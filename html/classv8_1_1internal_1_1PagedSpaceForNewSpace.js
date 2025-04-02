@@ -1,0 +1,27 @@
+var classv8_1_1internal_1_1PagedSpaceForNewSpace =
+[
+    [ "PagedSpaceForNewSpace", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a0d835760aaac322e5223eb95fa949461", null ],
+    [ "AddPage", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#ac9df75ea37efea81ebdd35569315e97f", null ],
+    [ "AllocatedSinceLastGC", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#ae1f7285c9f96f81ca1a73149ec36d6e9", null ],
+    [ "AllocatePageUpToCapacityForTesting", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#ab40243a876e2453d62bf492ac935d58c", null ],
+    [ "Available", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#aa0cc04bf1adad585ed2753879f5266d0", null ],
+    [ "CreateAllocatorPolicy", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a1943d80da8f4c5738521b5f739e6973b", null ],
+    [ "EnsureCurrentCapacity", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a7ce19b0b07c0d222f05a3c759ca4f271", null ],
+    [ "ExternalBackingStoreBytes", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#ad0da948b2df496a3433ebf6e3fe64172", null ],
+    [ "FinishShrinking", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#ac35422a3ee547152af7f8d2a51128820", null ],
+    [ "first_allocatable_address", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a632602e59c49de7c236ec4fded8fca0d", null ],
+    [ "GarbageCollectionEpilogue", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#ab12b5976f01119aa827d1f81db86cc22", null ],
+    [ "Grow", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#afe1db146e0ea4a6cd6b46cb493e1af34", null ],
+    [ "InitializePage", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#accdef0b5ca81c3eb6cf7ddd48d7ddf3d", null ],
+    [ "IsPromotionCandidate", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a5fb2913071b112f8507a6fa2bb4b2222", null ],
+    [ "MakeIterable", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a3cfc2c475c203ee45a0578a8e4908dd1", null ],
+    [ "MaximumCapacity", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a823c0458976cfc8e26bb34543ca633d4", null ],
+    [ "ReleasePage", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#ad73cf0b933461a1530e2c2746f3582c9", null ],
+    [ "RemovePage", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a9f693d50e73c466d8e1bc8db31c72d6d", null ],
+    [ "ShouldReleaseEmptyPage", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a6e97c75226520eb7d0cf4f3d6655e5ae", null ],
+    [ "StartShrinking", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a1edf3f047469681540df87c40b73e1c4", null ],
+    [ "TearDown", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a212bdd445e02b1446f5ca0aef3d862d0", null ],
+    [ "TotalCapacity", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#afb7d94925d47c11989b144e6ea5b4da9", null ],
+    [ "UsableCapacity", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a8d76dee4a083dde2834ba5b67d17d64d", null ],
+    [ "PagedNewSpaceAllocatorPolicy", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a67abb399c28482b7ce7bef06439ad112", null ]
+];

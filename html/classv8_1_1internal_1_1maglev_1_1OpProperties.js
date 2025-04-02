@@ -1,0 +1,27 @@
+var classv8_1_1internal_1_1maglev_1_1OpProperties =
+[
+    [ "OpProperties", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a2a7d350e02db5074f9745af3f1f40300", null ],
+    [ "can_allocate", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a160d91844df80e7a13216576ae29b3f1", null ],
+    [ "can_deopt", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#affca51dc4cc3741705fb73690d6c37a8", null ],
+    [ "can_eager_deopt", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a6f757478a116a03612eeeed4b7c2e1a0", null ],
+    [ "can_lazy_deopt", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a7e9ef5825d63a72aca3d02eeed5f6cf1", null ],
+    [ "can_participate_in_cse", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#af18038e4a2bbd5118d7eeb0429b71312", null ],
+    [ "can_read", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a2829f92b00341c81c1d782d2ad8a774b", null ],
+    [ "can_throw", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a3270ce4a31a4047d48055aabc42c831d", null ],
+    [ "can_write", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#ae20793314e7f00f6a88e94b48c4b3422", null ],
+    [ "is_any_call", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a9ba86b69e6ebbeeaf255476472b29ec4", null ],
+    [ "is_call", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#aa5009397fc12d77ddd74c8a5cab7a52f", null ],
+    [ "is_conversion", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#aa096a2379d1d55726ad7c21149dc61b2", null ],
+    [ "is_deferred_call", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#ab793c91a5e8649d9c4d6f28250f50eac", null ],
+    [ "is_deopt_checkpoint", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a639068468bc66b7cb22b735d12956b15", null ],
+    [ "is_pure", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#ababcad480c7eaa9a3398397d783a4f10", null ],
+    [ "is_required_when_unused", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a2615b4e2e9bbe4a5204755a11a7be176", null ],
+    [ "is_tagged", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#ac33df8bca79e12130c8ceb3991fd9652", null ],
+    [ "needs_register_snapshot", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a1d098a250ee68ea845d8fcbcb822827e", null ],
+    [ "not_idempotent", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#add8abad2f6a787f6808f1c324b15281d", null ],
+    [ "operator uint32_t", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#ac6a0c8d253a39a262e40a1bb66bd22d5", null ],
+    [ "operator|", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a7a2fd843071c5e393c3c55fa6e6cda4a", null ],
+    [ "value_representation", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a9f989420e0ea0d6e75a761dc60903761", null ],
+    [ "WithNewValueRepresentation", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a7b297fe43579ba8c26fce201bd4c034b", null ],
+    [ "WithoutDeopt", "classv8_1_1internal_1_1maglev_1_1OpProperties.html#a8fbdd46d25d7947dd83e932bbf83b8ea", null ]
+];

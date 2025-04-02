@@ -1,0 +1,4 @@
+var structv8_1_1internal_1_1compiler_1_1MachineOperatorGlobalCache_1_1ArchitectureDefaultTruncateFloat32ToInt32Operator =
+[
+    [ "ArchitectureDefaultTruncateFloat32ToInt32Operator", "structv8_1_1internal_1_1compiler_1_1MachineOperatorGlobalCache_1_1ArchitectureDefaultTruncateFloat32ToInt32Operator.html#afc5a9b08e3a99146f523fbae9e03a3f4", null ]
+];

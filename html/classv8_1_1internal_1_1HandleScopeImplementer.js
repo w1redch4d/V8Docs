@@ -1,0 +1,27 @@
+var classv8_1_1internal_1_1HandleScopeImplementer =
+[
+    [ "EnteredContextRewindScope", "classv8_1_1internal_1_1HandleScopeImplementer_1_1EnteredContextRewindScope.html", "classv8_1_1internal_1_1HandleScopeImplementer_1_1EnteredContextRewindScope" ],
+    [ "HandleScopeImplementer", "classv8_1_1internal_1_1HandleScopeImplementer.html#a8a8b3601372eacaddfe9eae275e7bdc5", null ],
+    [ "~HandleScopeImplementer", "classv8_1_1internal_1_1HandleScopeImplementer.html#abe28dcc1808d3078a405a88bccaf32a6", null ],
+    [ "HandleScopeImplementer", "classv8_1_1internal_1_1HandleScopeImplementer.html#abe4188eb9baa7cfa7c996ed21c15c376", null ],
+    [ "ArchiveThread", "classv8_1_1internal_1_1HandleScopeImplementer.html#a62d016202e4b0555cea27a762608b275", null ],
+    [ "blocks", "classv8_1_1internal_1_1HandleScopeImplementer.html#aae5c33d2c88d861f16fb234debb83951", null ],
+    [ "DeleteExtensions", "classv8_1_1internal_1_1HandleScopeImplementer.html#a92f5f26b0a0272544ec08f0ce306e8f3", null ],
+    [ "EnterContext", "classv8_1_1internal_1_1HandleScopeImplementer.html#ac649a97c4a2a70f9e6194c695adfac1a", null ],
+    [ "EnteredContextCount", "classv8_1_1internal_1_1HandleScopeImplementer.html#aa0980ef91551318c231574c06891ac91", null ],
+    [ "FreeThreadResources", "classv8_1_1internal_1_1HandleScopeImplementer.html#a3e23aca523c7e6549024c75f7985ea34", null ],
+    [ "GetSpareOrNewBlock", "classv8_1_1internal_1_1HandleScopeImplementer.html#a4836bd3e2b4aa3a84895d53ce8178921", null ],
+    [ "HasSavedContexts", "classv8_1_1internal_1_1HandleScopeImplementer.html#a75f22aaa7cfac21893a225cf11e33a44", null ],
+    [ "isolate", "classv8_1_1internal_1_1HandleScopeImplementer.html#a9f9c1c36e18c787b31c4d772e5bebc45", null ],
+    [ "Iterate", "classv8_1_1internal_1_1HandleScopeImplementer.html#a58970d2e9a1292fd9b41c1e2986fa0a2", null ],
+    [ "LastEnteredContext", "classv8_1_1internal_1_1HandleScopeImplementer.html#ac6897a650291e5948ded45a76156a5ab", null ],
+    [ "LastEnteredContextWas", "classv8_1_1internal_1_1HandleScopeImplementer.html#a2e59f0ced789e182fc29cf5cc2dfdcdd", null ],
+    [ "LeaveContext", "classv8_1_1internal_1_1HandleScopeImplementer.html#a01b77adea5938074f429ce5b09a01957", null ],
+    [ "operator=", "classv8_1_1internal_1_1HandleScopeImplementer.html#a95120f2522e70ec16f8d5b513b14f1ef", null ],
+    [ "RestoreContext", "classv8_1_1internal_1_1HandleScopeImplementer.html#ae0f85697d83f8f2ae0c3eed2ff46c3cb", null ],
+    [ "RestoreThread", "classv8_1_1internal_1_1HandleScopeImplementer.html#aba36eab4b28babfa77c6c4e033e588c7", null ],
+    [ "ReturnBlock", "classv8_1_1internal_1_1HandleScopeImplementer.html#a8b9fb644d3bcba87368f8c124b658a38", null ],
+    [ "SaveContext", "classv8_1_1internal_1_1HandleScopeImplementer.html#ad17cb817a0e07f26c28adfe0239b01b4", null ],
+    [ "HandleScopeImplementerOffsets", "classv8_1_1internal_1_1HandleScopeImplementer.html#a66ef675d4e69ca637e2b88b463427da6", null ],
+    [ "PersistentHandlesScope", "classv8_1_1internal_1_1HandleScopeImplementer.html#ab5e34710418c513f4ba9390ca9119a62", null ]
+];

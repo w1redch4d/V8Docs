@@ -1,0 +1,25 @@
+var classv8_1_1internal_1_1Zone =
+[
+    [ "Zone", "classv8_1_1internal_1_1Zone.html#a3bd9b0f47d6c89c9aceb6d6989e14fc4", null ],
+    [ "~Zone", "classv8_1_1internal_1_1Zone.html#a18483b56097296d48c8dd8a7629d23b6", null ],
+    [ "Allocate", "classv8_1_1internal_1_1Zone.html#ae16b81277a566c4dd8838edb44c08b9b", null ],
+    [ "AllocateArray", "classv8_1_1internal_1_1Zone.html#a94a480bf811555f252fa10e82214684b", null ],
+    [ "AllocateVector", "classv8_1_1internal_1_1Zone.html#ae9377ec6a07122d265a8ed3d458a3240", null ],
+    [ "allocation_size", "classv8_1_1internal_1_1Zone.html#a5598fd0d6fbe395c364a7cc5722433ee", null ],
+    [ "allocation_size_for_tracing", "classv8_1_1internal_1_1Zone.html#aa183fb1a471f7a53d8c00ca064bcc6b0", null ],
+    [ "allocator", "classv8_1_1internal_1_1Zone.html#a9234ec880ffd4299722bc2889ff259bb", null ],
+    [ "CloneVector", "classv8_1_1internal_1_1Zone.html#a322c325012453118a4a8b4fd5774ca8e", null ],
+    [ "Delete", "classv8_1_1internal_1_1Zone.html#ae840fc39d61f87201f8760957bf75349", null ],
+    [ "DeleteArray", "classv8_1_1internal_1_1Zone.html#af60cc5d5e76a39b2edda91f220b53fcf", null ],
+    [ "freed_size_for_tracing", "classv8_1_1internal_1_1Zone.html#a6c554f6bcf5b68c79f8a5f34af761071", null ],
+    [ "name", "classv8_1_1internal_1_1Zone.html#ab82c3c2b263fe167d256cc81066226ff", null ],
+    [ "New", "classv8_1_1internal_1_1Zone.html#ad0db66a23649463e572b49f50973e779", null ],
+    [ "NewVector", "classv8_1_1internal_1_1Zone.html#aaeb11af85ebaf68f434a445583dacac8", null ],
+    [ "NewVector", "classv8_1_1internal_1_1Zone.html#a5ef0df421bef94925a36e620e72effc1", null ],
+    [ "Reset", "classv8_1_1internal_1_1Zone.html#ab2d176e653855b61275e505bddbc3ece", null ],
+    [ "Seal", "classv8_1_1internal_1_1Zone.html#a199eff98cf634a8ab8e8812847a36edc", null ],
+    [ "segment_bytes_allocated", "classv8_1_1internal_1_1Zone.html#abb42dabf73796e97db6d9de086663b2a", null ],
+    [ "Snapshot", "classv8_1_1internal_1_1Zone.html#a0363b4eed8096f39c7ae4e1fe8c228e3", null ],
+    [ "supports_compression", "classv8_1_1internal_1_1Zone.html#a517cf5fe72764f846909b178c516e042", null ],
+    [ "ZoneSnapshot", "classv8_1_1internal_1_1Zone.html#a8f0874539e52f4c13fdf8cc649ff0fac", null ]
+];

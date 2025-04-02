@@ -1,0 +1,27 @@
+var classv8_1_1internal_1_1ExternalEntityTable =
+[
+    [ "Space", "structv8_1_1internal_1_1ExternalEntityTable_1_1Space.html", "structv8_1_1internal_1_1ExternalEntityTable_1_1Space" ],
+    [ "SpaceWithBlackAllocationSupport", "structv8_1_1internal_1_1ExternalEntityTable_1_1SpaceWithBlackAllocationSupport.html", "structv8_1_1internal_1_1ExternalEntityTable_1_1SpaceWithBlackAllocationSupport" ],
+    [ "UnsealReadOnlySegmentScope", "classv8_1_1internal_1_1ExternalEntityTable_1_1UnsealReadOnlySegmentScope.html", "classv8_1_1internal_1_1ExternalEntityTable_1_1UnsealReadOnlySegmentScope" ],
+    [ "Base", "classv8_1_1internal_1_1ExternalEntityTable.html#a4d36db7e8e37b52d121071b7b0cad6f1", null ],
+    [ "FreelistHead", "classv8_1_1internal_1_1ExternalEntityTable.html#a7809f2fcbc1e9540898aae9508d707fc", null ],
+    [ "Segment", "classv8_1_1internal_1_1ExternalEntityTable.html#a6d2c297664f9cd6948323e167ce614e5", null ],
+    [ "WriteIterator", "classv8_1_1internal_1_1ExternalEntityTable.html#a9001f73823fa7b9e9b248a49c754d801", null ],
+    [ "ExternalEntityTable", "classv8_1_1internal_1_1ExternalEntityTable.html#a785ae9e1713390d1776b2cf1ed1f03f1", null ],
+    [ "ExternalEntityTable", "classv8_1_1internal_1_1ExternalEntityTable.html#acf6359549f19ffe0377602e70fc5d24a", null ],
+    [ "AllocateEntry", "classv8_1_1internal_1_1ExternalEntityTable.html#ac7c2d54546c11dd1c44fececcc69a58a", null ],
+    [ "AllocateEntryBelow", "classv8_1_1internal_1_1ExternalEntityTable.html#a23e287b8f13e54829d6cc733894c5ea1", null ],
+    [ "AttachSpaceToReadOnlySegment", "classv8_1_1internal_1_1ExternalEntityTable.html#aad955e1bb5421defef0948b7c418008a", null ],
+    [ "DetachSpaceFromReadOnlySegment", "classv8_1_1internal_1_1ExternalEntityTable.html#a40ce9b9a13e3dcba880893a0af274407", null ],
+    [ "Extend", "classv8_1_1internal_1_1ExternalEntityTable.html#adbee8fd5f6ae6da2db50bde72c299279", null ],
+    [ "GenericSweep", "classv8_1_1internal_1_1ExternalEntityTable.html#a3f5114ae540635a65861cfa3cf2347dc", null ],
+    [ "GenericSweep", "classv8_1_1internal_1_1ExternalEntityTable.html#ae68916e01050f84d6e782789d210d501", null ],
+    [ "Initialize", "classv8_1_1internal_1_1ExternalEntityTable.html#a618909b92853be6de8554ba3e3ceae6f", null ],
+    [ "InitializeSpace", "classv8_1_1internal_1_1ExternalEntityTable.html#a471c7cf2e9d530dffb64a63a39732563", null ],
+    [ "IterateEntriesIn", "classv8_1_1internal_1_1ExternalEntityTable.html#a82fb79152d605f156481dc0cc72ed747", null ],
+    [ "operator=", "classv8_1_1internal_1_1ExternalEntityTable.html#aff15d7e7f0eb851d7c4279f5a8ac2902", null ],
+    [ "TearDown", "classv8_1_1internal_1_1ExternalEntityTable.html#a8ec7c96072e9d4e5c43b5422d833b867", null ],
+    [ "TearDownSpace", "classv8_1_1internal_1_1ExternalEntityTable.html#ad18a21272eaa4ab17168842931f61324", null ],
+    [ "TryAllocateEntryFromFreelist", "classv8_1_1internal_1_1ExternalEntityTable.html#a21de1ed108d0ccb377d667b0e9bbe59c", null ],
+    [ "Isolate", "classv8_1_1internal_1_1ExternalEntityTable.html#aba4f0964bdacf2bbf62cf876e5d28d0a", null ]
+];

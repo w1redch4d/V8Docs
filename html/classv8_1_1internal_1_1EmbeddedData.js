@@ -1,0 +1,26 @@
+var classv8_1_1internal_1_1EmbeddedData =
+[
+    [ "BuiltinLookupEntry", "structv8_1_1internal_1_1EmbeddedData_1_1BuiltinLookupEntry.html", "structv8_1_1internal_1_1EmbeddedData_1_1BuiltinLookupEntry" ],
+    [ "LayoutDescription", "structv8_1_1internal_1_1EmbeddedData_1_1LayoutDescription.html", "structv8_1_1internal_1_1EmbeddedData_1_1LayoutDescription" ],
+    [ "AddressForHashing", "classv8_1_1internal_1_1EmbeddedData.html#a8f78bc173ea5564705fade3ff7dd515d", null ],
+    [ "code", "classv8_1_1internal_1_1EmbeddedData.html#a0b175baddf938466f3cba16a96b45408", null ],
+    [ "code_size", "classv8_1_1internal_1_1EmbeddedData.html#adfb00e7701141990e1697f3a795abfd0", null ],
+    [ "CreateEmbeddedBlobCodeHash", "classv8_1_1internal_1_1EmbeddedData.html#a7f8382816aa67c6d27fcf87175559db5", null ],
+    [ "CreateEmbeddedBlobDataHash", "classv8_1_1internal_1_1EmbeddedData.html#a711dadd951162d4a505ccbb227872151", null ],
+    [ "data", "classv8_1_1internal_1_1EmbeddedData.html#a671f1e14951e9876f252d1cc33c1585d", null ],
+    [ "data_size", "classv8_1_1internal_1_1EmbeddedData.html#ac5f52822165f191fe26aebcfbbd3a0d3", null ],
+    [ "Dispose", "classv8_1_1internal_1_1EmbeddedData.html#ae2bc2670cdb7be01306390826cb72058", null ],
+    [ "EmbeddedBlobCodeHash", "classv8_1_1internal_1_1EmbeddedData.html#a54d6d475db1bbe30fdaddddfe8962ab2", null ],
+    [ "EmbeddedBlobDataHash", "classv8_1_1internal_1_1EmbeddedData.html#a5e8103aa387380dd4b6f94a3ee2bc830", null ],
+    [ "GetBuiltinId", "classv8_1_1internal_1_1EmbeddedData.html#ae5cbe98ea1ececd038a62d033d59060c", null ],
+    [ "InstructionEndOf", "classv8_1_1internal_1_1EmbeddedData.html#a06f2683c48a6126204b339945957d0f5", null ],
+    [ "InstructionEndOfBytecodeHandlers", "classv8_1_1internal_1_1EmbeddedData.html#a71adf07cc0a83b390bd2f6a37c1ab8ef", null ],
+    [ "InstructionSizeOf", "classv8_1_1internal_1_1EmbeddedData.html#a59518d547915f442356ea926c0d1ff56", null ],
+    [ "InstructionStartOf", "classv8_1_1internal_1_1EmbeddedData.html#a3ee374680ecbc4aae34314eab5fec477", null ],
+    [ "InstructionStartOfBytecodeHandlers", "classv8_1_1internal_1_1EmbeddedData.html#a8987203b76ed22b061ec2be87b99e6d6", null ],
+    [ "IsInCodeRange", "classv8_1_1internal_1_1EmbeddedData.html#a39ce8c64940b01141ff6f7aebe1d2d62", null ],
+    [ "IsolateHash", "classv8_1_1internal_1_1EmbeddedData.html#a401c9d3f26eaf5292d1e70d47d06c979", null ],
+    [ "MetadataStartOf", "classv8_1_1internal_1_1EmbeddedData.html#a4cc59fe2948bc1571a3126517709abba", null ],
+    [ "PaddedInstructionSizeOf", "classv8_1_1internal_1_1EmbeddedData.html#a5db4feb7cfedef80b9d0d0594bfa45fe", null ],
+    [ "TryLookupCode", "classv8_1_1internal_1_1EmbeddedData.html#abfca50e87246885a98c636e1245d1a8f", null ]
+];

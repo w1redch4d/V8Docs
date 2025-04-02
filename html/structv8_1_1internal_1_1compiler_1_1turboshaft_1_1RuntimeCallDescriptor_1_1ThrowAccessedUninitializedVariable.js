@@ -1,0 +1,5 @@
+var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowAccessedUninitializedVariable =
+[
+    [ "arguments_t", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowAccessedUninitializedVariable.html#a4bc84614adcb48686fe0c0ab3b3f71f4", null ],
+    [ "result_t", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowAccessedUninitializedVariable.html#ae04a732cc1a27dec96afdef324c7c7c9", null ]
+];

@@ -1,0 +1,28 @@
+var classv8_1_1internal_1_1MicrotaskQueue =
+[
+    [ "~MicrotaskQueue", "classv8_1_1internal_1_1MicrotaskQueue.html#a224fc03264fabe66b101685219eb14eb", null ],
+    [ "AddMicrotasksCompletedCallback", "classv8_1_1internal_1_1MicrotaskQueue.html#af263d5ad2f3c8cbf98fa244a18ad41b4", null ],
+    [ "capacity", "classv8_1_1internal_1_1MicrotaskQueue.html#a5cd348b62cdd9f017c609d039fcd1308", null ],
+    [ "DecrementMicrotasksScopeDepth", "classv8_1_1internal_1_1MicrotaskQueue.html#a15af51d60c8ed3fe1b983c68a3c1501a", null ],
+    [ "DecrementMicrotasksSuppressions", "classv8_1_1internal_1_1MicrotaskQueue.html#acd8ca584bb7cea905c76eaeeb49eb631", null ],
+    [ "EnqueueMicrotask", "classv8_1_1internal_1_1MicrotaskQueue.html#ad20205118a0265c10f5475dcb7b08448", null ],
+    [ "EnqueueMicrotask", "classv8_1_1internal_1_1MicrotaskQueue.html#a510bdbfc122894274d89bcf2ad11aca2", null ],
+    [ "EnqueueMicrotask", "classv8_1_1internal_1_1MicrotaskQueue.html#ac0a25bb986c40a1cc1d0dfc6e2609bee", null ],
+    [ "get", "classv8_1_1internal_1_1MicrotaskQueue.html#aad082ef3433f2d5a669975ea0dcade8a", null ],
+    [ "GetMicrotasksScopeDepth", "classv8_1_1internal_1_1MicrotaskQueue.html#a9b315eb28540f1f6c667a4c6bfdc8e1f", null ],
+    [ "HasMicrotasksSuppressions", "classv8_1_1internal_1_1MicrotaskQueue.html#a11ca1703a05c705fa451216a1acefc04", null ],
+    [ "IncrementMicrotasksScopeDepth", "classv8_1_1internal_1_1MicrotaskQueue.html#a0d6d681eaf1e7195432de4ae0cd3b8c3", null ],
+    [ "IncrementMicrotasksSuppressions", "classv8_1_1internal_1_1MicrotaskQueue.html#a481d9f70a3780b0f7143402ea37b2a24", null ],
+    [ "IsRunningMicrotasks", "classv8_1_1internal_1_1MicrotaskQueue.html#aa147bac5b7afcf7b8872e0c61341fd4f", null ],
+    [ "IterateMicrotasks", "classv8_1_1internal_1_1MicrotaskQueue.html#a8d4d95ab5c39f431f2c7d2d98688beab", null ],
+    [ "microtasks_policy", "classv8_1_1internal_1_1MicrotaskQueue.html#a32e49dec8cab234cf246fd1af25864a2", null ],
+    [ "next", "classv8_1_1internal_1_1MicrotaskQueue.html#a2e25414ca9dc82a4582719da26106f35", null ],
+    [ "PerformCheckpoint", "classv8_1_1internal_1_1MicrotaskQueue.html#aab5059e7580ba258496a8ef63d083155", null ],
+    [ "prev", "classv8_1_1internal_1_1MicrotaskQueue.html#a7143938b5adb5b985ce6c581c4cba32f", null ],
+    [ "RemoveMicrotasksCompletedCallback", "classv8_1_1internal_1_1MicrotaskQueue.html#a96bb8ee92f9224d79ba98130d53e79c9", null ],
+    [ "RunMicrotasks", "classv8_1_1internal_1_1MicrotaskQueue.html#aaa0dc3795c313ffa164da19dd50f4fc2", null ],
+    [ "set_microtasks_policy", "classv8_1_1internal_1_1MicrotaskQueue.html#a2f54797c6ac8fcc8d535cecac41d227d", null ],
+    [ "ShouldPerfomCheckpoint", "classv8_1_1internal_1_1MicrotaskQueue.html#a9a417f0864d4a3b2da3401625bc4ebdb", null ],
+    [ "size", "classv8_1_1internal_1_1MicrotaskQueue.html#a7209bf6df85bdc067b3dc73261ef355a", null ],
+    [ "start", "classv8_1_1internal_1_1MicrotaskQueue.html#aaa3648a97cbb8c0b94581d6404ee7c37", null ]
+];

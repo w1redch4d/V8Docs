@@ -1,0 +1,25 @@
+var classv8__inspector_1_1V8HeapProfilerAgentImpl =
+[
+    [ "AsyncCallbacks", "structv8__inspector_1_1V8HeapProfilerAgentImpl_1_1AsyncCallbacks.html", "structv8__inspector_1_1V8HeapProfilerAgentImpl_1_1AsyncCallbacks" ],
+    [ "GCTask", "classv8__inspector_1_1V8HeapProfilerAgentImpl_1_1GCTask.html", "classv8__inspector_1_1V8HeapProfilerAgentImpl_1_1GCTask" ],
+    [ "HeapSnapshotProtocolOptions", "structv8__inspector_1_1V8HeapProfilerAgentImpl_1_1HeapSnapshotProtocolOptions.html", "structv8__inspector_1_1V8HeapProfilerAgentImpl_1_1HeapSnapshotProtocolOptions" ],
+    [ "HeapSnapshotTask", "classv8__inspector_1_1V8HeapProfilerAgentImpl_1_1HeapSnapshotTask.html", "classv8__inspector_1_1V8HeapProfilerAgentImpl_1_1HeapSnapshotTask" ],
+    [ "V8HeapProfilerAgentImpl", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#aac42cd3d8c6a5b7af951c100a0e76938", null ],
+    [ "~V8HeapProfilerAgentImpl", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#a846234b7f5eefeffa7aff151a096e39c", null ],
+    [ "V8HeapProfilerAgentImpl", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#a6327c56b09df60bf2ac49a3e8679bc2b", null ],
+    [ "addInspectedHeapObject", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#aabeaac4ea6b5c4a098b61fa3ab5c20bf", null ],
+    [ "collectGarbage", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#a22df431315758f9716e340a0ccbc94a3", null ],
+    [ "disable", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#a2bd08340b7c4ba22256effb08a860f23", null ],
+    [ "enable", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#a01c0599210861a9a7227f2ac50458d7f", null ],
+    [ "getHeapObjectId", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#a5a5ae8b52be8c63ed16c952c769a81d9", null ],
+    [ "getObjectByHeapObjectId", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#afa5132bc76a590ac1bf8c14e3448a822", null ],
+    [ "getSamplingProfile", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#ae48622c1b6564851cab5298aa5d25252", null ],
+    [ "operator=", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#a44aa59a46f0cb1356aedeed6d372d36a", null ],
+    [ "restore", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#acd028e018255aca3916afddc9c989dc7", null ],
+    [ "startSampling", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#ab215f5c05d5944d5bcb2c88c6508499d", null ],
+    [ "startTrackingHeapObjects", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#ae7014ed5bb63c9c552d38eb5d760023b", null ],
+    [ "stopSampling", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#afb840b1f8f72ce4c3aef372e8751f4d6", null ],
+    [ "stopTrackingHeapObjects", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#a89380e430250b906e10c8bdc8ce278a8", null ],
+    [ "takeHeapSnapshot", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#a8fdc8668bf3318f4ad299840fab9ecde", null ],
+    [ "takePendingHeapSnapshots", "classv8__inspector_1_1V8HeapProfilerAgentImpl.html#a3114b5fc4530ee73b69314bca82fc5c7", null ]
+];

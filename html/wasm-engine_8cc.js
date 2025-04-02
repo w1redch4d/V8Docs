@@ -1,0 +1,21 @@
+var wasm_engine_8cc =
+[
+    [ "v8::internal::wasm::WasmOrphanedGlobalHandle", "classv8_1_1internal_1_1wasm_1_1WasmOrphanedGlobalHandle.html", "classv8_1_1internal_1_1wasm_1_1WasmOrphanedGlobalHandle" ],
+    [ "v8::internal::wasm::WasmEngine::LogCodesTask", "classv8_1_1internal_1_1wasm_1_1WasmEngine_1_1LogCodesTask.html", "classv8_1_1internal_1_1wasm_1_1WasmEngine_1_1LogCodesTask" ],
+    [ "v8::internal::wasm::WasmEngine::CurrentGCInfo", "structv8_1_1internal_1_1wasm_1_1WasmEngine_1_1CurrentGCInfo.html", "structv8_1_1internal_1_1wasm_1_1WasmEngine_1_1CurrentGCInfo" ],
+    [ "v8::internal::wasm::WasmEngine::IsolateInfo", "structv8_1_1internal_1_1wasm_1_1WasmEngine_1_1IsolateInfo.html", "structv8_1_1internal_1_1wasm_1_1WasmEngine_1_1IsolateInfo" ],
+    [ "v8::internal::wasm::WasmEngine::IsolateInfo::CodeToLogPerScript", "structv8_1_1internal_1_1wasm_1_1WasmEngine_1_1IsolateInfo_1_1CodeToLogPerScript.html", "structv8_1_1internal_1_1wasm_1_1WasmEngine_1_1IsolateInfo_1_1CodeToLogPerScript" ],
+    [ "v8::internal::wasm::WasmEngine::NativeModuleInfo", "structv8_1_1internal_1_1wasm_1_1WasmEngine_1_1NativeModuleInfo.html", "structv8_1_1internal_1_1wasm_1_1WasmEngine_1_1NativeModuleInfo" ],
+    [ "TRACE_CODE_GC", "wasm-engine_8cc.html#aa11964a2fa0e69c324c74f7361b77a37", null ],
+    [ "GetWasmCodeManager", "wasm-engine_8cc.html#a55a717894f5d005ae86062dd4647a3b2", null ],
+    [ "GetWasmEngine", "wasm-engine_8cc.html#abc12fc3b25ebfb54c20b8479642acb94", null ],
+    [ "GetWasmImportWrapperCache", "wasm-engine_8cc.html#a36345041662f17bb39d27709c1cb78ac", null ],
+    [ "max_mem32_pages", "wasm-engine_8cc.html#a2c6edd5180c4a1c2a0454eaac389dc1f", null ],
+    [ "max_mem64_pages", "wasm-engine_8cc.html#a4326f4455d83a545760a1048f2d6b122", null ],
+    [ "max_module_size", "wasm-engine_8cc.html#a76ecd8d4d54ac6dd52d2278b2cda0ba7", null ],
+    [ "max_table_init_entries", "wasm-engine_8cc.html#a99d89c02d7aa502fd4d2939a076c1688", null ],
+    [ "max_table_size", "wasm-engine_8cc.html#a38d56b630d25ea0451a91c6204e89042", null ],
+    [ "code_manager", "wasm-engine_8cc.html#a7edd6d7cb36a3ca555668ff04ed90737", null ],
+    [ "engine", "wasm-engine_8cc.html#a09d8f881228b5320f5caba482e3ab38e", null ],
+    [ "import_wrapper_cache", "wasm-engine_8cc.html#a756e87558c02d6645e094704f4434210", null ]
+];

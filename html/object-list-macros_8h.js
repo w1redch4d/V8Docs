@@ -1,0 +1,25 @@
+var object_list_macros_8h =
+[
+    [ "ABSTRACT_TRUSTED_OBJECT_LIST_GENERATOR", "object-list-macros_8h.html#acf6e5b7ff5d4c12a8fc97a2c25eff4b3", null ],
+    [ "CONCRETE_TRUSTED_OBJECT_LIST_GENERATOR", "object-list-macros_8h.html#a9f5f2b516c3af6b01df56a289d3b91a0", null ],
+    [ "CONCRETE_TRUSTED_OBJECT_TYPE_LIST1", "object-list-macros_8h.html#aae52dfed05befd4d65179e157995bbb2", null ],
+    [ "CONCRETE_TRUSTED_OBJECT_TYPE_LIST2", "object-list-macros_8h.html#af93e756ed2ef9b43d6ffb2031499f5ec", null ],
+    [ "DEF_FWD_DECLARATION", "object-list-macros_8h.html#a2e64756fe138de3a5921775d1f8a106c", null ],
+    [ "DYNAMICALLY_SIZED_HEAP_OBJECT_LIST", "object-list-macros_8h.html#ae500d56aa09c154055be6f861e0b7661", null ],
+    [ "HEAP_OBJECT_ORDINARY_TYPE_LIST", "object-list-macros_8h.html#ada19637ffad7320b8ec46da33a798fb3", null ],
+    [ "HEAP_OBJECT_ORDINARY_TYPE_LIST_BASE", "object-list-macros_8h.html#a4855e4470bf8315e3994dfc2dabd1e67", null ],
+    [ "HEAP_OBJECT_SPECIALIZED_TYPE_LIST", "object-list-macros_8h.html#acf340c0a7d21033957262624dd38ed39", null ],
+    [ "HEAP_OBJECT_TEMPLATE_TYPE_LIST", "object-list-macros_8h.html#a6345638c948ee614d5d54a8612c0b246", null ],
+    [ "HEAP_OBJECT_TRUSTED_TYPE_LIST", "object-list-macros_8h.html#a3126e9b784c843128d4e5ceb47403b80", null ],
+    [ "HEAP_OBJECT_TYPE_LIST", "object-list-macros_8h.html#a2bc780537858a4278e56a734d25b9820", null ],
+    [ "HOLE_LIST", "object-list-macros_8h.html#a35ed094e73d0885dcf5a97df45ec090e", null ],
+    [ "OBJECT_TYPE_LIST", "object-list-macros_8h.html#abe3762a9cb34ffde3492d30c4e3381ad", null ],
+    [ "ODDBALL_LIST", "object-list-macros_8h.html#abdc5ed9caeba4c2fa1d3321078ee7b2a", null ],
+    [ "SIMPLE_HEAP_OBJECT_LIST1", "object-list-macros_8h.html#aab89e8d5b58d1183dfb94639bf0298c7", null ],
+    [ "SIMPLE_HEAP_OBJECT_LIST1_ADAPTER", "object-list-macros_8h.html#a952632dc7f2503179b11f9533d8c12bd", null ],
+    [ "SIMPLE_HEAP_OBJECT_LIST2", "object-list-macros_8h.html#a892db83df7945413bed983ffd29194ca", null ],
+    [ "SIMPLE_HEAP_OBJECT_LIST2_ADAPTER", "object-list-macros_8h.html#a6c7df93e054cc094160bd57e3d6d47fa", null ],
+    [ "SIMPLE_HEAP_OBJECT_LIST_GENERATOR", "object-list-macros_8h.html#ae4fdf2e3bbd27c573cd64cc5d9561e5c", null ],
+    [ "TRUSTED_OBJECT_LIST1_ADAPTER", "object-list-macros_8h.html#a185ee5d9bdcfea445b1f9064c1e5e27b", null ],
+    [ "TRUSTED_OBJECT_LIST2_ADAPTER", "object-list-macros_8h.html#a6d643a75194a48540c9973ad4a80e546", null ]
+];

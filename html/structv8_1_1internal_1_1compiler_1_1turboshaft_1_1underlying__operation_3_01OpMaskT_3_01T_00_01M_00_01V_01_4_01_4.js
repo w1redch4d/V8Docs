@@ -1,0 +1,4 @@
+var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1underlying__operation_3_01OpMaskT_3_01T_00_01M_00_01V_01_4_01_4 =
+[
+    [ "type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1underlying__operation_3_01OpMaskT_3_01T_00_01M_00_01V_01_4_01_4.html#ab1e89c2d4cbee83677e45016e530f438", null ]
+];

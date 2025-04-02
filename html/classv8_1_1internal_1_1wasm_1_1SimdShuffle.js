@@ -1,0 +1,37 @@
+var classv8_1_1internal_1_1wasm_1_1SimdShuffle =
+[
+    [ "ShuffleArray", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#aa3bbdb4c0d091e8ae041cbb7305d7e02", null ],
+    [ "CanonicalShuffle", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269", [
+      [ "kUnknown", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a25c2dc47991b3df171ed5192bcf70390", null ],
+      [ "kIdentity", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269ac7c5a181d7cc5f5733d84dd9bd778967", null ],
+      [ "kS64x2Even", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a19d48773c4a40047d1c1d6ec498559f7", null ],
+      [ "kS64x2Odd", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a55bf925d549b61e9fceb8e655d3c3353", null ],
+      [ "kS64x2ReverseBytes", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269ac0c6ff8712340ad3f945c164199ea65e", null ],
+      [ "kS64x2Reverse", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269afeed9acb2084d9cc2d191599925c279c", null ],
+      [ "kS32x4InterleaveEven", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269acfd5ce5a8c266f08b9267f4268d8f232", null ],
+      [ "kS32x4InterleaveOdd", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269acee7acc682f4fe1c29fc36643b531942", null ],
+      [ "kS32x4InterleaveLowHalves", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269acc83a3da5795d59b6638168da52d56ee", null ],
+      [ "kS32x4InterleaveHighHalves", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a7fd27641a0cd67ecdc775193f4277e5b", null ],
+      [ "kS32x4ReverseBytes", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269ae7b6b975053710ca8bfe60a2d75ce75f", null ],
+      [ "kS32x4Reverse", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a8e6b000280ac29a41649161e8c34aa83", null ],
+      [ "kS32x2Reverse", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a645353547e8c130e1ab83bc8a7fcd0e4", null ],
+      [ "kS32x4TransposeEven", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a5c90cb337830b7c5b1ac0a29c7ecea72", null ],
+      [ "kS32x4TransposeOdd", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269aa7f49bae09602ee3f7646b9283cf7220", null ],
+      [ "kS16x8InterleaveEven", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269aba0456dbe0095f46e0603b3b4f358f31", null ],
+      [ "kS16x8InterleaveOdd", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a6c5c07bdcc546f61b55fc809bfd2bec8", null ],
+      [ "kS16x8InterleaveLowHalves", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a080fb32016a25a80e41cbc8acac5d009", null ],
+      [ "kS16x8InterleaveHighHalves", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269ad33bd189358874d2e88c7cd8cc59c61e", null ],
+      [ "kS16x8ReverseBytes", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a165a1964d56cdcad36eef4a7a4633e1f", null ],
+      [ "kS16x2Reverse", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a58a2d7414434f247b05e564d0be02bef", null ],
+      [ "kS16x4Reverse", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269af362cf05ff009b1262757d9c0d814d03", null ],
+      [ "kS16x8TransposeEven", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a52c8f642b8cef8fc5c027012fc24c0f7", null ],
+      [ "kS16x8TransposeOdd", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a772e66700f17146157c38190b272003e", null ],
+      [ "kS8x16InterleaveEven", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269ad64a559b361ce8dc78d73fd7179c55ea", null ],
+      [ "kS8x16InterleaveOdd", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269afcb10b9d7414b211ebaf52159dc4a33e", null ],
+      [ "kS8x16InterleaveLowHalves", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a5133570d2b75a0fddea2c4eb80ac35c3", null ],
+      [ "kS8x16InterleaveHighHalves", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a4a5d0d732e0e78b6dfa5f6bc9d864ac7", null ],
+      [ "kS8x16TransposeEven", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a920fee76d56c6c49e164d09f7e86d6d7", null ],
+      [ "kS8x16TransposeOdd", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269ab8bb2700149763dc89e3f5e3d1b2e456", null ],
+      [ "kMaxShuffles", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html#af15cefce4d146a78a441ef79def26269a550b40e9149cc0205ca16f0d6bb0aed3", null ]
+    ] ]
+];

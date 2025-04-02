@@ -1,0 +1,37 @@
+var classv8_1_1internal_1_1TranslatedFrame =
+[
+    [ "iterator", "classv8_1_1internal_1_1TranslatedFrame_1_1iterator.html", "classv8_1_1internal_1_1TranslatedFrame_1_1iterator" ],
+    [ "const_reference", "classv8_1_1internal_1_1TranslatedFrame.html#a73fe5e9fb6fc92da94ab19a1e503e4ac", null ],
+    [ "reference", "classv8_1_1internal_1_1TranslatedFrame.html#afd51b51c12c3887ad28328682dcbdad4", null ],
+    [ "Kind", "classv8_1_1internal_1_1TranslatedFrame.html#aa6931f8e7c4e1e1bf42252d1d8e1bf9d", [
+      [ "kUnoptimizedFunction", "classv8_1_1internal_1_1TranslatedFrame.html#aa6931f8e7c4e1e1bf42252d1d8e1bf9daf5cd66e71d7b724c35d824ec699bc877", null ],
+      [ "kInlinedExtraArguments", "classv8_1_1internal_1_1TranslatedFrame.html#aa6931f8e7c4e1e1bf42252d1d8e1bf9da03e7dacc4a3785200dee70725df2f5d7", null ],
+      [ "kConstructCreateStub", "classv8_1_1internal_1_1TranslatedFrame.html#aa6931f8e7c4e1e1bf42252d1d8e1bf9da367828a131b7228a29b7985c92f14c25", null ],
+      [ "kConstructInvokeStub", "classv8_1_1internal_1_1TranslatedFrame.html#aa6931f8e7c4e1e1bf42252d1d8e1bf9dae663a02d6950f12efd7a2a2cced91ec2", null ],
+      [ "kBuiltinContinuation", "classv8_1_1internal_1_1TranslatedFrame.html#aa6931f8e7c4e1e1bf42252d1d8e1bf9da787a7f6c603978547f4a6331837ff1fc", null ],
+      [ "kJavaScriptBuiltinContinuation", "classv8_1_1internal_1_1TranslatedFrame.html#aa6931f8e7c4e1e1bf42252d1d8e1bf9dabedaf777612f7f49b507e1013e1f9a7b", null ],
+      [ "kJavaScriptBuiltinContinuationWithCatch", "classv8_1_1internal_1_1TranslatedFrame.html#aa6931f8e7c4e1e1bf42252d1d8e1bf9da2e3e2b7871cc90d49236372bf73ef3d5", null ],
+      [ "kInvalid", "classv8_1_1internal_1_1TranslatedFrame.html#aa6931f8e7c4e1e1bf42252d1d8e1bf9da3f05f5234575afd27adff9698484165d", null ]
+    ] ],
+    [ "begin", "classv8_1_1internal_1_1TranslatedFrame.html#ab8fe3880b57f7f14f4ebfd907dfeb723", null ],
+    [ "bytecode_array", "classv8_1_1internal_1_1TranslatedFrame.html#ad2e6fba70e2ea37ee8cbb458fdfade4a", null ],
+    [ "bytecode_offset", "classv8_1_1internal_1_1TranslatedFrame.html#a011bb9e8a1ff4d3a4428fecff0ef8852", null ],
+    [ "end", "classv8_1_1internal_1_1TranslatedFrame.html#a045d000f672509ec860ed19e309ec800", null ],
+    [ "formal_parameter_count", "classv8_1_1internal_1_1TranslatedFrame.html#a8d77ddaa8937d8637ec397c92554306b", null ],
+    [ "front", "classv8_1_1internal_1_1TranslatedFrame.html#a10dbd5e39f866cfebdd40ec9afd15ec6", null ],
+    [ "front", "classv8_1_1internal_1_1TranslatedFrame.html#a138abdc5b6e20dcce454438c7b05e076", null ],
+    [ "GetValueCount", "classv8_1_1internal_1_1TranslatedFrame.html#a75f38cdc7b7403f6e0ce3b2c404ce936", null ],
+    [ "height", "classv8_1_1internal_1_1TranslatedFrame.html#aa27437180bb74852169f8d95c479fb83", null ],
+    [ "kind", "classv8_1_1internal_1_1TranslatedFrame.html#af9c28d9058f76e6b6abbd26e8afac3e4", null ],
+    [ "raw_bytecode_array", "classv8_1_1internal_1_1TranslatedFrame.html#a569b3fc0917bc24dcdbde6cb09064e75", null ],
+    [ "raw_shared_info", "classv8_1_1internal_1_1TranslatedFrame.html#ae337bba572078036792b5a4727370638", null ],
+    [ "return_value_count", "classv8_1_1internal_1_1TranslatedFrame.html#ac8e4f261cbc34bd38286acd3808d373d", null ],
+    [ "return_value_offset", "classv8_1_1internal_1_1TranslatedFrame.html#a01c107381c76b3aef2938c15e1b85715", null ],
+    [ "shared_info", "classv8_1_1internal_1_1TranslatedFrame.html#a5df70fee206fe51bb37c15e0d7d53471", null ],
+    [ "Deoptimizer", "classv8_1_1internal_1_1TranslatedFrame.html#aa89911581cd6ded032f998021aef9e5c", null ],
+    [ "TranslatedState", "classv8_1_1internal_1_1TranslatedFrame.html#a93214c289745cbbfea7af56c3a474a3b", null ],
+    [ "bytecode_array_", "classv8_1_1internal_1_1TranslatedFrame.html#a36f1ebb0959b9988dfdb4557dc097353", null ],
+    [ "raw_bytecode_array_", "classv8_1_1internal_1_1TranslatedFrame.html#ac549f6eafc58c83c5787a5aadaa28490", null ],
+    [ "raw_shared_info_", "classv8_1_1internal_1_1TranslatedFrame.html#a5c8c84d2c4e7bddaf915ae438c711efd", null ],
+    [ "shared_info_", "classv8_1_1internal_1_1TranslatedFrame.html#abb85ed9c577d4c94bf621299842beb93", null ]
+];

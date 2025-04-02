@@ -1,0 +1,27 @@
+var classv8_1_1internal_1_1wasm_1_1CompilationState =
+[
+    [ "~CompilationState", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a65d1dbc0c9fdd995fd0eb1fbbf8f1947", null ],
+    [ "CompilationState", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a0062bb36ce5045e29478034fe91a5d9a", null ],
+    [ "AddCallback", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a7ed524741d5660c9c342c654df2ac37e", null ],
+    [ "AllowAnotherTopTierJob", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#aceda8f4173dae2b1acfdff2cf0bd9128", null ],
+    [ "AllowAnotherTopTierJobForAllFunctions", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a9c56f9d64da89e21922aaf94fab9c734", null ],
+    [ "baseline_compilation_finished", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a74e1f8aaf59a147b239151b5b913362f", null ],
+    [ "CancelCompilation", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a94616121bb815ddab13b79d737542e29", null ],
+    [ "CancelInitialCompilation", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a0fccff8ad60688e7fbd9b4c853e90439", null ],
+    [ "detected_features", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#afda3d9cadd9a4eb735ff81fb8b5d0ea4", null ],
+    [ "dynamic_tiering", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a9e0115c333551438ffda8396cabb3060", null ],
+    [ "EstimateCurrentMemoryConsumption", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#ac43a967338375f3962c4b31151e5d713", null ],
+    [ "failed", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a2badfff8eee4ca33ffd54ab30ae5b1bf", null ],
+    [ "GetWireBytesStorage", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#ac94f5604f1684b2f28391cef5a2dffb7", null ],
+    [ "InitCompileJob", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#ab81cbf88e8bd750d5d7e198464e923f3", null ],
+    [ "InitializeAfterDeserialization", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a9ebb11cd7d9fb9633666bdebbd038a5f", null ],
+    [ "operator delete", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a3cad8313a10e79a902008f9d380bca51", null ],
+    [ "PublishCode", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#ad47276201a3451517914237634bef777", null ],
+    [ "set_compilation_id", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#aaae5bb20ea313ddf1ccf1393ca5ade67", null ],
+    [ "SetError", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#aa615c60c7e1fc45f22289c32bf136cc3", null ],
+    [ "SetHighPriority", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#ae278181990bde146ca006094ce3c9960", null ],
+    [ "SetWireBytesStorage", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a82cff25a5e68e95bd42f7c5c45058171", null ],
+    [ "TierUpAllFunctions", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a80ea8bcbfde72f2c012a2002b8dacedf", null ],
+    [ "UpdateDetectedFeatures", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a3763475c99a36d50427d6c2b3f4e1d07", null ],
+    [ "NativeModule", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#ab2eba8bcd9cf5215e8ce842fad93a987", null ]
+];

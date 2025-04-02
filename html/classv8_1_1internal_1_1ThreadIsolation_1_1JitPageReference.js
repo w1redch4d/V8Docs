@@ -1,0 +1,23 @@
+var classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference =
+[
+    [ "JitPageReference", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#a3edc17f965c03cc6ad7b0828c7abcc6b", null ],
+    [ "JitPageReference", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#ad86fe054613b70838f1de16aa77f77cc", null ],
+    [ "JitPageReference", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#a2c900aefa210a58ec36cb99103fd1c21", null ],
+    [ "Address", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#a28345b86ae17d87bf18a2bc48e009fbd", null ],
+    [ "AllocationContaining", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#a3c672ea20bc67a093d494dac05b6e32d", null ],
+    [ "Contains", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#abf262ccf3689012d523dad6a36353c71", null ],
+    [ "Empty", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#a70ff1afb5302270121810c10de513241", null ],
+    [ "End", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#ab99a3396ad3496a5a8b33ba219a3295d", null ],
+    [ "Expand", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#ac9d067706f113b474b23bbdf1dcb1788", null ],
+    [ "JitPage", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#afdad1df8d724c942c547e03e971b162c", null ],
+    [ "LookupAllocation", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#a526d05b2c270e66a95f5b7458704b6f6", null ],
+    [ "Merge", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#ace872443251ece57a1ab35ec85ee7966", null ],
+    [ "operator=", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#a62df99cc315f373135cb59fe8f9478b1", null ],
+    [ "RegisterAllocation", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#a01c7ce87c561baef5a70e7611109292c", null ],
+    [ "Shrink", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#a70a195bdcea6a2b5084ba3ba6de9df31", null ],
+    [ "Size", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#af4b94d4a6df3312f72be1011ca682a61", null ],
+    [ "StartOfAllocationAt", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#a4e1bf1dc108b08b04f838150485b51ba", null ],
+    [ "UnregisterAllocation", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#a64a7f94f65914367ef065f6c4cbbc78a", null ],
+    [ "UnregisterAllocationsExcept", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#ad76725e8c98259fc5fc25d874288fa7b", null ],
+    [ "UnregisterRange", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html#a0451c964f79279911c61c0c807cbc6f3", null ]
+];

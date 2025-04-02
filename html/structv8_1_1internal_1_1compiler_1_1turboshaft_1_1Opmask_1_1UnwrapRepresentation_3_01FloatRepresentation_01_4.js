@@ -1,0 +1,4 @@
+var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Opmask_1_1UnwrapRepresentation_3_01FloatRepresentation_01_4 =
+[
+    [ "type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Opmask_1_1UnwrapRepresentation_3_01FloatRepresentation_01_4.html#a795f43e95fad5ddd9aeaa4f65c1cb82d", null ]
+];

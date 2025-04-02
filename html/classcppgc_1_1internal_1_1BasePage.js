@@ -1,0 +1,35 @@
+var classcppgc_1_1internal_1_1BasePage =
+[
+    [ "PageType", "classcppgc_1_1internal_1_1BasePage.html#a3de0259fe2de103d4696f949fd54baa8", [
+      [ "kNormal", "classcppgc_1_1internal_1_1BasePage.html#a3de0259fe2de103d4696f949fd54baa8a07fa7a19aa722c635a15e94cb7f50416", null ],
+      [ "kLarge", "classcppgc_1_1internal_1_1BasePage.html#a3de0259fe2de103d4696f949fd54baa8a995e7b7e33ea3f37a72770505adf016e", null ]
+    ] ],
+    [ "BasePage", "classcppgc_1_1internal_1_1BasePage.html#af9832087981e329d0655652490374924", null ],
+    [ "BasePage", "classcppgc_1_1internal_1_1BasePage.html#a3bbb9e91a60b4fb2da556ce83b8d73ae", null ],
+    [ "AllocatedBytesAtLastGC", "classcppgc_1_1internal_1_1BasePage.html#a71eddac96ff32bebcfc144ebf78a432b", null ],
+    [ "AllocatedSize", "classcppgc_1_1internal_1_1BasePage.html#a6d9e8a57ad7821c890ee20c125d6a964", null ],
+    [ "ChangeOwner", "classcppgc_1_1internal_1_1BasePage.html#adbc0c4cc1ffb2b3c4c238548298536c9", null ],
+    [ "contains_young_objects", "classcppgc_1_1internal_1_1BasePage.html#a899623e96979432740d1d945126d9698", null ],
+    [ "DecrementMarkedBytes", "classcppgc_1_1internal_1_1BasePage.html#aa2f9fababf00dbebe8fcb9174b7deae6", null ],
+    [ "discarded_memory", "classcppgc_1_1internal_1_1BasePage.html#a0412f90841f734a033ec5101a324474a", null ],
+    [ "heap", "classcppgc_1_1internal_1_1BasePage.html#a1fd6c829347f95514f49a78a9aa3d7f1", null ],
+    [ "IncrementDiscardedMemory", "classcppgc_1_1internal_1_1BasePage.html#a14b0a12d14bef6bea44c0253ee15bce6", null ],
+    [ "IncrementMarkedBytes", "classcppgc_1_1internal_1_1BasePage.html#a6d28f270dfb1319b8e3a288cd23cae35", null ],
+    [ "is_large", "classcppgc_1_1internal_1_1BasePage.html#ab65af9f888c5bde1db2af60c49644e62", null ],
+    [ "marked_bytes", "classcppgc_1_1internal_1_1BasePage.html#a7347680f8fbd6f33fdeb352f08b079e2", null ],
+    [ "ObjectHeaderFromInnerAddress", "classcppgc_1_1internal_1_1BasePage.html#aa716b86439efb5cf4873fc70b80e19e5", null ],
+    [ "ObjectHeaderFromInnerAddress", "classcppgc_1_1internal_1_1BasePage.html#a3e4e942b9d1f96f27df335a9daaacf09", null ],
+    [ "operator=", "classcppgc_1_1internal_1_1BasePage.html#a9a0d635ab4348523fef624b9850aeb1e", null ],
+    [ "PayloadEnd", "classcppgc_1_1internal_1_1BasePage.html#a0132b154f136a3b4229d893f9d0497ab", null ],
+    [ "PayloadEnd", "classcppgc_1_1internal_1_1BasePage.html#a47dea9d7834cfe2185686819d2495907", null ],
+    [ "PayloadStart", "classcppgc_1_1internal_1_1BasePage.html#a89fb5022ace725ee6a48442104b06b32", null ],
+    [ "PayloadStart", "classcppgc_1_1internal_1_1BasePage.html#a97997ccc34c65c720be3b5f1ba95d2c5", null ],
+    [ "ResetDiscardedMemory", "classcppgc_1_1internal_1_1BasePage.html#ab1f6fb2fc65a603faff3b67d00b5052d", null ],
+    [ "ResetMarkedBytes", "classcppgc_1_1internal_1_1BasePage.html#af96bf6afb4cf702bb40bb12f1e88a7da", null ],
+    [ "set_as_containing_young_objects", "classcppgc_1_1internal_1_1BasePage.html#a0c6bf1626997a879cbc7314e6dca310b", null ],
+    [ "space", "classcppgc_1_1internal_1_1BasePage.html#ae0a9a1d2e5cdc4e59260fd62c27689e8", null ],
+    [ "SynchronizedLoad", "classcppgc_1_1internal_1_1BasePage.html#ab9bebea6af5128927c2ae53ed869de3b", null ],
+    [ "SynchronizedStore", "classcppgc_1_1internal_1_1BasePage.html#a00afbe77f9921610214eb023f0ae3dc8", null ],
+    [ "TryObjectHeaderFromInnerAddress", "classcppgc_1_1internal_1_1BasePage.html#a3b306a948898f571b832d85d7746c057", null ],
+    [ "TryObjectHeaderFromInnerAddress", "classcppgc_1_1internal_1_1BasePage.html#a1a3b0f00415c669a307867f9ed5d9592", null ]
+];

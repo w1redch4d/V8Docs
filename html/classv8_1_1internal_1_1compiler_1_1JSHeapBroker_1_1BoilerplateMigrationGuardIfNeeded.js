@@ -1,0 +1,4 @@
+var classv8_1_1internal_1_1compiler_1_1JSHeapBroker_1_1BoilerplateMigrationGuardIfNeeded =
+[
+    [ "BoilerplateMigrationGuardIfNeeded", "classv8_1_1internal_1_1compiler_1_1JSHeapBroker_1_1BoilerplateMigrationGuardIfNeeded.html#ae69ba22f35a91187ea34c8444f1922bf", null ]
+];

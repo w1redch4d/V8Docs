@@ -1,0 +1,58 @@
+var register_riscv_8h =
+[
+    [ "v8::internal::Register", "classv8_1_1internal_1_1Register.html", "classv8_1_1internal_1_1Register" ],
+    [ "v8::internal::VRegister", "classv8_1_1internal_1_1VRegister.html", "classv8_1_1internal_1_1VRegister" ],
+    [ "v8::internal::FPURegister", "classv8_1_1internal_1_1FPURegister.html", "classv8_1_1internal_1_1FPURegister" ],
+    [ "ALLOCATABLE_DOUBLE_REGISTERS", "register-riscv_8h.html#a64deb731200fafa6d62cc0cfc21f8241", null ],
+    [ "ALLOCATABLE_GENERAL_REGISTERS", "register-riscv_8h.html#a9aa945c04e3e53cc56bd34ca0f8cf12f", null ],
+    [ "ALLOCATABLE_SIMD128_REGISTERS", "register-riscv_8h.html#a93f868f9f7eb738d29bd99492fb9551e", null ],
+    [ "ALWAYS_ALLOCATABLE_GENERAL_REGISTERS", "register-riscv_8h.html#a3b79b61aaed58272a17800a2329afdf8", null ],
+    [ "DECLARE_DOUBLE_REGISTER", "register-riscv_8h.html#a72331a30470c93ba3e7c951d6088a5c1", null ],
+    [ "DECLARE_REGISTER", "register-riscv_8h.html#ac1fe813efc233d386ff48874fa5beb2b", null ],
+    [ "DECLARE_VECTOR_REGISTER", "register-riscv_8h.html#a5c66cb1e01517e72e76deddb15bcfaa9", null ],
+    [ "DOUBLE_REGISTERS", "register-riscv_8h.html#ada5d54017d447835f4c60a12e19a8c63", null ],
+    [ "FLOAT_REGISTERS", "register-riscv_8h.html#a183ae45f47122dcf640123e7b7cbd09e", null ],
+    [ "GENERAL_REGISTERS", "register-riscv_8h.html#a15589d1b473b8d16bb98adcf2da0941f", null ],
+    [ "MAYBE_ALLOCATABLE_GENERAL_REGISTERS", "register-riscv_8h.html#afcaa03bead4733e654591281c60957de", null ],
+    [ "REGISTER_CODE", "register-riscv_8h.html#a992561d9148de018f89e9094649e8e28", null ],
+    [ "REGISTER_CODE", "register-riscv_8h.html#a992561d9148de018f89e9094649e8e28", null ],
+    [ "REGISTER_CODE", "register-riscv_8h.html#a992561d9148de018f89e9094649e8e28", null ],
+    [ "VECTOR_REGISTERS", "register-riscv_8h.html#aa1e849901968a4324e0d46a5fefc3aa4", null ],
+    [ "DoubleRegisterCode", "register-riscv_8h.html#ad3a68800e1cd69257bcff1997092072c", [
+      [ "kDoubleAfterLast", "register-riscv_8h.html#ad3a68800e1cd69257bcff1997092072caeb443f13d5eb8c6a6f05d4585e0616d8", null ],
+      [ "kDoubleAfterLast", "register-riscv_8h.html#ad3a68800e1cd69257bcff1997092072caeb443f13d5eb8c6a6f05d4585e0616d8", null ],
+      [ "kDoubleAfterLast", "register-riscv_8h.html#ad3a68800e1cd69257bcff1997092072caeb443f13d5eb8c6a6f05d4585e0616d8", null ],
+      [ "kDoubleAfterLast", "register-riscv_8h.html#ad3a68800e1cd69257bcff1997092072caeb443f13d5eb8c6a6f05d4585e0616d8", null ],
+      [ "kDoubleAfterLast", "register-riscv_8h.html#ad3a68800e1cd69257bcff1997092072caeb443f13d5eb8c6a6f05d4585e0616d8", null ],
+      [ "kDoubleAfterLast", "register-riscv_8h.html#ad3a68800e1cd69257bcff1997092072caeb443f13d5eb8c6a6f05d4585e0616d8", null ],
+      [ "kDoubleAfterLast", "register-riscv_8h.html#ad3a68800e1cd69257bcff1997092072caeb443f13d5eb8c6a6f05d4585e0616d8", null ],
+      [ "kDoubleAfterLast", "register-riscv_8h.html#ad3a68800e1cd69257bcff1997092072caeb443f13d5eb8c6a6f05d4585e0616d8", null ]
+    ] ],
+    [ "RegisterCode", "register-riscv_8h.html#a5d1b8d6b5da233dee5acb35e984dba91", [
+      [ "kRegAfterLast", "register-riscv_8h.html#a5d1b8d6b5da233dee5acb35e984dba91a100f1d6c3bf137d1960b69567af83cc2", null ],
+      [ "kRegAfterLast", "register-riscv_8h.html#a5d1b8d6b5da233dee5acb35e984dba91a100f1d6c3bf137d1960b69567af83cc2", null ],
+      [ "kRegAfterLast", "register-riscv_8h.html#a5d1b8d6b5da233dee5acb35e984dba91a100f1d6c3bf137d1960b69567af83cc2", null ],
+      [ "kRegAfterLast", "register-riscv_8h.html#a5d1b8d6b5da233dee5acb35e984dba91a100f1d6c3bf137d1960b69567af83cc2", null ],
+      [ "kRegAfterLast", "register-riscv_8h.html#a5d1b8d6b5da233dee5acb35e984dba91a100f1d6c3bf137d1960b69567af83cc2", null ],
+      [ "kRegAfterLast", "register-riscv_8h.html#a5d1b8d6b5da233dee5acb35e984dba91a100f1d6c3bf137d1960b69567af83cc2", null ],
+      [ "kRegAfterLast", "register-riscv_8h.html#a5d1b8d6b5da233dee5acb35e984dba91a100f1d6c3bf137d1960b69567af83cc2", null ],
+      [ "kRegAfterLast", "register-riscv_8h.html#a5d1b8d6b5da233dee5acb35e984dba91a100f1d6c3bf137d1960b69567af83cc2", null ],
+      [ "kRegAfterLast", "register-riscv_8h.html#a5d1b8d6b5da233dee5acb35e984dba91a100f1d6c3bf137d1960b69567af83cc2", null ]
+    ] ],
+    [ "VRegisterCode", "register-riscv_8h.html#addaf00b0c7a644f2e3efc0bbaea4a481", [
+      [ "kVRAfterLast", "register-riscv_8h.html#addaf00b0c7a644f2e3efc0bbaea4a481a91f8d5aa8ec3db9ecd4e61b6252bf47c", null ]
+    ] ],
+    [ "ArgumentPaddingSlots", "register-riscv_8h.html#acd38bb6e1776004e1aca3c1d17f49e2e", null ],
+    [ "ReassignRegister", "register-riscv_8h.html#abda4a55a899184dca5308bde33e5283c", null ],
+    [ "ToNumber", "register-riscv_8h.html#a5a857fe236959ea037b3dd560a3414f0", null ],
+    [ "ToRegister", "register-riscv_8h.html#aad4614e9eaee9371d87d0f56ffb440e3", null ],
+    [ "kMaglevFlagsRegister", "register-riscv_8h.html#ada1ca878abab0c76b84c013ce9e330df", null ],
+    [ "kPadArguments", "register-riscv_8h.html#a92a7e83fbe481bc2720837476f3c6b9c", null ],
+    [ "kSafepointRegisterStackIndexMap", "register-riscv_8h.html#ac436a4fa1fbdad3777f2aeb9ba250457", null ],
+    [ "kSimd128ScratchReg2", "register-riscv_8h.html#a5e9aa68b3fc15e39ae21c4a1ec5f2eec", null ],
+    [ "kSimd128ScratchReg3", "register-riscv_8h.html#a98af270b03f54aabe75bb7123321befb", null ],
+    [ "kSimulatorBreakArgument", "register-riscv_8h.html#a6427e0a3987534d4dd2a032b2ae41402", null ],
+    [ "kSingleRegZero", "register-riscv_8h.html#a709ceb6db419bdd01fd58cfe464ce943", null ],
+    [ "kUndefIndex", "register-riscv_8h.html#ae6fabe8bafe302f332c9f1035eecbc83", null ],
+    [ "padreg", "register-riscv_8h.html#afe37e12f36a26345439ef209c3d11e1d", null ]
+];

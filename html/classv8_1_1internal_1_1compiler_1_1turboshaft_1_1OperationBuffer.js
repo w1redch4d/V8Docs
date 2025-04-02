@@ -1,0 +1,20 @@
+var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer =
+[
+    [ "ReplaceScope", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer_1_1ReplaceScope.html", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer_1_1ReplaceScope" ],
+    [ "OperationBuffer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a00999609a046525c9095d14e815343a3", null ],
+    [ "Allocate", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#ab1fe64ac93c9a8b179caac414244671d", null ],
+    [ "BeginIndex", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a8ffa4a5016a85192c761b3fc70973eec", null ],
+    [ "capacity", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a0b96b90b7270860e3191fc40ad9fbf18", null ],
+    [ "EndIndex", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a4923671d41462d0f20811211ec1b4f04", null ],
+    [ "Get", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a0fc361c80db3537818a80cca8374fe3a", null ],
+    [ "Get", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#aa8a12560ff0abc386099d947f6ae38f1", null ],
+    [ "Grow", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a409b20b89101789137f7f205c90a811a", null ],
+    [ "Index", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#aca3b2beb3390b4a80668fb3a5d519adf", null ],
+    [ "Index", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a789a2cf5a8962a282eae62e229b7fabc", null ],
+    [ "Next", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#aa2b1c83d3f1416bafed698a1acd34157", null ],
+    [ "Previous", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a3322ec76252e68f285f2e272985d056d", null ],
+    [ "RemoveLast", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a90e7526135709e6a20f192bbfa6ba327", null ],
+    [ "Reset", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a1f0ac1639d9573e6e558d6c8c21da973", null ],
+    [ "size", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a24f3cfe4c7354b4047fd6e2951b95a81", null ],
+    [ "SlotCount", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a01eec5c7fd74c604c50cffbbfcdf2c23", null ]
+];

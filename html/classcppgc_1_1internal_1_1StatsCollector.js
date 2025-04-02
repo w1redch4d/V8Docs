@@ -1,0 +1,48 @@
+var classcppgc_1_1internal_1_1StatsCollector =
+[
+    [ "AllocationObserver", "classcppgc_1_1internal_1_1StatsCollector_1_1AllocationObserver.html", "classcppgc_1_1internal_1_1StatsCollector_1_1AllocationObserver" ],
+    [ "Event", "structcppgc_1_1internal_1_1StatsCollector_1_1Event.html", "structcppgc_1_1internal_1_1StatsCollector_1_1Event" ],
+    [ "DisabledConcurrentScope", "classcppgc_1_1internal_1_1StatsCollector.html#a21c9432b4ddabacb43e1a59d8432c998", null ],
+    [ "DisabledScope", "classcppgc_1_1internal_1_1StatsCollector.html#a77627d8d1bfb30be9c6fc20175b08000", null ],
+    [ "EnabledConcurrentScope", "classcppgc_1_1internal_1_1StatsCollector.html#a14b64b4a2b16d3eb1e5e5be64792d06a", null ],
+    [ "EnabledScope", "classcppgc_1_1internal_1_1StatsCollector.html#a84f776d47ac0f9fb8a4cbb0dd5a86037", null ],
+    [ "MarkingType", "classcppgc_1_1internal_1_1StatsCollector.html#a37592372178fe3b50c4669471c83939e", null ],
+    [ "SweepingType", "classcppgc_1_1internal_1_1StatsCollector.html#a0a98c0d3317c5606fa2c7f2cc96350d6", null ],
+    [ "ConcurrentScopeId", "classcppgc_1_1internal_1_1StatsCollector.html#a8c9e5f1ab9b9d543c796b8a6f610f597", [
+      [ "kNumHistogramConcurrentScopeIds", "classcppgc_1_1internal_1_1StatsCollector.html#a8c9e5f1ab9b9d543c796b8a6f610f597a989a608e825b29e5b10787a8b8853c9b", null ],
+      [ "kNumConcurrentScopeIds", "classcppgc_1_1internal_1_1StatsCollector.html#a8c9e5f1ab9b9d543c796b8a6f610f597aeafb7820e131084887d2b112947bfc33", null ]
+    ] ],
+    [ "ScopeId", "classcppgc_1_1internal_1_1StatsCollector.html#af549198afe9620b919765b20fb42a9fb", [
+      [ "kNumHistogramScopeIds", "classcppgc_1_1internal_1_1StatsCollector.html#af549198afe9620b919765b20fb42a9fbaa053cf89c69878955bbc84315fe58ddf", null ],
+      [ "kNumScopeIds", "classcppgc_1_1internal_1_1StatsCollector.html#af549198afe9620b919765b20fb42a9fba677d8cc207cea7f0dd061fb59592189e", null ]
+    ] ],
+    [ "StatsCollector", "classcppgc_1_1internal_1_1StatsCollector.html#a8ac74150d4cc2290e22c5f3f5c7a3e0c", null ],
+    [ "StatsCollector", "classcppgc_1_1internal_1_1StatsCollector.html#af4bf457ee1bdf7d49fdc3bb2b0c08e2f", null ],
+    [ "allocated_memory_size", "classcppgc_1_1internal_1_1StatsCollector.html#a5918a1fccd8225a4bd6802487c71c97e", null ],
+    [ "allocated_object_size", "classcppgc_1_1internal_1_1StatsCollector.html#a73f51180cb1cfd0b7eae5b7eb159f965", null ],
+    [ "DecrementDiscardedMemory", "classcppgc_1_1internal_1_1StatsCollector.html#a3f1aaf696059287fd6e20c8a502ce125", null ],
+    [ "discarded_memory_size", "classcppgc_1_1internal_1_1StatsCollector.html#acb9144ca1ea32a4d7ab86c72abdd816d", null ],
+    [ "GetMetricRecorder", "classcppgc_1_1internal_1_1StatsCollector.html#a9fb139c58d2ff76498bbc62bdf4ae583", null ],
+    [ "GetPreviousEventForTesting", "classcppgc_1_1internal_1_1StatsCollector.html#a00482762bc982a9f9a54a227d3a366aa", null ],
+    [ "GetRecentAllocationSpeedInBytesPerMs", "classcppgc_1_1internal_1_1StatsCollector.html#a189728359f000b57fa64c2bc67a12665", null ],
+    [ "IncrementDiscardedMemory", "classcppgc_1_1internal_1_1StatsCollector.html#ad507372a785cdfa1abb135a583fdd545", null ],
+    [ "marked_bytes", "classcppgc_1_1internal_1_1StatsCollector.html#ad4cf92d8691de9fcb2d6af7cadeb9a9a", null ],
+    [ "marked_bytes_on_current_cycle", "classcppgc_1_1internal_1_1StatsCollector.html#a32b806e61caeb0f80503520c0e01d463", null ],
+    [ "marking_time", "classcppgc_1_1internal_1_1StatsCollector.html#a52f722114b2602e93cf92d6c426fe47c", null ],
+    [ "NotifyAllocatedMemory", "classcppgc_1_1internal_1_1StatsCollector.html#ad7390dadea155253664b0e8c7af7603a", null ],
+    [ "NotifyAllocation", "classcppgc_1_1internal_1_1StatsCollector.html#ac7274c8cffff5012046ae7e316c70f24", null ],
+    [ "NotifyExplicitFree", "classcppgc_1_1internal_1_1StatsCollector.html#ab128748a5b3937b920ded4dd1e744810", null ],
+    [ "NotifyFreedMemory", "classcppgc_1_1internal_1_1StatsCollector.html#aaf01b91072648b3bcddad880dbffa5b3", null ],
+    [ "NotifyMarkingCompleted", "classcppgc_1_1internal_1_1StatsCollector.html#a7eb687fe410d613574bed04a610915d4", null ],
+    [ "NotifyMarkingStarted", "classcppgc_1_1internal_1_1StatsCollector.html#abdcdfc9b3a8de7189a42999edbd23c94", null ],
+    [ "NotifySafePointForConservativeCollection", "classcppgc_1_1internal_1_1StatsCollector.html#af4a3c91bef0011ce0d4ffd8b8fb3ccf9", null ],
+    [ "NotifySafePointForTesting", "classcppgc_1_1internal_1_1StatsCollector.html#ae571f17b4ebb35832eee366e190c000a", null ],
+    [ "NotifySweepingCompleted", "classcppgc_1_1internal_1_1StatsCollector.html#aba57596b172b1392d63085d07b6decb1", null ],
+    [ "NotifyUnmarkingStarted", "classcppgc_1_1internal_1_1StatsCollector.html#a8e847c83c24be2cab9d849e8a4c41fd9", null ],
+    [ "operator=", "classcppgc_1_1internal_1_1StatsCollector.html#a5b423b0d563d09504347819e7797bf5a", null ],
+    [ "RegisterObserver", "classcppgc_1_1internal_1_1StatsCollector.html#a57cac0c9b6d4f9b1e21a61132642d70c", null ],
+    [ "ResetDiscardedMemory", "classcppgc_1_1internal_1_1StatsCollector.html#ab27d34434c630e19d33155a73695d32c", null ],
+    [ "resident_memory_size", "classcppgc_1_1internal_1_1StatsCollector.html#a76a205a8eebfcf8c1c3981d4306da1a7", null ],
+    [ "SetMetricRecorder", "classcppgc_1_1internal_1_1StatsCollector.html#a7c0231949e652dbb5115e3cfe8fa9467", null ],
+    [ "UnregisterObserver", "classcppgc_1_1internal_1_1StatsCollector.html#a728aad7a1817a49929c0c813f524cc86", null ]
+];

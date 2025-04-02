@@ -1,0 +1,4 @@
+var structv8_1_1internal_1_1compiler_1_1MachineOperatorGlobalCache_1_1NormalWord64SarOperator =
+[
+    [ "NormalWord64SarOperator", "structv8_1_1internal_1_1compiler_1_1MachineOperatorGlobalCache_1_1NormalWord64SarOperator.html#a7dc75fed8d27ec1fdfc7dead8929e106", null ]
+];

@@ -1,0 +1,26 @@
+var classv8_1_1internal_1_1ExpressionParsingScope =
+[
+    [ "ExpressionScopeT", "classv8_1_1internal_1_1ExpressionParsingScope.html#ac96b06249f5f01652c29b210c12dd4c2", null ],
+    [ "ExpressionT", "classv8_1_1internal_1_1ExpressionParsingScope.html#a6b7d389f7f2198b3a416ac3dc950290d", null ],
+    [ "ParserT", "classv8_1_1internal_1_1ExpressionParsingScope.html#ab1c919a769c079c545cd17e85384e451", null ],
+    [ "ScopeType", "classv8_1_1internal_1_1ExpressionParsingScope.html#aaedd2a2e2b4a9e552a226bf10b0a1839", null ],
+    [ "ExpressionParsingScope", "classv8_1_1internal_1_1ExpressionParsingScope.html#affe1661e350ce48ea5d8b29ede649685", null ],
+    [ "ExpressionParsingScope", "classv8_1_1internal_1_1ExpressionParsingScope.html#a71161f04e76a6435ab1f3ac3452bddac", null ],
+    [ "~ExpressionParsingScope", "classv8_1_1internal_1_1ExpressionParsingScope.html#aa403d07e862cc8ebacf22f1bc07fb23d", null ],
+    [ "ClearExpressionError", "classv8_1_1internal_1_1ExpressionParsingScope.html#a3a805d5c920bc09a8edab0937ee4041c", null ],
+    [ "ClearPatternError", "classv8_1_1internal_1_1ExpressionParsingScope.html#aa686d5e16921ee010d404bae6477984f", null ],
+    [ "is_verified", "classv8_1_1internal_1_1ExpressionParsingScope.html#a17d11b16ca1d056f8d1eb276299061e5", null ],
+    [ "MarkIdentifierAsAssigned", "classv8_1_1internal_1_1ExpressionParsingScope.html#aac080017aacedb657bdc33acf1d11fe9", null ],
+    [ "operator=", "classv8_1_1internal_1_1ExpressionParsingScope.html#ad92c13401066d565d82b841d820c39bb", null ],
+    [ "RecordAsyncArrowParametersError", "classv8_1_1internal_1_1ExpressionParsingScope.html#ac75d421604a401861368e62e6fcb6479", null ],
+    [ "RecordExpressionError", "classv8_1_1internal_1_1ExpressionParsingScope.html#a5b5efdf84868f236027f45ce013e9d18", null ],
+    [ "RecordPatternError", "classv8_1_1internal_1_1ExpressionParsingScope.html#ae084bf5178b2acb849256c40ec7f6129", null ],
+    [ "SetInitializers", "classv8_1_1internal_1_1ExpressionParsingScope.html#a8486ab8f10db0bdb9562d7df77d804c7", null ],
+    [ "TrackVariable", "classv8_1_1internal_1_1ExpressionParsingScope.html#aa37e3af8f35fe7891b17c83d783bd1dd", null ],
+    [ "ValidateAndRewriteReference", "classv8_1_1internal_1_1ExpressionParsingScope.html#a940ca593812fcc6303ba0474f136de23", null ],
+    [ "ValidateExpression", "classv8_1_1internal_1_1ExpressionParsingScope.html#a0ba221e0a4196b747e1a25eb9d00dfab", null ],
+    [ "ValidatePattern", "classv8_1_1internal_1_1ExpressionParsingScope.html#a37a0a5668d1f451a0cabe6ac642e348d", null ],
+    [ "ValidatePattern", "classv8_1_1internal_1_1ExpressionParsingScope.html#af9b0b7c984f7fa6f83c3eeb6900b3e2f", null ],
+    [ "variable_list", "classv8_1_1internal_1_1ExpressionParsingScope.html#ad2bc2b8947389531c3e3874b16a5a2a2", null ],
+    [ "AccumulationScope< Types >", "classv8_1_1internal_1_1ExpressionParsingScope.html#a3e81dc26625797ea24ecaa928b424dbb", null ]
+];

@@ -1,0 +1,4 @@
+var structv8_1_1internal_1_1compiler_1_1MachineOperatorGlobalCache_1_1SetOverflowToMinTruncateFloat64ToInt64Operator =
+[
+    [ "SetOverflowToMinTruncateFloat64ToInt64Operator", "structv8_1_1internal_1_1compiler_1_1MachineOperatorGlobalCache_1_1SetOverflowToMinTruncateFloat64ToInt64Operator.html#a33cc600575dac9e5b9a0f2d9c33379eb", null ]
+];

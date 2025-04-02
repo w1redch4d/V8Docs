@@ -1,0 +1,4 @@
+var classstd_1_1iterator__traits_3_01v8_1_1internal_1_1compiler_1_1turboshaft_1_1PredecessorIterator_01_4 =
+[
+    [ "iterator_category", "classstd_1_1iterator__traits_3_01v8_1_1internal_1_1compiler_1_1turboshaft_1_1PredecessorIterator_01_4.html#a9036521d03d49b64793288baa961a3e1", null ]
+];

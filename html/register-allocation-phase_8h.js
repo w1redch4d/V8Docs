@@ -1,0 +1,21 @@
+var register_allocation_phase_8h =
+[
+    [ "v8::internal::compiler::turboshaft::MeetRegisterConstraintsPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MeetRegisterConstraintsPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MeetRegisterConstraintsPhase" ],
+    [ "v8::internal::compiler::turboshaft::ResolvePhisPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ResolvePhisPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ResolvePhisPhase" ],
+    [ "v8::internal::compiler::turboshaft::BuildLiveRangesPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuildLiveRangesPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuildLiveRangesPhase" ],
+    [ "v8::internal::compiler::turboshaft::BuildLiveRangeBundlesPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuildLiveRangeBundlesPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuildLiveRangeBundlesPhase" ],
+    [ "v8::internal::compiler::turboshaft::AllocateGeneralRegistersPhase< RegAllocator >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateGeneralRegistersPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateGeneralRegistersPhase" ],
+    [ "v8::internal::compiler::turboshaft::AllocateFPRegistersPhase< RegAllocator >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateFPRegistersPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateFPRegistersPhase" ],
+    [ "v8::internal::compiler::turboshaft::AllocateSimd128RegistersPhase< RegAllocator >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateSimd128RegistersPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateSimd128RegistersPhase" ],
+    [ "v8::internal::compiler::turboshaft::DecideSpillingModePhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1DecideSpillingModePhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1DecideSpillingModePhase" ],
+    [ "v8::internal::compiler::turboshaft::AssignSpillSlotsPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AssignSpillSlotsPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AssignSpillSlotsPhase" ],
+    [ "v8::internal::compiler::turboshaft::CommitAssignmentPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CommitAssignmentPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CommitAssignmentPhase" ],
+    [ "v8::internal::compiler::turboshaft::PopulateReferenceMapsPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1PopulateReferenceMapsPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1PopulateReferenceMapsPhase" ],
+    [ "v8::internal::compiler::turboshaft::ConnectRangesPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConnectRangesPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConnectRangesPhase" ],
+    [ "v8::internal::compiler::turboshaft::ResolveControlFlowPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ResolveControlFlowPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ResolveControlFlowPhase" ],
+    [ "v8::internal::compiler::turboshaft::OptimizeMovesPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OptimizeMovesPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OptimizeMovesPhase" ],
+    [ "v8::internal::compiler::turboshaft::FrameElisionPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FrameElisionPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FrameElisionPhase" ],
+    [ "v8::internal::compiler::turboshaft::JumpThreadingPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1JumpThreadingPhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1JumpThreadingPhase" ],
+    [ "v8::internal::compiler::turboshaft::AssembleCodePhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AssembleCodePhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AssembleCodePhase" ],
+    [ "v8::internal::compiler::turboshaft::FinalizeCodePhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FinalizeCodePhase.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FinalizeCodePhase" ]
+];

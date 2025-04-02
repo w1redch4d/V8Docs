@@ -1,0 +1,5 @@
+var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstanceAndMarkMapAsMigrationTarget =
+[
+    [ "arguments_t", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstanceAndMarkMapAsMigrationTarget.html#aa36d851a66c5ab511f452feec90816e7", null ],
+    [ "result_t", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstanceAndMarkMapAsMigrationTarget.html#adca132f783bba70fe538bee8fca33807", null ]
+];

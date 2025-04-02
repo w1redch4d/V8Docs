@@ -1,0 +1,24 @@
+var classv8_1_1internal_1_1maglev_1_1InlinedAllocation =
+[
+    [ "List", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#af5d62a1bd0669cfb70c154f8604196d2", null ],
+    [ "InlinedAllocation", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a7389e8aab812f92a141c254321a467a8", null ],
+    [ "AddNonEscapingUses", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a8c1bc0c4d9b2bb60d9400c6fb08de963", null ],
+    [ "allocation_block", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#ad2bc2882fcf331565bb91608b9f859a2", null ],
+    [ "ForceEscaping", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a29072f956d278be5312b53e86d34d9d8", null ],
+    [ "GenerateCode", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a62bb22c062ba420f98ab9abc717c5a7b", null ],
+    [ "HasBeenAnalysed", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#aadd2e0bbed07a10341f1be49853cf0ec", null ],
+    [ "HasBeenElided", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a37ca998497150a6f2573a77c922bf13f", null ],
+    [ "HasEscaped", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a6425c91e9f82343b6596f0dd8dd2f2ba", null ],
+    [ "IsEscaping", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a8980aba75d158f003952277a7f12f0a0", null ],
+    [ "non_escaping_use_count", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a2cf0f1e833730ccc6fac22d8d061f183", null ],
+    [ "object", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#adb2b465cc915e87e9e056f175d487eba", null ],
+    [ "offset", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#ac323851241154b71459bd5f4de0d7a02", null ],
+    [ "PrintParams", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#ae56bf1c758235a767f3bb3334bcf6fb5", null ],
+    [ "set_offset", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#ab7498ca93c7073573ff74af16e2b5790", null ],
+    [ "SetElided", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a15084016da74a9b3c8a24eaf8e9adee4", null ],
+    [ "SetEscaped", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a59d6204d5b7970c723d950f359b609c6", null ],
+    [ "SetValueLocationConstraints", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a8846d8c399fbc400d5cc0633009a568d", null ],
+    [ "size", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a61de6cb459ebf62d23081820c9ed2308", null ],
+    [ "UpdateObject", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a595511ecb92e7bb2d0419c8b5bf2d2cd", null ],
+    [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1InlinedAllocation.html#a22a19952758feb905d9c3a9a46e80bb6", null ]
+];

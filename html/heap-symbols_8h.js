@@ -1,0 +1,27 @@
+var heap_symbols_8h =
+[
+    [ "EXTRA_IMPORTANT_INTERNALIZED_STRING_LIST_GENERATOR", "heap-symbols_8h.html#a8abdcb7834ab3b7f5dd4b953a0f3ab0b", null ],
+    [ "IMPORTANT_INTERNALIZED_STRING_LIST_GENERATOR", "heap-symbols_8h.html#a506c32c147b66f3513d175ce157f5e16", null ],
+    [ "IMPORTANT_PRIVATE_SYMBOL_LIST_GENERATOR", "heap-symbols_8h.html#afe25810578f4a1ff3558030d76f37b8b", null ],
+    [ "INTERNALIZED_STRING_FOR_PROTECTOR_LIST_GENERATOR", "heap-symbols_8h.html#a041ef708b2b53d88ab04fba7b6a1e1b1", null ],
+    [ "INTERNALIZED_STRING_LIST_GENERATOR", "heap-symbols_8h.html#ac81a2e02273118f4747b410c0e2121b6", null ],
+    [ "INTERNALIZED_STRING_LIST_GENERATOR_INTL", "heap-symbols_8h.html#aa9bdb1558025922fe6b3585597e52537", null ],
+    [ "MC_INCREMENTAL_SCOPES", "heap-symbols_8h.html#adc727768a7eee32368cdb1a484d3ed83", null ],
+    [ "MC_MAIN_THREAD_SCOPES", "heap-symbols_8h.html#a522c76aba840477993b16e1feefcb56c", null ],
+    [ "MINOR_MS_INCREMENTAL_SCOPES", "heap-symbols_8h.html#ab6b6207ee5b4bd4e73e11fef3ba5dff4", null ],
+    [ "MINOR_MS_MAIN_THREAD_SCOPES", "heap-symbols_8h.html#aa84acc96d6be273c96e4f7984abee47a", null ],
+    [ "NOT_IMPORTANT_INTERNALIZED_STRING_LIST_GENERATOR", "heap-symbols_8h.html#a622e415faef0ec97213a0379318fa8cd", null ],
+    [ "NOT_IMPORTANT_PRIVATE_SYMBOL_LIST_GENERATOR", "heap-symbols_8h.html#ad0e27b3505367657563408b8b69e204c", null ],
+    [ "PRIVATE_SYMBOL_LIST_GENERATOR", "heap-symbols_8h.html#aa9b356e4853b554460b48db1d9ff10bb", null ],
+    [ "PUBLIC_SYMBOL_FOR_PROTECTOR_LIST_GENERATOR", "heap-symbols_8h.html#a98ff7a8d3afe09eb21ebf514cc6462d2", null ],
+    [ "PUBLIC_SYMBOL_LIST_GENERATOR", "heap-symbols_8h.html#a63d277994c56f578465a3ce3e388485f", null ],
+    [ "SCAVENGER_MAIN_THREAD_SCOPES", "heap-symbols_8h.html#abc2119d3b5975acaeb3f3a7cee558cf2", null ],
+    [ "SYMBOL_FOR_PROTECTOR_LIST_GENERATOR", "heap-symbols_8h.html#a964f25ecc61d5c329a8ee5a28f971be9", null ],
+    [ "TOP_MC_SCOPES", "heap-symbols_8h.html#a6408aa1d97bc0d94bce81304103adb26", null ],
+    [ "TOP_MINOR_MS_SCOPES", "heap-symbols_8h.html#a1d0d51cc852c7c4f1113fc7c5dea9e5d", null ],
+    [ "TRACER_BACKGROUND_SCOPES", "heap-symbols_8h.html#ae459a15bfc1e3e36ffde19b1817df283", null ],
+    [ "TRACER_SCOPES", "heap-symbols_8h.html#a8da43ddae15b0009dbbb370907ec8038", null ],
+    [ "TRACER_YOUNG_EPOCH_SCOPES", "heap-symbols_8h.html#a1395ea2624b7738bb845bf4436548684", null ],
+    [ "WELL_KNOWN_SYMBOL_FOR_PROTECTOR_LIST_GENERATOR", "heap-symbols_8h.html#a72dff5a3170737b7cd29a679abfd31b7", null ],
+    [ "WELL_KNOWN_SYMBOL_LIST_GENERATOR", "heap-symbols_8h.html#a0254f752dc99372bd6643789c25251e3", null ]
+];

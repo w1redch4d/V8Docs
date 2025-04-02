@@ -1,0 +1,37 @@
+var wasm_opcodes_inl_8h =
+[
+    [ "CASE", "wasm-opcodes-inl_8h.html#a3b9c2bfe5a606ed65453c639676f2710", null ],
+    [ "CASE", "wasm-opcodes-inl_8h.html#a3b9c2bfe5a606ed65453c639676f2710", null ],
+    [ "CASE", "wasm-opcodes-inl_8h.html#a3b9c2bfe5a606ed65453c639676f2710", null ],
+    [ "CASE", "wasm-opcodes-inl_8h.html#a3b9c2bfe5a606ed65453c639676f2710", null ],
+    [ "CASE", "wasm-opcodes-inl_8h.html#a3b9c2bfe5a606ed65453c639676f2710", null ],
+    [ "CASE", "wasm-opcodes-inl_8h.html#a3b9c2bfe5a606ed65453c639676f2710", null ],
+    [ "CASE", "wasm-opcodes-inl_8h.html#a79febc5ff7ee11e13559e3a6ffa577d2", null ],
+    [ "CASE", "wasm-opcodes-inl_8h.html#a51d06ed11cce06568994cc78f35b60b8", null ],
+    [ "CHECK_OPCODE", "wasm-opcodes-inl_8h.html#a8aa933d9f88b6897bc44ce9caf1a4efe", null ],
+    [ "CHECK_OPCODE", "wasm-opcodes-inl_8h.html#a4b3aea3f72aec1970b61b26e2f347ee9", null ],
+    [ "CHECK_PREFIX", "wasm-opcodes-inl_8h.html#aba701b275b36bcf379e142cf729c1434", null ],
+    [ "DECLARE_SIG", "wasm-opcodes-inl_8h.html#a3d413d8c024db8f592977e1630434696", null ],
+    [ "DECLARE_SIG_ENTRY", "wasm-opcodes-inl_8h.html#a200ce6dae30b21d7e8e9658c1c3db923", null ],
+    [ "DECLARE_SIG_ENUM", "wasm-opcodes-inl_8h.html#adb82661d3fdc08ec96eff325249f8355", null ],
+    [ "MESSAGE_TO_TRAPREASON", "wasm-opcodes-inl_8h.html#a90f38e0c9d0d788b3444f2889fd41a5e", null ],
+    [ "TRAPREASON_TO_MESSAGE", "wasm-opcodes-inl_8h.html#a5e2d172a0984e352cc39cfc50b7feb83", null ],
+    [ "WasmOpcodeSig", "wasm-opcodes-inl_8h.html#a5cfa2fdf653cbb5960cf67ae133e3ca4", [
+      [ "kSigEnum_None", "wasm-opcodes-inl_8h.html#a5cfa2fdf653cbb5960cf67ae133e3ca4ad2575c7ebfdf6d588bc9395d7430003b", null ]
+    ] ],
+    [ "GetAsmJsOpcodeSigIndex", "wasm-opcodes-inl_8h.html#acfcd70491e34a38f7a7dc2c1c4933342", null ],
+    [ "GetAtomicOpcodeMem32SigIndex", "wasm-opcodes-inl_8h.html#a9884cfa3f2075434f73eed6811715e10", null ],
+    [ "GetAtomicOpcodeMem64SigIndex", "wasm-opcodes-inl_8h.html#a0eec9732a4a624df0bba983dff63d2fc", null ],
+    [ "GetNumericOpcodeSigIndex", "wasm-opcodes-inl_8h.html#abe9d7e6889c84462ce83079b8640c597", null ],
+    [ "GetRelaxedSimdOpcodeSigIndex", "wasm-opcodes-inl_8h.html#a4db7f2b8528515f6c1d9b0bef1861e66", null ],
+    [ "GetShortOpcodeSigIndex", "wasm-opcodes-inl_8h.html#ac76d6066cf1b3d1418ae8374f5bba673", null ],
+    [ "GetSimdOpcodeSigIndex", "wasm-opcodes-inl_8h.html#a19c0ef31725a4f7070998f651510c75c", null ],
+    [ "kAtomicExprSigTableMem32", "wasm-opcodes-inl_8h.html#a7fdddc11ab57dd582771a7841369ee66", null ],
+    [ "kAtomicExprSigTableMem64", "wasm-opcodes-inl_8h.html#aec047736d33960972c5b78479cc49481", null ],
+    [ "kCachedSigs", "wasm-opcodes-inl_8h.html#a2c314937057452aa204491e7101b05d1", null ],
+    [ "kNumericExprSigTable", "wasm-opcodes-inl_8h.html#ac17bfc20db1fda6504bd989b6395b96e", null ],
+    [ "kRelaxedSimdExprSigTable", "wasm-opcodes-inl_8h.html#a5277eb25a1918d6f7dace725465bbc98", null ],
+    [ "kShortSigTable", "wasm-opcodes-inl_8h.html#a7e930f452a6e46b0aceee3e9d968b62c", null ],
+    [ "kSimdExprSigTable", "wasm-opcodes-inl_8h.html#ad822923877eef9f2e2250d8e1ed751bd", null ],
+    [ "kSimpleAsmjsExprSigTable", "wasm-opcodes-inl_8h.html#a872651a895ab224e0e601501eb19bb03", null ]
+];

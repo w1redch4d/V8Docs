@@ -1,0 +1,24 @@
+var classv8_1_1internal_1_1PerfettoLogger =
+[
+    [ "PerfettoLogger", "classv8_1_1internal_1_1PerfettoLogger.html#a37b346240329cf5ae635677e11f7defc", null ],
+    [ "~PerfettoLogger", "classv8_1_1internal_1_1PerfettoLogger.html#ae85c9048194042a39763dd28ab856456", null ],
+    [ "BytecodeMoveEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a257ddc6493ae54b861322c8c2c03328e", null ],
+    [ "CallbackEvent", "classv8_1_1internal_1_1PerfettoLogger.html#afbeba9ac15b32d784d1841987bd70a36", null ],
+    [ "CodeCreateEvent", "classv8_1_1internal_1_1PerfettoLogger.html#ad8873b3ef9f946f1921714155fbd84b7", null ],
+    [ "CodeCreateEvent", "classv8_1_1internal_1_1PerfettoLogger.html#ac543663045707c0c855512caaa351926", null ],
+    [ "CodeCreateEvent", "classv8_1_1internal_1_1PerfettoLogger.html#ae9f1b0e3982e0bc7ee8ab46e51db5b7e", null ],
+    [ "CodeCreateEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a3f5f46c31c59348619a1ccc2c6600cc4", null ],
+    [ "CodeDeoptEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a9a8e656e85af502a3086e1de8db5d44c", null ],
+    [ "CodeDependencyChangeEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a80d9943b3428eda49bd2b29d6d89d935", null ],
+    [ "CodeDisableOptEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a7374ac5676d5dbfcfe05bbda7e50c84c", null ],
+    [ "CodeMoveEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a4cba1ef85cb989d2a0085a5049d68f06", null ],
+    [ "CodeMovingGCEvent", "classv8_1_1internal_1_1PerfettoLogger.html#ab207862ea2edc6d8ab3e61a24a79235f", null ],
+    [ "GetterCallbackEvent", "classv8_1_1internal_1_1PerfettoLogger.html#ad0a41e1e8d7174d6f078d559a5b11122", null ],
+    [ "is_listening_to_code_events", "classv8_1_1internal_1_1PerfettoLogger.html#a7137764bca205e11e65b2e0628845f6d", null ],
+    [ "LogExistingCode", "classv8_1_1internal_1_1PerfettoLogger.html#ad54707d2a24a8958872fe16e24b6fc3a", null ],
+    [ "NativeContextMoveEvent", "classv8_1_1internal_1_1PerfettoLogger.html#af094c8b3353801d3c5fe77314ce40df1", null ],
+    [ "RegExpCodeCreateEvent", "classv8_1_1internal_1_1PerfettoLogger.html#ada7899fdd4f16a297520e022dd6304f3", null ],
+    [ "SetterCallbackEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a2acfee1b0d3b1c9cfa02d4fcdca36fbf", null ],
+    [ "SharedFunctionInfoMoveEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a25e1f81bc46aa21b381d3716a108c301", null ],
+    [ "WeakCodeClearEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a8118c30593758cf406cfec36c7038d44", null ]
+];

@@ -1,0 +1,28 @@
+var classv8_1_1internal_1_1GcSafeCode =
+[
+    [ "builtin_id", "classv8_1_1internal_1_1GcSafeCode.html#a346c32c6139a57f6bd65d1a8f9c239fb", null ],
+    [ "CanDeoptAt", "classv8_1_1internal_1_1GcSafeCode.html#a1fb16d1b1369b27eb4e7e65a706780ae", null ],
+    [ "constant_pool", "classv8_1_1internal_1_1GcSafeCode.html#a1876edf9cb3299e2b58845a2cab02567", null ],
+    [ "GetOffsetFromInstructionStart", "classv8_1_1internal_1_1GcSafeCode.html#a7964ab38778414289332e3c06f8eedde", null ],
+    [ "has_instruction_stream", "classv8_1_1internal_1_1GcSafeCode.html#a721bfa07644e1d47df858cab732dc0ce", null ],
+    [ "has_tagged_outgoing_params", "classv8_1_1internal_1_1GcSafeCode.html#ac325fab6c2357db9de723074ea2e1e14", null ],
+    [ "instruction_end", "classv8_1_1internal_1_1GcSafeCode.html#a1dc9697e6a4ba08ed55b6c94eb3d52f5", null ],
+    [ "instruction_start", "classv8_1_1internal_1_1GcSafeCode.html#ab7f7ec47bee8867ff5fae0723c3ee960", null ],
+    [ "InstructionEnd", "classv8_1_1internal_1_1GcSafeCode.html#a14dbeacbbb0471cca26a6a44600186ed", null ],
+    [ "InstructionStart", "classv8_1_1internal_1_1GcSafeCode.html#a51fc21130747806e997812a3612b70e7", null ],
+    [ "is_baseline_leave_frame_builtin", "classv8_1_1internal_1_1GcSafeCode.html#afacab9af812293da46b3fc6e5f243125", null ],
+    [ "is_baseline_trampoline_builtin", "classv8_1_1internal_1_1GcSafeCode.html#a7383d8d0b58a76ef696a4432ade31311", null ],
+    [ "is_builtin", "classv8_1_1internal_1_1GcSafeCode.html#a69dd8bbadb6a51876421941b36fb042e", null ],
+    [ "is_interpreter_trampoline_builtin", "classv8_1_1internal_1_1GcSafeCode.html#a07e95fdb3c7808280fb48b9cb23ec78b", null ],
+    [ "is_maglevved", "classv8_1_1internal_1_1GcSafeCode.html#abffde9282690468e1e9a9cb6f9ba384e", null ],
+    [ "is_turbofanned", "classv8_1_1internal_1_1GcSafeCode.html#a4cf630bb215a768cab76be92ae782dc0", null ],
+    [ "kind", "classv8_1_1internal_1_1GcSafeCode.html#a38ff797bc5d62aafeb3bdc619348576b", null ],
+    [ "marked_for_deoptimization", "classv8_1_1internal_1_1GcSafeCode.html#ab1c70e51cad44b0d0a2a1a35df9f8346", null ],
+    [ "raw_instruction_stream", "classv8_1_1internal_1_1GcSafeCode.html#a2cc08c1a366ecb108170fa4267b5fc46", null ],
+    [ "raw_instruction_stream", "classv8_1_1internal_1_1GcSafeCode.html#ab16f56c6c1aa38aafdd07d0d1b30d10f", null ],
+    [ "safepoint_table_address", "classv8_1_1internal_1_1GcSafeCode.html#a8137ead60ff2ef1a2c4e626500722d4d", null ],
+    [ "stack_slots", "classv8_1_1internal_1_1GcSafeCode.html#a283ec4a231ad1714925dcedf26dd8b98", null ],
+    [ "UnsafeCastToCode", "classv8_1_1internal_1_1GcSafeCode.html#a63abd6b5d792cb8476b92e2df4fcfa23", null ],
+    [ "wasm_js_first_tagged_parameter", "classv8_1_1internal_1_1GcSafeCode.html#a76780dfd949713072469de33ac0eb85d", null ],
+    [ "wasm_js_tagged_parameter_count", "classv8_1_1internal_1_1GcSafeCode.html#a1341c82b3da6746e3a324ff971f60a25", null ]
+];

@@ -1,0 +1,25 @@
+var classv8_1_1internal_1_1maglev_1_1RegisterFrameState =
+[
+    [ "RegTList", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a686b85f0295597097fab2f94f044a9b7", null ],
+    [ "AddToFree", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a2b7048e34fb9d2c5be5b2aab872274c2", null ],
+    [ "AddToFree", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a7a87e3226f5349c81dd08f1baf616e4d", null ],
+    [ "AllocateRegister", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a0109713338a9e370d1aa577a40a64b55", null ],
+    [ "block", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#ac66fafb824ff711376ba3392595e9165", null ],
+    [ "blocked", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a335550503cc75d07ea7f78666fe64d4e", null ],
+    [ "clear_blocked", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a9edbaec11ec0ea48acd6cac403a2423c", null ],
+    [ "empty", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a1fc7b0d01b577993fa875683ba48371b", null ],
+    [ "ForEachUsedRegister", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#aef1a5f5b2f0263755d19887d6c271ad5", null ],
+    [ "free", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a28131c9b222f44fa314b904704366272", null ],
+    [ "FreeRegistersUsedBy", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#aeda1f4461c81823377934c71ae77e4cb", null ],
+    [ "GetValue", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a1a850460739dc4cc8d47eca35ee3f48f", null ],
+    [ "is_blocked", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#ad08b1eaf5d5071f6441eedacc810c87f", null ],
+    [ "RemoveFromFree", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a0ace98877e450f5dc94fa4764f184a1e", null ],
+    [ "SetValue", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a6253008f59f004107b61e81f683ed778", null ],
+    [ "SetValueWithoutBlocking", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#adbc04ce3328b7dd66e1a6a1d385fd8bf", null ],
+    [ "TryChooseInputRegister", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a787483497baee9550f605aab8057de2c", null ],
+    [ "TryChooseUnblockedInputRegister", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a84ab121328495f20bd4c676c06fb5495", null ],
+    [ "unblock", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a634ce28caf22af716ed96defbac31207", null ],
+    [ "unblocked_free", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#aaa8e87b02cf8c45afb0d853d8c891fe1", null ],
+    [ "UnblockedFreeIsEmpty", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a2c7301e9092234999c57ca7f6ac65ebe", null ],
+    [ "used", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a4a76fd9a4c89ac750455ab2f13e5e38d", null ]
+];

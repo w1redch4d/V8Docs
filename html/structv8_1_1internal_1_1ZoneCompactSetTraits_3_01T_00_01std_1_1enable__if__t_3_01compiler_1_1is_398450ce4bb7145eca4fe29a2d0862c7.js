@@ -1,0 +1,5 @@
+var structv8_1_1internal_1_1ZoneCompactSetTraits_3_01T_00_01std_1_1enable__if__t_3_01compiler_1_1is_398450ce4bb7145eca4fe29a2d0862c7 =
+[
+    [ "data_type", "structv8_1_1internal_1_1ZoneCompactSetTraits_3_01T_00_01std_1_1enable__if__t_3_01compiler_1_1is_398450ce4bb7145eca4fe29a2d0862c7.html#ab68585ab8a85fe5604ae82652f904d3b", null ],
+    [ "handle_type", "structv8_1_1internal_1_1ZoneCompactSetTraits_3_01T_00_01std_1_1enable__if__t_3_01compiler_1_1is_398450ce4bb7145eca4fe29a2d0862c7.html#af766f8be8401cf049a181018c0447962", null ]
+];

@@ -1,0 +1,5 @@
+var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowConstructorReturnedNonObject =
+[
+    [ "arguments_t", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowConstructorReturnedNonObject.html#a493c3c843493551b6e5cc95e3ee1bbc7", null ],
+    [ "result_t", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowConstructorReturnedNonObject.html#a77854d40eeef98820f0d10ebaf01179f", null ]
+];

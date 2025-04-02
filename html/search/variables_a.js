@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['j_0',['J',['../namespacev8_1_1internal.html#a7d86f7943f3994d68eb7b5a9cab29811',1,'v8::internal']]],
+  ['jal_1',['JAL',['../namespacev8_1_1internal.html#a7429853f64cca58ee6a1bc3362427100',1,'v8::internal']]],
+  ['javascript_5flinkage_2',['javascript_linkage',['../structv8_1_1internal_1_1torque_1_1BuiltinDeclaration.html#a36f3c547a210a3355a4ab85d344ed4df',1,'v8::internal::torque::BuiltinDeclaration']]],
+  ['jmpbuf_3',['jmpbuf',['../namespacev8_1_1internal.html#a86bca54805e1828c0927f8de7350236b',1,'v8::internal']]],
+  ['js_5fentry_5fsp_5f_4',['js_entry_sp_',['../classv8_1_1internal_1_1ThreadLocalTop.html#a2a93253ede9a9c1687f5aba5107da7b7',1,'v8::internal::ThreadLocalTop']]],
+  ['js_5fframe_5fcount_5',['js_frame_count',['../structv8_1_1internal_1_1DeoptimizationFrameTranslation_1_1FrameCount.html#a1ce522ec9c61cec4af8b66fa6577e753',1,'v8::internal::DeoptimizationFrameTranslation::FrameCount']]],
+  ['js_5ffunctions_6',['js_functions',['../liveedit_8cc.html#a77bb465acc0f393f9f9a18741d35c04a',1,'liveedit.cc']]],
+  ['js_5fobject_5fcallback_7',['js_object_callback',['../structv8_1_1internal_1_1SerializeEmbedderFieldsCallback.html#ad210a74b2055b19fa48faa1c37c36bd6',1,'v8::internal::SerializeEmbedderFieldsCallback::js_object_callback'],['../structv8_1_1internal_1_1DeserializeEmbedderFieldsCallback.html#a47a9dd286fd812ed5503b0c3cd9b6d17',1,'v8::internal::DeserializeEmbedderFieldsCallback::js_object_callback']]],
+  ['js_5fsample_5fcount_5f_8',['js_sample_count_',['../classv8_1_1sampler_1_1Sampler.html#ac9ce4fdf7ce265479fdefa9dad30593c',1,'v8::sampler::Sampler']]],
+  ['js_5fstack_5ftrace_5f_9',['js_stack_trace_',['../classv8_1_1internal_1_1StackTraceFailureMessage.html#aa1e1b6fdb0f84dc1c947181cc4517c74',1,'v8::internal::StackTraceFailureMessage']]],
+  ['js_5fstacktrace_10',['js_stacktrace',['../classv8_1_1internal_1_1HeapStats.html#ae0cc8db0b9dd4d309c4aa89c083a656e',1,'v8::internal::HeapStats']]],
+  ['js_5fwasm_5fcall_5fparameters_11',['js_wasm_call_parameters',['../structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TSCallDescriptor.html#ad4282d2bcbbcba161e36fa080ee1a13d',1,'v8::internal::compiler::turboshaft::TSCallDescriptor']]],
+  ['js_5fwasm_5fcalls_5fsidetable_12',['js_wasm_calls_sidetable',['../graph-builder_8cc.html#a1a3e86f90fa766d5b3044f96772c454e',1,'graph-builder.cc']]],
+  ['jsgraph_13',['jsgraph',['../add-type-assertions-reducer_8cc.html#a63b24fad76b2ce65101ba7d418f301d2',1,'jsgraph:&#160;add-type-assertions-reducer.cc'],['../js-call-reducer_8cc.html#a63b24fad76b2ce65101ba7d418f301d2',1,'jsgraph:&#160;js-call-reducer.cc']]],
+  ['jump_5flabel_14',['jump_label',['../structv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1BranchBuilder_1_1LabelJumpTarget.html#ae2bb05dc5be6093319112a4149d508a8',1,'v8::internal::maglev::MaglevGraphBuilder::BranchBuilder::LabelJumpTarget']]],
+  ['jump_5fopt_5f_15',['jump_opt_',['../classv8_1_1internal_1_1compiler_1_1CodeAssemblerCompilationJob.html#a03b2e3c59c0bdf2e2b4cafcb20cc5919',1,'v8::internal::compiler::CodeAssemblerCompilationJob']]],
+  ['jump_5foptimization_5finfo_16',['jump_optimization_info',['../structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1CodegenComponent.html#ad8dc4a5ab61d1d24ca4b135df507e2c2',1,'v8::internal::compiler::turboshaft::detail::CodegenComponent']]],
+  ['jump_5ftable_5fstart_17',['jump_table_start',['../structv8_1_1internal_1_1wasm_1_1NativeModule_1_1JumpTablesRef.html#a50f3e825d91e66fe4c340debaf6fc31a',1,'v8::internal::wasm::NativeModule::JumpTablesRef::jump_table_start'],['../namespacev8_1_1internal.html#a75ab54774d3f5e8b122735859c6a53b9',1,'v8::internal::jump_table_start']]],
+  ['jump_5ftables_18',['jump_tables',['../structv8_1_1internal_1_1compiler_1_1TurbolizerCodeOffsetsInfo.html#a69d85db7c0b083da2cd7001432588630',1,'v8::internal::compiler::TurbolizerCodeOffsetsInfo::jump_tables'],['../structv8_1_1internal_1_1wasm_1_1DeserializationUnit.html#ac66732c00a41347f9ab8c3252ea997d3',1,'v8::internal::wasm::DeserializationUnit::jump_tables']]],
+  ['jump_5ftarget_5foffset_19',['jump_target_offset',['../structv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1BranchBuilder_1_1BytecodeJumpTarget.html#a1af33ce7472d5793352b7e6ee4e5a171',1,'v8::internal::maglev::MaglevGraphBuilder::BranchBuilder::BytecodeJumpTarget']]]
+];
