@@ -1,5 +1,9 @@
 var classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder =
 [
+    [ "FastElementsField", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a6392e89d0f152f77c90f34412d0bb187", null ],
+    [ "HasElementsField", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#ad532894da751da9449108e36a3d68b7c", null ],
+    [ "HasNullPrototypeField", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#afc2f164865f2a9ef748d80e6bdd29de6", null ],
+    [ "HasRestPropertyField", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a46362574bf9cae671273a6f3e9205eb3", null ],
     [ "Property", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#aee075956870810b48e2e4a87989bea42", null ],
     [ "ObjectLiteralBoilerplateBuilder", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a394a083e86b855535f68391c3c56c084", null ],
     [ "boilerplate_description", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a27698bd5444c568710b23fe22aac343c", null ],
@@ -12,9 +16,16 @@ var classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder =
     [ "has_null_prototype", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#ab9d81d788424599ec3839be589f99328", null ],
     [ "has_rest_property", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a168dd20f2d14faa59c150d7a34c76ba3", null ],
     [ "InitDepthAndFlags", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a303f8b9fc2b363b81686d97cc30bef9f", null ],
+    [ "InitFlagsForPendingNullPrototype", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#abad9349187a39619b55d10a5ae815f2d", null ],
     [ "is_empty", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a1eb355912ebc484c901be8a072dd8b96", null ],
     [ "IsEmptyObjectLiteral", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#af74884b45e64832e2b1f8d99964f7b11", null ],
     [ "IsFastCloningSupported", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#ac1575e2702dd3c3431fa875fdcc45829", null ],
     [ "properties", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a0c0ab5e9173b13c82173f05f3c094560", null ],
-    [ "properties_count", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a612df80685cf4473c0a2d84a382b91be", null ]
+    [ "properties_count", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a612df80685cf4473c0a2d84a382b91be", null ],
+    [ "set_fast_elements", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#aeb2a2a1eb6d90affa4a122f3c16ec299", null ],
+    [ "set_has_elements", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a075b9f95d26305761286a001127160d8", null ],
+    [ "set_has_null_protoype", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#ae5846246331dc81191db3374187bad10", null ],
+    [ "boilerplate_description_", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#add023b69366d30554cf084efa0273b82", null ],
+    [ "boilerplate_properties_", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#ab48aa1f4c3c2f47faa702b0addd40c7b", null ],
+    [ "properties_", "classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a7f6d3f9a43e774b377ff86df461af512", null ]
 ];

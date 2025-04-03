@@ -1,0 +1,25 @@
+var classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis =
+[
+    [ "BlockPhis", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a4889c7ad21f3dc6f4e8ef4e0067f9f3a", null ],
+    [ "BlockPhis", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#afb4caa69bc93a3b4ca37de47c4a98f57", null ],
+    [ "AddIncomingException", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a2707d4b2bca47b8082097cea3114830a", null ],
+    [ "AddInputForPhi", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a7256d03e04c54ae01a2cf2785dd004bf", null ],
+    [ "AllocatePhiInputs", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a3651dbdf86e876d64cb770bc5e8c1703", null ],
+    [ "GrowInputsVector", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a1fbfe8fa88608839c6d8117df7580a0c", null ],
+    [ "incoming_exceptions", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a3f61266b640a14901fa55e35f5cac66c", null ],
+    [ "InitReturnPhis", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#ae6090a07784b42404f18119230e84c1f", null ],
+    [ "phi_count", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a343495b76a375a78b6271a5b07bc89b1", null ],
+    [ "phi_inputs", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a1c7fe754132cf2d00231b3248dd127e8", null ],
+    [ "phi_type", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a65a40287fdc511ee534f24ee588dcf57", null ],
+    [ "zone", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a02bc045bd8f4691d683dbcb17e5d4ec8", null ],
+    [ "incoming_exceptions_", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#afef64ad6e56907596fbc92163414a5dc", null ],
+    [ "input_capacity_per_phi_", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a9a4cf91596716b5151b222c24b43f102", null ],
+    [ "inputs_per_phi_", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#aeef5120e2975758784b09494f3f671d8", null ],
+    [ "kInitialInputCapacityPerPhi", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a35bbf8efa28216f1ae5b205f0ca6737a", null ],
+    [ "next_phi_input_add_offset_", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a31228f4fa1704b13393c6d01e81dca4b", null ],
+    [ "phi_count_", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#a54397155b55aac670a3f5d15bcf6441d", null ],
+    [ "phi_inputs_", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#aff547e2ea861250bb35c75a0dbbc8ba6", null ],
+    [ "phi_inputs_capacity_total_", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#ad9b274f42d33817946feabcde9c722fb", null ],
+    [ "phi_inputs_total_", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#aa570cc12494967902b6cee530f815f28", null ],
+    [ "phi_types_", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html#aeef57dca350984567837e3a03bda4046", null ]
+];

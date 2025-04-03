@@ -49,5 +49,11 @@ var property_details_8h =
     [ "operator<<", "property-details_8h.html#a4fc43332de5210c56250d280320e50c7", null ],
     [ "operator<<", "property-details_8h.html#a2dde116498b084f61cfa6ebc2cf267ba", null ],
     [ "operator<<", "property-details_8h.html#aac463a781a8342811063c5a629b5b229", null ],
-    [ "PropertyAttributesFromInt", "property-details_8h.html#ab0a2095fbc8a73360b0fde42f64fc423", null ]
+    [ "PropertyAttributesFromInt", "property-details_8h.html#ab0a2095fbc8a73360b0fde42f64fc423", null ],
+    [ "kDescriptorIndexBitCount", "property-details_8h.html#abaea4429ff69dfcd0b2f6170a141ed54", null ],
+    [ "kFirstInobjectPropertyOffsetBitCount", "property-details_8h.html#a2e82a673e49694d3ae9e28975208a13e", null ],
+    [ "kInvalidEnumCacheSentinel", "property-details_8h.html#a7fabf69c19f19fafd8f7b6c73fc6a3ee", null ],
+    [ "kMaxNumberOfDescriptors", "property-details_8h.html#a977d36df2779c31664c2b153da8f3284", null ],
+    [ "kPropertyAttributesBitsCount", "property-details_8h.html#ae8ab318483b24df2322201a4b93e15f1", null ],
+    [ "kPropertyAttributesCombinationsCount", "property-details_8h.html#a40d013d724136e3ef19eb1261fa356d0", null ]
 ];

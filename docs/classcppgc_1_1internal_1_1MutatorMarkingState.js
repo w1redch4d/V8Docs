@@ -1,5 +1,6 @@
 var classcppgc_1_1internal_1_1MutatorMarkingState =
 [
+    [ "RecentlyRetracedWeakContainers", "classcppgc_1_1internal_1_1MutatorMarkingState_1_1RecentlyRetracedWeakContainers.html", "classcppgc_1_1internal_1_1MutatorMarkingState_1_1RecentlyRetracedWeakContainers" ],
     [ "MutatorMarkingState", "classcppgc_1_1internal_1_1MutatorMarkingState.html#a5c9a47eb30c15d1139665d5d2d9d50ba", null ],
     [ "~MutatorMarkingState", "classcppgc_1_1internal_1_1MutatorMarkingState.html#a96618d94e36042d47a149e5fea8d2d19", null ],
     [ "DynamicallyMarkAddress", "classcppgc_1_1internal_1_1MutatorMarkingState.html#a02826267c51898f878add55c724c4129", null ],
@@ -10,5 +11,7 @@ var classcppgc_1_1internal_1_1MutatorMarkingState =
     [ "MarkNoPush", "classcppgc_1_1internal_1_1MutatorMarkingState.html#a95a872ea126234926678720420a1f1c2", null ],
     [ "Publish", "classcppgc_1_1internal_1_1MutatorMarkingState.html#a763d7e5ff6b50a8adb2f56cd148ba6f9", null ],
     [ "retrace_marked_objects_worklist", "classcppgc_1_1internal_1_1MutatorMarkingState.html#a847ad141670bfd2213b03fbf9345078d", null ],
-    [ "ReTraceMarkedWeakContainer", "classcppgc_1_1internal_1_1MutatorMarkingState.html#a5f1477371dd8290109a072d8eb434929", null ]
+    [ "ReTraceMarkedWeakContainer", "classcppgc_1_1internal_1_1MutatorMarkingState.html#a5f1477371dd8290109a072d8eb434929", null ],
+    [ "recently_retraced_weak_containers_", "classcppgc_1_1internal_1_1MutatorMarkingState.html#a1ebbf3c68bca32e639def73b5fab0a76", null ],
+    [ "retrace_marked_objects_worklist_", "classcppgc_1_1internal_1_1MutatorMarkingState.html#ae80c68958fe3944037532f0b017e9853", null ]
 ];

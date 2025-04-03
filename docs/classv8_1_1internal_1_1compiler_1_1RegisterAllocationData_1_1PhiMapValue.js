@@ -7,5 +7,9 @@ var classv8_1_1internal_1_1compiler_1_1RegisterAllocationData_1_1PhiMapValue =
     [ "CommitAssignment", "classv8_1_1internal_1_1compiler_1_1RegisterAllocationData_1_1PhiMapValue.html#a777606c6f3af77423c4e981f95a3e636", null ],
     [ "phi", "classv8_1_1internal_1_1compiler_1_1RegisterAllocationData_1_1PhiMapValue.html#a9abecd18a6ecde601a3a244987cf3220", null ],
     [ "set_assigned_register", "classv8_1_1internal_1_1compiler_1_1RegisterAllocationData_1_1PhiMapValue.html#ad878f5cd5be5623656f415e7a71c07c3", null ],
-    [ "UnsetAssignedRegister", "classv8_1_1internal_1_1compiler_1_1RegisterAllocationData_1_1PhiMapValue.html#aff6bf366de2ebb74d514f044363953bc", null ]
+    [ "UnsetAssignedRegister", "classv8_1_1internal_1_1compiler_1_1RegisterAllocationData_1_1PhiMapValue.html#aff6bf366de2ebb74d514f044363953bc", null ],
+    [ "assigned_register_", "classv8_1_1internal_1_1compiler_1_1RegisterAllocationData_1_1PhiMapValue.html#a31951c3d22569d74959f0f11bd35ac0b", null ],
+    [ "block_", "classv8_1_1internal_1_1compiler_1_1RegisterAllocationData_1_1PhiMapValue.html#aad792415e2c3ccfbc299738a646680bb", null ],
+    [ "incoming_operands_", "classv8_1_1internal_1_1compiler_1_1RegisterAllocationData_1_1PhiMapValue.html#a69ae0c888798d64f59c74e90620ad867", null ],
+    [ "phi_", "classv8_1_1internal_1_1compiler_1_1RegisterAllocationData_1_1PhiMapValue.html#a0ee6f0cb39c35dc5b76371b82ec7a9f7", null ]
 ];

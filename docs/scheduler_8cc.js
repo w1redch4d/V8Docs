@@ -2,6 +2,8 @@ var scheduler_8cc =
 [
     [ "v8::internal::compiler::CFGBuilder", "classv8_1_1internal_1_1compiler_1_1CFGBuilder.html", "classv8_1_1internal_1_1compiler_1_1CFGBuilder" ],
     [ "v8::internal::compiler::SpecialRPONumberer", "classv8_1_1internal_1_1compiler_1_1SpecialRPONumberer.html", "classv8_1_1internal_1_1compiler_1_1SpecialRPONumberer" ],
+    [ "v8::internal::compiler::SpecialRPONumberer::SpecialRPOStackFrame", "structv8_1_1internal_1_1compiler_1_1SpecialRPONumberer_1_1SpecialRPOStackFrame.html", "structv8_1_1internal_1_1compiler_1_1SpecialRPONumberer_1_1SpecialRPOStackFrame" ],
+    [ "v8::internal::compiler::SpecialRPONumberer::LoopInfo", "structv8_1_1internal_1_1compiler_1_1SpecialRPONumberer_1_1LoopInfo.html", "structv8_1_1internal_1_1compiler_1_1SpecialRPONumberer_1_1LoopInfo" ],
     [ "v8::internal::compiler::PrepareUsesVisitor", "classv8_1_1internal_1_1compiler_1_1PrepareUsesVisitor.html", "classv8_1_1internal_1_1compiler_1_1PrepareUsesVisitor" ],
     [ "v8::internal::compiler::ScheduleEarlyNodeVisitor", "classv8_1_1internal_1_1compiler_1_1ScheduleEarlyNodeVisitor.html", "classv8_1_1internal_1_1compiler_1_1ScheduleEarlyNodeVisitor" ],
     [ "v8::internal::compiler::ScheduleLateNodeVisitor", "classv8_1_1internal_1_1compiler_1_1ScheduleLateNodeVisitor.html", "classv8_1_1internal_1_1compiler_1_1ScheduleLateNodeVisitor" ],

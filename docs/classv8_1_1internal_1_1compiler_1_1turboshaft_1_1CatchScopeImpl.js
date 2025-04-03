@@ -6,5 +6,7 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CatchScopeImpl =
     [ "CatchScopeImpl", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CatchScopeImpl.html#ab327e4f61b162dd16e798761c3abbe73", null ],
     [ "operator=", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CatchScopeImpl.html#a958f3b520448e5eab554c00e69247545", null ],
     [ "operator=", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CatchScopeImpl.html#a431133eb1f2c7a73ce9498ce8b21a50b", null ],
-    [ "Assembler", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CatchScopeImpl.html#ac0563e5912e478a40f0995239e33e97a", null ]
+    [ "Assembler", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CatchScopeImpl.html#ac0563e5912e478a40f0995239e33e97a", null ],
+    [ "assembler_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CatchScopeImpl.html#a2009fa17be6e3ca82c3f48680a821db5", null ],
+    [ "previous_catch_block_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CatchScopeImpl.html#a30036152ccc78d58eb2d2100a60b4916", null ]
 ];

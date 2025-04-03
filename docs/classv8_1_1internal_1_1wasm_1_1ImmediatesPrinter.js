@@ -13,6 +13,7 @@ var classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter =
     [ "F32Const", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#a3d875410083b4c4f934b133903a849fd", null ],
     [ "F64Const", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#adf1272bc0bae558fe0c310b73a52bd79", null ],
     [ "Field", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#a9f85c989d135e8ec821d01fe2e5eb0d3", null ],
+    [ "func_index", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#acb9120c8b7b7af44561a5a75a5cd0cc3", null ],
     [ "FunctionIndex", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#ac75324a7ebf480e6948ce841c5ba865c", null ],
     [ "GlobalIndex", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#ae2840b214cf3c57102f84016838ee712", null ],
     [ "HeapType", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#a33a12af63ed85fff29f73edb14f3f414", null ],
@@ -24,6 +25,7 @@ var classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter =
     [ "MemoryCopy", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#ac5884df02bc262726b20db033f3ab966", null ],
     [ "MemoryIndex", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#a8ab15f05b4933d0e42e59da31a1d4c2e", null ],
     [ "MemoryInit", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#aa1fa1df46dd2c5de2ac053461aac1a21", null ],
+    [ "names", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#ad21458772fdddf867b9e1e322f71870d", null ],
     [ "PrintDepthAsLabel", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#a23ee3329a2d34c23670ac936e65f0a28", null ],
     [ "PrintSignature", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#a29e082fba05c698ed9cf5b1f231f5261", null ],
     [ "S128Const", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#ae5f8ac07854343fe5025d41675022c34", null ],
@@ -36,5 +38,8 @@ var classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter =
     [ "TagIndex", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#a4508dda555c1c39bff842a75f3f9f03d", null ],
     [ "TryTable", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#a9d072a29e4d6b43193f3f9f5984a48c3", null ],
     [ "TypeIndex", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#afe4a2af0775569ba3a16adff99885104", null ],
-    [ "ValueType", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#a86ff888738f05e487fefadc454c738e1", null ]
+    [ "use_type", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#a116750d3a72f0269a42a24ecf5cf203d", null ],
+    [ "ValueType", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#a86ff888738f05e487fefadc454c738e1", null ],
+    [ "out_", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#a8301b7c759602653b770c88ce6c42ba7", null ],
+    [ "owner_", "classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#ae690d991d7bac6d639ee8739aaf6b415", null ]
 ];

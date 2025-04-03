@@ -1,10 +1,11 @@
 var classv8_1_1internal_1_1BytecodeArray =
 [
-    [ "BodyDescriptor", "classv8_1_1internal_1_1BytecodeArray_1_1BodyDescriptor.html", null ],
+    [ "BodyDescriptor", "classv8_1_1internal_1_1BytecodeArray_1_1BodyDescriptor.html", "classv8_1_1internal_1_1BytecodeArray_1_1BodyDescriptor" ],
     [ "BytecodeArraySize", "classv8_1_1internal_1_1BytecodeArray.html#a90080242a9108c1f62326fab0306cc05", null ],
     [ "clear_padding", "classv8_1_1internal_1_1BytecodeArray.html#a8aaca6fef1dbb7c590eef04265fdcd6d", null ],
     [ "CopyBytecodesTo", "classv8_1_1internal_1_1BytecodeArray.html#a8249b9bb1f6e33704e83097755ad2872", null ],
     [ "DECL_RELEASE_ACQUIRE_PROTECTED_POINTER_ACCESSORS", "classv8_1_1internal_1_1BytecodeArray.html#ac287fdc4c1a016997dbdf1c0fdbb28c5", null ],
+    [ "Disassemble", "classv8_1_1internal_1_1BytecodeArray.html#a2789bf083a6fb2037c76785e89ee74e3", null ],
     [ "Disassemble", "classv8_1_1internal_1_1BytecodeArray.html#aa697b1df23298f823e8d7665d6e059ec", null ],
     [ "get", "classv8_1_1internal_1_1BytecodeArray.html#aad1e4f3a4719dce53e414b0ecc21a712", null ],
     [ "GetFirstBytecodeAddress", "classv8_1_1internal_1_1BytecodeArray.html#a87e82c77346fa5b4697d440818e32257", null ],
@@ -25,6 +26,9 @@ var classv8_1_1internal_1_1BytecodeArray =
     [ "set_max_arguments", "classv8_1_1internal_1_1BytecodeArray.html#a7b4f87454e6be1cb87d4f162634a1260", null ],
     [ "set_parameter_count", "classv8_1_1internal_1_1BytecodeArray.html#addff915f334084ecc7f6f2f6a4adf8ac", null ],
     [ "SetSourcePositionsFailedToCollect", "classv8_1_1internal_1_1BytecodeArray.html#aa8c20115a092db4e91d21e9501160986", null ],
+    [ "SizeFor", "classv8_1_1internal_1_1BytecodeArray.html#aecc5b608691b8af5c7a46f12b5e0e7bb", null ],
     [ "SourcePosition", "classv8_1_1internal_1_1BytecodeArray.html#a69bdd683e5e55247daabf97e6bfe6f09", null ],
-    [ "SourceStatementPosition", "classv8_1_1internal_1_1BytecodeArray.html#a5ec0d8bd1627b7d2fced73546148c54c", null ]
+    [ "SourceStatementPosition", "classv8_1_1internal_1_1BytecodeArray.html#a5ec0d8bd1627b7d2fced73546148c54c", null ],
+    [ "kMaxLength", "classv8_1_1internal_1_1BytecodeArray.html#a9b306a4048c3a924e49ff1e4bb02bfe6", null ],
+    [ "kMaxSize", "classv8_1_1internal_1_1BytecodeArray.html#ad1cc19e0caa3dd920b2dd14468b60a71", null ]
 ];

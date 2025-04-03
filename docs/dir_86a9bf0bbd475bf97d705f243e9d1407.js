@@ -2,7 +2,7 @@ var dir_86a9bf0bbd475bf97d705f243e9d1407 =
 [
     [ "bignum-dtoa.cc", "bignum-dtoa_8cc.html", "bignum-dtoa_8cc" ],
     [ "bignum-dtoa.h", "bignum-dtoa_8h.html", "bignum-dtoa_8h" ],
-    [ "bignum.cc", "bignum_8cc.html", null ],
+    [ "bignum.cc", "bignum_8cc.html", "bignum_8cc" ],
     [ "bignum.h", "bignum_8h.html", "bignum_8h" ],
     [ "cached-powers.cc", "cached-powers_8cc.html", "cached-powers_8cc" ],
     [ "cached-powers.h", "cached-powers_8h.html", "cached-powers_8h" ],

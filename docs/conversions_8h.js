@@ -34,6 +34,7 @@ var conversions_8h =
     [ "ImplicitOctalStringToDouble", "conversions_8h.html#a63781d9a6b6af3987d366f29869bf113", null ],
     [ "IntToStringView", "conversions_8h.html#a5512dadcf2833bffe6971ebc38cbca4b", null ],
     [ "IsInt32Double", "conversions_8h.html#a4735753e5be0295af082dd6d3797e490", null ],
+    [ "IsMinusZero", "conversions_8h.html#ac2e67965c23f31e787267da33347b3d7", null ],
     [ "IsSmiDouble", "conversions_8h.html#a35072b3221e991faa21cba215016bc88", null ],
     [ "IsSpecialIndex", "conversions_8h.html#a43a1f080ca463128ff1378b0d1e26b43", null ],
     [ "IsSpecialIndex", "conversions_8h.html#af83d8ddc1e683359604bc844fb7de893", null ],

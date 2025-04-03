@@ -14,5 +14,11 @@ var classv8_1_1internal_1_1FrameSummary_1_1JavaScriptFrameSummary =
     [ "receiver", "classv8_1_1internal_1_1FrameSummary_1_1JavaScriptFrameSummary.html#a1e2f95dbc5f26782403a9f89fd5c8db9", null ],
     [ "script", "classv8_1_1internal_1_1FrameSummary_1_1JavaScriptFrameSummary.html#af96c849c6a7705f8ab40addfe406cfc6", null ],
     [ "SourcePosition", "classv8_1_1internal_1_1FrameSummary_1_1JavaScriptFrameSummary.html#a49ee8723d37c8f8f53bea3fb29aa1fa2", null ],
-    [ "SourceStatementPosition", "classv8_1_1internal_1_1FrameSummary_1_1JavaScriptFrameSummary.html#abcc998d284bb73eb0c636e6bb954f503", null ]
+    [ "SourceStatementPosition", "classv8_1_1internal_1_1FrameSummary_1_1JavaScriptFrameSummary.html#abcc998d284bb73eb0c636e6bb954f503", null ],
+    [ "abstract_code_", "classv8_1_1internal_1_1FrameSummary_1_1JavaScriptFrameSummary.html#ac1c7b2c49ab77640d48cc0f759ae8248", null ],
+    [ "code_offset_", "classv8_1_1internal_1_1FrameSummary_1_1JavaScriptFrameSummary.html#aca503be0cf149a113a12c22279243275", null ],
+    [ "function_", "classv8_1_1internal_1_1FrameSummary_1_1JavaScriptFrameSummary.html#a8c36051ec7d7e6eaed0d13e9e7be537c", null ],
+    [ "is_constructor_", "classv8_1_1internal_1_1FrameSummary_1_1JavaScriptFrameSummary.html#a40c2eda8775f6caa07da06928ffce3b8", null ],
+    [ "parameters_", "classv8_1_1internal_1_1FrameSummary_1_1JavaScriptFrameSummary.html#a61ae0621bda66868e8a9e12555f2fe30", null ],
+    [ "receiver_", "classv8_1_1internal_1_1FrameSummary_1_1JavaScriptFrameSummary.html#adab8af0f5de83d154842fa2696d61d98", null ]
 ];

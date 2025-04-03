@@ -1,5 +1,8 @@
 var classv8_1_1internal_1_1GlobalHandles_1_1Node =
 [
+    [ "IsInYoungList", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#a791b232886ef5fbf7eff7ba7e6b9bcfb", null ],
+    [ "NodeState", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#a131e7cba2fca86d8cfa0feb922110f00", null ],
+    [ "NodeWeaknessType", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#ac07b74045e6f069d0b2ef7ecd4bb52e7", null ],
     [ "State", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#ad0e78c1f3196c693801bcac55e643acb", [
       [ "FREE", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#ad0e78c1f3196c693801bcac55e643acba90034b191067ca8c7fbd5772164939fd", null ],
       [ "NORMAL", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#ad0e78c1f3196c693801bcac55e643acba0fab9077ecd84ccb5ed960cea313f19e", null ],
@@ -9,6 +12,8 @@ var classv8_1_1internal_1_1GlobalHandles_1_1Node =
     [ "Node", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#a354bbbc3dcb2aa61cb4382ca3d581bec", null ],
     [ "Node", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#a0b6cc599b16db28517403961291f7a1c", null ],
     [ "AnnotateStrongRetainer", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#a87f1ce59d4d0a6f90fd4ab4606c511c1", null ],
+    [ "CheckNodeIsFreeNodeImpl", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#a93be36b40a88bc886c6b8634ace14433", null ],
+    [ "ClearImplFields", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#ae47f73c98d4804c2ac6aafb71cd44df6", null ],
     [ "ClearWeakness", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#aa902c39330187f7b522a20d3a1c94c61", null ],
     [ "CollectPhantomCallbackData", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#ae8ed2bc149338d2aa3754f50c16338ed", null ],
     [ "global_handles", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#ac830d60f839028ae6e9c9f260f426996", null ],
@@ -33,5 +38,6 @@ var classv8_1_1internal_1_1GlobalHandles_1_1Node =
     [ "set_weakness_type", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#abaca36fa2c23fd6b16cf86d9ab11f86b", null ],
     [ "state", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#a29e8b618119d6991289811245bbd6c38", null ],
     [ "weakness_type", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#aeee2fc10e25af51a0df216887696e555", null ],
-    [ "NodeBase< Node >", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#a183b0d65f8bf7de47fd9c96943cbff9e", null ]
+    [ "NodeBase< Node >", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#a183b0d65f8bf7de47fd9c96943cbff9e", null ],
+    [ "weak_callback_", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html#ad9042d473a79beb9f82e66d93df24ab2", null ]
 ];

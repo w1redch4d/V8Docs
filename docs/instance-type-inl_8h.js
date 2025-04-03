@@ -1,8 +1,8 @@
 var instance_type_inl_8h =
 [
-    [ "v8::internal::InstanceTypeChecker::InstanceRangeChecker< lower_limit, upper_limit >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker.html", null ],
-    [ "v8::internal::InstanceTypeChecker::InstanceRangeChecker< FIRST_TYPE, upper_limit >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01FIRST__TYPE_00_01upper__limit_01_4.html", null ],
-    [ "v8::internal::InstanceTypeChecker::InstanceRangeChecker< lower_limit, LAST_TYPE >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01lower__limit_00_01LAST__TYPE_01_4.html", null ],
+    [ "v8::internal::InstanceTypeChecker::InstanceRangeChecker< lower_limit, upper_limit >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker.html", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker" ],
+    [ "v8::internal::InstanceTypeChecker::InstanceRangeChecker< FIRST_TYPE, upper_limit >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01FIRST__TYPE_00_01upper__limit_01_4.html", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01FIRST__TYPE_00_01upper__limit_01_4" ],
+    [ "v8::internal::InstanceTypeChecker::InstanceRangeChecker< lower_limit, LAST_TYPE >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01lower__limit_00_01LAST__TYPE_01_4.html", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01lower__limit_00_01LAST__TYPE_01_4" ],
     [ "DECL_TYPE", "instance-type-inl_8h.html#a0baf32941c04dbb3e1ea0f1bb3d5e0fa", null ],
     [ "INSTANCE_TYPE_CHECK", "instance-type-inl_8h.html#a845dbe29096b496f477ff8f8522b9aa2", null ],
     [ "INSTANCE_TYPE_CHECKER1", "instance-type-inl_8h.html#abb19ca6288c0c5a9db3cef637d722307", null ],

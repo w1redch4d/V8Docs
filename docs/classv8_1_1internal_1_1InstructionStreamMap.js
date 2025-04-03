@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1InstructionStreamMap =
 [
+    [ "CodeEntryMapInfo", "structv8_1_1internal_1_1InstructionStreamMap_1_1CodeEntryMapInfo.html", "structv8_1_1internal_1_1InstructionStreamMap_1_1CodeEntryMapInfo" ],
     [ "InstructionStreamMap", "classv8_1_1internal_1_1InstructionStreamMap.html#a6d983b89ecde6e7c3ad71f6e3aa98ff4", null ],
     [ "~InstructionStreamMap", "classv8_1_1internal_1_1InstructionStreamMap.html#a6bf862d2cec14ece44b6b0e2990ccd15", null ],
     [ "InstructionStreamMap", "classv8_1_1internal_1_1InstructionStreamMap.html#a5e99ff30d76b462725d6cc0b3960310c", null ],
@@ -13,5 +14,7 @@ var classv8_1_1internal_1_1InstructionStreamMap =
     [ "operator=", "classv8_1_1internal_1_1InstructionStreamMap.html#aa39f320a007ec69b96ab0fafb759c8eb", null ],
     [ "Print", "classv8_1_1internal_1_1InstructionStreamMap.html#a46cc776b838145cd2955b27dcbe77c94", null ],
     [ "RemoveCode", "classv8_1_1internal_1_1InstructionStreamMap.html#aab90713b2462d354cda0e81ba9278a7f", null ],
-    [ "size", "classv8_1_1internal_1_1InstructionStreamMap.html#ac76e913fc95783821c8dc8b169384e6e", null ]
+    [ "size", "classv8_1_1internal_1_1InstructionStreamMap.html#ac76e913fc95783821c8dc8b169384e6e", null ],
+    [ "code_entries_", "classv8_1_1internal_1_1InstructionStreamMap.html#a87aec074f23fb40b727f8f750fca6578", null ],
+    [ "code_map_", "classv8_1_1internal_1_1InstructionStreamMap.html#a2f0d13bd0cb9dfdf6acf2bc00fee540b", null ]
 ];

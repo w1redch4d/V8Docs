@@ -2,6 +2,7 @@ var hashmap_8h =
 [
     [ "v8::base::DefaultAllocationPolicy", "classv8_1_1base_1_1DefaultAllocationPolicy.html", "classv8_1_1base_1_1DefaultAllocationPolicy" ],
     [ "v8::base::TemplateHashMapImpl< Key, Value, MatchFun, AllocationPolicy >", "classv8_1_1base_1_1TemplateHashMapImpl.html", "classv8_1_1base_1_1TemplateHashMapImpl" ],
+    [ "v8::base::TemplateHashMapImpl< Key, Value, MatchFun, AllocationPolicy >::Impl", "structv8_1_1base_1_1TemplateHashMapImpl_1_1Impl.html", "structv8_1_1base_1_1TemplateHashMapImpl_1_1Impl" ],
     [ "v8::base::HashEqualityThenKeyMatcher< Key, MatchFun >", "structv8_1_1base_1_1HashEqualityThenKeyMatcher.html", "structv8_1_1base_1_1HashEqualityThenKeyMatcher" ],
     [ "v8::base::CustomMatcherTemplateHashMapImpl< AllocationPolicy >", "classv8_1_1base_1_1CustomMatcherTemplateHashMapImpl.html", "classv8_1_1base_1_1CustomMatcherTemplateHashMapImpl" ],
     [ "v8::base::KeyEqualityMatcher< Key >", "structv8_1_1base_1_1KeyEqualityMatcher.html", "structv8_1_1base_1_1KeyEqualityMatcher" ],

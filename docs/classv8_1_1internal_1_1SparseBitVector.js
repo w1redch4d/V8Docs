@@ -1,12 +1,26 @@
 var classv8_1_1internal_1_1SparseBitVector =
 [
     [ "Iterator", "classv8_1_1internal_1_1SparseBitVector_1_1Iterator.html", "classv8_1_1internal_1_1SparseBitVector_1_1Iterator" ],
+    [ "Segment", "structv8_1_1internal_1_1SparseBitVector_1_1Segment.html", "structv8_1_1internal_1_1SparseBitVector_1_1Segment" ],
     [ "SparseBitVector", "classv8_1_1internal_1_1SparseBitVector.html#a38c86e6299c1077ff8ef1d0765e32bf5", null ],
     [ "Add", "classv8_1_1internal_1_1SparseBitVector.html#a6cba7af591294e5cd7f968603c0b028a", null ],
     [ "begin", "classv8_1_1internal_1_1SparseBitVector.html#ab20e27654d9ca4593e615c1f61b72aa1", null ],
+    [ "CheckConsistency", "classv8_1_1internal_1_1SparseBitVector.html#a3d13d1779cb75bc7344fc755a28d06a9", null ],
     [ "Contains", "classv8_1_1internal_1_1SparseBitVector.html#a5dfbb6a0f24a850b18ee9896d302e567", null ],
+    [ "contains", "classv8_1_1internal_1_1SparseBitVector.html#aa186836de5a9583edba4e0bc5917d333", null ],
     [ "end", "classv8_1_1internal_1_1SparseBitVector.html#a3b13075e0b0ae68012de91be0360ee9a", null ],
+    [ "GetWordAndBitInWord", "classv8_1_1internal_1_1SparseBitVector.html#aa37ec8a1e79273b46c4e9edd3f7d30c3", null ],
+    [ "insert_after", "classv8_1_1internal_1_1SparseBitVector.html#a1fb6ce68fcb7694f5fe9d55e3bf3a636", null ],
+    [ "InsertBitAfter", "classv8_1_1internal_1_1SparseBitVector.html#a096c15f6019aed2f0d4217e0a1e4556e", null ],
+    [ "InsertSegmentAfter", "classv8_1_1internal_1_1SparseBitVector.html#aae0ded7e1748fe36c5a6f1d57167a5f9", null ],
     [ "MOVE_ONLY_NO_DEFAULT_CONSTRUCTOR", "classv8_1_1internal_1_1SparseBitVector.html#a71bedc32b441e9708e8be874556930fb", null ],
     [ "Remove", "classv8_1_1internal_1_1SparseBitVector.html#a366c72ce1b321ac72a4c29e440a05ad3", null ],
-    [ "Union", "classv8_1_1internal_1_1SparseBitVector.html#a42469372a3e4e85d06c78be5d4f1efdd", null ]
+    [ "set", "classv8_1_1internal_1_1SparseBitVector.html#a6e58e1dc91a1d7e4faca03d262f6b06e", null ],
+    [ "Union", "classv8_1_1internal_1_1SparseBitVector.html#a42469372a3e4e85d06c78be5d4f1efdd", null ],
+    [ "unset", "classv8_1_1internal_1_1SparseBitVector.html#a53dea57a891fcad62e5a473988ba0738", null ],
+    [ "first_segment_", "classv8_1_1internal_1_1SparseBitVector.html#af6ac4d31dfc3fb3ff008e5563817bdda", null ],
+    [ "kBitsPerWord", "classv8_1_1internal_1_1SparseBitVector.html#aee8eefccd7f675157081ac30a1bf9b5d", null ],
+    [ "kNumBitsPerSegment", "classv8_1_1internal_1_1SparseBitVector.html#ac2865f0186d2c32e65b4c5e107e0f035", null ],
+    [ "kNumWordsPerSegment", "classv8_1_1internal_1_1SparseBitVector.html#a7c638e2d4ed95ffcb156f928070e8ae5", null ],
+    [ "zone_", "classv8_1_1internal_1_1SparseBitVector.html#af2e247b07572427e0088999ce6178227", null ]
 ];

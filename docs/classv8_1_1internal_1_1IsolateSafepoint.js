@@ -1,13 +1,41 @@
 var classv8_1_1internal_1_1IsolateSafepoint =
 [
+    [ "Barrier", "classv8_1_1internal_1_1IsolateSafepoint_1_1Barrier.html", "classv8_1_1internal_1_1IsolateSafepoint_1_1Barrier" ],
+    [ "IncludeMainThread", "classv8_1_1internal_1_1IsolateSafepoint.html#ab0c45afd900a9afe3492f0bb0bf86b78", [
+      [ "kYes", "classv8_1_1internal_1_1IsolateSafepoint.html#ab0c45afd900a9afe3492f0bb0bf86b78a1ea590aa4a64767508460736ac0edaa9", null ],
+      [ "kNo", "classv8_1_1internal_1_1IsolateSafepoint.html#ab0c45afd900a9afe3492f0bb0bf86b78a8cc8e60acfa3ae6089df773013fd73a2", null ]
+    ] ],
     [ "IsolateSafepoint", "classv8_1_1internal_1_1IsolateSafepoint.html#a1449b285357604091dd403c2f0cf160b", null ],
+    [ "AddLocalHeap", "classv8_1_1internal_1_1IsolateSafepoint.html#a6da4d1d48d8c1a6fb3c1878c5648dbd7", null ],
     [ "AssertActive", "classv8_1_1internal_1_1IsolateSafepoint.html#a10bd26df469f53e11665569cd911c0b0", null ],
     [ "AssertMainThreadIsOnlyThread", "classv8_1_1internal_1_1IsolateSafepoint.html#a282617af3a625c13c3dd9e007030c44e", null ],
+    [ "ClearSafepointRequestedFlags", "classv8_1_1internal_1_1IsolateSafepoint.html#a56b9f145bc86e40468c35d72a2c08e0d", null ],
+    [ "EnterLocalSafepointScope", "classv8_1_1internal_1_1IsolateSafepoint.html#ac349ca506b987a24f0b0c07ebbc9dd98", null ],
+    [ "InitiateGlobalSafepointScope", "classv8_1_1internal_1_1IsolateSafepoint.html#a59ec36fa7ca0a98886c2b879e8ea07ae", null ],
+    [ "InitiateGlobalSafepointScopeRaw", "classv8_1_1internal_1_1IsolateSafepoint.html#ab51661efcab2b04e7556db890be449ce", null ],
+    [ "isolate", "classv8_1_1internal_1_1IsolateSafepoint.html#abb065a082e6428710c1c6571542de145", null ],
     [ "Iterate", "classv8_1_1internal_1_1IsolateSafepoint.html#ac8c0a57a187bf5e71eae9d4ca5be1944", null ],
     [ "IterateLocalHeaps", "classv8_1_1internal_1_1IsolateSafepoint.html#a59f22c82bce4a7341d5408114842fbc3", null ],
+    [ "LeaveGlobalSafepointScope", "classv8_1_1internal_1_1IsolateSafepoint.html#a94f16cd9cf36d8ca0b8414ced116b773", null ],
+    [ "LeaveLocalSafepointScope", "classv8_1_1internal_1_1IsolateSafepoint.html#ae919234f4ffc128812db6e449b7e1be9", null ],
+    [ "LockMutex", "classv8_1_1internal_1_1IsolateSafepoint.html#aed5e7b4b5d6f5d71f451041231e96a82", null ],
+    [ "NotifyPark", "classv8_1_1internal_1_1IsolateSafepoint.html#acdbb28ed2ee17fc02c473a8c6425cc1b", null ],
+    [ "RemoveLocalHeap", "classv8_1_1internal_1_1IsolateSafepoint.html#aca1bc0ac81eb3613d3b5f135ff3a52df", null ],
+    [ "SetSafepointRequestedFlags", "classv8_1_1internal_1_1IsolateSafepoint.html#af27ad3752eda69b04a4e1178cd71b61e", null ],
+    [ "shared_space_isolate", "classv8_1_1internal_1_1IsolateSafepoint.html#a08d263ca10e47a66dc04304b5f712d8c", null ],
+    [ "ShouldIncludeMainThread", "classv8_1_1internal_1_1IsolateSafepoint.html#a210deec4798e55e765322719cfc29fce", null ],
+    [ "TryInitiateGlobalSafepointScope", "classv8_1_1internal_1_1IsolateSafepoint.html#a69fd6bde4a4a8c0e0382b01145a896fe", null ],
+    [ "WaitInSafepoint", "classv8_1_1internal_1_1IsolateSafepoint.html#a6819ba53621750b99dcfba928bde6e51", null ],
+    [ "WaitInUnpark", "classv8_1_1internal_1_1IsolateSafepoint.html#a8e0013a72a79b5875af426f3ad6fa6f7", null ],
+    [ "WaitUntilRunningThreadsInSafepoint", "classv8_1_1internal_1_1IsolateSafepoint.html#ac46d75c82a1e87610e4602ab2c6eaa11", null ],
     [ "GlobalSafepoint", "classv8_1_1internal_1_1IsolateSafepoint.html#a53a10e5bfa8e517c1ac62b6cb18ac580", null ],
     [ "GlobalSafepointScope", "classv8_1_1internal_1_1IsolateSafepoint.html#a3aa872166d8e7a3df791ab3aead9a851", null ],
     [ "Isolate", "classv8_1_1internal_1_1IsolateSafepoint.html#aba4f0964bdacf2bbf62cf876e5d28d0a", null ],
     [ "IsolateSafepointScope", "classv8_1_1internal_1_1IsolateSafepoint.html#ae0e46e73e8db92436cd5ce7a0d22962b", null ],
-    [ "LocalHeap", "classv8_1_1internal_1_1IsolateSafepoint.html#a7e184dfc60742f164fdcd5cda27c53b0", null ]
+    [ "LocalHeap", "classv8_1_1internal_1_1IsolateSafepoint.html#a7e184dfc60742f164fdcd5cda27c53b0", null ],
+    [ "active_safepoint_scopes_", "classv8_1_1internal_1_1IsolateSafepoint.html#a84a681611042e3fbd9cbde5d88d22d03", null ],
+    [ "barrier_", "classv8_1_1internal_1_1IsolateSafepoint.html#a87507ef5e1bfe7646f8c0bb2e4a2d7ce", null ],
+    [ "heap_", "classv8_1_1internal_1_1IsolateSafepoint.html#ac99081a356afae8579f94145b3ed1df8", null ],
+    [ "local_heaps_head_", "classv8_1_1internal_1_1IsolateSafepoint.html#a5ab4c8074d02983aeefac6911c67d6e2", null ],
+    [ "local_heaps_mutex_", "classv8_1_1internal_1_1IsolateSafepoint.html#a82064158564df15ae71a953b1d16854e", null ]
 ];

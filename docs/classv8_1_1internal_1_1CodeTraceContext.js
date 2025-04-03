@@ -13,5 +13,7 @@ var classv8_1_1internal_1_1CodeTraceContext =
     [ "set_v8_internal_code", "classv8_1_1internal_1_1CodeTraceContext.html#a9868eb6b208d5427d4418d3a10be62a6", null ],
     [ "set_v8_js_code", "classv8_1_1internal_1_1CodeTraceContext.html#a256d1ca9072b8d4fb3aa0126b303bab0", null ],
     [ "set_v8_reg_exp_code", "classv8_1_1internal_1_1CodeTraceContext.html#a7652bd152ed95a7cda093448d97ba5e9", null ],
-    [ "set_v8_wasm_code", "classv8_1_1internal_1_1CodeTraceContext.html#a62c20edde506ec767ea4b8dacdab2077", null ]
+    [ "set_v8_wasm_code", "classv8_1_1internal_1_1CodeTraceContext.html#a62c20edde506ec767ea4b8dacdab2077", null ],
+    [ "incremental_state_", "classv8_1_1internal_1_1CodeTraceContext.html#a73556ce64a430cc6a4c6c9367cacb23a", null ],
+    [ "trace_packet_", "classv8_1_1internal_1_1CodeTraceContext.html#ae28ff2244ca5d63bbb4bbd616814b9fa", null ]
 ];

@@ -9,5 +9,7 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShufflePackNode_1_1Specific
     [ "kind", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShufflePackNode_1_1SpecificInfo.html#a04a0ff3a9844c4eb0bd2aeecf70ba0fc", null ],
     [ "set_kind", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShufflePackNode_1_1SpecificInfo.html#a13d1a89ecf6cc8eedb7ea4e1deb8c9b2", null ],
     [ "set_splat_index", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShufflePackNode_1_1SpecificInfo.html#af58de9c566759fc2b9ff3a70d7de50ab", null ],
-    [ "splat_index", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShufflePackNode_1_1SpecificInfo.html#a315d1126720426e5dc74d407f6e734c3", null ]
+    [ "splat_index", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShufflePackNode_1_1SpecificInfo.html#a315d1126720426e5dc74d407f6e734c3", null ],
+    [ "kind_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShufflePackNode_1_1SpecificInfo.html#ab363c54838fbec4069670670f429964a", null ],
+    [ "param_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShufflePackNode_1_1SpecificInfo.html#a546b4118894fda94974813609aac7d96", null ]
 ];

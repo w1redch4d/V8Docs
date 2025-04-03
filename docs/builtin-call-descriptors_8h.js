@@ -1,6 +1,7 @@
 var builtin_call_descriptors_8h =
 [
     [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor" ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< Derived >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor" ],
     [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CheckTurbofanType", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CheckTurbofanType.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CheckTurbofanType" ],
     [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::ToNumber", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1ToNumber.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1ToNumber" ],
     [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::NonNumberToNumber", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1NonNumberToNumber.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1NonNumberToNumber" ],

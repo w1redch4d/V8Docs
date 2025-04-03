@@ -1,6 +1,7 @@
 var classv8_1_1base_1_1VirtualAddressSubspace =
 [
     [ "~VirtualAddressSubspace", "classv8_1_1base_1_1VirtualAddressSubspace.html#adebe4a2723644c314a1e2e3975d2673d", null ],
+    [ "VirtualAddressSubspace", "classv8_1_1base_1_1VirtualAddressSubspace.html#a20ce936158395805ca0a537930b12fcd", null ],
     [ "AllocateGuardRegion", "classv8_1_1base_1_1VirtualAddressSubspace.html#a05052f976eeacec0a345d2c207182bc3", null ],
     [ "AllocatePages", "classv8_1_1base_1_1VirtualAddressSubspace.html#aff99dc54cbf0f15a33b8a717b5d908d0", null ],
     [ "AllocateSharedPages", "classv8_1_1base_1_1VirtualAddressSubspace.html#ad60238f642b9b65cf3ef14a2e6b3d677", null ],
@@ -11,9 +12,15 @@ var classv8_1_1base_1_1VirtualAddressSubspace =
     [ "FreeGuardRegion", "classv8_1_1base_1_1VirtualAddressSubspace.html#a53a6d3175eb4ff3bcfa78bc8534300a7", null ],
     [ "FreePages", "classv8_1_1base_1_1VirtualAddressSubspace.html#a6fa819569f94cd91cbf489cc8ba97c9f", null ],
     [ "FreeSharedPages", "classv8_1_1base_1_1VirtualAddressSubspace.html#af6f4b232ce68238f68a98be0b909a2c9", null ],
+    [ "FreeSubspace", "classv8_1_1base_1_1VirtualAddressSubspace.html#ac33446b7812996139d409e7652c310e6", null ],
     [ "RandomPageAddress", "classv8_1_1base_1_1VirtualAddressSubspace.html#a3d215d96f3d3a9584e05b6b4fe2e08c0", null ],
     [ "RecommitPages", "classv8_1_1base_1_1VirtualAddressSubspace.html#a902092e2727cdbb40f31af68b5352f74", null ],
     [ "SetPagePermissions", "classv8_1_1base_1_1VirtualAddressSubspace.html#a50d1dc930adb97e3cb188afcd4dfe2ad", null ],
     [ "SetRandomSeed", "classv8_1_1base_1_1VirtualAddressSubspace.html#adabac2e9521e33534d33ab17539fde0c", null ],
-    [ "v8::base::VirtualAddressSpace", "classv8_1_1base_1_1VirtualAddressSubspace.html#a16f5c58f761ad460001a18171f4bcb66", null ]
+    [ "v8::base::VirtualAddressSpace", "classv8_1_1base_1_1VirtualAddressSubspace.html#a16f5c58f761ad460001a18171f4bcb66", null ],
+    [ "mutex_", "classv8_1_1base_1_1VirtualAddressSubspace.html#a204a1009d1afd785364eebf297c91087", null ],
+    [ "parent_space_", "classv8_1_1base_1_1VirtualAddressSubspace.html#a968f54652a311cdab9573806b888d571", null ],
+    [ "region_allocator_", "classv8_1_1base_1_1VirtualAddressSubspace.html#a64b7664b093998803ea0adbbe641c8cf", null ],
+    [ "reservation_", "classv8_1_1base_1_1VirtualAddressSubspace.html#aee945aca7556199a5ae05b9b62937ff3", null ],
+    [ "rng_", "classv8_1_1base_1_1VirtualAddressSubspace.html#a24898cbf88563a7fddb8512d390d69f8", null ]
 ];

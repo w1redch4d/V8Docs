@@ -9,6 +9,7 @@ var classv8__inspector_1_1V8DebuggerScript =
     [ "V8DebuggerScript", "classv8__inspector_1_1V8DebuggerScript.html#a8aaa83b1777fcfd7073f5c2cc84d1303", null ],
     [ "buildId", "classv8__inspector_1_1V8DebuggerScript.html#ac962cf72a5989364504607fcbf6c7757", null ],
     [ "codeOffset", "classv8__inspector_1_1V8DebuggerScript.html#a09d95e08dbb15e21ef921ee814de021e", null ],
+    [ "Create", "classv8__inspector_1_1V8DebuggerScript.html#a45b66dd203699147db7b4922292d5747", null ],
     [ "embedderName", "classv8__inspector_1_1V8DebuggerScript.html#a03de4b928389890f3d7663cd0ca37f5b", null ],
     [ "endColumn", "classv8__inspector_1_1V8DebuggerScript.html#a92f40a01b2472ffaf5f9018d8bdf2a53", null ],
     [ "endLine", "classv8__inspector_1_1V8DebuggerScript.html#acd43cfb996bb3b202053393ef478a418", null ],

@@ -11,5 +11,8 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordRepresentation =
     [ "MaxUnsignedValue", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordRepresentation.html#ae604e1ede5eced4c62fdf50674a332c2", null ],
     [ "MinSignedValue", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordRepresentation.html#ad5f9d013c5762bc4b3da5af84f03bea8", null ],
     [ "operator Enum", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordRepresentation.html#acd4c0a95b1c36ed834764065302cdd4b", null ],
-    [ "value", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordRepresentation.html#ac3f4e1dcaa793921b9328004de765884", null ]
+    [ "value", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordRepresentation.html#ac3f4e1dcaa793921b9328004de765884", null ],
+    [ "Word32", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordRepresentation.html#a91e7dfb9bf3220d4d3c4c891b3f3e7c4", null ],
+    [ "Word64", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordRepresentation.html#ae2bfdf68d8864e018348d60f0346fa4d", null ],
+    [ "WordPtr", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordRepresentation.html#ad66890d848f8fe401e7543360bf6f10e", null ]
 ];

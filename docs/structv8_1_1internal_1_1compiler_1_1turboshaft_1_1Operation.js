@@ -19,6 +19,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation =
     [ "PrintInputs", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation.html#a81ec36a2d31c8136313e8bb9d0747e6a", null ],
     [ "PrintOptions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation.html#a094d34d2d57b1e041478dab6b24d5c1b", null ],
     [ "StorageSlotCount", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation.html#ae643f7273f0dba20cf25c09053df4906", null ],
+    [ "StorageSlotCount", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation.html#ae973ecc74e40986ac8ab1c6d997d8b4e", null ],
     [ "ToString", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation.html#a7e84e6ef44d06ef8f2a56cb68234132b", null ],
     [ "TryCast", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation.html#a318237a986aa7de0f90f6b9dcc5e6f9e", null ],
     [ "TryCast", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation.html#ab0900d5726ed9973e226cdbafc507262", null ],

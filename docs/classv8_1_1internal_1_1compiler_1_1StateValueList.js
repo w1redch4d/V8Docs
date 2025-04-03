@@ -6,6 +6,7 @@ var classv8_1_1internal_1_1compiler_1_1StateValueList =
     [ "StateValueList", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#af795592a172e2b47ae86200b1fa2a517", null ],
     [ "begin", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#ac44bb257aef290c0cbf0ebce3af31a0b", null ],
     [ "end", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#a64cb205dadb71d16d6f598ac1a7ce2ee", null ],
+    [ "HasNestedFieldsAfter", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#abedaf0b1706705ff78a38dc78303c91f", null ],
     [ "MakeSlice", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#a849c136508e1840dd89cc24ef4d8f084", null ],
     [ "nested_count", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#a589912e8e07f0059deabb3e792698cd7", null ],
     [ "PushArgumentsElements", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#a5d02553eb6515e60cbd9bbb56c85b44a", null ],
@@ -18,5 +19,7 @@ var classv8_1_1internal_1_1compiler_1_1StateValueList =
     [ "PushRestLength", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#aa5bd4bd70e18cc432473351df24e59db", null ],
     [ "PushStringConcat", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#a9f6b34e6ccaf7cbcdba19711246eb1bd", null ],
     [ "ReserveSize", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#a72420dd9e091bfffd59103bb3a335b87", null ],
-    [ "size", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#abff51ec79080b1bf0f7ec05865d279f2", null ]
+    [ "size", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#abff51ec79080b1bf0f7ec05865d279f2", null ],
+    [ "fields_", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#a92f0c347589fba902d2ef03ecc2bb337", null ],
+    [ "nested_", "classv8_1_1internal_1_1compiler_1_1StateValueList.html#ae8bd6584fc45f75c435153c02012869c", null ]
 ];

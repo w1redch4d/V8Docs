@@ -32,5 +32,7 @@ var classv8_1_1internal_1_1compiler_1_1ProcessedFeedback =
     [ "AsTypeOf", "classv8_1_1internal_1_1compiler_1_1ProcessedFeedback.html#a6adcc8357fb5d3982df2c455afd72ac9", null ],
     [ "IsInsufficient", "classv8_1_1internal_1_1compiler_1_1ProcessedFeedback.html#a11313f14c118462eaae3b3697d923cf6", null ],
     [ "kind", "classv8_1_1internal_1_1compiler_1_1ProcessedFeedback.html#abd574a6fd6eca9f71f8236ac7325df1f", null ],
-    [ "slot_kind", "classv8_1_1internal_1_1compiler_1_1ProcessedFeedback.html#ac9e78d3360d026c09919ed201bd43fca", null ]
+    [ "slot_kind", "classv8_1_1internal_1_1compiler_1_1ProcessedFeedback.html#ac9e78d3360d026c09919ed201bd43fca", null ],
+    [ "kind_", "classv8_1_1internal_1_1compiler_1_1ProcessedFeedback.html#abb96984b9da80907db3ed11aa811b7ca", null ],
+    [ "slot_kind_", "classv8_1_1internal_1_1compiler_1_1ProcessedFeedback.html#aea9034ecac729c5b4e49652ed10c3ba5", null ]
 ];

@@ -15,5 +15,8 @@ var classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterAllocator =
     [ "RegisterIsLive", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterAllocator.html#a0bc56ab130525071cd03980110eac9cc", null ],
     [ "ReleaseRegister", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterAllocator.html#a0b423e75d83fe9a03d9130f0df184fac", null ],
     [ "ReleaseRegisters", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterAllocator.html#a10809b0c4b7d4b1829f27ae8e52b3e83", null ],
-    [ "set_observer", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterAllocator.html#abcd4a8405ef4a920eddc496e05644b20", null ]
+    [ "set_observer", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterAllocator.html#abcd4a8405ef4a920eddc496e05644b20", null ],
+    [ "max_register_count_", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterAllocator.html#a2011343498b78473b65934663cfe0d01", null ],
+    [ "next_register_index_", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterAllocator.html#a3b54cddbcf73af815e131772da9cd8e4", null ],
+    [ "observer_", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterAllocator.html#ade05cb5f182556ff9e1a47cb586d6fe4", null ]
 ];

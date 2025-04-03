@@ -17,5 +17,12 @@ var classv8_1_1internal_1_1ReadOnlyArtifacts =
     [ "shared_read_only_space", "classv8_1_1internal_1_1ReadOnlyArtifacts.html#ada67b5b4dbcccedd806cbd7d38860271", null ],
     [ "VerifyChecksum", "classv8_1_1internal_1_1ReadOnlyArtifacts.html#a67f35bbcc3a9a36cfb965cb4650caa7c", null ],
     [ "VerifyHeapAndSpaceRelationships", "classv8_1_1internal_1_1ReadOnlyArtifacts.html#ac667bbb7d5450d919321c3fb00b2db12", null ],
-    [ "ReadOnlyHeap", "classv8_1_1internal_1_1ReadOnlyArtifacts.html#ae169b5a93f2af0caa0214f372321e376", null ]
+    [ "ReadOnlyHeap", "classv8_1_1internal_1_1ReadOnlyArtifacts.html#ae169b5a93f2af0caa0214f372321e376", null ],
+    [ "external_pointer_registry_", "classv8_1_1internal_1_1ReadOnlyArtifacts.html#a960b159940f0ddecef6c1e1a8019a424", null ],
+    [ "initial_next_unique_sfi_id_", "classv8_1_1internal_1_1ReadOnlyArtifacts.html#af9bf235b50d2b9d939b2f8863309572b", null ],
+    [ "page_allocator_", "classv8_1_1internal_1_1ReadOnlyArtifacts.html#a6f0cb5ec808ff8035ebb2f6ccf6ffcff", null ],
+    [ "pages_", "classv8_1_1internal_1_1ReadOnlyArtifacts.html#a41bf37eb72fac70e725be59ccfb82019", null ],
+    [ "read_only_heap_", "classv8_1_1internal_1_1ReadOnlyArtifacts.html#a3e84059b45a13e066741b60599e57e62", null ],
+    [ "shared_read_only_space_", "classv8_1_1internal_1_1ReadOnlyArtifacts.html#ae928dd2a94e00101d0ffde0a561f3cbc", null ],
+    [ "stats_", "classv8_1_1internal_1_1ReadOnlyArtifacts.html#a2270e2fba7f8dcd2d4daca696226c38c", null ]
 ];

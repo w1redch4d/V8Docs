@@ -7,5 +7,6 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShadowyOpIndexVectorWrapper
     [ "operator base::Vector< const OpIndex >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShadowyOpIndexVectorWrapper.html#a369650a859e443dadcdf0487f61502ea", null ],
     [ "operator base::Vector< const V< U > >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShadowyOpIndexVectorWrapper.html#a4723fa2edfa2754b664665f89d97f670", null ],
     [ "operator base::Vector< V< U > >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShadowyOpIndexVectorWrapper.html#a5b6200ba71bf9ea1fc6a1f2998ed4edb", null ],
-    [ "size", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShadowyOpIndexVectorWrapper.html#a377a531e3c0b5dd39126cae8812a1cdc", null ]
+    [ "size", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShadowyOpIndexVectorWrapper.html#a377a531e3c0b5dd39126cae8812a1cdc", null ],
+    [ "indices_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShadowyOpIndexVectorWrapper.html#a5f83dfce1190c0056376e8e149e42cee", null ]
 ];

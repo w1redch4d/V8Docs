@@ -49,5 +49,6 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationMatcher =
     [ "MatchWordMul", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationMatcher.html#a2e8716996b32cf05cc916761686edb63", null ],
     [ "MatchWordSub", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationMatcher.html#ab21ca157646fce6880e87720a68609e7", null ],
     [ "MatchZero", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationMatcher.html#a449b5beee8756d9a634a357e018c865c", null ],
-    [ "TryCast", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationMatcher.html#a83b23f13fd73e7f889fd938db8b8bc6e", null ]
+    [ "TryCast", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationMatcher.html#a83b23f13fd73e7f889fd938db8b8bc6e", null ],
+    [ "graph_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationMatcher.html#abf1829f967fc3bd94048438b3b99ae67", null ]
 ];

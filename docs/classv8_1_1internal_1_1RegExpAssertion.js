@@ -15,5 +15,6 @@ var classv8_1_1internal_1_1RegExpAssertion =
     [ "IsAnchoredAtEnd", "classv8_1_1internal_1_1RegExpAssertion.html#a4f6c10ba865665f43d18bf7177a1fec2", null ],
     [ "IsAnchoredAtStart", "classv8_1_1internal_1_1RegExpAssertion.html#a90ad621f84e8eabd1ecb43999897f5df", null ],
     [ "max_match", "classv8_1_1internal_1_1RegExpAssertion.html#a67392097713d7e6c4b68cc596877e165", null ],
-    [ "min_match", "classv8_1_1internal_1_1RegExpAssertion.html#af6541c01d316e53a10095a4a2c88bdec", null ]
+    [ "min_match", "classv8_1_1internal_1_1RegExpAssertion.html#af6541c01d316e53a10095a4a2c88bdec", null ],
+    [ "assertion_type_", "classv8_1_1internal_1_1RegExpAssertion.html#a41b394b2d1b482f15646e86f2042d025", null ]
 ];

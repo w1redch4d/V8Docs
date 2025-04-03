@@ -10,5 +10,8 @@ var classv8_1_1internal_1_1compiler_1_1FrameStateInfo =
     [ "shared_info", "classv8_1_1internal_1_1compiler_1_1FrameStateInfo.html#a7e1408c34f6ffcc6d72853a8a712fdb9", null ],
     [ "stack_count", "classv8_1_1internal_1_1compiler_1_1FrameStateInfo.html#ad004a9ebbeadc4e2780a9df4c2661efa", null ],
     [ "state_combine", "classv8_1_1internal_1_1compiler_1_1FrameStateInfo.html#a6338f32fce8404f821be68ab49fed9be", null ],
-    [ "type", "classv8_1_1internal_1_1compiler_1_1FrameStateInfo.html#af3a5e00051a872dafc6664b0864ed70b", null ]
+    [ "type", "classv8_1_1internal_1_1compiler_1_1FrameStateInfo.html#af3a5e00051a872dafc6664b0864ed70b", null ],
+    [ "bailout_id_", "classv8_1_1internal_1_1compiler_1_1FrameStateInfo.html#ac808082163651121be2b803f3e1192be", null ],
+    [ "frame_state_combine_", "classv8_1_1internal_1_1compiler_1_1FrameStateInfo.html#a8bb8bd2cc859db93a3684010cc970bd4", null ],
+    [ "info_", "classv8_1_1internal_1_1compiler_1_1FrameStateInfo.html#a77b353187d3caa4bc44a05d4127c7ef8", null ]
 ];

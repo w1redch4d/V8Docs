@@ -1,5 +1,7 @@
 var classv8_1_1internal_1_1ZoneChunkList =
 [
+    [ "Chunk", "structv8_1_1internal_1_1ZoneChunkList_1_1Chunk.html", "structv8_1_1internal_1_1ZoneChunkList_1_1Chunk" ],
+    [ "SeekResult", "structv8_1_1internal_1_1ZoneChunkList_1_1SeekResult.html", "structv8_1_1internal_1_1ZoneChunkList_1_1SeekResult" ],
     [ "const_iterator", "classv8_1_1internal_1_1ZoneChunkList.html#a632c22365562df6b5fe8b5780ae4a669", null ],
     [ "const_reverse_iterator", "classv8_1_1internal_1_1ZoneChunkList.html#a76c620dcafb242358a1b9468beda4ecd", null ],
     [ "iterator", "classv8_1_1internal_1_1ZoneChunkList.html#ac24f3783e7f9641e4e1783fb689a0c07", null ],
@@ -19,6 +21,8 @@ var classv8_1_1internal_1_1ZoneChunkList =
     [ "front", "classv8_1_1internal_1_1ZoneChunkList.html#ad5c56e59e047caf803019ddcd924624e", null ],
     [ "front", "classv8_1_1internal_1_1ZoneChunkList.html#abf71d8766112243e51739a88ecf3bb06", null ],
     [ "MOVE_ONLY_NO_DEFAULT_CONSTRUCTOR", "classv8_1_1internal_1_1ZoneChunkList.html#a463b196010df3e411ff3617d29ea7254", null ],
+    [ "NewChunk", "classv8_1_1internal_1_1ZoneChunkList.html#a578942a0f4469a7f65478e4def851eb6", null ],
+    [ "NextChunkCapacity", "classv8_1_1internal_1_1ZoneChunkList.html#a8fa7a503a339e72e48c1540c3942a5b4", null ],
     [ "push_back", "classv8_1_1internal_1_1ZoneChunkList.html#a1bfa2578fd6bf29b46d5f3a9b04199bb", null ],
     [ "push_front", "classv8_1_1internal_1_1ZoneChunkList.html#a5b567f81ef5a6cdfe93edad692802e49", null ],
     [ "rbegin", "classv8_1_1internal_1_1ZoneChunkList.html#a22b48818bd77297a72a51a68df71e18f", null ],
@@ -26,8 +30,15 @@ var classv8_1_1internal_1_1ZoneChunkList =
     [ "rend", "classv8_1_1internal_1_1ZoneChunkList.html#a6377ac77625febe387db53f3182050fb", null ],
     [ "rend", "classv8_1_1internal_1_1ZoneChunkList.html#adba4a76d4efde7cb271281f4b1d92eac", null ],
     [ "Rewind", "classv8_1_1internal_1_1ZoneChunkList.html#ae484d24be7d33ea708645400c727b56d", null ],
+    [ "SeekIndex", "classv8_1_1internal_1_1ZoneChunkList.html#a419413e4b3d63cfb5eb0588f136d8373", null ],
     [ "size", "classv8_1_1internal_1_1ZoneChunkList.html#a9c0a9de3bb20dedc836317c219dab166", null ],
     [ "SplitAt", "classv8_1_1internal_1_1ZoneChunkList.html#a87b538f57d4683faeb510a524b649f82", null ],
     [ "swap", "classv8_1_1internal_1_1ZoneChunkList.html#a7179a6a57ed451627ab72117103aee7d", null ],
-    [ "ZoneChunkListIterator", "classv8_1_1internal_1_1ZoneChunkList.html#aadb999f6c7ceb0e3c94ab892e1bce6dd", null ]
+    [ "ZoneChunkListIterator", "classv8_1_1internal_1_1ZoneChunkList.html#aadb999f6c7ceb0e3c94ab892e1bce6dd", null ],
+    [ "front_", "classv8_1_1internal_1_1ZoneChunkList.html#ad7a11e6c65cf2c421534ed7439b4cd8d", null ],
+    [ "kInitialChunkCapacity", "classv8_1_1internal_1_1ZoneChunkList.html#a3d03875fd05b20ef981e8a18ef8535cd", null ],
+    [ "kMaxChunkCapacity", "classv8_1_1internal_1_1ZoneChunkList.html#a86ab808cce6634d8b95121bd65eec2a8", null ],
+    [ "last_nonempty_", "classv8_1_1internal_1_1ZoneChunkList.html#ac5759c1164626de0d0faaec0eb4f49cf", null ],
+    [ "size_", "classv8_1_1internal_1_1ZoneChunkList.html#aa24ecfb2bf697ea842f4046a58a05249", null ],
+    [ "zone_", "classv8_1_1internal_1_1ZoneChunkList.html#a2eac7a52a12f708efaaf944ae3b6ac68", null ]
 ];

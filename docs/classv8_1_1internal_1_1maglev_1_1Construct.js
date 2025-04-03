@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1maglev_1_1Construct =
 [
+    [ "Base", "classv8_1_1internal_1_1maglev_1_1Construct.html#ae5d8c9bf929967df09faa40937cd8955", null ],
     [ "Construct", "classv8_1_1internal_1_1maglev_1_1Construct.html#a40393e0b322b7fb9e6ee8de13a9c595b", null ],
     [ "arg", "classv8_1_1internal_1_1maglev_1_1Construct.html#ac07c4cb81086e13f430a772a4f191d7a", null ],
     [ "args", "classv8_1_1internal_1_1maglev_1_1Construct.html#a4c78076522107aa8d60ce9d6df4c4e21", null ],
@@ -16,5 +17,11 @@ var classv8_1_1internal_1_1maglev_1_1Construct =
     [ "PrintParams", "classv8_1_1internal_1_1maglev_1_1Construct.html#a0ac0bb2677a6de425e2fe2d2fb81eb75", null ],
     [ "set_arg", "classv8_1_1internal_1_1maglev_1_1Construct.html#a0560875a77c123a6a461153c254ad099", null ],
     [ "SetValueLocationConstraints", "classv8_1_1internal_1_1maglev_1_1Construct.html#a5fc608ba4c988392858ec44cdc674dd2", null ],
-    [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1Construct.html#a9892006af488e84c889e7d6a1dcddedf", null ]
+    [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1Construct.html#a9892006af488e84c889e7d6a1dcddedf", null ],
+    [ "feedback_", "classv8_1_1internal_1_1maglev_1_1Construct.html#a4b7b7d128b658f58277f14416a7491cb", null ],
+    [ "kContextIndex", "classv8_1_1internal_1_1maglev_1_1Construct.html#a55f789520feb8189ef2616100f9dd208", null ],
+    [ "kFixedInputCount", "classv8_1_1internal_1_1maglev_1_1Construct.html#ad6408f6ed2f8f39e21e3f6c1f2911c2d", null ],
+    [ "kFunctionIndex", "classv8_1_1internal_1_1maglev_1_1Construct.html#af0afec943f60295151a3a921662392b2", null ],
+    [ "kNewTargetIndex", "classv8_1_1internal_1_1maglev_1_1Construct.html#a5857377b66652256744e8125eeeb4a2a", null ],
+    [ "kProperties", "classv8_1_1internal_1_1maglev_1_1Construct.html#aa3c4803540126c5e3f8921669d106ec5", null ]
 ];

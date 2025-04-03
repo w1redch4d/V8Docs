@@ -16,5 +16,12 @@ var classv8_1_1internal_1_1DebugStackTraceIterator =
     [ "GetScript", "classv8_1_1internal_1_1DebugStackTraceIterator.html#a19f19fc0effa871d3131b9610bb74d70", null ],
     [ "GetSharedFunctionInfo", "classv8_1_1internal_1_1DebugStackTraceIterator.html#a2b80113b71a2a6edb02080d4cfa09dca", null ],
     [ "GetSourceLocation", "classv8_1_1internal_1_1DebugStackTraceIterator.html#aceb83dc0511cd7b43d9e6aeb6c97d99e", null ],
-    [ "PrepareRestart", "classv8_1_1internal_1_1DebugStackTraceIterator.html#a165622582ac0dcdc2046a9fa3b2d147e", null ]
+    [ "PrepareRestart", "classv8_1_1internal_1_1DebugStackTraceIterator.html#a165622582ac0dcdc2046a9fa3b2d147e", null ],
+    [ "UpdateInlineFrameIndexAndResumableFnOnStack", "classv8_1_1internal_1_1DebugStackTraceIterator.html#a62abb6a7232514a9f16a334e903d0451", null ],
+    [ "frame_inspector_", "classv8_1_1internal_1_1DebugStackTraceIterator.html#a159f8630f4762786ca0ae98b5ffac2e9", null ],
+    [ "inlined_frame_index_", "classv8_1_1internal_1_1DebugStackTraceIterator.html#ae91fd3c460657dd8b25b5adb3f60aebc", null ],
+    [ "is_top_frame_", "classv8_1_1internal_1_1DebugStackTraceIterator.html#a62b3bdd2b2f3542ec35d932b105b807b", null ],
+    [ "isolate_", "classv8_1_1internal_1_1DebugStackTraceIterator.html#ac02a88394faf79fb296d3c5c05008982", null ],
+    [ "iterator_", "classv8_1_1internal_1_1DebugStackTraceIterator.html#a6e19978ca5eb82b8bb104d3f5f826b3f", null ],
+    [ "resumable_fn_on_stack_", "classv8_1_1internal_1_1DebugStackTraceIterator.html#a5013d510e0aabd0c9ef33a4af1fab10e", null ]
 ];

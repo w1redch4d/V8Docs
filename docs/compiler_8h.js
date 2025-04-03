@@ -12,5 +12,7 @@ var compiler_8h =
     [ "v8::internal::ScriptStreamingData", "structv8_1_1internal_1_1ScriptStreamingData.html", "structv8_1_1internal_1_1ScriptStreamingData" ],
     [ "v8::internal::BackgroundDeserializeTask", "classv8_1_1internal_1_1BackgroundDeserializeTask.html", "classv8_1_1internal_1_1BackgroundDeserializeTask" ],
     [ "DeferredFinalizationJobDataList", "compiler_8h.html#a950645fccc11d743afa1e62fc9cf2d6f", null ],
-    [ "FinalizeUnoptimizedCompilationDataList", "compiler_8h.html#abb9cd085c9e9692c979dbb3d239565c8", null ]
+    [ "FinalizeUnoptimizedCompilationDataList", "compiler_8h.html#abb9cd085c9e9692c979dbb3d239565c8", null ],
+    [ "IsMaglevEnabled", "compiler_8h.html#a7406a952d2c33446062616dd41e79809", null ],
+    [ "IsMaglevOsrEnabled", "compiler_8h.html#a6c437af0c4ce8c8ff4a81f80058cdfe8", null ]
 ];

@@ -4,7 +4,7 @@ var string_8h =
     [ "v8::internal::String", "classv8_1_1internal_1_1String.html", "classv8_1_1internal_1_1String" ],
     [ "v8::internal::String::FlatContent", "classv8_1_1internal_1_1String_1_1FlatContent.html", "classv8_1_1internal_1_1String_1_1FlatContent" ],
     [ "v8::internal::String::Match", "classv8_1_1internal_1_1String_1_1Match.html", "classv8_1_1internal_1_1String_1_1Match" ],
-    [ "v8::internal::ObjectTraits< String >", "structv8_1_1internal_1_1ObjectTraits_3_01String_01_4.html", null ],
+    [ "v8::internal::ObjectTraits< String >", "structv8_1_1internal_1_1ObjectTraits_3_01String_01_4.html", "structv8_1_1internal_1_1ObjectTraits_3_01String_01_4" ],
     [ "v8::internal::SubStringRange", "classv8_1_1internal_1_1SubStringRange.html", "classv8_1_1internal_1_1SubStringRange" ],
     [ "v8::internal::SeqString", "classv8_1_1internal_1_1SeqString.html", "classv8_1_1internal_1_1SeqString" ],
     [ "v8::internal::SeqString::DataAndPaddingSizes", "structv8_1_1internal_1_1SeqString_1_1DataAndPaddingSizes.html", "structv8_1_1internal_1_1SeqString_1_1DataAndPaddingSizes" ],

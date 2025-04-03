@@ -23,5 +23,17 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatch
       [ "kUnsignedGreaterThanOrEqual", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#a1994d1671165e08c47eb7cdb509e2109a7b53538afb832790083b47ce81ad4601", null ]
     ] ],
     [ "StaticCanonicalForLoopMatcher", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#af933fcfdeb2060166303946f61013906", null ],
-    [ "GetIterCountIfStaticCanonicalForLoop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#a0b3aea0f63b1798aefe26eeccf13061d", null ]
+    [ "BinopFromOverflowCheckedBinopKind", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#ae51d9fa9d519dd60b2a43ebc47ec7c1c", null ],
+    [ "BinopFromWordBinopKind", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#aff2342b6758a83796bf7048b0cd58f20", null ],
+    [ "BinopKindIsSupported", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#a1638172305a4ce2ac88078d47376030a", null ],
+    [ "ComparisonKindToCmpOp", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#aa96bdb060b7f40ce6e0043e72718ad26", null ],
+    [ "CountIterations", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#a9f68869cf3420e0ebdb7ec599fb85243", null ],
+    [ "CountIterationsImpl", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#a8f9ac7de276e4309082d7043681bce0f", null ],
+    [ "GetIterCountIfStaticCanonicalForLoop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#a0b3aea0f63b1798aefe26eeccf13061d", null ],
+    [ "InvertComparisonOp", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#abb2a1308e384b2f6d9a2ef51ee03ed0e", null ],
+    [ "MatchCheckedOverflowBinop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#a7af472a6055ab5dd0653846f64827378", null ],
+    [ "MatchPhiCompareCst", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#a6e48eb4ff439bf4dc86e8b968c9337f0", null ],
+    [ "MatchWordBinop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#aec3b8334f8a47c55359d0371fe7d036c", null ],
+    [ "kMaxExactIter", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#ac30cbee885f8d8548c1226d4a5578896", null ],
+    [ "matcher_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StaticCanonicalForLoopMatcher.html#a3adabe0f211aea80d9de0d8cc31243e2", null ]
 ];

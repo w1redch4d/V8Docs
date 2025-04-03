@@ -7,5 +7,6 @@ var heap_2cppgc_2memory_8h =
     [ "NoSanitizeMemset", "heap_2cppgc_2memory_8h.html#a34ece969fe6544c2bc0cc30c1ca04f8e", null ],
     [ "SetMemoryAccessible", "heap_2cppgc_2memory_8h.html#a713063893bc5c3eb40cebc5dade998da", null ],
     [ "SetMemoryInaccessible", "heap_2cppgc_2memory_8h.html#a6195d95eb470576ce85a9aef57387da2", null ],
-    [ "ZapMemory", "heap_2cppgc_2memory_8h.html#a653452023f08ff54eddb171d03675757", null ]
+    [ "ZapMemory", "heap_2cppgc_2memory_8h.html#a653452023f08ff54eddb171d03675757", null ],
+    [ "kZappedValue", "heap_2cppgc_2memory_8h.html#a1e9d71b2e3f0e3e847f4148302e3a0cf", null ]
 ];

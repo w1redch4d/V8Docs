@@ -4,5 +4,6 @@ var classv8_1_1internal_1_1ContextFilter =
     [ "Accept", "classv8_1_1internal_1_1ContextFilter.html#a93300a0b0377ae0e6bc92c5941dfc1ab", null ],
     [ "native_context_address", "classv8_1_1internal_1_1ContextFilter.html#adc209bada7ae04214132bf0d5c4757ce", null ],
     [ "OnMoveEvent", "classv8_1_1internal_1_1ContextFilter.html#aa750b45cd888a1299e184e375c325943", null ],
-    [ "set_native_context_address", "classv8_1_1internal_1_1ContextFilter.html#a454317a7ccc21fcf54e980263c014f99", null ]
+    [ "set_native_context_address", "classv8_1_1internal_1_1ContextFilter.html#a454317a7ccc21fcf54e980263c014f99", null ],
+    [ "native_context_address_", "classv8_1_1internal_1_1ContextFilter.html#a3be7a64f76ee7016c621c166ebe4d66c", null ]
 ];

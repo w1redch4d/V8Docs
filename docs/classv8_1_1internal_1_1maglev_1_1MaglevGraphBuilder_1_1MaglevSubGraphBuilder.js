@@ -1,0 +1,27 @@
+var classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder =
+[
+    [ "BorrowParentKnownNodeAspectsAndVOs", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder_1_1BorrowParentKnownNodeAspectsAndVOs.html", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder_1_1BorrowParentKnownNodeAspectsAndVOs" ],
+    [ "Label", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder_1_1Label.html", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder_1_1Label" ],
+    [ "LoopLabel", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder_1_1LoopLabel.html", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder_1_1LoopLabel" ],
+    [ "Variable", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder_1_1Variable.html", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder_1_1Variable" ],
+    [ "MaglevSubGraphBuilder", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#ac70f8e605b421047ad0a9092899408e6", null ],
+    [ "BeginLoop", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#aff7071914a1cb6a914dfa45b9dabe141", null ],
+    [ "Bind", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#ab0c2375fb1a4b8309764eb26e997e4df", null ],
+    [ "Branch", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#ad8de0cce1bf46b3ad89e7c34e1bbdfce", null ],
+    [ "Branch", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#acd4158926af21f482c777684373aa2b2", null ],
+    [ "EndLoop", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#abacc1f05aaf2c31fc36fd344df705624", null ],
+    [ "get", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#a9d9809014aab9fa444741b0a61ba0bd8", null ],
+    [ "Goto", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#a8172610b10b95773445f5af7e4ccafa4", null ],
+    [ "GotoIfFalse", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#a552ae8e19db374ef6a296bdf4f30bcc2", null ],
+    [ "GotoIfTrue", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#a3216da2011569a7ad658f9a9f3e15770", null ],
+    [ "GotoOrTrim", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#a364d44e5c625e4f676782fba236c0b81", null ],
+    [ "MergeIntoLabel", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#a370142dcd7ae8a1fc55cd783cd81525f", null ],
+    [ "MoveKnownNodeAspectsAndVOsToParent", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#abb1f5fb0d956749d3e03f88ea7682456", null ],
+    [ "ReducePredecessorCount", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#aa480f041774327397c761e16c3af9eb8", null ],
+    [ "set", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#a013293672392b0e7fc65c8cc0e1e9175", null ],
+    [ "TakeKnownNodeAspectsAndVOsFromParent", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#aa9b8be66b1737694fe57237164f9f349", null ],
+    [ "TrimPredecessorsAndBind", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#a22e85304d912459c327251caca4303f1", null ],
+    [ "builder_", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#a88bc9fe601dddcbdbbda5781c5a2517a", null ],
+    [ "compilation_unit_", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#a13ba411132d5d1ec2c8b6b8f2d7f9333", null ],
+    [ "pseudo_frame_", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html#aaf99a1989e4cf41f0a027f012842ab79", null ]
+];

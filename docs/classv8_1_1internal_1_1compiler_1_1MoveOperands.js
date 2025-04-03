@@ -16,5 +16,7 @@ var classv8_1_1internal_1_1compiler_1_1MoveOperands =
     [ "set_source", "classv8_1_1internal_1_1compiler_1_1MoveOperands.html#aff79a4dbeb36b580d0928f21bb281e73", null ],
     [ "SetPending", "classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a3d1362a181883cd36934437dad57d429", null ],
     [ "source", "classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a21c1325326f8b6d912b6fd51550ffcdd", null ],
-    [ "source", "classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a4aa05ae621c53fba614650d91a6db7dd", null ]
+    [ "source", "classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a4aa05ae621c53fba614650d91a6db7dd", null ],
+    [ "destination_", "classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a96f73d90e62228ae15411a6677226f7d", null ],
+    [ "source_", "classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a5565dd620c82cf6654921c65171a2596", null ]
 ];

@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1maglev_1_1CallWithSpread =
 [
+    [ "Base", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#ae591aea53b6e77e982430b1a1b634b98", null ],
     [ "CallWithSpread", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#a98a03efc2d9743793f26bd1f0ad3856f", null ],
     [ "arg", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#a3fd13be446dc4894690ce2d5f4e612ce", null ],
     [ "args_no_spread", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#a3670f72dae6e4ecb34fced96ea495c1a", null ],
@@ -16,5 +17,9 @@ var classv8_1_1internal_1_1maglev_1_1CallWithSpread =
     [ "set_arg", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#a2476fd9b06f463c8dd3b9591f8c3580b", null ],
     [ "SetValueLocationConstraints", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#a7539e1525cef7236bb12408a3181cd07", null ],
     [ "spread", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#a7d73b27d64fa8431c54b32eca5a58088", null ],
-    [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#af93c4c8aa16ca1b4f81cd93431d5f3de", null ]
+    [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#af93c4c8aa16ca1b4f81cd93431d5f3de", null ],
+    [ "kContextIndex", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#a82b8ec7c4f04ba0bea43d2f6a68fcd13", null ],
+    [ "kFixedInputCount", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#aa5d7ddda3614cbea2ad9a8113cd951a3", null ],
+    [ "kFunctionIndex", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#af4e65aaf4d7690ce0e7ca6866be7f81d", null ],
+    [ "kProperties", "classv8_1_1internal_1_1maglev_1_1CallWithSpread.html#a746582c3901d9391298749f7d1503646", null ]
 ];

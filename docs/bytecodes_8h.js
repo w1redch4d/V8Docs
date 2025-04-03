@@ -1,6 +1,6 @@
 var bytecodes_8h =
 [
-    [ "v8::internal::interpreter::Bytecodes", "classv8_1_1internal_1_1interpreter_1_1Bytecodes.html", null ],
+    [ "v8::internal::interpreter::Bytecodes", "classv8_1_1internal_1_1interpreter_1_1Bytecodes.html", "classv8_1_1internal_1_1interpreter_1_1Bytecodes" ],
     [ "BYTECODE_LIST", "bytecodes_8h.html#ab60ff831bd383cdf3ff083bc1d5c9c4b", null ],
     [ "BYTECODE_LIST_WITH_UNIQUE_HANDLERS", "bytecodes_8h.html#a56c8314d59acdae46514693123fdad35", null ],
     [ "BYTECODE_LIST_WITH_UNIQUE_HANDLERS_IMPL", "bytecodes_8h.html#afe2439ffec0ab8a47a45c486d9fd10e0", null ],

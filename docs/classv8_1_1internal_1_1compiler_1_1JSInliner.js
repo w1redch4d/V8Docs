@@ -1,7 +1,28 @@
 var classv8_1_1internal_1_1compiler_1_1JSInliner =
 [
     [ "JSInliner", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a3ad62bd6fb8ff9898604910d719af21e", null ],
+    [ "broker", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a1432414da934317d0f1ceeaba2b6a756", null ],
+    [ "common", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a290e94661fb8936c02af627bc64e88b5", null ],
+    [ "CreateArtificialFrameState", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a151dc9bf0aff64371ba99424851c1877", null ],
+    [ "DetermineCallContext", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#ab69c88e1eaf8f1db0615da2fd7e282c3", null ],
+    [ "DetermineCallTarget", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#aa1adc69e2eea877c12ca575d121ceff0", null ],
+    [ "graph", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a9fa331729e9f5b2fb9b25d968e792e56", null ],
+    [ "InlineCall", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a2090a5cdcc6c7c12ea24586594ad3e73", null ],
+    [ "isolate", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a46120e42cb3968e9f8b0ac62c420cee6", null ],
+    [ "javascript", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a8d942e5116a3b8f18a34899968c3dab9", null ],
+    [ "jsgraph", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a6e01dbfb2068d7723ef8c41663ff439c", null ],
     [ "Reduce", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a2107409713e64e84dc797fa5ca80f910", null ],
     [ "ReduceJSCall", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a1324c04be61ba4f42912e35f6c81a0f5", null ],
-    [ "reducer_name", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#abe31ccd8f37f40746dafc1685cda5167", null ]
+    [ "reducer_name", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#abe31ccd8f37f40746dafc1685cda5167", null ],
+    [ "simplified", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a5c86f2e226849430dc90ffe66f457076", null ],
+    [ "zone", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a616a51cf29ba63d368e07e7b14c8e5b6", null ],
+    [ "broker_", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a21e67bd222495a1223add107e3e07128", null ],
+    [ "info_", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#acdb9e6432f7dcadc341bad0f8746066f", null ],
+    [ "inline_wasm_fct_if_supported_", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a9dc03ac41504cc28c43ae1f5563a0ca0", null ],
+    [ "js_wasm_calls_sidetable_", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a909d90660aec57b9a1ab1007ab57c1d1", null ],
+    [ "jsgraph_", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#ac7a6c2e80c3f9cb0a94f0fd4aa887927", null ],
+    [ "local_zone_", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#ab7258a7bc9305fca1b0494d0c850296f", null ],
+    [ "node_origins_", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a3808697979497f480e00c19908e3e467", null ],
+    [ "source_positions_", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#ad75f9940ac341c0cfaccdcb10dbfb527", null ],
+    [ "wasm_module_", "classv8_1_1internal_1_1compiler_1_1JSInliner.html#a91fb7c16978a3ad932534b743ebcdcc7", null ]
 ];

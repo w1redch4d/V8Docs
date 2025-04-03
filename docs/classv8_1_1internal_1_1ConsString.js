@@ -18,5 +18,8 @@ var classv8_1_1internal_1_1ConsString =
     [ "StringBuiltinsAssembler", "classv8_1_1internal_1_1ConsString.html#a03e9ee00da7d49d1b31af9c8d63023b2", null ],
     [ "ToDirectStringAssembler", "classv8_1_1internal_1_1ConsString.html#a09816edeed66c9edbd22158b56fe25e1", null ],
     [ "TorqueGeneratedConsStringAsserts", "classv8_1_1internal_1_1ConsString.html#ad8c88c6702e2fad8178c39c8d121974d", null ],
-    [ "V8HeapExplorer", "classv8_1_1internal_1_1ConsString.html#a29c5c7a1e13f0404746b9261f3764a7f", null ]
+    [ "V8HeapExplorer", "classv8_1_1internal_1_1ConsString.html#a29c5c7a1e13f0404746b9261f3764a7f", null ],
+    [ "first_", "classv8_1_1internal_1_1ConsString.html#a9fbc94dad5589782f578948b39e0123d", null ],
+    [ "kMinLength", "classv8_1_1internal_1_1ConsString.html#a1c3bddf914ec5eceaadab606bc63375c", null ],
+    [ "second_", "classv8_1_1internal_1_1ConsString.html#a84140288427d0dd7b7dabac21479002a", null ]
 ];

@@ -8,5 +8,7 @@ var classv8_1_1internal_1_1compiler_1_1ElementAccessFeedback =
     [ "Refine", "classv8_1_1internal_1_1compiler_1_1ElementAccessFeedback.html#aa6ebec9cd33220c19cbe0fb4288b7f67", null ],
     [ "Refine", "classv8_1_1internal_1_1compiler_1_1ElementAccessFeedback.html#a147914c9dc0a95cd3815275e0d77734a", null ],
     [ "Refine", "classv8_1_1internal_1_1compiler_1_1ElementAccessFeedback.html#ac1b0c36661565b593e5cb431e8b1015b", null ],
-    [ "transition_groups", "classv8_1_1internal_1_1compiler_1_1ElementAccessFeedback.html#aa8b04847ce0e07895f9fa4e92bed5169", null ]
+    [ "transition_groups", "classv8_1_1internal_1_1compiler_1_1ElementAccessFeedback.html#aa8b04847ce0e07895f9fa4e92bed5169", null ],
+    [ "keyed_mode_", "classv8_1_1internal_1_1compiler_1_1ElementAccessFeedback.html#af2b06cbf9dbb175c3dc018657a9981f2", null ],
+    [ "transition_groups_", "classv8_1_1internal_1_1compiler_1_1ElementAccessFeedback.html#a9b4c722d5a2416431b4044bccc22a1f8", null ]
 ];

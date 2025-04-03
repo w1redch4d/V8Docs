@@ -1,6 +1,8 @@
 var json_stringifier_8cc =
 [
     [ "v8::internal::JsonStringifier", "classv8_1_1internal_1_1JsonStringifier.html", "classv8_1_1internal_1_1JsonStringifier" ],
+    [ "v8::internal::JsonStringifier::NoExtendBuilder< DestChar >", "classv8_1_1internal_1_1JsonStringifier_1_1NoExtendBuilder.html", "classv8_1_1internal_1_1JsonStringifier_1_1NoExtendBuilder" ],
+    [ "v8::internal::JsonStringifier::SimplePropertyKeyCache", "classv8_1_1internal_1_1JsonStringifier_1_1SimplePropertyKeyCache.html", "classv8_1_1internal_1_1JsonStringifier_1_1SimplePropertyKeyCache" ],
     [ "v8::internal::CircularStructureMessageBuilder", "classv8_1_1internal_1_1CircularStructureMessageBuilder.html", "classv8_1_1internal_1_1CircularStructureMessageBuilder" ],
     [ "v8::internal::OutBuffer< Char >", "classv8_1_1internal_1_1OutBuffer.html", "classv8_1_1internal_1_1OutBuffer" ],
     [ "v8::internal::ContinuationRecord", "structv8_1_1internal_1_1ContinuationRecord.html", "structv8_1_1internal_1_1ContinuationRecord" ],
@@ -17,5 +19,6 @@ var json_stringifier_8cc =
       [ "EXCEPTION", "json-stringifier_8cc.html#a37e290c8e613119e7591abaf8dbdc889a5c8e735a7aa4d9efd81fa9497d5038c1", null ]
     ] ],
     [ "JsonStringify", "json-stringifier_8cc.html#afdba5d7b864ef3a628250495207a7b1c", null ],
-    [ "MayHaveInterestingProperties", "json-stringifier_8cc.html#a47e67293988257b00ee31442223f1b93", null ]
+    [ "MayHaveInterestingProperties", "json-stringifier_8cc.html#a47e67293988257b00ee31442223f1b93", null ],
+    [ "kJsonStringifierZoneName", "json-stringifier_8cc.html#a4b4f646f57af56b9e65f47d0e7d5dedd", null ]
 ];

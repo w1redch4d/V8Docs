@@ -15,5 +15,11 @@ var classv8_1_1internal_1_1compiler_1_1SourcePositionTable =
     [ "PrintJson", "classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html#a2499f9d0dcaf5082a76424204c75cdc8", null ],
     [ "RemoveDecorator", "classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html#a0bbb2fe7146666fe40274b864e507718", null ],
     [ "SetCurrentPosition", "classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html#a51a1b746d8a1260cbedc2dfe4e7600a1", null ],
-    [ "SetSourcePosition", "classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html#a853c0ebb1e3ec366366b1a971a9d8c61", null ]
+    [ "SetSourcePosition", "classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html#a853c0ebb1e3ec366366b1a971a9d8c61", null ],
+    [ "UnknownSourcePosition", "classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html#a168aa509885525d2abe6c25959fcd05e", null ],
+    [ "current_position_", "classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html#aae042111fadf0212cb9aa91de08e609d", null ],
+    [ "decorator_", "classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html#a6c635548505dc4d6f3b9c07347e222dc", null ],
+    [ "enabled_", "classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html#aea71f6a30315f10e511435dd8d999e03", null ],
+    [ "graph_", "classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html#a62a65d69c9f690eb145f996519f47cfc", null ],
+    [ "table_", "classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html#ae02e2ade131801e04a38be66f281cd4e", null ]
 ];

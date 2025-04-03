@@ -40,5 +40,6 @@ var macro_assembler_8h =
     [ "SmiCheck", "macro-assembler_8h.html#a32df3bb76b662e0f3613654187f72aa4", [
       [ "kOmit", "macro-assembler_8h.html#a32df3bb76b662e0f3613654187f72aa4a095c609f689463f87b6ca0b1081d676d", null ],
       [ "kInline", "macro-assembler_8h.html#a32df3bb76b662e0f3613654187f72aa4ac85854ddee9c5a42803e4cf834327ca1", null ]
-    ] ]
+    ] ],
+    [ "kMaxCParameters", "macro-assembler_8h.html#a7dbb75f29f0db9e81bd5cbe7316b1604", null ]
 ];

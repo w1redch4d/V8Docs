@@ -1,4 +1,4 @@
 var regexp_parser_8h =
 [
-    [ "v8::internal::RegExpParser", "classv8_1_1internal_1_1RegExpParser.html", null ]
+    [ "v8::internal::RegExpParser", "classv8_1_1internal_1_1RegExpParser.html", "classv8_1_1internal_1_1RegExpParser" ]
 ];

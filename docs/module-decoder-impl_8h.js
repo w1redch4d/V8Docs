@@ -3,6 +3,7 @@ var module_decoder_impl_8h =
     [ "v8::internal::wasm::WasmSectionIterator", "classv8_1_1internal_1_1wasm_1_1WasmSectionIterator.html", "classv8_1_1internal_1_1wasm_1_1WasmSectionIterator" ],
     [ "v8::internal::wasm::ModuleDecoderImpl", "classv8_1_1internal_1_1wasm_1_1ModuleDecoderImpl.html", "classv8_1_1internal_1_1wasm_1_1ModuleDecoderImpl" ],
     [ "v8::internal::wasm::ModuleDecoderImpl::DataSegmentHeader", "structv8_1_1internal_1_1wasm_1_1ModuleDecoderImpl_1_1DataSegmentHeader.html", "structv8_1_1internal_1_1wasm_1_1ModuleDecoderImpl_1_1DataSegmentHeader" ],
+    [ "v8::internal::wasm::ModuleDecoderImpl::LimitsByte", "structv8_1_1internal_1_1wasm_1_1ModuleDecoderImpl_1_1LimitsByte.html", "structv8_1_1internal_1_1wasm_1_1ModuleDecoderImpl_1_1LimitsByte" ],
     [ "BYTES", "module-decoder-impl_8h.html#a0108440bf3c2b59861521034d0a1cd60", null ],
     [ "TRACE", "module-decoder-impl_8h.html#a5f6aa8edcd99914757600b5d3b259bb7", null ],
     [ "TYPE_CHECK", "module-decoder-impl_8h.html#ad3420dc32e6db9041028b95f6f909bc5", null ],

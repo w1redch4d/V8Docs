@@ -8,5 +8,8 @@ var classv8_1_1internal_1_1compiler_1_1PackNode =
     [ "Print", "classv8_1_1internal_1_1compiler_1_1PackNode.html#ab71e414eff501705a44555f60e95509e", null ],
     [ "RevectorizedNode", "classv8_1_1internal_1_1compiler_1_1PackNode.html#af69f33042bf1292c5a181ebbf0f89fc6", null ],
     [ "SetOperand", "classv8_1_1internal_1_1compiler_1_1PackNode.html#a6c14e58d91f3970b34c0340ba0380bb8", null ],
-    [ "SetRevectorizedNode", "classv8_1_1internal_1_1compiler_1_1PackNode.html#a67b83ed5a12e71eb25301e34bb96ffef", null ]
+    [ "SetRevectorizedNode", "classv8_1_1internal_1_1compiler_1_1PackNode.html#a67b83ed5a12e71eb25301e34bb96ffef", null ],
+    [ "nodes_", "classv8_1_1internal_1_1compiler_1_1PackNode.html#a737dabb5f12fb0f481eb48e8c4c15981", null ],
+    [ "operands_", "classv8_1_1internal_1_1compiler_1_1PackNode.html#a54d3ca6ca42e53d72c9fa31fed9c1ced", null ],
+    [ "revectorized_node_", "classv8_1_1internal_1_1compiler_1_1PackNode.html#ad4869aefb24e486048ea1580cfa19336", null ]
 ];

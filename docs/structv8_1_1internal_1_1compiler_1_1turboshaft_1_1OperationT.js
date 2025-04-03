@@ -5,6 +5,8 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT =
     [ "OperationT", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#aa1206e0a21d489885a66dd8a4ba36e35", null ],
     [ "derived_this", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#a0a55b6581328ffae7cb0aeef44beeb02", null ],
     [ "derived_this", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#a2a2aa27ae37b068854782feff5325b57", null ],
+    [ "Effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#a32338d57e87e0ac92dbea6a3356db676", null ],
+    [ "EffectsIfStatic", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#ae5e8b83327f96d1c97bad9136c4de572", null ],
     [ "EqualsForGVN", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#a7f91e68ca49fd9e3ee9d7aa7c48f5702", null ],
     [ "hash_value", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#ac823015d62e9893decb1f0e41a107c75", null ],
     [ "HashWithOptions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#ad689d563a6f21005f74fb4417923eaea", null ],
@@ -13,10 +15,18 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT =
     [ "input", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#afca6eeff589e26e34848be85e47f7304", null ],
     [ "inputs", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#a743930576a8cbac37242c823fd4fd706", null ],
     [ "inputs", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#abda3527abd5fac1bcb0fae05697d7bf0", null ],
+    [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#ac011528d998368dee40bfea2ac4ec2ea", null ],
+    [ "IsBlockTerminator", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#ac682e718590f531ccb0358bc580ca006", null ],
     [ "IsRequiredWhenUnused", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#ac793d6bf62714f92ce21a5b2407d43d3", null ],
+    [ "New", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#a365e8f84a177347e2d406cac8c72cd0e", null ],
+    [ "New", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#a50257cda445f63bf012e31df4649173f", null ],
     [ "operator==", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#aa86c2219b0c148bfd54ad7a14022104e", null ],
+    [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#aa03a341a0f2561e8f36c0e8edbd89c62", null ],
     [ "PrintInputs", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#ab003b45afd232e57d95a10992b60163e", null ],
     [ "PrintOptions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#a0b679b4eac9393cdd08f725ebbd105a6", null ],
+    [ "PrintOptionsHelper", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#af4c883cb7b550a0f59e10993d1910e1b", null ],
     [ "StorageSlotCount", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#a5d5568512be15d1e9934d3c337259f15", null ],
-    [ "Validate", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#a8146e491600f088dc5b6b5eac7770e74", null ]
+    [ "StorageSlotCount", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#aecd633b2a7767265cc6d40febb3ff548", null ],
+    [ "Validate", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#a8146e491600f088dc5b6b5eac7770e74", null ],
+    [ "opcode", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationT.html#ae3ed1feb1e040d3ca888b785cb3d2b3c", null ]
 ];

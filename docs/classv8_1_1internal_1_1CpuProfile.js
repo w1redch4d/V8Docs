@@ -16,7 +16,20 @@ var classv8_1_1internal_1_1CpuProfile =
     [ "samples_count", "classv8_1_1internal_1_1CpuProfile.html#a9c97b8160475d22df0e26a6de1bf5f4b", null ],
     [ "sampling_interval_us", "classv8_1_1internal_1_1CpuProfile.html#a1ce42ffc3bbe3fca33b8761abe1a20e6", null ],
     [ "start_time", "classv8_1_1internal_1_1CpuProfile.html#a2809207f0958ded5c674fd1b5488ed28", null ],
+    [ "StreamPendingTraceEvents", "classv8_1_1internal_1_1CpuProfile.html#aa67ac87479c6377cadf5697b998bd9db", null ],
     [ "title", "classv8_1_1internal_1_1CpuProfile.html#a8672369ca76f838e11e9ddc596e6c749", null ],
     [ "top_down", "classv8_1_1internal_1_1CpuProfile.html#a040eeec171efa7c97c6ce2e3e43e6630", null ],
-    [ "UpdateTicksScale", "classv8_1_1internal_1_1CpuProfile.html#a66f5b3ad5fe0fcf040e8274e5238441d", null ]
+    [ "UpdateTicksScale", "classv8_1_1internal_1_1CpuProfile.html#a66f5b3ad5fe0fcf040e8274e5238441d", null ],
+    [ "context_filter_", "classv8_1_1internal_1_1CpuProfile.html#a52c20a05c4bec462d2c981912c94924e", null ],
+    [ "delegate_", "classv8_1_1internal_1_1CpuProfile.html#a13f6e9f9067a6a32112a90b16a8cefa7", null ],
+    [ "end_time_", "classv8_1_1internal_1_1CpuProfile.html#a0c9de2531b46b29b48d2f139bc203913", null ],
+    [ "id_", "classv8_1_1internal_1_1CpuProfile.html#a7088fda282fb3123130ded734364d355", null ],
+    [ "next_sample_delta_", "classv8_1_1internal_1_1CpuProfile.html#ade408de5ceb5f9c1e41097a1cbd73286", null ],
+    [ "options_", "classv8_1_1internal_1_1CpuProfile.html#a1edafbac9ff8c39721c007159bbf9eaf", null ],
+    [ "profiler_", "classv8_1_1internal_1_1CpuProfile.html#afac814334577e4b1f42ba83d0b267d99", null ],
+    [ "samples_", "classv8_1_1internal_1_1CpuProfile.html#a5a8b18062640f2a4bb7218bc1b8ce383", null ],
+    [ "start_time_", "classv8_1_1internal_1_1CpuProfile.html#a293e74b3327d92f258e05de645c856b1", null ],
+    [ "streaming_next_sample_", "classv8_1_1internal_1_1CpuProfile.html#abd8740672514474d73a993336a115a0c", null ],
+    [ "title_", "classv8_1_1internal_1_1CpuProfile.html#a6355273dc0e79fab26bddbc9f094c321", null ],
+    [ "top_down_", "classv8_1_1internal_1_1CpuProfile.html#a5dc7d8b827dc5034d6dccefbcebd0aff", null ]
 ];

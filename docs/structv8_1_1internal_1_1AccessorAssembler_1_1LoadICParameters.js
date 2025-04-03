@@ -11,5 +11,13 @@ var structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters =
     [ "receiver", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#ad3ad24e8c2f152b6493a8e1fd44c49af", null ],
     [ "receiver_and_lookup_start_object", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#aec3712e6171f734e920063dbd5dab66c", null ],
     [ "slot", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#adb5da92450e9e2e4cf2234412c2629ee", null ],
-    [ "vector", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#adbfa4ed2668deb340d8280466d947e78", null ]
+    [ "vector", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#adbfa4ed2668deb340d8280466d947e78", null ],
+    [ "cache_type_", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#a71a2d5411aa3c72731b06c8d2104fea7", null ],
+    [ "context_", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#a9af931e2217231fb2df03018aa177462", null ],
+    [ "enum_index_", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#af0828a6e924aac419d307117aadc8436", null ],
+    [ "lookup_start_object_", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#af55ce38846144f988e30d5169c650423", null ],
+    [ "name_", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#a4cb9b9fe18b13c86888e86638345a803", null ],
+    [ "receiver_", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#a09561a991d9d059c80be9ef457c93ca9", null ],
+    [ "slot_", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#ab582eeb93a84244acd846adef7c3e491", null ],
+    [ "vector_", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html#a61e560c8fe03f0a13c63fbff88763dab", null ]
 ];

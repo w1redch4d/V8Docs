@@ -14,5 +14,12 @@ var heap_snapshot_generator_8cc =
     [ "MAKE_STRING_CASE", "heap-snapshot-generator_8cc.html#a9eaa3021fa1b37a2020160ae831c2be5", null ],
     [ "MAKE_STRING_MAP_CASE", "heap-snapshot-generator_8cc.html#aeb503f3b214afb0512456ea22e2dd8e4", null ],
     [ "MAKE_TORQUE_CASE", "heap-snapshot-generator_8cc.html#a44912b5e340b4756bb362993146c3571", null ],
-    [ "index", "heap-snapshot-generator_8cc.html#a0cfab207d565dcf62ebf50f3987e05de", null ]
+    [ "SerializePosition", "heap-snapshot-generator_8cc.html#a86c738caeae9f68dbca2f1ab52ac1bf6", null ],
+    [ "utoa", "heap-snapshot-generator_8cc.html#a5fc54ebbae5c83aac796f0c7134517de", null ],
+    [ "utoa_impl", "heap-snapshot-generator_8cc.html#ac46a4a67c4903e153f5d067b592bc76a", null ],
+    [ "WriteUChar", "heap-snapshot-generator_8cc.html#a0bd24ec1cf5d0a985cc3732188cb9f1b", null ],
+    [ "index", "heap-snapshot-generator_8cc.html#a0cfab207d565dcf62ebf50f3987e05de", null ],
+    [ "isolate_", "heap-snapshot-generator_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b", null ],
+    [ "native_context_names", "heap-snapshot-generator_8cc.html#acaad388b793a57d78638e01951d536cf", null ],
+    [ "prev_", "heap-snapshot-generator_8cc.html#ad3aaf2e61aa76898ede44d9562273588", null ]
 ];

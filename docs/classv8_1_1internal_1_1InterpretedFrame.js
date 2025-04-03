@@ -1,6 +1,8 @@
 var classv8_1_1internal_1_1InterpretedFrame =
 [
     [ "InterpretedFrame", "classv8_1_1internal_1_1InterpretedFrame.html#ab0e08279788deabbf22fc02bd884ef6a", null ],
+    [ "cast", "classv8_1_1internal_1_1InterpretedFrame.html#abbaa12b752a9f269085b50ba7aa305c1", null ],
+    [ "cast", "classv8_1_1internal_1_1InterpretedFrame.html#a0bb718b7bf82e6db5a691e33d11d6c33", null ],
     [ "GetBytecodeOffset", "classv8_1_1internal_1_1InterpretedFrame.html#ad2ed86b6b5000bf7ccd1ec70a63c87c2", null ],
     [ "PatchBytecodeArray", "classv8_1_1internal_1_1InterpretedFrame.html#ab0615134a656818754157777fb7c4957", null ],
     [ "PatchBytecodeOffset", "classv8_1_1internal_1_1InterpretedFrame.html#a544cdc5b93167c2a47b0acdd240eb923", null ],

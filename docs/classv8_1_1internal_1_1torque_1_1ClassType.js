@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1torque_1_1ClassType =
 [
+    [ "ClassType", "classv8_1_1internal_1_1torque_1_1ClassType.html#a69271c75dfab1cc7f28e1553ec60658f", null ],
     [ "AllowInstantiation", "classv8_1_1internal_1_1torque_1_1ClassType.html#aae0d4a5cc8b6559545fca4bc729e0b4c", null ],
     [ "AttributedToFile", "classv8_1_1internal_1_1torque_1_1ClassType.html#ac10693a4c6b63c5850d53414818b9a92", null ],
     [ "ComputeAllFields", "classv8_1_1internal_1_1torque_1_1ClassType.html#abdf48ef9a4c100f7aab173576bf777e6", null ],
@@ -10,6 +11,7 @@ var classv8_1_1internal_1_1torque_1_1ClassType =
     [ "DoNotGenerateCast", "classv8_1_1internal_1_1torque_1_1ClassType.html#a074869aae5dc91d8b14447f855e5e63f", null ],
     [ "Finalize", "classv8_1_1internal_1_1torque_1_1ClassType.html#a4d07ff2860ffbeb59c446d53e2328d3a", null ],
     [ "GenerateAccessors", "classv8_1_1internal_1_1torque_1_1ClassType.html#acd7122a960239c443fa6ae3880f6b311", null ],
+    [ "GenerateSliceAccessor", "classv8_1_1internal_1_1torque_1_1ClassType.html#a9b0ed36c5ab9d73819e009d25251206a", null ],
     [ "GetClassDeclaringField", "classv8_1_1internal_1_1torque_1_1ClassType.html#a20169a69ada1120b3c37659ef7e6fd66", null ],
     [ "GetFieldPreceding", "classv8_1_1internal_1_1torque_1_1ClassType.html#a7c51d4cd0100475b8fb1dabfe1e7ef0c", null ],
     [ "GetGeneratedTNodeTypeNameImpl", "classv8_1_1internal_1_1torque_1_1ClassType.html#a76b9e7b6bbcb4cecca236b987f528c27", null ],
@@ -48,5 +50,13 @@ var classv8_1_1internal_1_1torque_1_1ClassType =
     [ "size", "classv8_1_1internal_1_1torque_1_1ClassType.html#a85af0626ebf56f4a246281698935962f", null ],
     [ "ToExplicitString", "classv8_1_1internal_1_1torque_1_1ClassType.html#aa2a9e1bc006cbb40a5b5c70c1c2c4caf", null ],
     [ "TypeOracle", "classv8_1_1internal_1_1torque_1_1ClassType.html#a7094142f1d9b95b74797a11decbf23e3", null ],
-    [ "TypeVisitor", "classv8_1_1internal_1_1torque_1_1ClassType.html#a385875ee07c2f379fa4ef3ec39f23b8f", null ]
+    [ "TypeVisitor", "classv8_1_1internal_1_1torque_1_1ClassType.html#a385875ee07c2f379fa4ef3ec39f23b8f", null ],
+    [ "alias_", "classv8_1_1internal_1_1torque_1_1ClassType.html#aa8ab73bcdca48cb9f516a13fe5dcf8a3", null ],
+    [ "decl_", "classv8_1_1internal_1_1torque_1_1ClassType.html#aa7f748b257f10ecd33d937f79525fe39", null ],
+    [ "flags_", "classv8_1_1internal_1_1torque_1_1ClassType.html#a5a7ccf617515734a6d1578144ba4f23b", null ],
+    [ "generates_", "classv8_1_1internal_1_1torque_1_1ClassType.html#ae27caa3d2ef382ba0f0c278f6f9cdccc", null ],
+    [ "header_size_", "classv8_1_1internal_1_1torque_1_1ClassType.html#a155b11f5910e6c16f54e7e4115b091cb", null ],
+    [ "instance_type_range_", "classv8_1_1internal_1_1torque_1_1ClassType.html#af41f9f7a0d394413220feedbc4951af4", null ],
+    [ "own_instance_type_", "classv8_1_1internal_1_1torque_1_1ClassType.html#a656fd3bb1b99c6e9f8662e572ae1501e", null ],
+    [ "size_", "classv8_1_1internal_1_1torque_1_1ClassType.html#a63d69078e2a00ec6616fd4da9dbaa083", null ]
 ];

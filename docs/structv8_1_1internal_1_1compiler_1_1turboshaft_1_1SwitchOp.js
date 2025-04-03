@@ -10,5 +10,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SwitchOp =
     [ "PrintOptions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SwitchOp.html#a24ea19f77966b620694b119652b6ce8c", null ],
     [ "cases", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SwitchOp.html#a9ade6dc50b7acbc69788f7bf75f76eb7", null ],
     [ "default_case", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SwitchOp.html#a47813e21bf2604cfa15fc0374af8033a", null ],
-    [ "default_hint", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SwitchOp.html#a9e88a84fbf6806ed3b5a91192f48d19a", null ]
+    [ "default_hint", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SwitchOp.html#a9e88a84fbf6806ed3b5a91192f48d19a", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SwitchOp.html#a02b10b3ad9f5964e6a7421e159fe3ae7", null ]
 ];

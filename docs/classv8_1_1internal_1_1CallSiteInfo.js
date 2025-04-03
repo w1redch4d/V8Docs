@@ -1,12 +1,28 @@
 var classv8_1_1internal_1_1CallSiteInfo =
 [
-    [ "BodyDescriptor", "classv8_1_1internal_1_1CallSiteInfo_1_1BodyDescriptor.html", null ],
+    [ "BodyDescriptor", "classv8_1_1internal_1_1CallSiteInfo_1_1BodyDescriptor.html", "classv8_1_1internal_1_1CallSiteInfo_1_1BodyDescriptor" ],
     [ "code_object", "classv8_1_1internal_1_1CallSiteInfo.html#a5d0e75c8cd904e0d19f743a864487a00", null ],
+    [ "ComputeLocation", "classv8_1_1internal_1_1CallSiteInfo.html#ab9ed2bc7b10c084cbed505ad14fab866", null ],
+    [ "ComputeSourcePosition", "classv8_1_1internal_1_1CallSiteInfo.html#a6ff4a9447552eaf13c61b7c67099d59c", null ],
+    [ "GetColumnNumber", "classv8_1_1internal_1_1CallSiteInfo.html#a86e750320e0d0271a11b8cc369cb0353", null ],
+    [ "GetEnclosingColumnNumber", "classv8_1_1internal_1_1CallSiteInfo.html#a14d2078ffea1bccf6d2669b2609cbdb4", null ],
+    [ "GetEnclosingLineNumber", "classv8_1_1internal_1_1CallSiteInfo.html#aad3efe5abd58a26446b43902e7a3720b", null ],
+    [ "GetEvalOrigin", "classv8_1_1internal_1_1CallSiteInfo.html#a26b0fce5434695a6547c2a763a149a0e", null ],
+    [ "GetFunctionDebugName", "classv8_1_1internal_1_1CallSiteInfo.html#ae615d818a9b4319ae3ddce2f05efc96e", null ],
+    [ "GetFunctionName", "classv8_1_1internal_1_1CallSiteInfo.html#a6cd92e656aa694d8c802c1b16bda9781", null ],
+    [ "GetLineNumber", "classv8_1_1internal_1_1CallSiteInfo.html#a1a05103fddc554a9f0ea9d58dd7a2a9e", null ],
+    [ "GetMethodName", "classv8_1_1internal_1_1CallSiteInfo.html#a8db94217eb296b5ec248cc7464684124", null ],
+    [ "GetScript", "classv8_1_1internal_1_1CallSiteInfo.html#a8121c55f4744935b801d8a734d5216d2", null ],
+    [ "GetScript", "classv8_1_1internal_1_1CallSiteInfo.html#a0d7206ce4bb6bbc888e823fdc28c6408", null ],
+    [ "GetScriptHash", "classv8_1_1internal_1_1CallSiteInfo.html#a6ac5c557f76280e363d566e9494b0ebb", null ],
     [ "GetScriptId", "classv8_1_1internal_1_1CallSiteInfo.html#aaf782ff0f3887294a223642536984039", null ],
     [ "GetScriptName", "classv8_1_1internal_1_1CallSiteInfo.html#a1ae4f451418175bd3234912b86dc88b0", null ],
     [ "GetScriptNameOrSourceURL", "classv8_1_1internal_1_1CallSiteInfo.html#afce31c1c510759c87a778893068f51d3", null ],
     [ "GetScriptSource", "classv8_1_1internal_1_1CallSiteInfo.html#aab78853537eed20cfc9b1842f57cfd8d", null ],
     [ "GetScriptSourceMappingURL", "classv8_1_1internal_1_1CallSiteInfo.html#abda3ef2970afe6beabc85aa269063115", null ],
+    [ "GetSharedFunctionInfo", "classv8_1_1internal_1_1CallSiteInfo.html#a23f1c0540f2f5b7eee6358906d319bb1", null ],
+    [ "GetSourcePosition", "classv8_1_1internal_1_1CallSiteInfo.html#ad0c7d41cf8be2ca32f9fec4814ca55b9", null ],
+    [ "GetTypeName", "classv8_1_1internal_1_1CallSiteInfo.html#aa02ce872c8db0709811b142c4d45da96", null ],
     [ "IsAsync", "classv8_1_1internal_1_1CallSiteInfo.html#a8dc9104ad64cb6b8ad6bbf4428865e61", null ],
     [ "IsConstructor", "classv8_1_1internal_1_1CallSiteInfo.html#a549bdb1396cb05b0cabc34baac93601d", null ],
     [ "IsEval", "classv8_1_1internal_1_1CallSiteInfo.html#ae2cc5dd28d0e398d96623b3d83755d41", null ],
@@ -19,5 +35,6 @@ var classv8_1_1internal_1_1CallSiteInfo =
     [ "IsSubjectToDebugging", "classv8_1_1internal_1_1CallSiteInfo.html#ad6e4629b04d250c523d00aa0175e741e", null ],
     [ "IsToplevel", "classv8_1_1internal_1_1CallSiteInfo.html#a8db7f162861d90878844db99f5948c71", null ],
     [ "IsUserJavaScript", "classv8_1_1internal_1_1CallSiteInfo.html#a5948a22f6509f4ed40e8125dad11a848", null ],
-    [ "set_code_object", "classv8_1_1internal_1_1CallSiteInfo.html#a24d5e56e75e541d2ab7734f6ab7f66e0", null ]
+    [ "set_code_object", "classv8_1_1internal_1_1CallSiteInfo.html#a24d5e56e75e541d2ab7734f6ab7f66e0", null ],
+    [ "kUnknown", "classv8_1_1internal_1_1CallSiteInfo.html#aa7dba73d2803bee26933950bac1b6a2a", null ]
 ];

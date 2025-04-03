@@ -11,5 +11,11 @@ var classv8_1_1internal_1_1ParserBase_1_1Target =
     [ "labels", "classv8_1_1internal_1_1ParserBase_1_1Target.html#a9795e0738740ec0a7df0b5094ae4856c", null ],
     [ "own_labels", "classv8_1_1internal_1_1ParserBase_1_1Target.html#a6e51511d0048c8903034c399b2dff0a5", null ],
     [ "previous", "classv8_1_1internal_1_1ParserBase_1_1Target.html#adc5a150d4eb53c38ce8cb8d43603470c", null ],
-    [ "statement", "classv8_1_1internal_1_1ParserBase_1_1Target.html#a11feae0a17426bdbbf0901f781997503", null ]
+    [ "statement", "classv8_1_1internal_1_1ParserBase_1_1Target.html#a11feae0a17426bdbbf0901f781997503", null ],
+    [ "labels_", "classv8_1_1internal_1_1ParserBase_1_1Target.html#a515d21c21b6f44fea64e3d97de533fbe", null ],
+    [ "own_labels_", "classv8_1_1internal_1_1ParserBase_1_1Target.html#aef7d2794876010278ad647610c859f6c", null ],
+    [ "previous_", "classv8_1_1internal_1_1ParserBase_1_1Target.html#a71e8efad4537bcf31605e1881c0e00f9", null ],
+    [ "stack_", "classv8_1_1internal_1_1ParserBase_1_1Target.html#a490cca23fde011311c42f99ae0c148a0", null ],
+    [ "statement_", "classv8_1_1internal_1_1ParserBase_1_1Target.html#a4e7c34af7939b023cb469d0604b14479", null ],
+    [ "target_type_", "classv8_1_1internal_1_1ParserBase_1_1Target.html#a49c1a0489c177d83f26cd0c3f0510367", null ]
 ];

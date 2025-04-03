@@ -6,5 +6,7 @@ var classv8_1_1internal_1_1compiler_1_1CreateArrayParameters =
     [ "hash_value", "classv8_1_1internal_1_1compiler_1_1CreateArrayParameters.html#a6a29f4937376e7654e59752cb05f2b7e", null ],
     [ "operator!=", "classv8_1_1internal_1_1compiler_1_1CreateArrayParameters.html#adb9d7c771c4f69ec32ea1d29114acbec", null ],
     [ "operator<<", "classv8_1_1internal_1_1compiler_1_1CreateArrayParameters.html#aee102429f24c194ba751af4424f0fc19", null ],
-    [ "operator==", "classv8_1_1internal_1_1compiler_1_1CreateArrayParameters.html#a5ef0840d564a5da7746f4ef9aa7398c8", null ]
+    [ "operator==", "classv8_1_1internal_1_1compiler_1_1CreateArrayParameters.html#a5ef0840d564a5da7746f4ef9aa7398c8", null ],
+    [ "arity_", "classv8_1_1internal_1_1compiler_1_1CreateArrayParameters.html#ad2e747ee45850367bf37dd20d271d459", null ],
+    [ "site_", "classv8_1_1internal_1_1compiler_1_1CreateArrayParameters.html#a3ef5421cc6efff8843bebe9d1942500c", null ]
 ];

@@ -13,5 +13,6 @@ var maglev_ir_8cc =
     [ "FromConstantToBool", "maglev-ir_8cc.html#aa6cccfcfaf8bcd06c55d23e506fd8e52", null ],
     [ "OpcodeToString", "maglev-ir_8cc.html#a6871f78cb8caf3155622f51a7fbf22f0", null ],
     [ "operator<<", "maglev-ir_8cc.html#a9f07b8d4fac3928d80f6311bdac3cf3d", null ],
-    [ "ToValueRepresentation", "maglev-ir_8cc.html#ac1fa16af91ef8bc16520ef9fa56df806", null ]
+    [ "ToValueRepresentation", "maglev-ir_8cc.html#ac1fa16af91ef8bc16520ef9fa56df806", null ],
+    [ "scope_", "maglev-ir_8cc.html#adb07a2b1e32b9e1fb3493e0223404678", null ]
 ];

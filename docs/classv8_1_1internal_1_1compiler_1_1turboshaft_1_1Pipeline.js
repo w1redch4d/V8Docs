@@ -22,5 +22,6 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline =
     [ "Run", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#aded11be3db32b765bbeb39e65c4a5f62", null ],
     [ "SelectInstructions", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#a44057f6364e9db388310f94a251a8624", null ],
     [ "TraceSequence", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#ad5d560bfacd943a7a6aa03b8362a24f0", null ],
-    [ "VerifyGeneratedCodeIsIdempotent", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#ab6857d4e1dbac4a6d743d431a092feef", null ]
+    [ "VerifyGeneratedCodeIsIdempotent", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#ab6857d4e1dbac4a6d743d431a092feef", null ],
+    [ "data_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#a5169f2a63732a00b8960d30e369f260f", null ]
 ];

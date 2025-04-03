@@ -11,7 +11,6 @@ var namespacev8_1_1internal_1_1ETWJITInterface =
     [ "ETWEnableCallback", "namespacev8_1_1internal_1_1ETWJITInterface.html#a0fdeb72f182400f120c3fc7ba09f36e8", null ],
     [ "EventFields", "namespacev8_1_1internal_1_1ETWJITInterface.html#afbf22c12bd32aab6654bec8dd3a3a76f", null ],
     [ "EventHandler", "namespacev8_1_1internal_1_1ETWJITInterface.html#a70fbc3f0bfba1d4c87a482073134992a", null ],
-    [ "EventHandler", "namespacev8_1_1internal_1_1ETWJITInterface.html#a8d1af511bb1e9f71be18c1635ff585c1", null ],
     [ "EventMetadata", "namespacev8_1_1internal_1_1ETWJITInterface.html#aabdf73152141fe07aa4515cfc4249c1a", null ],
     [ "Field", "namespacev8_1_1internal_1_1ETWJITInterface.html#a3cdd3cd811c54e8bdd8ea821cca9c61c", null ],
     [ "GetScriptMethodName", "namespacev8_1_1internal_1_1ETWJITInterface.html#a30c3e59c80bdb1dd99d321242a2ab41c", null ],

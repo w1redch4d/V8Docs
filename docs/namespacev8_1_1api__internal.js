@@ -1,0 +1,28 @@
+var namespacev8_1_1api__internal =
+[
+    [ "IndirectHandleBase", "classv8_1_1api__internal_1_1IndirectHandleBase.html", "classv8_1_1api__internal_1_1IndirectHandleBase" ],
+    [ "StackAllocated", "classv8_1_1api__internal_1_1StackAllocated.html", "classv8_1_1api__internal_1_1StackAllocated" ],
+    [ "StackAllocated< true >", "classv8_1_1api__internal_1_1StackAllocated_3_01true_01_4.html", "classv8_1_1api__internal_1_1StackAllocated_3_01true_01_4" ],
+    [ "AnnotateStrongRetainer", "namespacev8_1_1api__internal.html#a0bda66e2e57b118758a526381d8c3560", null ],
+    [ "AnnotateStrongRetainer", "namespacev8_1_1api__internal.html#a203c7cdd9cceecb1915a81da7eb8304b", null ],
+    [ "ClearWeak", "namespacev8_1_1api__internal.html#a03854afbc1f45647247bd49e9889a18b", null ],
+    [ "ClearWeak", "namespacev8_1_1api__internal.html#a0fe1f7025a122734d7c23286ac78ae7b", null ],
+    [ "ConvertToJSGlobalProxyIfNecessary", "namespacev8_1_1api__internal.html#a01c33eab82ee2d7dc2d891c029059f18", null ],
+    [ "ConvertToJSGlobalProxyIfNecessary", "namespacev8_1_1api__internal.html#af4e9264b952e3bd877651b8181331023", null ],
+    [ "CopyGlobalReference", "namespacev8_1_1api__internal.html#ad6a2e58ff01e3366fb5de149201f3c02", null ],
+    [ "CopyGlobalReference", "namespacev8_1_1api__internal.html#a2478b070f289ae72485ab88473f2f0ac", null ],
+    [ "DisposeGlobal", "namespacev8_1_1api__internal.html#ad9237dfeefc7a0a56d6d657188c0e3c2", null ],
+    [ "DisposeGlobal", "namespacev8_1_1api__internal.html#ac478ebd8efd8db43a5bebaa7dbd5104b", null ],
+    [ "Eternalize", "namespacev8_1_1api__internal.html#aac3998cd31b748a6f97580be077ac59f", null ],
+    [ "FromJustIsNothing", "namespacev8_1_1api__internal.html#aebeb3fd192c06c100aeb3ab572a7eda0", null ],
+    [ "GetFunctionTemplateData", "namespacev8_1_1api__internal.html#a8061ccf455fa00e6ced64ffebc063bac", null ],
+    [ "GlobalizeReference", "namespacev8_1_1api__internal.html#a482959df1defa204750f8e007a3062d6", null ],
+    [ "GlobalizeReference", "namespacev8_1_1api__internal.html#a209a2c21baab5ac005975fdd3dc97325", null ],
+    [ "InternalFieldOutOfBounds", "namespacev8_1_1api__internal.html#aad55d35425893387251b6edaf1482301", null ],
+    [ "MakeWeak", "namespacev8_1_1api__internal.html#a26313c2d296ab6afb767f15261dd7451", null ],
+    [ "MakeWeak", "namespacev8_1_1api__internal.html#a6e19dba9644f1405ed8144c4d9e7b98f", null ],
+    [ "MakeWeak", "namespacev8_1_1api__internal.html#ad2b43757f87818a8fd8dc91079fdc6b5", null ],
+    [ "MakeWeak", "namespacev8_1_1api__internal.html#ac54b4d738340136de9a8556566d31e93", null ],
+    [ "MoveGlobalReference", "namespacev8_1_1api__internal.html#a19d5498d6c2bfaf666bed2fb783d7ec2", null ],
+    [ "ToLocalEmpty", "namespacev8_1_1api__internal.html#a289b306a243b3b0727cecab4fe5507d5", null ]
+];

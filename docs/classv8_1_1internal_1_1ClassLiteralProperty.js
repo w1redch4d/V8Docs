@@ -7,6 +7,8 @@ var classv8_1_1internal_1_1ClassLiteralProperty =
       [ "FIELD", "classv8_1_1internal_1_1ClassLiteralProperty.html#a6337ac1796c0270a31eb498f1dd6b489ae07670340908fe643612dd5fc44b72bd", null ],
       [ "AUTO_ACCESSOR", "classv8_1_1internal_1_1ClassLiteralProperty.html#a6337ac1796c0270a31eb498f1dd6b489a9e84afba2f133adb2136c4ddd0d18a1f", null ]
     ] ],
+    [ "ClassLiteralProperty", "classv8_1_1internal_1_1ClassLiteralProperty.html#ae7a4323a6a7d4bdb178ca6917cd0ae5b", null ],
+    [ "ClassLiteralProperty", "classv8_1_1internal_1_1ClassLiteralProperty.html#a939d5c6881645af3003f45b65505b13c", null ],
     [ "auto_accessor_info", "classv8_1_1internal_1_1ClassLiteralProperty.html#a919a48581d051c8edb7c9a7bf61d03ec", null ],
     [ "computed_name_var", "classv8_1_1internal_1_1ClassLiteralProperty.html#a563ae81583391dbc4b45d359e64a6425", null ],
     [ "is_auto_accessor", "classv8_1_1internal_1_1ClassLiteralProperty.html#a4b81c7692c6323f5cc3b21ba47e23e15", null ],
@@ -18,5 +20,9 @@ var classv8_1_1internal_1_1ClassLiteralProperty =
     [ "SetPrivateNameProxy", "classv8_1_1internal_1_1ClassLiteralProperty.html#af5e2729c3c4d56b208d5bec5b3c7a65e", null ],
     [ "AstNodeFactory", "classv8_1_1internal_1_1ClassLiteralProperty.html#a8d587c8ad3515ff6433eb83c578e795f", null ],
     [ "auto_accessor_info_", "classv8_1_1internal_1_1ClassLiteralProperty.html#ae18db506e41fc7b6814f1b928dd8ad5f", null ],
-    [ "private_or_computed_name_proxy_", "classv8_1_1internal_1_1ClassLiteralProperty.html#a508142559cfebecb803859c91e08b70b", null ]
+    [ "is_private_", "classv8_1_1internal_1_1ClassLiteralProperty.html#a789c771df8a51885c168ef74c0c1f0c7", null ],
+    [ "is_static_", "classv8_1_1internal_1_1ClassLiteralProperty.html#a7db93e608b00dedbb1ffddbd678a86b5", null ],
+    [ "kind_", "classv8_1_1internal_1_1ClassLiteralProperty.html#a1fd9db4871574e9fd64c3935e63b19a1", null ],
+    [ "private_or_computed_name_proxy_", "classv8_1_1internal_1_1ClassLiteralProperty.html#a508142559cfebecb803859c91e08b70b", null ],
+    [ "Zone", "classv8_1_1internal_1_1ClassLiteralProperty.html#add307252dfb09396c164524571c5404f", null ]
 ];

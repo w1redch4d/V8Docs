@@ -23,5 +23,6 @@ var runtime_debug_8cc =
     [ "RUNTIME_FUNCTION", "runtime-debug_8cc.html#ab874947e7f3b8f9db8a57c60e3b5c39b", null ],
     [ "RUNTIME_FUNCTION", "runtime-debug_8cc.html#af131799c04878124fb31cb08bad0f527", null ],
     [ "RUNTIME_FUNCTION", "runtime-debug_8cc.html#a94315d5677c285c48dca64e3ecd3734e", null ],
-    [ "RUNTIME_FUNCTION_RETURN_PAIR", "runtime-debug_8cc.html#a88c717d1c8e28061a10af7a2cb41c238", null ]
+    [ "RUNTIME_FUNCTION_RETURN_PAIR", "runtime-debug_8cc.html#a88c717d1c8e28061a10af7a2cb41c238", null ],
+    [ "SetScopeVariableValue", "runtime-debug_8cc.html#a9b38ad4b650f30f8da248f34cb15cba0", null ]
 ];

@@ -14,5 +14,10 @@ var classv8_1_1internal_1_1UnoptimizedCompilationJob =
     [ "RecordFunctionCompilation", "classv8_1_1internal_1_1UnoptimizedCompilationJob.html#a0499b35b93d6722ce6bb6b4990056889", null ],
     [ "stack_limit", "classv8_1_1internal_1_1UnoptimizedCompilationJob.html#a8c51e7065295f33a16d2bd0b74726bcd", null ],
     [ "time_taken_to_execute", "classv8_1_1internal_1_1UnoptimizedCompilationJob.html#a4e4be3ed121386b80893f650f88843cb", null ],
-    [ "time_taken_to_finalize", "classv8_1_1internal_1_1UnoptimizedCompilationJob.html#acc53791635032f15165064b6f0d1d2fb", null ]
+    [ "time_taken_to_finalize", "classv8_1_1internal_1_1UnoptimizedCompilationJob.html#acc53791635032f15165064b6f0d1d2fb", null ],
+    [ "compilation_info_", "classv8_1_1internal_1_1UnoptimizedCompilationJob.html#a3d63977e5fb1972b880868607a355ede", null ],
+    [ "parse_info_", "classv8_1_1internal_1_1UnoptimizedCompilationJob.html#a74c00874d5594e1126570449d1b538ce", null ],
+    [ "stack_limit_", "classv8_1_1internal_1_1UnoptimizedCompilationJob.html#aba3668de431a175db89fe6c3cd234277", null ],
+    [ "time_taken_to_execute_", "classv8_1_1internal_1_1UnoptimizedCompilationJob.html#a81dbd8d9117cdbf1a8db85f20f19f8f1", null ],
+    [ "time_taken_to_finalize_", "classv8_1_1internal_1_1UnoptimizedCompilationJob.html#ac4f766dbfa0024e611137035659fac71", null ]
 ];

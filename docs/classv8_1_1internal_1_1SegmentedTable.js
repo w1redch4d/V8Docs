@@ -17,5 +17,10 @@ var classv8_1_1internal_1_1SegmentedTable =
     [ "operator=", "classv8_1_1internal_1_1SegmentedTable.html#ada64de8ab1420715a1bc35980c25861e", null ],
     [ "TearDown", "classv8_1_1internal_1_1SegmentedTable.html#a2cfdb07012a5ae848125c147ec5596d1", null ],
     [ "base_", "classv8_1_1internal_1_1SegmentedTable.html#a097388232d47016f5f48c9d32456321b", null ],
+    [ "kEntriesPerSegment", "classv8_1_1internal_1_1SegmentedTable.html#a01370b791f4b5d633e9ae2fc363aaf15", null ],
+    [ "kEntrySize", "classv8_1_1internal_1_1SegmentedTable.html#af47bd6319a270841c17d3ca4d52c6184", null ],
+    [ "kIsWriteProtected", "classv8_1_1internal_1_1SegmentedTable.html#a98cf442ccc8db31ec185855b3ef6ec3d", null ],
+    [ "kSegmentSize", "classv8_1_1internal_1_1SegmentedTable.html#a0108b93cb85f7197751f63bb4dbcbb4a", null ],
+    [ "kUseContiguousMemory", "classv8_1_1internal_1_1SegmentedTable.html#af5261a9204a574c7867ca14ed6ebdc56", null ],
     [ "vas_", "classv8_1_1internal_1_1SegmentedTable.html#a2549c846632c44b78c582618984f1d5c", null ]
 ];

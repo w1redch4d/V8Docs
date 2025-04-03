@@ -4,12 +4,22 @@ var classv8_1_1Serializer =
     [ "Serializer", "classv8_1_1Serializer.html#ac7c1d6f1243fed40cddadf4223fb4768", null ],
     [ "AdoptSharedValueConveyor", "classv8_1_1Serializer.html#a54d5467f7d1e9b35ec95f36f7f88b2b9", null ],
     [ "AppendBackingStoresTo", "classv8_1_1Serializer.html#a87a2fc3c4d8697f27ebfe3dedaed099c", null ],
+    [ "FinalizeTransfer", "classv8_1_1Serializer.html#a7188d991cc06915323bb23f2284a9f1e", null ],
     [ "FreeBufferMemory", "classv8_1_1Serializer.html#af406a9e21fccfce3a5faed52182a69a6", null ],
     [ "GetSharedArrayBufferId", "classv8_1_1Serializer.html#a57af2849005d7894e9d7f744e2798ad7", null ],
     [ "GetWasmModuleTransferId", "classv8_1_1Serializer.html#a3cdc13f6ac9385f12704716640dfb2dc", null ],
     [ "operator=", "classv8_1_1Serializer.html#aab52f908a4366bb78bf0feaa73b0c229", null ],
+    [ "PrepareTransfer", "classv8_1_1Serializer.html#a15f31e461e0a801398f3f679e17ede20", null ],
     [ "ReallocateBufferMemory", "classv8_1_1Serializer.html#acfffa60f4405f57980e58cea60aef504", null ],
     [ "Release", "classv8_1_1Serializer.html#ad420d51469353d80ce6acf5578bedfe9", null ],
     [ "ThrowDataCloneError", "classv8_1_1Serializer.html#a97707713e9bfe28e117bd15d40e3afc6", null ],
-    [ "WriteValue", "classv8_1_1Serializer.html#aa08807473dd1ce42c0810713c42fc866", null ]
+    [ "WriteValue", "classv8_1_1Serializer.html#aa08807473dd1ce42c0810713c42fc866", null ],
+    [ "array_buffers_", "classv8_1_1Serializer.html#aae4c79f2f6579c42c9230b986c78b826", null ],
+    [ "backing_stores_", "classv8_1_1Serializer.html#a0d82e134ed7673c0580481959d23da44", null ],
+    [ "current_memory_usage_", "classv8_1_1Serializer.html#afd62a6e0c905a70818c45e2c3fc7e237", null ],
+    [ "data_", "classv8_1_1Serializer.html#a8c0fc9453c101ae9166fa06e20572e30", null ],
+    [ "isolate_", "classv8_1_1Serializer.html#a4f521cfb3eebc1c97dfdd978533e87f4", null ],
+    [ "serializer_", "classv8_1_1Serializer.html#af1a3b0dd864c21b9f33c10430aa1d91a", null ],
+    [ "shared_array_buffers_", "classv8_1_1Serializer.html#a0d6bb4ff18c17151dbd0243da229e179", null ],
+    [ "wasm_modules_", "classv8_1_1Serializer.html#a2affdb569edaf5ff2acd52041cc0c23b", null ]
 ];

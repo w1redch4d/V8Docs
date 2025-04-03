@@ -1,0 +1,5 @@
+var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MultiSwitch_3_01T_00_01std_1_1enable__if__t_3_d54cd1da050e47cddcb78ee81e189097 =
+[
+    [ "encode", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MultiSwitch_3_01T_00_01std_1_1enable__if__t_3_d54cd1da050e47cddcb78ee81e189097.html#a443ad98ee9af4a58b9be14a7d12ead2b", null ],
+    [ "max_value", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MultiSwitch_3_01T_00_01std_1_1enable__if__t_3_d54cd1da050e47cddcb78ee81e189097.html#a89292923f2e6ad8f811eae6d41f4544f", null ]
+];

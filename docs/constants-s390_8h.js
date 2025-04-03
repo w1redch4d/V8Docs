@@ -35,7 +35,7 @@ var constants_s390_8h =
     [ "v8::internal::VRI_A_Instruction", "classv8_1_1internal_1_1VRI__A__Instruction.html", null ],
     [ "v8::internal::VRI_C_Instruction", "classv8_1_1internal_1_1VRI__C__Instruction.html", null ],
     [ "v8::internal::Registers", "classv8_1_1internal_1_1Registers.html", "classv8_1_1internal_1_1Registers" ],
-    [ "v8::internal::DoubleRegisters", "classv8_1_1internal_1_1DoubleRegisters.html", null ],
+    [ "v8::internal::DoubleRegisters", "classv8_1_1internal_1_1DoubleRegisters.html", "classv8_1_1internal_1_1DoubleRegisters" ],
     [ "__STDC_FORMAT_MACROS", "constants-s390_8h.html#aacbb9e1f38be71e22df1584a37c56693", null ],
     [ "ABI_CALL_VIA_IP", "constants-s390_8h.html#a625e28f977c05c0f7082401b0cd0fa01", null ],
     [ "ABI_PASSES_HANDLES_IN_REGS", "constants-s390_8h.html#ae2a22a00e756a29b1cc1f3d42849636b", null ],

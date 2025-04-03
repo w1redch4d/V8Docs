@@ -23,6 +23,7 @@ var code_generator_riscv_8cc =
     [ "TRACE", "code-generator-riscv_8cc.html#a5f6aa8edcd99914757600b5d3b259bb7", null ],
     [ "UNSUPPORTED_COND", "code-generator-riscv_8cc.html#a7f39fa22dccc5274a592becbb43303c0", null ],
     [ "AssembleBranchToLabels", "code-generator-riscv_8cc.html#a607d414510cad926115d8bd1c15546d8", null ],
+    [ "HasRegisterInput", "code-generator-riscv_8cc.html#a3774af211d609ef676fc7bc0ea44598d", null ],
     [ "if", "code-generator-riscv_8cc.html#a3747c79301145dc087d31ce28c59564f", null ],
     [ "if", "code-generator-riscv_8cc.html#a78411a01f2200ed207b3ad1f46fd0ddb", null ],
     [ "if", "code-generator-riscv_8cc.html#aa583abbe977ca41df2196a083796b84a", null ],
@@ -30,5 +31,12 @@ var code_generator_riscv_8cc =
     [ "TRACE", "code-generator-riscv_8cc.html#a3762add7a183a4d1750c04e5fa1a6d17", null ],
     [ "UNIMPLEMENTED", "code-generator-riscv_8cc.html#af413822112d238aed70b6b1eee0feac7", null ],
     [ "UNIMPLEMENTED", "code-generator-riscv_8cc.html#a538499d2a66bf6e9d3182a57104edec9", null ],
-    [ "else", "code-generator-riscv_8cc.html#adfb90f7265e4b3bd9956cbbea98e4a0f", null ]
+    [ "else", "code-generator-riscv_8cc.html#adfb90f7265e4b3bd9956cbbea98e4a0f", null ],
+    [ "indirect_pointer_tag_", "code-generator-riscv_8cc.html#ac65776d707ac07cc6389ba76807fa3a7", null ],
+    [ "mode_", "code-generator-riscv_8cc.html#adc5709192230b7fde07de03eb2974043", null ],
+    [ "must_save_lr_", "code-generator-riscv_8cc.html#a41a2de46b73ead1c0417e8f1751a5022", null ],
+    [ "object_", "code-generator-riscv_8cc.html#a5563c55e446f92e237e9fb9b07b423b6", null ],
+    [ "offset_", "code-generator-riscv_8cc.html#ab11f8f1256e847420fa280346be66736", null ],
+    [ "value_", "code-generator-riscv_8cc.html#ac1b34591c0a6bb909fcc2d34d0b5aaff", null ],
+    [ "zone_", "code-generator-riscv_8cc.html#a4979f6e7e64e9ee56f4229d03fa20c69", null ]
 ];

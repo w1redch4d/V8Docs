@@ -7,5 +7,8 @@ var classv8_1_1internal_1_1compiler_1_1CreateFunctionContextParameters =
     [ "hash_value", "classv8_1_1internal_1_1compiler_1_1CreateFunctionContextParameters.html#ae24e93406d280790d5f645866eef114f", null ],
     [ "operator!=", "classv8_1_1internal_1_1compiler_1_1CreateFunctionContextParameters.html#a1211f41eaf72d5c515d11a7fabfce8a0", null ],
     [ "operator<<", "classv8_1_1internal_1_1compiler_1_1CreateFunctionContextParameters.html#a85a3012932d4a089af94021f78a37df7", null ],
-    [ "operator==", "classv8_1_1internal_1_1compiler_1_1CreateFunctionContextParameters.html#a6aca938c7549399fbf47505f826ef4d6", null ]
+    [ "operator==", "classv8_1_1internal_1_1compiler_1_1CreateFunctionContextParameters.html#a6aca938c7549399fbf47505f826ef4d6", null ],
+    [ "scope_info_", "classv8_1_1internal_1_1compiler_1_1CreateFunctionContextParameters.html#adcd4c46b86d40f070c99694265a48b44", null ],
+    [ "scope_type_", "classv8_1_1internal_1_1compiler_1_1CreateFunctionContextParameters.html#a7c289a3fa2e9376fd6cb0f608e5d0414", null ],
+    [ "slot_count_", "classv8_1_1internal_1_1compiler_1_1CreateFunctionContextParameters.html#ac06ab99ba817503d65570014f843fde1", null ]
 ];

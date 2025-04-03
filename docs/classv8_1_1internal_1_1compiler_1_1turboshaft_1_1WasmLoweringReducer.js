@@ -1,15 +1,29 @@
 var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer =
 [
+    [ "GlobalMode", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#aad2ef35f2ef3d4cfc6c87212054f2626", [
+      [ "kLoad", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#aad2ef35f2ef3d4cfc6c87212054f2626ae40d6c82a1a5f5a163aca43efa5e444a", null ],
+      [ "kStore", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#aad2ef35f2ef3d4cfc6c87212054f2626a7a2153137630bc6255f57e97c5454d2c", null ]
+    ] ],
     [ "AnyConvertExtern", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a97cb529287511c4b80ac1de86e31e402", null ],
     [ "ArrayGet", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a1f276efae13df740f3adc9b555ad79c6", null ],
     [ "ArrayLength", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a599b3dae1e061fd2eb710c9679a76782", null ],
     [ "ArraySet", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#aa93384e9c1962e88cbb3ddc316a9af2e", null ],
     [ "AssertNotNull", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#aefa55ebdca60253da096c5787befe58c", null ],
     [ "ExternConvertAny", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a4b784978c9211e45b0eb1f24bce70f4b", null ],
+    [ "field_offset", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a4d08032288855b9a22732eafe3f6cbc0", null ],
     [ "GlobalGet", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#aef478bea4150c09746d6cb620cd516fa", null ],
     [ "GlobalSet", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a7d96a3b20f586d917dbd7bf4e010a0b0", null ],
+    [ "IsDataRefMap", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#ad8f70c8b07e14f5552fc1de1461eaa18", null ],
     [ "IsNull", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a87d21c7e584e674d33bee486285e9e7d", null ],
+    [ "LoadWasmTypeInfo", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a0afae6f0cfaa0edf0898a2c252abe1f4", null ],
+    [ "LowerGlobalSetOrGet", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#ae21074397dc366d3406408f9decae552", null ],
     [ "Null", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#abf520a680aa7f9ab5f105453acb1bbb7", null ],
+    [ "null_checks_for_struct_op", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a15192cc4f74446df050745d8d29f0994", null ],
+    [ "ReduceWasmTypeCastAbstract", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a825a001706cd50523d90ec74eb6af8f5", null ],
+    [ "ReduceWasmTypeCastRtt", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a81571a3685de557b0a7496bcd55fe49e", null ],
+    [ "ReduceWasmTypeCheckAbstract", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a8d5236c292dc6e96687e9190ce0b246d", null ],
+    [ "ReduceWasmTypeCheckRtt", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#aa990cc8298171d493ea50165bc3d2ed5", null ],
+    [ "RepresentationFor", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#ae3af3c46347447792af8ecb10141bfcd", null ],
     [ "RttCanon", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a7bcdfbc3ff72ab9c189a9864456e5966", null ],
     [ "StringAsWtf16", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#ae6b24f5f417e9d246d1137eab8e0016f", null ],
     [ "StringPrepareForGetCodeUnit", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a4f149b16a684b0ee8ea9d833bad3e6e3", null ],
@@ -20,5 +34,9 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer =
     [ "WasmRefFunc", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#adadde01bead9abb2f3670802009f68e4", null ],
     [ "WasmTypeAnnotation", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a9061ab0389592bcff9a769068efbfcae", null ],
     [ "WasmTypeCast", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a79c5fabc82e18262880546317abd0b8b", null ],
-    [ "WasmTypeCheck", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a50d1b85fa679818fdbeb7dc9803d03d4", null ]
+    [ "WasmTypeCheck", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a50d1b85fa679818fdbeb7dc9803d03d4", null ],
+    [ "kMaybeSandboxedPointer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a000231d38237c1068b64f84e0f778940", null ],
+    [ "module_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#aa95419ddfa8128426a0be89181a85ba3", null ],
+    [ "null_check_strategy_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#a9c44b754242eea7542cd9c206039f5cd", null ],
+    [ "shared_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringReducer.html#aedcb2f62008f28758401f71638eea079", null ]
 ];

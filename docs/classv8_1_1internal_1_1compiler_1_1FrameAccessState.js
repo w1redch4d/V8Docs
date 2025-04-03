@@ -15,5 +15,10 @@ var classv8_1_1internal_1_1compiler_1_1FrameAccessState =
     [ "SetFrameAccessToDefault", "classv8_1_1internal_1_1compiler_1_1FrameAccessState.html#a001a59fa5264c0b6258ce73ec9839a30", null ],
     [ "SetFrameAccessToFP", "classv8_1_1internal_1_1compiler_1_1FrameAccessState.html#a41f291198c791ef4579c8fd4f2864274", null ],
     [ "SetFrameAccessToSP", "classv8_1_1internal_1_1compiler_1_1FrameAccessState.html#a19d517b0eb62cd2610c9eb5f54fc3039", null ],
-    [ "sp_delta", "classv8_1_1internal_1_1compiler_1_1FrameAccessState.html#a02c09f4ef98d2fe023d3ebbabc322637", null ]
+    [ "sp_delta", "classv8_1_1internal_1_1compiler_1_1FrameAccessState.html#a02c09f4ef98d2fe023d3ebbabc322637", null ],
+    [ "access_frame_with_fp_", "classv8_1_1internal_1_1compiler_1_1FrameAccessState.html#aec58d128fa8993c62a41788f909f2af8", null ],
+    [ "fp_relative_only_", "classv8_1_1internal_1_1compiler_1_1FrameAccessState.html#abd693c14e216a55d0c5d07c2f2880634", null ],
+    [ "frame_", "classv8_1_1internal_1_1compiler_1_1FrameAccessState.html#acec2f311cf71c3911aadb8a6218adf4d", null ],
+    [ "has_frame_", "classv8_1_1internal_1_1compiler_1_1FrameAccessState.html#a20407010d2211464d017e20dc5b31679", null ],
+    [ "sp_delta_", "classv8_1_1internal_1_1compiler_1_1FrameAccessState.html#aa3ebcdcdfcfb2e770a13dd208b16785d", null ]
 ];

@@ -1,5 +1,28 @@
 var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper =
 [
     [ "float_t", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a008fb13f0706d89490f4d880110e5223", null ],
-    [ "type_t", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#ab0fe6fc6a63f2f63a1dc57e3293cc967", null ]
+    [ "type_t", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#ab0fe6fc6a63f2f63a1dc57e3293cc967", null ],
+    [ "Add", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a62b3306ce9d50c71fde5aa60e7340e52", null ],
+    [ "Atan2", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a75b0bfbb23a6e93f0186d8ff7abdf2dd", null ],
+    [ "Divide", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a6cda4819cd142aefe5d9c84cebf4ef8b", null ],
+    [ "IsIntegerSet", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#aebd874e965010196ffe50d83c60daf8b", null ],
+    [ "IsZeroish", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#aa786c0c67a813371e7fe8736f7453e0f", null ],
+    [ "LessThan", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#abb1298364ca59d15697163001e8a2a0f", null ],
+    [ "LessThanOrEqual", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a8f5596a68c5196a15f4ae966e1c80f56", null ],
+    [ "Max", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#aac5128d4f17d227f090625064eeacb74", null ],
+    [ "Min", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a2bc825903255cfc9abce3eca53d1ff69", null ],
+    [ "Modulus", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a14deebcaf7cdda61d87f8fba18df59ee", null ],
+    [ "Multiply", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#af19a0b4214e65271f4adbefbd2ab0026", null ],
+    [ "Power", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a58a4a420b52a69aabcd84b5c87d2034d", null ],
+    [ "ProductSet", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a82e6d8d41779efeb65bdecc32f80a6be", null ],
+    [ "Range", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a3308b735642deabfb52b0be96f8c9a93", null ],
+    [ "RestrictionForLessThan_False", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#aebd7bcbc7c0d1f33abc29632e1bb863f", null ],
+    [ "RestrictionForLessThan_True", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a1722cb5cca81cdeb2dd9d0bb028bd5f8", null ],
+    [ "RestrictionForLessThanOrEqual_False", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a7b4568f93fefa61f1cbb1d18dae0accf", null ],
+    [ "RestrictionForLessThanOrEqual_True", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a7466c1ce24fff89c03ab0b18e9b72827", null ],
+    [ "Set", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a35fc55e621775cfa6434164e141ad660", null ],
+    [ "Subtract", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a67bc07537bbb9dea0412aee0eaa8ccf2", null ],
+    [ "UnsignedLessThanOrEqual", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#a7f7dddcb8ebb16127f4f41e9f68e0bd6", null ],
+    [ "inf", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#aed64a1446a59aa9c374635366af59ac2", null ],
+    [ "kSetThreshold", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html#afdd9492ce96e4d2d05cc75ec0ea506e8", null ]
 ];

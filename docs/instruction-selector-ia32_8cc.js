@@ -26,6 +26,7 @@ var instruction_selector_ia32_8cc =
     [ "AtomicOrder", "instruction-selector-ia32_8cc.html#aaa7747e179f62a3d85f3abb4ae9c0e8a", null ],
     [ "AtomicOrder", "instruction-selector-ia32_8cc.html#a82a6b49c949a404763f2f2f62338b40b", null ],
     [ "EXPORT_TEMPLATE_DEFINE", "instruction-selector-ia32_8cc.html#a07b00ecc9a497366b4b4f2ba83a53553", null ],
+    [ "VisitShift", "instruction-selector-ia32_8cc.html#a85e1ba005af1f915780c79786dc65f20", null ],
     [ "VisitWord32PairShift", "instruction-selector-ia32_8cc.html#ac517f9d317a64c01ec2915e7faeac16a", null ],
     [ "base", "instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23", null ],
     [ "displacement", "instruction-selector-ia32_8cc.html#a241d2c58aca95f8589148d4acf97406d", null ],

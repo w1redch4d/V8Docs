@@ -9,6 +9,12 @@ var classv8__inspector_1_1V8ConsoleAgentImpl =
     [ "enabled", "classv8__inspector_1_1V8ConsoleAgentImpl.html#a59902ce08341ebdad818ce9adef3ed36", null ],
     [ "messageAdded", "classv8__inspector_1_1V8ConsoleAgentImpl.html#a19ee7153e91f89f23995ab56cd196f7f", null ],
     [ "operator=", "classv8__inspector_1_1V8ConsoleAgentImpl.html#a81fd7243b0e89d2da03af675de42dc45", null ],
+    [ "reportAllMessages", "classv8__inspector_1_1V8ConsoleAgentImpl.html#a61f109b134e24e4809c303940d28e159", null ],
+    [ "reportMessage", "classv8__inspector_1_1V8ConsoleAgentImpl.html#a24ff613585543dc69b5def1983ce30a2", null ],
     [ "reset", "classv8__inspector_1_1V8ConsoleAgentImpl.html#a3a304c066d94ac83ae27eed044d5c0bf", null ],
-    [ "restore", "classv8__inspector_1_1V8ConsoleAgentImpl.html#a97d8d726388ce732cda43a91f50bd7fd", null ]
+    [ "restore", "classv8__inspector_1_1V8ConsoleAgentImpl.html#a97d8d726388ce732cda43a91f50bd7fd", null ],
+    [ "m_enabled", "classv8__inspector_1_1V8ConsoleAgentImpl.html#afd4916690b8baf4f0ea1ec2cf58e29cb", null ],
+    [ "m_frontend", "classv8__inspector_1_1V8ConsoleAgentImpl.html#a990268ebb3effe21dcb6b19f2913d7be", null ],
+    [ "m_session", "classv8__inspector_1_1V8ConsoleAgentImpl.html#a8069c06cd4d4de9fbba2b1790b5a37f9", null ],
+    [ "m_state", "classv8__inspector_1_1V8ConsoleAgentImpl.html#a5261d31cc88e9bbd9e770fa944c51303", null ]
 ];

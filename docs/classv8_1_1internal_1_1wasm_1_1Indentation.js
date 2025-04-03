@@ -4,5 +4,7 @@ var classv8_1_1internal_1_1wasm_1_1Indentation =
     [ "current", "classv8_1_1internal_1_1wasm_1_1Indentation.html#aa774d09f241c92ffe778ff5365b989a3", null ],
     [ "decrease", "classv8_1_1internal_1_1wasm_1_1Indentation.html#a95bee04153b97520fda8fa4b0517a24b", null ],
     [ "Extra", "classv8_1_1internal_1_1wasm_1_1Indentation.html#a7fb83ba82396583ec8fa5003a3375e11", null ],
-    [ "increase", "classv8_1_1internal_1_1wasm_1_1Indentation.html#adcb43ec8ca0e7b26bcd028395541a5d0", null ]
+    [ "increase", "classv8_1_1internal_1_1wasm_1_1Indentation.html#adcb43ec8ca0e7b26bcd028395541a5d0", null ],
+    [ "current_", "classv8_1_1internal_1_1wasm_1_1Indentation.html#a4f7f346111c750e1396e63373779e58b", null ],
+    [ "delta_", "classv8_1_1internal_1_1wasm_1_1Indentation.html#ac1bfd2537551c4b05d560b264fc216cc", null ]
 ];

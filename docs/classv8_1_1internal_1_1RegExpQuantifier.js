@@ -17,5 +17,13 @@ var classv8_1_1internal_1_1RegExpQuantifier =
     [ "max_match", "classv8_1_1internal_1_1RegExpQuantifier.html#ade99e5073f82e2d5007c7305b87a46b4", null ],
     [ "min", "classv8_1_1internal_1_1RegExpQuantifier.html#acb387be307b9a6b0242d4a5da644d1e0", null ],
     [ "min_match", "classv8_1_1internal_1_1RegExpQuantifier.html#a74589c62f5e4b5d3050d5de67181f933", null ],
-    [ "quantifier_type", "classv8_1_1internal_1_1RegExpQuantifier.html#a40d93b2a1c007231d46d30771309df53", null ]
+    [ "quantifier_type", "classv8_1_1internal_1_1RegExpQuantifier.html#a40d93b2a1c007231d46d30771309df53", null ],
+    [ "ToNode", "classv8_1_1internal_1_1RegExpQuantifier.html#af74888630424746f820660fbfc63e0fe", null ],
+    [ "body_", "classv8_1_1internal_1_1RegExpQuantifier.html#a4d7fb9f57da93e4accd74ccc7c467078", null ],
+    [ "index_", "classv8_1_1internal_1_1RegExpQuantifier.html#a65a9ddb805bd94a8d4c73b30160ca17f", null ],
+    [ "max_", "classv8_1_1internal_1_1RegExpQuantifier.html#a8eef1355fa1fc40060339de49a51f27d", null ],
+    [ "max_match_", "classv8_1_1internal_1_1RegExpQuantifier.html#a1da485f37f92d0af2b9b5baa70d21098", null ],
+    [ "min_", "classv8_1_1internal_1_1RegExpQuantifier.html#aa692634882a0b3ecb1e153ab33a20d5a", null ],
+    [ "min_match_", "classv8_1_1internal_1_1RegExpQuantifier.html#a994f034771e46bdb069be97d3d61cb66", null ],
+    [ "quantifier_type_", "classv8_1_1internal_1_1RegExpQuantifier.html#a214b23a6a67e6de249c39020277e5884", null ]
 ];

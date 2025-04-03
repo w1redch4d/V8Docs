@@ -62,5 +62,6 @@ var classv8_1_1internal_1_1torque_1_1ParseResultHolderBase =
     [ "~ParseResultHolderBase", "classv8_1_1internal_1_1torque_1_1ParseResultHolderBase.html#a68c8e8a0122c2fe71e8e877ecc1d25e5", null ],
     [ "ParseResultHolderBase", "classv8_1_1internal_1_1torque_1_1ParseResultHolderBase.html#aad528131025a77ce4ee69835b9d66c1a", null ],
     [ "Cast", "classv8_1_1internal_1_1torque_1_1ParseResultHolderBase.html#a369e42bc42f04bc65894ba55d34ac334", null ],
-    [ "Cast", "classv8_1_1internal_1_1torque_1_1ParseResultHolderBase.html#ac03a29ad63345b62599e6ed1d33bc7c4", null ]
+    [ "Cast", "classv8_1_1internal_1_1torque_1_1ParseResultHolderBase.html#ac03a29ad63345b62599e6ed1d33bc7c4", null ],
+    [ "type_id_", "classv8_1_1internal_1_1torque_1_1ParseResultHolderBase.html#a1fbe4928b38ebdcecdfdc8dc2e089511", null ]
 ];

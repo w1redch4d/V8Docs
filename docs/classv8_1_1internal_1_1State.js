@@ -17,5 +17,10 @@ var classv8_1_1internal_1_1State =
     [ "MarkVisitedFromStack", "classv8_1_1internal_1_1State.html#a045d13287132780c14b5ee1ec29985a1", null ],
     [ "RecordEphemeronKey", "classv8_1_1internal_1_1State.html#a321b6e06404b262057ee84ec20406117", null ],
     [ "UnmarkPending", "classv8_1_1internal_1_1State.html#a18548b5822371b7f0fe50f907ccc4955", null ],
-    [ "WasVisitedFromStack", "classv8_1_1internal_1_1State.html#a4bfe9e02f691da1a7b78600f24979df2", null ]
+    [ "WasVisitedFromStack", "classv8_1_1internal_1_1State.html#a4bfe9e02f691da1a7b78600f24979df2", null ],
+    [ "eager_ephemeron_edges_", "classv8_1_1internal_1_1State.html#a4d8e7e54fc6be87dcf5269d648e6c689", null ],
+    [ "ephemeron_edges_", "classv8_1_1internal_1_1State.html#a36335e2e5e25a0574c63671ee4b23184", null ],
+    [ "ephemeron_keys_", "classv8_1_1internal_1_1State.html#af63540dc2776fe1392b037d5821ad847", null ],
+    [ "is_weak_container_", "classv8_1_1internal_1_1State.html#abca09d09c9d2fef4cf2ae91544ac128a", null ],
+    [ "was_visited_from_stack_", "classv8_1_1internal_1_1State.html#a712c9e94b34f3e155bd22a861cbe4b1d", null ]
 ];

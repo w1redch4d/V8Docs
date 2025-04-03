@@ -1,6 +1,8 @@
 var variable_reducer_8h =
 [
     [ "v8::internal::compiler::turboshaft::VariableReducer< AfterNext >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1VariableReducer.html", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1VariableReducer" ],
+    [ "v8::internal::compiler::turboshaft::VariableReducer< AfterNext >::GetActiveLoopVariablesIndex", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1VariableReducer_1_1GetActiveLoopVariablesIndex.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1VariableReducer_1_1GetActiveLoopVariablesIndex" ],
+    [ "v8::internal::compiler::turboshaft::VariableReducer< AfterNext >::VariableTable", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1VariableReducer_1_1VariableTable.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1VariableReducer_1_1VariableTable" ],
     [ "__", "variable-reducer_8h.html#a0a87998f4e8cee4888f2a89df3d5639b", null ],
     [ "Assert", "variable-reducer_8h.html#a706ac5b1a53bd04067f81924b92cb9f6", null ],
     [ "BIND", "variable-reducer_8h.html#ad53bab49f3f3d6e63bd35df0a9b08db7", null ],

@@ -50,5 +50,6 @@ var classv8_1_1internal_1_1PreParserFactory =
     [ "NewWhileStatement", "classv8_1_1internal_1_1PreParserFactory.html#aceef3dd63fd73e983ceee179cd901679", null ],
     [ "NewWithStatement", "classv8_1_1internal_1_1PreParserFactory.html#a58e749b19ef584e3e354d32036757b31", null ],
     [ "NewYield", "classv8_1_1internal_1_1PreParserFactory.html#a50837240b7bdafc1e3f0c93d3ecb6360", null ],
-    [ "NewYieldStar", "classv8_1_1internal_1_1PreParserFactory.html#aec60404c5c817d1ef1f71109e0256899", null ]
+    [ "NewYieldStar", "classv8_1_1internal_1_1PreParserFactory.html#aec60404c5c817d1ef1f71109e0256899", null ],
+    [ "ast_node_factory_", "classv8_1_1internal_1_1PreParserFactory.html#a829a848ff5347b920c9dee9760f26395", null ]
 ];

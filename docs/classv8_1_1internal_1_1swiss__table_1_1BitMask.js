@@ -14,5 +14,6 @@ var classv8_1_1internal_1_1swiss__table_1_1BitMask =
     [ "operator++", "classv8_1_1internal_1_1swiss__table_1_1BitMask.html#a42dceccc3dc5a22869f0e5134c6fdd8d", null ],
     [ "TrailingZeros", "classv8_1_1internal_1_1swiss__table_1_1BitMask.html#a1bc4d11ef7ed7a0d701b6a28544c025f", null ],
     [ "operator!=", "classv8_1_1internal_1_1swiss__table_1_1BitMask.html#a202ada6bddc6a84fb868421ca5cdc506", null ],
-    [ "operator==", "classv8_1_1internal_1_1swiss__table_1_1BitMask.html#a78d41f827e8092b7f5d2fae8c3051d36", null ]
+    [ "operator==", "classv8_1_1internal_1_1swiss__table_1_1BitMask.html#a78d41f827e8092b7f5d2fae8c3051d36", null ],
+    [ "mask_", "classv8_1_1internal_1_1swiss__table_1_1BitMask.html#aa0f741da50165f175b0364092abe28ef", null ]
 ];

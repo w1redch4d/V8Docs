@@ -1,6 +1,7 @@
 var classv8_1_1internal_1_1EphemeronHashTable =
 [
-    [ "BodyDescriptor", "classv8_1_1internal_1_1EphemeronHashTable_1_1BodyDescriptor.html", null ],
+    [ "BodyDescriptor", "classv8_1_1internal_1_1EphemeronHashTable_1_1BodyDescriptor.html", "classv8_1_1internal_1_1EphemeronHashTable_1_1BodyDescriptor" ],
+    [ "GetMap", "classv8_1_1internal_1_1EphemeronHashTable.html#a5dd156fa0e9561397572233b7b568626", null ],
     [ "set_key", "classv8_1_1internal_1_1EphemeronHashTable.html#ae36be7d97985dbbd1f1b614aeac230cc", null ],
     [ "set_key", "classv8_1_1internal_1_1EphemeronHashTable.html#ac369ec289f4b082476a1f51ca102986c", null ],
     [ "HashTable< EphemeronHashTable, ObjectHashTableShape >", "classv8_1_1internal_1_1EphemeronHashTable.html#a8f479450d366940958833c7100727be0", null ],

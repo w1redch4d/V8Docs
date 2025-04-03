@@ -35,5 +35,6 @@ var wasm_compiler_definitions_8h =
     [ "hash_value", "wasm-compiler-definitions_8h.html#aa6c495a0f2fbf73d9a3131db34a19707", null ],
     [ "operator<<", "wasm-compiler-definitions_8h.html#a28f481fae5c5925f509537809ddd79c0", null ],
     [ "operator<<", "wasm-compiler-definitions_8h.html#aff4092a2aaa675884437c0406cf4295f", null ],
-    [ "operator==", "wasm-compiler-definitions_8h.html#a734a0f0702a483cc9e0e7c4b9bebbd9f", null ]
+    [ "operator==", "wasm-compiler-definitions_8h.html#a734a0f0702a483cc9e0e7c4b9bebbd9f", null ],
+    [ "kCharWidthBailoutSentinel", "wasm-compiler-definitions_8h.html#abff94baf37c6df7c72548b97a739f132", null ]
 ];

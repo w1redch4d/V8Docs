@@ -1,6 +1,6 @@
 var heap_visitor_inl_8h =
 [
-    [ "v8::internal::ConcurrentVisitorCastHelper< T >", "structv8_1_1internal_1_1ConcurrentVisitorCastHelper.html", null ],
+    [ "v8::internal::ConcurrentVisitorCastHelper< T >", "structv8_1_1internal_1_1ConcurrentVisitorCastHelper.html", "structv8_1_1internal_1_1ConcurrentVisitorCastHelper" ],
     [ "CASE", "heap-visitor-inl_8h.html#a1d69734c638c848a9df543f292f8d69c", null ],
     [ "CASE", "heap-visitor-inl_8h.html#a1d69734c638c848a9df543f292f8d69c", null ],
     [ "DEFINE_READ_ONLY_MAP_SPECIALIZATION", "heap-visitor-inl_8h.html#ae606e52853817ab2f439d6a91ee4974f", null ],

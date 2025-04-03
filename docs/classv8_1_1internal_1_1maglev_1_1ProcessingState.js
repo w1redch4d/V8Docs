@@ -5,5 +5,7 @@ var classv8_1_1internal_1_1maglev_1_1ProcessingState =
     [ "block", "classv8_1_1internal_1_1maglev_1_1ProcessingState.html#a0944fbea39354e7e5c0908951e4144b3", null ],
     [ "next_block", "classv8_1_1internal_1_1maglev_1_1ProcessingState.html#a4e23d2a17e19e4b6e68736d7745d3b87", null ],
     [ "node_it", "classv8_1_1internal_1_1maglev_1_1ProcessingState.html#a47e32cf82efb4f25d4818958fe813526", null ],
-    [ "operator=", "classv8_1_1internal_1_1maglev_1_1ProcessingState.html#a35dba47e59c7c52c57833c22fd75cc11", null ]
+    [ "operator=", "classv8_1_1internal_1_1maglev_1_1ProcessingState.html#a35dba47e59c7c52c57833c22fd75cc11", null ],
+    [ "block_it_", "classv8_1_1internal_1_1maglev_1_1ProcessingState.html#a35f6c3d749273cda052e5f60d730bfa7", null ],
+    [ "node_it_", "classv8_1_1internal_1_1maglev_1_1ProcessingState.html#a2aaa595532a08320405bef8e7aa60e96", null ]
 ];

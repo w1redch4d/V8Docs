@@ -1,12 +1,14 @@
 var classv8_1_1internal_1_1wasm_1_1WasmDecoder =
 [
     [ "WasmDecoder", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#a60adadbf1d6be7052e938e8480f74e7a", null ],
+    [ "AnalyzeLoopAssignment", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#abb3194fe3d9ae69ec341dd67863c9de1", null ],
     [ "CanReturnCall", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#ac92be79e23e3f091bb677fc7453c7e8e", null ],
     [ "DecodeError", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#af62d3163b4ab1369a59dc4b6d6057936", null ],
     [ "DecodeLocals", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#ab1ec646237d05590f7d62bee6a4529ad", null ],
     [ "local_type", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#ae252baa18f6e898b2e0c99958a8b6bac", null ],
     [ "local_types", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#a640ed46a87e4806452f124749d29da72", null ],
     [ "num_locals", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#aa1264b6b36a50ad107ccd63c8a3dbf60", null ],
+    [ "OpcodeLength", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#a31d10c6a0de1196eb064f8e1f033835f", null ],
     [ "Validate", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#a3c450fa13c8c53e4dd9643a2f8dcb1d7", null ],
     [ "Validate", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#a10a6db15726eae05311fb00e4fcf6349", null ],
     [ "Validate", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#a0fc58dab20afb36409e89d1a1be6e5af", null ],
@@ -45,5 +47,6 @@ var classv8_1_1internal_1_1wasm_1_1WasmDecoder =
     [ "module_", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#a524cde749c8fe086036b213a3ca39e4f", null ],
     [ "num_locals_", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#aae9fb4e807e7cb558cc73804cedcc360", null ],
     [ "sig_", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#ae6d1f55cf19c107e39accc71e51665e0", null ],
+    [ "validate", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#ae10ccd643aa1dd81c8a2ed88a2650560", null ],
     [ "zone_", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html#a57852cf327f84924a5f9418d7c0b3844", null ]
 ];

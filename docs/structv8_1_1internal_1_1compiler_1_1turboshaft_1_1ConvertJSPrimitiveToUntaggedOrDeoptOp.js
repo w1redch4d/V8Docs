@@ -20,6 +20,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntagg
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOrDeoptOp.html#a8b943295e034ba76b8fff48bc2d5696a", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOrDeoptOp.html#a22eee65c048344feb96d93b9d85fb331", null ],
     [ "Validate", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOrDeoptOp.html#a5c1676e05f3065526da7c2e3401aef75", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOrDeoptOp.html#a000d9720954d5c39e0d76b81bba90b82", null ],
     [ "feedback", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOrDeoptOp.html#a62637730d33ac341e0c8a4db7a32bf93", null ],
     [ "from_kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOrDeoptOp.html#a0779e54ad4b829dd5e228d35894bc265", null ],
     [ "minus_zero_mode", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOrDeoptOp.html#aac342f52e3a9f7eb88e8c38a01bdddc9", null ],

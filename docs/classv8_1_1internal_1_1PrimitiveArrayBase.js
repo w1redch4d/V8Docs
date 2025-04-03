@@ -1,8 +1,11 @@
 var classv8_1_1internal_1_1PrimitiveArrayBase =
 [
+    [ "ElementMemberT", "classv8_1_1internal_1_1PrimitiveArrayBase.html#ab123df1f4af7a6ebc47ca5c861cf0fa4", null ],
+    [ "ElementT", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a8830684c8db523f749631a41d2b579f3", null ],
     [ "Header", "classv8_1_1internal_1_1PrimitiveArrayBase.html#ac8919d1e7306f9e87f5faf426a751df9", null ],
     [ "Shape", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a8f9ddc2a16fc08d295d55ee6b6d5aef1", null ],
     [ "Allocate", "classv8_1_1internal_1_1PrimitiveArrayBase.html#ab1a5dd1d1a62deea07d78472f4c93627", null ],
+    [ "Allocate", "classv8_1_1internal_1_1PrimitiveArrayBase.html#acbc1602cd93de7aa10d28c015ef213d4", null ],
     [ "AllocatedSize", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a0005a39dc4818d5a06ea67d8ef7a77d6", null ],
     [ "begin", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a24c2117eea15a4b304f8c390d43220b6", null ],
     [ "begin", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a9f702227cd4612d326926e807008fd7d", null ],
@@ -10,7 +13,14 @@ var classv8_1_1internal_1_1PrimitiveArrayBase =
     [ "end", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a90a191291b20d96e7c9d2d28104ddac9", null ],
     [ "end", "classv8_1_1internal_1_1PrimitiveArrayBase.html#aea2e871d878066d20dec9d6775154d78", null ],
     [ "FLEXIBLE_ARRAY_MEMBER", "classv8_1_1internal_1_1PrimitiveArrayBase.html#adef7467f7a1b398c7c49023861c1c906", null ],
+    [ "FromAddressOfFirstElement", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a543517ecceeda6ce418367d03abf6d03", null ],
     [ "get", "classv8_1_1internal_1_1PrimitiveArrayBase.html#aaaf2708abe2beab54a2c71bfe878aa17", null ],
     [ "IsInBounds", "classv8_1_1internal_1_1PrimitiveArrayBase.html#ad1a45a30c7530aca55e1a999391158f0", null ],
-    [ "set", "classv8_1_1internal_1_1PrimitiveArrayBase.html#aa220f6b9e327b4a58fcf5b3bbbb7b519", null ]
+    [ "OffsetOfElementAt", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a5ce474b4fc2969b70d1ac00059e58f4f", null ],
+    [ "set", "classv8_1_1internal_1_1PrimitiveArrayBase.html#aa220f6b9e327b4a58fcf5b3bbbb7b519", null ],
+    [ "SizeFor", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a75ab26cedef21b0b3725566ef62eed66", null ],
+    [ "kElementsAreMaybeObject", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a3ee9aa53eeaddd075f814555674804ba", null ],
+    [ "kElementSize", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a381b1f6a58748514d15eac9d7ecc7cce", null ],
+    [ "kMaxLength", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a0bad1c0e5564a24ea324b348955c6610", null ],
+    [ "kMaxRegularLength", "classv8_1_1internal_1_1PrimitiveArrayBase.html#a5b21e49857373c52a9fdd14c55ab8bdd", null ]
 ];

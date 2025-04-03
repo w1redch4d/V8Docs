@@ -7,11 +7,15 @@ var classv8_1_1internal_1_1DirectHandle =
     [ "DirectHandle", "classv8_1_1internal_1_1DirectHandle.html#a22d1a1097b3ba9d2cde75dd7f3ad9822", null ],
     [ "DirectHandle", "classv8_1_1internal_1_1DirectHandle.html#aa28b183b82c0c422b3b8903d4882bc6e", null ],
     [ "DirectHandle", "classv8_1_1internal_1_1DirectHandle.html#a80efa5c5f43bb55c560e841969bccbd6", null ],
+    [ "DirectHandle", "classv8_1_1internal_1_1DirectHandle.html#aa972dfdf063a2e3209e1d7f5843b562e", null ],
+    [ "DirectHandle", "classv8_1_1internal_1_1DirectHandle.html#ada53d55257a1f51b2d07612103061ad4", null ],
     [ "address", "classv8_1_1internal_1_1DirectHandle.html#a1e8cb72a9d95d9af4345addacd10ff1e", null ],
     [ "equals", "classv8_1_1internal_1_1DirectHandle.html#a31afde13f216498f0c92c845a5cc684f", null ],
     [ "is_identical_to", "classv8_1_1internal_1_1DirectHandle.html#ab60d47234096e5ace4ab7860b0597a9d", null ],
     [ "is_identical_to", "classv8_1_1internal_1_1DirectHandle.html#a1e15d76143f507fd5d70299609178a9e", null ],
     [ "is_null", "classv8_1_1internal_1_1DirectHandle.html#a06eb965863d4b0adb5aa7f70aba666e3", null ],
+    [ "New", "classv8_1_1internal_1_1DirectHandle.html#ac5c73f73099c6012827cac2e23caf6f3", null ],
+    [ "null", "classv8_1_1internal_1_1DirectHandle.html#a0ece64ef1a1e1b1d6bb489e5f63254ec", null ],
     [ "operator*", "classv8_1_1internal_1_1DirectHandle.html#acc071d4beceb9dbfb2cb595462905d37", null ],
     [ "operator->", "classv8_1_1internal_1_1DirectHandle.html#ab0404b7b374082f2bac03652b841e2a5", null ],
     [ "repr", "classv8_1_1internal_1_1DirectHandle.html#afe11fd3c1c17e5ed4d05101218517211", null ],
@@ -24,5 +28,6 @@ var classv8_1_1internal_1_1DirectHandle =
     [ "indirect_handle", "classv8_1_1internal_1_1DirectHandle.html#a603a663e60ec0a5ff2f6d53d14427f23", null ],
     [ "indirect_handle", "classv8_1_1internal_1_1DirectHandle.html#a5e0d469e57f6b02830588422e8b497f4", null ],
     [ "MaybeDirectHandle", "classv8_1_1internal_1_1DirectHandle.html#a378be75bc8ed04ce779a8b7958294299", null ],
-    [ "UncheckedCast", "classv8_1_1internal_1_1DirectHandle.html#ae91ab6f0b1c69309562f22e9af136b35", null ]
+    [ "UncheckedCast", "classv8_1_1internal_1_1DirectHandle.html#ae91ab6f0b1c69309562f22e9af136b35", null ],
+    [ "handle_", "classv8_1_1internal_1_1DirectHandle.html#ab0892d25679a46be667a9e64f39faa58", null ]
 ];

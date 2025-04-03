@@ -14,6 +14,7 @@ var classv8_1_1internal_1_1maglev_1_1BasicBlock =
     [ "ForEachSuccessor", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a6871a44ddeb7756faa000457b7bc3286", null ],
     [ "has_phi", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a68f63035f27811c2690e323ad13f8c4b", null ],
     [ "has_state", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a7c760d73c06d49c39fda43889315a239", null ],
+    [ "HasPhisOrRegisterMerges", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#ae4c04ed763a8e8b8a031c276087d59e5", null ],
     [ "is_deferred", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#abf73cc59e326d3b75564395e52e25d7a", null ],
     [ "is_edge_split_block", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a647d849058456cbcd5b2a0c4eefe189c", null ],
     [ "is_exception_handler_block", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#ad9af1a6b53b70ccc8b36a4adabf1c0f7", null ],
@@ -41,6 +42,17 @@ var classv8_1_1internal_1_1maglev_1_1BasicBlock =
     [ "spill_hints", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#abad3972bfdaa86ddff685213f6b62c8b", null ],
     [ "state", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#ae7fe6426f4c9f45087862e8ce1636fd2", null ],
     [ "successors", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a2cf937e581d7d4f4710d6a8a2eb94bea", null ],
+    [ "control_node_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a5220a7558ca6738cc829372c0b5afb81", null ],
+    [ "deferred_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#aa39d4624dae8b5a3b60d6370ac8dc7a3", null ],
     [ "edge_split_block_register_state_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a3a0ce55e3433f6cc7a1977f83cb3ed56", null ],
-    [ "state_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a673607daadb68f2b7629f60cb2ada711", null ]
+    [ "is_start_block_of_switch_case_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#ab3515cce5a3a3951ba5a70c09b6dba8c", null ],
+    [ "label_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#ab785c1ebb053750f9f812aa76478a969", null ],
+    [ "nodes_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a5c60175261944b562f90d91f76aca59d", null ],
+    [ "predecessor_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a606f633ff8dc5ee0de21b01eabb19053", null ],
+    [ "real_jump_target_cache_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a9034528039daa25f8456286d10a834a5", null ],
+    [ "reload_hints_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a6412ca84df9fa46daf403597838c0e56", null ],
+    [ "snapshot_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#af9e702133b7547c02d26e4b474bab07a", null ],
+    [ "spill_hints_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a99079894d7e0bd6f68244fe4a2ab718e", null ],
+    [ "state_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a673607daadb68f2b7629f60cb2ada711", null ],
+    [ "type_", "classv8_1_1internal_1_1maglev_1_1BasicBlock.html#a863ffa293a4a6afc6ae41ca8d5a6413e", null ]
 ];

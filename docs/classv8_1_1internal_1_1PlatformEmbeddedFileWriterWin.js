@@ -13,6 +13,7 @@ var classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin =
     [ "DeclareRvaToSymbol", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#a6e335a1fb250240147df0794cc790f1f", null ],
     [ "DeclareSymbolGlobal", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#a28bf69a2c9490d410b81453f2e2663cb", null ],
     [ "DeclareUint32", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#add2224c6a6f5195ee58ae802b20593da", null ],
+    [ "DirectiveAsString", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#aa0d5805a84d93d28dc4981f8db4cfa01", null ],
     [ "EndPdataSection", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#a666c3b7514862c343b27039fc2cc2416", null ],
     [ "EndXdataSection", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#a9e9a3fc6e9e26ebf3074e5388e2f7c5c", null ],
     [ "FileEpilogue", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#ae4babb1ef5f3f632edb1feb560a2caad", null ],
@@ -25,5 +26,7 @@ var classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin =
     [ "SourceInfo", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#a25189b65ab28376c9d46e8c6fafd45b9", null ],
     [ "StartPdataSection", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#a7bee76d5de84f7c64fc86b4965078a38", null ],
     [ "StartXdataSection", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#af970c693e9e3720bcc3a05ac13968187", null ],
-    [ "WriteByteChunk", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#ac1796c522078dd61f548bd1e147d74fe", null ]
+    [ "WriteByteChunk", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#ac1796c522078dd61f548bd1e147d74fe", null ],
+    [ "target_arch_", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#aeabd1be04f1173cd6240c38e19f7f3e8", null ],
+    [ "target_os_", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterWin.html#a09a140cb05b74542d1e9bdb565d1724f", null ]
 ];

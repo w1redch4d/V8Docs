@@ -1,6 +1,8 @@
 var global_handles_8cc =
 [
     [ "v8::internal::GlobalHandles::NodeBlock< NodeType >", "classv8_1_1internal_1_1GlobalHandles_1_1NodeBlock.html", "classv8_1_1internal_1_1GlobalHandles_1_1NodeBlock" ],
+    [ "v8::internal::GlobalHandles::NodeIterator< BlockType >", "classv8_1_1internal_1_1GlobalHandles_1_1NodeIterator.html", "classv8_1_1internal_1_1GlobalHandles_1_1NodeIterator" ],
+    [ "v8::internal::GlobalHandles::NodeSpace< NodeType >", "classv8_1_1internal_1_1GlobalHandles_1_1NodeSpace.html", "classv8_1_1internal_1_1GlobalHandles_1_1NodeSpace" ],
     [ "v8::internal::NodeBase< Child >", "classv8_1_1internal_1_1NodeBase.html", "classv8_1_1internal_1_1NodeBase" ],
     [ "v8::internal::GlobalHandles::Node", "classv8_1_1internal_1_1GlobalHandles_1_1Node.html", "classv8_1_1internal_1_1GlobalHandles_1_1Node" ],
     [ "GenericCallback", "global-handles_8cc.html#add8a89771f9de699bf857fe1eadec729", null ],

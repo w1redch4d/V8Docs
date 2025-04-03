@@ -2,6 +2,7 @@ var v8_console_message_8h =
 [
     [ "v8_inspector::V8ConsoleMessage", "classv8__inspector_1_1V8ConsoleMessage.html", "classv8__inspector_1_1V8ConsoleMessage" ],
     [ "v8_inspector::V8ConsoleMessageStorage", "classv8__inspector_1_1V8ConsoleMessageStorage.html", "classv8__inspector_1_1V8ConsoleMessageStorage" ],
+    [ "v8_inspector::V8ConsoleMessageStorage::PerContextData", "structv8__inspector_1_1V8ConsoleMessageStorage_1_1PerContextData.html", "structv8__inspector_1_1V8ConsoleMessageStorage_1_1PerContextData" ],
     [ "ConsoleAPIType", "v8-console-message_8h.html#a86071795d551436b9f0871e76dffd09f", [
       [ "kLog", "v8-console-message_8h.html#a86071795d551436b9f0871e76dffd09faf7971cffe1eeab35748c8d08e50703ec", null ],
       [ "kDebug", "v8-console-message_8h.html#a86071795d551436b9f0871e76dffd09fabb53ce21b7c0b7c8a8f7860a41901d29", null ],

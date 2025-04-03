@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Sequence =
 [
+    [ "base", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Sequence.html#a37f4e1f387add273a6dbd4381dfa41a2", null ],
     [ "iterator_type", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Sequence.html#a0352a380de6ffb152ab5e11c00a0924c", null ],
     [ "value_type", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Sequence.html#adf7dc74b0784fc7d3ce2879cb814da52", null ],
     [ "Sequence", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Sequence.html#aaeb7c464eef46445251c36392eec44e0", null ],

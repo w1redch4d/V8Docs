@@ -20,5 +20,7 @@ var classv8_1_1internal_1_1VirtualMemory =
     [ "Release", "classv8_1_1internal_1_1VirtualMemory.html#ab1cc06b20f4379874b06e8c894d7e8ea", null ],
     [ "Reset", "classv8_1_1internal_1_1VirtualMemory.html#aacdcb5f689db1e7346aa047b27637c00", null ],
     [ "SetPermissions", "classv8_1_1internal_1_1VirtualMemory.html#ab9d171acf0e9958c506fd0e7c885f529", null ],
-    [ "size", "classv8_1_1internal_1_1VirtualMemory.html#a48f0249dbd8fb6b9fdd45b51037e9c90", null ]
+    [ "size", "classv8_1_1internal_1_1VirtualMemory.html#a48f0249dbd8fb6b9fdd45b51037e9c90", null ],
+    [ "page_allocator_", "classv8_1_1internal_1_1VirtualMemory.html#a20c96adf72024daf6d96e023ad533e26", null ],
+    [ "region_", "classv8_1_1internal_1_1VirtualMemory.html#a77ebc8f72604155ff6b63fab260fe2e3", null ]
 ];

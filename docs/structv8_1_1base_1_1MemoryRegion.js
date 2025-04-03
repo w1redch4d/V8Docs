@@ -1,5 +1,6 @@
 var structv8_1_1base_1_1MemoryRegion =
 [
+    [ "FromMapsLine", "structv8_1_1base_1_1MemoryRegion.html#abd20813104908d9ee6dcc047661a56a5", null ],
     [ "dev", "structv8_1_1base_1_1MemoryRegion.html#aaed18dccd5345d02d3ded2e9e9cba11c", null ],
     [ "end", "structv8_1_1base_1_1MemoryRegion.html#a408edd7c270a95c2e642c244d13f3c62", null ],
     [ "inode", "structv8_1_1base_1_1MemoryRegion.html#a3afaa66017b038b9da1bd205baa3aac5", null ],

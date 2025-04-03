@@ -7,5 +7,6 @@ var classv8_1_1internal_1_1DispatchingDecoderVisitor =
     [ "InsertVisitorBefore", "classv8_1_1internal_1_1DispatchingDecoderVisitor.html#a11f1b7b5caa21fe5087601997b800f25", null ],
     [ "PrependVisitor", "classv8_1_1internal_1_1DispatchingDecoderVisitor.html#a9bde00a60970d0d420b3ba8fe2e6ea26", null ],
     [ "RemoveVisitor", "classv8_1_1internal_1_1DispatchingDecoderVisitor.html#afb3200eb3db0b8b11b24a752eee5f03c", null ],
-    [ "VisitNEONShiftImmediate", "classv8_1_1internal_1_1DispatchingDecoderVisitor.html#aa1dbbd237c4b99fcce66482fd25750d8", null ]
+    [ "VisitNEONShiftImmediate", "classv8_1_1internal_1_1DispatchingDecoderVisitor.html#aa1dbbd237c4b99fcce66482fd25750d8", null ],
+    [ "visitors_", "classv8_1_1internal_1_1DispatchingDecoderVisitor.html#a423519f27b7476090717a8d4b2adc9f8", null ]
 ];

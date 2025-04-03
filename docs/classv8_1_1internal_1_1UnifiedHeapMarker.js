@@ -7,5 +7,8 @@ var classv8_1_1internal_1_1UnifiedHeapMarker =
     [ "GetMutatorMarkingState", "classv8_1_1internal_1_1UnifiedHeapMarker.html#a2b5109744201ea2273e53cbd8c630051", null ],
     [ "GetMutatorUnifiedHeapMarkingState", "classv8_1_1internal_1_1UnifiedHeapMarker.html#ada9324d4b2ac143204ab85dce9af9c84", null ],
     [ "stack_visitor", "classv8_1_1internal_1_1UnifiedHeapMarker.html#a0e46ecb790d158d653de179425729460", null ],
-    [ "visitor", "classv8_1_1internal_1_1UnifiedHeapMarker.html#a746f420eb69cdd8fef9b968dbbffb8b7", null ]
+    [ "visitor", "classv8_1_1internal_1_1UnifiedHeapMarker.html#a746f420eb69cdd8fef9b968dbbffb8b7", null ],
+    [ "conservative_marking_visitor_", "classv8_1_1internal_1_1UnifiedHeapMarker.html#aed0e485cb92b2c0b056083e5843e6131", null ],
+    [ "marking_visitor_", "classv8_1_1internal_1_1UnifiedHeapMarker.html#abfbba497dd0cc3306e749a125356b722", null ],
+    [ "mutator_unified_heap_marking_state_", "classv8_1_1internal_1_1UnifiedHeapMarker.html#a07f6e03e9d954de8f5dc7c0f75ee5876", null ]
 ];

@@ -11,6 +11,8 @@ var implementation_visitor_8h =
     [ "v8::internal::torque::Arguments", "structv8_1_1internal_1_1torque_1_1Arguments.html", "structv8_1_1internal_1_1torque_1_1Arguments" ],
     [ "v8::internal::torque::ImplementationVisitor", "classv8_1_1internal_1_1torque_1_1ImplementationVisitor.html", "classv8_1_1internal_1_1torque_1_1ImplementationVisitor" ],
     [ "v8::internal::torque::ImplementationVisitor::BindingsManagersScope", "structv8_1_1internal_1_1torque_1_1ImplementationVisitor_1_1BindingsManagersScope.html", "structv8_1_1internal_1_1torque_1_1ImplementationVisitor_1_1BindingsManagersScope" ],
+    [ "v8::internal::torque::ImplementationVisitor::StackScope", "classv8_1_1internal_1_1torque_1_1ImplementationVisitor_1_1StackScope.html", "classv8_1_1internal_1_1torque_1_1ImplementationVisitor_1_1StackScope" ],
+    [ "v8::internal::torque::ImplementationVisitor::BreakContinueActivator", "classv8_1_1internal_1_1torque_1_1ImplementationVisitor_1_1BreakContinueActivator.html", "classv8_1_1internal_1_1torque_1_1ImplementationVisitor_1_1BreakContinueActivator" ],
     [ "IsCompatibleSignature", "implementation-visitor_8h.html#af9e9ab6210a27297f3af7afe1c1eb566", null ],
     [ "ReportAllUnusedMacros", "implementation-visitor_8h.html#a5bb10e20eb8a76aa10fa70987ebc5b42", null ]
 ];

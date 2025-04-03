@@ -23,5 +23,14 @@ var classv8_1_1internal_1_1UnoptimizedCompilationInfo =
     [ "SetAsmWasmData", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#a5503a69b59c23812b869b84f083a0cb0", null ],
     [ "SetBytecodeArray", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#a06b2d875dd0a2a28f7ed09809ebe849f", null ],
     [ "source_range_map", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#a9282de8611d3227484c4d5138560c7f8", null ],
-    [ "SourcePositionRecordingMode", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#a0fe164cc4bc3adebfe1b0f8b42c306ee", null ]
+    [ "SourcePositionRecordingMode", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#a0fe164cc4bc3adebfe1b0f8b42c306ee", null ],
+    [ "asm_wasm_data_", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#a7699bfd13cc617c6441e1c004dfd225c", null ],
+    [ "bytecode_array_", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#acb50bd8f2165f6e4c13899ef13ccb3c9", null ],
+    [ "character_stream_", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#a5e2b6ab565774ab228485536ef9a3bec", null ],
+    [ "coverage_info_", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#abab3dd06c476e7f2a882000b7bfebb43", null ],
+    [ "dispatcher_", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#a1ce4742894551af92bad70b1531a14c0", null ],
+    [ "feedback_vector_spec_", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#afac5ce9f97a0c9066bffe50c62bd4c46", null ],
+    [ "flags_", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#a3c5ec6544fba3e5b84a350c0c0a67a64", null ],
+    [ "literal_", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#a675ca040a4f815231901fbf9f42b7044", null ],
+    [ "source_range_map_", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html#a99f1d411585fbd85793d4e203603e53d", null ]
 ];

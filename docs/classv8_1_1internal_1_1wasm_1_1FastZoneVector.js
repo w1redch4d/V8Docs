@@ -9,10 +9,14 @@ var classv8_1_1internal_1_1wasm_1_1FastZoneVector =
     [ "end", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#ac90ab587c9f31e8903e69a763bb15b85", null ],
     [ "EnsureMoreCapacity", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#a7ab60d8919d98aa997b1e9d6758c3d9f", null ],
     [ "front", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#a0bcb8c15212d8ded7ae94a007fed7ba9", null ],
+    [ "Grow", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#a28c47d729f45fa38dc51985b85e8b5d8", null ],
     [ "operator[]", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#a9c4ae6d2e5a176bacbeea5b5ebc64e96", null ],
     [ "pop", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#a7bdb091db2743dc50349707e048fdc3b", null ],
     [ "push", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#a450edea0ff21f1b3bcffb6ec2607bb18", null ],
     [ "Reset", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#a805470b110e35d7893162e7bc9ba6480", null ],
     [ "shrink_to", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#a26478386a16686bc69e671a40de365af", null ],
-    [ "size", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#af9453b8601432ad545cbb841287dbc86", null ]
+    [ "size", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#af9453b8601432ad545cbb841287dbc86", null ],
+    [ "begin_", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#ae5330f199777ba858678796c01d36b69", null ],
+    [ "capacity_end_", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#a29b829457e3d64079640fbf8a35129a1", null ],
+    [ "end_", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html#a6f9bd1de9dbb6240b47741d1ac3918f7", null ]
 ];

@@ -13,5 +13,7 @@ var classv8_1_1internal_1_1torque_1_1Instruction =
     [ "operator->", "classv8_1_1internal_1_1torque_1_1Instruction.html#a4d5e5853a7f84309e22c4d403bdde6a8", null ],
     [ "operator=", "classv8_1_1internal_1_1torque_1_1Instruction.html#a385b2c69c1b4ec25843f32d937991f41", null ],
     [ "RecomputeDefinitionLocations", "classv8_1_1internal_1_1torque_1_1Instruction.html#a4d1da43442ca932d7c6a64a43ad5f11c", null ],
-    [ "TypeInstruction", "classv8_1_1internal_1_1torque_1_1Instruction.html#a78736db1a416f69cd177408fa6e24500", null ]
+    [ "TypeInstruction", "classv8_1_1internal_1_1torque_1_1Instruction.html#a78736db1a416f69cd177408fa6e24500", null ],
+    [ "instruction_", "classv8_1_1internal_1_1torque_1_1Instruction.html#a251bc1a660df631cde781e39ef2209cc", null ],
+    [ "kind_", "classv8_1_1internal_1_1torque_1_1Instruction.html#a7bf4372b435971962d0850244603880f", null ]
 ];

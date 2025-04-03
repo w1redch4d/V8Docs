@@ -9,5 +9,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreDataViewElementOp =
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreDataViewElementOp.html#a371bf26b11ad6812cbd822f7b3303b06", null ],
     [ "storage", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreDataViewElementOp.html#ad2f72d30051f3d4612efe4c8f5da236c", null ],
     [ "value", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreDataViewElementOp.html#aefb9a87c52a36d764d433beb677de692", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreDataViewElementOp.html#a9f895b95be17c4d5128c98c67ecb7737", null ],
     [ "element_type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreDataViewElementOp.html#aec776d12ce2c4b38eda417ecaa85ad37", null ]
 ];

@@ -5,6 +5,7 @@ var structv8_1_1internal_1_1TickSample =
       [ "kSkipCEntryFrame", "structv8_1_1internal_1_1TickSample.html#a83e83599fa86f30e0761b741065d4bcba9ba3c0d507dfe1ffe607825dd412a699", null ]
     ] ],
     [ "TickSample", "structv8_1_1internal_1_1TickSample.html#a50360fec16de75dc7ce23bd35ed19e3d", null ],
+    [ "GetStackSample", "structv8_1_1internal_1_1TickSample.html#a9a9f0d94f5f7e56e5917d0bc3dcdd74d", null ],
     [ "Init", "structv8_1_1internal_1_1TickSample.html#aff711cc4adfe44983edee08ff98db9c8", null ],
     [ "print", "structv8_1_1internal_1_1TickSample.html#a3541d54db3bb3c5d1d8133830c77baf8", null ],
     [ "context", "structv8_1_1internal_1_1TickSample.html#a1ca3441e32d0a4f956c1095416cdf937", null ],
@@ -13,6 +14,8 @@ var structv8_1_1internal_1_1TickSample =
     [ "external_callback_entry", "structv8_1_1internal_1_1TickSample.html#a850e183601352c0479985e9856ecff92", null ],
     [ "frames_count", "structv8_1_1internal_1_1TickSample.html#ab7605ad4adb82fb910760e5b0de64631", null ],
     [ "has_external_callback", "structv8_1_1internal_1_1TickSample.html#aab6f962edf414a9fc191ed879921b13d", null ],
+    [ "kMaxFramesCount", "structv8_1_1internal_1_1TickSample.html#a305f921f29b48e09d3dc0ff2c6ca11d4", null ],
+    [ "kMaxFramesCountLog2", "structv8_1_1internal_1_1TickSample.html#abd16e5fe58fa470dcc5b54672c068d74", null ],
     [ "pc", "structv8_1_1internal_1_1TickSample.html#a5f30752795aa735d5894d4a37de9ee4b", null ],
     [ "sampling_interval_", "structv8_1_1internal_1_1TickSample.html#a0536ed2cd297652a67ffb808f01ea117", null ],
     [ "stack", "structv8_1_1internal_1_1TickSample.html#ae4048b0a6ac7e724dbb0c39dfd9679cf", null ],

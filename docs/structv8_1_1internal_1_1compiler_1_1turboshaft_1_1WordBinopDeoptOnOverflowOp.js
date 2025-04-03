@@ -18,6 +18,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordBinopDeoptOnOverflowOp
     [ "PrintOptions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordBinopDeoptOnOverflowOp.html#adc0b9b2b942e0bfc87d4d94d4ec51495", null ],
     [ "right", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordBinopDeoptOnOverflowOp.html#a384b0285a5d80f6ee81b301d30ca2108", null ],
     [ "Validate", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordBinopDeoptOnOverflowOp.html#a08ed5014900185be11d1e23c5e2e224a", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordBinopDeoptOnOverflowOp.html#ad33d6fc6f495922ab83e68e70cc87a6b", null ],
     [ "feedback", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordBinopDeoptOnOverflowOp.html#a559acda94a94ac816da4693695156fb5", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordBinopDeoptOnOverflowOp.html#ab010b65e8cdd1443494beed05adb0e34", null ],
     [ "mode", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordBinopDeoptOnOverflowOp.html#a06758bcf6e665598a2867b546dd6655d", null ],

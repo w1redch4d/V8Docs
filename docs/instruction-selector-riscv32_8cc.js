@@ -8,5 +8,7 @@ var instruction_selector_riscv32_8cc =
     [ "EXPORT_TEMPLATE_DEFINE", "instruction-selector-riscv32_8cc.html#a07b00ecc9a497366b4b4f2ba83a53553", null ],
     [ "VisitAtomicCompareExchange", "instruction-selector-riscv32_8cc.html#a69a4d2c55c2d1e540c156e7c4f5ef569", null ],
     [ "VisitAtomicExchange", "instruction-selector-riscv32_8cc.html#a5b3d626cbf89aff9824fec446340a633", null ],
-    [ "VisitPairAtomicBinop", "instruction-selector-riscv32_8cc.html#a68957dad517963fa3226ec2745bb6f21", null ]
+    [ "VisitInt32PairBinop", "instruction-selector-riscv32_8cc.html#a417883f38ea551fef6e367c4d41dcba7", null ],
+    [ "VisitPairAtomicBinop", "instruction-selector-riscv32_8cc.html#a68957dad517963fa3226ec2745bb6f21", null ],
+    [ "VisitWord32PairShift", "instruction-selector-riscv32_8cc.html#aed5e0163ca94e708444f997de02405e5", null ]
 ];

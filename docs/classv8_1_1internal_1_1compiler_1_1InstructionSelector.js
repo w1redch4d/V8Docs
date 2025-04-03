@@ -22,8 +22,18 @@ var classv8_1_1internal_1_1compiler_1_1InstructionSelector =
       [ "kAllSourcePositions", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#ac985d7ff7e0eeb569c3b612182388601ab2fd54d89fbd0ef99231e4733e3ae591", null ]
     ] ],
     [ "~InstructionSelector", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#a9119211624560fc445fb3c3f597bfa8b", null ],
+    [ "InstructionSelector", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#a84592c2bad7fafb0763d51982e739b2d", null ],
+    [ "InstructionSelector", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#ae05f6c14d9e9e40430e8f70a4d8ca2ca", null ],
+    [ "AlignmentRequirements", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#a0c9aed886a7ff7e2bd9cc055574af334", null ],
+    [ "ForTurbofan", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#a072f596003cc025a9b25289df8831bc9", null ],
+    [ "ForTurboshaft", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#afc07b576c63d88366b399c6f0da6e73d", null ],
     [ "GetVirtualRegistersForTesting", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#a89579ed3e6e00e4f329deddd2cd52b5e", null ],
     [ "instr_origins", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#aa62d8e78d99b9afb09c01db61934cacd", null ],
     [ "IsSupported", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#ab1a42ac73e0ac494aabb7c72268c9658", null ],
-    [ "SelectInstructions", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#a84cd6221134abef1298cd6d187469712", null ]
+    [ "operator=", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#a2d178b19f5397a7053656423826e6070", null ],
+    [ "SelectInstructions", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#a84cd6221134abef1298cd6d187469712", null ],
+    [ "SupportedFeatures", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#ab5ee2fe198b50a28b6e9d03cf26b79cb", null ],
+    [ "SupportedMachineOperatorFlags", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#aa31dee7be3b35a108712f2913a598ca0", null ],
+    [ "turbofan_impl_", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#ad6403a31f0b16cd91f2142718f141dfb", null ],
+    [ "turboshaft_impl_", "classv8_1_1internal_1_1compiler_1_1InstructionSelector.html#a058d22fbd6b60b9865e46343197a27fd", null ]
 ];

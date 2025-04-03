@@ -15,6 +15,7 @@ var classv8_1_1internal_1_1AssemblerRISCVV =
     [ "GenInstrV", "classv8_1_1internal_1_1AssemblerRISCVV.html#aa5a9fc1b6971ff4616ee8bc2063f8c13", null ],
     [ "GenInstrV", "classv8_1_1internal_1_1AssemblerRISCVV.html#afdb05e781281bb737489fb9808e393fb", null ],
     [ "GenInstrV", "classv8_1_1internal_1_1AssemblerRISCVV.html#a0de06b3883509d6306114a5aabd52d3f", null ],
+    [ "GenZimm", "classv8_1_1internal_1_1AssemblerRISCVV.html#a2a38bb8dc1e75ebe5de94878e31c890b", null ],
     [ "SegInstr", "classv8_1_1internal_1_1AssemblerRISCVV.html#a21f4f72c578de049be05e90071b81f06", null ],
     [ "vadc_vi", "classv8_1_1internal_1_1AssemblerRISCVV.html#af98778da505af1e7618ddfb8d1d3526f", null ],
     [ "vadc_vv", "classv8_1_1internal_1_1AssemblerRISCVV.html#a2b060a1774e4791bcc7ebdb91bf367a8", null ],

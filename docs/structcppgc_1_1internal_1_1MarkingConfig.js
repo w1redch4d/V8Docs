@@ -5,6 +5,7 @@ var structcppgc_1_1internal_1_1MarkingConfig =
       [ "kNotForced", "structcppgc_1_1internal_1_1MarkingConfig.html#a74d8f8edbbd41410753efcb241bca188a5d15e19685b0655571d8b0f742811b65", null ],
       [ "kForced", "structcppgc_1_1internal_1_1MarkingConfig.html#a74d8f8edbbd41410753efcb241bca188af8ece195be5dd5e820bdeee7ad21a4bf", null ]
     ] ],
+    [ "Default", "structcppgc_1_1internal_1_1MarkingConfig.html#a174a1b05fcfd33f1e60954bf6f3b1631", null ],
     [ "bailout_of_marking_when_ahead_of_schedule", "structcppgc_1_1internal_1_1MarkingConfig.html#a259f8c960856df883647b02fa0cff0bd", null ],
     [ "collection_type", "structcppgc_1_1internal_1_1MarkingConfig.html#a146d9dd286e4b3af8d78682887f670fd", null ],
     [ "is_forced_gc", "structcppgc_1_1internal_1_1MarkingConfig.html#aed6a73d4526f06b669d22a824748a4b3", null ],

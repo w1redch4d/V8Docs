@@ -17,5 +17,10 @@ var wasm_engine_8cc =
     [ "max_table_size", "wasm-engine_8cc.html#a38d56b630d25ea0451a91c6204e89042", null ],
     [ "code_manager", "wasm-engine_8cc.html#a7edd6d7cb36a3ca555668ff04ed90737", null ],
     [ "engine", "wasm-engine_8cc.html#a09d8f881228b5320f5caba482e3ab38e", null ],
-    [ "import_wrapper_cache", "wasm-engine_8cc.html#a756e87558c02d6645e094704f4434210", null ]
+    [ "handle_", "wasm-engine_8cc.html#af4cf4c59bc3f05a0a229655e7c35db6c", null ],
+    [ "import_wrapper_cache", "wasm-engine_8cc.html#a756e87558c02d6645e094704f4434210", null ],
+    [ "isolate_", "wasm-engine_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b", null ],
+    [ "location_", "wasm-engine_8cc.html#a85d590abdb473e04aaa51e70b61a6866", null ],
+    [ "script_id_", "wasm-engine_8cc.html#a061eb80ab3273d83c199befcbeb7f1c8", null ],
+    [ "source_url_", "wasm-engine_8cc.html#a8c83c08ba2849db5be8298e4065548d9", null ]
 ];

@@ -1,9 +1,20 @@
 var classv8_1_1internal_1_1wasm_1_1ParallelMove =
 [
+    [ "RegisterLoad", "structv8_1_1internal_1_1wasm_1_1ParallelMove_1_1RegisterLoad.html", "structv8_1_1internal_1_1wasm_1_1ParallelMove_1_1RegisterLoad" ],
+    [ "RegisterMove", "structv8_1_1internal_1_1wasm_1_1ParallelMove_1_1RegisterMove.html", "structv8_1_1internal_1_1wasm_1_1ParallelMove_1_1RegisterMove" ],
+    [ "LoadsStorage", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#af25416e7b739799cd322643bee2f54d6", null ],
+    [ "MovesStorage", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a0f0d2e4daa112765f479971fe0a15cb1", null ],
+    [ "VarState", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a33549944af3903db68ea40441115c807", null ],
     [ "ParallelMove", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a5d9f5b6cf2e08f3ca22c1f8c3a483577", null ],
     [ "ParallelMove", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#aeea956f50fa80ab59092698abee3c40e", null ],
     [ "~ParallelMove", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a496401337151a42d533a2f0e1463a662", null ],
+    [ "ASSERT_TRIVIALLY_COPYABLE", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a23e5c65dddb41e4e8613cab3b153c4b9", null ],
+    [ "ASSERT_TRIVIALLY_COPYABLE", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a4b263d497db779f0a578b23d67e41e7f", null ],
+    [ "ClearExecutedMove", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a3c28191f60a76d5505d2deb245e3a4da", null ],
     [ "Execute", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#aa82be2272454419f72151ece4e06da4d", null ],
+    [ "ExecuteLoads", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a9e971f08459f9f666361dc051e088c82", null ],
+    [ "ExecuteMove", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#aa899f9f7b8d84ba7306eb7365d2361dc", null ],
+    [ "ExecuteMoves", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#ae5d720695a448688e80043a206ef280b", null ],
     [ "LoadConstant", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#af4bac107ec5ba3c7cee563e7ecd96ec8", null ],
     [ "LoadI64HalfIntoRegister", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a78081d5c68a04f923dd0e44ea6538e3e", null ],
     [ "LoadI64HalfStackSlot", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#aaee2b0f83da71020cf81e6f38c2fabe2", null ],
@@ -11,6 +22,16 @@ var classv8_1_1internal_1_1wasm_1_1ParallelMove =
     [ "LoadStackSlot", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a8e331f0fc7a68c652b1c87a4ee20af58", null ],
     [ "MoveRegister", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a357036f679af885ced939b90e94615c8", null ],
     [ "operator=", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#ab5b6196c26f14c5bf11da781400e80f2", null ],
+    [ "register_load", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a4832f0cd2b40d505c9beb3f0ff6f6e7f", null ],
+    [ "register_move", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#ade82c18c72160be0ffe726a72964a26c", null ],
+    [ "src_reg_use_count", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#ad1b892731209176397216f35ef81702a", null ],
     [ "Transfer", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#add897de31964820887c3849fd45a5ae5", null ],
-    [ "TransferToStack", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a7f57ba431437463f6617ef5d9f216961", null ]
+    [ "TransferToStack", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a7f57ba431437463f6617ef5d9f216961", null ],
+    [ "asm_", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a4b6105603e620ba4415278216a3503f5", null ],
+    [ "last_spill_offset_", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#ac39cc1ac1b38db7e1e673bd9d6182c7c", null ],
+    [ "load_dst_regs_", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#adbc53dafcff4dfab024d84b7e613b3ba", null ],
+    [ "move_dst_regs_", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#aa579b8a6e0f17765d15097149fb1d83a", null ],
+    [ "register_loads_", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#af1e6f1622afcf859868679f5ebcdc552", null ],
+    [ "register_moves_", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#a1ffb8b100b23940e25026ddf1509241f", null ],
+    [ "src_reg_use_count_", "classv8_1_1internal_1_1wasm_1_1ParallelMove.html#abdad4d01454c61cd07bd276f8b043c3f", null ]
 ];

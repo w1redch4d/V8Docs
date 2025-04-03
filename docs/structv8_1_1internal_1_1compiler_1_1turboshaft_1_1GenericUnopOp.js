@@ -9,5 +9,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericUnopOp =
     [ "input", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericUnopOp.html#ac9af7c642c46d742f13bb714ef90cd94", null ],
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericUnopOp.html#abecf75c010cf4214d3d6d536177d6ed1", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericUnopOp.html#a13c4f60928af4d1a108d303d06ad242d", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericUnopOp.html#ab0316e5415e55fe54d9a6c6a4cac0c3e", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericUnopOp.html#aad1da8adb8ed11fb059129365b9e4707", null ]
 ];

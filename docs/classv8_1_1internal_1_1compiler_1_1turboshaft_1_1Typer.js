@@ -1,4 +1,25 @@
 var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer =
 [
-    [ "BranchRefinements", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer_1_1BranchRefinements.html", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer_1_1BranchRefinements" ]
+    [ "BranchRefinements", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer_1_1BranchRefinements.html", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer_1_1BranchRefinements" ],
+    [ "allow_invalid_inputs", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#ae03cd8ad0d874bd5dbd8c34ded776ad6", null ],
+    [ "ExtendWord32ToWord64", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a9fce390f60f7fc2db8db68418f808039", null ],
+    [ "InputIs", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a8a6240f5d9b184364ab49f184ff22e83", null ],
+    [ "TruncateWord32Input", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#ae971594f9403a8bde6177b4aab0ff687", null ],
+    [ "TypeComparison", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a60e92d29587c7dac668d06d0f67a8a8b", null ],
+    [ "TypeConstant", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a17ef75921ccf2c2c0c8f1f9f5eb54c24", null ],
+    [ "TypeFloat32Comparison", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a645448ce1ede1abd671ac73f121a527f", null ],
+    [ "TypeFloat64Comparison", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a43f5ab7a5685223173c721b0dcc74dd4", null ],
+    [ "TypeFloatBinop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a98614c49e7375c2f0362cae83beadced", null ],
+    [ "TypeForRepresentation", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a703bc4c1f576ad642ed8fab08c202a7b", null ],
+    [ "TypeForRepresentation", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a70eccf15f839695e3085a13c4ffce827", null ],
+    [ "TypeOverflowCheckedBinop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a35173a85837a839dfe83c73f733e8da1", null ],
+    [ "TypeProjection", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a54049c245bd131225686c0d8dd5560c6", null ],
+    [ "TypeWord32Add", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a58196abe0b74aa9d424d6c8e95a1627d", null ],
+    [ "TypeWord32Comparison", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a53d129135b3ca9231f5786580efd1676", null ],
+    [ "TypeWord32OverflowCheckedAdd", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a60462778e8226a97a800a42c26423c5b", null ],
+    [ "TypeWord32Sub", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#ad5abedb5ccf63b7eb0c9b784ca69bd87", null ],
+    [ "TypeWord64Add", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a2d7239f64ae14793929360cbfe024e91", null ],
+    [ "TypeWord64Comparison", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a86138565cb69179469845b0a5ea654cd", null ],
+    [ "TypeWord64Sub", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a702045f5ebbe73d1dc97a53e5a2cb6a1", null ],
+    [ "TypeWordBinop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html#a1c9c017d91fc22936d432af42fbf824e", null ]
 ];

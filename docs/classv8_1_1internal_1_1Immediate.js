@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1Immediate =
 [
+    [ "Value", "unionv8_1_1internal_1_1Immediate_1_1Value.html", "unionv8_1_1internal_1_1Immediate_1_1Value" ],
     [ "Immediate", "classv8_1_1internal_1_1Immediate.html#a3ef228c4649ea36a1071be0ce57d2f94", null ],
     [ "Immediate", "classv8_1_1internal_1_1Immediate.html#aa020cdd47a96749e2a70eb9a64440bd6", null ],
     [ "Immediate", "classv8_1_1internal_1_1Immediate.html#a1930cc50e6a8c6499c00ba08a8ccfa9b", null ],
@@ -7,10 +8,13 @@ var classv8_1_1internal_1_1Immediate =
     [ "Immediate", "classv8_1_1internal_1_1Immediate.html#a7ecdd1a029e82b282bdd582a67e10a72", null ],
     [ "Immediate", "classv8_1_1internal_1_1Immediate.html#a38e0d823dfd0322df19fa3b0f62e64cf", null ],
     [ "Immediate", "classv8_1_1internal_1_1Immediate.html#ab756134930863bd481eb34f18a2c2a88", null ],
+    [ "Immediate", "classv8_1_1internal_1_1Immediate.html#a55b79bed85622c82559d90e008fa9915", null ],
     [ "Immediate", "classv8_1_1internal_1_1Immediate.html#a41d43192d4da4a7345227e863739d3ea", null ],
     [ "Immediate", "classv8_1_1internal_1_1Immediate.html#aaf2ad48bb63a59ff142728ecf9507d47", null ],
     [ "Immediate", "classv8_1_1internal_1_1Immediate.html#ab756134930863bd481eb34f18a2c2a88", null ],
+    [ "CodeRelativeOffset", "classv8_1_1internal_1_1Immediate.html#aee0c9dd5cd8201980e7a4d9f7e326a3e", null ],
     [ "embedded_object", "classv8_1_1internal_1_1Immediate.html#a0e1bb896e4faf04e4a157fdde66cf41a", null ],
+    [ "EmbeddedNumber", "classv8_1_1internal_1_1Immediate.html#a662388100ab244d72b874277dc16315e", null ],
     [ "external_reference", "classv8_1_1internal_1_1Immediate.html#a2f14650d1fe9b4768cb4056151e3ddb2", null ],
     [ "heap_number_request", "classv8_1_1internal_1_1Immediate.html#ac40c4c4d0a6a41fe7129df5e2977fd1d", null ],
     [ "immediate", "classv8_1_1internal_1_1Immediate.html#adb04b814f4b09b7231cda1b30f0356a4", null ],
@@ -29,5 +33,11 @@ var classv8_1_1internal_1_1Immediate =
     [ "value", "classv8_1_1internal_1_1Immediate.html#aab76f4d8cd387f6c28fe2ffbe9e9a278", null ],
     [ "Assembler", "classv8_1_1internal_1_1Immediate.html#ab679df99d1569d09fdf3358620a4ad34", null ],
     [ "MacroAssembler", "classv8_1_1internal_1_1Immediate.html#ae605ff1d9d93250ace8a0a8b8d1dee67", null ],
-    [ "Operand", "classv8_1_1internal_1_1Immediate.html#a7b8d0ee5e2ffdb09cfa7faade3d8c711", null ]
+    [ "Operand", "classv8_1_1internal_1_1Immediate.html#a7b8d0ee5e2ffdb09cfa7faade3d8c711", null ],
+    [ "is_heap_number_request_", "classv8_1_1internal_1_1Immediate.html#a1d25825934816cee312dbb7d5a710a60", null ],
+    [ "rmode_", "classv8_1_1internal_1_1Immediate.html#af5de339fd26d5394fd04c00bb04c9118", null ],
+    [ "rmode_", "classv8_1_1internal_1_1Immediate.html#a0979c7f3c3fd80bcf938e321bfad0663", null ],
+    [ "value_", "classv8_1_1internal_1_1Immediate.html#aea97e63861bac121d59c43e95a5119f2", null ],
+    [ "value_", "classv8_1_1internal_1_1Immediate.html#a4a3bc09361f7b5fbfff71a89f7645928", null ],
+    [ "value_", "classv8_1_1internal_1_1Immediate.html#a2eddf7c1fdaae524521d091d379cadce", null ]
 ];

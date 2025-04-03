@@ -77,7 +77,9 @@ var instructions_arm64_8h =
     [ "kImmExceptionIsRedirectedCall", "instructions-arm64_8h.html#a1f1d984e7fc7c1acfd1872bf8d12ca5b", null ],
     [ "kImmExceptionIsSwitchStackLimit", "instructions-arm64_8h.html#a842fb5fb95c118b8acd740ff0e72441d", null ],
     [ "kImmExceptionIsUnreachable", "instructions-arm64_8h.html#ad8928339b7f871b82e4a7df02316df77", null ],
+    [ "kNEONFormatMaxBits", "instructions-arm64_8h.html#a0a6bc3e76b2ebc3fdf0037b1bab9d493", null ],
     [ "kPrintfArgCountOffset", "instructions-arm64_8h.html#af4c2f22aae64dc7253decb70681c0385", null ],
+    [ "kPrintfArgPatternBits", "instructions-arm64_8h.html#a3b3a18b54df6210191fd0c25855c2927", null ],
     [ "kPrintfArgPatternListOffset", "instructions-arm64_8h.html#a784bea408940d0207e1552b58d76f7dc", null ],
     [ "kPrintfLength", "instructions-arm64_8h.html#a48970dfffdb17719bb25411c0f7c17de", null ],
     [ "kPrintfMaxArgCount", "instructions-arm64_8h.html#a640eda25f65fc82df9ad9082210b17fb", null ]

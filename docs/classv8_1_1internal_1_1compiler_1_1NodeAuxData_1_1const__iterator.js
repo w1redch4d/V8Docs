@@ -11,5 +11,7 @@ var classv8_1_1internal_1_1compiler_1_1NodeAuxData_1_1const__iterator =
     [ "operator*", "classv8_1_1internal_1_1compiler_1_1NodeAuxData_1_1const__iterator.html#a0eff5332ab7bf214f4b5811e6c54396c", null ],
     [ "operator++", "classv8_1_1internal_1_1compiler_1_1NodeAuxData_1_1const__iterator.html#a450fa59bdb1696d2b34657a39bdf9cc7", null ],
     [ "operator++", "classv8_1_1internal_1_1compiler_1_1NodeAuxData_1_1const__iterator.html#a20fdad3c9638f6fb475100053e0e5217", null ],
-    [ "operator==", "classv8_1_1internal_1_1compiler_1_1NodeAuxData_1_1const__iterator.html#afe589d430f6a818ba30661bfc3eec379", null ]
+    [ "operator==", "classv8_1_1internal_1_1compiler_1_1NodeAuxData_1_1const__iterator.html#afe589d430f6a818ba30661bfc3eec379", null ],
+    [ "current_", "classv8_1_1internal_1_1compiler_1_1NodeAuxData_1_1const__iterator.html#a82ab37b7479013a673433e7d450b1668", null ],
+    [ "data_", "classv8_1_1internal_1_1compiler_1_1NodeAuxData_1_1const__iterator.html#a650bb72dc32b4ead8152bc475e3a2b11", null ]
 ];

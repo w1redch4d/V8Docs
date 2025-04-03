@@ -1,6 +1,7 @@
 var turbofan_graph_visualizer_8cc =
 [
     [ "v8::internal::compiler::GraphC1Visualizer", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer" ],
+    [ "v8::internal::compiler::GraphC1Visualizer::Tag", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer_1_1Tag.html", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer_1_1Tag" ],
     [ "get_cached_trace_turbo_filename", "turbofan-graph-visualizer_8cc.html#ac4c039f85802a33eb82dcd5db9636c2f", null ],
     [ "GetVisualizerLogFileName", "turbofan-graph-visualizer_8cc.html#aba37cfbab57a391e69d293b93ad81e32", null ],
     [ "JsonPrintAllBytecodeSources", "turbofan-graph-visualizer_8cc.html#a6a43a8aecced215c56e41acf7e44a8a8", null ],
@@ -23,6 +24,8 @@ var turbofan_graph_visualizer_8cc =
     [ "operator<<", "turbofan-graph-visualizer_8cc.html#ad75dd052c19d316da94295f570c5c737", null ],
     [ "operator<<", "turbofan-graph-visualizer_8cc.html#adf47684bc386dfb4e8f3732ac607ae7a", null ],
     [ "PrintTopLevelLiveRanges", "turbofan-graph-visualizer_8cc.html#adbc492e0d2a7d68addf8436a92dc073d", null ],
+    [ "SafeId", "turbofan-graph-visualizer_8cc.html#a4a2e971f0caf7ef0be73261909334211", null ],
+    [ "SafeMnemonic", "turbofan-graph-visualizer_8cc.html#a1a9a4bcd2680964a4319426069496178", null ],
     [ "kOnStack", "turbofan-graph-visualizer_8cc.html#a1a468f6402937d9b07f3719e148f911d", null ],
     [ "kUnvisited", "turbofan-graph-visualizer_8cc.html#a4307712b5db9d879cc68bef07f992093", null ],
     [ "kVisited", "turbofan-graph-visualizer_8cc.html#ae52fc6c975ee4f4817cf536b71166342", null ]

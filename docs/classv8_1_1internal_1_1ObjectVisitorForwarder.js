@@ -2,6 +2,9 @@ var classv8_1_1internal_1_1ObjectVisitorForwarder =
 [
     [ "ObjectVisitorForwarder", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#a7b2f45b892719363f4e2a1fa348ab5b0", null ],
     [ "ObjectVisitorForwarder", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#aeb6bcdf963b86e055d2a1ff25331b4af", null ],
+    [ "ShouldUseUncheckedCast", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#abf80d789d2e6ca591ce4678c8552a9c3", null ],
+    [ "ShouldVisitFullJSObject", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#a62ba756289487697353ea781ee2c79b4", null ],
+    [ "ShouldVisitMapPointer", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#a2653b542aca0c52b5eab27e52dbe3f86", null ],
     [ "VisitCodeTarget", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#ab8f93b9a5b93a23d8f897e8805961132", null ],
     [ "VisitCppHeapPointer", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#a35a418b30bfe75a0822131f3e6dffccb", null ],
     [ "VisitCustomWeakPointer", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#a2ee9145da911841bcf02d2364653c368", null ],
@@ -22,5 +25,6 @@ var classv8_1_1internal_1_1ObjectVisitorForwarder =
     [ "VisitPointers", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#a80acc72f6ca33649b3fa37cf2693173e", null ],
     [ "VisitProtectedPointer", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#af8e33e4e62b509994d07dfdf5d0995ea", null ],
     [ "VisitProtectedPointer", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#afb23243d8d5da4e220c8d72923c335de", null ],
-    [ "VisitTrustedPointerTableEntry", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#a27c4877ea0ab34b992b74eea34048fbb", null ]
+    [ "VisitTrustedPointerTableEntry", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#a27c4877ea0ab34b992b74eea34048fbb", null ],
+    [ "visitor_", "classv8_1_1internal_1_1ObjectVisitorForwarder.html#a94ecf23152805e65f9f05f0dff3ca358", null ]
 ];

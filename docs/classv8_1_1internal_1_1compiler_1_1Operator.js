@@ -38,5 +38,17 @@ var classv8_1_1internal_1_1compiler_1_1Operator =
     [ "PrintToImpl", "classv8_1_1internal_1_1compiler_1_1Operator.html#a1b0f06d10c0293b8545b3ce37313bb44", null ],
     [ "properties", "classv8_1_1internal_1_1compiler_1_1Operator.html#a32cc5083fca9b80a5e02c0ed4c08ff70", null ],
     [ "ValueInputCount", "classv8_1_1internal_1_1compiler_1_1Operator.html#a2ea0f97044ee07b76f525f48360a75ce", null ],
-    [ "ValueOutputCount", "classv8_1_1internal_1_1compiler_1_1Operator.html#a6169426001d45c50a3f49051b7d4333d", null ]
+    [ "ValueOutputCount", "classv8_1_1internal_1_1compiler_1_1Operator.html#a6169426001d45c50a3f49051b7d4333d", null ],
+    [ "ZeroIfEliminatable", "classv8_1_1internal_1_1compiler_1_1Operator.html#abfd4399c6dc901728864bf616c52b5ce", null ],
+    [ "ZeroIfNoThrow", "classv8_1_1internal_1_1compiler_1_1Operator.html#a33ac290c997f8d9889d20c6e34b7d622", null ],
+    [ "ZeroIfPure", "classv8_1_1internal_1_1compiler_1_1Operator.html#ac05d4213206e14d84b683018c2e996d5", null ],
+    [ "control_in_", "classv8_1_1internal_1_1compiler_1_1Operator.html#ac48ce263e95508954092504b539b55fe", null ],
+    [ "control_out_", "classv8_1_1internal_1_1compiler_1_1Operator.html#aba836cb7047f9288947586f993e27bfd", null ],
+    [ "effect_in_", "classv8_1_1internal_1_1compiler_1_1Operator.html#a371f017a8268b687210f711db23d8325", null ],
+    [ "effect_out_", "classv8_1_1internal_1_1compiler_1_1Operator.html#ae5e823a0bbf53a5971c3d65b23d71a28", null ],
+    [ "mnemonic_", "classv8_1_1internal_1_1compiler_1_1Operator.html#acde9bf3f0cd205ba55817ce9ef6d3348", null ],
+    [ "opcode_", "classv8_1_1internal_1_1compiler_1_1Operator.html#ad560da225c828fead2028d4b6939034a", null ],
+    [ "properties_", "classv8_1_1internal_1_1compiler_1_1Operator.html#a76958899fa42674aee4b228760354f47", null ],
+    [ "value_in_", "classv8_1_1internal_1_1compiler_1_1Operator.html#af487cf21d58d31016d50fcac34ba97c7", null ],
+    [ "value_out_", "classv8_1_1internal_1_1compiler_1_1Operator.html#a430df9452d651c6cef6ff16aeaf569ef", null ]
 ];

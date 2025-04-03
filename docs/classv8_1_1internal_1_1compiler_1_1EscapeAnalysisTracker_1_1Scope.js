@@ -11,5 +11,9 @@ var classv8_1_1internal_1_1compiler_1_1EscapeAnalysisTracker_1_1Scope =
     [ "SetEscaped", "classv8_1_1internal_1_1compiler_1_1EscapeAnalysisTracker_1_1Scope.html#a99ae8c5318d3134d4b341b9f7de80383", null ],
     [ "SetReplacement", "classv8_1_1internal_1_1compiler_1_1EscapeAnalysisTracker_1_1Scope.html#ad95e0ff57346b1f361a21aae0538dfcd", null ],
     [ "SetVirtualObject", "classv8_1_1internal_1_1compiler_1_1EscapeAnalysisTracker_1_1Scope.html#a5bdbbee660355b6fbf575de5ee6c8aa5", null ],
-    [ "ValueInput", "classv8_1_1internal_1_1compiler_1_1EscapeAnalysisTracker_1_1Scope.html#ad4f481eef51cdb0da8025b8f03f2413f", null ]
+    [ "ValueInput", "classv8_1_1internal_1_1compiler_1_1EscapeAnalysisTracker_1_1Scope.html#ad4f481eef51cdb0da8025b8f03f2413f", null ],
+    [ "reducer_", "classv8_1_1internal_1_1compiler_1_1EscapeAnalysisTracker_1_1Scope.html#af9a56b06ba5d455f362d923fcc1a0274", null ],
+    [ "replacement_", "classv8_1_1internal_1_1compiler_1_1EscapeAnalysisTracker_1_1Scope.html#a722a7e470e4808ca300c22940797e00c", null ],
+    [ "tracker_", "classv8_1_1internal_1_1compiler_1_1EscapeAnalysisTracker_1_1Scope.html#aa768c6c3925a1a829f6c4e7cc5d3ca25", null ],
+    [ "vobject_", "classv8_1_1internal_1_1compiler_1_1EscapeAnalysisTracker_1_1Scope.html#a50c604486484b5d7ed00be6adbb11126", null ]
 ];

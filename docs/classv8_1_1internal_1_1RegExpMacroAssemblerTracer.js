@@ -50,5 +50,6 @@ var classv8_1_1internal_1_1RegExpMacroAssemblerTracer =
     [ "stack_limit_slack_slot_count", "classv8_1_1internal_1_1RegExpMacroAssemblerTracer.html#ae97c15dc0cd0df10ff2c63eb7848d725", null ],
     [ "Succeed", "classv8_1_1internal_1_1RegExpMacroAssemblerTracer.html#a3f36f07f3140a501c727692e74c3b58e", null ],
     [ "WriteCurrentPositionToRegister", "classv8_1_1internal_1_1RegExpMacroAssemblerTracer.html#a1c35d06d23287b461c2f665d7a17950c", null ],
-    [ "WriteStackPointerToRegister", "classv8_1_1internal_1_1RegExpMacroAssemblerTracer.html#a56f1a3f6aefde895fa11c518dae92efa", null ]
+    [ "WriteStackPointerToRegister", "classv8_1_1internal_1_1RegExpMacroAssemblerTracer.html#a56f1a3f6aefde895fa11c518dae92efa", null ],
+    [ "assembler_", "classv8_1_1internal_1_1RegExpMacroAssemblerTracer.html#ad527bffe53f67c2c7a704bf66512a898", null ]
 ];

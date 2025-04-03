@@ -1,7 +1,26 @@
 var classv8_1_1internal_1_1MemoryMeasurement =
 [
+    [ "Request", "structv8_1_1internal_1_1MemoryMeasurement_1_1Request.html", "structv8_1_1internal_1_1MemoryMeasurement_1_1Request" ],
     [ "MemoryMeasurement", "classv8_1_1internal_1_1MemoryMeasurement.html#a202fd52e2f725b6a110fe59da67450b6", null ],
+    [ "DefaultDelegate", "classv8_1_1internal_1_1MemoryMeasurement.html#a6cc4c49a53892a2b818f5abf777d34f5", null ],
     [ "EnqueueRequest", "classv8_1_1internal_1_1MemoryMeasurement.html#a09415c896b029aa53c4a0639036fbb7d", null ],
     [ "FinishProcessing", "classv8_1_1internal_1_1MemoryMeasurement.html#a2b16af443017f8c53573e169987d6d93", null ],
-    [ "StartProcessing", "classv8_1_1internal_1_1MemoryMeasurement.html#a061d53ab3d6b57b6a76398a07172fdc0", null ]
+    [ "IsGCTaskPending", "classv8_1_1internal_1_1MemoryMeasurement.html#a0cb0b0bc329f532efe0c24cf47f64d5e", null ],
+    [ "NextGCTaskDelayInSeconds", "classv8_1_1internal_1_1MemoryMeasurement.html#a39afd3fb86540bc5a5529cc728a5a232", null ],
+    [ "ReportResults", "classv8_1_1internal_1_1MemoryMeasurement.html#a389206d128463b95d0b94de4b7052263", null ],
+    [ "ScheduleGCTask", "classv8_1_1internal_1_1MemoryMeasurement.html#ac75e76dc4a324b4f861bf5cab4155f66", null ],
+    [ "ScheduleReportingTask", "classv8_1_1internal_1_1MemoryMeasurement.html#ac2d1bba2ab4379e16520f1b703a265ef", null ],
+    [ "SetGCTaskDone", "classv8_1_1internal_1_1MemoryMeasurement.html#aeec7f9a652081cecce8f1eb0e4768493", null ],
+    [ "SetGCTaskPending", "classv8_1_1internal_1_1MemoryMeasurement.html#ab84fde062145c503ed2ae0078c611614", null ],
+    [ "StartProcessing", "classv8_1_1internal_1_1MemoryMeasurement.html#a061d53ab3d6b57b6a76398a07172fdc0", null ],
+    [ "delayed_gc_task_pending_", "classv8_1_1internal_1_1MemoryMeasurement.html#a64c10016bdf3d207f89e8d1b00cccc4b", null ],
+    [ "done_", "classv8_1_1internal_1_1MemoryMeasurement.html#a9ec1608ebc60205014d34d0716325b29", null ],
+    [ "eager_gc_task_pending_", "classv8_1_1internal_1_1MemoryMeasurement.html#a00bd8053e4d62a1b7cc6c4b06650f6bc", null ],
+    [ "isolate_", "classv8_1_1internal_1_1MemoryMeasurement.html#a1fb6b5fe2ec2865c84a4814044056eba", null ],
+    [ "kGCTaskDelayInSeconds", "classv8_1_1internal_1_1MemoryMeasurement.html#ad61eb2bf7e5c7593487a1cc20f4608eb", null ],
+    [ "processing_", "classv8_1_1internal_1_1MemoryMeasurement.html#ac7b1de636267869fd5c487569e26097b", null ],
+    [ "random_number_generator_", "classv8_1_1internal_1_1MemoryMeasurement.html#a17144edd08c67d5117572c9421a7644e", null ],
+    [ "received_", "classv8_1_1internal_1_1MemoryMeasurement.html#a4f0db703cc74cfb90647ee6a0eafa2c6", null ],
+    [ "reporting_task_pending_", "classv8_1_1internal_1_1MemoryMeasurement.html#a0c0e548baf86ed1e741c27210b6d4b77", null ],
+    [ "task_runner_", "classv8_1_1internal_1_1MemoryMeasurement.html#a8f7aebb2ecfa9c19bb969930074df9b2", null ]
 ];

@@ -1,0 +1,28 @@
+var structv8_1_1metrics_1_1GarbageCollectionFullCycle =
+[
+    [ "collection_rate_cpp_in_percent", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a3e7733e4c8aa7a0db29030146ee72176", null ],
+    [ "collection_rate_in_percent", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a973e3d01201f88748c35bbb34dfbde01", null ],
+    [ "collection_weight_cpp_in_percent", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a063b37440e50ce3e177fdce6dd615b08", null ],
+    [ "collection_weight_in_percent", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a061d2a2cc47cb7e85a851b036924f21e", null ],
+    [ "efficiency_cpp_in_bytes_per_us", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a4857283819cb89b1210c7e606f41d2db", null ],
+    [ "efficiency_in_bytes_per_us", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#af44cb085f3056c1cd46c2595e1ad85d1", null ],
+    [ "incremental_marking_start_stop_wall_clock_duration_in_us", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a7fe24408ed93f34acf49ddc9f2aae5aa", null ],
+    [ "main_thread", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#ab70223e677d89427b3d71ddfb5b052ea", null ],
+    [ "main_thread_atomic", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#ae5429cc70bb3c981e9c6927a96cb5a49", null ],
+    [ "main_thread_atomic_cpp", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a842a3fab3828596a4c0921efa23ae223", null ],
+    [ "main_thread_collection_weight_cpp_in_percent", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#afe43fb0d95da202f536efe1b0909bf04", null ],
+    [ "main_thread_collection_weight_in_percent", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#add5700d261bae842f657dc8fcdc70e29", null ],
+    [ "main_thread_cpp", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a412ab4fadc151c4bc8e488ab990ac182", null ],
+    [ "main_thread_efficiency_cpp_in_bytes_per_us", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a280259f404b21bb0af622dac2ae7a9ab", null ],
+    [ "main_thread_efficiency_in_bytes_per_us", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a72586e69ab74b6bf513ef34b0bc14883", null ],
+    [ "main_thread_incremental", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a04710290f0b9f8bb1af5fc50cbdd653a", null ],
+    [ "main_thread_incremental_cpp", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a5fa22096ec9ec4d8d69afa1c89a14399", null ],
+    [ "memory", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a4b1f97820b6577c1a0d5883860f1128e", null ],
+    [ "memory_cpp", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a3edd3aadf9ed15d6a0c4b952e0751793", null ],
+    [ "objects", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#a79054d435efd00d01d2dd61b77d4f81b", null ],
+    [ "objects_cpp", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#af821c8fa29b5098ae17caa4ede5da14e", null ],
+    [ "priority", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#ac373f0a3c6d70c9357ccb80d780a5160", null ],
+    [ "reason", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#af2f1f942bf7844b832e1e0d2c709d58b", null ],
+    [ "total", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#ad8a504136393858c312cc9deb259ecad", null ],
+    [ "total_cpp", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html#ad77146335f2d3ddd720c1d6c7c761448", null ]
+];

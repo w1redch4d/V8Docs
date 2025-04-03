@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1HeapObjectsMap =
 [
+    [ "EntryInfo", "structv8_1_1internal_1_1HeapObjectsMap_1_1EntryInfo.html", "structv8_1_1internal_1_1HeapObjectsMap_1_1EntryInfo" ],
     [ "TimeInterval", "structv8_1_1internal_1_1HeapObjectsMap_1_1TimeInterval.html", "structv8_1_1internal_1_1HeapObjectsMap_1_1TimeInterval" ],
     [ "IsNativeObject", "classv8_1_1internal_1_1HeapObjectsMap.html#a46917f8bcc3bff5a72c3dca48b54eac3", [
       [ "kNo", "classv8_1_1internal_1_1HeapObjectsMap.html#a46917f8bcc3bff5a72c3dca48b54eac3a8cc8e60acfa3ae6089df773013fd73a2", null ],
@@ -26,5 +27,18 @@ var classv8_1_1internal_1_1HeapObjectsMap =
     [ "samples", "classv8_1_1internal_1_1HeapObjectsMap.html#a59074a8ac6d66c09d35c749ad3dd9c78", null ],
     [ "StopHeapObjectsTracking", "classv8_1_1internal_1_1HeapObjectsMap.html#a73ec46f75f7c486e3fcec5643766c442", null ],
     [ "UpdateHeapObjectsMap", "classv8_1_1internal_1_1HeapObjectsMap.html#af0743759fc64433e0a2b207168dfb566", null ],
-    [ "UpdateObjectSize", "classv8_1_1internal_1_1HeapObjectsMap.html#a15a31776da26230e3641837998095544", null ]
+    [ "UpdateObjectSize", "classv8_1_1internal_1_1HeapObjectsMap.html#a15a31776da26230e3641837998095544", null ],
+    [ "entries_", "classv8_1_1internal_1_1HeapObjectsMap.html#ae4f59fb9a6ca509f461ada6c644e6335", null ],
+    [ "entries_map_", "classv8_1_1internal_1_1HeapObjectsMap.html#af29fe11c5c6c3f47e09236c6f7f25dc1", null ],
+    [ "heap_", "classv8_1_1internal_1_1HeapObjectsMap.html#add62c342ee9f332d81a3cb781b2ab37a", null ],
+    [ "kFirstAvailableNativeId", "classv8_1_1internal_1_1HeapObjectsMap.html#a94b1f6b9b6943c127548f9bb0e276c19", null ],
+    [ "kFirstAvailableObjectId", "classv8_1_1internal_1_1HeapObjectsMap.html#a0424e15b8207599ea3fae3c69eb0fa26", null ],
+    [ "kGcRootsFirstSubrootId", "classv8_1_1internal_1_1HeapObjectsMap.html#a1328bc87783492d376630e24758bbc69", null ],
+    [ "kGcRootsObjectId", "classv8_1_1internal_1_1HeapObjectsMap.html#abf649a7b9e771c6b8dbe9ef581d5eaac", null ],
+    [ "kInternalRootObjectId", "classv8_1_1internal_1_1HeapObjectsMap.html#a04fba906564af1ded2c829fe22b0f6d0", null ],
+    [ "kObjectIdStep", "classv8_1_1internal_1_1HeapObjectsMap.html#a11bef81d3f530538f97fc8dd362d2e2d", null ],
+    [ "merged_native_entries_map_", "classv8_1_1internal_1_1HeapObjectsMap.html#ada84c0d9d752056b68010d0b7f465bf1", null ],
+    [ "next_id_", "classv8_1_1internal_1_1HeapObjectsMap.html#aa71efa4559341fb3959af7d923b301c2", null ],
+    [ "next_native_id_", "classv8_1_1internal_1_1HeapObjectsMap.html#a18ed0add8feac8a0a72c747fbbd2f634", null ],
+    [ "time_intervals_", "classv8_1_1internal_1_1HeapObjectsMap.html#af20407d0c3ae641a4f1b3fe72658d0c5", null ]
 ];

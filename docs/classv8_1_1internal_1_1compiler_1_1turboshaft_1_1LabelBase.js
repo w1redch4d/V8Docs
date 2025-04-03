@@ -14,7 +14,12 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase =
     [ "GotoIfNot", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase.html#a2a0a55fae09966939699567ff885b2c0", null ],
     [ "has_incoming_jump", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase.html#a84436a3742b0271628a5ff5363e40399", null ],
     [ "MaterializePhis", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase.html#a44f3e1b2ce035d4f7d9710a92072bc9e", null ],
+    [ "MaterializePhisImpl", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase.html#aaa43797b0984e0d3f926a9ea08654509", null ],
     [ "operator=", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase.html#ab6c7ccb35613d9b3e82881a3f656827a", null ],
+    [ "RecordValues", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase.html#a7d355a248eaad29c0150acd270b88abb", null ],
+    [ "RecordValuesImpl", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase.html#ac7017d61f350451093a6c85a88489146", null ],
     [ "data_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase.html#a5c68c14f6cb4c74306728d2c02a27cac", null ],
-    [ "has_incoming_jump_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase.html#ad398116a28635ecc1c72b95c6b69b35b", null ]
+    [ "has_incoming_jump_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase.html#ad398116a28635ecc1c72b95c6b69b35b", null ],
+    [ "is_loop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase.html#a67fbebffeeb0e8174d936c5355b8c711", null ],
+    [ "size", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase.html#a23f6cad41a81ba474d1fd812a1939841", null ]
 ];

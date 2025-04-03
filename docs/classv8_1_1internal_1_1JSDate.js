@@ -1,6 +1,6 @@
 var classv8_1_1internal_1_1JSDate =
 [
-    [ "BodyDescriptor", "classv8_1_1internal_1_1JSDate_1_1BodyDescriptor.html", null ],
+    [ "BodyDescriptor", "classv8_1_1internal_1_1JSDate_1_1BodyDescriptor.html", "classv8_1_1internal_1_1JSDate_1_1BodyDescriptor" ],
     [ "FieldIndex", "classv8_1_1internal_1_1JSDate.html#afc7907b14eb9ef9499498c3b1e19e379", [
       [ "kYear", "classv8_1_1internal_1_1JSDate.html#afc7907b14eb9ef9499498c3b1e19e379a08732ebdc85921f293cc3bb3e257efab", null ],
       [ "kMonth", "classv8_1_1internal_1_1JSDate.html#afc7907b14eb9ef9499498c3b1e19e379a90ccebd007fce994a004b04cd110c67f", null ],
@@ -26,6 +26,12 @@ var classv8_1_1internal_1_1JSDate =
       [ "kTimeInDayUTC", "classv8_1_1internal_1_1JSDate.html#afc7907b14eb9ef9499498c3b1e19e379ae968616de9b52c1d825f9819e7590045", null ],
       [ "kTimezoneOffset", "classv8_1_1internal_1_1JSDate.html#afc7907b14eb9ef9499498c3b1e19e379a54a2bdaa892ecf3720e00faf802c1475", null ]
     ] ],
+    [ "CurrentTimeValue", "classv8_1_1internal_1_1JSDate.html#a009fd52bb24fcb08c05839ce7524dc41", null ],
+    [ "DoGetField", "classv8_1_1internal_1_1JSDate.html#aa41cfc53c6e50d31a3391ac5d5a4857f", null ],
+    [ "GetField", "classv8_1_1internal_1_1JSDate.html#a60a4e557ea335900319413c65f1a0c75", null ],
+    [ "GetUTCField", "classv8_1_1internal_1_1JSDate.html#a67f83615656865fbe429456a9d623ef5", null ],
+    [ "New", "classv8_1_1internal_1_1JSDate.html#a2b78c3be5432e277e682acc8a050c3ab", null ],
+    [ "SetCachedFields", "classv8_1_1internal_1_1JSDate.html#aca83e50b36fc984a0fdd5db8598a9248", null ],
     [ "SetNanValue", "classv8_1_1internal_1_1JSDate.html#aa6158b2969ccf0f97900a5c222788aa6", null ],
     [ "SetValue", "classv8_1_1internal_1_1JSDate.html#a84cf32fe5cc39f408f681bfe02d34882", null ]
 ];

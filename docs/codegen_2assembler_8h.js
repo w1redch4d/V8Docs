@@ -7,7 +7,7 @@ var codegen_2assembler_8h =
     [ "v8::internal::AssemblerBuffer", "classv8_1_1internal_1_1AssemblerBuffer.html", "classv8_1_1internal_1_1AssemblerBuffer" ],
     [ "v8::internal::SlotDescriptor", "classv8_1_1internal_1_1SlotDescriptor.html", "classv8_1_1internal_1_1SlotDescriptor" ],
     [ "v8::internal::AssemblerBase", "classv8_1_1internal_1_1AssemblerBase.html", "classv8_1_1internal_1_1AssemblerBase" ],
-    [ "v8::internal::AssemblerBase::CodeComment", "classv8_1_1internal_1_1AssemblerBase_1_1CodeComment.html", null ],
+    [ "v8::internal::AssemblerBase::CodeComment", "classv8_1_1internal_1_1AssemblerBase_1_1CodeComment.html", "classv8_1_1internal_1_1AssemblerBase_1_1CodeComment" ],
     [ "v8::internal::CpuFeatureScope", "classv8_1_1internal_1_1CpuFeatureScope.html", "classv8_1_1internal_1_1CpuFeatureScope" ],
     [ "ASM_CODE_COMMENT", "codegen_2assembler_8h.html#aa9b6b07d630b3249a10dea3be092a204", null ],
     [ "ASM_CODE_COMMENT_STRING", "codegen_2assembler_8h.html#a76c4e520168782df773c203738c512fa", null ],

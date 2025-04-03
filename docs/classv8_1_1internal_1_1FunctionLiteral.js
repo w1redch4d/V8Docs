@@ -1,5 +1,12 @@
 var classv8_1_1internal_1_1FunctionLiteral =
 [
+    [ "FunctionSyntaxKindBits", "classv8_1_1internal_1_1FunctionLiteral.html#acce1662e694a3e1693b1efbf61cd22b1", null ],
+    [ "HasBracesField", "classv8_1_1internal_1_1FunctionLiteral.html#a5bcf71c8429a36c9a5fce854f6a8018a", null ],
+    [ "HasDuplicateParameters", "classv8_1_1internal_1_1FunctionLiteral.html#a4ac430bec0f098592fd8d57d7958f144", null ],
+    [ "HasStaticPrivateMethodsOrAccessorsField", "classv8_1_1internal_1_1FunctionLiteral.html#afc4894f148d1eaaf5078d5d970357abd", null ],
+    [ "Pretenure", "classv8_1_1internal_1_1FunctionLiteral.html#a7e05c6db1faf5c623d753d2e2e97c2e2", null ],
+    [ "RequiresInstanceMembersInitializer", "classv8_1_1internal_1_1FunctionLiteral.html#a0ccba69711f7d7e82f16d1e739d9f588", null ],
+    [ "ShouldParallelCompileField", "classv8_1_1internal_1_1FunctionLiteral.html#ac408c0b47fdc14d03a621e26ac598afc", null ],
     [ "EagerCompileHint", "classv8_1_1internal_1_1FunctionLiteral.html#a88aceb776d91034844bee9a78b28a236", [
       [ "kShouldEagerCompile", "classv8_1_1internal_1_1FunctionLiteral.html#a88aceb776d91034844bee9a78b28a236a2e351afdcc97482806ce1b5a59e4bc4e", null ],
       [ "kShouldLazyCompile", "classv8_1_1internal_1_1FunctionLiteral.html#a88aceb776d91034844bee9a78b28a236a32145bd42a60332dc05749f3897f2022", null ]
@@ -8,6 +15,7 @@ var classv8_1_1internal_1_1FunctionLiteral =
       [ "kNoDuplicateParameters", "classv8_1_1internal_1_1FunctionLiteral.html#a5284629ea529d40edd36090d9032a6c4a29e2ed39c31a878a86ee0ca03f59f160", null ],
       [ "kHasDuplicateParameters", "classv8_1_1internal_1_1FunctionLiteral.html#a5284629ea529d40edd36090d9032a6c4abc9cc0d926ea49f372322fde9775e2ba", null ]
     ] ],
+    [ "FunctionLiteral", "classv8_1_1internal_1_1FunctionLiteral.html#a784d01f1aa25f2b5a24953c1442b02f7", null ],
     [ "add_expected_properties", "classv8_1_1internal_1_1FunctionLiteral.html#a331643e4b329598b00976dfbde979312", null ],
     [ "AllowsLazyCompilation", "classv8_1_1internal_1_1FunctionLiteral.html#a7d0a890afce7b8f84d089de0c66dee1b", null ],
     [ "body", "classv8_1_1internal_1_1FunctionLiteral.html#a4b930a6752c7f2e885a8e64f6c87a26f", null ],
@@ -57,5 +65,18 @@ var classv8_1_1internal_1_1FunctionLiteral =
     [ "start_position", "classv8_1_1internal_1_1FunctionLiteral.html#a882001096b1edab1bcd5d5889eb88287", null ],
     [ "suspend_count", "classv8_1_1internal_1_1FunctionLiteral.html#a8666facc578704c3358e39292fd12e7e", null ],
     [ "syntax_kind", "classv8_1_1internal_1_1FunctionLiteral.html#a09200671aa80fa729b7dbb9d3acdea2e", null ],
-    [ "AstNodeFactory", "classv8_1_1internal_1_1FunctionLiteral.html#a8d587c8ad3515ff6433eb83c578e795f", null ]
+    [ "AstNodeFactory", "classv8_1_1internal_1_1FunctionLiteral.html#a8d587c8ad3515ff6433eb83c578e795f", null ],
+    [ "body_", "classv8_1_1internal_1_1FunctionLiteral.html#a5f21e88f24dee37aab298c68b27ed6ad", null ],
+    [ "expected_property_count_", "classv8_1_1internal_1_1FunctionLiteral.html#a9eb4189a4410b38d2f0244423258d6cd", null ],
+    [ "function_length_", "classv8_1_1internal_1_1FunctionLiteral.html#ac63e64dc1c6e1e7adc9a81ae678be684", null ],
+    [ "function_literal_id_", "classv8_1_1internal_1_1FunctionLiteral.html#a121d219c973bc7b4a7855182b8673bf8", null ],
+    [ "function_token_position_", "classv8_1_1internal_1_1FunctionLiteral.html#aefc3eed6024e3f017f34305073da8c55", null ],
+    [ "parameter_count_", "classv8_1_1internal_1_1FunctionLiteral.html#aec66a049a2bac02d546f09e7ff68bfc0", null ],
+    [ "produced_preparse_data_", "classv8_1_1internal_1_1FunctionLiteral.html#a55b6ab0499610673cdea0cfd5d04dd85", null ],
+    [ "raw_inferred_name_", "classv8_1_1internal_1_1FunctionLiteral.html#a8b4fbdbd61ec89ff73d2643c222fd98d", null ],
+    [ "raw_name_", "classv8_1_1internal_1_1FunctionLiteral.html#a5b6137aa0676fc89f186395da548c587", null ],
+    [ "scope_", "classv8_1_1internal_1_1FunctionLiteral.html#a4e900bf07f527ca5098aee5473b38de6", null ],
+    [ "shared_function_info_", "classv8_1_1internal_1_1FunctionLiteral.html#a9af7b8e6c40dc8580d1c400ce48d7cda", null ],
+    [ "suspend_count_", "classv8_1_1internal_1_1FunctionLiteral.html#a229aa8ee8e4be29685a3d5bfbd88482f", null ],
+    [ "Zone", "classv8_1_1internal_1_1FunctionLiteral.html#a21197f4108cb1a4a074a70eead635e33", null ]
 ];

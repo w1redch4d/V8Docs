@@ -29,5 +29,7 @@ var runtime_scopes_8cc =
     [ "RUNTIME_FUNCTION", "runtime-scopes_8cc.html#a054e3b1f20feb2adc7b6e3ed11362d7c", null ],
     [ "RUNTIME_FUNCTION", "runtime-scopes_8cc.html#a973b3a921d9e3a0734ffc9ba65064d44", null ],
     [ "RUNTIME_FUNCTION", "runtime-scopes_8cc.html#a46f83cf971dbafcf907be31de4e1795c", null ],
-    [ "RUNTIME_FUNCTION_RETURN_PAIR", "runtime-scopes_8cc.html#ac1e9a8b96f83dd8e3c30c816fe182e16", null ]
+    [ "RUNTIME_FUNCTION_RETURN_PAIR", "runtime-scopes_8cc.html#ac1e9a8b96f83dd8e3c30c816fe182e16", null ],
+    [ "array_", "runtime-scopes_8cc.html#afa9387d05a2f95cf8593871d5cbd2713", null ],
+    [ "parameters_", "runtime-scopes_8cc.html#a8b458cab516ac4d27c3042a2a5b1fb29", null ]
 ];

@@ -1,6 +1,7 @@
 var utils_arm64_8h =
 [
     [ "CountLeadingSignBits", "utils-arm64_8h.html#a00c3c4c571eb99f0b25f43c1aaca3692", null ],
+    [ "CountLeadingZeros", "utils-arm64_8h.html#ad9fbdf7842baa6b695f7ab2e33fd2be0", null ],
     [ "CountSetBits", "utils-arm64_8h.html#a0cb7a39160e24bfe8266d984f9901399", null ],
     [ "double_exp", "utils-arm64_8h.html#ab58896b4f0975121cc6a0a924a79c0a8", null ],
     [ "double_mantissa", "utils-arm64_8h.html#ac4b493ff1e8339708c906f1eb86d507c", null ],
@@ -18,6 +19,7 @@ var utils_arm64_8h =
     [ "IsSignallingNaN", "utils-arm64_8h.html#a120dd9e041a6c5f9b61d732a636b8790", null ],
     [ "IsSignallingNaN", "utils-arm64_8h.html#a3f5de39307e7cc9597a9ce8c5f90c52a", null ],
     [ "IsSignallingNaN", "utils-arm64_8h.html#a03c8f6eb2cfd34cf7e71b67e5d8ae131", null ],
+    [ "LargestPowerOf2Divisor", "utils-arm64_8h.html#a29043384a79caf69b676dd81ac04db06", null ],
     [ "LowestSetBitPosition", "utils-arm64_8h.html#a1965bbb6048b9de64ab6c2f29cbdcb9c", null ],
     [ "MaskToBit", "utils-arm64_8h.html#a3b7d82de1a3b6b564e0137710b6c745f", null ],
     [ "ReverseBytes", "utils-arm64_8h.html#a871de4f6dc625ff786b325e0bc468c47", null ],

@@ -14,6 +14,8 @@ var classv8_1_1internal_1_1SerializedData =
     [ "SetHeaderValue", "classv8_1_1internal_1_1SerializedData.html#a617333e419eb38d576477bee55228b1c", null ],
     [ "SetMagicNumber", "classv8_1_1internal_1_1SerializedData.html#ab546a46afc7195d0a4d0476577f904f1", null ],
     [ "data_", "classv8_1_1internal_1_1SerializedData.html#a93440d72ae5a03b63cd2f3e461ed4f85", null ],
+    [ "kMagicNumber", "classv8_1_1internal_1_1SerializedData.html#a80a2eb7c3ee6d6add59c63cde72eec69", null ],
+    [ "kMagicNumberOffset", "classv8_1_1internal_1_1SerializedData.html#a9aef34a6567d08076368fc78da647e76", null ],
     [ "owns_data_", "classv8_1_1internal_1_1SerializedData.html#a755ae910320bb00afc3721c8e270560f", null ],
     [ "size_", "classv8_1_1internal_1_1SerializedData.html#ad4e6f69ddd63b35ed0efed21d0f0fb02", null ]
 ];

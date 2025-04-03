@@ -1,7 +1,12 @@
 var classv8_1_1internal_1_1ThreadManager =
 [
+    [ "ThreadManager", "classv8_1_1internal_1_1ThreadManager.html#a7f06d84d6c2a86273915ccda9e15ee12", null ],
+    [ "~ThreadManager", "classv8_1_1internal_1_1ThreadManager.html#aca982e6e2e596eb0b3d5e80cbd5d8239", null ],
     [ "ArchiveThread", "classv8_1_1internal_1_1ThreadManager.html#a36506aaa6d781c749efe48996b48e2a0", null ],
+    [ "ASSERT_TRIVIALLY_COPYABLE", "classv8_1_1internal_1_1ThreadManager.html#ab45d9e6eed8c9f6b1e2f49381b7ff69d", null ],
     [ "CurrentId", "classv8_1_1internal_1_1ThreadManager.html#a20de7ca0770f36132c2f48462ff07e08", null ],
+    [ "DeleteThreadStateList", "classv8_1_1internal_1_1ThreadManager.html#a9f65f528b8d918bb62390d469200e5fc", null ],
+    [ "EagerlyArchiveThread", "classv8_1_1internal_1_1ThreadManager.html#ac86e451a498ebd5d66704a4278ef383d", null ],
     [ "FirstThreadStateInUse", "classv8_1_1internal_1_1ThreadManager.html#a31381c48c7f8608f4a2ab582a2c4c729", null ],
     [ "FreeThreadResources", "classv8_1_1internal_1_1ThreadManager.html#a7ff25a1bc335c55e57bae1f262f5ac0e", null ],
     [ "GetFreeThreadState", "classv8_1_1internal_1_1ThreadManager.html#ae7610d3c55e69ceffd65c6b734813f0b", null ],
@@ -15,5 +20,12 @@ var classv8_1_1internal_1_1ThreadManager =
     [ "RestoreThread", "classv8_1_1internal_1_1ThreadManager.html#ac7d4ad5d9a21d88fc2d50f5d91a62442", null ],
     [ "Unlock", "classv8_1_1internal_1_1ThreadManager.html#ab7d0f390011373f4b036548923add1bf", null ],
     [ "Isolate", "classv8_1_1internal_1_1ThreadManager.html#aba4f0964bdacf2bbf62cf876e5d28d0a", null ],
-    [ "ThreadState", "classv8_1_1internal_1_1ThreadManager.html#aa9bf73e11f97e69db675bb6d4c212a2a", null ]
+    [ "ThreadState", "classv8_1_1internal_1_1ThreadManager.html#aa9bf73e11f97e69db675bb6d4c212a2a", null ],
+    [ "free_anchor_", "classv8_1_1internal_1_1ThreadManager.html#aabee6157e0bc720b3c83683c42365704", null ],
+    [ "in_use_anchor_", "classv8_1_1internal_1_1ThreadManager.html#a67a314616958eac2054a2ecc52bce520", null ],
+    [ "isolate_", "classv8_1_1internal_1_1ThreadManager.html#ac39532c111c76abb9dbd896e7122c4c1", null ],
+    [ "lazily_archived_thread_", "classv8_1_1internal_1_1ThreadManager.html#a12e8052beacdc1bb008ee6017e22f8e9", null ],
+    [ "lazily_archived_thread_state_", "classv8_1_1internal_1_1ThreadManager.html#a4ef39a6888a60ed856ab0fbab383dbcd", null ],
+    [ "mutex_", "classv8_1_1internal_1_1ThreadManager.html#a7c7350a53f2fee2a2d118c88052c562d", null ],
+    [ "mutex_owner_", "classv8_1_1internal_1_1ThreadManager.html#a907832ffd0117d985f96c35fed866017", null ]
 ];

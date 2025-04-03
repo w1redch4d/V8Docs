@@ -32,5 +32,19 @@ var classv8_1_1internal_1_1wasm_1_1OffsetsProvider =
     [ "StringOffset", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a55c7405dc4a10bcb044c34cab9123eb3", null ],
     [ "TableOffset", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a743816d59ccd6ea89f3903bfa4e1dc1d", null ],
     [ "TagOffset", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a6d9b26d74b6fea97636dd3605a09e1a8", null ],
-    [ "TypeOffset", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a7891e7395eca4c133c22e3bf73b1bee6", null ]
+    [ "TypeOffset", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a7891e7395eca4c133c22e3bf73b1bee6", null ],
+    [ "data_offsets_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#ae4c2b8ce9e57dffb71e9e83a1fdd9d14", null ],
+    [ "element_offsets_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#ac1e12a5d2796fbee58affb91fdb92809", null ],
+    [ "global_offsets_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a969f39d64b30216ecfe5f4fe0830d022", null ],
+    [ "import_offsets_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#ae59440d4a5741edaf4fe1482fe14538d", null ],
+    [ "memory_offset_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a2817997bbe52fc0a7e57528a9d21986f", null ],
+    [ "num_imported_globals_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#aa2fe31d29254f704396287e4956772ba", null ],
+    [ "num_imported_tables_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a92a414611d578e39af6c57e16c6d04e3", null ],
+    [ "num_imported_tags_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a89c15a7924b41edd81e7b52df6106680", null ],
+    [ "recgroups_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a20f1568f6c3be10c0133b6ae7b2e314e", null ],
+    [ "start_offset_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a422aeabc50276026952f11ded8a90dd4", null ],
+    [ "string_offsets_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a906ec0137e1c828910c432e083a41c0b", null ],
+    [ "table_offsets_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a6979d6807e64a2daca62bfc50109b040", null ],
+    [ "tag_offsets_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a150dc3f53739429dfcc101e176e03359", null ],
+    [ "type_offsets_", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html#a8fd0c3d9105c6a77a58297b4979cffd9", null ]
 ];

@@ -1,6 +1,5 @@
 var hierarchy =
 [
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Abort", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Abort.html", null ],
     [ "v8::internal::ParserBase< Impl >::AcceptINScope", "classv8_1_1internal_1_1ParserBase_1_1AcceptINScope.html", null ],
     [ "v8::internal::compiler::AccessInfoFactory", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html", null ],
     [ "v8::internal::AccountingAllocator", "classv8_1_1internal_1_1AccountingAllocator.html", [
@@ -12,6 +11,7 @@ var hierarchy =
     [ "v8::AcquireLoadTag", "structv8_1_1AcquireLoadTag.html", null ],
     [ "v8::internal::wasm::WasmInterpreterThread::Activation", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html", null ],
     [ "heap::base::ActiveSystemPages", "classheap_1_1base_1_1ActiveSystemPages.html", null ],
+    [ "v8::ActivityControl", "classv8_1_1ActivityControl.html", null ],
     [ "Adapter", null, [
       [ "v8::internal::compiler::InstructionSelectorT< Adapter >", "classv8_1_1internal_1_1compiler_1_1InstructionSelectorT.html", null ],
       [ "v8::internal::compiler::OperandGeneratorT< Adapter >", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html", [
@@ -29,7 +29,11 @@ var hierarchy =
     [ "v8::internal::wasm::AdaptiveMap< Value >", "classv8_1_1internal_1_1wasm_1_1AdaptiveMap.html", null ],
     [ "v8::internal::wasm::AdaptiveMap< AdaptiveMap< WireBytesRef > >", "classv8_1_1internal_1_1wasm_1_1AdaptiveMap.html", null ],
     [ "v8::internal::wasm::AdaptiveMap< WireBytesRef >", "classv8_1_1internal_1_1wasm_1_1AdaptiveMap.html", null ],
-    [ "v8::base::AddressRegion", "classv8_1_1base_1_1AddressRegion.html", null ],
+    [ "cppgc::AdditionalBytes", "structcppgc_1_1AdditionalBytes.html", null ],
+    [ "v8::base::RegionAllocator::AddressEndOrder", "structv8_1_1base_1_1RegionAllocator_1_1AddressEndOrder.html", null ],
+    [ "v8::base::AddressRegion", "classv8_1_1base_1_1AddressRegion.html", [
+      [ "v8::base::RegionAllocator::Region", "classv8_1_1base_1_1RegionAllocator_1_1Region.html", null ]
+    ] ],
     [ "v8::base::AddressSpaceReservation", "classv8_1_1base_1_1AddressSpaceReservation.html", null ],
     [ "v8::internal::AddressToTraceMap", "classv8_1_1internal_1_1AddressToTraceMap.html", null ],
     [ "AfterNext", null, [
@@ -64,8 +68,13 @@ var hierarchy =
     [ "v8::internal::compiler::AllocateParameters", "classv8_1_1internal_1_1compiler_1_1AllocateParameters.html", null ],
     [ "v8::internal::compiler::AllocateSimd128RegistersPhase< RegAllocator >", "structv8_1_1internal_1_1compiler_1_1AllocateSimd128RegistersPhase.html", null ],
     [ "v8::internal::compiler::turboshaft::AllocateSimd128RegistersPhase< RegAllocator >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateSimd128RegistersPhase.html", null ],
+    [ "v8::AllocationProfile::Allocation", "structv8_1_1AllocationProfile_1_1Allocation.html", null ],
     [ "v8::internal::compiler::AllocationBuilder", "classv8_1_1internal_1_1compiler_1_1AllocationBuilder.html", null ],
     [ "v8::internal::AllocationCounter", "classv8_1_1internal_1_1AllocationCounter.html", null ],
+    [ "cppgc::internal::MakeGarbageCollectedTraitInternal::AllocationDispatcher< GCInfoType, CustomSpace, alignment >", "structcppgc_1_1internal_1_1MakeGarbageCollectedTraitInternal_1_1AllocationDispatcher.html", null ],
+    [ "cppgc::internal::MakeGarbageCollectedTraitInternal::AllocationDispatcher< GCInfoType, CustomSpace, api_constants::kDefaultAlignment >", "structcppgc_1_1internal_1_1MakeGarbageCollectedTraitInternal_1_1AllocationDispatcher_3_01GCInfoTcd48ea361426ed61bf4ce5d798be04b1.html", null ],
+    [ "cppgc::internal::MakeGarbageCollectedTraitInternal::AllocationDispatcher< GCInfoType, void, alignment >", "structcppgc_1_1internal_1_1MakeGarbageCollectedTraitInternal_1_1AllocationDispatcher_3_01GCInfoTa49176a720dc886b3a4de85174b31710.html", null ],
+    [ "cppgc::internal::MakeGarbageCollectedTraitInternal::AllocationDispatcher< GCInfoType, void, api_constants::kDefaultAlignment >", "structcppgc_1_1internal_1_1MakeGarbageCollectedTraitInternal_1_1AllocationDispatcher_3_01GCInfoTaefc38591fdda28796a038e87d8bc1f0.html", null ],
     [ "cppgc::AllocationHandle", "classcppgc_1_1AllocationHandle.html", [
       [ "cppgc::internal::ObjectAllocator", "classcppgc_1_1internal_1_1ObjectAllocator.html", null ]
     ] ],
@@ -78,11 +87,17 @@ var hierarchy =
       [ "v8::internal::MinorGCHeapGrowing", "classv8_1_1internal_1_1MinorGCHeapGrowing.html", null ]
     ] ],
     [ "v8::internal::AllocationObserver", "classv8_1_1internal_1_1AllocationObserver.html", [
+      [ "v8::internal::IncrementalMarking::Observer", "classv8_1_1internal_1_1IncrementalMarking_1_1Observer.html", null ],
+      [ "v8::internal::SamplingHeapProfiler::Observer", "classv8_1_1internal_1_1SamplingHeapProfiler_1_1Observer.html", null ],
       [ "v8::internal::ScheduleMinorGCTaskObserver", "classv8_1_1internal_1_1ScheduleMinorGCTaskObserver.html", null ],
       [ "v8::internal::StressConcurrentAllocationObserver", "classv8_1_1internal_1_1StressConcurrentAllocationObserver.html", null ],
       [ "v8::internal::StressScavengeObserver", "classv8_1_1internal_1_1StressScavengeObserver.html", null ]
     ] ],
-    [ "v8::AllocationProfile", null, [
+    [ "v8::internal::AllocationCounter::AllocationObserverCounter", "structv8_1_1internal_1_1AllocationCounter_1_1AllocationObserverCounter.html", null ],
+    [ "AllocationPolicy", null, [
+      [ "v8::base::TemplateHashMapImpl< Key, Value, MatchFun, AllocationPolicy >::Impl", "structv8_1_1base_1_1TemplateHashMapImpl_1_1Impl.html", null ]
+    ] ],
+    [ "v8::AllocationProfile", "classv8_1_1AllocationProfile.html", [
       [ "v8::internal::AllocationProfile", "classv8_1_1internal_1_1AllocationProfile.html", null ]
     ] ],
     [ "v8::base::AllocationResult< Pointer >", "structv8_1_1base_1_1AllocationResult.html", null ],
@@ -94,11 +109,16 @@ var hierarchy =
     [ "v8::internal::AllocationTraceNode", "classv8_1_1internal_1_1AllocationTraceNode.html", null ],
     [ "v8::internal::AllocationTraceTree", "classv8_1_1internal_1_1AllocationTraceTree.html", null ],
     [ "v8::internal::AllocationTracker", "classv8_1_1internal_1_1AllocationTracker.html", null ],
+    [ "v8::ArrayBuffer::Allocator", "classv8_1_1ArrayBuffer_1_1Allocator.html", null ],
+    [ "std::allocator", null, [
+      [ "v8::internal::StrongRootAllocator< T >", "classv8_1_1internal_1_1StrongRootAllocator.html", null ]
+    ] ],
     [ "v8::internal::AllocatorPolicy", "classv8_1_1internal_1_1AllocatorPolicy.html", [
       [ "v8::internal::PagedNewSpaceAllocatorPolicy", "classv8_1_1internal_1_1PagedNewSpaceAllocatorPolicy.html", null ],
       [ "v8::internal::PagedSpaceAllocatorPolicy", "classv8_1_1internal_1_1PagedSpaceAllocatorPolicy.html", null ],
       [ "v8::internal::SemiSpaceNewSpaceAllocatorPolicy", "classv8_1_1internal_1_1SemiSpaceNewSpaceAllocatorPolicy.html", null ]
     ] ],
+    [ "v8::Isolate::AllowJavascriptExecutionScope", "classv8_1_1Isolate_1_1AllowJavascriptExecutionScope.html", null ],
     [ "v8::internal::AllStatic", "classv8_1_1internal_1_1AllStatic.html", [
       [ "v8::internal::TaggedField< T, kFieldOffset >", "classv8_1_1internal_1_1TaggedField.html", [
         [ "v8::internal::TaggedField< Tagged< T >, kFieldOffset >", "classv8_1_1internal_1_1TaggedField_3_01Tagged_3_01T_01_4_00_01kFieldOffset_01_4.html", null ]
@@ -164,6 +184,7 @@ var hierarchy =
       [ "v8::internal::ConcurrentLookupIterator", "classv8_1_1internal_1_1ConcurrentLookupIterator.html", null ],
       [ "v8::internal::CpuFeatures", "classv8_1_1internal_1_1CpuFeatures.html", null ],
       [ "v8::internal::DateParser", "classv8_1_1internal_1_1DateParser.html", null ],
+      [ "v8::internal::DateParser::KeywordTable", "classv8_1_1internal_1_1DateParser_1_1KeywordTable.html", null ],
       [ "v8::internal::DebugEvaluate", "classv8_1_1internal_1_1DebugEvaluate.html", null ],
       [ "v8::internal::Disassembler", "classv8_1_1internal_1_1Disassembler.html", null ],
       [ "v8::internal::DotPrinter", "classv8_1_1internal_1_1DotPrinter.html", null ],
@@ -248,6 +269,7 @@ var hierarchy =
     ] ],
     [ "v8::internal::AlternativeGenerationList", "classv8_1_1internal_1_1AlternativeGenerationList.html", null ],
     [ "v8::internal::maglev::NodeInfo::AlternativeNodes", "classv8_1_1internal_1_1maglev_1_1NodeInfo_1_1AlternativeNodes.html", null ],
+    [ "v8::internal::maglev::MergePointInterpreterFrameState::Alternatives", "classv8_1_1internal_1_1maglev_1_1MergePointInterpreterFrameState_1_1Alternatives.html", null ],
     [ "v8::internal::AlwaysAllocateScope", "classv8_1_1internal_1_1AlwaysAllocateScope.html", null ],
     [ "v8::internal::AlwaysAllocateScopeForTesting", "classv8_1_1internal_1_1AlwaysAllocateScopeForTesting.html", null ],
     [ "v8::internal::compiler::turboshaft::AnalyzerIterator", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1AnalyzerIterator.html", null ],
@@ -268,6 +290,7 @@ var hierarchy =
       [ "v8::internal::compiler::turboshaft::UntaggedUnion< Ts >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1UntaggedUnion.html", null ],
       [ "v8::internal::compiler::turboshaft::WordWithBits< Bits >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordWithBits.html", null ]
     ] ],
+    [ "v8::AnyCType", "unionv8_1_1AnyCType.html", null ],
     [ "v8::internal::compiler::detail::AnyTurbofanNodeOrBlock<... >", "structv8_1_1internal_1_1compiler_1_1detail_1_1AnyTurbofanNodeOrBlock.html", null ],
     [ "v8::internal::compiler::detail::AnyTurbofanNodeOrBlock< Head, Tail... >", "structv8_1_1internal_1_1compiler_1_1detail_1_1AnyTurbofanNodeOrBlock_3_01Head_00_01Tail_8_8_8_01_4.html", null ],
     [ "v8::internal::compiler::detail::AnyTurbofanNodeOrBlock<>", "structv8_1_1internal_1_1compiler_1_1detail_1_1AnyTurbofanNodeOrBlock_3_4.html", null ],
@@ -284,11 +307,16 @@ var hierarchy =
     [ "v8::internal::baseline::detail::ArgumentSettingHelper< Descriptor, ArgIndex, kIsRegister >", "structv8_1_1internal_1_1baseline_1_1detail_1_1ArgumentSettingHelper_3_01Descriptor_00_01ArgIndex_00_01kIsRegister_01_4.html", null ],
     [ "v8::internal::baseline::detail::ArgumentSettingHelper< Descriptor, ArgIndex, true, Arg, Args... >", "structv8_1_1internal_1_1baseline_1_1detail_1_1ArgumentSettingHelper_3_01Descriptor_00_01ArgIndex60e380f59ec0845fced202163ef9fad9.html", null ],
     [ "v8::internal::baseline::detail::ArgumentSettingHelper< Descriptor, ArgIndex, true, interpreter::RegisterList >", "structv8_1_1internal_1_1baseline_1_1detail_1_1ArgumentSettingHelper_3_01Descriptor_00_01ArgIndexffb2279c8724fbaa6d55816de44fc625.html", null ],
+    [ "v8::CFunction::ArgUnwrap< F >", "classv8_1_1CFunction_1_1ArgUnwrap.html", null ],
+    [ "v8::CFunction::ArgUnwrap< R(*)(Args...)>", "classv8_1_1CFunction_1_1ArgUnwrap_3_01R_07_5_08_07Args_8_8_8_08_4.html", null ],
+    [ "v8::platform::tracing::TraceObject::ArgValue", "unionv8_1_1platform_1_1tracing_1_1TraceObject_1_1ArgValue.html", null ],
     [ "v8::base::internal::ArithmeticOrUnderlyingEnum< T >", "structv8_1_1base_1_1internal_1_1ArithmeticOrUnderlyingEnum.html", null ],
     [ "v8::base::internal::ArithmeticOrUnderlyingEnum< T >", "structv8_1_1base_1_1internal_1_1ArithmeticOrUnderlyingEnum_3_01T_01_4.html", null ],
     [ "std::array", null, [
       [ "v8::internal::maglev::detail::ArrayWrapper< Size >", "classv8_1_1internal_1_1maglev_1_1detail_1_1ArrayWrapper.html", null ]
     ] ],
+    [ "v8::Array< MachineRepresentation >", "classv8_1_1Array.html", null ],
+    [ "v8::Array< v8::internal::compiler::Node * >", "classv8_1_1Array.html", null ],
     [ "v8::internal::ArrayBufferList", "structv8_1_1internal_1_1ArrayBufferList.html", null ],
     [ "v8::internal::ArrayBufferSweeper", "classv8_1_1internal_1_1ArrayBufferSweeper.html", null ],
     [ "v8::internal::compiler::ArrayBufferViewAccessBuilder", "classv8_1_1internal_1_1compiler_1_1ArrayBufferViewAccessBuilder.html", null ],
@@ -444,6 +472,7 @@ var hierarchy =
     [ "v8::internal::AssemblerZone", "classv8_1_1internal_1_1AssemblerZone.html", null ],
     [ "v8::internal::AssertNoContextChange", "classv8_1_1internal_1_1AssertNoContextChange.html", null ],
     [ "v8::internal::compiler::AssertParameters", "classv8_1_1internal_1_1compiler_1_1AssertParameters.html", null ],
+    [ "v8::internal::interpreter::BytecodeGenerator::AssignmentLhsData", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1AssignmentLhsData.html", null ],
     [ "v8::internal::compiler::AssignSpillSlotsPhase", "structv8_1_1internal_1_1compiler_1_1AssignSpillSlotsPhase.html", null ],
     [ "v8::internal::compiler::turboshaft::AssignSpillSlotsPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AssignSpillSlotsPhase.html", null ],
     [ "v8::internal::wasm::AssumptionsJournal", "classv8_1_1internal_1_1wasm_1_1AssumptionsJournal.html", null ],
@@ -568,12 +597,18 @@ var hierarchy =
     [ "v8::AsyncHooks", "classv8_1_1AsyncHooks.html", null ],
     [ "v8::AsyncHooksWrap", "classv8_1_1AsyncHooksWrap.html", null ],
     [ "v8_inspector::AsyncStackTrace", "classv8__inspector_1_1AsyncStackTrace.html", null ],
+    [ "v8::internal::FutexWaitListNode::AsyncState", "structv8_1_1internal_1_1FutexWaitListNode_1_1AsyncState.html", null ],
+    [ "cppgc::internal::AtomicEntryFlag", "classcppgc_1_1internal_1_1AtomicEntryFlag.html", null ],
+    [ "cppgc::internal::MemberBase< StorageType >::AtomicInitializerTag", "structcppgc_1_1internal_1_1MemberBase_1_1AtomicInitializerTag.html", null ],
+    [ "cppgc::internal::RawPointer::AtomicInitializerTag", "structcppgc_1_1internal_1_1RawPointer_1_1AtomicInitializerTag.html", null ],
     [ "v8::internal::compiler::AtomicLoadParameters", "classv8_1_1internal_1_1compiler_1_1AtomicLoadParameters.html", null ],
     [ "v8::internal::compiler::AtomicOpParameters", "classv8_1_1internal_1_1compiler_1_1AtomicOpParameters.html", null ],
     [ "v8::internal::compiler::TurbofanAdapter::AtomicRMWView", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1AtomicRMWView.html", null ],
     [ "v8::internal::compiler::TurboshaftAdapter::AtomicRMWView", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1AtomicRMWView.html", null ],
     [ "v8::internal::compiler::AtomicStoreParameters", "classv8_1_1internal_1_1compiler_1_1AtomicStoreParameters.html", null ],
     [ "v8::internal::AtomicsWaitWakeHandle", "classv8_1_1internal_1_1AtomicsWaitWakeHandle.html", null ],
+    [ "v8::Isolate::AtomicsWaitWakeHandle", "classv8_1_1Isolate_1_1AtomicsWaitWakeHandle.html", null ],
+    [ "v8::internal::LocalHeap::AtomicThreadState", "classv8_1_1internal_1_1LocalHeap_1_1AtomicThreadState.html", null ],
     [ "v8::base::AtomicTypeFromByteWidth< Width >", "structv8_1_1base_1_1AtomicTypeFromByteWidth.html", null ],
     [ "v8::base::AtomicTypeFromByteWidth< 1 >", "structv8_1_1base_1_1AtomicTypeFromByteWidth_3_011_01_4.html", null ],
     [ "v8::base::AtomicTypeFromByteWidth< 2 >", "structv8_1_1base_1_1AtomicTypeFromByteWidth_3_012_01_4.html", null ],
@@ -604,11 +639,15 @@ var hierarchy =
       [ "v8_inspector::V8SchemaAgentImpl", "classv8__inspector_1_1V8SchemaAgentImpl.html", null ]
     ] ],
     [ "v8::internal::BackgroundCompileTask", "classv8_1_1internal_1_1BackgroundCompileTask.html", null ],
+    [ "v8::internal::GCTracer::BackgroundCounter", "structv8_1_1internal_1_1GCTracer_1_1BackgroundCounter.html", null ],
     [ "v8::internal::BackgroundDeserializeTask", "classv8_1_1internal_1_1BackgroundDeserializeTask.html", null ],
     [ "v8::internal::BackgroundMergeTask", "classv8_1_1internal_1_1BackgroundMergeTask.html", null ],
-    [ "BackingStoreBase", null, [
+    [ "v8::internal::BackingStoreBase", "classv8_1_1internal_1_1BackingStoreBase.html", [
+      [ "v8::BackingStore", "classv8_1_1BackingStore.html", null ],
       [ "v8::internal::BackingStore", "classv8_1_1internal_1_1BackingStore.html", null ]
     ] ],
+    [ "v8::Context::BackupIncumbentScope", "classv8_1_1Context_1_1BackupIncumbentScope.html", null ],
+    [ "v8::internal::IsolateSafepoint::Barrier", "classv8_1_1internal_1_1IsolateSafepoint_1_1Barrier.html", null ],
     [ "Base", null, [
       [ "v8::internal::FixedIntegerArrayBase< Address, Base >", "classv8_1_1internal_1_1FixedIntegerArrayBase.html", [
         [ "v8::internal::FixedAddressArrayBase< Base >", "classv8_1_1internal_1_1FixedAddressArrayBase.html", null ]
@@ -908,11 +947,25 @@ var hierarchy =
     [ "v8::internal::baseline::BaselineCompilerTask", "classv8_1_1internal_1_1baseline_1_1BaselineCompilerTask.html", null ],
     [ "v8::internal::compiler::turboshaft::BaseListTraits", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BaseListTraits.html", null ],
     [ "v8::internal::compiler::turboshaft::wle::BaseListTraits", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1wle_1_1BaseListTraits.html", null ],
+    [ "v8::internal::TracedNodeBlock::BaseListTraits< ConcreteTraits >", "structv8_1_1internal_1_1TracedNodeBlock_1_1BaseListTraits.html", null ],
+    [ "v8::internal::TracedNodeBlock::BaseListTraits< OverallListTraits >", "structv8_1_1internal_1_1TracedNodeBlock_1_1BaseListTraits.html", [
+      [ "v8::internal::TracedNodeBlock::OverallListTraits", "structv8_1_1internal_1_1TracedNodeBlock_1_1OverallListTraits.html", null ]
+    ] ],
+    [ "v8::internal::TracedNodeBlock::BaseListTraits< UsableListTraits >", "structv8_1_1internal_1_1TracedNodeBlock_1_1BaseListTraits.html", [
+      [ "v8::internal::TracedNodeBlock::UsableListTraits", "structv8_1_1internal_1_1TracedNodeBlock_1_1UsableListTraits.html", null ]
+    ] ],
+    [ "v8::internal::TracedNodeBlock::BaseListTraits< YoungListTraits >", "structv8_1_1internal_1_1TracedNodeBlock_1_1BaseListTraits.html", [
+      [ "v8::internal::TracedNodeBlock::YoungListTraits", "structv8_1_1internal_1_1TracedNodeBlock_1_1YoungListTraits.html", null ]
+    ] ],
     [ "BaseNameDictionary", null, [
       [ "v8::internal::GlobalDictionary", "classv8_1_1internal_1_1GlobalDictionary.html", null ],
       [ "v8::internal::NameDictionary", "classv8_1_1internal_1_1NameDictionary.html", null ]
     ] ],
-    [ "BasePageHandle", null, [
+    [ "cppgc::internal::BaseObjectSizeTrait", "structcppgc_1_1internal_1_1BaseObjectSizeTrait.html", [
+      [ "cppgc::subtle::ObjectSizeTrait< T, false >", "structcppgc_1_1subtle_1_1ObjectSizeTrait_3_01T_00_01false_01_4.html", null ],
+      [ "cppgc::subtle::ObjectSizeTrait< T, true >", "structcppgc_1_1subtle_1_1ObjectSizeTrait_3_01T_00_01true_01_4.html", null ]
+    ] ],
+    [ "cppgc::internal::BasePageHandle", "classcppgc_1_1internal_1_1BasePageHandle.html", [
       [ "cppgc::internal::BasePage", "classcppgc_1_1internal_1_1BasePage.html", [
         [ "cppgc::internal::LargePage", "classcppgc_1_1internal_1_1LargePage.html", null ],
         [ "cppgc::internal::NormalPage", "classcppgc_1_1internal_1_1NormalPage.html", null ]
@@ -974,7 +1027,12 @@ var hierarchy =
     [ "heap::base::BasicSlotSet< kTaggedSize >", "classheap_1_1base_1_1BasicSlotSet.html", [
       [ "v8::internal::SlotSet", "classv8_1_1internal_1_1SlotSet.html", null ]
     ] ],
-    [ "v8::internal::CompilationStatistics::BasicStats", "classv8_1_1internal_1_1CompilationStatistics_1_1BasicStats.html", null ],
+    [ "v8::internal::CompilationStatistics::BasicStats", "classv8_1_1internal_1_1CompilationStatistics_1_1BasicStats.html", [
+      [ "v8::internal::CompilationStatistics::OrderedStats", "classv8_1_1internal_1_1CompilationStatistics_1_1OrderedStats.html", [
+        [ "v8::internal::CompilationStatistics::PhaseStats", "classv8_1_1internal_1_1CompilationStatistics_1_1PhaseStats.html", null ]
+      ] ],
+      [ "v8::internal::CompilationStatistics::TotalStats", "classv8_1_1internal_1_1CompilationStatistics_1_1TotalStats.html", null ]
+    ] ],
     [ "v8::internal::BasicTracedReferenceExtractor", "classv8_1_1internal_1_1BasicTracedReferenceExtractor.html", null ],
     [ "v8::base::internal::has_key_equal< M >::big", "structv8_1_1base_1_1internal_1_1has__key__equal_1_1big.html", null ],
     [ "v8::base::internal::BigEnoughPromotion< Lhs, Rhs, is_intmax_type, is_max_exponent >", "structv8_1_1base_1_1internal_1_1BigEnoughPromotion.html", null ],
@@ -982,7 +1040,6 @@ var hierarchy =
     [ "v8::base::internal::BigEnoughPromotion< Lhs, Rhs, is_intmax_type, true >", "structv8_1_1base_1_1internal_1_1BigEnoughPromotion_3_01Lhs_00_01Rhs_00_01is__intmax__type_00_01true_01_4.html", null ],
     [ "v8::base::internal::BigEnoughPromotion< Lhs, Rhs, true, false >", "structv8_1_1base_1_1internal_1_1BigEnoughPromotion_3_01Lhs_00_01Rhs_00_01true_00_01false_01_4.html", null ],
     [ "v8::internal::compiler::BigIntOperationParameters", "classv8_1_1internal_1_1compiler_1_1BigIntOperationParameters.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::BigIntUnaryOp", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1BigIntUnaryOp.html", null ],
     [ "v8::base::Bignum", "classv8_1_1base_1_1Bignum.html", null ],
     [ "v8_inspector::protocol::Binary", "classv8__inspector_1_1protocol_1_1Binary.html", null ],
     [ "v8::internal::BinaryOperationFeedback", "classv8_1_1internal_1_1BinaryOperationFeedback.html", null ],
@@ -1009,6 +1066,7 @@ var hierarchy =
     [ "v8::internal::torque::BitField", "structv8_1_1internal_1_1torque_1_1BitField.html", null ],
     [ "v8::internal::compiler::turboshaft::detail::BitfieldCheck", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1BitfieldCheck.html", null ],
     [ "v8::internal::torque::BitFieldDeclaration", "structv8_1_1internal_1_1torque_1_1BitFieldDeclaration.html", null ],
+    [ "v8::internal::UnoptimizedCompileFlags::BitFields", "structv8_1_1internal_1_1UnoptimizedCompileFlags_1_1BitFields.html", null ],
     [ "v8::base::BitFieldUnion< A, B >", "classv8_1_1base_1_1BitFieldUnion.html", null ],
     [ "v8::internal::swiss_table::BitMask< T, SignificantBits, Shift >", "classv8_1_1internal_1_1swiss__table_1_1BitMask.html", null ],
     [ "v8::internal::Map::Bits1", "structv8_1_1internal_1_1Map_1_1Bits1.html", null ],
@@ -1029,16 +1087,20 @@ var hierarchy =
     [ "v8::debug::Coverage::BlockData", "classv8_1_1debug_1_1Coverage_1_1BlockData.html", null ],
     [ "v8::internal::compiler::turboshaft::LabelBase< loop, Ts >::BlockData", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LabelBase_1_1BlockData.html", null ],
     [ "v8::internal::compiler::turboshaft::TurboshaftSpecialRPONumberer::BlockData", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TurboshaftSpecialRPONumberer_1_1BlockData.html", null ],
+    [ "v8::internal::wasm::WasmBytecodeGenerator::BlockData", "structv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator_1_1BlockData.html", null ],
     [ "v8::internal::Assembler::BlockGrowBufferScope", "classv8_1_1internal_1_1Assembler_1_1BlockGrowBufferScope.html", null ],
     [ "v8::internal::compiler::turboshaft::BlockIndex", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockIndex.html", null ],
+    [ "v8::internal::wasm::AsmJsParser::BlockInfo", "structv8_1_1internal_1_1wasm_1_1AsmJsParser_1_1BlockInfo.html", null ],
     [ "v8::internal::compiler::GraphAssembler::BlockInlineReduction", "classv8_1_1internal_1_1compiler_1_1GraphAssembler_1_1BlockInlineReduction.html", null ],
     [ "v8::internal::compiler::turboshaft::BlockInstrumentationPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockInstrumentationPhase.html", null ],
+    [ "v8::internal::wasm::TurboshaftGraphBuildingInterface::BlockPhis", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html", null ],
     [ "v8::internal::Assembler::BlockPoolsScope", "classv8_1_1internal_1_1Assembler_1_1BlockPoolsScope.html", null ],
     [ "v8::internal::compiler::BlockStartsAsJSON", "structv8_1_1internal_1_1compiler_1_1BlockStartsAsJSON.html", null ],
     [ "v8::internal::compiler::turboshaft::MemoryAnalyzer::BlockState", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryAnalyzer_1_1BlockState.html", null ],
     [ "v8::internal::ParserBase< Impl >::BlockState", "classv8_1_1internal_1_1ParserBase_1_1BlockState.html", [
       [ "v8::internal::ParserBase< Impl >::FunctionState", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html", null ]
     ] ],
+    [ "v8::internal::compiler::turboshaft::GraphVisitor< typename >::BlockToClone", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1GraphVisitor_1_1BlockToClone.html", null ],
     [ "v8::internal::Assembler::BlockTrampolinePoolScope", "classv8_1_1internal_1_1Assembler_1_1BlockTrampolinePoolScope.html", null ],
     [ "v8::internal::wasm::BlockTypeImmediate", "structv8_1_1internal_1_1wasm_1_1BlockTypeImmediate.html", null ],
     [ "v8::internal::StringForwardingTable::BlockVector", "classv8_1_1internal_1_1StringForwardingTable_1_1BlockVector.html", null ],
@@ -1180,6 +1242,9 @@ var hierarchy =
     [ "v8::internal::maglev::MaglevGraphBuilder::MaglevSubGraphBuilder::BorrowParentKnownNodeAspectsAndVOs", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder_1_1BorrowParentKnownNodeAspectsAndVOs.html", null ],
     [ "v8::internal::torque::BottomOffset", "structv8_1_1internal_1_1torque_1_1BottomOffset.html", null ],
     [ "v8::internal::compiler::InductionVariable::Bound", "structv8_1_1internal_1_1compiler_1_1InductionVariable_1_1Bound.html", null ],
+    [ "v8::internal::compiler::BitsetType::Boundary", "structv8_1_1internal_1_1compiler_1_1BitsetType_1_1Boundary.html", null ],
+    [ "v8::internal::compiler::ControlEquivalence::Bracket", "structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1Bracket.html", null ],
+    [ "v8::internal::maglev::MaglevGraphBuilder::BranchBuilder", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1BranchBuilder.html", null ],
     [ "v8::internal::compiler::BranchCondition", "structv8_1_1internal_1_1compiler_1_1BranchCondition.html", null ],
     [ "v8::internal::compiler::BranchConditionDuplicationPhase", "structv8_1_1internal_1_1compiler_1_1BranchConditionDuplicationPhase.html", null ],
     [ "v8::internal::compiler::BranchConditionDuplicator", "classv8_1_1internal_1_1compiler_1_1BranchConditionDuplicator.html", null ],
@@ -1193,6 +1258,8 @@ var hierarchy =
     [ "v8::internal::wasm::BranchTableIterator< ValidationTag >", "classv8_1_1internal_1_1wasm_1_1BranchTableIterator.html", null ],
     [ "v8::internal::compiler::TurbofanAdapter::BranchView", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1BranchView.html", null ],
     [ "v8::internal::compiler::TurboshaftAdapter::BranchView", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1BranchView.html", null ],
+    [ "v8::internal::Processor::BreakableScope", "classv8_1_1internal_1_1Processor_1_1BreakableScope.html", null ],
+    [ "v8::internal::torque::ImplementationVisitor::BreakContinueActivator", "classv8_1_1internal_1_1torque_1_1ImplementationVisitor_1_1BreakContinueActivator.html", null ],
     [ "v8::internal::BreakIterator", "classv8_1_1internal_1_1BreakIterator.html", null ],
     [ "v8::internal::BreakLocation", "classv8_1_1internal_1_1BreakLocation.html", null ],
     [ "v8::internal::Brief", "structv8_1_1internal_1_1Brief.html", null ],
@@ -1221,6 +1288,7 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::detail::BuiltinComponent", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1BuiltinComponent.html", null ],
     [ "v8::internal::maglev::DeoptFrame::BuiltinContinuationFrameData", "structv8_1_1internal_1_1maglev_1_1DeoptFrame_1_1BuiltinContinuationFrameData.html", null ],
     [ "v8::internal::BuiltinContinuationFrameInfo", "classv8_1_1internal_1_1BuiltinContinuationFrameInfo.html", null ],
+    [ "v8::internal::BuiltinsSorter::BuiltinDensitySlot", "structv8_1_1internal_1_1BuiltinsSorter_1_1BuiltinDensitySlot.html", null ],
     [ "v8::internal::BuiltinJumpTableInfoEntry", "structv8_1_1internal_1_1BuiltinJumpTableInfoEntry.html", null ],
     [ "v8::internal::BuiltinJumpTableInfoIterator", "classv8_1_1internal_1_1BuiltinJumpTableInfoIterator.html", null ],
     [ "v8::internal::BuiltinJumpTableInfoWriter", "classv8_1_1internal_1_1BuiltinJumpTableInfoWriter.html", null ],
@@ -1261,11 +1329,24 @@ var hierarchy =
     ] ],
     [ "v8::internal::interpreter::BytecodeRegisterOptimizer::BytecodeWriter", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1BytecodeWriter.html", null ],
     [ "heap::base::BytesAndDuration", "structheap_1_1base_1_1BytesAndDuration.html", null ],
+    [ "v8::ScriptCompiler::CachedData", "structv8_1_1ScriptCompiler_1_1CachedData.html", null ],
+    [ "v8::internal::wasm::DebugInfoImpl::CachedDebuggingCode", "structv8_1_1internal_1_1wasm_1_1DebugInfoImpl_1_1CachedDebuggingCode.html", null ],
     [ "v8::base::CachedPower", "structv8_1_1base_1_1CachedPower.html", null ],
+    [ "v8_inspector::V8DebuggerAgentImpl::CachedScript", "structv8__inspector_1_1V8DebuggerAgentImpl_1_1CachedScript.html", null ],
+    [ "v8_inspector::V8Debugger::CachedStackFrameKey", "structv8__inspector_1_1V8Debugger_1_1CachedStackFrameKey.html", null ],
     [ "v8::internal::compiler::InstructionSelectorT< Adapter >::CachedStateValuesBuilder", "classv8_1_1internal_1_1compiler_1_1InstructionSelectorT_1_1CachedStateValuesBuilder.html", null ],
     [ "heap::base::CachedUnorderedMap< _Key, _Value, _Hash >", "classheap_1_1base_1_1CachedUnorderedMap.html", null ],
     [ "heap::base::CachedUnorderedMap< cppgc::internal::BasePage *, int64_t, v8::base::hash< cppgc::internal::BasePage * > >", "classheap_1_1base_1_1CachedUnorderedMap.html", null ],
     [ "heap::base::CachedUnorderedMap< MutablePageMetadata *, MemoryChunkData >", "classheap_1_1base_1_1CachedUnorderedMap.html", null ],
+    [ "v8::internal::wasm::AsmJsParser::CachedVectors< T >", "classv8_1_1internal_1_1wasm_1_1AsmJsParser_1_1CachedVectors.html", null ],
+    [ "v8::internal::wasm::AsmJsParser::CachedVectors< AsmJsScanner::token_t >", "classv8_1_1internal_1_1wasm_1_1AsmJsParser_1_1CachedVectors.html", null ],
+    [ "v8::internal::wasm::AsmJsParser::CachedVectors< int32_t >", "classv8_1_1internal_1_1wasm_1_1AsmJsParser_1_1CachedVectors.html", null ],
+    [ "v8::internal::wasm::AsmJsParser::CachedVectors< v8::internal::wasm::AsmType * >", "classv8_1_1internal_1_1wasm_1_1AsmJsParser_1_1CachedVectors.html", null ],
+    [ "v8::internal::wasm::AsmJsParser::CachedVectors< v8::internal::wasm::ValueType >", "classv8_1_1internal_1_1wasm_1_1AsmJsParser_1_1CachedVectors.html", null ],
+    [ "unibrow::Mapping< T, size >::CacheEntry", "structunibrow_1_1Mapping_1_1CacheEntry.html", null ],
+    [ "unibrow::Predicate< T, size >::CacheEntry", "classunibrow_1_1Predicate_1_1CacheEntry.html", null ],
+    [ "v8::internal::wasm::WasmCodeLookupCache::CacheEntry", "structv8_1_1internal_1_1wasm_1_1WasmCodeLookupCache_1_1CacheEntry.html", null ],
+    [ "v8::internal::DateCache::CacheItem", "structv8_1_1internal_1_1DateCache_1_1CacheItem.html", null ],
     [ "v8::internal::wasm::WasmImportWrapperCache::CacheKey", "structv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache_1_1CacheKey.html", null ],
     [ "v8::internal::wasm::WasmImportWrapperCache::CacheKeyHash", "classv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache_1_1CacheKeyHash.html", null ],
     [ "v8::internal::wasm::LiftoffAssembler::CacheState", "structv8_1_1internal_1_1wasm_1_1LiftoffAssembler_1_1CacheState.html", null ],
@@ -1276,6 +1357,8 @@ var hierarchy =
     [ "v8::base::tmp::call_parameters< R(O::*)(Args...)>", "structv8_1_1base_1_1tmp_1_1call__parameters_3_01R_07O_1_1_5_08_07Args_8_8_8_08_4.html", null ],
     [ "v8::internal::Callable", "classv8_1_1internal_1_1Callable.html", null ],
     [ "v8::internal::maglev::CallArguments", "classv8_1_1internal_1_1maglev_1_1CallArguments.html", null ],
+    [ "v8::internal::GCCallbacks::CallbackData", "structv8_1_1internal_1_1GCCallbacks_1_1CallbackData.html", null ],
+    [ "v8::internal::GCCallbacksInSafepoint::CallbackData", "structv8_1_1internal_1_1GCCallbacksInSafepoint_1_1CallbackData.html", null ],
     [ "v8::internal::compiler::WasmGraphBuilder::Callbacks", "structv8_1_1internal_1_1compiler_1_1WasmGraphBuilder_1_1Callbacks.html", null ],
     [ "v8::internal::compiler::CallBufferT< Adapter >", "structv8_1_1internal_1_1compiler_1_1CallBufferT.html", null ],
     [ "v8::CallDepthScope< do_callback >", "classv8_1_1CallDepthScope.html", null ],
@@ -1733,6 +1816,7 @@ var hierarchy =
         [ "v8::internal::HeartbeatTask", "classv8_1_1internal_1_1HeartbeatTask.html", null ],
         [ "v8::internal::IncrementalMarkingJob::Task", "classv8_1_1internal_1_1IncrementalMarkingJob_1_1Task.html", null ],
         [ "v8::internal::MemoryPressureInterruptTask", "classv8_1_1internal_1_1MemoryPressureInterruptTask.html", null ],
+        [ "v8::internal::MemoryReducer::TimerTask", "classv8_1_1internal_1_1MemoryReducer_1_1TimerTask.html", null ],
         [ "v8::internal::MinorGCJob::Task", "classv8_1_1internal_1_1MinorGCJob_1_1Task.html", null ],
         [ "v8::internal::ResolveAsyncWaiterPromisesTask", "classv8_1_1internal_1_1ResolveAsyncWaiterPromisesTask.html", null ],
         [ "v8::internal::StressConcurrentAllocationTask", "classv8_1_1internal_1_1StressConcurrentAllocationTask.html", null ],
@@ -1744,9 +1828,24 @@ var hierarchy =
     ] ],
     [ "v8::internal::CancelableTaskManager", "classv8_1_1internal_1_1CancelableTaskManager.html", null ],
     [ "v8_inspector::V8InspectorImpl::EvaluateScope::CancelToken", "structv8__inspector_1_1V8InspectorImpl_1_1EvaluateScope_1_1CancelToken.html", null ],
+    [ "v8::internal::compiler::JSInliningHeuristic::Candidate", "structv8_1_1internal_1_1compiler_1_1JSInliningHeuristic_1_1Candidate.html", null ],
+    [ "v8::internal::compiler::WasmAddressReassociation::CandidateBaseAddr", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation_1_1CandidateBaseAddr.html", null ],
+    [ "v8::internal::compiler::JSInliningHeuristic::CandidateCompare", "structv8_1_1internal_1_1compiler_1_1JSInliningHeuristic_1_1CandidateCompare.html", null ],
+    [ "v8::internal::compiler::WasmInliner::CandidateInfo", "structv8_1_1internal_1_1compiler_1_1WasmInliner_1_1CandidateInfo.html", null ],
+    [ "v8::internal::wasm::TypeCanonicalizer::CanonicalEquality", "structv8_1_1internal_1_1wasm_1_1TypeCanonicalizer_1_1CanonicalEquality.html", null ],
+    [ "v8::internal::wasm::TypeCanonicalizer::CanonicalGroup", "structv8_1_1internal_1_1wasm_1_1TypeCanonicalizer_1_1CanonicalGroup.html", null ],
+    [ "v8::internal::wasm::TypeCanonicalizer::CanonicalHashing", "structv8_1_1internal_1_1wasm_1_1TypeCanonicalizer_1_1CanonicalHashing.html", null ],
     [ "unibrow::CanonicalizationRange", "structunibrow_1_1CanonicalizationRange.html", null ],
+    [ "v8::internal::wasm::TypeCanonicalizer::CanonicalSingletonGroup", "structv8_1_1internal_1_1wasm_1_1TypeCanonicalizer_1_1CanonicalSingletonGroup.html", null ],
+    [ "v8::internal::wasm::TypeCanonicalizer::CanonicalType", "structv8_1_1internal_1_1wasm_1_1TypeCanonicalizer_1_1CanonicalType.html", null ],
     [ "v8::internal::compiler::turboshaft::SwitchOp::Case", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SwitchOp_1_1Case.html", null ],
     [ "v8::internal::compiler::CaseInfoT< Adapter >", "structv8_1_1internal_1_1compiler_1_1CaseInfoT.html", null ],
+    [ "v8::base::AsAtomicImpl< TAtomicStorageType >::cast_helper< U >", "structv8_1_1base_1_1AsAtomicImpl_1_1cast__helper.html", null ],
+    [ "v8::base::AtomicValue< T >::cast_helper< S >", "structv8_1_1base_1_1AtomicValue_1_1cast__helper.html", null ],
+    [ "v8::base::AsAtomicImpl< TAtomicStorageType >::cast_helper< base::StrongAlias< T, U > >", "structv8_1_1base_1_1AsAtomicImpl_1_1cast__helper_3_01base_1_1StrongAlias_3_01T_00_01U_01_4_01_4.html", null ],
+    [ "v8::base::AtomicValue< T >::cast_helper< S * >", "structv8_1_1base_1_1AtomicValue_1_1cast__helper_3_01S_01_5_01_4.html", null ],
+    [ "v8::base::AsAtomicImpl< TAtomicStorageType >::cast_helper< U * >", "structv8_1_1base_1_1AsAtomicImpl_1_1cast__helper_3_01U_01_5_01_4.html", null ],
+    [ "v8::internal::CastCheck< PerformCheck >", "structv8_1_1internal_1_1CastCheck.html", null ],
     [ "v8::internal::CastTraits< To >", "structv8_1_1internal_1_1CastTraits.html", null ],
     [ "v8::internal::CastTraits< Base >", "structv8_1_1internal_1_1CastTraits.html", [
       [ "v8::internal::CastTraits< FixedAddressArrayBase< Base > >", "structv8_1_1internal_1_1CastTraits_3_01FixedAddressArrayBase_3_01Base_01_4_01_4.html", null ],
@@ -1792,6 +1891,7 @@ var hierarchy =
     [ "v8::internal::CastTraits< WasmExternalFunction >", "structv8_1_1internal_1_1CastTraits_3_01WasmExternalFunction_01_4.html", null ],
     [ "v8::internal::CastTraits< WasmJSFunction >", "structv8_1_1internal_1_1CastTraits_3_01WasmJSFunction_01_4.html", null ],
     [ "v8::internal::wasm::WasmEHData::CatchBlock", "structv8_1_1internal_1_1wasm_1_1WasmEHData_1_1CatchBlock.html", null ],
+    [ "v8::internal::maglev::MaglevGraphBuilder::CatchBlockDetails", "structv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1CatchBlockDetails.html", null ],
     [ "v8::internal::wasm::CatchCase", "structv8_1_1internal_1_1wasm_1_1CatchCase.html", null ],
     [ "v8::internal::wasm::WasmEHData::CatchHandler", "structv8_1_1internal_1_1wasm_1_1WasmEHData_1_1CatchHandler.html", null ],
     [ "v8::internal::ParserBase< Impl >::CatchInfo", "structv8_1_1internal_1_1ParserBase_1_1CatchInfo.html", null ],
@@ -1799,16 +1899,24 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::CatchScopeImpl< AssemblerT >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CatchScopeImpl.html", null ],
     [ "v8::internal::torque::CfgAssembler", "classv8_1_1internal_1_1torque_1_1CfgAssembler.html", null ],
     [ "v8::internal::torque::CfgAssemblerScopedTemporaryBlock", "classv8_1_1internal_1_1torque_1_1CfgAssemblerScopedTemporaryBlock.html", null ],
+    [ "v8::CFunction", "classv8_1_1CFunction.html", null ],
+    [ "v8::internal::CFunctionBuilder", "classv8_1_1internal_1_1CFunctionBuilder.html", null ],
+    [ "v8::internal::CFunctionBuilderWithFunction< RetBuilder, ArgBuilders >", "classv8_1_1internal_1_1CFunctionBuilderWithFunction.html", null ],
+    [ "v8::CFunctionInfo", "classv8_1_1CFunctionInfo.html", [
+      [ "v8::internal::CFunctionInfoImpl< Representation, RetBuilder, ArgBuilders >", "classv8_1_1internal_1_1CFunctionInfoImpl.html", null ]
+    ] ],
     [ "v8::internal::Arguments< arguments_type >::ChangeValueScope", "classv8_1_1internal_1_1Arguments_1_1ChangeValueScope.html", null ],
-    [ "v8_inspector::V8Inspector::Channel", null, [
+    [ "v8_inspector::V8Inspector::Channel", "classv8__inspector_1_1V8Inspector_1_1Channel.html", [
       [ "v8::InspectorFrontend", "classv8_1_1InspectorFrontend.html", null ]
     ] ],
     [ "v8::internal::CharacterClassStringLess", "structv8_1_1internal_1_1CharacterClassStringLess.html", null ],
+    [ "v8::internal::FrequencyCollator::CharacterFrequency", "classv8_1_1internal_1_1FrequencyCollator_1_1CharacterFrequency.html", null ],
     [ "v8::internal::CharacterRange", "classv8_1_1internal_1_1CharacterRange.html", null ],
     [ "v8::internal::CharacterSet", "classv8_1_1internal_1_1CharacterSet.html", null ],
     [ "v8::internal::CharTraits< Char >", "structv8_1_1internal_1_1CharTraits.html", null ],
     [ "v8::internal::CharTraits< uint16_t >", "structv8_1_1internal_1_1CharTraits_3_01uint16__t_01_4.html", null ],
     [ "v8::internal::CharTraits< uint8_t >", "structv8_1_1internal_1_1CharTraits_3_01uint8__t_01_4.html", null ],
+    [ "v8::internal::compiler::RedundancyElimination::Check", "structv8_1_1internal_1_1compiler_1_1RedundancyElimination_1_1Check.html", null ],
     [ "v8::internal::compiler::CheckBoundsParameters", "classv8_1_1internal_1_1compiler_1_1CheckBoundsParameters.html", null ],
     [ "v8::internal::compiler::CodeAssembler::CheckedNode< PreviousType, FromTyped >", "classv8_1_1internal_1_1compiler_1_1CodeAssembler_1_1CheckedNode.html", null ],
     [ "v8::internal::maglev::CheckedNumberOrOddballToFloat64OrHoleyFloat64< CheckedNumberOrOddballToFloat64, ValueRepresentation::kFloat64 >", "classv8_1_1internal_1_1maglev_1_1CheckedNumberOrOddballToFloat64OrHoleyFloat64.html", [
@@ -1820,18 +1928,25 @@ var hierarchy =
     [ "v8::base::internal::CheckedNumeric< T >", "classv8_1_1base_1_1internal_1_1CheckedNumeric.html", null ],
     [ "v8::internal::compiler::CheckFloat64HoleParameters", "classv8_1_1internal_1_1compiler_1_1CheckFloat64HoleParameters.html", null ],
     [ "v8::internal::compiler::CheckIfParameters", "classv8_1_1internal_1_1compiler_1_1CheckIfParameters.html", null ],
+    [ "CheckingPolicy", null, [
+      [ "cppgc::internal::BasicMember< K >", "classcppgc_1_1internal_1_1BasicMember.html", null ],
+      [ "cppgc::internal::BasicMember< V >", "classcppgc_1_1internal_1_1BasicMember.html", null ],
+      [ "cppgc::internal::BasicCrossThreadPersistent< T, WeaknessPolicy, LocationPolicy, CheckingPolicy >", "classcppgc_1_1internal_1_1BasicCrossThreadPersistent.html", null ],
+      [ "cppgc::internal::BasicMember< T, WeaknessTag, WriteBarrierPolicy, CheckingPolicy, StorageType >", "classcppgc_1_1internal_1_1BasicMember.html", null ],
+      [ "cppgc::internal::BasicPersistent< T, WeaknessPolicy, LocationPolicy, CheckingPolicy >", "classcppgc_1_1internal_1_1BasicPersistent.html", null ]
+    ] ],
     [ "v8::internal::compiler::CheckMapsParameters", "classv8_1_1internal_1_1compiler_1_1CheckMapsParameters.html", null ],
     [ "v8::internal::compiler::CheckMinusZeroParameters", "classv8_1_1internal_1_1compiler_1_1CheckMinusZeroParameters.html", null ],
     [ "v8::base::internal::CheckOnFailure", "structv8_1_1base_1_1internal_1_1CheckOnFailure.html", null ],
     [ "v8::internal::compiler::CheckParameters", "classv8_1_1internal_1_1compiler_1_1CheckParameters.html", null ],
+    [ "cppgc::internal::SameThreadEnabledCheckingPolicy< kCheckOffHeapAssignments >::CheckPointersImplTrampoline< T, bool >", "structcppgc_1_1internal_1_1SameThreadEnabledCheckingPolicy_1_1CheckPointersImplTrampoline.html", null ],
+    [ "cppgc::internal::SameThreadEnabledCheckingPolicy< kCheckOffHeapAssignments >::CheckPointersImplTrampoline< T, true >", "structcppgc_1_1internal_1_1SameThreadEnabledCheckingPolicy_1_1CheckPointersImplTrampoline_3_01T_00_01true_01_4.html", null ],
     [ "v8::internal::compiler::CheckTaggedInputParameters", "classv8_1_1internal_1_1compiler_1_1CheckTaggedInputParameters.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CheckTurbofanType", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CheckTurbofanType.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CheckTurboshaftFloat32Type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CheckTurboshaftFloat32Type.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CheckTurboshaftFloat64Type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CheckTurboshaftFloat64Type.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CheckTurboshaftWord32Type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CheckTurboshaftWord32Type.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CheckTurboshaftWord64Type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CheckTurboshaftWord64Type.html", null ],
+    [ "v8::internal::ChunkedStream< Char >::Chunk", "structv8_1_1internal_1_1ChunkedStream_1_1Chunk.html", null ],
     [ "v8::internal::Heap::Chunk", "structv8_1_1internal_1_1Heap_1_1Chunk.html", null ],
     [ "v8::internal::TypedSlots::Chunk", "structv8_1_1internal_1_1TypedSlots_1_1Chunk.html", null ],
+    [ "v8::internal::Utf8ExternalStreamingStream::Chunk", "structv8_1_1internal_1_1Utf8ExternalStreamingStream_1_1Chunk.html", null ],
+    [ "v8::internal::ZoneChunkList< T >::Chunk", "structv8_1_1internal_1_1ZoneChunkList_1_1Chunk.html", null ],
     [ "v8::internal::ChunkedStream< Char >", "classv8_1_1internal_1_1ChunkedStream.html", null ],
     [ "v8::internal::ChunkedStream< uint8_t >", "classv8_1_1internal_1_1ChunkedStream.html", null ],
     [ "v8::internal::CircularStructureMessageBuilder", "classv8_1_1internal_1_1CircularStructureMessageBuilder.html", null ],
@@ -1921,13 +2036,17 @@ var hierarchy =
     [ "v8::internal::CodeCommentEntry", "structv8_1_1internal_1_1CodeCommentEntry.html", null ],
     [ "v8::internal::CodeCommentsIterator", "classv8_1_1internal_1_1CodeCommentsIterator.html", null ],
     [ "v8::internal::CodeCommentsWriter", "classv8_1_1internal_1_1CodeCommentsWriter.html", null ],
+    [ "v8::internal::LowLevelLogger::CodeCreateStruct", "structv8_1_1internal_1_1LowLevelLogger_1_1CodeCreateStruct.html", null ],
     [ "v8::internal::CodeDataSourceIncrementalState", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html", null ],
     [ "v8::internal::CodeDesc", "classv8_1_1internal_1_1CodeDesc.html", null ],
     [ "v8::internal::compiler::turboshaft::CodeEliminationAndSimplificationPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CodeEliminationAndSimplificationPhase.html", null ],
     [ "v8::internal::CodeEntry", "classv8_1_1internal_1_1CodeEntry.html", null ],
     [ "v8::internal::CodeEntryAndLineNumber", "structv8_1_1internal_1_1CodeEntryAndLineNumber.html", null ],
+    [ "v8::internal::InstructionStreamMap::CodeEntryMapInfo", "structv8_1_1internal_1_1InstructionStreamMap_1_1CodeEntryMapInfo.html", null ],
     [ "v8::internal::CodeEntryStorage", "classv8_1_1internal_1_1CodeEntryStorage.html", null ],
+    [ "v8::CodeEvent", "classv8_1_1CodeEvent.html", null ],
     [ "v8::internal::CodeEvent", "structv8_1_1internal_1_1CodeEvent.html", null ],
+    [ "v8::CodeEventHandler", "classv8_1_1CodeEventHandler.html", null ],
     [ "v8::internal::CodeEventObserver", "classv8_1_1internal_1_1CodeEventObserver.html", [
       [ "v8::internal::ProfilerCodeObserver", "classv8_1_1internal_1_1ProfilerCodeObserver.html", null ],
       [ "v8::internal::ProfilerEventsProcessor", "classv8_1_1internal_1_1ProfilerEventsProcessor.html", [
@@ -1946,11 +2065,13 @@ var hierarchy =
     [ "v8::internal::CodeEventsContainer", "classv8_1_1internal_1_1CodeEventsContainer.html", null ],
     [ "v8::internal::CodeFactory", "classv8_1_1internal_1_1CodeFactory.html", null ],
     [ "v8::internal::wasm::WasmInterpreter::CodeMap", "classv8_1_1internal_1_1wasm_1_1WasmInterpreter_1_1CodeMap.html", null ],
+    [ "v8::internal::LowLevelLogger::CodeMoveStruct", "structv8_1_1internal_1_1LowLevelLogger_1_1CodeMoveStruct.html", null ],
     [ "v8::internal::CodePageMemoryModificationScopeForDebugging", "classv8_1_1internal_1_1CodePageMemoryModificationScopeForDebugging.html", null ],
     [ "v8::internal::trap_handler::CodeProtectionInfo", "structv8_1_1internal_1_1trap__handler_1_1CodeProtectionInfo.html", null ],
     [ "v8::internal::trap_handler::CodeProtectionInfoListEntry", "structv8_1_1internal_1_1trap__handler_1_1CodeProtectionInfoListEntry.html", null ],
     [ "v8::internal::CodeRangeAddressHint", "classv8_1_1internal_1_1CodeRangeAddressHint.html", null ],
     [ "v8::internal::CodeReference", "classv8_1_1internal_1_1CodeReference.html", null ],
+    [ "v8::internal::wasm::NativeModule::CodeSpaceData", "structv8_1_1internal_1_1wasm_1_1NativeModule_1_1CodeSpaceData.html", null ],
     [ "v8::internal::wasm::CodeSpaceWriteScope", "classv8_1_1internal_1_1wasm_1_1CodeSpaceWriteScope.html", null ],
     [ "v8::internal::CodeStatistics", "classv8_1_1internal_1_1CodeStatistics.html", null ],
     [ "v8::internal::CodeStubArguments", "classv8_1_1internal_1_1CodeStubArguments.html", null ],
@@ -1983,6 +2104,7 @@ var hierarchy =
     [ "v8::internal::CompilationCacheScriptLookupResult", "classv8_1_1internal_1_1CompilationCacheScriptLookupResult.html", null ],
     [ "v8::internal::compiler::CompilationDependencies::CompilationDependencyEqual", "structv8_1_1internal_1_1compiler_1_1CompilationDependencies_1_1CompilationDependencyEqual.html", null ],
     [ "v8::internal::compiler::CompilationDependencies::CompilationDependencyHash", "structv8_1_1internal_1_1compiler_1_1CompilationDependencies_1_1CompilationDependencyHash.html", null ],
+    [ "v8::ScriptCompiler::CompilationDetails", "structv8_1_1ScriptCompiler_1_1CompilationDetails.html", null ],
     [ "v8::internal::wasm::CompilationEnv", "structv8_1_1internal_1_1wasm_1_1CompilationEnv.html", null ],
     [ "v8::internal::wasm::CompilationEventCallback", "classv8_1_1internal_1_1wasm_1_1CompilationEventCallback.html", [
       [ "v8::internal::wasm::AsyncCompileJob::CompilationStateCallback", "classv8_1_1internal_1_1wasm_1_1AsyncCompileJob_1_1CompilationStateCallback.html", null ]
@@ -2008,6 +2130,7 @@ var hierarchy =
     [ "v8::internal::wasm::CompilationResultResolver", "classv8_1_1internal_1_1wasm_1_1CompilationResultResolver.html", null ],
     [ "v8::internal::wasm::CompilationState", "classv8_1_1internal_1_1wasm_1_1CompilationState.html", null ],
     [ "v8::internal::CompiledReplacement", "classv8_1_1internal_1_1CompiledReplacement.html", null ],
+    [ "v8::CompiledWasmModule", "classv8_1_1CompiledWasmModule.html", null ],
     [ "v8::internal::wasm::AsyncCompileJob::CompileStep", "classv8_1_1internal_1_1wasm_1_1AsyncCompileJob_1_1CompileStep.html", [
       [ "v8::internal::wasm::AsyncCompileJob::DecodeModule", "classv8_1_1internal_1_1wasm_1_1AsyncCompileJob_1_1DecodeModule.html", null ],
       [ "v8::internal::wasm::AsyncCompileJob::Fail", "classv8_1_1internal_1_1wasm_1_1AsyncCompileJob_1_1Fail.html", null ],
@@ -2031,6 +2154,7 @@ var hierarchy =
     [ "v8::internal::CompressedZonePtr< T >", "classv8_1_1internal_1_1CompressedZonePtr.html", null ],
     [ "v8::internal::ClassBoilerplate::ComputedEntryFlags", "structv8_1_1internal_1_1ClassBoilerplate_1_1ComputedEntryFlags.html", null ],
     [ "v8::internal::compiler::ComputeSchedulePhase", "structv8_1_1internal_1_1compiler_1_1ComputeSchedulePhase.html", null ],
+    [ "v8::internal::PagedSpaceBase::ConcurrentAllocationMutex", "classv8_1_1internal_1_1PagedSpaceBase_1_1ConcurrentAllocationMutex.html", null ],
     [ "v8::internal::baseline::ConcurrentBaselineCompiler", "classv8_1_1internal_1_1baseline_1_1ConcurrentBaselineCompiler.html", null ],
     [ "v8::internal::Sweeper::ConcurrentMajorSweeper", "classv8_1_1internal_1_1Sweeper_1_1ConcurrentMajorSweeper.html", null ],
     [ "cppgc::internal::ConcurrentMarkerBase", "classcppgc_1_1internal_1_1ConcurrentMarkerBase.html", [
@@ -2046,7 +2170,9 @@ var hierarchy =
       ] ]
     ] ],
     [ "v8::internal::torque::ConditionalAnnotation", "structv8_1_1internal_1_1torque_1_1ConditionalAnnotation.html", null ],
+    [ "v8::internal::ConditionalChain::ConditionalChainEntry", "structv8_1_1internal_1_1ConditionalChain_1_1ConditionalChainEntry.html", null ],
     [ "v8::internal::compiler::FlagsContinuationT< Adapter >::ConditionalCompare", "structv8_1_1internal_1_1compiler_1_1FlagsContinuationT_1_1ConditionalCompare.html", null ],
+    [ "cppgc::internal::MarkingWorklists::ExternalMarkingWorklist::ConditionalMutexGuard< AccessMode >", "structcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist_1_1ConditionalMutexGuard.html", null ],
     [ "cppgc::internal::MarkingWorklists::ExternalMarkingWorklist::ConditionalMutexGuard< AccessMode::kAtomic >", "structcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist_1_1ConditionalMutexGuard_3_01AccessMode_1_1kAtomic_01_4.html", null ],
     [ "cppgc::internal::MarkingWorklists::ExternalMarkingWorklist::ConditionalMutexGuard< AccessMode::kNonAtomic >", "structcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist_1_1ConditionalMutexGuard_0ac28523d4de27304205f0bb331fe997.html", null ],
     [ "v8::base::ConditionVariable", "classv8_1_1base_1_1ConditionVariable.html", [
@@ -2098,12 +2224,14 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::detail::ConstOrVTypeHelper< T, std::void_t< ConstOrV< T > > >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1ConstOrVTypeHelper_3_01T_00_01std_1_a4bd34144963fcf2b212b15396aa142b.html", null ],
     [ "v8::internal::ConstPageRange", "classv8_1_1internal_1_1ConstPageRange.html", null ],
     [ "v8::internal::ConstPool", "classv8_1_1internal_1_1ConstPool.html", null ],
+    [ "v8::internal::compiler::LoopVariableOptimizer::Constraint", "structv8_1_1internal_1_1compiler_1_1LoopVariableOptimizer_1_1Constraint.html", null ],
     [ "v8::internal::compiler::ConstructForwardVarargsParameters", "classv8_1_1internal_1_1compiler_1_1ConstructForwardVarargsParameters.html", null ],
     [ "v8::internal::maglev::DeoptFrame::ConstructInvokeStubFrameData", "structv8_1_1internal_1_1maglev_1_1DeoptFrame_1_1ConstructInvokeStubFrameData.html", null ],
     [ "v8::internal::compiler::NodeHashCache::Constructor", "classv8_1_1internal_1_1compiler_1_1NodeHashCache_1_1Constructor.html", null ],
     [ "v8::internal::ConstructorBuiltins", "classv8_1_1internal_1_1ConstructorBuiltins.html", null ],
     [ "v8::internal::compiler::ConstructParameters", "classv8_1_1internal_1_1compiler_1_1ConstructParameters.html", null ],
     [ "v8::internal::ConstructStubFrameInfo", "classv8_1_1internal_1_1ConstructStubFrameInfo.html", null ],
+    [ "v8::ScriptCompiler::ConsumeCodeCacheTask", "classv8_1_1ScriptCompiler_1_1ConsumeCodeCacheTask.html", null ],
     [ "v8::internal::ConsumedPreparseData", "classv8_1_1internal_1_1ConsumedPreparseData.html", [
       [ "v8::internal::BaseConsumedPreparseData< Tagged< PreparseData > >", "classv8_1_1internal_1_1BaseConsumedPreparseData.html", [
         [ "v8::internal::OnHeapConsumedPreparseData", "classv8_1_1internal_1_1OnHeapConsumedPreparseData.html", null ]
@@ -2128,7 +2256,10 @@ var hierarchy =
     ] ],
     [ "v8::ContainsOnlyOneByteHelper", "classv8_1_1ContainsOnlyOneByteHelper.html", null ],
     [ "v8::internal::compiler::ContextAccess", "classv8_1_1internal_1_1compiler_1_1ContextAccess.html", null ],
+    [ "v8::internal::DebugEvaluate::ContextBuilder", "classv8_1_1internal_1_1DebugEvaluate_1_1ContextBuilder.html", null ],
+    [ "v8::internal::DebugEvaluate::ContextBuilder::ContextChainElement", "structv8_1_1internal_1_1DebugEvaluate_1_1ContextBuilder_1_1ContextChainElement.html", null ],
     [ "v8::internal::ContextFilter", "classv8_1_1internal_1_1ContextFilter.html", null ],
+    [ "v8::metrics::Recorder::ContextId", "classv8_1_1metrics_1_1Recorder_1_1ContextId.html", null ],
     [ "v8::internal::interpreter::BytecodeGenerator::ContextScope", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ContextScope.html", null ],
     [ "v8::base::ContextualVariable< Derived, VarType >", "classv8_1_1base_1_1ContextualVariable.html", [
       [ "v8::base::ContextualVariableWithDefault< Derived, VarType, default_args >", "classv8_1_1base_1_1ContextualVariableWithDefault.html", null ],
@@ -2169,10 +2300,9 @@ var hierarchy =
       [ "v8::internal::interpreter::BytecodeGenerator::ControlScopeForTryFinally", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScopeForTryFinally.html", null ]
     ] ],
     [ "v8::internal::compiler::turboshaft::ControlState", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ControlState.html", null ],
-    [ "ConvertableToTraceFormat", null, [
+    [ "v8::ConvertableToTraceFormat", "classv8_1_1ConvertableToTraceFormat.html", [
       [ "v8::tracing::TracedValue", "classv8_1_1tracing_1_1TracedValue.html", null ]
     ] ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CopyFastSmiOrObjectElements", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CopyFastSmiOrObjectElements.html", null ],
     [ "v8::internal::maglev::detail::CopyForDeferredByValue< T, Enable >", "structv8_1_1internal_1_1maglev_1_1detail_1_1CopyForDeferredByValue.html", [
       [ "v8::internal::maglev::detail::CopyForDeferredHelper< T, typename std::enable_if< std::is_arithmetic< T >::value >::type >", "structv8_1_1internal_1_1maglev_1_1detail_1_1CopyForDeferredHelper_3_01T_00_01typename_01std_1_1efa51a72949e14fbfd18fe92e9bddfd7f.html", null ],
       [ "v8::internal::maglev::detail::CopyForDeferredHelper< T, typename std::enable_if< std::is_base_of< compiler::ObjectRef, T >::value >::type >", "structv8_1_1internal_1_1maglev_1_1detail_1_1CopyForDeferredHelper_3_01T_00_01typename_01std_1_1e05ee1e4a49c07d3ccfad8047559e9129.html", null ],
@@ -2241,16 +2371,25 @@ var hierarchy =
     [ "v8::internal::CppClassNamesAsHeapObjectNameScope", "classv8_1_1internal_1_1CppClassNamesAsHeapObjectNameScope.html", null ],
     [ "v8::internal::CppGraphBuilder", "classv8_1_1internal_1_1CppGraphBuilder.html", null ],
     [ "v8::internal::CppGraphBuilderImpl", "classv8_1_1internal_1_1CppGraphBuilderImpl.html", null ],
-    [ "v8::CppHeap", null, [
+    [ "v8::CppHeap", "classv8_1_1CppHeap.html", [
       [ "v8::internal::CppHeap", "classv8_1_1internal_1_1CppHeap.html", null ]
     ] ],
+    [ "v8::CppHeapCreateParams", "structv8_1_1CppHeapCreateParams.html", null ],
+    [ "v8::CppHeapPointerTagRange", "structv8_1_1CppHeapPointerTagRange.html", null ],
     [ "v8::internal::CppMarkingState", "classv8_1_1internal_1_1CppMarkingState.html", null ],
     [ "v8::base::CPU", "classv8_1_1base_1_1CPU.html", null ],
     [ "v8::internal::CpuFeatureScope", "classv8_1_1internal_1_1CpuFeatureScope.html", null ],
+    [ "v8::CpuProfile", "classv8_1_1CpuProfile.html", null ],
     [ "v8::internal::CpuProfile", "classv8_1_1internal_1_1CpuProfile.html", null ],
+    [ "v8::CpuProfileDeoptFrame", "structv8_1_1CpuProfileDeoptFrame.html", null ],
+    [ "v8::CpuProfileDeoptInfo", "structv8_1_1CpuProfileDeoptInfo.html", null ],
     [ "v8::internal::CpuProfileJSONSerializer", "classv8_1_1internal_1_1CpuProfileJSONSerializer.html", null ],
+    [ "v8::CpuProfileNode", "classv8_1_1CpuProfileNode.html", null ],
+    [ "v8::CpuProfiler", "classv8_1_1CpuProfiler.html", null ],
     [ "v8::internal::CpuProfiler", "classv8_1_1internal_1_1CpuProfiler.html", null ],
     [ "v8::internal::CpuProfilesCollection", "classv8_1_1internal_1_1CpuProfilesCollection.html", null ],
+    [ "v8::CpuProfilingOptions", "classv8_1_1CpuProfilingOptions.html", null ],
+    [ "v8::CpuProfilingResult", "structv8_1_1CpuProfilingResult.html", null ],
     [ "v8::internal::CPURegList", "classv8_1_1internal_1_1CPURegList.html", null ],
     [ "v8::internal::compiler::CreateArrayIteratorParameters", "classv8_1_1internal_1_1compiler_1_1CreateArrayIteratorParameters.html", null ],
     [ "v8::internal::interpreter::CreateArrayLiteralFlags", "classv8_1_1internal_1_1interpreter_1_1CreateArrayLiteralFlags.html", null ],
@@ -2259,10 +2398,10 @@ var hierarchy =
     [ "v8::internal::interpreter::CreateClosureFlags", "classv8_1_1internal_1_1interpreter_1_1CreateClosureFlags.html", null ],
     [ "v8::internal::compiler::CreateClosureParameters", "classv8_1_1internal_1_1compiler_1_1CreateClosureParameters.html", null ],
     [ "v8::internal::compiler::CreateCollectionIteratorParameters", "classv8_1_1internal_1_1compiler_1_1CreateCollectionIteratorParameters.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CreateFunctionContext< B >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CreateFunctionContext.html", null ],
     [ "v8::internal::compiler::CreateFunctionContextParameters", "classv8_1_1internal_1_1compiler_1_1CreateFunctionContextParameters.html", null ],
     [ "v8::internal::compiler::CreateLiteralParameters", "classv8_1_1internal_1_1compiler_1_1CreateLiteralParameters.html", null ],
     [ "v8::internal::interpreter::CreateObjectLiteralFlags", "classv8_1_1internal_1_1interpreter_1_1CreateObjectLiteralFlags.html", null ],
+    [ "v8::Isolate::CreateParams", "structv8_1_1Isolate_1_1CreateParams.html", null ],
     [ "v8::base::CreateSemaphoreTrait< N >", "structv8_1_1base_1_1CreateSemaphoreTrait.html", null ],
     [ "v8::internal::CrossHeapRememberedSet", "classv8_1_1internal_1_1CrossHeapRememberedSet.html", null ],
     [ "v8::internal::compiler::turboshaft::CsaBranchEliminationPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CsaBranchEliminationPhase.html", null ],
@@ -2272,29 +2411,121 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::CsaLoadEliminationPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CsaLoadEliminationPhase.html", null ],
     [ "v8::internal::compiler::CsaOptimizationPhase", "structv8_1_1internal_1_1compiler_1_1CsaOptimizationPhase.html", null ],
     [ "v8::internal::compiler::turboshaft::CsaOptimizePhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CsaOptimizePhase.html", null ],
+    [ "v8::CTypeInfo", "classv8_1_1CTypeInfo.html", null ],
+    [ "v8::CTypeInfoBuilder< T, Flags >", "classv8_1_1CTypeInfoBuilder.html", null ],
+    [ "v8::internal::CTypeInfoTraits< type >", "structv8_1_1internal_1_1CTypeInfoTraits.html", null ],
     [ "v8::internal::wasm::WasmEngine::CurrentGCInfo", "structv8_1_1internal_1_1wasm_1_1WasmEngine_1_1CurrentGCInfo.html", null ],
     [ "v8::internal::compiler::CurrentHeapBrokerScope", "classv8_1_1internal_1_1compiler_1_1CurrentHeapBrokerScope.html", null ],
     [ "v8::internal::interpreter::BytecodeGenerator::CurrentScope", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1CurrentScope.html", null ],
+    [ "cppgc::internal::FinalizerTraitImpl< T, true >::Custom", "structcppgc_1_1internal_1_1FinalizerTraitImpl_3_01T_00_01true_01_4_1_1Custom.html", null ],
     [ "v8::internal::wasm::CustomSectionOffset", "structv8_1_1internal_1_1wasm_1_1CustomSectionOffset.html", null ],
+    [ "cppgc::CustomSpaceBase", "classcppgc_1_1CustomSpaceBase.html", [
+      [ "cppgc::CustomSpace< ConcreteCustomSpace >", "classcppgc_1_1CustomSpace.html", null ]
+    ] ],
+    [ "cppgc::CustomSpaceIndex", "structcppgc_1_1CustomSpaceIndex.html", null ],
+    [ "v8::CustomSpaceStatisticsReceiver", "classv8_1_1CustomSpaceStatisticsReceiver.html", null ],
     [ "v8::internal::wasm::CWasmArgumentsPacker", "classv8_1_1internal_1_1wasm_1_1CWasmArgumentsPacker.html", null ],
     [ "v8::D8Testing", "classv8_1_1D8Testing.html", null ],
     [ "v8::internal::wasm::DanglingExceptions", "structv8_1_1internal_1_1wasm_1_1DanglingExceptions.html", null ],
+    [ "v8::Data", "classv8_1_1Data.html", [
+      [ "v8::CompileHintsCollector", "classv8_1_1CompileHintsCollector.html", null ],
+      [ "v8::Context", "classv8_1_1Context.html", null ],
+      [ "v8::FixedArray", "classv8_1_1FixedArray.html", null ],
+      [ "v8::Module", "classv8_1_1Module.html", null ],
+      [ "v8::ModuleRequest", "classv8_1_1ModuleRequest.html", null ],
+      [ "v8::PrimitiveArray", "classv8_1_1PrimitiveArray.html", null ],
+      [ "v8::Private", "classv8_1_1Private.html", null ],
+      [ "v8::Script", "classv8_1_1Script.html", null ],
+      [ "v8::Signature", "classv8_1_1Signature.html", null ],
+      [ "v8::Template", "classv8_1_1Template.html", [
+        [ "v8::FunctionTemplate", "classv8_1_1FunctionTemplate.html", null ],
+        [ "v8::ObjectTemplate", "classv8_1_1ObjectTemplate.html", null ]
+      ] ],
+      [ "v8::UnboundModuleScript", "classv8_1_1UnboundModuleScript.html", null ],
+      [ "v8::UnboundScript", "classv8_1_1UnboundScript.html", null ],
+      [ "v8::Value", "classv8_1_1Value.html", [
+        [ "v8::External", "classv8_1_1External.html", null ],
+        [ "v8::Object", "classv8_1_1Object.html", [
+          [ "v8::Array", "classv8_1_1Array.html", null ],
+          [ "v8::ArrayBuffer", "classv8_1_1ArrayBuffer.html", null ],
+          [ "v8::ArrayBufferView", "classv8_1_1ArrayBufferView.html", [
+            [ "v8::DataView", "classv8_1_1DataView.html", null ],
+            [ "v8::TypedArray", "classv8_1_1TypedArray.html", [
+              [ "v8::BigInt64Array", "classv8_1_1BigInt64Array.html", null ],
+              [ "v8::BigUint64Array", "classv8_1_1BigUint64Array.html", null ],
+              [ "v8::Float16Array", "classv8_1_1Float16Array.html", null ],
+              [ "v8::Float32Array", "classv8_1_1Float32Array.html", null ],
+              [ "v8::Float64Array", "classv8_1_1Float64Array.html", null ],
+              [ "v8::Int16Array", "classv8_1_1Int16Array.html", null ],
+              [ "v8::Int32Array", "classv8_1_1Int32Array.html", null ],
+              [ "v8::Int8Array", "classv8_1_1Int8Array.html", null ],
+              [ "v8::Uint16Array", "classv8_1_1Uint16Array.html", null ],
+              [ "v8::Uint32Array", "classv8_1_1Uint32Array.html", null ],
+              [ "v8::Uint8Array", "classv8_1_1Uint8Array.html", null ],
+              [ "v8::Uint8ClampedArray", "classv8_1_1Uint8ClampedArray.html", null ]
+            ] ]
+          ] ],
+          [ "v8::BigIntObject", "classv8_1_1BigIntObject.html", null ],
+          [ "v8::BooleanObject", "classv8_1_1BooleanObject.html", null ],
+          [ "v8::Date", "classv8_1_1Date.html", null ],
+          [ "v8::Function", "classv8_1_1Function.html", null ],
+          [ "v8::Map", "classv8_1_1Map.html", null ],
+          [ "v8::NumberObject", "classv8_1_1NumberObject.html", null ],
+          [ "v8::Promise", "classv8_1_1Promise.html", null ],
+          [ "v8::Promise::Resolver", "classv8_1_1Promise_1_1Resolver.html", null ],
+          [ "v8::Proxy", "classv8_1_1Proxy.html", null ],
+          [ "v8::RegExp", "classv8_1_1RegExp.html", null ],
+          [ "v8::Set", "classv8_1_1Set.html", null ],
+          [ "v8::SharedArrayBuffer", "classv8_1_1SharedArrayBuffer.html", null ],
+          [ "v8::StringObject", "classv8_1_1StringObject.html", null ],
+          [ "v8::SymbolObject", "classv8_1_1SymbolObject.html", null ],
+          [ "v8::WasmMemoryMapDescriptor", "classv8_1_1WasmMemoryMapDescriptor.html", null ],
+          [ "v8::WasmMemoryObject", "classv8_1_1WasmMemoryObject.html", null ],
+          [ "v8::WasmModuleObject", "classv8_1_1WasmModuleObject.html", null ],
+          [ "v8::debug::EphemeronTable", "classv8_1_1debug_1_1EphemeronTable.html", null ]
+        ] ],
+        [ "v8::Primitive", "classv8_1_1Primitive.html", [
+          [ "v8::Boolean", "classv8_1_1Boolean.html", null ],
+          [ "v8::Name", "classv8_1_1Name.html", [
+            [ "v8::String", "classv8_1_1String.html", null ],
+            [ "v8::Symbol", "classv8_1_1Symbol.html", null ]
+          ] ],
+          [ "v8::Numeric", "classv8_1_1Numeric.html", [
+            [ "v8::BigInt", "classv8_1_1BigInt.html", null ],
+            [ "v8::Number", "classv8_1_1Number.html", [
+              [ "v8::Integer", "classv8_1_1Integer.html", [
+                [ "v8::Int32", "classv8_1_1Int32.html", null ],
+                [ "v8::Uint32", "classv8_1_1Uint32.html", null ]
+              ] ]
+            ] ]
+          ] ]
+        ] ],
+        [ "v8::debug::AccessorPair", "classv8_1_1debug_1_1AccessorPair.html", null ]
+      ] ]
+    ] ],
     [ "v8::internal::maglev::MaglevGraphBuilder::BranchBuilder::Data", "unionv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1BranchBuilder_1_1Data.html", null ],
     [ "v8::internal::StringTable::Data", "classv8_1_1internal_1_1StringTable_1_1Data.html", null ],
+    [ "v8::internal::tracing::ScopedTracer::Data", "structv8_1_1internal_1_1tracing_1_1ScopedTracer_1_1Data.html", null ],
+    [ "v8::internal::wasm::InliningTree::Data", "structv8_1_1internal_1_1wasm_1_1InliningTree_1_1Data.html", null ],
     [ "v8::internal::SeqString::DataAndPaddingSizes", "structv8_1_1internal_1_1SeqString_1_1DataAndPaddingSizes.html", null ],
+    [ "v8::SerializationData::DataDeleter", "structv8_1_1SerializationData_1_1DataDeleter.html", null ],
     [ "v8::internal::PreparseDataBuilder::DataGatheringScope", "classv8_1_1internal_1_1PreparseDataBuilder_1_1DataGatheringScope.html", null ],
     [ "v8::internal::wasm::ModuleDecoderImpl::DataSegmentHeader", "structv8_1_1internal_1_1wasm_1_1ModuleDecoderImpl_1_1DataSegmentHeader.html", null ],
     [ "perfetto::DataSource", null, [
       [ "v8::internal::CodeDataSource", "classv8_1_1internal_1_1CodeDataSource.html", null ]
     ] ],
+    [ "v8::internal::BitVector::DataStorage", "unionv8_1_1internal_1_1BitVector_1_1DataStorage.html", null ],
     [ "v8::internal::DateCache", "classv8_1_1internal_1_1DateCache.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::DateCurrentTime", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1DateCurrentTime.html", null ],
     [ "v8::internal::temporal::DateRecord", "structv8_1_1internal_1_1temporal_1_1DateRecord.html", null ],
+    [ "v8::internal::DateParser::DateStringTokenizer< Char >", "classv8_1_1internal_1_1DateParser_1_1DateStringTokenizer.html", null ],
     [ "v8::internal::temporal::DateTimeRecord", "structv8_1_1internal_1_1temporal_1_1DateTimeRecord.html", null ],
+    [ "v8::internal::DateParser::DateToken", "structv8_1_1internal_1_1DateParser_1_1DateToken.html", null ],
+    [ "v8::internal::DateParser::DayComposer", "classv8_1_1internal_1_1DateParser_1_1DayComposer.html", null ],
     [ "v8::internal::compiler::turboshaft::DeadCodeAnalysis", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1DeadCodeAnalysis.html", null ],
     [ "v8::internal::maglev::DeadNodeSweepingProcessor", "classv8_1_1internal_1_1maglev_1_1DeadNodeSweepingProcessor.html", null ],
     [ "v8::internal::Debug", "classv8_1_1internal_1_1Debug.html", null ],
     [ "v8::debug::DebugDelegate", "classv8_1_1debug_1_1DebugDelegate.html", [
+      [ "v8::internal::wasm::gdb_server::GdbServer::DebugDelegate", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer_1_1DebugDelegate.html", null ],
       [ "v8_inspector::V8Debugger", "classv8__inspector_1_1V8Debugger.html", null ]
     ] ],
     [ "v8::internal::compiler::turboshaft::DebugFeatureLoweringPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1DebugFeatureLoweringPhase.html", null ],
@@ -2302,8 +2533,6 @@ var hierarchy =
     [ "v8::internal::wasm::DebugInfo", "classv8_1_1internal_1_1wasm_1_1DebugInfo.html", null ],
     [ "v8::internal::DebugInfoCollection", "classv8_1_1internal_1_1DebugInfoCollection.html", null ],
     [ "v8::internal::wasm::DebugInfoImpl", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::DebugPrint< B, Input >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1DebugPrint.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::DebugPrint", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1DebugPrint.html", null ],
     [ "v8::internal::DebugScope", "classv8_1_1internal_1_1DebugScope.html", null ],
     [ "v8::internal::wasm::DebugSideTable", "classv8_1_1internal_1_1wasm_1_1DebugSideTable.html", null ],
     [ "v8::internal::compiler::DecideSpillingModePhase", "structv8_1_1internal_1_1compiler_1_1DecideSpillingModePhase.html", null ],
@@ -2342,8 +2571,6 @@ var hierarchy =
     [ "v8::internal::torque::Declarations", "classv8_1_1internal_1_1torque_1_1Declarations.html", null ],
     [ "v8::internal::torque::DeclarationVisitor", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html", null ],
     [ "v8::internal::wasm::DecodedNameSection", "classv8_1_1internal_1_1wasm_1_1DecodedNameSection.html", null ],
-    [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeFunctionBody", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeFunctionBody.html", null ],
-    [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeModuleHeader", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeModuleHeader.html", null ],
     [ "v8::internal::wasm::Decoder", "classv8_1_1internal_1_1wasm_1_1Decoder.html", [
       [ "v8::internal::wasm::WasmDecoder< Decoder::FullValidationTag >", "classv8_1_1internal_1_1wasm_1_1WasmDecoder.html", [
         [ "v8::internal::wasm::FunctionBodyDisassembler", "classv8_1_1internal_1_1wasm_1_1FunctionBodyDisassembler.html", null ]
@@ -2360,21 +2587,30 @@ var hierarchy =
       ] ],
       [ "v8::internal::DispatchingDecoderVisitor", "classv8_1_1internal_1_1DispatchingDecoderVisitor.html", null ]
     ] ],
-    [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeSectionID", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeSectionID.html", null ],
-    [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeSectionPayload", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeSectionPayload.html", null ],
-    [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeVarInt32", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeVarInt32.html", [
-      [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeFunctionLength", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeFunctionLength.html", null ],
-      [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeNumberOfFunctions", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeNumberOfFunctions.html", null ],
-      [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeSectionLength", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeSectionLength.html", null ]
+    [ "v8::internal::wasm::AsyncStreamingDecoder::DecodingState", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodingState.html", [
+      [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeFunctionBody", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeFunctionBody.html", null ],
+      [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeModuleHeader", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeModuleHeader.html", null ],
+      [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeSectionID", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeSectionID.html", null ],
+      [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeSectionPayload", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeSectionPayload.html", null ],
+      [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeVarInt32", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeVarInt32.html", [
+        [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeFunctionLength", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeFunctionLength.html", null ],
+        [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeNumberOfFunctions", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeNumberOfFunctions.html", null ],
+        [ "v8::internal::wasm::AsyncStreamingDecoder::DecodeSectionLength", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1DecodeSectionLength.html", null ]
+      ] ]
     ] ],
     [ "v8::internal::maglev::DecompressedUseMarkingProcessor", "classv8_1_1internal_1_1maglev_1_1DecompressedUseMarkingProcessor.html", null ],
     [ "v8::internal::compiler::DecompressionOptimizationPhase", "structv8_1_1internal_1_1compiler_1_1DecompressionOptimizationPhase.html", null ],
     [ "v8::internal::compiler::turboshaft::DecompressionOptimizationPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1DecompressionOptimizationPhase.html", null ],
     [ "v8::internal::compiler::DecompressionOptimizer", "classv8_1_1internal_1_1compiler_1_1DecompressionOptimizer.html", null ],
     [ "v8::internal::compiler::Deduplicator", "classv8_1_1internal_1_1compiler_1_1Deduplicator.html", null ],
+    [ "v8::internal::compiler::turboshaft::GraphBuildingNodeProcessor::Deduplicator", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GraphBuildingNodeProcessor_1_1Deduplicator.html", null ],
+    [ "v8::internal::compiler::turboshaft::StringEscapeAnalysisReducer< Next >::Deduplicator", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringEscapeAnalysisReducer_1_1Deduplicator.html", null ],
     [ "v8::internal::torque::Deduplicator< T >", "classv8_1_1internal_1_1torque_1_1Deduplicator.html", null ],
     [ "v8::internal::torque::Deduplicator< v8::internal::torque::BuiltinPointerType >", "classv8_1_1internal_1_1torque_1_1Deduplicator.html", null ],
     [ "v8::internal::torque::Deduplicator< v8::internal::torque::UnionType >", "classv8_1_1internal_1_1torque_1_1Deduplicator.html", null ],
+    [ "v8::Context::DeepFreezeDelegate", "classv8_1_1Context_1_1DeepFreezeDelegate.html", null ],
+    [ "v8_inspector::DeepSerializationResult", "structv8__inspector_1_1DeepSerializationResult.html", null ],
+    [ "v8_inspector::DeepSerializedValue", "structv8__inspector_1_1DeepSerializedValue.html", null ],
     [ "v8::base::DefaultAllocationPolicy", "classv8_1_1base_1_1DefaultAllocationPolicy.html", null ],
     [ "v8::base::DefaultConstructTrait< T >", "structv8_1_1base_1_1DefaultConstructTrait.html", null ],
     [ "v8::base::DefaultCreateTrait< T >", "structv8_1_1base_1_1DefaultCreateTrait.html", null ],
@@ -2397,13 +2633,18 @@ var hierarchy =
     [ "v8::internal::DefineNamedOwnICNoFeedbackGenerator", "classv8_1_1internal_1_1DefineNamedOwnICNoFeedbackGenerator.html", null ],
     [ "v8::internal::compiler::DefineNamedOwnPropertyParameters", "classv8_1_1internal_1_1compiler_1_1DefineNamedOwnPropertyParameters.html", null ],
     [ "v8::internal::torque::DefinitionLocation", "classv8_1_1internal_1_1torque_1_1DefinitionLocation.html", null ],
+    [ "v8::platform::DefaultForegroundTaskRunner::DelayedEntry", "structv8_1_1platform_1_1DefaultForegroundTaskRunner_1_1DelayedEntry.html", null ],
+    [ "v8::platform::DefaultForegroundTaskRunner::DelayedEntryCompare", "structv8_1_1platform_1_1DefaultForegroundTaskRunner_1_1DelayedEntryCompare.html", null ],
+    [ "v8::internal::metrics::Recorder::DelayedEventBase", "classv8_1_1internal_1_1metrics_1_1Recorder_1_1DelayedEventBase.html", [
+      [ "v8::internal::metrics::Recorder::DelayedEvent< T >", "classv8_1_1internal_1_1metrics_1_1Recorder_1_1DelayedEvent.html", null ]
+    ] ],
     [ "v8::internal::compiler::DelayedInsertionMapCompare", "structv8_1_1internal_1_1compiler_1_1DelayedInsertionMapCompare.html", null ],
     [ "v8::internal::compiler::RegisterAllocationData::DelayedReference", "structv8_1_1internal_1_1compiler_1_1RegisterAllocationData_1_1DelayedReference.html", null ],
     [ "v8::platform::DelayedTaskQueue", "classv8_1_1platform_1_1DelayedTaskQueue.html", null ],
-    [ "ValueDeserializer::Delegate", null, [
+    [ "v8::ValueDeserializer::Delegate", "classv8_1_1ValueDeserializer_1_1Delegate.html", [
       [ "v8::Deserializer", "classv8_1_1Deserializer.html", null ]
     ] ],
-    [ "ValueSerializer::Delegate", null, [
+    [ "v8::ValueSerializer::Delegate", "classv8_1_1ValueSerializer_1_1Delegate.html", [
       [ "v8::Serializer", "classv8_1_1Serializer.html", null ]
     ] ],
     [ "v8::internal::DeleteNodesCallback", "classv8_1_1internal_1_1DeleteNodesCallback.html", null ],
@@ -2432,25 +2673,202 @@ var hierarchy =
     [ "std::deque", null, [
       [ "v8::internal::ZoneDeque< v8::internal::compiler::turboshaft::SnapshotTableEntry >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
       [ "v8::internal::ZoneDeque< v8::internal::compiler::turboshaft::SnapshotTable::SnapshotData >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
-      [ "v8::internal::ZoneDeque< EntryBuilder >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
+      [ "v8::internal::ZoneDeque< v8::internal::SafepointTableBuilder::EntryBuilder >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
       [ "v8::internal::ZoneDeque< v8::internal::compiler::DeoptimizationExit * >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
       [ "v8::internal::ZoneDeque< v8::internal::Handle< v8::internal::TrustedObject > >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
       [ "v8::internal::ZoneDeque< v8::internal::DeoptimizationLiteral >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
       [ "v8::internal::ZoneDeque< Node * >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
-      [ "v8::internal::ZoneDeque< ScheduleGraphNode * >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
+      [ "v8::internal::ZoneDeque< v8::internal::compiler::InstructionScheduler::ScheduleGraphNode * >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
       [ "v8::internal::ZoneDeque< v8::internal::compiler::BasicBlock * >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
       [ "v8::internal::ZoneDeque< v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo * >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
       [ "v8::internal::ZoneDeque< v8::internal::maglev::LoopEffects * >", "classv8_1_1internal_1_1ZoneDeque.html", null ],
       [ "v8::internal::ZoneDeque< T >", "classv8_1_1internal_1_1ZoneDeque.html", null ]
     ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< Derived >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", null ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< Derived >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", null ],
     [ "v8::internal::Descriptor", "classv8_1_1internal_1_1Descriptor.html", null ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< Abort >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Abort", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Abort.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< BigIntUnaryOp >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::BigIntUnaryOp", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1BigIntUnaryOp.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< CheckTurbofanType >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CheckTurbofanType", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CheckTurbofanType.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< CheckTurboshaftFloat32Type >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CheckTurboshaftFloat32Type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CheckTurboshaftFloat32Type.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< CheckTurboshaftFloat64Type >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CheckTurboshaftFloat64Type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CheckTurboshaftFloat64Type.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< CheckTurboshaftWord32Type >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CheckTurboshaftWord32Type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CheckTurboshaftWord32Type.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< CheckTurboshaftWord64Type >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CheckTurboshaftWord64Type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CheckTurboshaftWord64Type.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< CopyFastSmiOrObjectElements >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CopyFastSmiOrObjectElements", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CopyFastSmiOrObjectElements.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< CreateFunctionContext< B > >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::CreateFunctionContext< B >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CreateFunctionContext.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< DateCurrentTime >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::DateCurrentTime", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1DateCurrentTime.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< DebugPrint >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::DebugPrint", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1DebugPrint.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< DebugPrint< B, Input > >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::DebugPrint< B, Input >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1DebugPrint.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< FastNewClosure >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::FastNewClosure", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1FastNewClosure.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< FindOrderedHashEntry< B > >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::FindOrderedHashEntry< B >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1FindOrderedHashEntry.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< GrowFastElements< B > >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::GrowFastElements< B >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1GrowFastElements.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< HandleNoHeapWritesInterrupts >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::HandleNoHeapWritesInterrupts", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1HandleNoHeapWritesInterrupts.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< HasInPrototypeChain >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::HasInPrototypeChain", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1HasInPrototypeChain.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< NewArgumentsElements< B > >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::NewArgumentsElements< B >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1NewArgumentsElements.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< NewClosure >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::NewClosure", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1NewClosure.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< NewClosure_Tenured >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::NewClosure_Tenured", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1NewClosure__Tenured.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< NonNumberToNumber >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::NonNumberToNumber", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1NonNumberToNumber.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< NonNumberToNumeric >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::NonNumberToNumeric", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1NonNumberToNumeric.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< NumberToString >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::NumberToString", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1NumberToString.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< PlainPrimitiveToNumber >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::PlainPrimitiveToNumber", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1PlainPrimitiveToNumber.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< PropagateException >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::PropagateException", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1PropagateException.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< ReThrow >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ReThrow", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ReThrow.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< SameValue >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::SameValue", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1SameValue.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< SameValueNumbersOnly >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::SameValueNumbersOnly", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1SameValueNumbersOnly.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< StackGuard >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::StackGuard", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1StackGuard.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< StackGuardWithGap >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::StackGuardWithGap", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1StackGuardWithGap.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< StringAdd_CheckNone >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringAdd_CheckNone", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringAdd__CheckNone.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< StringCharCodeAt >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::StringCharCodeAt", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1StringCharCodeAt.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< StringCompare >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringCompare", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringCompare.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< StringComparison< B > >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringComparison< B >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringComparison.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< StringEqual >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringEqual", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringEqual.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< StringFromCodePointAt >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringFromCodePointAt", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringFromCodePointAt.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< StringIndexOf >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringIndexOf", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringIndexOf.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< StringSubstring >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringSubstring", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringSubstring.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< StringToNumber >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringToNumber", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringToNumber.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< SymbolDescriptiveString >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::SymbolDescriptiveString", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1SymbolDescriptiveString.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< TerminateExecution >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::TerminateExecution", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TerminateExecution.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< ThrowAccessedUninitializedVariable >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowAccessedUninitializedVariable", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowAccessedUninitializedVariable.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< ThrowCalledNonCallable >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowCalledNonCallable", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowCalledNonCallable.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< ThrowConstructorReturnedNonObject >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowConstructorReturnedNonObject", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowConstructorReturnedNonObject.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< ThrowInvalidStringLength >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowInvalidStringLength", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowInvalidStringLength.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< ThrowNotSuperConstructor >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowNotSuperConstructor", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowNotSuperConstructor.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< ThrowSuperAlreadyCalledError >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowSuperAlreadyCalledError", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowSuperAlreadyCalledError.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< ThrowSuperNotCalled >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowSuperNotCalled", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowSuperNotCalled.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< ToBoolean >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::ToBoolean", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1ToBoolean.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< ToNumber >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::ToNumber", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1ToNumber.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< ToNumeric >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::ToNumeric", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1ToNumeric.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< ToObject >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::ToObject", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1ToObject.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< ToString >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::ToString", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1ToString.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< TransitionElementsKind >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::TransitionElementsKind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TransitionElementsKind.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< TryMigrateInstance >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::TryMigrateInstance", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstance.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< TryMigrateInstanceAndMarkMapAsMigrationTarget >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::TryMigrateInstanceAndMarkMapAsMigrationTarget", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstanceAndMarkMapAsMigrationTarget.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Descriptor< Typeof >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", [
+      [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Typeof", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Typeof.html", null ]
+    ] ],
     [ "v8::internal::DescriptorArrayMarkingState", "classv8_1_1internal_1_1DescriptorArrayMarkingState.html", null ],
     [ "v8::internal::PrototypeCheckAssembler::DescriptorIndexNameValue", "structv8_1_1internal_1_1PrototypeCheckAssembler_1_1DescriptorIndexNameValue.html", null ],
     [ "v8::internal::DescriptorLookupCache", "classv8_1_1internal_1_1DescriptorLookupCache.html", null ],
     [ "v8::internal::wasm::DeserializationQueue", "classv8_1_1internal_1_1wasm_1_1DeserializationQueue.html", null ],
     [ "v8::internal::wasm::DeserializationUnit", "structv8_1_1internal_1_1wasm_1_1DeserializationUnit.html", null ],
+    [ "v8::DeserializeAPIWrapperCallback", "structv8_1_1DeserializeAPIWrapperCallback.html", null ],
+    [ "v8::DeserializeContextDataCallback", "structv8_1_1DeserializeContextDataCallback.html", null ],
     [ "v8::internal::DeserializeEmbedderFieldsCallback", "structv8_1_1internal_1_1DeserializeEmbedderFieldsCallback.html", null ],
+    [ "v8::DeserializeInternalFieldsCallback", "structv8_1_1DeserializeInternalFieldsCallback.html", null ],
     [ "v8::bigint::Processor::Destroyer", "classv8_1_1bigint_1_1Processor_1_1Destroyer.html", null ],
+    [ "cppgc::internal::FinalizerTraitImpl< T, true >::Destructor", "structcppgc_1_1internal_1_1FinalizerTraitImpl_3_01T_00_01true_01_4_1_1Destructor.html", null ],
     [ "v8::internal::DetachableVectorBase", "classv8_1_1internal_1_1DetachableVectorBase.html", [
       [ "v8::internal::DetachableVector< Address * >", "classv8_1_1internal_1_1DetachableVector.html", null ],
       [ "v8::internal::DetachableVector< v8::internal::Tagged< v8::internal::NativeContext > >", "classv8_1_1internal_1_1DetachableVector.html", null ],
@@ -2458,17 +2876,21 @@ var hierarchy =
       [ "v8::internal::DetachableVector< T >", "classv8_1_1internal_1_1DetachableVector.html", null ]
     ] ],
     [ "v8::internal::Heap::DevToolsTraceEventScope", "classv8_1_1internal_1_1Heap_1_1DevToolsTraceEventScope.html", null ],
+    [ "v8::internal::compiler::ControlEquivalence::DFSStackEntry", "structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1DFSStackEntry.html", null ],
     [ "v8::internal::compiler::Diamond", "structv8_1_1internal_1_1compiler_1_1Diamond.html", null ],
     [ "Dictionary", null, [
       [ "v8::internal::NumberDictionary", "classv8_1_1internal_1_1NumberDictionary.html", null ],
       [ "v8::internal::SimpleNumberDictionary", "classv8_1_1internal_1_1SimpleNumberDictionary.html", null ]
     ] ],
+    [ "v8::DictionaryTemplate", "classv8_1_1DictionaryTemplate.html", null ],
     [ "v8::bigint::Digits", "classv8_1_1bigint_1_1Digits.html", [
       [ "v8::bigint::RWDigits", "classv8_1_1bigint_1_1RWDigits.html", [
         [ "v8::bigint::ScratchDigits", "classv8_1_1bigint_1_1ScratchDigits.html", null ]
       ] ],
       [ "v8::bigint::ShiftedDigits", "classv8_1_1bigint_1_1ShiftedDigits.html", null ]
     ] ],
+    [ "cppgc::internal::DijkstraWriteBarrierPolicy", "structcppgc_1_1internal_1_1DijkstraWriteBarrierPolicy.html", null ],
+    [ "v8::internal::wasm::WasmFunctionBuilder::DirectCallIndex", "structv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder_1_1DirectCallIndex.html", null ],
     [ "v8::internal::DirectHandleVector< T >", "classv8_1_1internal_1_1DirectHandleVector.html", null ],
     [ "v8::internal::DirectHandleVector< v8::internal::AccessorInfo >", "classv8_1_1internal_1_1DirectHandleVector.html", null ],
     [ "v8::internal::DirectHandleVector< v8::internal::AllocationSite >", "classv8_1_1internal_1_1DirectHandleVector.html", null ],
@@ -2480,9 +2902,13 @@ var hierarchy =
     [ "v8::internal::DisableBreak", "classv8_1_1internal_1_1DisableBreak.html", null ],
     [ "v8::debug::DisableBreakScope", "classv8_1_1debug_1_1DisableBreakScope.html", null ],
     [ "v8::internal::DisableConservativeStackScanningScopeForTesting", "classv8_1_1internal_1_1DisableConservativeStackScanningScopeForTesting.html", null ],
+    [ "cppgc::internal::DisabledCheckingPolicy", "classcppgc_1_1internal_1_1DisabledCheckingPolicy.html", null ],
+    [ "v8::internal::Deserializer< IsolateT >::DisableGCStats", "classv8_1_1internal_1_1Deserializer_1_1DisableGCStats.html", null ],
     [ "v8::internal::DisableTemporaryObjectTracking", "classv8_1_1internal_1_1DisableTemporaryObjectTracking.html", null ],
     [ "v8::internal::compiler::turboshaft::DisableValueNumbering", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1DisableValueNumbering.html", null ],
+    [ "cppgc::subtle::DisallowGarbageCollectionScope", "classcppgc_1_1subtle_1_1DisallowGarbageCollectionScope.html", null ],
     [ "v8::internal::DisallowHeapAccessIf", "classv8_1_1internal_1_1DisallowHeapAccessIf.html", null ],
+    [ "v8::Isolate::DisallowJavascriptExecutionScope", "classv8_1_1Isolate_1_1DisallowJavascriptExecutionScope.html", null ],
     [ "v8::ShellOptions::DisallowReassignment< T, kAllowIdenticalAssignment >", "classv8_1_1ShellOptions_1_1DisallowReassignment.html", null ],
     [ "v8::ShellOptions::DisallowReassignment< bool >", "classv8_1_1ShellOptions_1_1DisallowReassignment.html", null ],
     [ "v8::ShellOptions::DisallowReassignment< CodeCacheOptions, true >", "classv8_1_1ShellOptions_1_1DisallowReassignment.html", null ],
@@ -2496,6 +2922,7 @@ var hierarchy =
     [ "v8::debug::DisassemblyCollector", "classv8_1_1debug_1_1DisassemblyCollector.html", [
       [ "v8_inspector::DisassemblyCollectorImpl", "classv8__inspector_1_1DisassemblyCollectorImpl.html", null ]
     ] ],
+    [ "v8::DiscardedSamplesDelegate", "classv8_1_1DiscardedSamplesDelegate.html", null ],
     [ "v8::base::DiscriminatedUnion< TagEnum, Ts >", "classv8_1_1base_1_1DiscriminatedUnion.html", null ],
     [ "v8::base::DiscriminatedUnion< FrameType, InterpretedFrameData, InlinedArgumentsFrameData, ConstructInvokeStubFrameData, BuiltinContinuationFrameData >", "classv8_1_1base_1_1DiscriminatedUnion.html", null ],
     [ "v8::internal::wasm::DisjointAllocationPool", "classv8_1_1internal_1_1wasm_1_1DisjointAllocationPool.html", null ],
@@ -2524,6 +2951,7 @@ var hierarchy =
     ] ],
     [ "v8::base::Double", "classv8_1_1base_1_1Double.html", null ],
     [ "v8::internal::compiler::PersistentMap< Key, Value, Hasher >::double_iterator", "classv8_1_1internal_1_1compiler_1_1PersistentMap_1_1double__iterator.html", null ],
+    [ "v8::internal::maglev::VirtualObject::DoubleArray", "structv8_1_1internal_1_1maglev_1_1VirtualObject_1_1DoubleArray.html", null ],
     [ "v8::internal::compiler::DoubleEndedSplitVector< T >", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html", null ],
     [ "v8::internal::compiler::DoubleEndedSplitVector< UseInterval >", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html", null ],
     [ "v8::internal::compiler::DoubleEndedSplitVector< UsePosition * >", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html", null ],
@@ -2549,6 +2977,7 @@ var hierarchy =
     [ "v8::DynamicImportData", "structv8_1_1DynamicImportData.html", null ],
     [ "v8::internal::compiler::EarlyGraphTrimmingPhase", "structv8_1_1internal_1_1compiler_1_1EarlyGraphTrimmingPhase.html", null ],
     [ "v8::internal::compiler::EarlyOptimizationPhase", "structv8_1_1internal_1_1compiler_1_1EarlyOptimizationPhase.html", null ],
+    [ "cppgc::internal::EatParams< typename >", "structcppgc_1_1internal_1_1EatParams.html", null ],
     [ "v8::internal::EatsAtLeastInfo", "structv8_1_1internal_1_1EatsAtLeastInfo.html", null ],
     [ "unibrow::Ecma262Canonicalize", "structunibrow_1_1Ecma262Canonicalize.html", null ],
     [ "unibrow::Ecma262UnCanonicalize", "structunibrow_1_1Ecma262UnCanonicalize.html", null ],
@@ -2560,9 +2989,11 @@ var hierarchy =
     [ "v8::internal::compiler::AdvancedReducer::Editor", "classv8_1_1internal_1_1compiler_1_1AdvancedReducer_1_1Editor.html", null ],
     [ "v8::internal::compiler::turboshaft::EffectDimensions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1EffectDimensions.html", null ],
     [ "v8::internal::compiler::EffectGraphReducer", "classv8_1_1internal_1_1compiler_1_1EffectGraphReducer.html", null ],
+    [ "v8::internal::compiler::RedundancyElimination::EffectPathChecks", "classv8_1_1internal_1_1compiler_1_1RedundancyElimination_1_1EffectPathChecks.html", null ],
     [ "v8::internal::EhFrameIterator", "classv8_1_1internal_1_1EhFrameIterator.html", null ],
     [ "v8::internal::EhFrameWriter", "classv8_1_1internal_1_1EhFrameWriter.html", null ],
     [ "v8::base::ElapsedTimer", "classv8_1_1base_1_1ElapsedTimer.html", null ],
+    [ "v8::internal::compiler::LoadElimination::AbstractElements::Element", "structv8_1_1internal_1_1compiler_1_1LoadElimination_1_1AbstractElements_1_1Element.html", null ],
     [ "v8::base::tmp::detail::element_impl< List, Index >", "structv8_1_1base_1_1tmp_1_1detail_1_1element__impl.html", [
       [ "v8::base::tmp::element< List, Index >", "structv8_1_1base_1_1tmp_1_1element.html", null ]
     ] ],
@@ -2582,8 +3013,13 @@ var hierarchy =
     [ "v8::internal::EmbeddedFileWriterInterface", "classv8_1_1internal_1_1EmbeddedFileWriterInterface.html", [
       [ "v8::internal::EmbeddedFileWriter", "classv8_1_1internal_1_1EmbeddedFileWriter.html", null ]
     ] ],
+    [ "v8::EmbedderGraph", "classv8_1_1EmbedderGraph.html", [
+      [ "v8::internal::EmbedderGraphImpl", "classv8_1_1internal_1_1EmbedderGraphImpl.html", null ]
+    ] ],
+    [ "v8::EmbedderRootsHandler", "classv8_1_1EmbedderRootsHandler.html", null ],
     [ "v8::internal::EmbedderStackStateScope", "classv8_1_1internal_1_1EmbedderStackStateScope.html", null ],
     [ "v8::internal::EmbedderState", "classv8_1_1internal_1_1EmbedderState.html", null ],
+    [ "v8::EmbedderStateScope", "classv8_1_1EmbedderStateScope.html", null ],
     [ "v8::base::EmptyBase", "structv8_1_1base_1_1EmptyBase.html", null ],
     [ "v8::internal::EmptyDoubleRegisterArray", "structv8_1_1internal_1_1EmptyDoubleRegisterArray.html", null ],
     [ "v8::internal::wasm::EmptyInterface", "classv8_1_1internal_1_1wasm_1_1EmptyInterface.html", null ],
@@ -2594,25 +3030,42 @@ var hierarchy =
       [ "v8::internal::metrics::Recorder", "classv8_1_1internal_1_1metrics_1_1Recorder.html", null ],
       [ "v8::platform::DefaultJobState", "classv8_1_1platform_1_1DefaultJobState.html", null ]
     ] ],
+    [ "v8::internal::ETWJITInterface::IsolateLoadScriptData::EnableInterruptData", "structv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData_1_1EnableInterruptData.html", null ],
     [ "v8::internal::Isolate::EnableRoAllocationForSnapshotScope", "classv8_1_1internal_1_1Isolate_1_1EnableRoAllocationForSnapshotScope.html", null ],
+    [ "v8::internal::ETWJITInterface::IsolateLoadScriptData::EnableWithFilterDataInterruptData", "structv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData_1_1EnableWithFilterDataInterruptData.html", null ],
     [ "v8::internal::EncodedCSignature", "structv8_1_1internal_1_1EncodedCSignature.html", null ],
     [ "v8::internal::ro::EncodedExternalReference", "structv8_1_1internal_1_1ro_1_1EncodedExternalReference.html", null ],
     [ "v8::internal::ro::EncodedTagged", "structv8_1_1internal_1_1ro_1_1EncodedTagged.html", null ],
     [ "unibrow::Utf8::EncodingResult", "structunibrow_1_1Utf8_1_1EncodingResult.html", null ],
     [ "v8::base::DoublyThreadedList< T, DTLTraits >::end_iterator", "classv8_1_1base_1_1DoublyThreadedList_1_1end__iterator.html", null ],
     [ "v8::base::IntrusiveSet< T, GetIntrusiveSetIndex, Container >::end_iterator", "classv8_1_1base_1_1IntrusiveSet_1_1end__iterator.html", null ],
+    [ "v8::internal::BitVector::Iterator::EndTag", "structv8_1_1internal_1_1BitVector_1_1Iterator_1_1EndTag.html", null ],
+    [ "v8::internal::compiler::BytecodeLivenessState::Iterator::EndTag", "structv8_1_1internal_1_1compiler_1_1BytecodeLivenessState_1_1Iterator_1_1EndTag.html", null ],
     [ "v8::internal::SparseBitVector::Iterator::EndTag", "structv8_1_1internal_1_1SparseBitVector_1_1Iterator_1_1EndTag.html", null ],
     [ "wasm::EngineImpl", "structwasm_1_1EngineImpl.html", null ],
     [ "v8::internal::baseline::EnsureAccumulatorPreservedScope", "classv8_1_1internal_1_1baseline_1_1EnsureAccumulatorPreservedScope.html", null ],
+    [ "cppgc::internal::EnsureGCInfoIndexTrait", "structcppgc_1_1internal_1_1EnsureGCInfoIndexTrait.html", null ],
+    [ "cppgc::internal::EnsureGCInfoIndexTrait::EnsureGCInfoIndexTraitDispatch< T, bool, bool >", "structcppgc_1_1internal_1_1EnsureGCInfoIndexTrait_1_1EnsureGCInfoIndexTraitDispatch.html", null ],
     [ "v8::internal::EnsureSpace", "classv8_1_1internal_1_1EnsureSpace.html", null ],
     [ "v8::internal::HandleScopeImplementer::EnteredContextRewindScope", "classv8_1_1internal_1_1HandleScopeImplementer_1_1EnteredContextRewindScope.html", null ],
     [ "v8::internal::compiler::SpillPlacer::Entry", "classv8_1_1internal_1_1compiler_1_1SpillPlacer_1_1Entry.html", null ],
+    [ "v8::internal::compiler::turboshaft::LayeredHashMap< Key, Value >::Entry", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LayeredHashMap_1_1Entry.html", null ],
+    [ "v8::internal::compiler::turboshaft::ValueNumberingReducer< Next >::Entry", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ValueNumberingReducer_1_1Entry.html", null ],
     [ "v8::internal::interpreter::BytecodeGenerator::ControlScope::DeferredCommands::Entry", "structv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope_1_1DeferredCommands_1_1Entry.html", null ],
+    [ "v8::internal::interpreter::ConstantArrayBuilder::Entry", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder_1_1Entry.html", null ],
+    [ "v8::internal::interpreter::HandlerTableBuilder::Entry", "structv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder_1_1Entry.html", null ],
+    [ "v8::internal::SamplingCircularQueue< T, Length >::Entry", "structv8_1_1internal_1_1SamplingCircularQueue_1_1Entry.html", null ],
     [ "v8::internal::StubCache::Entry", "structv8_1_1internal_1_1StubCache_1_1Entry.html", null ],
     [ "v8::internal::torque::EnumDescription::Entry", "structv8_1_1internal_1_1torque_1_1EnumDescription_1_1Entry.html", null ],
     [ "v8::internal::wasm::DebugSideTable::Entry", "classv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1Entry.html", null ],
+    [ "v8::internal::wasm::WasmBytecodeGenerator::RollbackStack::Entry", "structv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator_1_1RollbackStack_1_1Entry.html", null ],
     [ "v8::internal::wasm::WasmModuleBuilder::WasmElemSegment::Entry", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmElemSegment_1_1Entry.html", null ],
+    [ "v8::internal::MaglevSafepointTableBuilder::EntryBuilder", "structv8_1_1internal_1_1MaglevSafepointTableBuilder_1_1EntryBuilder.html", null ],
+    [ "v8::internal::SafepointTableBuilder::EntryBuilder", "structv8_1_1internal_1_1SafepointTableBuilder_1_1EntryBuilder.html", null ],
+    [ "v8::internal::HeapObjectsMap::EntryInfo", "structv8_1_1internal_1_1HeapObjectsMap_1_1EntryInfo.html", null ],
+    [ "v8::internal::wasm::DebugSideTable::EntryPositionLess", "structv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1EntryPositionLess.html", null ],
     [ "v8::internal::EntrySourceLocation", "structv8_1_1internal_1_1EntrySourceLocation.html", null ],
+    [ "v8::internal::Isolate::EntryStackItem", "classv8_1_1internal_1_1Isolate_1_1EntryStackItem.html", null ],
     [ "v8::internal::torque::EnumDescription", "structv8_1_1internal_1_1torque_1_1EnumDescription.html", null ],
     [ "v8::internal::torque::EnumEntry", "structv8_1_1internal_1_1torque_1_1EnumEntry.html", null ],
     [ "v8::internal::EnumIndexComparator< Dictionary >", "structv8_1_1internal_1_1EnumIndexComparator.html", null ],
@@ -2631,6 +3084,7 @@ var hierarchy =
     ] ],
     [ "v8::internal::Ephemeron", "structv8_1_1internal_1_1Ephemeron.html", null ],
     [ "v8::internal::EphemeronMarking", "structv8_1_1internal_1_1EphemeronMarking.html", null ],
+    [ "cppgc::EphemeronPair< K, V >", "structcppgc_1_1EphemeronPair.html", null ],
     [ "cppgc::internal::MarkingWorklists::EphemeronPairItem", "structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem.html", null ],
     [ "v8::internal::EphemeronRememberedSet", "classv8_1_1internal_1_1EphemeronRememberedSet.html", null ],
     [ "v8::internal::compiler::FeedbackSource::Equal", "structv8_1_1internal_1_1compiler_1_1FeedbackSource_1_1Equal.html", null ],
@@ -2668,11 +3122,9 @@ var hierarchy =
       [ "v8::internal::compiler::OpEqualTo< IndirectHandle< T > >", "structv8_1_1internal_1_1compiler_1_1OpEqualTo_3_01IndirectHandle_3_01T_01_4_01_4.html", null ]
     ] ],
     [ "v8::internal::CodeEntry::Equals", "structv8_1_1internal_1_1CodeEntry_1_1Equals.html", null ],
+    [ "v8::internal::ProfileNode::Equals", "structv8_1_1internal_1_1ProfileNode_1_1Equals.html", null ],
     [ "v8::internal::Scanner::ErrorState", "classv8_1_1internal_1_1Scanner_1_1ErrorState.html", null ],
     [ "v8::internal::wasm::ErrorThrower", "classv8_1_1internal_1_1wasm_1_1ErrorThrower.html", null ],
-    [ "EscapableHandleScopeBase", null, [
-      [ "v8::InternalEscapableScope", "classv8_1_1InternalEscapableScope.html", null ]
-    ] ],
     [ "v8::internal::compiler::EscapeAnalysisPhase", "structv8_1_1internal_1_1compiler_1_1EscapeAnalysisPhase.html", null ],
     [ "v8::internal::compiler::EscapeAnalysisResult", "classv8_1_1internal_1_1compiler_1_1EscapeAnalysisResult.html", null ],
     [ "v8::internal::EternalHandles", "classv8_1_1internal_1_1EternalHandles.html", null ],
@@ -2681,12 +3133,16 @@ var hierarchy =
     [ "v8::internal::EtwTraceDebug", "classv8_1_1internal_1_1EtwTraceDebug.html", null ],
     [ "v8::internal::EvacuationAllocator", "classv8_1_1internal_1_1EvacuationAllocator.html", null ],
     [ "v8_inspector::EvaluateCallback", "classv8__inspector_1_1EvaluateCallback.html", null ],
+    [ "v8_inspector::V8InspectorSession::EvaluateResult", "structv8__inspector_1_1V8InspectorSession_1_1EvaluateResult.html", null ],
     [ "v8_inspector::V8InspectorImpl::EvaluateScope", "classv8__inspector_1_1V8InspectorImpl_1_1EvaluateScope.html", null ],
     [ "cppgc::internal::StatsCollector::Event", "structcppgc_1_1internal_1_1StatsCollector_1_1Event.html", null ],
     [ "v8::internal::GCTracer::Event", "classv8_1_1internal_1_1GCTracer_1_1Event.html", null ],
     [ "v8::internal::MemoryReducer::Event", "structv8_1_1internal_1_1MemoryReducer_1_1Event.html", null ],
+    [ "v8::Exception", "classv8_1_1Exception.html", null ],
+    [ "v8::internal::compiler::BytecodeGraphBuilder::ExceptionHandler", "structv8_1_1internal_1_1compiler_1_1BytecodeGraphBuilder_1_1ExceptionHandler.html", null ],
     [ "v8::internal::maglev::ExceptionHandlerInfo", "classv8_1_1internal_1_1maglev_1_1ExceptionHandlerInfo.html", null ],
     [ "v8::internal::wasm::WasmEHData::ExceptionPayloadSlotOffsets", "structv8_1_1internal_1_1wasm_1_1WasmEHData_1_1ExceptionPayloadSlotOffsets.html", null ],
+    [ "v8::ExceptionPropagationMessage", "classv8_1_1ExceptionPropagationMessage.html", null ],
     [ "v8::internal::Isolate::ExceptionScope", "classv8_1_1internal_1_1Isolate_1_1ExceptionScope.html", null ],
     [ "v8::internal::ExclusiveObjectLock", "classv8_1_1internal_1_1ExclusiveObjectLock.html", null ],
     [ "v8::ExecArgs", "classv8_1_1ExecArgs.html", null ],
@@ -2694,7 +3150,9 @@ var hierarchy =
     [ "v8::internal::ExistingCodeLogger", "classv8_1_1internal_1_1ExistingCodeLogger.html", null ],
     [ "v8::internal::compiler::ExitMachineGraphParameters", "classv8_1_1internal_1_1compiler_1_1ExitMachineGraphParameters.html", null ],
     [ "v8::internal::ExitPoint", "classv8_1_1internal_1_1ExitPoint.html", null ],
+    [ "cppgc::internal::ExplicitManagementImpl", "classcppgc_1_1internal_1_1ExplicitManagementImpl.html", null ],
     [ "v8::PerIsolateData::ExplicitRealmScope", "classv8_1_1PerIsolateData_1_1ExplicitRealmScope.html", null ],
+    [ "v8::internal::Parser::ExportClauseData", "structv8_1_1internal_1_1Parser_1_1ExportClauseData.html", null ],
     [ "wasm::ExportTypeImpl", "structwasm_1_1ExportTypeImpl.html", null ],
     [ "v8::internal::interpreter::BytecodeGenerator::ExpressionResultScope", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ExpressionResultScope.html", [
       [ "v8::internal::interpreter::BytecodeGenerator::EffectResultScope", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1EffectResultScope.html", null ],
@@ -2711,7 +3169,7 @@ var hierarchy =
     [ "v8::internal::torque::ExpressionWithSource", "structv8_1_1internal_1_1torque_1_1ExpressionWithSource.html", null ],
     [ "v8::internal::compiler::ExtendingLoadMatcher< Adapter >", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html", null ],
     [ "v8::internal::compiler::turboshaft::SLPTree::ExtendIntToF32x4Info", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SLPTree_1_1ExtendIntToF32x4Info.html", null ],
-    [ "v8::Extension", null, [
+    [ "v8::Extension", "classv8_1_1Extension.html", [
       [ "v8::internal::CpuTraceMarkExtension", "classv8_1_1internal_1_1CpuTraceMarkExtension.html", null ],
       [ "v8::internal::ExternalizeStringExtension", "classv8_1_1internal_1_1ExternalizeStringExtension.html", null ],
       [ "v8::internal::FuzzilliExtension", "classv8_1_1internal_1_1FuzzilliExtension.html", null ],
@@ -2721,11 +3179,12 @@ var hierarchy =
       [ "v8::internal::TriggerFailureExtension", "classv8_1_1internal_1_1TriggerFailureExtension.html", null ],
       [ "v8::internal::VTuneDomainSupportExtension", "classv8_1_1internal_1_1VTuneDomainSupportExtension.html", null ]
     ] ],
+    [ "v8::ExtensionConfiguration", "classv8_1_1ExtensionConfiguration.html", null ],
+    [ "v8::internal::Genesis::ExtensionStates", "classv8_1_1internal_1_1Genesis_1_1ExtensionStates.html", null ],
     [ "v8::internal::ExternalCallbackScope", "classv8_1_1internal_1_1ExternalCallbackScope.html", null ],
+    [ "cppgc::internal::MarkingWorklists::ExternalMarkingWorklist", "classcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist.html", null ],
+    [ "v8::ExternalMemoryAccounter", "classv8_1_1ExternalMemoryAccounter.html", null ],
     [ "v8::internal::Heap::ExternalMemoryAccounting", "classv8_1_1internal_1_1Heap_1_1ExternalMemoryAccounting.html", null ],
-    [ "String::ExternalOneByteStringResource", null, [
-      [ "v8::ExternalOwningOneByteStringResource", "classv8_1_1ExternalOwningOneByteStringResource.html", null ]
-    ] ],
     [ "v8::internal::ExternalPointerMember< tag >", "classv8_1_1internal_1_1ExternalPointerMember.html", null ],
     [ "v8::internal::ExternalPointerMember< kExternalStringResourceDataTag >", "classv8_1_1internal_1_1ExternalPointerMember.html", null ],
     [ "v8::internal::ExternalPointerMember< kExternalStringResourceTag >", "classv8_1_1internal_1_1ExternalPointerMember.html", null ],
@@ -2733,10 +3192,18 @@ var hierarchy =
     [ "v8::internal::ExternalReference", "classv8_1_1internal_1_1ExternalReference.html", null ],
     [ "v8::internal::ExternalReferenceEncoder", "classv8_1_1internal_1_1ExternalReferenceEncoder.html", null ],
     [ "v8::internal::ExternalReferenceTable", "classv8_1_1internal_1_1ExternalReferenceTable.html", null ],
-    [ "v8::ScriptCompiler::ExternalSourceStream", null, [
+    [ "v8::ExternalResourceVisitor", "classv8_1_1ExternalResourceVisitor.html", null ],
+    [ "v8::ScriptCompiler::ExternalSourceStream", "classv8_1_1ScriptCompiler_1_1ExternalSourceStream.html", [
       [ "v8::DummySourceStream", "classv8_1_1DummySourceStream.html", null ]
     ] ],
+    [ "v8::String::ExternalStringResourceBase", "classv8_1_1String_1_1ExternalStringResourceBase.html", [
+      [ "v8::String::ExternalOneByteStringResource", "classv8_1_1String_1_1ExternalOneByteStringResource.html", [
+        [ "v8::ExternalOwningOneByteStringResource", "classv8_1_1ExternalOwningOneByteStringResource.html", null ]
+      ] ],
+      [ "v8::String::ExternalStringResource", "classv8_1_1String_1_1ExternalStringResource.html", null ]
+    ] ],
     [ "v8::internal::ExternalStringStream< Char >", "classv8_1_1internal_1_1ExternalStringStream.html", null ],
+    [ "v8::internal::Heap::ExternalStringTable", "classv8_1_1internal_1_1Heap_1_1ExternalStringTable.html", null ],
     [ "wasm::ExternTypeImpl", "structwasm_1_1ExternTypeImpl.html", [
       [ "wasm::FuncTypeImpl", "structwasm_1_1FuncTypeImpl.html", null ],
       [ "wasm::GlobalTypeImpl", "structwasm_1_1GlobalTypeImpl.html", null ],
@@ -2744,6 +3211,19 @@ var hierarchy =
       [ "wasm::TableTypeImpl", "structwasm_1_1TableTypeImpl.html", null ]
     ] ],
     [ "std::false_type", null, [
+      [ "cppgc::internal::HasFinalizeGarbageCollectedObject< T, typename >", "structcppgc_1_1internal_1_1HasFinalizeGarbageCollectedObject.html", null ],
+      [ "cppgc::internal::HasGarbageCollectedMixinTypeMarker< T, typename >", "structcppgc_1_1internal_1_1HasGarbageCollectedMixinTypeMarker.html", null ],
+      [ "cppgc::internal::HasGarbageCollectedTypeMarker< T, typename >", "structcppgc_1_1internal_1_1HasGarbageCollectedTypeMarker.html", null ],
+      [ "cppgc::internal::IsGarbageCollectedMixinType< T, bool, bool >", "structcppgc_1_1internal_1_1IsGarbageCollectedMixinType.html", null ],
+      [ "cppgc::internal::IsGarbageCollectedType< T, bool >", "structcppgc_1_1internal_1_1IsGarbageCollectedType.html", null ],
+      [ "cppgc::internal::IsGarbageCollectedWithMixinType< T, bool >", "structcppgc_1_1internal_1_1IsGarbageCollectedWithMixinType.html", null ],
+      [ "cppgc::internal::IsMemberType< T, bool >", "structcppgc_1_1internal_1_1IsMemberType.html", null ],
+      [ "cppgc::internal::IsTraceMethodConst< T, typename >", "structcppgc_1_1internal_1_1IsTraceMethodConst.html", null ],
+      [ "cppgc::internal::IsTraceable< T, typename >", "structcppgc_1_1internal_1_1IsTraceable.html", null ],
+      [ "cppgc::internal::IsUntracedMemberType< T, bool >", "structcppgc_1_1internal_1_1IsUntracedMemberType.html", null ],
+      [ "cppgc::internal::IsWeak< T >", "structcppgc_1_1internal_1_1IsWeak.html", null ],
+      [ "cppgc::internal::IsWeakMemberType< T, bool >", "structcppgc_1_1internal_1_1IsWeakMemberType.html", null ],
+      [ "v8::MemorySpan< T >::is_compatible_iterator< It, typename >", "structv8_1_1MemorySpan_1_1is__compatible__iterator.html", null ],
       [ "v8::base::tmp::lazy_false< T >", "structv8_1_1base_1_1tmp_1_1lazy__false.html", null ],
       [ "v8::internal::compiler::is_ref< T >", "structv8_1_1internal_1_1compiler_1_1is__ref.html", null ],
       [ "v8::internal::compiler::turboshaft::details::ThrowingOpHasLazyDeoptOption< Op, typename >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1details_1_1ThrowingOpHasLazyDeoptOption.html", null ],
@@ -2767,6 +3247,7 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::fast_hash< SwitchOp::Case >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1fast__hash_3_01SwitchOp_1_1Case_01_4.html", null ],
     [ "v8::internal::compiler::turboshaft::fast_hash< TSCallDescriptor >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1fast__hash_3_01TSCallDescriptor_01_4.html", null ],
     [ "v8::internal::compiler::turboshaft::fast_hash< Type >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1fast__hash_3_01Type_01_4.html", null ],
+    [ "v8::FastApiCallbackOptions", "structv8_1_1FastApiCallbackOptions.html", null ],
     [ "v8::internal::compiler::fast_api_call::FastApiCallBuilder", "classv8_1_1internal_1_1compiler_1_1fast__api__call_1_1FastApiCallBuilder.html", null ],
     [ "v8::internal::compiler::FastApiCallFunction", "structv8_1_1internal_1_1compiler_1_1FastApiCallFunction.html", null ],
     [ "v8::internal::compiler::FastApiCallParameters", "classv8_1_1internal_1_1compiler_1_1FastApiCallParameters.html", null ],
@@ -2775,7 +3256,7 @@ var hierarchy =
     [ "v8::base::internal::FastIntegerArithmeticPromotion< Lhs, Rhs >", "structv8_1_1base_1_1internal_1_1FastIntegerArithmeticPromotion_3_01Lhs_00_01Rhs_01_4.html", null ],
     [ "v8::internal::FastJsonStringifier< Char >", "classv8_1_1internal_1_1FastJsonStringifier.html", null ],
     [ "v8::internal::FastKeyAccumulator", "classv8_1_1internal_1_1FastKeyAccumulator.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::FastNewClosure", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1FastNewClosure.html", null ],
+    [ "v8::FastOneByteString", "structv8_1_1FastOneByteString.html", null ],
     [ "v8::internal::wasm::FastZoneVector< T >", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html", null ],
     [ "v8::internal::wasm::FastZoneVector< Control >", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html", null ],
     [ "v8::internal::wasm::FastZoneVector< uint32_t >", "classv8_1_1internal_1_1wasm_1_1FastZoneVector.html", null ],
@@ -2798,12 +3279,18 @@ var hierarchy =
     [ "v8::internal::Map::FieldCounts", "classv8_1_1internal_1_1Map_1_1FieldCounts.html", null ],
     [ "v8::internal::wasm::FieldImmediate", "structv8_1_1internal_1_1wasm_1_1FieldImmediate.html", null ],
     [ "v8::internal::FieldIndex", "classv8_1_1internal_1_1FieldIndex.html", null ],
+    [ "v8::internal::compiler::CsaLoadElimination::FieldInfo", "structv8_1_1internal_1_1compiler_1_1CsaLoadElimination_1_1FieldInfo.html", null ],
+    [ "v8::internal::compiler::LoadElimination::FieldInfo", "structv8_1_1internal_1_1compiler_1_1LoadElimination_1_1FieldInfo.html", null ],
+    [ "v8::internal::compiler::WasmLoadElimination::FieldOrElementValue", "structv8_1_1internal_1_1compiler_1_1WasmLoadElimination_1_1FieldOrElementValue.html", null ],
     [ "v8::internal::torque::cpp::File", "classv8_1_1internal_1_1torque_1_1cpp_1_1File.html", null ],
     [ "v8::internal::MarkCompactCollector::FilterNonTrivialWeakRefJobItem", "classv8_1_1internal_1_1MarkCompactCollector_1_1FilterNonTrivialWeakRefJobItem.html", null ],
     [ "v8::internal::compiler::FinalizeCodePhase", "structv8_1_1internal_1_1compiler_1_1FinalizeCodePhase.html", null ],
     [ "v8::internal::compiler::turboshaft::FinalizeCodePhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FinalizeCodePhase.html", null ],
+    [ "cppgc::internal::FinalizerTrait< T >", "structcppgc_1_1internal_1_1FinalizerTrait.html", null ],
+    [ "cppgc::internal::FinalizerTraitImpl< T, isFinalized >", "structcppgc_1_1internal_1_1FinalizerTraitImpl.html", null ],
+    [ "cppgc::internal::FinalizerTraitImpl< T, false >", "structcppgc_1_1internal_1_1FinalizerTraitImpl_3_01T_00_01false_01_4.html", null ],
+    [ "cppgc::internal::FinalizerTraitImpl< T, true >", "structcppgc_1_1internal_1_1FinalizerTraitImpl_3_01T_00_01true_01_4.html", null ],
     [ "v8::internal::FinalizeUnoptimizedCompilationData", "classv8_1_1internal_1_1FinalizeUnoptimizedCompilationData.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::FindOrderedHashEntry< B >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1FindOrderedHashEntry.html", null ],
     [ "v8::internal::detail::FirstInvalidRegisterHelper< N, Index >", "structv8_1_1internal_1_1detail_1_1FirstInvalidRegisterHelper.html", null ],
     [ "v8::internal::detail::FirstInvalidRegisterHelper< N, N >", "structv8_1_1internal_1_1detail_1_1FirstInvalidRegisterHelper_3_01N_00_01N_01_4.html", null ],
     [ "v8::internal::FixedArrayBuilder", "classv8_1_1internal_1_1FixedArrayBuilder.html", null ],
@@ -2823,14 +3310,14 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::detail::FixedSidetable< OperationState::Liveness, OpIndex >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1FixedSidetable.html", [
       [ "v8::internal::compiler::turboshaft::FixedOpIndexSidetable< OperationState::Liveness >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FixedOpIndexSidetable.html", null ]
     ] ],
-    [ "v8::internal::compiler::turboshaft::detail::FixedSidetable< PerOperationUses, OpIndex >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1FixedSidetable.html", [
-      [ "v8::internal::compiler::turboshaft::FixedOpIndexSidetable< PerOperationUses >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FixedOpIndexSidetable.html", null ]
-    ] ],
-    [ "v8::internal::compiler::turboshaft::detail::FixedSidetable< std::optional< Snapshot >, BlockIndex >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1FixedSidetable.html", [
-      [ "v8::internal::compiler::turboshaft::FixedBlockSidetable< std::optional< Snapshot > >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FixedBlockSidetable.html", null ]
+    [ "v8::internal::compiler::turboshaft::detail::FixedSidetable< std::optional< v8::internal::compiler::turboshaft::LateLoadEliminationAnalyzer::Snapshot >, BlockIndex >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1FixedSidetable.html", [
+      [ "v8::internal::compiler::turboshaft::FixedBlockSidetable< std::optional< v8::internal::compiler::turboshaft::LateLoadEliminationAnalyzer::Snapshot > >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FixedBlockSidetable.html", null ]
     ] ],
     [ "v8::internal::compiler::turboshaft::detail::FixedSidetable< std::optional< v8::internal::compiler::turboshaft::MemoryAnalyzer::BlockState >, BlockIndex >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1FixedSidetable.html", [
       [ "v8::internal::compiler::turboshaft::FixedBlockSidetable< std::optional< v8::internal::compiler::turboshaft::MemoryAnalyzer::BlockState > >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FixedBlockSidetable.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::detail::FixedSidetable< std::optional< v8::internal::compiler::turboshaft::WasmLoadEliminationAnalyzer::Snapshot >, BlockIndex >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1FixedSidetable.html", [
+      [ "v8::internal::compiler::turboshaft::FixedBlockSidetable< std::optional< v8::internal::compiler::turboshaft::WasmLoadEliminationAnalyzer::Snapshot > >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FixedBlockSidetable.html", null ]
     ] ],
     [ "v8::internal::compiler::turboshaft::detail::FixedSidetable< T, BlockIndex >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1FixedSidetable.html", [
       [ "v8::internal::compiler::turboshaft::FixedBlockSidetable< T >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FixedBlockSidetable.html", null ]
@@ -2855,6 +3342,9 @@ var hierarchy =
     ] ],
     [ "v8::internal::compiler::turboshaft::detail::FixedSidetable< v8::internal::compiler::turboshaft::TurboshaftSpecialRPONumberer::BlockData, BlockIndex >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1FixedSidetable.html", [
       [ "v8::internal::compiler::turboshaft::FixedBlockSidetable< v8::internal::compiler::turboshaft::TurboshaftSpecialRPONumberer::BlockData >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FixedBlockSidetable.html", null ]
+    ] ],
+    [ "v8::internal::compiler::turboshaft::detail::FixedSidetable< v8::internal::compiler::turboshaft::UseMap::PerOperationUses, OpIndex >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1FixedSidetable.html", [
+      [ "v8::internal::compiler::turboshaft::FixedOpIndexSidetable< v8::internal::compiler::turboshaft::UseMap::PerOperationUses >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FixedOpIndexSidetable.html", null ]
     ] ],
     [ "v8::internal::Flag", "structv8_1_1internal_1_1Flag.html", null ],
     [ "v8::internal::FlagHelpers", "classv8_1_1internal_1_1FlagHelpers.html", null ],
@@ -2898,8 +3388,8 @@ var hierarchy =
       [ "v8::internal::ZoneAbslFlatHashMap< v8::internal::compiler::turboshaft::OpIndex, v8::internal::compiler::turboshaft::BaseData >", "classv8_1_1internal_1_1ZoneAbslFlatHashMap.html", null ],
       [ "v8::internal::ZoneAbslFlatHashMap< v8::internal::compiler::turboshaft::OpIndex, v8::internal::ZoneVector< v8::internal::compiler::turboshaft::OpIndex > * >", "classv8_1_1internal_1_1ZoneAbslFlatHashMap.html", null ],
       [ "v8::internal::ZoneAbslFlatHashMap< v8::internal::compiler::turboshaft::OpIndex, T >", "classv8_1_1internal_1_1ZoneAbslFlatHashMap.html", null ],
-      [ "v8::internal::ZoneAbslFlatHashMap< v8::internal::compiler::turboshaft::OpIndex, Deduplicator * >", "classv8_1_1internal_1_1ZoneAbslFlatHashMap.html", null ],
-      [ "v8::internal::ZoneAbslFlatHashMap< v8::internal::compiler::turboshaft::Block *, BlockPhis >", "classv8_1_1internal_1_1ZoneAbslFlatHashMap.html", null ],
+      [ "v8::internal::ZoneAbslFlatHashMap< v8::internal::compiler::turboshaft::OpIndex, v8::internal::compiler::turboshaft::StringEscapeAnalysisReducer::Deduplicator * >", "classv8_1_1internal_1_1ZoneAbslFlatHashMap.html", null ],
+      [ "v8::internal::ZoneAbslFlatHashMap< v8::internal::compiler::turboshaft::Block *, v8::internal::wasm::TurboshaftGraphBuildingInterface::BlockPhis >", "classv8_1_1internal_1_1ZoneAbslFlatHashMap.html", null ],
       [ "v8::internal::ZoneAbslFlatHashMap< K, V, Hash, KeyEqual >", "classv8_1_1internal_1_1ZoneAbslFlatHashMap.html", null ]
     ] ],
     [ "absl::flat_hash_map< int, v8::base::DoublyThreadedList< Key, v8::internal::compiler::turboshaft::OffsetListTraits >, typename absl::flat_hash_map< int, v8::base::DoublyThreadedList< Key, v8::internal::compiler::turboshaft::OffsetListTraits > >::hasher, typename absl::flat_hash_map< int, v8::base::DoublyThreadedList< Key, v8::internal::compiler::turboshaft::OffsetListTraits >, typename absl::flat_hash_map< int, v8::base::DoublyThreadedList< Key, v8::internal::compiler::turboshaft::OffsetListTraits > >::hasher >::key_equal, ZoneAllocator< std::pair< const int, v8::base::DoublyThreadedList< Key, v8::internal::compiler::turboshaft::OffsetListTraits > > > >", null, [
@@ -2932,6 +3422,7 @@ var hierarchy =
     [ "v8::internal::Float32", "classv8_1_1internal_1_1Float32.html", null ],
     [ "v8::internal::Float64", "classv8_1_1internal_1_1Float64.html", null ],
     [ "v8::internal::compiler::turboshaft::FloatOperationTyper< Bits >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatOperationTyper.html", null ],
+    [ "v8::internal::StringStream::FmtElm", "classv8_1_1internal_1_1StringStream_1_1FmtElm.html", null ],
     [ "v8::internal::compiler::PersistentMap< Key, Value, Hasher >::FocusedTree", "structv8_1_1internal_1_1compiler_1_1PersistentMap_1_1FocusedTree.html", null ],
     [ "v8::base::tmp::detail::fold_right1_impl< F, T, List1 >", "structv8_1_1base_1_1tmp_1_1detail_1_1fold__right1__impl.html", [
       [ "v8::base::tmp::fold_right1< F, List1, T >", "structv8_1_1base_1_1tmp_1_1fold__right1.html", null ]
@@ -2955,6 +3446,7 @@ var hierarchy =
     [ "v8::internal::ParserBase< Impl >::ForInfo", "structv8_1_1internal_1_1ParserBase_1_1ForInfo.html", null ],
     [ "v8::internal::compiler::ForInParameters", "classv8_1_1internal_1_1compiler_1_1ForInParameters.html", null ],
     [ "v8::internal::interpreter::BytecodeGenerator::ForInScope", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ForInScope.html", null ],
+    [ "v8::internal::maglev::MaglevGraphBuilder::ForInState", "structv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1ForInState.html", null ],
     [ "v8::internal::FormalParametersBase", "structv8_1_1internal_1_1FormalParametersBase.html", [
       [ "v8::internal::ParserFormalParameters", "structv8_1_1internal_1_1ParserFormalParameters.html", null ],
       [ "v8::internal::PreParserFormalParameters", "classv8_1_1internal_1_1PreParserFormalParameters.html", null ]
@@ -2976,6 +3468,7 @@ var hierarchy =
     [ "v8::internal::compiler::FrameElisionPhase", "structv8_1_1internal_1_1compiler_1_1FrameElisionPhase.html", null ],
     [ "v8::internal::compiler::turboshaft::FrameElisionPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FrameElisionPhase.html", null ],
     [ "v8::internal::FrameFunctionIterator", "classv8_1_1internal_1_1FrameFunctionIterator.html", null ],
+    [ "v8::internal::wasm::DebugInfoImpl::FrameInspectionScope", "structv8_1_1internal_1_1wasm_1_1DebugInfoImpl_1_1FrameInspectionScope.html", null ],
     [ "v8::internal::FrameInspector", "classv8_1_1internal_1_1FrameInspector.html", null ],
     [ "v8::internal::compiler::FrameOffset", "classv8_1_1internal_1_1compiler_1_1FrameOffset.html", null ],
     [ "v8::internal::FrameScope", "classv8_1_1internal_1_1FrameScope.html", [
@@ -2985,6 +3478,7 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::FrameStateData", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FrameStateData.html", null ],
     [ "v8::internal::compiler::FrameStateFunctionInfo", "classv8_1_1internal_1_1compiler_1_1FrameStateFunctionInfo.html", null ],
     [ "v8::internal::compiler::FrameStateInfo", "classv8_1_1internal_1_1compiler_1_1FrameStateInfo.html", null ],
+    [ "v8::internal::compiler::InstructionSelectorT< Adapter >::FrameStateInput", "structv8_1_1internal_1_1compiler_1_1InstructionSelectorT_1_1FrameStateInput.html", null ],
     [ "v8::internal::FrameSummaries", "structv8_1_1internal_1_1FrameSummaries.html", null ],
     [ "v8::internal::FrameSummary", "classv8_1_1internal_1_1FrameSummary.html", null ],
     [ "v8::internal::FrameSummary::FrameSummaryBase", "classv8_1_1internal_1_1FrameSummary_1_1FrameSummaryBase.html", [
@@ -2992,6 +3486,7 @@ var hierarchy =
     ] ],
     [ "v8::internal::FrameTranslationBuilder", "classv8_1_1internal_1_1FrameTranslationBuilder.html", null ],
     [ "v8::internal::FrameWriter", "classv8_1_1internal_1_1FrameWriter.html", null ],
+    [ "v8::internal::RecyclingZoneAllocator< T >::FreeBlock", "structv8_1_1internal_1_1RecyclingZoneAllocator_1_1FreeBlock.html", null ],
     [ "v8::base::FreeDeleter", "structv8_1_1base_1_1FreeDeleter.html", null ],
     [ "cppgc::internal::FreeList", "classcppgc_1_1internal_1_1FreeList.html", null ],
     [ "v8::internal::FreeList", "classv8_1_1internal_1_1FreeList.html", [
@@ -3009,6 +3504,7 @@ var hierarchy =
     [ "v8::internal::FreeListCategory", "classv8_1_1internal_1_1FreeListCategory.html", null ],
     [ "v8::internal::FreeList::FreeListCategoryIterator", "classv8_1_1internal_1_1FreeList_1_1FreeListCategoryIterator.html", null ],
     [ "v8::internal::SegmentedTable< Entry, size >::FreelistHead", "structv8_1_1internal_1_1SegmentedTable_1_1FreelistHead.html", null ],
+    [ "cppgc::HeapStatistics::FreeListStatistics", "structcppgc_1_1HeapStatistics_1_1FreeListStatistics.html", null ],
     [ "v8::internal::FreeStoreAllocationPolicy", "classv8_1_1internal_1_1FreeStoreAllocationPolicy.html", null ],
     [ "v8::internal::wasm::FreezeCacheState", "classv8_1_1internal_1_1wasm_1_1FreezeCacheState.html", null ],
     [ "v8::internal::FrequencyCollator", "classv8_1_1internal_1_1FrequencyCollator.html", null ],
@@ -3017,8 +3513,10 @@ var hierarchy =
       [ "v8_inspector::V8InspectorSessionImpl", "classv8__inspector_1_1V8InspectorSessionImpl.html", null ]
     ] ],
     [ "v8::internal::Object::FullPtrComparer", "structv8_1_1internal_1_1Object_1_1FullPtrComparer.html", null ],
+    [ "v8::internal::wasm::Decoder::FullValidationTag", "structv8_1_1internal_1_1wasm_1_1Decoder_1_1FullValidationTag.html", null ],
     [ "wasm::FuncData", "structwasm_1_1FuncData.html", null ],
     [ "v8::internal::FuncNameInferrer", "classv8_1_1internal_1_1FuncNameInferrer.html", null ],
+    [ "v8::internal::CodeDataSourceIncrementalState::Function", "structv8_1_1internal_1_1CodeDataSourceIncrementalState_1_1Function.html", null ],
     [ "v8::internal::Runtime::Function", "structv8_1_1internal_1_1Runtime_1_1Function.html", null ],
     [ "v8::internal::torque::cpp::Function", "classv8_1_1internal_1_1torque_1_1cpp_1_1Function.html", null ],
     [ "v8::internal::compiler::FunctionalList< A >", "classv8_1_1internal_1_1compiler_1_1FunctionalList.html", null ],
@@ -3028,8 +3526,9 @@ var hierarchy =
     [ "v8::internal::maglev::detail::FunctionArgumentsTupleHelper< R(&)(A...)>", "structv8_1_1internal_1_1maglev_1_1detail_1_1FunctionArgumentsTupleHelper_3_01R_07_6_08_07A_8_8_8_08_4.html", null ],
     [ "v8::internal::maglev::detail::FunctionArgumentsTupleHelper< R(C::*)(A...) const >", "structv8_1_1internal_1_1maglev_1_1detail_1_1FunctionArgumentsTupleHelper_3_01R_07C_1_1_5_08_07A_8_8_8_08_01const_01_4.html", null ],
     [ "v8::internal::wasm::FunctionBody", "structv8_1_1internal_1_1wasm_1_1FunctionBody.html", null ],
-    [ "v8::FunctionCallbackInfo< T >", "classv8_1_1FunctionCallbackInfo.html", null ],
+    [ "v8::FunctionCallbackInfo< F >", "classv8_1_1FunctionCallbackInfo.html", null ],
     [ "v8::debug::Coverage::FunctionData", "classv8_1_1debug_1_1Coverage_1_1FunctionData.html", null ],
+    [ "v8::internal::wasm::AsmJsParser::FunctionImportInfo", "structv8_1_1internal_1_1wasm_1_1AsmJsParser_1_1FunctionImportInfo.html", null ],
     [ "v8::internal::AllocationTracker::FunctionInfo", "structv8_1_1internal_1_1AllocationTracker_1_1FunctionInfo.html", null ],
     [ "v8::internal::ParserBase< Impl >::FunctionState::FunctionOrEvalRecordingScope", "classv8_1_1internal_1_1ParserBase_1_1FunctionState_1_1FunctionOrEvalRecordingScope.html", null ],
     [ "v8::internal::ParserBase< Impl >::FunctionParsingScope", "classv8_1_1internal_1_1ParserBase_1_1FunctionParsingScope.html", null ],
@@ -3039,6 +3538,15 @@ var hierarchy =
     [ "v8::internal::FutexWaitList", "classv8_1_1internal_1_1FutexWaitList.html", null ],
     [ "v8::internal::FutexWaitListNode", "classv8_1_1internal_1_1FutexWaitListNode.html", null ],
     [ "v8::internal::compiler::GapResolver", "classv8_1_1internal_1_1compiler_1_1GapResolver.html", null ],
+    [ "cppgc::GarbageCollected< T >", "classcppgc_1_1GarbageCollected.html", null ],
+    [ "cppgc::GarbageCollectedMixin", "classcppgc_1_1GarbageCollectedMixin.html", null ],
+    [ "v8::metrics::GarbageCollectionBatchedEvents< EventType >", "structv8_1_1metrics_1_1GarbageCollectionBatchedEvents.html", null ],
+    [ "v8::metrics::GarbageCollectionFullCycle", "structv8_1_1metrics_1_1GarbageCollectionFullCycle.html", null ],
+    [ "v8::metrics::GarbageCollectionFullMainThreadIncrementalMark", "structv8_1_1metrics_1_1GarbageCollectionFullMainThreadIncrementalMark.html", null ],
+    [ "v8::metrics::GarbageCollectionFullMainThreadIncrementalSweep", "structv8_1_1metrics_1_1GarbageCollectionFullMainThreadIncrementalSweep.html", null ],
+    [ "v8::metrics::GarbageCollectionPhases", "structv8_1_1metrics_1_1GarbageCollectionPhases.html", null ],
+    [ "v8::metrics::GarbageCollectionSizes", "structv8_1_1metrics_1_1GarbageCollectionSizes.html", null ],
+    [ "v8::metrics::GarbageCollectionYoungCycle", "structv8_1_1metrics_1_1GarbageCollectionYoungCycle.html", null ],
     [ "cppgc::internal::GarbageCollector", "classcppgc_1_1internal_1_1GarbageCollector.html", [
       [ "cppgc::internal::GCInvoker", "classcppgc_1_1internal_1_1GCInvoker.html", null ],
       [ "cppgc::internal::GCInvoker::GCInvokerImpl", "classcppgc_1_1internal_1_1GCInvoker_1_1GCInvokerImpl.html", null ],
@@ -3057,6 +3565,7 @@ var hierarchy =
     [ "cppgc::internal::GCConfig", "structcppgc_1_1internal_1_1GCConfig.html", null ],
     [ "cppgc::internal::MetricRecorder::GCCycle", "structcppgc_1_1internal_1_1MetricRecorder_1_1GCCycle.html", null ],
     [ "cppgc::internal::GCInfo", "structcppgc_1_1internal_1_1GCInfo.html", null ],
+    [ "cppgc::internal::GCInfoFolding< T, ParentMostGarbageCollectedType >", "structcppgc_1_1internal_1_1GCInfoFolding.html", null ],
     [ "cppgc::internal::GCInfoTable", "classcppgc_1_1internal_1_1GCInfoTable.html", null ],
     [ "v8::internal::GCTracer", "classv8_1_1internal_1_1GCTracer.html", null ],
     [ "v8::internal::wasm::gdb_server::GdbServer", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html", null ],
@@ -3067,6 +3576,7 @@ var hierarchy =
     [ "v8::internal::GeneratedCode< WasmToJSCallSig >", "classv8_1_1internal_1_1GeneratedCode.html", null ],
     [ "v8::internal::compiler::turboshaft::GeneratorAnalyzer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GeneratorAnalyzer.html", null ],
     [ "v8::debug::GeneratorObject", "classv8_1_1debug_1_1GeneratorObject.html", null ],
+    [ "v8::internal::compiler::turboshaft::GraphBuildingNodeProcessor::GeneratorSplitEdge", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1GraphBuildingNodeProcessor_1_1GeneratorSplitEdge.html", null ],
     [ "v8::internal::compiler::turboshaft::GenericAssemblerOpInterface< Assembler >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericAssemblerOpInterface.html", [
       [ "v8::internal::compiler::turboshaft::TurboshaftAssemblerOpInterface< Assembler< reducer_list< NumberBuiltinsReducer..., TSReducerBase > > >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TurboshaftAssemblerOpInterface.html", [
         [ "v8::internal::compiler::turboshaft::Assembler< reducer_list< NumberBuiltinsReducer..., TSReducerBase > >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Assembler.html", null ]
@@ -3089,6 +3599,11 @@ var hierarchy =
     [ "v8::internal::compiler::GenericLoweringPhase", "structv8_1_1internal_1_1compiler_1_1GenericLoweringPhase.html", null ],
     [ "v8::internal::torque::GenericParameter", "structv8_1_1internal_1_1torque_1_1GenericParameter.html", null ],
     [ "v8::internal::Genesis", "classv8_1_1internal_1_1Genesis.html", null ],
+    [ "v8::internal::compiler::turboshaft::MaybeRedundantStoresTable::GetActiveKeysIndex", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MaybeRedundantStoresTable_1_1GetActiveKeysIndex.html", null ],
+    [ "v8::internal::compiler::turboshaft::VariableReducer< AfterNext >::GetActiveLoopVariablesIndex", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1VariableReducer_1_1GetActiveLoopVariablesIndex.html", null ],
+    [ "v8::internal::CFunctionBuilderWithFunction< RetBuilder, ArgBuilders >::GetArgBuilder< Merge, N, Flags >", "structv8_1_1internal_1_1CFunctionBuilderWithFunction_1_1GetArgBuilder.html", null ],
+    [ "v8::internal::CFunctionBuilderWithFunction< RetBuilder, ArgBuilders >::GetArgBuilder< false, N, Flags... >", "structv8_1_1internal_1_1CFunctionBuilderWithFunction_1_1GetArgBuilder_3_01false_00_01N_00_01Flags_8_8_8_01_4.html", null ],
+    [ "v8::internal::CFunctionBuilderWithFunction< RetBuilder, ArgBuilders >::GetArgBuilder< true, N, Flags... >", "structv8_1_1internal_1_1CFunctionBuilderWithFunction_1_1GetArgBuilder_3_01true_00_01N_00_01Flags_8_8_8_01_4.html", null ],
     [ "v8::internal::compiler::GetIteratorParameters", "classv8_1_1internal_1_1compiler_1_1GetIteratorParameters.html", null ],
     [ "v8::internal::wasm::GetProtectedInstruction< kLoadOrStore, kExtraEmittedInstructions >", "classv8_1_1internal_1_1wasm_1_1GetProtectedInstruction.html", null ],
     [ "v8::internal::compiler::GetTemplateObjectParameters", "classv8_1_1internal_1_1compiler_1_1GetTemplateObjectParameters.html", null ],
@@ -3101,6 +3616,7 @@ var hierarchy =
     [ "v8::internal::GlobalHandleVector< v8::internal::FunctionTemplateInfo >", "classv8_1_1internal_1_1GlobalHandleVector.html", null ],
     [ "v8::internal::GlobalHandleVector< v8::internal::HeapObject >", "classv8_1_1internal_1_1GlobalHandleVector.html", null ],
     [ "v8::internal::GlobalHandleVector< v8::internal::Map >", "classv8_1_1internal_1_1GlobalHandleVector.html", null ],
+    [ "v8::internal::wasm::AsmJsParser::GlobalImport", "structv8_1_1internal_1_1wasm_1_1AsmJsParser_1_1GlobalImport.html", null ],
     [ "v8::internal::GlobalSafepoint", "classv8_1_1internal_1_1GlobalSafepoint.html", null ],
     [ "v8::internal::GlobalSafepointForSharedSpaceIsolateTag", "structv8_1_1internal_1_1GlobalSafepointForSharedSpaceIsolateTag.html", null ],
     [ "v8::internal::GlobalSafepointScope", "classv8_1_1internal_1_1GlobalSafepointScope.html", null ],
@@ -3137,7 +3653,6 @@ var hierarchy =
     [ "v8::internal::swiss_table::GroupPortableImpl", "structv8_1_1internal_1_1swiss__table_1_1GroupPortableImpl.html", null ],
     [ "v8::internal::swiss_table::GroupSse2Polyfill", "structv8_1_1internal_1_1swiss__table_1_1GroupSse2Polyfill.html", null ],
     [ "v8::internal::GrowableBitVector", "classv8_1_1internal_1_1GrowableBitVector.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::GrowFastElements< B >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1GrowFastElements.html", null ],
     [ "v8::internal::compiler::GrowFastElementsParameters", "classv8_1_1internal_1_1compiler_1_1GrowFastElementsParameters.html", null ],
     [ "v8::internal::compiler::turboshaft::detail::GrowingSidetable< T, Key >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1GrowingSidetable.html", null ],
     [ "v8::internal::compiler::turboshaft::detail::GrowingSidetable< const v8::internal::maglev::BasicBlock *, BlockIndex >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1GrowingSidetable.html", [
@@ -3204,7 +3719,6 @@ var hierarchy =
       [ "v8::internal::Handle< v8::internal::TrustedObject >", "classv8_1_1internal_1_1Handle.html", null ],
       [ "v8::internal::Handle< v8::internal::NativeContext >", "classv8_1_1internal_1_1Handle.html", null ],
       [ "v8::internal::Handle< v8::internal::JSGlobalProxy >", "classv8_1_1internal_1_1Handle.html", null ],
-      [ "v8::internal::Handle< Map >", "classv8_1_1internal_1_1Handle.html", null ],
       [ "v8::internal::Handle< v8::internal::WasmTrustedInstanceData >", "classv8_1_1internal_1_1Handle.html", null ],
       [ "v8::internal::Handle< v8::internal::JSAtomicsMutex >", "classv8_1_1internal_1_1Handle.html", null ],
       [ "v8::internal::Handle< v8::internal::OrderedHashSet >", "classv8_1_1internal_1_1Handle.html", null ],
@@ -3238,15 +3752,23 @@ var hierarchy =
       [ "v8::internal::Handle< v8::internal::JSWeakMap >", "classv8_1_1internal_1_1Handle.html", null ],
       [ "v8::internal::Handle< T >", "classv8_1_1internal_1_1Handle.html", null ]
     ] ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::HandleNoHeapWritesInterrupts", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1HandleNoHeapWritesInterrupts.html", null ],
+    [ "v8::internal::HandleHelper", "classv8_1_1internal_1_1HandleHelper.html", null ],
     [ "v8::internal::wasm::handler_traits< compact_handler >", "structv8_1_1internal_1_1wasm_1_1handler__traits.html", null ],
     [ "v8::internal::wasm::handler_traits< false >", "structv8_1_1internal_1_1wasm_1_1handler__traits_3_01false_01_4.html", null ],
     [ "v8::internal::wasm::handler_traits< true >", "structv8_1_1internal_1_1wasm_1_1handler__traits_3_01true_01_4.html", null ],
+    [ "v8::internal::compiler::CodeGenerator::HandlerInfo", "structv8_1_1internal_1_1compiler_1_1CodeGenerator_1_1HandlerInfo.html", null ],
     [ "v8::internal::wasm::HandlersBase", "classv8_1_1internal_1_1wasm_1_1HandlersBase.html", [
       [ "v8::internal::wasm::Handlers< Compressed >", "classv8_1_1internal_1_1wasm_1_1Handlers.html", null ]
     ] ],
     [ "v8::internal::HandlerTable", "classv8_1_1internal_1_1HandlerTable.html", null ],
     [ "v8::internal::interpreter::HandlerTableBuilder", "classv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder.html", null ],
+    [ "v8::internal::maglev::MaglevGraphBuilder::HandlerTableEntry", "structv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1HandlerTableEntry.html", null ],
+    [ "v8::HandleScope", "classv8_1_1HandleScope.html", [
+      [ "v8::EscapableHandleScopeBase", "classv8_1_1EscapableHandleScopeBase.html", [
+        [ "v8::EscapableHandleScope", "classv8_1_1EscapableHandleScope.html", null ],
+        [ "v8::InternalEscapableScope", "classv8_1_1InternalEscapableScope.html", null ]
+      ] ]
+    ] ],
     [ "v8::internal::HandleScope", "classv8_1_1internal_1_1HandleScope.html", null ],
     [ "v8::internal::HandleScopeData", "structv8_1_1internal_1_1HandleScopeData.html", null ],
     [ "v8::internal::HandleScopeImplementer", "classv8_1_1internal_1_1HandleScopeImplementer.html", null ],
@@ -3361,8 +3883,10 @@ var hierarchy =
     [ "v8::base::Hasher", "classv8_1_1base_1_1Hasher.html", null ],
     [ "v8::base::StrongAlias< TagType, UnderlyingType >::Hasher", "structv8_1_1base_1_1StrongAlias_1_1Hasher.html", null ],
     [ "v8::internal::CodeEntry::Hasher", "structv8_1_1internal_1_1CodeEntry_1_1Hasher.html", null ],
+    [ "v8::internal::Isolate::ThreadDataTable::Hasher", "structv8_1_1internal_1_1Isolate_1_1ThreadDataTable_1_1Hasher.html", null ],
     [ "v8::internal::Object::Hasher", "structv8_1_1internal_1_1Object_1_1Hasher.html", null ],
     [ "v8::internal::PerfettoV8String::Hasher", "structv8_1_1internal_1_1PerfettoV8String_1_1Hasher.html", null ],
+    [ "v8::internal::ProfileNode::Hasher", "structv8_1_1internal_1_1ProfileNode_1_1Hasher.html", null ],
     [ "HashTable", null, [
       [ "v8::internal::ObjectMultiHashTableBase< ObjectTwoHashTable, 2 >", "classv8_1_1internal_1_1ObjectMultiHashTableBase.html", [
         [ "v8::internal::ObjectTwoHashTable", "classv8_1_1internal_1_1ObjectTwoHashTable.html", null ]
@@ -3378,23 +3902,27 @@ var hierarchy =
       [ "v8::internal::ScriptCacheKey", "classv8_1_1internal_1_1ScriptCacheKey.html", null ]
     ] ],
     [ "v8::internal::compiler::PersistentMap< Key, Value, Hasher >::HashValue", "classv8_1_1internal_1_1compiler_1_1PersistentMap_1_1HashValue.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::HasInPrototypeChain", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1HasInPrototypeChain.html", null ],
     [ "v8::internal::compiler::turboshaft::HasProperRunMethod< Phase >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1HasProperRunMethod.html", null ],
-    [ "cppgc::Heap", null, [
+    [ "v8::internal::FutexWaitList::HeadAndTail", "structv8_1_1internal_1_1FutexWaitList_1_1HeadAndTail.html", null ],
+    [ "cppgc::Heap", "classcppgc_1_1Heap.html", [
       [ "cppgc::internal::Heap", "classcppgc_1_1internal_1_1Heap.html", null ]
     ] ],
     [ "v8::internal::Heap", "classv8_1_1internal_1_1Heap.html", null ],
     [ "v8::internal::HeapAllocator", "classv8_1_1internal_1_1HeapAllocator.html", null ],
     [ "v8::internal::compiler::HeapBrokerInitializationPhase", "structv8_1_1internal_1_1compiler_1_1HeapBrokerInitializationPhase.html", null ],
+    [ "v8::HeapCodeStatistics", "classv8_1_1HeapCodeStatistics.html", null ],
+    [ "cppgc::subtle::HeapConsistency", "classcppgc_1_1subtle_1_1HeapConsistency.html", null ],
     [ "v8::internal::HeapEntriesAllocator", "classv8_1_1internal_1_1HeapEntriesAllocator.html", [
       [ "v8::internal::EmbedderGraphEntriesAllocator", "classv8_1_1internal_1_1EmbedderGraphEntriesAllocator.html", null ],
       [ "v8::internal::JSArrayBufferDataEntryAllocator", "classv8_1_1internal_1_1JSArrayBufferDataEntryAllocator.html", null ],
       [ "v8::internal::V8HeapExplorer", "classv8_1_1internal_1_1V8HeapExplorer.html", null ]
     ] ],
     [ "v8::internal::HeapEntry", "classv8_1_1internal_1_1HeapEntry.html", null ],
+    [ "v8::HeapGraphEdge", "classv8_1_1HeapGraphEdge.html", null ],
     [ "v8::internal::HeapGraphEdge", "classv8_1_1internal_1_1HeapGraphEdge.html", null ],
+    [ "v8::HeapGraphNode", "classv8_1_1HeapGraphNode.html", null ],
     [ "cppgc::internal::HeapGrowing", "classcppgc_1_1internal_1_1HeapGrowing.html", null ],
-    [ "cppgc::HeapHandle", null, [
+    [ "cppgc::HeapHandle", "classcppgc_1_1HeapHandle.html", [
       [ "cppgc::internal::HeapBase", "classcppgc_1_1internal_1_1HeapBase.html", [
         [ "cppgc::internal::Heap", "classcppgc_1_1internal_1_1Heap.html", null ],
         [ "v8::internal::CppHeap", "classv8_1_1internal_1_1CppHeap.html", null ]
@@ -3452,11 +3980,13 @@ var hierarchy =
       ] ],
       [ "v8::internal::TrustedObjectLayout", "classv8_1_1internal_1_1TrustedObjectLayout.html", null ]
     ] ],
+    [ "cppgc::internal::HeapObjectName", "structcppgc_1_1internal_1_1HeapObjectName.html", null ],
     [ "v8::internal::HeapObjectRange", "classv8_1_1internal_1_1HeapObjectRange.html", null ],
     [ "v8::internal::HeapObjectsFilter", "classv8_1_1internal_1_1HeapObjectsFilter.html", [
       [ "v8::internal::UnreachableObjectsFilter", "classv8_1_1internal_1_1UnreachableObjectsFilter.html", null ]
     ] ],
     [ "v8::internal::HeapObjectsMap", "classv8_1_1internal_1_1HeapObjectsMap.html", null ],
+    [ "v8::HeapObjectStatistics", "classv8_1_1HeapObjectStatistics.html", null ],
     [ "v8::internal::compiler::HeapObjectType", "classv8_1_1internal_1_1compiler_1_1HeapObjectType.html", null ],
     [ "v8::internal::HeapObjectVisitor", "classv8_1_1internal_1_1HeapObjectVisitor.html", [
       [ "v8::internal::EvacuateNewToOldSpacePageVisitor", "classv8_1_1internal_1_1EvacuateNewToOldSpacePageVisitor.html", null ],
@@ -3466,12 +3996,21 @@ var hierarchy =
         [ "v8::internal::EvacuateOldSpaceVisitor", "classv8_1_1internal_1_1EvacuateOldSpaceVisitor.html", null ]
       ] ]
     ] ],
+    [ "cppgc::Heap::HeapOptions", "structcppgc_1_1Heap_1_1HeapOptions.html", null ],
+    [ "v8::HeapProfiler", "classv8_1_1HeapProfiler.html", null ],
     [ "v8::internal::HeapProfilerNativeMoveListener", "classv8_1_1internal_1_1HeapProfilerNativeMoveListener.html", null ],
     [ "cppgc::internal::HeapRegistry", "classcppgc_1_1internal_1_1HeapRegistry.html", null ],
+    [ "v8::HeapSnapshot", "classv8_1_1HeapSnapshot.html", null ],
     [ "v8::internal::HeapSnapshot", "classv8_1_1internal_1_1HeapSnapshot.html", null ],
     [ "v8::internal::HeapSnapshotJSONSerializer", "classv8_1_1internal_1_1HeapSnapshotJSONSerializer.html", null ],
+    [ "v8::HeapProfiler::HeapSnapshotOptions", "structv8_1_1HeapProfiler_1_1HeapSnapshotOptions.html", null ],
     [ "v8_inspector::V8HeapProfilerAgentImpl::HeapSnapshotProtocolOptions", "structv8__inspector_1_1V8HeapProfilerAgentImpl_1_1HeapSnapshotProtocolOptions.html", null ],
+    [ "v8::HeapSpaceStatistics", "classv8_1_1HeapSpaceStatistics.html", null ],
+    [ "cppgc::subtle::HeapState", "classcppgc_1_1subtle_1_1HeapState.html", null ],
+    [ "cppgc::HeapStatistics", "structcppgc_1_1HeapStatistics.html", null ],
+    [ "v8::HeapStatistics", "classv8_1_1HeapStatistics.html", null ],
     [ "v8::internal::HeapStats", "classv8_1_1internal_1_1HeapStats.html", null ],
+    [ "v8::HeapStatsUpdate", "structv8_1_1HeapStatsUpdate.html", null ],
     [ "v8::internal::wasm::HeapTypeBase", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html", [
       [ "v8::internal::wasm::HeapType", "classv8_1_1internal_1_1wasm_1_1HeapType.html", null ]
     ] ],
@@ -3492,6 +4031,7 @@ var hierarchy =
     ] ],
     [ "v8::internal::FlagList::HelpOptions", "classv8_1_1internal_1_1FlagList_1_1HelpOptions.html", null ],
     [ "v8::internal::ClassScope::HeritageParsingScope", "structv8_1_1internal_1_1ClassScope_1_1HeritageParsingScope.html", null ],
+    [ "v8::HighAllocationThroughputObserver", "classv8_1_1HighAllocationThroughputObserver.html", null ],
     [ "v8::internal::HighAllocationThroughputScope", "classv8_1_1internal_1_1HighAllocationThroughputScope.html", null ],
     [ "v8::internal::Histogram", "classv8_1_1internal_1_1Histogram.html", [
       [ "v8::internal::AggregatableHistogramTimer", "classv8_1_1internal_1_1AggregatableHistogramTimer.html", null ],
@@ -3506,6 +4046,8 @@ var hierarchy =
     [ "v8::internal::interpreter::BytecodeGenerator::HoleCheckElisionScope", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1HoleCheckElisionScope.html", [
       [ "v8::internal::interpreter::BytecodeGenerator::HoleCheckElisionMergeScope::Branch", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1HoleCheckElisionMergeScope_1_1Branch.html", null ]
     ] ],
+    [ "v8::internal::Deserializer< IsolateT >::HotObjectsList", "classv8_1_1internal_1_1Deserializer_1_1HotObjectsList.html", null ],
+    [ "v8::internal::Serializer::HotObjectsList", "classv8_1_1internal_1_1Serializer_1_1HotObjectsList.html", null ],
     [ "v8::internal::IC", "classv8_1_1internal_1_1IC.html", [
       [ "v8::internal::LoadIC", "classv8_1_1internal_1_1LoadIC.html", [
         [ "v8::internal::KeyedLoadIC", "classv8_1_1internal_1_1KeyedLoadIC.html", null ],
@@ -3538,7 +4080,8 @@ var hierarchy =
     ] ],
     [ "v8::internal::IdentityMapFindResult< T >", "structv8_1_1internal_1_1IdentityMapFindResult.html", null ],
     [ "v8::internal::compiler::turboshaft::Operation::IdentityMapper", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation_1_1IdentityMapper.html", null ],
-    [ "IdleTask", null, [
+    [ "v8::IdleTask", "classv8_1_1IdleTask.html", [
+      [ "v8::DelayedTasksPlatform::DelayedIdleTask", "classv8_1_1DelayedTasksPlatform_1_1DelayedIdleTask.html", null ],
       [ "v8::internal::CancelableIdleTask", "classv8_1_1internal_1_1CancelableIdleTask.html", null ]
     ] ],
     [ "v8::internal::IeeeDoubleBigEndianArchType", "unionv8_1_1internal_1_1IeeeDoubleBigEndianArchType.html", null ],
@@ -3548,6 +4091,7 @@ var hierarchy =
     [ "v8::internal::torque::IfDefScope", "classv8_1_1internal_1_1torque_1_1IfDefScope.html", null ],
     [ "v8::internal::compiler::IfValueParameters", "classv8_1_1internal_1_1compiler_1_1IfValueParameters.html", null ],
     [ "v8::internal::IgnoreLocalGCRequests", "classv8_1_1internal_1_1IgnoreLocalGCRequests.html", null ],
+    [ "cppgc::internal::IgnoreLocationPolicy", "classcppgc_1_1internal_1_1IgnoreLocationPolicy.html", null ],
     [ "v8::internal::Immediate", "classv8_1_1internal_1_1Immediate.html", null ],
     [ "v8::internal::wasm::WasmInitExpr::Immediate", "unionv8_1_1internal_1_1wasm_1_1WasmInitExpr_1_1Immediate.html", null ],
     [ "v8::internal::Immediate64", "classv8_1_1internal_1_1Immediate64.html", null ],
@@ -3559,6 +4103,7 @@ var hierarchy =
     [ "v8::internal::wasm::ImmF64Immediate", "structv8_1_1internal_1_1wasm_1_1ImmF64Immediate.html", null ],
     [ "v8::internal::wasm::ImmI32Immediate", "structv8_1_1internal_1_1wasm_1_1ImmI32Immediate.html", null ],
     [ "v8::internal::wasm::ImmI64Immediate", "structv8_1_1internal_1_1wasm_1_1ImmI64Immediate.html", null ],
+    [ "v8::internal::compiler::CodeAssemblerVariable::ImplComparator", "structv8_1_1internal_1_1compiler_1_1CodeAssemblerVariable_1_1ImplComparator.html", null ],
     [ "wasm::implement< C >", "structwasm_1_1implement.html", null ],
     [ "wasm::implement< Config >", "structwasm_1_1implement_3_01Config_01_4.html", null ],
     [ "wasm::implement< Engine >", "structwasm_1_1implement_3_01Engine_01_4.html", null ],
@@ -3588,6 +4133,7 @@ var hierarchy =
     [ "v8::internal::ImportAttributesKeyComparer", "structv8_1_1internal_1_1ImportAttributesKeyComparer.html", null ],
     [ "v8::internal::ImportedFunctionEntry", "classv8_1_1internal_1_1ImportedFunctionEntry.html", null ],
     [ "wasm::ImportTypeImpl", "structwasm_1_1ImportTypeImpl.html", null ],
+    [ "v8::internal::compiler::LinearScanAllocator::InactiveLiveRangeOrdering", "structv8_1_1internal_1_1compiler_1_1LinearScanAllocator_1_1InactiveLiveRangeOrdering.html", null ],
     [ "v8::internal::torque::cpp::IncludeGuardScope", "classv8_1_1internal_1_1torque_1_1cpp_1_1IncludeGuardScope.html", null ],
     [ "v8::internal::torque::IncludeGuardScope", "classv8_1_1internal_1_1torque_1_1IncludeGuardScope.html", null ],
     [ "v8::internal::torque::IncludeObjectMacrosScope", "classv8_1_1internal_1_1torque_1_1IncludeObjectMacrosScope.html", null ],
@@ -3621,6 +4167,7 @@ var hierarchy =
     ] ],
     [ "v8::base::index_of_type< SearchT, Ts >", "structv8_1_1base_1_1index__of__type.html", null ],
     [ "v8::internal::SourcePositionTableIterator::IndexAndPositionState", "structv8_1_1internal_1_1SourcePositionTableIterator_1_1IndexAndPositionState.html", null ],
+    [ "v8::IndexedPropertyHandlerConfiguration", "structv8_1_1IndexedPropertyHandlerConfiguration.html", null ],
     [ "v8::internal::IndexGenerator", "classv8_1_1internal_1_1IndexGenerator.html", null ],
     [ "v8::internal::wasm::IndexImmediate", "structv8_1_1internal_1_1wasm_1_1IndexImmediate.html", [
       [ "v8::internal::wasm::CallFunctionImmediate", "structv8_1_1internal_1_1wasm_1_1CallFunctionImmediate.html", null ],
@@ -3631,10 +4178,136 @@ var hierarchy =
     ] ],
     [ "v8::internal::SwissNameDictionary::IndexIterable", "classv8_1_1internal_1_1SwissNameDictionary_1_1IndexIterable.html", null ],
     [ "v8::internal::SwissNameDictionary::IndexIterator", "classv8_1_1internal_1_1SwissNameDictionary_1_1IndexIterator.html", null ],
+    [ "v8::internal::compiler::LoadElimination::IndexRange", "classv8_1_1internal_1_1compiler_1_1LoadElimination_1_1IndexRange.html", null ],
     [ "v8::internal::compiler::turboshaft::detail::IndexTypeFor< T >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1IndexTypeFor.html", null ],
     [ "v8::internal::compiler::turboshaft::detail::IndexTypeFor< std::tuple< T > >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1IndexTypeFor_3_01std_1_1tuple_3_01T_01_4_01_4.html", null ],
     [ "v8::internal::wasm::WasmInstruction::Optional::IndirectCall", "structv8_1_1internal_1_1wasm_1_1WasmInstruction_1_1Optional_1_1IndirectCall.html", null ],
+    [ "v8::internal::wasm::WasmInterpreterRuntime::IndirectCallValue", "structv8_1_1internal_1_1wasm_1_1WasmInterpreterRuntime_1_1IndirectCallValue.html", null ],
     [ "v8::internal::wasm::IndirectFunctionTableEntry", "classv8_1_1internal_1_1wasm_1_1IndirectFunctionTableEntry.html", null ],
+    [ "v8::api_internal::IndirectHandleBase", "classv8_1_1api__internal_1_1IndirectHandleBase.html", [
+      [ "v8::Eternal< v8::Context >", "classv8_1_1Eternal.html", null ],
+      [ "v8::LocalBase< v8::String >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< v8::String >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< v8::Object >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< v8::Object >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< v8::Array >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< v8::Array >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< v8::Context >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< v8::Context >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< Object >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< Object >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< Context >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< Context >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< v8::Value >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< v8::Value >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< Value >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< Value >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< v8::UnboundScript >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< v8::UnboundScript >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< Name >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< Name >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< v8::Promise >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< v8::Promise >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< v8::Data >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< v8::Data >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< v8::debug::Script >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< v8::debug::Script >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< Map >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< Map >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< SharedArrayBuffer >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< SharedArrayBuffer >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< Promise >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< Promise >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::LocalBase< v8::Map >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< v8::Map >", "classv8_1_1Local.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::FunctionTemplate >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::FunctionTemplate >", "classv8_1_1Global.html", null ],
+        [ "v8::Persistent< v8::FunctionTemplate >", "classv8_1_1Persistent.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::ObjectTemplate >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::ObjectTemplate >", "classv8_1_1Global.html", null ],
+        [ "v8::Persistent< v8::ObjectTemplate >", "classv8_1_1Persistent.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::Private >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::Private >", "classv8_1_1Global.html", null ],
+        [ "v8::Persistent< v8::Private >", "classv8_1_1Persistent.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::Function >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::Function >", "classv8_1_1Global.html", null ],
+        [ "v8::Persistent< v8::Function >", "classv8_1_1Persistent.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::Context >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::Context >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::Value >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::Value >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::String >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::String >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::FixedArray >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::FixedArray >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::Promise::Resolver >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::Promise::Resolver >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::debug::Script >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::debug::Script >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::Promise >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::Promise >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::Object >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::Object >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::PersistentBase< debug::WasmScript >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< debug::WasmScript >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::debug::EphemeronTable >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::debug::EphemeronTable >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::PrimitiveArray >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::PrimitiveArray >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::ArrayBuffer >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::ArrayBuffer >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::PersistentBase< v8::RegExp >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< v8::RegExp >", "classv8_1_1Global.html", null ]
+      ] ],
+      [ "v8::Eternal< T >", "classv8_1_1Eternal.html", null ],
+      [ "v8::LocalBase< T >", "classv8_1_1LocalBase.html", [
+        [ "v8::Local< T >", "classv8_1_1Local.html", [
+          [ "v8::internal::LocalUnchecked< T >", "classv8_1_1internal_1_1LocalUnchecked.html", null ]
+        ] ]
+      ] ],
+      [ "v8::PersistentBase< T >", "classv8_1_1PersistentBase.html", [
+        [ "v8::Global< T >", "classv8_1_1Global.html", null ],
+        [ "v8::Persistent< T, M >", "classv8_1_1Persistent.html", null ]
+      ] ],
+      [ "v8::TracedReferenceBase", "classv8_1_1TracedReferenceBase.html", [
+        [ "v8::BasicTracedReference< T >", "classv8_1_1BasicTracedReference.html", [
+          [ "v8::TracedReference< T >", "classv8_1_1TracedReference.html", null ]
+        ] ]
+      ] ]
+    ] ],
     [ "v8::internal::InfoCellPair", "classv8_1_1internal_1_1InfoCellPair.html", null ],
     [ "v8::internal::MainAllocator::InGCTag", "structv8_1_1internal_1_1MainAllocator_1_1InGCTag.html", null ],
     [ "v8::internal::torque::InitializerResults", "structv8_1_1internal_1_1torque_1_1InitializerResults.html", null ],
@@ -3649,6 +4322,7 @@ var hierarchy =
     [ "v8::internal::Comparator::Input", "classv8_1_1internal_1_1Comparator_1_1Input.html", null ],
     [ "v8::internal::compiler::Node::InputEdges", "classv8_1_1internal_1_1compiler_1_1Node_1_1InputEdges.html", null ],
     [ "v8::internal::compiler::SparseInputMask::InputIterator", "classv8_1_1internal_1_1compiler_1_1SparseInputMask_1_1InputIterator.html", null ],
+    [ "v8::internal::DateParser::InputReader< Char >", "classv8_1_1internal_1_1DateParser_1_1InputReader.html", null ],
     [ "v8::internal::compiler::Node::Inputs", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs.html", null ],
     [ "v8::internal::compiler::turboshaft::InputsRepFactory", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1InputsRepFactory.html", null ],
     [ "v8::base::tmp::detail::insert_at1_impl< I, T, Before, After >", "structv8_1_1base_1_1tmp_1_1detail_1_1insert__at1__impl.html", null ],
@@ -3674,8 +4348,10 @@ var hierarchy =
     [ "v8::base::tmp::detail::insert_at_impl< I, T, list<>, List >", "structv8_1_1base_1_1tmp_1_1detail_1_1insert__at__impl.html", [
       [ "v8::base::tmp::insert_at< List, I, T >", "structv8_1_1base_1_1tmp_1_1insert__at.html", null ]
     ] ],
+    [ "v8_inspector::V8InspectorSession::Inspectable", "classv8__inspector_1_1V8InspectorSession_1_1Inspectable.html", null ],
     [ "v8_inspector::InspectedContext", "classv8__inspector_1_1InspectedContext.html", null ],
     [ "v8::internal::wasm::InstanceBuilder", "classv8_1_1internal_1_1wasm_1_1InstanceBuilder.html", null ],
+    [ "v8::internal::wasm::TurboshaftGraphBuildingInterface::InstanceCache", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1InstanceCache.html", null ],
     [ "v8::internal::InstanceTypeChecker::InstanceRangeChecker< lower_limit, upper_limit >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker.html", null ],
     [ "v8::internal::InstanceTypeChecker::InstanceRangeChecker< FIRST_TYPE, upper_limit >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01FIRST__TYPE_00_01upper__limit_01_4.html", null ],
     [ "v8::internal::InstanceTypeChecker::InstanceRangeChecker< lower_limit, LAST_TYPE >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01lower__limit_00_01LAST__TYPE_01_4.html", null ],
@@ -3683,6 +4359,7 @@ var hierarchy =
     [ "v8::base::tmp::instantiate< T, U >", "structv8_1_1base_1_1tmp_1_1instantiate.html", null ],
     [ "v8::internal::wasm::InstantiationResultResolver", "classv8_1_1internal_1_1wasm_1_1InstantiationResultResolver.html", null ],
     [ "v8::internal::compiler::Instruction", "classv8_1_1internal_1_1compiler_1_1Instruction.html", null ],
+    [ "v8::internal::FrameTranslationBuilder::Instruction", "structv8_1_1internal_1_1FrameTranslationBuilder_1_1Instruction.html", null ],
     [ "v8::internal::torque::Instruction", "classv8_1_1internal_1_1torque_1_1Instruction.html", null ],
     [ "v8::internal::InstructionAccurateScope", "classv8_1_1internal_1_1InstructionAccurateScope.html", null ],
     [ "v8::internal::compiler::InstructionAsJSON", "structv8_1_1internal_1_1compiler_1_1InstructionAsJSON.html", null ],
@@ -3760,6 +4437,7 @@ var hierarchy =
       [ "v8::internal::torque::UnsafeCastInstruction", "structv8_1_1internal_1_1torque_1_1UnsafeCastInstruction.html", null ]
     ] ],
     [ "v8::internal::compiler::InstructionBlockAsJSON", "structv8_1_1internal_1_1compiler_1_1InstructionBlockAsJSON.html", null ],
+    [ "v8::internal::compiler::RegisterAllocatorVerifier::InstructionConstraint", "structv8_1_1internal_1_1compiler_1_1RegisterAllocatorVerifier_1_1InstructionConstraint.html", null ],
     [ "v8::internal::compiler::InstructionOperand", "classv8_1_1internal_1_1compiler_1_1InstructionOperand.html", [
       [ "v8::internal::compiler::ConstantOperand", "classv8_1_1internal_1_1compiler_1_1ConstantOperand.html", null ],
       [ "v8::internal::compiler::ImmediateOperand", "classv8_1_1internal_1_1compiler_1_1ImmediateOperand.html", null ],
@@ -3796,6 +4474,10 @@ var hierarchy =
     [ "v8::base::internal::IntegerForDigitsAndSign< Size, IsSigned >", "structv8_1_1base_1_1internal_1_1IntegerForDigitsAndSign.html", null ],
     [ "v8::internal::IntegerLiteral", "classv8_1_1internal_1_1IntegerLiteral.html", null ],
     [ "std::integral_constant", null, [
+      [ "v8::internal::count< T, Args... >", "structv8_1_1internal_1_1count.html", [
+        [ "v8::internal::count< T, U, Args... >", "structv8_1_1internal_1_1count_3_01T_00_01U_00_01Args_8_8_8_01_4.html", null ]
+      ] ],
+      [ "cppgc::internal::IsGarbageCollectedOrMixinType< T >", "structcppgc_1_1internal_1_1IsGarbageCollectedOrMixinType.html", null ],
       [ "v8::base::index_of_type< SearchT >", "structv8_1_1base_1_1index__of__type_3_01SearchT_01_4.html", null ],
       [ "v8::base::index_of_type< SearchT, SearchT, Ts... >", "structv8_1_1base_1_1index__of__type_3_01SearchT_00_01SearchT_00_01Ts_8_8_8_01_4.html", null ],
       [ "v8::base::index_of_type< SearchT, T, Ts... >", "structv8_1_1base_1_1index__of__type_3_01SearchT_00_01T_00_01Ts_8_8_8_01_4.html", null ],
@@ -3806,10 +4488,14 @@ var hierarchy =
       [ "v8::base::tmp::detail::length_impl< list1< Ts... > >", "structv8_1_1base_1_1tmp_1_1detail_1_1length__impl_3_01list1_3_01Ts_8_8_8_01_4_01_4.html", null ],
       [ "v8::base::tmp::detail::length_impl< list< Ts... > >", "structv8_1_1base_1_1tmp_1_1detail_1_1length__impl_3_01list_3_01Ts_8_8_8_01_4_01_4.html", null ],
       [ "v8::internal::compiler::turboshaft::static_operation_input_count< Op, class >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1static__operation__input__count.html", null ],
-      [ "v8::internal::compiler::turboshaft::static_operation_input_count< Op, std::void_t< decltype(Op::inputs)> >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1static__operation__input__count_3_01Op_00_01st1d94e625d0a5c3310a7f67cc0097f7c9.html", null ]
+      [ "v8::internal::compiler::turboshaft::static_operation_input_count< Op, std::void_t< decltype(Op::inputs)> >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1static__operation__input__count_3_01Op_00_01st1d94e625d0a5c3310a7f67cc0097f7c9.html", null ],
+      [ "v8::internal::count< T, List >", "structv8_1_1internal_1_1count.html", null ],
+      [ "v8::internal::count< T, T, Args... >", "structv8_1_1internal_1_1count_3_01T_00_01T_00_01Args_8_8_8_01_4.html", null ]
     ] ],
     [ "v8::internal::InternalIndex", "classv8_1_1internal_1_1InternalIndex.html", null ],
     [ "v8_inspector::InternalPropertyMirror", "structv8__inspector_1_1InternalPropertyMirror.html", null ],
+    [ "v8::internal::Internals", "classv8_1_1internal_1_1Internals.html", null ],
+    [ "cppgc::internal::StatsCollector::InternalScope< trace_category, scope_category >", "classcppgc_1_1internal_1_1StatsCollector_1_1InternalScope.html", null ],
     [ "v8::internal::maglev::DeoptFrame::InterpretedFrameData", "structv8_1_1internal_1_1maglev_1_1DeoptFrame_1_1InterpretedFrameData.html", null ],
     [ "v8::internal::interpreter::Interpreter", "classv8_1_1internal_1_1interpreter_1_1Interpreter.html", null ],
     [ "v8::internal::wasm::InterpreterCode", "structv8_1_1internal_1_1wasm_1_1InterpreterCode.html", null ],
@@ -3825,14 +4511,14 @@ var hierarchy =
     [ "v8::internal::interpreter::IntrinsicsGenerator", "classv8_1_1internal_1_1interpreter_1_1IntrinsicsGenerator.html", null ],
     [ "v8::internal::interpreter::IntrinsicsHelper", "classv8_1_1internal_1_1interpreter_1_1IntrinsicsHelper.html", null ],
     [ "v8::base::IntrusiveSet< T, GetIntrusiveSetIndex, Container >", "classv8_1_1base_1_1IntrusiveSet.html", null ],
-    [ "v8::base::IntrusiveSet< Key, GetActiveKeysIndex, ZoneVector< Key > >", "classv8_1_1base_1_1IntrusiveSet.html", [
-      [ "v8::internal::ZoneIntrusiveSet< Key, GetActiveKeysIndex >", "classv8_1_1internal_1_1ZoneIntrusiveSet.html", null ]
+    [ "v8::base::IntrusiveSet< Key, v8::internal::compiler::turboshaft::MaybeRedundantStoresTable::GetActiveKeysIndex, ZoneVector< Key > >", "classv8_1_1base_1_1IntrusiveSet.html", [
+      [ "v8::internal::ZoneIntrusiveSet< Key, v8::internal::compiler::turboshaft::MaybeRedundantStoresTable::GetActiveKeysIndex >", "classv8_1_1internal_1_1ZoneIntrusiveSet.html", null ]
     ] ],
     [ "v8::base::IntrusiveSet< T, GetIntrusiveSetIndex, ZoneVector< T > >", "classv8_1_1base_1_1IntrusiveSet.html", [
       [ "v8::internal::ZoneIntrusiveSet< T, GetIntrusiveSetIndex >", "classv8_1_1internal_1_1ZoneIntrusiveSet.html", null ]
     ] ],
-    [ "v8::base::IntrusiveSet< v8::internal::compiler::turboshaft::SnapshotTableKey, GetActiveLoopVariablesIndex, ZoneVector< v8::internal::compiler::turboshaft::SnapshotTableKey > >", "classv8_1_1base_1_1IntrusiveSet.html", [
-      [ "v8::internal::ZoneIntrusiveSet< v8::internal::compiler::turboshaft::SnapshotTableKey, GetActiveLoopVariablesIndex >", "classv8_1_1internal_1_1ZoneIntrusiveSet.html", null ]
+    [ "v8::base::IntrusiveSet< v8::internal::compiler::turboshaft::SnapshotTableKey, v8::internal::compiler::turboshaft::VariableReducer::GetActiveLoopVariablesIndex, ZoneVector< v8::internal::compiler::turboshaft::SnapshotTableKey > >", "classv8_1_1base_1_1IntrusiveSet.html", [
+      [ "v8::internal::ZoneIntrusiveSet< v8::internal::compiler::turboshaft::SnapshotTableKey, v8::internal::compiler::turboshaft::VariableReducer::GetActiveLoopVariablesIndex >", "classv8_1_1internal_1_1ZoneIntrusiveSet.html", null ]
     ] ],
     [ "v8::base::IntrusiveSetIndex", "classv8_1_1base_1_1IntrusiveSetIndex.html", null ],
     [ "v8::InvokeBootstrapper< ObjectType >", "structv8_1_1InvokeBootstrapper.html", null ],
@@ -3852,9 +4538,14 @@ var hierarchy =
     [ "v8::internal::is_valid_type_tag< T >", "structv8_1_1internal_1_1is__valid__type__tag.html", null ],
     [ "v8::internal::is_valid_type_tag< PairT< T1, T2 > >", "structv8_1_1internal_1_1is__valid__type__tag_3_01PairT_3_01T1_00_01T2_01_4_01_4.html", null ],
     [ "v8::internal::is_valid_type_tag< Union< T... > >", "structv8_1_1internal_1_1is__valid__type__tag_3_01Union_3_01T_8_8_8_01_4_01_4.html", null ],
+    [ "cppgc::internal::IsAllocatedOnCompactableSpace< T >", "structcppgc_1_1internal_1_1IsAllocatedOnCompactableSpace.html", null ],
+    [ "cppgc::internal::IsAllocatedOnCompactableSpaceImpl< CustomSpace >", "structcppgc_1_1internal_1_1IsAllocatedOnCompactableSpaceImpl.html", null ],
+    [ "cppgc::internal::IsAllocatedOnCompactableSpaceImpl< void >", "structcppgc_1_1internal_1_1IsAllocatedOnCompactableSpaceImpl_3_01void_01_4.html", null ],
     [ "v8::base::internal::IsCheckedOp< L, R >", "structv8_1_1base_1_1internal_1_1IsCheckedOp.html", null ],
     [ "v8::base::internal::IsClampedOp< L, R >", "structv8_1_1base_1_1internal_1_1IsClampedOp.html", null ],
     [ "v8::internal::IsCompiledScope", "classv8_1_1internal_1_1IsCompiledScope.html", null ],
+    [ "cppgc::internal::IsComplete< T >", "structcppgc_1_1internal_1_1IsComplete.html", null ],
+    [ "v8::TracedReference< T >::IsDroppable", "structv8_1_1TracedReference_1_1IsDroppable.html", null ],
     [ "v8::base::internal::IsEqual< L, R >", "structv8_1_1base_1_1internal_1_1IsEqual.html", null ],
     [ "v8::base::internal::IsGreater< L, R >", "structv8_1_1base_1_1internal_1_1IsGreater.html", null ],
     [ "v8::base::internal::IsGreaterOrEqual< L, R >", "structv8_1_1base_1_1internal_1_1IsGreaterOrEqual.html", null ],
@@ -3864,15 +4555,18 @@ var hierarchy =
     [ "v8::base::internal::IsNotEqual< L, R >", "structv8_1_1base_1_1internal_1_1IsNotEqual.html", null ],
     [ "v8::base::internal::IsNumericRangeContained< Dst, Src >", "structv8_1_1base_1_1internal_1_1IsNumericRangeContained.html", null ],
     [ "v8::base::internal::IsNumericRangeContained< Dst, Src >", "structv8_1_1base_1_1internal_1_1IsNumericRangeContained_3_01Dst_00_01Src_01_4.html", null ],
+    [ "v8::Isolate", "classv8_1_1Isolate.html", null ],
     [ "v8::internal::IsolateData", "classv8_1_1internal_1_1IsolateData.html", null ],
     [ "v8::internal::IsolateForPointerCompression", "classv8_1_1internal_1_1IsolateForPointerCompression.html", null ],
     [ "v8::internal::IsolateForSandbox", "classv8_1_1internal_1_1IsolateForSandbox.html", null ],
     [ "v8::internal::IsolateGroup", "classv8_1_1internal_1_1IsolateGroup.html", null ],
+    [ "v8::IsolateGroup", "classv8_1_1IsolateGroup.html", null ],
     [ "v8::internal::wasm::WasmEngine::IsolateInfo", "structv8_1_1internal_1_1wasm_1_1WasmEngine_1_1IsolateInfo.html", null ],
     [ "v8::internal::ETWJITInterface::IsolateLoadScriptData", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html", null ],
     [ "v8::internal::IsolateSafepoint", "classv8_1_1internal_1_1IsolateSafepoint.html", null ],
     [ "v8::internal::IsolateSafepointScope", "classv8_1_1internal_1_1IsolateSafepointScope.html", null ],
     [ "v8::base::internal::IsStrictOp< L, R >", "structv8_1_1base_1_1internal_1_1IsStrictOp.html", null ],
+    [ "cppgc::internal::IsSubclassOfBasicMemberTemplate< BasicMemberCandidate, WeaknessTag, WriteBarrierPolicy >", "structcppgc_1_1internal_1_1IsSubclassOfBasicMemberTemplate.html", null ],
     [ "v8::base::internal::IsTypeInRangeForNumericType< Dst, Src >", "structv8_1_1base_1_1internal_1_1IsTypeInRangeForNumericType.html", null ],
     [ "v8::base::internal::IsValueInRangeFastOp< Dst, Src >", "structv8_1_1base_1_1internal_1_1IsValueInRangeFastOp.html", null ],
     [ "v8::base::internal::IsValueInRangeFastOp< Dst, Src >", "structv8_1_1base_1_1internal_1_1IsValueInRangeFastOp_3_01Dst_00_01Src_01_4.html", null ],
@@ -3895,6 +4589,7 @@ var hierarchy =
     [ "v8::internal::Script::Iterator", "classv8_1_1internal_1_1Script_1_1Iterator.html", null ],
     [ "v8::internal::wasm::LiftoffRegList::Iterator", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList_1_1Iterator.html", null ],
     [ "v8::internal::WeakArrayList::Iterator", "classv8_1_1internal_1_1WeakArrayList_1_1Iterator.html", null ],
+    [ "v8::MemorySpan< T >::Iterator", "classv8_1_1MemorySpan_1_1Iterator.html", null ],
     [ "v8::base::IntrusiveSet< T, GetIntrusiveSetIndex, Container >::iterator", "classv8_1_1base_1_1IntrusiveSet_1_1iterator.html", null ],
     [ "v8::base::iterator< Category, Type, Diff, Pointer, Reference >", "structv8_1_1base_1_1iterator.html", null ],
     [ "v8::base::SmallMap< NormalMap, kArraySize, EqualKey, MapInit >::iterator", "classv8_1_1base_1_1SmallMap_1_1iterator.html", null ],
@@ -3936,44 +4631,52 @@ var hierarchy =
       [ "v8::internal::RegListBase< RegisterT >::ReverseIterator", "classv8_1_1internal_1_1RegListBase_1_1ReverseIterator.html", null ]
     ] ],
     [ "v8::base::iterator< std::forward_iterator_tag, T >", "structv8_1_1base_1_1iterator.html", [
+      [ "cppgc::internal::NormalPage::IteratorImpl< T >", "classcppgc_1_1internal_1_1NormalPage_1_1IteratorImpl.html", null ],
       [ "v8::base::DoublyThreadedList< T, DTLTraits >::iterator", "classv8_1_1base_1_1DoublyThreadedList_1_1iterator.html", null ]
     ] ],
-    [ "v8::base::iterator< std::forward_iterator_tag, TracedNode >", "structv8_1_1base_1_1iterator.html", null ],
+    [ "v8::base::iterator< std::forward_iterator_tag, TracedNode >", "structv8_1_1base_1_1iterator.html", [
+      [ "v8::internal::TracedNodeBlock::NodeIteratorImpl", "classv8_1_1internal_1_1TracedNodeBlock_1_1NodeIteratorImpl.html", null ]
+    ] ],
     [ "v8::base::iterator< std::input_iterator_tag, uint32_t >", "structv8_1_1base_1_1iterator.html", [
       [ "v8::internal::wasm::BytecodeIterator::offset_iterator", "classv8_1_1internal_1_1wasm_1_1BytecodeIterator_1_1offset__iterator.html", null ]
     ] ],
     [ "v8::base::iterator< std::input_iterator_tag, WasmOpcode >", "structv8_1_1base_1_1iterator.html", [
       [ "v8::internal::wasm::BytecodeIterator::opcode_iterator", "classv8_1_1internal_1_1wasm_1_1BytecodeIterator_1_1opcode__iterator.html", null ]
     ] ],
+    [ "v8::internal::wasm::BytecodeIterator::iterator_base", "classv8_1_1internal_1_1wasm_1_1BytecodeIterator_1_1iterator__base.html", [
+      [ "v8::internal::wasm::BytecodeIterator::offset_iterator", "classv8_1_1internal_1_1wasm_1_1BytecodeIterator_1_1offset__iterator.html", null ],
+      [ "v8::internal::wasm::BytecodeIterator::opcode_iterator", "classv8_1_1internal_1_1wasm_1_1BytecodeIterator_1_1opcode__iterator.html", null ]
+    ] ],
     [ "v8::base::iterator_range< ForwardIterator >", "classv8_1_1base_1_1iterator__range.html", null ],
     [ "std::iterator_traits< v8::internal::compiler::turboshaft::PredecessorIterator >", "classstd_1_1iterator__traits_3_01v8_1_1internal_1_1compiler_1_1turboshaft_1_1PredecessorIterator_01_4.html", null ],
     [ "v8::internal::interpreter::BytecodeGenerator::IteratorRecord", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1IteratorRecord.html", null ],
+    [ "v8::internal::compiler::BytecodeGraphBuilder::OsrIteratorState::IteratorsStates", "structv8_1_1internal_1_1compiler_1_1BytecodeGraphBuilder_1_1OsrIteratorState_1_1IteratorsStates.html", null ],
     [ "v8::internal::wasm::ITracer", "classv8_1_1internal_1_1wasm_1_1ITracer.html", [
       [ "v8::internal::wasm::OffsetsProvider", "classv8_1_1internal_1_1wasm_1_1OffsetsProvider.html", null ]
     ] ],
     [ "v8::internal::JavaScriptStackFrameIterator", "classv8_1_1internal_1_1JavaScriptStackFrameIterator.html", null ],
     [ "v8::internal::ThreadIsolation::JitAllocation", "classv8_1_1internal_1_1ThreadIsolation_1_1JitAllocation.html", null ],
+    [ "v8::JitCodeEvent", "structv8_1_1JitCodeEvent.html", null ],
     [ "v8::internal::ThreadIsolation::JitPage", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPage.html", null ],
     [ "v8::internal::ThreadIsolation::JitPageReference", "classv8_1_1internal_1_1ThreadIsolation_1_1JitPageReference.html", null ],
-    [ "v8::JobDelegate", null, [
+    [ "v8::internal::LazyCompileDispatcher::Job", "structv8_1_1internal_1_1LazyCompileDispatcher_1_1Job.html", null ],
+    [ "v8::JobDelegate", "classv8_1_1JobDelegate.html", [
       [ "v8::platform::DefaultJobState::JobDelegate", "classv8_1_1platform_1_1DefaultJobState_1_1JobDelegate.html", null ]
     ] ],
-    [ "JobHandle", null, [
+    [ "v8::JobHandle", "classv8_1_1JobHandle.html", [
       [ "v8::platform::DefaultJobHandle", "classv8_1_1platform_1_1DefaultJobHandle.html", null ]
     ] ],
-    [ "cppgc::JobTask", null, [
-      [ "cppgc::internal::WeakCallbackJobTask", "classcppgc_1_1internal_1_1WeakCallbackJobTask.html", null ]
-    ] ],
-    [ "JobTask", null, [
-      [ "v8::internal::ArrayBufferSweeper::SweepingState::SweepingJob", "classv8_1_1internal_1_1ArrayBufferSweeper_1_1SweepingState_1_1SweepingJob.html", null ]
-    ] ],
-    [ "v8::JobTask", null, [
+    [ "v8::JobTask", "classv8_1_1JobTask.html", [
+      [ "cppgc::internal::WeakCallbackJobTask", "classcppgc_1_1internal_1_1WeakCallbackJobTask.html", null ],
+      [ "v8::DelayedTasksPlatform::DelayedJob", "classv8_1_1DelayedTasksPlatform_1_1DelayedJob.html", null ],
+      [ "v8::internal::ArrayBufferSweeper::SweepingState::SweepingJob", "classv8_1_1internal_1_1ArrayBufferSweeper_1_1SweepingState_1_1SweepingJob.html", null ],
       [ "v8::internal::ConcurrentMarking::JobTaskMajor", "classv8_1_1internal_1_1ConcurrentMarking_1_1JobTaskMajor.html", null ],
       [ "v8::internal::ConcurrentMarking::JobTaskMinor", "classv8_1_1internal_1_1ConcurrentMarking_1_1JobTaskMinor.html", null ],
       [ "v8::internal::LazyCompileDispatcher::JobTask", "classv8_1_1internal_1_1LazyCompileDispatcher_1_1JobTask.html", null ],
       [ "v8::internal::OptimizingCompileDispatcher::CompileTask", "classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html", null ],
       [ "v8::internal::PageEvacuationJob", "classv8_1_1internal_1_1PageEvacuationJob.html", null ],
       [ "v8::internal::PointersUpdatingJob", "classv8_1_1internal_1_1PointersUpdatingJob.html", null ],
+      [ "v8::internal::ScavengerCollector::JobTask", "classv8_1_1internal_1_1ScavengerCollector_1_1JobTask.html", null ],
       [ "v8::internal::Sweeper::MajorSweeperJob", "classv8_1_1internal_1_1Sweeper_1_1MajorSweeperJob.html", null ],
       [ "v8::internal::Sweeper::MinorSweeperJob", "classv8_1_1internal_1_1Sweeper_1_1MinorSweeperJob.html", null ],
       [ "v8::internal::baseline::ConcurrentBaselineCompiler::JobDispatcher", "classv8_1_1internal_1_1baseline_1_1ConcurrentBaselineCompiler_1_1JobDispatcher.html", null ],
@@ -3987,9 +4690,14 @@ var hierarchy =
     [ "v8::internal::compiler::JSCallAccessor", "classv8_1_1internal_1_1compiler_1_1JSCallAccessor.html", null ],
     [ "v8::internal::JSDataObjectBuilder", "classv8_1_1internal_1_1JSDataObjectBuilder.html", null ],
     [ "v8::internal::JSDispatchHandleAliasTag", "structv8_1_1internal_1_1JSDispatchHandleAliasTag.html", null ],
+    [ "v8::JSEntryStub", "structv8_1_1JSEntryStub.html", null ],
+    [ "v8::JSEntryStubs", "structv8_1_1JSEntryStubs.html", null ],
     [ "v8::internal::Factory::JSFunctionBuilder", "classv8_1_1internal_1_1Factory_1_1JSFunctionBuilder.html", null ],
     [ "v8::internal::compiler::JSHeapBroker", "classv8_1_1internal_1_1compiler_1_1JSHeapBroker.html", null ],
     [ "v8::internal::compiler::JSHeapBrokerScopeForTesting", "classv8_1_1internal_1_1compiler_1_1JSHeapBrokerScopeForTesting.html", null ],
+    [ "v8::internal::FieldStatsCollector::JSObjectFieldStats", "structv8_1_1internal_1_1FieldStatsCollector_1_1JSObjectFieldStats.html", null ],
+    [ "v8::JSON", "classv8_1_1JSON.html", null ],
+    [ "v8::internal::JsonParser< Char >::JsonContinuation", "structv8_1_1internal_1_1JsonParser_1_1JsonContinuation.html", null ],
     [ "v8::internal::compiler::JSONEscaped", "classv8_1_1internal_1_1compiler_1_1JSONEscaped.html", null ],
     [ "v8::internal::compiler::JSONGraphWriter", "classv8_1_1internal_1_1compiler_1_1JSONGraphWriter.html", null ],
     [ "v8::internal::JsonParseInternalizer", "classv8_1_1internal_1_1JsonParseInternalizer.html", null ],
@@ -4004,16 +4712,6 @@ var hierarchy =
     [ "v8::internal::compiler::JSSpeculativeBinopBuilder", "classv8_1_1internal_1_1compiler_1_1JSSpeculativeBinopBuilder.html", null ],
     [ "v8::internal::wasm::JSToWasmWrapperCompilationUnit", "classv8_1_1internal_1_1wasm_1_1JSToWasmWrapperCompilationUnit.html", null ],
     [ "v8::internal::compiler::JSTypeHintLowering", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html", null ],
-    [ "JSVisitor", null, [
-      [ "v8::internal::GraphBuildingVisitor", "classv8_1_1internal_1_1GraphBuildingVisitor.html", null ],
-      [ "v8::internal::UnifiedHeapMarkingVisitorBase", "classv8_1_1internal_1_1UnifiedHeapMarkingVisitorBase.html", [
-        [ "v8::internal::ConcurrentUnifiedHeapMarkingVisitor", "classv8_1_1internal_1_1ConcurrentUnifiedHeapMarkingVisitor.html", null ],
-        [ "v8::internal::MutatorUnifiedHeapMarkingVisitor", "classv8_1_1internal_1_1MutatorUnifiedHeapMarkingVisitor.html", null ]
-      ] ],
-      [ "v8::internal::WeakVisitor", "classv8_1_1internal_1_1WeakVisitor.html", [
-        [ "v8::internal::VisiblityVisitor", "classv8_1_1internal_1_1VisiblityVisitor.html", null ]
-      ] ]
-    ] ],
     [ "v8::internal::wasm::JumpBuffer", "structv8_1_1internal_1_1wasm_1_1JumpBuffer.html", null ],
     [ "v8::internal::JumpOptimizationInfo::JumpInfo", "structv8_1_1internal_1_1JumpOptimizationInfo_1_1JumpInfo.html", null ],
     [ "v8::internal::JumpOptimizationInfo", "structv8_1_1internal_1_1JumpOptimizationInfo.html", null ],
@@ -4024,11 +4722,15 @@ var hierarchy =
     [ "v8::internal::compiler::JumpThreading", "classv8_1_1internal_1_1compiler_1_1JumpThreading.html", null ],
     [ "v8::internal::compiler::JumpThreadingPhase", "structv8_1_1internal_1_1compiler_1_1JumpThreadingPhase.html", null ],
     [ "v8::internal::compiler::turboshaft::JumpThreadingPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1JumpThreadingPhase.html", null ],
+    [ "v8::Maybe< void >::JustTag", "structv8_1_1Maybe_3_01void_01_4_1_1JustTag.html", null ],
+    [ "cppgc::internal::KeepLocationPolicy", "classcppgc_1_1internal_1_1KeepLocationPolicy.html", null ],
+    [ "cppgc::Visitor::Key", "classcppgc_1_1Visitor_1_1Key.html", null ],
+    [ "v8::internal::DescriptorLookupCache::Key", "structv8_1_1internal_1_1DescriptorLookupCache_1_1Key.html", null ],
     [ "v8::internal::wasm::NativeModuleCache::Key", "structv8_1_1internal_1_1wasm_1_1NativeModuleCache_1_1Key.html", null ],
     [ "v8::internal::KeyAccumulator", "classv8_1_1internal_1_1KeyAccumulator.html", null ],
     [ "v8::internal::compiler::turboshaft::KeyData", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1KeyData.html", [
-      [ "v8::internal::compiler::turboshaft::SnapshotTableEntry< OpIndex, v8::internal::compiler::turboshaft::KeyData >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SnapshotTableEntry.html", null ],
-      [ "v8::internal::compiler::turboshaft::SnapshotTableEntry< Value, v8::internal::compiler::turboshaft::KeyData >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SnapshotTableEntry.html", null ],
+      [ "v8::internal::compiler::turboshaft::SnapshotTableEntry< v8::OpIndex, v8::internal::compiler::turboshaft::KeyData >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SnapshotTableEntry.html", null ],
+      [ "v8::internal::compiler::turboshaft::SnapshotTableEntry< v8::Value, v8::internal::compiler::turboshaft::KeyData >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SnapshotTableEntry.html", null ],
       [ "v8::internal::compiler::turboshaft::SnapshotTableEntry< Value, KeyData >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SnapshotTableEntry.html", null ]
     ] ],
     [ "v8::internal::compiler::turboshaft::wle::KeyData", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1wle_1_1KeyData.html", null ],
@@ -4094,6 +4796,7 @@ var hierarchy =
     [ "unibrow::Letter", "structunibrow_1_1Letter.html", null ],
     [ "v8::internal::torque::Lexer", "classv8_1_1internal_1_1torque_1_1Lexer.html", null ],
     [ "v8::internal::torque::LexerResult", "structv8_1_1internal_1_1torque_1_1LexerResult.html", null ],
+    [ "v8::internal::compiler::WasmInliner::LexicographicOrdering", "structv8_1_1internal_1_1compiler_1_1WasmInliner_1_1LexicographicOrdering.html", null ],
     [ "v8::internal::compiler::LifetimePosition", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html", null ],
     [ "v8::internal::wasm::LiftoffFrameDescriptionForDeopt", "structv8_1_1internal_1_1wasm_1_1LiftoffFrameDescriptionForDeopt.html", null ],
     [ "v8::internal::wasm::LiftoffOptions", "structv8_1_1internal_1_1wasm_1_1LiftoffOptions.html", null ],
@@ -4102,11 +4805,16 @@ var hierarchy =
     [ "v8::internal::wasm::LiftoffStackSlots", "classv8_1_1internal_1_1wasm_1_1LiftoffStackSlots.html", null ],
     [ "v8::internal::wasm::LiftoffVarState", "classv8_1_1internal_1_1wasm_1_1LiftoffVarState.html", null ],
     [ "v8::internal::compiler::RangeType::Limits", "structv8_1_1internal_1_1compiler_1_1RangeType_1_1Limits.html", null ],
+    [ "v8::internal::wasm::ModuleDecoderImpl::LimitsByte", "structv8_1_1internal_1_1wasm_1_1ModuleDecoderImpl_1_1LimitsByte.html", null ],
+    [ "v8::internal::Heap::LimitsCompuatationResult", "structv8_1_1internal_1_1Heap_1_1LimitsCompuatationResult.html", null ],
+    [ "v8::internal::wasm::MultiLineStringBuilder::Line", "structv8_1_1internal_1_1wasm_1_1MultiLineStringBuilder_1_1Line.html", null ],
+    [ "v8::JitCodeEvent::line_info_t", "structv8_1_1JitCodeEvent_1_1line__info__t.html", null ],
     [ "v8::internal::torque::LineAndColumn", "structv8_1_1internal_1_1torque_1_1LineAndColumn.html", null ],
     [ "v8::internal::LinearAllocationArea", "classv8_1_1internal_1_1LinearAllocationArea.html", null ],
     [ "cppgc::internal::NormalPageSpace::LinearAllocationBuffer", "classcppgc_1_1internal_1_1NormalPageSpace_1_1LinearAllocationBuffer.html", null ],
     [ "v8::internal::LinearAreaOriginalData", "classv8_1_1internal_1_1LinearAreaOriginalData.html", null ],
     [ "v8::internal::compiler::LinearScheduler", "classv8_1_1internal_1_1compiler_1_1LinearScheduler.html", null ],
+    [ "v8::CpuProfileNode::LineTick", "structv8_1_1CpuProfileNode_1_1LineTick.html", null ],
     [ "v8::internal::wasm::LinkageAllocator", "classv8_1_1internal_1_1wasm_1_1LinkageAllocator.html", null ],
     [ "v8::internal::LinkageLocation", "classv8_1_1internal_1_1LinkageLocation.html", null ],
     [ "v8::internal::wasm::LinkageLocationAllocator", "classv8_1_1internal_1_1wasm_1_1LinkageLocationAllocator.html", null ],
@@ -4114,9 +4822,9 @@ var hierarchy =
     [ "v8::internal::maglev::VirtualObject::List", "classv8_1_1internal_1_1maglev_1_1VirtualObject_1_1List.html", null ],
     [ "std::list", null, [
       [ "v8::internal::ZoneLinkedList< Bracket >", "classv8_1_1internal_1_1ZoneLinkedList.html", null ],
-      [ "v8::internal::ZoneLinkedList< ScheduleGraphNode * >", "classv8_1_1internal_1_1ZoneLinkedList.html", null ],
+      [ "v8::internal::ZoneLinkedList< v8::internal::compiler::InstructionScheduler::ScheduleGraphNode * >", "classv8_1_1internal_1_1ZoneLinkedList.html", null ],
       [ "v8::internal::ZoneLinkedList< v8::internal::interpreter::BytecodeLabel >", "classv8_1_1internal_1_1ZoneLinkedList.html", null ],
-      [ "v8::internal::ZoneLinkedList< GlobalImport >", "classv8_1_1internal_1_1ZoneLinkedList.html", null ],
+      [ "v8::internal::ZoneLinkedList< v8::internal::wasm::AsmJsParser::GlobalImport >", "classv8_1_1internal_1_1ZoneLinkedList.html", null ],
       [ "v8::internal::ZoneLinkedList< T >", "classv8_1_1internal_1_1ZoneLinkedList.html", null ]
     ] ],
     [ "v8::base::tmp::list<... >", "structv8_1_1base_1_1tmp_1_1list.html", null ],
@@ -4126,6 +4834,7 @@ var hierarchy =
       [ "v8::internal::ProfilerListener", "classv8_1_1internal_1_1ProfilerListener.html", null ]
     ] ],
     [ "v8::internal::heap::ListNode< T >", "classv8_1_1internal_1_1heap_1_1ListNode.html", null ],
+    [ "v8::internal::TracedNodeBlock::ListNode", "structv8_1_1internal_1_1TracedNodeBlock_1_1ListNode.html", null ],
     [ "v8::internal::heap::ListNode< v8::internal::MutablePageMetadata >", "classv8_1_1internal_1_1heap_1_1ListNode.html", null ],
     [ "v8::internal::torque::ListPrintAdaptor< T, L >", "structv8_1_1internal_1_1torque_1_1ListPrintAdaptor.html", null ],
     [ "v8::internal::LiteralBoilerplateBuilder", "classv8_1_1internal_1_1LiteralBoilerplateBuilder.html", [
@@ -4134,6 +4843,7 @@ var hierarchy =
     ] ],
     [ "v8::internal::LiteralBuffer", "classv8_1_1internal_1_1LiteralBuffer.html", null ],
     [ "v8::debug::LiveEditResult", "structv8_1_1debug_1_1LiveEditResult.html", null ],
+    [ "cppgc::LivenessBroker", "classcppgc_1_1LivenessBroker.html", null ],
     [ "cppgc::internal::LivenessBrokerFactory", "classcppgc_1_1internal_1_1LivenessBrokerFactory.html", null ],
     [ "v8::internal::LiveObjectRange", "classv8_1_1internal_1_1LiveObjectRange.html", null ],
     [ "v8::internal::maglev::ValueNode::LiveRange", "structv8_1_1internal_1_1maglev_1_1ValueNode_1_1LiveRange.html", null ],
@@ -4147,6 +4857,7 @@ var hierarchy =
     [ "v8::internal::AccessorAssembler::LoadICParameters", "structv8_1_1internal_1_1AccessorAssembler_1_1LoadICParameters.html", null ],
     [ "v8::internal::compiler::LoadLaneParameters", "structv8_1_1internal_1_1compiler_1_1LoadLaneParameters.html", null ],
     [ "v8::internal::LoadStoreLaneParams", "classv8_1_1internal_1_1LoadStoreLaneParams.html", null ],
+    [ "v8::internal::compiler::KeyedAccessMode::LoadStoreMode", "unionv8_1_1internal_1_1compiler_1_1KeyedAccessMode_1_1LoadStoreMode.html", null ],
     [ "v8::internal::compiler::turboshaft::LoadStoreSimplificationConfiguration", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadStoreSimplificationConfiguration.html", [
       [ "v8::internal::compiler::turboshaft::LoadStoreSimplificationReducer< Next >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadStoreSimplificationReducer.html", null ]
     ] ],
@@ -4156,7 +4867,6 @@ var hierarchy =
     [ "v8::internal::compiler::TurboshaftAdapter::LoadView", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1LoadView.html", null ],
     [ "heap::base::Worklist< EntryType, MinSegmentSize >::Local", "classheap_1_1base_1_1Worklist_1_1Local.html", null ],
     [ "v8::internal::MarkingWorklists::Local", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html", null ],
-    [ "v8::internal::WeakObjects::Local", "classv8_1_1internal_1_1WeakObjects_1_1Local.html", null ],
     [ "v8::internal::YoungGenerationRememberedSetsMarkingWorklist::Local", "classv8_1_1internal_1_1YoungGenerationRememberedSetsMarkingWorklist_1_1Local.html", null ],
     [ "v8::internal::wasm::LocalDeclEncoder", "classv8_1_1internal_1_1wasm_1_1LocalDeclEncoder.html", null ],
     [ "v8::internal::wasm::LocalDeclEncoderBuffer", "structv8_1_1internal_1_1wasm_1_1LocalDeclEncoderBuffer.html", null ],
@@ -4170,16 +4880,23 @@ var hierarchy =
     [ "v8::internal::ScopeInfo::LocalNamesRange< ScopeInfoPtr >", "classv8_1_1internal_1_1ScopeInfo_1_1LocalNamesRange.html", null ],
     [ "v8::internal::Sweeper::LocalSweeper", "classv8_1_1internal_1_1Sweeper_1_1LocalSweeper.html", null ],
     [ "v8::internal::torque::LocalValue", "classv8_1_1internal_1_1torque_1_1LocalValue.html", null ],
+    [ "v8::LocalVector< T >", "classv8_1_1LocalVector.html", null ],
     [ "v8::debug::Location", "classv8_1_1debug_1_1Location.html", [
       [ "v8::debug::BreakLocation", "classv8_1_1debug_1_1BreakLocation.html", null ]
     ] ],
     [ "v8::internal::Scanner::Location", "structv8_1_1internal_1_1Scanner_1_1Location.html", null ],
+    [ "v8::Location", "classv8_1_1Location.html", null ],
+    [ "LocationPolicy", null, [
+      [ "cppgc::internal::BasicCrossThreadPersistent< T, WeaknessPolicy, LocationPolicy, CheckingPolicy >", "classcppgc_1_1internal_1_1BasicCrossThreadPersistent.html", null ],
+      [ "cppgc::internal::BasicPersistent< T, WeaknessPolicy, LocationPolicy, CheckingPolicy >", "classcppgc_1_1internal_1_1BasicPersistent.html", null ]
+    ] ],
     [ "v8::internal::torque::LocationReference", "classv8_1_1internal_1_1torque_1_1LocationReference.html", null ],
     [ "v8::internal::LockedQueue< Record >", "classv8_1_1internal_1_1LockedQueue.html", null ],
     [ "v8::internal::LockedQueue< std::shared_ptr< v8::internal::wasm::gdb_server::TaskRunner::Task > >", "classv8_1_1internal_1_1LockedQueue.html", null ],
     [ "v8::internal::LockedQueue< std::unique_ptr< v8::internal::baseline::BaselineBatchCompilerJob > >", "classv8_1_1internal_1_1LockedQueue.html", null ],
     [ "v8::internal::LockedQueue< v8::internal::CodeEventsContainer >", "classv8_1_1internal_1_1LockedQueue.html", null ],
     [ "v8::internal::LockedQueue< v8::internal::TickSampleEventRecord >", "classv8_1_1internal_1_1LockedQueue.html", null ],
+    [ "v8::Locker", "classv8_1_1Locker.html", null ],
     [ "v8::base::LockGuard< Mutex >", "classv8_1_1base_1_1LockGuard.html", null ],
     [ "v8::internal::JSAtomicsMutex::LockGuardBase", "classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html", [
       [ "v8::internal::JSAtomicsMutex::LockGuard", "classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuard.html", null ],
@@ -4199,6 +4916,7 @@ var hierarchy =
     ] ],
     [ "v8::internal::LogFile", "classv8_1_1internal_1_1LogFile.html", null ],
     [ "v8::internal::Logger", "classv8_1_1internal_1_1Logger.html", null ],
+    [ "v8::metrics::LongTaskStats", "structv8_1_1metrics_1_1LongTaskStats.html", null ],
     [ "v8::internal::RegExpInstruction::LookaroundPayload", "classv8_1_1internal_1_1RegExpInstruction_1_1LookaroundPayload.html", null ],
     [ "v8::internal::LookupIterator", "classv8_1_1internal_1_1LookupIterator.html", null ],
     [ "v8::internal::compiler::LoopTree::Loop", "classv8_1_1internal_1_1compiler_1_1LoopTree_1_1Loop.html", null ],
@@ -4208,6 +4926,7 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::LoopFinder", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoopFinder.html", null ],
     [ "v8::internal::compiler::LoopFinderImpl", "classv8_1_1internal_1_1compiler_1_1LoopFinderImpl.html", null ],
     [ "v8::internal::compiler::LoopInfo", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html", null ],
+    [ "v8::internal::compiler::SpecialRPONumberer::LoopInfo", "structv8_1_1internal_1_1compiler_1_1SpecialRPONumberer_1_1LoopInfo.html", null ],
     [ "v8::internal::compiler::turboshaft::LoopFinder::LoopInfo", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoopFinder_1_1LoopInfo.html", null ],
     [ "v8::internal::compiler::turboshaft::TurboshaftSpecialRPONumberer::LoopInfo", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TurboshaftSpecialRPONumberer_1_1LoopInfo.html", null ],
     [ "v8::internal::LoopInitializationMarker", "classv8_1_1internal_1_1LoopInitializationMarker.html", null ],
@@ -4215,6 +4934,7 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::detail::LoopLabelForHelper< T >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1LoopLabelForHelper.html", null ],
     [ "v8::internal::compiler::turboshaft::detail::LoopLabelForHelper< std::tuple< V< Ts >... > >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1LoopLabelForHelper_3_01std_1_1tuple_31cd6567bf9334019d58a08f2d5542d5.html", null ],
     [ "v8::internal::compiler::turboshaft::detail::LoopLabelForHelper< V< T > >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1LoopLabelForHelper_3_01V_3_01T_01_4_01_4.html", null ],
+    [ "v8::internal::maglev::MergePointInterpreterFrameState::LoopMetadata", "structv8_1_1internal_1_1maglev_1_1MergePointInterpreterFrameState_1_1LoopMetadata.html", null ],
     [ "v8::internal::maglev::LoopOptimizationProcessor", "classv8_1_1internal_1_1maglev_1_1LoopOptimizationProcessor.html", null ],
     [ "v8::internal::compiler::LoopPeeler", "classv8_1_1internal_1_1compiler_1_1LoopPeeler.html", null ],
     [ "v8::internal::compiler::LoopPeelingPhase", "structv8_1_1internal_1_1compiler_1_1LoopPeelingPhase.html", null ],
@@ -4222,8 +4942,11 @@ var hierarchy =
     [ "v8::internal::compiler::GraphAssembler::LoopScope< Reps >", "classv8_1_1internal_1_1compiler_1_1GraphAssembler_1_1LoopScope.html", null ],
     [ "v8::internal::interpreter::BytecodeGenerator::LoopScope", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1LoopScope.html", null ],
     [ "v8::internal::ParserBase< Impl >::FunctionState::LoopScope", "classv8_1_1internal_1_1ParserBase_1_1FunctionState_1_1LoopScope.html", null ],
+    [ "v8::internal::compiler::GraphAssembler::LoopScope< Reps >::LoopScopeInternal", "classv8_1_1internal_1_1compiler_1_1GraphAssembler_1_1LoopScope_1_1LoopScopeInternal.html", null ],
+    [ "v8::internal::compiler::BytecodeAnalysis::BytecodeAnalysisImpl::LoopStackEntry", "structv8_1_1internal_1_1compiler_1_1BytecodeAnalysis_1_1BytecodeAnalysisImpl_1_1LoopStackEntry.html", null ],
     [ "v8::internal::compiler::turboshaft::LoopUnrollingAnalyzer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoopUnrollingAnalyzer.html", null ],
     [ "v8::internal::compiler::turboshaft::LoopUnrollingPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoopUnrollingPhase.html", null ],
+    [ "v8::internal::maglev::LiveRangeAndNextUseProcessor::LoopUsedNodes", "structv8_1_1internal_1_1maglev_1_1LiveRangeAndNextUseProcessor_1_1LoopUsedNodes.html", null ],
     [ "v8::internal::compiler::LoopVariableOptimizer", "classv8_1_1internal_1_1compiler_1_1LoopVariableOptimizer.html", null ],
     [ "v8::internal::compiler::JSTypeHintLowering::LoweringResult", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering_1_1LoweringResult.html", null ],
     [ "v8::base::internal::LowestValuePromotion< Lhs, Rhs, Promotion >", "structv8_1_1base_1_1internal_1_1LowestValuePromotion.html", null ],
@@ -4258,9 +4981,15 @@ var hierarchy =
     [ "v8::internal::maglev::MaglevPhiRepresentationSelector", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html", null ],
     [ "v8::internal::maglev::MaglevPrintingVisitor", "classv8_1_1internal_1_1maglev_1_1MaglevPrintingVisitor.html", null ],
     [ "v8::internal::MaglevSafepointTable", "classv8_1_1internal_1_1MaglevSafepointTable.html", null ],
+    [ "v8::internal::maglev::MaglevGraphBuilder::MaglevSubGraphBuilder", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder.html", null ],
     [ "v8::internal::MainAllocator", "classv8_1_1internal_1_1MainAllocator.html", null ],
     [ "cppgc::internal::MetricRecorder::MainThreadIncrementalMark", "structcppgc_1_1internal_1_1MetricRecorder_1_1MainThreadIncrementalMark.html", null ],
     [ "cppgc::internal::MetricRecorder::MainThreadIncrementalSweep", "structcppgc_1_1internal_1_1MetricRecorder_1_1MainThreadIncrementalSweep.html", null ],
+    [ "cppgc::internal::MakeGarbageCollectedTraitInternal", "classcppgc_1_1internal_1_1MakeGarbageCollectedTraitInternal.html", [
+      [ "cppgc::MakeGarbageCollectedTraitBase< T >", "classcppgc_1_1MakeGarbageCollectedTraitBase.html", [
+        [ "cppgc::MakeGarbageCollectedTrait< T >", "classcppgc_1_1MakeGarbageCollectedTrait.html", null ]
+      ] ]
+    ] ],
     [ "v8::internal::Malloced", "classv8_1_1internal_1_1Malloced.html", [
       [ "v8::internal::AlternativeGeneration", "classv8_1_1internal_1_1AlternativeGeneration.html", null ],
       [ "v8::internal::ArrayBufferExtension", "classv8_1_1internal_1_1ArrayBufferExtension.html", null ],
@@ -4323,26 +5052,27 @@ var hierarchy =
       [ "v8::internal::ZoneMap< int, int >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< int, v8::internal::compiler::LoopInfo >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< int, v8::internal::compiler::BytecodeGraphBuilder::Environment * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
-      [ "v8::internal::ZoneMap< int32_t, ScheduleGraphNode * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
+      [ "v8::internal::ZoneMap< int32_t, v8::internal::compiler::InstructionScheduler::ScheduleGraphNode * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< v8::internal::compiler::Node *, int >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< v8::internal::compiler::Node *, v8::internal::compiler::Node * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< v8::internal::compiler::InstructionOperand *, v8::internal::compiler::UsePosition * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
-      [ "v8::internal::ZoneMap< v8::internal::compiler::Node *, FieldInfo >", "classv8_1_1internal_1_1ZoneMap.html", null ],
+      [ "v8::internal::ZoneMap< v8::internal::compiler::Node *, v8::internal::compiler::LoadElimination::FieldInfo >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< v8::internal::compiler::Node *, v8::internal::ZoneCompactSet< v8::internal::Map > >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< int, v8::internal::compiler::InductionVariable * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< NodeId, v8::internal::ZoneVector >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< NodeId, v8::internal::compiler::NodeObservation * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
+      [ "v8::internal::ZoneMap< Key, v8::Value >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< Key, Value >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< int, PhiMapValue * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< v8::internal::compiler::TopLevelLiveRange *, v8::internal::compiler::AllocatedOperand * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< v8::internal::compiler::RpoNumber, v8::internal::compiler::BlockAssessments * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
-      [ "v8::internal::ZoneMap< v8::internal::compiler::RpoNumber, DelayedAssessments * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
+      [ "v8::internal::ZoneMap< v8::internal::compiler::RpoNumber, v8::internal::compiler::RegisterAllocatorVerifier::DelayedAssessments * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< v8::internal::compiler::InstructionOperand, int, v8::internal::compiler::OperandAsKeyLess >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< v8::internal::compiler::Node *, v8::internal::ZoneVector< v8::internal::compiler::Node * > >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< v8::internal::compiler::Node *, v8::internal::ZoneMap< v8::internal::compiler::Node *, v8::internal::ZoneSet > * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< int, ZoneMap< int, BasicBlock * > * >", "classv8_1_1internal_1_1ZoneMap.html", null ],
-      [ "v8::internal::ZoneMap< CandidateAddressKey, CandidateBaseAddr >", "classv8_1_1internal_1_1ZoneMap.html", null ],
-      [ "v8::internal::ZoneMap< CandidateAddressKey, CandidateMemOps >", "classv8_1_1internal_1_1ZoneMap.html", null ],
+      [ "v8::internal::ZoneMap< CandidateAddressKey, v8::internal::compiler::WasmAddressReassociation::CandidateBaseAddr >", "classv8_1_1internal_1_1ZoneMap.html", null ],
+      [ "v8::internal::ZoneMap< CandidateAddressKey, v8::internal::compiler::WasmAddressReassociation::CandidateMemOps >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< v8::internal::compiler::turboshaft::OpIndex, uint64_t >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< Key, int >", "classv8_1_1internal_1_1ZoneMap.html", null ],
       [ "v8::internal::ZoneMap< double, index_t >", "classv8_1_1internal_1_1ZoneMap.html", null ],
@@ -4411,6 +5141,10 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::Opmask::MaskBuilder< Op, Fields >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Opmask_1_1MaskBuilder.html", null ],
     [ "v8::internal::String::Match", "classv8_1_1internal_1_1String_1_1Match.html", null ],
     [ "v8::internal::torque::MatchedInput", "structv8_1_1internal_1_1torque_1_1MatchedInput.html", null ],
+    [ "MatchFun", null, [
+      [ "v8::base::TemplateHashMapImpl< Key, Value, MatchFun, AllocationPolicy >::Impl", "structv8_1_1base_1_1TemplateHashMapImpl_1_1Impl.html", null ]
+    ] ],
+    [ "v8::internal::TranslatedValue::MaterializedObjectInfo", "structv8_1_1internal_1_1TranslatedValue_1_1MaterializedObjectInfo.html", null ],
     [ "v8::internal::MaterializedObjectStore", "classv8_1_1internal_1_1MaterializedObjectStore.html", null ],
     [ "v8::internal::maglev::MaxCallDepthProcessor", "classv8_1_1internal_1_1maglev_1_1MaxCallDepthProcessor.html", null ],
     [ "v8::internal::MaxDecimalDigitsIn< bytes >", "structv8_1_1internal_1_1MaxDecimalDigitsIn.html", null ],
@@ -4423,6 +5157,14 @@ var hierarchy =
     [ "v8::base::internal::MaxExponentPromotion< Lhs, Rhs, RIGHT_PROMOTION >", "structv8_1_1base_1_1internal_1_1MaxExponentPromotion_3_01Lhs_00_01Rhs_00_01RIGHT__PROMOTION_01_4.html", null ],
     [ "v8::internal::compiler::may_be_unequal< T >", "structv8_1_1internal_1_1compiler_1_1may__be__unequal.html", null ],
     [ "v8::internal::compiler::may_be_unequal< PersistentMap< Key, Value, Hasher > >", "structv8_1_1internal_1_1compiler_1_1may__be__unequal_3_01PersistentMap_3_01Key_00_01Value_00_01Hasher_01_4_01_4.html", null ],
+    [ "v8::Maybe< T >", "classv8_1_1Maybe.html", null ],
+    [ "v8::Maybe< v8::internal::compiler::OuterContext >", "classv8_1_1Maybe.html", null ],
+    [ "v8::Maybe< void >", "classv8_1_1Maybe_3_01void_01_4.html", null ],
+    [ "v8::internal::MaybeDefineIteratorConcept< Iterator, typename >", "structv8_1_1internal_1_1MaybeDefineIteratorConcept.html", [
+      [ "v8::internal::WrappedIterator< Iterator, ElementType >", "classv8_1_1internal_1_1WrappedIterator.html", null ]
+    ] ],
+    [ "v8::internal::MaybeDefineIteratorConcept< Iterator, std::enable_if_t< kHaveIteratorCategory< Iterator > &&!kHaveIteratorConcept< Iterator > > >", "structv8_1_1internal_1_1MaybeDefineIteratorConcept_3_01Iterator_00_01std_1_1enable__if__t_3_01kH269ae503c6c19997500dc31f5464edf9.html", null ],
+    [ "v8::internal::MaybeDefineIteratorConcept< Iterator, std::enable_if_t< kHaveIteratorConcept< Iterator > > >", "structv8_1_1internal_1_1MaybeDefineIteratorConcept_3_01Iterator_00_01std_1_1enable__if__t_3_01kH892ec00f98dda7627d4caa9056502a1e.html", null ],
     [ "v8::internal::MaybeDirectHandle< T >", "classv8_1_1internal_1_1MaybeDirectHandle.html", null ],
     [ "v8::internal::MaybeDirectHandle< v8::internal::FeedbackCell >", "classv8_1_1internal_1_1MaybeDirectHandle.html", null ],
     [ "v8::internal::MaybeDirectHandle< v8::internal::JSObject >", "classv8_1_1internal_1_1MaybeDirectHandle.html", null ],
@@ -4451,6 +5193,12 @@ var hierarchy =
     [ "v8::internal::MaybeHandle< v8::internal::String >", "classv8_1_1internal_1_1MaybeHandle.html", null ],
     [ "v8::internal::MaybeHandle< v8::internal::TrustedByteArray >", "classv8_1_1internal_1_1MaybeHandle.html", null ],
     [ "v8::internal::MaybeHandle< v8::internal::TrustedObject >", "classv8_1_1internal_1_1MaybeHandle.html", null ],
+    [ "v8::MaybeLocal< T >", "classv8_1_1MaybeLocal.html", null ],
+    [ "v8::MaybeLocal< Context >", "classv8_1_1MaybeLocal.html", null ],
+    [ "v8::MaybeLocal< Promise >", "classv8_1_1MaybeLocal.html", null ],
+    [ "v8::MaybeLocal< v8::String >", "classv8_1_1MaybeLocal.html", null ],
+    [ "v8::MaybeLocal< v8::Value >", "classv8_1_1MaybeLocal.html", null ],
+    [ "v8::MaybeLocal< Value >", "classv8_1_1MaybeLocal.html", null ],
     [ "v8::platform::DelayedTaskQueue::MaybeNextTask", "structv8_1_1platform_1_1DelayedTaskQueue_1_1MaybeNextTask.html", null ],
     [ "v8::internal::MaybeObjectDirectHandle", "classv8_1_1internal_1_1MaybeObjectDirectHandle.html", null ],
     [ "v8::internal::MaybeObjectHandle", "classv8_1_1internal_1_1MaybeObjectHandle.html", null ],
@@ -4468,11 +5216,16 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::SnapshotTable< Value, KeyData >::MaybeSnapshot", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1SnapshotTable_1_1MaybeSnapshot.html", null ],
     [ "v8::internal::wasm::CatchCase::MaybeTagIndex", "unionv8_1_1internal_1_1wasm_1_1CatchCase_1_1MaybeTagIndex.html", null ],
     [ "v8::internal::MaybeWeak< T >", "classv8_1_1internal_1_1MaybeWeak.html", null ],
-    [ "v8::MeasureMemoryDelegate", null, [
+    [ "v8::MeasureMemoryDelegate", "classv8_1_1MeasureMemoryDelegate.html", [
       [ "v8::internal::MeasureMemoryDelegate", "classv8_1_1internal_1_1MeasureMemoryDelegate.html", null ]
     ] ],
     [ "v8::internal::compiler::MeetRegisterConstraintsPhase", "structv8_1_1internal_1_1compiler_1_1MeetRegisterConstraintsPhase.html", null ],
     [ "v8::internal::compiler::turboshaft::MeetRegisterConstraintsPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MeetRegisterConstraintsPhase.html", null ],
+    [ "cppgc::internal::MemberBase< StorageType >", "classcppgc_1_1internal_1_1MemberBase.html", [
+      [ "cppgc::internal::BasicMember< K >", "classcppgc_1_1internal_1_1BasicMember.html", null ],
+      [ "cppgc::internal::BasicMember< V >", "classcppgc_1_1internal_1_1BasicMember.html", null ],
+      [ "cppgc::internal::BasicMember< T, WeaknessTag, WriteBarrierPolicy, CheckingPolicy, StorageType >", "classcppgc_1_1internal_1_1BasicMember.html", null ]
+    ] ],
     [ "cppgc::internal::MemberDebugHelper", "classcppgc_1_1internal_1_1MemberDebugHelper.html", null ],
     [ "v8::internal::wasm::MemoryAccessImmediate", "structv8_1_1internal_1_1wasm_1_1MemoryAccessImmediate.html", null ],
     [ "v8::internal::compiler::turboshaft::MemoryAddress", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryAddress.html", null ],
@@ -4480,6 +5233,7 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::MemoryAnalyzer", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryAnalyzer.html", null ],
     [ "v8::internal::MemoryBalancer", "classv8_1_1internal_1_1MemoryBalancer.html", null ],
     [ "v8::internal::MemoryChunk", "classv8_1_1internal_1_1MemoryChunk.html", null ],
+    [ "v8::internal::MemoryAllocator::MemoryChunkAllocationResult", "structv8_1_1internal_1_1MemoryAllocator_1_1MemoryChunkAllocationResult.html", null ],
     [ "v8::internal::MemoryChunkData", "structv8_1_1internal_1_1MemoryChunkData.html", null ],
     [ "v8::internal::MemoryChunkIterator", "classv8_1_1internal_1_1MemoryChunkIterator.html", null ],
     [ "v8::internal::MemoryChunkLayout", "classv8_1_1internal_1_1MemoryChunkLayout.html", null ],
@@ -4504,16 +5258,25 @@ var hierarchy =
     [ "v8::internal::compiler::MemoryOptimizationPhase", "structv8_1_1internal_1_1compiler_1_1MemoryOptimizationPhase.html", null ],
     [ "v8::internal::compiler::MemoryOptimizer", "classv8_1_1internal_1_1compiler_1_1MemoryOptimizer.html", null ],
     [ "v8::base::OS::MemoryRange", "structv8_1_1base_1_1OS_1_1MemoryRange.html", null ],
+    [ "v8::MemoryRange", "structv8_1_1MemoryRange.html", null ],
     [ "v8::internal::MemoryReducer", "classv8_1_1internal_1_1MemoryReducer.html", null ],
     [ "cppgc::internal::MemoryRegion", "classcppgc_1_1internal_1_1MemoryRegion.html", null ],
     [ "v8::base::MemoryRegion", "structv8_1_1base_1_1MemoryRegion.html", null ],
     [ "v8::internal::compiler::turboshaft::MemoryRepresentation", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryRepresentation.html", null ],
+    [ "v8::MemorySpan< T >", "classv8_1_1MemorySpan.html", null ],
+    [ "v8::MemorySpan< const size_t >", "classv8_1_1MemorySpan.html", null ],
+    [ "v8::MemorySpan< const v8::Local< v8::Context > >", "classv8_1_1MemorySpan.html", null ],
     [ "v8::internal::wasm::MemoryTracingInfo", "structv8_1_1internal_1_1wasm_1_1MemoryTracingInfo.html", null ],
     [ "v8::internal::wasm::Merge< Value >", "structv8_1_1internal_1_1wasm_1_1Merge.html", null ],
+    [ "v8::internal::wasm::Merge< v8::Value >", "structv8_1_1internal_1_1wasm_1_1Merge.html", null ],
+    [ "v8::internal::CppGraphBuilderImpl::MergedNodeItem", "structv8_1_1internal_1_1CppGraphBuilderImpl_1_1MergedNodeItem.html", null ],
     [ "v8::internal::maglev::MergePointInterpreterFrameState", "classv8_1_1internal_1_1maglev_1_1MergePointInterpreterFrameState.html", null ],
     [ "v8::internal::maglev::MergePointRegisterState", "classv8_1_1internal_1_1maglev_1_1MergePointRegisterState.html", null ],
+    [ "v8::Message", "classv8_1_1Message.html", null ],
+    [ "v8::internal::PendingCompilationErrorHandler::MessageDetails::MessageArgument", "structv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails_1_1MessageArgument.html", null ],
     [ "v8::internal::LogFile::MessageBuilder", "classv8_1_1internal_1_1LogFile_1_1MessageBuilder.html", null ],
     [ "v8::internal::torque::MessageBuilder", "classv8_1_1internal_1_1torque_1_1MessageBuilder.html", null ],
+    [ "v8::internal::PendingCompilationErrorHandler::MessageDetails", "classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html", null ],
     [ "v8::internal::MessageFormatter", "classv8_1_1internal_1_1MessageFormatter.html", null ],
     [ "v8::internal::MessageHandler", "classv8_1_1internal_1_1MessageHandler.html", null ],
     [ "v8::internal::MessageLocation", "classv8_1_1internal_1_1MessageLocation.html", null ],
@@ -4522,9 +5285,10 @@ var hierarchy =
     [ "cppgc::internal::MetricRecorder", "classcppgc_1_1internal_1_1MetricRecorder.html", [
       [ "v8::internal::CppHeap::MetricRecorderAdapter", "classv8_1_1internal_1_1CppHeap_1_1MetricRecorderAdapter.html", null ]
     ] ],
-    [ "v8::MicrotaskQueue", null, [
+    [ "v8::MicrotaskQueue", "classv8_1_1MicrotaskQueue.html", [
       [ "v8::internal::MicrotaskQueue", "classv8_1_1internal_1_1MicrotaskQueue.html", null ]
     ] ],
+    [ "v8::MicrotasksScope", "classv8_1_1MicrotasksScope.html", null ],
     [ "v8::internal::MigrationObserver", "classv8_1_1internal_1_1MigrationObserver.html", [
       [ "v8::internal::ProfilingMigrationObserver", "classv8_1_1internal_1_1ProfilingMigrationObserver.html", null ]
     ] ],
@@ -4532,6 +5296,7 @@ var hierarchy =
     [ "v8::internal::ConcurrentMarking::MinorMarkingState", "classv8_1_1internal_1_1ConcurrentMarking_1_1MinorMarkingState.html", null ],
     [ "v8::internal::MinorMarkSweepCollector", "classv8_1_1internal_1_1MinorMarkSweepCollector.html", null ],
     [ "v8::internal::wasm::WasmImportWrapperCache::ModificationScope", "classv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache_1_1ModificationScope.html", null ],
+    [ "v8::ModifyCodeGenerationFromStringsResult", "structv8_1_1ModifyCodeGenerationFromStringsResult.html", null ],
     [ "v8::internal::wasm::WasmWrapperTSGraphBuilder::ModifyThreadInWasmFlagScope", "classv8_1_1internal_1_1wasm_1_1WasmWrapperTSGraphBuilder_1_1ModifyThreadInWasmFlagScope.html", null ],
     [ "v8::internal::wasm::ModuleDecoder", "classv8_1_1internal_1_1wasm_1_1ModuleDecoder.html", null ],
     [ "v8::internal::wasm::ModuleDisassembler", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html", null ],
@@ -4542,6 +5307,7 @@ var hierarchy =
     [ "v8::internal::MoveCycleState", "structv8_1_1internal_1_1MoveCycleState.html", null ],
     [ "cppgc::internal::MoveListener", "classcppgc_1_1internal_1_1MoveListener.html", null ],
     [ "v8::internal::compiler::MoveOptimizer", "classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html", null ],
+    [ "v8::internal::compiler::CodeGenerator::MoveType", "classv8_1_1internal_1_1compiler_1_1CodeGenerator_1_1MoveType.html", null ],
     [ "v8::internal::MSAControlRegister", "structv8_1_1internal_1_1MSAControlRegister.html", null ],
     [ "v8::internal::MSARegisters", "classv8_1_1internal_1_1MSARegisters.html", null ],
     [ "unibrow::MultiCharacterSpecialCase< kW >", "structunibrow_1_1MultiCharacterSpecialCase.html", null ],
@@ -4557,19 +5323,29 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::MultiSwitch< T, Enable >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MultiSwitch.html", null ],
     [ "v8::internal::compiler::turboshaft::MultiSwitch< T, std::enable_if_t< std::is_base_of_v< MaybeRegisterRepresentation, T > > >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MultiSwitch_3_01T_00_01std_1_1enable__if__t_3_d54cd1da050e47cddcb78ee81e189097.html", null ],
     [ "v8::internal::compiler::turboshaft::MultiSwitchIntegral< T, MaxValue >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MultiSwitchIntegral.html", null ],
+    [ "cppgc::internal::Sweeper::SweeperImpl::MutatorThreadSweepingScope", "classcppgc_1_1internal_1_1Sweeper_1_1SweeperImpl_1_1MutatorThreadSweepingScope.html", null ],
     [ "v8::base::Mutex", "classv8_1_1base_1_1Mutex.html", null ],
+    [ "v8::internal::FuncNameInferrer::Name", "structv8_1_1internal_1_1FuncNameInferrer_1_1Name.html", null ],
+    [ "v8::JitCodeEvent::name_t", "structv8_1_1JitCodeEvent_1_1name__t.html", null ],
     [ "v8::internal::torque::NameAndExpression", "structv8_1_1internal_1_1torque_1_1NameAndExpression.html", null ],
     [ "v8::internal::torque::NameAndType", "structv8_1_1internal_1_1torque_1_1NameAndType.html", null ],
     [ "v8::internal::torque::NameAndTypeExpression", "structv8_1_1internal_1_1torque_1_1NameAndTypeExpression.html", null ],
     [ "v8::internal::CodeEventLogger::NameBuffer", "classv8_1_1internal_1_1CodeEventLogger_1_1NameBuffer.html", null ],
     [ "disasm::NameConverter", "classdisasm_1_1NameConverter.html", null ],
     [ "v8::internal::compiler::NamedAccess", "classv8_1_1internal_1_1compiler_1_1NamedAccess.html", null ],
+    [ "v8::NamedPropertyHandlerConfiguration", "structv8_1_1NamedPropertyHandlerConfiguration.html", null ],
     [ "v8::internal::JsonParser< Char >::NamedPropertyIterator< Char >", "classv8_1_1internal_1_1JsonParser_1_1NamedPropertyIterator.html", null ],
     [ "v8::internal::NamedPropertyValueIterator", "classv8_1_1internal_1_1NamedPropertyValueIterator.html", null ],
+    [ "v8::internal::CodeAddressMap::NameMap", "classv8_1_1internal_1_1CodeAddressMap_1_1NameMap.html", null ],
+    [ "cppgc::NameProvider", "classcppgc_1_1NameProvider.html", null ],
     [ "v8::internal::torque::NamespaceScope", "classv8_1_1internal_1_1torque_1_1NamespaceScope.html", null ],
     [ "v8::internal::wasm::NamesProvider", "classv8_1_1internal_1_1wasm_1_1NamesProvider.html", null ],
+    [ "cppgc::internal::NameTraitBase", "classcppgc_1_1internal_1_1NameTraitBase.html", [
+      [ "cppgc::internal::NameTrait< T >", "classcppgc_1_1internal_1_1NameTrait.html", null ]
+    ] ],
     [ "v8::base::internal::NarrowingRange< Dst, Src, Bounds >", "structv8_1_1base_1_1internal_1_1NarrowingRange.html", null ],
     [ "v8::internal::interpreter::BytecodeGenerator::NaryCodeCoverageSlots", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1NaryCodeCoverageSlots.html", null ],
+    [ "v8::internal::NaryOperation::NaryOperationEntry", "structv8_1_1internal_1_1NaryOperation_1_1NaryOperationEntry.html", null ],
     [ "v8::internal::NativeContextInferrer", "classv8_1_1internal_1_1NativeContextInferrer.html", null ],
     [ "v8::internal::NativeContextStats", "classv8_1_1internal_1_1NativeContextStats.html", null ],
     [ "v8::internal::wasm::NativeModule", "classv8_1_1internal_1_1wasm_1_1NativeModule.html", null ],
@@ -4583,11 +5359,9 @@ var hierarchy =
     [ "v8::internal::NEONFormatMap", "structv8_1_1internal_1_1NEONFormatMap.html", null ],
     [ "v8::internal::NeonListOperand", "classv8_1_1internal_1_1NeonListOperand.html", null ],
     [ "v8::internal::NeonMemOperand", "classv8_1_1internal_1_1NeonMemOperand.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::NewArgumentsElements< B >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1NewArgumentsElements.html", null ],
     [ "v8::internal::compiler::NewArgumentsElementsParameters", "classv8_1_1internal_1_1compiler_1_1NewArgumentsElementsParameters.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::NewClosure", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1NewClosure.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::NewClosure_Tenured", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1NewClosure__Tenured.html", null ],
     [ "v8::internal::NewCodeOptions", "structv8_1_1internal_1_1NewCodeOptions.html", null ],
+    [ "v8::internal::BackgroundMergeTask::NewCompiledDataForCachedSfi", "structv8_1_1internal_1_1BackgroundMergeTask_1_1NewCompiledDataForCachedSfi.html", null ],
     [ "Next", null, [
       [ "v8::internal::compiler::turboshaft::UniformReducerAdapter< AssertTypesReducer, Next >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1UniformReducerAdapter.html", [
         [ "v8::internal::compiler::turboshaft::AssertTypesReducer< Next >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1AssertTypesReducer.html", null ]
@@ -4663,25 +5437,27 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::next_reducer_is< Next, GenericReducerBase, EmitProjectionReducer, TSReducerBase >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1next__reducer__is.html", [
       [ "v8::internal::compiler::turboshaft::next_is_bottom_of_assembler_stack< Next >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1next__is__bottom__of__assembler__stack.html", null ]
     ] ],
+    [ "v8::internal::ParserBase< Impl >::NextArrowFunctionInfo", "structv8_1_1internal_1_1ParserBase_1_1NextArrowFunctionInfo.html", null ],
     [ "v8::internal::NexusConfig", "classv8_1_1internal_1_1NexusConfig.html", null ],
+    [ "v8::api_internal::StackAllocated< check_statically_enabled >::no_checking_tag", "structv8_1_1api__internal_1_1StackAllocated_1_1no__checking__tag.html", null ],
     [ "v8::internal::maglev::detail::CopyForDeferredHelper< T, Enable >::No_Copy_Helper_Implemented_For_Type< U >", "structv8_1_1internal_1_1maglev_1_1detail_1_1CopyForDeferredHelper_1_1No__Copy__Helper__Implemented__For__Type.html", null ],
     [ "v8::internal::compiler::turboshaft::NoChangeCallback", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1NoChangeCallback.html", null ],
-    [ "Node", null, [
-      [ "v8::internal::EmbedderGraphImpl::V8NodeImpl", "classv8_1_1internal_1_1EmbedderGraphImpl_1_1V8NodeImpl.html", null ]
-    ] ],
-    [ "v8::EmbedderGraph::Node", null, [
+    [ "v8::AllocationProfile::Node", "structv8_1_1AllocationProfile_1_1Node.html", null ],
+    [ "v8::EmbedderGraph::Node", "classv8_1_1EmbedderGraph_1_1Node.html", [
+      [ "v8::internal::EmbedderGraphImpl::V8NodeImpl", "classv8_1_1internal_1_1EmbedderGraphImpl_1_1V8NodeImpl.html", null ],
       [ "v8::internal::EmbedderNode", "classv8_1_1internal_1_1EmbedderNode.html", [
         [ "v8::internal::EmbedderRootNode", "classv8_1_1internal_1_1EmbedderRootNode.html", null ]
       ] ]
     ] ],
     [ "v8::internal::compiler::Node", "classv8_1_1internal_1_1compiler_1_1Node.html", null ],
     [ "v8::internal::compiler::NodeAuxData< T, def >", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html", null ],
-    [ "v8::internal::compiler::NodeAuxData< AbstractState const * >", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html", null ],
     [ "v8::internal::compiler::NodeAuxData< bool >", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html", null ],
     [ "v8::internal::compiler::NodeAuxData< v8::internal::compiler::ControlPathState< NodeState, node_uniqueness >, ZoneConstruct< v8::internal::compiler::ControlPathState< NodeState, node_uniqueness > > >", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html", null ],
     [ "v8::internal::compiler::NodeAuxData< v8::internal::compiler::ControlPathState< NodeWithType, node_uniqueness >, ZoneConstruct< v8::internal::compiler::ControlPathState< NodeWithType, node_uniqueness > > >", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html", null ],
+    [ "v8::internal::compiler::NodeAuxData< v8::internal::compiler::CsaLoadElimination::AbstractState const * >", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html", null ],
     [ "v8::internal::compiler::NodeAuxData< v8::internal::compiler::FunctionalList >", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html", null ],
     [ "v8::internal::compiler::NodeAuxData< v8::internal::compiler::NodeOrigin, UnknownNodeOrigin >", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html", null ],
+    [ "v8::internal::compiler::NodeAuxData< v8::internal::compiler::WasmLoadElimination::AbstractState const * >", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html", null ],
     [ "v8::internal::compiler::NodeAuxData< v8::internal::SourcePosition, UnknownSourcePosition >", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html", null ],
     [ "v8::internal::compiler::NodeAuxDataMap< T, kNonExistent >", "classv8_1_1internal_1_1compiler_1_1NodeAuxDataMap.html", null ],
     [ "v8::internal::compiler::NodeAuxDataMap< int, -1 >", "classv8_1_1internal_1_1compiler_1_1NodeAuxDataMap.html", null ],
@@ -4691,13 +5467,19 @@ var hierarchy =
     ] ],
     [ "v8::internal::GlobalHandles::NodeBlock< NodeType >", "classv8_1_1internal_1_1GlobalHandles_1_1NodeBlock.html", null ],
     [ "v8::internal::compiler::NodeCopier", "classv8_1_1internal_1_1compiler_1_1NodeCopier.html", null ],
+    [ "v8::internal::compiler::NodeHashCache::NodeEquals", "structv8_1_1internal_1_1compiler_1_1NodeHashCache_1_1NodeEquals.html", null ],
     [ "v8::internal::compiler::turboshaft::NodeGroup", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1NodeGroup.html", null ],
     [ "v8::internal::compiler::NodeHashCache", "classv8_1_1internal_1_1compiler_1_1NodeHashCache.html", null ],
+    [ "v8::internal::compiler::NodeHashCache::NodeHashCode", "structv8_1_1internal_1_1compiler_1_1NodeHashCache_1_1NodeHashCode.html", null ],
     [ "v8::internal::compiler::NodeInfo", "structv8_1_1internal_1_1compiler_1_1NodeInfo.html", null ],
     [ "v8::internal::compiler::RepresentationSelector::NodeInfo", "classv8_1_1internal_1_1compiler_1_1RepresentationSelector_1_1NodeInfo.html", null ],
     [ "v8::internal::maglev::MaglevGraphLabeller::NodeInfo", "structv8_1_1internal_1_1maglev_1_1MaglevGraphLabeller_1_1NodeInfo.html", null ],
     [ "v8::internal::maglev::NodeInfo", "classv8_1_1internal_1_1maglev_1_1NodeInfo.html", null ],
     [ "v8::internal::NodeInfo", "structv8_1_1internal_1_1NodeInfo.html", null ],
+    [ "v8::internal::GlobalHandles::NodeIterator< BlockType >", "classv8_1_1internal_1_1GlobalHandles_1_1NodeIterator.html", null ],
+    [ "v8::internal::compiler::StateValuesCache::NodeKey", "structv8_1_1internal_1_1compiler_1_1StateValuesCache_1_1NodeKey.html", [
+      [ "v8::internal::compiler::StateValuesCache::StateValuesKey", "structv8_1_1internal_1_1compiler_1_1StateValuesCache_1_1StateValuesKey.html", null ]
+    ] ],
     [ "v8::internal::compiler::NodeMarkerBase", "classv8_1_1internal_1_1compiler_1_1NodeMarkerBase.html", [
       [ "v8::internal::compiler::NodeMarker< bool >", "classv8_1_1internal_1_1compiler_1_1NodeMarker.html", null ],
       [ "v8::internal::compiler::NodeMarker< size_t >", "classv8_1_1internal_1_1compiler_1_1NodeMarker.html", null ],
@@ -4727,7 +5509,16 @@ var hierarchy =
     [ "v8::internal::maglev::NodeMultiProcessor<>", "classv8_1_1internal_1_1maglev_1_1NodeMultiProcessor_3_4.html", null ],
     [ "v8::internal::compiler::NodeOrigin", "classv8_1_1internal_1_1compiler_1_1NodeOrigin.html", null ],
     [ "v8::internal::compiler::NodeOriginAsJSON", "structv8_1_1internal_1_1compiler_1_1NodeOriginAsJSON.html", null ],
-    [ "v8::internal::compiler::NodeProperties", "classv8_1_1internal_1_1compiler_1_1NodeProperties.html", null ],
+    [ "v8::internal::compiler::NodeProperties", "classv8_1_1internal_1_1compiler_1_1NodeProperties.html", [
+      [ "v8::internal::compiler::RepresentationSelector::NodeProperties", "classv8_1_1internal_1_1compiler_1_1RepresentationSelector_1_1NodeProperties.html", null ],
+      [ "v8::internal::compiler::SimplifiedLowering::NodeProperties", "classv8_1_1internal_1_1compiler_1_1SimplifiedLowering_1_1NodeProperties.html", null ]
+    ] ],
+    [ "v8::internal::GlobalHandles::NodeSpace< NodeType >", "classv8_1_1internal_1_1GlobalHandles_1_1NodeSpace.html", null ],
+    [ "v8::internal::compiler::EffectGraphReducer::NodeState", "structv8_1_1internal_1_1compiler_1_1EffectGraphReducer_1_1NodeState.html", null ],
+    [ "v8::internal::compiler::GraphReducer::NodeState", "structv8_1_1internal_1_1compiler_1_1GraphReducer_1_1NodeState.html", null ],
+    [ "v8::internal::compiler::LinearScheduler::NodeState", "structv8_1_1internal_1_1compiler_1_1LinearScheduler_1_1NodeState.html", null ],
+    [ "v8::internal::compiler::RepresentationSelector::NodeState", "structv8_1_1internal_1_1compiler_1_1RepresentationSelector_1_1NodeState.html", null ],
+    [ "v8::internal::maglev::LiveRangeAndNextUseProcessor::NodeUse", "structv8_1_1internal_1_1maglev_1_1LiveRangeAndNextUseProcessor_1_1NodeUse.html", null ],
     [ "v8::internal::NodeVisitor", "classv8_1_1internal_1_1NodeVisitor.html", [
       [ "v8::internal::Analysis< Propagators >", "classv8_1_1internal_1_1Analysis.html", null ],
       [ "v8::internal::DotPrinterImpl", "classv8_1_1internal_1_1DotPrinterImpl.html", null ]
@@ -4776,7 +5567,9 @@ var hierarchy =
         [ "v8::internal::compiler::FastApiCallNode", "classv8_1_1internal_1_1compiler_1_1FastApiCallNode.html", null ]
       ] ]
     ] ],
+    [ "v8::internal::JsonStringifier::NoExtendBuilder< DestChar >", "classv8_1_1internal_1_1JsonStringifier_1_1NoExtendBuilder.html", null ],
     [ "v8::internal::NoGarbageCollectionMutexGuard", "classv8_1_1internal_1_1NoGarbageCollectionMutexGuard.html", null ],
+    [ "cppgc::subtle::NoGarbageCollectionScope", "classcppgc_1_1subtle_1_1NoGarbageCollectionScope.html", null ],
     [ "v8::internal::StackFrameIterator::NoHandles", "structv8_1_1internal_1_1StackFrameIterator_1_1NoHandles.html", null ],
     [ "v8::base::NoHashMapValue", "structv8_1_1base_1_1NoHashMapValue.html", null ],
     [ "v8::internal::compiler::turboshaft::NoKeyData", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1NoKeyData.html", null ],
@@ -5060,14 +5853,16 @@ var hierarchy =
       [ "v8::internal::compiler::ParallelMove", "classv8_1_1internal_1_1compiler_1_1ParallelMove.html", null ]
     ] ],
     [ "v8::internal::wasm::Decoder::NoName", "structv8_1_1internal_1_1wasm_1_1Decoder_1_1NoName.html", null ],
+    [ "v8::NonCopyablePersistentTraits< T >", "classv8_1_1NonCopyablePersistentTraits.html", null ],
     [ "v8::internal::compiler::turboshaft::None", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1None.html", null ],
     [ "cppgc::internal::SingleThreadedHandle::NonEmptyTag", "structcppgc_1_1internal_1_1SingleThreadedHandle_1_1NonEmptyTag.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::NonNumberToNumber", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1NonNumberToNumber.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::NonNumberToNumeric", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1NonNumberToNumeric.html", null ],
     [ "v8::internal::NopRwxMemoryWriteScope", "classv8_1_1internal_1_1NopRwxMemoryWriteScope.html", null ],
     [ "cppgc::internal::NormalPageMemoryPool", "classcppgc_1_1internal_1_1NormalPageMemoryPool.html", null ],
     [ "v8::internal::NoRootArrayScope", "classv8_1_1internal_1_1NoRootArrayScope.html", null ],
+    [ "v8::internal::compiler::turboshaft::GraphBuildingNodeProcessor::NoThrowingScopeRequired", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GraphBuildingNodeProcessor_1_1NoThrowingScopeRequired.html", null ],
+    [ "v8::internal::wasm::Decoder::NoValidationTag", "structv8_1_1internal_1_1wasm_1_1Decoder_1_1NoValidationTag.html", null ],
     [ "v8::internal::wasm::NoVector", "classv8_1_1internal_1_1wasm_1_1NoVector.html", null ],
+    [ "cppgc::internal::NoWriteBarrierPolicy", "structcppgc_1_1internal_1_1NoWriteBarrierPolicy.html", null ],
     [ "v8::base::detail::nth_type< N, Ts >", "structv8_1_1base_1_1detail_1_1nth__type.html", null ],
     [ "v8::base::detail::nth_type< 0, T, Ts... >", "structv8_1_1base_1_1detail_1_1nth__type_3_010_00_01T_00_01Ts_8_8_8_01_4.html", null ],
     [ "v8::base::detail::nth_type< N - 1, Ts... >", "structv8_1_1base_1_1detail_1_1nth__type.html", [
@@ -5078,21 +5873,20 @@ var hierarchy =
     [ "v8::internal::Intl::NumberFormatDigitOptions", "structv8_1_1internal_1_1Intl_1_1NumberFormatDigitOptions.html", null ],
     [ "v8::internal::NumberFormatSpan", "structv8_1_1internal_1_1NumberFormatSpan.html", null ],
     [ "v8::internal::compiler::NumberOperationParameters", "classv8_1_1internal_1_1compiler_1_1NumberOperationParameters.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::NumberToString", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1NumberToString.html", null ],
     [ "std::numeric_limits", null, [
       [ "v8::base::internal::SaturationDefaultLimits< T >", "structv8_1_1base_1_1internal_1_1SaturationDefaultLimits.html", null ]
-    ] ],
-    [ "v8::Object", null, [
-      [ "v8::debug::EphemeronTable", "classv8_1_1debug_1_1EphemeronTable.html", null ]
     ] ],
     [ "v8::internal::compiler::ObjectAccess", "structv8_1_1internal_1_1compiler_1_1ObjectAccess.html", null ],
     [ "v8::internal::ObjectCacheIndexMap", "classv8_1_1internal_1_1ObjectCacheIndexMap.html", null ],
     [ "v8::internal::ObjectDescriptor< IsolateT >", "classv8_1_1internal_1_1ObjectDescriptor.html", null ],
+    [ "v8::internal::maglev::VirtualObject::ObjectFields", "structv8_1_1internal_1_1maglev_1_1VirtualObject_1_1ObjectFields.html", null ],
     [ "ObjectHashTableBase", null, [
       [ "v8::internal::EphemeronHashTable", "classv8_1_1internal_1_1EphemeronHashTable.html", null ],
       [ "v8::internal::ObjectHashTable", "classv8_1_1internal_1_1ObjectHashTable.html", null ]
     ] ],
     [ "v8::internal::ObjectLockGuard< LockType >", "classv8_1_1internal_1_1ObjectLockGuard.html", null ],
+    [ "v8::HeapProfiler::ObjectNameResolver", "classv8_1_1HeapProfiler_1_1ObjectNameResolver.html", null ],
+    [ "v8::internal::TranslatedState::ObjectPosition", "structv8_1_1internal_1_1TranslatedState_1_1ObjectPosition.html", null ],
     [ "v8::internal::ObjectPostProcessor", "classv8_1_1internal_1_1ObjectPostProcessor.html", null ],
     [ "ObjectRef", null, [
       [ "v8::internal::compiler::HeapObjectRef", "classv8_1_1internal_1_1compiler_1_1HeapObjectRef.html", [
@@ -5145,12 +5939,14 @@ var hierarchy =
         [ "v8::internal::compiler::TemplateObjectDescriptionRef", "classv8_1_1internal_1_1compiler_1_1TemplateObjectDescriptionRef.html", null ]
       ] ]
     ] ],
+    [ "cppgc::subtle::ObjectSizeTrait< T, bool >", "structcppgc_1_1subtle_1_1ObjectSizeTrait.html", null ],
     [ "cppgc::internal::ObjectStartBitmap", "classcppgc_1_1internal_1_1ObjectStartBitmap.html", [
       [ "cppgc::internal::PlatformAwareObjectStartBitmap", "classcppgc_1_1internal_1_1PlatformAwareObjectStartBitmap.html", null ]
     ] ],
     [ "v8::internal::ObjectStats", "classv8_1_1internal_1_1ObjectStats.html", null ],
     [ "v8::internal::ObjectStatsCollector", "classv8_1_1internal_1_1ObjectStatsCollector.html", null ],
     [ "v8::internal::ObjectStatsCollectorImpl", "classv8_1_1internal_1_1ObjectStatsCollectorImpl.html", null ],
+    [ "cppgc::HeapStatistics::ObjectStatsEntry", "structcppgc_1_1HeapStatistics_1_1ObjectStatsEntry.html", null ],
     [ "v8::internal::ObjectStatsVisitor", "classv8_1_1internal_1_1ObjectStatsVisitor.html", null ],
     [ "v8::internal::ObjectTraits< T >", "structv8_1_1internal_1_1ObjectTraits.html", null ],
     [ "v8::internal::ObjectTraits< ConsString >", "structv8_1_1internal_1_1ObjectTraits_3_01ConsString_01_4.html", null ],
@@ -5222,7 +6018,8 @@ var hierarchy =
         ] ],
         [ "v8::internal::IndexedReferencesExtractor", "classv8_1_1internal_1_1IndexedReferencesExtractor.html", null ],
         [ "v8::internal::MarkCompactCollector::CustomRootBodyMarkingVisitor", "classv8_1_1internal_1_1MarkCompactCollector_1_1CustomRootBodyMarkingVisitor.html", null ],
-        [ "v8::internal::PointersUpdatingVisitor", "classv8_1_1internal_1_1PointersUpdatingVisitor.html", null ]
+        [ "v8::internal::PointersUpdatingVisitor", "classv8_1_1internal_1_1PointersUpdatingVisitor.html", null ],
+        [ "v8::internal::UnreachableObjectsFilter::MarkingVisitor", "classv8_1_1internal_1_1UnreachableObjectsFilter_1_1MarkingVisitor.html", null ]
       ] ],
       [ "v8::internal::Serializer::ObjectSerializer", "classv8_1_1internal_1_1Serializer_1_1ObjectSerializer.html", null ]
     ] ],
@@ -5256,6 +6053,8 @@ var hierarchy =
     [ "v8::internal::compiler::OneOrTwoByteAnalysis", "classv8_1_1internal_1_1compiler_1_1OneOrTwoByteAnalysis.html", null ],
     [ "v8::internal::OnHeapStream< Char >", "classv8_1_1internal_1_1OnHeapStream.html", null ],
     [ "v8::internal::OnHeapStream< uint16_t >", "classv8_1_1internal_1_1OnHeapStream.html", null ],
+    [ "v8::internal::TieringManager::OnInterruptTickScope", "classv8_1_1internal_1_1TieringManager_1_1OnInterruptTickScope.html", null ],
+    [ "v8::OOMDetails", "structv8_1_1OOMDetails.html", null ],
     [ "v8::internal::maglev::detail::opcode_of_helper< T >", "structv8_1_1internal_1_1maglev_1_1detail_1_1opcode__of__helper.html", null ],
     [ "v8::internal::compiler::turboshaft::opcode_to_operation_map< opcode >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1opcode__to__operation__map.html", null ],
     [ "v8::internal::compiler::turboshaft::OpEffects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpEffects.html", null ],
@@ -5266,6 +6065,7 @@ var hierarchy =
       [ "v8::internal::Operand256", "classv8_1_1internal_1_1Operand256.html", null ]
     ] ],
     [ "v8::internal::compiler::OperandAsKeyLess", "structv8_1_1internal_1_1compiler_1_1OperandAsKeyLess.html", null ],
+    [ "v8::internal::compiler::RegisterAllocatorVerifier::OperandConstraint", "structv8_1_1internal_1_1compiler_1_1RegisterAllocatorVerifier_1_1OperandConstraint.html", null ],
     [ "v8::internal::interpreter::OperandScaler< operand_type, operand_scale >", "structv8_1_1internal_1_1interpreter_1_1OperandScaler.html", null ],
     [ "v8::internal::interpreter::OperandTraits< OperandType >", "structv8_1_1internal_1_1interpreter_1_1OperandTraits.html", null ],
     [ "v8::internal::interpreter::OperandTypeInfoTraits< OperandTypeInfo >", "structv8_1_1internal_1_1interpreter_1_1OperandTypeInfoTraits.html", null ],
@@ -5873,26 +6673,29 @@ var hierarchy =
     ] ],
     [ "v8::internal::OutBuffer< Char >", "classv8_1_1internal_1_1OutBuffer.html", null ],
     [ "v8::internal::compiler::OuterContext", "structv8_1_1internal_1_1compiler_1_1OuterContext.html", null ],
+    [ "v8::internal::compiler::Node::OutOfLineInputs", "structv8_1_1internal_1_1compiler_1_1Node_1_1OutOfLineInputs.html", null ],
     [ "v8::internal::Comparator::Output", "classv8_1_1internal_1_1Comparator_1_1Output.html", null ],
     [ "v8::internal::compiler::OutputFrameStateCombine", "classv8_1_1internal_1_1compiler_1_1OutputFrameStateCombine.html", null ],
-    [ "v8::OutputStream", null, [
+    [ "v8::OutputStream", "classv8_1_1OutputStream.html", [
       [ "v8::internal::FileOutputStream", "classv8_1_1internal_1_1FileOutputStream.html", null ]
     ] ],
     [ "v8::internal::OutputStreamWriter", "classv8_1_1internal_1_1OutputStreamWriter.html", null ],
-    [ "v8::internal::TracedNodeBlock::OverallListTraits", "structv8_1_1internal_1_1TracedNodeBlock_1_1OverallListTraits.html", null ],
     [ "v8::internal::compiler::fast_api_call::OverloadsResolutionResult", "structv8_1_1internal_1_1compiler_1_1fast__api__call_1_1OverloadsResolutionResult.html", null ],
+    [ "cppgc::testing::OverrideEmbedderStackStateScope", "classcppgc_1_1testing_1_1OverrideEmbedderStackStateScope.html", null ],
+    [ "v8::OwnedBuffer", "structv8_1_1OwnedBuffer.html", null ],
     [ "v8::base::OwnedVector< T >", "classv8_1_1base_1_1OwnedVector.html", null ],
     [ "v8::base::OwnedVector< const int >", "classv8_1_1base_1_1OwnedVector.html", null ],
     [ "v8::base::OwnedVector< const uint8_t >", "classv8_1_1base_1_1OwnedVector.html", null ],
     [ "v8::base::OwnedVector< uint32_t >", "classv8_1_1base_1_1OwnedVector.html", null ],
     [ "v8::base::OwnedVector< uint8_t >", "classv8_1_1base_1_1OwnedVector.html", null ],
     [ "v8::base::OwnedVector< v8::internal::wasm::ValidateFunctionsStreamingJobData::Unit >", "classv8_1_1base_1_1OwnedVector.html", null ],
+    [ "v8::internal::maglev::NodeBase::OwnerOrTemporaries", "structv8_1_1internal_1_1maglev_1_1NodeBase_1_1OwnerOrTemporaries.html", null ],
     [ "v8::internal::wasm::gdb_server::Packet", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Packet.html", null ],
     [ "v8::internal::compiler::turboshaft::PaddingSpace", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1PaddingSpace.html", null ],
     [ "NON_EXPORTED_BASE::v8::PageAllocator", null, [
       [ "v8::base::PageAllocator", "classv8_1_1base_1_1PageAllocator.html", null ]
     ] ],
-    [ "v8::PageAllocator", null, [
+    [ "v8::PageAllocator", "classv8_1_1PageAllocator.html", [
       [ "v8::base::BoundedPageAllocator", "classv8_1_1base_1_1BoundedPageAllocator.html", null ],
       [ "v8::base::LsanPageAllocator", "classv8_1_1base_1_1LsanPageAllocator.html", null ],
       [ "v8::base::VirtualAddressSpacePageAllocator", "classv8_1_1base_1_1VirtualAddressSpacePageAllocator.html", null ]
@@ -5902,8 +6705,10 @@ var hierarchy =
     [ "cppgc::internal::PageMemoryRegion", "classcppgc_1_1internal_1_1PageMemoryRegion.html", null ],
     [ "cppgc::internal::PageMemoryRegionTree", "classcppgc_1_1internal_1_1PageMemoryRegionTree.html", null ],
     [ "v8::internal::PageRange", "classv8_1_1internal_1_1PageRange.html", null ],
+    [ "cppgc::HeapStatistics::PageStatistics", "structcppgc_1_1HeapStatistics_1_1PageStatistics.html", null ],
     [ "std::pair", null, [
       [ "v8::internal::compiler::ObjectStateInfo", "structv8_1_1internal_1_1compiler_1_1ObjectStateInfo.html", null ],
+      [ "v8::internal::compiler::PersistentMap< Key, Value, Hasher >::KeyValue", "structv8_1_1internal_1_1compiler_1_1PersistentMap_1_1KeyValue.html", null ],
       [ "v8::internal::compiler::StorePairRepresentation", "structv8_1_1internal_1_1compiler_1_1StorePairRepresentation.html", null ],
       [ "v8::internal::compiler::TypedObjectStateInfo", "structv8_1_1internal_1_1compiler_1_1TypedObjectStateInfo.html", null ]
     ] ],
@@ -5913,7 +6718,8 @@ var hierarchy =
     [ "v8::internal::ParallelWorkItem", "classv8_1_1internal_1_1ParallelWorkItem.html", [
       [ "v8::internal::UpdatingItem", "classv8_1_1internal_1_1UpdatingItem.html", [
         [ "v8::internal::EphemeronTableUpdatingItem", "classv8_1_1internal_1_1EphemeronTableUpdatingItem.html", null ]
-      ] ]
+      ] ],
+      [ "v8::internal::YoungGenerationRememberedSetsMarkingWorklist::MarkingItem", "classv8_1_1internal_1_1YoungGenerationRememberedSetsMarkingWorklist_1_1MarkingItem.html", null ]
     ] ],
     [ "v8::internal::compiler::turboshaft::ShufflePackNode::SpecificInfo::Param", "unionv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShufflePackNode_1_1SpecificInfo_1_1Param.html", null ],
     [ "v8::internal::torque::cpp::Function::Parameter", "structv8_1_1internal_1_1torque_1_1cpp_1_1Function_1_1Parameter.html", null ],
@@ -5922,6 +6728,7 @@ var hierarchy =
     [ "v8::internal::torque::ParameterList", "structv8_1_1internal_1_1torque_1_1ParameterList.html", null ],
     [ "v8::internal::ParserBase< Impl >::ParameterParsingScope", "classv8_1_1internal_1_1ParserBase_1_1ParameterParsingScope.html", null ],
     [ "v8::internal::torque::ParameterTypes", "structv8_1_1internal_1_1torque_1_1ParameterTypes.html", null ],
+    [ "cppgc::internal::WriteBarrier::Params", "structcppgc_1_1internal_1_1WriteBarrier_1_1Params.html", null ],
     [ "v8::internal::ParentScope", "classv8_1_1internal_1_1ParentScope.html", null ],
     [ "v8::internal::ParkedMutexGuard", "classv8_1_1internal_1_1ParkedMutexGuard.html", null ],
     [ "v8::internal::ParkedRecursiveMutexGuard", "classv8_1_1internal_1_1ParkedRecursiveMutexGuard.html", null ],
@@ -5944,8 +6751,10 @@ var hierarchy =
     [ "v8::internal::ParserTypes< Impl >", "structv8_1_1internal_1_1ParserTypes.html", null ],
     [ "v8::internal::ParserTypes< Parser >", "structv8_1_1internal_1_1ParserTypes_3_01Parser_01_4.html", null ],
     [ "v8::internal::ParserTypes< PreParser >", "structv8_1_1internal_1_1ParserTypes_3_01PreParser_01_4.html", null ],
+    [ "v8::internal::Parser::ParsingModeScope", "classv8_1_1internal_1_1Parser_1_1ParsingModeScope.html", null ],
     [ "v8::base::pass_value_or_ref< T, remove_array_extend >", "structv8_1_1base_1_1pass__value__or__ref.html", null ],
     [ "v8::internal::maglev::MaglevGraphBuilder::BranchBuilder::PatchAccumulatorInBranchScope", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1BranchBuilder_1_1PatchAccumulatorInBranchScope.html", null ],
+    [ "v8::internal::compiler::RedundancyElimination::PathChecksForEffectNodes", "classv8_1_1internal_1_1compiler_1_1RedundancyElimination_1_1PathChecksForEffectNodes.html", null ],
     [ "v8::internal::PauseAllocationObserversScope", "classv8_1_1internal_1_1PauseAllocationObserversScope.html", null ],
     [ "v8::internal::IncrementalMarking::PauseBlackAllocationScope", "classv8_1_1internal_1_1IncrementalMarking_1_1PauseBlackAllocationScope.html", null ],
     [ "cppgc::internal::MarkerBase::PauseConcurrentMarkingScope", "classcppgc_1_1internal_1_1MarkerBase_1_1PauseConcurrentMarkingScope.html", null ],
@@ -5972,16 +6781,26 @@ var hierarchy =
     [ "v8::internal::PendingCompilationErrorHandler", "classv8_1_1internal_1_1PendingCompilationErrorHandler.html", null ],
     [ "v8::internal::GlobalHandles::PendingPhantomCallback", "classv8_1_1internal_1_1GlobalHandles_1_1PendingPhantomCallback.html", null ],
     [ "v8::internal::PerClientSafepointData", "classv8_1_1internal_1_1PerClientSafepointData.html", null ],
+    [ "v8_inspector::V8ConsoleMessageStorage::PerContextData", "structv8__inspector_1_1V8ConsoleMessageStorage_1_1PerContextData.html", null ],
     [ "v8::internal::PerfectKeywordHash", "classv8_1_1internal_1_1PerfectKeywordHash.html", null ],
     [ "v8::internal::PerfectKeywordHashTableEntry", "structv8_1_1internal_1_1PerfectKeywordHashTableEntry.html", null ],
     [ "v8::internal::PerfettoV8String", "classv8_1_1internal_1_1PerfettoV8String.html", null ],
     [ "v8::internal::torque::GlobalContext::PerFileStreams", "structv8_1_1internal_1_1torque_1_1GlobalContext_1_1PerFileStreams.html", null ],
     [ "v8::PerIsolateData", "classv8_1_1PerIsolateData.html", null ],
+    [ "v8::internal::wasm::DebugInfoImpl::PerIsolateDebugData", "structv8_1_1internal_1_1wasm_1_1DebugInfoImpl_1_1PerIsolateDebugData.html", null ],
     [ "v8::internal::Isolate::PerIsolateThreadData", "classv8_1_1internal_1_1Isolate_1_1PerIsolateThreadData.html", null ],
     [ "v8::internal::compiler::SimplifiedLoweringVerifier::PerNodeData", "structv8_1_1internal_1_1compiler_1_1SimplifiedLoweringVerifier_1_1PerNodeData.html", null ],
+    [ "v8::internal::compiler::turboshaft::UseMap::PerOperationUses", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1UseMap_1_1PerOperationUses.html", null ],
+    [ "cppgc::internal::PersistentBase", "classcppgc_1_1internal_1_1PersistentBase.html", [
+      [ "cppgc::internal::BasicPersistent< T, WeaknessPolicy, LocationPolicy, CheckingPolicy >", "classcppgc_1_1internal_1_1BasicPersistent.html", null ],
+      [ "cppgc::internal::CrossThreadPersistentBase", "classcppgc_1_1internal_1_1CrossThreadPersistentBase.html", [
+        [ "cppgc::internal::BasicCrossThreadPersistent< T, WeaknessPolicy, LocationPolicy, CheckingPolicy >", "classcppgc_1_1internal_1_1BasicCrossThreadPersistent.html", null ]
+      ] ]
+    ] ],
     [ "v8::internal::PersistentHandles", "classv8_1_1internal_1_1PersistentHandles.html", null ],
     [ "v8::internal::PersistentHandlesList", "classv8_1_1internal_1_1PersistentHandlesList.html", null ],
     [ "v8::internal::PersistentHandlesScope", "classv8_1_1internal_1_1PersistentHandlesScope.html", null ],
+    [ "v8::PersistentHandleVisitor", "classv8_1_1PersistentHandleVisitor.html", null ],
     [ "v8::internal::compiler::PersistentMap< Key, Value, Hasher >", "classv8_1_1internal_1_1compiler_1_1PersistentMap.html", null ],
     [ "v8::internal::compiler::PersistentMap< int >", "classv8_1_1internal_1_1compiler_1_1PersistentMap.html", null ],
     [ "v8::internal::compiler::PersistentMap< Node * >", "classv8_1_1internal_1_1compiler_1_1PersistentMap.html", null ],
@@ -5989,6 +6808,27 @@ var hierarchy =
     [ "v8::internal::compiler::PersistentMap< NodeWithPathDepth, NodeWithType >", "classv8_1_1internal_1_1compiler_1_1PersistentMap.html", null ],
     [ "v8::internal::compiler::PersistentMap< uint32_t >", "classv8_1_1internal_1_1compiler_1_1PersistentMap.html", null ],
     [ "v8::internal::compiler::PersistentMap< Variable, Node * >", "classv8_1_1internal_1_1compiler_1_1PersistentMap.html", null ],
+    [ "cppgc::internal::PersistentNode", "classcppgc_1_1internal_1_1PersistentNode.html", null ],
+    [ "cppgc::internal::PersistentRegionBase", "classcppgc_1_1internal_1_1PersistentRegionBase.html", [
+      [ "cppgc::internal::CrossThreadPersistentRegion", "classcppgc_1_1internal_1_1CrossThreadPersistentRegion.html", null ],
+      [ "cppgc::internal::PersistentRegion", "classcppgc_1_1internal_1_1PersistentRegion.html", null ]
+    ] ],
+    [ "cppgc::internal::PersistentRegionLock", "classcppgc_1_1internal_1_1PersistentRegionLock.html", null ],
+    [ "v8::PersistentValueMapBase< K, V, Traits >", "classv8_1_1PersistentValueMapBase.html", [
+      [ "v8::GlobalValueMap< K, V, Traits >", "classv8_1_1GlobalValueMap.html", [
+        [ "v8::StdGlobalValueMap< K, V, Traits >", "classv8_1_1StdGlobalValueMap.html", null ]
+      ] ],
+      [ "v8::PersistentValueMap< K, V, Traits >", "classv8_1_1PersistentValueMap.html", [
+        [ "v8::StdPersistentValueMap< K, V, Traits >", "classv8_1_1StdPersistentValueMap.html", null ]
+      ] ]
+    ] ],
+    [ "v8::PersistentValueMapBase< K, V, DefaultGlobalMapTraits< K, V > >", "classv8_1_1PersistentValueMapBase.html", [
+      [ "v8::GlobalValueMap< K, V, DefaultGlobalMapTraits< K, V > >", "classv8_1_1GlobalValueMap.html", null ]
+    ] ],
+    [ "v8::PersistentValueMapBase< K, V, DefaultPersistentValueMapTraits< K, V > >", "classv8_1_1PersistentValueMapBase.html", [
+      [ "v8::PersistentValueMap< K, V, DefaultPersistentValueMapTraits< K, V > >", "classv8_1_1PersistentValueMap.html", null ]
+    ] ],
+    [ "v8::PersistentValueMapBase< K, V, Traits >::PersistentValueReference", "classv8_1_1PersistentValueMapBase_1_1PersistentValueReference.html", null ],
     [ "v8::internal::PerThreadAssertScopeEmpty< kAllow, kTypes >", "classv8_1_1internal_1_1PerThreadAssertScopeEmpty.html", null ],
     [ "v8::internal::PerThreadAssertScopeEmpty< false, SAFEPOINTS_ASSERT, HEAP_ALLOCATION_ASSERT >", "classv8_1_1internal_1_1PerThreadAssertScopeEmpty.html", null ],
     [ "v8::internal::PerThreadAssertScopeEmpty< kAllow, kTypes... >", "classv8_1_1internal_1_1PerThreadAssertScopeEmpty.html", [
@@ -6005,12 +6845,14 @@ var hierarchy =
       [ "v8::internal::compiler::TurbofanPipelineStatistics", "classv8_1_1internal_1_1compiler_1_1TurbofanPipelineStatistics.html", null ]
     ] ],
     [ "v8::internal::PlainBuffer< T >", "classv8_1_1internal_1_1PlainBuffer.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::PlainPrimitiveToNumber", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1PlainPrimitiveToNumber.html", null ],
-    [ "Platform", null, [
+    [ "cppgc::Platform", "classcppgc_1_1Platform.html", [
+      [ "cppgc::DefaultPlatform", "classcppgc_1_1DefaultPlatform.html", null ]
+    ] ],
+    [ "v8::bigint::Platform", "classv8_1_1bigint_1_1Platform.html", null ],
+    [ "v8::Platform", "classv8_1_1Platform.html", [
       [ "v8::DelayedTasksPlatform", "classv8_1_1DelayedTasksPlatform.html", null ],
       [ "v8::PredictablePlatform", "classv8_1_1PredictablePlatform.html", null ]
     ] ],
-    [ "v8::bigint::Platform", "classv8_1_1bigint_1_1Platform.html", null ],
     [ "v8::base::Thread::PlatformData", "classv8_1_1base_1_1Thread_1_1PlatformData.html", null ],
     [ "v8::internal::PlatformEmbeddedFileWriterBase", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterBase.html", [
       [ "v8::internal::PlatformEmbeddedFileWriterAIX", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterAIX.html", null ],
@@ -6021,7 +6863,7 @@ var hierarchy =
     ] ],
     [ "v8::base::PointerWithPayload< PointerType, PayloadType, NumPayloadBits >", "classv8_1_1base_1_1PointerWithPayload.html", null ],
     [ "v8::base::PointerWithPayload< const v8::internal::AstRawString, NameType, 2 >", "classv8_1_1base_1_1PointerWithPayload.html", null ],
-    [ "v8::base::PointerWithPayload< RareData, bool, 1 >", "classv8_1_1base_1_1PointerWithPayload.html", null ],
+    [ "v8::base::PointerWithPayload< v8::internal::ClassScope::RareData, bool, 1 >", "classv8_1_1base_1_1PointerWithPayload.html", null ],
     [ "v8::base::PointerWithPayload< v8::internal::Expression, bool, 1 >", "classv8_1_1base_1_1PointerWithPayload.html", null ],
     [ "v8::base::PointerWithPayload< v8::internal::maglev::ValueNode, Kind, 3 >", "classv8_1_1base_1_1PointerWithPayload.html", null ],
     [ "v8::base::PointerWithPayload< v8::internal::ParserBase::FunctionState, bool, 1 >", "classv8_1_1base_1_1PointerWithPayload.html", null ],
@@ -6035,6 +6877,7 @@ var hierarchy =
     [ "v8::internal::maglev::PolymorphicAccessInfo", "classv8_1_1internal_1_1maglev_1_1PolymorphicAccessInfo.html", null ],
     [ "v8::internal::wasm::CallSiteFeedback::PolymorphicCase", "structv8_1_1internal_1_1wasm_1_1CallSiteFeedback_1_1PolymorphicCase.html", null ],
     [ "v8::internal::MemoryAllocator::Pool", "classv8_1_1internal_1_1MemoryAllocator_1_1Pool.html", null ],
+    [ "cppgc::internal::NormalPageMemoryPool::PooledPageMemoryRegion", "structcppgc_1_1internal_1_1NormalPageMemoryPool_1_1PooledPageMemoryRegion.html", null ],
     [ "v8::internal::baseline::detail::PopAllHelper< T >", "structv8_1_1internal_1_1baseline_1_1detail_1_1PopAllHelper.html", null ],
     [ "v8::internal::baseline::detail::PopAllHelper< Register >", "structv8_1_1internal_1_1baseline_1_1detail_1_1PopAllHelper_3_01Register_01_4.html", null ],
     [ "v8::internal::baseline::detail::PopAllHelper< Register, Register, T... >", "structv8_1_1internal_1_1baseline_1_1detail_1_1PopAllHelper_3_01Register_00_01Register_00_01T_8_8_8_01_4.html", null ],
@@ -6044,10 +6887,12 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::PopulateReferenceMapsPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1PopulateReferenceMapsPhase.html", null ],
     [ "v8::internal::Position", "classv8_1_1internal_1_1Position.html", null ],
     [ "v8::internal::QuickCheckDetails::Position", "structv8_1_1internal_1_1QuickCheckDetails_1_1Position.html", null ],
+    [ "v8::internal::Utf8ExternalStreamingStream::Position", "structv8_1_1internal_1_1Utf8ExternalStreamingStream_1_1Position.html", null ],
     [ "v8::internal::Script::PositionInfo", "structv8_1_1internal_1_1Script_1_1PositionInfo.html", null ],
     [ "v8::base::internal::PositionOfSignBit< Integer >", "structv8_1_1base_1_1internal_1_1PositionOfSignBit.html", null ],
     [ "v8::internal::PositionTableEntry", "structv8_1_1internal_1_1PositionTableEntry.html", null ],
     [ "v8::internal::PossiblyEmptyBuckets", "classv8_1_1internal_1_1PossiblyEmptyBuckets.html", null ],
+    [ "cppgc::PostConstructionCallbackTrait< T, typename >", "structcppgc_1_1PostConstructionCallbackTrait.html", null ],
     [ "v8::debug::PostponeInterruptsScope", "classv8_1_1debug_1_1PostponeInterruptsScope.html", null ],
     [ "v8::base::PowersOfTenCache", "classv8_1_1base_1_1PowersOfTenCache.html", null ],
     [ "v8::base::PreciseSleepTimer", "classv8_1_1base_1_1PreciseSleepTimer.html", null ],
@@ -6056,6 +6901,7 @@ var hierarchy =
     [ "unibrow::Predicate< T, size >", "classunibrow_1_1Predicate.html", null ],
     [ "cppgc::internal::PreFinalizer", "structcppgc_1_1internal_1_1PreFinalizer.html", null ],
     [ "cppgc::internal::PreFinalizerHandler", "classcppgc_1_1internal_1_1PreFinalizerHandler.html", null ],
+    [ "cppgc::internal::PrefinalizerRegistration", "classcppgc_1_1internal_1_1PrefinalizerRegistration.html", null ],
     [ "v8::internal::PreloadState", "structv8_1_1internal_1_1PreloadState.html", null ],
     [ "v8::internal::compiler::PrepareUsesVisitor", "classv8_1_1internal_1_1compiler_1_1PrepareUsesVisitor.html", null ],
     [ "v8::internal::PreparseByteDataConstants", "structv8_1_1internal_1_1PreparseByteDataConstants.html", [
@@ -6097,6 +6943,7 @@ var hierarchy =
     [ "v8::internal::PrivateNameScopeIterator", "classv8_1_1internal_1_1PrivateNameScopeIterator.html", null ],
     [ "v8_inspector::PrivatePropertyMirror", "structv8__inspector_1_1PrivatePropertyMirror.html", null ],
     [ "v8::internal::swiss_table::ProbeSequence< GroupSize >", "classv8_1_1internal_1_1swiss__table_1_1ProbeSequence.html", null ],
+    [ "cppgc::ProcessHeapStatistics", "classcppgc_1_1ProcessHeapStatistics.html", null ],
     [ "cppgc::internal::ProcessHeapStatisticsUpdater", "classcppgc_1_1internal_1_1ProcessHeapStatisticsUpdater.html", null ],
     [ "v8::internal::maglev::ProcessingState", "classv8_1_1internal_1_1maglev_1_1ProcessingState.html", null ],
     [ "v8::bigint::Processor", "classv8_1_1bigint_1_1Processor.html", [
@@ -6115,16 +6962,22 @@ var hierarchy =
     [ "v8::internal::Isolate::PromiseHandler", "structv8_1_1internal_1_1Isolate_1_1PromiseHandler.html", null ],
     [ "v8_inspector::PromiseHandlerTracker", "classv8__inspector_1_1PromiseHandlerTracker.html", null ],
     [ "v8::internal::Isolate::PromiseHookFields", "structv8_1_1internal_1_1Isolate_1_1PromiseHookFields.html", null ],
+    [ "v8::PromiseRejectMessage", "classv8_1_1PromiseRejectMessage.html", null ],
     [ "v8::internal::Scavenger::PromotedListEntry", "structv8_1_1internal_1_1Scavenger_1_1PromotedListEntry.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::PropagateException", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1PropagateException.html", null ],
     [ "v8::internal::compiler::PropertyAccess", "classv8_1_1internal_1_1compiler_1_1PropertyAccess.html", null ],
     [ "v8::internal::compiler::PropertyAccessBuilder", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html", null ],
     [ "v8::internal::compiler::PropertyAccessInfo", "classv8_1_1internal_1_1compiler_1_1PropertyAccessInfo.html", null ],
     [ "v8::internal::compiler::PropertyAccessTarget", "structv8_1_1internal_1_1compiler_1_1PropertyAccessTarget.html", null ],
     [ "v8_inspector::ValueMirror::PropertyAccumulator", "classv8__inspector_1_1ValueMirror_1_1PropertyAccumulator.html", null ],
+    [ "v8::PropertyCallbackInfo< T >", "classv8_1_1PropertyCallbackInfo.html", null ],
+    [ "v8::PropertyCallbackInfo< Array >", "classv8_1_1PropertyCallbackInfo.html", null ],
+    [ "v8::PropertyCallbackInfo< Boolean >", "classv8_1_1PropertyCallbackInfo.html", null ],
+    [ "v8::PropertyCallbackInfo< Integer >", "classv8_1_1PropertyCallbackInfo.html", null ],
+    [ "v8::PropertyCallbackInfo< Value >", "classv8_1_1PropertyCallbackInfo.html", null ],
     [ "v8::debug::PropertyDescriptor", "structv8_1_1debug_1_1PropertyDescriptor.html", null ],
     [ "v8::internal::compiler::PropertyDescriptor", "structv8_1_1internal_1_1compiler_1_1PropertyDescriptor.html", null ],
     [ "v8::internal::PropertyDescriptor", "classv8_1_1internal_1_1PropertyDescriptor.html", null ],
+    [ "v8::PropertyDescriptor", "classv8_1_1PropertyDescriptor.html", null ],
     [ "v8::internal::PropertyDetails", "classv8_1_1internal_1_1PropertyDetails.html", null ],
     [ "v8::debug::PropertyIterator", "classv8_1_1debug_1_1PropertyIterator.html", [
       [ "v8::internal::DebugPropertyIterator", "classv8_1_1internal_1_1DebugPropertyIterator.html", null ]
@@ -6156,9 +7009,10 @@ var hierarchy =
     [ "v8::internal::baseline::detail::PushHelper< interpreter::RegisterList >", "structv8_1_1internal_1_1baseline_1_1detail_1_1PushHelper_3_01interpreter_1_1RegisterList_01_4.html", null ],
     [ "v8::internal::compiler::PushParameterT< Adapter >", "structv8_1_1internal_1_1compiler_1_1PushParameterT.html", null ],
     [ "v8::internal::torque::QualifiedName", "structv8_1_1internal_1_1torque_1_1QualifiedName.html", null ],
+    [ "v8::QueryObjectPredicate", "classv8_1_1QueryObjectPredicate.html", null ],
     [ "std::queue", null, [
       [ "v8::internal::ZoneQueue< v8::internal::compiler::Node * >", "classv8_1_1internal_1_1ZoneQueue.html", null ],
-      [ "v8::internal::ZoneQueue< Token >", "classv8_1_1internal_1_1ZoneQueue.html", null ],
+      [ "v8::internal::ZoneQueue< v8::internal::compiler::MemoryOptimizer::Token >", "classv8_1_1internal_1_1ZoneQueue.html", null ],
       [ "v8::internal::ZoneQueue< T >", "classv8_1_1internal_1_1ZoneQueue.html", null ]
     ] ],
     [ "v8::internal::QuickCheckDetails", "classv8_1_1internal_1_1QuickCheckDetails.html", null ],
@@ -6170,9 +7024,12 @@ var hierarchy =
     [ "v8::internal::InternalIndex::Range", "classv8_1_1internal_1_1InternalIndex_1_1Range.html", null ],
     [ "v8::internal::Range< Char >", "structv8_1_1internal_1_1Range.html", null ],
     [ "v8::base::internal::RangeCheck", "classv8_1_1base_1_1internal_1_1RangeCheck.html", null ],
+    [ "v8::internal::AddressToTraceMap::RangeStack", "structv8_1_1internal_1_1AddressToTraceMap_1_1RangeStack.html", null ],
+    [ "v8::internal::CodeEntry::RareData", "structv8_1_1internal_1_1CodeEntry_1_1RareData.html", null ],
     [ "cppgc::internal::RawHeap", "classcppgc_1_1internal_1_1RawHeap.html", null ],
     [ "v8::internal::compiler::RawMachineAssembler", "classv8_1_1internal_1_1compiler_1_1RawMachineAssembler.html", null ],
     [ "v8::internal::compiler::RawMachineLabel", "classv8_1_1internal_1_1compiler_1_1RawMachineLabel.html", null ],
+    [ "cppgc::internal::RawPointer", "classcppgc_1_1internal_1_1RawPointer.html", null ],
     [ "v8::internal::RawPreparseData", "structv8_1_1internal_1_1RawPreparseData.html", null ],
     [ "v8::internal::BaseConsumedPreparseData< Data >::ByteData::ReadingScope", "classv8_1_1internal_1_1BaseConsumedPreparseData_1_1ByteData_1_1ReadingScope.html", null ],
     [ "v8::internal::ReadOnlyArtifacts", "classv8_1_1internal_1_1ReadOnlyArtifacts.html", null ],
@@ -6182,14 +7039,18 @@ var hierarchy =
     [ "v8::internal::ReadOnlyPageObjectIterator", "classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html", null ],
     [ "v8::internal::ReadOnlyRoots", "classv8_1_1internal_1_1ReadOnlyRoots.html", null ],
     [ "v8::PerIsolateData::RealmScope", "classv8_1_1PerIsolateData_1_1RealmScope.html", null ],
+    [ "cppgc::internal::MutatorMarkingState::RecentlyRetracedWeakContainers", "classcppgc_1_1internal_1_1MutatorMarkingState_1_1RecentlyRetracedWeakContainers.html", null ],
     [ "v8::internal::wasm::OffsetsProvider::RecGroup", "structv8_1_1internal_1_1wasm_1_1OffsetsProvider_1_1RecGroup.html", null ],
+    [ "v8::internal::wasm::WasmModuleBuilder::RecGroup", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1RecGroup.html", null ],
     [ "v8::internal::StringForwardingTable::Record", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html", null ],
+    [ "v8::metrics::Recorder", "classv8_1_1metrics_1_1Recorder.html", null ],
     [ "v8::platform::tracing::Recorder", "classv8_1_1platform_1_1tracing_1_1Recorder.html", null ],
     [ "v8::internal::GCTracer::RecordGCPhasesInfo", "classv8_1_1internal_1_1GCTracer_1_1RecordGCPhasesInfo.html", null ],
     [ "v8::internal::MarkCompactCollector::RecordRelocSlotInfo", "structv8_1_1internal_1_1MarkCompactCollector_1_1RecordRelocSlotInfo.html", null ],
     [ "v8::internal::compiler::turboshaft::RecreateSchedulePhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RecreateSchedulePhase.html", null ],
     [ "v8::internal::compiler::turboshaft::RecreateScheduleResult", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RecreateScheduleResult.html", null ],
     [ "v8::internal::RecursionCheck", "classv8_1_1internal_1_1RecursionCheck.html", null ],
+    [ "v8::internal::wasm::TypeCanonicalizer::RecursionGroupRange", "structv8_1_1internal_1_1wasm_1_1TypeCanonicalizer_1_1RecursionGroupRange.html", null ],
     [ "v8::internal::Serializer::RecursionScope", "classv8_1_1internal_1_1Serializer_1_1RecursionScope.html", null ],
     [ "v8::base::RecursiveMutex", "classv8_1_1base_1_1RecursiveMutex.html", null ],
     [ "v8::internal::compiler::JSHeapBroker::RecursiveSharedMutexGuardIfNeeded", "classv8_1_1internal_1_1compiler_1_1JSHeapBroker_1_1RecursiveSharedMutexGuardIfNeeded.html", [
@@ -6271,6 +7132,7 @@ var hierarchy =
     [ "v8::internal::AtomicSlot::Reference", "classv8_1_1internal_1_1AtomicSlot_1_1Reference.html", null ],
     [ "v8::internal::CodeStubAssembler::Reference", "structv8_1_1internal_1_1CodeStubAssembler_1_1Reference.html", null ],
     [ "v8::internal::UnalignedSlot< T >::Reference", "classv8_1_1internal_1_1UnalignedSlot_1_1Reference.html", null ],
+    [ "v8::internal::Deserializer< IsolateT >::ReferenceDescriptor", "structv8_1_1internal_1_1Deserializer_1_1ReferenceDescriptor.html", null ],
     [ "v8::internal::ReferenceSummary", "classv8_1_1internal_1_1ReferenceSummary.html", null ],
     [ "wasm::RefImpl< Ref, JSType >", "classwasm_1_1RefImpl.html", null ],
     [ "v8::internal::RegExpCompileData", "structv8_1_1internal_1_1RegExpCompileData.html", null ],
@@ -6370,9 +7232,12 @@ var hierarchy =
     [ "v8::internal::maglev::RegisterFrameState< v8::internal::DoubleRegister >", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html", null ],
     [ "v8::internal::maglev::RegisterFrameState< v8::internal::Register >", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html", null ],
     [ "v8::internal::interpreter::RegisterList", "classv8_1_1internal_1_1interpreter_1_1RegisterList.html", null ],
+    [ "v8::internal::wasm::ParallelMove::RegisterLoad", "structv8_1_1internal_1_1wasm_1_1ParallelMove_1_1RegisterLoad.html", null ],
     [ "v8::internal::maglev::RegisterMerge", "structv8_1_1internal_1_1maglev_1_1RegisterMerge.html", null ],
+    [ "v8::internal::wasm::ParallelMove::RegisterMove", "structv8_1_1internal_1_1wasm_1_1ParallelMove_1_1RegisterMove.html", null ],
     [ "v8::internal::Registers", "classv8_1_1internal_1_1Registers.html", null ],
     [ "v8::internal::maglev::RegisterSnapshot", "structv8_1_1internal_1_1maglev_1_1RegisterSnapshot.html", null ],
+    [ "v8::RegisterState", "structv8_1_1RegisterState.html", null ],
     [ "v8::internal::maglev::RegisterStateFlags", "structv8_1_1internal_1_1maglev_1_1RegisterStateFlags.html", null ],
     [ "v8::internal::RegisterValues", "classv8_1_1internal_1_1RegisterValues.html", null ],
     [ "v8::internal::RegListBase< RegisterT >", "classv8_1_1internal_1_1RegListBase.html", null ],
@@ -6382,6 +7247,7 @@ var hierarchy =
     [ "v8::internal::RegListBase< v8::internal::Register >", "classv8_1_1internal_1_1RegListBase.html", null ],
     [ "v8::internal::interpreter::InterpreterAssembler::RegListNodePair", "classv8_1_1internal_1_1interpreter_1_1InterpreterAssembler_1_1RegListNodePair.html", null ],
     [ "v8::internal::wasm::RegModeTransform", "structv8_1_1internal_1_1wasm_1_1RegModeTransform.html", null ],
+    [ "v8::internal::maglev::NodeBase::OwnerOrTemporaries::Regs", "structv8_1_1internal_1_1maglev_1_1NodeBase_1_1OwnerOrTemporaries_1_1Regs.html", null ],
     [ "v8::RelaxedLoadTag", "structv8_1_1RelaxedLoadTag.html", null ],
     [ "v8::RelaxedStoreTag", "structv8_1_1RelaxedStoreTag.html", null ],
     [ "v8::ReleaseStoreTag", "structv8_1_1ReleaseStoreTag.html", null ],
@@ -6414,9 +7280,12 @@ var hierarchy =
       [ "v8_inspector::RemoteCallFrameId", "classv8__inspector_1_1RemoteCallFrameId.html", null ],
       [ "v8_inspector::RemoteObjectId", "classv8__inspector_1_1RemoteObjectId.html", null ]
     ] ],
+    [ "v8::DefaultGlobalMapTraits< K, V >::RemovePointer< T >", "structv8_1_1DefaultGlobalMapTraits_1_1RemovePointer.html", null ],
+    [ "v8::DefaultGlobalMapTraits< K, V >::RemovePointer< T * >", "structv8_1_1DefaultGlobalMapTraits_1_1RemovePointer_3_01T_01_5_01_4.html", null ],
     [ "v8::internal::RemoveTagged< T >", "structv8_1_1internal_1_1RemoveTagged.html", null ],
     [ "v8::internal::RemoveTagged< Tagged< T > >", "structv8_1_1internal_1_1RemoveTagged_3_01Tagged_3_01T_01_4_01_4.html", null ],
     [ "v8::internal::maglev::RepeatIterator< T >", "classv8_1_1internal_1_1maglev_1_1RepeatIterator.html", null ],
+    [ "v8::internal::CompiledReplacement::ReplacementPart", "structv8_1_1internal_1_1CompiledReplacement_1_1ReplacementPart.html", null ],
     [ "v8::internal::ReplacementStringBuilder", "classv8_1_1internal_1_1ReplacementStringBuilder.html", null ],
     [ "v8::internal::compiler::turboshaft::OperationBuffer::ReplaceScope", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer_1_1ReplaceScope.html", null ],
     [ "v8::internal::Representation", "classv8_1_1internal_1_1Representation.html", null ],
@@ -6428,6 +7297,7 @@ var hierarchy =
       [ "v8::internal::compiler::turboshaft::detail::RepresentationForUnion< UntaggedUnion< T, Ts... > >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1RepresentationForUnion_3_01UntaggedUdd35bedf6501805edaef3298c9f1e4cd.html", null ]
     ] ],
     [ "v8::internal::compiler::RepresentationSelector", "classv8_1_1internal_1_1compiler_1_1RepresentationSelector.html", null ],
+    [ "v8::internal::MemoryMeasurement::Request", "structv8_1_1internal_1_1MemoryMeasurement_1_1Request.html", null ],
     [ "v8::internal::VirtualMemoryCage::ReservationParams", "structv8_1_1internal_1_1VirtualMemoryCage_1_1ReservationParams.html", null ],
     [ "v8::internal::torque::ResidueClass", "classv8_1_1internal_1_1torque_1_1ResidueClass.html", null ],
     [ "v8::internal::compiler::ResolveControlFlowPhase", "structv8_1_1internal_1_1compiler_1_1ResolveControlFlowPhase.html", null ],
@@ -6436,21 +7306,25 @@ var hierarchy =
     [ "v8::internal::wasm::ResolvedWasmImport", "classv8_1_1internal_1_1wasm_1_1ResolvedWasmImport.html", null ],
     [ "v8::internal::compiler::ResolvePhisPhase", "structv8_1_1internal_1_1compiler_1_1ResolvePhisPhase.html", null ],
     [ "v8::internal::compiler::turboshaft::ResolvePhisPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ResolvePhisPhase.html", null ],
+    [ "cppgc::Heap::ResourceConstraints", "structcppgc_1_1Heap_1_1ResourceConstraints.html", null ],
+    [ "v8::ResourceConstraints", "classv8_1_1ResourceConstraints.html", null ],
     [ "v8::internal::compiler::GraphAssembler::RestoreEffectControlScope", "classv8_1_1internal_1_1compiler_1_1GraphAssembler_1_1RestoreEffectControlScope.html", null ],
     [ "v8::internal::wasm::Result< T >", "classv8_1_1internal_1_1wasm_1_1Result.html", null ],
+    [ "v8::MeasureMemoryDelegate::Result", "structv8_1_1MeasureMemoryDelegate_1_1Result.html", null ],
     [ "v8::internal::compiler::WasmGraphBuilder::ResultNodesOfBr", "structv8_1_1internal_1_1compiler_1_1WasmGraphBuilder_1_1ResultNodesOfBr.html", null ],
     [ "v8::internal::compiler::ResumeJumpTarget", "classv8_1_1internal_1_1compiler_1_1ResumeJumpTarget.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ReThrow", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ReThrow.html", null ],
+    [ "v8::ReturnValue< F >", "classv8_1_1ReturnValue.html", null ],
     [ "v8::internal::ReturnValueScope", "classv8_1_1internal_1_1ReturnValueScope.html", null ],
     [ "v8::internal::ReusableUnoptimizedCompileState", "classv8_1_1internal_1_1ReusableUnoptimizedCompileState.html", null ],
     [ "v8::internal::Rewriter", "classv8_1_1internal_1_1Rewriter.html", null ],
     [ "v8::bigint::RightShiftState", "structv8_1_1bigint_1_1RightShiftState.html", null ],
     [ "v8::base::RingBuffer< T, _SIZE >", "classv8_1_1base_1_1RingBuffer.html", null ],
     [ "v8::base::RingBuffer< double >", "classv8_1_1base_1_1RingBuffer.html", null ],
+    [ "v8::internal::wasm::WasmBytecodeGenerator::RollbackStack", "classv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator_1_1RollbackStack.html", null ],
     [ "v8::internal::RootIndexMap", "classv8_1_1internal_1_1RootIndexMap.html", null ],
     [ "v8::internal::RootsTable", "classv8_1_1internal_1_1RootsTable.html", null ],
     [ "v8::internal::compiler::turboshaft::RootTypes", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RootTypes.html", null ],
-    [ "RootVisitor", null, [
+    [ "cppgc::internal::RootVisitor", "classcppgc_1_1internal_1_1RootVisitor.html", [
       [ "cppgc::internal::RootVisitorBase", "classcppgc_1_1internal_1_1RootVisitorBase.html", [
         [ "cppgc::internal::RootMarkingVisitor", "classcppgc_1_1internal_1_1RootMarkingVisitor.html", null ],
         [ "v8::internal::GraphBuildingRootVisitor", "classv8_1_1internal_1_1GraphBuildingRootVisitor.html", null ]
@@ -6490,6 +7364,7 @@ var hierarchy =
           ] ]
         ] ]
       ] ],
+      [ "v8::internal::UnreachableObjectsFilter::MarkingVisitor", "classv8_1_1internal_1_1UnreachableObjectsFilter_1_1MarkingVisitor.html", null ],
       [ "v8::internal::YoungGenerationRootMarkingVisitor", "classv8_1_1internal_1_1YoungGenerationRootMarkingVisitor.html", null ]
     ] ],
     [ "v8::internal::compiler::RpoNumber", "classv8_1_1internal_1_1compiler_1_1RpoNumber.html", null ],
@@ -6513,10 +7388,13 @@ var hierarchy =
       [ "v8::internal::MaglevSafepointTableBuilder", "classv8_1_1internal_1_1MaglevSafepointTableBuilder.html", null ],
       [ "v8::internal::SafepointTableBuilder", "classv8_1_1internal_1_1SafepointTableBuilder.html", null ]
     ] ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::SameValue", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1SameValue.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::SameValueNumbersOnly", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1SameValueNumbersOnly.html", null ],
+    [ "cppgc::internal::SameThreadEnabledCheckingPolicyBase", "classcppgc_1_1internal_1_1SameThreadEnabledCheckingPolicyBase.html", [
+      [ "cppgc::internal::SameThreadEnabledCheckingPolicy< kCheckOffHeapAssignments >", "classcppgc_1_1internal_1_1SameThreadEnabledCheckingPolicy.html", null ]
+    ] ],
+    [ "v8::AllocationProfile::Sample", "structv8_1_1AllocationProfile_1_1Sample.html", null ],
     [ "v8::internal::SamplingHeapProfiler::Sample", "structv8_1_1internal_1_1SamplingHeapProfiler_1_1Sample.html", null ],
     [ "v8::internal::CpuProfile::SampleInfo", "structv8_1_1internal_1_1CpuProfile_1_1SampleInfo.html", null ],
+    [ "v8::SampleInfo", "structv8_1_1SampleInfo.html", null ],
     [ "v8::sampler::Sampler", "classv8_1_1sampler_1_1Sampler.html", [
       [ "v8::internal::CpuSampler", "classv8_1_1internal_1_1CpuSampler.html", null ],
       [ "v8::internal::Ticker", "classv8_1_1internal_1_1Ticker.html", null ]
@@ -6525,6 +7403,7 @@ var hierarchy =
     [ "v8::internal::SamplingCircularQueue< v8::internal::TickSampleEventRecord, kTickSampleQueueLength >", "classv8_1_1internal_1_1SamplingCircularQueue.html", null ],
     [ "v8::internal::SamplingHeapProfiler", "classv8_1_1internal_1_1SamplingHeapProfiler.html", null ],
     [ "v8::internal::SandboxHardwareSupport", "classv8_1_1internal_1_1SandboxHardwareSupport.html", null ],
+    [ "v8::SandboxHardwareSupport", "classv8_1_1SandboxHardwareSupport.html", null ],
     [ "v8::internal::compiler::turboshaft::SaturatedUint8", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1SaturatedUint8.html", null ],
     [ "v8::base::internal::SaturateFastAsmOp< Dst, Src >", "structv8_1_1base_1_1internal_1_1SaturateFastAsmOp.html", null ],
     [ "v8::base::internal::SaturateFastOp< Dst, Src >", "structv8_1_1base_1_1internal_1_1SaturateFastOp.html", null ],
@@ -6555,8 +7434,14 @@ var hierarchy =
     [ "v8::internal::compiler::ScheduleEarlyNodeVisitor", "classv8_1_1internal_1_1compiler_1_1ScheduleEarlyNodeVisitor.html", null ],
     [ "v8::internal::compiler::ScheduleLateNodeVisitor", "classv8_1_1internal_1_1compiler_1_1ScheduleLateNodeVisitor.html", null ],
     [ "v8::internal::compiler::Scheduler", "classv8_1_1internal_1_1compiler_1_1Scheduler.html", null ],
+    [ "v8::internal::compiler::Scheduler::SchedulerData", "structv8_1_1internal_1_1compiler_1_1Scheduler_1_1SchedulerData.html", null ],
     [ "v8::internal::compiler::ScheduleVerifier", "classv8_1_1internal_1_1compiler_1_1ScheduleVerifier.html", null ],
+    [ "v8::internal::compiler::InstructionScheduler::SchedulingQueueBase", "classv8_1_1internal_1_1compiler_1_1InstructionScheduler_1_1SchedulingQueueBase.html", [
+      [ "v8::internal::compiler::InstructionScheduler::CriticalPathFirstQueue", "classv8_1_1internal_1_1compiler_1_1InstructionScheduler_1_1CriticalPathFirstQueue.html", null ],
+      [ "v8::internal::compiler::InstructionScheduler::StressSchedulerQueue", "classv8_1_1internal_1_1compiler_1_1InstructionScheduler_1_1StressSchedulerQueue.html", null ]
+    ] ],
     [ "v8::base::ContextualVariable< Derived, VarType >::Scope", "classv8_1_1base_1_1ContextualVariable_1_1Scope.html", null ],
+    [ "v8::Context::Scope", "classv8_1_1Context_1_1Scope.html", null ],
     [ "v8::internal::CodeTracer::Scope", "classv8_1_1internal_1_1CodeTracer_1_1Scope.html", [
       [ "v8::internal::CodeTracer::StreamScope", "classv8_1_1internal_1_1CodeTracer_1_1StreamScope.html", null ]
     ] ],
@@ -6564,12 +7449,14 @@ var hierarchy =
     [ "v8::internal::compiler::SourcePositionTable::Scope", "classv8_1_1internal_1_1compiler_1_1SourcePositionTable_1_1Scope.html", null ],
     [ "v8::internal::compiler::ZoneStats::Scope", "classv8_1_1internal_1_1compiler_1_1ZoneStats_1_1Scope.html", null ],
     [ "v8::internal::GCTracer::Scope", "classv8_1_1internal_1_1GCTracer_1_1Scope.html", null ],
+    [ "v8::Isolate::Scope", "classv8_1_1Isolate_1_1Scope.html", null ],
     [ "v8_inspector::InjectedScript::Scope", "classv8__inspector_1_1InjectedScript_1_1Scope.html", [
       [ "v8_inspector::InjectedScript::CallFrameScope", "classv8__inspector_1_1InjectedScript_1_1CallFrameScope.html", null ],
       [ "v8_inspector::InjectedScript::ContextScope", "classv8__inspector_1_1InjectedScript_1_1ContextScope.html", null ],
       [ "v8_inspector::InjectedScript::ObjectScope", "classv8__inspector_1_1InjectedScript_1_1ObjectScope.html", null ]
     ] ],
     [ "v8::internal::compiler::turboshaft::ScopeCounter", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ScopeCounter.html", null ],
+    [ "v8::ScopedBlockingCall", "classv8_1_1ScopedBlockingCall.html", null ],
     [ "v8::internal::compiler::ScopedExceptionHandler", "classv8_1_1internal_1_1compiler_1_1ScopedExceptionHandler.html", null ],
     [ "v8::internal::ScopedExternalStringLock", "classv8_1_1internal_1_1ScopedExternalStringLock.html", null ],
     [ "v8::internal::ScopedFullHeapCrashKey", "classv8_1_1internal_1_1ScopedFullHeapCrashKey.html", null ],
@@ -6585,17 +7472,28 @@ var hierarchy =
     [ "v8::internal::ScopeIterator", "classv8_1_1internal_1_1ScopeIterator.html", null ],
     [ "v8::internal::baseline::BaselineAssembler::ScratchRegisterScope", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler_1_1ScratchRegisterScope.html", null ],
     [ "v8::debug::Script", "classv8_1_1debug_1_1Script.html", null ],
+    [ "v8::ScriptCompiler", "classv8_1_1ScriptCompiler.html", null ],
     [ "v8::debug::Coverage::ScriptData", "classv8_1_1debug_1_1Coverage_1_1ScriptData.html", null ],
+    [ "v8::internal::AllocationTracker::ScriptData", "classv8_1_1internal_1_1AllocationTracker_1_1ScriptData.html", null ],
     [ "v8::internal::ScriptDetails", "structv8_1_1internal_1_1ScriptDetails.html", null ],
     [ "v8::internal::SharedFunctionInfo::ScriptIterator", "classv8_1_1internal_1_1SharedFunctionInfo_1_1ScriptIterator.html", null ],
+    [ "v8::ScriptOrigin", "classv8_1_1ScriptOrigin.html", null ],
+    [ "v8::ScriptOriginOptions", "classv8_1_1ScriptOriginOptions.html", null ],
+    [ "v8::ScriptOrModule", "classv8_1_1ScriptOrModule.html", null ],
     [ "v8::debug::ScriptSource", "classv8_1_1debug_1_1ScriptSource.html", null ],
     [ "v8::internal::ScriptStreamingData", "structv8_1_1internal_1_1ScriptStreamingData.html", null ],
+    [ "v8::ScriptCompiler::ScriptStreamingTask", "classv8_1_1ScriptCompiler_1_1ScriptStreamingTask.html", null ],
+    [ "v8::internal::CodeDataSourceIncrementalState::ScriptUniqueId", "structv8_1_1internal_1_1CodeDataSourceIncrementalState_1_1ScriptUniqueId.html", null ],
     [ "v8::internal::SCTableReference", "classv8_1_1internal_1_1SCTableReference.html", null ],
     [ "v8::internal::SealHandleScope", "classv8_1_1internal_1_1SealHandleScope.html", null ],
+    [ "v8::SealHandleScope", "classv8_1_1SealHandleScope.html", null ],
     [ "v8::internal::SeededStringHasher", "structv8_1_1internal_1_1SeededStringHasher.html", null ],
+    [ "v8::internal::ZoneChunkList< T >::SeekResult", "structv8_1_1internal_1_1ZoneChunkList_1_1SeekResult.html", null ],
     [ "heap::base::Stack::Segment", "structheap_1_1base_1_1Stack_1_1Segment.html", null ],
+    [ "v8::internal::AstConsString::Segment", "structv8_1_1internal_1_1AstConsString_1_1Segment.html", null ],
     [ "v8::internal::Segment", "classv8_1_1internal_1_1Segment.html", null ],
     [ "v8::internal::SegmentedTable< Entry, size >::Segment", "structv8_1_1internal_1_1SegmentedTable_1_1Segment.html", null ],
+    [ "v8::internal::SparseBitVector::Segment", "structv8_1_1internal_1_1SparseBitVector_1_1Segment.html", null ],
     [ "heap::base::internal::SegmentBase", "classheap_1_1base_1_1internal_1_1SegmentBase.html", [
       [ "heap::base::Worklist< EntryType, MinSegmentSize >::Segment", "classheap_1_1base_1_1Worklist_1_1Segment.html", null ]
     ] ],
@@ -6612,21 +7510,26 @@ var hierarchy =
     [ "v8::base::Semaphore", "classv8_1_1base_1_1Semaphore.html", [
       [ "v8::internal::ParkingSemaphore", "classv8_1_1internal_1_1ParkingSemaphore.html", null ]
     ] ],
+    [ "cppgc::internal::SentinelPointer", "structcppgc_1_1internal_1_1SentinelPointer.html", null ],
     [ "v8::SeqCstAccessTag", "structv8_1_1SeqCstAccessTag.html", null ],
+    [ "v8::internal::SnapshotCreatorImpl::SerializableContext", "structv8_1_1internal_1_1SnapshotCreatorImpl_1_1SerializableContext.html", null ],
     [ "v8::SerializationData", "classv8_1_1SerializationData.html", null ],
     [ "v8::SerializationDataQueue", "classv8_1_1SerializationDataQueue.html", null ],
+    [ "v8::SerializeAPIWrapperCallback", "structv8_1_1SerializeAPIWrapperCallback.html", null ],
+    [ "v8::SerializeContextDataCallback", "structv8_1_1SerializeContextDataCallback.html", null ],
     [ "v8::internal::SerializedData", "classv8_1_1internal_1_1SerializedData.html", [
       [ "v8::internal::SerializedCodeData", "classv8_1_1internal_1_1SerializedCodeData.html", null ],
       [ "v8::internal::SnapshotData", "classv8_1_1internal_1_1SnapshotData.html", null ]
     ] ],
     [ "v8::internal::SerializeEmbedderFieldsCallback", "structv8_1_1internal_1_1SerializeEmbedderFieldsCallback.html", null ],
+    [ "v8::SerializeInternalFieldsCallback", "structv8_1_1SerializeInternalFieldsCallback.html", null ],
     [ "v8::internal::SerializerReference", "classv8_1_1internal_1_1SerializerReference.html", null ],
     [ "v8::internal::SerializerReferenceMap", "classv8_1_1internal_1_1SerializerReferenceMap.html", null ],
     [ "v8::internal::wasm::gdb_server::Session", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Session.html", null ],
     [ "std::set", null, [
       [ "v8::internal::ZoneSet< const AstModuleRequest *, ModuleRequestComparer >", "classv8_1_1internal_1_1ZoneSet.html", null ],
       [ "v8::internal::ZoneSet< InstructionOperand, OperandAsKeyLess >", "classv8_1_1internal_1_1ZoneSet.html", null ],
-      [ "v8::internal::ZoneSet< v8::internal::compiler::CodeAssemblerVariable::Impl *, CodeAssemblerVariable::ImplComparator >", "classv8_1_1internal_1_1ZoneSet.html", null ],
+      [ "v8::internal::ZoneSet< v8::internal::compiler::CodeAssemblerVariable::Impl *, v8::internal::compiler::CodeAssemblerVariable::ImplComparator >", "classv8_1_1internal_1_1ZoneSet.html", null ],
       [ "v8::internal::ZoneSet< v8::internal::compiler::Node * >", "classv8_1_1internal_1_1ZoneSet.html", null ],
       [ "v8::internal::ZoneSet< Candidate, CandidateCompare >", "classv8_1_1internal_1_1ZoneSet.html", null ],
       [ "v8::internal::ZoneSet< NodeId >", "classv8_1_1internal_1_1ZoneSet.html", null ],
@@ -6647,12 +7550,13 @@ var hierarchy =
     [ "v8::internal::SharedFeedbackSlot", "classv8_1_1internal_1_1SharedFeedbackSlot.html", null ],
     [ "v8::internal::SharedFunctionInfoFinder", "classv8_1_1internal_1_1SharedFunctionInfoFinder.html", null ],
     [ "v8::base::OS::SharedLibraryAddress", "structv8_1_1base_1_1OS_1_1SharedLibraryAddress.html", null ],
-    [ "v8::PageAllocator::SharedMemory", null, [
+    [ "v8::PageAllocator::SharedMemory", "classv8_1_1PageAllocator_1_1SharedMemory.html", [
       [ "v8::base::SharedMemory", "classv8_1_1base_1_1SharedMemory.html", null ]
     ] ],
-    [ "v8::PageAllocator::SharedMemoryMapping", null, [
+    [ "v8::PageAllocator::SharedMemoryMapping", "classv8_1_1PageAllocator_1_1SharedMemoryMapping.html", [
       [ "v8::base::SharedMemoryMapping", "classv8_1_1base_1_1SharedMemoryMapping.html", null ]
     ] ],
+    [ "v8::SharedMemoryStatistics", "classv8_1_1SharedMemoryStatistics.html", null ],
     [ "v8::base::SharedMutex", "classv8_1_1base_1_1SharedMutex.html", null ],
     [ "v8::base::SharedMutexGuard< kIsShared >", "classv8_1_1base_1_1SharedMutexGuard.html", null ],
     [ "v8::base::SharedMutexGuard< base::kExclusive >", "classv8_1_1base_1_1SharedMutexGuard.html", null ],
@@ -6666,6 +7570,7 @@ var hierarchy =
     [ "v8::internal::SharedObjectSafePublishGuard", "classv8_1_1internal_1_1SharedObjectSafePublishGuard.html", null ],
     [ "v8::internal::SharedStringAccessGuardIfNeeded", "classv8_1_1internal_1_1SharedStringAccessGuardIfNeeded.html", null ],
     [ "v8::internal::SharedStructTypeRegistry", "classv8_1_1internal_1_1SharedStructTypeRegistry.html", null ],
+    [ "v8::SharedValueConveyor", "classv8_1_1SharedValueConveyor.html", null ],
     [ "v8::internal::SharedWasmMemoryData", "structv8_1_1internal_1_1SharedWasmMemoryData.html", null ],
     [ "v8::ShellOptions", "classv8_1_1ShellOptions.html", null ],
     [ "shmem_data", "structshmem__data.html", null ],
@@ -6679,12 +7584,14 @@ var hierarchy =
     ] ],
     [ "v8::internal::wasm::SignatureHasher", "classv8_1_1internal_1_1wasm_1_1SignatureHasher.html", null ],
     [ "v8::internal::Simd128", "classv8_1_1internal_1_1Simd128.html", null ],
+    [ "v8::internal::wasm::WasmBytecodeGenerator::Simd128Hash", "structv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator_1_1Simd128Hash.html", null ],
     [ "v8::internal::wasm::Simd128Immediate", "structv8_1_1internal_1_1wasm_1_1Simd128Immediate.html", null ],
     [ "v8::internal::compiler::SimdImmediateParameter< simd_size, typename >", "classv8_1_1internal_1_1compiler_1_1SimdImmediateParameter.html", null ],
     [ "v8::internal::wasm::SimdLaneImmediate", "structv8_1_1internal_1_1wasm_1_1SimdLaneImmediate.html", null ],
     [ "v8::internal::wasm::WasmInstruction::Optional::SimdLaneLoad", "structv8_1_1internal_1_1wasm_1_1WasmInstruction_1_1Optional_1_1SimdLaneLoad.html", null ],
     [ "v8::internal::wasm::SimdShuffle", "classv8_1_1internal_1_1wasm_1_1SimdShuffle.html", null ],
     [ "v8::internal::wasm::SimdSwizzle", "classv8_1_1internal_1_1wasm_1_1SimdSwizzle.html", null ],
+    [ "v8::internal::JsonStringifier::SimplePropertyKeyCache", "classv8_1_1internal_1_1JsonStringifier_1_1SimplePropertyKeyCache.html", null ],
     [ "v8::internal::SimpleStringBuilder", "classv8_1_1internal_1_1SimpleStringBuilder.html", null ],
     [ "v8::internal::compiler::SimplifiedLowering", "classv8_1_1internal_1_1compiler_1_1SimplifiedLowering.html", null ],
     [ "v8::internal::compiler::SimplifiedLoweringPhase", "structv8_1_1internal_1_1compiler_1_1SimplifiedLoweringPhase.html", null ],
@@ -6692,11 +7599,13 @@ var hierarchy =
     [ "v8::internal::compiler::SimplifiedOperatorGlobalCache", "structv8_1_1internal_1_1compiler_1_1SimplifiedOperatorGlobalCache.html", null ],
     [ "cppgc::internal::SingleThreadedHandle", "structcppgc_1_1internal_1_1SingleThreadedHandle.html", null ],
     [ "v8::base::SingleThreadInitOnceTrait", "structv8_1_1base_1_1SingleThreadInitOnceTrait.html", null ],
+    [ "v8::base::RegionAllocator::SizeAddressOrder", "structv8_1_1base_1_1RegionAllocator_1_1SizeAddressOrder.html", null ],
     [ "cppgc::internal::MetricRecorder::GCCycle::Sizes", "structcppgc_1_1internal_1_1MetricRecorder_1_1GCCycle_1_1Sizes.html", null ],
     [ "v8::internal::Intl::SkipResourceCheck", "structv8_1_1internal_1_1Intl_1_1SkipResourceCheck.html", null ],
     [ "v8::internal::HeapObject::SkipTypeCheckTag", "structv8_1_1internal_1_1HeapObject_1_1SkipTypeCheckTag.html", null ],
     [ "v8::internal::compiler::SlackTrackingPrediction", "classv8_1_1internal_1_1compiler_1_1SlackTrackingPrediction.html", null ],
     [ "v8::internal::compiler::StateValueList::Slice", "structv8_1_1internal_1_1compiler_1_1StateValueList_1_1Slice.html", null ],
+    [ "v8::internal::wasm::LiftoffStackSlots::Slot", "structv8_1_1internal_1_1wasm_1_1LiftoffStackSlots_1_1Slot.html", null ],
     [ "v8::internal::wasm::Slot", "structv8_1_1internal_1_1wasm_1_1Slot.html", null ],
     [ "v8::internal::SlotAccessorForHandle< IsolateT >", "classv8_1_1internal_1_1SlotAccessorForHandle.html", null ],
     [ "v8::internal::SlotAccessorForHeapObject", "classv8_1_1internal_1_1SlotAccessorForHeapObject.html", null ],
@@ -6733,6 +7642,7 @@ var hierarchy =
     ] ],
     [ "v8::internal::SlotDescriptor", "classv8_1_1internal_1_1SlotDescriptor.html", null ],
     [ "v8::internal::SlotHoldsTrustedPointerImpl< TSlot >", "structv8_1_1internal_1_1SlotHoldsTrustedPointerImpl.html", null ],
+    [ "cppgc::internal::BasePage::SlotSetDeleter", "structcppgc_1_1internal_1_1BasePage_1_1SlotSetDeleter.html", null ],
     [ "SlotT", null, [
       [ "v8::internal::WriteProtectedSlot< SlotT >", "classv8_1_1internal_1_1WriteProtectedSlot.html", null ]
     ] ],
@@ -6741,12 +7651,12 @@ var hierarchy =
     [ "v8::base::SmallMap< NormalMap, kArraySize, EqualKey, MapInit >", "classv8_1_1base_1_1SmallMap.html", [
       [ "v8::internal::SmallZoneMap< K, V, kArraySize, Compare, KeyEqual >", "classv8_1_1internal_1_1SmallZoneMap.html", null ]
     ] ],
-    [ "v8::base::SmallMap< std::map< v8::internal::Isolate *, HeadAndTail > >", "classv8_1_1base_1_1SmallMap.html", null ],
-    [ "v8::base::SmallMap< std::map< void *, HeadAndTail >, 16 >", "classv8_1_1base_1_1SmallMap.html", null ],
+    [ "v8::base::SmallMap< std::map< v8::internal::Isolate *, v8::internal::FutexWaitList::HeadAndTail > >", "classv8_1_1base_1_1SmallMap.html", null ],
+    [ "v8::base::SmallMap< std::map< void *, v8::internal::FutexWaitList::HeadAndTail >, 16 >", "classv8_1_1base_1_1SmallMap.html", null ],
     [ "v8::base::SmallMap< ZoneMap< K, V, std::less< K > >, kArraySize, std::equal_to< K >, ZoneMapInit< ZoneMap< K, V, std::less< K > > > >", "classv8_1_1base_1_1SmallMap.html", null ],
     [ "v8::base::internal::SmallMapDefaultInit< NormalMap >", "classv8_1_1base_1_1internal_1_1SmallMapDefaultInit.html", null ],
-    [ "v8::base::internal::SmallMapDefaultInit< std::map< v8::internal::Isolate *, HeadAndTail > >", "classv8_1_1base_1_1internal_1_1SmallMapDefaultInit.html", null ],
-    [ "v8::base::internal::SmallMapDefaultInit< std::map< void *, HeadAndTail > >", "classv8_1_1base_1_1internal_1_1SmallMapDefaultInit.html", null ],
+    [ "v8::base::internal::SmallMapDefaultInit< std::map< v8::internal::Isolate *, v8::internal::FutexWaitList::HeadAndTail > >", "classv8_1_1base_1_1internal_1_1SmallMapDefaultInit.html", null ],
+    [ "v8::base::internal::SmallMapDefaultInit< std::map< void *, v8::internal::FutexWaitList::HeadAndTail > >", "classv8_1_1base_1_1internal_1_1SmallMapDefaultInit.html", null ],
     [ "v8::base::SmallVector< T, kSize, Allocator >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< CharacterRange, kInitialSize >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< double >", "classv8_1_1base_1_1SmallVector.html", null ],
@@ -6755,10 +7665,7 @@ var hierarchy =
     [ "v8::base::SmallVector< int >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< int, 16 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< int32_t, kInlineLineEndsSize >", "classv8_1_1base_1_1SmallVector.html", null ],
-    [ "v8::base::SmallVector< Name, 8 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< OperationStorageSlot, 32 >", "classv8_1_1base_1_1SmallVector.html", null ],
-    [ "v8::base::SmallVector< ReplacementPart, kStaticVectorSlots >", "classv8_1_1base_1_1SmallVector.html", null ],
-    [ "v8::base::SmallVector< Slot, 8 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< T, kSize, ZoneAllocator< T > >", "classv8_1_1base_1_1SmallVector.html", [
       [ "v8::internal::SmallZoneVector< T, kSize >", "classv8_1_1internal_1_1SmallZoneVector.html", null ]
     ] ],
@@ -6766,26 +7673,36 @@ var hierarchy =
     [ "v8::base::SmallVector< uint32_t, 4 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< uint32_t, 8 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< uint8_t, 8 >", "classv8_1_1base_1_1SmallVector.html", null ],
+    [ "v8::base::SmallVector< v8::internal::CompiledReplacement::ReplacementPart, kStaticVectorSlots >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< v8::internal::compiler::turboshaft::Block *, 4 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< v8::internal::compiler::turboshaft::Block const *, 4 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< v8::internal::compiler::turboshaft::OpIndex, 16 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< v8::internal::compiler::turboshaft::OpIndex, 32 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< v8::internal::ConstantPoolEntry, kTypicalNumPending32Constants >", "classv8_1_1base_1_1SmallVector.html", null ],
+    [ "v8::base::SmallVector< v8::internal::FuncNameInferrer::Name, 8 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< v8::internal::Handle< v8::internal::Object > >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< v8::internal::Handle< v8::internal::String >, kStaticVectorSlots >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< v8::internal::JsonProperty >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< v8::internal::MachineType, 32 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< v8::internal::maglev::ValueNode *, 8 >", "classv8_1_1base_1_1SmallVector.html", null ],
+    [ "v8::base::SmallVector< v8::internal::wasm::LiftoffStackSlots::Slot, 8 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::base::SmallVector< v8::internal::wasm::LiftoffVarState, kSize, ZoneAllocator< v8::internal::wasm::LiftoffVarState > >", "classv8_1_1base_1_1SmallVector.html", [
       [ "v8::internal::SmallZoneVector< v8::internal::wasm::LiftoffVarState, 16 >", "classv8_1_1internal_1_1SmallZoneVector.html", null ]
     ] ],
     [ "v8::base::SmallVector< v8::Isolate::UseCounterFeature, 8 >", "classv8_1_1base_1_1SmallVector.html", null ],
     [ "v8::internal::SmiIndex", "structv8_1_1internal_1_1SmiIndex.html", null ],
+    [ "v8::internal::SmiTagging< tagged_ptr_size >", "structv8_1_1internal_1_1SmiTagging.html", null ],
+    [ "v8::internal::SmiTagging< 4 >", "structv8_1_1internal_1_1SmiTagging_3_014_01_4.html", null ],
+    [ "v8::internal::SmiTagging< 8 >", "structv8_1_1internal_1_1SmiTagging_3_018_01_4.html", null ],
     [ "heap::base::SmoothedBytesAndDuration", "classheap_1_1base_1_1SmoothedBytesAndDuration.html", null ],
+    [ "v8::internal::MemoryBalancer::SmoothedBytesAndDuration", "classv8_1_1internal_1_1MemoryBalancer_1_1SmoothedBytesAndDuration.html", null ],
+    [ "v8::internal::compiler::turboshaft::LateLoadEliminationAnalyzer::Snapshot", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer_1_1Snapshot.html", null ],
     [ "v8::internal::compiler::turboshaft::SnapshotTable< Value, KeyData >::Snapshot", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1SnapshotTable_1_1Snapshot.html", null ],
+    [ "v8::internal::compiler::turboshaft::WasmLoadEliminationAnalyzer::Snapshot", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoadEliminationAnalyzer_1_1Snapshot.html", null ],
     [ "v8::internal::Scope::Snapshot", "classv8_1_1internal_1_1Scope_1_1Snapshot.html", null ],
     [ "v8::internal::SnapshotByteSink", "classv8_1_1internal_1_1SnapshotByteSink.html", null ],
     [ "v8::internal::SnapshotByteSource", "classv8_1_1internal_1_1SnapshotByteSource.html", null ],
+    [ "v8::SnapshotCreator", "classv8_1_1SnapshotCreator.html", null ],
     [ "v8::internal::SnapshotCreatorImpl", "classv8_1_1internal_1_1SnapshotCreatorImpl.html", null ],
     [ "v8::internal::compiler::turboshaft::SnapshotTable< Value, KeyData >::SnapshotData", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SnapshotTable_1_1SnapshotData.html", null ],
     [ "v8::internal::compiler::turboshaft::SnapshotTable< Value, KeyData >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1SnapshotTable.html", null ],
@@ -6804,7 +7721,9 @@ var hierarchy =
       ] ]
     ] ],
     [ "v8::internal::compiler::turboshaft::SnapshotTable< OpIndex, VariableData >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1SnapshotTable.html", [
-      [ "v8::internal::compiler::turboshaft::ChangeTrackingSnapshotTable< VariableTable, OpIndex, VariableData >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeTrackingSnapshotTable.html", null ]
+      [ "v8::internal::compiler::turboshaft::ChangeTrackingSnapshotTable< VariableTable, OpIndex, VariableData >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeTrackingSnapshotTable.html", [
+        [ "v8::internal::compiler::turboshaft::VariableReducer< AfterNext >::VariableTable", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1VariableReducer_1_1VariableTable.html", null ]
+      ] ]
     ] ],
     [ "v8::internal::compiler::turboshaft::SnapshotTable< StoreObservability, MaybeRedundantStoresKeyData >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1SnapshotTable.html", [
       [ "v8::internal::compiler::turboshaft::ChangeTrackingSnapshotTable< MaybeRedundantStoresTable, StoreObservability, MaybeRedundantStoresKeyData >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeTrackingSnapshotTable.html", [
@@ -6840,12 +7759,14 @@ var hierarchy =
       [ "v8::internal::HeapSnapshotGenerator", "classv8_1_1internal_1_1HeapSnapshotGenerator.html", null ]
     ] ],
     [ "v8::internal::wasm::gdb_server::SocketBinding", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1SocketBinding.html", null ],
+    [ "v8::ScriptCompiler::Source", "classv8_1_1ScriptCompiler_1_1Source.html", null ],
     [ "v8::internal::SourceChangeRange", "structv8_1_1internal_1_1SourceChangeRange.html", null ],
     [ "v8::internal::SourceCodeCache", "classv8_1_1internal_1_1SourceCodeCache.html", null ],
     [ "v8::internal::SourceCodeOf", "structv8_1_1internal_1_1SourceCodeOf.html", null ],
     [ "v8::SourceGroup", "classv8_1_1SourceGroup.html", null ],
     [ "v8::internal::torque::SourceId", "classv8_1_1internal_1_1torque_1_1SourceId.html", null ],
     [ "v8::internal::compiler::SourceIdAssigner", "classv8_1_1internal_1_1compiler_1_1SourceIdAssigner.html", null ],
+    [ "v8::SourceLocation", "classv8_1_1SourceLocation.html", null ],
     [ "v8::internal::SourcePosition", "classv8_1_1internal_1_1SourcePosition.html", null ],
     [ "v8::internal::torque::SourcePosition", "structv8_1_1internal_1_1torque_1_1SourcePosition.html", null ],
     [ "v8::internal::compiler::SourcePositionAsJSON", "structv8_1_1internal_1_1compiler_1_1SourcePositionAsJSON.html", null ],
@@ -6853,43 +7774,68 @@ var hierarchy =
     [ "v8::internal::compiler::CodeAssembler::SourcePositionScope", "classv8_1_1internal_1_1compiler_1_1CodeAssembler_1_1SourcePositionScope.html", null ],
     [ "v8::internal::SourcePositionTableBuilder", "classv8_1_1internal_1_1SourcePositionTableBuilder.html", null ],
     [ "v8::internal::SourcePositionTableIterator", "classv8_1_1internal_1_1SourcePositionTableIterator.html", null ],
+    [ "v8::internal::SourcePositionTable::SourcePositionTuple", "structv8_1_1internal_1_1SourcePositionTable_1_1SourcePositionTuple.html", null ],
     [ "v8::internal::SourceRange", "structv8_1_1internal_1_1SourceRange.html", null ],
     [ "v8::internal::SourceRangeScope", "classv8_1_1internal_1_1SourceRangeScope.html", null ],
     [ "v8::internal::ExternalEntityTable< Entry, size >::Space", "structv8_1_1internal_1_1ExternalEntityTable_1_1Space.html", [
       [ "v8::internal::ExternalEntityTable< Entry, size >::SpaceWithBlackAllocationSupport", "structv8_1_1internal_1_1ExternalEntityTable_1_1SpaceWithBlackAllocationSupport.html", null ]
     ] ],
+    [ "cppgc::HeapStatistics::SpaceStatistics", "structcppgc_1_1HeapStatistics_1_1SpaceStatistics.html", null ],
+    [ "cppgc::SpaceTrait< T, typename >", "structcppgc_1_1SpaceTrait.html", null ],
     [ "v8::internal::SpaceVerificationVisitor", "classv8_1_1internal_1_1SpaceVerificationVisitor.html", null ],
     [ "v8::internal::compiler::SparseInputMask", "classv8_1_1internal_1_1compiler_1_1SparseInputMask.html", null ],
     [ "v8::internal::compiler::turboshaft::SparseOpIndexSideTable< T >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1SparseOpIndexSideTable.html", null ],
-    [ "v8::internal::compiler::turboshaft::SparseOpIndexSideTable< Deduplicator * >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1SparseOpIndexSideTable.html", null ],
     [ "v8::internal::compiler::turboshaft::SparseOpIndexSideTable< v8::internal::compiler::turboshaft::BlockIndex >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1SparseOpIndexSideTable.html", null ],
+    [ "v8::internal::compiler::turboshaft::SparseOpIndexSideTable< v8::internal::compiler::turboshaft::StringEscapeAnalysisReducer::Deduplicator * >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1SparseOpIndexSideTable.html", null ],
     [ "v8::internal::compiler::SparseSidetable< T >", "classv8_1_1internal_1_1compiler_1_1SparseSidetable.html", null ],
-    [ "v8::internal::compiler::SparseSidetable< State >", "classv8_1_1internal_1_1compiler_1_1SparseSidetable.html", null ],
+    [ "v8::internal::compiler::SparseSidetable< v8::internal::compiler::VariableTracker::State >", "classv8_1_1internal_1_1compiler_1_1SparseSidetable.html", null ],
     [ "v8::internal::compiler::SparseSidetable< v8::internal::compiler::VirtualObject * >", "classv8_1_1internal_1_1compiler_1_1SparseSidetable.html", null ],
     [ "v8::internal::torque::SpecializationKey< T >", "structv8_1_1internal_1_1torque_1_1SpecializationKey.html", null ],
     [ "v8::internal::torque::SpecializationRequester", "structv8_1_1internal_1_1torque_1_1SpecializationRequester.html", null ],
     [ "v8::internal::compiler::turboshaft::SpecialRPOSchedulingPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SpecialRPOSchedulingPhase.html", null ],
+    [ "v8::internal::compiler::SpecialRPONumberer::SpecialRPOStackFrame", "structv8_1_1internal_1_1compiler_1_1SpecialRPONumberer_1_1SpecialRPOStackFrame.html", null ],
     [ "v8::internal::compiler::turboshaft::TurboshaftSpecialRPONumberer::SpecialRPOStackFrame", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TurboshaftSpecialRPONumberer_1_1SpecialRPOStackFrame.html", null ],
     [ "v8::internal::compiler::turboshaft::ShufflePackNode::SpecificInfo", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ShufflePackNode_1_1SpecificInfo.html", null ],
     [ "v8::internal::compiler::SpeculativeBigIntAsNParameters", "classv8_1_1internal_1_1compiler_1_1SpeculativeBigIntAsNParameters.html", null ],
     [ "v8::internal::compiler::SpillPlacer", "classv8_1_1internal_1_1compiler_1_1SpillPlacer.html", null ],
+    [ "v8::internal::maglev::StraightForwardRegisterAllocator::SpillSlotInfo", "structv8_1_1internal_1_1maglev_1_1StraightForwardRegisterAllocator_1_1SpillSlotInfo.html", null ],
+    [ "v8::internal::maglev::StraightForwardRegisterAllocator::SpillSlots", "structv8_1_1internal_1_1maglev_1_1StraightForwardRegisterAllocator_1_1SpillSlots.html", null ],
     [ "v8::base::SpinningMutex", "classv8_1_1base_1_1SpinningMutex.html", null ],
     [ "v8::internal::SplayTree< Config, Allocator >", "classv8_1_1internal_1_1SplayTree.html", null ],
     [ "heap::base::Stack", "classheap_1_1base_1_1Stack.html", null ],
     [ "v8::base::Stack", "classv8_1_1base_1_1Stack.html", null ],
     [ "v8::internal::torque::Stack< T >", "classv8_1_1internal_1_1torque_1_1Stack.html", null ],
     [ "std::stack", null, [
-      [ "v8::internal::ZoneStack< LoopStackEntry >", "classv8_1_1internal_1_1ZoneStack.html", null ],
-      [ "v8::internal::ZoneStack< ExceptionHandler >", "classv8_1_1internal_1_1ZoneStack.html", null ],
-      [ "v8::internal::ZoneStack< IteratorsStates >", "classv8_1_1internal_1_1ZoneStack.html", null ],
+      [ "v8::internal::ZoneStack< v8::internal::compiler::BytecodeAnalysis::BytecodeAnalysisImpl::LoopStackEntry >", "classv8_1_1internal_1_1ZoneStack.html", null ],
+      [ "v8::internal::ZoneStack< v8::internal::compiler::BytecodeGraphBuilder::ExceptionHandler >", "classv8_1_1internal_1_1ZoneStack.html", null ],
+      [ "v8::internal::ZoneStack< v8::internal::compiler::BytecodeGraphBuilder::OsrIteratorState::IteratorsStates >", "classv8_1_1internal_1_1ZoneStack.html", null ],
       [ "v8::internal::ZoneStack< v8::internal::compiler::Node * >", "classv8_1_1internal_1_1ZoneStack.html", null ],
-      [ "v8::internal::ZoneStack< NodeState >", "classv8_1_1internal_1_1ZoneStack.html", null ],
+      [ "v8::internal::ZoneStack< v8::internal::compiler::EffectGraphReducer::NodeState >", "classv8_1_1internal_1_1ZoneStack.html", null ],
+      [ "v8::internal::ZoneStack< v8::internal::compiler::GraphReducer::NodeState >", "classv8_1_1internal_1_1ZoneStack.html", null ],
       [ "v8::internal::ZoneStack< v8::internal::ZoneVector< v8::internal::compiler::Node * > >", "classv8_1_1internal_1_1ZoneStack.html", null ],
-      [ "v8::internal::ZoneStack< HandlerTableEntry >", "classv8_1_1internal_1_1ZoneStack.html", null ],
+      [ "v8::internal::ZoneStack< v8::internal::maglev::MaglevGraphBuilder::HandlerTableEntry >", "classv8_1_1internal_1_1ZoneStack.html", null ],
       [ "v8::internal::ZoneStack< T >", "classv8_1_1internal_1_1ZoneStack.html", null ]
     ] ],
     [ "v8::internal::torque::Stack< const v8::internal::torque::Type * >", "classv8_1_1internal_1_1torque_1_1Stack.html", null ],
-    [ "api_internal::StackAllocated", null, [
+    [ "v8::api_internal::StackAllocated< check_statically_enabled >", "classv8_1_1api__internal_1_1StackAllocated.html", null ],
+    [ "v8::api_internal::StackAllocated< false >", "classv8_1_1api__internal_1_1StackAllocated.html", [
+      [ "v8::Local< v8::String >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< v8::Object >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< v8::Array >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< v8::Context >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< Object >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< Context >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< v8::Value >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< Value >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< v8::UnboundScript >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< Name >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< v8::Promise >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< v8::Data >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< v8::debug::Script >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< Map >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< SharedArrayBuffer >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< Promise >", "classv8_1_1Local.html", null ],
+      [ "v8::Local< v8::Map >", "classv8_1_1Local.html", null ],
       [ "v8::internal::DirectHandle< v8::internal::Object >", "classv8_1_1internal_1_1DirectHandle.html", null ],
       [ "v8::internal::DirectHandle< v8::internal::Script >", "classv8_1_1internal_1_1DirectHandle.html", null ],
       [ "v8::internal::DirectHandle< v8::internal::Name >", "classv8_1_1internal_1_1DirectHandle.html", null ],
@@ -6910,6 +7856,8 @@ var hierarchy =
       [ "v8::internal::DirectHandle< v8::internal::Symbol >", "classv8_1_1internal_1_1DirectHandle.html", null ],
       [ "v8::internal::DirectHandle< typename v8::internal::CharTraits< Char >::String >", "classv8_1_1internal_1_1DirectHandle.html", null ],
       [ "v8::internal::DirectHandle< v8::internal::SwissNameDictionary >", "classv8_1_1internal_1_1DirectHandle.html", null ],
+      [ "v8::Local< T >", "classv8_1_1Local.html", null ],
+      [ "v8::api_internal::StackAllocated< true >", "classv8_1_1api__internal_1_1StackAllocated_3_01true_01_4.html", null ],
       [ "v8::internal::DirectHandle< T >", "classv8_1_1internal_1_1DirectHandle.html", [
         [ "v8::internal::DirectHandleUnchecked< T >", "classv8_1_1internal_1_1DirectHandleUnchecked.html", null ]
       ] ]
@@ -6959,31 +7907,34 @@ var hierarchy =
         ] ]
       ] ]
     ] ],
+    [ "v8::StackFrame", "classv8_1_1StackFrame.html", null ],
     [ "v8_inspector::StackFrame", "classv8__inspector_1_1StackFrame.html", null ],
+    [ "v8_inspector::V8StackTraceImpl::StackFrameIterator", "classv8__inspector_1_1V8StackTraceImpl_1_1StackFrameIterator.html", null ],
     [ "v8::internal::StackFrameIteratorBase", "classv8_1_1internal_1_1StackFrameIteratorBase.html", [
       [ "v8::internal::StackFrameIterator", "classv8_1_1internal_1_1StackFrameIterator.html", null ],
       [ "v8::internal::StackFrameIteratorForProfiler", "classv8_1_1internal_1_1StackFrameIteratorForProfiler.html", [
         [ "v8::internal::StackFrameIteratorForProfilerForTesting", "classv8_1_1internal_1_1StackFrameIteratorForProfilerForTesting.html", null ]
       ] ]
     ] ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::StackGuard", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1StackGuard.html", null ],
     [ "v8::internal::StackGuard", "classv8_1_1internal_1_1StackGuard.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::StackGuardWithGap", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1StackGuardWithGap.html", null ],
     [ "v8::internal::StackHandler", "classv8_1_1internal_1_1StackHandler.html", null ],
     [ "v8::internal::StackHandlerIterator", "classv8_1_1internal_1_1StackHandlerIterator.html", null ],
     [ "v8::internal::StackHandlerMarker", "structv8_1_1internal_1_1StackHandlerMarker.html", null ],
     [ "v8::internal::wasm::StackHandlerMarker", "structv8_1_1internal_1_1wasm_1_1StackHandlerMarker.html", null ],
     [ "v8::internal::StackLimitCheck", "classv8_1_1internal_1_1StackLimitCheck.html", null ],
     [ "v8::internal::wasm::StackMemory", "classv8_1_1internal_1_1wasm_1_1StackMemory.html", null ],
+    [ "v8::internal::compiler::turboshaft::AnalyzerIterator::StackNode", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AnalyzerIterator_1_1StackNode.html", null ],
     [ "v8::internal::wasm::StackPool", "classv8_1_1internal_1_1wasm_1_1StackPool.html", null ],
     [ "v8::internal::ErrorUtils::StackPropertyLookupResult", "structv8_1_1internal_1_1ErrorUtils_1_1StackPropertyLookupResult.html", null ],
     [ "v8::internal::torque::StackRange", "classv8_1_1internal_1_1torque_1_1StackRange.html", null ],
+    [ "v8::internal::torque::ImplementationVisitor::StackScope", "classv8_1_1internal_1_1torque_1_1ImplementationVisitor_1_1StackScope.html", null ],
     [ "v8::internal::wasm::StackMemory::StackSegment", "classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html", null ],
     [ "v8::base::Stack::StackSlot", "structv8_1_1base_1_1Stack_1_1StackSlot.html", null ],
     [ "v8::internal::maglev::StackSlot", "structv8_1_1internal_1_1maglev_1_1StackSlot.html", null ],
     [ "v8::internal::compiler::StackSlotRepresentation", "classv8_1_1internal_1_1compiler_1_1StackSlotRepresentation.html", null ],
     [ "v8::internal::wasm::StackMemory::StackSwitchInfo", "structv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSwitchInfo.html", null ],
     [ "v8::base::debug::StackTrace", "classv8_1_1base_1_1debug_1_1StackTrace.html", null ],
+    [ "v8::StackTrace", "classv8_1_1StackTrace.html", null ],
     [ "_v8_internal_debugonly::StackTraceDebugDetails", "struct__v8__internal__debugonly_1_1StackTraceDebugDetails.html", null ],
     [ "v8::internal::StackTraceFailureMessage", "classv8_1_1internal_1_1StackTraceFailureMessage.html", null ],
     [ "v8::debug::StackTraceIterator", "classv8_1_1debug_1_1StackTraceIterator.html", [
@@ -6998,12 +7949,18 @@ var hierarchy =
       [ "v8::internal::ConservativeStackVisitorBase< ConcreteVisitor >", "classv8_1_1internal_1_1ConservativeStackVisitorBase.html", null ],
       [ "v8::internal::ConservativeTracedHandlesMarkingVisitor", "classv8_1_1internal_1_1ConservativeTracedHandlesMarkingVisitor.html", null ]
     ] ],
+    [ "cppgc::testing::StandaloneTestingHeap", "classcppgc_1_1testing_1_1StandaloneTestingHeap.html", null ],
     [ "v8::base::AddressRegion::StartAddressLess", "structv8_1_1base_1_1AddressRegion_1_1StartAddressLess.html", null ],
+    [ "v8::internal::BitVector::Iterator::StartTag", "structv8_1_1internal_1_1BitVector_1_1Iterator_1_1StartTag.html", null ],
+    [ "v8::internal::compiler::BytecodeLivenessState::Iterator::StartTag", "structv8_1_1internal_1_1compiler_1_1BytecodeLivenessState_1_1Iterator_1_1StartTag.html", null ],
+    [ "v8::StartupData", "classv8_1_1StartupData.html", null ],
+    [ "v8::internal::compiler::VariableTracker::State", "classv8_1_1internal_1_1compiler_1_1VariableTracker_1_1State.html", null ],
     [ "v8::internal::FuncNameInferrer::State", "classv8_1_1internal_1_1FuncNameInferrer_1_1State.html", null ],
     [ "v8::internal::MathRandom::State", "structv8_1_1internal_1_1MathRandom_1_1State.html", null ],
     [ "v8::internal::MemoryReducer::State", "classv8_1_1internal_1_1MemoryReducer_1_1State.html", null ],
     [ "v8::internal::PreParserFuncNameInferrer::State", "classv8_1_1internal_1_1PreParserFuncNameInferrer_1_1State.html", null ],
     [ "v8::internal::StackFrame::State", "structv8_1_1internal_1_1StackFrame_1_1State.html", null ],
+    [ "v8::internal::StringComparator::State", "classv8_1_1internal_1_1StringComparator_1_1State.html", null ],
     [ "v8::internal::StateBase", "classv8_1_1internal_1_1StateBase.html", [
       [ "v8::internal::RootState", "classv8_1_1internal_1_1RootState.html", null ],
       [ "v8::internal::State", "classv8_1_1internal_1_1State.html", null ]
@@ -7025,10 +7982,16 @@ var hierarchy =
     [ "v8::internal::StatsCounter", "classv8_1_1internal_1_1StatsCounter.html", null ],
     [ "v8::internal::compiler::ZoneStats::StatsScope", "classv8_1_1internal_1_1compiler_1_1ZoneStats_1_1StatsScope.html", null ],
     [ "v8::internal::StatsTable", "classv8_1_1internal_1_1StatsTable.html", null ],
+    [ "v8::internal::compiler::StringBuilderOptimizer::Status", "structv8_1_1internal_1_1compiler_1_1StringBuilderOptimizer_1_1Status.html", null ],
+    [ "v8::StdMapTraits< K, V >", "classv8_1_1StdMapTraits.html", [
+      [ "v8::DefaultGlobalMapTraits< K, V >", "classv8_1_1DefaultGlobalMapTraits.html", null ],
+      [ "v8::DefaultPersistentValueMapTraits< K, V >", "classv8_1_1DefaultPersistentValueMapTraits.html", null ]
+    ] ],
     [ "heap::base::IncrementalMarkingSchedule::StepInfo", "structheap_1_1base_1_1IncrementalMarkingSchedule_1_1StepInfo.html", null ],
     [ "v8::internal::ThreadIsolation::StlAllocator< T >", "structv8_1_1internal_1_1ThreadIsolation_1_1StlAllocator.html", null ],
     [ "v8::bigint::Storage", "classv8_1_1bigint_1_1Storage.html", null ],
     [ "v8::internal::compiler::turboshaft::ConstantOp::Storage", "unionv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConstantOp_1_1Storage.html", null ],
+    [ "v8::internal::maglev::NodeBase::OwnerOrTemporaries::Store", "unionv8_1_1internal_1_1maglev_1_1NodeBase_1_1OwnerOrTemporaries_1_1Store.html", null ],
     [ "v8::internal::compiler::StoreGlobalParameters", "classv8_1_1internal_1_1compiler_1_1StoreGlobalParameters.html", null ],
     [ "v8::internal::StoreICNoFeedbackGenerator", "classv8_1_1internal_1_1StoreICNoFeedbackGenerator.html", null ],
     [ "v8::internal::AccessorAssembler::StoreICParameters", "structv8_1_1internal_1_1AccessorAssembler_1_1StoreICParameters.html", null ],
@@ -7050,6 +8013,7 @@ var hierarchy =
       [ "v8::internal::OFStreamBase", "classv8_1_1internal_1_1OFStreamBase.html", null ],
       [ "v8::internal::torque::NullStreambuf", "classv8_1_1internal_1_1torque_1_1NullStreambuf.html", null ]
     ] ],
+    [ "v8::ScriptCompiler::StreamedSource", "classv8_1_1ScriptCompiler_1_1StreamedSource.html", null ],
     [ "v8::internal::wasm::StreamingDecoder", "classv8_1_1internal_1_1wasm_1_1StreamingDecoder.html", [
       [ "v8::internal::wasm::AsyncStreamingDecoder", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder.html", null ],
       [ "v8::internal::wasm::SyncStreamingDecoder", "classv8_1_1internal_1_1wasm_1_1SyncStreamingDecoder.html", null ]
@@ -7057,44 +8021,39 @@ var hierarchy =
     [ "v8::internal::wasm::StreamingProcessor", "classv8_1_1internal_1_1wasm_1_1StreamingProcessor.html", [
       [ "v8::internal::wasm::AsyncStreamingProcessor", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingProcessor.html", null ]
     ] ],
+    [ "v8::internal::Utf8ExternalStreamingStream::StreamPosition", "structv8_1_1internal_1_1Utf8ExternalStreamingStream_1_1StreamPosition.html", null ],
     [ "v8::base::internal::StrictNumeric< T >", "classv8_1_1base_1_1internal_1_1StrictNumeric.html", null ],
     [ "v8_inspector::String16", "classv8__inspector_1_1String16.html", null ],
     [ "v8_inspector::String16Builder", "classv8__inspector_1_1String16Builder.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringAdd_CheckNone", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringAdd__CheckNone.html", null ],
     [ "v8::internal::StringAllocator", "classv8_1_1internal_1_1StringAllocator.html", [
       [ "v8::internal::FixedStringAllocator", "classv8_1_1internal_1_1FixedStringAllocator.html", null ],
       [ "v8::internal::HeapStringAllocator", "classv8_1_1internal_1_1HeapStringAllocator.html", null ],
       [ "v8::internal::SmallStringOptimizedAllocator< kInlineSize >", "classv8_1_1internal_1_1SmallStringOptimizedAllocator.html", null ]
     ] ],
+    [ "v8_inspector::StringBuffer", "classv8__inspector_1_1StringBuffer.html", null ],
+    [ "v8::internal::compiler::StringBuilderOptimizer::StringBuilder", "structv8_1_1internal_1_1compiler_1_1StringBuilderOptimizer_1_1StringBuilder.html", null ],
     [ "v8::internal::wasm::StringBuilder", "classv8_1_1internal_1_1wasm_1_1StringBuilder.html", [
       [ "v8::internal::wasm::MultiLineStringBuilder", "classv8_1_1internal_1_1wasm_1_1MultiLineStringBuilder.html", null ]
     ] ],
     [ "v8::internal::compiler::StringBuilderOptimizer", "classv8_1_1internal_1_1compiler_1_1StringBuilderOptimizer.html", null ],
     [ "v8::internal::StringCharacterStream", "classv8_1_1internal_1_1StringCharacterStream.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::StringCharCodeAt", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1StringCharCodeAt.html", null ],
     [ "v8::internal::StringComparator", "classv8_1_1internal_1_1StringComparator.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringCompare", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringCompare.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringComparison< B >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringComparison.html", null ],
     [ "v8::internal::wasm::StringConstImmediate", "structv8_1_1internal_1_1wasm_1_1StringConstImmediate.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringEqual", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringEqual.html", null ],
     [ "v8::internal::StringEquals", "structv8_1_1internal_1_1StringEquals.html", null ],
     [ "v8::internal::compiler::turboshaft::StringEscapeAnalyzer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringEscapeAnalyzer.html", null ],
     [ "v8::internal::StringForwardingTable", "classv8_1_1internal_1_1StringForwardingTable.html", null ],
     [ "v8::internal::StringForwardingTableCleanerBase", "classv8_1_1internal_1_1StringForwardingTableCleanerBase.html", [
       [ "v8::internal::FullStringForwardingTableCleaner", "classv8_1_1internal_1_1FullStringForwardingTableCleaner.html", null ]
     ] ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringFromCodePointAt", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringFromCodePointAt.html", null ],
     [ "v8::internal::StringHandleEqual", "structv8_1_1internal_1_1StringHandleEqual.html", null ],
     [ "v8::internal::StringHandleHash", "structv8_1_1internal_1_1StringHandleHash.html", null ],
     [ "v8::internal::StringHasher", "classv8_1_1internal_1_1StringHasher.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringIndexOf", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringIndexOf.html", null ],
     [ "v8::internal::StringSearchBase", "classv8_1_1internal_1_1StringSearchBase.html", [
       [ "v8::internal::StringSearch< PatternChar, SubjectChar >", "classv8_1_1internal_1_1StringSearch.html", null ]
     ] ],
     [ "v8::internal::StringShape", "classv8_1_1internal_1_1StringShape.html", null ],
     [ "v8::internal::StringsStorage", "classv8_1_1internal_1_1StringsStorage.html", null ],
     [ "v8::internal::StringStream", "classv8_1_1internal_1_1StringStream.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringSubstring", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringSubstring.html", null ],
     [ "v8::internal::StringTable", "classv8_1_1internal_1_1StringTable.html", null ],
     [ "v8::internal::StringTableKey", "classv8_1_1internal_1_1StringTableKey.html", [
       [ "v8::internal::InternalizedStringKey", "classv8_1_1internal_1_1InternalizedStringKey.html", null ],
@@ -7106,14 +8065,16 @@ var hierarchy =
       [ "v8::internal::NumberParseIntHelper", "classv8_1_1internal_1_1NumberParseIntHelper.html", null ],
       [ "v8::internal::StringToBigIntHelper< IsolateT >", "classv8_1_1internal_1_1StringToBigIntHelper.html", null ]
     ] ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::StringToNumber", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1StringToNumber.html", null ],
     [ "v8_inspector::protocol::StringUtil", "classv8__inspector_1_1protocol_1_1StringUtil.html", null ],
     [ "v8::internal::compiler::turboshaft::StringView", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringView.html", null ],
+    [ "v8_inspector::StringView", "classv8__inspector_1_1StringView.html", null ],
     [ "v8::internal::maglev::detail::StripFirstTupleArg< T >", "structv8_1_1internal_1_1maglev_1_1detail_1_1StripFirstTupleArg.html", null ],
     [ "v8::internal::maglev::detail::StripFirstTupleArg< std::tuple< T1, T... > >", "structv8_1_1internal_1_1maglev_1_1detail_1_1StripFirstTupleArg_3_01std_1_1tuple_3_01T1_00_01T_8_8_8_01_4_01_4.html", null ],
     [ "v8::internal::maglev::detail::StripFirstTupleArg< typename FunctionArgumentsTupleHelper< Function >::Tuple >", "structv8_1_1internal_1_1maglev_1_1detail_1_1StripFirstTupleArg.html", null ],
     [ "v8::base::StrongAlias< TagType, UnderlyingType >", "classv8_1_1base_1_1StrongAlias.html", null ],
-    [ "StrongRootAllocatorBase", null, [
+    [ "cppgc::internal::StrongCrossThreadPersistentPolicy", "structcppgc_1_1internal_1_1StrongCrossThreadPersistentPolicy.html", null ],
+    [ "cppgc::internal::StrongPersistentPolicy", "structcppgc_1_1internal_1_1StrongPersistentPolicy.html", null ],
+    [ "v8::internal::StrongRootAllocatorBase", "classv8_1_1internal_1_1StrongRootAllocatorBase.html", [
       [ "v8::internal::StrongRootAllocator< Address >", "classv8_1_1internal_1_1StrongRootAllocator_3_01Address_01_4.html", null ]
     ] ],
     [ "v8::internal::StrongRootsEntry", "classv8_1_1internal_1_1StrongRootsEntry.html", null ],
@@ -7131,6 +8092,7 @@ var hierarchy =
     ] ],
     [ "v8::internal::compiler::turboshaft::SupportedOperations", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1SupportedOperations.html", null ],
     [ "v8::internal::SuppressDebug", "classv8_1_1internal_1_1SuppressDebug.html", null ],
+    [ "v8::Isolate::SuppressMicrotaskExecutionScope", "classv8_1_1Isolate_1_1SuppressMicrotaskExecutionScope.html", null ],
     [ "heap::base::SuspendTagCheckingScope", "classheap_1_1base_1_1SuspendTagCheckingScope.html", null ],
     [ "cppgc::internal::Sweeper", "classcppgc_1_1internal_1_1Sweeper.html", null ],
     [ "v8::internal::Sweeper", "classv8_1_1internal_1_1Sweeper.html", null ],
@@ -7138,9 +8100,11 @@ var hierarchy =
     [ "cppgc::internal::SweepingConfig", "structcppgc_1_1internal_1_1SweepingConfig.html", null ],
     [ "cppgc::internal::Sweeper::SweepingOnMutatorThreadObserver", "classcppgc_1_1internal_1_1Sweeper_1_1SweepingOnMutatorThreadObserver.html", null ],
     [ "v8::internal::ArrayBufferSweeper::SweepingState", "classv8_1_1internal_1_1ArrayBufferSweeper_1_1SweepingState.html", null ],
+    [ "v8::internal::Sweeper::SweepingState< scope >", "classv8_1_1internal_1_1Sweeper_1_1SweepingState.html", null ],
+    [ "v8::internal::Sweeper::SweepingState< SweepingScope::kMajor >", "classv8_1_1internal_1_1Sweeper_1_1SweepingState.html", null ],
+    [ "v8::internal::Sweeper::SweepingState< SweepingScope::kMinor >", "classv8_1_1internal_1_1Sweeper_1_1SweepingState.html", null ],
     [ "v8::internal::compiler::SwitchInfoT< Adapter >", "classv8_1_1internal_1_1compiler_1_1SwitchInfoT.html", null ],
     [ "v8::internal::torque::Symbol", "classv8_1_1internal_1_1torque_1_1Symbol.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::SymbolDescriptiveString", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1SymbolDescriptiveString.html", null ],
     [ "v8::internal::Symbolizer::SymbolizedSample", "structv8_1_1internal_1_1Symbolizer_1_1SymbolizedSample.html", null ],
     [ "v8::internal::Symbolizer", "classv8_1_1internal_1_1Symbolizer.html", null ],
     [ "v8::base::SysInfo", "classv8_1_1base_1_1SysInfo.html", null ],
@@ -7154,6 +8118,7 @@ var hierarchy =
     [ "v8::internal::wasm::TableCopyImmediate", "structv8_1_1internal_1_1wasm_1_1TableCopyImmediate.html", null ],
     [ "v8::internal::wasm::WasmInstruction::Optional::TableInit", "structv8_1_1internal_1_1wasm_1_1WasmInstruction_1_1Optional_1_1TableInit.html", null ],
     [ "v8::internal::wasm::TableInitImmediate", "structv8_1_1internal_1_1wasm_1_1TableInitImmediate.html", null ],
+    [ "v8::internal::compiler::GraphC1Visualizer::Tag", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer_1_1Tag.html", null ],
     [ "v8::internal::TagForManaged< CppType >", "structv8_1_1internal_1_1TagForManaged.html", null ],
     [ "detail::TaggedArrayHeader", null, [
       [ "v8::internal::TaggedArrayBase< ArrayList, ArrayListShape >", "classv8_1_1internal_1_1TaggedArrayBase.html", [
@@ -7303,15 +8268,18 @@ var hierarchy =
     [ "v8::internal::detail::TaggedOperatorArrowRef< T >", "classv8_1_1internal_1_1detail_1_1TaggedOperatorArrowRef.html", null ],
     [ "v8::internal::TaggedPayload< PayloadTaggingScheme >", "structv8_1_1internal_1_1TaggedPayload.html", null ],
     [ "v8::internal::TaggedRegister", "classv8_1_1internal_1_1TaggedRegister.html", null ],
+    [ "v8::internal::TagRange< Tag >", "structv8_1_1internal_1_1TagRange.html", null ],
+    [ "v8::internal::TagRange< ExternalPointerTag >", "structv8_1_1internal_1_1TagRange.html", null ],
     [ "v8::internal::ParserBase< Impl >::Target", "classv8_1_1internal_1_1ParserBase_1_1Target.html", null ],
     [ "v8::internal::wasm::gdb_server::Target", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Target.html", null ],
-    [ "cppgc::Task", null, [
-      [ "cppgc::internal::MarkerBase::IncrementalMarkingTask", "classcppgc_1_1internal_1_1MarkerBase_1_1IncrementalMarkingTask.html", null ]
-    ] ],
     [ "v8::internal::wasm::gdb_server::TaskRunner::Task", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1TaskRunner_1_1Task.html", null ],
-    [ "v8::Task", null, [
+    [ "v8::Task", "classv8_1_1Task.html", [
+      [ "cppgc::internal::GCInvoker::GCInvokerImpl::GCTask", "classcppgc_1_1internal_1_1GCInvoker_1_1GCInvokerImpl_1_1GCTask.html", null ],
+      [ "cppgc::internal::MarkerBase::IncrementalMarkingTask", "classcppgc_1_1internal_1_1MarkerBase_1_1IncrementalMarkingTask.html", null ],
+      [ "cppgc::internal::Sweeper::SweeperImpl::IncrementalSweepTask", "classcppgc_1_1internal_1_1Sweeper_1_1SweeperImpl_1_1IncrementalSweepTask.html", null ],
       [ "v8::CheckMessageFromWorkerTask", "classv8_1_1CheckMessageFromWorkerTask.html", null ],
       [ "v8::CleanUpWorkerTask", "classv8_1_1CleanUpWorkerTask.html", null ],
+      [ "v8::DelayedTasksPlatform::DelayedTask", "classv8_1_1DelayedTasksPlatform_1_1DelayedTask.html", null ],
       [ "v8::OnMessageFromWorkerTask", "classv8_1_1OnMessageFromWorkerTask.html", null ],
       [ "v8::SetTimeoutTask", "classv8_1_1SetTimeoutTask.html", null ],
       [ "v8::internal::CpuProfileMaxSamplesCallbackTask", "classv8_1_1internal_1_1CpuProfileMaxSamplesCallbackTask.html", null ],
@@ -7324,6 +8292,9 @@ var hierarchy =
     [ "v8_inspector::TaskInfo", "classv8__inspector_1_1TaskInfo.html", null ],
     [ "v8::platform::TaskQueue", "classv8_1_1platform_1_1TaskQueue.html", null ],
     [ "v8::internal::wasm::gdb_server::TaskRunner", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1TaskRunner.html", null ],
+    [ "v8::TaskRunner", "classv8_1_1TaskRunner.html", [
+      [ "v8::DelayedTasksPlatform::DelayedTaskRunner", "classv8_1_1DelayedTasksPlatform_1_1DelayedTaskRunner.html", null ]
+    ] ],
     [ "v8::internal::ConcurrentMarking::TaskState", "structv8_1_1internal_1_1ConcurrentMarking_1_1TaskState.html", null ],
     [ "FirstMixin::template BodyDescriptor", null, [
       [ "v8::internal::StackedBodyDescriptor< Base, FirstMixin >", "classv8_1_1internal_1_1StackedBodyDescriptor_3_01Base_00_01FirstMixin_01_4.html", null ]
@@ -7367,6 +8338,7 @@ var hierarchy =
         [ "v8::internal::VariableMap", "classv8_1_1internal_1_1VariableMap.html", null ]
       ] ]
     ] ],
+    [ "v8::internal::PreParser::TemplateLiteralState", "structv8_1_1internal_1_1PreParser_1_1TemplateLiteralState.html", null ],
     [ "v8::internal::torque::cpp::TemplateParameter", "structv8_1_1internal_1_1torque_1_1cpp_1_1TemplateParameter.html", null ],
     [ "v8::internal::compiler::TempLoopInfo", "structv8_1_1internal_1_1compiler_1_1TempLoopInfo.html", null ],
     [ "v8::internal::TemporalParser", "classv8_1_1internal_1_1TemporalParser.html", null ],
@@ -7379,7 +8351,6 @@ var hierarchy =
       [ "v8::internal::maglev::MaglevAssembler::TemporaryRegisterScope", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler_1_1TemporaryRegisterScope.html", null ]
     ] ],
     [ "v8::internal::wasm::AsmJsParser::TemporaryVariableScope", "classv8_1_1internal_1_1wasm_1_1AsmJsParser_1_1TemporaryVariableScope.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::TerminateExecution", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TerminateExecution.html", null ],
     [ "v8::internal::TestingStream< Char >", "classv8_1_1internal_1_1TestingStream.html", null ],
     [ "v8::internal::interpreter::TestTypeOfFlags", "classv8_1_1internal_1_1interpreter_1_1TestTypeOfFlags.html", null ],
     [ "v8::internal::TextElement", "classv8_1_1internal_1_1TextElement.html", null ],
@@ -7389,34 +8360,38 @@ var hierarchy =
       [ "v8::platform::WorkerThread", "classv8_1_1platform_1_1WorkerThread.html", null ]
     ] ],
     [ "v8::base::Thread", "classv8_1_1base_1_1Thread.html", [
+      [ "v8::SourceGroup::IsolateThread", "classv8_1_1SourceGroup_1_1IsolateThread.html", null ],
       [ "v8::StreamerThread", "classv8_1_1StreamerThread.html", null ],
+      [ "v8::Worker::WorkerThread", "classv8_1_1Worker_1_1WorkerThread.html", null ],
       [ "v8::internal::ParkingThread", "classv8_1_1internal_1_1ParkingThread.html", null ],
       [ "v8::internal::Profiler", "classv8_1_1internal_1_1Profiler.html", null ],
       [ "v8::internal::ProfilerEventsProcessor", "classv8_1_1internal_1_1ProfilerEventsProcessor.html", null ],
       [ "v8::internal::SamplingThread", "classv8_1_1internal_1_1SamplingThread.html", null ],
-      [ "v8::internal::wasm::gdb_server::GdbServerThread", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServerThread.html", null ]
+      [ "v8::internal::wasm::gdb_server::GdbServerThread", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServerThread.html", null ],
+      [ "v8::platform::DefaultWorkerThreadsTaskRunner::WorkerThread", "classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner_1_1WorkerThread.html", null ]
     ] ],
+    [ "v8::internal::Isolate::ThreadDataTable", "classv8_1_1internal_1_1Isolate_1_1ThreadDataTable.html", null ],
     [ "v8::base::ThreadedListTraits< T >", "structv8_1_1base_1_1ThreadedListTraits.html", null ],
     [ "v8::internal::ThreadId", "classv8_1_1internal_1_1ThreadId.html", null ],
+    [ "v8::ThreadIsolatedAllocator", "classv8_1_1ThreadIsolatedAllocator.html", null ],
     [ "v8::internal::ThreadIsolation", "classv8_1_1internal_1_1ThreadIsolation.html", null ],
+    [ "v8::internal::Debug::ThreadLocal", "classv8_1_1internal_1_1Debug_1_1ThreadLocal.html", null ],
+    [ "v8::internal::RegExpStack::ThreadLocal", "structv8_1_1internal_1_1RegExpStack_1_1ThreadLocal.html", null ],
+    [ "v8::internal::StackGuard::ThreadLocal", "classv8_1_1internal_1_1StackGuard_1_1ThreadLocal.html", null ],
     [ "v8::internal::ThreadLocalTop", "classv8_1_1internal_1_1ThreadLocalTop.html", null ],
     [ "v8::internal::ThreadManager", "classv8_1_1internal_1_1ThreadManager.html", null ],
     [ "v8::base::ThreadSafeInitOnceTrait", "structv8_1_1base_1_1ThreadSafeInitOnceTrait.html", null ],
+    [ "v8::internal::LocalHeap::ThreadState", "classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html", null ],
     [ "v8::internal::ThreadState", "classv8_1_1internal_1_1ThreadState.html", null ],
     [ "v8::internal::ThreadVisitor", "classv8_1_1internal_1_1ThreadVisitor.html", [
       [ "v8::internal::RedirectActiveFunctions", "classv8_1_1internal_1_1RedirectActiveFunctions.html", null ]
     ] ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowAccessedUninitializedVariable", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowAccessedUninitializedVariable.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowCalledNonCallable", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowCalledNonCallable.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowConstructorReturnedNonObject", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowConstructorReturnedNonObject.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowInvalidStringLength", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowInvalidStringLength.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowNotSuperConstructor", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowNotSuperConstructor.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowSuperAlreadyCalledError", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowSuperAlreadyCalledError.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::ThrowSuperNotCalled", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowSuperNotCalled.html", null ],
+    [ "v8::internal::compiler::turboshaft::GraphBuildingNodeProcessor::ThrowingScope", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GraphBuildingNodeProcessor_1_1ThrowingScope.html", null ],
     [ "v8::internal::TickCounter", "classv8_1_1internal_1_1TickCounter.html", null ],
     [ "v8::internal::TickSample", "structv8_1_1internal_1_1TickSample.html", null ],
     [ "v8::internal::TickSampleEventRecord", "classv8_1_1internal_1_1TickSampleEventRecord.html", null ],
     [ "v8::internal::TieringManager", "classv8_1_1internal_1_1TieringManager.html", null ],
+    [ "v8::internal::DateParser::TimeComposer", "classv8_1_1internal_1_1DateParser_1_1TimeComposer.html", null ],
     [ "v8::base::TimeConstants", "classv8_1_1base_1_1TimeConstants.html", [
       [ "v8::base::time_internal::TimeBase< ThreadTicks >", "classv8_1_1base_1_1time__internal_1_1TimeBase.html", [
         [ "v8::base::ThreadTicks", "classv8_1_1base_1_1ThreadTicks.html", null ]
@@ -7436,6 +8411,7 @@ var hierarchy =
     [ "v8::internal::HeapObjectsMap::TimeInterval", "structv8_1_1internal_1_1HeapObjectsMap_1_1TimeInterval.html", null ],
     [ "v8::internal::temporal::TimeRecord", "structv8_1_1internal_1_1temporal_1_1TimeRecord.html", null ],
     [ "v8::internal::TimerEventScope< TimerEvent >", "classv8_1_1internal_1_1TimerEventScope.html", null ],
+    [ "v8::base::Win32Time::TimeStamp", "unionv8_1_1base_1_1Win32Time_1_1TimeStamp.html", null ],
     [ "v8::base::TimezoneCache", "classv8_1_1base_1_1TimezoneCache.html", [
       [ "v8::base::PosixTimezoneCache", "classv8_1_1base_1_1PosixTimezoneCache.html", [
         [ "v8::base::AIXTimezoneCache", "classv8_1_1base_1_1AIXTimezoneCache.html", null ],
@@ -7450,6 +8426,7 @@ var hierarchy =
       [ "v8::base::WindowsTimezoneCache", "classv8_1_1base_1_1WindowsTimezoneCache.html", null ],
       [ "v8::internal::ICUTimezoneCache", "classv8_1_1internal_1_1ICUTimezoneCache.html", null ]
     ] ],
+    [ "v8::internal::DateParser::TimeZoneComposer", "classv8_1_1internal_1_1DateParser_1_1TimeZoneComposer.html", null ],
     [ "v8::internal::TNode< T >", "classv8_1_1internal_1_1TNode.html", [
       [ "v8::internal::SloppyTNode< T >", "classv8_1_1internal_1_1SloppyTNode.html", null ]
     ] ],
@@ -7469,13 +8446,12 @@ var hierarchy =
     [ "v8::internal::TNode< v8::internal::UintPtrT >", "classv8_1_1internal_1_1TNode.html", null ],
     [ "v8::internal::TNode< v8::internal::Union >", "classv8_1_1internal_1_1TNode.html", null ],
     [ "v8::internal::TNode< v8::internal::Word32T >", "classv8_1_1internal_1_1TNode.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::ToBoolean", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1ToBoolean.html", null ],
+    [ "v8::internal::compiler::turboshaft::detail::RepresentationForUnion< UntaggedUnion< T, Ts... > >::to_rep_type< U >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1RepresentationForUnion_3_01UntaggedUe5e5b88ec9b4cea032bda42747d080da.html", null ],
+    [ "v8::internal::compiler::MemoryOptimizer::Token", "structv8_1_1internal_1_1compiler_1_1MemoryOptimizer_1_1Token.html", null ],
     [ "v8::internal::OperationsBarrier::Token", "classv8_1_1internal_1_1OperationsBarrier_1_1Token.html", null ],
     [ "v8::internal::Token", "classv8_1_1internal_1_1Token.html", null ],
+    [ "v8::internal::Scanner::TokenDesc", "structv8_1_1internal_1_1Scanner_1_1TokenDesc.html", null ],
     [ "unibrow::ToLowercase", "structunibrow_1_1ToLowercase.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::ToNumber", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1ToNumber.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::ToNumeric", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1ToNumeric.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::ToObject", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1ToObject.html", null ],
     [ "v8::internal::compiler::TopLevelLiveRangeAsJSON", "structv8_1_1internal_1_1compiler_1_1TopLevelLiveRangeAsJSON.html", null ],
     [ "v8::internal::torque::TorqueAbortCompilation", "structv8_1_1internal_1_1torque_1_1TorqueAbortCompilation.html", null ],
     [ "v8::internal::torque::TorqueCodeGenerator", "classv8_1_1internal_1_1torque_1_1TorqueCodeGenerator.html", [
@@ -8142,29 +9118,46 @@ var hierarchy =
       [ "v8::internal::WeakCell", "classv8_1_1internal_1_1WeakCell.html", null ]
     ] ],
     [ "v8::internal::torque::TorqueMessage", "structv8_1_1internal_1_1torque_1_1TorqueMessage.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::ToString", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1ToString.html", null ],
     [ "unibrow::ToUppercase", "structunibrow_1_1ToUppercase.html", null ],
     [ "v8::internal::Trace", "classv8_1_1internal_1_1Trace.html", null ],
-    [ "TraceBuffer", null, [
+    [ "v8::platform::tracing::TraceBuffer", "classv8_1_1platform_1_1tracing_1_1TraceBuffer.html", [
       [ "v8::platform::tracing::TraceBufferRingBuffer", "classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html", null ]
     ] ],
+    [ "v8::platform::tracing::TraceBufferChunk", "classv8_1_1platform_1_1tracing_1_1TraceBufferChunk.html", null ],
+    [ "v8::platform::tracing::TraceConfig", "classv8_1_1platform_1_1tracing_1_1TraceConfig.html", null ],
+    [ "v8::Traced< F >", "classv8_1_1Traced.html", null ],
+    [ "cppgc::TraceDescriptor", "structcppgc_1_1TraceDescriptor.html", null ],
     [ "v8::internal::TracedHandles", "classv8_1_1internal_1_1TracedHandles.html", null ],
     [ "v8::internal::TracedNode", "classv8_1_1internal_1_1TracedNode.html", null ],
     [ "v8::internal::TracedNodeBlock", "classv8_1_1internal_1_1TracedNodeBlock.html", null ],
     [ "v8::internal::tracing::TraceEventHelper", "classv8_1_1internal_1_1tracing_1_1TraceEventHelper.html", null ],
     [ "v8::platform::tracing::TraceEventListener", "classv8_1_1platform_1_1tracing_1_1TraceEventListener.html", null ],
     [ "v8::internal::tracing::TraceID", "classv8_1_1internal_1_1tracing_1_1TraceID.html", null ],
+    [ "v8::internal::wasm::WasmFullDecoder< ValidationTag, Interface, decoding_mode >::TraceLine", "classv8_1_1internal_1_1wasm_1_1WasmFullDecoder_1_1TraceLine.html", null ],
+    [ "v8::platform::tracing::TraceObject", "classv8_1_1platform_1_1tracing_1_1TraceObject.html", null ],
     [ "v8::internal::compiler::TraceScope", "classv8_1_1internal_1_1compiler_1_1TraceScope.html", null ],
-    [ "v8::TracingController::TraceStateObserver", null, [
+    [ "v8::TracingController::TraceStateObserver", "classv8_1_1TracingController_1_1TraceStateObserver.html", [
       [ "v8::internal::TracingCpuProfilerImpl", "classv8_1_1internal_1_1TracingCpuProfilerImpl.html", null ],
       [ "v8::tracing::TracingCategoryObserver", "classv8_1_1tracing_1_1TracingCategoryObserver.html", null ]
     ] ],
     [ "v8::internal::tracing::TraceStringWithCopy", "classv8_1_1internal_1_1tracing_1_1TraceStringWithCopy.html", null ],
-    [ "TraceWriter", null, [
+    [ "cppgc::TraceTrait< v8::TracedReference< T > >", "structcppgc_1_1TraceTrait_3_01v8_1_1TracedReference_3_01T_01_4_01_4.html", null ],
+    [ "cppgc::internal::TraceTraitBase< T >", "structcppgc_1_1internal_1_1TraceTraitBase.html", [
+      [ "cppgc::TraceTrait< T >", "structcppgc_1_1TraceTrait.html", null ]
+    ] ],
+    [ "cppgc::internal::TraceTraitFromInnerAddressImpl", "structcppgc_1_1internal_1_1TraceTraitFromInnerAddressImpl.html", null ],
+    [ "cppgc::internal::TraceTraitImpl< T, bool >", "structcppgc_1_1internal_1_1TraceTraitImpl.html", null ],
+    [ "cppgc::internal::TraceTraitImpl< T, false >", "structcppgc_1_1internal_1_1TraceTraitImpl_3_01T_00_01false_01_4.html", null ],
+    [ "cppgc::internal::TraceTraitImpl< T, true >", "structcppgc_1_1internal_1_1TraceTraitImpl_3_01T_00_01true_01_4.html", null ],
+    [ "v8::platform::tracing::TraceWriter", "classv8_1_1platform_1_1tracing_1_1TraceWriter.html", [
       [ "v8::platform::tracing::JSONTraceWriter", "classv8_1_1platform_1_1tracing_1_1JSONTraceWriter.html", null ]
     ] ],
+    [ "v8::TracingController", "classv8_1_1TracingController.html", null ],
+    [ "V8_PLATFORM_NON_EXPORTED_BASEv8::TracingController", null, [
+      [ "v8::platform::tracing::TracingController", "classv8_1_1platform_1_1tracing_1_1TracingController.html", null ]
+    ] ],
     [ "v8::internal::TracingFlags", "structv8_1_1internal_1_1TracingFlags.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::TransitionElementsKind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TransitionElementsKind.html", null ],
+    [ "v8::internal::Assembler::Trampoline", "classv8_1_1internal_1_1Assembler_1_1Trampoline.html", null ],
     [ "v8::internal::TransitionsAccessor", "classv8_1_1internal_1_1TransitionsAccessor.html", null ],
     [ "v8::internal::wasm::TransitiveTypeFeedbackProcessor", "classv8_1_1internal_1_1wasm_1_1TransitiveTypeFeedbackProcessor.html", null ],
     [ "v8::internal::TranslatedFrame", "classv8_1_1internal_1_1TranslatedFrame.html", null ],
@@ -8181,6 +9174,21 @@ var hierarchy =
       [ "v8::internal::compiler::turboshaft::detail::produces_printable_graph_impl< P >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1produces__printable__graph__impl.html", [
         [ "v8::internal::compiler::turboshaft::produces_printable_graph< P >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1produces__printable__graph.html", null ]
       ] ],
+      [ "cppgc::internal::HasFinalizeGarbageCollectedObject< T, std::void_t< decltype(std::declval< T >().FinalizeGarbageCollectedObject())> >", "structcppgc_1_1internal_1_1HasFinalizeGarbageCollectedObject_3_01T_00_01std_1_1void__t_3_01declt33c4c48a75c68f1642b6ab8ba63f96c8.html", null ],
+      [ "cppgc::internal::HasGarbageCollectedMixinTypeMarker< T, std::void_t< typename std::remove_const_t< T >::IsGarbageCollectedMixinTypeMarker > >", "structcppgc_1_1internal_1_1HasGarbageCollectedMixinTypeMarker_3_01T_00_01std_1_1void__t_3_01typef6d641b5f0b633a654a3f007406486dd.html", null ],
+      [ "cppgc::internal::HasGarbageCollectedTypeMarker< T, std::void_t< typename std::remove_const_t< T >::IsGarbageCollectedTypeMarker > >", "structcppgc_1_1internal_1_1HasGarbageCollectedTypeMarker_3_01T_00_01std_1_1void__t_3_01typename_0e40f6c4e0fe4b1e60e741ce24f3bf56.html", null ],
+      [ "cppgc::internal::IsGarbageCollectedMixinType< T, false, true >", "structcppgc_1_1internal_1_1IsGarbageCollectedMixinType_3_01T_00_01false_00_01true_01_4.html", null ],
+      [ "cppgc::internal::IsGarbageCollectedType< T, true >", "structcppgc_1_1internal_1_1IsGarbageCollectedType_3_01T_00_01true_01_4.html", null ],
+      [ "cppgc::internal::IsGarbageCollectedWithMixinType< T, true >", "structcppgc_1_1internal_1_1IsGarbageCollectedWithMixinType_3_01T_00_01true_01_4.html", null ],
+      [ "cppgc::internal::IsMemberType< T, true >", "structcppgc_1_1internal_1_1IsMemberType_3_01T_00_01true_01_4.html", null ],
+      [ "cppgc::internal::IsTraceMethodConst< T, std::void_t< decltype(std::declval< const T >().Trace(std::declval< Visitor * >()))> >", "structcppgc_1_1internal_1_1IsTraceMethodConst_3_01T_00_01std_1_1void__t_3_01decltype_07std_1_1de919d404ca7bd337d1d290a989786002b.html", null ],
+      [ "cppgc::internal::IsTraceable< T, std::void_t< decltype(std::declval< T >().Trace(std::declval< Visitor * >()))> >", "structcppgc_1_1internal_1_1IsTraceable_3_01T_00_01std_1_1void__t_3_01decltype_07std_1_1declval_397ac939bed87cb368e98419b0dc8956b.html", null ],
+      [ "cppgc::internal::IsUntracedMemberType< T, true >", "structcppgc_1_1internal_1_1IsUntracedMemberType_3_01T_00_01true_01_4.html", null ],
+      [ "cppgc::internal::IsWeak< BasicCrossThreadPersistent< T, internal::WeakCrossThreadPersistentPolicy, LocationPolicy, CheckingPolicy > >", "structcppgc_1_1internal_1_1IsWeak_3_01BasicCrossThreadPersistent_3_01T_00_01internal_1_1WeakCros6251904fc881150f13e418ea64da9a91.html", null ],
+      [ "cppgc::internal::IsWeak< BasicPersistent< T, internal::WeakPersistentPolicy, LocationPolicy, CheckingPolicy > >", "structcppgc_1_1internal_1_1IsWeak_3_01BasicPersistent_3_01T_00_01internal_1_1WeakPersistentPolica0137f7022c128522e140d084b881692.html", null ],
+      [ "cppgc::internal::IsWeak< internal::BasicMember< T, WeakMemberTag, WriteBarrierPolicy, CheckingPolicy, StorageType > >", "structcppgc_1_1internal_1_1IsWeak_3_01internal_1_1BasicMember_3_01T_00_01WeakMemberTag_00_01Writefa1e1443525ba643a98e1a7a3dfd271.html", null ],
+      [ "cppgc::internal::IsWeakMemberType< T, true >", "structcppgc_1_1internal_1_1IsWeakMemberType_3_01T_00_01true_01_4.html", null ],
+      [ "v8::MemorySpan< T >::is_compatible_iterator< It, std::void_t< std::is_base_of< std::random_access_iterator_tag, typename std::iterator_traits< It >::iterator_category >, is_array_convertible< std::remove_reference_t< iter_reference_t< It > >, T > > >", "structv8_1_1MemorySpan_1_1is__compatible__iterator_3_01It_00_01std_1_1void__t_3_01std_1_1is__bas588d3c10a10a6bf91cdf3dd884edacf7.html", null ],
       [ "v8::base::tmp::lazy_true< T >", "structv8_1_1base_1_1tmp_1_1lazy__true.html", null ],
       [ "v8::internal::compiler::turboshaft::detail::produces_printable_graph_impl< typename, typename >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1produces__printable__graph__impl.html", null ],
       [ "v8::internal::compiler::turboshaft::details::ThrowingOpHasLazyDeoptOption< CallOp, void >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1details_1_1ThrowingOpHasLazyDeoptOption_3_01CallOp_00_01void_01_4.html", null ],
@@ -8215,10 +9223,10 @@ var hierarchy =
     ] ],
     [ "v8::internal::wasm::TruncatedUserString< kMaxLen >", "classv8_1_1internal_1_1wasm_1_1TruncatedUserString.html", null ],
     [ "v8::internal::compiler::Truncation", "classv8_1_1internal_1_1compiler_1_1Truncation.html", null ],
+    [ "v8::internal::ThreadIsolation::TrustedData", "structv8_1_1internal_1_1ThreadIsolation_1_1TrustedData.html", null ],
     [ "v8::internal::wasm::WasmEHData::TryBlock", "structv8_1_1internal_1_1wasm_1_1WasmEHData_1_1TryBlock.html", null ],
+    [ "v8::TryCatch", "classv8_1_1TryCatch.html", null ],
     [ "v8::internal::compiler::JSCallReducerAssembler::TryCatchBuilder0", "classv8_1_1internal_1_1compiler_1_1JSCallReducerAssembler_1_1TryCatchBuilder0.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::TryMigrateInstance", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstance.html", null ],
-    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::TryMigrateInstanceAndMarkMapAsMigrationTarget", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstanceAndMarkMapAsMigrationTarget.html", null ],
     [ "v8::internal::wasm::TryTableIterator< ValidationTag >", "classv8_1_1internal_1_1wasm_1_1TryTableIterator.html", null ],
     [ "std::tuple", null, [
       [ "v8::internal::compiler::turboshaft::all_of< Ts >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1all__of.html", null ],
@@ -8289,6 +9297,7 @@ var hierarchy =
     [ "v8::internal::compiler::TypeCache", "classv8_1_1internal_1_1compiler_1_1TypeCache.html", null ],
     [ "v8::internal::wasm::TypeCanonicalizer", "classv8_1_1internal_1_1wasm_1_1TypeCanonicalizer.html", null ],
     [ "v8::internal::torque::TypeChecker", "structv8_1_1internal_1_1torque_1_1TypeChecker.html", null ],
+    [ "v8::TypecheckWitness", "classv8_1_1TypecheckWitness.html", null ],
     [ "v8::internal::torque::TypeConstraint", "classv8_1_1internal_1_1torque_1_1TypeConstraint.html", null ],
     [ "v8::internal::wasm::TypeDefinition", "structv8_1_1internal_1_1wasm_1_1TypeDefinition.html", null ],
     [ "v8::internal::compiler::TypedLoweringPhase", "structv8_1_1internal_1_1compiler_1_1TypedLoweringPhase.html", null ],
@@ -8313,9 +9322,12 @@ var hierarchy =
       [ "v8::internal::wasm::StructIndexImmediate", "structv8_1_1internal_1_1wasm_1_1StructIndexImmediate.html", null ]
     ] ],
     [ "v8::internal::compiler::turboshaft::TypeInferenceAnalysis", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html", null ],
+    [ "v8::internal::TypeInfoHelper< T >", "structv8_1_1internal_1_1TypeInfoHelper.html", null ],
+    [ "v8::internal::TypeInfoHelper< const FastOneByteString & >", "structv8_1_1internal_1_1TypeInfoHelper_3_01const_01FastOneByteString_01_6_01_4.html", null ],
+    [ "v8::internal::TypeInfoHelper< FastApiCallbackOptions & >", "structv8_1_1internal_1_1TypeInfoHelper_3_01FastApiCallbackOptions_01_6_01_4.html", null ],
+    [ "v8::internal::TypeInfoHelper< v8::Local< v8::Array > >", "structv8_1_1internal_1_1TypeInfoHelper_3_01v8_1_1Local_3_01v8_1_1Array_01_4_01_4.html", null ],
     [ "v8::internal::wasm::TypeInModule", "structv8_1_1internal_1_1wasm_1_1TypeInModule.html", null ],
     [ "v8::internal::torque::TypeLess", "structv8_1_1internal_1_1torque_1_1TypeLess.html", null ],
-    [ "v8::internal::compiler::turboshaft::BuiltinCallDescriptor::Typeof", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Typeof.html", null ],
     [ "v8::internal::TypeOfFeedback", "classv8_1_1internal_1_1TypeOfFeedback.html", null ],
     [ "v8::internal::compiler::turboshaft::TypeParser", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeParser.html", null ],
     [ "v8::internal::compiler::turboshaft::Typer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Typer.html", null ],
@@ -8332,6 +9344,7 @@ var hierarchy =
     [ "v8::internal::types_have_common_values< UintPtrT, U >", "structv8_1_1internal_1_1types__have__common__values_3_01UintPtrT_00_01U_01_4.html", null ],
     [ "v8::internal::types_have_common_values< Union< Ts... >, U >", "structv8_1_1internal_1_1types__have__common__values_3_01Union_3_01Ts_8_8_8_01_4_00_01U_01_4.html", null ],
     [ "v8::internal::types_have_common_values< Union< Ts... >, Union< Us... > >", "structv8_1_1internal_1_1types__have__common__values_3_01Union_3_01Ts_8_8_8_01_4_00_01Union_3_01Us_8_8_8_01_4_01_4.html", null ],
+    [ "v8::internal::BackingStore::TypeSpecificData", "unionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData.html", null ],
     [ "v8::internal::torque::TypeswitchCase", "structv8_1_1internal_1_1torque_1_1TypeswitchCase.html", null ],
     [ "v8::internal::torque::TypeVisitor", "classv8_1_1internal_1_1torque_1_1TypeVisitor.html", null ],
     [ "v8::internal::RegExpInstruction::Uc16Range", "structv8_1_1internal_1_1RegExpInstruction_1_1Uc16Range.html", null ],
@@ -8347,12 +9360,14 @@ var hierarchy =
     [ "v8::base::internal::UnderlyingType< CheckedNumeric< T > >", "structv8_1_1base_1_1internal_1_1UnderlyingType_3_01CheckedNumeric_3_01T_01_4_01_4.html", null ],
     [ "v8::base::internal::UnderlyingType< ClampedNumeric< T > >", "structv8_1_1base_1_1internal_1_1UnderlyingType_3_01ClampedNumeric_3_01T_01_4_01_4.html", null ],
     [ "v8::base::internal::UnderlyingType< StrictNumeric< T > >", "structv8_1_1base_1_1internal_1_1UnderlyingType_3_01StrictNumeric_3_01T_01_4_01_4.html", null ],
+    [ "v8::internal::compiler::LinearScanAllocator::UnhandledLiveRangeOrdering", "structv8_1_1internal_1_1compiler_1_1LinearScanAllocator_1_1UnhandledLiveRangeOrdering.html", null ],
     [ "unibrow::UnicodeData", "classunibrow_1_1UnicodeData.html", null ],
     [ "v8::internal::UnicodeRangeSplitter", "classv8_1_1internal_1_1UnicodeRangeSplitter.html", null ],
     [ "v8::internal::UnifiedHeapMarkingState", "classv8_1_1internal_1_1UnifiedHeapMarkingState.html", null ],
     [ "v8::internal::compiler::turboshaft::Uninitialized< T >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Uninitialized.html", null ],
     [ "v8::internal::wasm::ValidateFunctionsStreamingJobData::Unit", "structv8_1_1internal_1_1wasm_1_1ValidateFunctionsStreamingJobData_1_1Unit.html", null ],
     [ "v8::internal::UnlinkWeakNextScope", "classv8_1_1internal_1_1UnlinkWeakNextScope.html", null ],
+    [ "v8::Unlocker", "classv8_1_1Unlocker.html", null ],
     [ "v8::internal::UnoptimizedCompilationInfo", "classv8_1_1internal_1_1UnoptimizedCompilationInfo.html", null ],
     [ "v8::internal::UnoptimizedCompileFlags", "classv8_1_1internal_1_1UnoptimizedCompileFlags.html", null ],
     [ "v8::internal::UnoptimizedCompileState", "classv8_1_1internal_1_1UnoptimizedCompileState.html", null ],
@@ -8362,7 +9377,7 @@ var hierarchy =
       [ "v8::internal::ZoneUnorderedMap< int, int >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
       [ "v8::internal::ZoneUnorderedMap< NodeId, v8::internal::compiler::VirtualObject * >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
       [ "v8::internal::ZoneUnorderedMap< v8::internal::compiler::Node *, bool >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
-      [ "v8::internal::ZoneUnorderedMap< FrameStateInput, v8::internal::compiler::InstructionSelectorT::CachedStateValues *, typename v8::internal::compiler::InstructionSelectorT::FrameStateInput::Hash, typename v8::internal::compiler::InstructionSelectorT::FrameStateInput::Equal >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
+      [ "v8::internal::ZoneUnorderedMap< v8::internal::compiler::InstructionSelectorT::FrameStateInput, v8::internal::compiler::InstructionSelectorT::CachedStateValues *, typename v8::internal::compiler::InstructionSelectorT::FrameStateInput::Hash, typename v8::internal::compiler::InstructionSelectorT::FrameStateInput::Equal >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
       [ "v8::internal::ZoneUnorderedMap< int, Constant >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
       [ "v8::internal::ZoneUnorderedMap< v8::internal::compiler::FeedbackSource, v8::internal::compiler::ProcessedFeedback const *, v8::internal::compiler::FeedbackSource::Hash, v8::internal::compiler::FeedbackSource::Equal >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
       [ "v8::internal::ZoneUnorderedMap< v8::internal::compiler::PropertyAccessTarget, v8::internal::compiler::PropertyAccessInfo, v8::internal::compiler::PropertyAccessTarget::Hash, v8::internal::compiler::PropertyAccessTarget::Equal >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
@@ -8371,7 +9386,7 @@ var hierarchy =
       [ "v8::internal::ZoneUnorderedMap< NodeId, T >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
       [ "v8::internal::ZoneUnorderedMap< v8::internal::compiler::Node *, v8::internal::compiler::PackNode * >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
       [ "v8::internal::ZoneUnorderedMap< v8::internal::compiler::Node *, v8::internal::ZoneVector< v8::internal::compiler::Node * > >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
-      [ "v8::internal::ZoneUnorderedMap< NodeId, State >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
+      [ "v8::internal::ZoneUnorderedMap< NodeId, v8::internal::compiler::VariableTracker::State >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
       [ "v8::internal::ZoneUnorderedMap< const v8::internal::maglev::NodeBase *, v8::internal::compiler::turboshaft::OpIndex >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
       [ "v8::internal::ZoneUnorderedMap< const v8::internal::maglev::BasicBlock *, v8::internal::compiler::turboshaft::Block * >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
       [ "v8::internal::ZoneUnorderedMap< int, v8::internal::compiler::turboshaft::SnapshotTableKey >", "classv8_1_1internal_1_1ZoneUnorderedMap.html", null ],
@@ -8396,7 +9411,7 @@ var hierarchy =
       [ "v8::internal::ZoneUnorderedSet< v8::internal::Handle< v8::internal::JSObject >, v8::internal::Handle< v8::internal::JSObject >::hash, v8::internal::Handle< v8::internal::JSObject >::equal_to >", "classv8_1_1internal_1_1ZoneUnorderedSet.html", null ],
       [ "v8::internal::ZoneUnorderedSet< v8::internal::Handle< v8::internal::String >, v8::internal::Handle< v8::internal::String >::hash, v8::internal::Handle< v8::internal::String >::equal_to >", "classv8_1_1internal_1_1ZoneUnorderedSet.html", null ],
       [ "v8::internal::ZoneUnorderedSet< v8::internal::compiler::Node * >", "classv8_1_1internal_1_1ZoneUnorderedSet.html", null ],
-      [ "v8::internal::ZoneUnorderedSet< v8::internal::compiler::Node *, NodeHashCode, NodeEquals >", "classv8_1_1internal_1_1ZoneUnorderedSet.html", null ],
+      [ "v8::internal::ZoneUnorderedSet< v8::internal::compiler::Node *, v8::internal::compiler::NodeHashCache::NodeHashCode, v8::internal::compiler::NodeHashCache::NodeEquals >", "classv8_1_1internal_1_1ZoneUnorderedSet.html", null ],
       [ "v8::internal::UnorderedModuleSet", "classv8_1_1internal_1_1UnorderedModuleSet.html", null ],
       [ "v8::internal::UnorderedStringSet", "classv8_1_1internal_1_1UnorderedStringSet.html", null ],
       [ "v8::internal::ZoneUnorderedSet< K, Hash, KeyEqual >", "classv8_1_1internal_1_1ZoneUnorderedSet.html", null ]
@@ -8405,10 +9420,12 @@ var hierarchy =
     [ "v8::internal::compiler::UnparkedScopeIfNeeded", "classv8_1_1internal_1_1compiler_1_1UnparkedScopeIfNeeded.html", null ],
     [ "v8::internal::UnparkedScopeIfOnBackground", "classv8_1_1internal_1_1UnparkedScopeIfOnBackground.html", null ],
     [ "v8::internal::wasm::UnpublishedWasmCode", "structv8_1_1internal_1_1wasm_1_1UnpublishedWasmCode.html", null ],
+    [ "v8::internal::Deserializer< IsolateT >::UnresolvedForwardRef", "structv8_1_1internal_1_1Deserializer_1_1UnresolvedForwardRef.html", null ],
     [ "v8::internal::VariableProxy::UnresolvedNext", "structv8_1_1internal_1_1VariableProxy_1_1UnresolvedNext.html", null ],
     [ "VariableProxy::UnresolvedNext", null, [
       [ "v8::base::ThreadedListBase< VariableProxy, VariableProxy::UnresolvedNext >", "classv8_1_1base_1_1ThreadedListBase.html", null ]
     ] ],
+    [ "cppgc::internal::BasicCrossThreadPersistent< T, WeaknessPolicy, LocationPolicy, CheckingPolicy >::UnsafeCtorTag", "classcppgc_1_1internal_1_1BasicCrossThreadPersistent_1_1UnsafeCtorTag.html", null ],
     [ "v8::internal::ExternalEntityTable< Entry, size >::UnsealReadOnlySegmentScope", "classv8_1_1internal_1_1ExternalEntityTable_1_1UnsealReadOnlySegmentScope.html", null ],
     [ "v8::internal::UntaggedT", "structv8_1_1internal_1_1UntaggedT.html", [
       [ "v8::internal::CppHeapPointerT", "structv8_1_1internal_1_1CppHeapPointerT.html", null ],
@@ -8456,6 +9473,10 @@ var hierarchy =
       ] ]
     ] ],
     [ "v8::internal::compiler::UntyperPhase", "structv8_1_1internal_1_1compiler_1_1UntyperPhase.html", null ],
+    [ "v8::internal::WeakObjects::UnusedBase", "classv8_1_1internal_1_1WeakObjects_1_1UnusedBase.html", [
+      [ "v8::internal::WeakObjects::Local", "classv8_1_1internal_1_1WeakObjects_1_1Local.html", null ]
+    ] ],
+    [ "v8::Unwinder", "classv8_1_1Unwinder.html", null ],
     [ "v8::internal::compiler::UnwindingInfoWriter", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html", null ],
     [ "v8::internal::compiler::turboshaft::Opmask::UnwrapRepresentation< T >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Opmask_1_1UnwrapRepresentation.html", null ],
     [ "v8::internal::compiler::turboshaft::Opmask::UnwrapRepresentation< FloatRepresentation >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Opmask_1_1UnwrapRepresentation_3_01FloatRepresentation_01_4.html", null ],
@@ -8463,8 +9484,8 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::Opmask::UnwrapRepresentation< WordRepresentation >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Opmask_1_1UnwrapRepresentation_3_01WordRepresentation_01_4.html", null ],
     [ "v8::internal::UpdateTypedSlotHelper", "classv8_1_1internal_1_1UpdateTypedSlotHelper.html", null ],
     [ "unibrow::Uppercase", "structunibrow_1_1Uppercase.html", null ],
-    [ "v8::internal::TracedNodeBlock::UsableListTraits", "structv8_1_1internal_1_1TracedNodeBlock_1_1UsableListTraits.html", null ],
     [ "v8::base::Use", "structv8_1_1base_1_1Use.html", null ],
+    [ "v8::internal::compiler::Node::Use", "structv8_1_1internal_1_1compiler_1_1Node_1_1Use.html", null ],
     [ "v8::internal::compiler::Node::UseEdges", "classv8_1_1internal_1_1compiler_1_1Node_1_1UseEdges.html", null ],
     [ "v8::internal::compiler::UseInfo", "classv8_1_1internal_1_1compiler_1_1UseInfo.html", null ],
     [ "v8::internal::compiler::UseInterval", "classv8_1_1internal_1_1compiler_1_1UseInterval.html", null ],
@@ -8490,31 +9511,37 @@ var hierarchy =
     [ "v8::internal::Utf8DecoderBase< Utf8Decoder >", "classv8_1_1internal_1_1Utf8DecoderBase.html", [
       [ "v8::internal::Utf8Decoder", "classv8_1_1internal_1_1Utf8Decoder.html", null ]
     ] ],
+    [ "v8::String::Utf8Value", "classv8_1_1String_1_1Utf8Value.html", null ],
     [ "v8::Utils", "classv8_1_1Utils.html", null ],
+    [ "v8::V8", "classv8_1_1V8.html", null ],
     [ "V8_CONDITION_VARIABLE", "structV8__CONDITION__VARIABLE.html", null ],
     [ "V8_CRITICAL_SECTION", "structV8__CRITICAL__SECTION.html", null ],
     [ "V8_SRWLOCK", "structV8__SRWLOCK.html", null ],
     [ "v8_inspector::V8ConsoleMessage", "classv8__inspector_1_1V8ConsoleMessage.html", null ],
     [ "v8_inspector::V8ConsoleMessageStorage", "classv8__inspector_1_1V8ConsoleMessageStorage.html", null ],
+    [ "v8_inspector::V8ContextInfo", "classv8__inspector_1_1V8ContextInfo.html", null ],
     [ "v8_inspector::V8DebuggerBarrier", "classv8__inspector_1_1V8DebuggerBarrier.html", null ],
     [ "v8_inspector::internal::V8DebuggerId", "classv8__inspector_1_1internal_1_1V8DebuggerId.html", null ],
+    [ "v8_inspector::V8DebuggerId", "classv8__inspector_1_1V8DebuggerId.html", null ],
     [ "v8_inspector::V8DebuggerScript", "classv8__inspector_1_1V8DebuggerScript.html", null ],
     [ "v8_inspector::V8DeepSerializer", "classv8__inspector_1_1V8DeepSerializer.html", null ],
     [ "v8::internal::V8HeapCompressionSchemeImpl< Cage >", "classv8_1_1internal_1_1V8HeapCompressionSchemeImpl.html", null ],
-    [ "V8Inspector", null, [
+    [ "v8_inspector::V8Inspector", "classv8__inspector_1_1V8Inspector.html", [
       [ "v8_inspector::V8InspectorImpl", "classv8__inspector_1_1V8InspectorImpl.html", null ]
     ] ],
-    [ "v8_inspector::V8InspectorClient", null, [
+    [ "v8_inspector::V8InspectorClient", "classv8__inspector_1_1V8InspectorClient.html", [
       [ "v8::InspectorClient", "classv8_1_1InspectorClient.html", null ]
     ] ],
-    [ "V8InspectorSession", null, [
+    [ "v8_inspector::V8InspectorSession", "classv8__inspector_1_1V8InspectorSession.html", [
       [ "v8_inspector::V8InspectorSessionImpl", "classv8__inspector_1_1V8InspectorSessionImpl.html", null ]
     ] ],
     [ "v8_inspector::V8Regex", "classv8__inspector_1_1V8Regex.html", null ],
     [ "v8_inspector::V8SerializationDuplicateTracker", "classv8__inspector_1_1V8SerializationDuplicateTracker.html", null ],
-    [ "V8StackTrace", null, [
+    [ "v8_inspector::V8StackFrame", "structv8__inspector_1_1V8StackFrame.html", null ],
+    [ "v8_inspector::V8StackTrace", "classv8__inspector_1_1V8StackTrace.html", [
       [ "v8_inspector::V8StackTraceImpl", "classv8__inspector_1_1V8StackTraceImpl.html", null ]
     ] ],
+    [ "v8_inspector::V8StackTraceId", "structv8__inspector_1_1V8StackTraceId.html", null ],
     [ "v8::internal::compiler::turboshaft::v_traits< T, typename >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1v__traits.html", null ],
     [ "v8::internal::compiler::turboshaft::v_traits< Any >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1v__traits_3_01Any_01_4.html", null ],
     [ "v8::internal::compiler::turboshaft::v_traits< Compressed >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1v__traits_3_01Compressed_01_4.html", null ],
@@ -8534,12 +9561,15 @@ var hierarchy =
     [ "wasm::ValTypeImpl", "structwasm_1_1ValTypeImpl.html", null ],
     [ "v8::internal::compiler::StateValueList::Value", "structv8_1_1internal_1_1compiler_1_1StateValueList_1_1Value.html", null ],
     [ "v8::internal::ExternalReferenceEncoder::Value", "classv8_1_1internal_1_1ExternalReferenceEncoder_1_1Value.html", null ],
+    [ "v8::internal::Immediate::Value", "unionv8_1_1internal_1_1Immediate_1_1Value.html", null ],
+    [ "v8::internal::Operand::Value", "unionv8_1_1internal_1_1Operand_1_1Value.html", null ],
     [ "v8::internal::wasm::DebugSideTable::Entry::Value", "structv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1Entry_1_1Value.html", null ],
-    [ "v8::Value", null, [
-      [ "v8::debug::AccessorPair", "classv8_1_1debug_1_1AccessorPair.html", null ]
-    ] ],
+    [ "v8::String::Value", "classv8_1_1String_1_1Value.html", null ],
     [ "v8::base::TemplateHashMap< Key, Value, MatchFun, AllocationPolicy >::value_type", "structv8_1_1base_1_1TemplateHashMap_1_1value__type.html", null ],
     [ "v8::internal::ValueDeserializer", "classv8_1_1internal_1_1ValueDeserializer.html", null ],
+    [ "v8::ValueDeserializer", "classv8_1_1ValueDeserializer.html", null ],
+    [ "v8::internal::compiler::JSNativeContextSpecialization::ValueEffectControl", "classv8_1_1internal_1_1compiler_1_1JSNativeContextSpecialization_1_1ValueEffectControl.html", null ],
+    [ "v8::internal::ValueHelper", "classv8_1_1internal_1_1ValueHelper.html", null ],
     [ "v8::internal::maglev::ValueLocation", "classv8_1_1internal_1_1maglev_1_1ValueLocation.html", [
       [ "v8::internal::maglev::InputLocation", "classv8_1_1internal_1_1maglev_1_1InputLocation.html", [
         [ "v8::internal::maglev::Input", "classv8_1_1internal_1_1maglev_1_1Input.html", null ]
@@ -8547,12 +9577,18 @@ var hierarchy =
     ] ],
     [ "v8::internal::maglev::ValueLocationConstraintProcessor", "classv8_1_1internal_1_1maglev_1_1ValueLocationConstraintProcessor.html", null ],
     [ "v8_inspector::ValueMirror", "classv8__inspector_1_1ValueMirror.html", null ],
+    [ "cppgc::internal::WriteBarrierTypeForNonCagedHeapPolicy::ValueModeDispatch< value_mode >", "structcppgc_1_1internal_1_1WriteBarrierTypeForNonCagedHeapPolicy_1_1ValueModeDispatch.html", null ],
+    [ "cppgc::internal::WriteBarrierTypeForNonCagedHeapPolicy::ValueModeDispatch< WriteBarrier::ValueMode::kNoValuePresent >", "structcppgc_1_1internal_1_1WriteBarrierTypeForNonCagedHeapPolicy_1_1ValueModeDispatch_3_01WriteB2c0d730864832f8a08948b1083f0b12f.html", null ],
+    [ "cppgc::internal::WriteBarrierTypeForNonCagedHeapPolicy::ValueModeDispatch< WriteBarrier::ValueMode::kValuePresent >", "structcppgc_1_1internal_1_1WriteBarrierTypeForNonCagedHeapPolicy_1_1ValueModeDispatch_3_01WriteBc17f16a0bf570a93fe5e8e83ef4a3f83.html", null ],
     [ "v8::internal::ValueSerializer", "classv8_1_1internal_1_1ValueSerializer.html", null ],
+    [ "v8::ValueSerializer", "classv8_1_1ValueSerializer.html", null ],
+    [ "v8::internal::Deoptimizer::ValueToMaterialize", "structv8_1_1internal_1_1Deoptimizer_1_1ValueToMaterialize.html", null ],
     [ "v8::internal::wasm::ValueTypeBase", "classv8_1_1internal_1_1wasm_1_1ValueTypeBase.html", [
       [ "v8::internal::wasm::CanonicalValueType", "classv8_1_1internal_1_1wasm_1_1CanonicalValueType.html", null ],
       [ "v8::internal::wasm::ValueType", "classv8_1_1internal_1_1wasm_1_1ValueType.html", null ]
     ] ],
     [ "v8::internal::wasm::ValueTypes", "classv8_1_1internal_1_1wasm_1_1ValueTypes.html", null ],
+    [ "v8::String::ValueView", "classv8_1_1String_1_1ValueView.html", null ],
     [ "v8::internal::compiler::Variable", "classv8_1_1internal_1_1compiler_1_1Variable.html", null ],
     [ "v8::internal::maglev::MaglevGraphBuilder::MaglevSubGraphBuilder::Variable", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1MaglevSubGraphBuilder_1_1Variable.html", null ],
     [ "v8::internal::compiler::turboshaft::VariableData", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1VariableData.html", null ],
@@ -8560,6 +9596,7 @@ var hierarchy =
     [ "v8::internal::VariableLookupResult", "structv8_1_1internal_1_1VariableLookupResult.html", null ],
     [ "v8::internal::SerializerDeserializer::VariableRepeatRootCount", "structv8_1_1internal_1_1SerializerDeserializer_1_1VariableRepeatRootCount.html", null ],
     [ "v8::internal::compiler::VariableTracker", "classv8_1_1internal_1_1compiler_1_1VariableTracker.html", null ],
+    [ "v8::internal::wasm::AsmJsParser::VarInfo", "structv8_1_1internal_1_1wasm_1_1AsmJsParser_1_1VarInfo.html", null ],
     [ "v8::base::Vector< T >", "classv8_1_1base_1_1Vector.html", [
       [ "v8::base::EmbeddedVector< T, kSize >", "classv8_1_1base_1_1EmbeddedVector.html", null ],
       [ "v8::base::ScopedVector< T >", "classv8_1_1base_1_1ScopedVector.html", null ]
@@ -8569,7 +9606,6 @@ var hierarchy =
       [ "v8::internal::torque::VisitResultVector", "classv8_1_1internal_1_1torque_1_1VisitResultVector.html", null ]
     ] ],
     [ "v8::base::Vector< bool >", "classv8_1_1base_1_1Vector.html", null ],
-    [ "v8::base::Vector< CanonicalType >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< Char >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< char >", "classv8_1_1base_1_1Vector.html", [
       [ "v8::base::EmbeddedVector< char, 128 >", "classv8_1_1base_1_1EmbeddedVector.html", null ],
@@ -8589,14 +9625,15 @@ var hierarchy =
     [ "v8::base::Vector< const v8::internal::compiler::turboshaft::OpIndex >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< const v8::internal::compiler::turboshaft::RegisterRepresentation >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< const v8::internal::MachineType >", "classv8_1_1base_1_1Vector.html", null ],
-    [ "v8::base::Vector< Entry >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< Instr >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< uint32_t >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< uint8_t >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< v8::base::Vector >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< v8::internal::compiler::turboshaft::Block * >", "classv8_1_1base_1_1Vector.html", null ],
+    [ "v8::base::Vector< v8::internal::compiler::turboshaft::LayeredHashMap::Entry >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< v8::internal::compiler::turboshaft::OpIndex >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< v8::internal::compiler::turboshaft::SwitchOp::Case >", "classv8_1_1base_1_1Vector.html", null ],
+    [ "v8::base::Vector< v8::internal::compiler::turboshaft::ValueNumberingReducer::Entry >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< v8::internal::compiler::UsePosition * >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< v8::internal::Label * >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< v8::internal::MachineType >", "classv8_1_1base_1_1Vector.html", null ],
@@ -8604,9 +9641,10 @@ var hierarchy =
     [ "v8::base::Vector< v8::internal::maglev::ValueNode * >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< v8::internal::PreparseDataBuilder * >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< v8::internal::PrototypeCheckAssembler::DescriptorIndexNameValue >", "classv8_1_1base_1_1Vector.html", null ],
+    [ "v8::base::Vector< v8::internal::wasm::AsmJsParser::VarInfo >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< v8::internal::wasm::CatchCase >", "classv8_1_1base_1_1Vector.html", null ],
+    [ "v8::base::Vector< v8::internal::wasm::TypeCanonicalizer::CanonicalType >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< v8::internal::wasm::WasmCode *const >", "classv8_1_1base_1_1Vector.html", null ],
-    [ "v8::base::Vector< VarInfo >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::base::Vector< WellKnownImport const >", "classv8_1_1base_1_1Vector.html", null ],
     [ "v8::internal::Assembler::VectorUnit", "classv8_1_1internal_1_1Assembler_1_1VectorUnit.html", null ],
     [ "cppgc::internal::VerificationState", "classcppgc_1_1internal_1_1VerificationState.html", [
@@ -8623,7 +9661,7 @@ var hierarchy =
         [ "v8::base::VirtualAddressSubspace", "classv8_1_1base_1_1VirtualAddressSubspace.html", null ]
       ] ]
     ] ],
-    [ "v8::VirtualAddressSpace", null, [
+    [ "v8::VirtualAddressSpace", "classv8_1_1VirtualAddressSpace.html", [
       [ "v8::base::LsanVirtualAddressSpace", "classv8_1_1base_1_1LsanVirtualAddressSpace.html", null ]
     ] ],
     [ "cppgc::internal::VirtualMemory", "classcppgc_1_1internal_1_1VirtualMemory.html", null ],
@@ -8632,11 +9670,21 @@ var hierarchy =
       [ "v8::internal::CodeRange", "classv8_1_1internal_1_1CodeRange.html", null ]
     ] ],
     [ "v8::internal::VisitMarker", "classv8_1_1internal_1_1VisitMarker.html", null ],
-    [ "cppgc::Visitor", null, [
+    [ "cppgc::Visitor", "classcppgc_1_1Visitor.html", [
       [ "cppgc::internal::VisitorBase", "classcppgc_1_1internal_1_1VisitorBase.html", [
         [ "cppgc::internal::MarkingVisitorBase", "classcppgc_1_1internal_1_1MarkingVisitorBase.html", [
           [ "cppgc::internal::ConcurrentMarkingVisitor", "classcppgc_1_1internal_1_1ConcurrentMarkingVisitor.html", null ],
           [ "cppgc::internal::MutatorMarkingVisitor", "classcppgc_1_1internal_1_1MutatorMarkingVisitor.html", null ]
+        ] ]
+      ] ],
+      [ "v8::JSVisitor", "classv8_1_1JSVisitor.html", [
+        [ "v8::internal::GraphBuildingVisitor", "classv8_1_1internal_1_1GraphBuildingVisitor.html", null ],
+        [ "v8::internal::UnifiedHeapMarkingVisitorBase", "classv8_1_1internal_1_1UnifiedHeapMarkingVisitorBase.html", [
+          [ "v8::internal::ConcurrentUnifiedHeapMarkingVisitor", "classv8_1_1internal_1_1ConcurrentUnifiedHeapMarkingVisitor.html", null ],
+          [ "v8::internal::MutatorUnifiedHeapMarkingVisitor", "classv8_1_1internal_1_1MutatorUnifiedHeapMarkingVisitor.html", null ]
+        ] ],
+        [ "v8::internal::WeakVisitor", "classv8_1_1internal_1_1WeakVisitor.html", [
+          [ "v8::internal::VisiblityVisitor", "classv8_1_1internal_1_1VisiblityVisitor.html", null ]
         ] ]
       ] ]
     ] ],
@@ -8654,6 +9702,7 @@ var hierarchy =
     ] ],
     [ "v8::internal::wasm::gdb_server::wasm_addr_t", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1wasm__addr__t.html", null ],
     [ "wasm_callback_env_t", "structwasm__callback__env__t.html", null ],
+    [ "v8::JitCodeEvent::wasm_source_info_t", "structv8_1_1JitCodeEvent_1_1wasm__source__info__t.html", null ],
     [ "v8::internal::compiler::WasmAddressReassociation", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html", null ],
     [ "v8::internal::compiler::WasmBaseOptimizationPhase", "structv8_1_1internal_1_1compiler_1_1WasmBaseOptimizationPhase.html", null ],
     [ "v8::internal::wasm::WasmBytecode", "classv8_1_1internal_1_1wasm_1_1WasmBytecode.html", null ],
@@ -8671,6 +9720,7 @@ var hierarchy =
     [ "v8::internal::wasm::WasmCompilationResult", "structv8_1_1internal_1_1wasm_1_1WasmCompilationResult.html", null ],
     [ "v8::internal::wasm::WasmCompilationUnit", "classv8_1_1internal_1_1wasm_1_1WasmCompilationUnit.html", null ],
     [ "v8::internal::wasm::WasmDataSegment", "structv8_1_1internal_1_1wasm_1_1WasmDataSegment.html", null ],
+    [ "v8::internal::wasm::WasmModuleBuilder::WasmDataSegment", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmDataSegment.html", null ],
     [ "v8::internal::compiler::turboshaft::WasmDeadCodeEliminationPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmDeadCodeEliminationPhase.html", null ],
     [ "v8::internal::wasm::WasmDebugSymbols", "structv8_1_1internal_1_1wasm_1_1WasmDebugSymbols.html", null ],
     [ "v8::internal::wasm::WasmDeoptData", "structv8_1_1internal_1_1wasm_1_1WasmDeoptData.html", null ],
@@ -8687,11 +9737,15 @@ var hierarchy =
     [ "v8::internal::wasm::WasmError", "classv8_1_1internal_1_1wasm_1_1WasmError.html", null ],
     [ "v8::internal::wasm::WasmExecutionTimer", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html", null ],
     [ "v8::internal::wasm::WasmExport", "structv8_1_1internal_1_1wasm_1_1WasmExport.html", null ],
+    [ "v8::internal::wasm::WasmModuleBuilder::WasmExport", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmExport.html", null ],
     [ "v8::internal::wasm::WasmFunction", "structv8_1_1internal_1_1wasm_1_1WasmFunction.html", null ],
+    [ "v8::internal::wasm::WasmModuleBuilder::WasmFunctionImport", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmFunctionImport.html", null ],
     [ "v8::internal::wasm::WasmFunctionName", "structv8_1_1internal_1_1wasm_1_1WasmFunctionName.html", null ],
     [ "v8::internal::compiler::turboshaft::WasmGCOptimizePhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmGCOptimizePhase.html", null ],
     [ "v8::internal::compiler::turboshaft::WasmGCTypeAnalyzer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmGCTypeAnalyzer.html", null ],
     [ "v8::internal::wasm::WasmGlobal", "structv8_1_1internal_1_1wasm_1_1WasmGlobal.html", null ],
+    [ "v8::internal::wasm::WasmModuleBuilder::WasmGlobal", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmGlobal.html", null ],
+    [ "v8::internal::wasm::WasmModuleBuilder::WasmGlobalImport", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmGlobalImport.html", null ],
     [ "v8::internal::compiler::WasmGraphBuilder", "classv8_1_1internal_1_1compiler_1_1WasmGraphBuilder.html", null ],
     [ "v8::internal::wasm::WasmGraphBuilderBase", "classv8_1_1internal_1_1wasm_1_1WasmGraphBuilderBase.html", [
       [ "v8::internal::wasm::TurboshaftGraphBuildingInterface", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface.html", null ],
@@ -8716,11 +9770,16 @@ var hierarchy =
     [ "v8::internal::compiler::WasmLoopInfo", "structv8_1_1internal_1_1compiler_1_1WasmLoopInfo.html", null ],
     [ "v8::internal::compiler::turboshaft::WasmLoweringPhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoweringPhase.html", null ],
     [ "v8::internal::wasm::WasmMemory", "structv8_1_1internal_1_1wasm_1_1WasmMemory.html", null ],
+    [ "v8::internal::wasm::WasmModuleBuilder::WasmMemory", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmMemory.html", null ],
     [ "v8::internal::compiler::turboshaft::wle::WasmMemoryAddress", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1wle_1_1WasmMemoryAddress.html", null ],
     [ "v8::internal::wasm::WasmModule", "structv8_1_1internal_1_1wasm_1_1WasmModule.html", null ],
+    [ "v8::metrics::WasmModuleCompiled", "structv8_1_1metrics_1_1WasmModuleCompiled.html", null ],
     [ "v8::internal::wasm::gdb_server::WasmModuleDebug", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1WasmModuleDebug.html", null ],
+    [ "v8::metrics::WasmModuleDecoded", "structv8_1_1metrics_1_1WasmModuleDecoded.html", null ],
     [ "v8::internal::wasm::gdb_server::GdbServer::WasmModuleInfo", "structv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer_1_1WasmModuleInfo.html", null ],
+    [ "v8::metrics::WasmModuleInstantiated", "structv8_1_1metrics_1_1WasmModuleInstantiated.html", null ],
     [ "v8::internal::wasm::WasmModuleSourceMap", "classv8_1_1internal_1_1wasm_1_1WasmModuleSourceMap.html", null ],
+    [ "v8::metrics::WasmModulesPerIsolate", "structv8_1_1metrics_1_1WasmModulesPerIsolate.html", null ],
     [ "v8::internal::wasm::WasmOpcodes", "classv8_1_1internal_1_1wasm_1_1WasmOpcodes.html", null ],
     [ "v8::internal::compiler::turboshaft::WasmOptimizePhase", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmOptimizePhase.html", null ],
     [ "v8::internal::wasm::WasmOrphanedGlobalHandle", "classv8_1_1internal_1_1wasm_1_1WasmOrphanedGlobalHandle.html", null ],
@@ -8729,30 +9788,42 @@ var hierarchy =
     [ "v8::internal::compiler::turboshaft::WasmRevecVerifier", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecVerifier.html", null ],
     [ "v8::internal::wasm::WasmSectionIterator", "classv8_1_1internal_1_1wasm_1_1WasmSectionIterator.html", null ],
     [ "v8::internal::wasm::WasmSerializer", "classv8_1_1internal_1_1wasm_1_1WasmSerializer.html", null ],
+    [ "v8::WasmStreaming", "classv8_1_1WasmStreaming.html", null ],
     [ "v8::WasmStreaming::WasmStreamingImpl", "classv8_1_1WasmStreaming_1_1WasmStreamingImpl.html", null ],
     [ "v8::internal::wasm::WasmStringRefLiteral", "structv8_1_1internal_1_1wasm_1_1WasmStringRefLiteral.html", null ],
+    [ "v8::internal::wasm::WasmModuleBuilder::WasmTable", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmTable.html", null ],
     [ "v8::internal::wasm::WasmTable", "structv8_1_1internal_1_1wasm_1_1WasmTable.html", null ],
     [ "v8::internal::wasm::WasmTag", "structv8_1_1internal_1_1wasm_1_1WasmTag.html", null ],
     [ "v8::internal::compiler::WasmTypeCheckConfig", "structv8_1_1internal_1_1compiler_1_1WasmTypeCheckConfig.html", null ],
     [ "v8::internal::wasm::WasmValue", "classv8_1_1internal_1_1wasm_1_1WasmValue.html", null ],
     [ "v8_inspector::InspectedContext::WeakCallbackData", "classv8__inspector_1_1InspectedContext_1_1WeakCallbackData.html", null ],
+    [ "v8::WeakCallbackInfo< T >", "classv8_1_1WeakCallbackInfo.html", null ],
+    [ "v8::WeakCallbackInfo< void >", "classv8_1_1WeakCallbackInfo.html", null ],
     [ "cppgc::internal::MarkingWorklists::WeakCallbackItem", "structcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem.html", null ],
     [ "v8::internal::WeakCodeRegistry", "classv8_1_1internal_1_1WeakCodeRegistry.html", null ],
     [ "v8::internal::WeakVisitor::WeakContainerScope", "classv8_1_1internal_1_1WeakVisitor_1_1WeakContainerScope.html", null ],
+    [ "cppgc::internal::WeakCrossThreadPersistentPolicy", "structcppgc_1_1internal_1_1WeakCrossThreadPersistentPolicy.html", null ],
     [ "v8::internal::WeakListVisitor< T >", "structv8_1_1internal_1_1WeakListVisitor.html", null ],
     [ "v8::internal::WeakListVisitor< AllocationSite >", "structv8_1_1internal_1_1WeakListVisitor_3_01AllocationSite_01_4.html", null ],
     [ "v8::internal::WeakListVisitor< Context >", "structv8_1_1internal_1_1WeakListVisitor_3_01Context_01_4.html", null ],
     [ "v8::internal::WeakListVisitor< JSFinalizationRegistry >", "structv8_1_1internal_1_1WeakListVisitor_3_01JSFinalizationRegistry_01_4.html", null ],
+    [ "WeaknessPolicy", null, [
+      [ "cppgc::internal::BasicCrossThreadPersistent< T, WeaknessPolicy, LocationPolicy, CheckingPolicy >", "classcppgc_1_1internal_1_1BasicCrossThreadPersistent.html", null ],
+      [ "cppgc::internal::BasicPersistent< T, WeaknessPolicy, LocationPolicy, CheckingPolicy >", "classcppgc_1_1internal_1_1BasicPersistent.html", null ]
+    ] ],
     [ "v8::internal::WeakObjectRetainer", "classv8_1_1internal_1_1WeakObjectRetainer.html", [
       [ "v8::internal::EvacuationWeakObjectRetainer", "classv8_1_1internal_1_1EvacuationWeakObjectRetainer.html", null ],
       [ "v8::internal::MarkCompactWeakObjectRetainer", "classv8_1_1internal_1_1MarkCompactWeakObjectRetainer.html", null ]
     ] ],
     [ "v8::internal::WeakObjects", "classv8_1_1internal_1_1WeakObjects.html", null ],
+    [ "cppgc::internal::WeakPersistentPolicy", "structcppgc_1_1internal_1_1WeakPersistentPolicy.html", null ],
     [ "v8::internal::wasm::WellKnownImportsList", "classv8_1_1internal_1_1wasm_1_1WellKnownImportsList.html", null ],
     [ "unibrow::WhiteSpace", "structunibrow_1_1WhiteSpace.html", null ],
     [ "v8::base::Win32Time", "classv8_1_1base_1_1Win32Time.html", null ],
     [ "v8::internal::wasm::WireBytesRef", "classv8_1_1internal_1_1wasm_1_1WireBytesRef.html", null ],
-    [ "v8::internal::wasm::WireBytesStorage", "classv8_1_1internal_1_1wasm_1_1WireBytesStorage.html", null ],
+    [ "v8::internal::wasm::WireBytesStorage", "classv8_1_1internal_1_1wasm_1_1WireBytesStorage.html", [
+      [ "v8::internal::wasm::AsyncStreamingDecoder::SectionBuffer", "classv8_1_1internal_1_1wasm_1_1AsyncStreamingDecoder_1_1SectionBuffer.html", null ]
+    ] ],
     [ "v8::internal::WithExternalPointer< kFieldOffset, kTagRange >", "structv8_1_1internal_1_1WithExternalPointer.html", null ],
     [ "v8::internal::WithProtectedPointer< kFieldOffset >", "structv8_1_1internal_1_1WithProtectedPointer.html", null ],
     [ "v8::internal::tracing::TraceID::WithScope", "classv8_1_1internal_1_1tracing_1_1TraceID_1_1WithScope.html", null ],
@@ -8784,16 +9855,20 @@ var hierarchy =
     ] ],
     [ "v8_inspector::WrapOptions", "structv8__inspector_1_1WrapOptions.html", null ],
     [ "v8::internal::wasm::WrapperCompilationInfo", "structv8_1_1internal_1_1wasm_1_1WrapperCompilationInfo.html", null ],
+    [ "v8::internal::WasmDispatchTableData::WrapperEntry", "structv8_1_1internal_1_1WasmDispatchTableData_1_1WrapperEntry.html", null ],
     [ "v8_inspector::WrapSerializationOptions", "structv8__inspector_1_1WrapSerializationOptions.html", null ],
     [ "v8::bigint::RWDigits::WritableDigitReference", "classv8_1_1bigint_1_1RWDigits_1_1WritableDigitReference.html", null ],
     [ "v8::internal::WritableFreeSpace", "classv8_1_1internal_1_1WritableFreeSpace.html", null ],
     [ "v8::internal::WritableJitAllocation", "classv8_1_1internal_1_1WritableJitAllocation.html", null ],
     [ "v8::internal::WritableJitPage", "classv8_1_1internal_1_1WritableJitPage.html", null ],
+    [ "cppgc::internal::WriteBarrier", "classcppgc_1_1internal_1_1WriteBarrier.html", null ],
     [ "v8::internal::WriteBarrier", "classv8_1_1internal_1_1WriteBarrier.html", null ],
+    [ "v8::internal::InstructionStream::WriteBarrierPromise", "classv8_1_1internal_1_1InstructionStream_1_1WriteBarrierPromise.html", null ],
+    [ "cppgc::internal::WriteBarrierTypeForNonCagedHeapPolicy", "classcppgc_1_1internal_1_1WriteBarrierTypeForNonCagedHeapPolicy.html", null ],
+    [ "v8::String::WriteFlags", "structv8_1_1String_1_1WriteFlags.html", null ],
     [ "v8::internal::SegmentedTable< Entry, size >::WriteIterator", "classv8_1_1internal_1_1SegmentedTable_1_1WriteIterator.html", null ],
     [ "v8::internal::maglev::detail::YouNeedToDefineAnInputTypesArrayInYourDerivedClass", "structv8_1_1internal_1_1maglev_1_1detail_1_1YouNeedToDefineAnInputTypesArrayInYourDerivedClass.html", null ],
     [ "v8::internal::YoungGenerationRememberedSetsMarkingWorklist", "classv8_1_1internal_1_1YoungGenerationRememberedSetsMarkingWorklist.html", null ],
-    [ "v8::internal::TracedNodeBlock::YoungListTraits", "structv8_1_1internal_1_1TracedNodeBlock_1_1YoungListTraits.html", null ],
     [ "v8::internal::compiler::turboshaft::Zip< Iterables >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Zip.html", null ],
     [ "v8::internal::compiler::PersistentMap< Key, Value, Hasher >::ZipIterable", "structv8_1_1internal_1_1compiler_1_1PersistentMap_1_1ZipIterable.html", null ],
     [ "v8::ZombieProtector", "classv8_1_1ZombieProtector.html", null ],
@@ -8823,7 +9898,7 @@ var hierarchy =
       ] ],
       [ "v8::internal::Signature< MachineRepresentation >", "classv8_1_1internal_1_1Signature.html", null ],
       [ "v8::internal::Signature< ValueType >", "classv8_1_1internal_1_1Signature.html", null ],
-      [ "v8::internal::ZoneChunkList< EntryBuilder >", "classv8_1_1internal_1_1ZoneChunkList.html", null ],
+      [ "v8::internal::ZoneChunkList< v8::internal::MaglevSafepointTableBuilder::EntryBuilder >", "classv8_1_1internal_1_1ZoneChunkList.html", null ],
       [ "v8::internal::ZoneChunkList< int >", "classv8_1_1internal_1_1ZoneChunkList.html", null ],
       [ "v8::internal::ZoneList< v8::internal::AlternativeGeneration * >", "classv8_1_1internal_1_1ZoneList.html", null ],
       [ "v8::internal::ZoneList< v8::internal::Expression >", "classv8_1_1internal_1_1ZoneList.html", null ],
@@ -8962,12 +10037,16 @@ var hierarchy =
       [ "v8::internal::BoyerMoorePositionInfo", "classv8_1_1internal_1_1BoyerMoorePositionInfo.html", null ],
       [ "v8::internal::CaseClause", "classv8_1_1internal_1_1CaseClause.html", null ],
       [ "v8::internal::ClassLiteralStaticElement", "classv8_1_1internal_1_1ClassLiteralStaticElement.html", null ],
+      [ "v8::internal::ClassScope::RareData", "structv8_1_1internal_1_1ClassScope_1_1RareData.html", null ],
+      [ "v8::internal::DeclarationScope::RareData", "structv8_1_1internal_1_1DeclarationScope_1_1RareData.html", null ],
       [ "v8::internal::DynamicBitSet", "classv8_1_1internal_1_1DynamicBitSet.html", null ],
       [ "v8::internal::Guard", "classv8_1_1internal_1_1Guard.html", null ],
       [ "v8::internal::LiteralProperty", "classv8_1_1internal_1_1LiteralProperty.html", [
         [ "v8::internal::ClassLiteralProperty", "classv8_1_1internal_1_1ClassLiteralProperty.html", null ],
         [ "v8::internal::ObjectLiteralProperty", "classv8_1_1internal_1_1ObjectLiteralProperty.html", null ]
       ] ],
+      [ "v8::internal::Parser::NamedImport", "structv8_1_1internal_1_1Parser_1_1NamedImport.html", null ],
+      [ "v8::internal::Parser::TemplateLiteral", "classv8_1_1internal_1_1Parser_1_1TemplateLiteral.html", null ],
       [ "v8::internal::ParserFormalParameters::Parameter", "structv8_1_1internal_1_1ParserFormalParameters_1_1Parameter.html", null ],
       [ "v8::internal::PreparseDataBuilder", "classv8_1_1internal_1_1PreparseDataBuilder.html", null ],
       [ "v8::internal::PreparseDataBuilder::ByteData", "classv8_1_1internal_1_1PreparseDataBuilder_1_1ByteData.html", null ],
@@ -9032,6 +10111,9 @@ var hierarchy =
       [ "v8::internal::compiler::CompilationDependencies", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html", null ],
       [ "v8::internal::compiler::CompilationDependency", "classv8_1_1internal_1_1compiler_1_1CompilationDependency.html", null ],
       [ "v8::internal::compiler::ConstraintBuilder", "classv8_1_1internal_1_1compiler_1_1ConstraintBuilder.html", null ],
+      [ "v8::internal::compiler::ControlEquivalence::NodeData", "structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1NodeData.html", null ],
+      [ "v8::internal::compiler::CsaLoadElimination::AbstractState", "structv8_1_1internal_1_1compiler_1_1CsaLoadElimination_1_1AbstractState.html", null ],
+      [ "v8::internal::compiler::CsaLoadElimination::HalfState", "classv8_1_1internal_1_1compiler_1_1CsaLoadElimination_1_1HalfState.html", null ],
       [ "v8::internal::compiler::DeoptimizationExit", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html", null ],
       [ "v8::internal::compiler::Dependable", "classv8_1_1internal_1_1compiler_1_1Dependable.html", [
         [ "v8::internal::compiler::VirtualObject", "classv8_1_1internal_1_1compiler_1_1VirtualObject.html", null ]
@@ -9040,6 +10122,7 @@ var hierarchy =
       [ "v8::internal::compiler::Frame", "classv8_1_1internal_1_1compiler_1_1Frame.html", null ],
       [ "v8::internal::compiler::FrameAccessState", "classv8_1_1internal_1_1compiler_1_1FrameAccessState.html", null ],
       [ "v8::internal::compiler::FrameStateDescriptor", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html", null ],
+      [ "v8::internal::compiler::FunctionalList< A >::Cons", "structv8_1_1internal_1_1compiler_1_1FunctionalList_1_1Cons.html", null ],
       [ "v8::internal::compiler::GraphDecorator", "classv8_1_1internal_1_1compiler_1_1GraphDecorator.html", [
         [ "v8::internal::compiler::BreakOnNodeDecorator", "classv8_1_1internal_1_1compiler_1_1BreakOnNodeDecorator.html", null ],
         [ "v8::internal::compiler::BytecodeGraphBuilder::BytecodePositionDecorator", "classv8_1_1internal_1_1compiler_1_1BytecodeGraphBuilder_1_1BytecodePositionDecorator.html", null ],
@@ -9050,10 +10133,16 @@ var hierarchy =
       ] ],
       [ "v8::internal::compiler::InductionVariable", "classv8_1_1internal_1_1compiler_1_1InductionVariable.html", null ],
       [ "v8::internal::compiler::InstructionScheduler", "classv8_1_1internal_1_1compiler_1_1InstructionScheduler.html", null ],
+      [ "v8::internal::compiler::InstructionScheduler::ScheduleGraphNode", "classv8_1_1internal_1_1compiler_1_1InstructionScheduler_1_1ScheduleGraphNode.html", null ],
       [ "v8::internal::compiler::InstructionSelectorT< Adapter >::CachedStateValues< Adapter >", "structv8_1_1internal_1_1compiler_1_1InstructionSelectorT_1_1CachedStateValues.html", null ],
       [ "v8::internal::compiler::LiveRangeBuilder", "classv8_1_1internal_1_1compiler_1_1LiveRangeBuilder.html", null ],
       [ "v8::internal::compiler::LiveRangeBundle", "classv8_1_1internal_1_1compiler_1_1LiveRangeBundle.html", null ],
       [ "v8::internal::compiler::LiveRangeConnector", "classv8_1_1internal_1_1compiler_1_1LiveRangeConnector.html", null ],
+      [ "v8::internal::compiler::LoadElimination::AbstractElements", "classv8_1_1internal_1_1compiler_1_1LoadElimination_1_1AbstractElements.html", null ],
+      [ "v8::internal::compiler::LoadElimination::AbstractField", "classv8_1_1internal_1_1compiler_1_1LoadElimination_1_1AbstractField.html", null ],
+      [ "v8::internal::compiler::LoadElimination::AbstractMaps", "classv8_1_1internal_1_1compiler_1_1LoadElimination_1_1AbstractMaps.html", null ],
+      [ "v8::internal::compiler::LoadElimination::AbstractState", "classv8_1_1internal_1_1compiler_1_1LoadElimination_1_1AbstractState.html", null ],
+      [ "v8::internal::compiler::LoadElimination::AbstractStateForEffectNodes", "classv8_1_1internal_1_1compiler_1_1LoadElimination_1_1AbstractStateForEffectNodes.html", null ],
       [ "v8::internal::compiler::LoopTree", "classv8_1_1internal_1_1compiler_1_1LoopTree.html", null ],
       [ "v8::internal::compiler::MemoryLowering::AllocationGroup", "classv8_1_1internal_1_1compiler_1_1MemoryLowering_1_1AllocationGroup.html", null ],
       [ "v8::internal::compiler::MemoryLowering::AllocationState", "classv8_1_1internal_1_1compiler_1_1MemoryLowering_1_1AllocationState.html", null ],
@@ -9128,15 +10217,25 @@ var hierarchy =
         [ "v8::internal::compiler::LinearScanAllocator", "classv8_1_1internal_1_1compiler_1_1LinearScanAllocator.html", null ]
       ] ],
       [ "v8::internal::compiler::RegisterAllocatorVerifier", "classv8_1_1internal_1_1compiler_1_1RegisterAllocatorVerifier.html", null ],
+      [ "v8::internal::compiler::RegisterAllocatorVerifier::DelayedAssessments", "classv8_1_1internal_1_1compiler_1_1RegisterAllocatorVerifier_1_1DelayedAssessments.html", null ],
       [ "v8::internal::compiler::SpecialRPONumberer", "classv8_1_1internal_1_1compiler_1_1SpecialRPONumberer.html", null ],
       [ "v8::internal::compiler::SpillRange", "classv8_1_1internal_1_1compiler_1_1SpillRange.html", null ],
       [ "v8::internal::compiler::TopLevelLiveRange::SpillMoveInsertionList", "structv8_1_1internal_1_1compiler_1_1TopLevelLiveRange_1_1SpillMoveInsertionList.html", null ],
+      [ "v8::internal::compiler::UnwindingInfoWriter::BlockInitialState", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter_1_1BlockInitialState.html", null ],
+      [ "v8::internal::compiler::UnwindingInfoWriter::BlockInitialState", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter_1_1BlockInitialState.html", null ],
+      [ "v8::internal::compiler::UnwindingInfoWriter::BlockInitialState", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter_1_1BlockInitialState.html", null ],
+      [ "v8::internal::compiler::UnwindingInfoWriter::BlockInitialState", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter_1_1BlockInitialState.html", null ],
+      [ "v8::internal::compiler::UnwindingInfoWriter::BlockInitialState", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter_1_1BlockInitialState.html", null ],
+      [ "v8::internal::compiler::WasmAddressReassociation::CandidateMemOps", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation_1_1CandidateMemOps.html", null ],
+      [ "v8::internal::compiler::WasmLoadElimination::AbstractState", "structv8_1_1internal_1_1compiler_1_1WasmLoadElimination_1_1AbstractState.html", null ],
+      [ "v8::internal::compiler::WasmLoadElimination::HalfState", "classv8_1_1internal_1_1compiler_1_1WasmLoadElimination_1_1HalfState.html", null ],
       [ "v8::internal::compiler::turboshaft::CompareChainNode", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode.html", null ],
       [ "v8::internal::interpreter::BlockCoverageBuilder", "classv8_1_1internal_1_1interpreter_1_1BlockCoverageBuilder.html", null ],
       [ "v8::internal::interpreter::BytecodeGenerator::FeedbackSlotCache", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html", null ],
       [ "v8::internal::interpreter::BytecodeGenerator::TopLevelDeclarationsBuilder", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html", null ],
       [ "v8::internal::interpreter::BytecodeJumpTable", "classv8_1_1internal_1_1interpreter_1_1BytecodeJumpTable.html", null ],
       [ "v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html", null ],
+      [ "v8::internal::interpreter::ConstantArrayBuilder::ConstantArraySlice", "structv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder_1_1ConstantArraySlice.html", null ],
       [ "v8::internal::maglev::Graph", "classv8_1_1internal_1_1maglev_1_1Graph.html", null ],
       [ "v8::internal::maglev::MaglevCompilationUnit", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html", null ],
       [ "v8::internal::maglev::NodeBase", "classv8_1_1internal_1_1maglev_1_1NodeBase.html", [
@@ -9334,67 +10433,49 @@ var hierarchy =
     [ "v8::internal::ZoneTypeTraits< kEnableCompression >", "structv8_1_1internal_1_1ZoneTypeTraits.html", null ],
     [ "v8::internal::ZoneTypeTraits< false >", "structv8_1_1internal_1_1ZoneTypeTraits_3_01false_01_4.html", null ],
     [ "v8::internal::ZoneTypeTraits< true >", "structv8_1_1internal_1_1ZoneTypeTraits_3_01true_01_4.html", null ],
-    [ "v8::internal::ZoneVector< T >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< AbstractState const * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< T >", "classv8_1_1internal_1_1ZoneVector.html", [
+      [ "v8::internal::wasm::AsmJsParser::CachedVector< T >", "classv8_1_1internal_1_1wasm_1_1AsmJsParser_1_1CachedVector.html", null ]
+    ] ],
     [ "v8::internal::ZoneVector< AliasSnapshot >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< AsmJsScanner::token_t >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< Backedge >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< base::uc16 >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< BasicBlock * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< BlockInfo >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< BlockToClone >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< bool >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< ConditionalChainEntry >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< const BlockInitialState * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< const v8::internal::compiler::turboshaft::Block * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< const v8::internal::compiler::UnwindingInfoWriter::BlockInitialState * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< const v8::internal::maglev::BasicBlock * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< const v8::internal::SourceTextModuleDescriptor::Entry * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< Constant >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< DelayedReference >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< DeoptimizationEntry >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< DirectCallIndex >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< EffectPathChecks const * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< Entry * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< Entry >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< FeedbackSlotKind >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< HandlerInfo >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< Instruction * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< Instruction >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< InstructionConstraint >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< InstructionOperand >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< int >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< int32_t >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< int64_t >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< Key >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< LoopInfo >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< MachineRepresentation >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< MapMaskAndOr >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< MapSnapshot >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< MaybeSnapshot >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< MaybeVariable >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< MemorySnapshot >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< MoveOperands * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< NaryOperationEntry >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< Node * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< NodeData * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< OperationState::Liveness >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< OpIndex >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< PerOperationUses >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< PhiInstruction * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< RecGroup >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< ReferenceMap * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< RpoNumber >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< ScheduleGraphNode * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< SchedulerData >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< SpecialRPOStackFrame >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< StackNode >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< State >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< Status >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< std::optional< Snapshot > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< std::optional< table_t::Key > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< std::optional< table_t::Snapshot > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< std::optional< v8::internal::compiler::turboshaft::LateLoadEliminationAnalyzer::Snapshot > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< std::optional< v8::internal::compiler::turboshaft::MemoryAnalyzer::BlockState > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< std::optional< v8::internal::compiler::turboshaft::SnapshotTable::Snapshot > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< std::optional< v8::internal::compiler::turboshaft::WasmLoadEliminationAnalyzer::Snapshot > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< std::optional< v8::internal::Snapshot > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< std::optional< v8::internal::ZoneVector< v8::internal::compiler::Node * > > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< std::pair< int, int > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
@@ -9408,19 +10489,19 @@ var hierarchy =
     [ "v8::internal::ZoneVector< std::pair< v8::internal::NativeFunctionLiteral *, size_t > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< std::pair< v8::internal::ObjectLiteralBoilerplateBuilder *, size_t > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< std::pair< v8::internal::Tagged< v8::internal::Smi >, index_t > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< StoreObservability >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< StringBuilder >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< table_t::Snapshot >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< Type >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< uint16_t >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< uint32_t >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< uint64_t >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< uint8_t >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::bool >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::BasicBlock * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::CaseInfoT >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::CodeGenerator::HandlerInfo >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::CompilationDependency const * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::ControlPathState< NodeState, node_uniqueness > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::ControlPathState< NodeWithType, node_uniqueness > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::CsaLoadElimination::AbstractState const * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::FunctionalList >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::GraphDecorator * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::ImmediateOperand * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
@@ -9428,7 +10509,9 @@ var hierarchy =
     [ "v8::internal::ZoneVector< v8::internal::compiler::Instruction * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::InstructionOperand * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::InstructionOperand >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::InstructionScheduler::ScheduleGraphNode * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::LiveRange * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::LoadElimination::AbstractState const * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::LoopTree::Loop * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::LoopTree::Loop >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::MapRef >", "classv8_1_1internal_1_1ZoneVector.html", null ],
@@ -9439,19 +10522,27 @@ var hierarchy =
     [ "v8::internal::ZoneVector< v8::internal::compiler::PackNode * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::PushParameterT >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::Reducer * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::RedundancyElimination::EffectPathChecks const * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::RepresentationSelector::NodeInfo >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::ResumeJumpTarget >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::Scheduler::SchedulerData >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::SimplifiedLoweringVerifier::PerNodeData >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::SpecialRPONumberer::LoopInfo >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::SpecialRPONumberer::SpecialRPOStackFrame >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::StateValueDescriptor >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::StateValueList * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::StringBuilderOptimizer::Status >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::StringBuilderOptimizer::StringBuilder >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::TempLoopInfo >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::TopLevelLiveRange * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::TurbolizerInstructionStartInfo >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::AnalyzerIterator::StackNode >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::Block * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::BlockIndex >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::ControlState >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::GraphVisitor::BlockToClone >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::LayeredHashMap::Entry * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::LoadEliminationReplacement >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::MapMaskAndOr >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::MaybeRegisterRepresentation >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::OpIndex >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::PackNode * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
@@ -9465,17 +10556,24 @@ var hierarchy =
     [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::TurboshaftSpecialRPONumberer::BlockData >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::TurboshaftSpecialRPONumberer::LoopInfo >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::Type >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::UseMap::PerOperationUses >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::V< v8::internal::compiler::turboshaft::FrameState > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::V< v8::internal::String > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::turboshaft::ValueNumberingReducer::Entry * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::UseInterval >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::compiler::Variable >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::compiler::WasmLoadElimination::AbstractState const * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::ConditionalChain::ConditionalChainEntry >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::FrameTranslationBuilder::Instruction >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::interpreter::BytecodeGenerator::ControlScope::DeferredCommands::Entry >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::interpreter::BytecodeLabel >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::interpreter::BytecodeRegisterOptimizer::RegisterInfo * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::interpreter::ConstantArrayBuilder::Entry >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::interpreter::HandlerTableBuilder::Entry >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::MachineType >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::maglev::BasicBlock * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::maglev::InitialValue * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< v8::internal::maglev::ValueNode * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::NaryOperation::NaryOperationEntry >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::OptimizedCompilationInfo::InlinedFunctionHolder >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::RegExpCapture * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::RegExpNode * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
@@ -9483,15 +10581,25 @@ var hierarchy =
     [ "v8::internal::ZoneVector< v8::internal::SourcePosition >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::SourceRange >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::SparseBitVector * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::wasm::AsmJsParser::BlockInfo >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::wasm::AsmType * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::wasm::InterpreterCode >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::wasm::ModuleTypeIndex >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::wasm::TypeDefinition >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::wasm::ValueType >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::wasm::WasmFunctionBuilder * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::wasm::WasmFunctionBuilder::DirectCallIndex >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::wasm::WasmInitExpr >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::wasm::WasmModuleBuilder::RecGroup >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::wasm::WasmModuleBuilder::WasmDataSegment >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::wasm::WasmModuleBuilder::WasmElemSegment >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::wasm::WasmModuleBuilder::WasmElemSegment::Entry >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::wasm::WasmModuleBuilder::WasmExport >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::wasm::WasmModuleBuilder::WasmFunctionImport >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::wasm::WasmModuleBuilder::WasmGlobal >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::wasm::WasmModuleBuilder::WasmGlobalImport >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::wasm::WasmModuleBuilder::WasmMemory >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::internal::wasm::WasmModuleBuilder::WasmTable >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::WasmInliningPosition >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::ZonePreparseData * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::ZoneVector * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
@@ -9503,24 +10611,20 @@ var hierarchy =
     [ "v8::internal::ZoneVector< v8::internal::ZoneVector< v8::internal::compiler::turboshaft::OpIndex > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::ZoneVector< v8::internal::wasm::AsmType * > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< v8::internal::ZoneVector< v8::internal::wasm::ValueType > >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< Value >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< ValueNode * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< wasm::ValueType >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< WasmDataSegment >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< WasmExport >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< WasmFunctionImport >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< WasmGlobal >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< WasmGlobalImport >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< WasmMemory >", "classv8_1_1internal_1_1ZoneVector.html", null ],
-    [ "v8::internal::ZoneVector< WasmTable >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::MapMaskAndOr >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::OpIndex >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::StoreObservability >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::Type >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::v8::internal::compiler::turboshaft::MapMaskAndOr >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::v8::internal::maglev::ValueNode * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::Value >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::ValueNode * >", "classv8_1_1internal_1_1ZoneVector.html", null ],
+    [ "v8::internal::ZoneVector< v8::wasm::ValueType >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVector< WorkingBuffer >", "classv8_1_1internal_1_1ZoneVector.html", null ],
     [ "v8::internal::ZoneVectorWrapper", "classv8_1_1internal_1_1ZoneVectorWrapper.html", null ],
     [ "v8::internal::compiler::turboshaft::ZoneWithName< Name >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ZoneWithName.html", null ],
     [ "v8::internal::compiler::turboshaft::ZoneWithName< compiler::kGraphZoneName >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ZoneWithName.html", null ],
     [ "v8::internal::compiler::turboshaft::ZoneWithName< kCompilationZoneName >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ZoneWithName.html", null ],
     [ "v8::internal::compiler::turboshaft::ZoneWithName< kGraphZoneName >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ZoneWithName.html", null ],
-    [ "v8::internal::compiler::turboshaft::ZoneWithName< ZoneName >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ZoneWithName.html", null ],
-    [ "EmbedderGraph", null, [
-      [ "v8::internal::EmbedderGraphImpl", "classv8_1_1internal_1_1EmbedderGraphImpl.html", null ]
-    ] ]
+    [ "v8::internal::compiler::turboshaft::ZoneWithName< ZoneName >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1ZoneWithName.html", null ]
 ];

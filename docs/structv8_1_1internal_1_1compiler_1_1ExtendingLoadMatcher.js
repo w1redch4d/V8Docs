@@ -9,10 +9,21 @@ var structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher =
     [ "immediate", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a574d6079156d00134759383dbd735516", null ],
     [ "immediate", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a574d6079156d00134759383dbd735516", null ],
     [ "immediate", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a574d6079156d00134759383dbd735516", null ],
+    [ "Initialize", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#aab3983e022547d934201e1ffca507ef0", null ],
+    [ "Initialize", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#aab3983e022547d934201e1ffca507ef0", null ],
+    [ "Initialize", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#aab3983e022547d934201e1ffca507ef0", null ],
+    [ "Initialize", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a85eec601790dfe5c65e2819181ae8f6e", null ],
+    [ "Initialize", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a85eec601790dfe5c65e2819181ae8f6e", null ],
+    [ "Initialize", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a85eec601790dfe5c65e2819181ae8f6e", null ],
     [ "Matches", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a1a6f5933a0a5a988f7a740347765eb69", null ],
     [ "Matches", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a1a6f5933a0a5a988f7a740347765eb69", null ],
     [ "Matches", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a1a6f5933a0a5a988f7a740347765eb69", null ],
     [ "opcode", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a569bdbc19be71b1909e5cbeae001d6f2", null ],
     [ "opcode", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a569bdbc19be71b1909e5cbeae001d6f2", null ],
-    [ "opcode", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a569bdbc19be71b1909e5cbeae001d6f2", null ]
+    [ "opcode", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a569bdbc19be71b1909e5cbeae001d6f2", null ],
+    [ "base_", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#ae95957da68fb257e77a096fac3f7542c", null ],
+    [ "immediate_", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a201115b9d8549679bb2c8669968bd2f4", null ],
+    [ "matches_", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a32251311940cb3ad2b262b43480a5ef5", null ],
+    [ "opcode_", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#ad0dc04674c926cee892846026266edfd", null ],
+    [ "selector_", "structv8_1_1internal_1_1compiler_1_1ExtendingLoadMatcher.html#a1e9a80e1418a487511f660e997f94408", null ]
 ];

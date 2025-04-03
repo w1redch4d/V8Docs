@@ -13,6 +13,7 @@ var regexp_compiler_8h =
     [ "v8::internal::GreedyLoopState", "classv8_1_1internal_1_1GreedyLoopState.html", "classv8_1_1internal_1_1GreedyLoopState" ],
     [ "v8::internal::PreloadState", "structv8_1_1internal_1_1PreloadState.html", "structv8_1_1internal_1_1PreloadState" ],
     [ "v8::internal::FrequencyCollator", "classv8_1_1internal_1_1FrequencyCollator.html", "classv8_1_1internal_1_1FrequencyCollator" ],
+    [ "v8::internal::FrequencyCollator::CharacterFrequency", "classv8_1_1internal_1_1FrequencyCollator_1_1CharacterFrequency.html", "classv8_1_1internal_1_1FrequencyCollator_1_1CharacterFrequency" ],
     [ "v8::internal::RegExpCompiler", "classv8_1_1internal_1_1RegExpCompiler.html", "classv8_1_1internal_1_1RegExpCompiler" ],
     [ "v8::internal::RegExpCompiler::CompilationResult", "structv8_1_1internal_1_1RegExpCompiler_1_1CompilationResult.html", "structv8_1_1internal_1_1RegExpCompiler_1_1CompilationResult" ],
     [ "v8::internal::UnicodeRangeSplitter", "classv8_1_1internal_1_1UnicodeRangeSplitter.html", "classv8_1_1internal_1_1UnicodeRangeSplitter" ],

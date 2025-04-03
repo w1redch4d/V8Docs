@@ -3,6 +3,8 @@ var node_8h =
     [ "v8::internal::compiler::Node", "classv8_1_1internal_1_1compiler_1_1Node.html", "classv8_1_1internal_1_1compiler_1_1Node" ],
     [ "v8::internal::compiler::Node::UseEdges", "classv8_1_1internal_1_1compiler_1_1Node_1_1UseEdges.html", "classv8_1_1internal_1_1compiler_1_1Node_1_1UseEdges" ],
     [ "v8::internal::compiler::Node::Uses", "classv8_1_1internal_1_1compiler_1_1Node_1_1Uses.html", "classv8_1_1internal_1_1compiler_1_1Node_1_1Uses" ],
+    [ "v8::internal::compiler::Node::OutOfLineInputs", "structv8_1_1internal_1_1compiler_1_1Node_1_1OutOfLineInputs.html", "structv8_1_1internal_1_1compiler_1_1Node_1_1OutOfLineInputs" ],
+    [ "v8::internal::compiler::Node::Use", "structv8_1_1internal_1_1compiler_1_1Node_1_1Use.html", "structv8_1_1internal_1_1compiler_1_1Node_1_1Use" ],
     [ "v8::internal::compiler::NodeWrapper", "classv8_1_1internal_1_1compiler_1_1NodeWrapper.html", "classv8_1_1internal_1_1compiler_1_1NodeWrapper" ],
     [ "v8::internal::compiler::Effect", "classv8_1_1internal_1_1compiler_1_1Effect.html", "classv8_1_1internal_1_1compiler_1_1Effect" ],
     [ "v8::internal::compiler::Control", "classv8_1_1internal_1_1compiler_1_1Control.html", "classv8_1_1internal_1_1compiler_1_1Control" ],

@@ -10,10 +10,14 @@ var classv8_1_1internal_1_1Representation =
       [ "kNumRepresentations", "classv8_1_1internal_1_1Representation.html#a08dbab898351309de7fa1fded4476d00a4c0c32e8357125883ea4735a78a5fe34", null ]
     ] ],
     [ "Representation", "classv8_1_1internal_1_1Representation.html#a25ea49558d2401c524c487e459371745", null ],
+    [ "Representation", "classv8_1_1internal_1_1Representation.html#a3cace0e3cfd847df39d3212adab231f9", null ],
     [ "CanBeInPlaceChangedTo", "classv8_1_1internal_1_1Representation.html#afc2857d68d808055d558efa69b9a7838", null ],
+    [ "Double", "classv8_1_1internal_1_1Representation.html#a7807b32840f6be86e8def85c31fd5f3c", null ],
     [ "Equals", "classv8_1_1internal_1_1Representation.html#aa84e9e08d7aa134ade62588b6353aaeb", null ],
     [ "fits_into", "classv8_1_1internal_1_1Representation.html#a358b22922554e7c1c08eb68e74c8d904", null ],
+    [ "FromKind", "classv8_1_1internal_1_1Representation.html#ab68f5a15f6a1525cb53f782e25ad9ca2", null ],
     [ "generalize", "classv8_1_1internal_1_1Representation.html#a8bdd97567badb1040967d90910c76c54", null ],
+    [ "HeapObject", "classv8_1_1internal_1_1Representation.html#ab692b8055cd297c62e2b1ea0b71b2e32", null ],
     [ "is_more_general_than", "classv8_1_1internal_1_1Representation.html#a204311b6c7ea002cd2a78909b16f4db4", null ],
     [ "IsCompatibleForLoad", "classv8_1_1internal_1_1Representation.html#a8127928bb5b6b4ab191cf394c6650260", null ],
     [ "IsCompatibleForStore", "classv8_1_1internal_1_1Representation.html#a5763bb09b83c85d7a1c31c5dc65b25f6", null ],
@@ -28,6 +32,11 @@ var classv8_1_1internal_1_1Representation =
     [ "MightCauseMapDeprecation", "classv8_1_1internal_1_1Representation.html#a271821efd4a27ea9bf05e157dc1c0dc6", null ],
     [ "Mnemonic", "classv8_1_1internal_1_1Representation.html#a2c11ece11b8b1278960aa71c2e3506b5", null ],
     [ "MostGenericInPlaceChange", "classv8_1_1internal_1_1Representation.html#a5efb2345c1fd28e1cc0eaf4eb206b3f5", null ],
+    [ "None", "classv8_1_1internal_1_1Representation.html#ace382f041e3e5c2b98fefd107be9927d", null ],
     [ "operator==", "classv8_1_1internal_1_1Representation.html#aa6487dee451bae428a3d41a31f5efc63", null ],
-    [ "size", "classv8_1_1internal_1_1Representation.html#ac049ab6968c584b7f4ba9c658cced439", null ]
+    [ "size", "classv8_1_1internal_1_1Representation.html#ac049ab6968c584b7f4ba9c658cced439", null ],
+    [ "Smi", "classv8_1_1internal_1_1Representation.html#ae90de5082c6bebfdf7e93dd8d6258f53", null ],
+    [ "Tagged", "classv8_1_1internal_1_1Representation.html#af5ac13ce30d154a376b85764d1ad2760", null ],
+    [ "WasmValue", "classv8_1_1internal_1_1Representation.html#aae4395f622afdd457e0d6906c8513e99", null ],
+    [ "kind_", "classv8_1_1internal_1_1Representation.html#a43b1fa5d837e760fdc9196d9673e94af", null ]
 ];

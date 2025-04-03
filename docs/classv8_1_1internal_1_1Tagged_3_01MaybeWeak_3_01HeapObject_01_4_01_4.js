@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1Tagged_3_01MaybeWeak_3_01HeapObject_01_4_01_4 =
 [
+    [ "Base", "classv8_1_1internal_1_1Tagged_3_01MaybeWeak_3_01HeapObject_01_4_01_4.html#a8091a7f382e02be45222b5124d7cafa5", null ],
     [ "Tagged", "classv8_1_1internal_1_1Tagged_3_01MaybeWeak_3_01HeapObject_01_4_01_4.html#af929939a66c16a8a37bb72218d8d3322", null ],
     [ "Tagged", "classv8_1_1internal_1_1Tagged_3_01MaybeWeak_3_01HeapObject_01_4_01_4.html#a9dd3d1b326eb427fb98f4ec85523de37", null ],
     [ "Tagged", "classv8_1_1internal_1_1Tagged_3_01MaybeWeak_3_01HeapObject_01_4_01_4.html#ae4b77568762d3a4cd1c52b699bd8a5e2", null ],

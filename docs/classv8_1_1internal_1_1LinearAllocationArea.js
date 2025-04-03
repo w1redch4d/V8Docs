@@ -16,5 +16,9 @@ var classv8_1_1internal_1_1LinearAllocationArea =
     [ "top", "classv8_1_1internal_1_1LinearAllocationArea.html#af4ca520b139834b4719e7241eb8de346", null ],
     [ "top_address", "classv8_1_1internal_1_1LinearAllocationArea.html#a8613eb642dcce91ebb8691e28a7b3114", null ],
     [ "top_address", "classv8_1_1internal_1_1LinearAllocationArea.html#a37b34152a3c996f3343875b02a22ffca", null ],
-    [ "Verify", "classv8_1_1internal_1_1LinearAllocationArea.html#af1768b9f5d7707a260b87e65a1cb45fa", null ]
+    [ "Verify", "classv8_1_1internal_1_1LinearAllocationArea.html#af1768b9f5d7707a260b87e65a1cb45fa", null ],
+    [ "kSize", "classv8_1_1internal_1_1LinearAllocationArea.html#af82512d9eb17b4c6400a25f012d71b27", null ],
+    [ "limit_", "classv8_1_1internal_1_1LinearAllocationArea.html#a9579f411592d38115af1a3bfffa8bc3e", null ],
+    [ "start_", "classv8_1_1internal_1_1LinearAllocationArea.html#a19e267418a302181eb2386ede24c55a2", null ],
+    [ "top_", "classv8_1_1internal_1_1LinearAllocationArea.html#a8a3283edecd34266a511051537d32a87", null ]
 ];

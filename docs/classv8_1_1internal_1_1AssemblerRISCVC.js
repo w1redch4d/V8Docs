@@ -35,5 +35,7 @@ var classv8_1_1internal_1_1AssemblerRISCVC =
     [ "c_xor", "classv8_1_1internal_1_1AssemblerRISCVC.html#a4189200b5998e5fed4b7e5e5d8afd717", null ],
     [ "cbranch_offset", "classv8_1_1internal_1_1AssemblerRISCVC.html#ac43534f11864d3416b56ef9cbc23f933", null ],
     [ "cjump_offset", "classv8_1_1internal_1_1AssemblerRISCVC.html#a756387c8431d2afd14b33da0e6f9a145", null ],
-    [ "CJumpOffset", "classv8_1_1internal_1_1AssemblerRISCVC.html#aa3dcd3ba86c4b69aa4c8761683b8478b", null ]
+    [ "CJumpOffset", "classv8_1_1internal_1_1AssemblerRISCVC.html#aa3dcd3ba86c4b69aa4c8761683b8478b", null ],
+    [ "IsCBranch", "classv8_1_1internal_1_1AssemblerRISCVC.html#a20f43d31be781215f8363efd4582da70", null ],
+    [ "IsCJal", "classv8_1_1internal_1_1AssemblerRISCVC.html#ab708c9f0f32d49280f832c7056eca2c6", null ]
 ];

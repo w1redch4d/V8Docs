@@ -5,5 +5,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryBarrierOp =
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryBarrierOp.html#adc53338745470d7f574e49610b4870d8", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryBarrierOp.html#a710ac3456022ec1b73d40fb2c7a9256d", null ],
     [ "PrintOptions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryBarrierOp.html#a7354243d3ad39e9c8c7039b67ae5c832", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryBarrierOp.html#ae492e1a3d884284eb1428bfae589fb8a", null ],
     [ "memory_order", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryBarrierOp.html#aee27bdf62740c7546ea4aa832a0e388d", null ]
 ];

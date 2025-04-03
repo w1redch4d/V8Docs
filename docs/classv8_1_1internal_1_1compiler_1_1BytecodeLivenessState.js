@@ -19,5 +19,6 @@ var classv8_1_1internal_1_1compiler_1_1BytecodeLivenessState =
     [ "register_count", "classv8_1_1internal_1_1compiler_1_1BytecodeLivenessState.html#a793aad6cf78732e1b2e6dd291f766b8d", null ],
     [ "RegisterIsLive", "classv8_1_1internal_1_1compiler_1_1BytecodeLivenessState.html#ad6690d916f8386e37d529179baa973f2", null ],
     [ "Union", "classv8_1_1internal_1_1compiler_1_1BytecodeLivenessState.html#a105809b878f191ad50aede7c368c71c9", null ],
-    [ "UnionIsChanged", "classv8_1_1internal_1_1compiler_1_1BytecodeLivenessState.html#abea25c41c5a5695336ec07eb5ac0338a", null ]
+    [ "UnionIsChanged", "classv8_1_1internal_1_1compiler_1_1BytecodeLivenessState.html#abea25c41c5a5695336ec07eb5ac0338a", null ],
+    [ "bit_vector_", "classv8_1_1internal_1_1compiler_1_1BytecodeLivenessState.html#a712b10416abe29891c1858ab91fe6d96", null ]
 ];

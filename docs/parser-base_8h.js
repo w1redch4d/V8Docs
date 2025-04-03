@@ -18,6 +18,7 @@ var parser_base_8h =
     [ "v8::internal::ParserBase< Impl >::AcceptINScope", "classv8_1_1internal_1_1ParserBase_1_1AcceptINScope.html", "classv8_1_1internal_1_1ParserBase_1_1AcceptINScope" ],
     [ "v8::internal::ParserBase< Impl >::ParameterParsingScope", "classv8_1_1internal_1_1ParserBase_1_1ParameterParsingScope.html", "classv8_1_1internal_1_1ParserBase_1_1ParameterParsingScope" ],
     [ "v8::internal::ParserBase< Impl >::FunctionParsingScope", "classv8_1_1internal_1_1ParserBase_1_1FunctionParsingScope.html", "classv8_1_1internal_1_1ParserBase_1_1FunctionParsingScope" ],
+    [ "v8::internal::ParserBase< Impl >::NextArrowFunctionInfo", "structv8_1_1internal_1_1ParserBase_1_1NextArrowFunctionInfo.html", "structv8_1_1internal_1_1ParserBase_1_1NextArrowFunctionInfo" ],
     [ "RETURN_IF_PARSE_ERROR", "parser-base_8h.html#a7d3041b8b0aadf4b77aac9a1ed5faa0d", null ],
     [ "ParseFunctionFlags", "parser-base_8h.html#af90501554ade432759b626ac06f2b23c", null ],
     [ "AllowLabelledFunctionStatement", "parser-base_8h.html#a99ae0efd455e9639ef4b65d748b535aa", [

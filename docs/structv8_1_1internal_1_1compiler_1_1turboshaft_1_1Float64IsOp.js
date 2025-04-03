@@ -5,5 +5,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Float64IsOp =
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Float64IsOp.html#a6d92eb86ffc33393470cd6801c845dcd", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Float64IsOp.html#ac0993284810e018619444049ed9f7e12", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Float64IsOp.html#a37ec6f79cfd0cdd761176cdaa8b3fd67", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Float64IsOp.html#af6465ddc9cc2bada771dfed92774b027", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Float64IsOp.html#a9429f18552c241ea1b3f06ac63cd6e7d", null ]
 ];

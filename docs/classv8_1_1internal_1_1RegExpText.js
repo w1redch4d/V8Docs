@@ -7,5 +7,7 @@ var classv8_1_1internal_1_1RegExpText =
     [ "elements", "classv8_1_1internal_1_1RegExpText.html#a590279264dfad23ce5eb6525f990d41d", null ],
     [ "IsTextElement", "classv8_1_1internal_1_1RegExpText.html#a9656a07fc9368d7d4b2cec3959fde1c9", null ],
     [ "max_match", "classv8_1_1internal_1_1RegExpText.html#ac6e7ca99e8d7dc54bbd1b205953d2c52", null ],
-    [ "min_match", "classv8_1_1internal_1_1RegExpText.html#aa314a4eba4ea4c94205347204cc2d102", null ]
+    [ "min_match", "classv8_1_1internal_1_1RegExpText.html#aa314a4eba4ea4c94205347204cc2d102", null ],
+    [ "elements_", "classv8_1_1internal_1_1RegExpText.html#a53fa0e6b9c28cdf22bd4a95ab0fb17b8", null ],
+    [ "length_", "classv8_1_1internal_1_1RegExpText.html#a1e4a9bad2aa9561772258cfb7dba7db1", null ]
 ];

@@ -5,5 +5,7 @@ var classv8_1_1internal_1_1PreParserFormalParameters =
     [ "set_has_duplicate", "classv8_1_1internal_1_1PreParserFormalParameters.html#aa132cf5b420c37b2df15a40fa7746b06", null ],
     [ "set_strict_parameter_error", "classv8_1_1internal_1_1PreParserFormalParameters.html#ad8e17aba6b9a92eed4e81b339604a520", null ],
     [ "ValidateDuplicate", "classv8_1_1internal_1_1PreParserFormalParameters.html#acb6849b6b52564dccb1824bd43531e7d", null ],
-    [ "ValidateStrictMode", "classv8_1_1internal_1_1PreParserFormalParameters.html#a526f08ce9c359f5eef198cd28efa3006", null ]
+    [ "ValidateStrictMode", "classv8_1_1internal_1_1PreParserFormalParameters.html#a526f08ce9c359f5eef198cd28efa3006", null ],
+    [ "has_duplicate_", "classv8_1_1internal_1_1PreParserFormalParameters.html#a3db3154767d18b288385d9b250455850", null ],
+    [ "strict_parameter_error_", "classv8_1_1internal_1_1PreParserFormalParameters.html#ae968fe672ce2efe1f6414ec7ac7273eb", null ]
 ];

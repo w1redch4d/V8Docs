@@ -17,5 +17,6 @@ var classv8_1_1internal_1_1IdentityMap =
     [ "Insert", "classv8_1_1internal_1_1IdentityMap.html#a6c20e0172463b63878c2b425cc514e55", null ],
     [ "Insert", "classv8_1_1internal_1_1IdentityMap.html#aefd606cb2a0e14f6e03f3b1b79780817", null ],
     [ "NewPointerArray", "classv8_1_1internal_1_1IdentityMap.html#a720d0560b6cc6860ee8f894e696a2a2c", null ],
-    [ "operator=", "classv8_1_1internal_1_1IdentityMap.html#aec2457111d0e22986f6914c80cda73f7", null ]
+    [ "operator=", "classv8_1_1internal_1_1IdentityMap.html#aec2457111d0e22986f6914c80cda73f7", null ],
+    [ "allocator_", "classv8_1_1internal_1_1IdentityMap.html#acd748b0ab47f184d998817a0ca987696", null ]
 ];

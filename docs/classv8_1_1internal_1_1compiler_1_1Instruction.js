@@ -1,6 +1,7 @@
 var classv8_1_1internal_1_1compiler_1_1Instruction =
 [
     [ "InputCountField", "classv8_1_1internal_1_1compiler_1_1Instruction.html#afa07cebb4f63522cfae73283fdc44200", null ],
+    [ "IsCallField", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a261c63c3d6a13d245688cf2dbbfeb831", null ],
     [ "OutputCountField", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a3fb40e15b57bdc553dfe3c9cbdb22d25", null ],
     [ "TempCountField", "classv8_1_1internal_1_1compiler_1_1Instruction.html#ab24311699952ed38dc27fc2e34d881ba", null ],
     [ "GapPosition", "classv8_1_1internal_1_1compiler_1_1Instruction.html#ac16ebb6b4b65e5787eebc6ddeb3ed53a", [
@@ -10,6 +11,8 @@ var classv8_1_1internal_1_1compiler_1_1Instruction =
       [ "LAST_GAP_POSITION", "classv8_1_1internal_1_1compiler_1_1Instruction.html#ac16ebb6b4b65e5787eebc6ddeb3ed53aa11e45069c25ab5b77d5c250d7bae847a", null ]
     ] ],
     [ "Instruction", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a7a14e98d248baf91c96d739abe0ac8ab", null ],
+    [ "Instruction", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a7682c82422010f10d48d97b026c52a91", null ],
+    [ "Instruction", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a9ea91de3a03656f97fdd176e484a78c7", null ],
     [ "addressing_mode", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a6071d298148db31de7ad9b26003468d9", null ],
     [ "arch_opcode", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a110e8decb235f9f15274d9ba08215f0a", null ],
     [ "AreMovesRedundant", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a8411f3332ae945845526f186f13cfe16", null ],
@@ -32,6 +35,7 @@ var classv8_1_1internal_1_1compiler_1_1Instruction =
     [ "InputCount", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a7397ee156e6480bacb532b0c9a8a9600", null ],
     [ "IsCall", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a0fda28324d2637361f573fea3c7c33f7", null ],
     [ "IsCallWithDescriptorFlags", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a549a6b5d9fe88bcea799fcb618d0a552", null ],
+    [ "IsCallWithDescriptorFlags", "classv8_1_1internal_1_1compiler_1_1Instruction.html#abe06555b4239741368eb39a021b9454a", null ],
     [ "IsDeoptimizeCall", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a03df6fda0669b277368902600f399798", null ],
     [ "IsJump", "classv8_1_1internal_1_1compiler_1_1Instruction.html#acd8f7f05fa57a36ab5e2886cc072c6cf", null ],
     [ "IsNop", "classv8_1_1internal_1_1compiler_1_1Instruction.html#aabdaed9c8a364750937952985e88cb72", null ],
@@ -44,6 +48,8 @@ var classv8_1_1internal_1_1compiler_1_1Instruction =
     [ "memory_access_mode", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a84f850b2a7b90ba9701eb50056e5883e", null ],
     [ "misc", "classv8_1_1internal_1_1compiler_1_1Instruction.html#af3831983ad9747281073ba205d2db443", null ],
     [ "NeedsReferenceMap", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a9fc25f86458ae866f77f2e0ab43b5631", null ],
+    [ "New", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a8d97882c1a8b108a47fc6fbaf9d80f41", null ],
+    [ "New", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a897bd2df3168d8dcedb93c74be33f5f0", null ],
     [ "opcode", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a3073637a83dfb080f4163832e16c1f75", null ],
     [ "operator=", "classv8_1_1internal_1_1compiler_1_1Instruction.html#abf6a338faf452fb9c6a67642a40d744c", null ],
     [ "Output", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a76a8ba87b013aaf751d9e4897b704d90", null ],
@@ -60,5 +66,14 @@ var classv8_1_1internal_1_1compiler_1_1Instruction =
     [ "set_reference_map", "classv8_1_1internal_1_1compiler_1_1Instruction.html#ab7794f633e3aae61d2d04377b86fdca2", null ],
     [ "TempAt", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a2e117c8d914bd5d296c73345ec07f24c", null ],
     [ "TempAt", "classv8_1_1internal_1_1compiler_1_1Instruction.html#ac674090bc8524cf52550a8b310d4d25f", null ],
-    [ "TempCount", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a137497f10530d39a31901f1ae68b4c11", null ]
+    [ "TempCount", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a137497f10530d39a31901f1ae68b4c11", null ],
+    [ "bit_field_", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a2c0b9a70223e578728163417bb7526d8", null ],
+    [ "block_", "classv8_1_1internal_1_1compiler_1_1Instruction.html#ab352e3d03ea0a7279ee371106533b8cb", null ],
+    [ "kMaxInputCount", "classv8_1_1internal_1_1compiler_1_1Instruction.html#af7eaf97100daf27ac13aa3d865e59e88", null ],
+    [ "kMaxOutputCount", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a930a334f132f75a1ec49fa3800f4f1a8", null ],
+    [ "kMaxTempCount", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a6633fd2ba6cba2934880852c9275ca95", null ],
+    [ "opcode_", "classv8_1_1internal_1_1compiler_1_1Instruction.html#ae5ebd5b196e673dfc63c7485d1c33d00", null ],
+    [ "operands_", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a69e6327dfa9e8ecf9435826c65c71dbf", null ],
+    [ "parallel_moves_", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a19eefd75c608541b6a4a5e1a0e442384", null ],
+    [ "reference_map_", "classv8_1_1internal_1_1compiler_1_1Instruction.html#a02dc592ab1f59ed6b88d6226ad32b922", null ]
 ];

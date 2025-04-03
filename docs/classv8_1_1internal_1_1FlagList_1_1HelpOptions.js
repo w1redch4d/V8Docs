@@ -7,5 +7,7 @@ var classv8_1_1internal_1_1FlagList_1_1HelpOptions =
     [ "HelpOptions", "classv8_1_1internal_1_1FlagList_1_1HelpOptions.html#a95a931cea03f6cb8962ab904ac03441e", null ],
     [ "HasUsage", "classv8_1_1internal_1_1FlagList_1_1HelpOptions.html#a3c1a14dce3cb002ca90a04c379f52108", null ],
     [ "ShouldExit", "classv8_1_1internal_1_1FlagList_1_1HelpOptions.html#accbf33fefb1b90107347ef94851a8d6a", null ],
-    [ "usage", "classv8_1_1internal_1_1FlagList_1_1HelpOptions.html#a440c111cc16814f498d8577dd902f4bd", null ]
+    [ "usage", "classv8_1_1internal_1_1FlagList_1_1HelpOptions.html#a440c111cc16814f498d8577dd902f4bd", null ],
+    [ "exit_behavior_", "classv8_1_1internal_1_1FlagList_1_1HelpOptions.html#aa693fefa2788759fda96494d220f26cf", null ],
+    [ "usage_", "classv8_1_1internal_1_1FlagList_1_1HelpOptions.html#a5223fcb442ea6e61d791f6c911b24628", null ]
 ];

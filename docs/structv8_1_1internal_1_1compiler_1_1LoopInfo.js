@@ -12,5 +12,12 @@ var structv8_1_1internal_1_1compiler_1_1LoopInfo =
     [ "mark_resumable", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html#a43b8759175baa4c674ab5078243c4f48", null ],
     [ "parent_offset", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html#a06718b85c331b84d8a1c2e659df93681", null ],
     [ "resumable", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html#a960fba1cf7f7935cef4c6391c97a67dd", null ],
-    [ "resume_jump_targets", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html#ab549408f8dbf110ae49d5d7e19e56043", null ]
+    [ "resume_jump_targets", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html#ab549408f8dbf110ae49d5d7e19e56043", null ],
+    [ "assignments_", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html#a5cebf48ddbe941da35f4b598aa78f412", null ],
+    [ "innermost_", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html#a3da3d72e185b483cce7de5057a290654", null ],
+    [ "loop_end_", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html#a902bd23c2de0f81dc06b80b8613cdaeb", null ],
+    [ "loop_start_", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html#a1e635aab909e95ac17a76b84ae34a209", null ],
+    [ "parent_offset_", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html#a72ff38c294084f4d7e7edae3cdc1ccf9", null ],
+    [ "resumable_", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html#a6246782f54d4ee0207a916d69562a496", null ],
+    [ "resume_jump_targets_", "structv8_1_1internal_1_1compiler_1_1LoopInfo.html#aa058ca06a816e349a95e0cb907bf73c7", null ]
 ];

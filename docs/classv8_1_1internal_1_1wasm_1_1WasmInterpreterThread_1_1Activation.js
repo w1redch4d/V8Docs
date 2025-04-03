@@ -1,6 +1,7 @@
 var classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation =
 [
     [ "Activation", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a556899b280289b51d12e4b1158b535c7", null ],
+    [ "CaptureStackTrace", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#aa0a5cb5df9768e7cf526d064b0e22bb9", null ],
     [ "GetCurrentFrame", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a289938b71de348e34c45ee59a43665bf", null ],
     [ "GetFramePointer", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#aefb2ced835009ab3db7b877cfc24ea3f", null ],
     [ "GetFunctionIndex", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#af0b05f574d93fb6c414c251c9919578c", null ],
@@ -12,5 +13,14 @@ var classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation =
     [ "SetCurrentActivationFrame", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a090f790b4040eda5ffc3d08db8596f1f", null ],
     [ "SetCurrentFrame", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a15ec683555b2e1d23cad0937833ec429", null ],
     [ "SetTrapped", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a7e39d6cdc69ec1365af24045755da3b2", null ],
-    [ "thread", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a352127c1f80a6bf74b44809e240d7c99", null ]
+    [ "thread", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a352127c1f80a6bf74b44809e240d7c99", null ],
+    [ "current_fp_", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#ab85fbfcccbf2c5157f4715991bfc9921", null ],
+    [ "current_frame_size_", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a585cfe6c08cd77671871672e2ed2ea54", null ],
+    [ "current_frame_state_", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#ab909c0bb9f78274d9449e8eb07e4f941", null ],
+    [ "current_ref_stack_fp_", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a16e1b87c180753413c8f989db5a267ce", null ],
+    [ "current_ref_stack_frame_size_", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a5587802ce0a0d72d51509356a8b0b3af", null ],
+    [ "frame_pointer_", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#aa20751b834dc26ea1057b84d0c9ffd5f", null ],
+    [ "thread_", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a9d912a5073bc43e270d89c177ba8531a", null ],
+    [ "trap_stack_trace_", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a22ef11c29b1dcb89a2963d6836f56a53", null ],
+    [ "wasm_runtime_", "classv8_1_1internal_1_1wasm_1_1WasmInterpreterThread_1_1Activation.html#a4a9b11141850daef608bb4439f8bb007", null ]
 ];

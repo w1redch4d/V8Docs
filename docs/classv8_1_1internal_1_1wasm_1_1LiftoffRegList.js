@@ -4,11 +4,14 @@ var classv8_1_1internal_1_1wasm_1_1LiftoffRegList =
     [ "storage_t", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a6130c2e21fdd526ec9c6ebe8fb798120", null ],
     [ "LiftoffRegList", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a83b9237a0c85c45182954a984c611ce7", null ],
     [ "LiftoffRegList", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a7ee39621074ba1d0be5cbbad5aae9d84", null ],
+    [ "LiftoffRegList", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a46f3330903cb34bd7394668a544e08da", null ],
     [ "begin", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a2f038fb43b56f02e2f1b2852ecc50742", null ],
     [ "clear", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a1e842a4ec3f1e7a3d38898b720fb69db", null ],
     [ "clear", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a2a33af7173beeff5cf02ab7087961f75", null ],
     [ "clear", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#afccd47911d0ace32208c79c7a95a44b6", null ],
     [ "end", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a9b37b37b8aa67c8d163ce5cb9e31b6fc", null ],
+    [ "FromBits", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#ae1def16345ea2ee88959cd9e5c99d4a1", null ],
+    [ "FromBits", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a5c6b41a653580a5920d217e1563bee1c", null ],
     [ "GetAdjacentFpRegsSet", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#ac0acf8fe1ecaa70cd63230d3c90dbe84", null ],
     [ "GetFirstRegSet", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#adbcf50afc84394ee021352925d364b77", null ],
     [ "GetFpList", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#aab5ce2c583f5193a70b7f77994ec4377", null ],
@@ -30,5 +33,12 @@ var classv8_1_1internal_1_1wasm_1_1LiftoffRegList =
     [ "set", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a0c16db6bdd2f272ac8ae01b35b4783bf", null ],
     [ "set", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a7e1b5ec68afc38fb4f91871c303ea73d", null ],
     [ "set", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a11adba2aaefd589fbb0710c3f09f2099", null ],
-    [ "SpreadSetBitsToAdjacentFpRegs", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#aeb7e4780b22421063506bc03719403cb", null ]
+    [ "SpreadSetBitsToAdjacentFpRegs", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#aeb7e4780b22421063506bc03719403cb", null ],
+    [ "kEvenFpSetMask", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a24789532ee6357e30d888a9e89966e96", null ],
+    [ "kFpMask", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a27209310c19f408fe933ab1fe99edc1a", null ],
+    [ "kGpMask", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#ae0d3c068d2800d4b334cd25e917ec3f8", null ],
+    [ "kOddFpSetMask", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a82247fa21daaddc88885f8afc2e9c2cd", null ],
+    [ "regs_", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a8bb3323750570a965785a07b0b2f6c70", null ],
+    [ "use_u16", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#af3ea94fccb0087ad31e82baa6248c6e6", null ],
+    [ "use_u32", "classv8_1_1internal_1_1wasm_1_1LiftoffRegList.html#a795e8f3abdef39b745f3586c4fca6e7a", null ]
 ];

@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1Expression =
 [
+    [ "IsParenthesizedField", "classv8_1_1internal_1_1Expression.html#af0efec8c5a3c8fe012b7f6fc04b4ff45", null ],
     [ "NextBitField", "classv8_1_1internal_1_1Expression.html#aee7da8c8d5eb60c6a5f67acfb7883586", null ],
     [ "Context", "classv8_1_1internal_1_1Expression.html#a04f7abd80505ef4b9e813324d2fb37a9", [
       [ "kUninitialized", "classv8_1_1internal_1_1Expression.html#a04f7abd80505ef4b9e813324d2fb37a9ae730a0312c7931e1264d93933bb99690", null ],

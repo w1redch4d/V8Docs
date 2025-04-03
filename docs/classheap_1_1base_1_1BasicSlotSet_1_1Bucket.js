@@ -9,5 +9,6 @@ var classheap_1_1base_1_1BasicSlotSet_1_1Bucket =
     [ "IsEmpty", "classheap_1_1base_1_1BasicSlotSet_1_1Bucket.html#a77ec21dd327adfaafb669d412c35ee5c", null ],
     [ "LoadCell", "classheap_1_1base_1_1BasicSlotSet_1_1Bucket.html#a770afa436ef08649257cc8a1a88073a1", null ],
     [ "SetCellBits", "classheap_1_1base_1_1BasicSlotSet_1_1Bucket.html#a0f5054454c6f872df374297e57f9a62d", null ],
-    [ "StoreCell", "classheap_1_1base_1_1BasicSlotSet_1_1Bucket.html#a89bbae46b8720cdd1f7a7d92526dd625", null ]
+    [ "StoreCell", "classheap_1_1base_1_1BasicSlotSet_1_1Bucket.html#a89bbae46b8720cdd1f7a7d92526dd625", null ],
+    [ "cells_", "classheap_1_1base_1_1BasicSlotSet_1_1Bucket.html#aeb6b0cc4028ab934595b2f599ed5ec68", null ]
 ];

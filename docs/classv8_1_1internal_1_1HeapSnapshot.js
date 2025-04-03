@@ -1,9 +1,14 @@
 var classv8_1_1internal_1_1HeapSnapshot =
 [
+    [ "ScriptId", "classv8_1_1internal_1_1HeapSnapshot.html#a9321b47c56c120e24fd75d3e79494c60", null ],
+    [ "ScriptsLineEndsMap", "classv8_1_1internal_1_1HeapSnapshot.html#ab270bfada91b2a74afdf0397839da7b6", null ],
     [ "HeapSnapshot", "classv8_1_1internal_1_1HeapSnapshot.html#a04998b24ea8049161c2a6734549a49d7", null ],
     [ "HeapSnapshot", "classv8_1_1internal_1_1HeapSnapshot.html#ab264ed52cc11a24229c03ce51e6482c1", null ],
     [ "AddEntry", "classv8_1_1internal_1_1HeapSnapshot.html#a9028b9fa71881d3260ef1b037d58d4f6", null ],
+    [ "AddGcRootsEntry", "classv8_1_1internal_1_1HeapSnapshot.html#a352aa163bfb72cca7b9751aa77b062ab", null ],
+    [ "AddGcSubrootEntry", "classv8_1_1internal_1_1HeapSnapshot.html#ac81a1c0239469687734f7b7b89c63cff", null ],
     [ "AddLocation", "classv8_1_1internal_1_1HeapSnapshot.html#a8e0861799ccc8e659cb9d0d4d285a3ef", null ],
+    [ "AddRootEntry", "classv8_1_1internal_1_1HeapSnapshot.html#a415216f94b6b5901ceea95f2ea606e89", null ],
     [ "AddScriptLineEnds", "classv8_1_1internal_1_1HeapSnapshot.html#a162186e5743ecd1fbcfae292cf046d4a", null ],
     [ "AddSyntheticRootEntries", "classv8_1_1internal_1_1HeapSnapshot.html#a0f939339bb8e7574baf78d2b059d50d1", null ],
     [ "capture_numeric_value", "classv8_1_1internal_1_1HeapSnapshot.html#ae4dfd4d51464fbe0b80145a464dc2126", null ],
@@ -26,5 +31,18 @@ var classv8_1_1internal_1_1HeapSnapshot =
     [ "Print", "classv8_1_1internal_1_1HeapSnapshot.html#a3c183f20e6935d16ec6a852cfb77b252", null ],
     [ "profiler", "classv8_1_1internal_1_1HeapSnapshot.html#a9368ab463cae71ee9e5eb1bcb18eaa81", null ],
     [ "RememberLastJSObjectId", "classv8_1_1internal_1_1HeapSnapshot.html#a728b4c7878a21901a906fca5f0880d98", null ],
-    [ "root", "classv8_1_1internal_1_1HeapSnapshot.html#a172f93598e319cf06585229e6987c201", null ]
+    [ "root", "classv8_1_1internal_1_1HeapSnapshot.html#a172f93598e319cf06585229e6987c201", null ],
+    [ "children_", "classv8_1_1internal_1_1HeapSnapshot.html#ad4d4e2c7b63db17492b7b5687dee48a4", null ],
+    [ "edges_", "classv8_1_1internal_1_1HeapSnapshot.html#a2da8c22ea85b1bdfd65a4d02da60c551", null ],
+    [ "entries_", "classv8_1_1internal_1_1HeapSnapshot.html#a6de965d71046744bc01e77675f5a6fb8", null ],
+    [ "entries_by_id_cache_", "classv8_1_1internal_1_1HeapSnapshot.html#aabd96ec996ed49322f05a04dc6b172af", null ],
+    [ "gc_roots_entry_", "classv8_1_1internal_1_1HeapSnapshot.html#ac7cfcb369d33c2ae7dcebcbed0e080f3", null ],
+    [ "gc_subroot_entries_", "classv8_1_1internal_1_1HeapSnapshot.html#ac1044942cff9f934cbc563c24bca5ebd", null ],
+    [ "locations_", "classv8_1_1internal_1_1HeapSnapshot.html#aa2a502ac70ccac7bf97419a368317374", null ],
+    [ "max_snapshot_js_object_id_", "classv8_1_1internal_1_1HeapSnapshot.html#a2e1ba8caf542c0bfc8b8f2c6d10a67db", null ],
+    [ "numerics_mode_", "classv8_1_1internal_1_1HeapSnapshot.html#a2e0ecf756cc0c9a23ecc32a36bcf70f7", null ],
+    [ "profiler_", "classv8_1_1internal_1_1HeapSnapshot.html#a57e194743619363a6a32946745513934", null ],
+    [ "root_entry_", "classv8_1_1internal_1_1HeapSnapshot.html#a4dd4277a1d462cbd8da1d010c8c85d79", null ],
+    [ "scripts_line_ends_map_", "classv8_1_1internal_1_1HeapSnapshot.html#ac2e9d11c09151007c9497ce4392ef80e", null ],
+    [ "snapshot_mode_", "classv8_1_1internal_1_1HeapSnapshot.html#a5a614e57730bba5972253bc0d44a7c55", null ]
 ];

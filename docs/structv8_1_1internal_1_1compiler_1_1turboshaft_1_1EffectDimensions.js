@@ -3,6 +3,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1EffectDimensions =
     [ "Bits", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1EffectDimensions.html#a6c683880195d5add6dce08885e534b06", null ],
     [ "EffectDimensions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1EffectDimensions.html#a41e05dc36794e2e7bd9627f67ad80c85", null ],
     [ "bits", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1EffectDimensions.html#aacc8d313978f3b1d7a97d3944f420ccf", null ],
+    [ "FromBits", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1EffectDimensions.html#a5d7febe653a330322230c0a88e42ef8b", null ],
     [ "operator!=", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1EffectDimensions.html#ac65f1948d616fdb08beff1cd4e2e9b7a", null ],
     [ "operator==", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1EffectDimensions.html#ac69ed4c1ec18c6304ded7497f42a1eb9", null ],
     [ "after_raw_heap_access", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1EffectDimensions.html#a1eabb6cfce92aa47dd473750b446ce89", null ],

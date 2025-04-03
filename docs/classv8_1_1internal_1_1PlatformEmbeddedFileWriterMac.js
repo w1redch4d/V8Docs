@@ -16,5 +16,7 @@ var classv8_1_1internal_1_1PlatformEmbeddedFileWriterMac =
     [ "IndentedDataDirective", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterMac.html#ab06aaee692a924941bd1754619ff1fd7", null ],
     [ "SectionRoData", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterMac.html#afeed3b4fd7d2bf2b847fd821402ab255", null ],
     [ "SectionText", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterMac.html#a0f7e516dbb7f507913e263397fed5ce8", null ],
-    [ "SourceInfo", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterMac.html#a9e4d6830199c9b0e281235eb9a9c61dd", null ]
+    [ "SourceInfo", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterMac.html#a9e4d6830199c9b0e281235eb9a9c61dd", null ],
+    [ "target_arch_", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterMac.html#a20554cc287f079569a57058b37381278", null ],
+    [ "target_os_", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterMac.html#a2efd6c5083e96565cf0515a14dd6c398", null ]
 ];

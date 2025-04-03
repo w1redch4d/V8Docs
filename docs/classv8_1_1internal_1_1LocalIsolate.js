@@ -13,6 +13,8 @@ var classv8_1_1internal_1_1LocalIsolate =
     [ "ExecuteMainThreadWhileParked", "classv8_1_1internal_1_1LocalIsolate.html#a2f5728011e7ab560e02be7dd8db2659c", null ],
     [ "factory", "classv8_1_1internal_1_1LocalIsolate.html#a1de9a6297474532cd46814ac04d731ed", null ],
     [ "FatalProcessOutOfHeapMemory", "classv8_1_1internal_1_1LocalIsolate.html#affac807fe9a2174614ed35330ebda7fd", null ],
+    [ "ForSandbox", "classv8_1_1internal_1_1LocalIsolate.html#a8097e176a22f9d9e72a9d701057a041e", null ],
+    [ "FromHeap", "classv8_1_1internal_1_1LocalIsolate.html#a5dffbbe8d83f1e44ea3737003a5dd563", null ],
     [ "fuzzer_rng", "classv8_1_1internal_1_1LocalIsolate.html#a0c52b4cde4bc630becbb6a6e60f4fabc", null ],
     [ "GetAndIncNextUniqueSfiId", "classv8_1_1internal_1_1LocalIsolate.html#a2b9d268e1df2c5da8f423787be6d0d06", null ],
     [ "GetMainThreadIsolateUnsafe", "classv8_1_1internal_1_1LocalIsolate.html#a4efcd078cbbde954c811cf613cd20148", null ],
@@ -21,6 +23,7 @@ var classv8_1_1internal_1_1LocalIsolate =
     [ "has_exception", "classv8_1_1internal_1_1LocalIsolate.html#a30cdf3ca0798130adbfa1155c362eab0", null ],
     [ "heap", "classv8_1_1internal_1_1LocalIsolate.html#a6c12bc9810a9e5f546c2545aaa303367", null ],
     [ "heap", "classv8_1_1internal_1_1LocalIsolate.html#ace15f298b8a94b2724ed64fb8eed5ed7", null ],
+    [ "InitializeBigIntProcessor", "classv8_1_1internal_1_1LocalIsolate.html#a819d5cde68b6a0efc257155df7e794f2", null ],
     [ "internalized_string_access", "classv8_1_1internal_1_1LocalIsolate.html#ad098ebfe4ced39fd29c9ff7b7573955a", null ],
     [ "is_main_thread", "classv8_1_1internal_1_1LocalIsolate.html#af56727abcb80bd2b539f6975e9539c6b", null ],
     [ "is_precise_binary_code_coverage", "classv8_1_1internal_1_1LocalIsolate.html#aad5b8ab2696656300ec10b9f25b0a386", null ],
@@ -49,5 +52,11 @@ var classv8_1_1internal_1_1LocalIsolate =
     [ "IsolateForPointerCompression", "classv8_1_1internal_1_1LocalIsolate.html#a88b5be144ccf307511706a0ac8ee4d08", null ],
     [ "IsolateForSandbox", "classv8_1_1internal_1_1LocalIsolate.html#ae7d983a0f877c1dfd76416d9be0765c9", null ],
     [ "LocalIsolateFactory", "classv8_1_1internal_1_1LocalIsolate.html#a377bb991fd0549b0fe074948ba4ea8ad", null ],
-    [ "v8::internal::LocalFactory", "classv8_1_1internal_1_1LocalIsolate.html#a128d1f51147cea8b44580e1c7718adb5", null ]
+    [ "v8::internal::LocalFactory", "classv8_1_1internal_1_1LocalIsolate.html#a128d1f51147cea8b44580e1c7718adb5", null ],
+    [ "bigint_processor_", "classv8_1_1internal_1_1LocalIsolate.html#a60a7221f28d33933d946c0db47dcddfa", null ],
+    [ "heap_", "classv8_1_1internal_1_1LocalIsolate.html#a3658ec10dfc1d6b2e05ca503e971450e", null ],
+    [ "isolate_", "classv8_1_1internal_1_1LocalIsolate.html#a4179ece8c2c41831c12e3793fe643264", null ],
+    [ "logger_", "classv8_1_1internal_1_1LocalIsolate.html#a305eb08fca8f88edeb4895258a3343af", null ],
+    [ "stack_limit_", "classv8_1_1internal_1_1LocalIsolate.html#a538c76de26a0707f34f9962a12b81bca", null ],
+    [ "thread_id_", "classv8_1_1internal_1_1LocalIsolate.html#aecef545b2d43b0d6049ddb65955c56a3", null ]
 ];

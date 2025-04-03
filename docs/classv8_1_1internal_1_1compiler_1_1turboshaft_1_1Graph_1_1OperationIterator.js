@@ -7,5 +7,7 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Graph_1_1OperationIterator 
     [ "operator++", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Graph_1_1OperationIterator.html#a600105420ab330ce9f82a4b29485021d", null ],
     [ "operator--", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Graph_1_1OperationIterator.html#ab64ef9e23d2d0ba1add5a17ca90313f6", null ],
     [ "operator->", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Graph_1_1OperationIterator.html#a9e12004a7c5921c076c7506d1d9da9ad", null ],
-    [ "operator==", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Graph_1_1OperationIterator.html#a5dd28aa6e99046356e7804acbacd99ec", null ]
+    [ "operator==", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Graph_1_1OperationIterator.html#a5dd28aa6e99046356e7804acbacd99ec", null ],
+    [ "graph_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Graph_1_1OperationIterator.html#a9dca2592e150988b4383a7e7562b2818", null ],
+    [ "index_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Graph_1_1OperationIterator.html#a0f3d336cfa18ed4d5bf39437ded290fb", null ]
 ];

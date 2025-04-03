@@ -13,5 +13,7 @@ var classv8_1_1internal_1_1wasm_1_1Result =
     [ "operator=", "classv8_1_1internal_1_1wasm_1_1Result.html#a057272d58d1855de1ebdc08c5aa8d3d9", null ],
     [ "operator=", "classv8_1_1internal_1_1wasm_1_1Result.html#a4944af88635d713d250e88b04d22f449", null ],
     [ "value", "classv8_1_1internal_1_1wasm_1_1Result.html#a240672d375fbd6c7c78ab96567c796e0", null ],
-    [ "value", "classv8_1_1internal_1_1wasm_1_1Result.html#a4f23066466cbb5c5f8e7b3962e642479", null ]
+    [ "value", "classv8_1_1internal_1_1wasm_1_1Result.html#a4f23066466cbb5c5f8e7b3962e642479", null ],
+    [ "error_", "classv8_1_1internal_1_1wasm_1_1Result.html#af1eef2ac1ede20acd63cf80c51376c65", null ],
+    [ "value_", "classv8_1_1internal_1_1wasm_1_1Result.html#a96db6e9dab0dcfc61e35948ea3abe2fb", null ]
 ];

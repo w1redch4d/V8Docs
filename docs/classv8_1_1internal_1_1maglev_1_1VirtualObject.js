@@ -1,6 +1,9 @@
 var classv8_1_1internal_1_1maglev_1_1VirtualObject =
 [
+    [ "DoubleArray", "structv8_1_1internal_1_1maglev_1_1VirtualObject_1_1DoubleArray.html", "structv8_1_1internal_1_1maglev_1_1VirtualObject_1_1DoubleArray" ],
     [ "List", "classv8_1_1internal_1_1maglev_1_1VirtualObject_1_1List.html", "classv8_1_1internal_1_1maglev_1_1VirtualObject_1_1List" ],
+    [ "ObjectFields", "structv8_1_1internal_1_1maglev_1_1VirtualObject_1_1ObjectFields.html", "structv8_1_1internal_1_1maglev_1_1VirtualObject_1_1ObjectFields" ],
+    [ "Base", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#aa93af3c3efa7aac26f7110f495aee6a6", null ],
     [ "Type", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a13a88154bcebf477f76108f306c338d3", [
       [ "kDefault", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a13a88154bcebf477f76108f306c338d3a85b7ee8f037be86a5fb30d7430b8930e", null ],
       [ "kHeapNumber", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a13a88154bcebf477f76108f306c338d3a168ee2b244d06addbd983ece99f23b22", null ],
@@ -30,7 +33,14 @@ var classv8_1_1internal_1_1maglev_1_1VirtualObject =
     [ "slot_count", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a902e27705e99378d05887d4986f44ebf", null ],
     [ "Snapshot", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a282d67c4dd5a68b8f4e8d6677625904b", null ],
     [ "type", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a80ee94f22ca1dd849e2d78467e6ef51a", null ],
+    [ "allocation_", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#afb1d89ce8b52fd2ab6fcff5f909aae6d", null ],
     [ "double_array_", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#aaa6af8f6eb4e2085a4b609063c90fcbe", null ],
+    [ "id_", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a9e3fb3f8ecff4217d485f7e04e240b50", null ],
+    [ "List", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a11410f630473ea69697c77ee2deb7a62", null ],
+    [ "map_", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a6c7005f3503e47ae935d621a487cc7d8", null ],
+    [ "next_", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a5844349d305d337f650c82ef5b3cf930", null ],
     [ "number_", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#aac3e1462f7af3f4714fddc0fa9c98d34", null ],
-    [ "slots_", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a3af5a18358d54b10e6b098ee8a7a6276", null ]
+    [ "slots_", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a3af5a18358d54b10e6b098ee8a7a6276", null ],
+    [ "snapshotted_", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a359eb362980425ac7581df4b2f45fb64", null ],
+    [ "type_", "classv8_1_1internal_1_1maglev_1_1VirtualObject.html#a77d3c8c154b0b6699c289ccb1a750f7f", null ]
 ];

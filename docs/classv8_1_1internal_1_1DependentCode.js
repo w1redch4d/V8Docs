@@ -13,5 +13,25 @@ var classv8_1_1internal_1_1DependentCode =
       [ "kAllocationSiteTransitionChangedGroup", "classv8_1_1internal_1_1DependentCode.html#a6ddeb27b4e6f458ce2257036e3f364aeae60f6df8660033d63ce6ba299c5af52f", null ],
       [ "kScriptContextSlotPropertyChangedGroup", "classv8_1_1internal_1_1DependentCode.html#a6ddeb27b4e6f458ce2257036e3f364aea6f51a8a00fe6fd1fdfd2e7855751a2b5", null ],
       [ "kEmptyContextExtensionGroup", "classv8_1_1internal_1_1DependentCode.html#a6ddeb27b4e6f458ce2257036e3f364aea91a08afd5daa1ec67c5ff19f92e3eda2", null ]
-    ] ]
+    ] ],
+    [ "DeoptimizeDependencyGroups", "classv8_1_1internal_1_1DependentCode.html#aa03be0b5011c6c73f1dbdf3a98c696d8", null ],
+    [ "DeoptimizeDependencyGroups", "classv8_1_1internal_1_1DependentCode.html#ac8da05d32a7e9c02c7a11456c8b0afd5", null ],
+    [ "DeoptimizeDependencyGroups", "classv8_1_1internal_1_1DependentCode.html#ae607224cd3e2eb6974203cd886f60f77", null ],
+    [ "DependencyGroupName", "classv8_1_1internal_1_1DependentCode.html#a934f45cfae0b04968d0133ca4c7d020c", null ],
+    [ "DependencyGroupToLazyDeoptReason", "classv8_1_1internal_1_1DependentCode.html#a0b942ef2b65b5d1723541f42817d1539", null ],
+    [ "empty_dependent_code", "classv8_1_1internal_1_1DependentCode.html#a4b24d15d464fe8be34264894c1ff76d2", null ],
+    [ "FillEntryFromBack", "classv8_1_1internal_1_1DependentCode.html#a493ea552af866e08012e0369e4643f07", null ],
+    [ "GetDependentCode", "classv8_1_1internal_1_1DependentCode.html#afe4632b3af597a19b83438bb646859bc", null ],
+    [ "InsertWeakCode", "classv8_1_1internal_1_1DependentCode.html#ae464115474d257b4caf652d6d051692c", null ],
+    [ "InstallDependency", "classv8_1_1internal_1_1DependentCode.html#aa3b408d35921cf4376f0abb8a947fb1d", null ],
+    [ "IterateAndCompact", "classv8_1_1internal_1_1DependentCode.html#ad36c59fdcc6f308607c8c187bc2b6e2f", null ],
+    [ "LengthFor", "classv8_1_1internal_1_1DependentCode.html#a184b75f87ba902605146a09c5cc4889f", null ],
+    [ "MarkCodeForDeoptimization", "classv8_1_1internal_1_1DependentCode.html#aeb79c9f8ca9a6d04199a211f79477170", null ],
+    [ "MarkCodeForDeoptimization", "classv8_1_1internal_1_1DependentCode.html#ad4d5c0309a75246d8cc5faa70e5db1c9", null ],
+    [ "OBJECT_CONSTRUCTORS", "classv8_1_1internal_1_1DependentCode.html#a57dc53afba10ecaafb89b59d76126eb6", null ],
+    [ "SetDependentCode", "classv8_1_1internal_1_1DependentCode.html#a16378e297804b6a64e71f64ef41822c3", null ],
+    [ "kCodeSlotOffset", "classv8_1_1internal_1_1DependentCode.html#a1606e09cf74f7347fe664452243e08cc", null ],
+    [ "kEmptyDependentCode", "classv8_1_1internal_1_1DependentCode.html#a7638d047ff3f71bef6d1b5559089f6cf", null ],
+    [ "kGroupsSlotOffset", "classv8_1_1internal_1_1DependentCode.html#abf2078246265a011cd2d2beda5765816", null ],
+    [ "kSlotsPerEntry", "classv8_1_1internal_1_1DependentCode.html#a7f0c97556b0f969edefa0ef996cc7a3a", null ]
 ];

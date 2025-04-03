@@ -21,6 +21,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimiti
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOp.html#adab7db7fe137e453b759ef38bbbee119", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOp.html#abd452b819833746dc7f8899e882546da", null ],
     [ "Validate", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOp.html#a7866f952cbae3b98441f7a4044e007cb", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOp.html#aac5ac600de0b2c2a86feadacb1af51e1", null ],
     [ "input_interpretation", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOp.html#a21c30e2697f2539363ff26048e8934b9", null ],
     [ "input_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOp.html#ade0cf280e14a62bf48a4036cf2958fd9", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOp.html#ab470faa9826818d8fa3ea0e2114534a2", null ],

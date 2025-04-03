@@ -1,6 +1,6 @@
 var dir_cfc0c72890b8d1e009b6260caa55cd65 =
 [
-    [ "allocation-tracker.cc", "allocation-tracker_8cc.html", null ],
+    [ "allocation-tracker.cc", "allocation-tracker_8cc.html", "allocation-tracker_8cc" ],
     [ "allocation-tracker.h", "allocation-tracker_8h.html", "allocation-tracker_8h" ],
     [ "circular-queue-inl.h", "circular-queue-inl_8h.html", null ],
     [ "circular-queue.h", "circular-queue_8h.html", "circular-queue_8h" ],
@@ -28,7 +28,7 @@ var dir_cfc0c72890b8d1e009b6260caa55cd65 =
     [ "symbolizer.h", "symbolizer_8h.html", "symbolizer_8h" ],
     [ "tick-sample.cc", "tick-sample_8cc.html", null ],
     [ "tick-sample.h", "tick-sample_8h.html", "tick-sample_8h" ],
-    [ "tracing-cpu-profiler.cc", "tracing-cpu-profiler_8cc.html", null ],
+    [ "tracing-cpu-profiler.cc", "tracing-cpu-profiler_8cc.html", "tracing-cpu-profiler_8cc" ],
     [ "tracing-cpu-profiler.h", "tracing-cpu-profiler_8h.html", "tracing-cpu-profiler_8h" ],
     [ "weak-code-registry.cc", "weak-code-registry_8cc.html", null ],
     [ "weak-code-registry.h", "weak-code-registry_8h.html", "weak-code-registry_8h" ]

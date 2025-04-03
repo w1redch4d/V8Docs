@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1StackGuard =
 [
+    [ "ThreadLocal", "classv8_1_1internal_1_1StackGuard_1_1ThreadLocal.html", "classv8_1_1internal_1_1StackGuard_1_1ThreadLocal" ],
     [ "InterruptFlag", "classv8_1_1internal_1_1StackGuard.html#a71190c3422ccb56cbaeed5375be65eeb", [
       [ "ALL_INTERRUPTS", "classv8_1_1internal_1_1StackGuard.html#a71190c3422ccb56cbaeed5375be65eeba4a56b1b977df6a98e56efd8c8b2e7a21", null ]
     ] ],
@@ -13,20 +14,40 @@ var classv8_1_1internal_1_1StackGuard =
     [ "address_of_interrupt_request", "classv8_1_1internal_1_1StackGuard.html#ad7a2342492253ec4bc4818c110889cb6", null ],
     [ "address_of_jslimit", "classv8_1_1internal_1_1StackGuard.html#a64bf18f10b1fef7d8191e4f8a2ab2bc1", null ],
     [ "address_of_real_jslimit", "classv8_1_1internal_1_1StackGuard.html#ac386b01202223f24137fb4787ac46e69", null ],
+    [ "ArchiveSpacePerThread", "classv8_1_1internal_1_1StackGuard.html#aca52d15703dd748210cc05932ad6ab8f", null ],
     [ "ArchiveStackGuard", "classv8_1_1internal_1_1StackGuard.html#acb831b60589eedfbe0087a9cb4260efe", null ],
+    [ "CheckInterrupt", "classv8_1_1internal_1_1StackGuard.html#af9428f94302f175104f58c9a96f5b8cc", null ],
+    [ "ClearInterrupt", "classv8_1_1internal_1_1StackGuard.html#a982f280fc152d42e4663ead6a7f846b1", null ],
     [ "climit", "classv8_1_1internal_1_1StackGuard.html#a3fc7c4f7b03f04254e545670a0708e9b", null ],
+    [ "FetchAndClearInterrupts", "classv8_1_1internal_1_1StackGuard.html#afce75a3ab88d2db4ebea23c00a51ffe3", null ],
     [ "FreeThreadResources", "classv8_1_1internal_1_1StackGuard.html#af3c0e7861b527d914570aacda023acff", null ],
     [ "HandleInterrupts", "classv8_1_1internal_1_1StackGuard.html#ab06a1511d34eb817aa707c3696c32f35", null ],
+    [ "has_pending_interrupts", "classv8_1_1internal_1_1StackGuard.html#a927406660e7194a0d25727b06b82d232", null ],
     [ "HasTerminationRequest", "classv8_1_1internal_1_1StackGuard.html#a9bcdfb41bcc23096795afb2b08783122", null ],
     [ "InitThread", "classv8_1_1internal_1_1StackGuard.html#a3738bc365765124e5a3ee6e7fe52be7b", null ],
+    [ "InterruptLevelMask", "classv8_1_1internal_1_1StackGuard.html#a7a58211301c90c107e492ca7c7856118", null ],
+    [ "Iterate", "classv8_1_1internal_1_1StackGuard.html#a350754154a35591663c894192ca5cb7c", null ],
     [ "jslimit", "classv8_1_1internal_1_1StackGuard.html#a4bea1f2e4968f6610c790bb459caa506", null ],
+    [ "jslimit_offset", "classv8_1_1internal_1_1StackGuard.html#a4ec9218f9c0c9b5a1d3ebab2ec1653cc", null ],
     [ "operator=", "classv8_1_1internal_1_1StackGuard.html#a4f14813c977c55784a00364031fcf082", null ],
+    [ "PopInterruptsScope", "classv8_1_1internal_1_1StackGuard.html#acd1a00196b6ec63d90c99d170811a17a", null ],
+    [ "PushInterruptsScope", "classv8_1_1internal_1_1StackGuard.html#ad464df776522617a278a5f2098177161", null ],
     [ "real_climit", "classv8_1_1internal_1_1StackGuard.html#a42e4c0136070320961e60b3e648b1776", null ],
     [ "real_jslimit", "classv8_1_1internal_1_1StackGuard.html#a8e958b6a54c5b3544f348b1b0ce15a89", null ],
+    [ "real_jslimit_offset", "classv8_1_1internal_1_1StackGuard.html#af374c029f39c6cb867c4ba8053ab6afb", null ],
+    [ "RequestInterrupt", "classv8_1_1internal_1_1StackGuard.html#af05fd19c43ffe3952d11a9b1be24083e", null ],
     [ "RestoreStackGuard", "classv8_1_1internal_1_1StackGuard.html#ae5e81ec252c44746fe9049c6c76afcbb", null ],
     [ "SetStackLimit", "classv8_1_1internal_1_1StackGuard.html#add078da8ff9bcd4399cab789d7695c1e", null ],
     [ "SetStackLimitForStackSwitching", "classv8_1_1internal_1_1StackGuard.html#ad01222648db42ca0cbb341fbdacfdc7d", null ],
+    [ "SetStackLimitInternal", "classv8_1_1internal_1_1StackGuard.html#ad47fa14cdf1f2c3c3042d49341315fb9", null ],
+    [ "update_interrupt_requests_and_stack_limits", "classv8_1_1internal_1_1StackGuard.html#a7a64eccc8f455c4a198ac2c82fd4c443", null ],
     [ "InterruptsScope", "classv8_1_1internal_1_1StackGuard.html#ab6a9f22bbd76a6d0783be0f113b96afc", null ],
     [ "Isolate", "classv8_1_1internal_1_1StackGuard.html#aba4f0964bdacf2bbf62cf876e5d28d0a", null ],
-    [ "StackLimitCheck", "classv8_1_1internal_1_1StackGuard.html#ad886bb634836d54ec18f36a04e2a4a3c", null ]
+    [ "StackLimitCheck", "classv8_1_1internal_1_1StackGuard.html#ad886bb634836d54ec18f36a04e2a4a3c", null ],
+    [ "isolate_", "classv8_1_1internal_1_1StackGuard.html#a022e169dbb52a0c1d1a5a3b6596070b1", null ],
+    [ "kIllegalLimit", "classv8_1_1internal_1_1StackGuard.html#ac53ef7cc7ba29d830d9745cb904302a9", null ],
+    [ "kInterruptLimit", "classv8_1_1internal_1_1StackGuard.html#a61a72c61781826b2a7f88531e431348d", null ],
+    [ "kNumberOfInterruptLevels", "classv8_1_1internal_1_1StackGuard.html#a0d63d1531e742d25624c90002dda6bda", null ],
+    [ "kSizeInBytes", "classv8_1_1internal_1_1StackGuard.html#a1864c7dfe64c2335675f1a256dab8ef1", null ],
+    [ "thread_local_", "classv8_1_1internal_1_1StackGuard.html#a86006e53263d51a22e4c5daee8b5e80b", null ]
 ];

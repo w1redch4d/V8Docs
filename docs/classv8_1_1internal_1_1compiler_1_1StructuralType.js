@@ -6,5 +6,7 @@ var classv8_1_1internal_1_1compiler_1_1StructuralType =
     [ "LengthForTesting", "classv8_1_1internal_1_1compiler_1_1StructuralType.html#a7a2ae95b270cb0a9c895801dc9a27355", null ],
     [ "Set", "classv8_1_1internal_1_1compiler_1_1StructuralType.html#ae197ff156b6de4623ecdba5b140cad0c", null ],
     [ "Shrink", "classv8_1_1internal_1_1compiler_1_1StructuralType.html#a5a56de438e75c6241c04f023e474e622", null ],
-    [ "Type", "classv8_1_1internal_1_1compiler_1_1StructuralType.html#a18dba29b4f3e91d6d2bc53472a6bb7cc", null ]
+    [ "Type", "classv8_1_1internal_1_1compiler_1_1StructuralType.html#a18dba29b4f3e91d6d2bc53472a6bb7cc", null ],
+    [ "elements_", "classv8_1_1internal_1_1compiler_1_1StructuralType.html#a058a0a1f747bc567ede06de065f71fed", null ],
+    [ "length_", "classv8_1_1internal_1_1compiler_1_1StructuralType.html#a6b4387d3bf79a6eb4da438a63e3ec935", null ]
 ];

@@ -1,6 +1,7 @@
 var assembler_ia32_8h =
 [
     [ "v8::internal::Immediate", "classv8_1_1internal_1_1Immediate.html", "classv8_1_1internal_1_1Immediate" ],
+    [ "v8::internal::Immediate::Value", "unionv8_1_1internal_1_1Immediate_1_1Value.html", "unionv8_1_1internal_1_1Immediate_1_1Value" ],
     [ "v8::internal::Operand", "classv8_1_1internal_1_1Operand.html", "classv8_1_1internal_1_1Operand" ],
     [ "v8::internal::Displacement", "classv8_1_1internal_1_1Displacement.html", "classv8_1_1internal_1_1Displacement" ],
     [ "v8::internal::Assembler", "classv8_1_1internal_1_1Assembler.html", "classv8_1_1internal_1_1Assembler" ],

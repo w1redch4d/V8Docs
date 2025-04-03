@@ -5,6 +5,7 @@ var classv8_1_1internal_1_1HeapSnapshotGenerator =
     [ "HeapSnapshotGenerator", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#ae110c1a1f83f44c23815bbe455e1433c", null ],
     [ "HeapSnapshotGenerator", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a9b7ae38190d89fbc1a9cfa31a08a37a7", null ],
     [ "AddEntry", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#af1484c2e66ebfd1bbf66c5dbd1e5e298", null ],
+    [ "FillReferences", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a66198a94726fa80496fad091fcd368ac", null ],
     [ "FindEntry", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#adc146fd422dfbc959b3200f2a3892094", null ],
     [ "FindEntry", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a26a537861ce85c1fe7b57c695b688e8a", null ],
     [ "FindOrAddEntry", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a9303e5109b84c33d63b3c86e87f5536f", null ],
@@ -12,5 +13,18 @@ var classv8_1_1internal_1_1HeapSnapshotGenerator =
     [ "GenerateSnapshot", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a5119a215e57adbedee69fde36570a0dc", null ],
     [ "GenerateSnapshotAfterGC", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a116fa422f2c57bc373d7122c202502e7", null ],
     [ "heap", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a6657d55a8d4bc885665b94fd29817431", null ],
-    [ "operator=", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a0eea6f913025c299c981de8d194997bf", null ]
+    [ "InitProgressCounter", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a79ee0b97d57595a4cbdab0c1b93e7c2d", null ],
+    [ "operator=", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a0eea6f913025c299c981de8d194997bf", null ],
+    [ "ProgressReport", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a7a8a3c968384230ed17931e675d19a02", null ],
+    [ "ProgressStep", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#aee4dac3bf199a4575e6098acc29ebb98", null ],
+    [ "control_", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#affce5f6dbacff8212026362f14f950df", null ],
+    [ "dom_explorer_", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a5795c2d13068140c384bdc4837e0ee65", null ],
+    [ "entries_map_", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a16a490edad31a0024bbfeef208f1e65a", null ],
+    [ "heap_", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#ae67eec73ab2852e5df379ed75a044162", null ],
+    [ "progress_counter_", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#aa4595c7acd2b65d1c89bc4801fa05337", null ],
+    [ "progress_total_", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a2092a8afd9bc3db3faa9b19ceae3b7f0", null ],
+    [ "smis_map_", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#ad37719c05429ffaaf5d84f14ac4d37d4", null ],
+    [ "snapshot_", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#a5a5885e3774dab3ee7beb31c0250b892", null ],
+    [ "stack_state_", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#aa3861c1a5b9c68d1b24895d232c21f36", null ],
+    [ "v8_heap_explorer_", "classv8_1_1internal_1_1HeapSnapshotGenerator.html#ae829d0c6451bf827c725a1b7672cc7b6", null ]
 ];

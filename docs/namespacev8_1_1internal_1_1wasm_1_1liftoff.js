@@ -253,6 +253,7 @@ var namespacev8_1_1internal_1_1wasm_1_1liftoff =
     [ "StoreToMemory", "namespacev8_1_1internal_1_1wasm_1_1liftoff.html#a45a81b15716cf112e06a575bc2c216ff", null ],
     [ "Sub", "namespacev8_1_1internal_1_1wasm_1_1liftoff.html#af235e0902cf4fbd4131a93f64a84552d", null ],
     [ "Xor", "namespacev8_1_1internal_1_1wasm_1_1liftoff.html#a4fc68fba13d62f020ba376f9d5a806de", null ],
+    [ "kByteRegs", "namespacev8_1_1internal_1_1wasm_1_1liftoff.html#a1bc6aefe031a11152fc27cecc3d0fdb8", null ],
     [ "kHalfStackSlotSize", "namespacev8_1_1internal_1_1wasm_1_1liftoff.html#ae36b5a92de1655749a9b92ba8e7941d8", null ],
     [ "kHighWordOffset", "namespacev8_1_1internal_1_1wasm_1_1liftoff.html#a199a8905e6ad71cd77470c2dfdce9039", null ],
     [ "kInstanceDataOperand", "namespacev8_1_1internal_1_1wasm_1_1liftoff.html#a9ab8538520579e39cb56c092a04507c8", null ],

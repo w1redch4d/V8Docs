@@ -3,6 +3,7 @@ var classv8__inspector_1_1InjectedScript_1_1Scope =
     [ "Scope", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a8072e9d02c3f098a44d752c4223b6546", null ],
     [ "~Scope", "classv8__inspector_1_1InjectedScript_1_1Scope.html#abe2bf15e5df05a950632a364d6cd1b1a", null ],
     [ "allowCodeGenerationFromStrings", "classv8__inspector_1_1InjectedScript_1_1Scope.html#ad5805baa1b036973fc9a3fef647b5d7b", null ],
+    [ "cleanup", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a89eedba04e51247abcceeb38a9f33ec9", null ],
     [ "context", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a19fb464cf9d923f0c411a109556a1b27", null ],
     [ "findInjectedScript", "classv8__inspector_1_1InjectedScript_1_1Scope.html#ace9c1643f03b948a245fd18c5ff15e22", null ],
     [ "ignoreExceptionsAndMuteConsole", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a5cfdd81520136556d441da6f12ba86a1", null ],
@@ -11,8 +12,19 @@ var classv8__inspector_1_1InjectedScript_1_1Scope =
     [ "inspector", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a335b4ec824aec7329a5fad0e8e49052b", null ],
     [ "installCommandLineAPI", "classv8__inspector_1_1InjectedScript_1_1Scope.html#aa84185aad25b80098114b396c276bb01", null ],
     [ "pretendUserGesture", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a3b8050560a48dd5de2afa15ae05b4c6d", null ],
+    [ "setPauseOnExceptionsState", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a4a7fd323a852f3756eade8e9146e8c1d", null ],
     [ "setTryCatchVerbose", "classv8__inspector_1_1InjectedScript_1_1Scope.html#adbe3cc540ec9a6a09c4b06b25c68db39", null ],
     [ "tryCatch", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a2eafb028616c31815b2f6b4dc3f632bc", null ],
+    [ "m_allowEval", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a2a12e6c330555d5cb8283a2c03dab46d", null ],
+    [ "m_commandLineAPIScope", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a2fbdbf260ba1b9dd0f86c187cc71ac9d", null ],
+    [ "m_context", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a0b70617341303ffb49c1bc7a1cc38611", null ],
+    [ "m_contextGroupId", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a1dae0ba46e68876dd45c055749a433f8", null ],
+    [ "m_handleScope", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a15421219325deb95b07e063cf8e53e56", null ],
+    [ "m_ignoreExceptionsAndMuteConsole", "classv8__inspector_1_1InjectedScript_1_1Scope.html#acba8eefb3554b5042e5e4aa5fcd5e950", null ],
     [ "m_injectedScript", "classv8__inspector_1_1InjectedScript_1_1Scope.html#adff5f2b2e976932540cef7d5634ccd85", null ],
-    [ "m_inspector", "classv8__inspector_1_1InjectedScript_1_1Scope.html#ad9031140b715c3a75ee74a6120a5a5f6", null ]
+    [ "m_inspector", "classv8__inspector_1_1InjectedScript_1_1Scope.html#ad9031140b715c3a75ee74a6120a5a5f6", null ],
+    [ "m_previousPauseOnExceptionsState", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a8f65b533ab6fe995191c073754c6d681", null ],
+    [ "m_sessionId", "classv8__inspector_1_1InjectedScript_1_1Scope.html#a08582a958e3c0b89b7d2fe2b5b299ed0", null ],
+    [ "m_tryCatch", "classv8__inspector_1_1InjectedScript_1_1Scope.html#aa97014b391041fb2e66e6de1de300058", null ],
+    [ "m_userGesture", "classv8__inspector_1_1InjectedScript_1_1Scope.html#ac5ef144e8fe289e44e47d605031f6ce7", null ]
 ];

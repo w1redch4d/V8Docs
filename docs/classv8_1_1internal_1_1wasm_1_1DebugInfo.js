@@ -18,5 +18,6 @@ var classv8_1_1internal_1_1wasm_1_1DebugInfo =
     [ "RemoveBreakpoint", "classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a8598203e0455f16604e6eb2809cdb34d", null ],
     [ "RemoveDebugSideTables", "classv8_1_1internal_1_1wasm_1_1DebugInfo.html#ad68da127ead8c18497a9a92b11f3f4d9", null ],
     [ "RemoveIsolate", "classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a2df24fac33fc9a5e4e1f58032ccbc232", null ],
-    [ "SetBreakpoint", "classv8_1_1internal_1_1wasm_1_1DebugInfo.html#ade2211ee9e1b68eabb114880b5d370a0", null ]
+    [ "SetBreakpoint", "classv8_1_1internal_1_1wasm_1_1DebugInfo.html#ade2211ee9e1b68eabb114880b5d370a0", null ],
+    [ "impl_", "classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9a2d8147b1f57b4e671ddb6bca45da32", null ]
 ];

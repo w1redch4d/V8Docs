@@ -19,6 +19,8 @@ var register_allocator_8h =
     [ "v8::internal::compiler::BundleBuilder", "classv8_1_1internal_1_1compiler_1_1BundleBuilder.html", "classv8_1_1internal_1_1compiler_1_1BundleBuilder" ],
     [ "v8::internal::compiler::RegisterAllocator", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator" ],
     [ "v8::internal::compiler::LinearScanAllocator", "classv8_1_1internal_1_1compiler_1_1LinearScanAllocator.html", "classv8_1_1internal_1_1compiler_1_1LinearScanAllocator" ],
+    [ "v8::internal::compiler::LinearScanAllocator::UnhandledLiveRangeOrdering", "structv8_1_1internal_1_1compiler_1_1LinearScanAllocator_1_1UnhandledLiveRangeOrdering.html", "structv8_1_1internal_1_1compiler_1_1LinearScanAllocator_1_1UnhandledLiveRangeOrdering" ],
+    [ "v8::internal::compiler::LinearScanAllocator::InactiveLiveRangeOrdering", "structv8_1_1internal_1_1compiler_1_1LinearScanAllocator_1_1InactiveLiveRangeOrdering.html", "structv8_1_1internal_1_1compiler_1_1LinearScanAllocator_1_1InactiveLiveRangeOrdering" ],
     [ "v8::internal::compiler::OperandAssigner", "classv8_1_1internal_1_1compiler_1_1OperandAssigner.html", "classv8_1_1internal_1_1compiler_1_1OperandAssigner" ],
     [ "v8::internal::compiler::ReferenceMapPopulator", "classv8_1_1internal_1_1compiler_1_1ReferenceMapPopulator.html", "classv8_1_1internal_1_1compiler_1_1ReferenceMapPopulator" ],
     [ "v8::internal::compiler::LiveRangeConnector", "classv8_1_1internal_1_1compiler_1_1LiveRangeConnector.html", "classv8_1_1internal_1_1compiler_1_1LiveRangeConnector" ],
@@ -43,5 +45,6 @@ var register_allocator_8h =
       [ "kRequiresSlot", "register-allocator_8h.html#a7b6df401819d405afa63acd8f105c5e2a52ab9859ec308dbd0d198cce409b209d", null ]
     ] ],
     [ "operator<<", "register-allocator_8h.html#a4cc8ca2751d420ca6e57346723de0084", null ],
-    [ "operator<<", "register-allocator_8h.html#a4343c6cb055ec2b4274edfb1ce50f3ec", null ]
+    [ "operator<<", "register-allocator_8h.html#a4343c6cb055ec2b4274edfb1ce50f3ec", null ],
+    [ "kUnassignedRegister", "register-allocator_8h.html#a5514165439c07930304e4a7f06d091fb", null ]
 ];

@@ -7,6 +7,7 @@ var classv8_1_1internal_1_1CommonFrameWithJSLinkage =
     [ "GetParameter", "classv8_1_1internal_1_1CommonFrameWithJSLinkage.html#acf1b8c55ece6c0ffbea1248e264c7b56", null ],
     [ "GetParameters", "classv8_1_1internal_1_1CommonFrameWithJSLinkage.html#a8b56b8867f75878c1ed0851c553425d0", null ],
     [ "GetParameterSlot", "classv8_1_1internal_1_1CommonFrameWithJSLinkage.html#a2824045ae7dbcb75ff5ab74affe77cc8", null ],
+    [ "IsConstructFrame", "classv8_1_1internal_1_1CommonFrameWithJSLinkage.html#ab787744c0f1291df0e241c1aa52c1078", null ],
     [ "IsConstructor", "classv8_1_1internal_1_1CommonFrameWithJSLinkage.html#a7b269683cfac557e79a44e0d22f0e0b3", null ],
     [ "LookupExceptionHandlerInTable", "classv8_1_1internal_1_1CommonFrameWithJSLinkage.html#a9e7ee17d94a0fe6400ea25e5333ee4b9", null ],
     [ "receiver", "classv8_1_1internal_1_1CommonFrameWithJSLinkage.html#ae931a1d1b6049e0c1587c886818e4cdf", null ],

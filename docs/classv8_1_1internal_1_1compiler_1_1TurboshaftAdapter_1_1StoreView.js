@@ -13,5 +13,7 @@ var classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1StoreView =
     [ "operator node_t", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1StoreView.html#a0fa78f9132c2e97204217dc5dd9f0258", null ],
     [ "stored_rep", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1StoreView.html#adf33f1e0dae93b2a10c5b4d933030175", null ],
     [ "ts_stored_rep", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1StoreView.html#a79e75b2e3d624530ce99175f3a08370e", null ],
-    [ "value", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1StoreView.html#a94e66a14c02cd403018a7d30410f0dd8", null ]
+    [ "value", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1StoreView.html#a94e66a14c02cd403018a7d30410f0dd8", null ],
+    [ "node_", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1StoreView.html#adc75a587e0727517e51e72d17af2eaae", null ],
+    [ "op_", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1StoreView.html#a855f3a9ce27f4f0be08331a25d856caa", null ]
 ];

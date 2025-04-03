@@ -1,9 +1,9 @@
 var objects_inl_8h =
 [
-    [ "v8::internal::CastTraits< Union< T... > >", "structv8_1_1internal_1_1CastTraits_3_01Union_3_01T_8_8_8_01_4_01_4.html", null ],
-    [ "v8::internal::CastTraits< JSPrimitive >", "structv8_1_1internal_1_1CastTraits_3_01JSPrimitive_01_4.html", null ],
-    [ "v8::internal::CastTraits< JSAny >", "structv8_1_1internal_1_1CastTraits_3_01JSAny_01_4.html", null ],
-    [ "v8::internal::CastTraits< FieldType >", "structv8_1_1internal_1_1CastTraits_3_01FieldType_01_4.html", null ],
+    [ "v8::internal::CastTraits< Union< T... > >", "structv8_1_1internal_1_1CastTraits_3_01Union_3_01T_8_8_8_01_4_01_4.html", "structv8_1_1internal_1_1CastTraits_3_01Union_3_01T_8_8_8_01_4_01_4" ],
+    [ "v8::internal::CastTraits< JSPrimitive >", "structv8_1_1internal_1_1CastTraits_3_01JSPrimitive_01_4.html", "structv8_1_1internal_1_1CastTraits_3_01JSPrimitive_01_4" ],
+    [ "v8::internal::CastTraits< JSAny >", "structv8_1_1internal_1_1CastTraits_3_01JSAny_01_4.html", "structv8_1_1internal_1_1CastTraits_3_01JSAny_01_4" ],
+    [ "v8::internal::CastTraits< FieldType >", "structv8_1_1internal_1_1CastTraits_3_01FieldType_01_4.html", "structv8_1_1internal_1_1CastTraits_3_01FieldType_01_4" ],
     [ "v8::internal::CastTraits< Managed< T > >", "structv8_1_1internal_1_1CastTraits_3_01Managed_3_01T_01_4_01_4.html", null ],
     [ "v8::internal::CastTraits< TrustedManaged< T > >", "structv8_1_1internal_1_1CastTraits_3_01TrustedManaged_3_01T_01_4_01_4.html", null ],
     [ "v8::internal::CastTraits< PodArray< T > >", "structv8_1_1internal_1_1CastTraits_3_01PodArray_3_01T_01_4_01_4.html", null ],
@@ -88,5 +88,8 @@ var objects_inl_8h =
     [ "IsSpecialReceiverMap", "objects-inl_8h.html#a529e657bacb0631661f387dba3b5a652", null ],
     [ "IsTaggedIndex", "objects-inl_8h.html#ac572dcb30a0acc2f4b94ec2379eee850", null ],
     [ "IsZero", "objects-inl_8h.html#a63ccd7d7bd45b21cd6747a0ddd2d47ad", null ],
+    [ "MakeEntryPair", "objects-inl_8h.html#a6cbe1fe5e81a51b9b211ba8bd3d3f09e", null ],
+    [ "MakeEntryPair", "objects-inl_8h.html#a418c4d76653a31a5ec81b0a49afb1e74", null ],
+    [ "ObjectAddressForHashing", "objects-inl_8h.html#aba864955f64f743c98ac6827ddc7da9f", null ],
     [ "OutsideSandboxOrInReadonlySpace", "objects-inl_8h.html#a75f4278f5c28aa5f7fe4b8a5a38456c9", null ]
 ];

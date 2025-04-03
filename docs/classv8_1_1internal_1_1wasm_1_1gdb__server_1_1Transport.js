@@ -12,6 +12,7 @@ var classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Transport =
     [ "buf_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Transport.html#a2b2ff61a46356824de84d5056040f7bc", null ],
     [ "handle_accept_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Transport.html#a7b8e6e3ab148e555d781eb3905ab9895", null ],
     [ "handle_bind_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Transport.html#acf2e4f277c92086af18133386d2cbb8d", null ],
+    [ "kBufSize", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Transport.html#aeb8a7833daa841026eb45e6d939a8a8f", null ],
     [ "pos_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Transport.html#ab5f3135217af190da164ceda586c05b4", null ],
     [ "size_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Transport.html#a05f589b07c15a6ced385b269322c2909", null ]
 ];

@@ -1,5 +1,6 @@
 var structv8_1_1internal_1_1maglev_1_1detail_1_1FunctionArgumentsTupleHelper_3_01R_07C_1_1_5_08_07A_8_8_8_08_01const_01_4 =
 [
     [ "FunctionPointer", "structv8_1_1internal_1_1maglev_1_1detail_1_1FunctionArgumentsTupleHelper_3_01R_07C_1_1_5_08_07A_8_8_8_08_01const_01_4.html#a93d5c79b51c1ad6997af1424b3e7d66a", null ],
-    [ "Tuple", "structv8_1_1internal_1_1maglev_1_1detail_1_1FunctionArgumentsTupleHelper_3_01R_07C_1_1_5_08_07A_8_8_8_08_01const_01_4.html#aecce417b65f06eb5b2888605151eba14", null ]
+    [ "Tuple", "structv8_1_1internal_1_1maglev_1_1detail_1_1FunctionArgumentsTupleHelper_3_01R_07C_1_1_5_08_07A_8_8_8_08_01const_01_4.html#aecce417b65f06eb5b2888605151eba14", null ],
+    [ "kSize", "structv8_1_1internal_1_1maglev_1_1detail_1_1FunctionArgumentsTupleHelper_3_01R_07C_1_1_5_08_07A_8_8_8_08_01const_01_4.html#aeda1515ec302aa896717b13fe5e21691", null ]
 ];

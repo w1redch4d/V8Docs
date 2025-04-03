@@ -10,6 +10,7 @@ var conversions_8cc =
     [ "BigIntLiteral", "conversions_8cc.html#a5c6cd52d29b1702862607c7e6f87c1bd", null ],
     [ "BigIntLiteralToDecimal", "conversions_8cc.html#afaca811e9d3f0deb233413dc4dacd8f4", null ],
     [ "BinaryStringToDouble", "conversions_8cc.html#a7115cac3559d1bc540f1d7f062c664bf", null ],
+    [ "CreateExponentialRepresentation", "conversions_8cc.html#a4ce1242cd13d12812dc19c55c9b9e625", null ],
     [ "DoubleToExponentialStringView", "conversions_8cc.html#a833665896ef7ac47ea7ecd26aea3b97c", null ],
     [ "DoubleToFixedStringView", "conversions_8cc.html#ae27e762b16a752bd14572e714fbe312d", null ],
     [ "DoubleToFloat32_NoInline", "conversions_8cc.html#aab1caac71305ee0a9ecb668a0485ee4a", null ],

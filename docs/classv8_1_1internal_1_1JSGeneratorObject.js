@@ -10,5 +10,7 @@ var classv8_1_1internal_1_1JSGeneratorObject =
     [ "is_closed", "classv8_1_1internal_1_1JSGeneratorObject.html#aaa3ce743854de6a923834439b6c1ea03", null ],
     [ "is_executing", "classv8_1_1internal_1_1JSGeneratorObject.html#a5082c9be962a28e7c8a1ea8a7744e5cb", null ],
     [ "is_suspended", "classv8_1_1internal_1_1JSGeneratorObject.html#a4da012c3e89635903d39c19721da2779", null ],
-    [ "source_position", "classv8_1_1internal_1_1JSGeneratorObject.html#a20178277ce0d26b2cf30c40c70f5edbe", null ]
+    [ "source_position", "classv8_1_1internal_1_1JSGeneratorObject.html#a20178277ce0d26b2cf30c40c70f5edbe", null ],
+    [ "kGeneratorClosed", "classv8_1_1internal_1_1JSGeneratorObject.html#a305bc269946a338f1232f4268392fa05", null ],
+    [ "kGeneratorExecuting", "classv8_1_1internal_1_1JSGeneratorObject.html#a3b515123f771dc8d61065ded67f7f1f9", null ]
 ];

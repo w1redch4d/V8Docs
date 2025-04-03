@@ -8,6 +8,8 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadOp =
     [ "index", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadOp.html#a58c902be77047080298648354274c426", null ],
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadOp.html#a30d126fdc6e37dea8ea495a728f7a6f0", null ],
     [ "machine_type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadOp.html#a0fb79697e9afa81bd4779fe00a56b069", null ],
+    [ "New", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadOp.html#a98259f89729e0f40a746852a321c233a", null ],
+    [ "OffsetIsValid", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadOp.html#a657cd64833ceb5087bcb5efca9342df8", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadOp.html#a3902d8328b20b91612218a878b11ad16", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadOp.html#a01b93620e40851cf24d14c7cdcee1a8d", null ],
     [ "PrintInputs", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadOp.html#a94ca9b13888bf0abc3a081d789be48e3", null ],

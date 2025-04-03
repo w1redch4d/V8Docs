@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1WasmTrustedInstanceData =
 [
+    [ "CopyTableEntries", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#ad5fa0df8fba113e186afd8a1b10b8161", null ],
     [ "DECL_PROTECTED_POINTER_ACCESSORS", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a616539ac75427d425f851a66a78fa910", null ],
     [ "DECL_PROTECTED_POINTER_ACCESSORS", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#aa41bdedb922a2b8b7f8e783ddad3a334", null ],
     [ "dispatch_table", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#aa77b539327db808a03509190170d5404", null ],
@@ -7,14 +8,24 @@ var classv8_1_1internal_1_1WasmTrustedInstanceData =
     [ "GetGlobalBufferAndIndex", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a2b52a6afd836b6b563383e787d3131e7", null ],
     [ "GetGlobalStorage", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a7558971c5572009784c8a45e25033bdc", null ],
     [ "GetGlobalValue", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#abc9dc826c0283941be4d1e6cfa9371d3", null ],
+    [ "GetOrCreateFuncRef", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a743dd82b5a2b1a0664b5fda8d6b50a53", null ],
     [ "has_dispatch_table", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#af9e47a0955857d9d480d508239791c6b", null ],
+    [ "InitDataSegmentArrays", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a74e85e919dddc266cc1d846849aec50a", null ],
+    [ "InitTableEntries", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a3559cff5510ccf662c3e1f550de408c2", null ],
     [ "memory_base", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a675ac2c9a20e5ca6de5690461423a07a", null ],
     [ "memory_object", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#ad5a80cd6f0317dfbd5ccf63c79482450", null ],
     [ "memory_size", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a5ffd9de7f743ceb78a03c461ee247b30", null ],
     [ "module", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#abe17aad860c7790fe78f65cae8e64d29", null ],
     [ "module_object", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a50285bb0cb1b1cf4b3c6cb146f73eecb", null ],
     [ "native_module", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a1712b5e555cfe7c555c1167b74a0c81a", null ],
+    [ "New", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#aa9358c42d89b73872bf663ca701ea50f", null ],
     [ "OBJECT_CONSTRUCTORS", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#ad79a7583df5d47e3daf85c19a2012986", null ],
     [ "SetRawMemory", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a3b10b49e542f346ba14702828af547c0", null ],
-    [ "try_get_func_ref", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a6a3c772c7795f345d71f35b3cac43d45", null ]
+    [ "try_get_func_ref", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a6a3c772c7795f345d71f35b3cac43d45", null ],
+    [ "kProtectedFieldNames", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a570376cd95bb723fb0a30b9e1e0ebc0d", null ],
+    [ "kProtectedFieldOffsets", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a6d40ff595b69eb36026f3ec8d1a35fac", null ],
+    [ "kTaggedFieldNames", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#a82e0d67b495b3d12886e1491a43cdb24", null ],
+    [ "kTaggedFieldOffsets", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#aabf57a672c88fe7c988311cd560a37d1", null ],
+    [ "kTaggedFieldsCount", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#aaedf2ec93418f82037ad7ef660b9f0a5", null ],
+    [ "kWasmInterpreterAdditionalFields", "classv8_1_1internal_1_1WasmTrustedInstanceData.html#ad169caebc15b6c65ab08d8c6a087831d", null ]
 ];

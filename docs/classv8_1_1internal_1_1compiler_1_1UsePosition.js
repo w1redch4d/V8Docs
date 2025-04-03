@@ -1,12 +1,18 @@
 var classv8_1_1internal_1_1compiler_1_1UsePosition =
 [
     [ "Ordering", "structv8_1_1internal_1_1compiler_1_1UsePosition_1_1Ordering.html", "structv8_1_1internal_1_1compiler_1_1UsePosition_1_1Ordering" ],
+    [ "AssignedRegisterField", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#ac1c0b032a6ff308234bb5a6361c6d937", null ],
+    [ "HintTypeField", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a98b86629952166dc4ae7eb895d482e2c", null ],
+    [ "RegisterBeneficialField", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a44c140de9ef351329b1cd8a4f8c122db", null ],
+    [ "SpillDetrimentalField", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#aab546e512888884a8b217b6aafe601ec", null ],
+    [ "TypeField", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a0513c373438e734e920a179ab7f10341", null ],
     [ "UsePosition", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a09f93db85bda57ad1eadbea6730fb561", null ],
     [ "UsePosition", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a7f6e43bcd54a35274a69fad9b6b5c63e", null ],
     [ "HasHint", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#adcd6d6bba972035c2620f45c4eca10b2", null ],
     [ "HasOperand", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a5bd736652321839daf999518a5bd5ec3", null ],
     [ "hint_type", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a584349d6713eaad018390d5f2d3b275d", null ],
     [ "HintRegister", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a1932b3af680cb198fe8dc5fd81efe631", null ],
+    [ "HintTypeForOperand", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a7dac7388e373c36e922dd3dde55dccf3", null ],
     [ "IsResolved", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#aa86a5b3cdaca01569b1d1a18c054d2d1", null ],
     [ "operand", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a1ee3d50a19d17dc175b9db35d23c9724", null ],
     [ "operator=", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a28843c40a18b08b3501f9dec427c9618", null ],
@@ -18,5 +24,9 @@ var classv8_1_1internal_1_1compiler_1_1UsePosition =
     [ "set_type", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a97e321bd8c3a1b4cd7082ffd790cb5c1", null ],
     [ "SetHint", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#aaf756ac5ad8ad040426b9c74465a4e1b", null ],
     [ "SpillDetrimental", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a4985143f8ecf1771c707ec432216f746", null ],
-    [ "type", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#adb8398b5cc61c66c3d71279e1c27c661", null ]
+    [ "type", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#adb8398b5cc61c66c3d71279e1c27c661", null ],
+    [ "flags_", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#aa3c0c6912c9475312bf608d38e37df53", null ],
+    [ "hint_", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a42f60d27bb855b4f1d74a6ef637f2f3d", null ],
+    [ "operand_", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a855869caebafc1af61892f1ac1b95b82", null ],
+    [ "pos_", "classv8_1_1internal_1_1compiler_1_1UsePosition.html#a95501ad115a667e3ba4607989fb10080", null ]
 ];

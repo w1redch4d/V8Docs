@@ -15,5 +15,7 @@ var classv8_1_1internal_1_1wasm_1_1WasmEHData =
     [ "SetCaughtException", "classv8_1_1internal_1_1wasm_1_1WasmEHData.html#afcd9d0d7855a7db494d56214793718f1", null ],
     [ "catch_blocks_", "classv8_1_1internal_1_1wasm_1_1WasmEHData.html#a2412c2874f38f21f27946d713859b0ec", null ],
     [ "code_trycatch_map_", "classv8_1_1internal_1_1wasm_1_1WasmEHData.html#a9ddd9c7797ceee6df6c61303e43f700c", null ],
+    [ "kCatchAllTagIndex", "classv8_1_1internal_1_1wasm_1_1WasmEHData.html#a1929dc69832fe743ee438e28a22394d9", null ],
+    [ "kDelegateToCallerIndex", "classv8_1_1internal_1_1wasm_1_1WasmEHData.html#ab12e1d53fa827791a770adf8ba2f8be0", null ],
     [ "try_blocks_", "classv8_1_1internal_1_1wasm_1_1WasmEHData.html#aa99b31a5b7bb91657b783d891182af0c", null ]
 ];

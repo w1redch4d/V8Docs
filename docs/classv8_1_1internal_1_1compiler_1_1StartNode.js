@@ -11,5 +11,8 @@ var classv8_1_1internal_1_1compiler_1_1StartNode =
     [ "LastOutputIndex", "classv8_1_1internal_1_1compiler_1_1StartNode.html#ac1762cf02fbc14e0d63bc349a39cc55c", null ],
     [ "LastParameterIndex_MaybeNonStandardLayout", "classv8_1_1internal_1_1compiler_1_1StartNode.html#aaa2527a754e43f68505f34bf0480cba0", null ],
     [ "NewTargetOutputIndex", "classv8_1_1internal_1_1compiler_1_1StartNode.html#a79c6650ff273c17b25ff45f1c804195c", null ],
-    [ "NewTargetParameterIndex", "classv8_1_1internal_1_1compiler_1_1StartNode.html#a307f8e07ab7dad488e1d7990f47f99c2", null ]
+    [ "NewTargetParameterIndex", "classv8_1_1internal_1_1compiler_1_1StartNode.html#a307f8e07ab7dad488e1d7990f47f99c2", null ],
+    [ "OutputArityForFormalParameterCount", "classv8_1_1internal_1_1compiler_1_1StartNode.html#a8e6a4ef330c86718e1622ed044af06d4", null ],
+    [ "kExtraOutputCount", "classv8_1_1internal_1_1compiler_1_1StartNode.html#a14f0f39d82393eeebb199afe596c51f0", null ],
+    [ "kReceiverOutputCount", "classv8_1_1internal_1_1compiler_1_1StartNode.html#ad5a5632921e156150009edda769e976a", null ]
 ];

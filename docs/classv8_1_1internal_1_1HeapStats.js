@@ -7,6 +7,8 @@ var classv8_1_1internal_1_1HeapStats =
     [ "free_global_handle_count", "classv8_1_1internal_1_1HeapStats.html#a9acb362dae5d400e082898f78ebccf16", null ],
     [ "global_handle_count", "classv8_1_1internal_1_1HeapStats.html#ae91d1cc88be15308334409dc63255f6f", null ],
     [ "js_stacktrace", "classv8_1_1internal_1_1HeapStats.html#ae0cc8db0b9dd4d309c4aa89c083a656e", null ],
+    [ "kEndMarker", "classv8_1_1internal_1_1HeapStats.html#a615e1138a3309a8a1a875f9aa93bf0ee", null ],
+    [ "kStartMarker", "classv8_1_1internal_1_1HeapStats.html#a205765088d14ac30ada403e983dc12da", null ],
     [ "last_few_messages", "classv8_1_1internal_1_1HeapStats.html#aa213d3ff3ede753af944d06fa726c668", null ],
     [ "lo_space_size", "classv8_1_1internal_1_1HeapStats.html#a94dada2b68cc423f2bf5a2342ae551a2", null ],
     [ "malloced_memory", "classv8_1_1internal_1_1HeapStats.html#adb741b85054ae6121ecfebe89c496a58", null ],

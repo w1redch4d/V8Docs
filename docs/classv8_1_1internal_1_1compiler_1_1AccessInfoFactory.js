@@ -1,10 +1,27 @@
 var classv8_1_1internal_1_1compiler_1_1AccessInfoFactory =
 [
     [ "AccessInfoFactory", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#a35a555b2b854114ef37654c1d5c485ad", null ],
+    [ "AccessInfoFactory", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#aaae31e46c1d4f1d472d74eae38f2d303", null ],
+    [ "broker", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#a7c982d6722d7803ecc30e54db5c5571c", null ],
+    [ "ComputeAccessorDescriptorAccessInfo", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#afb212cb2cdfc9934bde5f635004bc289", null ],
+    [ "ComputeDataFieldAccessInfo", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#abe29e9a90523f8fef46d2de4d1363ffe", null ],
     [ "ComputeDictionaryProtoAccessInfo", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#a8d61a7948b2999a224c4fae781c66830", null ],
     [ "ComputeElementAccessInfo", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#ab5af3e9c28061ca139e22137a9150adf", null ],
     [ "ComputeElementAccessInfos", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#a0eae3cccdc1af9cf2456ab5be58673a1", null ],
     [ "ComputePropertyAccessInfo", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#aaef14b874baf1bceefdcb720b20c067d", null ],
+    [ "ConsolidateElementLoad", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#a3f9caebd92a887178ad4945427c50790", null ],
+    [ "dependencies", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#afb9a238eb5f90408e6b3d04eb11c7dbf", null ],
     [ "FinalizePropertyAccessInfos", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#a4bcdc2608e1fae5ef52a9e4c8eed8dd3", null ],
-    [ "FinalizePropertyAccessInfosAsOne", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#aacedd013de90abc10d7cf75f0f4ef0ab", null ]
+    [ "FinalizePropertyAccessInfosAsOne", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#aacedd013de90abc10d7cf75f0f4ef0ab", null ],
+    [ "Invalid", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#aab2603a8d5cbc71396229456b6333b23", null ],
+    [ "isolate", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#af00a8a4dc49ae951a765df7ece4a79a1", null ],
+    [ "LookupSpecialFieldAccessor", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#aa2095fa92e92b23077ac63d0c3bd4934", null ],
+    [ "LookupTransition", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#a4166e59d312215f9067b56588d3f87cc", null ],
+    [ "MergePropertyAccessInfos", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#aaa50bc55bb494192be6fd9e20b2807b7", null ],
+    [ "operator=", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#ab27c6b9a02b3109f92f6586dfa9c734a", null ],
+    [ "TryLoadPropertyDetails", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#aa561a1c49df27731e9673478538464f4", null ],
+    [ "zone", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#a73809169b89a23e6a079ffc3ff79a374", null ],
+    [ "broker_", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#a6eaf0ca25b1d88c88569cac72d40a76b", null ],
+    [ "type_cache_", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#a767d314628250835f854ce6b156f9c94", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1AccessInfoFactory.html#a0b2cd82eee5d3dd62c56b47ff1f0e144", null ]
 ];

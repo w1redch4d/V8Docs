@@ -20,5 +20,6 @@ var handles_8h =
     [ "indirect_handle", "handles_8h.html#a2bb82c5ace5d6a2ae7fc4f356dcaae92", null ],
     [ "operator<<", "handles_8h.html#a5bcf64c1b9cb00cbeeba691afe65d0d0", null ],
     [ "operator<<", "handles_8h.html#a605bbd66c481a60d243fee705c8c63f8", null ],
+    [ "is_direct_handle_v", "handles_8h.html#ac64a4aab23a8524723643a53256e5294", null ],
     [ "kTaggedNullAddress", "handles_8h.html#a175c065c1245d42fdbd4a853993be670", null ]
 ];

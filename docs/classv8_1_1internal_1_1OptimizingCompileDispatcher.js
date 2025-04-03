@@ -1,17 +1,36 @@
 var classv8_1_1internal_1_1OptimizingCompileDispatcher =
 [
     [ "CompileTask", "classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html", "classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask" ],
+    [ "ModeFlag", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#abda1adc399a9d61f642cc1cd82242564", [
+      [ "COMPILE", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#abda1adc399a9d61f642cc1cd82242564a99af9ab876b8c224f75ed7b72220ed3c", null ],
+      [ "FLUSH", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#abda1adc399a9d61f642cc1cd82242564adfc4b2aa5dfab1c75484a947aa2d6078", null ]
+    ] ],
     [ "OptimizingCompileDispatcher", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ab800eba82ee31785da6ea1adddeec0be", null ],
     [ "~OptimizingCompileDispatcher", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ab71247caa09e63efbf21bfc83a5b6c37", null ],
     [ "AwaitCompileTasks", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a9d053d3ff089fe529f83a54b5da4ad94", null ],
+    [ "CompileNext", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a3aebf8e49822a3d67e0a69e218233643", null ],
+    [ "Enabled", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a5242d544a43212fa6496ef4e3441b050", null ],
     [ "finalize", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#af49de09d80b6310da952055984b60271", null ],
     [ "Flush", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a3482c1a41548633dc036c0aea4ba6cbb", null ],
+    [ "FlushInputQueue", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a0f003581e59805dc305cc701c42a9ed0", null ],
+    [ "FlushOutputQueue", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#abe1743b1a1cea04679ac918201263266", null ],
+    [ "FlushQueues", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a45c1f475951c95dbfaa5190af5fc098d", null ],
     [ "HasJobs", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a4e600bb05ff4b8aad0323dad2b18c612", null ],
     [ "InstallGeneratedBuiltins", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a5680c35a7c6c5737b562c71703f93341", null ],
     [ "InstallOptimizedFunctions", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a6a2f2d6c43028b6474396c576df12083", null ],
     [ "IsQueueAvailable", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#aa067df152012a6dfb1a33ca7b0ce4e01", null ],
+    [ "NextInput", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ac68d41703274dcc9d8021b3df60ae764", null ],
     [ "Prioritize", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ab319f8e43e0dc4290a71f1795911c311", null ],
     [ "QueueForOptimization", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ad4c9e18bce0d13b7a98b1babd0ea249f", null ],
     [ "set_finalize", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae74de2e7a3843014a0197c03aff46c56", null ],
-    [ "Stop", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a8b5292a016e4a78386d021b00a40204d", null ]
+    [ "Stop", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a8b5292a016e4a78386d021b00a40204d", null ],
+    [ "finalize_", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a46619b9f214bdd1bb804cfdda312b599", null ],
+    [ "input_queue_", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae383c19a579fb14b883c27d4c6c0290c", null ],
+    [ "isolate_", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a4f878d577357a51ad07c7636b660e0f7", null ],
+    [ "job_handle_", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae1cecdc7968b5f67189415c0a6bbaba8", null ],
+    [ "kEfficiencyTaskPriority", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a63b1d1639bfebfb45d7aa069bc01778d", null ],
+    [ "kTaskPriority", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a5f55aaa00a805aad3deef732254fa8fe", null ],
+    [ "output_queue_", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a9be8e3a0bd8b3502e19d0d1c662dc1ec", null ],
+    [ "output_queue_mutex_", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a9dbe86ca42f82c4a7c90d3387e3a69b9", null ],
+    [ "recompilation_delay_", "classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a3186513b543f53ca9d43490c669e6a09", null ]
 ];

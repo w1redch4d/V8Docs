@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin =
 [
+    [ "Base", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#a148102d600f7e9c7a8ef99c45fad4312", null ],
     [ "CallCPPBuiltin", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#aa067991f02c5deb0ccae4ec51df355a2", null ],
     [ "arg", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#a28643f2d9e43fb20675d0c2de52237b8", null ],
     [ "args", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#a2622aa004c02fd62be52866b458f4c30", null ],
@@ -16,5 +17,12 @@ var classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin =
     [ "SetValueLocationConstraints", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#af95a4c3885ccd946dbe198d1ab54815c", null ],
     [ "target", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#a00e17b2ae1dbd569b055a945df7c88da", null ],
     [ "target", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#a2118e42b87743c5de12bf7b6433241ec", null ],
-    [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#a966b3b7f2d3b9bc299acf0c40f120fa8", null ]
+    [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#a966b3b7f2d3b9bc299acf0c40f120fa8", null ],
+    [ "builtin_", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#a4508aed140905fd69d5fede32b5f932a", null ],
+    [ "kCEntry_Builtin", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#afd2ebf8a70cb57b0aefb7d5b9eadc3e3", null ],
+    [ "kContextIndex", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#aa4f2300a22eb96637bc86447e1cb4b04", null ],
+    [ "kFixedInputCount", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#ac082e9617b62513070686777a367b573", null ],
+    [ "kNewTargetIndex", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#add08ca4cd0f205744914b035f304f362", null ],
+    [ "kProperties", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#a01429b1c30710aa97a663bc1115630a3", null ],
+    [ "kTargetIndex", "classv8_1_1internal_1_1maglev_1_1CallCPPBuiltin.html#ad0f28bc12e9549ad0d88e3fd3c3c1af3", null ]
 ];

@@ -8,6 +8,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor =
     [ "CopyFastSmiOrObjectElements", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CopyFastSmiOrObjectElements.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CopyFastSmiOrObjectElements" ],
     [ "CreateFunctionContext", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CreateFunctionContext.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1CreateFunctionContext" ],
     [ "DebugPrint", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1DebugPrint.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1DebugPrint" ],
+    [ "Descriptor", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1Descriptor" ],
     [ "FastNewClosure", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1FastNewClosure.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1FastNewClosure" ],
     [ "FindOrderedHashEntry", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1FindOrderedHashEntry.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1FindOrderedHashEntry" ],
     [ "GrowFastElements", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1GrowFastElements.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor_1_1GrowFastElements" ],
@@ -40,9 +41,12 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor =
     [ "FindOrderedHashSetEntry", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html#a921213346833aed09db85835d76ae2da", null ],
     [ "GrowFastDoubleElements", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html#a10d9b7d1ac7acff44fe92c872b1e5fd6", null ],
     [ "GrowFastSmiOrObjectElements", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html#a5ce5213624d0bf8f24a7d4894f132a31", null ],
+    [ "Never", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html#adafcb9c5c0d13d226ca350175ce9dfc8", null ],
     [ "NewRestArgumentsElements", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html#a510e507275e3bc334054c65680ad9924", null ],
     [ "NewSloppyArgumentsElements", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html#a9763bf21745ce1fbd3a917e870ab434b", null ],
     [ "NewStrictArgumentsElements", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html#a2ba36edcbe9523819df2129de150fc7d", null ],
     [ "StringLessThan", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html#a3b5d627ef4ebf304a05b75760b9f9288", null ],
-    [ "StringLessThanOrEqual", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html#a5dc775006e2d08c042502a122e41a85b", null ]
+    [ "StringLessThanOrEqual", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html#a5dc775006e2d08c042502a122e41a85b", null ],
+    [ "Void", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html#aa32ee51dc0fcdf53db7675a82fa5e1eb", null ],
+    [ "base_effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinCallDescriptor.html#abf3462360e182a3684301ffe4417949e", null ]
 ];

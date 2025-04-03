@@ -50,6 +50,7 @@ var instance_type_8h =
       [ "kSlicedStringTag", "instance-type_8h.html#a1dcd1c70913dd4654f57126302d602f3ad20b0b337d27d5c026040a5ddde26056", null ],
       [ "kThinStringTag", "instance-type_8h.html#a1dcd1c70913dd4654f57126302d602f3a50a3631077e22994ea698506529181d0", null ]
     ] ],
+    [ "IsShortcutCandidate", "instance-type_8h.html#a7f1715652054fbabe5af5b3a376ecd91", null ],
     [ "operator<<", "instance-type_8h.html#a586cf3b32468e70bd7267ad157f48e10", null ],
     [ "ToString", "instance-type_8h.html#a6bd26246c8cb198816ff791c3c423686", null ],
     [ "kExternalOneByteStringTag", "instance-type_8h.html#ac2826c80213f63ebf8092ff9b19ee305", null ],
@@ -75,5 +76,6 @@ var instance_type_8h =
     [ "kTwoByteStringTag", "instance-type_8h.html#a32748e76c13313ee4837d66d18000307", null ],
     [ "kUncachedExternalStringMask", "instance-type_8h.html#a4d1b938077c26360300997ba84b869bb", null ],
     [ "kUncachedExternalStringTag", "instance-type_8h.html#a3bca87fbeea8eaed3b35acb2cedc0715", null ],
-    [ "LAST_STRING_TYPE", "instance-type_8h.html#a37634b0651895896e662fdbd2f143740", null ]
+    [ "LAST_STRING_TYPE", "instance-type_8h.html#a37634b0651895896e662fdbd2f143740", null ],
+    [ "PROPERTY_DICTIONARY_TYPE", "instance-type_8h.html#a403aa5a29cd222ebfdd187939b2b94da", null ]
 ];

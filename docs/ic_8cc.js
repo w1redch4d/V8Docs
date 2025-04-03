@@ -1,6 +1,8 @@
 var ic_8cc =
 [
     [ "AllowedHandlerChange", "ic_8cc.html#a85ef08bfe2ad420bc46f5c7eb5c795d5", null ],
+    [ "CloneObjectSlowPath", "ic_8cc.html#a80ab82e3c89e8beac48dfa29ec43c55a", null ],
+    [ "LookupForRead", "ic_8cc.html#a6f6d363b89c2af7cc183a5ca7683d0c5", null ],
     [ "RUNTIME_FUNCTION", "ic_8cc.html#ab1b7ebd9c89f4e4e01fbed4e04142d94", null ],
     [ "RUNTIME_FUNCTION", "ic_8cc.html#ad672d5b36aa5bcf7ff6913f8f665618d", null ],
     [ "RUNTIME_FUNCTION", "ic_8cc.html#a2c0210c0f0074270e163f6e22c862cf2", null ],

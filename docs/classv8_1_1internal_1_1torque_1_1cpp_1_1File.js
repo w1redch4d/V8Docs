@@ -9,5 +9,8 @@ var classv8_1_1internal_1_1torque_1_1cpp_1_1File =
     [ "EndNamespace", "classv8_1_1internal_1_1torque_1_1cpp_1_1File.html#a7959eca5cfe8803ce001c165185e8810", null ],
     [ "EndNamespace", "classv8_1_1internal_1_1torque_1_1cpp_1_1File.html#a84beef71e1f45c1a45ef491ae4b7205e", null ],
     [ "operator<<", "classv8_1_1internal_1_1torque_1_1cpp_1_1File.html#a1ad94454f991a659d125df17fa8af47e", null ],
-    [ "s", "classv8_1_1internal_1_1torque_1_1cpp_1_1File.html#a9a491c60cb8bc1c2b8a84c45c98811b1", null ]
+    [ "s", "classv8_1_1internal_1_1torque_1_1cpp_1_1File.html#a9a491c60cb8bc1c2b8a84c45c98811b1", null ],
+    [ "includes_", "classv8_1_1internal_1_1torque_1_1cpp_1_1File.html#acf8fc65f2f8de9ef7b2ca432ea93369f", null ],
+    [ "namespaces_", "classv8_1_1internal_1_1torque_1_1cpp_1_1File.html#a24829ebd1454919c338f84efe9f4174d", null ],
+    [ "stream_", "classv8_1_1internal_1_1torque_1_1cpp_1_1File.html#ae22fddcc36ebdea9505704a1696fcab9", null ]
 ];

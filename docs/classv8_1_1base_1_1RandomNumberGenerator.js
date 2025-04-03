@@ -5,6 +5,10 @@ var classv8_1_1base_1_1RandomNumberGenerator =
     [ "RandomNumberGenerator", "classv8_1_1base_1_1RandomNumberGenerator.html#adcae8e6314b7bc485f79542b4e58ebbd", null ],
     [ "RandomNumberGenerator", "classv8_1_1base_1_1RandomNumberGenerator.html#adb6de9543dad50afa7986a2e35ce003f", null ],
     [ "initial_seed", "classv8_1_1base_1_1RandomNumberGenerator.html#ab2032751e720a66ae16e9bf81cc63f8f", null ],
+    [ "max", "classv8_1_1base_1_1RandomNumberGenerator.html#a64914e03f573be801ef1cfdc7170db65", null ],
+    [ "min", "classv8_1_1base_1_1RandomNumberGenerator.html#aaea45d9e60e628653a106dc4af631acf", null ],
+    [ "MurmurHash3", "classv8_1_1base_1_1RandomNumberGenerator.html#ac780ac819aabd925ed250e66dc00a6b8", null ],
+    [ "Next", "classv8_1_1base_1_1RandomNumberGenerator.html#ab45f16fc178d407ab832831eabb812ad", null ],
     [ "NextBool", "classv8_1_1base_1_1RandomNumberGenerator.html#a9f4f789dc1abf53926db911f1db7534d", null ],
     [ "NextBytes", "classv8_1_1base_1_1RandomNumberGenerator.html#a0094583611a7499452662dcdcc2b6ddb", null ],
     [ "NextDouble", "classv8_1_1base_1_1RandomNumberGenerator.html#a3cb661fd70f4322d36792f98acd6ca7e", null ],
@@ -14,5 +18,14 @@ var classv8_1_1base_1_1RandomNumberGenerator =
     [ "NextSample", "classv8_1_1base_1_1RandomNumberGenerator.html#a4090ec844e0f1cc4150db68cf69c6c7d", null ],
     [ "NextSampleSlow", "classv8_1_1base_1_1RandomNumberGenerator.html#a8da70065401acffe63d0be29e5a20596", null ],
     [ "operator()", "classv8_1_1base_1_1RandomNumberGenerator.html#a9099758ebcd0ade049e34bd9ebc0c27b", null ],
-    [ "SetSeed", "classv8_1_1base_1_1RandomNumberGenerator.html#a09f96e1c329a56aa6c62b21c2d97d188", null ]
+    [ "SetEntropySource", "classv8_1_1base_1_1RandomNumberGenerator.html#ae97b331c6a33123e8571f93aaeaea164", null ],
+    [ "SetSeed", "classv8_1_1base_1_1RandomNumberGenerator.html#a09f96e1c329a56aa6c62b21c2d97d188", null ],
+    [ "ToDouble", "classv8_1_1base_1_1RandomNumberGenerator.html#a654429611ff0993d6ef6a337c6943158", null ],
+    [ "XorShift128", "classv8_1_1base_1_1RandomNumberGenerator.html#aed81ac9a466d6f8c981f13909574b1cf", null ],
+    [ "initial_seed_", "classv8_1_1base_1_1RandomNumberGenerator.html#a7e31ab8773dc8d0c526d7615ab558f0e", null ],
+    [ "kAddend", "classv8_1_1base_1_1RandomNumberGenerator.html#a1535ca3c8b973fdf97d9dcb4c5a148e6", null ],
+    [ "kMask", "classv8_1_1base_1_1RandomNumberGenerator.html#a9bc5a6545157c217eb56c71cc651e041", null ],
+    [ "kMultiplier", "classv8_1_1base_1_1RandomNumberGenerator.html#a2afb7b0d0c2435852767e5583b414771", null ],
+    [ "state0_", "classv8_1_1base_1_1RandomNumberGenerator.html#af67af3ca8628f5f93ae7873900a4c1b3", null ],
+    [ "state1_", "classv8_1_1base_1_1RandomNumberGenerator.html#ae78e49a0715becf7a38c157ea07e2486", null ]
 ];

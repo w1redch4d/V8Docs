@@ -644,6 +644,7 @@ var base_constants_riscv_8h =
     [ "kJTypeMask", "base-constants-riscv_8h.html#ae2cf0961d63682b242f675a62cccc370", null ],
     [ "kMaxTracepointCode", "base-constants-riscv_8h.html#a47d4367a17ac823f9d6212ee18273115", null ],
     [ "kMemOrderBits", "base-constants-riscv_8h.html#afebe5b93a7aef1338b02e32f1d944d6f", null ],
+    [ "kNegOffset", "base-constants-riscv_8h.html#a41c5fd9b0b8422b463467129949f45e6", null ],
     [ "kNopByte", "base-constants-riscv_8h.html#a208c3547e4bfa95d85c82ed2299aabaa", null ],
     [ "kNumVRegisters", "base-constants-riscv_8h.html#a122e2be6ae84ed90970c0ef0319bc8aa", null ],
     [ "kPredOrderShift", "base-constants-riscv_8h.html#a4129cce9fa838fdcccbd59540cc9c797", null ],

@@ -22,5 +22,7 @@ var classv8_1_1sampler_1_1Sampler =
     [ "is_counting_samples_", "classv8_1_1sampler_1_1Sampler.html#a9c32fc8d9c423d4f2d4232de0378cd6e", null ],
     [ "isolate_", "classv8_1_1sampler_1_1Sampler.html#afba2b361d86fdc59d795d6dd579f591a", null ],
     [ "js_sample_count_", "classv8_1_1sampler_1_1Sampler.html#ac9ce4fdf7ce265479fdefa9dad30593c", null ],
+    [ "kMaxFramesCount", "classv8_1_1sampler_1_1Sampler.html#a160867f43b86d3029b231734cd432f99", null ],
+    [ "kMaxFramesCountLog2", "classv8_1_1sampler_1_1Sampler.html#ad2852f03473f07a6d90a189aef0a96e9", null ],
     [ "record_sample_", "classv8_1_1sampler_1_1Sampler.html#ae4e2057ebb322ae6b1e6597916762daa", null ]
 ];

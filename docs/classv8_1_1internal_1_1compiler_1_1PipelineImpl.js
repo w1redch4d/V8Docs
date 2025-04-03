@@ -20,5 +20,6 @@ var classv8_1_1internal_1_1compiler_1_1PipelineImpl =
     [ "RunPrintAndVerify", "classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a5902a52f83068f881b63cd17a20bea5d", null ],
     [ "SelectInstructions", "classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a10fb3c6343d45066d6e0809c58f1e7e6", null ],
     [ "SelectInstructionsAndAssemble", "classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a312b72ecd1dbbbec3ae48dcb9151e6ca", null ],
-    [ "VerifyGeneratedCodeIsIdempotent", "classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a31436bb554500a44fbe5196d1d7817a6", null ]
+    [ "VerifyGeneratedCodeIsIdempotent", "classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a31436bb554500a44fbe5196d1d7817a6", null ],
+    [ "data_", "classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a3972067f2bfdb85017db0c359cdba886", null ]
 ];

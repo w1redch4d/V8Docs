@@ -1,5 +1,11 @@
 var classv8_1_1internal_1_1CodeReference =
 [
+    [ "Kind", "classv8_1_1internal_1_1CodeReference.html#a6325240f434c673de7a8799baa2acd39", [
+      [ "NONE", "classv8_1_1internal_1_1CodeReference.html#a6325240f434c673de7a8799baa2acd39ab50339a10e1de285ac99d4c3990b8693", null ],
+      [ "CODE", "classv8_1_1internal_1_1CodeReference.html#a6325240f434c673de7a8799baa2acd39a08054846bbc9933fd0395f8be516a9f9", null ],
+      [ "WASM_CODE", "classv8_1_1internal_1_1CodeReference.html#a6325240f434c673de7a8799baa2acd39aee64a7cd2ff9a30e38577e322a4c2baa", null ],
+      [ "CODE_DESC", "classv8_1_1internal_1_1CodeReference.html#a6325240f434c673de7a8799baa2acd39a59eb5b761bf814ee14a364662d3c8b95", null ]
+    ] ],
     [ "CodeReference", "classv8_1_1internal_1_1CodeReference.html#a707ac2a8fe5f93a24feafdcbab44e82e", null ],
     [ "CodeReference", "classv8_1_1internal_1_1CodeReference.html#a56641682eab8047655054c844d130cf5", null ],
     [ "CodeReference", "classv8_1_1internal_1_1CodeReference.html#a1c980b698abe0279d2bff207f847d96d", null ],
@@ -20,6 +26,7 @@ var classv8_1_1internal_1_1CodeReference =
     [ "relocation_start", "classv8_1_1internal_1_1CodeReference.html#a1b7f3cc0a851ea72610aac9666074953", null ],
     [ "code_", "classv8_1_1internal_1_1CodeReference.html#a8e1798509517ca8d9d14ea61074af7de", null ],
     [ "code_desc_", "classv8_1_1internal_1_1CodeReference.html#ad7752d5293404d1b58eeede7f7b4d5e6", null ],
+    [ "kind_", "classv8_1_1internal_1_1CodeReference.html#a80b311227f4b4d4be2808add145b9324", null ],
     [ "null_", "classv8_1_1internal_1_1CodeReference.html#a16cfb4f7a2f209fdd1ef07fc5ce8acb0", null ],
     [ "wasm_code_", "classv8_1_1internal_1_1CodeReference.html#aea96144a8aa4f1fcd856af3c3166ea62", null ]
 ];

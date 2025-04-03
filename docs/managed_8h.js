@@ -1,6 +1,6 @@
 var managed_8h =
 [
-    [ "v8::internal::TagForManaged< CppType >", "structv8_1_1internal_1_1TagForManaged.html", null ],
+    [ "v8::internal::TagForManaged< CppType >", "structv8_1_1internal_1_1TagForManaged.html", "structv8_1_1internal_1_1TagForManaged" ],
     [ "v8::internal::ManagedPtrDestructor", "structv8_1_1internal_1_1ManagedPtrDestructor.html", "structv8_1_1internal_1_1ManagedPtrDestructor" ],
     [ "v8::internal::Managed< CppType >", "classv8_1_1internal_1_1Managed.html", "classv8_1_1internal_1_1Managed" ],
     [ "v8::internal::TrustedManaged< CppType >", "classv8_1_1internal_1_1TrustedManaged.html", "classv8_1_1internal_1_1TrustedManaged" ],

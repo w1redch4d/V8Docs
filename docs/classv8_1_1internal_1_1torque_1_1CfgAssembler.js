@@ -23,5 +23,8 @@ var classv8_1_1internal_1_1torque_1_1CfgAssembler =
     [ "Result", "classv8_1_1internal_1_1torque_1_1CfgAssembler.html#ac869edcf855cb3d1aea24d8034e9f442", null ],
     [ "TopRange", "classv8_1_1internal_1_1torque_1_1CfgAssembler.html#a25e7bd7f64f4abf7d794fe337cb034c2", null ],
     [ "Unreachable", "classv8_1_1internal_1_1torque_1_1CfgAssembler.html#a462cd976e9861be31ba4216162df0671", null ],
-    [ "CfgAssemblerScopedTemporaryBlock", "classv8_1_1internal_1_1torque_1_1CfgAssembler.html#a08842da5432d1a3b497da21ac7611c3b", null ]
+    [ "CfgAssemblerScopedTemporaryBlock", "classv8_1_1internal_1_1torque_1_1CfgAssembler.html#a08842da5432d1a3b497da21ac7611c3b", null ],
+    [ "cfg_", "classv8_1_1internal_1_1torque_1_1CfgAssembler.html#a734d9bf2bdfbbafaf2987eb7629dadca", null ],
+    [ "current_block_", "classv8_1_1internal_1_1torque_1_1CfgAssembler.html#afbc2f7fffd947442c7a7847eb8f45d37", null ],
+    [ "current_stack_", "classv8_1_1internal_1_1torque_1_1CfgAssembler.html#a4c0154475823412f1057bbe2439fb90b", null ]
 ];

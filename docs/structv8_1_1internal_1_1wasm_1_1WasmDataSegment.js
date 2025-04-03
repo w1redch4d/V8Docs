@@ -1,6 +1,7 @@
 var structv8_1_1internal_1_1wasm_1_1WasmDataSegment =
 [
     [ "WasmDataSegment", "structv8_1_1internal_1_1wasm_1_1WasmDataSegment.html#a898d1c8389a3747d3806b705ef9e1267", null ],
+    [ "PassiveForTesting", "structv8_1_1internal_1_1wasm_1_1WasmDataSegment.html#ade7bb06e5a1271c5ef475b274f7f3d47", null ],
     [ "active", "structv8_1_1internal_1_1wasm_1_1WasmDataSegment.html#a12e17e3fa84bb4207424e2b348187aa8", null ],
     [ "dest_addr", "structv8_1_1internal_1_1wasm_1_1WasmDataSegment.html#a6db8742bd7bdfb9a599e331d62cfac97", null ],
     [ "memory_index", "structv8_1_1internal_1_1wasm_1_1WasmDataSegment.html#aa16b0b1284162352cb1868c7de80dae1", null ],

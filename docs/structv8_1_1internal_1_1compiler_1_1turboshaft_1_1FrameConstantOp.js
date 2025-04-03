@@ -9,5 +9,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FrameConstantOp =
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FrameConstantOp.html#a768bd6f883c1c7cc98545e8024df7a5c", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FrameConstantOp.html#ace666741663e908a9f6a0e4c9ee2a349", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FrameConstantOp.html#a238b2ea9b357b16cbe2fdcd3f290f48c", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FrameConstantOp.html#a513ea2ead09b245e85efbaeea79f1e20", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FrameConstantOp.html#a98e8c135727ee75bd8cd9dbc42e5834c", null ]
 ];

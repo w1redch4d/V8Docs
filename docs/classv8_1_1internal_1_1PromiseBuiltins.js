@@ -30,5 +30,6 @@ var classv8_1_1internal_1_1PromiseBuiltins =
     [ "PromiseValueThunkOrReasonContextSlot", "classv8_1_1internal_1_1PromiseBuiltins.html#ad3fc9065a713c08bf10226f89e953c7f", [
       [ "kValueSlot", "classv8_1_1internal_1_1PromiseBuiltins.html#ad3fc9065a713c08bf10226f89e953c7faae2454a2844a5b5620c9bb4be3b932c1", null ],
       [ "kPromiseValueThunkOrReasonContextLength", "classv8_1_1internal_1_1PromiseBuiltins.html#ad3fc9065a713c08bf10226f89e953c7faca1d098337a36a5edaebbc5ba4c3d9db", null ]
-    ] ]
+    ] ],
+    [ "DISALLOW_IMPLICIT_CONSTRUCTORS", "classv8_1_1internal_1_1PromiseBuiltins.html#a3472c6ab89e8ccf086e7e8338b025a9c", null ]
 ];

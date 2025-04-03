@@ -823,6 +823,7 @@ var constants_loong64_8h =
     [ "kMsbdShift", "constants-loong64_8h.html#a7ab755e6595f8dceef9605a6cc757a0c", null ],
     [ "kMsbwBits", "constants-loong64_8h.html#a3e20ece9c5151e8f3f7a00f25d7a27fc", null ],
     [ "kMsbwShift", "constants-loong64_8h.html#a5fad8c9dc07979089ab3f8903a43136d", null ],
+    [ "kNegOffset", "constants-loong64_8h.html#a41c5fd9b0b8422b463467129949f45e6", null ],
     [ "kNumFPURegisters", "constants-loong64_8h.html#a612ebd49946c5fa52b1ad5fd7886c0f1", null ],
     [ "kNumSimuRegisters", "constants-loong64_8h.html#a6f89a05627bd4bdf11ef54730b4f2126", null ],
     [ "kOffs21HighBits", "constants-loong64_8h.html#af1cd44ad783b017a0291025d32ec6c11", null ],

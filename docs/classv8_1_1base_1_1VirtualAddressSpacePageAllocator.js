@@ -16,5 +16,8 @@ var classv8_1_1base_1_1VirtualAddressSpacePageAllocator =
     [ "ReleasePages", "classv8_1_1base_1_1VirtualAddressSpacePageAllocator.html#a6c0f4dbba2a7a829f70b19217e366575", null ],
     [ "SealPages", "classv8_1_1base_1_1VirtualAddressSpacePageAllocator.html#a29d7b04bad08f8b5b11739e702fab542", null ],
     [ "SetPermissions", "classv8_1_1base_1_1VirtualAddressSpacePageAllocator.html#a85ff3cea5fef1a362b76c37bae7cd228", null ],
-    [ "SetRandomMmapSeed", "classv8_1_1base_1_1VirtualAddressSpacePageAllocator.html#a76d49e8289d027aa3bb06b073e6cf1e3", null ]
+    [ "SetRandomMmapSeed", "classv8_1_1base_1_1VirtualAddressSpacePageAllocator.html#a76d49e8289d027aa3bb06b073e6cf1e3", null ],
+    [ "mutex_", "classv8_1_1base_1_1VirtualAddressSpacePageAllocator.html#ac3402e8b6ef3115130fb883a70fcc125", null ],
+    [ "resized_allocations_", "classv8_1_1base_1_1VirtualAddressSpacePageAllocator.html#ad8731487ab12b088617c261cd1dc8a16", null ],
+    [ "vas_", "classv8_1_1base_1_1VirtualAddressSpacePageAllocator.html#ad15c6bc63ebc4ba8d0cc3456824f466e", null ]
 ];

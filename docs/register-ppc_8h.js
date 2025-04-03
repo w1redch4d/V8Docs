@@ -63,6 +63,7 @@ var register_ppc_8h =
     [ "ToRegister", "register-ppc_8h.html#aad4614e9eaee9371d87d0f56ffb440e3", null ],
     [ "kConstantPoolRegister", "register-ppc_8h.html#a64763fbb168e37bdbae2e276206d867e", null ],
     [ "kNumRequiredStackFrameSlots", "register-ppc_8h.html#a2906abc1ef9137893de550f812a476d1", null ],
+    [ "kRegisterPassedArguments", "register-ppc_8h.html#aee1ede1bc75c059db25f836db07bbe34", null ],
     [ "kScratchSimd128Reg", "register-ppc_8h.html#a3e39b319361fe6c3cccb6ba4faffe2c2", null ],
     [ "kScratchSimd128Reg2", "register-ppc_8h.html#ae4bba798e3145cd78cd1258eb5dcabda", null ],
     [ "kStackFrameExtraParamSlot", "register-ppc_8h.html#a446dd5c320e038b1a5122c60249f6b8e", null ],

@@ -7,5 +7,7 @@ var code_assembler_8cc =
     [ "DEFINE_CODE_ASSEMBLER_BINARY_OP", "code-assembler_8cc.html#a8b79d21f8b1bc959a7acf025fc4ab67a", null ],
     [ "DEFINE_CODE_ASSEMBLER_UNARY_OP", "code-assembler_8cc.html#a76430922125b494776902239e5675bf9", null ],
     [ "operator<<", "code-assembler_8cc.html#af873b7bb70d51bf738f9cfc284aa0aee", null ],
-    [ "operator<<", "code-assembler_8cc.html#a03ae4b4c1bf44d9690082f8b67e5195d", null ]
+    [ "operator<<", "code-assembler_8cc.html#a03ae4b4c1bf44d9690082f8b67e5195d", null ],
+    [ "arr_", "code-assembler_8cc.html#a16ac2080a6e6f6d1d69fca5f02932464", null ],
+    [ "ptr_", "code-assembler_8cc.html#a7358bb21b70597d2c8863809f96d8c78", null ]
 ];

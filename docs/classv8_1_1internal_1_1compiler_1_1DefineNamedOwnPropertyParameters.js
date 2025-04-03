@@ -6,5 +6,7 @@ var classv8_1_1internal_1_1compiler_1_1DefineNamedOwnPropertyParameters =
     [ "hash_value", "classv8_1_1internal_1_1compiler_1_1DefineNamedOwnPropertyParameters.html#a2194371d65f9e2b0de63414b0c2eaf80", null ],
     [ "operator!=", "classv8_1_1internal_1_1compiler_1_1DefineNamedOwnPropertyParameters.html#a1bd2aa85037d5fb2d6843835a5da27b3", null ],
     [ "operator<<", "classv8_1_1internal_1_1compiler_1_1DefineNamedOwnPropertyParameters.html#a4e30d00112799d97e20ed3201e0a40be", null ],
-    [ "operator==", "classv8_1_1internal_1_1compiler_1_1DefineNamedOwnPropertyParameters.html#ad6b940960b8fc5381e66c90da65a4adc", null ]
+    [ "operator==", "classv8_1_1internal_1_1compiler_1_1DefineNamedOwnPropertyParameters.html#ad6b940960b8fc5381e66c90da65a4adc", null ],
+    [ "feedback_", "classv8_1_1internal_1_1compiler_1_1DefineNamedOwnPropertyParameters.html#a11efdbeca1d6d7798bcdc88c360ea654", null ],
+    [ "name_", "classv8_1_1internal_1_1compiler_1_1DefineNamedOwnPropertyParameters.html#a5cb7560f4fe2b15edb6665516d2cd06a", null ]
 ];

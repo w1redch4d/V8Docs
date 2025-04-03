@@ -34,6 +34,7 @@ var classv8_1_1internal_1_1compiler_1_1UnallocatedOperand =
     [ "UnallocatedOperand", "classv8_1_1internal_1_1compiler_1_1UnallocatedOperand.html#a0e5021406571fee14a5af045172c1dc5", null ],
     [ "UnallocatedOperand", "classv8_1_1internal_1_1compiler_1_1UnallocatedOperand.html#a2cb78df70133d2bb2454de2028d62265", null ],
     [ "UnallocatedOperand", "classv8_1_1internal_1_1compiler_1_1UnallocatedOperand.html#a9c0dff3fd2fbfb383be4d102570e5216", null ],
+    [ "UnallocatedOperand", "classv8_1_1internal_1_1compiler_1_1UnallocatedOperand.html#a28dd33e32b1184dfdb3e3ecccb039d98", null ],
     [ "basic_policy", "classv8_1_1internal_1_1compiler_1_1UnallocatedOperand.html#aa44fff5f66ddcbdca75c1e93b8a6f04f", null ],
     [ "extended_policy", "classv8_1_1internal_1_1compiler_1_1UnallocatedOperand.html#acb045c45b975b0e5ce57f068476114d8", null ],
     [ "fixed_register_index", "classv8_1_1internal_1_1compiler_1_1UnallocatedOperand.html#acee3820e5d7282c0283e10c3bdcb6ae4", null ],

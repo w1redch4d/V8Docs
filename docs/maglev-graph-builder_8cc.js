@@ -28,6 +28,16 @@ var maglev_graph_builder_8cc =
     [ "TRACE", "maglev-graph-builder_8cc.html#a5f6aa8edcd99914757600b5d3b259bb7", null ],
     [ "TRACE_CANNOT_INLINE", "maglev-graph-builder_8cc.html#aedfb41a33f5ec05ff82b4b02693a1677", null ],
     [ "TRACE_INLINING", "maglev-graph-builder_8cc.html#afbc4ec7b42a73d54a8c2599598fc4f90", null ],
+    [ "Int32Identity", "maglev-graph-builder_8cc.html#a073c08eaca3c6b1596106555163d2fb2", null ],
     [ "OperationValue", "maglev-graph-builder_8cc.html#a1a45ab9b221e14a9d481ab7b849b6c4d", null ],
-    [ "StaticTypeForNode", "maglev-graph-builder_8cc.html#a95dda117ccb800077a839a641bce59ec", null ]
+    [ "StaticTypeForNode", "maglev-graph-builder_8cc.html#a95dda117ccb800077a839a641bce59ec", null ],
+    [ "any_map_is_unstable_", "maglev-graph-builder_8cc.html#a7c726e51f7856b41cba511e4bea57fe3", null ],
+    [ "broker_", "maglev-graph-builder_8cc.html#ab41b862f200917175313d7a325d217a5", null ],
+    [ "emit_check_with_migration_", "maglev-graph-builder_8cc.html#aababe1a7e3fc78df5684ca8331d9b6df", null ],
+    [ "existing_known_maps_found_", "maglev-graph-builder_8cc.html#a5eea488f5f2ae06ded12266210d12dfb", null ],
+    [ "intersect_set_", "maglev-graph-builder_8cc.html#a83731b7bcbe871cd401baf1d26c40b3e", null ],
+    [ "known_maps_are_subset_of_requested_maps_", "maglev-graph-builder_8cc.html#a4aa9827c3817bc7146897dc83a09f743", null ],
+    [ "node_type_", "maglev-graph-builder_8cc.html#ac8f6defeef11dfabcc713456369ccd53", null ],
+    [ "requested_maps_", "maglev-graph-builder_8cc.html#ac5242ae5d965d55c7760a495ae87589d", null ],
+    [ "zone_", "maglev-graph-builder_8cc.html#a4979f6e7e64e9ee56f4229d03fa20c69", null ]
 ];

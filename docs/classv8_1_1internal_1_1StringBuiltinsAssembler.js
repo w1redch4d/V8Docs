@@ -11,6 +11,7 @@ var classv8_1_1internal_1_1StringBuiltinsAssembler =
       [ "kCompare", "classv8_1_1internal_1_1StringBuiltinsAssembler.html#a8f09468c1583d46d7ae409989f93f1dea9b32f5e2edb72d5268c8ade6154cafd4", null ]
     ] ],
     [ "StringBuiltinsAssembler", "classv8_1_1internal_1_1StringBuiltinsAssembler.html#ad75b2b6ac35d184939ee005a4d455a46", null ],
+    [ "AllocAndCopyStringCharacters", "classv8_1_1internal_1_1StringBuiltinsAssembler.html#a4da8abc8b61c1e639df6369b40f3713f", null ],
     [ "AllocateConsString", "classv8_1_1internal_1_1StringBuiltinsAssembler.html#a25138c0747ff13fd721c1e496781e4cb", null ],
     [ "BranchIfCanDerefIndirectString", "classv8_1_1internal_1_1StringBuiltinsAssembler.html#a11f00e18cadbfc059d129a4e0e218bed", null ],
     [ "BranchIfStringPrimitiveWithNoCustomIteration", "classv8_1_1internal_1_1StringBuiltinsAssembler.html#a5694b6ec6169b3c9eb72ae319533dc9d", null ],

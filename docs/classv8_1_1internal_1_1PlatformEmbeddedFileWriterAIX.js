@@ -16,5 +16,7 @@ var classv8_1_1internal_1_1PlatformEmbeddedFileWriterAIX =
     [ "IndentedDataDirective", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterAIX.html#a48dfd74cc4d63cc9b5de82a54150a81c", null ],
     [ "SectionRoData", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterAIX.html#ae713e6ec44537bdb14a03a98a9204a37", null ],
     [ "SectionText", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterAIX.html#a9a530927375d3e65602d9e78c99dab02", null ],
-    [ "SourceInfo", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterAIX.html#ad1e849d07523470e338c4fd612a569b8", null ]
+    [ "SourceInfo", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterAIX.html#ad1e849d07523470e338c4fd612a569b8", null ],
+    [ "target_arch_", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterAIX.html#a31061f1795922fb0d811c9cb884587b8", null ],
+    [ "target_os_", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterAIX.html#a2c79391760423bc00f66e572e457085c", null ]
 ];

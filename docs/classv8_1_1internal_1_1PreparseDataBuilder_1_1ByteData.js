@@ -13,6 +13,7 @@ var classv8_1_1internal_1_1PreparseDataBuilder_1_1ByteData =
     [ "WriteUint8", "classv8_1_1internal_1_1PreparseDataBuilder_1_1ByteData.html#a887fd3a8b763f9b592762a02edeaa5de", null ],
     [ "WriteVarint32", "classv8_1_1internal_1_1PreparseDataBuilder_1_1ByteData.html#aaeccc8106e83e2791be893d5b96faba0", null ],
     [ "byte_data_", "classv8_1_1internal_1_1PreparseDataBuilder_1_1ByteData.html#a6d629624770f8686444b188d801bd5dd", null ],
+    [ "free_quarters_in_last_byte_", "classv8_1_1internal_1_1PreparseDataBuilder_1_1ByteData.html#a2e042ce87205ddc9929d18dadb72918d", null ],
     [ "index_", "classv8_1_1internal_1_1PreparseDataBuilder_1_1ByteData.html#abd2465551e3e845801c43e56671b7a6c", null ],
     [ "zone_byte_data_", "classv8_1_1internal_1_1PreparseDataBuilder_1_1ByteData.html#a1bb75b0c3dc9d2b155c88ec11b53c290", null ]
 ];

@@ -18,6 +18,7 @@ var classv8_1_1internal_1_1GcSafeCode =
     [ "is_turbofanned", "classv8_1_1internal_1_1GcSafeCode.html#a4cf630bb215a768cab76be92ae782dc0", null ],
     [ "kind", "classv8_1_1internal_1_1GcSafeCode.html#a38ff797bc5d62aafeb3bdc619348576b", null ],
     [ "marked_for_deoptimization", "classv8_1_1internal_1_1GcSafeCode.html#ab1c70e51cad44b0d0a2a1a35df9f8346", null ],
+    [ "OBJECT_CONSTRUCTORS", "classv8_1_1internal_1_1GcSafeCode.html#a304e96f8a88bd86591f430fd31de60bb", null ],
     [ "raw_instruction_stream", "classv8_1_1internal_1_1GcSafeCode.html#a2cc08c1a366ecb108170fa4267b5fc46", null ],
     [ "raw_instruction_stream", "classv8_1_1internal_1_1GcSafeCode.html#ab16f56c6c1aa38aafdd07d0d1b30d10f", null ],
     [ "safepoint_table_address", "classv8_1_1internal_1_1GcSafeCode.html#a8137ead60ff2ef1a2c4e626500722d4d", null ],

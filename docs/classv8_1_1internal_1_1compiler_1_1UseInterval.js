@@ -13,5 +13,7 @@ var classv8_1_1internal_1_1compiler_1_1UseInterval =
     [ "set_end", "classv8_1_1internal_1_1compiler_1_1UseInterval.html#af6dee18ca848cf12e539937c70eb2299", null ],
     [ "set_start", "classv8_1_1internal_1_1compiler_1_1UseInterval.html#a42ca7aec1a891356dd5bac37a251df32", null ],
     [ "SplitAt", "classv8_1_1internal_1_1compiler_1_1UseInterval.html#ab683646571775088d0214bee4b72f395", null ],
-    [ "start", "classv8_1_1internal_1_1compiler_1_1UseInterval.html#a059388f647376c2586b2524a968a6b44", null ]
+    [ "start", "classv8_1_1internal_1_1compiler_1_1UseInterval.html#a059388f647376c2586b2524a968a6b44", null ],
+    [ "end_", "classv8_1_1internal_1_1compiler_1_1UseInterval.html#a681a1bb0eaa96757b950c5e4834fdfa8", null ],
+    [ "start_", "classv8_1_1internal_1_1compiler_1_1UseInterval.html#a5b50e95431d5ab18280706810339e828", null ]
 ];

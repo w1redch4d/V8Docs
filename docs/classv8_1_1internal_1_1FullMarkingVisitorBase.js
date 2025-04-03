@@ -5,5 +5,6 @@ var classv8_1_1internal_1_1FullMarkingVisitorBase =
     [ "AddWeakReferenceForReferenceSummarizer", "classv8_1_1internal_1_1FullMarkingVisitorBase.html#add9b9a453bb002d97a28fdf91fabf0b4", null ],
     [ "CanUpdateValuesInHeap", "classv8_1_1internal_1_1FullMarkingVisitorBase.html#a8670406311a84222b722e397fc045571", null ],
     [ "marking_state", "classv8_1_1internal_1_1FullMarkingVisitorBase.html#a121e5c7e0d9db87d85994056973e0362", null ],
-    [ "MarkPointerTableEntry", "classv8_1_1internal_1_1FullMarkingVisitorBase.html#a2d41975aafd897a708cf38776bbcffa5", null ]
+    [ "MarkPointerTableEntry", "classv8_1_1internal_1_1FullMarkingVisitorBase.html#a2d41975aafd897a708cf38776bbcffa5", null ],
+    [ "marking_state_", "classv8_1_1internal_1_1FullMarkingVisitorBase.html#a1a3b55e9b9e065d41159eb61c9dc010e", null ]
 ];

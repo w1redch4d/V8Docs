@@ -151,5 +151,8 @@ var simplified_operator_8cc =
     [ "operator==", "simplified-operator_8cc.html#aef15d4165e318b4eb2901c4170f68a68", null ],
     [ "operator==", "simplified-operator_8cc.html#ac5eee82f7b24e744441e49af22769189", null ],
     [ "SpeculativeBigIntAsNParametersOf", "simplified-operator_8cc.html#adbba9852894123321422cc4ce4ad80c2", null ],
-    [ "ValueTypeParameterOf", "simplified-operator_8cc.html#a9efa83fb0e8b79cb3a5789eba7681756", null ]
+    [ "ValueTypeParameterOf", "simplified-operator_8cc.html#a9efa83fb0e8b79cb3a5789eba7681756", null ],
+    [ "double_map_", "simplified-operator_8cc.html#aba0d7f9a753787e736cfc3347b124038", null ],
+    [ "fast_map_", "simplified-operator_8cc.html#a3add3773266fe9e500063bf6bd9759c4", null ],
+    [ "value_type_", "simplified-operator_8cc.html#a92ba0ffd02664413b697e399455e07f0", null ]
 ];

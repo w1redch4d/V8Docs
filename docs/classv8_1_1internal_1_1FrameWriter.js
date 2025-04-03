@@ -1,7 +1,11 @@
 var classv8_1_1internal_1_1FrameWriter =
 [
     [ "FrameWriter", "classv8_1_1internal_1_1FrameWriter.html#a69ae1a4abaf21bf37898a483694acbea", null ],
+    [ "DebugPrintOutputObject", "classv8_1_1internal_1_1FrameWriter.html#aab738574456378cde9bc279d75415b58", null ],
+    [ "DebugPrintOutputPc", "classv8_1_1internal_1_1FrameWriter.html#a4edf99d322a6c50d96f7513d55b0bc68", null ],
+    [ "DebugPrintOutputValue", "classv8_1_1internal_1_1FrameWriter.html#adfe069c2198767b5b3844010fa6030f1", null ],
     [ "frame", "classv8_1_1internal_1_1FrameWriter.html#afc5358714593a3599862dd9fa16d658a", null ],
+    [ "output_address", "classv8_1_1internal_1_1FrameWriter.html#a89f7f90f4aadd7fa47cf3f1ec145b46a", null ],
     [ "PushApprovedCallerPc", "classv8_1_1internal_1_1FrameWriter.html#a5a6c99025ecac712feff15ae96e96fb2", null ],
     [ "PushBottommostCallerPc", "classv8_1_1internal_1_1FrameWriter.html#a0d7f223f9c59e5688fdea872f656abbe", null ],
     [ "PushCallerConstantPool", "classv8_1_1internal_1_1FrameWriter.html#a47162731e631d44fe3537371ea707e92", null ],
@@ -11,5 +15,11 @@ var classv8_1_1internal_1_1FrameWriter =
     [ "PushRawValue", "classv8_1_1internal_1_1FrameWriter.html#a21f0dd5c779f03fdb04b4f6dd6da0d35", null ],
     [ "PushStackJSArguments", "classv8_1_1internal_1_1FrameWriter.html#a3ab4d3cdbb27e1ac85ef5b6c8d6abd7d", null ],
     [ "PushTranslatedValue", "classv8_1_1internal_1_1FrameWriter.html#a865c96cd2bcdae2c41b1c585c9a55212", null ],
-    [ "top_offset", "classv8_1_1internal_1_1FrameWriter.html#a8b310c9ebd751f9c358a52a820067ad6", null ]
+    [ "PushValue", "classv8_1_1internal_1_1FrameWriter.html#a181a8bcd148f708ad4db26cbe8e41183", null ],
+    [ "top_offset", "classv8_1_1internal_1_1FrameWriter.html#a8b310c9ebd751f9c358a52a820067ad6", null ],
+    [ "deoptimizer_", "classv8_1_1internal_1_1FrameWriter.html#a6616dd8c030e50d6b555260a478b0962", null ],
+    [ "frame_", "classv8_1_1internal_1_1FrameWriter.html#aa1f203f0d9c93ec3b0c7c439a34b266f", null ],
+    [ "NO_INPUT_INDEX", "classv8_1_1internal_1_1FrameWriter.html#abdae2515ee9c8225a1ebe582cdff87c2", null ],
+    [ "top_offset_", "classv8_1_1internal_1_1FrameWriter.html#a11324baf50ffb77d79c6f5eefccc4b7f", null ],
+    [ "trace_scope_", "classv8_1_1internal_1_1FrameWriter.html#afe111b2d6b108d634f1f72c03793e9e7", null ]
 ];

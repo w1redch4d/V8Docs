@@ -76,6 +76,7 @@ var liftoff_assembler_ia32_inl_8h =
     [ "setcc_32_no_spill", "liftoff-assembler-ia32-inl_8h.html#a32156f9db0f38f9969cc0bea0fe39aae", null ],
     [ "SignExtendI32ToI64", "liftoff-assembler-ia32-inl_8h.html#a8672b11e6544edbbbdc72e89a58b6df0", null ],
     [ "Store", "liftoff-assembler-ia32-inl_8h.html#a5b4ec0e2d6878faae66b90a7177d5f1d", null ],
+    [ "kByteRegs", "liftoff-assembler-ia32-inl_8h.html#a1bc6aefe031a11152fc27cecc3d0fdb8", null ],
     [ "kScratchDoubleReg", "liftoff-assembler-ia32-inl_8h.html#a4a8bc4aa963280cb0a3f347b49fd8b12", null ],
     [ "kSubSpSize", "liftoff-assembler-ia32-inl_8h.html#ab9a1f4c6a2d0218fe390a6715ec4e8b3", null ]
 ];

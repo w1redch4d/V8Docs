@@ -1,7 +1,14 @@
 var classv8_1_1internal_1_1VRegister =
 [
+    [ "VRegister", "classv8_1_1internal_1_1VRegister.html#ab1a516e32712dcfbcbe84959b3469cb6", null ],
     [ "VRegister", "classv8_1_1internal_1_1VRegister.html#aec12ac90047e4cf51d88825b099580fc", null ],
+    [ "BRegFromCode", "classv8_1_1internal_1_1VRegister.html#a8348f13c376e1e355d5640ccf64fd7cb", null ],
+    [ "Create", "classv8_1_1internal_1_1VRegister.html#a3278fc191f20d4d6049a258bbe5b1ad4", null ],
+    [ "Create", "classv8_1_1internal_1_1VRegister.html#ab1b41b6a908a34f244d779fe54d6a895", null ],
+    [ "DRegFromCode", "classv8_1_1internal_1_1VRegister.html#a9f9210a9087e7f15c3fe780f6c874cbf", null ],
     [ "Format", "classv8_1_1internal_1_1VRegister.html#a6f13de35f510a0aea1075699560fa4ba", null ],
+    [ "from_code", "classv8_1_1internal_1_1VRegister.html#aa91e848c4d1164adee41bede760e7cdb", null ],
+    [ "HRegFromCode", "classv8_1_1internal_1_1VRegister.html#a278098439081bdcb0c384061584546f3", null ],
     [ "Is16B", "classv8_1_1internal_1_1VRegister.html#af83eebeed80330fd6f154216e6dd00ad", null ],
     [ "Is1B", "classv8_1_1internal_1_1VRegister.html#a2f41a6726aea0a7fa760bc545f45a914", null ],
     [ "Is1D", "classv8_1_1internal_1_1VRegister.html#a15c434bc78a02510975183766d9a161d", null ],
@@ -20,10 +27,14 @@ var classv8_1_1internal_1_1VRegister =
     [ "IsLaneSizeS", "classv8_1_1internal_1_1VRegister.html#a782e2cb3baf5f8214faef47db21b07e4", null ],
     [ "IsSameFormat", "classv8_1_1internal_1_1VRegister.html#aa00f1a0e0fd6192c9283f3e6047c5521", null ],
     [ "IsScalar", "classv8_1_1internal_1_1VRegister.html#a81be102936a7b98f96dc19bf5c07810b", null ],
+    [ "IsValidLaneCount", "classv8_1_1internal_1_1VRegister.html#afb5c42c6a7478c92fb2d3c746b3edb9f", null ],
     [ "IsVector", "classv8_1_1internal_1_1VRegister.html#a5ebef8a3ffccb53982fd3103fea8756a", null ],
     [ "LaneCount", "classv8_1_1internal_1_1VRegister.html#ae5191d171b47e45363d95535f08be43c", null ],
     [ "LaneSizeInBits", "classv8_1_1internal_1_1VRegister.html#a8a5813a7e431f566421a4f7af48c3548", null ],
     [ "LaneSizeInBytes", "classv8_1_1internal_1_1VRegister.html#aa2f697759c4d8dd44a705c35a5875f58", null ],
+    [ "no_reg", "classv8_1_1internal_1_1VRegister.html#a3c938151335ff7180191f1b8be8e6647", null ],
+    [ "QRegFromCode", "classv8_1_1internal_1_1VRegister.html#a9e464a287b51d00d412dac0fbc983487", null ],
+    [ "SRegFromCode", "classv8_1_1internal_1_1VRegister.html#ad1413f8cbdce9b841619ac6121ba5d79", null ],
     [ "V16B", "classv8_1_1internal_1_1VRegister.html#a0c146eae5a6b5b75bd32c6faf0f9eaf4", null ],
     [ "V1D", "classv8_1_1internal_1_1VRegister.html#ad12e55ccd2ac5e82419623ea2d1a8984", null ],
     [ "V1Q", "classv8_1_1internal_1_1VRegister.html#ab5ba7ecde9dda9d7768ce32d9314eee2", null ],
@@ -33,5 +44,8 @@ var classv8_1_1internal_1_1VRegister =
     [ "V4S", "classv8_1_1internal_1_1VRegister.html#af526603146afaf27b038ad03de162cd7", null ],
     [ "V8B", "classv8_1_1internal_1_1VRegister.html#afc26451a31be01e51065ccf1cef26626", null ],
     [ "V8H", "classv8_1_1internal_1_1VRegister.html#ad0e049dfb79f4a4508f3d3f2372243fa", null ],
-    [ "RegisterBase", "classv8_1_1internal_1_1VRegister.html#a762c32bfc1b920b5ead6f1c087b4a400", null ]
+    [ "VRegFromCode", "classv8_1_1internal_1_1VRegister.html#a733b3df29823d0ab784148a89b57e6c5", null ],
+    [ "RegisterBase", "classv8_1_1internal_1_1VRegister.html#a762c32bfc1b920b5ead6f1c087b4a400", null ],
+    [ "kMaxNumRegisters", "classv8_1_1internal_1_1VRegister.html#a9659edbaf9a753bb5ad199e1698b87e5", null ],
+    [ "lane_count_", "classv8_1_1internal_1_1VRegister.html#ae5a296bc2637fc91f4d2944788f08f84", null ]
 ];

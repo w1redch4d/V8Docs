@@ -1,6 +1,7 @@
 var runtime_call_descriptors_8h =
 [
     [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor" ],
+    [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Descriptor< Derived >", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor" ],
     [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::Abort", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Abort.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Abort" ],
     [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::BigIntUnaryOp", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1BigIntUnaryOp.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1BigIntUnaryOp" ],
     [ "v8::internal::compiler::turboshaft::RuntimeCallDescriptor::DateCurrentTime", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1DateCurrentTime.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1DateCurrentTime" ],

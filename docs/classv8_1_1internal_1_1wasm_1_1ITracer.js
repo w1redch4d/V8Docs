@@ -27,5 +27,6 @@ var classv8_1_1internal_1_1wasm_1_1ITracer =
     [ "StringOffset", "classv8_1_1internal_1_1wasm_1_1ITracer.html#a03086af7efa1797aee674022b82aed39", null ],
     [ "TableOffset", "classv8_1_1internal_1_1wasm_1_1ITracer.html#ac66ebb215fe16087ec9b05347369d633", null ],
     [ "TagOffset", "classv8_1_1internal_1_1wasm_1_1ITracer.html#aeca77dd9a5157c40dd026aa9ed935543", null ],
-    [ "TypeOffset", "classv8_1_1internal_1_1wasm_1_1ITracer.html#a7e3a2233c8b25520797ad0d4582a7904", null ]
+    [ "TypeOffset", "classv8_1_1internal_1_1wasm_1_1ITracer.html#a7e3a2233c8b25520797ad0d4582a7904", null ],
+    [ "NoTrace", "classv8_1_1internal_1_1wasm_1_1ITracer.html#a3bce9691f1ab2583a20293fe67a338fa", null ]
 ];

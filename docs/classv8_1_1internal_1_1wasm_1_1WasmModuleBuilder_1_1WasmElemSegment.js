@@ -12,6 +12,7 @@ var classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmElemSegment =
     ] ],
     [ "WasmElemSegment", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmElemSegment.html#a3c2d67268cb5f739b8cdd1df9a6478e9", null ],
     [ "WasmElemSegment", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmElemSegment.html#ad0db234977a7648f1f56adbeb07943c2", null ],
+    [ "IsValidOffsetKind", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmElemSegment.html#a3fe17a253b66b17df0d3812007e0309c", null ],
     [ "MOVE_ONLY_NO_DEFAULT_CONSTRUCTOR", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmElemSegment.html#a30de796477fc90e0fff7ba4822aa2f64", null ],
     [ "entries", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmElemSegment.html#ab66c239a9f5518dd01c1ac8565a94609", null ],
     [ "indexing_mode", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmElemSegment.html#ad68f6415a567b6c1d8f8d31fcd685541", null ],

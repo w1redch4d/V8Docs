@@ -1,11 +1,20 @@
 var classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer =
 [
+    [ "DebugDelegate", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer_1_1DebugDelegate.html", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer_1_1DebugDelegate" ],
     [ "WasmModuleInfo", "structv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer_1_1WasmModuleInfo.html", "structv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer_1_1WasmModuleInfo" ],
+    [ "BreakpointsMap", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#aa63aea5f393f49c3be814ae79a691149", null ],
+    [ "IsolateDebugDelegateMap", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#ac8a795fd9a8ec0ea2a19652036330a91", null ],
+    [ "ScriptsMap", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a9ee299b5ae19e5f0c65e23fc8121218b", null ],
     [ "GdbServer", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a1ad5e3933632c7a3718c38c0531b3a00", null ],
     [ "~GdbServer", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a5a34f1b42e874eccbeb2d9c565d74efc", null ],
+    [ "GdbServer", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#ad3c3bf312beaab95e3b1b8e05cf3d2a2", null ],
     [ "AddBreakpoint", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a168d97440f3a10c328264f4b299e6f9e", null ],
     [ "AddIsolate", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#acf63f9f1a8a98e301ec1787fe8b0a0b5", null ],
+    [ "AddWasmModule", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#afad646ad50580f8f2af0bbcf70abed00", null ],
+    [ "Create", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#aafdbc06ac4debd088989426e15a3265b", null ],
     [ "GetLoadedModules", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a421cbf48c6c6960b484e8a345642a291", null ],
+    [ "GetModuleDebugHandler", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a38e4762901c9c162b5800db990d8deb2", null ],
+    [ "GetTarget", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#aa025f2c0cc6856fba032f77663a6c3d5", null ],
     [ "GetWasmCallStack", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a5b216bf583874ab5024390e93fc07c63", null ],
     [ "GetWasmData", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a38281e38ab0774639e683c65c02a3245", null ],
     [ "GetWasmGlobal", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#aa75bf6634f3ad45fbb311285bc0dc3ff", null ],
@@ -19,6 +28,14 @@ var classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer =
     [ "QuitMessageLoopOnPause", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a89519bb17f86245b0f4a78afe6da22f9", null ],
     [ "RemoveBreakpoint", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#aad924927dccd2cd06cd1b4289e542b5b", null ],
     [ "RemoveIsolate", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a98fb7de7dbec2a7482d7f736ae2409e0", null ],
+    [ "RunMessageLoopOnPause", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#ab789d52fa731c6abf730ed6e6673c90b", null ],
+    [ "RunSyncTask", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a6746338353c9058aa8ddf8a169486009", null ],
     [ "RunSyncTask", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#adacff1363d1d08074984a02b0620f81a", null ],
-    [ "Suspend", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#ad17b442bdd393042f12d00516275c0b6", null ]
+    [ "Suspend", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#ad17b442bdd393042f12d00516275c0b6", null ],
+    [ "breakpoints_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#ab6d3d5ec7c760cb0aa1b0f81e0568f93", null ],
+    [ "has_module_list_changed_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a466b7c7d4ca6bd0c12e08ae0e8c9e124", null ],
+    [ "isolate_delegates_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a082b07f0488292f06052836fa99347ed", null ],
+    [ "scripts_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a9df56fb33e0da700da7cda7ba9f57c71", null ],
+    [ "task_runner_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a1436ebf83b273b0f1819041ba7564afa", null ],
+    [ "thread_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a27935c5b7ca3fd765d7afd8393706091", null ]
 ];

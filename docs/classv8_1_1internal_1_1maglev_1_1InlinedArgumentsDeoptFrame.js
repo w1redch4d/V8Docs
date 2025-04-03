@@ -5,5 +5,7 @@ var classv8_1_1internal_1_1maglev_1_1InlinedArgumentsDeoptFrame =
     [ "bytecode_position", "classv8_1_1internal_1_1maglev_1_1InlinedArgumentsDeoptFrame.html#a14b9bd754c9309856d249bf4c073a072", null ],
     [ "closure", "classv8_1_1internal_1_1maglev_1_1InlinedArgumentsDeoptFrame.html#ae884b1b8fc6d10557318d355f511907b", null ],
     [ "closure", "classv8_1_1internal_1_1maglev_1_1InlinedArgumentsDeoptFrame.html#abfb2f66757200a7f11f9a59eeabb00b1", null ],
+    [ "data", "classv8_1_1internal_1_1maglev_1_1InlinedArgumentsDeoptFrame.html#a352ec70680298c3d64c9f2d743c9ec07", null ],
+    [ "data", "classv8_1_1internal_1_1maglev_1_1InlinedArgumentsDeoptFrame.html#aba9eaf82f10d7d29927e9f4f386560a9", null ],
     [ "unit", "classv8_1_1internal_1_1maglev_1_1InlinedArgumentsDeoptFrame.html#ab1a92c4e7e1d49ea768e56c04e49b856", null ]
 ];

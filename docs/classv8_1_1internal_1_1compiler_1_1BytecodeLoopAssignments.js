@@ -7,5 +7,7 @@ var classv8_1_1internal_1_1compiler_1_1BytecodeLoopAssignments =
     [ "ContainsParameter", "classv8_1_1internal_1_1compiler_1_1BytecodeLoopAssignments.html#a0b215bb6affa441114c7078bb862af54", null ],
     [ "local_count", "classv8_1_1internal_1_1compiler_1_1BytecodeLoopAssignments.html#a8b9068c7cf266075ae5eb6c366506f0d", null ],
     [ "parameter_count", "classv8_1_1internal_1_1compiler_1_1BytecodeLoopAssignments.html#a54b4faec8bfcd7e45e7a232b4445a2b5", null ],
-    [ "Union", "classv8_1_1internal_1_1compiler_1_1BytecodeLoopAssignments.html#a0dbd392668ebd96d7878a178b726031a", null ]
+    [ "Union", "classv8_1_1internal_1_1compiler_1_1BytecodeLoopAssignments.html#a0dbd392668ebd96d7878a178b726031a", null ],
+    [ "bit_vector_", "classv8_1_1internal_1_1compiler_1_1BytecodeLoopAssignments.html#ad5553fe44ce42ba93ef841d7fdd6050f", null ],
+    [ "parameter_count_", "classv8_1_1internal_1_1compiler_1_1BytecodeLoopAssignments.html#a310e568139e24309e9a80f2f964f3142", null ]
 ];

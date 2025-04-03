@@ -29,8 +29,14 @@ var bytecode_generator_8cc =
     [ "v8::internal::interpreter::BytecodeGenerator::LoopScope", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1LoopScope.html", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1LoopScope" ],
     [ "v8::internal::interpreter::BytecodeGenerator::ForInScope", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ForInScope.html", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ForInScope" ],
     [ "v8::internal::interpreter::BytecodeGenerator::DisposablesStackScope", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1DisposablesStackScope.html", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1DisposablesStackScope" ],
+    [ "IsCharU", "bytecode-generator_8cc.html#a67ea03204e2407b7376c0a48ec05f648", null ],
+    [ "IsLiteralCompareTypeof", "bytecode-generator_8cc.html#a5ee014ee613f7ea563de712d3dc6ca4d", null ],
+    [ "IsTypeof", "bytecode-generator_8cc.html#a1f5ac4df7f5b707bd6f8db29d7d4acf0", null ],
     [ "covered_cases", "bytecode-generator_8cc.html#ab0a9253e90784cbaddb0422053c13ed2", null ],
     [ "default_case", "bytecode-generator_8cc.html#a61cdd2155660e23961369f6adf66044a", null ],
     [ "getter", "bytecode-generator_8cc.html#ac44f078841b0e4ca9889f5da5ec95590", null ],
-    [ "setter", "bytecode-generator_8cc.html#a601701bd0c1baf808e0c9677ce65408c", null ]
+    [ "kDefaultNotFound", "bytecode-generator_8cc.html#ae2b6ae853a4ac8ee849e313438bbaa87", null ],
+    [ "ordered_accessors_", "bytecode-generator_8cc.html#a08f2619c9a8ff4d01e656c1a25254ce9", null ],
+    [ "setter", "bytecode-generator_8cc.html#a601701bd0c1baf808e0c9677ce65408c", null ],
+    [ "zone_", "bytecode-generator_8cc.html#a4979f6e7e64e9ee56f4229d03fa20c69", null ]
 ];

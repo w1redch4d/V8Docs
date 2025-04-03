@@ -9,5 +9,7 @@ var classv8_1_1internal_1_1SlotAccessorForHandle =
     [ "Write", "classv8_1_1internal_1_1SlotAccessorForHandle.html#aa2dbf7b7221d65eae2d26494d9254eab", null ],
     [ "Write", "classv8_1_1internal_1_1SlotAccessorForHandle.html#aa71163011e549575b182467606364299", null ],
     [ "WriteIndirectPointerTo", "classv8_1_1internal_1_1SlotAccessorForHandle.html#a82b8d72a4bae49e33003d2637f36c362", null ],
-    [ "WriteProtectedPointerTo", "classv8_1_1internal_1_1SlotAccessorForHandle.html#a37454fccff68a0514f292d29d02c4d35", null ]
+    [ "WriteProtectedPointerTo", "classv8_1_1internal_1_1SlotAccessorForHandle.html#a37454fccff68a0514f292d29d02c4d35", null ],
+    [ "handle_", "classv8_1_1internal_1_1SlotAccessorForHandle.html#a5c886e1829791273e3c7298ca7fc29cb", null ],
+    [ "isolate_", "classv8_1_1internal_1_1SlotAccessorForHandle.html#a5a8e911f6d4907e5dd9232c40b1cb11b", null ]
 ];

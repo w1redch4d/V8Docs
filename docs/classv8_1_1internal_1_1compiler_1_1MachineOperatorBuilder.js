@@ -293,5 +293,10 @@ var classv8_1_1internal_1_1compiler_1_1MachineOperatorBuilder =
     [ "Word64Shr", "classv8_1_1internal_1_1compiler_1_1MachineOperatorBuilder.html#a0b4dadca357a36ec7b7d30eb525c17de", null ],
     [ "Word64Xor", "classv8_1_1internal_1_1compiler_1_1MachineOperatorBuilder.html#ae87e7881d5dc79e7bf4d7de7da2d45fe", null ],
     [ "WordSar", "classv8_1_1internal_1_1compiler_1_1MachineOperatorBuilder.html#a955b365dd657ab6090f4d6ed900248da", null ],
-    [ "WordSarShiftOutZeros", "classv8_1_1internal_1_1compiler_1_1MachineOperatorBuilder.html#abfc3769c1e30d8eb8599b30ef74145d6", null ]
+    [ "WordSarShiftOutZeros", "classv8_1_1internal_1_1compiler_1_1MachineOperatorBuilder.html#abfc3769c1e30d8eb8599b30ef74145d6", null ],
+    [ "alignment_requirements_", "classv8_1_1internal_1_1compiler_1_1MachineOperatorBuilder.html#a6bcdc892041e60771739fe2c25f403d5", null ],
+    [ "cache_", "classv8_1_1internal_1_1compiler_1_1MachineOperatorBuilder.html#ad781b6c8766561df305e84da7381a74a", null ],
+    [ "flags_", "classv8_1_1internal_1_1compiler_1_1MachineOperatorBuilder.html#a9230ae9ab496c919cbf18b714dafd23c", null ],
+    [ "word_", "classv8_1_1internal_1_1compiler_1_1MachineOperatorBuilder.html#aea64daede5d27a8089af6462b90aabfb", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1MachineOperatorBuilder.html#aa1914ccf39349a90d5bfaf1d82ed355b", null ]
 ];

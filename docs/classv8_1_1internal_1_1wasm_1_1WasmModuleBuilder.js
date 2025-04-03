@@ -1,6 +1,14 @@
 var classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder =
 [
+    [ "RecGroup", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1RecGroup.html", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1RecGroup" ],
+    [ "WasmDataSegment", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmDataSegment.html", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmDataSegment" ],
     [ "WasmElemSegment", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmElemSegment.html", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmElemSegment" ],
+    [ "WasmExport", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmExport.html", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmExport" ],
+    [ "WasmFunctionImport", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmFunctionImport.html", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmFunctionImport" ],
+    [ "WasmGlobal", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmGlobal.html", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmGlobal" ],
+    [ "WasmGlobalImport", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmGlobalImport.html", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmGlobalImport" ],
+    [ "WasmMemory", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmMemory.html", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmMemory" ],
+    [ "WasmTable", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmTable.html", "structv8_1_1internal_1_1wasm_1_1WasmModuleBuilder_1_1WasmTable" ],
     [ "WasmModuleBuilder", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#a1ed9372caba8893eb4fda26de20c8722", null ],
     [ "WasmModuleBuilder", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#a3050d7fb0ab64b01e633b7ab09aa0f01", null ],
     [ "AddArrayType", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#a468b8abeb8298088bc0c865eeb0ca734", null ],
@@ -65,5 +73,21 @@ var classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder =
     [ "WriteAsmJsOffsetTable", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#af1b4a8354d776d26bd7d88c982e840e8", null ],
     [ "WriteTo", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#a6035c34cf52b42d5a417e086f265082a", null ],
     [ "zone", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#aa0946c70ee7eccf4f18403ea0832ab4d", null ],
-    [ "WasmFunctionBuilder", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#a0210e47d50d0e44fd0f929739a275fae", null ]
+    [ "WasmFunctionBuilder", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#a0210e47d50d0e44fd0f929739a275fae", null ],
+    [ "current_recursive_group_start_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#a819d197e8909a6941e1680f169238360", null ],
+    [ "data_segments_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#ac0f35a2ca99ea6c4e6f255f9361353b5", null ],
+    [ "element_segments_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#abc1040c1ba3010a9c2145251c185f233", null ],
+    [ "exports_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#aa82a086df9d227556a692a14a5f9e2e3", null ],
+    [ "function_imports_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#ad5c2f37f78c578e76ad6fb34e3911820", null ],
+    [ "functions_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#adebb020723df89323713ddac7b17b69b", null ],
+    [ "global_imports_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#a8aea1132f9fbc6fe630b01da897afe44", null ],
+    [ "globals_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#ae17580fd53575860e8d1b520b16f54da", null ],
+    [ "memories_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#aba578d663439a2fba08144ca139aa361", null ],
+    [ "recursive_groups_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#aaaa4c84dc3b6020bcda17fefefa715ea", null ],
+    [ "signature_map_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#a135df5677de8b141ca11000a6e48e07d", null ],
+    [ "start_function_index_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#a67c1fc8b06ba5f3322addda8a0a54090", null ],
+    [ "tables_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#a696bad22689964a0c78fc89dfa360791", null ],
+    [ "tags_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#a2ff22b6dcc662711894b6539bfeb2a7b", null ],
+    [ "types_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#ac57aaa894386721efaf6b10b5f5041b7", null ],
+    [ "zone_", "classv8_1_1internal_1_1wasm_1_1WasmModuleBuilder.html#acc33166ae029b5f2ed13c6577ec4471d", null ]
 ];

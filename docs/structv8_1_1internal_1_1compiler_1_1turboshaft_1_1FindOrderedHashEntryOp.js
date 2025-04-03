@@ -11,5 +11,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FindOrderedHashEntryOp =
     [ "key", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FindOrderedHashEntryOp.html#a9350bd4039874e3672883bf1d30b898c", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FindOrderedHashEntryOp.html#ab40a774b979cdce1ff064caf263eba0e", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FindOrderedHashEntryOp.html#a9b135798e9201918ab262938bfc30492", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FindOrderedHashEntryOp.html#aa28eb3c8ed48e9a769e7f363312f96c4", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1FindOrderedHashEntryOp.html#abe122ebe478ebdb709e47edef894e895", null ]
 ];

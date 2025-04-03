@@ -7,5 +7,7 @@ var classv8_1_1internal_1_1WritableJitPage =
     [ "FreeRange", "classv8_1_1internal_1_1WritableJitPage.html#a80a31048e872f67c4b9f33a22e6a606d", null ],
     [ "LookupAllocationContaining", "classv8_1_1internal_1_1WritableJitPage.html#a34b59de76e9f2e5269c8923fa410b3b3", null ],
     [ "operator=", "classv8_1_1internal_1_1WritableJitPage.html#ab82f0211fb7d218f6042654c7a2ff2a3", null ],
-    [ "ThreadIsolation", "classv8_1_1internal_1_1WritableJitPage.html#a71e03cc13153db913e0b9c197dc845f8", null ]
+    [ "ThreadIsolation", "classv8_1_1internal_1_1WritableJitPage.html#a71e03cc13153db913e0b9c197dc845f8", null ],
+    [ "page_ref_", "classv8_1_1internal_1_1WritableJitPage.html#ada604649c5c945c44261c9997ddd3452", null ],
+    [ "write_scope_", "classv8_1_1internal_1_1WritableJitPage.html#a19f10b1c878db85f9185cb3b8e444521", null ]
 ];

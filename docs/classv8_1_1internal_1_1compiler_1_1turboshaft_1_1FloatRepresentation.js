@@ -7,6 +7,8 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatRepresentation =
     [ "FloatRepresentation", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatRepresentation.html#a22ced8fdd6b26bac16011b38d7dd9919", null ],
     [ "FloatRepresentation", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatRepresentation.html#a34c1fc16e2c8c967656b33621fa9b8ac", null ],
     [ "FloatRepresentation", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatRepresentation.html#a21e4f38ab7db38042c7be404683506be", null ],
+    [ "Float32", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatRepresentation.html#ad19c6c726c813c35516d18481439e5f0", null ],
+    [ "Float64", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatRepresentation.html#aef1031e2329a10bcc095656f28ecf80f", null ],
     [ "operator Enum", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatRepresentation.html#a126c9dbdc7c1a96550f1c6b084a42320", null ],
     [ "value", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1FloatRepresentation.html#add44944cfe9e05dc8d3e536778c46d71", null ]
 ];

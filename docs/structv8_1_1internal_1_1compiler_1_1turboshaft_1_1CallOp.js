@@ -10,6 +10,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CallOp =
     [ "hash_value", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CallOp.html#a494b3ea6f1fbcb689d305331626e5ab4", null ],
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CallOp.html#aec934989a8d3a4cdbc31b635b7e25921", null ],
     [ "IsStackCheck", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CallOp.html#ab782d62e8f7b7baf8e67a9504f655fdf", null ],
+    [ "New", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CallOp.html#a5032e73fe065b62fcda53d3c922034b3", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CallOp.html#affe1728fa0faf149c9cea84ba8f35a71", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CallOp.html#a821b7fd36e11daf33cf8fc2a6ff04083", null ],
     [ "PrintOptions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CallOp.html#a7723e59f04917945cfbf3662fa7209cb", null ],

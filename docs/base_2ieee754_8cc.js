@@ -21,6 +21,7 @@ var base_2ieee754_8cc =
     [ "cosh", "base_2ieee754_8cc.html#a598803c3cbc13914a04ddff2f9467943", null ],
     [ "exp", "base_2ieee754_8cc.html#a6933d652f26a01529c4fc7d747981cc5", null ],
     [ "expm1", "base_2ieee754_8cc.html#aadf0cef9f17d3d4c3b0945f4b593f5c5", null ],
+    [ "k_log1p", "base_2ieee754_8cc.html#a19da41f8f1d2b250f224306ff5fe0721", null ],
     [ "log", "base_2ieee754_8cc.html#a3266ea29ca1587b1d68bbfe6872ffff6", null ],
     [ "log10", "base_2ieee754_8cc.html#a6eca5c3a9d5003646d470b4ac658d8ad", null ],
     [ "log1p", "base_2ieee754_8cc.html#a93a9aae6ad9669a8d355c0cfc704f18b", null ],
@@ -29,5 +30,12 @@ var base_2ieee754_8cc =
     [ "sin", "base_2ieee754_8cc.html#a6220acee5cae2ef3fcd2ea7b0f8ce388", null ],
     [ "sinh", "base_2ieee754_8cc.html#a4bae845cca99223e9dc03a268cd967eb", null ],
     [ "tan", "base_2ieee754_8cc.html#a1ba853e593d8716f210d26adabee40da", null ],
-    [ "tanh", "base_2ieee754_8cc.html#ab01c75ad07cdfdaf753a222a17eb3828", null ]
+    [ "tanh", "base_2ieee754_8cc.html#ab01c75ad07cdfdaf753a222a17eb3828", null ],
+    [ "Lg1", "base_2ieee754_8cc.html#a7d197d4effc41146a043a0588252d387", null ],
+    [ "Lg2", "base_2ieee754_8cc.html#a5a3f85a01dff3ddf82317f974806b5ba", null ],
+    [ "Lg3", "base_2ieee754_8cc.html#a9b9c5887f1bcef64c4b80d85c9d611e1", null ],
+    [ "Lg4", "base_2ieee754_8cc.html#aff8ec0ea665af0342860cfe67eb69fcb", null ],
+    [ "Lg5", "base_2ieee754_8cc.html#a42efb39cc11372593932f9963b51f9a6", null ],
+    [ "Lg6", "base_2ieee754_8cc.html#acf83b1ba33a3c5eb91e17af55da23a9f", null ],
+    [ "Lg7", "base_2ieee754_8cc.html#ae6e6d75408ab6e0d2967eb926fc1a9de", null ]
 ];

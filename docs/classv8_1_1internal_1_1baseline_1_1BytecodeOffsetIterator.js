@@ -10,5 +10,19 @@ var classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator =
     [ "current_pc_end_offset", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a4e144ac6727ddae76af6d70050693a96", null ],
     [ "current_pc_start_offset", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#acd351d708e954df27d31972b4796844c", null ],
     [ "done", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a6fd7240cd33b013459574d5c0cbb2293", null ],
-    [ "UpdatePointers", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a62eb2296ee85808efa7a49c0ada6390f", null ]
+    [ "Initialize", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a8dff9334ecd2180e69eb0d6b5f7c2d1b", null ],
+    [ "ReadPosition", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a54b336c52192d287263813d9c9a34b64", null ],
+    [ "UpdatePointers", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a62eb2296ee85808efa7a49c0ada6390f", null ],
+    [ "UpdatePointersCallback", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a7b9bc4044f55848e61e6af856b3eee9a", null ],
+    [ "bytecode_handle_storage_", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a280a13fc5e947051dedb641c15ea29db", null ],
+    [ "bytecode_iterator_", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a0b40d3ce976b9486b292a38d33cb46d6", null ],
+    [ "current_bytecode_offset_", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#abf6f3fbf17f9622c0c784e033d7ec4d3", null ],
+    [ "current_index_", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#ad4f4ebcbbcac1c9d8e29f1ab81bb2eba", null ],
+    [ "current_pc_end_offset_", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a6bc863f4f2edf72f094699c439ea6c78", null ],
+    [ "current_pc_start_offset_", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a09c1f71f0d8672a1c203e040aa588673", null ],
+    [ "data_length_", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#aebd43d7791e09308b04ef2c808d16563", null ],
+    [ "data_start_address_", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a1dc9675f440fbc090b026fb30104b4d7", null ],
+    [ "local_heap_", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#a9b8831bd9bd4175fdfd8b516b56d5f5c", null ],
+    [ "mapping_table_", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#aaf22436564f715c5483defbda6652fe1", null ],
+    [ "no_gc_", "classv8_1_1internal_1_1baseline_1_1BytecodeOffsetIterator.html#ae1ea87510475ee6d3d3f4a1b523ad2ff", null ]
 ];

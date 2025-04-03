@@ -1,6 +1,7 @@
 var backing_store_8h =
 [
     [ "v8::internal::BackingStore", "classv8_1_1internal_1_1BackingStore.html", "classv8_1_1internal_1_1BackingStore" ],
+    [ "v8::internal::BackingStore::TypeSpecificData", "unionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData.html", "unionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData" ],
     [ "v8::internal::BackingStore::TypeSpecificData::DeleterInfo", "structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo.html", "structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo" ],
     [ "v8::internal::GlobalBackingStoreRegistry", "classv8_1_1internal_1_1GlobalBackingStoreRegistry.html", "classv8_1_1internal_1_1GlobalBackingStoreRegistry" ],
     [ "InitializedFlag", "backing-store_8h.html#a6d3f691695696e478ebb4a18ab857bfa", [

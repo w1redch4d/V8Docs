@@ -8,8 +8,13 @@ var classv8_1_1internal_1_1Cancelable =
     [ "Cancelable", "classv8_1_1internal_1_1Cancelable.html#af72d1fe8c54b45da487af831987f4e5b", null ],
     [ "~Cancelable", "classv8_1_1internal_1_1Cancelable.html#a03c01713526ea76850329ceaf354d94b", null ],
     [ "Cancelable", "classv8_1_1internal_1_1Cancelable.html#a4459d9f9ffa3c10b57288c85f3717308", null ],
+    [ "Cancel", "classv8_1_1internal_1_1Cancelable.html#a14c7e543dabdc2abfd0334b4ece2b00a", null ],
+    [ "CompareExchangeStatus", "classv8_1_1internal_1_1Cancelable.html#a938961771ea6108e56ee333802c3bd81", null ],
     [ "id", "classv8_1_1internal_1_1Cancelable.html#a2243742c07e4655ed589aa5ae05c37a2", null ],
     [ "operator=", "classv8_1_1internal_1_1Cancelable.html#a5fa4256e56a9ea0a88fe6a09e50d70b0", null ],
     [ "TryRun", "classv8_1_1internal_1_1Cancelable.html#af46b0c5cafa45306e10034d264efa95d", null ],
-    [ "CancelableTaskManager", "classv8_1_1internal_1_1Cancelable.html#a76c51416f37d4d74c9557fb203b8ccf3", null ]
+    [ "CancelableTaskManager", "classv8_1_1internal_1_1Cancelable.html#a76c51416f37d4d74c9557fb203b8ccf3", null ],
+    [ "id_", "classv8_1_1internal_1_1Cancelable.html#aa2bc0d1f914affa94c198453b965d070", null ],
+    [ "parent_", "classv8_1_1internal_1_1Cancelable.html#ac350826b6f1278f6425798a669698ba3", null ],
+    [ "status_", "classv8_1_1internal_1_1Cancelable.html#a673ef248290d797bfaac791af77cd411", null ]
 ];

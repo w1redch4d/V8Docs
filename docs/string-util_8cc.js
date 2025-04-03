@@ -11,5 +11,6 @@ var string_util_8cc =
     [ "toV8String", "string-util_8cc.html#a80409bdf479d8b9dee90a12c0f870ca4", null ],
     [ "toV8String", "string-util_8cc.html#a582713572d0a91dbdfed48e9e69b7907", null ],
     [ "toV8StringInternalized", "string-util_8cc.html#a89ce22515c43e91dbc6b211bada653c7", null ],
-    [ "toV8StringInternalized", "string-util_8cc.html#ae67dd6fa57f44895e7a7cdc8391e5bd8", null ]
+    [ "toV8StringInternalized", "string-util_8cc.html#ae67dd6fa57f44895e7a7cdc8391e5bd8", null ],
+    [ "data_", "string-util_8cc.html#a94cc3f06b66d1b82ae472daec946d7ac", null ]
 ];

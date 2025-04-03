@@ -16,5 +16,11 @@ var classv8_1_1internal_1_1RegExpLookaround =
     [ "IsAnchoredAtStart", "classv8_1_1internal_1_1RegExpLookaround.html#a16c0ff4325d453275b2c390efbc14a43", null ],
     [ "max_match", "classv8_1_1internal_1_1RegExpLookaround.html#af20bddc3c92ef40530b7ee02a6e26b4e", null ],
     [ "min_match", "classv8_1_1internal_1_1RegExpLookaround.html#a15837ba2d732a0809843d745a2e17521", null ],
-    [ "type", "classv8_1_1internal_1_1RegExpLookaround.html#a534d51575b89f1a62609fd225b4611c5", null ]
+    [ "type", "classv8_1_1internal_1_1RegExpLookaround.html#a534d51575b89f1a62609fd225b4611c5", null ],
+    [ "body_", "classv8_1_1internal_1_1RegExpLookaround.html#a84bf4c204d9f441b1195239af8a49d90", null ],
+    [ "capture_count_", "classv8_1_1internal_1_1RegExpLookaround.html#a0db42f1f9e7b9ff3c8b947c49dd0c8b5", null ],
+    [ "capture_from_", "classv8_1_1internal_1_1RegExpLookaround.html#a979e61649178c1cba85f66ad25708048", null ],
+    [ "index_", "classv8_1_1internal_1_1RegExpLookaround.html#a2e59e8a156eed9c82648b0203aec6838", null ],
+    [ "is_positive_", "classv8_1_1internal_1_1RegExpLookaround.html#a8e3996d7e11bf906276b43a988c333e6", null ],
+    [ "type_", "classv8_1_1internal_1_1RegExpLookaround.html#a2c593a36466a230df07168d2d81ed050", null ]
 ];

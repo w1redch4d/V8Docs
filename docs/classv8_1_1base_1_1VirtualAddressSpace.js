@@ -12,6 +12,7 @@ var classv8_1_1base_1_1VirtualAddressSpace =
     [ "FreeGuardRegion", "classv8_1_1base_1_1VirtualAddressSpace.html#a5a62b313b26a991e0230c08c62b39feb", null ],
     [ "FreePages", "classv8_1_1base_1_1VirtualAddressSpace.html#a24080f41fd021f97105a64b4e4b0f0b1", null ],
     [ "FreeSharedPages", "classv8_1_1base_1_1VirtualAddressSpace.html#a6ab33c293194509f8ce941ddc6a6b32c", null ],
+    [ "FreeSubspace", "classv8_1_1base_1_1VirtualAddressSpace.html#a824381e07f413e9478ac3cf1faef736c", null ],
     [ "RandomPageAddress", "classv8_1_1base_1_1VirtualAddressSpace.html#a3b9fc3a8f5fb4b3595f807b754dc9275", null ],
     [ "RecommitPages", "classv8_1_1base_1_1VirtualAddressSpace.html#ac913f3e5face13ac948204b526da2d65", null ],
     [ "SetPagePermissions", "classv8_1_1base_1_1VirtualAddressSpace.html#a6abb0ee6650afc83c4facc580e103e52", null ],

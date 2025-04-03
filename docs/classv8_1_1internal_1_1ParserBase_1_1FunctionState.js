@@ -19,5 +19,17 @@ var classv8_1_1internal_1_1ParserBase_1_1FunctionState =
     [ "scope", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#ad06b70a5014551a6a3b7c18e9e6f897b", null ],
     [ "set_next_function_is_likely_called", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#a6db51fb7d056320f651fecd44b7a433a", null ],
     [ "suspend_count", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#a3b43180d6b7f04c8f53e09d461557811", null ],
-    [ "target_stack_address", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#ae18cf7bb31d1bc4b7ed88680b978014d", null ]
+    [ "target_stack_address", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#ae18cf7bb31d1bc4b7ed88680b978014d", null ],
+    [ "contains_function_or_eval_", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#abe1f77f9f49ff2c311d0c16a92c216e1", null ],
+    [ "dont_optimize_reason_", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#a1f5390de88fa1c03da94220624a9d7a4", null ],
+    [ "expected_property_count_", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#a6961e67a83e088f2911567d4d48a1cef", null ],
+    [ "function_state_stack_", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#af4fe44ac392dd216197d9e2354b5f5fc", null ],
+    [ "Impl", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#a1291e09897ea800c4f615300833e10e1", null ],
+    [ "loop_nesting_depth_", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#a5484129060cc042fc2b1975d6bbb0772", null ],
+    [ "next_function_is_likely_called_", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#a7e410c53d139ee0f2ebff50fcdce2dfd", null ],
+    [ "outer_function_state_", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#adc405b7a5e210cb2b481a60aa042b51a", null ],
+    [ "previous_function_was_likely_called_", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#a9a0deed857c4e98dd466cdd82a34072d", null ],
+    [ "scope_", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#aa4080807e8754113a9f164a8d0565b27", null ],
+    [ "suspend_count_", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#a8721033076a516bd560726314c7e03a0", null ],
+    [ "target_stack_", "classv8_1_1internal_1_1ParserBase_1_1FunctionState.html#ad0314108a9fb2b91eac74b3da18bac58", null ]
 ];

@@ -10,5 +10,11 @@ var classv8_1_1internal_1_1torque_1_1ControlFlowGraph =
     [ "set_end", "classv8_1_1internal_1_1torque_1_1ControlFlowGraph.html#aa782bce1ddd0037416b907b02f68b83d", null ],
     [ "SetReturnType", "classv8_1_1internal_1_1torque_1_1ControlFlowGraph.html#ab4df55a1e140465bc1edbf6697f56e79", null ],
     [ "start", "classv8_1_1internal_1_1torque_1_1ControlFlowGraph.html#a3c383e89a0bb0c93ef1ef9d0f3706569", null ],
-    [ "UnplaceBlockIf", "classv8_1_1internal_1_1torque_1_1ControlFlowGraph.html#a9b08e0517a559c45e8c56fc9f9c96965", null ]
+    [ "UnplaceBlockIf", "classv8_1_1internal_1_1torque_1_1ControlFlowGraph.html#a9b08e0517a559c45e8c56fc9f9c96965", null ],
+    [ "blocks_", "classv8_1_1internal_1_1torque_1_1ControlFlowGraph.html#a0fa982506c6697b33f72f5e2ecb67049", null ],
+    [ "end_", "classv8_1_1internal_1_1torque_1_1ControlFlowGraph.html#a859c642fdf247842d9b6da30be6c1822", null ],
+    [ "next_block_id_", "classv8_1_1internal_1_1torque_1_1ControlFlowGraph.html#a4bc118c6a7f184264893c71cd907f3b6", null ],
+    [ "placed_blocks_", "classv8_1_1internal_1_1torque_1_1ControlFlowGraph.html#a0805a07573936f36a6a1c7973edc1374", null ],
+    [ "return_type_", "classv8_1_1internal_1_1torque_1_1ControlFlowGraph.html#a15b83c16a645b0af8a26bcf617c89ffb", null ],
+    [ "start_", "classv8_1_1internal_1_1torque_1_1ControlFlowGraph.html#a005942ed3c9f1e79112fe48381528709", null ]
 ];

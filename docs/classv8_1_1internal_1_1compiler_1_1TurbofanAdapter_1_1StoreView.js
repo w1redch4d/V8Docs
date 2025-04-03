@@ -12,5 +12,6 @@ var classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1StoreView =
     [ "memory_order", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1StoreView.html#aefdad16afcb386c673ef498037f7ed03", null ],
     [ "operator node_t", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1StoreView.html#abdafe022d367da4dc011df80ac50947e", null ],
     [ "stored_rep", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1StoreView.html#ac093e033166afb79a1b66c5cd807b674", null ],
-    [ "value", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1StoreView.html#a62a16f9db8f6438643a4c80ad12ce2ad", null ]
+    [ "value", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1StoreView.html#a62a16f9db8f6438643a4c80ad12ce2ad", null ],
+    [ "node_", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1StoreView.html#aaee38f79eeeb45f01ca46cc3008d0eb3", null ]
 ];

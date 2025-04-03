@@ -2,6 +2,7 @@ var classv8_1_1internal_1_1LoopChoiceNode =
 [
     [ "LoopChoiceNode", "classv8_1_1internal_1_1LoopChoiceNode.html#ab785905f8cc6772081ab3ad025b7f99b", null ],
     [ "Accept", "classv8_1_1internal_1_1LoopChoiceNode.html#add352e67beda72f3782565250b40745e", null ],
+    [ "AddAlternative", "classv8_1_1internal_1_1LoopChoiceNode.html#add02d61e574666005102460c4d8d4e73", null ],
     [ "AddContinueAlternative", "classv8_1_1internal_1_1LoopChoiceNode.html#a30882e49330a344892de6024e1a9138c", null ],
     [ "AddLoopAlternative", "classv8_1_1internal_1_1LoopChoiceNode.html#a815bc1ebd29be2a63d8d69991c3a44c1", null ],
     [ "AsLoopChoiceNode", "classv8_1_1internal_1_1LoopChoiceNode.html#ab4cbb9e22f02e67e7da9b7a8a3807d62", null ],
@@ -17,5 +18,11 @@ var classv8_1_1internal_1_1LoopChoiceNode =
     [ "min_loop_iterations", "classv8_1_1internal_1_1LoopChoiceNode.html#a073ce796170edf118e61bf32280953d6", null ],
     [ "read_backward", "classv8_1_1internal_1_1LoopChoiceNode.html#a4dcd91110f4796314983ddb9cd3476ed", null ],
     [ "IterationDecrementer", "classv8_1_1internal_1_1LoopChoiceNode.html#a78bf2ca197ec1cde3d7d85178f2b4284", null ],
-    [ "LoopInitializationMarker", "classv8_1_1internal_1_1LoopChoiceNode.html#a5e6ddf8adc16c503a8566a3ef80eab29", null ]
+    [ "LoopInitializationMarker", "classv8_1_1internal_1_1LoopChoiceNode.html#a5e6ddf8adc16c503a8566a3ef80eab29", null ],
+    [ "body_can_be_zero_length_", "classv8_1_1internal_1_1LoopChoiceNode.html#a9b6fbfcfe5392e8c96e361f05f561904", null ],
+    [ "continue_node_", "classv8_1_1internal_1_1LoopChoiceNode.html#a6f56b629214ceaf564e6eeaa293990ac", null ],
+    [ "loop_node_", "classv8_1_1internal_1_1LoopChoiceNode.html#aaeb891ce3671739f29e79e0039e4e21c", null ],
+    [ "min_loop_iterations_", "classv8_1_1internal_1_1LoopChoiceNode.html#a8af582ade976f1d26ba8fca4798b225c", null ],
+    [ "read_backward_", "classv8_1_1internal_1_1LoopChoiceNode.html#a29915413e847420070832f70d5115600", null ],
+    [ "traversed_loop_initialization_node_", "classv8_1_1internal_1_1LoopChoiceNode.html#a6cd1f2693e86198171904f6f4aecb400", null ]
 ];

@@ -23,11 +23,13 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp =
     [ "ChangeOp", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#a06d83c5b8d707d45b6964393b4323eea", null ],
     [ "input", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#ab8f2a68b49d324646efe2dfc7dc010e2", null ],
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#a4d88288ac48c7d6fa288e4ffb091c0a7", null ],
+    [ "IsReversible", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#a4e4f7d84a4d659647231d7e0ee7875ea", null ],
     [ "IsReversibleBy", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#a5287703b2fd9a7f97cd7485839c942df", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#a7e64aa100495bf0480a890aaabf83628", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#ae181de2849a71e7fd838ca59c6189d49", null ],
     [ "Validate", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#a3c54b5e8fa933499a7d0f8be488dfb28", null ],
     [ "assumption", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#ae792ba1867c78b3561a83335f80d9dea", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#a1eb822f16667aa50ded158565d3ef8a4", null ],
     [ "from", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#ad2a655cfcab136a89301bae0c279c521", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#a25a751cd28714edda4b9881327778d14", null ],
     [ "to", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOp.html#a1bb3ac9ce162b10502a38a4d0c2f3268", null ]

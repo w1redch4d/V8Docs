@@ -1,12 +1,21 @@
 var classv8_1_1internal_1_1WritableJitAllocation =
 [
+    [ "JitAllocationSource", "classv8_1_1internal_1_1WritableJitAllocation.html#abd266d1fda0994c9f4bbe55d5e188d18", [
+      [ "kRegister", "classv8_1_1internal_1_1WritableJitAllocation.html#abd266d1fda0994c9f4bbe55d5e188d18a31b4285f9ab9bdef6c8ca2b268509e83", null ],
+      [ "kLookup", "classv8_1_1internal_1_1WritableJitAllocation.html#abd266d1fda0994c9f4bbe55d5e188d18a0c2a5cdacf8be7c37db4d51c1ef9566b", null ]
+    ] ],
     [ "WritableJitAllocation", "classv8_1_1internal_1_1WritableJitAllocation.html#ae30999c1117c1c56e05b22c631a74968", null ],
     [ "~WritableJitAllocation", "classv8_1_1internal_1_1WritableJitAllocation.html#a8b4739c54a6deb3e74e7ae702594e25c", null ],
+    [ "WritableJitAllocation", "classv8_1_1internal_1_1WritableJitAllocation.html#a74cebbbf88bacd64216acda3c91a7e80", null ],
+    [ "WritableJitAllocation", "classv8_1_1internal_1_1WritableJitAllocation.html#a4da1adc071ee635db438d26b9641963f", null ],
     [ "address", "classv8_1_1internal_1_1WritableJitAllocation.html#a1176b72035f0870f04b2b8183ff8a9dc", null ],
     [ "ClearBytes", "classv8_1_1internal_1_1WritableJitAllocation.html#a9ceea424d25a7087297d650a88c452af", null ],
     [ "CopyCode", "classv8_1_1internal_1_1WritableJitAllocation.html#a5214a39ff535864c1f6ae1968547208d", null ],
     [ "CopyData", "classv8_1_1internal_1_1WritableJitAllocation.html#ae8874306b45c6cb31544e5654210a001", null ],
+    [ "ForInstructionStream", "classv8_1_1internal_1_1WritableJitAllocation.html#a72af50fa547073a14369c06b3667345c", null ],
+    [ "ForNonExecutableMemory", "classv8_1_1internal_1_1WritableJitAllocation.html#a1b2aeaa9306ea785dd699803f37ad8e1", null ],
     [ "operator=", "classv8_1_1internal_1_1WritableJitAllocation.html#afe1731a28b9d84a4117891960d85c60d", null ],
+    [ "page_ref", "classv8_1_1internal_1_1WritableJitAllocation.html#a2618e2b5c9b21fa4c45343d1801a253f", null ],
     [ "size", "classv8_1_1internal_1_1WritableJitAllocation.html#af0f3a9c02fadf8b2f581f1d3f3e32ed7", null ],
     [ "WriteHeaderSlot", "classv8_1_1internal_1_1WritableJitAllocation.html#aecb003578990205c7955ab7565b1348f", null ],
     [ "WriteHeaderSlot", "classv8_1_1internal_1_1WritableJitAllocation.html#a52b003e3469ade15c70597343f00540e", null ],
@@ -19,10 +28,16 @@ var classv8_1_1internal_1_1WritableJitAllocation =
     [ "WriteProtectedPointerHeaderSlot", "classv8_1_1internal_1_1WritableJitAllocation.html#a89b78bd45eea4174ab716b84dc95bb7e", null ],
     [ "WriteProtectedPointerHeaderSlot", "classv8_1_1internal_1_1WritableJitAllocation.html#a7dca0a9beb1f03e92bd59304c748c53a", null ],
     [ "WriteProtectedPointerHeaderSlot", "classv8_1_1internal_1_1WritableJitAllocation.html#a9f6bf4b710bd8d08e7dcffa47ec6544a", null ],
+    [ "WriteScopeForApiEnforcement", "classv8_1_1internal_1_1WritableJitAllocation.html#af7c6aa39b1583419b85f480c09dab455", null ],
     [ "WriteUnalignedValue", "classv8_1_1internal_1_1WritableJitAllocation.html#a3fcd3ba75db73eca7bfbd142725f190b", null ],
     [ "WriteValue", "classv8_1_1internal_1_1WritableJitAllocation.html#a71687aa21827dfbadecc0477e20b60af", null ],
     [ "WriteValue", "classv8_1_1internal_1_1WritableJitAllocation.html#a1f9026ad6ff5f397e752fe6eb63a7f3c", null ],
     [ "ThreadIsolation", "classv8_1_1internal_1_1WritableJitAllocation.html#a71e03cc13153db913e0b9c197dc845f8", null ],
     [ "WritableJitPage", "classv8_1_1internal_1_1WritableJitAllocation.html#a0631888469a05acf1546ffd04e10b2d3", null ],
-    [ "WritableJumpTablePair", "classv8_1_1internal_1_1WritableJitAllocation.html#a03cd4c0456737af97e1f30731913f74b", null ]
+    [ "WritableJumpTablePair", "classv8_1_1internal_1_1WritableJitAllocation.html#a03cd4c0456737af97e1f30731913f74b", null ],
+    [ "address_", "classv8_1_1internal_1_1WritableJitAllocation.html#a194a48b5de9edacdd36245e822c1f7dc", null ],
+    [ "allocation_", "classv8_1_1internal_1_1WritableJitAllocation.html#a44d0df22b8f40b1f4a9f6995313f9d6d", null ],
+    [ "enforce_write_api_", "classv8_1_1internal_1_1WritableJitAllocation.html#a1ffbff2e24f314f47c5426d5e812757f", null ],
+    [ "page_ref_", "classv8_1_1internal_1_1WritableJitAllocation.html#a75326146b8ff27378684614e8bfb6c23", null ],
+    [ "write_scope_", "classv8_1_1internal_1_1WritableJitAllocation.html#af80bd868fe5e475bff6683b134255a29", null ]
 ];

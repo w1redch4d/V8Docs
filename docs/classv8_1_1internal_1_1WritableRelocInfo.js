@@ -12,5 +12,6 @@ var classv8_1_1internal_1_1WritableRelocInfo =
     [ "set_wasm_call_address", "classv8_1_1internal_1_1WritableRelocInfo.html#a07b77d75ab4172abbf521f061ccfd9a3", null ],
     [ "set_wasm_canonical_sig_id", "classv8_1_1internal_1_1WritableRelocInfo.html#afb672f86b71e3e0e7713bb5b66985ab3", null ],
     [ "set_wasm_code_pointer_table_entry", "classv8_1_1internal_1_1WritableRelocInfo.html#ab7efa4ab015f9c78957662ceb9cd4faa", null ],
-    [ "set_wasm_stub_call_address", "classv8_1_1internal_1_1WritableRelocInfo.html#a774c719eae7ef431515ad1bd6c11050c", null ]
+    [ "set_wasm_stub_call_address", "classv8_1_1internal_1_1WritableRelocInfo.html#a774c719eae7ef431515ad1bd6c11050c", null ],
+    [ "jit_allocation_", "classv8_1_1internal_1_1WritableRelocInfo.html#a93d7e6a916599e7d5f29391fe5ed1117", null ]
 ];

@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder =
 [
+    [ "Entry", "structv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder_1_1Entry.html", "structv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder_1_1Entry" ],
     [ "HandlerTableBuilder", "classv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder.html#a6627b2e006e6a55ce940b58c8edfddf2", null ],
     [ "HandlerTableBuilder", "classv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder.html#a259acc51ff14efb609554d4bf628f6c7", null ],
     [ "NewHandlerEntry", "classv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder.html#aeaa077d7683bba9ef16516c2304f5c87", null ],
@@ -9,5 +10,6 @@ var classv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder =
     [ "SetPrediction", "classv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder.html#a8949ce0536626ace7e8c167e81b601c1", null ],
     [ "SetTryRegionEnd", "classv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder.html#afacf3667fd2b30938af3a6cd959ce87f", null ],
     [ "SetTryRegionStart", "classv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder.html#a44e4050f8feeb5917c895f812897b665", null ],
-    [ "ToHandlerTable", "classv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder.html#afe3181b77ea11dcf7f3b3975e0a7b612", null ]
+    [ "ToHandlerTable", "classv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder.html#afe3181b77ea11dcf7f3b3975e0a7b612", null ],
+    [ "entries_", "classv8_1_1internal_1_1interpreter_1_1HandlerTableBuilder.html#a95b7c177c2ebb1efc03fd2910760fbfb", null ]
 ];

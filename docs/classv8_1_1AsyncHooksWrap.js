@@ -11,5 +11,12 @@ var classv8_1_1AsyncHooksWrap =
     [ "set_after_function", "classv8_1_1AsyncHooksWrap.html#a3bb0f99aea2abf77b2447ec4c5fa63e2", null ],
     [ "set_before_function", "classv8_1_1AsyncHooksWrap.html#a34129e18258cc73b41d442b4029d40d3", null ],
     [ "set_init_function", "classv8_1_1AsyncHooksWrap.html#a93cfce0a5b47b3c69cd6aa2e420bc762", null ],
-    [ "set_promiseResolve_function", "classv8_1_1AsyncHooksWrap.html#a6dd783f0764486f7e1e4155854b274b2", null ]
+    [ "set_promiseResolve_function", "classv8_1_1AsyncHooksWrap.html#a6dd783f0764486f7e1e4155854b274b2", null ],
+    [ "after_function_", "classv8_1_1AsyncHooksWrap.html#a678abcf798149963a490513004cae8f3", null ],
+    [ "before_function_", "classv8_1_1AsyncHooksWrap.html#ad816306120f069682a43d81945bf7763", null ],
+    [ "enabled_", "classv8_1_1AsyncHooksWrap.html#af7ce24454b0a17062c8e68ec766ee371", null ],
+    [ "init_function_", "classv8_1_1AsyncHooksWrap.html#ab2ee7cdc60d7e7c43de9680f0ff35483", null ],
+    [ "isolate_", "classv8_1_1AsyncHooksWrap.html#abc18c0d14de754a2da100923b0053e71", null ],
+    [ "kManagedTag", "classv8_1_1AsyncHooksWrap.html#a7485ef4cab5e736f6c73094fa1a43edf", null ],
+    [ "promiseResolve_function_", "classv8_1_1AsyncHooksWrap.html#ad65c818d95dc3075bbefe30c7edc345f", null ]
 ];

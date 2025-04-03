@@ -17,5 +17,15 @@ var classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase =
     [ "phase_kind_name", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#a439b345edaba095ed106b4c41cec6557", null ],
     [ "phase_name", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#aaad561cd6e2596be3158e6ba5c618e14", null ],
     [ "set_function_name", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#ae52c9d1191ef16378e11ac5edc1a2911", null ],
-    [ "PhaseScope", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#a83107872a2da1a6ff69a6f49d40dabbe", null ]
+    [ "PhaseScope", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#a83107872a2da1a6ff69a6f49d40dabbe", null ],
+    [ "code_kind_", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#a72c86e4ab01ad37bc458855d9eb8e336", null ],
+    [ "compilation_stats_", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#a59366bc4ba8b20315f02f6c1ed5ecf64", null ],
+    [ "function_name_", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#a3a58f384be3e88be2aeaddfe76ddba28", null ],
+    [ "outer_zone_", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#a5e5492b70b881cb920f595301b23392f", null ],
+    [ "phase_kind_name_", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#adedd5c8033907f336a0e9380cc20ce66", null ],
+    [ "phase_kind_stats_", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#aacc1e0111105105de3d54723483ca83e", null ],
+    [ "phase_name_", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#a4f8504cff566802dfdd75f486c613107", null ],
+    [ "phase_stats_", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#a958767e11802222e0deb96093ff23d1f", null ],
+    [ "total_stats_", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#aff14cc380c1455aea4d5210529163f76", null ],
+    [ "zone_stats_", "classv8_1_1internal_1_1compiler_1_1PipelineStatisticsBase.html#ac5a988993d260a641b77cfcc9ca884ae", null ]
 ];

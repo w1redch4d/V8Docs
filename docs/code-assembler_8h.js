@@ -7,6 +7,7 @@ var code_assembler_8h =
     [ "v8::internal::compiler::CodeAssembler::MessageWithSourceLocation", "structv8_1_1internal_1_1compiler_1_1CodeAssembler_1_1MessageWithSourceLocation.html", "structv8_1_1internal_1_1compiler_1_1CodeAssembler_1_1MessageWithSourceLocation" ],
     [ "v8::internal::compiler::CodeAssembler::SourcePositionScope", "classv8_1_1internal_1_1compiler_1_1CodeAssembler_1_1SourcePositionScope.html", "classv8_1_1internal_1_1compiler_1_1CodeAssembler_1_1SourcePositionScope" ],
     [ "v8::internal::compiler::CodeAssemblerVariable", "classv8_1_1internal_1_1compiler_1_1CodeAssemblerVariable.html", "classv8_1_1internal_1_1compiler_1_1CodeAssemblerVariable" ],
+    [ "v8::internal::compiler::CodeAssemblerVariable::ImplComparator", "structv8_1_1internal_1_1compiler_1_1CodeAssemblerVariable_1_1ImplComparator.html", "structv8_1_1internal_1_1compiler_1_1CodeAssemblerVariable_1_1ImplComparator" ],
     [ "v8::internal::compiler::TypedCodeAssemblerVariable< T >", "classv8_1_1internal_1_1compiler_1_1TypedCodeAssemblerVariable.html", "classv8_1_1internal_1_1compiler_1_1TypedCodeAssemblerVariable" ],
     [ "v8::internal::compiler::CodeAssemblerLabel", "classv8_1_1internal_1_1compiler_1_1CodeAssemblerLabel.html", "classv8_1_1internal_1_1compiler_1_1CodeAssemblerLabel" ],
     [ "v8::internal::compiler::CodeAssemblerParameterizedLabelBase", "classv8_1_1internal_1_1compiler_1_1CodeAssemblerParameterizedLabelBase.html", "classv8_1_1internal_1_1compiler_1_1CodeAssemblerParameterizedLabelBase" ],

@@ -7,5 +7,7 @@ var classv8_1_1internal_1_1compiler_1_1CallFrequency =
     [ "operator!=", "classv8_1_1internal_1_1compiler_1_1CallFrequency.html#a51a3d70cd07497722272566f6d1c28d9", null ],
     [ "operator==", "classv8_1_1internal_1_1compiler_1_1CallFrequency.html#a82e8306b07b5c96308870341dc9b7c0f", null ],
     [ "value", "classv8_1_1internal_1_1compiler_1_1CallFrequency.html#aa3966bd2be3fa537b3f7a7bd878038a1", null ],
-    [ "hash_value", "classv8_1_1internal_1_1compiler_1_1CallFrequency.html#a6f0a52a673e110cb4cf7a7d4d2eb0750", null ]
+    [ "hash_value", "classv8_1_1internal_1_1compiler_1_1CallFrequency.html#a6f0a52a673e110cb4cf7a7d4d2eb0750", null ],
+    [ "kNoFeedbackCallFrequency", "classv8_1_1internal_1_1compiler_1_1CallFrequency.html#af59252b0706555b84395dc70f85a9aff", null ],
+    [ "value_", "classv8_1_1internal_1_1compiler_1_1CallFrequency.html#a4a55daf82dc6f5676d6b84f55f6af3c8", null ]
 ];

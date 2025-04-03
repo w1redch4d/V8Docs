@@ -14,5 +14,7 @@ var classv8_1_1base_1_1AddressRegion =
     [ "operator!=", "classv8_1_1base_1_1AddressRegion.html#af52465d53b0ab5400a453d75d649d45d", null ],
     [ "operator==", "classv8_1_1base_1_1AddressRegion.html#a9f26a1c69ea1fb358968a68fa9597fc0", null ],
     [ "set_size", "classv8_1_1base_1_1AddressRegion.html#adc48f605d82ef43f598ce6bafcf7d4e7", null ],
-    [ "size", "classv8_1_1base_1_1AddressRegion.html#a753daf867d9e52511d3483b211a9f0b2", null ]
+    [ "size", "classv8_1_1base_1_1AddressRegion.html#a753daf867d9e52511d3483b211a9f0b2", null ],
+    [ "address_", "classv8_1_1base_1_1AddressRegion.html#a9f06d2c42cbed7af9d339d3abdbeafbc", null ],
+    [ "size_", "classv8_1_1base_1_1AddressRegion.html#ac7723a4e3059694a76118cd808d6b8ed", null ]
 ];

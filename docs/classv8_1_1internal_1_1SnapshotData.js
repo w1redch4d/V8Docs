@@ -6,5 +6,7 @@ var classv8_1_1internal_1_1SnapshotData =
     [ "Payload", "classv8_1_1internal_1_1SnapshotData.html#a9bda4c1d5d443a4495042d17b5900e1b", null ],
     [ "RawData", "classv8_1_1internal_1_1SnapshotData.html#a70047a3344e18358ddcc84b23979c628", null ],
     [ "Resize", "classv8_1_1internal_1_1SnapshotData.html#a190c9fce5e39ad8139ffb0d5705ca374", null ],
-    [ "SnapshotCompression", "classv8_1_1internal_1_1SnapshotData.html#a04bbb6445de09d650c751ecdad0853a0", null ]
+    [ "SnapshotCompression", "classv8_1_1internal_1_1SnapshotData.html#a04bbb6445de09d650c751ecdad0853a0", null ],
+    [ "kHeaderSize", "classv8_1_1internal_1_1SnapshotData.html#a0895a7571369257e2e9bb545327906c7", null ],
+    [ "kPayloadLengthOffset", "classv8_1_1internal_1_1SnapshotData.html#a8cd2a841789d01c5ffd3f10cfeecb03a", null ]
 ];

@@ -17,6 +17,8 @@ var classv8_1_1internal_1_1CallInterfaceDescriptorData =
     [ "InitializeRegisters", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#ae4b80e74df857ed6ef7000dd836092b2", null ],
     [ "InitializeTypes", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a0e377ce0bf8eea54a146b9e16c80ebc7", null ],
     [ "IsInitialized", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#ad64c17585b21c990357a8c9bd683509c", null ],
+    [ "IsInitializedRegisters", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a8d638a987d75de08a17d644bacc40675", null ],
+    [ "IsInitializedTypes", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#ac16fd6ad662a2674d2aebb58516fe8b0", null ],
     [ "operator=", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a2ff050a505192c7c4e8fbfcacd583a01", null ],
     [ "param_count", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#afc9672e6a8d836a4a2dab38d93643dff", null ],
     [ "param_type", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#aedc35cea5265a0216ae368e22a3773b4", null ],
@@ -28,5 +30,18 @@ var classv8_1_1internal_1_1CallInterfaceDescriptorData =
     [ "return_count", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a3b7f4dec26414fd42459ba66d28dd975", null ],
     [ "return_type", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a976287ee1e8aff980ce2ea03b79d5b36", null ],
     [ "stack_order", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a922555001b10c8b3ad81cab69905ce65", null ],
-    [ "tag", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#ae775cb3540ceecec96a433d854d16e99", null ]
+    [ "tag", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#ae775cb3540ceecec96a433d854d16e99", null ],
+    [ "allocatable_registers_", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a7847b27f709be4fc28b25c023ec0a611", null ],
+    [ "double_register_params_", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a850d50c117e9616bbaa91f7675813f4c", null ],
+    [ "double_register_returns_", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#afbd1fb1b2f5a1706d60f097b42f1f1e9", null ],
+    [ "flags_", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#aafaf4e253d700bc435482d2cd66e472b", null ],
+    [ "kUninitializedCount", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a362b3e5b167f15121ee5bd1cd37b8669", null ],
+    [ "machine_types_", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#adfffb5bbb2ce738342add64bbf039574", null ],
+    [ "param_count_", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a6997bef19680a409321af8ef5b3c9e3d", null ],
+    [ "register_param_count_", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#aeebf3c6b4a3e01812761df1f75e5c2f0", null ],
+    [ "register_params_", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a013b933b74de0f7d805dcdb04e7ee70a", null ],
+    [ "register_returns_", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#aa73ac26ce427f8737f8f5bcffaa67b5e", null ],
+    [ "return_count_", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a5dab33a292bcaa472e1bb64ae19380ce", null ],
+    [ "stack_order_", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a0f9b2ec350321497018178ff83981c3b", null ],
+    [ "tag_", "classv8_1_1internal_1_1CallInterfaceDescriptorData.html#a8ae5aa5bf2d8f857d5e2da254ea06bce", null ]
 ];

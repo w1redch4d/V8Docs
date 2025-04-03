@@ -82,7 +82,10 @@ var classv8_1_1internal_1_1compiler_1_1JSGraphAssembler =
     [ "TransitionAndStoreElement", "classv8_1_1internal_1_1compiler_1_1JSGraphAssembler.html#a9ca1108cb7d81ebae1850b59a9559efb", null ],
     [ "TypedArrayLength", "classv8_1_1internal_1_1compiler_1_1JSGraphAssembler.html#a5c0f943cc152267bc0b5840dafc94cdc", null ],
     [ "CatchScope", "classv8_1_1internal_1_1compiler_1_1JSGraphAssembler.html#a8685fa34e42e1dc9f3356100c109f95d", null ],
+    [ "broker_", "classv8_1_1internal_1_1compiler_1_1JSGraphAssembler.html#aaea2f6b1e15d344944adf2be4ba6ca3b", null ],
     [ "catch_scope_", "classv8_1_1internal_1_1compiler_1_1JSGraphAssembler.html#a921e2afd14f138406f4444cae1f9b799", null ],
+    [ "jsgraph_", "classv8_1_1internal_1_1compiler_1_1JSGraphAssembler.html#ae210e4cbc948edbed5445df994d59d42", null ],
     [ "outermost_catch_scope_", "classv8_1_1internal_1_1compiler_1_1JSGraphAssembler.html#a1cccaf0dd03a96b23a63cbcf026fd73f", null ],
-    [ "outermost_handler_", "classv8_1_1internal_1_1compiler_1_1JSGraphAssembler.html#a5628839ff93489dd6ad0bfa36f3104a2", null ]
+    [ "outermost_handler_", "classv8_1_1internal_1_1compiler_1_1JSGraphAssembler.html#a5628839ff93489dd6ad0bfa36f3104a2", null ],
+    [ "to_number_operator_", "classv8_1_1internal_1_1compiler_1_1JSGraphAssembler.html#a5f7f7878edf1256114457b2870ade2d7", null ]
 ];

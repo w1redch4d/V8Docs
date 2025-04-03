@@ -5,5 +5,6 @@ var classv8_1_1internal_1_1GlobalHandleVector_1_1Iterator =
     [ "operator*", "classv8_1_1internal_1_1GlobalHandleVector_1_1Iterator.html#a78b878f23067a0af756ee8c4912e8ce0", null ],
     [ "operator++", "classv8_1_1internal_1_1GlobalHandleVector_1_1Iterator.html#a91e3100c3484fc823fa5f42cf3564963", null ],
     [ "operator==", "classv8_1_1internal_1_1GlobalHandleVector_1_1Iterator.html#aa6910f3ed514faa9cf6748262d8f89fc", null ],
-    [ "raw", "classv8_1_1internal_1_1GlobalHandleVector_1_1Iterator.html#a1738092da609a1e6592078fe6049128c", null ]
+    [ "raw", "classv8_1_1internal_1_1GlobalHandleVector_1_1Iterator.html#a1738092da609a1e6592078fe6049128c", null ],
+    [ "it_", "classv8_1_1internal_1_1GlobalHandleVector_1_1Iterator.html#af9a5fa174422c9e86a171adacf345c7d", null ]
 ];

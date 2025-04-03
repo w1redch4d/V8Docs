@@ -13,5 +13,7 @@ var classv8_1_1internal_1_1ArrayIncludesIndexofAssembler =
     [ "GenerateHoleyDoubles", "classv8_1_1internal_1_1ArrayIncludesIndexofAssembler.html#aa55b8c64a7cfcd96c6330c58add92e48", null ],
     [ "GeneratePackedDoubles", "classv8_1_1internal_1_1ArrayIncludesIndexofAssembler.html#a29523b9d3123c5b220fdc0020bc7adcb", null ],
     [ "GenerateSmiOrObject", "classv8_1_1internal_1_1ArrayIncludesIndexofAssembler.html#a09216dbc549551f1be31af35cbb29b89", null ],
-    [ "ReturnIfEmpty", "classv8_1_1internal_1_1ArrayIncludesIndexofAssembler.html#acbea9ef2ab3222601d9df8fc7c0d4928", null ]
+    [ "ReturnIfEmpty", "classv8_1_1internal_1_1ArrayIncludesIndexofAssembler.html#acbea9ef2ab3222601d9df8fc7c0d4928", null ],
+    [ "kCanVectorize", "classv8_1_1internal_1_1ArrayIncludesIndexofAssembler.html#a798190fc9a3d424cec99291d3f3b6b82", null ],
+    [ "kSIMDThreshold", "classv8_1_1internal_1_1ArrayIncludesIndexofAssembler.html#aeec32e043680e10b0c7d0a78a9393b0a", null ]
 ];

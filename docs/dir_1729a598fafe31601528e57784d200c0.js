@@ -31,7 +31,7 @@ var dir_1729a598fafe31601528e57784d200c0 =
     [ "regexp-interpreter.cc", "regexp-interpreter_8cc.html", "regexp-interpreter_8cc" ],
     [ "regexp-interpreter.h", "regexp-interpreter_8h.html", "regexp-interpreter_8h" ],
     [ "regexp-macro-assembler-arch.h", "regexp-macro-assembler-arch_8h.html", null ],
-    [ "regexp-macro-assembler-tracer.cc", "regexp-macro-assembler-tracer_8cc.html", null ],
+    [ "regexp-macro-assembler-tracer.cc", "regexp-macro-assembler-tracer_8cc.html", "regexp-macro-assembler-tracer_8cc" ],
     [ "regexp-macro-assembler-tracer.h", "regexp-macro-assembler-tracer_8h.html", "regexp-macro-assembler-tracer_8h" ],
     [ "regexp-macro-assembler.cc", "regexp-macro-assembler_8cc.html", null ],
     [ "regexp-macro-assembler.h", "regexp-macro-assembler_8h.html", "regexp-macro-assembler_8h" ],

@@ -63,5 +63,10 @@ var value_serializer_8cc =
       [ "kLegacyReservedOffscreenCanvas", "value-serializer_8cc.html#a482944934a1ccec1124aff7156b0efa1ade0d70c3455c6b1dc097db69aa9797e6", null ],
       [ "kLegacyReservedCryptoKey", "value-serializer_8cc.html#a482944934a1ccec1124aff7156b0efa1a6a2a35799df1821504273a9c0d3a7c8d", null ],
       [ "kLegacyReservedRTCCertificate", "value-serializer_8cc.html#a482944934a1ccec1124aff7156b0efa1ae40f5f4dfe11c279323c0d6dc30ec442", null ]
-    ] ]
+    ] ],
+    [ "BytesNeededForVarint", "value-serializer_8cc.html#a4823ab1627a5d1bdee29c2af87f1612e", null ],
+    [ "CommitProperties", "value-serializer_8cc.html#af9c167f2d6a30479965aee1819bdc2a5", null ],
+    [ "IsValidObjectKey", "value-serializer_8cc.html#ace61e3e615a5ecbd3be129bc2d11e697", null ],
+    [ "SetPropertiesFromKeyValuePairs", "value-serializer_8cc.html#ae7a945ce78dd933cc125d18cc7a549d9", null ],
+    [ "kLatestVersion", "value-serializer_8cc.html#ae8bf225ed6b7de41cabc7c1596daf0d9", null ]
 ];

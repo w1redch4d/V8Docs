@@ -17,6 +17,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOrDeoptOp =
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOrDeoptOp.html#accfba9555304f12e42d796ed3ded9cb9", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOrDeoptOp.html#ab59aa6acce050fe780458e8fe5513a4b", null ],
     [ "Validate", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOrDeoptOp.html#a1a3ed172fd1df61925ea3ec2eaf2c004", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOrDeoptOp.html#a288320126f5a0270428fdc28978292c6", null ],
     [ "feedback", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOrDeoptOp.html#a9e6c85cc08c46aedc17be65a5f161313", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOrDeoptOp.html#af782ec44a3fe8979b7eec378820e97d3", null ],
     [ "minus_zero_mode", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ChangeOrDeoptOp.html#ac8513948744b373326d3724e4c64289a", null ]

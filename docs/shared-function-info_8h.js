@@ -18,5 +18,6 @@ var shared_function_info_8h =
       [ "kNo", "shared-function-info_8h.html#a76203d540ab8a0b4a07a0c73c7e81f47a8cc8e60acfa3ae6089df773013fd73a2", null ],
       [ "kYes", "shared-function-info_8h.html#a76203d540ab8a0b4a07a0c73c7e81f47a1ea590aa4a64767508460736ac0edaa9", null ]
     ] ],
-    [ "operator<<", "shared-function-info_8h.html#a65e338b65301686f0a796923e35f0130", null ]
+    [ "operator<<", "shared-function-info_8h.html#a65e338b65301686f0a796923e35f0130", null ],
+    [ "kStaticRootsSFISize", "shared-function-info_8h.html#a0f432e36796021f5600e391fb0e2d3cf", null ]
 ];

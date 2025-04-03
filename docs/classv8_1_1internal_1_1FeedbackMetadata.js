@@ -1,13 +1,26 @@
 var classv8_1_1internal_1_1FeedbackMetadata =
 [
-    [ "BodyDescriptor", "classv8_1_1internal_1_1FeedbackMetadata_1_1BodyDescriptor.html", null ],
+    [ "BodyDescriptor", "classv8_1_1internal_1_1FeedbackMetadata_1_1BodyDescriptor.html", "classv8_1_1internal_1_1FeedbackMetadata_1_1BodyDescriptor" ],
+    [ "VectorICComputer", "classv8_1_1internal_1_1FeedbackMetadata.html#a7a78f7c6f023ee5623b1045e3b9d0ff7", null ],
     [ "AllocatedSize", "classv8_1_1internal_1_1FeedbackMetadata.html#ac36802de8a1c26aa234bdca8d8f1d5f6", null ],
     [ "create_closure_slot_count", "classv8_1_1internal_1_1FeedbackMetadata.html#abf4f64a3443e41334c0aaa54aa050114", null ],
+    [ "get", "classv8_1_1internal_1_1FeedbackMetadata.html#ac0a1495b416e059d7b61d21fdac6f1cd", null ],
     [ "GetCreateClosureParameterCount", "classv8_1_1internal_1_1FeedbackMetadata.html#a8f0976720255313b15aa66cb1c434222", null ],
     [ "GetKind", "classv8_1_1internal_1_1FeedbackMetadata.html#a346ef6fc6f88122ec0bd64e9e653bd26", null ],
+    [ "GetSlotSize", "classv8_1_1internal_1_1FeedbackMetadata.html#ac884f26649c8516954934714ca1b6d14", null ],
     [ "is_empty", "classv8_1_1internal_1_1FeedbackMetadata.html#af643b4f55ecf4fc95d488375dc679b2e", null ],
+    [ "Kind2String", "classv8_1_1internal_1_1FeedbackMetadata.html#ab99ea48d786b662c532e699cbd39cd9b", null ],
     [ "New", "classv8_1_1internal_1_1FeedbackMetadata.html#a0d0217dbfa360234887afec97653ca70", null ],
+    [ "New", "classv8_1_1internal_1_1FeedbackMetadata.html#a3ef166b327a1f05089d92f41f87e43f9", null ],
+    [ "OBJECT_CONSTRUCTORS", "classv8_1_1internal_1_1FeedbackMetadata.html#a891814b4506c721bf9e1e4fe89ca858a", null ],
+    [ "set", "classv8_1_1internal_1_1FeedbackMetadata.html#ac79aca1ac2ba4687d84c5be86508627b", null ],
+    [ "SetCreateClosureParameterCount", "classv8_1_1internal_1_1FeedbackMetadata.html#a1624b620629756f9b5c81e90cf710941", null ],
+    [ "SetKind", "classv8_1_1internal_1_1FeedbackMetadata.html#a90a85d3b5c907ead75b627d508c0d21a", null ],
+    [ "SizeFor", "classv8_1_1internal_1_1FeedbackMetadata.html#a2752bbb673a97c10464fa071afd77cc1", null ],
     [ "slot_count", "classv8_1_1internal_1_1FeedbackMetadata.html#a1358010d1fe70d0b9eb8dbff6f6d7405", null ],
     [ "SpecDiffersFrom", "classv8_1_1internal_1_1FeedbackMetadata.html#ae1c4f3bba6268d7b9939ae62d11bc45b", null ],
-    [ "AccessorAssembler", "classv8_1_1internal_1_1FeedbackMetadata.html#a93a0224847297a8eb55ad69a914805a0", null ]
+    [ "word_count", "classv8_1_1internal_1_1FeedbackMetadata.html#a7680a51a0afce68474bed1e0f4bcae78", null ],
+    [ "word_count", "classv8_1_1internal_1_1FeedbackMetadata.html#aa93872fe6d43f5b9b37cd09a4b05b005", null ],
+    [ "AccessorAssembler", "classv8_1_1internal_1_1FeedbackMetadata.html#a93a0224847297a8eb55ad69a914805a0", null ],
+    [ "kFeedbackSlotKindBits", "classv8_1_1internal_1_1FeedbackMetadata.html#a3cfa478713b7f00d690be5bfd69f907b", null ]
 ];

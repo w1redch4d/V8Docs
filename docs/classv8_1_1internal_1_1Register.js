@@ -1,9 +1,26 @@
 var classv8_1_1internal_1_1Register =
 [
+    [ "Register", "classv8_1_1internal_1_1Register.html#a9a41b38fadaf12b5ca1487553ca62c6f", null ],
+    [ "Register", "classv8_1_1internal_1_1Register.html#a2e9e2ff7f37b0b9c4ca6facf47eb9c03", null ],
+    [ "Register", "classv8_1_1internal_1_1Register.html#a9a41b38fadaf12b5ca1487553ca62c6f", null ],
+    [ "Register", "classv8_1_1internal_1_1Register.html#a9a41b38fadaf12b5ca1487553ca62c6f", null ],
+    [ "Register", "classv8_1_1internal_1_1Register.html#a9a41b38fadaf12b5ca1487553ca62c6f", null ],
+    [ "Register", "classv8_1_1internal_1_1Register.html#a9a41b38fadaf12b5ca1487553ca62c6f", null ],
+    [ "Register", "classv8_1_1internal_1_1Register.html#a9a41b38fadaf12b5ca1487553ca62c6f", null ],
+    [ "Register", "classv8_1_1internal_1_1Register.html#a9a41b38fadaf12b5ca1487553ca62c6f", null ],
+    [ "Register", "classv8_1_1internal_1_1Register.html#a9a41b38fadaf12b5ca1487553ca62c6f", null ],
+    [ "Create", "classv8_1_1internal_1_1Register.html#ab09a490595780af1e02a2c1807138f15", null ],
+    [ "from_code", "classv8_1_1internal_1_1Register.html#a161b31fbba410d1c513ae779df7b9cbb", null ],
+    [ "GetSpecialRegisterName", "classv8_1_1internal_1_1Register.html#a6e271db622fb7f220321a9a634631256", null ],
     [ "high_bit", "classv8_1_1internal_1_1Register.html#a91e80ddbb345d890a005397bebc8a759", null ],
     [ "is_byte_register", "classv8_1_1internal_1_1Register.html#aa44ca9ea4626f46cd5e75d9fa4545d8a", null ],
     [ "is_byte_register", "classv8_1_1internal_1_1Register.html#ac0117d17b8e0618ea072f7c546d377ca", null ],
     [ "low_bits", "classv8_1_1internal_1_1Register.html#a0db741ee9ad68d2e97a451db47ced890", null ],
+    [ "no_reg", "classv8_1_1internal_1_1Register.html#af72f1656ce6c0186ea16328bbc55ae9c", null ],
+    [ "WRegFromCode", "classv8_1_1internal_1_1Register.html#a38f966f971bdff0ce3230f9bdf3ee84f", null ],
+    [ "XRegFromCode", "classv8_1_1internal_1_1Register.html#a6bc72db8c208ebd60c4fafe95167d380", null ],
     [ "RegisterBase", "classv8_1_1internal_1_1Register.html#a960d84c54d6f69c7f2d3cf54e7fd6938", null ],
-    [ "RegisterBase< Register, kRegAfterLast >", "classv8_1_1internal_1_1Register.html#a0b22bb42af03fab7eba8f423b58af909", null ]
+    [ "RegisterBase< Register, kRegAfterLast >", "classv8_1_1internal_1_1Register.html#a0b22bb42af03fab7eba8f423b58af909", null ],
+    [ "kExponentOffset", "classv8_1_1internal_1_1Register.html#abc30e312466b5d2f8f081800a310d3a3", null ],
+    [ "kMantissaOffset", "classv8_1_1internal_1_1Register.html#a8195b5e37238aa3dcc33c1418b1eba08", null ]
 ];

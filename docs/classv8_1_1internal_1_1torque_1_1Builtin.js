@@ -10,6 +10,7 @@ var classv8_1_1internal_1_1torque_1_1Builtin =
       [ "kFixedArgsJavaScript", "classv8_1_1internal_1_1torque_1_1Builtin.html#aebea5c698800d26fc469a2ded8785a51ada02d55c2c1d8c278bb630ac9a5befa1", null ],
       [ "kVarArgsJavaScript", "classv8_1_1internal_1_1torque_1_1Builtin.html#aebea5c698800d26fc469a2ded8785a51a0a8234948402339a1d4d71f6ef1a668b", null ]
     ] ],
+    [ "Builtin", "classv8_1_1internal_1_1torque_1_1Builtin.html#a61fe5ca253207c1cc37c379162b4d551", null ],
     [ "flags", "classv8_1_1internal_1_1torque_1_1Builtin.html#ae3f72fa8cb2161e3a1e14b01ea7002cf", null ],
     [ "HasCustomInterfaceDescriptor", "classv8_1_1internal_1_1torque_1_1Builtin.html#a35c66150bb0b0e0ab04486a1a77ebd7e", null ],
     [ "IsFixedArgsJavaScript", "classv8_1_1internal_1_1torque_1_1Builtin.html#a0bda03d0bd2b5112f76bbfd4e5b5a5f2", null ],
@@ -18,5 +19,8 @@ var classv8_1_1internal_1_1torque_1_1Builtin =
     [ "IsVarArgsJavaScript", "classv8_1_1internal_1_1torque_1_1Builtin.html#ac2947559a66fb9147c16de05d06950d9", null ],
     [ "kind", "classv8_1_1internal_1_1torque_1_1Builtin.html#aaeb360cdea47854dbc874e3d5bca3a02", null ],
     [ "use_counter_name", "classv8_1_1internal_1_1torque_1_1Builtin.html#a431a4451671f6534a62dddf5aa940a38", null ],
-    [ "Declarations", "classv8_1_1internal_1_1torque_1_1Builtin.html#a23135931a5f054329315374b774718cf", null ]
+    [ "Declarations", "classv8_1_1internal_1_1torque_1_1Builtin.html#a23135931a5f054329315374b774718cf", null ],
+    [ "flags_", "classv8_1_1internal_1_1torque_1_1Builtin.html#a6c1287a9ccc328201e7ff7194622033e", null ],
+    [ "kind_", "classv8_1_1internal_1_1torque_1_1Builtin.html#aeda0d6edb8b3a0a86ee56c5af1230398", null ],
+    [ "use_counter_name_", "classv8_1_1internal_1_1torque_1_1Builtin.html#a6bd88be7fada8290dc943313596c613a", null ]
 ];

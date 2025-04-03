@@ -1,5 +1,6 @@
 var classcppgc_1_1internal_1_1BasePage =
 [
+    [ "SlotSetDeleter", "structcppgc_1_1internal_1_1BasePage_1_1SlotSetDeleter.html", "structcppgc_1_1internal_1_1BasePage_1_1SlotSetDeleter" ],
     [ "PageType", "classcppgc_1_1internal_1_1BasePage.html#a3de0259fe2de103d4696f949fd54baa8", [
       [ "kNormal", "classcppgc_1_1internal_1_1BasePage.html#a3de0259fe2de103d4696f949fd54baa8a07fa7a19aa722c635a15e94cb7f50416", null ],
       [ "kLarge", "classcppgc_1_1internal_1_1BasePage.html#a3de0259fe2de103d4696f949fd54baa8a995e7b7e33ea3f37a72770505adf016e", null ]
@@ -8,10 +9,16 @@ var classcppgc_1_1internal_1_1BasePage =
     [ "BasePage", "classcppgc_1_1internal_1_1BasePage.html#a3bbb9e91a60b4fb2da556ce83b8d73ae", null ],
     [ "AllocatedBytesAtLastGC", "classcppgc_1_1internal_1_1BasePage.html#a71eddac96ff32bebcfc144ebf78a432b", null ],
     [ "AllocatedSize", "classcppgc_1_1internal_1_1BasePage.html#a6d9e8a57ad7821c890ee20c125d6a964", null ],
+    [ "AllocateSlotSet", "classcppgc_1_1internal_1_1BasePage.html#a0392b5f45e084548720478427a4e01da", null ],
     [ "ChangeOwner", "classcppgc_1_1internal_1_1BasePage.html#adbc0c4cc1ffb2b3c4c238548298536c9", null ],
     [ "contains_young_objects", "classcppgc_1_1internal_1_1BasePage.html#a899623e96979432740d1d945126d9698", null ],
     [ "DecrementMarkedBytes", "classcppgc_1_1internal_1_1BasePage.html#aa2f9fababf00dbebe8fcb9174b7deae6", null ],
+    [ "Destroy", "classcppgc_1_1internal_1_1BasePage.html#acda4e3db0ed7d3f684fe99c00c0ee877", null ],
     [ "discarded_memory", "classcppgc_1_1internal_1_1BasePage.html#a0412f90841f734a033ec5101a324474a", null ],
+    [ "FromInnerAddress", "classcppgc_1_1internal_1_1BasePage.html#aedc3a3a386f45a6fa7f9ed078cb5e7e5", null ],
+    [ "FromInnerAddress", "classcppgc_1_1internal_1_1BasePage.html#af1e5606c811fb5dcdbd60e1da987f409", null ],
+    [ "FromPayload", "classcppgc_1_1internal_1_1BasePage.html#abbf58f27d5638a63e40c587fa14915ca", null ],
+    [ "FromPayload", "classcppgc_1_1internal_1_1BasePage.html#aad13cafeed6c2ea494b7423b9c527b7a", null ],
     [ "heap", "classcppgc_1_1internal_1_1BasePage.html#a1fd6c829347f95514f49a78a9aa3d7f1", null ],
     [ "IncrementDiscardedMemory", "classcppgc_1_1internal_1_1BasePage.html#a14b0a12d14bef6bea44c0253ee15bce6", null ],
     [ "IncrementMarkedBytes", "classcppgc_1_1internal_1_1BasePage.html#a6d28f270dfb1319b8e3a288cd23cae35", null ],
@@ -31,5 +38,10 @@ var classcppgc_1_1internal_1_1BasePage =
     [ "SynchronizedLoad", "classcppgc_1_1internal_1_1BasePage.html#ab9bebea6af5128927c2ae53ed869de3b", null ],
     [ "SynchronizedStore", "classcppgc_1_1internal_1_1BasePage.html#a00afbe77f9921610214eb023f0ae3dc8", null ],
     [ "TryObjectHeaderFromInnerAddress", "classcppgc_1_1internal_1_1BasePage.html#a3b306a948898f571b832d85d7746c057", null ],
-    [ "TryObjectHeaderFromInnerAddress", "classcppgc_1_1internal_1_1BasePage.html#a1a3b0f00415c669a307867f9ed5d9592", null ]
+    [ "TryObjectHeaderFromInnerAddress", "classcppgc_1_1internal_1_1BasePage.html#a1a3b0f00415c669a307867f9ed5d9592", null ],
+    [ "contains_young_objects_", "classcppgc_1_1internal_1_1BasePage.html#afb9c8512cb38d7f728a985d4bb8d8fd3", null ],
+    [ "discarded_memory_", "classcppgc_1_1internal_1_1BasePage.html#ab1d98b2a0a19ae725845791169a8b300", null ],
+    [ "marked_bytes_", "classcppgc_1_1internal_1_1BasePage.html#a13af2b073576d2871321d095a97a542c", null ],
+    [ "space_", "classcppgc_1_1internal_1_1BasePage.html#a85bc64adad20c35c58a60ff667edaeae", null ],
+    [ "type_", "classcppgc_1_1internal_1_1BasePage.html#aaa4a6b3bafd76316a3ffb19f7c7c47dc", null ]
 ];

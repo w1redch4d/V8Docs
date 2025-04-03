@@ -18,5 +18,11 @@ var classv8_1_1internal_1_1compiler_1_1BlockAssessments =
     [ "Print", "classv8_1_1internal_1_1compiler_1_1BlockAssessments.html#a0fb4f2daf5848423b5d54c651743fb0b", null ],
     [ "spill_slot_delta", "classv8_1_1internal_1_1compiler_1_1BlockAssessments.html#ae90818ff83301e93a878b3b25c71fd89", null ],
     [ "stale_ref_stack_slots", "classv8_1_1internal_1_1compiler_1_1BlockAssessments.html#a996dadc7ea7fb442cabaaa1281126d56", null ],
-    [ "stale_ref_stack_slots", "classv8_1_1internal_1_1compiler_1_1BlockAssessments.html#a6d3ed8c07c1ddd3aab9adf7843f9db17", null ]
+    [ "stale_ref_stack_slots", "classv8_1_1internal_1_1compiler_1_1BlockAssessments.html#a6d3ed8c07c1ddd3aab9adf7843f9db17", null ],
+    [ "map_", "classv8_1_1internal_1_1compiler_1_1BlockAssessments.html#a1fff68bfc4301a4a17c0692a9d34cc73", null ],
+    [ "map_for_moves_", "classv8_1_1internal_1_1compiler_1_1BlockAssessments.html#a90936198810bfaf89985df4c1194b25d", null ],
+    [ "sequence_", "classv8_1_1internal_1_1compiler_1_1BlockAssessments.html#a07fcfe4224ec2c877d90f784a336d86f", null ],
+    [ "spill_slot_delta_", "classv8_1_1internal_1_1compiler_1_1BlockAssessments.html#ab3ae2f31ed12a1a504e6c54823dd3b93", null ],
+    [ "stale_ref_stack_slots_", "classv8_1_1internal_1_1compiler_1_1BlockAssessments.html#a0c292de394ef4f743288159dc7847681", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1BlockAssessments.html#a5404dc61bbf91af21be4456e53b5d570", null ]
 ];

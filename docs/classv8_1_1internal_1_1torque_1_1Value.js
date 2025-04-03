@@ -5,5 +5,8 @@ var classv8_1_1internal_1_1torque_1_1Value =
     [ "name", "classv8_1_1internal_1_1torque_1_1Value.html#ae690feb6b093fd73033062c275387526", null ],
     [ "set_value", "classv8_1_1internal_1_1torque_1_1Value.html#aa4d5947aac24834f86aa15cbe93e9592", null ],
     [ "type", "classv8_1_1internal_1_1torque_1_1Value.html#a1e7a7a8ac0a28b5be31dc3f54345ed8e", null ],
-    [ "value", "classv8_1_1internal_1_1torque_1_1Value.html#a8ebdbbb57926c88e8df542ee04a790ff", null ]
+    [ "value", "classv8_1_1internal_1_1torque_1_1Value.html#a8ebdbbb57926c88e8df542ee04a790ff", null ],
+    [ "name_", "classv8_1_1internal_1_1torque_1_1Value.html#ab2274a84b0f614c2cb76740539cf8c40", null ],
+    [ "type_", "classv8_1_1internal_1_1torque_1_1Value.html#a3442bde2a335af4b689acab438d97d77", null ],
+    [ "value_", "classv8_1_1internal_1_1torque_1_1Value.html#a23536c35b6fa632907a277bf3c502f14", null ]
 ];

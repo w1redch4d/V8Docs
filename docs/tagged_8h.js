@@ -60,5 +60,12 @@ var tagged_8h =
     [ "Tagged", "tagged_8h.html#aadee34544d184a666c8e3a40aa87aa78", null ],
     [ "Tagged", "tagged_8h.html#ab6711f2c46f3d6172c49eb4cf6faf491", null ],
     [ "Tagged", "tagged_8h.html#ae47e6dc6173c55a75270ecf8a4786707", null ],
-    [ "Tagged", "tagged_8h.html#a4382c244e839ce16a4beafabd1c6bd1d", null ]
+    [ "Tagged", "tagged_8h.html#a4382c244e839ce16a4beafabd1c6bd1d", null ],
+    [ "is_castable_v", "tagged_8h.html#a6983c0e0499990d61ae553d1cd3fd00c", null ],
+    [ "is_complex_subtype_v", "tagged_8h.html#a16a429d653d7cc4cd1252ce0434eb6af", null ],
+    [ "is_maybe_weak_v", "tagged_8h.html#a2afd2b1d6f3f3ad4ca4e320c88c2dd1a", null ],
+    [ "is_simple_subtype_v", "tagged_8h.html#a2f9782ce282776831f7d600c2374d43a", null ],
+    [ "is_subtype_v", "tagged_8h.html#a61e75b127f159545f8ffbd5d1988fcbd", null ],
+    [ "is_taggable_v", "tagged_8h.html#a617e4741f1ffa1110ec27e6144ce5216", null ],
+    [ "kTaggedCanConvertToRawObjects", "tagged_8h.html#a4b1f4266e86b6958de6b2ecf6b62fde5", null ]
 ];

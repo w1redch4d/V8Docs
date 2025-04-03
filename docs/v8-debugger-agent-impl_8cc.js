@@ -1,5 +1,31 @@
 var v8_debugger_agent_impl_8cc =
 [
     [ "v8_inspector::DisassemblyChunk", "structv8__inspector_1_1DisassemblyChunk.html", "structv8__inspector_1_1DisassemblyChunk" ],
-    [ "v8_inspector::DisassemblyCollectorImpl", "classv8__inspector_1_1DisassemblyCollectorImpl.html", "classv8__inspector_1_1DisassemblyCollectorImpl" ]
+    [ "v8_inspector::DisassemblyCollectorImpl", "classv8__inspector_1_1DisassemblyCollectorImpl.html", "classv8__inspector_1_1DisassemblyCollectorImpl" ],
+    [ "getScriptLanguage", "v8-debugger-agent-impl_8cc.html#a07c2ef1d0f5ee4438f77c5d5c3446746", null ],
+    [ "asyncCallStackDepth", "v8-debugger-agent-impl_8cc.html#af180b7e9ea105de7e0f3571559298ee2", null ],
+    [ "blackboxPattern", "v8-debugger-agent-impl_8cc.html#a12fe053b5b95fa7f3a2d7f8a30de0708", null ],
+    [ "breakpointHintPrefixHash", "v8-debugger-agent-impl_8cc.html#afe7067167349c2140caa5eafcb72e069", null ],
+    [ "breakpointHintPrefixLength", "v8-debugger-agent-impl_8cc.html#aaf4088021739c7d6bc69795f021f2a31", null ],
+    [ "breakpointHints", "v8-debugger-agent-impl_8cc.html#aaa8e3ab83c1bb649bf5cc2ee5f3be074", null ],
+    [ "breakpointHintText", "v8-debugger-agent-impl_8cc.html#aa3ebc32ff398b5af80548b6bcd2301f3", null ],
+    [ "breakpointsActiveWhenEnabled", "v8-debugger-agent-impl_8cc.html#a4efe963b65681c252111933def8e9de6", null ],
+    [ "breakpointsByRegex", "v8-debugger-agent-impl_8cc.html#a9ae1aa76bdc709c0a3cd04a9eb1495ec", null ],
+    [ "breakpointsByScriptHash", "v8-debugger-agent-impl_8cc.html#a4a5223b264cb3440d55040cc18c4da9d", null ],
+    [ "breakpointsByUrl", "v8-debugger-agent-impl_8cc.html#ab6d42dd6c0d164a395c5482ced54c27c", null ],
+    [ "debuggerEnabled", "v8-debugger-agent-impl_8cc.html#aadae04758b938e1d1944af2841c9db90", null ],
+    [ "instrumentationBreakpoints", "v8-debugger-agent-impl_8cc.html#a67f93d8e97e2df81fa49132cc63c08ba", null ],
+    [ "kBacktraceObjectGroup", "v8-debugger-agent-impl_8cc.html#af368e6275663f0262c06e21927a38116", null ],
+    [ "kBreakpointHintMaxLength", "v8-debugger-agent-impl_8cc.html#a81adfb8fc4eb787f9b3bd1576199dd21", null ],
+    [ "kBreakpointHintMaxSearchOffset", "v8-debugger-agent-impl_8cc.html#a0039cd5f1f8337c25bc71c33c93019de", null ],
+    [ "kDebuggerNotEnabled", "v8-debugger-agent-impl_8cc.html#a278fa1db9e59ca1239e304f201e411f6", null ],
+    [ "kDebuggerNotPaused", "v8-debugger-agent-impl_8cc.html#a5846076882a3e438bd2a9b2dab79132e", null ],
+    [ "kMaxNumBreakpoints", "v8-debugger-agent-impl_8cc.html#a18b24789dc6e668e74ff5ad505d93146", null ],
+    [ "maxScriptCacheSize", "v8-debugger-agent-impl_8cc.html#a66b577ce8c0f20431bf2ca0e0fdc0e4d", null ],
+    [ "pauseOnExceptionsState", "v8-debugger-agent-impl_8cc.html#a2c0c3983286bedc863cc89a9e4a69878", null ],
+    [ "regex_", "v8-debugger-agent-impl_8cc.html#a29beb3c4226513ebe25c173c07a33046", null ],
+    [ "selector_", "v8-debugger-agent-impl_8cc.html#a81748508ccef85e382f424addf07069b", null ],
+    [ "skipAllPauses", "v8-debugger-agent-impl_8cc.html#a1e7b1ed0da5a25d2ac0fdc50188185dc", null ],
+    [ "skipAnonymousScripts", "v8-debugger-agent-impl_8cc.html#ac5e15f1410c7810e7e09498e8af2d468", null ],
+    [ "type_", "v8-debugger-agent-impl_8cc.html#aa6231e9077e9cde9ef3c20940780eb2c", null ]
 ];

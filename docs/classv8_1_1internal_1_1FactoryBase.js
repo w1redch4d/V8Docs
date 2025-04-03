@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1FactoryBase =
 [
+    [ "AllocateRaw", "classv8_1_1internal_1_1FactoryBase.html#a3e751eceb867a541b0957390f50889ce", null ],
     [ "AllocateRawArray", "classv8_1_1internal_1_1FactoryBase.html#a40e88344490af97b2677d54022f49457", null ],
     [ "AllocateRawFixedArray", "classv8_1_1internal_1_1FactoryBase.html#a0cac26bc17ef3b1400d3976578d3742d", null ],
     [ "AllocateRawOneByteInternalizedString", "classv8_1_1internal_1_1FactoryBase.html#aaf31fed0956ad37950ae0a3e3c893a53", null ],
@@ -9,9 +10,11 @@ var classv8_1_1internal_1_1FactoryBase =
     [ "CloneSharedFunctionInfo", "classv8_1_1internal_1_1FactoryBase.html#a26f9a975a39e54dfdad8fb46bcb4f007", null ],
     [ "GetInPlaceInternalizedStringMap", "classv8_1_1internal_1_1FactoryBase.html#aa9bec3aa4aeca3e2459988e90ae23ef2", null ],
     [ "HeapNumberToString", "classv8_1_1internal_1_1FactoryBase.html#a63f522a2d09dd0f69b37092812e0df90", null ],
+    [ "impl", "classv8_1_1internal_1_1FactoryBase.html#ac18775a7d35ced1ccabdf60f8c51f3ff", null ],
     [ "InternalizeString", "classv8_1_1internal_1_1FactoryBase.html#a2e3a4a931ac54160910372526dd4425d", null ],
     [ "InternalizeString", "classv8_1_1internal_1_1FactoryBase.html#a831fbe1eba0a3b9eec1e9ee4039cea12", null ],
     [ "InternalizeStringWithKey", "classv8_1_1internal_1_1FactoryBase.html#af499aa2eee825477c574213d3e183af8", null ],
+    [ "isolate", "classv8_1_1internal_1_1FactoryBase.html#ab289e2f68f398a5e406395cf6b0d10af", null ],
     [ "LookupSingleCharacterStringFromCode", "classv8_1_1internal_1_1FactoryBase.html#a469db4bb090fc440f355ef7ea181d4a0", null ],
     [ "MakeOrFindTwoCharacterString", "classv8_1_1internal_1_1FactoryBase.html#a25f3c1a51f036793db5278f094b5b2cc", null ],
     [ "NewAccessorPair", "classv8_1_1internal_1_1FactoryBase.html#a2180a7d181177b111b23762d0286c58a", null ],
@@ -91,9 +94,12 @@ var classv8_1_1internal_1_1FactoryBase =
     [ "NewWeakFixedArrayWithMap", "classv8_1_1internal_1_1FactoryBase.html#a13206d73991e0a50500539e9424ee383", null ],
     [ "NewWithImmortalMap", "classv8_1_1internal_1_1FactoryBase.html#a3e2e2d35e2860757da409a7f83bc1d52", null ],
     [ "NumberToString", "classv8_1_1internal_1_1FactoryBase.html#a08c674e64ab4a7614e29c48e1f023dfe", null ],
+    [ "read_only_roots", "classv8_1_1internal_1_1FactoryBase.html#aeecc4e21939c1956019210a11d82ca41", null ],
     [ "RefineAllocationTypeForInPlaceInternalizableString", "classv8_1_1internal_1_1FactoryBase.html#abd1a1f2d2fdb356cf88cfdc384762da2", null ],
     [ "SmiToString", "classv8_1_1internal_1_1FactoryBase.html#a3ec2b8c75127792f53a9e56127dc1bd6", null ],
     [ "ToBoolean", "classv8_1_1internal_1_1FactoryBase.html#a010b93a09d3bd39d371cfd7c05878651", null ],
     [ "PrimitiveArrayBase", "classv8_1_1internal_1_1FactoryBase.html#aad6b351814e9a33a5a53d909c305c37b", null ],
-    [ "TaggedArrayBase", "classv8_1_1internal_1_1FactoryBase.html#a12c1a2721f8e6dd89c067073fc1228f7", null ]
+    [ "TaggedArrayBase", "classv8_1_1internal_1_1FactoryBase.html#a12c1a2721f8e6dd89c067073fc1228f7", null ],
+    [ "kNumberToStringBufferSize", "classv8_1_1internal_1_1FactoryBase.html#abc71364086da4a53d5243103eaf2543a", null ],
+    [ "TorqueGeneratedFactory< Impl >", "classv8_1_1internal_1_1FactoryBase.html#a58c9ba8a95425e66bb2d199f6e4ff53f", null ]
 ];

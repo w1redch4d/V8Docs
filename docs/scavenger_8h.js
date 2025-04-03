@@ -4,6 +4,7 @@ var scavenger_8h =
     [ "v8::internal::Scavenger::PromotedListEntry", "structv8_1_1internal_1_1Scavenger_1_1PromotedListEntry.html", "structv8_1_1internal_1_1Scavenger_1_1PromotedListEntry" ],
     [ "v8::internal::RootScavengeVisitor", "classv8_1_1internal_1_1RootScavengeVisitor.html", "classv8_1_1internal_1_1RootScavengeVisitor" ],
     [ "v8::internal::ScavengerCollector", "classv8_1_1internal_1_1ScavengerCollector.html", "classv8_1_1internal_1_1ScavengerCollector" ],
+    [ "v8::internal::ScavengerCollector::JobTask", "classv8_1_1internal_1_1ScavengerCollector_1_1JobTask.html", "classv8_1_1internal_1_1ScavengerCollector_1_1JobTask" ],
     [ "SurvivingNewLargeObjectMapEntry", "scavenger_8h.html#a04d77c93c07223aa036697e09666b744", null ],
     [ "SurvivingNewLargeObjectsMap", "scavenger_8h.html#a7a36763f3e013af97f98963f6f3f844e", null ],
     [ "CopyAndForwardResult", "scavenger_8h.html#ad0be9dd7fc0ca100a8341fb131891bfb", [

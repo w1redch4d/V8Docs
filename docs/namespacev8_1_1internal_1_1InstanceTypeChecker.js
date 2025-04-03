@@ -1,9 +1,9 @@
 var namespacev8_1_1internal_1_1InstanceTypeChecker =
 [
     [ "InstanceTypeTraits", "namespacev8_1_1internal_1_1InstanceTypeChecker_1_1InstanceTypeTraits.html", null ],
-    [ "InstanceRangeChecker", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker.html", null ],
-    [ "InstanceRangeChecker< FIRST_TYPE, upper_limit >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01FIRST__TYPE_00_01upper__limit_01_4.html", null ],
-    [ "InstanceRangeChecker< lower_limit, LAST_TYPE >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01lower__limit_00_01LAST__TYPE_01_4.html", null ],
+    [ "InstanceRangeChecker", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker.html", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker" ],
+    [ "InstanceRangeChecker< FIRST_TYPE, upper_limit >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01FIRST__TYPE_00_01upper__limit_01_4.html", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01FIRST__TYPE_00_01upper__limit_01_4" ],
+    [ "InstanceRangeChecker< lower_limit, LAST_TYPE >", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01lower__limit_00_01LAST__TYPE_01_4.html", "structv8_1_1internal_1_1InstanceTypeChecker_1_1InstanceRangeChecker_3_01lower__limit_00_01LAST__TYPE_01_4" ],
     [ "InstanceTypeRange", "namespacev8_1_1internal_1_1InstanceTypeChecker.html#a14de62f00090cbd073eb0d7752c64ded", null ],
     [ "TaggedAddressRange", "namespacev8_1_1internal_1_1InstanceTypeChecker.html#ad7068a7d428d26348f96b2d2a733e045", null ],
     [ "IsAbstractCode", "namespacev8_1_1internal_1_1InstanceTypeChecker.html#ac8ba27c13a6ef0f7d5713e79ae627a84", null ],

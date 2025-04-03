@@ -17,5 +17,8 @@ var classv8_1_1internal_1_1SnapshotByteSource =
     [ "operator=", "classv8_1_1internal_1_1SnapshotByteSource.html#aa5aab950741918012e09d77e334e5764", null ],
     [ "Peek", "classv8_1_1internal_1_1SnapshotByteSource.html#aa1dd9148628eb926262da51793cf771c", null ],
     [ "position", "classv8_1_1internal_1_1SnapshotByteSource.html#adbb0814d3b6252c6559a6a7c6d07aff1", null ],
-    [ "set_position", "classv8_1_1internal_1_1SnapshotByteSource.html#afab8fb9010737708c59913c697bb324d", null ]
+    [ "set_position", "classv8_1_1internal_1_1SnapshotByteSource.html#afab8fb9010737708c59913c697bb324d", null ],
+    [ "data_", "classv8_1_1internal_1_1SnapshotByteSource.html#abed3fb31d8ee10f492e2c82cb34886c8", null ],
+    [ "length_", "classv8_1_1internal_1_1SnapshotByteSource.html#ac281b199b9c74eab38f68b053907a902", null ],
+    [ "position_", "classv8_1_1internal_1_1SnapshotByteSource.html#ae1f782248415ee4baf56cfe152deda64", null ]
 ];

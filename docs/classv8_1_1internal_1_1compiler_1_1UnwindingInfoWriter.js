@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter =
 [
+    [ "BlockInitialState", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter_1_1BlockInitialState.html", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter_1_1BlockInitialState" ],
     [ "UnwindingInfoWriter", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#ab9baf225b2104df264b3cf7b1a5b7cce", null ],
     [ "UnwindingInfoWriter", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#ab9baf225b2104df264b3cf7b1a5b7cce", null ],
     [ "UnwindingInfoWriter", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#ab9baf225b2104df264b3cf7b1a5b7cce", null ],
@@ -18,6 +19,11 @@ var classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter =
     [ "eh_frame_writer", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#ac19e21764be5956e26e7e0ce999839f0", null ],
     [ "eh_frame_writer", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#ac19e21764be5956e26e7e0ce999839f0", null ],
     [ "eh_frame_writer", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#ac19e21764be5956e26e7e0ce999839f0", null ],
+    [ "enabled", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a7a2883619739b531fbccc30bf4ecfc91", null ],
+    [ "enabled", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a7a2883619739b531fbccc30bf4ecfc91", null ],
+    [ "enabled", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a7a2883619739b531fbccc30bf4ecfc91", null ],
+    [ "enabled", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a7a2883619739b531fbccc30bf4ecfc91", null ],
+    [ "enabled", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a7a2883619739b531fbccc30bf4ecfc91", null ],
     [ "EndInstructionBlock", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#ace4ad754006ecc09e7acc9412374dfab", null ],
     [ "EndInstructionBlock", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#afc7ef781f2d55ef125a3dd4697c0164e", null ],
     [ "EndInstructionBlock", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#afc7ef781f2d55ef125a3dd4697c0164e", null ],
@@ -59,5 +65,11 @@ var classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter =
     [ "SetNumberOfInstructionBlocks", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a5480ac05525eca5283126ea5e3748561", null ],
     [ "SetNumberOfInstructionBlocks", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a5480ac05525eca5283126ea5e3748561", null ],
     [ "SetNumberOfInstructionBlocks", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a5480ac05525eca5283126ea5e3748561", null ],
-    [ "SetNumberOfInstructionBlocks", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a5480ac05525eca5283126ea5e3748561", null ]
+    [ "SetNumberOfInstructionBlocks", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a5480ac05525eca5283126ea5e3748561", null ],
+    [ "block_initial_states_", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a49d57b9c86ceef6e4ac1e7ac7b0fe6d2", null ],
+    [ "block_will_exit_", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a218e928b3396846a90af303176aed9e4", null ],
+    [ "eh_frame_writer_", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#ab624dab2beed40c2d6d11c5f028ed83a", null ],
+    [ "saved_lr_", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a66a3a64f75b423bb18d80d49d3c9757a", null ],
+    [ "tracking_fp_", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#ae86a9140eab7ee55cf48035ed6f1ea58", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1UnwindingInfoWriter.html#a9452fc3201076268e0deb658f31ba099", null ]
 ];

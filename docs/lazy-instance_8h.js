@@ -1,12 +1,12 @@
 var lazy_instance_8h =
 [
-    [ "v8::base::LeakyInstanceTrait< T >", "structv8_1_1base_1_1LeakyInstanceTrait.html", null ],
+    [ "v8::base::LeakyInstanceTrait< T >", "structv8_1_1base_1_1LeakyInstanceTrait.html", "structv8_1_1base_1_1LeakyInstanceTrait" ],
     [ "v8::base::StaticallyAllocatedInstanceTrait< T >", "structv8_1_1base_1_1StaticallyAllocatedInstanceTrait.html", "structv8_1_1base_1_1StaticallyAllocatedInstanceTrait" ],
     [ "v8::base::DynamicallyAllocatedInstanceTrait< T >", "structv8_1_1base_1_1DynamicallyAllocatedInstanceTrait.html", "structv8_1_1base_1_1DynamicallyAllocatedInstanceTrait" ],
-    [ "v8::base::DefaultConstructTrait< T >", "structv8_1_1base_1_1DefaultConstructTrait.html", null ],
-    [ "v8::base::DefaultCreateTrait< T >", "structv8_1_1base_1_1DefaultCreateTrait.html", null ],
-    [ "v8::base::ThreadSafeInitOnceTrait", "structv8_1_1base_1_1ThreadSafeInitOnceTrait.html", null ],
-    [ "v8::base::SingleThreadInitOnceTrait", "structv8_1_1base_1_1SingleThreadInitOnceTrait.html", null ],
+    [ "v8::base::DefaultConstructTrait< T >", "structv8_1_1base_1_1DefaultConstructTrait.html", "structv8_1_1base_1_1DefaultConstructTrait" ],
+    [ "v8::base::DefaultCreateTrait< T >", "structv8_1_1base_1_1DefaultCreateTrait.html", "structv8_1_1base_1_1DefaultCreateTrait" ],
+    [ "v8::base::ThreadSafeInitOnceTrait", "structv8_1_1base_1_1ThreadSafeInitOnceTrait.html", "structv8_1_1base_1_1ThreadSafeInitOnceTrait" ],
+    [ "v8::base::SingleThreadInitOnceTrait", "structv8_1_1base_1_1SingleThreadInitOnceTrait.html", "structv8_1_1base_1_1SingleThreadInitOnceTrait" ],
     [ "v8::base::LazyInstanceImpl< T, AllocationTrait, CreateTrait, InitOnceTrait, DestroyTrait >", "structv8_1_1base_1_1LazyInstanceImpl.html", "structv8_1_1base_1_1LazyInstanceImpl" ],
     [ "v8::base::LazyStaticInstance< T, CreateTrait, InitOnceTrait, DestroyTrait >", "structv8_1_1base_1_1LazyStaticInstance.html", "structv8_1_1base_1_1LazyStaticInstance" ],
     [ "v8::base::LazyInstance< T, CreateTrait, InitOnceTrait, DestroyTrait >", "structv8_1_1base_1_1LazyInstance.html", "structv8_1_1base_1_1LazyInstance" ],

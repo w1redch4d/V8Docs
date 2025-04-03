@@ -1,6 +1,6 @@
 var js_operator_8h =
 [
-    [ "v8::internal::compiler::JSOperator", "classv8_1_1internal_1_1compiler_1_1JSOperator.html", null ],
+    [ "v8::internal::compiler::JSOperator", "classv8_1_1internal_1_1compiler_1_1JSOperator.html", "classv8_1_1internal_1_1compiler_1_1JSOperator" ],
     [ "v8::internal::compiler::CallFrequency", "classv8_1_1internal_1_1compiler_1_1CallFrequency.html", "classv8_1_1internal_1_1compiler_1_1CallFrequency" ],
     [ "v8::internal::compiler::ConstructForwardVarargsParameters", "classv8_1_1internal_1_1compiler_1_1ConstructForwardVarargsParameters.html", "classv8_1_1internal_1_1compiler_1_1ConstructForwardVarargsParameters" ],
     [ "v8::internal::compiler::ConstructParameters", "classv8_1_1internal_1_1compiler_1_1ConstructParameters.html", "classv8_1_1internal_1_1compiler_1_1ConstructParameters" ],

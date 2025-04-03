@@ -7,5 +7,6 @@ var classv8_1_1bigint_1_1Processor =
     [ "FromString", "classv8_1_1bigint_1_1Processor.html#ad416a68f503531173b465b670e78d75d", null ],
     [ "Modulo", "classv8_1_1bigint_1_1Processor.html#a2face814cc109c9c463d420b2ffe56b0", null ],
     [ "Multiply", "classv8_1_1bigint_1_1Processor.html#aa81eb2227d307d2c2328b76fef725a7c", null ],
+    [ "New", "classv8_1_1bigint_1_1Processor.html#a6c97f8d1231b4919db1570e2cd0d2df8", null ],
     [ "ToString", "classv8_1_1bigint_1_1Processor.html#aaa697967611ba4db1e89ae8b5f165455", null ]
 ];

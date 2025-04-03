@@ -9,5 +9,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CheckedClosureOp =
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CheckedClosureOp.html#a567127a6f9c80db143c77b7824a131dd", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CheckedClosureOp.html#a6cbff088ef9c0be665c939cb85e0fef1", null ],
     [ "Validate", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CheckedClosureOp.html#ab30e997175ee1dbaa1f8539824e39bf7", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CheckedClosureOp.html#af13eedec99a008fb2bb1479cc57c7132", null ],
     [ "feedback_cell", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CheckedClosureOp.html#a6b9f9b2963398a3c6139d78394c9a4a4", null ]
 ];

@@ -10,6 +10,7 @@ var classv8_1_1internal_1_1compiler_1_1StringRef =
     [ "length", "classv8_1_1internal_1_1compiler_1_1StringRef.html#aff61cb140abb0d85ac42c01d246580c3", null ],
     [ "object", "classv8_1_1internal_1_1compiler_1_1StringRef.html#aa5c42ecc979bc96dbe17fe07e40e430c", null ],
     [ "ObjectIfContentAccessible", "classv8_1_1internal_1_1compiler_1_1StringRef.html#a8c7e2eac7528b26a2f1bcbffbcd0023a", null ],
+    [ "SupportedStringKind", "classv8_1_1internal_1_1compiler_1_1StringRef.html#a3d1c6d3aa8a83df5e577e46b8666336f", null ],
     [ "ToInt", "classv8_1_1internal_1_1compiler_1_1StringRef.html#a509579e650167ea9d6f9b9fe27cca844", null ],
     [ "ToNumber", "classv8_1_1internal_1_1compiler_1_1StringRef.html#aecc86110e3e156c6ef053a2e8e75cbe9", null ]
 ];

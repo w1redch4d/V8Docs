@@ -17,7 +17,15 @@ var classv8_1_1internal_1_1SourcePositionTableIterator =
     [ "code_offset", "classv8_1_1internal_1_1SourcePositionTableIterator.html#ad98189665bf08418a805faf4d9861a3e", null ],
     [ "done", "classv8_1_1internal_1_1SourcePositionTableIterator.html#a0845f40c6af62abe649e2a543efc057d", null ],
     [ "GetState", "classv8_1_1internal_1_1SourcePositionTableIterator.html#acb20300c99e73c48075c9f4792b9d977", null ],
+    [ "Initialize", "classv8_1_1internal_1_1SourcePositionTableIterator.html#a81ff24dddf71a3e8d6ea2a006e4ec4f3", null ],
     [ "is_statement", "classv8_1_1internal_1_1SourcePositionTableIterator.html#a0c544ad2e93732e877653d84794076ff", null ],
     [ "RestoreState", "classv8_1_1internal_1_1SourcePositionTableIterator.html#a18ec75be2b171318c57ce1437b987eac", null ],
-    [ "source_position", "classv8_1_1internal_1_1SourcePositionTableIterator.html#abf6e147228bac707e824d768ac15ad2b", null ]
+    [ "source_position", "classv8_1_1internal_1_1SourcePositionTableIterator.html#abf6e147228bac707e824d768ac15ad2b", null ],
+    [ "current_", "classv8_1_1internal_1_1SourcePositionTableIterator.html#a27fdb8abf4b9345934fb81b4d8aef40a", null ],
+    [ "function_entry_filter_", "classv8_1_1internal_1_1SourcePositionTableIterator.html#a04e94a2e3ae1110af3eb6693e5e0f411", null ],
+    [ "index_", "classv8_1_1internal_1_1SourcePositionTableIterator.html#a4d42a106e0e3d9852d68be926b46117d", null ],
+    [ "iteration_filter_", "classv8_1_1internal_1_1SourcePositionTableIterator.html#acb9bc0c248afc29cf328abaae3020437", null ],
+    [ "kDone", "classv8_1_1internal_1_1SourcePositionTableIterator.html#ad98d312bff7771367bb97c0c3c969641", null ],
+    [ "raw_table_", "classv8_1_1internal_1_1SourcePositionTableIterator.html#a7a01d2ac869c96c71f4db3fcd9f7c8f7", null ],
+    [ "table_", "classv8_1_1internal_1_1SourcePositionTableIterator.html#a4b93e58568b41064e6ea91bfd2851099", null ]
 ];

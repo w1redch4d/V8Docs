@@ -13,6 +13,19 @@ var classv8_1_1internal_1_1ObjectDescriptor =
     [ "IncComputedCount", "classv8_1_1internal_1_1ObjectDescriptor.html#abc9f5ba56abf7cd0460eff54efa83cb1", null ],
     [ "IncElementsCount", "classv8_1_1internal_1_1ObjectDescriptor.html#a7e90de2edbfb9af4f0730bbed1263885", null ],
     [ "IncPropertiesCount", "classv8_1_1internal_1_1ObjectDescriptor.html#a51c2e147b73ecb7a7db52afac15209f2", null ],
+    [ "properties_dictionary_template", "classv8_1_1internal_1_1ObjectDescriptor.html#aaca3dfdfd49e9c355c4e9702b4f13228", null ],
+    [ "properties_ordered_dictionary_template", "classv8_1_1internal_1_1ObjectDescriptor.html#a4673db73c6a6fde0b9ee12d666b37509", null ],
     [ "properties_template", "classv8_1_1internal_1_1ObjectDescriptor.html#a200f983f3042306acd08e50816d69b62", null ],
-    [ "UpdateNextEnumerationIndex", "classv8_1_1internal_1_1ObjectDescriptor.html#a327f3c0b84b5170525765628659d9f2b", null ]
+    [ "UpdateNextEnumerationIndex", "classv8_1_1internal_1_1ObjectDescriptor.html#a327f3c0b84b5170525765628659d9f2b", null ],
+    [ "computed_count_", "classv8_1_1internal_1_1ObjectDescriptor.html#aaca99e28b550d4647dd23c8b9a84317f", null ],
+    [ "computed_properties_", "classv8_1_1internal_1_1ObjectDescriptor.html#a5d8ecaaea0e235595001775c452a9758", null ],
+    [ "current_computed_index_", "classv8_1_1internal_1_1ObjectDescriptor.html#a11e22901244fc47721792f845dc2eac0", null ],
+    [ "descriptor_array_template_", "classv8_1_1internal_1_1ObjectDescriptor.html#a8df4f7b232b7e7b1f6c4f8e8c7deeb74", null ],
+    [ "element_count_", "classv8_1_1internal_1_1ObjectDescriptor.html#a98c7cb8fee85ef03ee638cba8b7da271", null ],
+    [ "elements_dictionary_template_", "classv8_1_1internal_1_1ObjectDescriptor.html#a3c7824b461e23f90ac8b30896aadb5dd", null ],
+    [ "next_enumeration_index_", "classv8_1_1internal_1_1ObjectDescriptor.html#a2b47fd6511cff3aeee8487becc560f32", null ],
+    [ "properties_dictionary_template_", "classv8_1_1internal_1_1ObjectDescriptor.html#a8b3a4a55f1ecb34691b5a958cd28229a", null ],
+    [ "property_count_", "classv8_1_1internal_1_1ObjectDescriptor.html#a035130201a024c7400c76de46038316e", null ],
+    [ "property_slack_", "classv8_1_1internal_1_1ObjectDescriptor.html#a28f0769b270ddfefed81de314d2c54ca", null ],
+    [ "temp_handle_", "classv8_1_1internal_1_1ObjectDescriptor.html#aae3086deb46d18650f8912393f887fd9", null ]
 ];

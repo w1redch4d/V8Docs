@@ -7,5 +7,7 @@ var classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs =
     [ "count", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs.html#a17bdf15e2c7eb3c6aeeac7ffc2612e4c", null ],
     [ "empty", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs.html#a69bd5b8ed5345110db122ffb634e2ca0", null ],
     [ "end", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs.html#afab4c550fc33518f820abcb740f034cf", null ],
-    [ "operator[]", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs.html#afa1cf46f4993cfd70953d4158a7abacd", null ]
+    [ "operator[]", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs.html#afa1cf46f4993cfd70953d4158a7abacd", null ],
+    [ "count_", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs.html#a9966fd096d928ed44f2326e605dc75b3", null ],
+    [ "input_root_", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs.html#a314cb4e8190b37760ad88ee139955b3c", null ]
 ];

@@ -9,5 +9,11 @@ var classv8_1_1internal_1_1EmbedderNode =
     [ "SetDetachedness", "classv8_1_1internal_1_1EmbedderNode.html#ae9372f2c7ec55cbf52bc925579ee39ca", null ],
     [ "SetWrapperNode", "classv8_1_1internal_1_1EmbedderNode.html#a32f747b78f73b09cb4c58f57c18411ad", null ],
     [ "SizeInBytes", "classv8_1_1internal_1_1EmbedderNode.html#a1c21464cb7f27b7dbc81034120862c56", null ],
-    [ "WrapperNode", "classv8_1_1internal_1_1EmbedderNode.html#a7321a129cba109e1e05a2ce9f9974063", null ]
+    [ "WrapperNode", "classv8_1_1internal_1_1EmbedderNode.html#a7321a129cba109e1e05a2ce9f9974063", null ],
+    [ "detachedness_", "classv8_1_1internal_1_1EmbedderNode.html#a4ff4ba752198e4b45f750c45e53613ac", null ],
+    [ "header_address_", "classv8_1_1internal_1_1EmbedderNode.html#aa50f889559b73add51494aacc57a5e53", null ],
+    [ "name_", "classv8_1_1internal_1_1EmbedderNode.html#af187659890497fb79a937ba3168acc37", null ],
+    [ "named_edges_", "classv8_1_1internal_1_1EmbedderNode.html#a36ab380e8c6553c86538688e0291f490", null ],
+    [ "size_", "classv8_1_1internal_1_1EmbedderNode.html#ad187a192d34602f347af17f19a308f5b", null ],
+    [ "wrapper_node_", "classv8_1_1internal_1_1EmbedderNode.html#aeb294bfa105c28f1d732dcb0a9314cb5", null ]
 ];

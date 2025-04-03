@@ -8,6 +8,7 @@ var classv8_1_1internal_1_1TNode =
     [ "operator bool", "classv8_1_1internal_1_1TNode.html#a737acd0ff01f6be9c56bbc98b87428c6", null ],
     [ "operator compiler::Node *", "classv8_1_1internal_1_1TNode.html#ac4a81e3bdceb2921bbd0506d63828eac", null ],
     [ "operator=", "classv8_1_1internal_1_1TNode.html#af0e5799aa959cfc7c93ca05914a349d6", null ],
+    [ "UncheckedCast", "classv8_1_1internal_1_1TNode.html#aef7e09b0f9e153327c5c1eb4dd516e6e", null ],
     [ "TNode", "classv8_1_1internal_1_1TNode.html#a9e45093dda72c5af25effcb8eaef18af", null ],
     [ "node_", "classv8_1_1internal_1_1TNode.html#ac379d76708dab17de227a0f72724ef01", null ]
 ];

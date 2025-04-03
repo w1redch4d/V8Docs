@@ -9,5 +9,6 @@ var classv8_1_1base_1_1SharedMutex =
     [ "TryLockExclusive", "classv8_1_1base_1_1SharedMutex.html#af7aab6f32a07fd3aabdfaa0ff7a09b9d", null ],
     [ "TryLockShared", "classv8_1_1base_1_1SharedMutex.html#aea754fdc6ede6a9aa72abaf67033094d", null ],
     [ "UnlockExclusive", "classv8_1_1base_1_1SharedMutex.html#a750bf654a05473c2d5c8254c4d95dc33", null ],
-    [ "UnlockShared", "classv8_1_1base_1_1SharedMutex.html#a72b2ae77ff2fe77c3ae4204c61500e8d", null ]
+    [ "UnlockShared", "classv8_1_1base_1_1SharedMutex.html#a72b2ae77ff2fe77c3ae4204c61500e8d", null ],
+    [ "native_handle_", "classv8_1_1base_1_1SharedMutex.html#a7f7ee86a6fde1d009b425a1a7007c5cf", null ]
 ];

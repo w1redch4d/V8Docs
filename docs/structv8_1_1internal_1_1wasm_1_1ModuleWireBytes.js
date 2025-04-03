@@ -10,5 +10,6 @@ var structv8_1_1internal_1_1wasm_1_1ModuleWireBytes =
     [ "length", "structv8_1_1internal_1_1wasm_1_1ModuleWireBytes.html#a31e859ce9fbc3561f23d5411edd92c4b", null ],
     [ "module_bytes", "structv8_1_1internal_1_1wasm_1_1ModuleWireBytes.html#af538fbe064092b19f8841de4f52873e2", null ],
     [ "operator==", "structv8_1_1internal_1_1wasm_1_1ModuleWireBytes.html#ac827c8aebe6fadcba8d9b39e594c5742", null ],
-    [ "start", "structv8_1_1internal_1_1wasm_1_1ModuleWireBytes.html#ad9cc50d7981d904ba5bb6e20d8db65b1", null ]
+    [ "start", "structv8_1_1internal_1_1wasm_1_1ModuleWireBytes.html#ad9cc50d7981d904ba5bb6e20d8db65b1", null ],
+    [ "module_bytes_", "structv8_1_1internal_1_1wasm_1_1ModuleWireBytes.html#a424d1c2b5d3dc5f321d01d630a7568fa", null ]
 ];

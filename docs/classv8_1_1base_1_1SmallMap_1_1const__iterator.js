@@ -7,6 +7,8 @@ var classv8_1_1base_1_1SmallMap_1_1const__iterator =
     [ "value_type", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#a9daedd7c12ca2bc954f3ca9099a3c105", null ],
     [ "const_iterator", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#a064ff3cc188b4f7d95fa41649861e97b", null ],
     [ "const_iterator", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#a69e0491f0f4b6265aa1fdf93a2983c4b", null ],
+    [ "const_iterator", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#a7eaf04c85b2ae07cab82a0ebe3a61153", null ],
+    [ "const_iterator", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#aec3e8c853f2f8d082cab74f75b7c8ef6", null ],
     [ "operator!=", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#a31d9d5b2e4bb4426950ba114838855c1", null ],
     [ "operator*", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#a53a6924137511ea0ad5b735049d04005", null ],
     [ "operator++", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#a7cf6fb1c93f167163cba32600cdc2d84", null ],
@@ -15,5 +17,7 @@ var classv8_1_1base_1_1SmallMap_1_1const__iterator =
     [ "operator--", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#ae67968c424261ddd0c9406a920fc084d", null ],
     [ "operator->", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#a3937ebcb34021d9e17e11050db5eed6b", null ],
     [ "operator==", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#a3f500b4a80500677f82573b7c3a3b6bf", null ],
-    [ "SmallMap", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#ab044a48012adc18054f48dca590e08b4", null ]
+    [ "SmallMap", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#ab044a48012adc18054f48dca590e08b4", null ],
+    [ "array_iter_", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#a4de5f90e16268eadb763cc932ccfcffa", null ],
+    [ "map_iter_", "classv8_1_1base_1_1SmallMap_1_1const__iterator.html#ac8954b8284b804e9512a4a343ee303a0", null ]
 ];

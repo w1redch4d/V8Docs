@@ -11,5 +11,6 @@ var classv8_1_1platform_1_1DefaultJobHandle =
     [ "NotifyConcurrencyIncrease", "classv8_1_1platform_1_1DefaultJobHandle.html#a394b462251dee25aeb3f24cd915e029b", null ],
     [ "operator=", "classv8_1_1platform_1_1DefaultJobHandle.html#a3838507eee68ae639bde94369cf3ed44", null ],
     [ "UpdatePriority", "classv8_1_1platform_1_1DefaultJobHandle.html#a3787d51aa1e57d68d76b9bb9546e3aa2", null ],
-    [ "UpdatePriorityEnabled", "classv8_1_1platform_1_1DefaultJobHandle.html#a6f24a0f9ce263a52758e5e36abc22d57", null ]
+    [ "UpdatePriorityEnabled", "classv8_1_1platform_1_1DefaultJobHandle.html#a6f24a0f9ce263a52758e5e36abc22d57", null ],
+    [ "state_", "classv8_1_1platform_1_1DefaultJobHandle.html#a8a15eeb427fcc41dc315ff69b8e99c09", null ]
 ];

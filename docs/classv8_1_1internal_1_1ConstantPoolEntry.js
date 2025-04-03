@@ -20,8 +20,12 @@ var classv8_1_1internal_1_1ConstantPoolEntry =
     [ "set_merged_index", "classv8_1_1internal_1_1ConstantPoolEntry.html#a5990c4b32551a11641b0bcc894fe8fd4", null ],
     [ "set_offset", "classv8_1_1internal_1_1ConstantPoolEntry.html#a8d63e159ab6e3dc4bdfa6c7b317dc898", null ],
     [ "sharing_ok", "classv8_1_1internal_1_1ConstantPoolEntry.html#a83d2472a93bce7206cb9cf3b0f33414f", null ],
+    [ "size", "classv8_1_1internal_1_1ConstantPoolEntry.html#a11980869d87e0390dcea4827cc067fb0", null ],
     [ "value", "classv8_1_1internal_1_1ConstantPoolEntry.html#a3ece91621f31dbf81f9bf4befc65d3b0", null ],
     [ "value64", "classv8_1_1internal_1_1ConstantPoolEntry.html#a902d87dbfab074fd20a1ef5d553930f2", null ],
+    [ "merged_index_", "classv8_1_1internal_1_1ConstantPoolEntry.html#ae1c95cd82cc979e822466a5178ee26b9", null ],
+    [ "position_", "classv8_1_1internal_1_1ConstantPoolEntry.html#a69be31809c8fb62eefe216fdfd50242f", null ],
+    [ "rmode_", "classv8_1_1internal_1_1ConstantPoolEntry.html#afd24bc81fe7b9176b7d3ccfeca05e52b", null ],
     [ "value64_", "classv8_1_1internal_1_1ConstantPoolEntry.html#aee4aa4423ac97735a7e8efb34ad63605", null ],
     [ "value_", "classv8_1_1internal_1_1ConstantPoolEntry.html#aa72147dd5044e00060ad6106a21a49ee", null ]
 ];

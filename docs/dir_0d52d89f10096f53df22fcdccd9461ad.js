@@ -1,7 +1,7 @@
 var dir_0d52d89f10096f53df22fcdccd9461ad =
 [
     [ "embedded", "dir_8bcda6c104caef500ec275b8b6b7c994.html", "dir_8bcda6c104caef500ec275b8b6b7c994" ],
-    [ "code-serializer.cc", "code-serializer_8cc.html", null ],
+    [ "code-serializer.cc", "code-serializer_8cc.html", "code-serializer_8cc" ],
     [ "code-serializer.h", "code-serializer_8h.html", "code-serializer_8h" ],
     [ "context-deserializer.cc", "context-deserializer_8cc.html", "context-deserializer_8cc" ],
     [ "context-deserializer.h", "context-deserializer_8h.html", "context-deserializer_8h" ],
@@ -45,7 +45,7 @@ var dir_0d52d89f10096f53df22fcdccd9461ad =
     [ "sort-builtins.h", "sort-builtins_8h.html", "sort-builtins_8h" ],
     [ "startup-deserializer.cc", "startup-deserializer_8cc.html", null ],
     [ "startup-deserializer.h", "startup-deserializer_8h.html", "startup-deserializer_8h" ],
-    [ "startup-serializer.cc", "startup-serializer_8cc.html", null ],
+    [ "startup-serializer.cc", "startup-serializer_8cc.html", "startup-serializer_8cc" ],
     [ "startup-serializer.h", "startup-serializer_8h.html", "startup-serializer_8h" ],
     [ "static-roots-gen.cc", "static-roots-gen_8cc.html", "static-roots-gen_8cc" ],
     [ "static-roots-gen.h", "static-roots-gen_8h.html", "static-roots-gen_8h" ]

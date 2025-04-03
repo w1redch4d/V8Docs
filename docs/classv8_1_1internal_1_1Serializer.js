@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1Serializer =
 [
+    [ "HotObjectsList", "classv8_1_1internal_1_1Serializer_1_1HotObjectsList.html", "classv8_1_1internal_1_1Serializer_1_1HotObjectsList" ],
     [ "ObjectSerializer", "classv8_1_1internal_1_1Serializer_1_1ObjectSerializer.html", "classv8_1_1internal_1_1Serializer_1_1ObjectSerializer" ],
     [ "RecursionScope", "classv8_1_1internal_1_1Serializer_1_1RecursionScope.html", "classv8_1_1internal_1_1Serializer_1_1RecursionScope" ],
     [ "PendingObjectReferences", "classv8_1_1internal_1_1Serializer.html#ae25a653f1cdcccecaff77e26c74a9cb8", null ],
@@ -51,5 +52,23 @@ var classv8_1_1internal_1_1Serializer =
     [ "TotalAllocationSize", "classv8_1_1internal_1_1Serializer.html#ab8fd0f66b25aea9ae8545d29c488327d", null ],
     [ "TryEncodeExternalReference", "classv8_1_1internal_1_1Serializer.html#ae0a50f0caae945469fa8a152fb39aefd", null ],
     [ "VisitRootPointers", "classv8_1_1internal_1_1Serializer.html#a35c2c2370059a9e4e688e23f81e67838", null ],
-    [ "sink_", "classv8_1_1internal_1_1Serializer.html#a6c1513b0ef81406f8b5ae65f22492480", null ]
+    [ "allocation_size_", "classv8_1_1internal_1_1Serializer.html#aeefa118a2b977060502c3e7e14120c59", null ],
+    [ "code_address_map_", "classv8_1_1internal_1_1Serializer.html#a28e18a9bf821675e07668308b9b53360", null ],
+    [ "code_buffer_", "classv8_1_1internal_1_1Serializer.html#aba8c549510f3bf5f1beda57a6dbdb8e1", null ],
+    [ "deferred_objects_", "classv8_1_1internal_1_1Serializer.html#af4092b00d34939d407c8bd6bd6ff0aec", null ],
+    [ "dispatch_handle_map_", "classv8_1_1internal_1_1Serializer.html#abbea95669a77a01da5b0af77306ab46d", null ],
+    [ "external_reference_encoder_", "classv8_1_1internal_1_1Serializer.html#a77ce43f8a7fe3b7dfb19208665eb5d14", null ],
+    [ "flags_", "classv8_1_1internal_1_1Serializer.html#affd13f7168674fb8545931c3efe13d75", null ],
+    [ "forward_refs_per_pending_object_", "classv8_1_1internal_1_1Serializer.html#aaab187ee8dff2f40020c9645e8d929b2", null ],
+    [ "hot_objects_", "classv8_1_1internal_1_1Serializer.html#a113a99814d567b8b3766103145d035bb", null ],
+    [ "isolate_", "classv8_1_1internal_1_1Serializer.html#a2a0bb475a79a6094294882195dd6cb86", null ],
+    [ "next_forward_ref_id_", "classv8_1_1internal_1_1Serializer.html#a14eb8a5e6d6f85c3aa173bd6fd174d93", null ],
+    [ "num_back_refs_", "classv8_1_1internal_1_1Serializer.html#a9e9f38991986dacae444308819631d24", null ],
+    [ "recursion_depth_", "classv8_1_1internal_1_1Serializer.html#af22b7761fa592a50cba1d5b002fa351d", null ],
+    [ "reference_map_", "classv8_1_1internal_1_1Serializer.html#a3a0587870b148ea94fdfcccc9eb5e532", null ],
+    [ "root_index_map_", "classv8_1_1internal_1_1Serializer.html#a4256760da33786e0706d86823f10aaeb", null ],
+    [ "seen_backing_stores_index_", "classv8_1_1internal_1_1Serializer.html#ab5e6ac8f655088975857f12daa3426cb", null ],
+    [ "serializer_tracks_serialization_statistics_", "classv8_1_1internal_1_1Serializer.html#aa8601c895b5842c97c3ee487ba01bf77", null ],
+    [ "sink_", "classv8_1_1internal_1_1Serializer.html#a6c1513b0ef81406f8b5ae65f22492480", null ],
+    [ "unresolved_forward_refs_", "classv8_1_1internal_1_1Serializer.html#a7a6e3d589ae46982712051441c82588c", null ]
 ];

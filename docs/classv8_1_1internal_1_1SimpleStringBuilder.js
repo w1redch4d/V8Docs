@@ -9,6 +9,10 @@ var classv8_1_1internal_1_1SimpleStringBuilder =
     [ "AddString", "classv8_1_1internal_1_1SimpleStringBuilder.html#a511c074f3b3fa7d7161da48a01020f73", null ],
     [ "AddStringLiteral", "classv8_1_1internal_1_1SimpleStringBuilder.html#a20549eb5453d127e150010592d93045f", null ],
     [ "AddSubstring", "classv8_1_1internal_1_1SimpleStringBuilder.html#a53568204e083e38d1ec2fba1cf036bf2", null ],
+    [ "DISALLOW_IMPLICIT_CONSTRUCTORS", "classv8_1_1internal_1_1SimpleStringBuilder.html#a3c2aa4cb1b9f5bc01a7763de5d1373ee", null ],
     [ "Finalize", "classv8_1_1internal_1_1SimpleStringBuilder.html#ab6aebcff188bdab258d9c139e29543e4", null ],
-    [ "position", "classv8_1_1internal_1_1SimpleStringBuilder.html#a856c891342137fab4a7e5c8efac88b0c", null ]
+    [ "is_finalized", "classv8_1_1internal_1_1SimpleStringBuilder.html#a6021086a5e9f2ce467aca259ff4f479d", null ],
+    [ "position", "classv8_1_1internal_1_1SimpleStringBuilder.html#a856c891342137fab4a7e5c8efac88b0c", null ],
+    [ "buffer_", "classv8_1_1internal_1_1SimpleStringBuilder.html#ab7ba4a770041f69736fea907d6a0c939", null ],
+    [ "cursor_", "classv8_1_1internal_1_1SimpleStringBuilder.html#a3ce54903d603d7e6dfb667a0bba70e24", null ]
 ];

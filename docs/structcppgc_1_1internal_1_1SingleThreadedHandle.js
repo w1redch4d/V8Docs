@@ -6,5 +6,6 @@ var structcppgc_1_1internal_1_1SingleThreadedHandle =
     [ "Cancel", "structcppgc_1_1internal_1_1SingleThreadedHandle.html#ae10f09cffd47d7e9826b48f07a41d9ea", null ],
     [ "CancelIfNonEmpty", "structcppgc_1_1internal_1_1SingleThreadedHandle.html#a79992ab4db1c259471cee6a44795799d", null ],
     [ "IsCanceled", "structcppgc_1_1internal_1_1SingleThreadedHandle.html#a1a77e0d9c749d6abfca0693fa84016af", null ],
-    [ "operator bool", "structcppgc_1_1internal_1_1SingleThreadedHandle.html#aba5454913ce402d5644aa8c023168b17", null ]
+    [ "operator bool", "structcppgc_1_1internal_1_1SingleThreadedHandle.html#aba5454913ce402d5644aa8c023168b17", null ],
+    [ "is_cancelled_", "structcppgc_1_1internal_1_1SingleThreadedHandle.html#a6b6b67b48d5a4e015302b4e6ec1f8884", null ]
 ];

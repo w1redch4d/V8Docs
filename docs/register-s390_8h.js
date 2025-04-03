@@ -50,6 +50,7 @@ var register_s390_8h =
     [ "ReassignRegister", "register-s390_8h.html#abda4a55a899184dca5308bde33e5283c", null ],
     [ "ToRegister", "register-s390_8h.html#aad4614e9eaee9371d87d0f56ffb440e3", null ],
     [ "kCalleeRegisterSaveAreaSize", "register-s390_8h.html#aa1356f23099de5370b518383d40ebb15", null ],
+    [ "kRegisterPassedArguments", "register-s390_8h.html#aee1ede1bc75c059db25f836db07bbe34", null ],
     [ "kStackFrameRASlot", "register-s390_8h.html#a2403858ebac34af63966847ad4564145", null ],
     [ "kStackFrameSPSlot", "register-s390_8h.html#a8310481213902bbefd6080c6277d3d34", null ]
 ];

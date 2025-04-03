@@ -9,8 +9,22 @@ var classcppgc_1_1internal_1_1Heap =
     [ "DisableHeapGrowingForTesting", "classcppgc_1_1internal_1_1Heap.html#ad708043e1dbc8a096aaf90aa84303e92", null ],
     [ "EnableGenerationalGC", "classcppgc_1_1internal_1_1Heap.html#a804ce769cae3eda2c7300337fd8c32d7", null ],
     [ "epoch", "classcppgc_1_1internal_1_1Heap.html#a7cec8e020df130e677dca502e0de7eca", null ],
+    [ "FinalizeGarbageCollection", "classcppgc_1_1internal_1_1Heap.html#a74bc03426204a72880853269fd29ac16", null ],
+    [ "FinalizeGarbageCollectionImpl", "classcppgc_1_1internal_1_1Heap.html#a8714e89d8ad6399c286855f9402a710c", null ],
+    [ "FinalizeIncrementalGarbageCollectionForTesting", "classcppgc_1_1internal_1_1Heap.html#a07fe422418ad2f31845c2ec827ccf8ba", null ],
+    [ "FinalizeIncrementalGarbageCollectionIfNeeded", "classcppgc_1_1internal_1_1Heap.html#a93798517a5fe38fe360e6364f5d6b6ea", null ],
     [ "FinalizeIncrementalGarbageCollectionIfRunning", "classcppgc_1_1internal_1_1Heap.html#a8395f79503fa26ecee4d42fb3b35d98b", null ],
+    [ "From", "classcppgc_1_1internal_1_1Heap.html#a3422719f7f923fa394ddb0d18da0cf0c", null ],
+    [ "From", "classcppgc_1_1internal_1_1Heap.html#a475ef65ab0247acc1ab02828adf132bd", null ],
     [ "overridden_stack_state", "classcppgc_1_1internal_1_1Heap.html#ab91497bf0dab65703c8278cc7e2f2040", null ],
     [ "set_override_stack_state", "classcppgc_1_1internal_1_1Heap.html#abe1e21035873ef1ff18287e0121267a7", null ],
-    [ "StartIncrementalGarbageCollection", "classcppgc_1_1internal_1_1Heap.html#a34945f4743e37aa5ac89468edb90362e", null ]
+    [ "StartGarbageCollection", "classcppgc_1_1internal_1_1Heap.html#aec5f207d0368f7afb3e206e813fd8986", null ],
+    [ "StartIncrementalGarbageCollection", "classcppgc_1_1internal_1_1Heap.html#a34945f4743e37aa5ac89468edb90362e", null ],
+    [ "StartIncrementalGarbageCollectionForTesting", "classcppgc_1_1internal_1_1Heap.html#a3e2c142a9963f5ab9fecfb40b617d123", null ],
+    [ "config_", "classcppgc_1_1internal_1_1Heap.html#affe6e269339ba81a0ecde5ce65d21860", null ],
+    [ "epoch_", "classcppgc_1_1internal_1_1Heap.html#a19cb317fff491b940203462cf1999707", null ],
+    [ "gc_invoker_", "classcppgc_1_1internal_1_1Heap.html#a8605a807a01f2e4aae1d946fc8226d91", null ],
+    [ "generational_gc_enabled_", "classcppgc_1_1internal_1_1Heap.html#ae1c697431e09f31a5a9ae10598f42c16", null ],
+    [ "growing_", "classcppgc_1_1internal_1_1Heap.html#ad97fd49e46cf3c2946cbf3a40c4d5c13", null ],
+    [ "override_stack_state_", "classcppgc_1_1internal_1_1Heap.html#abc7f4ed354a4c37711baa0cee8323b94", null ]
 ];

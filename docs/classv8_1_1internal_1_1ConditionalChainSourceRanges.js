@@ -6,5 +6,7 @@ var classv8_1_1internal_1_1ConditionalChainSourceRanges =
     [ "GetRange", "classv8_1_1internal_1_1ConditionalChainSourceRanges.html#a1ed72f359c03654ae0f66fed13758543", null ],
     [ "GetRangeAtIndex", "classv8_1_1internal_1_1ConditionalChainSourceRanges.html#a09e14c8a4c98f84806b471438c0365cd", null ],
     [ "HasRange", "classv8_1_1internal_1_1ConditionalChainSourceRanges.html#a8c66d86cf3e3bc2c510cf0f8200f9ef5", null ],
-    [ "RangeCount", "classv8_1_1internal_1_1ConditionalChainSourceRanges.html#a82604bb7db5088677355c2330ab0e329", null ]
+    [ "RangeCount", "classv8_1_1internal_1_1ConditionalChainSourceRanges.html#a82604bb7db5088677355c2330ab0e329", null ],
+    [ "else_ranges_", "classv8_1_1internal_1_1ConditionalChainSourceRanges.html#a540ad6110b4e57c42e9c9fae8dde7ac8", null ],
+    [ "then_ranges_", "classv8_1_1internal_1_1ConditionalChainSourceRanges.html#a5bed043b44eea677d6d4108e3501b2c9", null ]
 ];

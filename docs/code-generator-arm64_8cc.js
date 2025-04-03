@@ -16,5 +16,13 @@ var code_generator_arm64_8cc =
     [ "ASSEMBLE_SIMD_SHIFT_RIGHT", "code-generator-arm64_8cc.html#a32e0814033354c75aba9292b5a28e497", null ],
     [ "ATOMIC_BINOP_CASE", "code-generator-arm64_8cc.html#a82fcb46a1460459d02289b25ac40f048", null ],
     [ "AssembleConditionalCompareChain", "code-generator-arm64_8cc.html#a5b4157e4d68bf9bd89e49b536f1fdcbd", null ],
-    [ "ConditionToDefaultFlags", "code-generator-arm64_8cc.html#abc36062c5abad33071fd01fc136d1101", null ]
+    [ "ConditionToDefaultFlags", "code-generator-arm64_8cc.html#abc36062c5abad33071fd01fc136d1101", null ],
+    [ "indirect_pointer_tag_", "code-generator-arm64_8cc.html#ac65776d707ac07cc6389ba76807fa3a7", null ],
+    [ "mode_", "code-generator-arm64_8cc.html#adc5709192230b7fde07de03eb2974043", null ],
+    [ "must_save_lr_", "code-generator-arm64_8cc.html#a41a2de46b73ead1c0417e8f1751a5022", null ],
+    [ "object_", "code-generator-arm64_8cc.html#a5563c55e446f92e237e9fb9b07b423b6", null ],
+    [ "offset_", "code-generator-arm64_8cc.html#ab11f8f1256e847420fa280346be66736", null ],
+    [ "unwinding_info_writer_", "code-generator-arm64_8cc.html#a169281d819fe1cec036d4799afb2accf", null ],
+    [ "value_", "code-generator-arm64_8cc.html#ac1b34591c0a6bb909fcc2d34d0b5aaff", null ],
+    [ "zone_", "code-generator-arm64_8cc.html#a4979f6e7e64e9ee56f4229d03fa20c69", null ]
 ];

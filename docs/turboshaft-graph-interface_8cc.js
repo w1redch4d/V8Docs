@@ -4,6 +4,8 @@ var turboshaft_graph_interface_8cc =
     [ "v8::internal::wasm::TurboshaftGraphBuildingInterface::Value", "structv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1Value.html", "structv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1Value" ],
     [ "v8::internal::wasm::TurboshaftGraphBuildingInterface::Control", "structv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1Control.html", "structv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1Control" ],
     [ "v8::internal::wasm::TurboshaftGraphBuildingInterface::BrTableAnalysis< ValidationTag >", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BrTableAnalysis.html", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BrTableAnalysis" ],
+    [ "v8::internal::wasm::TurboshaftGraphBuildingInterface::InstanceCache", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1InstanceCache.html", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1InstanceCache" ],
+    [ "v8::internal::wasm::TurboshaftGraphBuildingInterface::BlockPhis", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis.html", "classv8_1_1internal_1_1wasm_1_1TurboshaftGraphBuildingInterface_1_1BlockPhis" ],
     [ "__", "turboshaft-graph-interface_8cc.html#a0a87998f4e8cee4888f2a89df3d5639b", null ],
     [ "Assert", "turboshaft-graph-interface_8cc.html#a706ac5b1a53bd04067f81924b92cb9f6", null ],
     [ "BIND", "turboshaft-graph-interface_8cc.html#ad53bab49f3f3d6e63bd35df0a9b08db7", null ],

@@ -1,6 +1,7 @@
 var structv8_1_1internal_1_1wasm_1_1LiftoffOptions =
 [
     [ "is_initialized", "structv8_1_1internal_1_1wasm_1_1LiftoffOptions.html#a2bd972c771eb32b375cc1dfc451402eb", null ],
+    [ "Set", "structv8_1_1internal_1_1wasm_1_1LiftoffOptions.html#afa775b45f118c896af13bd1ec620370a", null ],
     [ "breakpoints", "structv8_1_1internal_1_1wasm_1_1LiftoffOptions.html#a1a04182df26af45d8bd84ad1b363b02e", null ],
     [ "counters", "structv8_1_1internal_1_1wasm_1_1LiftoffOptions.html#a3afe855984aa9fecd0f5b37100bf1aad", null ],
     [ "dead_breakpoint", "structv8_1_1internal_1_1wasm_1_1LiftoffOptions.html#a600d7fbe474bd97d92092651da257010", null ],

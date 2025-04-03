@@ -112,7 +112,7 @@ var dir_1909b13b6d0cbcc1d36d622424b54e1c =
     [ "growable-fixed-array-gen.cc", "growable-fixed-array-gen_8cc.html", "growable-fixed-array-gen_8cc" ],
     [ "growable-fixed-array-gen.h", "growable-fixed-array-gen_8h.html", "growable-fixed-array-gen_8h" ],
     [ "number-builtins-reducer-inl.h", "number-builtins-reducer-inl_8h.html", "number-builtins-reducer-inl_8h" ],
-    [ "profile-data-reader.cc", "profile-data-reader_8cc.html", null ],
+    [ "profile-data-reader.cc", "profile-data-reader_8cc.html", "profile-data-reader_8cc" ],
     [ "profile-data-reader.h", "profile-data-reader_8h.html", "profile-data-reader_8h" ],
     [ "setup-builtins-internal.cc", "setup-builtins-internal_8cc.html", "setup-builtins-internal_8cc" ],
     [ "torque-csa-header-includes.h", "torque-csa-header-includes_8h.html", null ]

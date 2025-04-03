@@ -1,5 +1,7 @@
 var runtime_test_wasm_8cc =
 [
+    [ "CreateDummyWasmLookAlikeForFuzzing", "runtime-test-wasm_8cc.html#a9a531612e07e7d95b4b3d9f1b4d51e58", null ],
+    [ "CreateWasmObject", "runtime-test-wasm_8cc.html#ae2a85b60dd6245096476dd62e5f1ba55", null ],
     [ "RUNTIME_FUNCTION", "runtime-test-wasm_8cc.html#adb979a40d577e2efdd62113f76d48911", null ],
     [ "RUNTIME_FUNCTION", "runtime-test-wasm_8cc.html#a6aab514dae144021dba032d6ec953a66", null ],
     [ "RUNTIME_FUNCTION", "runtime-test-wasm_8cc.html#a9d6c2a1d3adc7f01b6aa06fe0286d649", null ],

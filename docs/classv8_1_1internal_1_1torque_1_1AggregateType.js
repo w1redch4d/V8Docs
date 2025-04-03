@@ -21,5 +21,8 @@ var classv8_1_1internal_1_1torque_1_1AggregateType =
     [ "SetFields", "classv8_1_1internal_1_1torque_1_1AggregateType.html#a65eacb56c33bc4a4f2e5609ed87c8a68", null ],
     [ "SimpleNameImpl", "classv8_1_1internal_1_1torque_1_1AggregateType.html#acb54d1367b419b648c1e99904e135461", null ],
     [ "fields_", "classv8_1_1internal_1_1torque_1_1AggregateType.html#a1ca99a103b97bba5144befc81d6e2900", null ],
-    [ "is_finalized_", "classv8_1_1internal_1_1torque_1_1AggregateType.html#ac12b51a35f0145b6c8d797e4cdd60e96", null ]
+    [ "is_finalized_", "classv8_1_1internal_1_1torque_1_1AggregateType.html#ac12b51a35f0145b6c8d797e4cdd60e96", null ],
+    [ "methods_", "classv8_1_1internal_1_1torque_1_1AggregateType.html#aa9ce80bd6635c404db140dcf844f5079", null ],
+    [ "name_", "classv8_1_1internal_1_1torque_1_1AggregateType.html#a6c6b6cd2ad7702719367bb2659db9b86", null ],
+    [ "namespace_", "classv8_1_1internal_1_1torque_1_1AggregateType.html#a0f3a4e3e4192657479eda03ba799d834", null ]
 ];

@@ -1,12 +1,26 @@
 var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer =
 [
     [ "WasmRevecAnalyzer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a21677be0662a70089fdc5f2295dd6ba7", null ],
+    [ "DecideVectorize", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#ad014f74f1ad09f37d70d9035b8dd3fc5", null ],
     [ "GetIntersectPackNodes", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#ad780bbfa1ba191693029bda0d76d8ae1", null ],
     [ "GetPackNode", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a0be3ba4bd037940c39529a7cd2d33f27", null ],
     [ "GetReducedInput", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#ad3ccb7b2b9b6ffe1c4ccddd175edc86d", null ],
     [ "GetStartOperation", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a5acf27161a75447fc345c8b743a6c657", null ],
+    [ "IsSupportedReduceSeed", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a65271eb7318cdc1a07efa467bdb42478", null ],
     [ "MergeSLPTree", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#af8dcc3ae841ae010624ca57550f8cc2a", null ],
+    [ "Print", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a7bef0bd5ace4eb0a6e31a26e4fe09a45", null ],
+    [ "ProcessBlock", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a4602950475e92401c84a30d17b3f25cc", null ],
     [ "Run", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a74a936a468ebc80e5b6a753029dcbf31", null ],
     [ "ShouldReduce", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a59811aec0c2e537f20bdcc7319eee24a", null ],
-    [ "uses", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a7921514104b28636e735a6d73adb1780", null ]
+    [ "uses", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a7921514104b28636e735a6d73adb1780", null ],
+    [ "data_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a8e1b6d4d4e3df7c50eba7f9e5544f384", null ],
+    [ "graph_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#ad5938ede34f9ad9f4d1b66f64fe2f4da", null ],
+    [ "module_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#ade6ec83846ef781f370b55c6a3d2cd15", null ],
+    [ "phase_zone_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#aa452ca654e53eb26b920ba4d0e47afd9", null ],
+    [ "reduce_seeds_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a705b8c527951c6e70aa1de53a6f43117", null ],
+    [ "revectorizable_intersect_node_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#ab748b398642f2e4c8bce3da3f45f5571", null ],
+    [ "revectorizable_node_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#ae90d709bd983d4830c087627c63006d7", null ],
+    [ "should_reduce_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#afe3fc09c14541aa02931716eaf89558e", null ],
+    [ "store_seeds_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#a5f04c60694707e730fcdc7d33df39a8b", null ],
+    [ "use_map_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmRevecAnalyzer.html#ae302aeaf8f1c7e92e8c6794e4c8c690e", null ]
 ];

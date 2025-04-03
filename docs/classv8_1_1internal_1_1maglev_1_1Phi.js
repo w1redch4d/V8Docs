@@ -1,7 +1,11 @@
 var classv8_1_1internal_1_1maglev_1_1Phi =
 [
+    [ "Base", "classv8_1_1internal_1_1maglev_1_1Phi.html#aabc56de04e043ac18626347923c973cb", null ],
+    [ "HasKeyFlag", "classv8_1_1internal_1_1maglev_1_1Phi.html#a674108662e973ed98d31bdffc5d39129", null ],
     [ "Key", "classv8_1_1internal_1_1maglev_1_1Phi.html#a88f352eb9cb73d59a35aa0ed001a3d3c", null ],
     [ "List", "classv8_1_1internal_1_1maglev_1_1Phi.html#a27508166cd8ae6970e9c9781d11444db", null ],
+    [ "LoopPhiAfterLoopFlag", "classv8_1_1internal_1_1maglev_1_1Phi.html#a148776c0ce391006a24da52d964cf4f0", null ],
+    [ "Requires31BitValueFlag", "classv8_1_1internal_1_1maglev_1_1Phi.html#aefb6907a0aabeb993bd07bae3a15e811", null ],
     [ "Phi", "classv8_1_1internal_1_1maglev_1_1Phi.html#a967211f55e447556a0e9e229f39b3fac", null ],
     [ "backedge_input", "classv8_1_1internal_1_1maglev_1_1Phi.html#ac48d011194dc69db69cc47b9c6d4343c", null ],
     [ "GenerateCode", "classv8_1_1internal_1_1maglev_1_1Phi.html#a45f282f4e951ebb400bcc05da0d1bb8a", null ],
@@ -16,6 +20,7 @@ var classv8_1_1internal_1_1maglev_1_1Phi =
     [ "merge_post_loop_type", "classv8_1_1internal_1_1maglev_1_1Phi.html#ab2a1bc3925da3061f45afb088487ef71", null ],
     [ "merge_state", "classv8_1_1internal_1_1maglev_1_1Phi.html#acbb82b4dd216af1db1888773a224e0d7", null ],
     [ "merge_type", "classv8_1_1internal_1_1maglev_1_1Phi.html#a264eb6b277937f3f960ee1fe1832cd30", null ],
+    [ "next", "classv8_1_1internal_1_1maglev_1_1Phi.html#a622857a7ee17282324a9a1930b151e60", null ],
     [ "owner", "classv8_1_1internal_1_1maglev_1_1Phi.html#aebfcac3bcceb896ede01902e6774e0c2", null ],
     [ "predecessor_at", "classv8_1_1internal_1_1maglev_1_1Phi.html#a8c08ea15ed104b4b2962e044fe970b59", null ],
     [ "PrintParams", "classv8_1_1internal_1_1maglev_1_1Phi.html#a7fbc6cbe63554ef5821f681995cd23f8", null ],
@@ -32,6 +37,11 @@ var classv8_1_1internal_1_1maglev_1_1Phi =
     [ "uses_require_31_bit_value", "classv8_1_1internal_1_1maglev_1_1Phi.html#a34f77dae395570481359baa2ffc26dd7", null ],
     [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1Phi.html#a8ad36f89adf593d55258655c355869b0", null ],
     [ "key_", "classv8_1_1internal_1_1maglev_1_1Phi.html#a2bf513a9e7be05c51d5c9e16f50baacb", null ],
+    [ "merge_state_", "classv8_1_1internal_1_1maglev_1_1Phi.html#aa05fc4904e42859e2f81f0d2bdfb1159", null ],
+    [ "next_", "classv8_1_1internal_1_1maglev_1_1Phi.html#a91e590078788813ac089c0e8026aa7a0", null ],
+    [ "owner_", "classv8_1_1internal_1_1maglev_1_1Phi.html#a122d8ceadbcdc449b8bd0b2688868fa4", null ],
     [ "post_loop_type_", "classv8_1_1internal_1_1maglev_1_1Phi.html#ae3705951315c708bcc561a6cb72e8242", null ],
-    [ "type_", "classv8_1_1internal_1_1maglev_1_1Phi.html#a22f7edc4bbfc7d995c1bca7a5beb7469", null ]
+    [ "same_loop_uses_repr_hint_", "classv8_1_1internal_1_1maglev_1_1Phi.html#aa3b6477793e63c9c6a2862a4caa48577", null ],
+    [ "type_", "classv8_1_1internal_1_1maglev_1_1Phi.html#a22f7edc4bbfc7d995c1bca7a5beb7469", null ],
+    [ "uses_repr_hint_", "classv8_1_1internal_1_1maglev_1_1Phi.html#ab6ca90267a62cddc823b273b9fc7045f", null ]
 ];

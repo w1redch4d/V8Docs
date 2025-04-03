@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1maglev_1_1CallSelf =
 [
+    [ "Base", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#a46911ed2431f1940ad71ca53b6e8aea8", null ],
     [ "CallSelf", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#af5626aec2897e4a32cc9e71df23b7783", null ],
     [ "arg", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#a12b77d84e24220d5eb66f803871c2f2d", null ],
     [ "args", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#a4e86a53abeab166f46ddf7266cc68c3e", null ],
@@ -17,5 +18,12 @@ var classv8_1_1internal_1_1maglev_1_1CallSelf =
     [ "receiver", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#adf537b1830b1bf30de6af67645d25024", null ],
     [ "set_arg", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#a674c8f419ec278a226872f5bf97aa1f3", null ],
     [ "SetValueLocationConstraints", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#a2e390f95b7998c75bc84ba1ad8cccdca", null ],
-    [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#ae43f1def09c51e8facbf7e507f0ddbab", null ]
+    [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#ae43f1def09c51e8facbf7e507f0ddbab", null ],
+    [ "expected_parameter_count_", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#afbc5884685ee613a5ed692fd98533958", null ],
+    [ "kClosureIndex", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#a2ffc6729629658a5f23c682d04f42d1a", null ],
+    [ "kContextIndex", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#a0364ce872d4071895bf3ffc5b697a65b", null ],
+    [ "kFixedInputCount", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#aad244bc0ba29c3d378bddb13ab8906b2", null ],
+    [ "kNewTargetIndex", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#ac8b6fdc82bb41e992651e310a795beff", null ],
+    [ "kProperties", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#a3be862f1f3fb32a0f2119be5241add17", null ],
+    [ "kReceiverIndex", "classv8_1_1internal_1_1maglev_1_1CallSelf.html#a13777f0d2ad46de37d209d710fd1e6a0", null ]
 ];

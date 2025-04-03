@@ -1,9 +1,9 @@
 var string_util_8h =
 [
-    [ "v8_inspector::protocol::StringUtil", "classv8__inspector_1_1protocol_1_1StringUtil.html", null ],
+    [ "v8_inspector::protocol::StringUtil", "classv8__inspector_1_1protocol_1_1StringUtil.html", "classv8__inspector_1_1protocol_1_1StringUtil" ],
     [ "v8_inspector::protocol::Binary", "classv8__inspector_1_1protocol_1_1Binary.html", "classv8__inspector_1_1protocol_1_1Binary" ],
-    [ "v8_crdtp::ProtocolTypeTraits< v8_inspector::String16 >", "structv8__crdtp_1_1ProtocolTypeTraits_3_01v8__inspector_1_1String16_01_4.html", null ],
-    [ "v8_crdtp::ProtocolTypeTraits< v8_inspector::protocol::Binary >", "structv8__crdtp_1_1ProtocolTypeTraits_3_01v8__inspector_1_1protocol_1_1Binary_01_4.html", null ],
+    [ "v8_crdtp::ProtocolTypeTraits< v8_inspector::String16 >", "structv8__crdtp_1_1ProtocolTypeTraits_3_01v8__inspector_1_1String16_01_4.html", "structv8__crdtp_1_1ProtocolTypeTraits_3_01v8__inspector_1_1String16_01_4" ],
+    [ "v8_crdtp::ProtocolTypeTraits< v8_inspector::protocol::Binary >", "structv8__crdtp_1_1ProtocolTypeTraits_3_01v8__inspector_1_1protocol_1_1Binary_01_4.html", "structv8__crdtp_1_1ProtocolTypeTraits_3_01v8__inspector_1_1protocol_1_1Binary_01_4" ],
     [ "String", "string-util_8h.html#a45fbcba1668c18368c6d1950cbbeb587", null ],
     [ "stackTraceIdToString", "string-util_8h.html#a5984e924a4b1ddb0f815abd0a8fc5322", null ],
     [ "StringBufferFrom", "string-util_8h.html#af5294078c4e93d418e23aa2d7ceb9a6a", null ],

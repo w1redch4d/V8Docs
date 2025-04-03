@@ -6,6 +6,7 @@ var classv8_1_1base_1_1ThreadedListBase =
     [ "ThreadedListBase", "classv8_1_1base_1_1ThreadedListBase.html#a81564d22b6cb84d2cd4f3ac12a12b948", null ],
     [ "ThreadedListBase", "classv8_1_1base_1_1ThreadedListBase.html#a4587cd4b060cb72632917d3e62ea477f", null ],
     [ "Add", "classv8_1_1base_1_1ThreadedListBase.html#ab6be761075723a432aeb19fd3c51f657", null ],
+    [ "AddAfter", "classv8_1_1base_1_1ThreadedListBase.html#ad7d750ecacf4a54dfa9c7b1cc6c833b7", null ],
     [ "AddFront", "classv8_1_1base_1_1ThreadedListBase.html#a54c2e08ba1073e18def9c26059ca808d", null ],
     [ "Append", "classv8_1_1base_1_1ThreadedListBase.html#aac60fabe346f768d6da7542d55c0277d", null ],
     [ "AtForTest", "classv8_1_1base_1_1ThreadedListBase.html#a6377f3b8c8522fd14625eda37c8c97cb", null ],
@@ -27,5 +28,7 @@ var classv8_1_1base_1_1ThreadedListBase =
     [ "Remove", "classv8_1_1base_1_1ThreadedListBase.html#ab42195c713ff863232a9688cb17edbcc", null ],
     [ "RemoveAt", "classv8_1_1base_1_1ThreadedListBase.html#a2eeabdb511e38ed098d237b6fcfce2ca", null ],
     [ "Rewind", "classv8_1_1base_1_1ThreadedListBase.html#ad203870de4bad8a74dcc328d0223efc6", null ],
-    [ "Verify", "classv8_1_1base_1_1ThreadedListBase.html#a723e0457396583407246f93a3c80890c", null ]
+    [ "Verify", "classv8_1_1base_1_1ThreadedListBase.html#a723e0457396583407246f93a3c80890c", null ],
+    [ "head_", "classv8_1_1base_1_1ThreadedListBase.html#a1dd549237b1060fdf0ebfc8d1d15d0d4", null ],
+    [ "tail_", "classv8_1_1base_1_1ThreadedListBase.html#afc17219c91dda7fb9c0b687eaeda6993", null ]
 ];

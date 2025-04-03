@@ -8,5 +8,6 @@ var classv8_1_1internal_1_1ParameterDeclarationParsingScope =
     [ "Declare", "classv8_1_1internal_1_1ParameterDeclarationParsingScope.html#a14d736b0c47c0d7b872f0631a02b4867", null ],
     [ "duplicate_location", "classv8_1_1internal_1_1ParameterDeclarationParsingScope.html#a74ee887755d22037fb829d9049bd4a50", null ],
     [ "has_duplicate", "classv8_1_1internal_1_1ParameterDeclarationParsingScope.html#a8e644ee7f3f75502397e7cb9833cc9b7", null ],
-    [ "operator=", "classv8_1_1internal_1_1ParameterDeclarationParsingScope.html#acc79d1b5b7ece4ed94a1f637e23c70d7", null ]
+    [ "operator=", "classv8_1_1internal_1_1ParameterDeclarationParsingScope.html#acc79d1b5b7ece4ed94a1f637e23c70d7", null ],
+    [ "duplicate_loc_", "classv8_1_1internal_1_1ParameterDeclarationParsingScope.html#a1cb779384619cbabd541a6363b779db8", null ]
 ];

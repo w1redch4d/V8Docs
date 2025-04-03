@@ -13,6 +13,7 @@ var classv8_1_1internal_1_1compiler_1_1OperandGeneratorT =
     ] ],
     [ "OperandGeneratorT", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#aa88fb957063abf9f4b66a40c5ee533c5", null ],
     [ "AllocateVirtualRegister", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a2b4d53b25c56c820e51a01205fab8d65", null ],
+    [ "Define", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#ae11d4131afe7807f20d6566441fd531c", null ],
     [ "DefineAsConstant", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a1c7a3da4fa458a90b7bb0fa66098abce", null ],
     [ "DefineAsDualLocation", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#aa9f8bff2a3c1e43030985707e09e9661", null ],
     [ "DefineAsFixed", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#ae8ce69f7d1c361f91bf1b703a4645be5", null ],
@@ -23,6 +24,7 @@ var classv8_1_1internal_1_1compiler_1_1OperandGeneratorT =
     [ "DefineSameAsFirst", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a14817812e3082c8d6ec580785b168f67", null ],
     [ "DefineSameAsFirstForVreg", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#ad44c4ce7dbed1f7950f06d900d1eb103", null ],
     [ "DefineSameAsInput", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#aba787aa8328b6ff9f47cbdfedc50df08", null ],
+    [ "GetVReg", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a1153df5d50b9e9c0f9d42ad37d772ed3", null ],
     [ "Label", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#ab1d20b807c5d525f2ba357e8f987a53a", null ],
     [ "NoOutput", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#abcd6e352b87b5572d99de26f17e4de5b", null ],
     [ "selector", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#af765a02049fa117d8532daecc60b0a63", null ],
@@ -36,7 +38,12 @@ var classv8_1_1internal_1_1compiler_1_1OperandGeneratorT =
     [ "TempRegister", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#ad8a01a153e2d2a3d788bb0377bc81d32", null ],
     [ "TempSimd128Register", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a6258379e745ebd39bfcd664dd90c1955", null ],
     [ "TempSimd256Register", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a7295ef0454fa365dd425a15326339b70", null ],
+    [ "ToConstant", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#aad66021327942e89a96065583cdbb7a1", null ],
+    [ "ToDualLocationUnallocatedOperand", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a1268c8d4e7d6a8d5c524db21a36fcf97", null ],
+    [ "ToNegatedConstant", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a3f39cbf75571f4926d40ada2c3a9cffc", null ],
+    [ "ToUnallocatedOperand", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a2bab992dbb70b7e92a09fcc0cccfaaae", null ],
     [ "Use", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a1377a382c1a6210a6a954400b193e0c9", null ],
+    [ "Use", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a06f490c7cc8ba45e8f8302bae4bdb444", null ],
     [ "UseAny", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a4579b3634c596a942bce8f5655f886f9", null ],
     [ "UseAnyAtEnd", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a72d0e990261c3092757de4590761ac34", null ],
     [ "UseFixed", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#adc9eb9d0494519c42103466e7625d6f0", null ],
@@ -57,5 +64,6 @@ var classv8_1_1internal_1_1compiler_1_1OperandGeneratorT =
     [ "UseUniqueRegister", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a30f8c2d3b7d733f869aae13a2aa4c9f5", null ],
     [ "UseUniqueRegisterOrSlotOrConstant", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a38a8369e5bf153a1b289b92605a114bd", null ],
     [ "UseUniqueSlot", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#adac567300eec494d851db13302691575", null ],
-    [ "zone", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a6fd80bb82962a974c6b578e3246f4889", null ]
+    [ "zone", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a6fd80bb82962a974c6b578e3246f4889", null ],
+    [ "selector_", "classv8_1_1internal_1_1compiler_1_1OperandGeneratorT.html#a0e164b00273c702b51a7e16f3cb34265", null ]
 ];

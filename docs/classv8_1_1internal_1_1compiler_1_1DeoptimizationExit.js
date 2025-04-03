@@ -16,5 +16,18 @@ var classv8_1_1internal_1_1compiler_1_1DeoptimizationExit =
     [ "set_deoptimization_id", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#a26fcd1f8ba93b5bf5f2bc0be572b62af", null ],
     [ "set_emitted", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#ade4d7d2449395b2661101143d782be79", null ],
     [ "set_immediate_args", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#a0db3252630a5772c84972078adb5bd2d", null ],
-    [ "translation_id", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#a17a683bea481cd6ceba5ce5a9b6ccffe", null ]
+    [ "translation_id", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#a17a683bea481cd6ceba5ce5a9b6ccffe", null ],
+    [ "bailout_id_", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#a23446b9674569671e229f3ed38f6719a", null ],
+    [ "continue_label_", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#a56c0755683512ce269e04273e21a2a6f", null ],
+    [ "deoptimization_id_", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#a7b28c3a3feab91243847c62df302f1fd", null ],
+    [ "emitted_", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#a7ee0fcf6e021b26120acbae1922eb002", null ],
+    [ "immediate_args_", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#afae9607ad1a3a382a86baa93fac72195", null ],
+    [ "kind_", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#a39d95b17fb672e5384f864444514ade1", null ],
+    [ "kNoDeoptIndex", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#adf1666bf599c3b1116eab48f4716e2c1", null ],
+    [ "label_", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#a8b7f3ed04c11e7f2a3dafbaa08ee7037", null ],
+    [ "node_id_", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#ab7c518380a8e6b6fb54e97bd1fa94b5e", null ],
+    [ "pc_offset_", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#a0820b99ede64ba828c8907f4af5c6c89", null ],
+    [ "pos_", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#af8f1183e7b3b0c98e3c52a1c593ae301", null ],
+    [ "reason_", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#ad35af47f2f8e38b44dc773687527c8f1", null ],
+    [ "translation_id_", "classv8_1_1internal_1_1compiler_1_1DeoptimizationExit.html#af4ae637b7f658fe3288dfd968a9b4c7e", null ]
 ];

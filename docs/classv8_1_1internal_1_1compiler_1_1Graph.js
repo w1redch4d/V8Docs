@@ -12,6 +12,7 @@ var classv8_1_1internal_1_1compiler_1_1Graph =
     [ "NewNode", "classv8_1_1internal_1_1compiler_1_1Graph.html#ad2588802d0525353a979dc8679f2a84e", null ],
     [ "NewNode", "classv8_1_1internal_1_1compiler_1_1Graph.html#a8d5cff99be5b221af1da4fa05df2f9f7", null ],
     [ "NewNodeUnchecked", "classv8_1_1internal_1_1compiler_1_1Graph.html#ac96b63d8f7e19cce02ab93f534e0ce27", null ],
+    [ "NextNodeId", "classv8_1_1internal_1_1compiler_1_1Graph.html#a43db3fa3f9187cbcd8e3e519351284f1", null ],
     [ "NodeCount", "classv8_1_1internal_1_1compiler_1_1Graph.html#ad7fa20abddfe70faa0962f83a36bdbdd", null ],
     [ "operator=", "classv8_1_1internal_1_1compiler_1_1Graph.html#a10c9d1a4c9542e89d5b4e4dc4b3fc75a", null ],
     [ "Print", "classv8_1_1internal_1_1compiler_1_1Graph.html#afcf4e02c85aee8d098b5c861f4769a0a", null ],
@@ -22,5 +23,13 @@ var classv8_1_1internal_1_1compiler_1_1Graph =
     [ "SetStart", "classv8_1_1internal_1_1compiler_1_1Graph.html#abc339cd062989332e6b478e5dd44115e", null ],
     [ "start", "classv8_1_1internal_1_1compiler_1_1Graph.html#a98d06cf4ca9cc8ccb1cde2d6b75b858d", null ],
     [ "zone", "classv8_1_1internal_1_1compiler_1_1Graph.html#a5267465edc70f666462d9f27a59c1b64", null ],
-    [ "NodeMarkerBase", "classv8_1_1internal_1_1compiler_1_1Graph.html#a300aff091dd808ac2a77b73336b03672", null ]
+    [ "NodeMarkerBase", "classv8_1_1internal_1_1compiler_1_1Graph.html#a300aff091dd808ac2a77b73336b03672", null ],
+    [ "decorators_", "classv8_1_1internal_1_1compiler_1_1Graph.html#a06f6d5a40a7e9e6d726a78043ad0b1d4", null ],
+    [ "end_", "classv8_1_1internal_1_1compiler_1_1Graph.html#af0a1e3971b23d4b9e7fd81343de11ef8", null ],
+    [ "has_simd_", "classv8_1_1internal_1_1compiler_1_1Graph.html#a921b0080114f190250d3f8e7616ac8f3", null ],
+    [ "mark_max_", "classv8_1_1internal_1_1compiler_1_1Graph.html#aadccb04d908a8750ce5c61a12235cf9c", null ],
+    [ "next_node_id_", "classv8_1_1internal_1_1compiler_1_1Graph.html#a673670b29c5408fc7bf97b9a78e01ff3", null ],
+    [ "simd_stores_", "classv8_1_1internal_1_1compiler_1_1Graph.html#afc6bc24083b0c8c6b4886f289da3cdec", null ],
+    [ "start_", "classv8_1_1internal_1_1compiler_1_1Graph.html#a250c25aa841eb0c616c40524ab4429ab", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1Graph.html#a06077b7a6ccd7b08a6c639a273e39440", null ]
 ];

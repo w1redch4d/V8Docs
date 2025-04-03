@@ -12,5 +12,6 @@ var classv8_1_1internal_1_1maglev_1_1ValueLocation =
     [ "operand", "classv8_1_1internal_1_1maglev_1_1ValueLocation.html#a28ba2a38edce80345b84fdd6d431769f", null ],
     [ "SetAllocated", "classv8_1_1internal_1_1maglev_1_1ValueLocation.html#ac14f2b5879f2fef8c4b920479b114951", null ],
     [ "SetConstant", "classv8_1_1internal_1_1maglev_1_1ValueLocation.html#abaa0269e861d53213cbfd5fa147683bd", null ],
-    [ "SetUnallocated", "classv8_1_1internal_1_1maglev_1_1ValueLocation.html#a62afbf000cfb08eb1c801c7fe60c9cc3", null ]
+    [ "SetUnallocated", "classv8_1_1internal_1_1maglev_1_1ValueLocation.html#a62afbf000cfb08eb1c801c7fe60c9cc3", null ],
+    [ "operand_", "classv8_1_1internal_1_1maglev_1_1ValueLocation.html#a0a060f6b18dd3530e2e7671ed6f5b556", null ]
 ];

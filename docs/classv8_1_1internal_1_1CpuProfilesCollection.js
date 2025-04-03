@@ -12,7 +12,16 @@ var classv8_1_1internal_1_1CpuProfilesCollection =
     [ "RemoveProfile", "classv8_1_1internal_1_1CpuProfilesCollection.html#a4c4bf98364eb1a14e61667f1893faeb4", null ],
     [ "set_cpu_profiler", "classv8_1_1internal_1_1CpuProfilesCollection.html#aefc820f795001ef81f55d23614a41adb", null ],
     [ "StartProfiling", "classv8_1_1internal_1_1CpuProfilesCollection.html#ab5e43b60e4a9c10a098b9d1cfe14731c", null ],
+    [ "StartProfiling", "classv8_1_1internal_1_1CpuProfilesCollection.html#aa351b142f89cf827311d805d0233bb50", null ],
     [ "StartProfilingForTesting", "classv8_1_1internal_1_1CpuProfilesCollection.html#a3e0b51651d72346efd2c220b6bcfc230", null ],
     [ "StopProfiling", "classv8_1_1internal_1_1CpuProfilesCollection.html#a6acb07e3e1ed1efcb35fd613ef27bd8e", null ],
-    [ "UpdateNativeContextAddressForCurrentProfiles", "classv8_1_1internal_1_1CpuProfilesCollection.html#a7340503bcfb0a4d319c470d561a172b3", null ]
+    [ "UpdateNativeContextAddressForCurrentProfiles", "classv8_1_1internal_1_1CpuProfilesCollection.html#a7340503bcfb0a4d319c470d561a172b3", null ],
+    [ "current_profiles_", "classv8_1_1internal_1_1CpuProfilesCollection.html#af0376e1f6ef2de5ba0dfb6f2e762a599", null ],
+    [ "current_profiles_mutex_", "classv8_1_1internal_1_1CpuProfilesCollection.html#a1885b3325526ccd010c4a0774d242e5d", null ],
+    [ "finished_profiles_", "classv8_1_1internal_1_1CpuProfilesCollection.html#a70e6ea0485ed2a5c6f1ea6fbc9142b3b", null ],
+    [ "isolate_", "classv8_1_1internal_1_1CpuProfilesCollection.html#a0888b68a083883cd09c847444f1f45b2", null ],
+    [ "kMaxSimultaneousProfiles", "classv8_1_1internal_1_1CpuProfilesCollection.html#a3c8efd32f53f7fa8fe100cc188d60be7", null ],
+    [ "last_id_", "classv8_1_1internal_1_1CpuProfilesCollection.html#ae07e33438d4d84c2044e96757e053f0d", null ],
+    [ "profiler_", "classv8_1_1internal_1_1CpuProfilesCollection.html#ac547c36a2bf621504ccd3363fc2f8d30", null ],
+    [ "resource_names_", "classv8_1_1internal_1_1CpuProfilesCollection.html#ac0206c4641f96b1c30db7cbb8600f5f2", null ]
 ];

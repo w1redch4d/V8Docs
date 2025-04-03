@@ -13,5 +13,5 @@ var dir_93ef7a03ae011ca5032e526d863e8f9f =
     [ "startup-data-util.cc", "startup-data-util_8cc.html", "startup-data-util_8cc" ],
     [ "startup-data-util.h", "startup-data-util_8h.html", "startup-data-util_8h" ],
     [ "v8.cc", "v8_8cc.html", "v8_8cc" ],
-    [ "v8.h", "v8_8h.html", "v8_8h" ]
+    [ "v8.h", "src_2init_2v8_8h.html", "src_2init_2v8_8h" ]
 ];

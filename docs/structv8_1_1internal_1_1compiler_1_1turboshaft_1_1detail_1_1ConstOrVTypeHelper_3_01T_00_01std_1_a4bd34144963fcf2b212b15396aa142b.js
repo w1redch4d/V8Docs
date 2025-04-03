@@ -1,4 +1,5 @@
 var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1ConstOrVTypeHelper_3_01T_00_01std_1_a4bd34144963fcf2b212b15396aa142b =
 [
-    [ "type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1ConstOrVTypeHelper_3_01T_00_01std_1_a4bd34144963fcf2b212b15396aa142b.html#a8cdaba6397b869663514d331ed660aee", null ]
+    [ "type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1ConstOrVTypeHelper_3_01T_00_01std_1_a4bd34144963fcf2b212b15396aa142b.html#a8cdaba6397b869663514d331ed660aee", null ],
+    [ "exists", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1detail_1_1ConstOrVTypeHelper_3_01T_00_01std_1_a4bd34144963fcf2b212b15396aa142b.html#a0a85fe39600186467240e12129ea497d", null ]
 ];

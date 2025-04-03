@@ -25,5 +25,7 @@ var classv8_1_1internal_1_1Logger =
     [ "RemoveListener", "classv8_1_1internal_1_1Logger.html#aabb34877e09d06d56a30aaa4df106075", null ],
     [ "SetterCallbackEvent", "classv8_1_1internal_1_1Logger.html#ad8895e26d65ac2f409198992b3ced7bf", null ],
     [ "SharedFunctionInfoMoveEvent", "classv8_1_1internal_1_1Logger.html#a553a061808106090e143385055763096", null ],
-    [ "WeakCodeClearEvent", "classv8_1_1internal_1_1Logger.html#a6fe9c5329324764c73ff9d55df3660fe", null ]
+    [ "WeakCodeClearEvent", "classv8_1_1internal_1_1Logger.html#a6fe9c5329324764c73ff9d55df3660fe", null ],
+    [ "listeners_", "classv8_1_1internal_1_1Logger.html#afb18d8113db8a296967aa631254cd98f", null ],
+    [ "mutex_", "classv8_1_1internal_1_1Logger.html#ae929c109334ed8e48ee42e48eceda20a", null ]
 ];

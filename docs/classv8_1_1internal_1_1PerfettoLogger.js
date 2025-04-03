@@ -17,8 +17,13 @@ var classv8_1_1internal_1_1PerfettoLogger =
     [ "is_listening_to_code_events", "classv8_1_1internal_1_1PerfettoLogger.html#a7137764bca205e11e65b2e0628845f6d", null ],
     [ "LogExistingCode", "classv8_1_1internal_1_1PerfettoLogger.html#ad54707d2a24a8958872fe16e24b6fc3a", null ],
     [ "NativeContextMoveEvent", "classv8_1_1internal_1_1PerfettoLogger.html#af094c8b3353801d3c5fe77314ce40df1", null ],
+    [ "OnCodeDataSourceStart", "classv8_1_1internal_1_1PerfettoLogger.html#a261f4b3dc8a187575a4636c2479cfc1c", null ],
+    [ "OnCodeDataSourceStop", "classv8_1_1internal_1_1PerfettoLogger.html#a0632c07675e9bcd310f79b1a58d85e95", null ],
     [ "RegExpCodeCreateEvent", "classv8_1_1internal_1_1PerfettoLogger.html#ada7899fdd4f16a297520e022dd6304f3", null ],
+    [ "RegisterIsolate", "classv8_1_1internal_1_1PerfettoLogger.html#a9d4cbcbec13e1b187cb714626f2ed4e0", null ],
     [ "SetterCallbackEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a2acfee1b0d3b1c9cfa02d4fcdca36fbf", null ],
     [ "SharedFunctionInfoMoveEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a25e1f81bc46aa21b381d3716a108c301", null ],
-    [ "WeakCodeClearEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a8118c30593758cf406cfec36c7038d44", null ]
+    [ "UnregisterIsolate", "classv8_1_1internal_1_1PerfettoLogger.html#a8b7d1e1be72d3aa45a97e601bfb0faa7", null ],
+    [ "WeakCodeClearEvent", "classv8_1_1internal_1_1PerfettoLogger.html#a8118c30593758cf406cfec36c7038d44", null ],
+    [ "isolate_", "classv8_1_1internal_1_1PerfettoLogger.html#ac0d20a802dc6fffd7147d5a4a87b6c71", null ]
 ];

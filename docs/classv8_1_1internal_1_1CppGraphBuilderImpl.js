@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1CppGraphBuilderImpl =
 [
+    [ "MergedNodeItem", "structv8_1_1internal_1_1CppGraphBuilderImpl_1_1MergedNodeItem.html", "structv8_1_1internal_1_1CppGraphBuilderImpl_1_1MergedNodeItem" ],
     [ "VisitationDoneItem", "classv8_1_1internal_1_1CppGraphBuilderImpl_1_1VisitationDoneItem.html", "classv8_1_1internal_1_1CppGraphBuilderImpl_1_1VisitationDoneItem" ],
     [ "VisitationItem", "classv8_1_1internal_1_1CppGraphBuilderImpl_1_1VisitationItem.html", "classv8_1_1internal_1_1CppGraphBuilderImpl_1_1VisitationItem" ],
     [ "WorkstackItemBase", "classv8_1_1internal_1_1CppGraphBuilderImpl_1_1WorkstackItemBase.html", "classv8_1_1internal_1_1CppGraphBuilderImpl_1_1WorkstackItemBase" ],
@@ -18,5 +19,9 @@ var classv8_1_1internal_1_1CppGraphBuilderImpl =
     [ "VisitForVisibility", "classv8_1_1internal_1_1CppGraphBuilderImpl.html#ae33281bdeb3d0a22a6b83549d05a4b51", null ],
     [ "VisitForVisibility", "classv8_1_1internal_1_1CppGraphBuilderImpl.html#aca3f5a5f194ca11b33d04fc01f8107a6", null ],
     [ "VisitRootForGraphBuilding", "classv8_1_1internal_1_1CppGraphBuilderImpl.html#a5c0f3ae0d68b99d72f5030707df6a542", null ],
-    [ "VisitWeakContainerForVisibility", "classv8_1_1internal_1_1CppGraphBuilderImpl.html#a0fe1ca1d95e531236bd9c328fa2d7aa7", null ]
+    [ "VisitWeakContainerForVisibility", "classv8_1_1internal_1_1CppGraphBuilderImpl.html#a0fe1ca1d95e531236bd9c328fa2d7aa7", null ],
+    [ "cpp_heap_", "classv8_1_1internal_1_1CppGraphBuilderImpl.html#ab1cfcbcc40223961f45d48bd437c0b71", null ],
+    [ "graph_", "classv8_1_1internal_1_1CppGraphBuilderImpl.html#ac031819199a67b6ad008271f362cc468", null ],
+    [ "states_", "classv8_1_1internal_1_1CppGraphBuilderImpl.html#a272f27999655fd1ac1cbb0c83df29fa0", null ],
+    [ "workstack_", "classv8_1_1internal_1_1CppGraphBuilderImpl.html#a81fcebcef148d66863462aff02d0ee15", null ]
 ];

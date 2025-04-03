@@ -4,6 +4,8 @@ var runtime_test_8cc =
     [ "CONVERT_INT32_ARG_FUZZ_SAFE", "runtime-test_8cc.html#a2640b318a756b137ac867fd287ef29e2", null ],
     [ "ELEMENTS_KIND_CHECK_RUNTIME_FUNCTION", "runtime-test_8cc.html#add20088f7d2770a0dff4cf90bf4af532", null ],
     [ "FIXED_TYPED_ARRAYS_CHECK_RUNTIME_FUNCTION", "runtime-test_8cc.html#ab3f0c07fba4fa6b891aa27dc0764b148", null ],
+    [ "DebugPrintImpl", "runtime-test_8cc.html#a2bcd64ace550a42de307ffe523e09420", null ],
+    [ "ReturnNull", "runtime-test_8cc.html#a2739d6d4993f12c6a527cbcf4661a8da", null ],
     [ "RUNTIME_FUNCTION", "runtime-test_8cc.html#a14772e7cf5b50a131897f542d6d61cda", null ],
     [ "RUNTIME_FUNCTION", "runtime-test_8cc.html#ad28735a98baa9252028985133b3dcc4f", null ],
     [ "RUNTIME_FUNCTION", "runtime-test_8cc.html#a87d2661c0987558bc7621591ff95bc2a", null ],

@@ -13,6 +13,7 @@ var classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope =
     [ "ControlScope", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#ab2cb5eb76456331241e04869ddbe9592", null ],
     [ "AsyncReturnAccumulator", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#adac5157e86b26c8806dc7868ff48fb61", null ],
     [ "Break", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#a9e4750e9e467e0dac979a58e5a54f38a", null ],
+    [ "CommandUsesAccumulator", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#a9907edb461443a2da7d7d4983f3091bb", null ],
     [ "context", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#a63dc15eb57b6ab4364259e71b90367b2", null ],
     [ "Continue", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#a6cb96ab2060a74b9338e86405e33e375", null ],
     [ "Execute", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#a5eb468f354441d849f9cf755119260c7", null ],
@@ -21,5 +22,8 @@ var classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope =
     [ "outer", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#a37869ed8b8ee7bcb5cf023c2ba534c7e", null ],
     [ "PerformCommand", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#a0433a9ed04a952359da575ad2193a34a", null ],
     [ "PopContextToExpectedDepth", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#a7afc61ec6d0e5012e7aba2e4b6abc321", null ],
-    [ "ReturnAccumulator", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#a9bfcb286a18381c786e34237cce6391f", null ]
+    [ "ReturnAccumulator", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#a9bfcb286a18381c786e34237cce6391f", null ],
+    [ "context_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#ac7748ecb09d613997db7362d2234ef4c", null ],
+    [ "generator_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#af9e58bac529990504259e7e542b4beb9", null ],
+    [ "outer_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ControlScope.html#aac308737a6e4b35b4ec82c02a8d1bbb3", null ]
 ];

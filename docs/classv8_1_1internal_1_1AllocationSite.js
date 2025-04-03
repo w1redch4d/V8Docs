@@ -1,6 +1,6 @@
 var classv8_1_1internal_1_1AllocationSite =
 [
-    [ "BodyDescriptor", "classv8_1_1internal_1_1AllocationSite_1_1BodyDescriptor.html", null ],
+    [ "BodyDescriptor", "classv8_1_1internal_1_1AllocationSite_1_1BodyDescriptor.html", "classv8_1_1internal_1_1AllocationSite_1_1BodyDescriptor" ],
     [ "DeoptDependentCodeBit", "classv8_1_1internal_1_1AllocationSite.html#a81a8568fae60e63c1527a32a51be5c05", null ],
     [ "DoNotInlineBit", "classv8_1_1internal_1_1AllocationSite.html#a117c02e72360e926cdadf6de80eef00a", null ],
     [ "ElementsKindBits", "classv8_1_1internal_1_1AllocationSite.html#a74fffd6141cda4ede2f7f1f3af0977ca", null ],
@@ -15,8 +15,10 @@ var classv8_1_1internal_1_1AllocationSite =
       [ "kLastPretenureDecisionValue", "classv8_1_1internal_1_1AllocationSite.html#a90e0736002b73f20d96abede63a5395bab745b604372d1898d64a91d41f75d152", null ]
     ] ],
     [ "CanInlineCall", "classv8_1_1internal_1_1AllocationSite.html#aab240b53ca5f3f2cd6fe7698e69bf082", null ],
+    [ "CanTrack", "classv8_1_1internal_1_1AllocationSite.html#a5bce0a6a275e0f9a9c8a3e87babab0d9", null ],
     [ "deopt_dependent_code", "classv8_1_1internal_1_1AllocationSite.html#a5d2bc5f9c30628481e1f179b18818690", null ],
     [ "DigestPretenuringFeedback", "classv8_1_1internal_1_1AllocationSite.html#ab06a9db3e9fa8256f8cd97cc5cefeff5", null ],
+    [ "DigestTransitionFeedback", "classv8_1_1internal_1_1AllocationSite.html#aa6ed922371048ff605923c4727eb7a7d", null ],
     [ "GetAllocationType", "classv8_1_1internal_1_1AllocationSite.html#ab96ccfa1d44738723732f17579f62f41", null ],
     [ "GetElementsKind", "classv8_1_1internal_1_1AllocationSite.html#a1add82cc1996137a15e395fbf2a2e09f", null ],
     [ "HasWeakNext", "classv8_1_1internal_1_1AllocationSite.html#a06e769d7ad11dc8f553f8cc989525b9a", null ],
@@ -30,14 +32,19 @@ var classv8_1_1internal_1_1AllocationSite =
     [ "MarkZombie", "classv8_1_1internal_1_1AllocationSite.html#af432e0790ebdfc00d36c9a6234e98389", null ],
     [ "memento_create_count", "classv8_1_1internal_1_1AllocationSite.html#aa67ceb7ab03404c0e31fa529f08520c0", null ],
     [ "memento_found_count", "classv8_1_1internal_1_1AllocationSite.html#a7db228ca1d6bd89aa2af33005ca7a35e", null ],
+    [ "OBJECT_CONSTRUCTORS", "classv8_1_1internal_1_1AllocationSite.html#a43b4deb1094de065e170edd2fb467854", null ],
     [ "PointsToLiteral", "classv8_1_1internal_1_1AllocationSite.html#a1ada880cd600c59f8de3bfa32fdc956a", null ],
     [ "pretenure_decision", "classv8_1_1internal_1_1AllocationSite.html#a39fc1c0543c261ff4735a551113664d5", null ],
     [ "PretenureDecisionName", "classv8_1_1internal_1_1AllocationSite.html#a015895d2a527877f98749eb13b16a38f", null ],
+    [ "PretenuringDecisionMade", "classv8_1_1internal_1_1AllocationSite.html#ad0f24fad7553aaa188823b95eb03aac1", null ],
     [ "ResetPretenureDecision", "classv8_1_1internal_1_1AllocationSite.html#aa1b323951edb619dd9078164b9fabd5c", null ],
     [ "set_deopt_dependent_code", "classv8_1_1internal_1_1AllocationSite.html#a6b6321178dbb71e389194b39a6ee51ee", null ],
     [ "set_memento_create_count", "classv8_1_1internal_1_1AllocationSite.html#ab95f8e888faad709405944f3f5223378", null ],
     [ "set_memento_found_count", "classv8_1_1internal_1_1AllocationSite.html#ad74c42dccc41adcc6d7f2dd22fa56176", null ],
     [ "set_pretenure_decision", "classv8_1_1internal_1_1AllocationSite.html#a3eb7bfb649894bc1ea0875152aff118e", null ],
     [ "SetDoNotInlineCall", "classv8_1_1internal_1_1AllocationSite.html#a3e9fcf250995d87d2c31e05c6e4e6ce5", null ],
-    [ "SetElementsKind", "classv8_1_1internal_1_1AllocationSite.html#adf1136948311998f7ead14bcf8f2cfd8", null ]
+    [ "SetElementsKind", "classv8_1_1internal_1_1AllocationSite.html#adf1136948311998f7ead14bcf8f2cfd8", null ],
+    [ "ShouldTrack", "classv8_1_1internal_1_1AllocationSite.html#a596f5281700441022ddf66ba8a1b2d03", null ],
+    [ "ShouldTrack", "classv8_1_1internal_1_1AllocationSite.html#af38a6648a1495ca603f8ee8f68c826a7", null ],
+    [ "kMaximumArrayBytesToPretransition", "classv8_1_1internal_1_1AllocationSite.html#a01b7a42fb8817fea47bd9a0c7d349095", null ]
 ];

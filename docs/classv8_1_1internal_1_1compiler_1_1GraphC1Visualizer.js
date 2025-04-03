@@ -1,10 +1,26 @@
 var classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer =
 [
+    [ "Tag", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer_1_1Tag.html", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer_1_1Tag" ],
     [ "GraphC1Visualizer", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a60c8399fb60170f273da9f7b92f6294a", null ],
     [ "GraphC1Visualizer", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a7116bb5f8b06c8af1bb70aeba517afb7", null ],
     [ "operator=", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a10d2ea76c56e67550068e4d9c49dee35", null ],
+    [ "PrintBlockProperty", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a12addbeb6cc9085567478aa97571429b", null ],
     [ "PrintCompilation", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a26d2ddfa0795e9ed10283d6a47aaee90", null ],
+    [ "PrintIndent", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a11ba85fc15ad73466ec18d9790abe646", null ],
+    [ "PrintInputs", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#aafbfb3373fb763ec7039e22d56587f6a", null ],
+    [ "PrintInputs", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#ac32311e016ba0f8dacce23c1652d6f85", null ],
+    [ "PrintIntProperty", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a0f5595ff56963b118148987b760c5ca7", null ],
+    [ "PrintLiveRange", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a286631be4ba9d2dcca574054ae93ad98", null ],
+    [ "PrintLiveRangeChain", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a9c6398d7c5e8b591dadd67ed943378b0", null ],
     [ "PrintLiveRanges", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a52057023036222084e4fa0036486b0ad", null ],
+    [ "PrintLongProperty", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#acb961294663b1938c7ac002c84be286a", null ],
+    [ "PrintNode", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a7e28c7f41fc4cfcab0256ce24add4f82", null ],
+    [ "PrintNodeId", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a2d359904843445ff463f3155d404705c", null ],
     [ "PrintSchedule", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a3284f03562859b8e7452ad822ecc9ae4", null ],
-    [ "zone", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#aa39933c8f1d03bf94074281230244326", null ]
+    [ "PrintStringProperty", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a35ec02d97767b4cecb83608d152ea188", null ],
+    [ "PrintType", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#aae8c29f26d72afbe45759b32bcd24631", null ],
+    [ "zone", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#aa39933c8f1d03bf94074281230244326", null ],
+    [ "indent_", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a42158ea691ed09f7863d9eb96a127e95", null ],
+    [ "os_", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#a02c609603eafbffed257e4540e0d3e1b", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1GraphC1Visualizer.html#ad0db37b02792327ba8c0c724fe8c5637", null ]
 ];

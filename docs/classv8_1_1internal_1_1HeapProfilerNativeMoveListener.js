@@ -6,5 +6,6 @@ var classv8_1_1internal_1_1HeapProfilerNativeMoveListener =
     [ "ObjectMoveEvent", "classv8_1_1internal_1_1HeapProfilerNativeMoveListener.html#ade874abf1449a06f54b05c72b0e81981", null ],
     [ "operator=", "classv8_1_1internal_1_1HeapProfilerNativeMoveListener.html#a5874663936687d08d68d6c518e0e80be", null ],
     [ "StartListening", "classv8_1_1internal_1_1HeapProfilerNativeMoveListener.html#ab3fe5064d46815eaf72da514b62adf6c", null ],
-    [ "StopListening", "classv8_1_1internal_1_1HeapProfilerNativeMoveListener.html#af30e7e5630d68aa01be701c9e230898e", null ]
+    [ "StopListening", "classv8_1_1internal_1_1HeapProfilerNativeMoveListener.html#af30e7e5630d68aa01be701c9e230898e", null ],
+    [ "profiler_", "classv8_1_1internal_1_1HeapProfilerNativeMoveListener.html#a39cbd93600e1f1f67123aed1f320c46a", null ]
 ];

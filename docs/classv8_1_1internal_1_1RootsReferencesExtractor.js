@@ -5,5 +5,7 @@ var classv8_1_1internal_1_1RootsReferencesExtractor =
     [ "VisitRootPointer", "classv8_1_1internal_1_1RootsReferencesExtractor.html#a35d9987b6ff63a5cf7f9d617bff19929", null ],
     [ "VisitRootPointers", "classv8_1_1internal_1_1RootsReferencesExtractor.html#ad8abe976585ce152546311708f66b729", null ],
     [ "VisitRootPointers", "classv8_1_1internal_1_1RootsReferencesExtractor.html#a2f215eff108eb72b073604033ff34571", null ],
-    [ "VisitRunningCode", "classv8_1_1internal_1_1RootsReferencesExtractor.html#ae53f2f8ba2c088bd927fea74703a10a1", null ]
+    [ "VisitRunningCode", "classv8_1_1internal_1_1RootsReferencesExtractor.html#ae53f2f8ba2c088bd927fea74703a10a1", null ],
+    [ "explorer_", "classv8_1_1internal_1_1RootsReferencesExtractor.html#a977aa95e9e2622e66871061954022309", null ],
+    [ "visiting_weak_roots_", "classv8_1_1internal_1_1RootsReferencesExtractor.html#aa22004a9cfeed89024a9e6a96fe95a07", null ]
 ];

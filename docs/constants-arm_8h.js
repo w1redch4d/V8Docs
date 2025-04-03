@@ -3,7 +3,7 @@ var constants_arm_8h =
     [ "v8::internal::Instruction", "classv8_1_1internal_1_1Instruction.html", "classv8_1_1internal_1_1Instruction" ],
     [ "v8::internal::Registers", "classv8_1_1internal_1_1Registers.html", "classv8_1_1internal_1_1Registers" ],
     [ "v8::internal::Registers::RegisterAlias", "structv8_1_1internal_1_1Registers_1_1RegisterAlias.html", "structv8_1_1internal_1_1Registers_1_1RegisterAlias" ],
-    [ "v8::internal::VFPRegisters", "classv8_1_1internal_1_1VFPRegisters.html", null ],
+    [ "v8::internal::VFPRegisters", "classv8_1_1internal_1_1VFPRegisters.html", "classv8_1_1internal_1_1VFPRegisters" ],
     [ "DECLARE_STATIC_ACCESSOR", "constants-arm_8h.html#a82802e7a701275032a5718c52bcab4c0", null ],
     [ "DECLARE_STATIC_TYPED_ACCESSOR", "constants-arm_8h.html#a41dec1ea94ee9f0cad0f265c549b33eb", null ],
     [ "AddrMode", "constants-arm_8h.html#aeca27de14bfbf9ebd289e411d9a5c0a6", null ],

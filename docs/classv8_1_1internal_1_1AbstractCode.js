@@ -10,6 +10,7 @@ var classv8_1_1internal_1_1AbstractCode =
     [ "InstructionSize", "classv8_1_1internal_1_1AbstractCode.html#ae501cac11c222a81f90411851312f8e6", null ],
     [ "InstructionStart", "classv8_1_1internal_1_1AbstractCode.html#a9d804f8e79e1071a6f1764496fcc628e", null ],
     [ "kind", "classv8_1_1internal_1_1AbstractCode.html#a0264d616c3bdd2e327fb2fd30646e657", null ],
+    [ "OBJECT_CONSTRUCTORS", "classv8_1_1internal_1_1AbstractCode.html#a0ed0d0627043967a3fa7f2a8fdf333cb", null ],
     [ "SizeIncludingMetadata", "classv8_1_1internal_1_1AbstractCode.html#afd7930b9c73a98a89f8874167205f94e", null ],
     [ "SourcePosition", "classv8_1_1internal_1_1AbstractCode.html#a1f64324b436dc920244547c69ed27228", null ],
     [ "SourcePositionTable", "classv8_1_1internal_1_1AbstractCode.html#afbd8f05e2663c98af08f699cd4c382da", null ],

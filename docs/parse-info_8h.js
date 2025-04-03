@@ -1,6 +1,7 @@
 var parse_info_8h =
 [
     [ "v8::internal::UnoptimizedCompileFlags", "classv8_1_1internal_1_1UnoptimizedCompileFlags.html", "classv8_1_1internal_1_1UnoptimizedCompileFlags" ],
+    [ "v8::internal::UnoptimizedCompileFlags::BitFields", "structv8_1_1internal_1_1UnoptimizedCompileFlags_1_1BitFields.html", null ],
     [ "v8::internal::UnoptimizedCompileState", "classv8_1_1internal_1_1UnoptimizedCompileState.html", "classv8_1_1internal_1_1UnoptimizedCompileState" ],
     [ "v8::internal::ReusableUnoptimizedCompileState", "classv8_1_1internal_1_1ReusableUnoptimizedCompileState.html", "classv8_1_1internal_1_1ReusableUnoptimizedCompileState" ],
     [ "v8::internal::ParseInfo", "classv8_1_1internal_1_1ParseInfo.html", "classv8_1_1internal_1_1ParseInfo" ],

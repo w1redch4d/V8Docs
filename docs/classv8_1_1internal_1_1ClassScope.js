@@ -1,6 +1,7 @@
 var classv8_1_1internal_1_1ClassScope =
 [
     [ "HeritageParsingScope", "structv8_1_1internal_1_1ClassScope_1_1HeritageParsingScope.html", "structv8_1_1internal_1_1ClassScope_1_1HeritageParsingScope" ],
+    [ "RareData", "structv8_1_1internal_1_1ClassScope_1_1RareData.html", "structv8_1_1internal_1_1ClassScope_1_1RareData" ],
     [ "ClassScope", "classv8_1_1internal_1_1ClassScope.html#abfc1ef815542afc7de7fd23c63d4827a", null ],
     [ "ClassScope", "classv8_1_1internal_1_1ClassScope.html#a68c852a992d8ac9373ae587f97b53a1f", null ],
     [ "brand", "classv8_1_1internal_1_1ClassScope.html#ad43a58562f2c6eadceb58171d5ea1f69", null ],
@@ -8,17 +9,29 @@ var classv8_1_1internal_1_1ClassScope =
     [ "DeclareBrandVariable", "classv8_1_1internal_1_1ClassScope.html#aebd8561146bac772bd7edda07f8c1881", null ],
     [ "DeclareClassVariable", "classv8_1_1internal_1_1ClassScope.html#a6d9169fb0c0ac66ad1c5fc7e8a13b2c6", null ],
     [ "DeclarePrivateName", "classv8_1_1internal_1_1ClassScope.html#aa115d2793d843954d3fdf139c5001f4f", null ],
+    [ "EnsureRareData", "classv8_1_1internal_1_1ClassScope.html#a12abd768d4402190e21146e796e2c69b", null ],
+    [ "GetRareData", "classv8_1_1internal_1_1ClassScope.html#aee770590cf62881702fdae26d2e59836", null ],
     [ "GetUnresolvedPrivateNameTail", "classv8_1_1internal_1_1ClassScope.html#ae1d013173bd48eb3f46582b48a822cc1", null ],
     [ "has_static_private_methods", "classv8_1_1internal_1_1ClassScope.html#a356a64aff6d9beb5eaa87d4db9e8516c", null ],
     [ "is_anonymous_class", "classv8_1_1internal_1_1ClassScope.html#a94c0de73d9b62ac96bd2c77a4b43d439", null ],
     [ "IsParsingHeritage", "classv8_1_1internal_1_1ClassScope.html#af14b2dfd766335d6e62a301cbfe23fad", null ],
+    [ "LookupLocalPrivateName", "classv8_1_1internal_1_1ClassScope.html#a2e9bb80d04caac2d48d774da5262a8af", null ],
+    [ "LookupPrivateName", "classv8_1_1internal_1_1ClassScope.html#ab77e14dbe7a87b43736450acfe724973", null ],
+    [ "LookupPrivateNameInScopeInfo", "classv8_1_1internal_1_1ClassScope.html#aaefc35ab5d877f695aac53eee124f030", null ],
     [ "MigrateUnresolvedPrivateNameTail", "classv8_1_1internal_1_1ClassScope.html#a72b5faf53c77ab11d45af287f94de966", null ],
     [ "RedeclareSyntheticContextVariable", "classv8_1_1internal_1_1ClassScope.html#aff81e99af9fbe20ad4ed195549ac7c08", null ],
     [ "ResetUnresolvedPrivateNameTail", "classv8_1_1internal_1_1ClassScope.html#a69612d37d25b75130f950c3555c36bae", null ],
     [ "ResolvePrivateNames", "classv8_1_1internal_1_1ClassScope.html#aad465361f44999d92151d0a8824a5645", null ],
     [ "ResolvePrivateNamesPartially", "classv8_1_1internal_1_1ClassScope.html#abb6fb394ea2a7466878d9ad1a45b4621", null ],
     [ "set_should_save_class_variable_index", "classv8_1_1internal_1_1ClassScope.html#ad52826f120ea06cd9958a67367246e2b", null ],
+    [ "SetIsParsingHeritage", "classv8_1_1internal_1_1ClassScope.html#a654c768b1c8b8f36db55717e7f9d6f0c", null ],
     [ "should_save_class_variable_index", "classv8_1_1internal_1_1ClassScope.html#a2efe0369f43087f29e0b19025db373af", null ],
     [ "PrivateNameScopeIterator", "classv8_1_1internal_1_1ClassScope.html#aebc4a345e86d71b7a7abb5d8a668afac", null ],
-    [ "Scope", "classv8_1_1internal_1_1ClassScope.html#a921193447f6e42f596ac0a7694b02830", null ]
+    [ "Scope", "classv8_1_1internal_1_1ClassScope.html#a921193447f6e42f596ac0a7694b02830", null ],
+    [ "class_variable_", "classv8_1_1internal_1_1ClassScope.html#abc29c5a13ce15fbefe6f85c7b07b44a8", null ],
+    [ "has_explicit_static_private_methods_access_", "classv8_1_1internal_1_1ClassScope.html#a51f3d994397faecdd9f153e01a9a07e2", null ],
+    [ "has_static_private_methods_", "classv8_1_1internal_1_1ClassScope.html#a12b9395fe204d949de5d3f159e3f7930", null ],
+    [ "is_anonymous_class_", "classv8_1_1internal_1_1ClassScope.html#ac2f61d99eacea7ac587d39dab4296785", null ],
+    [ "rare_data_and_is_parsing_heritage_", "classv8_1_1internal_1_1ClassScope.html#abd3b2a22cbc949b284c5d17c5802d039", null ],
+    [ "should_save_class_variable_index_", "classv8_1_1internal_1_1ClassScope.html#a9c69a9d65c7500f9b96d8a6610d5521a", null ]
 ];

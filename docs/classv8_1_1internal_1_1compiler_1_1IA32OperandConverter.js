@@ -7,7 +7,9 @@ var classv8_1_1internal_1_1compiler_1_1IA32OperandConverter =
     [ "MemoryOperand", "classv8_1_1internal_1_1compiler_1_1IA32OperandConverter.html#aa718a8b823b4e61a37c18ddb718f7e73", null ],
     [ "MoveInstructionOperandToRegister", "classv8_1_1internal_1_1compiler_1_1IA32OperandConverter.html#ad076121456aa8fc5ce395ef9f169ae5d", null ],
     [ "NextMemoryOperand", "classv8_1_1internal_1_1compiler_1_1IA32OperandConverter.html#aaf3a448b8ac6882328912099e922f671", null ],
+    [ "NextOffset", "classv8_1_1internal_1_1compiler_1_1IA32OperandConverter.html#a4a3e27e14acefc12bdcf1671afcc5756", null ],
     [ "OutputOperand", "classv8_1_1internal_1_1compiler_1_1IA32OperandConverter.html#a8b2754030b7a27aa512c704e9e8568d8", null ],
+    [ "ScaleFor", "classv8_1_1internal_1_1compiler_1_1IA32OperandConverter.html#a4ab3618ff495426c0745d64429e21f16", null ],
     [ "SlotToOperand", "classv8_1_1internal_1_1compiler_1_1IA32OperandConverter.html#a1a90c6633a1e66f2444036376face278", null ],
     [ "ToImmediate", "classv8_1_1internal_1_1compiler_1_1IA32OperandConverter.html#a729775ae73e32869ff6d70238e1ec625", null ],
     [ "ToOperand", "classv8_1_1internal_1_1compiler_1_1IA32OperandConverter.html#a2e903b6207d8c5164fe06ef97e9b4f23", null ]

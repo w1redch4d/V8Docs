@@ -10,6 +10,8 @@ var maglev_interpreter_frame_state_8h =
     [ "v8::internal::maglev::CompactInterpreterFrameState", "classv8_1_1internal_1_1maglev_1_1CompactInterpreterFrameState.html", "classv8_1_1internal_1_1maglev_1_1CompactInterpreterFrameState" ],
     [ "v8::internal::maglev::MergePointRegisterState", "classv8_1_1internal_1_1maglev_1_1MergePointRegisterState.html", null ],
     [ "v8::internal::maglev::MergePointInterpreterFrameState", "classv8_1_1internal_1_1maglev_1_1MergePointInterpreterFrameState.html", "classv8_1_1internal_1_1maglev_1_1MergePointInterpreterFrameState" ],
+    [ "v8::internal::maglev::MergePointInterpreterFrameState::Alternatives", "classv8_1_1internal_1_1maglev_1_1MergePointInterpreterFrameState_1_1Alternatives.html", "classv8_1_1internal_1_1maglev_1_1MergePointInterpreterFrameState_1_1Alternatives" ],
+    [ "v8::internal::maglev::MergePointInterpreterFrameState::LoopMetadata", "structv8_1_1internal_1_1maglev_1_1MergePointInterpreterFrameState_1_1LoopMetadata.html", "structv8_1_1internal_1_1maglev_1_1MergePointInterpreterFrameState_1_1LoopMetadata" ],
     [ "v8::internal::maglev::LoopEffects", "structv8_1_1internal_1_1maglev_1_1LoopEffects.html", "structv8_1_1internal_1_1maglev_1_1LoopEffects" ],
     [ "ALTERNATIVES", "maglev-interpreter-frame-state_8h.html#af8806e4bfd3d7f909c574a1b2e136f8d", null ],
     [ "API", "maglev-interpreter-frame-state_8h.html#a3d1a3cc38dcee1588b53d3154c953454", null ],

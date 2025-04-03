@@ -2,7 +2,7 @@ var constants_ppc_8h =
 [
     [ "v8::internal::Instruction", "classv8_1_1internal_1_1Instruction.html", "classv8_1_1internal_1_1Instruction" ],
     [ "v8::internal::Registers", "classv8_1_1internal_1_1Registers.html", "classv8_1_1internal_1_1Registers" ],
-    [ "v8::internal::DoubleRegisters", "classv8_1_1internal_1_1DoubleRegisters.html", null ],
+    [ "v8::internal::DoubleRegisters", "classv8_1_1internal_1_1DoubleRegisters.html", "classv8_1_1internal_1_1DoubleRegisters" ],
     [ "ABI_CALL_VIA_IP", "constants-ppc_8h.html#a625e28f977c05c0f7082401b0cd0fa01", null ],
     [ "ABI_PASSES_HANDLES_IN_REGS", "constants-ppc_8h.html#ae2a22a00e756a29b1cc1f3d42849636b", null ],
     [ "ABI_RETURNS_OBJECT_PAIRS_IN_REGS", "constants-ppc_8h.html#a6d46e4a9913b9db7853d06da37a54015", null ],
@@ -818,11 +818,15 @@ var constants_ppc_8h =
     [ "is_signed", "constants-ppc_8h.html#af154c349adfe7801ac73d4be545d1336", null ],
     [ "NegateCondition", "constants-ppc_8h.html#a8a48ceee842dc92c88dc67d8047feff0", null ],
     [ "to_condition", "constants-ppc_8h.html#af09b0dbfc93e47d307aed1b33bdd5e9e", null ],
+    [ "kFpDwarfCode", "constants-ppc_8h.html#a9d70778163d3c26b5bbab08c8ea80f13", null ],
     [ "kFPRoundingModeMask", "constants-ppc_8h.html#a82dd788c5631a03c52cba076d8191d63", null ],
     [ "kHasFunctionDescriptorBitMask", "constants-ppc_8h.html#ab3384152216dc51413c090c8665ed3cb", null ],
     [ "kHasFunctionDescriptorBitShift", "constants-ppc_8h.html#a9cba3482f853e5409124f5629db4df54", null ],
     [ "kLoadDoubleMaxReachBits", "constants-ppc_8h.html#ae6c597da3e24ffc2c2c0294e1dbe5224", null ],
     [ "kLoadPtrMaxReachBits", "constants-ppc_8h.html#a40fe7232053aec4f306c360375a3462c", null ],
+    [ "kLrDwarfCode", "constants-ppc_8h.html#a2543e3345879eeda7716830d7c509ef5", null ],
     [ "kNumDoubleRegisters", "constants-ppc_8h.html#a4753eec6b6126beb055e4c14ab862356", null ],
-    [ "kPcLoadDelta", "constants-ppc_8h.html#a0b4ebb2293f69adc6d2f493fb2bcb8cb", null ]
+    [ "kPcLoadDelta", "constants-ppc_8h.html#a0b4ebb2293f69adc6d2f493fb2bcb8cb", null ],
+    [ "kR0DwarfCode", "constants-ppc_8h.html#a53f1d9ed075ada841f8118664263c5fb", null ],
+    [ "kSpDwarfCode", "constants-ppc_8h.html#a546f909e39c77f62f132ea2c664764e0", null ]
 ];

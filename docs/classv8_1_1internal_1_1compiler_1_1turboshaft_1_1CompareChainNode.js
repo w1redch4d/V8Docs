@@ -16,5 +16,11 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode =
     [ "node", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode.html#a99d0a26614a38e1671b972fc30a9af28", null ],
     [ "rhs", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode.html#a8e34f1bca26f62c203e7e02370a8aaac", null ],
     [ "SetCondition", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode.html#aa1f3dc815d34e08fa51226513cfeca57", null ],
-    [ "user_condition", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode.html#acd6cd211ddf015a72ba538837a878297", null ]
+    [ "user_condition", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode.html#acd6cd211ddf015a72ba538837a878297", null ],
+    [ "lhs_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode.html#ab28bb722351846ee256d98d528547b19", null ],
+    [ "node_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode.html#a352d07f1151179262d8f485f4670092f", null ],
+    [ "node_kind_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode.html#a031caee3547f6b906381a61fe92eac42", null ],
+    [ "requires_negation_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode.html#aaed4ddfdf6cf8d1efd0d8b62d40b8bfd", null ],
+    [ "rhs_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode.html#a3e921ad5a6450a42a5af7268d9313a96", null ],
+    [ "user_condition_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareChainNode.html#ab8696d6937a452eba712095f2585bba1", null ]
 ];

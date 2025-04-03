@@ -15,10 +15,22 @@ var classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit =
     [ "is_osr", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#ac0b2af2c18a14c2335f11f532654b9d5", null ],
     [ "local_isolate", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a09b557e1b71f0131388dadbbcafe6166", null ],
     [ "max_arguments", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a02d6a61be837da6ebdfb6fa7bd0e576b", null ],
+    [ "New", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#ad7049c33ad90c65ca014c244166a7ba6", null ],
+    [ "NewDummy", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a6b5ac091f3bd7ccb556035306824fd7a", null ],
+    [ "NewInner", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a932db9493aa2168269803566f708235f", null ],
     [ "osr_offset", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#acd08ac9ffa4345096d11997488ce518a", null ],
     [ "parameter_count", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#aa13e5c33790bbd2f2c1c365e7b6f94e2", null ],
     [ "register_count", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a0d62df65ce921cc14072e649a7859958", null ],
     [ "RegisterNodeInGraphLabeller", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#ae0172c15fb84d78d26781fa8d01deb4b", null ],
     [ "shared_function_info", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a0ccf6b779534fdb38b8c38777eed565d", null ],
-    [ "zone", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a09a36f14c571627ad8f1a6a62866ec89", null ]
+    [ "zone", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a09a36f14c571627ad8f1a6a62866ec89", null ],
+    [ "bytecode_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a7caed6c3512d6693b181d9be8c03f974", null ],
+    [ "caller_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#ae3675da7c575c9c06f2c05154540f386", null ],
+    [ "feedback_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#af771eb4975d579938db278fc2922bb62", null ],
+    [ "info_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a43156ee0cc366cefd739a515c89860f2", null ],
+    [ "inlining_depth_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a00e65eddadc224a4f17bf054656a5f91", null ],
+    [ "max_arguments_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a26b48247a70884884a0d3cb6f65db43b", null ],
+    [ "parameter_count_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a5f337a6ac17d5e9a886c7fdcd4db37bb", null ],
+    [ "register_count_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a18839791406a25db06af5285f56f90e4", null ],
+    [ "shared_function_info_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationUnit.html#a16ad572b38194605234fe55a5cec1bfe", null ]
 ];

@@ -16,5 +16,7 @@ var classv8_1_1base_1_1iterator__range =
     [ "operator[]", "classv8_1_1base_1_1iterator__range.html#a0c369ce5a2faf3b78836aeb931a01db3", null ],
     [ "rbegin", "classv8_1_1base_1_1iterator__range.html#aa7a8cdf4ef3d3532ac31c7fefdf56c49", null ],
     [ "rend", "classv8_1_1base_1_1iterator__range.html#a4f4788f27f0010629803790f8dccd58b", null ],
-    [ "size", "classv8_1_1base_1_1iterator__range.html#a0c49f9dfaaddb7a986f0b8779400f4c9", null ]
+    [ "size", "classv8_1_1base_1_1iterator__range.html#a0c49f9dfaaddb7a986f0b8779400f4c9", null ],
+    [ "begin_", "classv8_1_1base_1_1iterator__range.html#a45666932b7166871311a2589ee0edb6b", null ],
+    [ "end_", "classv8_1_1base_1_1iterator__range.html#a59407e979225289d02912d0f54a1311e", null ]
 ];

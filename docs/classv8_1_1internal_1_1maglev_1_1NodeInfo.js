@@ -22,5 +22,10 @@ var classv8_1_1internal_1_1maglev_1_1NodeInfo =
     [ "possible_maps_are_known", "classv8_1_1internal_1_1maglev_1_1NodeInfo.html#aa237bafb6fb907e808700488c726b7ef", null ],
     [ "possible_maps_are_unstable", "classv8_1_1internal_1_1maglev_1_1NodeInfo.html#a305d927d9eeaafb60715468e7f932ffa", null ],
     [ "SetPossibleMaps", "classv8_1_1internal_1_1maglev_1_1NodeInfo.html#a0dc02374908556fdc19b1a91960aad33", null ],
-    [ "type", "classv8_1_1internal_1_1maglev_1_1NodeInfo.html#ac412c8cba4e4f4b4e87097a8d5abf2d2", null ]
+    [ "type", "classv8_1_1internal_1_1maglev_1_1NodeInfo.html#ac412c8cba4e4f4b4e87097a8d5abf2d2", null ],
+    [ "alternative_", "classv8_1_1internal_1_1maglev_1_1NodeInfo.html#a348c0a6defe1a98ea7fcfb2141e99d6b", null ],
+    [ "any_map_is_unstable_", "classv8_1_1internal_1_1maglev_1_1NodeInfo.html#a0ca496bf1e6cde62d54d5723f30d12cb", null ],
+    [ "possible_maps_", "classv8_1_1internal_1_1maglev_1_1NodeInfo.html#a4056dc03f829fb58ea037ac46a5f6511", null ],
+    [ "possible_maps_are_known_", "classv8_1_1internal_1_1maglev_1_1NodeInfo.html#afd4d3580a19104f890e63fd140e66488", null ],
+    [ "type_", "classv8_1_1internal_1_1maglev_1_1NodeInfo.html#acb14d8f4f81d6825795364f5e5084d87", null ]
 ];

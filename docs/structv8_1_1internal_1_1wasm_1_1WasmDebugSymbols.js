@@ -7,5 +7,6 @@ var structv8_1_1internal_1_1wasm_1_1WasmDebugSymbols =
       [ "None", "structv8_1_1internal_1_1wasm_1_1WasmDebugSymbols.html#a8532d4e68c0d024103622db816fcf401ab6753b928ffa3762e2c24aca9e607a80", null ]
     ] ],
     [ "external_url", "structv8_1_1internal_1_1wasm_1_1WasmDebugSymbols.html#a25ea0bb81982bd235229b5344509f9c1", null ],
+    [ "kNumTypes", "structv8_1_1internal_1_1wasm_1_1WasmDebugSymbols.html#afb4e909d6da4db8f67f4d3698a6c9d55", null ],
     [ "type", "structv8_1_1internal_1_1wasm_1_1WasmDebugSymbols.html#a7ceab03e102013f6c054a06db16e12f5", null ]
 ];

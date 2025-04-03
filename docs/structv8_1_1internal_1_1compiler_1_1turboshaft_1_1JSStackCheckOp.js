@@ -11,6 +11,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1JSStackCheckOp =
     [ "frame_state", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1JSStackCheckOp.html#aa91c2ec8444cd1e86e2dbf232b7b9551", null ],
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1JSStackCheckOp.html#a5c5d3114e67c8f68df3d5daefe22b802", null ],
     [ "native_context", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1JSStackCheckOp.html#ab20fd9ad22cd813a31c49c0189fd7913", null ],
+    [ "New", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1JSStackCheckOp.html#a7d54add0415644b6da81ed8320e1b919", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1JSStackCheckOp.html#a215a73619f310a22fe48bb3bd0751f4b", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1JSStackCheckOp.html#aef988dd0561cf46c145eac68dd7c496a", null ],
     [ "Validate", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1JSStackCheckOp.html#a33a31d36e7450128a4ab0a934730c0cf", null ],

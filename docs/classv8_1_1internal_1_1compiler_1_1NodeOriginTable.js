@@ -17,5 +17,12 @@ var classv8_1_1internal_1_1compiler_1_1NodeOriginTable =
     [ "SetCurrentPosition", "classv8_1_1internal_1_1compiler_1_1NodeOriginTable.html#a1b38a198df330521b049be622f200959", null ],
     [ "SetNodeOrigin", "classv8_1_1internal_1_1compiler_1_1NodeOriginTable.html#a959bfcc10610d95fc220a87489d8080c", null ],
     [ "SetNodeOrigin", "classv8_1_1internal_1_1compiler_1_1NodeOriginTable.html#a61105060a00de67066b01d880aa4dc9d", null ],
-    [ "SetNodeOrigin", "classv8_1_1internal_1_1compiler_1_1NodeOriginTable.html#af86610c3408e22bda30e23cdd510231c", null ]
+    [ "SetNodeOrigin", "classv8_1_1internal_1_1compiler_1_1NodeOriginTable.html#af86610c3408e22bda30e23cdd510231c", null ],
+    [ "UnknownNodeOrigin", "classv8_1_1internal_1_1compiler_1_1NodeOriginTable.html#a0cb85df6550d26e8bc0203ec5e4dee3f", null ],
+    [ "current_bytecode_position_", "classv8_1_1internal_1_1compiler_1_1NodeOriginTable.html#ab97a3cc51b0c40221995000e96e1260d", null ],
+    [ "current_origin_", "classv8_1_1internal_1_1compiler_1_1NodeOriginTable.html#a9d51fcde0ea766f90f696ee191dd4e03", null ],
+    [ "current_phase_name_", "classv8_1_1internal_1_1compiler_1_1NodeOriginTable.html#a2e2f1b0b0471efffe426bbc9a45840e9", null ],
+    [ "decorator_", "classv8_1_1internal_1_1compiler_1_1NodeOriginTable.html#a1895853d3ba6a1b20a9ef519b82ee747", null ],
+    [ "graph_", "classv8_1_1internal_1_1compiler_1_1NodeOriginTable.html#a60c8102d4dabf39626441ce3a57cd680", null ],
+    [ "table_", "classv8_1_1internal_1_1compiler_1_1NodeOriginTable.html#ad34e15599183ac416781f2b5e88efa60", null ]
 ];

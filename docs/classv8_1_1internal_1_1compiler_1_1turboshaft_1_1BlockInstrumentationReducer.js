@@ -10,5 +10,10 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockInstrumentationReducer
     [ "LoadCounterValue", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockInstrumentationReducer.html#ada27974dd2c292759ce87f04ddbd46fb", null ],
     [ "Parameter", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockInstrumentationReducer.html#a5ed53a50e5af3343ebfb9b8785964f2c", null ],
     [ "ReduceOperation", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockInstrumentationReducer.html#a287705c4c8eee22caed04f045f5f31ad", null ],
-    [ "StoreCounterValue", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockInstrumentationReducer.html#a3ac025a14ea73f336b4b00e59284088c", null ]
+    [ "StoreCounterValue", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockInstrumentationReducer.html#a3ac025a14ea73f336b4b00e59284088c", null ],
+    [ "counters_array_handle_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockInstrumentationReducer.html#a16076309ce4c977b5d50e7e877b29e10", null ],
+    [ "data_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockInstrumentationReducer.html#aaac06a5d81234b61a39f50b1a495f3bc", null ],
+    [ "isolate_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockInstrumentationReducer.html#a6daab251cf031456177683f07ca3d286", null ],
+    [ "on_heap_counters_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockInstrumentationReducer.html#a52e64b63ac3504c8d012360910665d1a", null ],
+    [ "operations_emitted_in_current_block_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BlockInstrumentationReducer.html#a47d65ab725a64d3a850de2e5cf8ad843", null ]
 ];

@@ -1,5 +1,8 @@
 var classv8_1_1internal_1_1HandlerTable =
 [
+    [ "HandlerOffsetField", "classv8_1_1internal_1_1HandlerTable.html#a77450e461d0ea76122920567adbdd55e", null ],
+    [ "HandlerPredictionField", "classv8_1_1internal_1_1HandlerTable.html#adca073decc52b9416ad6b670765cedf7", null ],
+    [ "HandlerWasUsedField", "classv8_1_1internal_1_1HandlerTable.html#af2eaa7851052f158b1bb8a9c41486527", null ],
     [ "CatchPrediction", "classv8_1_1internal_1_1HandlerTable.html#a1d4e928c63ab7c79779838058fdf8435", [
       [ "UNCAUGHT", "classv8_1_1internal_1_1HandlerTable.html#a1d4e928c63ab7c79779838058fdf8435acf8473d1be139404be0be9df4460dcac", null ],
       [ "CAUGHT", "classv8_1_1internal_1_1HandlerTable.html#a1d4e928c63ab7c79779838058fdf8435a43e6e24327baf10866b49831644e6507", null ],
@@ -16,12 +19,19 @@ var classv8_1_1internal_1_1HandlerTable =
     [ "HandlerTable", "classv8_1_1internal_1_1HandlerTable.html#a4af77414252d993f531372a851f85deb", null ],
     [ "HandlerTable", "classv8_1_1internal_1_1HandlerTable.html#ad8d2ac49bfba5ad86f8e3503071247aa", null ],
     [ "HandlerTable", "classv8_1_1internal_1_1HandlerTable.html#a9c8401110cdf5093c87aca2474576126", null ],
+    [ "EmitReturnEntry", "classv8_1_1internal_1_1HandlerTable.html#a49c7ed76a08c7e7133ef5f6137b91793", null ],
+    [ "EmitReturnTableStart", "classv8_1_1internal_1_1HandlerTable.html#ae4d7aa024299002fc3ef9e3923eb01b8", null ],
+    [ "EntrySizeFromMode", "classv8_1_1internal_1_1HandlerTable.html#a5c23278c72ad838df4af0f7f6ef7a3e7", null ],
     [ "GetRangeData", "classv8_1_1internal_1_1HandlerTable.html#a13d4091bae68fb254e099bf0810921de", null ],
     [ "GetRangeEnd", "classv8_1_1internal_1_1HandlerTable.html#abf3582125d7138dc1c00c393a7cb9522", null ],
     [ "GetRangeHandler", "classv8_1_1internal_1_1HandlerTable.html#a51070059fac161f9b25200f5839b6ec5", null ],
+    [ "GetRangeHandlerBitfield", "classv8_1_1internal_1_1HandlerTable.html#a9da3d28bad486aee566be54a3ba16ad0", null ],
     [ "GetRangePrediction", "classv8_1_1internal_1_1HandlerTable.html#a163a51502c609c1c7149f087b7994a01", null ],
     [ "GetRangeStart", "classv8_1_1internal_1_1HandlerTable.html#a05744150128a020122d6d23805c1a789", null ],
+    [ "GetReturnHandler", "classv8_1_1internal_1_1HandlerTable.html#ac0ddbd66dfb26ff4bf5c41f310113770", null ],
+    [ "GetReturnOffset", "classv8_1_1internal_1_1HandlerTable.html#a287ff05d424e8b700d59c91ef0c1eb5a", null ],
     [ "HandlerWasUsed", "classv8_1_1internal_1_1HandlerTable.html#a68aaa16e7ac7440c5dc09b5fc245d659", null ],
+    [ "LengthForRange", "classv8_1_1internal_1_1HandlerTable.html#a3e307a83cb3a18ffc159bc12de0533fa", null ],
     [ "LookupHandlerIndexForRange", "classv8_1_1internal_1_1HandlerTable.html#a10d8a65653e66b5c90e406db1a109df8", null ],
     [ "LookupReturn", "classv8_1_1internal_1_1HandlerTable.html#af62d31c389403c24a2c8adccfd650413", null ],
     [ "MarkHandlerUsed", "classv8_1_1internal_1_1HandlerTable.html#a482d5d1fa8e3cb0cb1a4a97e484d16d8", null ],
@@ -30,5 +40,17 @@ var classv8_1_1internal_1_1HandlerTable =
     [ "SetRangeData", "classv8_1_1internal_1_1HandlerTable.html#aa2afe5c8c465265e1150587dc5134b66", null ],
     [ "SetRangeEnd", "classv8_1_1internal_1_1HandlerTable.html#aa42488039d1e1fea69fda47b7f2f045f", null ],
     [ "SetRangeHandler", "classv8_1_1internal_1_1HandlerTable.html#a683448668d43ac5c6352c6d2c66fa2d7", null ],
-    [ "SetRangeStart", "classv8_1_1internal_1_1HandlerTable.html#af003cc15ae2f99122d0dca3f8777b18c", null ]
+    [ "SetRangeStart", "classv8_1_1internal_1_1HandlerTable.html#af003cc15ae2f99122d0dca3f8777b18c", null ],
+    [ "kLazyDeopt", "classv8_1_1internal_1_1HandlerTable.html#af4b27336c045b4782f7dd377c0264bce", null ],
+    [ "kNoHandlerFound", "classv8_1_1internal_1_1HandlerTable.html#ac376bdd97fdb14d80ead3a8009c122a2", null ],
+    [ "kRangeDataIndex", "classv8_1_1internal_1_1HandlerTable.html#a03e2571a0a4e9a2e2672b3a582954821", null ],
+    [ "kRangeEndIndex", "classv8_1_1internal_1_1HandlerTable.html#ab9ff402bec2889835a0f0c2926ec2479", null ],
+    [ "kRangeEntrySize", "classv8_1_1internal_1_1HandlerTable.html#ad55e16b76217cb8404e0c9d1395f17be", null ],
+    [ "kRangeHandlerIndex", "classv8_1_1internal_1_1HandlerTable.html#ab58a756969746c032b6d21271fdca341", null ],
+    [ "kRangeStartIndex", "classv8_1_1internal_1_1HandlerTable.html#a3248a70cefcd2ac96902fb5c29461456", null ],
+    [ "kReturnEntrySize", "classv8_1_1internal_1_1HandlerTable.html#a9067fa627398c7167efd383c67226330", null ],
+    [ "kReturnHandlerIndex", "classv8_1_1internal_1_1HandlerTable.html#a681579ac7783f1be92b3d24d1728836b", null ],
+    [ "kReturnOffsetIndex", "classv8_1_1internal_1_1HandlerTable.html#a4072e331f4a8fa09323a8241d2233cf8", null ],
+    [ "number_of_entries_", "classv8_1_1internal_1_1HandlerTable.html#a4e2355f82357636f4c1596183db2926a", null ],
+    [ "raw_encoded_data_", "classv8_1_1internal_1_1HandlerTable.html#a991b40a7c7b6b1d3a1845e8c5c0917b0", null ]
 ];

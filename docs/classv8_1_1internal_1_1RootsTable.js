@@ -1,12 +1,27 @@
 var classv8_1_1internal_1_1RootsTable =
 [
     [ "RootsTable", "classv8_1_1internal_1_1RootsTable.html#a552345ad21b4035d70592f17a6297a3b", null ],
+    [ "begin", "classv8_1_1internal_1_1RootsTable.html#ad38e63aa046e54d4aa0513ae8c19807f", null ],
+    [ "end", "classv8_1_1internal_1_1RootsTable.html#a61174de0fdaa3f8a91b40784cf09a60f", null ],
     [ "FindHeapNumber", "classv8_1_1internal_1_1RootsTable.html#a49e230bd041ff24c0cb4c637385851e0", null ],
     [ "handle_at", "classv8_1_1internal_1_1RootsTable.html#a2ae6328a9e4d20296b4c54fb450c4903", null ],
+    [ "IsImmortalImmovable", "classv8_1_1internal_1_1RootsTable.html#ae3e6a29a5337c7e29ef16cf6ead8ba75", null ],
+    [ "IsReadOnly", "classv8_1_1internal_1_1RootsTable.html#ad47c272de267376aa79f8a01df182077", null ],
     [ "IsRootHandle", "classv8_1_1internal_1_1RootsTable.html#aba22a75b531e17ff1b99b2799f31198f", null ],
     [ "IsRootHandleLocation", "classv8_1_1internal_1_1RootsTable.html#a55978a96c28ab4bcff3923e192a2ae30", null ],
+    [ "name", "classv8_1_1internal_1_1RootsTable.html#a532aa42f4207b8dfaf995b6afc5d8075", null ],
+    [ "offset_of", "classv8_1_1internal_1_1RootsTable.html#a6c13d48fef78917e42206eea04eb06b6", null ],
+    [ "operator[]", "classv8_1_1internal_1_1RootsTable.html#a29bc7bf1a917a6ff2ffcd08d2be57497", null ],
     [ "operator[]", "classv8_1_1internal_1_1RootsTable.html#a6b741fc6ffd4a3894e21615f096a33b6", null ],
+    [ "read_only_roots_begin", "classv8_1_1internal_1_1RootsTable.html#af7bd2050af951b4fb38e74ec1dc6ad1a", null ],
+    [ "read_only_roots_end", "classv8_1_1internal_1_1RootsTable.html#ae2f890f7d1fb755bc5d80db61b53f594", null ],
     [ "slot", "classv8_1_1internal_1_1RootsTable.html#aa9f7574a9b651cf4c0170712af1964fa", null ],
+    [ "smi_roots_begin", "classv8_1_1internal_1_1RootsTable.html#a78bea73054f2985ba25462f4d81ca843", null ],
+    [ "smi_roots_end", "classv8_1_1internal_1_1RootsTable.html#ad32a116b26d07339bb6a911cca99a41f", null ],
+    [ "strong_or_read_only_roots_begin", "classv8_1_1internal_1_1RootsTable.html#a19306ad5d78ad0d567a3a5f49df298e0", null ],
+    [ "strong_or_read_only_roots_end", "classv8_1_1internal_1_1RootsTable.html#ab806674de11e3e3ab556926fee1c4287", null ],
+    [ "strong_roots_begin", "classv8_1_1internal_1_1RootsTable.html#abd024f9e3b9bde8589a11a3e6c4603cb", null ],
+    [ "strong_roots_end", "classv8_1_1internal_1_1RootsTable.html#a9d32a9d8cbaa8d8d7fa1a573e3ccb967", null ],
     [ "Factory", "classv8_1_1internal_1_1RootsTable.html#a328c093d609680cca505905c6d49901a", null ],
     [ "FactoryBase< Factory >", "classv8_1_1internal_1_1RootsTable.html#acb7851eb07b63cff4ef6ddbcacd7ae29", null ],
     [ "FactoryBase< LocalFactory >", "classv8_1_1internal_1_1RootsTable.html#a7d606a9ebefde3b31c7bf583ea267874", null ],
@@ -14,5 +29,8 @@ var classv8_1_1internal_1_1RootsTable =
     [ "Isolate", "classv8_1_1internal_1_1RootsTable.html#aba4f0964bdacf2bbf62cf876e5d28d0a", null ],
     [ "ReadOnlyHeap", "classv8_1_1internal_1_1RootsTable.html#ae169b5a93f2af0caa0214f372321e376", null ],
     [ "ReadOnlyRoots", "classv8_1_1internal_1_1RootsTable.html#a723b2cfa707c63382946bbf0be13d9ec", null ],
-    [ "RootsSerializer", "classv8_1_1internal_1_1RootsTable.html#a8d9995d9772cd856872506697a71691d", null ]
+    [ "RootsSerializer", "classv8_1_1internal_1_1RootsTable.html#a8d9995d9772cd856872506697a71691d", null ],
+    [ "kEntriesCount", "classv8_1_1internal_1_1RootsTable.html#a441891bb0367b9c60179d1b0ebb48354", null ],
+    [ "root_names_", "classv8_1_1internal_1_1RootsTable.html#a1f4deee43f50dcfdfeb3efbcd0e5ceb8", null ],
+    [ "roots_", "classv8_1_1internal_1_1RootsTable.html#a02abff42283f5883e47bd18398586e3e", null ]
 ];

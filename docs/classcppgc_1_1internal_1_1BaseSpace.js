@@ -24,5 +24,11 @@ var classcppgc_1_1internal_1_1BaseSpace =
     [ "raw_heap", "classcppgc_1_1internal_1_1BaseSpace.html#a0ba4c56be5e83e0accfbb88f2b7ead5a", null ],
     [ "RemoveAllPages", "classcppgc_1_1internal_1_1BaseSpace.html#aec48d179d7602f2907bae10e729a6e4a", null ],
     [ "RemovePage", "classcppgc_1_1internal_1_1BaseSpace.html#a7f338738c77c01c440ff0753bc42ebae", null ],
-    [ "size", "classcppgc_1_1internal_1_1BaseSpace.html#a421972cf57dafd7f7acf59e5245ccb54", null ]
+    [ "size", "classcppgc_1_1internal_1_1BaseSpace.html#a421972cf57dafd7f7acf59e5245ccb54", null ],
+    [ "heap_", "classcppgc_1_1internal_1_1BaseSpace.html#a95880e673b6cbfcfb8f300a9d92f112e", null ],
+    [ "index_", "classcppgc_1_1internal_1_1BaseSpace.html#acac7629f6e77b90293cac6b387998a19", null ],
+    [ "is_compactable_", "classcppgc_1_1internal_1_1BaseSpace.html#a0faa24dd23185db9625a9323a9db08fb", null ],
+    [ "pages_", "classcppgc_1_1internal_1_1BaseSpace.html#af2143e91b664ada57cc2f7db50f91074", null ],
+    [ "pages_mutex_", "classcppgc_1_1internal_1_1BaseSpace.html#a71b49306e7f901b51692ffb2b66d6512", null ],
+    [ "type_", "classcppgc_1_1internal_1_1BaseSpace.html#ae5684b59e132988cdee97a0f39b92f0f", null ]
 ];

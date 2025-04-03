@@ -6,5 +6,7 @@ var classcppgc_1_1internal_1_1FatalOutOfMemoryHandler =
     [ "FatalOutOfMemoryHandler", "classcppgc_1_1internal_1_1FatalOutOfMemoryHandler.html#a4ebc87e9511a27d9ab737cecb408f3c3", null ],
     [ "operator()", "classcppgc_1_1internal_1_1FatalOutOfMemoryHandler.html#a48f6ddadada5d321121b9cfce0740256", null ],
     [ "operator=", "classcppgc_1_1internal_1_1FatalOutOfMemoryHandler.html#a9583b0aa3a14e95b469c6f70a2dfb08a", null ],
-    [ "SetCustomHandler", "classcppgc_1_1internal_1_1FatalOutOfMemoryHandler.html#a46f5f7e9dd5b515927149ddf2c143b47", null ]
+    [ "SetCustomHandler", "classcppgc_1_1internal_1_1FatalOutOfMemoryHandler.html#a46f5f7e9dd5b515927149ddf2c143b47", null ],
+    [ "custom_handler_", "classcppgc_1_1internal_1_1FatalOutOfMemoryHandler.html#a2bffb72d35fd57715c360c7135d1b8c2", null ],
+    [ "heap_", "classcppgc_1_1internal_1_1FatalOutOfMemoryHandler.html#a342ce2291eb431ddf92154050b3e4409", null ]
 ];

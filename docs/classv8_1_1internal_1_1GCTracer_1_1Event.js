@@ -15,6 +15,7 @@ var classv8_1_1internal_1_1GCTracer_1_1Event =
       [ "START", "classv8_1_1internal_1_1GCTracer_1_1Event.html#a0f3b1f2a3d83c7041662d371f94ac3f4ab078ffd28db767c502ac367053f6e0ac", null ]
     ] ],
     [ "Event", "classv8_1_1internal_1_1GCTracer_1_1Event.html#a65e96f04ca3ab0e3821eee29e30c3a48", null ],
+    [ "IsYoungGenerationEvent", "classv8_1_1internal_1_1GCTracer_1_1Event.html#a0088b601ccc5ea89c818bbf629c8f336", null ],
     [ "collector_reason", "classv8_1_1internal_1_1GCTracer_1_1Event.html#a38a7a934142f05bcd46bdf099bd7bd0d", null ],
     [ "concurrency_estimate", "classv8_1_1internal_1_1GCTracer_1_1Event.html#ad6a97e7366956cc4c777654db01463e1", null ],
     [ "end_atomic_pause_time", "classv8_1_1internal_1_1GCTracer_1_1Event.html#a653545647af91c72b1758caa5f4a66f1", null ],

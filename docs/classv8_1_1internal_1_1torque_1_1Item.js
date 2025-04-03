@@ -14,5 +14,11 @@ var classv8_1_1internal_1_1torque_1_1Item =
     [ "rule", "classv8_1_1internal_1_1torque_1_1Item.html#a373e5df25dec005b67330b49bba22743", null ],
     [ "SplitByChildren", "classv8_1_1internal_1_1torque_1_1Item.html#a2cd25bc0d8b1e1073863297e3afa205c", null ],
     [ "start", "classv8_1_1internal_1_1torque_1_1Item.html#a87bf2ff7d07dcc47e719a5f774539d2c", null ],
-    [ "hash_value", "classv8_1_1internal_1_1torque_1_1Item.html#a0b09f2dabc69dd49b9efa18b8744d1cd", null ]
+    [ "hash_value", "classv8_1_1internal_1_1torque_1_1Item.html#a0b09f2dabc69dd49b9efa18b8744d1cd", null ],
+    [ "child_", "classv8_1_1internal_1_1torque_1_1Item.html#ad772c38b374e98d55baca84dbf67228a", null ],
+    [ "mark_", "classv8_1_1internal_1_1torque_1_1Item.html#ab6256b5394243b11a3f5e38c32255d5f", null ],
+    [ "pos_", "classv8_1_1internal_1_1torque_1_1Item.html#a7ec63f85c023540a8fecc383d5df3cd9", null ],
+    [ "prev_", "classv8_1_1internal_1_1torque_1_1Item.html#aee1bcd6cba8edf124a76fa0433ac494c", null ],
+    [ "rule_", "classv8_1_1internal_1_1torque_1_1Item.html#a7008724c0fe6eea534a72b6f84062899", null ],
+    [ "start_", "classv8_1_1internal_1_1torque_1_1Item.html#ae23ea0d722e9fa724e3217ae9672b7ad", null ]
 ];

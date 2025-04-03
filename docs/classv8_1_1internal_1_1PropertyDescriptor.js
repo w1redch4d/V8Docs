@@ -1,6 +1,7 @@
 var classv8_1_1internal_1_1PropertyDescriptor =
 [
     [ "PropertyDescriptor", "classv8_1_1internal_1_1PropertyDescriptor.html#a34d2a252efa85f709a606ee83471e29c", null ],
+    [ "CompletePropertyDescriptor", "classv8_1_1internal_1_1PropertyDescriptor.html#a8db7289399f6c1605a93e68359d1facd", null ],
     [ "configurable", "classv8_1_1internal_1_1PropertyDescriptor.html#a93eb7152899cee8f5c670b6269eb0702", null ],
     [ "enumerable", "classv8_1_1internal_1_1PropertyDescriptor.html#a4cf3fa2571ff91760d9d23f7a9c2469e", null ],
     [ "get", "classv8_1_1internal_1_1PropertyDescriptor.html#a7f39851df86a2cfe4fce61663af03eb8", null ],
@@ -11,6 +12,9 @@ var classv8_1_1internal_1_1PropertyDescriptor =
     [ "has_value", "classv8_1_1internal_1_1PropertyDescriptor.html#a167e0f002d5b84d0427116fe2be434e4", null ],
     [ "has_writable", "classv8_1_1internal_1_1PropertyDescriptor.html#a480d5bda3c0980007502c70af9231bd1", null ],
     [ "is_empty", "classv8_1_1internal_1_1PropertyDescriptor.html#a0ecf8d9f29dd17708cb3950761fa908f", null ],
+    [ "IsAccessorDescriptor", "classv8_1_1internal_1_1PropertyDescriptor.html#a4ddd81c576fa1059e0250531c3757cb2", null ],
+    [ "IsDataDescriptor", "classv8_1_1internal_1_1PropertyDescriptor.html#abc27e04bfdb68402ee0d08540d7829ea", null ],
+    [ "IsGenericDescriptor", "classv8_1_1internal_1_1PropertyDescriptor.html#a8d62371003664fcb9147a158ec1bd6e5", null ],
     [ "IsRegularAccessorProperty", "classv8_1_1internal_1_1PropertyDescriptor.html#af725d83d93e69b991c1e4dfe66fd201b", null ],
     [ "IsRegularDataProperty", "classv8_1_1internal_1_1PropertyDescriptor.html#a25ca69b939791b04a97da17b886d978d", null ],
     [ "name", "classv8_1_1internal_1_1PropertyDescriptor.html#aeac802afdd2c9c5593629b91413a7f31", null ],
@@ -24,7 +28,18 @@ var classv8_1_1internal_1_1PropertyDescriptor =
     [ "set_writable", "classv8_1_1internal_1_1PropertyDescriptor.html#a820c7429a2848c4c6b021c25760cbdc5", null ],
     [ "ToAttributes", "classv8_1_1internal_1_1PropertyDescriptor.html#acaba3a3c646431aa8a5ebc9601bc1c64", null ],
     [ "ToObject", "classv8_1_1internal_1_1PropertyDescriptor.html#aed33d99874e9f08a5c0afa6710295ff3", null ],
+    [ "ToPropertyDescriptor", "classv8_1_1internal_1_1PropertyDescriptor.html#a931cce28925f093ed20a3cba4c7e695d", null ],
     [ "ToPropertyDescriptorObject", "classv8_1_1internal_1_1PropertyDescriptor.html#a3fbddfca2637e956648c6ac83b9bbff7", null ],
     [ "value", "classv8_1_1internal_1_1PropertyDescriptor.html#a6f99b5ba6f954339f61128600b4527ee", null ],
-    [ "writable", "classv8_1_1internal_1_1PropertyDescriptor.html#a7777000cf86b115811d8b60d1774318d", null ]
+    [ "writable", "classv8_1_1internal_1_1PropertyDescriptor.html#a7777000cf86b115811d8b60d1774318d", null ],
+    [ "configurable_", "classv8_1_1internal_1_1PropertyDescriptor.html#a6868e041e658368b79f6cac2aa4fe290", null ],
+    [ "enumerable_", "classv8_1_1internal_1_1PropertyDescriptor.html#a855a80a1ff24c0d793d83bc2207631b9", null ],
+    [ "get_", "classv8_1_1internal_1_1PropertyDescriptor.html#af9498698cbabec487bbdaff5706aed21", null ],
+    [ "has_configurable_", "classv8_1_1internal_1_1PropertyDescriptor.html#af480f64b0c70517c77c9a7a102c62727", null ],
+    [ "has_enumerable_", "classv8_1_1internal_1_1PropertyDescriptor.html#a410bb7fb35f93f5e444816176c88f2e0", null ],
+    [ "has_writable_", "classv8_1_1internal_1_1PropertyDescriptor.html#a1280a8ee61f9352bf7feacfdad0692b5", null ],
+    [ "name_", "classv8_1_1internal_1_1PropertyDescriptor.html#a387c6c1a5f3266b90fadbfc28a38f10c", null ],
+    [ "set_", "classv8_1_1internal_1_1PropertyDescriptor.html#afe5f21db7ab845eea03d90ddedc7a0bc", null ],
+    [ "value_", "classv8_1_1internal_1_1PropertyDescriptor.html#adc04c1c9fe875e9baea072f198345c36", null ],
+    [ "writable_", "classv8_1_1internal_1_1PropertyDescriptor.html#a43092fc4b6d28111ac19fb2b16a3b829", null ]
 ];

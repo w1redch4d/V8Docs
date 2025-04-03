@@ -1,6 +1,7 @@
 var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TSCallDescriptor =
 [
     [ "TSCallDescriptor", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TSCallDescriptor.html#a9e8715f939d352785a45466720240e45", null ],
+    [ "Create", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TSCallDescriptor.html#a11e07361f0426f251b8a3d72f2ca1e34", null ],
     [ "can_throw", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TSCallDescriptor.html#ac255402437afc168ca2217eccb3fd220", null ],
     [ "descriptor", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TSCallDescriptor.html#a08307bea2d58c81a68e137a19d0422d8", null ],
     [ "in_reps", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TSCallDescriptor.html#a315f2accbaf0a6a09444b93a281fbb8e", null ],

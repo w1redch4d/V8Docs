@@ -70,5 +70,8 @@ var classv8_1_1internal_1_1compiler_1_1CommonOperatorBuilder =
     [ "TypedObjectState", "classv8_1_1internal_1_1compiler_1_1CommonOperatorBuilder.html#a7ba0e66fc286204b0573227e8d2ea6b7", null ],
     [ "TypedStateValues", "classv8_1_1internal_1_1compiler_1_1CommonOperatorBuilder.html#a6a293fe6dd992a2d0ec6c731bc9af5e8", null ],
     [ "TypeGuard", "classv8_1_1internal_1_1compiler_1_1CommonOperatorBuilder.html#a8ddd2ac453b6e45d9906166aa9275e43", null ],
-    [ "Unreachable", "classv8_1_1internal_1_1compiler_1_1CommonOperatorBuilder.html#a7f59ec318379bdb0316895cb431a489d", null ]
+    [ "Unreachable", "classv8_1_1internal_1_1compiler_1_1CommonOperatorBuilder.html#a7f59ec318379bdb0316895cb431a489d", null ],
+    [ "zone", "classv8_1_1internal_1_1compiler_1_1CommonOperatorBuilder.html#a2519fe7fffccbd4f712f838bf3e39b8f", null ],
+    [ "cache_", "classv8_1_1internal_1_1compiler_1_1CommonOperatorBuilder.html#ab36d4c761d48fda7c33e19aa440e2282", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1CommonOperatorBuilder.html#a349bc8851c91407c33944d02a2389712", null ]
 ];

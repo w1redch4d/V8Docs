@@ -1,6 +1,7 @@
 var classv8_1_1internal_1_1ApiCallbackExitFrame =
 [
     [ "ApiCallbackExitFrame", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#ac2d91cc19707135c1f2af1c2721ef19b", null ],
+    [ "cast", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#aaffa1f5513a63e30c70aebf3488c059f", null ],
     [ "ComputeParametersCount", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#af55359a99a87a85c2118cada3dd96115", null ],
     [ "context", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#aaafe267bc5e7d1ca7258805b5f72f53b", null ],
     [ "GetFunction", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#a664f136189fefc0191e88f44224a4a5d", null ],
@@ -10,7 +11,10 @@ var classv8_1_1internal_1_1ApiCallbackExitFrame =
     [ "IsConstructor", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#ac9e8c582b35b1f17515e5df62a054957", null ],
     [ "Print", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#a407607ca068b4e0d4c45adfdf8d6449e", null ],
     [ "receiver", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#ae0bf812e98cc8f84c86fd300e2cc7d8f", null ],
+    [ "set_target", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#a949db08daefa4eacc1141e8657a027f8", null ],
     [ "Summarize", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#a91f1084ebadeccddcb7882f49fe49c14", null ],
+    [ "target", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#aadc37d26f1a91936d0a8ac5aa5f72721", null ],
+    [ "target_slot", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#a6d7023c3db64d1d8e1ec51a7bd63c8c2", null ],
     [ "type", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#af96a37742eded0a121f003843ad4f184", null ],
     [ "StackFrameIteratorBase", "classv8_1_1internal_1_1ApiCallbackExitFrame.html#ac7310421866976ca454bbe11c5f926c3", null ]
 ];

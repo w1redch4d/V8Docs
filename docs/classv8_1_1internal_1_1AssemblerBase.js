@@ -1,6 +1,6 @@
 var classv8_1_1internal_1_1AssemblerBase =
 [
-    [ "CodeComment", "classv8_1_1internal_1_1AssemblerBase_1_1CodeComment.html", null ],
+    [ "CodeComment", "classv8_1_1internal_1_1AssemblerBase_1_1CodeComment.html", "classv8_1_1internal_1_1AssemblerBase_1_1CodeComment" ],
     [ "EmbeddedObjectIndex", "classv8_1_1internal_1_1AssemblerBase.html#aa640f80e17d88c963ca21dea85855dfc", null ],
     [ "AssemblerBase", "classv8_1_1internal_1_1AssemblerBase.html#a61088cd74c5ae2c562aed7bdd42f53da", null ],
     [ "~AssemblerBase", "classv8_1_1internal_1_1AssemblerBase.html#af44213a3bb719d56f95f921f3ea12483", null ],
@@ -23,6 +23,7 @@ var classv8_1_1internal_1_1AssemblerBase =
     [ "pc_offset_for_safepoint", "classv8_1_1internal_1_1AssemblerBase.html#a2cd562518476fe459ad4bb191c7f8ec2", null ],
     [ "predictable_code_size", "classv8_1_1internal_1_1AssemblerBase.html#aa9f455da0ddc6b3b115e907d6b555614", null ],
     [ "Print", "classv8_1_1internal_1_1AssemblerBase.html#a78aa6aa9bce96e406c1e00c366499d95", null ],
+    [ "QuietNaN", "classv8_1_1internal_1_1AssemblerBase.html#a7aeea695e14a3455d5c6431da6e211b7", null ],
     [ "RecordComment", "classv8_1_1internal_1_1AssemblerBase.html#ae6ab1df05b2ab957dc9be2e7b88d7d8f", null ],
     [ "RecordComment", "classv8_1_1internal_1_1AssemblerBase.html#ae7cc3b1816547ab7b07478403ef5eb00", null ],
     [ "ReleaseBuffer", "classv8_1_1internal_1_1AssemblerBase.html#a827990065c323903569414e6566a1fda", null ],
@@ -37,6 +38,16 @@ var classv8_1_1internal_1_1AssemblerBase =
     [ "buffer_", "classv8_1_1internal_1_1AssemblerBase.html#a17163b77cce6f7756a4e5d9d5944e050", null ],
     [ "buffer_start_", "classv8_1_1internal_1_1AssemblerBase.html#a2c35a83f6784a56a776928b9f595595b", null ],
     [ "code_comments_writer_", "classv8_1_1internal_1_1AssemblerBase.html#ab4cf3f1d5b70995967e5ce10cb32e49b", null ],
+    [ "code_targets_", "classv8_1_1internal_1_1AssemblerBase.html#af3642d32c4a5e0d7bb4104740f02a119", null ],
+    [ "constant_pool_available_", "classv8_1_1internal_1_1AssemblerBase.html#afca4de097da4982d38cb65c8b65a79a1", null ],
+    [ "embedded_objects_", "classv8_1_1internal_1_1AssemblerBase.html#a8e31b42740a791fccec4f9a71c0110f6", null ],
+    [ "embedded_objects_map_", "classv8_1_1internal_1_1AssemblerBase.html#a73bdad60c69040c12374059ab0dc54aa", null ],
+    [ "enabled_cpu_features_", "classv8_1_1internal_1_1AssemblerBase.html#a69e00196deec7c3aacd61b36637d47ff", null ],
     [ "heap_number_requests_", "classv8_1_1internal_1_1AssemblerBase.html#a92d7e428742344611f36a9a42fab7d47", null ],
-    [ "pc_", "classv8_1_1internal_1_1AssemblerBase.html#ae368e69fd2212be84c23ab5552b797da", null ]
+    [ "jump_optimization_info_", "classv8_1_1internal_1_1AssemblerBase.html#a6a383f59713b595f1ba80b019af80dad", null ],
+    [ "kDefaultBufferSize", "classv8_1_1internal_1_1AssemblerBase.html#a193c8b8185f08082d320ed59dbed4f55", null ],
+    [ "kMinimalBufferSize", "classv8_1_1internal_1_1AssemblerBase.html#aef92b0e5f90a909b84eb44607badcd5b", null ],
+    [ "options_", "classv8_1_1internal_1_1AssemblerBase.html#a1a5336973270b94e1e3bca9a62aafdcc", null ],
+    [ "pc_", "classv8_1_1internal_1_1AssemblerBase.html#ae368e69fd2212be84c23ab5552b797da", null ],
+    [ "predictable_code_size_", "classv8_1_1internal_1_1AssemblerBase.html#acdc1a45ad7a632d51a71a95b5de4bd67", null ]
 ];

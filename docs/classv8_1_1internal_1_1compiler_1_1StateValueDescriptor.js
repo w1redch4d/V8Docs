@@ -1,7 +1,11 @@
 var classv8_1_1internal_1_1compiler_1_1StateValueDescriptor =
 [
     [ "StateValueDescriptor", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#ad686b2b29d52f6ef775b3ebe5a8ca414", null ],
+    [ "StateValueDescriptor", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a8d582960add4b634a27a9e0b6a08cfd0", null ],
     [ "arguments_type", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a938557c306cc90ad9aa2e9c2295bb446", null ],
+    [ "ArgumentsElements", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#ab95ba9c83a345bcd1c1046a9095f53e8", null ],
+    [ "ArgumentsLength", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a4d9622d2861ec0bca830798301d85d5b", null ],
+    [ "Duplicate", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#ae1305bf26c2251e9cb459fcd1bed39ef", null ],
     [ "id", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a30b932d04b1c8ff222773bf43a9e7c81", null ],
     [ "IsArgumentsElements", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a14e71982371d04e18235c3a2462985a6", null ],
     [ "IsArgumentsLength", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a405475f34d13d4c756e62c1a4e98468c", null ],
@@ -12,8 +16,15 @@ var classv8_1_1internal_1_1compiler_1_1StateValueDescriptor =
     [ "IsPlain", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a6b765b0830d6b69bd61eab6244380cd1", null ],
     [ "IsRestLength", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a88cfac01c4b2b2f576f47d936fdf8c75", null ],
     [ "IsStringConcat", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#ab8f88a887acf15ebe146e27b505a1da1", null ],
+    [ "OptimizedOut", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a47257489b9accbb5af732fc600e5eac7", null ],
+    [ "Plain", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#aae51845a682673b263c9f5cf678f6663", null ],
     [ "Print", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a50a51fb42aca2f5770e7c87f246206bd", null ],
+    [ "Recursive", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a8d21a69377e57bca3e2202102fddbec7", null ],
+    [ "RestLength", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a20ddd36f0c8102a6102175d1ba590511", null ],
+    [ "StringConcat", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a07e75ba7aa6e1770f78d75a9da2d3be9", null ],
     [ "type", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a30878dc16f4e24ee51b3bd44b12ec2de", null ],
     [ "args_type_", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a27eef999c80cc0ac0de57a192b6f484c", null ],
-    [ "id_", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a624dd385b8a936cb8170759d028f61d5", null ]
+    [ "id_", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a624dd385b8a936cb8170759d028f61d5", null ],
+    [ "kind_", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a174abfaf4057aa0a25e87e09699604eb", null ],
+    [ "type_", "classv8_1_1internal_1_1compiler_1_1StateValueDescriptor.html#a0bf5ad6a73e8d5ca59ef496bd4619f9c", null ]
 ];

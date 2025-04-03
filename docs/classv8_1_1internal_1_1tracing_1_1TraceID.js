@@ -12,5 +12,7 @@ var classv8_1_1internal_1_1tracing_1_1TraceID =
     [ "TraceID", "classv8_1_1internal_1_1tracing_1_1TraceID.html#a4b09317c98a0fb706cfa16624c69131d", null ],
     [ "TraceID", "classv8_1_1internal_1_1tracing_1_1TraceID.html#aa9363ee19bcee42fdfb8aab2c1300fe7", null ],
     [ "raw_id", "classv8_1_1internal_1_1tracing_1_1TraceID.html#a8554139856bf174ad690fbd0f259938e", null ],
-    [ "scope", "classv8_1_1internal_1_1tracing_1_1TraceID.html#a5d41c0c9cd62e7b334282cff9f45f134", null ]
+    [ "scope", "classv8_1_1internal_1_1tracing_1_1TraceID.html#a5d41c0c9cd62e7b334282cff9f45f134", null ],
+    [ "raw_id_", "classv8_1_1internal_1_1tracing_1_1TraceID.html#ab23018ccf2eb0dbbd5b52562a9953950", null ],
+    [ "scope_", "classv8_1_1internal_1_1tracing_1_1TraceID.html#a045957036fbe1ea3e19acb895e2a57ca", null ]
 ];

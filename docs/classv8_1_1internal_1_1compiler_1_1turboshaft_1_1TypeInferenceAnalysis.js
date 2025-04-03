@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis =
 [
+    [ "table_t", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#a0b80d682f4b23265e836ac728a7fa115", null ],
     [ "TypeInferenceAnalysis", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#a6355ed2e3e4ae942a149a60a13ed14cb", null ],
     [ "ComputeTypeForPhi", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#a2bccfbeef51f9a02a1def790b07ef137", null ],
     [ "GetType", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#a3a0c4c5aa49aade07ef38e14871703fa", null ],
@@ -20,5 +21,13 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis =
     [ "RefineTypesAfterBranch", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#ae50c1f1b1b0707b0cb9459313a052fa2", null ],
     [ "Run", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#aea11ac0c34dd54cc92d9c0bc04771683", null ],
     [ "SetType", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#a8361db0a5f1791ce03144dd5a8580e39", null ],
-    [ "Widen", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#aeec47b43c4c5bb613ae4f4d2e7b7d602", null ]
+    [ "Widen", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#aeec47b43c4c5bb613ae4f4d2e7b7d602", null ],
+    [ "block_to_snapshot_mapping_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#a87694702200ff4aea3c02adbb821d46f", null ],
+    [ "current_block_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#a68feedf751e7a7f54b6f38bc31284b17", null ],
+    [ "graph_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#af247b00d2a34891356b0fd63aee103c4", null ],
+    [ "graph_zone_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#ad9695a13f103cd801992130bb8b107d9", null ],
+    [ "op_to_key_mapping_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#a42a68a6c634e268c4620b4e51fad8e55", null ],
+    [ "predecessors_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#a768487295e1c27555e3cca55373a44da", null ],
+    [ "table_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#acd51829dfb886ef712541a247db24c2e", null ],
+    [ "types_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceAnalysis.html#ac5bc0b6498cfb70c0636f7e24edb2a75", null ]
 ];

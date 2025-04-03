@@ -12,5 +12,12 @@ var classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator =
     [ "generated_code_size", "classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator.html#ac228b5f49cf9bad916c9226c6e48e5a2", null ],
     [ "GetNumCodeSpaces", "classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator.html#a5d094d325d0686a0da62db1dd40c2688", null ],
     [ "Init", "classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator.html#aac5c374b4b033bd08bb50481fda354db", null ],
-    [ "InitializeCodeRange", "classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator.html#af2b5295be5ab5f4b6371ab8dce603009", null ]
+    [ "InitializeCodeRange", "classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator.html#af2b5295be5ab5f4b6371ab8dce603009", null ],
+    [ "async_counters_", "classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator.html#ab0e75298547c6a5e80fe8cd1e25a1742", null ],
+    [ "committed_code_space_", "classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator.html#a33d82e350396396c61facd7fec7180fd", null ],
+    [ "free_code_space_", "classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator.html#a1f54429c1b62a241eeb0426458b7d388", null ],
+    [ "freed_code_size_", "classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator.html#a761bcecaa44aafed04cd2b97cdf26c11", null ],
+    [ "freed_code_space_", "classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator.html#ac2a529eb2d65d067fea506c7f10eb11d", null ],
+    [ "generated_code_size_", "classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator.html#a2aacac2f51bed124e8a0a167874cb698", null ],
+    [ "owned_code_space_", "classv8_1_1internal_1_1wasm_1_1WasmCodeAllocator.html#a347ce7c723cb2ec332cca5e5b15ed0b6", null ]
 ];

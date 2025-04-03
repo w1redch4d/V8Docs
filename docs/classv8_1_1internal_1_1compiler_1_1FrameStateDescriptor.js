@@ -20,5 +20,19 @@ var classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor =
     [ "stack_count", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a28da0fa351de91f63a0a93b6f19fdcf5", null ],
     [ "state_combine", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a0feda937c8a7c1c97864a67889fb50c5", null ],
     [ "total_conservative_frame_size_in_bytes", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#ad5e241ae2efed299431eb00f65711f79", null ],
-    [ "type", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#adebdcdcd09557866fc6295c7249703f3", null ]
+    [ "type", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#adebdcdcd09557866fc6295c7249703f3", null ],
+    [ "bailout_id_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a4db7bc1d8e14bcaeec9ba4f93b0ed732", null ],
+    [ "bytecode_array_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a2dc85c64f1dc1979bbaeafe8bb874874", null ],
+    [ "frame_state_combine_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a39293c72958a98d4dda6700ca5f5307b", null ],
+    [ "kImpossibleValue", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#ae8cb39ff5c6361596812548e22d34a54", null ],
+    [ "locals_count_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a716261d1a3ec1aae04f66e76a45fcf37", null ],
+    [ "max_arguments_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a1cfc11c2899591fb19df71bfdc9816dc", null ],
+    [ "outer_state_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a3d9fca52af8e21fbb444bcefba53743e", null ],
+    [ "parameters_count_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a5bc88e224c2f928eb0cbdf04de29400a", null ],
+    [ "shared_info_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a8c08393d2364e16742a76024bd0393a8", null ],
+    [ "stack_count_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#ada0f44df2aa69354f3a15da35bc3b648", null ],
+    [ "total_conservative_frame_size_in_bytes_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a9d933070e2e30bea533126c209784e91", null ],
+    [ "type_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a7675c27fc128263cde428f58afa6fab9", null ],
+    [ "values_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#a4af58e96a33d92a3cb8cf2b38064b0fe", null ],
+    [ "wasm_function_index_", "classv8_1_1internal_1_1compiler_1_1FrameStateDescriptor.html#aedca332684d257bd829a61b15c7a20ef", null ]
 ];

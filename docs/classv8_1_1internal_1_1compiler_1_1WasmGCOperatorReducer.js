@@ -1,6 +1,31 @@
 var classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer =
 [
+    [ "ControlPathTypes", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#ad184a4c54e1ec5ce9a0a97d083cdfb0c", null ],
     [ "WasmGCOperatorReducer", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a3ae7677c2f4b8057e85f591ec4d77934", null ],
+    [ "common", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#adff66dfde432a943f0dab579b2d5c968", null ],
+    [ "graph", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a6f2ffe02ed4cdd51871b8f371d01424f", null ],
+    [ "ObjectTypeFromContext", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a9344d1db5c8b851c1dc171fedad130f7", null ],
     [ "Reduce", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a8b0bb54e1d6e846194083f2fc6784aed", null ],
-    [ "reducer_name", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a65c8d0ef937724435f564db87f9b7ada", null ]
+    [ "ReduceAssertNotNull", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#abcbf35c61bf2a2c51613621216a7a59e", null ],
+    [ "ReduceCheckNull", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#ae27d2a72256bf37f4edd93791a3ebf16", null ],
+    [ "ReduceIf", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#aaff6bc0f005862cb35cacdea74393878", null ],
+    [ "ReduceMerge", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a11d2688fe79f1e2ecb3feb3f8ac8034b", null ],
+    [ "reducer_name", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a65c8d0ef937724435f564db87f9b7ada", null ],
+    [ "ReduceStart", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a142d98a30438ddd194fbfd02665bd8a8", null ],
+    [ "ReduceTypeGuard", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a26933fb45d4c7b98d1ad223ef0ad8f71", null ],
+    [ "ReduceWasmAnyConvertExtern", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#afc0d698040ab305fd44c457fde570d0a", null ],
+    [ "ReduceWasmArrayLength", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a7e6ebbd46d56b4bba80d9b943f8e646e", null ],
+    [ "ReduceWasmStructOperation", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#adcfa73a38e1ad890cb7c9d1a85a24e38", null ],
+    [ "ReduceWasmTypeCast", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#aeb8fd77e9e1f94234a7bb3cd935ea6a3", null ],
+    [ "ReduceWasmTypeCastAbstract", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#ad29855a27bd05bd899ca2070fa4bfe98", null ],
+    [ "ReduceWasmTypeCheck", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#ac9822fff5f04f50892b8d7332463e3c7", null ],
+    [ "ReduceWasmTypeCheckAbstract", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a552c808ee6ecafb7bebf83c1b3d4059b", null ],
+    [ "SetType", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a8027a4522b37b2e0915b09ceb0b39618", null ],
+    [ "simplified", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#aad7b7900d9ce1d6a5ecc07d8fb5fb3a4", null ],
+    [ "UpdateNodeAndAliasesTypes", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#aa5541c87ca4999e2e090f6b0eddccdc5", null ],
+    [ "UpdateSourcePosition", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a1a29956f4decbbda5928c3ff28e4331e", null ],
+    [ "gasm_", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#ab8d0dd0c76be396c68b9af0da45a2524", null ],
+    [ "mcgraph_", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a86f5a873a3871c7a3e0f0148ad944dff", null ],
+    [ "module_", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a4da51844f51faf499fb86c79784d4dc1", null ],
+    [ "source_position_table_", "classv8_1_1internal_1_1compiler_1_1WasmGCOperatorReducer.html#a374920764cd7fb0b9df060621aa9a3dd", null ]
 ];

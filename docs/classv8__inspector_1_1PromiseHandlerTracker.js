@@ -11,6 +11,10 @@ var classv8__inspector_1_1PromiseHandlerTracker =
     [ "~PromiseHandlerTracker", "classv8__inspector_1_1PromiseHandlerTracker.html#ae5cdd3286c8753e225d3238680d809a3", null ],
     [ "create", "classv8__inspector_1_1PromiseHandlerTracker.html#a5a50fd172b97b74f8c05f1d9c82fa6d8", null ],
     [ "discard", "classv8__inspector_1_1PromiseHandlerTracker.html#a15ccd76844096b48aa898d657cb7f799", null ],
+    [ "discardAll", "classv8__inspector_1_1PromiseHandlerTracker.html#a83176c4aed877f8a0332b767d258c211", null ],
     [ "get", "classv8__inspector_1_1PromiseHandlerTracker.html#a0eb43e212ffccb97e0eff20b2505da6e", null ],
-    [ "operator=", "classv8__inspector_1_1PromiseHandlerTracker.html#ae9d49b7ba3d66ed14c19649f41c615e9", null ]
+    [ "operator=", "classv8__inspector_1_1PromiseHandlerTracker.html#ae9d49b7ba3d66ed14c19649f41c615e9", null ],
+    [ "sendFailure", "classv8__inspector_1_1PromiseHandlerTracker.html#ac4e10c0df216004fa1ea1f60396064ce", null ],
+    [ "m_lastUsedId", "classv8__inspector_1_1PromiseHandlerTracker.html#a03f6be81cdc6f49e2ddef868def800d4", null ],
+    [ "m_promiseHandlers", "classv8__inspector_1_1PromiseHandlerTracker.html#a7d5841b1ae14e845db517e51ccdd1dfb", null ]
 ];

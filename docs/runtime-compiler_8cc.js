@@ -4,6 +4,7 @@ var runtime_compiler_8cc =
       [ "kAsmJsInstantiateSuccess", "runtime-compiler_8cc.html#ad981dd55311cde072850ec62e3b73190af4fd5682357ad7e9ba2890341126d653", null ],
       [ "kAsmJsInstantiateFail", "runtime-compiler_8cc.html#ad981dd55311cde072850ec62e3b73190af0ec7b19e0cd8d20577e449f29ec7c35", null ]
     ] ],
+    [ "CompileGlobalEval", "runtime-compiler_8cc.html#a6c55cec6e31722b8eba03d4fcaedd61c", null ],
     [ "RUNTIME_FUNCTION", "runtime-compiler_8cc.html#a9a9f6b861b87134d468e0138674dbcb0", null ],
     [ "RUNTIME_FUNCTION", "runtime-compiler_8cc.html#aba241cf1c046f2633b585bac6255197c", null ],
     [ "RUNTIME_FUNCTION", "runtime-compiler_8cc.html#a042dd5d7d946ad825138c202fcf7b8ac", null ],

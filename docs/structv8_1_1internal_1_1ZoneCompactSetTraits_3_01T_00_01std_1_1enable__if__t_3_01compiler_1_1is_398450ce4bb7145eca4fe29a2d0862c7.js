@@ -1,5 +1,7 @@
 var structv8_1_1internal_1_1ZoneCompactSetTraits_3_01T_00_01std_1_1enable__if__t_3_01compiler_1_1is_398450ce4bb7145eca4fe29a2d0862c7 =
 [
     [ "data_type", "structv8_1_1internal_1_1ZoneCompactSetTraits_3_01T_00_01std_1_1enable__if__t_3_01compiler_1_1is_398450ce4bb7145eca4fe29a2d0862c7.html#ab68585ab8a85fe5604ae82652f904d3b", null ],
-    [ "handle_type", "structv8_1_1internal_1_1ZoneCompactSetTraits_3_01T_00_01std_1_1enable__if__t_3_01compiler_1_1is_398450ce4bb7145eca4fe29a2d0862c7.html#af766f8be8401cf049a181018c0447962", null ]
+    [ "handle_type", "structv8_1_1internal_1_1ZoneCompactSetTraits_3_01T_00_01std_1_1enable__if__t_3_01compiler_1_1is_398450ce4bb7145eca4fe29a2d0862c7.html#af766f8be8401cf049a181018c0447962", null ],
+    [ "HandleToPointer", "structv8_1_1internal_1_1ZoneCompactSetTraits_3_01T_00_01std_1_1enable__if__t_3_01compiler_1_1is_398450ce4bb7145eca4fe29a2d0862c7.html#a97690a91c835669f4f76a463d2430c14", null ],
+    [ "PointerToHandle", "structv8_1_1internal_1_1ZoneCompactSetTraits_3_01T_00_01std_1_1enable__if__t_3_01compiler_1_1is_398450ce4bb7145eca4fe29a2d0862c7.html#ae6a71caa9d126ec82095c9bc3860847d", null ]
 ];

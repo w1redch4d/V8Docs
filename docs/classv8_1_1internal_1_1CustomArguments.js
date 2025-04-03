@@ -6,5 +6,6 @@ var classv8_1_1internal_1_1CustomArguments =
     [ "isolate", "classv8_1_1internal_1_1CustomArguments.html#a8f03ece99c778a10ccec2761d59bac4c", null ],
     [ "IterateInstance", "classv8_1_1internal_1_1CustomArguments.html#ad144a48c919d63a46566a9d91743787f", null ],
     [ "slot_at", "classv8_1_1internal_1_1CustomArguments.html#a949fa03ed8d478030bdc0aff0d60f9d4", null ],
+    [ "kReturnValueIndex", "classv8_1_1internal_1_1CustomArguments.html#a7b971539e899bc19552e8d0304731611", null ],
     [ "values_", "classv8_1_1internal_1_1CustomArguments.html#a21c3b0712977c6170d82e912ddaf5bdc", null ]
 ];

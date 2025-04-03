@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Var =
 [
+    [ "value_type", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Var.html#a4f422fef86366940e33ed5a9a700a958", null ],
     [ "Var", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Var.html#a601a8ba7b70189bf00d48c3738aaa9b3", null ],
     [ "Var", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Var.html#ab5e4900262e3ede78ac88f852ae6a0d7", null ],
     [ "Var", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Var.html#ad0b60893ccddacb11172640a53018e63", null ],

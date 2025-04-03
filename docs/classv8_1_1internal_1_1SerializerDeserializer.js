@@ -1,7 +1,7 @@
 var classv8_1_1internal_1_1SerializerDeserializer =
 [
-    [ "BytecodeValueEncoder", "structv8_1_1internal_1_1SerializerDeserializer_1_1BytecodeValueEncoder.html", null ],
-    [ "VariableRepeatRootCount", "structv8_1_1internal_1_1SerializerDeserializer_1_1VariableRepeatRootCount.html", null ],
+    [ "BytecodeValueEncoder", "structv8_1_1internal_1_1SerializerDeserializer_1_1BytecodeValueEncoder.html", "structv8_1_1internal_1_1SerializerDeserializer_1_1BytecodeValueEncoder" ],
+    [ "VariableRepeatRootCount", "structv8_1_1internal_1_1SerializerDeserializer_1_1VariableRepeatRootCount.html", "structv8_1_1internal_1_1SerializerDeserializer_1_1VariableRepeatRootCount" ],
     [ "FixedRawDataWithSize", "classv8_1_1internal_1_1SerializerDeserializer.html#abed4835149048417e0c28e426330b47d", null ],
     [ "FixedRepeatRootWithCount", "classv8_1_1internal_1_1SerializerDeserializer.html#a2038cf6ff2919e800bc0c2e6ccf883ea", null ],
     [ "HotObject", "classv8_1_1internal_1_1SerializerDeserializer.html#aa4019a6ab2139476ba8dc766891f324c", null ],
@@ -48,6 +48,20 @@ var classv8_1_1internal_1_1SerializerDeserializer =
       [ "kAnySlot", "classv8_1_1internal_1_1SerializerDeserializer.html#a108b70a5e6f10e237fd67e9ccb692c91a90de82d2ff185fb7bada4622349083e2", null ],
       [ "kMapSlot", "classv8_1_1internal_1_1SerializerDeserializer.html#a108b70a5e6f10e237fd67e9ccb692c91a9375a2b08f71c7d5a3e6c94913fa42a8", null ]
     ] ],
+    [ "CanBeDeferred", "classv8_1_1internal_1_1SerializerDeserializer.html#af1344bac8876eae3e493775952553fd5", null ],
+    [ "IterateSharedHeapObjectCache", "classv8_1_1internal_1_1SerializerDeserializer.html#acbf6fe75f1a92534301f84cda2e00907", null ],
+    [ "IterateStartupObjectCache", "classv8_1_1internal_1_1SerializerDeserializer.html#a8508cbd12bd1edef27bd69b146003c6f", null ],
     [ "RestoreExternalReferenceRedirector", "classv8_1_1internal_1_1SerializerDeserializer.html#ac9f8b5856c0f6cb5215e43f0b814a8c4", null ],
-    [ "RestoreExternalReferenceRedirector", "classv8_1_1internal_1_1SerializerDeserializer.html#af637716eca7af733cf6fae576587af57", null ]
+    [ "RestoreExternalReferenceRedirector", "classv8_1_1internal_1_1SerializerDeserializer.html#af637716eca7af733cf6fae576587af57", null ],
+    [ "kDoubleAlignmentSentinel", "classv8_1_1internal_1_1SerializerDeserializer.html#a71ed69f619892f6907c9367c41544300", null ],
+    [ "kEmptyBackingStoreRefSentinel", "classv8_1_1internal_1_1SerializerDeserializer.html#ad335f581bf1259ead415e9dc008f1ca3", null ],
+    [ "kFirstEncodableFixedRawDataSize", "classv8_1_1internal_1_1SerializerDeserializer.html#a461da9780060545aa098cf9d4fbd5f21", null ],
+    [ "kFirstEncodableRepeatRootCount", "classv8_1_1internal_1_1SerializerDeserializer.html#aeb521abade561ef962daee20e430a9b1", null ],
+    [ "kFirstEncodableVariableRepeatRootCount", "classv8_1_1internal_1_1SerializerDeserializer.html#ad4b5b17fdf6daf4435884b2722fe6f95", null ],
+    [ "kFixedRawDataCount", "classv8_1_1internal_1_1SerializerDeserializer.html#a4fe282cde405a487899037ab25414c38", null ],
+    [ "kFixedRepeatRootCount", "classv8_1_1internal_1_1SerializerDeserializer.html#a527c2d87efc1b7a572b46eb6635210c8", null ],
+    [ "kHotObjectCount", "classv8_1_1internal_1_1SerializerDeserializer.html#adfae79576a1611c3d08aadab302f4e8b", null ],
+    [ "kLastEncodableFixedRawDataSize", "classv8_1_1internal_1_1SerializerDeserializer.html#a4c4908511698912c3d806cd886de49eb", null ],
+    [ "kLastEncodableFixedRepeatRootCount", "classv8_1_1internal_1_1SerializerDeserializer.html#a8a56a454a2f0b758281fdc522eb6f6f4", null ],
+    [ "kRootArrayConstantsCount", "classv8_1_1internal_1_1SerializerDeserializer.html#a125ad87c0345821fe290d3b09c719b56", null ]
 ];

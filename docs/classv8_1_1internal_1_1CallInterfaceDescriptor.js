@@ -8,8 +8,14 @@ var classv8_1_1internal_1_1CallInterfaceDescriptor =
     [ "AllowVarArgs", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#ae0960cf9edaa55c08b6a547f38bee763", null ],
     [ "CalleeSaveRegisters", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#adc850fe0d43aa1afc305e60cd18fbc25", null ],
     [ "CheckFloatingPointParameters", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a082034846297c049eb04f2261d48b902", null ],
+    [ "ContextRegister", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#af9ee700c6bc681ccc4302649c41d1d30", null ],
     [ "data", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#abe72ae0be749720d248d32ea0fc581c1", null ],
     [ "DebugName", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a07ed8b51d804c824c8a96517b4806684", null ],
+    [ "DefaultDoubleRegisterArray", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a8f1ccef099bd0cc47f09319ebf9a8dcd", null ],
+    [ "DefaultJSRegisterArray", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a106ad0dff4d7c95109b0f099993a0916", null ],
+    [ "DefaultRegisterArray", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#ab76dc5bf6bef28ad6d08b6e08c9c4b3a", null ],
+    [ "DefaultReturnDoubleRegisterArray", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a57bf206f16f6c4b6662a6ac30d4a0cc4", null ],
+    [ "DefaultReturnRegisterArray", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#aeada1d26d4e2853c0b4a7b9053453e41", null ],
     [ "flags", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a45f6dbf6bf32a30051dbb7a03f6be415", null ],
     [ "GetDoubleRegisterParameter", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a0553c407f22ed2019ad9daf465085dc8", null ],
     [ "GetDoubleRegisterReturn", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a61d11a019cdb36ecbf502d7a45ccfc02", null ],
@@ -25,5 +31,6 @@ var classv8_1_1internal_1_1CallInterfaceDescriptor =
     [ "HasContextParameter", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a9a5b112612289f56ca2aca57c0195149", null ],
     [ "IsValidFloatParameterRegister", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#afd65798324a663a51ebfde9aed152ba4", null ],
     [ "operator==", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a5730ae33739283541496e6e8c400126f", null ],
-    [ "tag", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a813d622348b0b356ec357f7883c83516", null ]
+    [ "tag", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a813d622348b0b356ec357f7883c83516", null ],
+    [ "data_", "classv8_1_1internal_1_1CallInterfaceDescriptor.html#a48f66b36fc96b08d69ffaf4742b8d8bd", null ]
 ];

@@ -12,7 +12,14 @@ var classv8_1_1internal_1_1compiler_1_1LoopTree =
     [ "inner_loops", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#abafe88b32dd25c289e98168c4ad509e2", null ],
     [ "LoopNodes", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#a70bccfede25a90200796c4caf2bcdb4f", null ],
     [ "LoopNum", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#a1dc8958e89af98cde163c09492bd279b", null ],
+    [ "NewLoop", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#a5e2dc968e95e9b4577e3f1182f3f4942", null ],
     [ "outer_loops", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#a7520d8469a8b0d480e57f8bfb6e89f4d", null ],
+    [ "SetParent", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#a44abb39ace0ae113c64ad54b4632a3e1", null ],
     [ "zone", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#a0bf2683997bb3f87c17d163151d993dd", null ],
-    [ "LoopFinderImpl", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#a7c3aef85599c6822d83a965a321dfbc3", null ]
+    [ "LoopFinderImpl", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#a7c3aef85599c6822d83a965a321dfbc3", null ],
+    [ "all_loops_", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#ac966271b3b91a0fffb4b1a89a1029d99", null ],
+    [ "loop_nodes_", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#a38b29e07790b1fc6f3391b5f43ea29cc", null ],
+    [ "node_to_loop_num_", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#a4a07e28b8269bb7e9f5f275100769a45", null ],
+    [ "outer_loops_", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#a1ad7a25eb9321a8bc49d4a0f8a5389ca", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1LoopTree.html#a1e75864b1001ce8cc8e2f9069e701c02", null ]
 ];

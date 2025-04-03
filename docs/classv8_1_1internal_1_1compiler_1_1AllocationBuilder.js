@@ -16,5 +16,10 @@ var classv8_1_1internal_1_1compiler_1_1AllocationBuilder =
     [ "simplified", "classv8_1_1internal_1_1compiler_1_1AllocationBuilder.html#abcb606fc3b98036b5b0f2fdbf49373ef", null ],
     [ "Store", "classv8_1_1internal_1_1compiler_1_1AllocationBuilder.html#aba5aa2ad1d337a4110b33c2ac31b6da3", null ],
     [ "Store", "classv8_1_1internal_1_1compiler_1_1AllocationBuilder.html#a07cd9915f048637fdfc1ef1c1680b67d", null ],
-    [ "Store", "classv8_1_1internal_1_1compiler_1_1AllocationBuilder.html#a9aa00a063017009e0ee51359e52d0a97", null ]
+    [ "Store", "classv8_1_1internal_1_1compiler_1_1AllocationBuilder.html#a9aa00a063017009e0ee51359e52d0a97", null ],
+    [ "allocation_", "classv8_1_1internal_1_1compiler_1_1AllocationBuilder.html#afb02993951d179b85c2ec106cac0c7e2", null ],
+    [ "broker_", "classv8_1_1internal_1_1compiler_1_1AllocationBuilder.html#ae230ab42ed60e3395e8d6521b80d4759", null ],
+    [ "control_", "classv8_1_1internal_1_1compiler_1_1AllocationBuilder.html#aa127935ce0c3080d3f1f46ee58bbc307", null ],
+    [ "effect_", "classv8_1_1internal_1_1compiler_1_1AllocationBuilder.html#aaecc1277d5d489cdbfda6c0a98ecda30", null ],
+    [ "jsgraph_", "classv8_1_1internal_1_1compiler_1_1AllocationBuilder.html#a092b8a1102b87da523799ae67721ab0a", null ]
 ];

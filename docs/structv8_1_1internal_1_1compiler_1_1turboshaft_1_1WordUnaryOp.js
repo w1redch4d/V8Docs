@@ -11,8 +11,10 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordUnaryOp =
     [ "WordUnaryOp", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordUnaryOp.html#ad9cff255f4b43a34a1d7713d8193f485", null ],
     [ "input", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordUnaryOp.html#a8b18254fed38be843a727f8cad5b255b", null ],
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordUnaryOp.html#a7ec4f101dd5b1d18ec93c2a45c650283", null ],
+    [ "IsSupported", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordUnaryOp.html#a5d122097c14fbfc49774fdbeec9436df", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordUnaryOp.html#ae0b167a6449ff15b72dfa7389426396e", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordUnaryOp.html#a3530908131413b86b32321e10496d2e6", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordUnaryOp.html#ae4bb6128d2b8664be6d7e9e5495631f2", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordUnaryOp.html#a077cdc9a2e0e74758de3d6fecece7ffd", null ],
     [ "rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordUnaryOp.html#a8255494342ca69e5d06effea6c960824", null ]
 ];

@@ -10,7 +10,12 @@ var classv8_1_1internal_1_1CPURegList =
     [ "Combine", "classv8_1_1internal_1_1CPURegList.html#ab6666cd64473fcf6b9bf157c52c4afe9", null ],
     [ "Combine", "classv8_1_1internal_1_1CPURegList.html#a583e6f37f6ca75ea794e28fc61d44ef8", null ],
     [ "Count", "classv8_1_1internal_1_1CPURegList.html#a64a13a8c487091609c6793c8c05b6a36", null ],
+    [ "GetCalleeSaved", "classv8_1_1internal_1_1CPURegList.html#aa93111752064f4cf3890d07338fadaf3", null ],
+    [ "GetCalleeSavedV", "classv8_1_1internal_1_1CPURegList.html#a4759cabbf66c74068cde77cf207a8f05", null ],
+    [ "GetCallerSaved", "classv8_1_1internal_1_1CPURegList.html#a2ee8023b6245eccd0e20254237dfab75", null ],
+    [ "GetCallerSavedV", "classv8_1_1internal_1_1CPURegList.html#a2e99553c96b19db06c0fad774581c847", null ],
     [ "IncludesAliasOf", "classv8_1_1internal_1_1CPURegList.html#a2200a74ac7aa0da8ce2615611ee11609", null ],
+    [ "is_valid", "classv8_1_1internal_1_1CPURegList.html#a963fa27a4729cae2735956e65ea2eba8", null ],
     [ "IsEmpty", "classv8_1_1internal_1_1CPURegList.html#aa3d6f939b0dc9592857fface92e906f6", null ],
     [ "PopHighestIndex", "classv8_1_1internal_1_1CPURegList.html#a4f0b78f3f4844b520caba599d0860d81", null ],
     [ "PopLowestIndex", "classv8_1_1internal_1_1CPURegList.html#a867b629b4d0a55fe464cf3c2daca8d3c", null ],
@@ -21,5 +26,8 @@ var classv8_1_1internal_1_1CPURegList =
     [ "Remove", "classv8_1_1internal_1_1CPURegList.html#a793409f12364f86f730fdcfd7f06a13e", null ],
     [ "set_bits", "classv8_1_1internal_1_1CPURegList.html#a7e0c3017768853f3110dae73e2ba2930", null ],
     [ "TotalSizeInBytes", "classv8_1_1internal_1_1CPURegList.html#a403223596499cd9a8135a3196007ade1", null ],
-    [ "type", "classv8_1_1internal_1_1CPURegList.html#a54a5d7c1e76c61b75c4380420f38a145", null ]
+    [ "type", "classv8_1_1internal_1_1CPURegList.html#a54a5d7c1e76c61b75c4380420f38a145", null ],
+    [ "list_", "classv8_1_1internal_1_1CPURegList.html#a9a88d928215100fc88cd0dae8d204975", null ],
+    [ "size_", "classv8_1_1internal_1_1CPURegList.html#a223a94d17b28867f65e77c474bdc566b", null ],
+    [ "type_", "classv8_1_1internal_1_1CPURegList.html#a77c394f96b3a8275ab924bedef4f1890", null ]
 ];

@@ -6,6 +6,7 @@ var runtime_object_8cc =
       [ "kPrivateAccessor", "runtime-object_8cc.html#a07f2d9f3a42446ed467cf95f8f4af506a1fcfb1580d5bab5a971db1fbdd2530ff", null ],
       [ "kPrivateMethod", "runtime-object_8cc.html#a07f2d9f3a42446ed467cf95f8f4af506a5aa46f4cb099a5da2cf1aecb389bfc64", null ]
     ] ],
+    [ "IsValidAccessor", "runtime-object_8cc.html#aa6bad8704cddac10f4c783858182b195", null ],
     [ "RUNTIME_FUNCTION", "runtime-object_8cc.html#aea49180cb6db013bb0a5fd26ef26dc97", null ],
     [ "RUNTIME_FUNCTION", "runtime-object_8cc.html#acaab91cd51f71d1127b24f4d27b7b580", null ],
     [ "RUNTIME_FUNCTION", "runtime-object_8cc.html#a79d1a12fea94844d2286b6a3663f6ab3", null ],

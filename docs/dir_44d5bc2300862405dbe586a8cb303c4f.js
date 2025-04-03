@@ -13,7 +13,7 @@ var dir_44d5bc2300862405dbe586a8cb303c4f =
     [ "debug-property-iterator.h", "debug-property-iterator_8h.html", "debug-property-iterator_8h" ],
     [ "debug-scope-iterator.cc", "debug-scope-iterator_8cc.html", null ],
     [ "debug-scope-iterator.h", "debug-scope-iterator_8h.html", "debug-scope-iterator_8h" ],
-    [ "debug-scopes.cc", "debug-scopes_8cc.html", null ],
+    [ "debug-scopes.cc", "debug-scopes_8cc.html", "debug-scopes_8cc" ],
     [ "debug-scopes.h", "debug-scopes_8h.html", "debug-scopes_8h" ],
     [ "debug-stack-trace-iterator.cc", "debug-stack-trace-iterator_8cc.html", null ],
     [ "debug-stack-trace-iterator.h", "debug-stack-trace-iterator_8h.html", "debug-stack-trace-iterator_8h" ],

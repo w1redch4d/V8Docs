@@ -16,7 +16,7 @@ var dir_3ab3da63c8f7e21a052b2d96a9431252 =
     [ "deoptimizer.cc", "deoptimizer_8cc.html", "deoptimizer_8cc" ],
     [ "deoptimizer.h", "deoptimizer_8h.html", "deoptimizer_8h" ],
     [ "frame-description.h", "frame-description_8h.html", "frame-description_8h" ],
-    [ "frame-translation-builder.cc", "frame-translation-builder_8cc.html", null ],
+    [ "frame-translation-builder.cc", "frame-translation-builder_8cc.html", "frame-translation-builder_8cc" ],
     [ "frame-translation-builder.h", "frame-translation-builder_8h.html", "frame-translation-builder_8h" ],
     [ "materialized-object-store.cc", "materialized-object-store_8cc.html", null ],
     [ "materialized-object-store.h", "materialized-object-store_8h.html", "materialized-object-store_8h" ],

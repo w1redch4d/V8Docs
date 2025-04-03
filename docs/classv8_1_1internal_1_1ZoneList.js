@@ -32,11 +32,17 @@ var classv8_1_1internal_1_1ZoneList =
     [ "operator[]", "classv8_1_1internal_1_1ZoneList.html#a308b4366589266991932a1573dde5897", null ],
     [ "Remove", "classv8_1_1internal_1_1ZoneList.html#a5b6d289d5c66b02d682dd4b0f3b079aa", null ],
     [ "RemoveLast", "classv8_1_1internal_1_1ZoneList.html#a96ed79442bd782e28e5e8de08beb0bd9", null ],
+    [ "Resize", "classv8_1_1internal_1_1ZoneList.html#a9bbfc05f3b4a92e1a5780bf6ac758447", null ],
+    [ "ResizeAdd", "classv8_1_1internal_1_1ZoneList.html#af06d8992fc6f0bb7ae20f3f96ab6e6b4", null ],
+    [ "ResizeAddInternal", "classv8_1_1internal_1_1ZoneList.html#af6e3af22469c3864fd782f7630a3738e", null ],
     [ "Rewind", "classv8_1_1internal_1_1ZoneList.html#ab5326f399c34623de703eba5318d6663", null ],
     [ "Set", "classv8_1_1internal_1_1ZoneList.html#a63e3bb4959f8f39d148163cc6331be8d", null ],
     [ "Sort", "classv8_1_1internal_1_1ZoneList.html#a6ed0d7aa417a231cc2523936c4c5504c", null ],
     [ "StableSort", "classv8_1_1internal_1_1ZoneList.html#a454295d8e1b85d0fb3a5f28664d5753d", null ],
     [ "ToConstVector", "classv8_1_1internal_1_1ZoneList.html#ae90d96a5376753a634677992f9859092", null ],
     [ "ToVector", "classv8_1_1internal_1_1ZoneList.html#aff92e1c1dbf99fa4feb04c7c3cfa5213", null ],
-    [ "ToVector", "classv8_1_1internal_1_1ZoneList.html#a35ba1765ddcc29a5fbdf7642b64053be", null ]
+    [ "ToVector", "classv8_1_1internal_1_1ZoneList.html#a35ba1765ddcc29a5fbdf7642b64053be", null ],
+    [ "capacity_", "classv8_1_1internal_1_1ZoneList.html#a945d0d248ff656960e6b711c6749e08d", null ],
+    [ "data_", "classv8_1_1internal_1_1ZoneList.html#ad8d671292c857cf6b6bc710299b1e5f1", null ],
+    [ "length_", "classv8_1_1internal_1_1ZoneList.html#a8fa8947f56ecbf39c5a82de7ee2d8aae", null ]
 ];

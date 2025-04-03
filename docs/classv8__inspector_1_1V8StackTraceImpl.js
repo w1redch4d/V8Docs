@@ -1,11 +1,15 @@
 var classv8__inspector_1_1V8StackTraceImpl =
 [
+    [ "StackFrameIterator", "classv8__inspector_1_1V8StackTraceImpl_1_1StackFrameIterator.html", "classv8__inspector_1_1V8StackTraceImpl_1_1StackFrameIterator" ],
     [ "~V8StackTraceImpl", "classv8__inspector_1_1V8StackTraceImpl.html#ac418516cdb1e291dd1d1bc26f2d732c0", null ],
     [ "V8StackTraceImpl", "classv8__inspector_1_1V8StackTraceImpl.html#a7bf493451c0c55d00c2df6bd2d2a8583", null ],
+    [ "V8StackTraceImpl", "classv8__inspector_1_1V8StackTraceImpl.html#a2ba78d0e62f9aeebf8b1dfcf8556e577", null ],
     [ "buildInspectorObject", "classv8__inspector_1_1V8StackTraceImpl.html#a914ea5cdc602b930eb661fd954e2fa56", null ],
     [ "buildInspectorObjectImpl", "classv8__inspector_1_1V8StackTraceImpl.html#a1a6b6d5c9583d12cffdedd277dcf1a17", null ],
     [ "buildInspectorObjectImpl", "classv8__inspector_1_1V8StackTraceImpl.html#a7da49cbf980ef46791dd083c5405c45f", null ],
+    [ "capture", "classv8__inspector_1_1V8StackTraceImpl.html#a1568983d8399ef664fbb6768cb28e558", null ],
     [ "clone", "classv8__inspector_1_1V8StackTraceImpl.html#ac9e8e4fbf1322d007eaee818d1ba8cbd", null ],
+    [ "create", "classv8__inspector_1_1V8StackTraceImpl.html#a55343ec032575b26c19f21f1eef45566", null ],
     [ "firstNonEmptySourceURL", "classv8__inspector_1_1V8StackTraceImpl.html#a171aa208cb6a2a7779e7fd8ecd50213e", null ],
     [ "frames", "classv8__inspector_1_1V8StackTraceImpl.html#ad3fea7ccf368e3e080d41162f05231ce", null ],
     [ "isEmpty", "classv8__inspector_1_1V8StackTraceImpl.html#a61b5fee9032b9545dabda103fa0e9eef", null ],
@@ -16,5 +20,10 @@ var classv8__inspector_1_1V8StackTraceImpl =
     [ "topLineNumber", "classv8__inspector_1_1V8StackTraceImpl.html#ade598a87bddf42f072ffbffab0954cf8", null ],
     [ "topScriptId", "classv8__inspector_1_1V8StackTraceImpl.html#a01476566df09bb33c5a6a9783833b14d", null ],
     [ "topSourceURL", "classv8__inspector_1_1V8StackTraceImpl.html#a787b7b2badc9deef82b0b818a183fd44", null ],
-    [ "toString", "classv8__inspector_1_1V8StackTraceImpl.html#a385077fa1e169662af03a6ae228e2842", null ]
+    [ "toString", "classv8__inspector_1_1V8StackTraceImpl.html#a385077fa1e169662af03a6ae228e2842", null ],
+    [ "kDefaultMaxCallStackSizeToCapture", "classv8__inspector_1_1V8StackTraceImpl.html#af780ae2f9d2dba15f2286449b8a16bb5", null ],
+    [ "m_asyncParent", "classv8__inspector_1_1V8StackTraceImpl.html#ae6a27adda7f78fccb7a1a566c320ea03", null ],
+    [ "m_externalParent", "classv8__inspector_1_1V8StackTraceImpl.html#a74ca5f4abec927e2e199629278b5281e", null ],
+    [ "m_frames", "classv8__inspector_1_1V8StackTraceImpl.html#ae748e0c9c01ae75d798c6b022f144c8d", null ],
+    [ "m_maxAsyncDepth", "classv8__inspector_1_1V8StackTraceImpl.html#a60c2ab24f51f9573fcf9fb1ad81d561c", null ]
 ];

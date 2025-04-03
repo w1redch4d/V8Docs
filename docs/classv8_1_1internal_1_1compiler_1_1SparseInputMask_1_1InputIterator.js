@@ -10,5 +10,8 @@ var classv8_1_1internal_1_1compiler_1_1SparseInputMask_1_1InputIterator =
     [ "IsEnd", "classv8_1_1internal_1_1compiler_1_1SparseInputMask_1_1InputIterator.html#a77b3b66b5528cae10df6d9e5e2f428d8", null ],
     [ "IsReal", "classv8_1_1internal_1_1compiler_1_1SparseInputMask_1_1InputIterator.html#a1810ebea670f9b4174fe9a3c0cf19a51", null ],
     [ "parent", "classv8_1_1internal_1_1compiler_1_1SparseInputMask_1_1InputIterator.html#a57fd89f109b094ad40a71a6966918696", null ],
-    [ "real_index", "classv8_1_1internal_1_1compiler_1_1SparseInputMask_1_1InputIterator.html#aca63164577ab9054bb2a6a608045a892", null ]
+    [ "real_index", "classv8_1_1internal_1_1compiler_1_1SparseInputMask_1_1InputIterator.html#aca63164577ab9054bb2a6a608045a892", null ],
+    [ "bit_mask_", "classv8_1_1internal_1_1compiler_1_1SparseInputMask_1_1InputIterator.html#a76debd50f253df28cf59bdcd80a2371d", null ],
+    [ "parent_", "classv8_1_1internal_1_1compiler_1_1SparseInputMask_1_1InputIterator.html#a2213bc32e860d5554c5d1854065be023", null ],
+    [ "real_index_", "classv8_1_1internal_1_1compiler_1_1SparseInputMask_1_1InputIterator.html#ae77988b3cc6b5c8945a8f607b089ffcc", null ]
 ];

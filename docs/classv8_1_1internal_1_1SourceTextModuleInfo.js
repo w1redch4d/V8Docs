@@ -2,6 +2,7 @@ var classv8_1_1internal_1_1SourceTextModuleInfo =
 [
     [ "module_requests", "classv8_1_1internal_1_1SourceTextModuleInfo.html#a6b99c4db3fb67ab2fc08e97030474fff", null ],
     [ "namespace_imports", "classv8_1_1internal_1_1SourceTextModuleInfo.html#a3e0c5c0b1b4660120e2d1f101e1e97d9", null ],
+    [ "New", "classv8_1_1internal_1_1SourceTextModuleInfo.html#adb592c0b51d3bfa807b3af3c57c865db", null ],
     [ "regular_exports", "classv8_1_1internal_1_1SourceTextModuleInfo.html#ae11d9afb7b77aebe16a4029e31f2c04f", null ],
     [ "regular_imports", "classv8_1_1internal_1_1SourceTextModuleInfo.html#a0a8159619ba52c8f01e6f229b89bc75e", null ],
     [ "RegularExportCellIndex", "classv8_1_1internal_1_1SourceTextModuleInfo.html#a8b19f21dd90e8492a93d45c41a5d613f", null ],

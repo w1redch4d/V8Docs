@@ -9,5 +9,7 @@ var classv8_1_1internal_1_1compiler_1_1NodeAuxData =
     [ "Get", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html#a2a450f464b7213dfbb5bd82fda5e9010", null ],
     [ "Set", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html#a1dc51441caa7394d206f503ec98a2875", null ],
     [ "Set", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html#a3e564063f74647f3ecaf5e5c3695cd5a", null ],
-    [ "const_iterator", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html#ac220ce1c155db1ac44146c12d178056f", null ]
+    [ "const_iterator", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html#ac220ce1c155db1ac44146c12d178056f", null ],
+    [ "aux_data_", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html#a33875d4cb6ba312ce5f06cccb6643df7", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1NodeAuxData.html#a2b286ecad7fd54448e1d28f6b550029e", null ]
 ];

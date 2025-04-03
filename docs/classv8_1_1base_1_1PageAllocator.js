@@ -13,8 +13,11 @@ var classv8_1_1base_1_1PageAllocator =
     [ "GetRandomMmapAddr", "classv8_1_1base_1_1PageAllocator.html#a3291aa6434bac10f98fd4a4e26d39f04", null ],
     [ "RecommitPages", "classv8_1_1base_1_1PageAllocator.html#a6c762341c18814621512c02f490b117e", null ],
     [ "ReleasePages", "classv8_1_1base_1_1PageAllocator.html#abaadd3d1e886df5b18caac3cad323077", null ],
+    [ "RemapShared", "classv8_1_1base_1_1PageAllocator.html#a03edb7a21e747a19da9cb35031d6201a", null ],
     [ "SealPages", "classv8_1_1base_1_1PageAllocator.html#a5f9612a7f1161666964e35cf79cff0fc", null ],
     [ "SetPermissions", "classv8_1_1base_1_1PageAllocator.html#acf603de554e14db00ba33c9b02f36418", null ],
     [ "SetRandomMmapSeed", "classv8_1_1base_1_1PageAllocator.html#a2eb228e04b3015c0d32f2a2dafd9b16a", null ],
-    [ "v8::base::SharedMemory", "classv8_1_1base_1_1PageAllocator.html#a0193f2c5b8ca745b7637d1022382520e", null ]
+    [ "v8::base::SharedMemory", "classv8_1_1base_1_1PageAllocator.html#a0193f2c5b8ca745b7637d1022382520e", null ],
+    [ "allocate_page_size_", "classv8_1_1base_1_1PageAllocator.html#a0975b3408855e19b911224863e493221", null ],
+    [ "commit_page_size_", "classv8_1_1base_1_1PageAllocator.html#a79f4b27af9a3ae611be2005f62fa3915", null ]
 ];

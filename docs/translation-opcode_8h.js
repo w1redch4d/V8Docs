@@ -17,5 +17,8 @@ var translation_opcode_8h =
     [ "operator<<", "translation-opcode_8h.html#aa87b18b703f5f1cba559d4b0719a2500", null ],
     [ "TranslationOpcodeIsBegin", "translation-opcode_8h.html#a21e0674288cca53956238c1f9902cf93", null ],
     [ "TranslationOpcodeOperandCount", "translation-opcode_8h.html#a4d1013079e1cf0e846db134873b7ce66", null ],
-    [ "kMaxTranslationOperandCount", "translation-opcode_8h.html#af19e9c8ef1d76adc85da2ad3890ac00f", null ]
+    [ "kMaxTranslationOperandCount", "translation-opcode_8h.html#af19e9c8ef1d76adc85da2ad3890ac00f", null ],
+    [ "kNumTranslationFrameOpcodes", "translation-opcode_8h.html#a1e8d075531250aeabccda6a1cc1a0cc1", null ],
+    [ "kNumTranslationJsFrameOpcodes", "translation-opcode_8h.html#a048f4977065172359b8e1354d1412e5e", null ],
+    [ "kNumTranslationOpcodes", "translation-opcode_8h.html#a6a677e61bc3d3f67b0284aa3864632f2", null ]
 ];

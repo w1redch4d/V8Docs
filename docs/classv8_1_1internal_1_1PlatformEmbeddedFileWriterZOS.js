@@ -11,6 +11,7 @@ var classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS =
     [ "DeclareLabel", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#a9153818d7d64bd3978c6727ac58fc485", null ],
     [ "DeclareLabelEpilogue", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#ae5ec31fa89960d858a3518932ae42615", null ],
     [ "DeclareLabelProlog", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#aae4702ade79d13a51207958588a9d49e", null ],
+    [ "DeclareSymbolGlobal", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#a1a98f13f04e532b200416222e76dcf3b", null ],
     [ "DeclareUint32", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#a33cccd63f08eaa2f2312762368fadb67", null ],
     [ "FileEpilogue", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#ab7bd7b30e315f574b1241096c76921c2", null ],
     [ "FilePrologue", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#ad7cef1936a3fb594a2fcc27ed1b8020d", null ],
@@ -19,5 +20,7 @@ var classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS =
     [ "SectionRoData", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#af03e146a21d9956cb882cb5d3afffedd", null ],
     [ "SectionText", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#a2a2dddebc2bb0ae6902e41c77dd448b7", null ],
     [ "SourceInfo", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#a710473fdfb9f94598fc2f29978af3cef", null ],
-    [ "WriteByteChunk", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#a4345b4837354c325e91aadade854fbfa", null ]
+    [ "WriteByteChunk", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#a4345b4837354c325e91aadade854fbfa", null ],
+    [ "target_arch_", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#a541b85c155c463269abc367c8b79e078", null ],
+    [ "target_os_", "classv8_1_1internal_1_1PlatformEmbeddedFileWriterZOS.html#a9f962fd22b917d392e1c04caeb3f522a", null ]
 ];

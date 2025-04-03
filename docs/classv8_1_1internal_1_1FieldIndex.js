@@ -1,12 +1,26 @@
 var classv8_1_1internal_1_1FieldIndex =
 [
+    [ "EncodingBits", "classv8_1_1internal_1_1FieldIndex.html#a2c1458a3b75215501a0a9b12e6b140a4", null ],
+    [ "FirstInobjectPropertyOffsetBits", "classv8_1_1internal_1_1FieldIndex.html#a34d0ccef670eb2a0c818f2e625f216a0", null ],
+    [ "InObjectPropertyBits", "classv8_1_1internal_1_1FieldIndex.html#ae999649ce965a6aa458375791a73f04c", null ],
+    [ "IsInObjectBits", "classv8_1_1internal_1_1FieldIndex.html#a9f381aba025fd148a8f512a06bcebf3e", null ],
+    [ "OffsetBits", "classv8_1_1internal_1_1FieldIndex.html#adb8ae69367a410812f23d059ccbfeedf", null ],
     [ "Encoding", "classv8_1_1internal_1_1FieldIndex.html#a364cda7a37a67016a162b71dbe0bc507", [
       [ "kTagged", "classv8_1_1internal_1_1FieldIndex.html#a364cda7a37a67016a162b71dbe0bc507ab47089edab57c53e5aff0f7b0ebd473d", null ],
       [ "kDouble", "classv8_1_1internal_1_1FieldIndex.html#a364cda7a37a67016a162b71dbe0bc507a1bff76b9f083a28d2ddacd281c95144f", null ],
       [ "kWord32", "classv8_1_1internal_1_1FieldIndex.html#a364cda7a37a67016a162b71dbe0bc507ac6febbb82f26e28e0fe33f4f93613422", null ]
     ] ],
     [ "FieldIndex", "classv8_1_1internal_1_1FieldIndex.html#a0fcd6f91ef9353b7ae8549e603bf7945", null ],
+    [ "FieldIndex", "classv8_1_1internal_1_1FieldIndex.html#acb8818fc7d7eb04da0371492edbbbf1d", null ],
     [ "bit_field", "classv8_1_1internal_1_1FieldIndex.html#a0b6581ccd36137451190c5bf4cf6f61d", null ],
+    [ "FieldEncoding", "classv8_1_1internal_1_1FieldIndex.html#a7c5ccd8e0d7314878f00a6da4ab13eb4", null ],
+    [ "first_inobject_property_offset", "classv8_1_1internal_1_1FieldIndex.html#a4c1c796b4de7db2b8bbaa13e3a3fbd24", null ],
+    [ "ForDescriptor", "classv8_1_1internal_1_1FieldIndex.html#a469b18a661625c36af72c18bf16e3345", null ],
+    [ "ForDescriptor", "classv8_1_1internal_1_1FieldIndex.html#ade66ef1229f4a58f52b556ef78bc792c", null ],
+    [ "ForDetails", "classv8_1_1internal_1_1FieldIndex.html#aaed2a6728de2c13f45c1d89ef898af0c", null ],
+    [ "ForInObjectOffset", "classv8_1_1internal_1_1FieldIndex.html#af1798f86c468e237b3e01c6a7f56ba06", null ],
+    [ "ForPropertyIndex", "classv8_1_1internal_1_1FieldIndex.html#a3ccda1a912a43b786e671d39cb27fb6c", null ],
+    [ "ForSmiLoadHandler", "classv8_1_1internal_1_1FieldIndex.html#a12689b49c35cd8b3ab67c698a5eb70e0", null ],
     [ "GetFieldAccessStubKey", "classv8_1_1internal_1_1FieldIndex.html#af3638013abf72d672886f1aea043b2ce", null ],
     [ "GetLoadByFieldIndex", "classv8_1_1internal_1_1FieldIndex.html#a149d66d6a7d152602188850e4f81f95e", null ],
     [ "index", "classv8_1_1internal_1_1FieldIndex.html#a7a0b3f8b65e758c89fdb774a0ad1859e", null ],
@@ -16,5 +30,7 @@ var classv8_1_1internal_1_1FieldIndex =
     [ "operator!=", "classv8_1_1internal_1_1FieldIndex.html#a03ed68e896a172fdd0073c8cbf5dc156", null ],
     [ "operator==", "classv8_1_1internal_1_1FieldIndex.html#ab9c009ac443b11027f12bdc9e44612a7", null ],
     [ "outobject_array_index", "classv8_1_1internal_1_1FieldIndex.html#a91c9bffaa6a51f9a9ee5e91188c53ead", null ],
-    [ "property_index", "classv8_1_1internal_1_1FieldIndex.html#aad7207ff7cb868abc1cf9d226f383cde", null ]
+    [ "property_index", "classv8_1_1internal_1_1FieldIndex.html#aad7207ff7cb868abc1cf9d226f383cde", null ],
+    [ "bit_field_", "classv8_1_1internal_1_1FieldIndex.html#ae662bf74f05c36f18ef3b6bc1137f2e3", null ],
+    [ "kOffsetBitsSize", "classv8_1_1internal_1_1FieldIndex.html#a5ef5298c75839eb72f570d35c207c9b7", null ]
 ];

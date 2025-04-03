@@ -11,6 +11,7 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block =
       [ "kBranchTarget", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a00a7535332c5dcadf559badb725108e5a28d4ba18ff79dec2bd21e584e8eee775", null ]
     ] ],
     [ "Block", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a17fe62f94116b0ccc94c7e594b09cdd0", null ],
+    [ "AddPredecessor", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#aedf9255d24b15719afa06e2bc8828a71", null ],
     [ "begin", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a8597197c4fa1ac524decfff0a7da2061", null ],
     [ "clear_custom_data", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a0ab54a18357cf5ad57d407bce3a7d588", null ],
     [ "ComputeDominator", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#ad4dcacd598971a7231375e68bc816572", null ],
@@ -51,5 +52,16 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block =
     [ "single_loop_predecessor", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#ac4031ecf86acb451fcf218ca7e7dc843", null ],
     [ "Assembler", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#ac0563e5912e478a40f0995239e33e97a", null ],
     [ "Graph", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#afab89afd724f1b07b1aaad6bdc61c47a", null ],
-    [ "GraphVisitor", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#aa521498e887443141c6a70cfe3211535", null ]
+    [ "GraphVisitor", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#aa521498e887443141c6a70cfe3211535", null ],
+    [ "begin_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a516216658b1ba08b6c4090cf5d7e2c33", null ],
+    [ "custom_data_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a4c7f427ecdb530ad8936d769260ca6d2", null ],
+    [ "end_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a1dffbc6ea46ea52aad88e3bd2e861f79", null ],
+    [ "index_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#af4ab93230d02e279149c347270f327cb", null ],
+    [ "kind_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a4b75a2eaad3c040a599de736da8a2491", null ],
+    [ "kInvalidPredecessorIndex", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a0f3beeb7ec302dd66ff19e7628d67c9c", null ],
+    [ "last_predecessor_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a49741c193ba95f3ea037ccb2bc088ecf", null ],
+    [ "neighboring_predecessor_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#abb83f92cda76c3bc7bf6473e908caf89", null ],
+    [ "origin_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a6512237d20a3618281675d076723c593", null ],
+    [ "predecessor_count_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a5bd1a9fe32b110f464f46f59e02adc00", null ],
+    [ "single_loop_predecessor_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Block.html#a6d6e319cf71d09ae2de65e8619bd77ce", null ]
 ];

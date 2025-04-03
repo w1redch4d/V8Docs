@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView =
 [
+    [ "Kind", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView.html#ab719a7f2694365edde55458af4a59879", null ],
     [ "ConstantView", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView.html#a495a614fe66efb7544afd1432a977095", null ],
     [ "heap_object_value", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView.html#a5a5fcc46cc75883fcdf5312c0208aaff", null ],
     [ "int32_value", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView.html#a8c405717a84c173361e565ad4953b3be", null ],
@@ -14,5 +15,7 @@ var classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView =
     [ "is_number_zero", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView.html#af0fb8e77b0314566da5da1faf3e349ed", null ],
     [ "is_relocatable_int32", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView.html#a626448866ec5ad7376c7cadd154e8b8d", null ],
     [ "is_relocatable_int64", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView.html#ac2e538c3a606f5fd364ebe933433eb74", null ],
-    [ "operator node_t", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView.html#a5eb9cdcebf9b2a8df3fb3736b74f826e", null ]
+    [ "operator node_t", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView.html#a5eb9cdcebf9b2a8df3fb3736b74f826e", null ],
+    [ "node_", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView.html#a49656b6c325ffa975dfee556c467897e", null ],
+    [ "op_", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1ConstantView.html#a15368cbb6046519593f1e480948392eb", null ]
 ];

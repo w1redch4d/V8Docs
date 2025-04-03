@@ -1,0 +1,25 @@
+var classv8_1_1internal_1_1torque_1_1DeclarationVisitor =
+[
+    [ "CreateBuiltin", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#ac89b81a4db1cce60317f2554db1f7d95", null ],
+    [ "DeclareSpecializedTypes", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#ab8a2af232f160e1dc10b1ccfda985ca9", null ],
+    [ "MakeSpecializedSignature", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a07e91e8f28ae222e8631bd878e2db794", null ],
+    [ "Specialize", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a31a24da8d2c053155d808d890ce155de", null ],
+    [ "SpecializeImplicit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a28f22b5ba5d4a77885f71d54c3d04271", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#ac858ab791f81dfcb31234e8bc4024cda", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#ab3a67a14d684dd460c44f18b446653a2", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#af5a61b59760e931955eceba81de763ae", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a75b60728f6aeda30e52f699e6d93ae1b", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a0f779379f8e29f8f3eb915c0bc0cb6fb", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a0d5352a99d3e2f26c9c2177e1e23bb5d", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a6cedf58da5459ef720acb7f4da33c3da", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a5aebc745c41b222fa0ad69675f1bea9e", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#ad9cb291557318670cb43ed9da5a61624", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a1e99357d77ba6704912de780b2e67f55", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a4645fe01cc2803d0a76d5c0bac29839d", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#adeaa583a48ef9694417c80b23305a3a5", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a34c19bf9e25d7ab04839536b028b8e8c", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a5d916a6f32d3ec6a0ce5a5356dc95f03", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a0c7bb3c5f0b03a89bde8aad1d53d850f", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#ab49b92c5691834f35200d01b1c867008", null ],
+    [ "Visit", "classv8_1_1internal_1_1torque_1_1DeclarationVisitor.html#a49cf4892cfe5d6c8b07b930d33166bce", null ]
+];

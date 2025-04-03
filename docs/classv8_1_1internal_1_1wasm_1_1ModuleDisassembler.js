@@ -2,6 +2,25 @@ var classv8_1_1internal_1_1wasm_1_1ModuleDisassembler =
 [
     [ "ModuleDisassembler", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a36e0a96ad5ade830475d3024f89e7e9f", null ],
     [ "~ModuleDisassembler", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#acbbd2a35e97263e4a13e09f7ced2e112", null ],
+    [ "LineBreakOrSpace", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a2d95b684a878dc14d779dac4f8f2ef04", null ],
+    [ "PrintExportName", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a7bf2f570f499555efa6f95f6a34e1436", null ],
+    [ "PrintGlobal", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#af11eb7dd686a5cc1290eba9120e497ad", null ],
+    [ "PrintImportName", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#aef6ac4b9cddc708c9907e6b4ac4f729d", null ],
+    [ "PrintInitExpression", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a962cbb5a04fc5af04a4e3b2cc7c4706e", null ],
+    [ "PrintMemory", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a88fba569a32452687e4ae5d0b7c42e53", null ],
     [ "PrintModule", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a9ba4dbf090c02043a40dc1e746ae2f05", null ],
-    [ "PrintTypeDefinition", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a82612ecc9e1cc0b39608e755cedd5f90", null ]
+    [ "PrintMutableType", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#ae6665774a3c66bf5c1ac8486e54d4008", null ],
+    [ "PrintString", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a323b4c81d34672f55a6a00cef7a7d507", null ],
+    [ "PrintStringAsJSON", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#af296c8aa5376814084387ab94232ed28", null ],
+    [ "PrintTable", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a6cd3ed95b54de2b9c6b7a1703e9b9fc7", null ],
+    [ "PrintTagSignature", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a763bb42e751567e8c1b69643aa275019", null ],
+    [ "PrintTypeDefinition", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a82612ecc9e1cc0b39608e755cedd5f90", null ],
+    [ "function_body_offsets_", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#aba040fdbfdb0920c98f6c817ddcf8432", null ],
+    [ "module_", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a4939934e6a8cdf84d407117fbadaea83", null ],
+    [ "names_", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a37c795e9556caa7dfe2c1ddc826b097e", null ],
+    [ "offsets_", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#ad4fa0c4246c4f3c712acaaba3f5193c9", null ],
+    [ "out_", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#aabef9e2a4e378b4197a1759f2f3a51b2", null ],
+    [ "start_", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a6e76be30bab0c489e8c3909111c53de0", null ],
+    [ "wire_bytes_", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a8bcd4f74e7fa75d49a3372ba57f04c29", null ],
+    [ "zone_", "classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#ace3db5a6c5c2c4d7a450780f617c5d44", null ]
 ];

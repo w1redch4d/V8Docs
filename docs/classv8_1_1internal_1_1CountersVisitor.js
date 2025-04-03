@@ -13,5 +13,6 @@ var classv8_1_1internal_1_1CountersVisitor =
     [ "VisitHistogram", "classv8_1_1internal_1_1CountersVisitor.html#a5ef354da3c06f9fab8cfdc2ec8feccc2", null ],
     [ "VisitHistograms", "classv8_1_1internal_1_1CountersVisitor.html#ab1fa390b08ea35751a7d5cc940f91df8", null ],
     [ "VisitStatsCounter", "classv8_1_1internal_1_1CountersVisitor.html#a061f2cd858ef09b1a38f8d76f546da3e", null ],
-    [ "VisitStatsCounters", "classv8_1_1internal_1_1CountersVisitor.html#a889cb83436919ca49724ddf61fedb2c3", null ]
+    [ "VisitStatsCounters", "classv8_1_1internal_1_1CountersVisitor.html#a889cb83436919ca49724ddf61fedb2c3", null ],
+    [ "counters_", "classv8_1_1internal_1_1CountersVisitor.html#a4fb297df35b2b65263e390d6ea9351b0", null ]
 ];

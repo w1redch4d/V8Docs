@@ -9,6 +9,12 @@ var classv8_1_1internal_1_1JSDisposableStackBase =
       [ "kMethod", "classv8_1_1internal_1_1JSDisposableStackBase.html#ac87eee7db214cb10f8f3eafaef460fa7a2d4e92ed5eebb1063178ba0b67ca0a33", null ],
       [ "kLength", "classv8_1_1internal_1_1JSDisposableStackBase.html#ac87eee7db214cb10f8f3eafaef460fa7a24701b80e1466fa0384311fa3991218e", null ]
     ] ],
+    [ "Add", "classv8_1_1internal_1_1JSDisposableStackBase.html#a8db0888d62ea6f1c10c005c6b72a4c90", null ],
+    [ "CheckValueAndGetDisposeMethod", "classv8_1_1internal_1_1JSDisposableStackBase.html#ac08860b4530cf86013f07c3e8b1f0777", null ],
+    [ "DisposeResources", "classv8_1_1internal_1_1JSDisposableStackBase.html#aa022a35c381b45725e4e6875c3ef16b7", null ],
+    [ "HandleErrorInDisposal", "classv8_1_1internal_1_1JSDisposableStackBase.html#a43415f6da12a94fecdd1bede31146027", null ],
+    [ "InitializeJSDisposableStackBase", "classv8_1_1internal_1_1JSDisposableStackBase.html#a1798ceb9481610946a5268bcbcefd03d", null ],
+    [ "ResolveAPromiseWithValueAndReturnIt", "classv8_1_1internal_1_1JSDisposableStackBase.html#af715ebdf997766e7ca0b436cfcfdaaab", null ],
     [ "set_state", "classv8_1_1internal_1_1JSDisposableStackBase.html#aeb33e16b51b98c18cc5c5f360bcc2849", null ],
     [ "state", "classv8_1_1internal_1_1JSDisposableStackBase.html#a8ce7f5d247d201e75331a82d991100c3", null ]
 ];

@@ -14,5 +14,11 @@ var classv8_1_1internal_1_1torque_1_1Block =
     [ "IsDeferred", "classv8_1_1internal_1_1torque_1_1Block.html#a306af9bd15c8155ce8adf7a918b3d754", null ],
     [ "MergeInputDefinitions", "classv8_1_1internal_1_1torque_1_1Block.html#a6d4ff7391929520b5348ced61f23cf4d", null ],
     [ "Retype", "classv8_1_1internal_1_1torque_1_1Block.html#a63459ecacdeeb351bc2d892b3e558f21", null ],
-    [ "SetInputTypes", "classv8_1_1internal_1_1torque_1_1Block.html#aceed28d484956355355cbf3d474624e4", null ]
+    [ "SetInputTypes", "classv8_1_1internal_1_1torque_1_1Block.html#aceed28d484956355355cbf3d474624e4", null ],
+    [ "cfg_", "classv8_1_1internal_1_1torque_1_1Block.html#ad87be2d08f012041bb2c87501438f3a0", null ],
+    [ "id_", "classv8_1_1internal_1_1torque_1_1Block.html#a8dada64a0e7c58f4dd10538048bf5059", null ],
+    [ "input_definitions_", "classv8_1_1internal_1_1torque_1_1Block.html#a0b82af841e83798449cb061df100077a", null ],
+    [ "input_types_", "classv8_1_1internal_1_1torque_1_1Block.html#ab690eb201c1d1a5dfd56c0d2fb6013cb", null ],
+    [ "instructions_", "classv8_1_1internal_1_1torque_1_1Block.html#ae9b356eb37feedc354555995e47e3fbd", null ],
+    [ "is_deferred_", "classv8_1_1internal_1_1torque_1_1Block.html#ae455be74d230fd3f758ba593114578cb", null ]
 ];

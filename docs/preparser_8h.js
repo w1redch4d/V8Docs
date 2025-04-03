@@ -16,5 +16,6 @@ var preparser_8h =
     [ "v8::internal::PreParserPropertyList", "classv8_1_1internal_1_1PreParserPropertyList.html", null ],
     [ "v8::internal::ParserTypes< PreParser >", "structv8_1_1internal_1_1ParserTypes_3_01PreParser_01_4.html", "structv8_1_1internal_1_1ParserTypes_3_01PreParser_01_4" ],
     [ "v8::internal::PreParser", "classv8_1_1internal_1_1PreParser.html", "classv8_1_1internal_1_1PreParser" ],
+    [ "v8::internal::PreParser::TemplateLiteralState", "structv8_1_1internal_1_1PreParser_1_1TemplateLiteralState.html", null ],
     [ "DEFINE_RECORD_SOURCE_RANGE", "preparser_8h.html#a5d82fba388ed1e68098518a5d8fb0f78", null ]
 ];

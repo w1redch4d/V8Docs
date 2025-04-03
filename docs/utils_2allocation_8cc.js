@@ -16,5 +16,6 @@ var utils_2allocation_8cc =
     [ "SetPermissions", "utils_2allocation_8cc.html#a0b20b06fc0f215d9b9eac890977a53e7", null ],
     [ "SetPlatformPageAllocatorForTesting", "utils_2allocation_8cc.html#a3bf59698a1c12692ca1a78fc8d1c8eac", null ],
     [ "StrDup", "utils_2allocation_8cc.html#a7cd299af39afd3e3f7efe45c2afbd6c0", null ],
-    [ "StrNDup", "utils_2allocation_8cc.html#aceea577e077348b59a7551e628d81191", null ]
+    [ "StrNDup", "utils_2allocation_8cc.html#aceea577e077348b59a7551e628d81191", null ],
+    [ "page_allocator_", "utils_2allocation_8cc.html#a363fef2d05cd1053060bc9f977dc781a", null ]
 ];

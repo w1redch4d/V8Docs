@@ -1,8 +1,14 @@
 var classv8_1_1internal_1_1JavaScriptFrame =
 [
     [ "JavaScriptFrame", "classv8_1_1internal_1_1JavaScriptFrame.html#a75cddddb27dcc0eb6db3cddd6629d531", null ],
+    [ "cast", "classv8_1_1internal_1_1JavaScriptFrame.html#af9f4e7c627a1b486c8ae3b6339064781", null ],
+    [ "CollectFunctionAndOffsetForICStats", "classv8_1_1internal_1_1JavaScriptFrame.html#a581ee2659fad49b71c75a7a5bc2e920f", null ],
+    [ "constant_pool_pointer_register", "classv8_1_1internal_1_1JavaScriptFrame.html#a95093eb95849c3f6028a0076b6c13179", null ],
     [ "context", "classv8_1_1internal_1_1JavaScriptFrame.html#aef6bdfb094ce54c9546a352ccc79e6d8", null ],
+    [ "context_register", "classv8_1_1internal_1_1JavaScriptFrame.html#aaa3b72b65e52405ccc902eb2482e9132", null ],
+    [ "fp_register", "classv8_1_1internal_1_1JavaScriptFrame.html#a355bbc281e7a28842ef4e19a9c6ba4dc", null ],
     [ "function", "classv8_1_1internal_1_1JavaScriptFrame.html#a20ff9344c81385c5e217046e8ec749bb", null ],
+    [ "function_slot_object", "classv8_1_1internal_1_1JavaScriptFrame.html#a48e49dae0521d26551a4e06902669aa6", null ],
     [ "GetActiveCodeAndOffset", "classv8_1_1internal_1_1JavaScriptFrame.html#a96b87410936d2d93ee7bf0a2a52689cd", null ],
     [ "GetActualArgumentCount", "classv8_1_1internal_1_1JavaScriptFrame.html#a6b3379ad708bf3be4383797444e7c849", null ],
     [ "GetCallerStackPointer", "classv8_1_1internal_1_1JavaScriptFrame.html#a137d1ca2beb6143c7f37f0c086d5289a", null ],
@@ -15,6 +21,8 @@ var classv8_1_1internal_1_1JavaScriptFrame =
     [ "Iterate", "classv8_1_1internal_1_1JavaScriptFrame.html#a52d4f58bd9f50043925a533dcf8b0843", null ],
     [ "Print", "classv8_1_1internal_1_1JavaScriptFrame.html#a2eedcbe1491ac1dec887dbee63bc50f5", null ],
     [ "PrintFrameKind", "classv8_1_1internal_1_1JavaScriptFrame.html#a766472e0a76c066b3a89de5c991a16a7", null ],
+    [ "PrintFunctionAndOffset", "classv8_1_1internal_1_1JavaScriptFrame.html#ac0dc703b8d8d1cf9f4bb09e69afb368e", null ],
+    [ "PrintTop", "classv8_1_1internal_1_1JavaScriptFrame.html#a69de8494527b217bfd2bcde82196cd31", null ],
     [ "script", "classv8_1_1internal_1_1JavaScriptFrame.html#a93ee354b7376b5552f5cd7e2e4dcf109", null ],
     [ "set_receiver", "classv8_1_1internal_1_1JavaScriptFrame.html#a79eeb4ab1df710a06c6f5491b326f6c0", null ],
     [ "SetParameterValue", "classv8_1_1internal_1_1JavaScriptFrame.html#a49bb009bdbbcbea2291f483b503e1fe7", null ],

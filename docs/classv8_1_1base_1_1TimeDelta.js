@@ -1,6 +1,19 @@
 var classv8_1_1base_1_1TimeDelta =
 [
     [ "TimeDelta", "classv8_1_1base_1_1TimeDelta.html#a1602c64315c17e8725617c4a4a801fb0", null ],
+    [ "TimeDelta", "classv8_1_1base_1_1TimeDelta.html#a96d8966aa0f55a2a9cfd7c4d0c02a922", null ],
+    [ "FromDays", "classv8_1_1base_1_1TimeDelta.html#a619d8d037c1b49bdf59d1fb05fa095f4", null ],
+    [ "FromDouble", "classv8_1_1base_1_1TimeDelta.html#a5eb7e23911ff2d1c2540319387db62d5", null ],
+    [ "FromHours", "classv8_1_1base_1_1TimeDelta.html#a5e29e609e85ca493582b114fc0c69d39", null ],
+    [ "FromMachTimespec", "classv8_1_1base_1_1TimeDelta.html#acc527f0f013cfbb9c3e385ca412f70b6", null ],
+    [ "FromMicroseconds", "classv8_1_1base_1_1TimeDelta.html#a1df269c42efa26b4b6defb9d83f850da", null ],
+    [ "FromMilliseconds", "classv8_1_1base_1_1TimeDelta.html#aedb23f3b7d15531e09b71883aaa96b6d", null ],
+    [ "FromMillisecondsD", "classv8_1_1base_1_1TimeDelta.html#a33e9690c073397a6e9de97b5fc4d551c", null ],
+    [ "FromMinutes", "classv8_1_1base_1_1TimeDelta.html#a0da7ea02c3bcbb0875c1354246d54469", null ],
+    [ "FromNanoseconds", "classv8_1_1base_1_1TimeDelta.html#a023a048044be14caae6555c3f1763b9e", null ],
+    [ "FromSeconds", "classv8_1_1base_1_1TimeDelta.html#a38d36ea798323760ea45d69bb3b8b6e6", null ],
+    [ "FromSecondsD", "classv8_1_1base_1_1TimeDelta.html#a52a76ce4f67f0498432d69c3048b13aa", null ],
+    [ "FromTimespec", "classv8_1_1base_1_1TimeDelta.html#a8713573eefc14f286991f5ed33654571", null ],
     [ "InDays", "classv8_1_1base_1_1TimeDelta.html#a5efa208ef9617c552417540f0c94cfd4", null ],
     [ "InHours", "classv8_1_1base_1_1TimeDelta.html#a55e70d6c046d5bc6546064548b3878c0", null ],
     [ "InMicroseconds", "classv8_1_1base_1_1TimeDelta.html#ad9006b332aa15e66f2ddb8e8ba910892", null ],
@@ -14,6 +27,8 @@ var classv8_1_1base_1_1TimeDelta =
     [ "IsMax", "classv8_1_1base_1_1TimeDelta.html#ac3181f6214df3e7cd7daee884061af5c", null ],
     [ "IsMin", "classv8_1_1base_1_1TimeDelta.html#af74abda7e743e46b01d281c9492e79fc", null ],
     [ "IsZero", "classv8_1_1base_1_1TimeDelta.html#a50801573147a5ee1710d0b76eadd5d16", null ],
+    [ "Max", "classv8_1_1base_1_1TimeDelta.html#a1330af8b50fc0206f46945ea8d6922cf", null ],
+    [ "Min", "classv8_1_1base_1_1TimeDelta.html#a3fd6719e59fb94f03ec6a57fad48cfe9", null ],
     [ "operator!=", "classv8_1_1base_1_1TimeDelta.html#af786aad4a2c3e004b3e7f4609fa56f90", null ],
     [ "operator*", "classv8_1_1base_1_1TimeDelta.html#a132366195f662d7dc59f498ca4c1b723", null ],
     [ "operator*=", "classv8_1_1base_1_1TimeDelta.html#a90e7cb11eb061a8ab2afa8643e265146", null ],
@@ -35,5 +50,6 @@ var classv8_1_1base_1_1TimeDelta =
     [ "ToMachTimespec", "classv8_1_1base_1_1TimeDelta.html#a06c9d41e9cd433f94317b66808e03521", null ],
     [ "ToTimespec", "classv8_1_1base_1_1TimeDelta.html#a966a8dfea07271a6d811f39b7eac83a8", null ],
     [ "swap", "classv8_1_1base_1_1TimeDelta.html#a79386b291261cfbf042d023e47825b86", null ],
-    [ "time_internal::TimeBase", "classv8_1_1base_1_1TimeDelta.html#ad62ea60a58e3469c74322f59c2dba4f0", null ]
+    [ "time_internal::TimeBase", "classv8_1_1base_1_1TimeDelta.html#ad62ea60a58e3469c74322f59c2dba4f0", null ],
+    [ "delta_", "classv8_1_1base_1_1TimeDelta.html#ac4d170b3d3873000f0d2ea0ecf74493b", null ]
 ];

@@ -18,6 +18,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntagg
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOp.html#ab549107f9fc1df3f2adfeff4f6d73a49", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOp.html#a49fdf3bf31917ba0ec5ec83448069473", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOp.html#acecb8b9b3c4917db715e8d1a8cdd89a8", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOp.html#a09aa987886d36d437588d595ab11abb1", null ],
     [ "input_assumptions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOp.html#af710b6c8a5907af3a9bb36a459b64e3e", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertJSPrimitiveToUntaggedOp.html#a665b4853cc3b836bb072c716f8db4609", null ]
 ];

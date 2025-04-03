@@ -1,6 +1,6 @@
 var time_8h =
 [
-    [ "v8::base::TimeConstants", "classv8_1_1base_1_1TimeConstants.html", null ],
+    [ "v8::base::TimeConstants", "classv8_1_1base_1_1TimeConstants.html", "classv8_1_1base_1_1TimeConstants" ],
     [ "v8::base::TimeDelta", "classv8_1_1base_1_1TimeDelta.html", "classv8_1_1base_1_1TimeDelta" ],
     [ "v8::base::time_internal::TimeBase< TimeClass >", "classv8_1_1base_1_1time__internal_1_1TimeBase.html", "classv8_1_1base_1_1time__internal_1_1TimeBase" ],
     [ "v8::base::Time", "classv8_1_1base_1_1Time.html", "classv8_1_1base_1_1Time" ],

@@ -1,6 +1,7 @@
 var runtime_regexp_8cc =
 [
     [ "v8::internal::CompiledReplacement", "classv8_1_1internal_1_1CompiledReplacement.html", "classv8_1_1internal_1_1CompiledReplacement" ],
+    [ "v8::internal::CompiledReplacement::ReplacementPart", "structv8_1_1internal_1_1CompiledReplacement_1_1ReplacementPart.html", "structv8_1_1internal_1_1CompiledReplacement_1_1ReplacementPart" ],
     [ "CALL_Generic", "runtime-regexp_8cc.html#a292e8c703c60b4b04ac106113ab90de0", null ],
     [ "CALL_OneCharPattern", "runtime-regexp_8cc.html#a39434ac8bcac51e7c882a81b7077ae6e", null ],
     [ "FindOneByteStringIndices", "runtime-regexp_8cc.html#a0cb02d7542bfb6271c5ce6958c257d86", null ],
@@ -18,5 +19,17 @@ var runtime_regexp_8cc =
     [ "RUNTIME_FUNCTION", "runtime-regexp_8cc.html#a7fadfb277819729a98d537775f03145a", null ],
     [ "RUNTIME_FUNCTION", "runtime-regexp_8cc.html#a9560b59543bb72af926e9cc8b2186a41", null ],
     [ "RUNTIME_FUNCTION", "runtime-regexp_8cc.html#a1661fa19af16dc26ffd406d3287aea3e", null ],
-    [ "RUNTIME_FUNCTION", "runtime-regexp_8cc.html#aac8b910812d6edbfef049f94947bb84e", null ]
+    [ "RUNTIME_FUNCTION", "runtime-regexp_8cc.html#aac8b910812d6edbfef049f94947bb84e", null ],
+    [ "StringReplaceGlobalAtomRegExpWithString", "runtime-regexp_8cc.html#a04b91bca3f98845bf0d1c2c5c55b3d5d", null ],
+    [ "StringReplaceGlobalRegExpWithEmptyString", "runtime-regexp_8cc.html#a93095b0edbb6ab19a40d098b2cd11e1f", null ],
+    [ "StringReplaceGlobalRegExpWithString", "runtime-regexp_8cc.html#afe6baf2b22727bbab120a9323ef16883", null ],
+    [ "capture_name_map_", "runtime-regexp_8cc.html#a19a941f55b19f62b1c34313cac31def0", null ],
+    [ "captures_", "runtime-regexp_8cc.html#a2c9cdfc9054a3181cca85f108597e29a", null ],
+    [ "groups_obj_", "runtime-regexp_8cc.html#a489758bb18af0ceb0eb0e151fcb41849", null ],
+    [ "has_named_captures_", "runtime-regexp_8cc.html#a49e0b742bd7d0564ed575385162a822a", null ],
+    [ "isolate_", "runtime-regexp_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b", null ],
+    [ "match_", "runtime-regexp_8cc.html#aaf4491af7f42f8580ebb7adeaf2ea221", null ],
+    [ "match_info_", "runtime-regexp_8cc.html#a6f76e7595f342cb484dd3740ee9b751e", null ],
+    [ "match_position_", "runtime-regexp_8cc.html#ad1e9a2e57a432da9a18e09c10ce01c41", null ],
+    [ "subject_", "runtime-regexp_8cc.html#a4bfc0ffcdacd6f33d03a02d29f06c6b8", null ]
 ];

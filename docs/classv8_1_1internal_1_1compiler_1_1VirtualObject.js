@@ -10,5 +10,8 @@ var classv8_1_1internal_1_1compiler_1_1VirtualObject =
     [ "HasEscaped", "classv8_1_1internal_1_1compiler_1_1VirtualObject.html#a9ff32488db4159528f1fb5cf6ec9d002", null ],
     [ "id", "classv8_1_1internal_1_1compiler_1_1VirtualObject.html#a6007fffefc40ade4a21fe28551ec139d", null ],
     [ "SetEscaped", "classv8_1_1internal_1_1compiler_1_1VirtualObject.html#a9349ef14745ee74f35f7900283fcd22d", null ],
-    [ "size", "classv8_1_1internal_1_1compiler_1_1VirtualObject.html#ae6e7742c262de7d435686c9ee19a8b91", null ]
+    [ "size", "classv8_1_1internal_1_1compiler_1_1VirtualObject.html#ae6e7742c262de7d435686c9ee19a8b91", null ],
+    [ "escaped_", "classv8_1_1internal_1_1compiler_1_1VirtualObject.html#af0519d35fccb48bf5cf064152366df81", null ],
+    [ "fields_", "classv8_1_1internal_1_1compiler_1_1VirtualObject.html#aef51f9421515e7cf6622d474ac98cb2d", null ],
+    [ "id_", "classv8_1_1internal_1_1compiler_1_1VirtualObject.html#a172965972ce493260a125af10ba73b0a", null ]
 ];

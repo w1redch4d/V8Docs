@@ -32,5 +32,8 @@ var classv8_1_1internal_1_1compiler_1_1Constant =
     [ "ToInt32", "classv8_1_1internal_1_1compiler_1_1Constant.html#a38969f82d0fa6b301c93c927eb9a8daf", null ],
     [ "ToInt64", "classv8_1_1internal_1_1compiler_1_1Constant.html#a998ee14d6b667a4eb4f515e13d50fd8c", null ],
     [ "ToRpoNumber", "classv8_1_1internal_1_1compiler_1_1Constant.html#a74197737974d0c570df306015b869d2b", null ],
-    [ "type", "classv8_1_1internal_1_1compiler_1_1Constant.html#a885b3a552a157c3262ff2bc92deadc72", null ]
+    [ "type", "classv8_1_1internal_1_1compiler_1_1Constant.html#a885b3a552a157c3262ff2bc92deadc72", null ],
+    [ "rmode_", "classv8_1_1internal_1_1compiler_1_1Constant.html#a8540d1193ff104d563a557c9ab59590b", null ],
+    [ "type_", "classv8_1_1internal_1_1compiler_1_1Constant.html#a1acdd5a2cc80eed3b860595791d16f09", null ],
+    [ "value_", "classv8_1_1internal_1_1compiler_1_1Constant.html#aab8d226eeedf1c978ed4c78519cec603", null ]
 ];

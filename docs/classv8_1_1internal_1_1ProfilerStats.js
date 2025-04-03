@@ -10,7 +10,11 @@ var classv8_1_1internal_1_1ProfilerStats =
       [ "kNullPC", "classv8_1_1internal_1_1ProfilerStats.html#a15315705279d39f82537f4a0bb327259ad04b15bcffdce3860843e5612b1513a5", null ],
       [ "kNumberOfReasons", "classv8_1_1internal_1_1ProfilerStats.html#a15315705279d39f82537f4a0bb327259a28f6aa6febe7d63f36dc8013e7d56654", null ]
     ] ],
+    [ "ProfilerStats", "classv8_1_1internal_1_1ProfilerStats.html#aee985efc3c1b983ea46d1754aa92e6b6", null ],
     [ "AddReason", "classv8_1_1internal_1_1ProfilerStats.html#aec629b8ca598fc845f8bdb64de52ca19", null ],
     [ "Clear", "classv8_1_1internal_1_1ProfilerStats.html#a3f30dda6750993b8764be0e83f28e535", null ],
-    [ "Print", "classv8_1_1internal_1_1ProfilerStats.html#a7e98f7edf36445e1635c1e84a1a4dc12", null ]
+    [ "Instance", "classv8_1_1internal_1_1ProfilerStats.html#a14ad76d90889820ce1669992aaf3f80f", null ],
+    [ "Print", "classv8_1_1internal_1_1ProfilerStats.html#a7e98f7edf36445e1635c1e84a1a4dc12", null ],
+    [ "ReasonToString", "classv8_1_1internal_1_1ProfilerStats.html#a2e95e4261a377e06ea940c720d64113b", null ],
+    [ "counts_", "classv8_1_1internal_1_1ProfilerStats.html#a51c9a1a9bdb0d7cc8f4f61d09573764d", null ]
 ];

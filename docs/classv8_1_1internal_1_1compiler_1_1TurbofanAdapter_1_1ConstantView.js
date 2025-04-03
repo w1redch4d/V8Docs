@@ -14,5 +14,6 @@ var classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1ConstantView =
     [ "is_number_zero", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1ConstantView.html#a1fdc55b40286f63c8de607f4c7da0d28", null ],
     [ "is_relocatable_int32", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1ConstantView.html#aa165bd727884b95b04afe55e1707cc38", null ],
     [ "is_relocatable_int64", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1ConstantView.html#ad7438eecdb88d30d32d5a98a37464704", null ],
-    [ "operator node_t", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1ConstantView.html#ab9ab42788242b396e39d2e74daae857c", null ]
+    [ "operator node_t", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1ConstantView.html#ab9ab42788242b396e39d2e74daae857c", null ],
+    [ "node_", "classv8_1_1internal_1_1compiler_1_1TurbofanAdapter_1_1ConstantView.html#a463101531f3f1146c51cc9affdf0756b", null ]
 ];

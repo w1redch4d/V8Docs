@@ -9,6 +9,7 @@ var classv8_1_1internal_1_1ElementsAccessor =
     [ "CollectElementIndices", "classv8_1_1internal_1_1ElementsAccessor.html#a934d2c9d881ac0b972f6a45aaf5593cc", null ],
     [ "CollectValuesOrEntries", "classv8_1_1internal_1_1ElementsAccessor.html#ad4790125f363c72821d0d6e79557dcb8", null ],
     [ "CompareAndSwapAtomic", "classv8_1_1internal_1_1ElementsAccessor.html#a2e45550d6896c5717fa55f32b452de81", null ],
+    [ "Concat", "classv8_1_1internal_1_1ElementsAccessor.html#a0fbfcdb538340d70d929fe762f1512eb", null ],
     [ "CopyElements", "classv8_1_1internal_1_1ElementsAccessor.html#ac798c20747585e53375d8da781ad9876", null ],
     [ "CopyElements", "classv8_1_1internal_1_1ElementsAccessor.html#a3254ff016de5356dce79229e8a17a2b7", null ],
     [ "CopyElements", "classv8_1_1internal_1_1ElementsAccessor.html#aabba765f18901bdf14df1032b159460d", null ],
@@ -16,6 +17,7 @@ var classv8_1_1internal_1_1ElementsAccessor =
     [ "CreateListFromArrayLike", "classv8_1_1internal_1_1ElementsAccessor.html#a465d3e1895d5e81aa5c0d4fa00642dc0", null ],
     [ "Delete", "classv8_1_1internal_1_1ElementsAccessor.html#a7a9e37c4403a550ac67f5c3f6871f6dc", null ],
     [ "Fill", "classv8_1_1internal_1_1ElementsAccessor.html#a0b295bcb20c996236cb4c6e1a2726883", null ],
+    [ "ForKind", "classv8_1_1internal_1_1ElementsAccessor.html#a17955f534a47f8c15f0b042de9d1e394", null ],
     [ "Get", "classv8_1_1internal_1_1ElementsAccessor.html#a0597cf13dad50628ee180cb135473ed6", null ],
     [ "GetAtomic", "classv8_1_1internal_1_1ElementsAccessor.html#acfee41cd830607633a0507aa3afb614c", null ],
     [ "GetCapacity", "classv8_1_1internal_1_1ElementsAccessor.html#a35b0527e66bfac9acc696a002cfab6f4", null ],
@@ -29,6 +31,7 @@ var classv8_1_1internal_1_1ElementsAccessor =
     [ "HasEntry", "classv8_1_1internal_1_1ElementsAccessor.html#af7741550864be902a7e17b90c04822e4", null ],
     [ "IncludesValue", "classv8_1_1internal_1_1ElementsAccessor.html#a1911a09f63ee747060a9bf94e6c132c8", null ],
     [ "IndexOfValue", "classv8_1_1internal_1_1ElementsAccessor.html#afec5e997e48a0d0bafd8334b074791be", null ],
+    [ "InitializeOncePerProcess", "classv8_1_1internal_1_1ElementsAccessor.html#a7d9e3760dd5aad13d53c3ad1e15a8cad", null ],
     [ "LastIndexOfValue", "classv8_1_1internal_1_1ElementsAccessor.html#abed4e75ee257cce344bb334002cbfdb7", null ],
     [ "Normalize", "classv8_1_1internal_1_1ElementsAccessor.html#af125a7ecab1366b70a25f3fdeff87d00", null ],
     [ "NumberOfElements", "classv8_1_1internal_1_1ElementsAccessor.html#aab50889d7734f2f7687e19f7df18ef32", null ],
@@ -44,8 +47,10 @@ var classv8_1_1internal_1_1ElementsAccessor =
     [ "SetLength", "classv8_1_1internal_1_1ElementsAccessor.html#a783bb58868fd51dad5012d90ff11ebd2", null ],
     [ "Shift", "classv8_1_1internal_1_1ElementsAccessor.html#a15b0a70e2d0661bedd41af72dbfe38f8", null ],
     [ "SwapAtomic", "classv8_1_1internal_1_1ElementsAccessor.html#a6bbd2471ce82e8fd218e4004b3602e62", null ],
+    [ "TearDown", "classv8_1_1internal_1_1ElementsAccessor.html#acf8472f5ad7353960fa3564b575231c2", null ],
     [ "TransitionElementsKind", "classv8_1_1internal_1_1ElementsAccessor.html#a0762b16c3639a6d3036c54390aa5f502", null ],
     [ "Unshift", "classv8_1_1internal_1_1ElementsAccessor.html#ac92829879e040f505665f279643ca105", null ],
     [ "Validate", "classv8_1_1internal_1_1ElementsAccessor.html#acd85251dfbf4d6c60ba455122e149da0", null ],
-    [ "LookupIterator", "classv8_1_1internal_1_1ElementsAccessor.html#a44f614b48d67bab95d53634a26593e69", null ]
+    [ "LookupIterator", "classv8_1_1internal_1_1ElementsAccessor.html#a44f614b48d67bab95d53634a26593e69", null ],
+    [ "elements_accessors_", "classv8_1_1internal_1_1ElementsAccessor.html#a701439135c60cf5c3619544af865f49e", null ]
 ];

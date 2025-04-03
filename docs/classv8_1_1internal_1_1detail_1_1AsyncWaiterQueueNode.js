@@ -1,5 +1,7 @@
 var classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode =
 [
+    [ "AsyncWaiterQueueNode", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a5e26807a75de4a1fb1d82ae69e6be07b", null ],
+    [ "AsyncWaiterQueueNode", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#abb84f3e1b340e5f30d8ad8cd38d61077", null ],
     [ "CleanupMatchingAsyncWaiters", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a45cd8af42169918450a0c9c46a465fe2", null ],
     [ "GetInternalWaitingPromise", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a348fbd20fc16c7487d444e2e29b50ffd", null ],
     [ "GetNativeContext", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a2976fcef9b5f7b90a8fdaf431bc8c709", null ],
@@ -7,6 +9,22 @@ var classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode =
     [ "GetUnlockedPromise", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#aabd198548c2183e4f5c39eb02fdc28d6", null ],
     [ "IsEmpty", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a5d194f68f35205e4d298ce67947eead2", null ],
     [ "IsSameIsolateForAsyncCleanup", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#af6ce5cc929ebe88c39fc146fece70112", null ],
+    [ "NewAsyncWaiterStoredInIsolate", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a1aaf90603d114e662eaf7189bdbab7a1", null ],
+    [ "NewLockedAsyncWaiterStoredInIsolate", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a9d5bc60f3201c6223073e8bb94320ffc", null ],
     [ "Notify", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#afdb92c907988f53d7c8ff193fe26d574", null ],
-    [ "task_runner", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#aa3caaee8e82a348b66872b396e88baa5", null ]
+    [ "RemoveFromAsyncWaiterQueueList", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a52115608b23a4b7d2d5e8fd0ffffa1d0", null ],
+    [ "SetReadyForAsyncCleanup", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#acf85ea0f4ac9de24d60138876d190fbc", null ],
+    [ "task_runner", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#aa3caaee8e82a348b66872b396e88baa5", null ],
+    [ "AsyncWaiterNotifyTask< T >", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#aa8c5d15837f97bf602fb6a2dcd941576", null ],
+    [ "AsyncWaiterTimeoutTask< T >", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a5d7a8bd1de87cb4fc8d3b9d055f43ed0", null ],
+    [ "internal_waiting_promise_", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a69df77e5c41919bc91d7a2c8a21ebe62", null ],
+    [ "JSAtomicsCondition", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a2c32f951df51ee9f110b54e9d779d54a", null ],
+    [ "JSAtomicsMutex", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#aa10de7f33d10952e7931bb3b36501f4d", null ],
+    [ "native_context_", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a03d8725141d6a932fbbf449929551c79", null ],
+    [ "notify_task_id_", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a6c9e8d204b36d6b29ef530f127ce71a2", null ],
+    [ "ready_for_async_cleanup_", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a25054a6b8428a54545d1cea947e3a6c0", null ],
+    [ "synchronization_primitive_", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#ab6d2115a9c09cc911aeefbb182496ea0", null ],
+    [ "task_runner_", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a27bc29713354c709bf696a8ae200be1a", null ],
+    [ "timeout_task_id_", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a94c37ae836b5b15a42dc610706526521", null ],
+    [ "unlocked_promise_", "classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html#a70bca4744ea706e7b31c60ee30a580c3", null ]
 ];

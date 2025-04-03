@@ -7,6 +7,7 @@ var structv8_1_1internal_1_1torque_1_1AbortInstruction =
     ] ],
     [ "AbortInstruction", "structv8_1_1internal_1_1torque_1_1AbortInstruction.html#a45ae13873858488883dc632ad51b17d3", null ],
     [ "IsBlockTerminator", "structv8_1_1internal_1_1torque_1_1AbortInstruction.html#a9611dd2ae1f65e371cdc7241e8706d4f", null ],
+    [ "KindToString", "structv8_1_1internal_1_1torque_1_1AbortInstruction.html#a064307553f0749bcf882b4c60e1b5fd8", null ],
     [ "kind", "structv8_1_1internal_1_1torque_1_1AbortInstruction.html#a73156ceca435b94a4c54d8c32a544df4", null ],
     [ "message", "structv8_1_1internal_1_1torque_1_1AbortInstruction.html#a9a84b9d1c38af3f3ac2fb3129cd27648", null ]
 ];

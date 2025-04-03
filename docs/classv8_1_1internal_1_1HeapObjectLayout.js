@@ -1,11 +1,15 @@
 var classv8_1_1internal_1_1HeapObjectLayout =
 [
     [ "HeapObjectLayout", "classv8_1_1internal_1_1HeapObjectLayout.html#ac45bfbf1d3b7fc1e7cecdfefbbbf13b1", null ],
+    [ "HeapObjectLayout", "classv8_1_1internal_1_1HeapObjectLayout.html#addfc4f5729986fb9818159f3a1d67ab0", null ],
+    [ "HeapObjectLayout", "classv8_1_1internal_1_1HeapObjectLayout.html#a1b72d60575893dfbecc46c86ad489e69", null ],
     [ "address", "classv8_1_1internal_1_1HeapObjectLayout.html#a263ce0a188b9daa21effadc28d66857e", null ],
     [ "EarlyGetReadOnlyRoots", "classv8_1_1internal_1_1HeapObjectLayout.html#a6a89043dc48fe604ce85bb7611116ddc", null ],
     [ "GetWriteBarrierMode", "classv8_1_1internal_1_1HeapObjectLayout.html#a2dce589b3a240a5baa8b8447f71f8389", null ],
     [ "map", "classv8_1_1internal_1_1HeapObjectLayout.html#a8f7000d3bffa5190ae250d0dff465c3d", null ],
     [ "map", "classv8_1_1internal_1_1HeapObjectLayout.html#a0a3f7b31781e4bba276e8b629840f0f2", null ],
+    [ "operator=", "classv8_1_1internal_1_1HeapObjectLayout.html#a9b3742ef005a549add81241d7f27217a", null ],
+    [ "operator=", "classv8_1_1internal_1_1HeapObjectLayout.html#a0b5bab221f432a46ed7839667e9f1390", null ],
     [ "ptr", "classv8_1_1internal_1_1HeapObjectLayout.html#a0e02a8f9183b961bb28a6d1be4a55e2c", null ],
     [ "set_map", "classv8_1_1internal_1_1HeapObjectLayout.html#a72d3ec84fb43f26c368bf46efb0c4463", null ],
     [ "set_map", "classv8_1_1internal_1_1HeapObjectLayout.html#aa7ec2739228819f61b5952b7872551df", null ],
@@ -19,5 +23,6 @@ var classv8_1_1internal_1_1HeapObjectLayout =
     [ "SizeFromMap", "classv8_1_1internal_1_1HeapObjectLayout.html#af7c49d1642eb83de7e6d92c48b80bcb3", null ],
     [ "CodeStubAssembler", "classv8_1_1internal_1_1HeapObjectLayout.html#ab0fdd46d6a0fd9cdf4ce8df83e1efadd", null ],
     [ "Heap", "classv8_1_1internal_1_1HeapObjectLayout.html#a3d69975be2e998e7bf2dcd1b1c8b4577", null ],
-    [ "HeapObject", "classv8_1_1internal_1_1HeapObjectLayout.html#a4ae334d69f930be0e066fd52730366d3", null ]
+    [ "HeapObject", "classv8_1_1internal_1_1HeapObjectLayout.html#a4ae334d69f930be0e066fd52730366d3", null ],
+    [ "map_", "classv8_1_1internal_1_1HeapObjectLayout.html#aa77cc8df9bb0ea3ff1ed726ce1355cae", null ]
 ];

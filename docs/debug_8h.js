@@ -5,6 +5,7 @@ var debug_8h =
     [ "v8::internal::DebugInfoCollection", "classv8_1_1internal_1_1DebugInfoCollection.html", "classv8_1_1internal_1_1DebugInfoCollection" ],
     [ "v8::internal::DebugInfoCollection::Iterator", "classv8_1_1internal_1_1DebugInfoCollection_1_1Iterator.html", "classv8_1_1internal_1_1DebugInfoCollection_1_1Iterator" ],
     [ "v8::internal::Debug", "classv8_1_1internal_1_1Debug.html", "classv8_1_1internal_1_1Debug" ],
+    [ "v8::internal::Debug::ThreadLocal", "classv8_1_1internal_1_1Debug_1_1ThreadLocal.html", "classv8_1_1internal_1_1Debug_1_1ThreadLocal" ],
     [ "v8::internal::DebugScope", "classv8_1_1internal_1_1DebugScope.html", "classv8_1_1internal_1_1DebugScope" ],
     [ "v8::internal::ReturnValueScope", "classv8_1_1internal_1_1ReturnValueScope.html", "classv8_1_1internal_1_1ReturnValueScope" ],
     [ "v8::internal::DisableBreak", "classv8_1_1internal_1_1DisableBreak.html", "classv8_1_1internal_1_1DisableBreak" ],

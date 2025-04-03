@@ -169,5 +169,7 @@ var classv8_1_1internal_1_1InstructionBase =
     [ "SaFieldRaw", "classv8_1_1internal_1_1InstructionBase.html#a2fbbd2c466574b050c72efaf71abfca0", null ],
     [ "SetInstructionBits", "classv8_1_1internal_1_1InstructionBase.html#a671915b97096f3b2753c6070fc16ff10", null ],
     [ "SetInstructionBits", "classv8_1_1internal_1_1InstructionBase.html#a671915b97096f3b2753c6070fc16ff10", null ],
-    [ "SetInstructionBits", "classv8_1_1internal_1_1InstructionBase.html#ad7e385006a75031e5bd75d3243268e37", null ]
+    [ "SetInstructionBits", "classv8_1_1internal_1_1InstructionBase.html#ad7e385006a75031e5bd75d3243268e37", null ],
+    [ "kFunctionFieldRegisterTypeMask", "classv8_1_1internal_1_1InstructionBase.html#a1abe9853f52b90ea83d43775f5dd6c4b", null ],
+    [ "kOpcodeImmediateTypeMask", "classv8_1_1internal_1_1InstructionBase.html#a65e8208f287da67526d2f77be634e4c4", null ]
 ];

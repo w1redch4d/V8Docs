@@ -8,5 +8,6 @@ var classv8_1_1base_1_1Semaphore =
     [ "operator=", "classv8_1_1base_1_1Semaphore.html#ac14ed3a736c19a7a55f97c30d8d30db0", null ],
     [ "Signal", "classv8_1_1base_1_1Semaphore.html#a95ee194fdea88172c20132a95ac8ca59", null ],
     [ "Wait", "classv8_1_1base_1_1Semaphore.html#afa492a527fe740fb20024a4146833f32", null ],
-    [ "WaitFor", "classv8_1_1base_1_1Semaphore.html#aa42f3f944d0de73d7cbae90ad1e5cf58", null ]
+    [ "WaitFor", "classv8_1_1base_1_1Semaphore.html#aa42f3f944d0de73d7cbae90ad1e5cf58", null ],
+    [ "native_handle_", "classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4", null ]
 ];

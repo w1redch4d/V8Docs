@@ -9,5 +9,8 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmGCTypedOptimizationRedu
     [ "StructSet", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmGCTypedOptimizationReducer.html#aa04294c62bc7b809ca6d0698524d268b", null ],
     [ "WasmTypeAnnotation", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmGCTypedOptimizationReducer.html#a70f845d1bd7422979da9b12899115213", null ],
     [ "WasmTypeCast", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmGCTypedOptimizationReducer.html#aef49ffce331eddab881ea3976b6144a1", null ],
-    [ "WasmTypeCheck", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmGCTypedOptimizationReducer.html#a54da7f99fc883e8ce265b336199ed589", null ]
+    [ "WasmTypeCheck", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmGCTypedOptimizationReducer.html#a54da7f99fc883e8ce265b336199ed589", null ],
+    [ "analyzer_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmGCTypedOptimizationReducer.html#a1133e485b70b66ff240345726622793e", null ],
+    [ "graph_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmGCTypedOptimizationReducer.html#abac7395592f9b1b99c80419e5648df9c", null ],
+    [ "module_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmGCTypedOptimizationReducer.html#a896dce1bf6f31763cfa9cebcfbc6398e", null ]
 ];

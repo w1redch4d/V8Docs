@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer =
 [
+    [ "Snapshot", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer_1_1Snapshot.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer_1_1Snapshot" ],
     [ "AliasKey", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#aee93b087936c9c1fd393f67aa7245f7c", null ],
     [ "AliasSnapshot", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a95c1d2b36f55732c797e8b8e2d364ae9", null ],
     [ "AliasTable", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#ab57157cc570d305ef524337b3a393d38", null ],
@@ -14,6 +15,35 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer
       [ "kMaybeInnerPointer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a824e769ea962aa51b7b61701637e9155ab4346aa5a6e1d3594a057e092cacf8d9", null ]
     ] ],
     [ "LateLoadEliminationAnalyzer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a32a017aa452b5a6c91a19a03a8c70af6", null ],
+    [ "BackedgeHasSnapshot", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a92622a312b076a4bbc473b5da4712950", null ],
+    [ "BeginBlock", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a0af845bc17413b37427e86610bcda2ef", null ],
+    [ "DcheckWordBinop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#ab4aefb830bc86e47579bb7ea83d07bae", null ],
+    [ "FinishBlock", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a53525733dbd7bda4b39fe0bb694c7b86", null ],
     [ "GetReplacement", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a5b5a0c3c31a1827fce1a2db9311ee9ea", null ],
-    [ "Run", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#aeb99776cd2818c979eec62d31c6a7bc6", null ]
+    [ "InvalidateAllNonAliasingInputs", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#aba9fcc85e044df392d47ca99718d45ab", null ],
+    [ "InvalidateIfAlias", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#acdb671cb263ba267dc512bac7e9b5335", null ],
+    [ "ProcessAllocate", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a92c9abcf220644d81d465edf0d12cbff", null ],
+    [ "ProcessAssumeMap", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a2036c653777f34205f76194bf420edee", null ],
+    [ "ProcessBlock", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#ad1b4a451ff19cdc6b3121ce1aefbfe2e", null ],
+    [ "ProcessCall", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a5eec109d6683764397dc630821d12471", null ],
+    [ "ProcessChange", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#af71e3f86861a6551bec75c3a8fdb768d", null ],
+    [ "ProcessLoad", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a498d9e74b8ce59db6bf5825f2f53fc8d", null ],
+    [ "ProcessStore", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a061f883f06e9f9a1e408a8e5dd38b60a", null ],
+    [ "Run", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#aeb99776cd2818c979eec62d31c6a7bc6", null ],
+    [ "SealAndDiscard", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a380e9df65061e01488f3ca8ef19f2c8a", null ],
+    [ "StoreLoopSnapshotInForwardPredecessor", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#afcb52a852752d698ee5e9590922add91", null ],
+    [ "block_to_snapshot_mapping_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#ab0599fc9fd0ffaec99b6b8b3c05b7117", null ],
+    [ "broker_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#abf031b2c917daf0968085915f50c1f51", null ],
+    [ "data_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a7539e98f7b48de951d8e170f9322bcc6", null ],
+    [ "graph_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a41807c66756f7e65c957f39eb63767a8", null ],
+    [ "int32_truncated_loads_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a426b51892ca8fabc3d3459c6676f2718", null ],
+    [ "memory_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a7d08ec5109a14b2d8046234d654de59a", null ],
+    [ "non_aliasing_objects_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a2d4f2ed4d94f8332a929c0fbabce7f42", null ],
+    [ "object_maps_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a86bb6e6386569cd4a884d557624c1097", null ],
+    [ "phase_zone_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#af8b97ed18ae40673677aef2e6ac4df0f", null ],
+    [ "predecessor_alias_snapshots_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#aea9039319c26ab91c91bc8e05f38c5ea", null ],
+    [ "predecessor_maps_snapshots_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a13e84ea32e61d3eca366979c7865872e", null ],
+    [ "predecessor_memory_snapshots_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#ae052b5772f20988ac39f9c6a089c2c50", null ],
+    [ "raw_base_assumption_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a1bc1b2e656cbca448af5550796de4f58", null ],
+    [ "replacements_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html#a34942951efa93f9c81b18a00f956c2ea", null ]
 ];

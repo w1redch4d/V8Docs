@@ -1,6 +1,11 @@
 var classv8_1_1internal_1_1compiler_1_1TypeCache =
 [
     [ "TypeCache", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#a06063dc98326f98f7762affbe12ad2a3", null ],
+    [ "CreateRange", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#af7455cf0474d266b83abf32d7717a367", null ],
+    [ "CreateRange", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#adaf70d9be69fd1fa114b37441565e3fe", null ],
+    [ "Get", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#ac59f3e31df7ea90099fbe6090b81f6ff", null ],
+    [ "zone", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#ae76f155666b11c14c61e4d0a34bea7f1", null ],
+    [ "allocator", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#a9b8cb9987698fff9db2b1e9c71b8894b", null ],
     [ "kAdditiveSafeInteger", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#a2e603068650b3d143e18b10729ca4c29", null ],
     [ "kAdditiveSafeIntegerOrMinusZero", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#a6ed4c22794fefe7113af33123ec46f66", null ],
     [ "kArgumentsLengthType", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#a5b9513f9f14985d5c520c174803d52b7", null ],
@@ -65,5 +70,6 @@ var classv8_1_1internal_1_1compiler_1_1TypeCache =
     [ "kZeroOrOneOrNaN", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#a5c71c54fcc61f6c9a5a255d2869286c7", null ],
     [ "kZeroOrUndefined", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#ac5f7b54dbb0261f5fe655afc2cacce80", null ],
     [ "kZeroToThirtyOne", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#aa0b27da6ebf60a2b7913b66d8001f3e2", null ],
-    [ "kZeroToThirtyTwo", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#a24265e0a92e9bd1df6372511d0ad8aa0", null ]
+    [ "kZeroToThirtyTwo", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#a24265e0a92e9bd1df6372511d0ad8aa0", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1TypeCache.html#a2f651cc903c915d585944015f9edb728", null ]
 ];

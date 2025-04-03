@@ -19,5 +19,7 @@ var code_stub_assembler_8cc =
     [ "TYPED_ARRAY_CASE", "code-stub-assembler_8cc.html#a572dd685ddbfe9f50630f494b10dc032", null ],
     [ "TYPED_VARIABLE_CONSTRUCTOR", "code-stub-assembler_8cc.html#af9f378df5c7fe368f715273b67e54455", null ],
     [ "TYPED_VARIABLE_DEF", "code-stub-assembler_8cc.html#abcb76b5db26ef0dceea4317421eeae24", null ],
-    [ "V8_CODEGEN_CODE_STUB_ASSEMBLER_MACROS_DEFINED", "code-stub-assembler_8cc.html#a615773345a8eaea54aec6faa50b8ece2", null ]
+    [ "V8_CODEGEN_CODE_STUB_ASSEMBLER_MACROS_DEFINED", "code-stub-assembler_8cc.html#a615773345a8eaea54aec6faa50b8ece2", null ],
+    [ "csa", "code-stub-assembler_8cc.html#a8156c95ccc193ba80a626cb46250d166", null ],
+    [ "mt", "code-stub-assembler_8cc.html#a74a5ef43b6619793ef8d0fe626bd816a", null ]
 ];

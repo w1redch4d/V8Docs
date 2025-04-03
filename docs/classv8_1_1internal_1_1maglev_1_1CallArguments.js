@@ -10,6 +10,7 @@ var classv8_1_1internal_1_1maglev_1_1CallArguments =
     [ "CallArguments", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#aa043fea1cbfb7132bd5d084260ca3662", null ],
     [ "CallArguments", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a2aecfa9e3fb73c8e72f39efe32c6040f", null ],
     [ "array_like_argument", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a61637f2c07db425c0d2be9b57716f584", null ],
+    [ "CheckArgumentsAreNotConversionNodes", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a6ac5aee744d9919a8c505b38d52f48eb", null ],
     [ "count", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a89a5ec4b2b21bdca39cb10a20a136f21", null ],
     [ "count_with_receiver", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a7f5882b8f0672ba6114d229337b2d411", null ],
     [ "mode", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a1154ccc52aa7e5e5bd0bd7ef2847f1e6", null ],
@@ -19,5 +20,8 @@ var classv8_1_1internal_1_1maglev_1_1CallArguments =
     [ "receiver", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#ab6ebc3257cb86f1c89d3035b54d7747c", null ],
     [ "receiver_mode", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a9bed0c63cf0af4e1c4bfa1d3a1be4a19", null ],
     [ "set_arg", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a55d1174d82b765ecbefd815e9d5fc5cb", null ],
-    [ "set_receiver", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a386cbe3bd0304045979c402651d81273", null ]
+    [ "set_receiver", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a386cbe3bd0304045979c402651d81273", null ],
+    [ "args_", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a13552ab96d0da808bcbf2290f8a9ba33", null ],
+    [ "mode_", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a87ffef2ac9d78f858b3555bd753b701f", null ],
+    [ "receiver_mode_", "classv8_1_1internal_1_1maglev_1_1CallArguments.html#a2a4970239a4326ad30d535c54fbe4125", null ]
 ];

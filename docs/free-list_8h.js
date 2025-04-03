@@ -13,5 +13,7 @@ var free_list_8h =
     [ "FreeMode", "free-list_8h.html#a45db351d90234e7d9e494015fcf3829c", [
       [ "kLinkCategory", "free-list_8h.html#a45db351d90234e7d9e494015fcf3829ca53409264f9ed262cc16b5b513fea3a6e", null ],
       [ "kDoNotLinkCategory", "free-list_8h.html#a45db351d90234e7d9e494015fcf3829caba2ca651c63fb8feea63d688e34fceb4", null ]
-    ] ]
+    ] ],
+    [ "kFirstCategory", "free-list_8h.html#a044f3a8fe8dabbdeee3db1b16e85a1ba", null ],
+    [ "kInvalidCategory", "free-list_8h.html#adaaee8620068888ef2b3c120d05d8cd3", null ]
 ];

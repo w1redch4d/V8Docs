@@ -1,11 +1,32 @@
 var classv8_1_1internal_1_1SamplingHeapProfiler =
 [
     [ "AllocationNode", "classv8_1_1internal_1_1SamplingHeapProfiler_1_1AllocationNode.html", "classv8_1_1internal_1_1SamplingHeapProfiler_1_1AllocationNode" ],
+    [ "Observer", "classv8_1_1internal_1_1SamplingHeapProfiler_1_1Observer.html", "classv8_1_1internal_1_1SamplingHeapProfiler_1_1Observer" ],
     [ "Sample", "structv8_1_1internal_1_1SamplingHeapProfiler_1_1Sample.html", "structv8_1_1internal_1_1SamplingHeapProfiler_1_1Sample" ],
     [ "SamplingHeapProfiler", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a9e2ced230d5ba8793f768022acda90d9", null ],
     [ "~SamplingHeapProfiler", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a7ea176b12aa498fc382de981b8bfe6ac", null ],
     [ "SamplingHeapProfiler", "classv8_1_1internal_1_1SamplingHeapProfiler.html#af942453d8e0b6829ac7406998498a175", null ],
+    [ "AddStack", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a7128f29d4933b797746c4a123132895a", null ],
+    [ "BuildSamples", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a28284ba76d061d7182fa1db90ad26f22", null ],
+    [ "FindOrAddChildNode", "classv8_1_1internal_1_1SamplingHeapProfiler.html#aa5c3a298eb072cb093b72d4a5f8a6f6d", null ],
     [ "GetAllocationProfile", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a6eb106cbd50f0f07fed2ca0e35692cd8", null ],
     [ "names", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a9d01f094e3be9dfdc312cb7340c017db", null ],
-    [ "operator=", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a5452bf97c94d5e08dd09d4376912cbd2", null ]
+    [ "next_node_id", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a1bcd9d53e4df00d8cdbe44cadee19b84", null ],
+    [ "next_sample_id", "classv8_1_1internal_1_1SamplingHeapProfiler.html#abc4153594afeaa37e12db1be4888d522", null ],
+    [ "OnWeakCallback", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a9a961ec27db6a3cb849ce85469ec02c5", null ],
+    [ "operator=", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a5452bf97c94d5e08dd09d4376912cbd2", null ],
+    [ "SampleObject", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a39de70ab03f88baaba13c99692d63733", null ],
+    [ "ScaleSample", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a31c125da3a399b74491dba36e47e0f48", null ],
+    [ "TranslateAllocationNode", "classv8_1_1internal_1_1SamplingHeapProfiler.html#aba262c7395fe651abcf412d4bbe003a8", null ],
+    [ "allocation_observer_", "classv8_1_1internal_1_1SamplingHeapProfiler.html#ac52c3d9fb0d7b02e2731b9842eb361a7", null ],
+    [ "flags_", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a23119a85d3835257a35afb67b91ea4e1", null ],
+    [ "heap_", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a16e24bce6829e77398ae4dfbf72ad59d", null ],
+    [ "isolate_", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a438f38c6368b5fcb0682089727294bb8", null ],
+    [ "last_node_id_", "classv8_1_1internal_1_1SamplingHeapProfiler.html#ad8791211fa49d2b91ea64fe1c1857abb", null ],
+    [ "last_sample_id_", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a7182d1c6a3fb84356485cf03cc4e22c8", null ],
+    [ "names_", "classv8_1_1internal_1_1SamplingHeapProfiler.html#af4d883f295e34ee743a8303b71997f87", null ],
+    [ "profile_root_", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a8b2ba41d16ada4dce2a3329cb20761cf", null ],
+    [ "rate_", "classv8_1_1internal_1_1SamplingHeapProfiler.html#aa553490548f4fcd71bf8e59dd7506c09", null ],
+    [ "samples_", "classv8_1_1internal_1_1SamplingHeapProfiler.html#aa26e8248cb66ece52066f0cd85a03449", null ],
+    [ "stack_depth_", "classv8_1_1internal_1_1SamplingHeapProfiler.html#a09a429f7195cc6d77c206b197a825dbf", null ]
 ];

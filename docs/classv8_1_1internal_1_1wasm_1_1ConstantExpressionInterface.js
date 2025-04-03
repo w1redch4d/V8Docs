@@ -9,5 +9,17 @@ var classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface =
     [ "computed_value", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#a12f17502494a66295bbb3f15a5235966", null ],
     [ "end_found", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#a6c357999d72d81a3c815b08c0ed96b1f", null ],
     [ "error", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#a400568f2f15daa484b8ff28a1396c43b", null ],
-    [ "has_error", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#adea874c3b5259ac77854f9953c8ee23c", null ]
+    [ "generate_value", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#afbbb18603839bd465c0f8f3f9a763ed0", null ],
+    [ "GetTrustedInstanceDataForTypeIndex", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#aff21d2ff15c17409fb903e132fa2552e", null ],
+    [ "has_error", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#adea874c3b5259ac77854f9953c8ee23c", null ],
+    [ "computed_value_", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#a03de36a8840d66f356779cfd78dc6aa4", null ],
+    [ "decoding_mode", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#aba22936b95e09ee309922385862691b0", null ],
+    [ "end_found_", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#aa86126af8ed74bde5bce579363641520", null ],
+    [ "error_", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#a0123bba0e1db44c8c5998fa86abc1e0a", null ],
+    [ "isolate_", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#aa9a35de9702f92b34efc7df6bd58f245", null ],
+    [ "kUsesPoppedArgs", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#a3769a9d6bf19fa3bd49e92caf2f3f665", null ],
+    [ "module_", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#ac0d69cb745d57d151066f08a7ae2a491", null ],
+    [ "outer_module_", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#a6acc6b1e08477b73d081d62ebcda8fb6", null ],
+    [ "shared_trusted_instance_data_", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#a35ffcc9ca794f3f9ea7bbec601436fb9", null ],
+    [ "trusted_instance_data_", "classv8_1_1internal_1_1wasm_1_1ConstantExpressionInterface.html#a7437e6619c88466666b9747d3fed8542", null ]
 ];

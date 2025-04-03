@@ -13,10 +13,12 @@ var classv8_1_1internal_1_1CodeEventLogger =
     [ "CodeMovingGCEvent", "classv8_1_1internal_1_1CodeEventLogger.html#a1e7773a2cbfc92976ed978cd58aacce3", null ],
     [ "GetterCallbackEvent", "classv8_1_1internal_1_1CodeEventLogger.html#ae6ba9351c62e49c0ea44f2da9bdf1b95", null ],
     [ "is_listening_to_code_events", "classv8_1_1internal_1_1CodeEventLogger.html#a571e66059b501aa46b4dd04bdb3b2bc5", null ],
+    [ "LogRecordedBuffer", "classv8_1_1internal_1_1CodeEventLogger.html#af76fdceec88581da1cc1267c990939f4", null ],
     [ "NativeContextMoveEvent", "classv8_1_1internal_1_1CodeEventLogger.html#a7d1e7ab8e26fa58f66114e878cc383f8", null ],
     [ "RegExpCodeCreateEvent", "classv8_1_1internal_1_1CodeEventLogger.html#a43702564efd5df00c433fadf63140119", null ],
     [ "SetterCallbackEvent", "classv8_1_1internal_1_1CodeEventLogger.html#a275730fdc68d3a2f9621f2024e2acebd", null ],
     [ "SharedFunctionInfoMoveEvent", "classv8_1_1internal_1_1CodeEventLogger.html#aba57706aa2d5625494d9cf6182a0bf07", null ],
     [ "WeakCodeClearEvent", "classv8_1_1internal_1_1CodeEventLogger.html#a4801a476e5839b1245ca26cd4f119ac7", null ],
-    [ "isolate_", "classv8_1_1internal_1_1CodeEventLogger.html#a2934bdcd8baa3f759b111ea3235ef170", null ]
+    [ "isolate_", "classv8_1_1internal_1_1CodeEventLogger.html#a2934bdcd8baa3f759b111ea3235ef170", null ],
+    [ "name_buffer_", "classv8_1_1internal_1_1CodeEventLogger.html#a5185a53ee6cf8dcd0917dfe6cb4ce3c7", null ]
 ];

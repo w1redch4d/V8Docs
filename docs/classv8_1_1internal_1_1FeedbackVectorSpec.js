@@ -18,15 +18,19 @@ var classv8_1_1internal_1_1FeedbackVectorSpec =
     [ "AddLiteralSlot", "classv8_1_1internal_1_1FeedbackVectorSpec.html#a886fded8d478666c5a7e0e1c877bb45e", null ],
     [ "AddLoadGlobalICSlot", "classv8_1_1internal_1_1FeedbackVectorSpec.html#abc6ec0e52b977a3d177a2b722b67c97a", null ],
     [ "AddLoadICSlot", "classv8_1_1internal_1_1FeedbackVectorSpec.html#a56bcedafe3bc11216328bcd2f444e959", null ],
+    [ "AddSlot", "classv8_1_1internal_1_1FeedbackVectorSpec.html#a9daeda8f60225614c262b5f88794e452", null ],
     [ "AddStoreGlobalICSlot", "classv8_1_1internal_1_1FeedbackVectorSpec.html#addfb6cac864e5d81a55f4c5807d97e0a", null ],
     [ "AddStoreICSlot", "classv8_1_1internal_1_1FeedbackVectorSpec.html#aaa568b5a19203d2da57ace5c34daf9ba", null ],
     [ "AddStoreInArrayLiteralICSlot", "classv8_1_1internal_1_1FeedbackVectorSpec.html#a1b46742a132c4b011602b83ad8e7d2b6", null ],
     [ "AddTypeOfSlot", "classv8_1_1internal_1_1FeedbackVectorSpec.html#acf21c06230d2e2a5f9a169a2f1020a80", null ],
+    [ "append", "classv8_1_1internal_1_1FeedbackVectorSpec.html#a5bc8a3a55dfb93a1816840cc163a1182", null ],
     [ "create_closure_slot_count", "classv8_1_1internal_1_1FeedbackVectorSpec.html#a4c540c31889287e47d785b4139f580e9", null ],
     [ "GetCreateClosureParameterCount", "classv8_1_1internal_1_1FeedbackVectorSpec.html#abaeb48b4215a27287694f704f76002d4", null ],
     [ "GetKeyedStoreICSlotKind", "classv8_1_1internal_1_1FeedbackVectorSpec.html#a99cd88ad6031f5fa64a52838e322be6f", null ],
     [ "GetKind", "classv8_1_1internal_1_1FeedbackVectorSpec.html#a2232b4795a9741952841d6b938f32b04", null ],
     [ "GetStoreICSlot", "classv8_1_1internal_1_1FeedbackVectorSpec.html#ad566179cde015491ca5a48c7a0e163f3", null ],
     [ "slot_count", "classv8_1_1internal_1_1FeedbackVectorSpec.html#a2522b1598c7fea23dc8f27d066bcd90c", null ],
-    [ "SharedFeedbackSlot", "classv8_1_1internal_1_1FeedbackVectorSpec.html#a447ef19d3be65fe9028003377eeb35a6", null ]
+    [ "SharedFeedbackSlot", "classv8_1_1internal_1_1FeedbackVectorSpec.html#a447ef19d3be65fe9028003377eeb35a6", null ],
+    [ "create_closure_parameter_counts_", "classv8_1_1internal_1_1FeedbackVectorSpec.html#ab1700c74ffa3b0b5ad8b764b18b9288f", null ],
+    [ "slot_kinds_", "classv8_1_1internal_1_1FeedbackVectorSpec.html#ad371893b5bdeed53473af9b1c270d396", null ]
 ];

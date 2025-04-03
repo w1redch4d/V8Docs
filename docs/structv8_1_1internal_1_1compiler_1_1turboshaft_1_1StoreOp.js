@@ -8,6 +8,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreOp =
     [ "index", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreOp.html#aa14c843070bf72bbb7455d3585355bf2", null ],
     [ "indirect_pointer_tag", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreOp.html#aaeaad53e293d3132a0239438ce0a2d1b", null ],
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreOp.html#a3e2fc3a6742485f82b8b804f3ba1197e", null ],
+    [ "New", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreOp.html#ac8f0d2d487ba4efc5592403febf6bc81", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreOp.html#af091afd1bb5d66627ae30685fcd4dd8d", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreOp.html#a9c88cbfdcb9d4f3e688a6b86a2c47e3c", null ],
     [ "PrintInputs", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StoreOp.html#ac820a7f2e2f4e8adef2b8a96c44e6762", null ],

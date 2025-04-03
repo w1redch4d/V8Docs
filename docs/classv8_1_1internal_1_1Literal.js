@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1Literal =
 [
+    [ "TypeField", "classv8_1_1internal_1_1Literal.html#abc0f55bfaf4bc9905449beccbadd2d55", null ],
     [ "Type", "classv8_1_1internal_1_1Literal.html#aebdc45fab4b314d13410bd3285391f1c", [
       [ "kSmi", "classv8_1_1internal_1_1Literal.html#aebdc45fab4b314d13410bd3285391f1ca284e18cfb56a3b651157aeaaceb2809c", null ],
       [ "kHeapNumber", "classv8_1_1internal_1_1Literal.html#aebdc45fab4b314d13410bd3285391f1cac0345c7dcaf9fb0bd0f4ef5f85a77d54", null ],
@@ -11,6 +12,13 @@ var classv8_1_1internal_1_1Literal =
       [ "kNull", "classv8_1_1internal_1_1Literal.html#aebdc45fab4b314d13410bd3285391f1cacf94c750ada61b6390a4ef8dd7e94f48", null ],
       [ "kTheHole", "classv8_1_1internal_1_1Literal.html#aebdc45fab4b314d13410bd3285391f1ca0498a2ab22bb973b422949af330659e7", null ]
     ] ],
+    [ "Literal", "classv8_1_1internal_1_1Literal.html#aa521a9720fdebb208922a7aa75814532", null ],
+    [ "Literal", "classv8_1_1internal_1_1Literal.html#a32ac5b990fcf6b1ee399768ee3a1fc6f", null ],
+    [ "Literal", "classv8_1_1internal_1_1Literal.html#ad4ddc2647bab94dd78fec6cc288dddf4", null ],
+    [ "Literal", "classv8_1_1internal_1_1Literal.html#a7e6a7caf919f83d4d2c92e0480bcfe89", null ],
+    [ "Literal", "classv8_1_1internal_1_1Literal.html#a89c2a038ab46b658173d2e8905d9ba0e", null ],
+    [ "Literal", "classv8_1_1internal_1_1Literal.html#a6e584a30da4c7d2de7cdef0ea0a66316", null ],
+    [ "Literal", "classv8_1_1internal_1_1Literal.html#aaaf23a991adcadb24ab451e9bf891a78", null ],
     [ "AsArrayIndex", "classv8_1_1internal_1_1Literal.html#a0794e1a8d9d6ba7433c5a78d8c57ac69", null ],
     [ "AsBigInt", "classv8_1_1internal_1_1Literal.html#a8de2256ce6f0e6b287b00a2bcdfbb71f", null ],
     [ "AsBooleanLiteral", "classv8_1_1internal_1_1Literal.html#adbc104c9a036a587e8082c76a2000c81", null ],
@@ -25,6 +33,7 @@ var classv8_1_1internal_1_1Literal =
     [ "IsNumber", "classv8_1_1internal_1_1Literal.html#abb4c94e71c472cbfb953c5abe42244b9", null ],
     [ "IsPropertyName", "classv8_1_1internal_1_1Literal.html#ab801eee49b842399bd4180145e450869", null ],
     [ "IsRawString", "classv8_1_1internal_1_1Literal.html#ab3953c986546cab77aae0b51ee7579b9", null ],
+    [ "Match", "classv8_1_1internal_1_1Literal.html#a1035dab7bb6d4fab33e9ebae88d93673", null ],
     [ "ToBooleanIsFalse", "classv8_1_1internal_1_1Literal.html#ac644b187d1620e6f76d612d2f43bf97d", null ],
     [ "ToBooleanIsTrue", "classv8_1_1internal_1_1Literal.html#ad8547123e5c1db727e06aea1ed49cae7", null ],
     [ "ToUint32", "classv8_1_1internal_1_1Literal.html#a2320971a611642f4523ea38effae35da", null ],
@@ -35,5 +44,6 @@ var classv8_1_1internal_1_1Literal =
     [ "cons_string_", "classv8_1_1internal_1_1Literal.html#afeef5024811ca45c20e22546471f7451", null ],
     [ "number_", "classv8_1_1internal_1_1Literal.html#af824d8c4f587fd9a9a57414bb8fc3588", null ],
     [ "smi_", "classv8_1_1internal_1_1Literal.html#a15e4d0f0989027c8ebd877fb21e3baa9", null ],
-    [ "string_", "classv8_1_1internal_1_1Literal.html#afbc922923a7576c401ac7f3103031c8f", null ]
+    [ "string_", "classv8_1_1internal_1_1Literal.html#afbc922923a7576c401ac7f3103031c8f", null ],
+    [ "Zone", "classv8_1_1internal_1_1Literal.html#a829855b5cb78b1145c5623c453f35d87", null ]
 ];

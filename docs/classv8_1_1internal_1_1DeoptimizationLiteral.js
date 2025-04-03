@@ -9,6 +9,7 @@ var classv8_1_1internal_1_1DeoptimizationLiteral =
     [ "DeoptimizationLiteral", "classv8_1_1internal_1_1DeoptimizationLiteral.html#a5ad0d89455e60a6143fab6dabe7054a8", null ],
     [ "DeoptimizationLiteral", "classv8_1_1internal_1_1DeoptimizationLiteral.html#a157c8743af4e3ef5789d95a5179f42d6", null ],
     [ "DeoptimizationLiteral", "classv8_1_1internal_1_1DeoptimizationLiteral.html#a414f21197f3442c4abc19001f298d2fe", null ],
+    [ "HoleNaN", "classv8_1_1internal_1_1DeoptimizationLiteral.html#a8c0d50e1d8462882f913590e14a41633", null ],
     [ "kind", "classv8_1_1internal_1_1DeoptimizationLiteral.html#a58d242f21326a1017d02541408e31d9a", null ],
     [ "object", "classv8_1_1internal_1_1DeoptimizationLiteral.html#a7eab318a9016d66a06b72a81482a13b4", null ],
     [ "operator==", "classv8_1_1internal_1_1DeoptimizationLiteral.html#a6a7df5c0fac3c52dd84c7f0979a0d33e", null ],
@@ -17,6 +18,7 @@ var classv8_1_1internal_1_1DeoptimizationLiteral =
     [ "float32_", "classv8_1_1internal_1_1DeoptimizationLiteral.html#a0cc60a57d57de750234554bbf51f266b", null ],
     [ "float64_", "classv8_1_1internal_1_1DeoptimizationLiteral.html#a6a6b16f41eba9e9194897f23b4de3134", null ],
     [ "int64_", "classv8_1_1internal_1_1DeoptimizationLiteral.html#a3b1d34b6d0aa70040ce1a12df7c51d65", null ],
+    [ "kind_", "classv8_1_1internal_1_1DeoptimizationLiteral.html#a0ee5857fd153126574eb441d264149ba", null ],
     [ "number_", "classv8_1_1internal_1_1DeoptimizationLiteral.html#ab7f4d3a1431432635f120ebb450bb0e5", null ],
     [ "object_", "classv8_1_1internal_1_1DeoptimizationLiteral.html#aa1476f187d78b35a099cea8c169f4e23", null ],
     [ "uint64_", "classv8_1_1internal_1_1DeoptimizationLiteral.html#a1065b4e5dd3bfb51084413631227a1df", null ]

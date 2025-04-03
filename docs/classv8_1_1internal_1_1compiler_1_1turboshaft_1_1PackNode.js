@@ -25,5 +25,9 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PackNode =
     [ "RevectorizedNode", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PackNode.html#aa1de2266f9d4b879d20acfccdb5cfb4d", null ],
     [ "SetOperand", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PackNode.html#a417b92478de216e50ad7a96a9e66b3bc", null ],
     [ "SetRevectorizedNode", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PackNode.html#a7ec321343669bbf6435e2bd317358a14", null ],
-    [ "ForcePackNode", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PackNode.html#a632a880170a03497d0dbc6817d990375", null ]
+    [ "ForcePackNode", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PackNode.html#a632a880170a03497d0dbc6817d990375", null ],
+    [ "node_type_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PackNode.html#a91d992d090495ec6dd8a2872ad209071", null ],
+    [ "nodes_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PackNode.html#a300c86eb1dbc1fc70c8f6bb8d2e2a9fa", null ],
+    [ "operands_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PackNode.html#a4957b5e231759585da9996bc0b670913", null ],
+    [ "revectorized_node_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PackNode.html#a250848f05bae2c1a5641e7fea28e45f2", null ]
 ];

@@ -13,5 +13,7 @@ var classv8_1_1internal_1_1maglev_1_1RepeatIterator =
     [ "operator-", "classv8_1_1internal_1_1maglev_1_1RepeatIterator.html#a66e6f380912255942da62c13f7e7aece", null ],
     [ "operator--", "classv8_1_1internal_1_1maglev_1_1RepeatIterator.html#ad603d7ad8c84ffc211e8dddd5810f690", null ],
     [ "operator->", "classv8_1_1internal_1_1maglev_1_1RepeatIterator.html#a1fc6aeb1146de83ee98b696290062790", null ],
-    [ "operator==", "classv8_1_1internal_1_1maglev_1_1RepeatIterator.html#afbf3305a27d4eb1238d9597a6bd0a824", null ]
+    [ "operator==", "classv8_1_1internal_1_1maglev_1_1RepeatIterator.html#afbf3305a27d4eb1238d9597a6bd0a824", null ],
+    [ "count_", "classv8_1_1internal_1_1maglev_1_1RepeatIterator.html#aecf481c31ba7bd1ba7ac3f2605490fa0", null ],
+    [ "val_", "classv8_1_1internal_1_1maglev_1_1RepeatIterator.html#aead05b8b9b9753cbb94ccdc6e0dbfdb5", null ]
 ];

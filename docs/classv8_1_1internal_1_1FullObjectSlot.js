@@ -14,6 +14,7 @@ var classv8_1_1internal_1_1FullObjectSlot =
     [ "load", "classv8_1_1internal_1_1FullObjectSlot.html#a2ae2795364b260cabb7895c92be684d4", null ],
     [ "load_map", "classv8_1_1internal_1_1FullObjectSlot.html#a809fa0255a2590bd274b7d831275b56a", null ],
     [ "operator*", "classv8_1_1internal_1_1FullObjectSlot.html#a536ae99fe8455e37736a5966b32e9117", null ],
+    [ "RawToTagged", "classv8_1_1internal_1_1FullObjectSlot.html#a19aec9fca29a4e88b8e636e6e73e4dc2", null ],
     [ "Relaxed_CompareAndSwap", "classv8_1_1internal_1_1FullObjectSlot.html#ab246dda9ab9fe2a47d3579db868ca22b", null ],
     [ "Relaxed_ContainsMapValue", "classv8_1_1internal_1_1FullObjectSlot.html#ab61cf70a2f3284f135e6e3ce32beb45e", null ],
     [ "Relaxed_Load", "classv8_1_1internal_1_1FullObjectSlot.html#a503f3174807124ef8c65227ffb37250d", null ],
@@ -23,5 +24,6 @@ var classv8_1_1internal_1_1FullObjectSlot =
     [ "Release_CompareAndSwap", "classv8_1_1internal_1_1FullObjectSlot.html#abcf4357132b234c583ef6fd689ae1e5b", null ],
     [ "Release_Store", "classv8_1_1internal_1_1FullObjectSlot.html#adc3b0a9182bb08ede5db6ed027d49253", null ],
     [ "store", "classv8_1_1internal_1_1FullObjectSlot.html#a8536dba7ebccdf4f0e1ccfcee33abedd", null ],
-    [ "store_map", "classv8_1_1internal_1_1FullObjectSlot.html#a866d288a7800f7e47b688007a2aac89e", null ]
+    [ "store_map", "classv8_1_1internal_1_1FullObjectSlot.html#a866d288a7800f7e47b688007a2aac89e", null ],
+    [ "kCanBeWeak", "classv8_1_1internal_1_1FullObjectSlot.html#ac0ba1a9cd25f7946001b5bf6276e302a", null ]
 ];

@@ -9,6 +9,7 @@ var classv8_1_1internal_1_1ForEachStatement =
     [ "Initialize", "classv8_1_1internal_1_1ForEachStatement.html#a313c15cf34ee25e46b38d29f98e2062c", null ],
     [ "Initialize", "classv8_1_1internal_1_1ForEachStatement.html#a6a313ad237f5b93a69bd3db590872865", null ],
     [ "subject", "classv8_1_1internal_1_1ForEachStatement.html#afb5b36b890b74b3e6c859e99c1ed67f4", null ],
+    [ "VisitModeString", "classv8_1_1internal_1_1ForEachStatement.html#a4ff124771cb7721800726ff40ee77243", null ],
     [ "AstNodeFactory", "classv8_1_1internal_1_1ForEachStatement.html#a8d587c8ad3515ff6433eb83c578e795f", null ],
     [ "each_", "classv8_1_1internal_1_1ForEachStatement.html#aa12808d96f7342cf636a60c3d6f512a1", null ],
     [ "subject_", "classv8_1_1internal_1_1ForEachStatement.html#a3b5e40ae9a83c70fe26870e8b87e189c", null ],

@@ -6,5 +6,7 @@ var option_utils_8h =
     [ "GetNumberOption", "option-utils_8h.html#abca78bea2a5192ea95336ff120595db1", null ],
     [ "GetNumberOptionAsDouble", "option-utils_8h.html#a3bedefdbe3d4ced9ff83f5d67821586e", null ],
     [ "GetOptionsObject", "option-utils_8h.html#a4d1bd8f91ef3f5608f64b6069bd19155", null ],
-    [ "GetStringOption", "option-utils_8h.html#ae032dca06e882540eca629ad340d45b2", null ]
+    [ "GetStringOption", "option-utils_8h.html#a967b6192f8f6d144e7e974a2790fb4f6", null ],
+    [ "GetStringOption", "option-utils_8h.html#ae032dca06e882540eca629ad340d45b2", null ],
+    [ "GetStringOrBooleanOption", "option-utils_8h.html#ad4164bdbc127c93cf5ea852c0b9a5eee", null ]
 ];

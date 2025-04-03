@@ -5,5 +5,7 @@ var classv8_1_1internal_1_1NeonListOperand =
     [ "base", "classv8_1_1internal_1_1NeonListOperand.html#a15e8ec71a73fd1c793abb35acd7f5d53", null ],
     [ "length", "classv8_1_1internal_1_1NeonListOperand.html#a34bd85f2c2802409d20f40fa9101aa7b", null ],
     [ "register_count", "classv8_1_1internal_1_1NeonListOperand.html#a81738cec84de557307a9196f231ebdc4", null ],
-    [ "type", "classv8_1_1internal_1_1NeonListOperand.html#ad93381789031c1993e2408bb53487588", null ]
+    [ "type", "classv8_1_1internal_1_1NeonListOperand.html#ad93381789031c1993e2408bb53487588", null ],
+    [ "base_", "classv8_1_1internal_1_1NeonListOperand.html#a63c233795ec41bc40accb8054498a587", null ],
+    [ "register_count_", "classv8_1_1internal_1_1NeonListOperand.html#af4d6538a4c8375c3521288a6f8aa92b6", null ]
 ];

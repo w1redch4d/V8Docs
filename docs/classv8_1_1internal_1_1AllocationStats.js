@@ -10,5 +10,8 @@ var classv8_1_1internal_1_1AllocationStats =
     [ "IncreaseCapacity", "classv8_1_1internal_1_1AllocationStats.html#a2d4420ab92ac41b0d31013b745db6d6d", null ],
     [ "MaxCapacity", "classv8_1_1internal_1_1AllocationStats.html#ad39e9d9d7911ced8591f37dc50cd063c", null ],
     [ "operator=", "classv8_1_1internal_1_1AllocationStats.html#a17128448483ffaba83af4b80147e7c12", null ],
-    [ "Size", "classv8_1_1internal_1_1AllocationStats.html#aacac0c1a668a36698704bf047931bce9", null ]
+    [ "Size", "classv8_1_1internal_1_1AllocationStats.html#aacac0c1a668a36698704bf047931bce9", null ],
+    [ "capacity_", "classv8_1_1internal_1_1AllocationStats.html#a2b283167725017cb1591acfaa7811950", null ],
+    [ "max_capacity_", "classv8_1_1internal_1_1AllocationStats.html#aa752ba57acb89f0ac5bda26b75fead0c", null ],
+    [ "size_", "classv8_1_1internal_1_1AllocationStats.html#a25dadafce6a27c7c712b738b88a29b7a", null ]
 ];

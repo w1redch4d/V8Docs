@@ -10,5 +10,6 @@ var classv8_1_1internal_1_1SnapshotByteSink =
     [ "PutN", "classv8_1_1internal_1_1SnapshotByteSink.html#a1d7dab158a09aea2511510cfd5b644d3", null ],
     [ "PutRaw", "classv8_1_1internal_1_1SnapshotByteSink.html#ad93d2ad1d56393d7d265886b92b58cd6", null ],
     [ "PutUint30", "classv8_1_1internal_1_1SnapshotByteSink.html#aabc2272982a939be24759c15eabaa615", null ],
-    [ "PutUint32", "classv8_1_1internal_1_1SnapshotByteSink.html#a3948101c24367f9b91f1f29eee013e2c", null ]
+    [ "PutUint32", "classv8_1_1internal_1_1SnapshotByteSink.html#a3948101c24367f9b91f1f29eee013e2c", null ],
+    [ "data_", "classv8_1_1internal_1_1SnapshotByteSink.html#af83999325be1e25d29af608966f07308", null ]
 ];

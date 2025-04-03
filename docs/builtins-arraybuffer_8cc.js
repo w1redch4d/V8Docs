@@ -10,5 +10,7 @@ var builtins_arraybuffer_8cc =
     [ "BUILTIN", "builtins-arraybuffer_8cc.html#ac411002ca00b91efed68cb2b271fc03c", null ],
     [ "BUILTIN", "builtins-arraybuffer_8cc.html#a84532fbb0439339e6cd8fab478456d9a", null ],
     [ "BUILTIN", "builtins-arraybuffer_8cc.html#a25e16b4793c145647060b38527431128", null ],
-    [ "BUILTIN", "builtins-arraybuffer_8cc.html#a4eb7845403ae59883860e0a8d681467e", null ]
+    [ "BUILTIN", "builtins-arraybuffer_8cc.html#a4eb7845403ae59883860e0a8d681467e", null ],
+    [ "ResizeHelper", "builtins-arraybuffer_8cc.html#afdf0cfa410d7bcfe62ee78dc765d0456", null ],
+    [ "SliceHelper", "builtins-arraybuffer_8cc.html#a1ba5b7867b8a4da8ddfddf63e7a35a65", null ]
 ];

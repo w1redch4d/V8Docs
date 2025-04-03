@@ -2,6 +2,14 @@ var classv8_1_1internal_1_1HeapObject =
 [
     [ "SkipTypeCheckTag", "structv8_1_1internal_1_1HeapObject_1_1SkipTypeCheckTag.html", null ],
     [ "MapField", "classv8_1_1internal_1_1HeapObject.html#a3aac054febfcdea1543337dddc169770", null ],
+    [ "EmitWriteBarrier", "classv8_1_1internal_1_1HeapObject.html#a5131873a8fd9478286b475270cf42581", [
+      [ "kYes", "classv8_1_1internal_1_1HeapObject.html#a5131873a8fd9478286b475270cf42581a1ea590aa4a64767508460736ac0edaa9", null ],
+      [ "kNo", "classv8_1_1internal_1_1HeapObject.html#a5131873a8fd9478286b475270cf42581a8cc8e60acfa3ae6089df773013fd73a2", null ]
+    ] ],
+    [ "VerificationMode", "classv8_1_1internal_1_1HeapObject.html#aaf393b8e63b5da09bc57ca13e665bac4", [
+      [ "kSafeMapTransition", "classv8_1_1internal_1_1HeapObject.html#aaf393b8e63b5da09bc57ca13e665bac4a8444575190e55da6ffecb051d935b008", null ],
+      [ "kPotentialLayoutChange", "classv8_1_1internal_1_1HeapObject.html#aaf393b8e63b5da09bc57ca13e665bac4a3d157cdc43fd771a3ddd6e09d054b9f2", null ]
+    ] ],
     [ "HeapObject", "classv8_1_1internal_1_1HeapObject.html#a21466fa7ce2c045755ed487c895f4325", null ],
     [ "HeapObject", "classv8_1_1internal_1_1HeapObject.html#ae14644ae9493c3bbc27d33534015ba6c", null ],
     [ "HeapObject", "classv8_1_1internal_1_1HeapObject.html#adfa4969d520719cd5301218fb5950b5a", null ],
@@ -15,12 +23,15 @@ var classv8_1_1internal_1_1HeapObject =
     [ "ClearTrustedPointerField", "classv8_1_1internal_1_1HeapObject.html#a64edb80002a8dda1663e1d0b4b91afd2", null ],
     [ "EarlyGetReadOnlyRoots", "classv8_1_1internal_1_1HeapObject.html#a904bbc3a44825c0bd86c61967352d015", null ],
     [ "field_address", "classv8_1_1internal_1_1HeapObject.html#a5e5c299ce4ce20eceb1845fa04f33465", null ],
+    [ "FromAddress", "classv8_1_1internal_1_1HeapObject.html#a15742205ff1152213fb1a203c2859073", null ],
     [ "GetFieldAddress", "classv8_1_1internal_1_1HeapObject.html#aaa730555783e7ac8c86a2da00ff8156d", null ],
     [ "GetWriteBarrierMode", "classv8_1_1internal_1_1HeapObject.html#ad14dc9c93aa2dd77a7785d0b10a2c00f", null ],
     [ "HeapObjectShortPrint", "classv8_1_1internal_1_1HeapObject.html#ad2ac162b5f328c698255e2b0dd60a5d9", null ],
     [ "InitExternalPointerField", "classv8_1_1internal_1_1HeapObject.html#a4b7650c1a8bafa2c1c362e8834d49bad", null ],
     [ "InitSelfIndirectPointerField", "classv8_1_1internal_1_1HeapObject.html#aa1d72477e1cf6d3b57f55247402febf8", null ],
     [ "IsCodePointerFieldEmpty", "classv8_1_1internal_1_1HeapObject.html#aac23c0ed0abc3c8f0a4f56d7ff0430b4", null ],
+    [ "IsHeapObject", "classv8_1_1internal_1_1HeapObject.html#a5c50e0384cf1ca4518c9153feaa544f2", null ],
+    [ "IsSmi", "classv8_1_1internal_1_1HeapObject.html#a78f205adb065dc0d38c3a189275379a7", null ],
     [ "IsTrustedPointerFieldEmpty", "classv8_1_1internal_1_1HeapObject.html#aabc78c5fe069c7aff57618ee4abacfca", null ],
     [ "map_slot", "classv8_1_1internal_1_1HeapObject.html#a23e87d8b003a8b227f87e9b9b044a471", null ],
     [ "NeedsRehashing", "classv8_1_1internal_1_1HeapObject.html#a735ceffdd9d54c7056c5a76c7f146024", null ],
@@ -28,6 +39,8 @@ var classv8_1_1internal_1_1HeapObject =
     [ "operator->", "classv8_1_1internal_1_1HeapObject.html#aacb70bbac36340483e49079bb8150290", null ],
     [ "operator->", "classv8_1_1internal_1_1HeapObject.html#a08ed90a5428849249b570b57e6e27390", null ],
     [ "Print", "classv8_1_1internal_1_1HeapObject.html#a2568d562eebb72a9e8b15607bb06e064", null ],
+    [ "Print", "classv8_1_1internal_1_1HeapObject.html#a4d9b305b4447b0634243d77371e8bf9f", null ],
+    [ "Print", "classv8_1_1internal_1_1HeapObject.html#a55dafd504b1ac221a9f6170dadad7285", null ],
     [ "RawCppHeapPointerField", "classv8_1_1internal_1_1HeapObject.html#ad22982545468954303a3515ba6c5461d", null ],
     [ "RawExternalPointerField", "classv8_1_1internal_1_1HeapObject.html#a08abe2e5425b4ac5a2b00713b73cabda", null ],
     [ "RawField", "classv8_1_1internal_1_1HeapObject.html#a6314c80d035c50833bb03ef2abc80d2e", null ],
@@ -50,7 +63,10 @@ var classv8_1_1internal_1_1HeapObject =
     [ "Relaxed_ReadField", "classv8_1_1internal_1_1HeapObject.html#a3f10ed6e9956e93c8d7ae031bc7547de", null ],
     [ "Relaxed_WriteField", "classv8_1_1internal_1_1HeapObject.html#a0d8590667d27e7586315b6b2f770d0f7", null ],
     [ "release_compare_and_swap_map_word_forwarded", "classv8_1_1internal_1_1HeapObject.html#a0031030d3a0f5cbd30da8af43c09a4f9", null ],
+    [ "RequiredAlignment", "classv8_1_1internal_1_1HeapObject.html#a83a9550aebfc1ef15e9bf624a51ec4a4", null ],
+    [ "SeqCst_CompareAndSwapField", "classv8_1_1internal_1_1HeapObject.html#a4135a3a8db80ae477a9ee971a853691b", null ],
     [ "set_map", "classv8_1_1internal_1_1HeapObject.html#a7388ecf5fe1411b198164bd4cbf898db", null ],
+    [ "set_map", "classv8_1_1internal_1_1HeapObject.html#a443b3564b17f0e4f085e89411839e46a", null ],
     [ "set_map", "classv8_1_1internal_1_1HeapObject.html#ae2da587c643de01c8a00577a93df023f", null ],
     [ "set_map", "classv8_1_1internal_1_1HeapObject.html#a6cd69a5af51ee395de110cd3f93f4c6b", null ],
     [ "set_map_after_allocation", "classv8_1_1internal_1_1HeapObject.html#a93c814d1c6d0fa329059b8f00459aafe", null ],
@@ -64,6 +80,7 @@ var classv8_1_1internal_1_1HeapObject =
     [ "set_map_word", "classv8_1_1internal_1_1HeapObject.html#afc76b65eefe227c89062a1f920662b70", null ],
     [ "set_map_word_forwarded", "classv8_1_1internal_1_1HeapObject.html#a9d8cdd1fc50201212161a5df9aa522e0", null ],
     [ "set_map_word_forwarded", "classv8_1_1internal_1_1HeapObject.html#ac4ed86d9a3395a1989d482d2657322d6", null ],
+    [ "SetFillerMap", "classv8_1_1internal_1_1HeapObject.html#a5fa192ceb8b8178980ad4379a2191f6a", null ],
     [ "SetupLazilyInitializedCppHeapPointerField", "classv8_1_1internal_1_1HeapObject.html#a24b749e8279dccf77e90c6754a5505c3", null ],
     [ "SetupLazilyInitializedExternalPointerField", "classv8_1_1internal_1_1HeapObject.html#aabcbdcc72076db9110e01da46ea3d69a", null ],
     [ "SizeFromMap", "classv8_1_1internal_1_1HeapObject.html#a7175dfbcfd7797dcfbe8e45da47f2923", null ],
@@ -78,5 +95,7 @@ var classv8_1_1internal_1_1HeapObject =
     [ "WriteSandboxedPointerField", "classv8_1_1internal_1_1HeapObject.html#a83036b14057f3e3348640f99c8fa4f99", null ],
     [ "WriteSandboxedPointerField", "classv8_1_1internal_1_1HeapObject.html#a206b6c1c1902799396d2777f0971e1ef", null ],
     [ "WriteTrustedPointerField", "classv8_1_1internal_1_1HeapObject.html#a50f8c886016fc25a756e7362b4f0c340", null ],
-    [ "Tagged< HeapObject >", "classv8_1_1internal_1_1HeapObject.html#a93471833b64f6762c0e97c953bcf23fe", null ]
+    [ "Tagged< HeapObject >", "classv8_1_1internal_1_1HeapObject.html#a93471833b64f6762c0e97c953bcf23fe", null ],
+    [ "kHeaderSize", "classv8_1_1internal_1_1HeapObject.html#a08d8b3cbf29c8d1287956c715df91faa", null ],
+    [ "kMapOffset", "classv8_1_1internal_1_1HeapObject.html#a6250a2489c3d60667b5b3153dff0fed3", null ]
 ];

@@ -9,5 +9,13 @@ var classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarati
     [ "record_global_variable_declaration", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#adf6e3365ea8031b7beb65d01fbfe6b4c", null ],
     [ "record_module_function_declaration", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#a3a4b2c6d482893f16a1f1b4bf33eb68d", null ],
     [ "record_module_variable_declaration", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#abe59551e2879865988c5a359a655db68", null ],
-    [ "set_constant_pool_entry", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#a3c37cc085b4892838fcde73970298bca", null ]
+    [ "set_constant_pool_entry", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#a3c37cc085b4892838fcde73970298bca", null ],
+    [ "constant_pool_entry_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#a88a40317078f21a7670bb5223609fdfa", null ],
+    [ "entry_slots_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#a882744c57ce75790892e7f9f4fac62f4", null ],
+    [ "has_constant_pool_entry_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#ae093c6ef40e65e56c2fe32cfd198e51c", null ],
+    [ "kGlobalFunctionDeclarationSize", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#afbee76a2f5ee3fabd6168edbceb1a91c", null ],
+    [ "kGlobalVariableDeclarationSize", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#accc174a3b59e1f972818c42e6b7daee9", null ],
+    [ "kModuleFunctionDeclarationSize", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#aabc3fb452c4a5437ccadafe21f21aa88", null ],
+    [ "kModuleVariableDeclarationSize", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#abb044a466de9012a608e223390373998", null ],
+    [ "processed_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TopLevelDeclarationsBuilder.html#a22da7c1e61052b742c1139c46d09cd1f", null ]
 ];

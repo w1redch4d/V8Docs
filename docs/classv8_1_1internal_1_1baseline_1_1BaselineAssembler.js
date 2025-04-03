@@ -17,6 +17,7 @@ var classv8_1_1internal_1_1baseline_1_1BaselineAssembler =
     [ "ContextOperand", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a714f11e37b283665a20dcd30fed7c227", null ],
     [ "DebugBreak", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a7b75ad5ed01a835eb8d7628fbac9d038", null ],
     [ "DecodeField", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a1f2524ba0256304533647fbf9d702c6f", null ],
+    [ "EmitReturn", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a3e1593a2723b2868afd03e0284ba6686", null ],
     [ "ExceptionHandler", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a3e07c3319f95e437c33dcc322e230e82", null ],
     [ "FeedbackCellOperand", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a931c20fa9a11630082ce7ab81471f14a", null ],
     [ "FeedbackVectorOperand", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#ac484aef16ee243cc0311a46e1a612f29", null ],
@@ -76,6 +77,7 @@ var classv8_1_1internal_1_1baseline_1_1BaselineAssembler =
     [ "PushReverse", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a098a8dba68e70b2691eb661898d16392", null ],
     [ "RecordComment", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a099d7bb86d7c9d0f14d0167d67e12c87", null ],
     [ "RegisterFrameAddress", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#ad2c3a19eef19b8be26a7b63356aee4c0", null ],
+    [ "RegisterFrameOperand", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a2d3a5b3b1222c88de704b9627f13bb5e", null ],
     [ "SmiUntag", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#add2479e89e91d5c89ba14ee4766b8e0a", null ],
     [ "SmiUntag", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a6da8af86f59e804dbdd05e4e094e5577", null ],
     [ "StaContextSlot", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#ae9a0318f009741c8360e3c32d7787271", null ],
@@ -90,5 +92,7 @@ var classv8_1_1internal_1_1baseline_1_1BaselineAssembler =
     [ "TestAndBranch", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a433a4d485ad2666da1ac59349f96ebda", null ],
     [ "Trap", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a7c45884f0ded3053bf411056b40165de", null ],
     [ "TryLoadOptimizedOsrCode", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a96bf321ab772978594c9b93ae4f2fdec", null ],
-    [ "Word32And", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#ad88917919c94bf220fdac70bfe825ccc", null ]
+    [ "Word32And", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#ad88917919c94bf220fdac70bfe825ccc", null ],
+    [ "masm_", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#a8447d1878248749db99e7b3501682b94", null ],
+    [ "scratch_register_scope_", "classv8_1_1internal_1_1baseline_1_1BaselineAssembler.html#aa98727d4677bd15f0e6fcfb6fd1c482c", null ]
 ];

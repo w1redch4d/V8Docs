@@ -1,13 +1,47 @@
 var classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic =
 [
+    [ "Candidate", "structv8_1_1internal_1_1compiler_1_1JSInliningHeuristic_1_1Candidate.html", "structv8_1_1internal_1_1compiler_1_1JSInliningHeuristic_1_1Candidate" ],
+    [ "CandidateCompare", "structv8_1_1internal_1_1compiler_1_1JSInliningHeuristic_1_1CandidateCompare.html", "structv8_1_1internal_1_1compiler_1_1JSInliningHeuristic_1_1CandidateCompare" ],
+    [ "Candidates", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a57c10ee8d3b8d3c687f9b0e0398a91b1", null ],
     [ "Mode", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a460dfd6f51f754658f4d9d8b155fc66e", [
       [ "kJSOnly", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a460dfd6f51f754658f4d9d8b155fc66ea57996ae846b50440b0c158dd2c8547aa", null ],
       [ "kWasmWrappersOnly", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a460dfd6f51f754658f4d9d8b155fc66ea4ca66a9b46e460340f19d5783e1c448a", null ],
       [ "kWasmFullInlining", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a460dfd6f51f754658f4d9d8b155fc66ea78ec764af0ea3ad2f5198da20826ed66", null ]
     ] ],
+    [ "StateCloneMode", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a41da59f62b0388a1afada697e2215bc0", [
+      [ "kCloneState", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a41da59f62b0388a1afada697e2215bc0a6846d3174c029d825709b7773a20fdee", null ],
+      [ "kChangeInPlace", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a41da59f62b0388a1afada697e2215bc0af2222aa68f19e2f4be43f41bd9eb3cf1", null ]
+    ] ],
     [ "JSInliningHeuristic", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a111d53ca20bec91ed79f6b82fef67677", null ],
+    [ "broker", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a6f0630429ec017f0dfebc3a75444480a", null ],
+    [ "CollectFunctions", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#ab66f27a2c9c7ec9fad4189a62c30ae47", null ],
+    [ "common", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a65e00dad61d2746fbc906584b1e289ac", null ],
+    [ "CreateOrReuseDispatch", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a88195df193b55b78f4c04798a826fec5", null ],
+    [ "dependencies", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a6e72d1a27f8ef3efff8ec478ef03d200", null ],
+    [ "DuplicateFrameStateAndRename", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#acd5d8b36b048a344ee009bbf53da79be", null ],
+    [ "DuplicateStateValuesAndRename", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a01a260195c36d9f2632a546b962aedbb", null ],
     [ "Finalize", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#aa74c825a3782aa899312b7ea57d74e85", null ],
+    [ "graph", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#ae1ee74d944c3132c6ef8db7dc6f61474", null ],
+    [ "InlineCandidate", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#acbaadfa378d46be7dc01282f7760f7ae", null ],
+    [ "isolate", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a1d267b4ba61f784944f1b1c2ea99d907", null ],
+    [ "jsgraph", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a3ed257392abd291f37c657ff928caa31", null ],
+    [ "mode", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a6b4695537fab2577a4d7ffa4b4c1925e", null ],
+    [ "PrintCandidates", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a89fade5bfe839b9addffca77d9550618", null ],
     [ "Reduce", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a46c67cd61d9ab1b3123e0fecf458e936", null ],
     [ "reducer_name", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#acee14f61109bf15e3754c2ba44bc9017", null ],
-    [ "total_inlined_bytecode_size", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#ad739cb8971b1fcf6eda4cb3bf3aa70db", null ]
+    [ "simplified", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a00e5de1bfe3539f30ebe33c426c52b79", null ],
+    [ "total_inlined_bytecode_size", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#ad739cb8971b1fcf6eda4cb3bf3aa70db", null ],
+    [ "TryReuseDispatch", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a80bf8094f0b1d0b6ffcb4f0dae52fa6e", null ],
+    [ "broker_", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#af33a8b44a75af6758df3b8697209d7b7", null ],
+    [ "candidates_", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#ad659d55d4929f5684683be5d2e494a12", null ],
+    [ "info_", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a325b975c94d5d01d9ee1f6f42ca898c0", null ],
+    [ "inliner_", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#ac6b7021d01dfe4c81d6485ceee7269f6", null ],
+    [ "jsgraph_", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a1ef42428d09ed873691d905a77b39247", null ],
+    [ "kMaxCallPolymorphism", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#ac2d1067f7d8cbaed200ac4a9885e75e9", null ],
+    [ "max_inlined_bytecode_size_absolute_", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#ad9b58a62ef835534f4e07da45daa3087", null ],
+    [ "max_inlined_bytecode_size_cumulative_", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#ab659f4462b3f569214e842b63ece9e05", null ],
+    [ "mode_", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a993df70c2c1bb4bd0b1d1c28ddf4b0d0", null ],
+    [ "seen_", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#ae9b4999e42c37194c62648c7bb54a5ba", null ],
+    [ "source_positions_", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#a61dc4145ca7fe4babad7a4d395abacee", null ],
+    [ "total_inlined_bytecode_size_", "classv8_1_1internal_1_1compiler_1_1JSInliningHeuristic.html#ab2ba96b9b086ca6f4f06b667b548e16f", null ]
 ];

@@ -23,6 +23,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpEffects =
     [ "CanWriteHeapMemory", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpEffects.html#a62c5b9bdaee687aaa01aeda78bbaf2c6", null ],
     [ "CanWriteMemory", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpEffects.html#aca0ab24a0df7a13633b13da8bc82dda1", null ],
     [ "CanWriteOffHeapMemory", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpEffects.html#a04377af1f2ba956ba2c8f7b787509c76", null ],
+    [ "FromBits", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpEffects.html#a1efdf5ca95582eea6efd815ce0e468ba", null ],
     [ "hoistable_before_a_branch", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpEffects.html#a4fcab876c592041e725007a983083275", null ],
     [ "is_required_when_unused", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpEffects.html#a1b0cd4b8188353e971635112c3d2220e", null ],
     [ "IsSubsetOf", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpEffects.html#adb52874ec766d7ed46c064f6037a5dcf", null ],

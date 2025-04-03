@@ -1,11 +1,25 @@
 var classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation =
 [
+    [ "CandidateBaseAddr", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation_1_1CandidateBaseAddr.html", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation_1_1CandidateBaseAddr" ],
+    [ "CandidateMemOps", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation_1_1CandidateMemOps.html", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation_1_1CandidateMemOps" ],
+    [ "CandidateAddressKey", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#a74e6289729782cd081cd7962cbceef2c", null ],
     [ "WasmAddressReassociation", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#ae3d65b5b9dec82a3b04421c0b5975ba1", null ],
     [ "WasmAddressReassociation", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#ae3d65b5b9dec82a3b04421c0b5975ba1", null ],
     [ "WasmAddressReassociation", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#a7b261c6b14cb5389339e6e7beba8b42c", null ],
+    [ "AddCandidate", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#a5a6b8096300885afb4271eb9dd50be29", null ],
+    [ "CreateNewBase", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#aa9b83732aca4242b5765a343211cc268", null ],
+    [ "HasCandidateBaseAddr", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#a6977d1f581378d39e4f01903e98bed41", null ],
     [ "operator=", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#ac9c73353761f1f175e67e29699aadcc2", null ],
     [ "Optimize", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#afcb3ef298a02020182b6dea6748a0afe", null ],
     [ "Optimize", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#afcb3ef298a02020182b6dea6748a0afe", null ],
+    [ "ReplaceInputs", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#a33f478d0768d4350a1ff62b3db2b52d4", null ],
+    [ "ShouldTryOptimize", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#a2cbb7b266c3fbd36af24907ee049023e", null ],
     [ "VisitProtectedMemOp", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#a684e91f7ec1720b983c9d40dd1da6100", null ],
-    [ "VisitProtectedMemOp", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#ae31a6d3659fea793925bcfa476cdf340", null ]
+    [ "VisitProtectedMemOp", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#ae31a6d3659fea793925bcfa476cdf340", null ],
+    [ "candidate_base_addrs_", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#ac85d2d2feeafe5ebec69e6fa36b2c968", null ],
+    [ "candidates_", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#abb113069cebb4d085758ceda0b8eb8dd", null ],
+    [ "common_", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#a651c2f8fb7fe1d20f406910cc318c052", null ],
+    [ "graph_", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#a1af482413763573f738ddc41683360e3", null ],
+    [ "machine_", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#a326ed6c3f0fce01eb72de62892cefd79", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1WasmAddressReassociation.html#ac2eca283ab139c7fca5848a798c30197", null ]
 ];

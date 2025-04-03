@@ -1,15 +1,28 @@
 var classv8_1_1internal_1_1BigIntBase =
 [
+    [ "digit_t", "classv8_1_1internal_1_1BigIntBase.html#a3c61b5295c8c6a22976074a4ab68e953", null ],
     [ "LengthBits", "classv8_1_1internal_1_1BigIntBase.html#a8488a924cb44466f109975ebc78fe9b2", null ],
     [ "SignBits", "classv8_1_1internal_1_1BigIntBase.html#a6897f710e47711d876cbb460e561bcda", null ],
+    [ "digit", "classv8_1_1internal_1_1BigIntBase.html#aa08a71b0371043c22061cd8463a2c0eb", null ],
     [ "digits", "classv8_1_1internal_1_1BigIntBase.html#a00c02b8d7c269dbe9cc87aa0f6e5ef15", null ],
+    [ "FLEXIBLE_ARRAY_MEMBER", "classv8_1_1internal_1_1BigIntBase.html#ad891fe3f7b60a574789aa69f868a386d", null ],
+    [ "is_zero", "classv8_1_1internal_1_1BigIntBase.html#a596a7d927f1898372d58eadf9115f47e", null ],
     [ "length", "classv8_1_1internal_1_1BigIntBase.html#aaf970518859b7232cd6560a08b3bdee1", null ],
     [ "length", "classv8_1_1internal_1_1BigIntBase.html#a960ef1c929924b2be5013296fe7b2407", null ],
+    [ "sign", "classv8_1_1internal_1_1BigIntBase.html#a6d28490fe7e2df2cf5c1958d13400b69", null ],
     [ "::v8::internal::BigInt", "classv8_1_1internal_1_1BigIntBase.html#aff3b291dd1446db56aa682a943b4d2e3", null ],
     [ "CodeStubAssembler", "classv8_1_1internal_1_1BigIntBase.html#ab0fdd46d6a0fd9cdf4ce8df83e1efadd", null ],
     [ "compiler::AccessBuilder", "classv8_1_1internal_1_1BigIntBase.html#af3a8d08083fa2453a64cb634d3071b43", null ],
     [ "FreshlyAllocatedBigInt", "classv8_1_1internal_1_1BigIntBase.html#a08326fe9713fc63f5a24d319ae39c474", null ],
     [ "maglev::MaglevAssembler", "classv8_1_1internal_1_1BigIntBase.html#a23e0bac3332bb8e3ba46ae8b831d896e", null ],
     [ "MutableBigInt", "classv8_1_1internal_1_1BigIntBase.html#a7f815bd8712ef8864bfc57d18e85e032", null ],
-    [ "OffsetsForDebug", "classv8_1_1internal_1_1BigIntBase.html#a1e7ef7315cd297d6b6a956b93204f742", null ]
+    [ "OffsetsForDebug", "classv8_1_1internal_1_1BigIntBase.html#a1e7ef7315cd297d6b6a956b93204f742", null ],
+    [ "bitfield_", "classv8_1_1internal_1_1BigIntBase.html#aa36c0841f42712b291173363d24539c7", null ],
+    [ "kDigitBits", "classv8_1_1internal_1_1BigIntBase.html#a239f8ad4fd1d5897527f1e13136f4e31", null ],
+    [ "kDigitSize", "classv8_1_1internal_1_1BigIntBase.html#a7ebee5496bf8a631251eb7bf98d4b909", null ],
+    [ "kHalfDigitBits", "classv8_1_1internal_1_1BigIntBase.html#a52d9a673bef47d13d98c4be3e2ec3cd5", null ],
+    [ "kHalfDigitMask", "classv8_1_1internal_1_1BigIntBase.html#af54d7494e373723748556c8fd88c7d4c", null ],
+    [ "kLengthFieldBits", "classv8_1_1internal_1_1BigIntBase.html#a8694e9ccd3073872fb3f64a63b009b2c", null ],
+    [ "kMaxLength", "classv8_1_1internal_1_1BigIntBase.html#ab618e72b0fd49cc2e34536186e563234", null ],
+    [ "kMaxLengthBits", "classv8_1_1internal_1_1BigIntBase.html#ae603244ebd9cf97493b4d4fd63575001", null ]
 ];

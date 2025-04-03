@@ -1,7 +1,9 @@
 var simplified_lowering_8cc =
 [
     [ "v8::internal::compiler::RepresentationSelector", "classv8_1_1internal_1_1compiler_1_1RepresentationSelector.html", "classv8_1_1internal_1_1compiler_1_1RepresentationSelector" ],
+    [ "v8::internal::compiler::RepresentationSelector::NodeProperties", "classv8_1_1internal_1_1compiler_1_1RepresentationSelector_1_1NodeProperties.html", "classv8_1_1internal_1_1compiler_1_1RepresentationSelector_1_1NodeProperties" ],
     [ "v8::internal::compiler::RepresentationSelector::NodeInfo", "classv8_1_1internal_1_1compiler_1_1RepresentationSelector_1_1NodeInfo.html", "classv8_1_1internal_1_1compiler_1_1RepresentationSelector_1_1NodeInfo" ],
+    [ "v8::internal::compiler::RepresentationSelector::NodeState", "structv8_1_1internal_1_1compiler_1_1RepresentationSelector_1_1NodeState.html", "structv8_1_1internal_1_1compiler_1_1RepresentationSelector_1_1NodeState" ],
     [ "DECLARE_CASE", "simplified-lowering_8cc.html#a5f7b33ac9200a67bee802ec508b0acf0", null ],
     [ "DECLARE_CASE", "simplified-lowering_8cc.html#a5f7b33ac9200a67bee802ec508b0acf0", null ],
     [ "DECLARE_CASE", "simplified-lowering_8cc.html#a5f7b33ac9200a67bee802ec508b0acf0", null ],
@@ -13,5 +15,6 @@ var simplified_lowering_8cc =
       [ "RETYPE", "simplified-lowering_8cc.html#a6c5a55837c50147a77e7a81535b4c98ea6329e6d5c96ee40fefcbf37145cee673", null ],
       [ "LOWER", "simplified-lowering_8cc.html#a6c5a55837c50147a77e7a81535b4c98ea75f6edeea6463a90e994a419b9195f85", null ]
     ] ],
-    [ "kSimplifiedLoweringReducerName", "simplified-lowering_8cc.html#a01638392904df9474c52d5296848f339", null ]
+    [ "kSimplifiedLoweringReducerName", "simplified-lowering_8cc.html#a01638392904df9474c52d5296848f339", null ],
+    [ "verifier_", "simplified-lowering_8cc.html#a47c17469bc4c04728792353700d44381", null ]
 ];

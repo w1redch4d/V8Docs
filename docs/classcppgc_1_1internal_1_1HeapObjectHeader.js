@@ -1,8 +1,22 @@
 var classcppgc_1_1internal_1_1HeapObjectHeader =
 [
+    [ "FullyConstructedField", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a593a2ee83c0d29008d7574bf48cb2d99", null ],
+    [ "GCInfoIndexField", "classcppgc_1_1internal_1_1HeapObjectHeader.html#aa162933a4b3ab2bd083a489b175b0977", null ],
+    [ "MarkBitField", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a703f13d0d87365bf9f0d45723a3c9216", null ],
+    [ "SizeField", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a3b3495f7d966091ed4bf2dc77253d4b1", null ],
+    [ "UnusedField1", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a7856671c2fb565bddb051ddccfbdfb75", null ],
+    [ "EncodedHalf", "classcppgc_1_1internal_1_1HeapObjectHeader.html#ac649a136c9680f8b2c554ef027ba61a9", [
+      [ "kLow", "classcppgc_1_1internal_1_1HeapObjectHeader.html#ac649a136c9680f8b2c554ef027ba61a9acd8fe42741a3bbc973bbf1d404afeff4", null ],
+      [ "kHigh", "classcppgc_1_1internal_1_1HeapObjectHeader.html#ac649a136c9680f8b2c554ef027ba61a9aa022f15e910eb36278094efb6e808a07", null ]
+    ] ],
     [ "HeapObjectHeader", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a028ce269d69192a924f26a15d76db3db", null ],
     [ "AllocatedSize", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a38bd7c0ef4a16d993c2c95be6843415b", null ],
+    [ "CheckApiConstants", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a96e58789b26e413fdfc01feb432e4925", null ],
+    [ "DecodeSize", "classcppgc_1_1internal_1_1HeapObjectHeader.html#aa5017e8412a1748c743caf8a057703ee", null ],
+    [ "EncodeSize", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a843b7b6de2cd79501773631f8015eaf8", null ],
     [ "Finalize", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a3201b70a7116dcdf03784dd4a8e18df4", null ],
+    [ "FromObject", "classcppgc_1_1internal_1_1HeapObjectHeader.html#ae1323c25db232f814e104d7ce00e4ca1", null ],
+    [ "FromObject", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a04b955c04b80d2a431dc2b96e4a85028", null ],
     [ "GetGCInfoIndex", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a7390352abcea20d83a29d566d3968a9c", null ],
     [ "GetName", "classcppgc_1_1internal_1_1HeapObjectHeader.html#ab878e8fd6fdd1a1cf63f19c39aaaa35e", null ],
     [ "GetName", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a9008cbe685d081ece3c38eefa85e0869", null ],
@@ -12,13 +26,20 @@ var classcppgc_1_1internal_1_1HeapObjectHeader =
     [ "IsLargeObject", "classcppgc_1_1internal_1_1HeapObjectHeader.html#acb8d93ca4a7c69792f6c369622745255", null ],
     [ "IsMarked", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a328d2dfc7af3a7a8bd7f7618a3a41699", null ],
     [ "IsYoung", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a2686bf05c5e40b017825cb6d6a78e936", null ],
+    [ "LoadEncoded", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a0bd3e9caa427aed032b09d6f7fb8533f", null ],
     [ "MarkAsFullyConstructed", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a0077993bd60c38035d8dc5dcfb588d1a", null ],
     [ "MarkNonAtomic", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a361c2ba11dd867f69dc04804e3fe68f7", null ],
     [ "ObjectEnd", "classcppgc_1_1internal_1_1HeapObjectHeader.html#add8fab321cf446ad12159a5392910769", null ],
     [ "ObjectSize", "classcppgc_1_1internal_1_1HeapObjectHeader.html#aee0a84345ae58fd6de5a864b84caea0f", null ],
     [ "ObjectStart", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a2f5a585893bb8836a77a5fdbf344a24a", null ],
     [ "SetAllocatedSize", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a1d2d7c83d873509d74c404ebd71597fd", null ],
+    [ "StoreEncoded", "classcppgc_1_1internal_1_1HeapObjectHeader.html#ac4c793b4bc98298a7bb4f21410197d83", null ],
     [ "Trace", "classcppgc_1_1internal_1_1HeapObjectHeader.html#acab1ce084c6e90572e8663c7e22750fc", null ],
     [ "TryMarkAtomic", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a79d0b3366f5a6d465309c4301d61f31e", null ],
-    [ "Unmark", "classcppgc_1_1internal_1_1HeapObjectHeader.html#ac7acf1215fa12fc80bc92abc5c30772e", null ]
+    [ "Unmark", "classcppgc_1_1internal_1_1HeapObjectHeader.html#ac7acf1215fa12fc80bc92abc5c30772e", null ],
+    [ "encoded_high_", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a9c1d9f0b608d4e4b81e37879e92d24e5", null ],
+    [ "encoded_low_", "classcppgc_1_1internal_1_1HeapObjectHeader.html#aa84416811ed317af3cf1c383b7122608", null ],
+    [ "kLargeObjectSizeInHeader", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a945bba52d9445fea6d18617690497ccf", null ],
+    [ "kMaxSize", "classcppgc_1_1internal_1_1HeapObjectHeader.html#a7981830b8748baa87e9624d710954435", null ],
+    [ "kSizeLog2", "classcppgc_1_1internal_1_1HeapObjectHeader.html#ab689e281813d0ee313fddc49559b7df5", null ]
 ];

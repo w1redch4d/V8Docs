@@ -64,7 +64,14 @@ var structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter =
     [ "stack_slot_representation_of", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#ae3453ed7c2e8f1ce846c1b788c59efed", null ],
     [ "store_view", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#ab864468647bec96a88ff81a89c2e3a70", null ],
     [ "turboshaft_graph", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#af588ab7e040ae586f9599eda0263c30c", null ],
+    [ "valid", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#a6b9828cf6c789aa1352854d9ea5253cf", null ],
+    [ "valid", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#a74d9bf00bf4c51153600338ef82d2ea2", null ],
+    [ "value", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#a45db1143243d251b40c60280478072c4", null ],
     [ "value_input_count", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#abab0d28183c758f770856b363b3e81b7", null ],
     [ "word32_atomic_pair_store_view", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#a29acb1c0d5bb0fdd45b0cf43313bb500", null ],
-    [ "word_binop_view", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#a69464f68887276211fef7bae126dd4ea", null ]
+    [ "word_binop_view", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#a69464f68887276211fef7bae126dd4ea", null ],
+    [ "AllowsImplicitWord64ToWord32Truncation", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#a11f991b858de3cfe105ea8fdeec24f61", null ],
+    [ "graph_", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#accd518cfc98555ef86ac78153069ba16", null ],
+    [ "IsTurbofan", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#a7143500973faf48944b5e28656335d25", null ],
+    [ "IsTurboshaft", "structv8_1_1internal_1_1compiler_1_1TurboshaftAdapter.html#a27f4536b6508318a31036063a7c452d0", null ]
 ];

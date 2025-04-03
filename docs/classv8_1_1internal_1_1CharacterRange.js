@@ -2,9 +2,27 @@ var classv8_1_1internal_1_1CharacterRange =
 [
     [ "CharacterRange", "classv8_1_1internal_1_1CharacterRange.html#ae0a0e9b44a938fc324c0294a64d7d1bd", null ],
     [ "CharacterRange", "classv8_1_1internal_1_1CharacterRange.html#a1c257176d47561b468f2d9fcba3768ee", null ],
+    [ "CharacterRange", "classv8_1_1internal_1_1CharacterRange.html#a93b61f4840cc8e003b2c1edecb5a3a38", null ],
+    [ "AddCaseEquivalents", "classv8_1_1internal_1_1CharacterRange.html#a96cdf77b7a17b3cac6522d41bab0ef7c", null ],
+    [ "AddClassEscape", "classv8_1_1internal_1_1CharacterRange.html#af930c2ef1854edb11eb942b2864ddb9f", null ],
+    [ "AddUnicodeCaseEquivalents", "classv8_1_1internal_1_1CharacterRange.html#a13cd1950b2dce4c8bcc49e9bdbf8de3f", null ],
+    [ "Canonicalize", "classv8_1_1internal_1_1CharacterRange.html#a0fc9872753da38b12f6dc6faaee66f9a", null ],
+    [ "ClampToOneByte", "classv8_1_1internal_1_1CharacterRange.html#ab06cda75a5220a8332cd6fba667f6718", null ],
     [ "Contains", "classv8_1_1internal_1_1CharacterRange.html#ab56b8b430e7609543187d42f98d01835", null ],
+    [ "Equals", "classv8_1_1internal_1_1CharacterRange.html#a08ba3cfe6dade01c264f53fefca59eca", null ],
+    [ "Everything", "classv8_1_1internal_1_1CharacterRange.html#ad9b69fc9e62b3eaae9d56d57ffe1ed08", null ],
     [ "from", "classv8_1_1internal_1_1CharacterRange.html#a1c715522ce2f15a4820ce3d49745c053", null ],
+    [ "Intersect", "classv8_1_1internal_1_1CharacterRange.html#ace0f2789295e53965cdf7d7d377168da", null ],
+    [ "IsCanonical", "classv8_1_1internal_1_1CharacterRange.html#acb9eb96d79a5df8a89953a652257c5a2", null ],
     [ "IsEverything", "classv8_1_1internal_1_1CharacterRange.html#a5a1949c324d2fb00638bb3eac60a0c67", null ],
     [ "IsSingleton", "classv8_1_1internal_1_1CharacterRange.html#a15379e86d7b0c37a5b412171e86ea33e", null ],
-    [ "to", "classv8_1_1internal_1_1CharacterRange.html#a8e5054db7f3648edc1e2c1f78efca9ae", null ]
+    [ "List", "classv8_1_1internal_1_1CharacterRange.html#acd6ce82552c4b8325c864b646a78c52a", null ],
+    [ "Negate", "classv8_1_1internal_1_1CharacterRange.html#a820c888e43067f23080351cd67e5dfbd", null ],
+    [ "Range", "classv8_1_1internal_1_1CharacterRange.html#ad58f22c52e6a88a526a0605fffc0716a", null ],
+    [ "Singleton", "classv8_1_1internal_1_1CharacterRange.html#abf2152e296979fe9c2ac550a4a52a6b8", null ],
+    [ "Subtract", "classv8_1_1internal_1_1CharacterRange.html#a5770282a1f96b08ce6232d63d63da61f", null ],
+    [ "to", "classv8_1_1internal_1_1CharacterRange.html#a8e5054db7f3648edc1e2c1f78efca9ae", null ],
+    [ "from_", "classv8_1_1internal_1_1CharacterRange.html#a4f4e9199e4c5856bd56cd73381e5e51f", null ],
+    [ "kMaxCodePoint", "classv8_1_1internal_1_1CharacterRange.html#aa9c7ae9a4be97cbd112c4e3436b2f59f", null ],
+    [ "to_", "classv8_1_1internal_1_1CharacterRange.html#ab54f79bd557314f847f5a4a95ca020b9", null ]
 ];

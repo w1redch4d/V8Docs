@@ -6,5 +6,7 @@ var classcppgc_1_1internal_1_1MemoryRegion =
     [ "Contains", "classcppgc_1_1internal_1_1MemoryRegion.html#a1c8dd5740590dbdb2ead7d5cfe9b61f0", null ],
     [ "Contains", "classcppgc_1_1internal_1_1MemoryRegion.html#aec3dedada7798a2f623bf9424ce561ae", null ],
     [ "end", "classcppgc_1_1internal_1_1MemoryRegion.html#a93c510c37f35fac498ad01470a805822", null ],
-    [ "size", "classcppgc_1_1internal_1_1MemoryRegion.html#a04563b48aabd217604404e889be5a531", null ]
+    [ "size", "classcppgc_1_1internal_1_1MemoryRegion.html#a04563b48aabd217604404e889be5a531", null ],
+    [ "base_", "classcppgc_1_1internal_1_1MemoryRegion.html#a62946fed95599b4dc9c416b1c427995a", null ],
+    [ "size_", "classcppgc_1_1internal_1_1MemoryRegion.html#a29b4c58fe4212d54cb9d4d58e6798b41", null ]
 ];

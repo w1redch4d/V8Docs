@@ -1,5 +1,26 @@
 var classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData =
 [
+    [ "EnableInterruptData", "structv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData_1_1EnableInterruptData.html", "structv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData_1_1EnableInterruptData" ],
+    [ "EnableWithFilterDataInterruptData", "structv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData_1_1EnableWithFilterDataInterruptData.html", "structv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData_1_1EnableWithFilterDataInterruptData" ],
     [ "IsolateLoadScriptData", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#acdb2e8ab2dd2ae35366009c2647dfdb1", null ],
-    [ "IsolateLoadScriptData", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#ab952808c0f272e69c8a8e3d0a6cf53be", null ]
+    [ "IsolateLoadScriptData", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#ab952808c0f272e69c8a8e3d0a6cf53be", null ],
+    [ "AddIsolate", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a00ba0e1590d948701714971e91f7b4be", null ],
+    [ "AddLoadedScript", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a794adfb4644d2113b6259062f2c032cb", null ],
+    [ "CurrentEventId", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#ad46d0c6bacb18d535c7ace17c25e17d3", null ],
+    [ "DisableLog", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#acf42024d23fef5bf46d6b3189f7207c1", null ],
+    [ "EnableLog", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a28a6cfdfd33fc799593f8d9ce81bba3f", null ],
+    [ "EnableLogWithFilterData", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a52853d9e92d1bd395f019358d77518b6", null ],
+    [ "EnableLogWithFilterDataOnAllIsolates", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a3ab81a7d3e4ec6fc135eaabe2e7ef77b", null ],
+    [ "EnqueueDisableLog", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a6e95f6e8aa856618d4bd4b3a6cd3854b", null ],
+    [ "EnqueueEnableLog", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a28ed6bb69be4c08674c9446eaeef91f8", null ],
+    [ "EnqueueEnableLogWithFilterData", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a3ce2fe29239549d85cf95f545cf7d835", null ],
+    [ "GetData", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a9f2dba17a686b1d3398c781dac5b3614", null ],
+    [ "IsScriptLoaded", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#ad910bf5cbab0da86bed2574275865bc5", null ],
+    [ "MaybeAddLoadedScript", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a633eb581b7573166f4c114b39a7da74a", null ],
+    [ "RemoveAllLoadedScripts", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a9a1bd75f62213988314ac9f15ac6aa97", null ],
+    [ "RemoveIsolate", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a5f515865ecba8604c9998f11c97faac3", null ],
+    [ "UpdateAllIsolates", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a723eb6323d0a5647a60b8ca6d7703b4f", null ],
+    [ "event_id_", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a9206b16a9ba80239582296e8f5d63d7e", null ],
+    [ "isolate_", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a83a7f84097dc45ce011df30eff8e0662", null ],
+    [ "loaded_scripts_ids_", "classv8_1_1internal_1_1ETWJITInterface_1_1IsolateLoadScriptData.html#a3ae62c8b86c5ec33a34d937f2a2b6378", null ]
 ];

@@ -4,8 +4,11 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex =
     [ "OpIndex", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#ab4b5fe317c55bec21a921ba9cfcfe995", null ],
     [ "OpIndex", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#a81be8f26c653e2f8e61f7a935c465d2e", null ],
     [ "DecodeTurbofanNodeId", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#aab4c43b94037d234dadb1b2a06fd9e38", null ],
+    [ "EncodeTurbofanNodeId", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#a8b16e2782d11f196bbf75e56a7d8a813", null ],
+    [ "FromOffset", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#afa1619ba9d2f2e86953d0f11b454abe8", null ],
     [ "hash", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#aa55ce9dcd73325cfec67f99a138f9042", null ],
     [ "id", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#a6d74f117c9a3576288033fcddf160101", null ],
+    [ "Invalid", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#a19b67749ed68fc8a4883e936589372cc", null ],
     [ "IsTurbofanNodeId", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#ae52c92bae9ccc08337654847a1658c9b", null ],
     [ "offset", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#a6cf044ac66106a137238983b6a8b8de4", null ],
     [ "operator!=", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#ab9895ba0e83321d0ddd62d0dce1ddaef", null ],
@@ -17,5 +20,9 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex =
     [ "valid", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#ad3816bb041449b3d13b53d55896c8b77", null ],
     [ "AbslHashValue", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#a61aac9f89b2bb43beb1507cedc6a51de", null ],
     [ "OperationBuffer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#abcbca94c55a9f4e71eec6d87cb883de2", null ],
+    [ "kGenerationMask", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#ab272e013e2d3616abb62240bb4fcacc4", null ],
+    [ "kGenerationMaskShift", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#a8e94aa60d48fcdf1c487093833e0100b", null ],
+    [ "kTurbofanNodeIdFlag", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#a340bb52bd9dc13c4f515a0665dd963cb", null ],
+    [ "kUnmaskGenerationMask", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#acc6137d73776abd8439fca874f5d5fc5", null ],
     [ "offset_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OpIndex.html#aadc1f5c3c90237f2a578e0e89ae9eb28", null ]
 ];

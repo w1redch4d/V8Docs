@@ -10,6 +10,7 @@ var elements_kind_8cc =
     [ "GetFastElementsKindFromSequenceIndex", "elements-kind_8cc.html#a1ba5bdf720f227d87081872da45d189e", null ],
     [ "GetNextTransitionElementsKind", "elements-kind_8cc.html#a8b054aa74bde77c399f603b5250a851c", null ],
     [ "GetSequenceIndexFromFastElementsKind", "elements-kind_8cc.html#a72de456b806853a600a50dd8727fe945", null ],
+    [ "IsFastTransitionTarget", "elements-kind_8cc.html#a58383774354b2bee46a0dd16fab43085", null ],
     [ "IsMoreGeneralElementsKindTransition", "elements-kind_8cc.html#a3385b29114f02665568e3b85945e9d10", null ],
     [ "TypedArrayAndRabGsabTypedArrayElementsKindShifts", "elements-kind_8cc.html#a46651262e7e1ef32dff9bc0a0ffb66d5", null ],
     [ "TypedArrayAndRabGsabTypedArrayElementsKindSizes", "elements-kind_8cc.html#abc83cf5d8a6aa2290cc96406ed575312", null ],

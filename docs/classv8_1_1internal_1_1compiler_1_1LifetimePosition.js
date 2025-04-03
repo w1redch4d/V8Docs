@@ -1,14 +1,21 @@
 var classv8_1_1internal_1_1compiler_1_1LifetimePosition =
 [
     [ "LifetimePosition", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#ab3df636ee231f0b5d734aef97cbf74f8", null ],
+    [ "LifetimePosition", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#ab504ab1e4af9c91c5551335b840c2344", null ],
     [ "End", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#ad2e6a71395a528ea8f68881cf16e6765", null ],
+    [ "ExistsGapPositionBetween", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a160fe342f01d4d9203f37e82877c358c", null ],
+    [ "FromInt", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a40882269e85e8ace1d98b82e0e6419c2", null ],
     [ "FullStart", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a23e9a7b817091e0198847cddc383bb06", null ],
+    [ "GapFromInstructionIndex", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a99d5d744a757b2795d0fc42a315406a9", null ],
+    [ "InstructionFromInstructionIndex", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a32d9eb60b66b5eddb94c8a8bd69a877c", null ],
+    [ "Invalid", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#ab394c19abb7a07b49916bdecd6e0bd17", null ],
     [ "IsEnd", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a4edef965c8c118c718763ad16621ccb0", null ],
     [ "IsFullStart", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#abd54116a7f6e120375d39f1e814b40fd", null ],
     [ "IsGapPosition", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#ad66c72623d9ebbf765664f106dc76ba4", null ],
     [ "IsInstructionPosition", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#adc8ca1eee2b3f111eb6e62ca71136ec4", null ],
     [ "IsStart", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#ae3de40dd01dd4a502fc343b7b29b3448", null ],
     [ "IsValid", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a257da18336c1dd3b40e31a98d9b7949b", null ],
+    [ "MaxPosition", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a0db50cd0c61da89622ba974be2de6af4", null ],
     [ "NextFullStart", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a617164806c441fb71d891a79c5df7d3b", null ],
     [ "NextStart", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a4c84ec70089036192660b91c8246d63f", null ],
     [ "operator!=", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a4ef49233c7f153d8e2f50b512348e2d6", null ],
@@ -21,5 +28,8 @@ var classv8_1_1internal_1_1compiler_1_1LifetimePosition =
     [ "Print", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#ab30227ac9d3913e7aea2acb634f37adf", null ],
     [ "Start", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a88bd273c76a5b01f8089d5bcb4094b65", null ],
     [ "ToInstructionIndex", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a8c2698630261d8bba154be0df220e84f", null ],
-    [ "value", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#aa309fd80e2d8daf49cc58e4cedf9f934", null ]
+    [ "value", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#aa309fd80e2d8daf49cc58e4cedf9f934", null ],
+    [ "kHalfStep", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a909fe3ac1a2266279c4fb64980374771", null ],
+    [ "kStep", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#a2f47a2ef3f291fbcb0cac7a1937350d1", null ],
+    [ "value_", "classv8_1_1internal_1_1compiler_1_1LifetimePosition.html#adfd9cc95ded60a9977c4ede147b374b4", null ]
 ];

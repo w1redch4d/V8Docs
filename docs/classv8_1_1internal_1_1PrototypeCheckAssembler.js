@@ -8,5 +8,9 @@ var classv8_1_1internal_1_1PrototypeCheckAssembler =
       [ "kCheckFull", "classv8_1_1internal_1_1PrototypeCheckAssembler.html#ab4d02a927485515de801c15c6e1cdb9aa0a66371d78c7a2d7e29f8e17aafb2af1", null ]
     ] ],
     [ "PrototypeCheckAssembler", "classv8_1_1internal_1_1PrototypeCheckAssembler.html#a783ab07f67191660406801dee609aa14", null ],
-    [ "CheckAndBranch", "classv8_1_1internal_1_1PrototypeCheckAssembler.html#ae8956d7ca5826cb8545a43ce49e2b58a", null ]
+    [ "CheckAndBranch", "classv8_1_1internal_1_1PrototypeCheckAssembler.html#ae8956d7ca5826cb8545a43ce49e2b58a", null ],
+    [ "flags_", "classv8_1_1internal_1_1PrototypeCheckAssembler.html#a24b0d45c689174896e50628cb3daf009", null ],
+    [ "initial_prototype_map_", "classv8_1_1internal_1_1PrototypeCheckAssembler.html#a296abe8ab36a8f8afb98943133757656", null ],
+    [ "native_context_", "classv8_1_1internal_1_1PrototypeCheckAssembler.html#aac164f50b8a0425f7fc3f35ba88ebb30", null ],
+    [ "properties_", "classv8_1_1internal_1_1PrototypeCheckAssembler.html#aff4957a450b71d89d3de026bd9bb4755", null ]
 ];

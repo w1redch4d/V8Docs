@@ -15,5 +15,16 @@ var classv8_1_1internal_1_1FrameInspector =
     [ "IsConstructor", "classv8_1_1internal_1_1FrameInspector.html#a7e4ed371c98867c2c81e7f567f216a7f", null ],
     [ "IsJavaScript", "classv8_1_1internal_1_1FrameInspector.html#a7ba739639fccfb3d9e9efca1aacd03d2", null ],
     [ "javascript_frame", "classv8_1_1internal_1_1FrameInspector.html#ac74213bddad240953c5ca6603b9680c5", null ],
-    [ "operator=", "classv8_1_1internal_1_1FrameInspector.html#a7741a99b730820f7c7bb7be915e0606a", null ]
+    [ "operator=", "classv8_1_1internal_1_1FrameInspector.html#a7741a99b730820f7c7bb7be915e0606a", null ],
+    [ "ParameterIsShadowedByContextLocal", "classv8_1_1internal_1_1FrameInspector.html#a86f4bfb5641cc210a151d18f482c763c", null ],
+    [ "deoptimized_frame_", "classv8_1_1internal_1_1FrameInspector.html#aeea8cb3b38b7854f7e91ea4ae31380fd", null ],
+    [ "frame_", "classv8_1_1internal_1_1FrameInspector.html#a299b2f2602f8d8edf32be231160836ca", null ],
+    [ "function_", "classv8_1_1internal_1_1FrameInspector.html#ab6f1dcc1c0314168c16258d18212aea7", null ],
+    [ "inlined_frame_index_", "classv8_1_1internal_1_1FrameInspector.html#a5590c385d119131a81cb8aa0784f9994", null ],
+    [ "is_constructor_", "classv8_1_1internal_1_1FrameInspector.html#a9cfa2926a4c18de7ca13d5c03e9d4641", null ],
+    [ "is_optimized_", "classv8_1_1internal_1_1FrameInspector.html#a92dcf07f000bb2598d9d74a8527fcfa1", null ],
+    [ "isolate_", "classv8_1_1internal_1_1FrameInspector.html#aa23c9a1a5caedb5dfb001d90ecb75b1f", null ],
+    [ "receiver_", "classv8_1_1internal_1_1FrameInspector.html#a2b4ceaa1491a3ddd3595d89be510b325", null ],
+    [ "script_", "classv8_1_1internal_1_1FrameInspector.html#ab0cd1abb6905f57dfa476088c862f17d", null ],
+    [ "source_position_", "classv8_1_1internal_1_1FrameInspector.html#a68a2d8f28acb127b0424bdc9527a2e13", null ]
 ];

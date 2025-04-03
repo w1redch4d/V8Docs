@@ -10,6 +10,7 @@ var classv8_1_1internal_1_1EvacuateVisitorBase =
     [ "cage_base", "classv8_1_1internal_1_1EvacuateVisitorBase.html#a66fbd0566143fccc89168a2e82a15e90", null ],
     [ "ExecuteMigrationObservers", "classv8_1_1internal_1_1EvacuateVisitorBase.html#a034bacd0b3a920ee6ecbcbaf24fc36ed", null ],
     [ "MigrateObject", "classv8_1_1internal_1_1EvacuateVisitorBase.html#acd573012c922867059b0f4ac0c6e2df3", null ],
+    [ "RawMigrateObject", "classv8_1_1internal_1_1EvacuateVisitorBase.html#a12a3ff0d411a446f60d4398f9e0f1877", null ],
     [ "ShouldPromoteIntoSharedHeap", "classv8_1_1internal_1_1EvacuateVisitorBase.html#a22152d774553dd906bca340c583ddbb1", null ],
     [ "TryEvacuateObject", "classv8_1_1internal_1_1EvacuateVisitorBase.html#a6321f4dbe8353193b8e5bd4ea1d96cf4", null ],
     [ "heap_", "classv8_1_1internal_1_1EvacuateVisitorBase.html#a0c3cbd23e8f28a0038f6d93b38bbdbbb", null ],

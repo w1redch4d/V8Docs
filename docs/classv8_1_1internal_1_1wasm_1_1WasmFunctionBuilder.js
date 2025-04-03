@@ -1,5 +1,7 @@
 var classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder =
 [
+    [ "DirectCallIndex", "structv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder_1_1DirectCallIndex.html", "structv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder_1_1DirectCallIndex" ],
+    [ "WasmFunctionBuilder", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a85e7dcb90ca9554db88f9b9664705a38", null ],
     [ "AddAsmWasmOffset", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a91ea4239b6380384cc45a479d8338c68", null ],
     [ "AddLocal", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#af8cb07c7d154c0b158a6379f96ae3537", null ],
     [ "builder", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a41553126e06157f840033f83525f868a", null ],
@@ -43,5 +45,22 @@ var classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder =
     [ "WriteAsmWasmOffsetTable", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a659c33918ed9a4b35f2073b2996a0358", null ],
     [ "WriteBody", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#acf4518d800b07f99cc19533a143b356e", null ],
     [ "WriteSignature", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#acfdcaf788abeb2a3e0382c26b01db4c3", null ],
-    [ "WasmModuleBuilder", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#ace63ff4bed9fda245c733e10c4a9714b", null ]
+    [ "WasmModuleBuilder", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#ace63ff4bed9fda245c733e10c4a9714b", null ],
+    [ "asm_func_start_source_position_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#aa68e7410dbfc84ca6350ef3fa4d65597", null ],
+    [ "asm_offsets_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a9d4954c66d713cfe626f5de8ebd6fefa", null ],
+    [ "body_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a94bd5b75aecdf2d77bc6d62fa0301354", null ],
+    [ "builder_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a6b97828c6583a0e3bbc607d6c2b17000", null ],
+    [ "direct_calls_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#aeda64875b7acc7eb1282e477cebc7a34", null ],
+    [ "f32_temps_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#ad4074933ba7aa023f3864501fd953b4e", null ],
+    [ "f64_temps_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a689fee1371521d37f77419b053d77b7d", null ],
+    [ "func_index_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#abfcc2b0236ab1d64aea91660abb2bcdb", null ],
+    [ "hint_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a854475b1ab0fac058c06c4b6c07343f9", null ],
+    [ "i32_temps_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a697c9da39629437a27aca6953a677ca6", null ],
+    [ "i64_temps_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a3bb8f7ffbf287aa0fd37065d0f1933dc", null ],
+    [ "last_asm_byte_offset_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a50fb6fc03eeaa7a8c26cc81fa7962156", null ],
+    [ "last_asm_source_position_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a9a8eaf784b7905bd0e10569cfaff70b7", null ],
+    [ "locals_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#ad27989f1c51171684c10aed873f4178d", null ],
+    [ "name_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#ad5d03c61ab68f386e904deb1a5e7f9c2", null ],
+    [ "signature_index_", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a4dcc92e9d197c7a1ff81eec9185c438a", null ],
+    [ "Zone", "classv8_1_1internal_1_1wasm_1_1WasmFunctionBuilder.html#a645551cb1a587a49487d032190954e99", null ]
 ];

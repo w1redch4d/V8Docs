@@ -1,18 +1,57 @@
 var classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector =
 [
+    [ "HoistTypeList", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aaf450f1a55bd81acbb20eb985f41fe53", null ],
+    [ "Key", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#ae975baa2d578e89b6796abc9aa10617b", null ],
+    [ "Snapshot", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a3b568db4fa336aa8e9679a3a859b132d", null ],
+    [ "SnapshotTable", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a549e09aa1ed91df7bf491d9537936dbc", null ],
+    [ "HoistType", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aa988ff3862889cd903996cf98c3fb4a9", [
+      [ "kNone", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aa988ff3862889cd903996cf98c3fb4a9a35c3ace1970663a16e5c65baa5941b13", null ],
+      [ "kLoopEntry", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aa988ff3862889cd903996cf98c3fb4a9aa6ac8096e9e9b45f9bd89fc1cbc7af34", null ],
+      [ "kLoopEntryUnchecked", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aa988ff3862889cd903996cf98c3fb4a9a737e423eae8fce2e0bdf86e0b26e8af0", null ],
+      [ "kPrologue", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aa988ff3862889cd903996cf98c3fb4a9aafe77346975634583a26d409ec0752c0", null ]
+    ] ],
+    [ "NewNodePosition", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a8fc64505413ea38361fc9f83f66c8af9", [
+      [ "kBeginingOfCurrentBlock", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a8fc64505413ea38361fc9f83f66c8af9a66453ffa00f459519af19480d2d5be82", null ],
+      [ "kEndOfBlock", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a8fc64505413ea38361fc9f83f66c8af9a80008467dddaca1679eb05b79e924793", null ]
+    ] ],
     [ "ProcessPhiResult", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a13c6851b1d8269b5de114f66387d6324", [
       [ "kNone", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a13c6851b1d8269b5de114f66387d6324a6ba87a47347eacc720b702902c18308a", null ],
       [ "kRetryOnChange", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a13c6851b1d8269b5de114f66387d6324a6d9538ca67ccd79e1986ff074e095eb4", null ],
       [ "kChanged", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a13c6851b1d8269b5de114f66387d6324ad8dc86ff8347c2cef5aeebce0788dd47", null ]
     ] ],
     [ "MaglevPhiRepresentationSelector", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a3698d6bd0851f7118ca1293c4dc6ff69", null ],
+    [ "AddNode", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a518548d6aafdacffeae342bcec275140", null ],
+    [ "AddNodeAtBlockEnd", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#abd9a1409affd00a538817d11578569a9", null ],
+    [ "BypassIdentities", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a0108e002e8adebbf67021d614f349d0d", null ],
+    [ "CanHoistUntaggingTo", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aa7d06913b62d87e853c009cd00a14a01", null ],
+    [ "ConvertTaggedPhiTo", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a4fb3b23b553b531653f6699ae18fe299", null ],
+    [ "EnsurePhiInputsTagged", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a3cda9d06ef5315b251f995ca97759e6c", null ],
+    [ "EnsurePhiTagged", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a474a21dc2fbb4fffd8e968253af8d739", null ],
+    [ "FixLoopPhisBackedge", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a633bc5df30456f233a94731051ffec44", null ],
+    [ "graph_labeller", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aab7f8744ce0f161e3e9231995eb67c3c", null ],
+    [ "IsUntagging", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#af22631d9ed0d01adcabe754970ec684f", null ],
     [ "PostPhiProcessing", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#abb6c4fb2a7d120fc1e1b076598a66273", null ],
     [ "PostProcessGraph", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a20fe020eb00a33abe11b167ff7f2517a", null ],
+    [ "PreparePhiTaggings", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a6bc2051ae6719b455d1b3b0c8302d61e", null ],
     [ "PreProcessBasicBlock", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aa72ec2b01dd20e0900d0dad7629fd744", null ],
     [ "PreProcessGraph", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#ae73206ad251bec910d09138bcb86d70f", null ],
     [ "Process", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a96c09dddc32ee4b3ef21fe5d5725bf6a", null ],
     [ "Process", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a91f2a2e6820b467db501220887be2a9b", null ],
     [ "Process", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a248d5e04e1469cd3d66de24da4ebaa5a", null ],
     [ "Process", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aa5256599482f764514b001365691162d", null ],
-    [ "ProcessPhi", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aa36f0d8abcc6d544cc43c367622e49be", null ]
+    [ "ProcessPhi", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aa36f0d8abcc6d544cc43c367622e49be", null ],
+    [ "RegisterNewNode", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a48669c6574fa828f27fe839599edca70", null ],
+    [ "UpdateNodeInputs", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aabd57b817c1c86b8d0684f7745637325", null ],
+    [ "UpdateNodePhiInput", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a58c9fc2df225acf9736ce4b8c59de3f2", null ],
+    [ "UpdateNodePhiInput", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#abef2895c4eae6890bd7be68aec1f1559", null ],
+    [ "UpdateNodePhiInput", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aa1452617ef61ec6ba5d7cb4ec84993c9", null ],
+    [ "UpdateNodePhiInput", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#aca708f33490104431b247290ab5267c0", null ],
+    [ "UpdateNodePhiInput", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a4b1ad84dd75e94d5370e554caf80d24b", null ],
+    [ "UpdateNodePhiInput", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a15d0863522fdca92ad35c2e488236f76", null ],
+    [ "UpdateNonUntaggingNodeInputs", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#ae7d688c6fac360bd2969aaeb18ebe8d8", null ],
+    [ "UpdateUntaggingOfPhi", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a2cbcee01c520c52410023dd8a7d742b9", null ],
+    [ "builder_", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a0f15ef07c0c31dbad067d8bbc988630c", null ],
+    [ "current_block_", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a44ce1683e9a4dfdaceace00195ac06ff", null ],
+    [ "phi_taggings_", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a31e44b957112afe3c0d0b127a2bf3597", null ],
+    [ "predecessors_", "classv8_1_1internal_1_1maglev_1_1MaglevPhiRepresentationSelector.html#a64ce39a55f3c2d6c33fad6a0ea04c1ce", null ]
 ];

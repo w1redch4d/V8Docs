@@ -3,6 +3,7 @@ var classv8_1_1base_1_1EnumSet =
     [ "StorageType", "classv8_1_1base_1_1EnumSet.html#a931d94446d1a69609a41de1ea57f59c5", null ],
     [ "EnumSet", "classv8_1_1base_1_1EnumSet.html#a5b307abe5a11d13af582322078e4c025", null ],
     [ "EnumSet", "classv8_1_1base_1_1EnumSet.html#a0cab4dc0358bdd1d26d387f005516262", null ],
+    [ "EnumSet", "classv8_1_1base_1_1EnumSet.html#a2ee6e297e60619f06ceab4ab822e5436", null ],
     [ "Add", "classv8_1_1base_1_1EnumSet.html#a284a9564cbcce06b154271c335244102", null ],
     [ "Add", "classv8_1_1base_1_1EnumSet.html#a2c0e9927b3e854bf721aea04bea1e56d", null ],
     [ "contains", "classv8_1_1base_1_1EnumSet.html#ae4b456a7bb23f2a76c4526748fcc911a", null ],
@@ -10,8 +11,10 @@ var classv8_1_1base_1_1EnumSet =
     [ "contains_any", "classv8_1_1base_1_1EnumSet.html#acdcea1dcfc64156b624c2f674654fc93", null ],
     [ "contains_only", "classv8_1_1base_1_1EnumSet.html#a54638d7227d49136c2bb5fc41d902c23", null ],
     [ "empty", "classv8_1_1base_1_1EnumSet.html#a862a3eec9114561540c5dee511a03b9c", null ],
+    [ "FromIntegral", "classv8_1_1base_1_1EnumSet.html#a73bd152a76ce866e28a9e81eec4305f6", null ],
     [ "Intersect", "classv8_1_1base_1_1EnumSet.html#ab41683d2a0a3014151b6dced865815e7", null ],
     [ "is_subset_of", "classv8_1_1base_1_1EnumSet.html#a1783c16a671ba8fd8e930790aaf86c69", null ],
+    [ "Mask", "classv8_1_1base_1_1EnumSet.html#a5d366bfb386bdab04d4c0db39d20fb54", null ],
     [ "operator!=", "classv8_1_1base_1_1EnumSet.html#a9d56af2656dae51bbbf0a1b8d8b059eb", null ],
     [ "operator&", "classv8_1_1base_1_1EnumSet.html#afd294f41a616796a3b4db9fdf455e8a1", null ],
     [ "operator&", "classv8_1_1base_1_1EnumSet.html#aee75428959ac0b3bf6b9e3113ac836c0", null ],
@@ -30,5 +33,6 @@ var classv8_1_1base_1_1EnumSet =
     [ "Remove", "classv8_1_1base_1_1EnumSet.html#a78102a60c0437c1cbcb61eeab3901750", null ],
     [ "Remove", "classv8_1_1base_1_1EnumSet.html#a97255e2e217a367b6cf2411b4a98ed48", null ],
     [ "RemoveAll", "classv8_1_1base_1_1EnumSet.html#acf0621eacf66c93e2aa90280061ac55c", null ],
-    [ "ToIntegral", "classv8_1_1base_1_1EnumSet.html#a9976bf3babf9de8c602601184f7264e8", null ]
+    [ "ToIntegral", "classv8_1_1base_1_1EnumSet.html#a9976bf3babf9de8c602601184f7264e8", null ],
+    [ "bits_", "classv8_1_1base_1_1EnumSet.html#aaecec5be33fc7e272e65043cf19ff9d4", null ]
 ];

@@ -6,6 +6,7 @@ var classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator =
     [ "reference", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#afec61b28b73d479bc20c19269b82e1ef", null ],
     [ "value_type", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#ad7e998745f4cb7a2a63b4bfbde25d678", null ],
     [ "const_iterator", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#afb6a93b416f60138f10eecfb42eee766", null ],
+    [ "const_iterator", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#abbd1ca9fc3c7550f8ce120e4e6aeffb8", null ],
     [ "operator!=", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#ae783a2aef214d320db3e235e619b5741", null ],
     [ "operator*", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#abc93031e1f916f1850985d794bc25fa4", null ],
     [ "operator+", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#a6fbfef1f0a53d085e219219981a0062d", null ],
@@ -14,5 +15,6 @@ var classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator =
     [ "operator+=", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#a37ba8cfc0913c815fcb932f9bc92e61b", null ],
     [ "operator-", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#a86df56f38862f377fc6358cbb585f63e", null ],
     [ "operator==", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#a5cc88b20b772ce6452e964d7d47c95c2", null ],
-    [ "Node::Inputs", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#ab5632873536c3e0c97344fa0dc6184da", null ]
+    [ "Node::Inputs", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#ab5632873536c3e0c97344fa0dc6184da", null ],
+    [ "input_ptr_", "classv8_1_1internal_1_1compiler_1_1Node_1_1Inputs_1_1const__iterator.html#a939a1a0a64b4ead796f066b1e406791c", null ]
 ];

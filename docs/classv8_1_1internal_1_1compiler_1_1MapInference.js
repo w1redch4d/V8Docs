@@ -5,12 +5,22 @@ var classv8_1_1internal_1_1compiler_1_1MapInference =
     [ "AllOfInstanceTypes", "classv8_1_1internal_1_1compiler_1_1MapInference.html#afd5b1627254cc19c8780a2664f20fba1", null ],
     [ "AllOfInstanceTypesAre", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a4e9e9b70b676d23f49ae607e29efde72", null ],
     [ "AllOfInstanceTypesAreJSReceiver", "classv8_1_1internal_1_1compiler_1_1MapInference.html#aef065065d744f38a6a843b44c9d10e4a", null ],
+    [ "AllOfInstanceTypesUnsafe", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a3143f21e0be5b37b0e276d2a594fb2b2", null ],
     [ "AnyOfInstanceTypesAre", "classv8_1_1internal_1_1compiler_1_1MapInference.html#af1614fa5aa57cf568f1c092d2765b0c5", null ],
+    [ "AnyOfInstanceTypesUnsafe", "classv8_1_1internal_1_1compiler_1_1MapInference.html#aaabbce187abeb24b28f88bb76a0abe9c", null ],
     [ "GetMaps", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a362dbf778a3bb5d5fa798e63e846d74d", null ],
     [ "HaveMaps", "classv8_1_1internal_1_1compiler_1_1MapInference.html#abbb760bde03038c59d176678e2ae185e", null ],
     [ "InsertMapChecks", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a8c3d73008cf360598a4b6f3d72a493c2", null ],
     [ "Is", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a0aebe1837bc506cb226cb7582868b589", null ],
     [ "NoChange", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a884aad2b4fc88bf71803c223442656a5", null ],
+    [ "RelyOnMapsHelper", "classv8_1_1internal_1_1compiler_1_1MapInference.html#aa47f7e21f598db4407504bdeb7793421", null ],
     [ "RelyOnMapsPreferStability", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a1bc58a7987a77c0f33c21de93763c508", null ],
-    [ "RelyOnMapsViaStability", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a33dbc07c6da7cf5d0fbc796a535cf2ac", null ]
+    [ "RelyOnMapsViaStability", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a33dbc07c6da7cf5d0fbc796a535cf2ac", null ],
+    [ "Safe", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a827efa522fe7df367d2e2f3baf25ca5d", null ],
+    [ "SetGuarded", "classv8_1_1internal_1_1compiler_1_1MapInference.html#af002b085f8beab8f49c49e17693491d3", null ],
+    [ "SetNeedGuardIfUnreliable", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a5a31fbc00e6a1c71e47ae0d90ecaa1e0", null ],
+    [ "broker_", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a4de2db5f3ec0a9f3ef5cb4e6a766c319", null ],
+    [ "maps_", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a2c88480d834e598330c5a5a3349e2289", null ],
+    [ "maps_state_", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a2f6f5f9aa0cc5f03fbeb2efc4c7889ca", null ],
+    [ "object_", "classv8_1_1internal_1_1compiler_1_1MapInference.html#a60e67c0db1bca1036f10d23278639296", null ]
 ];

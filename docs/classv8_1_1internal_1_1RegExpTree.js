@@ -10,5 +10,6 @@ var classv8_1_1internal_1_1RegExpTree =
     [ "max_match", "classv8_1_1internal_1_1RegExpTree.html#ad27450dae179517a30b47de7eedde3c4", null ],
     [ "min_match", "classv8_1_1internal_1_1RegExpTree.html#a6aee84bbe2e078446f84681b70ebc32a", null ],
     [ "Print", "classv8_1_1internal_1_1RegExpTree.html#af682087bc39041e46f30cc97b6536605", null ],
-    [ "ToNode", "classv8_1_1internal_1_1RegExpTree.html#a3ac4eda3df44f8fe04cb268fc97709e4", null ]
+    [ "ToNode", "classv8_1_1internal_1_1RegExpTree.html#a3ac4eda3df44f8fe04cb268fc97709e4", null ],
+    [ "kInfinity", "classv8_1_1internal_1_1RegExpTree.html#a91c43a4c99efe5ac1ec0db20eff0a1f3", null ]
 ];

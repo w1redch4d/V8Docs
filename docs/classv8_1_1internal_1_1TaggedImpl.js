@@ -42,5 +42,8 @@ var classv8_1_1internal_1_1TaggedImpl =
     [ "CompressedObjectSlot", "classv8_1_1internal_1_1TaggedImpl.html#a30708fa9585bcf2c0287793149183a39", null ],
     [ "FullHeapObjectSlot", "classv8_1_1internal_1_1TaggedImpl.html#a255403cb2c4df6989d8b95df82815f37", null ],
     [ "FullMaybeObjectSlot", "classv8_1_1internal_1_1TaggedImpl.html#a09bc35a6e4df8c98c2a6a1809e10b416", null ],
-    [ "FullObjectSlot", "classv8_1_1internal_1_1TaggedImpl.html#a1b53faf9c93706754dec9f3958daa2e2", null ]
+    [ "FullObjectSlot", "classv8_1_1internal_1_1TaggedImpl.html#a1b53faf9c93706754dec9f3958daa2e2", null ],
+    [ "kCanBeWeak", "classv8_1_1internal_1_1TaggedImpl.html#a8be31f14fd21f053f3fe4be3b2ce90a8", null ],
+    [ "kIsFull", "classv8_1_1internal_1_1TaggedImpl.html#abcf0d7303ccdde67e7d0cba31a3b3f23", null ],
+    [ "ptr_", "classv8_1_1internal_1_1TaggedImpl.html#a1cdd66a3ff8043cf8d2e4476968e8720", null ]
 ];

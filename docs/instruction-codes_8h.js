@@ -94,5 +94,7 @@ var instruction_codes_8h =
     [ "operator<<", "instruction-codes_8h.html#af5d4e8906fd259c39f8de21030ecdf68", null ],
     [ "operator<<", "instruction-codes_8h.html#aa4ceb7df8bff8927bfdc6d9c354c5d69", null ],
     [ "operator<<", "instruction-codes_8h.html#abce9d2e3e7a9e9dc02a3d88342cbf0fe", null ],
-    [ "WriteBarrierKindToRecordWriteMode", "instruction-codes_8h.html#aba9d22999c890f67a654a25a69a9dc1a", null ]
+    [ "WriteBarrierKindToRecordWriteMode", "instruction-codes_8h.html#aba9d22999c890f67a654a25a69a9dc1a", null ],
+    [ "kLazyDeoptOnThrowSentinel", "instruction-codes_8h.html#ac2b0318acd0c17aacc605c59585822a8", null ],
+    [ "kStackPointerGreaterThanCondition", "instruction-codes_8h.html#ac7c47a9d740ddddf57ac91a9c3ad5fbb", null ]
 ];

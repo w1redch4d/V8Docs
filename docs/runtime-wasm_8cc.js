@@ -60,5 +60,8 @@ var runtime_wasm_8cc =
     [ "RUNTIME_FUNCTION", "runtime-wasm_8cc.html#ade179f99b1b2124e25feaa34dd885b33", null ],
     [ "RUNTIME_FUNCTION", "runtime-wasm_8cc.html#a37fc85bac005249f09980b40186eb4c0", null ],
     [ "RUNTIME_FUNCTION", "runtime-wasm_8cc.html#a92dc95198085755e79acfbabfc23d48d", null ],
-    [ "ToUtf8Lossy", "runtime-wasm_8cc.html#ad31e242d4f97adfe9b3e0da70ab90fd4", null ]
+    [ "ToUtf8Lossy", "runtime-wasm_8cc.html#ad31e242d4f97adfe9b3e0da70ab90fd4", null ],
+    [ "frame_iterator_", "runtime-wasm_8cc.html#a02fea9b950a84476952ad4ed58f40b4b", null ],
+    [ "is_thread_in_wasm_", "runtime-wasm_8cc.html#a4191a550f7ef3f3b5a95320c16257836", null ],
+    [ "isolate_", "runtime-wasm_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b", null ]
 ];

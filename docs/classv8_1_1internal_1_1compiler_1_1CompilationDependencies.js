@@ -2,6 +2,7 @@ var classv8_1_1internal_1_1compiler_1_1CompilationDependencies =
 [
     [ "CompilationDependencyEqual", "structv8_1_1internal_1_1compiler_1_1CompilationDependencies_1_1CompilationDependencyEqual.html", "structv8_1_1internal_1_1compiler_1_1CompilationDependencies_1_1CompilationDependencyEqual" ],
     [ "CompilationDependencyHash", "structv8_1_1internal_1_1compiler_1_1CompilationDependencies_1_1CompilationDependencyHash.html", "structv8_1_1internal_1_1compiler_1_1CompilationDependencies_1_1CompilationDependencyHash" ],
+    [ "CompilationDependencySet", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#a947d555f0385772932de209a5be04e9a", null ],
     [ "CompilationDependencies", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#ad02b443b5d5d916fd8850fd140f2d383", null ],
     [ "Commit", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#aa05c440f3d85dbeb3920db26145836f1", null ],
     [ "DependOnArrayBufferDetachingProtector", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#af8aa669ed239c23c72129ecf9360e048", null ],
@@ -39,6 +40,11 @@ var classv8_1_1internal_1_1compiler_1_1CompilationDependencies =
     [ "DependOnStringWrapperToPrimitiveProtector", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#a87f56d36ec58e58f638d85df158f559d", null ],
     [ "FieldRepresentationDependencyOffTheRecord", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#a14e7a55b6d0522edf287da5cfaa43293", null ],
     [ "FieldTypeDependencyOffTheRecord", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#afa09595a6cac6124a5e08de61a35ce52", null ],
+    [ "PrepareInstall", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#a33810e8684da7b3d064331a8c9cf8f2e", null ],
+    [ "PrepareInstallPredictable", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#afb803e7818b3f55ffbcfbd18d0c7152b", null ],
     [ "RecordDependency", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#ada04d81f8987f1124743805c96c0ee05", null ],
-    [ "TransitionDependencyOffTheRecord", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#a9145408a2bea36214ecc39ff195f8f45", null ]
+    [ "TransitionDependencyOffTheRecord", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#a9145408a2bea36214ecc39ff195f8f45", null ],
+    [ "broker_", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#ab749d4c393c37f467159a6e1d864bbe2", null ],
+    [ "dependencies_", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#a4f2205c9b2401ea270a81b760c492697", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1CompilationDependencies.html#a2c42c1759ba9a4173acd79ca4d695632", null ]
 ];

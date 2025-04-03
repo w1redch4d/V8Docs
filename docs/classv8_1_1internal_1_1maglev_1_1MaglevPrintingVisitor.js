@@ -8,5 +8,6 @@ var classv8_1_1internal_1_1maglev_1_1MaglevPrintingVisitor =
     [ "PreProcessGraph", "classv8_1_1internal_1_1maglev_1_1MaglevPrintingVisitor.html#aae2dbbd2bd2a8e64c2156b8da2c27e7d", null ],
     [ "Process", "classv8_1_1internal_1_1maglev_1_1MaglevPrintingVisitor.html#a67caa1391da9558e5da9b103cda56f3f", null ],
     [ "Process", "classv8_1_1internal_1_1maglev_1_1MaglevPrintingVisitor.html#ab199dc1eea8bfcf58abdf5affc3b620b", null ],
-    [ "Process", "classv8_1_1internal_1_1maglev_1_1MaglevPrintingVisitor.html#a2a0fee08f56564c021474b8241fa9381", null ]
+    [ "Process", "classv8_1_1internal_1_1maglev_1_1MaglevPrintingVisitor.html#a2a0fee08f56564c021474b8241fa9381", null ],
+    [ "os_", "classv8_1_1internal_1_1maglev_1_1MaglevPrintingVisitor.html#ad4ff6769f6e6181715cff0a8b2cdc390", null ]
 ];

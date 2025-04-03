@@ -14,6 +14,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimiti
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOrDeoptOp.html#a8eae0189ba5c883f9ea8e10896be41df", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOrDeoptOp.html#aa7bccc92aee916f468dc2165afa56abc", null ],
     [ "Validate", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOrDeoptOp.html#ae0469f2f3594a1f8f10db89da79ee257", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOrDeoptOp.html#a2ab9843dd48e5afae763cb20c226f930", null ],
     [ "feedback", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOrDeoptOp.html#ab81edea0268e5a8043a6f0a3df6520f9", null ],
     [ "input_interpretation", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOrDeoptOp.html#ac5d7543ba470c99694c1ad4455aef8be", null ],
     [ "input_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConvertUntaggedToJSPrimitiveOrDeoptOp.html#a60efc4fa9bc850c175893ebdb17aabc4", null ],

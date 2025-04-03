@@ -16,6 +16,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AtomicRMWOp =
     [ "Explode", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AtomicRMWOp.html#aeee9bb3a62edf4fd1c5f511ad5532c88", null ],
     [ "index", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AtomicRMWOp.html#a16b94c6147f9c4962783f65444b64ff3", null ],
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AtomicRMWOp.html#a95ad61b9d622d7349eea56fd14848ca8", null ],
+    [ "New", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AtomicRMWOp.html#adaff1257e55576051c761a581cdf3860", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AtomicRMWOp.html#aba09a37f378144bacf5871720d9132b8", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AtomicRMWOp.html#ad01b06f7e0392650f8aea429df7dd670", null ],
     [ "PrintInputs", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AtomicRMWOp.html#a54d1608689ba6dac9c5fe92225ea4179", null ],

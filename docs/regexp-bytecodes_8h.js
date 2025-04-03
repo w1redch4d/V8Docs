@@ -11,6 +11,9 @@ var regexp_bytecodes_8h =
     [ "RegExpBytecodeName", "regexp-bytecodes_8h.html#a2f3594cf9ff1a3b05fae913144f9c086", null ],
     [ "BYTECODE_MASK", "regexp-bytecodes_8h.html#aa5634be36cd47c03442ba7e58d5d764c", null ],
     [ "BYTECODE_SHIFT", "regexp-bytecodes_8h.html#a33a4bc88a7144f0fcfd42cc5a5b560d5", null ],
+    [ "kRegExpBytecodeCount", "regexp-bytecodes_8h.html#a0be7cc5097dc50c04bea250dda6412f2", null ],
+    [ "kRegExpBytecodeLengths", "regexp-bytecodes_8h.html#aba508d2e04aa1714033d763c7bb1f6c2", null ],
+    [ "kRegExpBytecodeNames", "regexp-bytecodes_8h.html#aaadf385106f1c77d75ed9c42f93a5ad9", null ],
     [ "kRegExpPaddedBytecodeCount", "regexp-bytecodes_8h.html#aef896513033e4192fbb567a2f9f256f2", null ],
     [ "MAX_FIRST_ARG", "regexp-bytecodes_8h.html#a8033d64d31bc2aa7eae2e3d14c072f18", null ]
 ];

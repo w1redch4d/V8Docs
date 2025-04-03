@@ -15,5 +15,6 @@ var classv8_1_1base_1_1LsanVirtualAddressSpace =
     [ "RandomPageAddress", "classv8_1_1base_1_1LsanVirtualAddressSpace.html#a278809162b32886b2b3da6255aa0b2c8", null ],
     [ "RecommitPages", "classv8_1_1base_1_1LsanVirtualAddressSpace.html#ad699bca1b79746676a8f521802dbee69", null ],
     [ "SetPagePermissions", "classv8_1_1base_1_1LsanVirtualAddressSpace.html#a0d4cd59eb68370e733ec2cf72028ad5f", null ],
-    [ "SetRandomSeed", "classv8_1_1base_1_1LsanVirtualAddressSpace.html#a068b2c077a524a0b5fb696e492a9c52e", null ]
+    [ "SetRandomSeed", "classv8_1_1base_1_1LsanVirtualAddressSpace.html#a068b2c077a524a0b5fb696e492a9c52e", null ],
+    [ "vas_", "classv8_1_1base_1_1LsanVirtualAddressSpace.html#a21945511708447893041bd6bf3c4da70", null ]
 ];

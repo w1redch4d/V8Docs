@@ -1,5 +1,30 @@
 var classv8_1_1internal_1_1wasm_1_1JumpTableAssembler =
 [
+    [ "JumpTableAssembler", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a8ff1a19540dfedab7df59c389a69f0ab", null ],
     [ "emit", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#aea100ea7bfad00aa730973e56a0a578c", null ],
-    [ "emit", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a8e6da08fb13310db0be81883009a67ca", null ]
+    [ "emit", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a8e6da08fb13310db0be81883009a67ca", null ],
+    [ "emit", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a00203850770b1893d8dc83555db84daf", null ],
+    [ "emit", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a665e83b7e58df229371073dceb3310ab", null ],
+    [ "EmitFarJumpSlot", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a433d7c261042c773d79f6bb9bcc25128", null ],
+    [ "EmitJumpSlot", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a792831c7a99da6c28c74710b0c604cf5", null ],
+    [ "EmitLazyCompileJumpSlot", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#ab3f7235ac5e16be6571bf84916e17de7", null ],
+    [ "FarJumpSlotIndexToOffset", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a4e616135983a522caacfc5b4bf44bcd3", null ],
+    [ "FarJumpSlotOffsetToIndex", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a01dc0a56e4bad49ae441513379eabe4d", null ],
+    [ "GenerateFarJumpTable", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a9429626ba78f937f1bdd773af25dda77", null ],
+    [ "GenerateLazyCompileTable", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#ae71b16baa415877eb767aeb926b938e5", null ],
+    [ "InitializeJumpsToLazyCompileTable", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a8d1850fd6a11a830c0b62ccfe4906baf", null ],
+    [ "JumpSlotIndexToOffset", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a75af4ab220bf462ded5d5cc62d9da9da", null ],
+    [ "LazyCompileSlotIndexToOffset", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#ab9d14294753cfc3099f3612018a8d6e6", null ],
+    [ "PatchFarJumpSlot", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#ac4625b661142f05adf36eeecc312c2de", null ],
+    [ "PatchJumpTableSlot", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a0cabb404f2bfe1a9ef3ea35fe63f7cf3", null ],
+    [ "pc_offset", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#ad7da30979406b352262e9c08c0c6641f", null ],
+    [ "SizeForNumberOfFarJumpSlots", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a87add92ae969554c1b14d8ff3e8d7cd2", null ],
+    [ "SizeForNumberOfLazyFunctions", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a52670982950dc90851cb4a1de6e97781", null ],
+    [ "SizeForNumberOfSlots", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a5515cdbbc42cf3c78581ea13768f74bb", null ],
+    [ "SkipUntil", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a0daa40e5360e9eac40a804ca23d11efd", null ],
+    [ "SlotOffsetToIndex", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#ada6cc7624595bb4befe6288661dc75ba", null ],
+    [ "buffer_start_", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#af774df8747eb3cfa7ed3fe8f55db6534", null ],
+    [ "jit_allocation_", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a8bf3dc71c2f501aa6edb60d873b7d9c2", null ],
+    [ "kJumpTableSlotsPerLine", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#afb394e650fc35713fac536853267c121", null ],
+    [ "pc_", "classv8_1_1internal_1_1wasm_1_1JumpTableAssembler.html#a52376e13f1910c7ef7da7418c1c80c96", null ]
 ];

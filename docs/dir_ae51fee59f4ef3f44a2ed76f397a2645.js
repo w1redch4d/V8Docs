@@ -11,7 +11,7 @@ var dir_ae51fee59f4ef3f44a2ed76f397a2645 =
     [ "string-hasher-inl.h", "string-hasher-inl_8h.html", null ],
     [ "string-hasher.h", "string-hasher_8h.html", "string-hasher_8h" ],
     [ "string-search.h", "string-search_8h.html", "string-search_8h" ],
-    [ "string-stream.cc", "string-stream_8cc.html", null ],
+    [ "string-stream.cc", "string-stream_8cc.html", "string-stream_8cc" ],
     [ "string-stream.h", "string-stream_8h.html", "string-stream_8h" ],
     [ "unicode-decoder.cc", "unicode-decoder_8cc.html", "unicode-decoder_8cc" ],
     [ "unicode-decoder.h", "unicode-decoder_8h.html", "unicode-decoder_8h" ],

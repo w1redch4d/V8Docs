@@ -12,5 +12,7 @@ var classv8_1_1internal_1_1DebugScopeIterator =
     [ "GetStartLocation", "classv8_1_1internal_1_1DebugScopeIterator.html#a006684a052633ca4740c4cd2011b8623", null ],
     [ "GetType", "classv8_1_1internal_1_1DebugScopeIterator.html#ac76fa53d87709b8d37c7a4a306762267", null ],
     [ "HasLocationInfo", "classv8_1_1internal_1_1DebugScopeIterator.html#ae7cbf3a1791d37936c34f9f6f7807239", null ],
-    [ "SetVariableValue", "classv8_1_1internal_1_1DebugScopeIterator.html#a8014c88a31fd3b6284ab00361d513a16", null ]
+    [ "SetVariableValue", "classv8_1_1internal_1_1DebugScopeIterator.html#a8014c88a31fd3b6284ab00361d513a16", null ],
+    [ "ShouldIgnore", "classv8_1_1internal_1_1DebugScopeIterator.html#a46abdaebcea116f387baa4e2225baf3e", null ],
+    [ "iterator_", "classv8_1_1internal_1_1DebugScopeIterator.html#ad1f50a37666427b0e0c1596af673067b", null ]
 ];

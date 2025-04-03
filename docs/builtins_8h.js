@@ -21,6 +21,7 @@ var builtins_8h =
       [ "DEF_ENUM", "builtins_8h.html#a7cc946db711e0424d0a51abb9a459cedad570b9e98d1be6a65c2079e5146e1f19", null ]
     ] ],
     [ "ExampleBuiltinForTorqueFunctionPointerType", "builtins_8h.html#ad904382c7f2bdfd901c1d5fa38108488", null ],
+    [ "FirstFromVarArgs", "builtins_8h.html#a25d99b5e935624cd74e99db868099de7", null ],
     [ "IsBaselineTrampolineBuiltin", "builtins_8h.html#a443f4b33147f47fb8ceb42ebeb8571a3", null ],
     [ "IsInterpreterTrampolineBuiltin", "builtins_8h.html#a231f45ba48e8c8a8431af1b8e150b599", null ],
     [ "IsValidTieringBuiltin", "builtins_8h.html#ac3ae977638419c739f5e209d7a66ae4b", null ],

@@ -21,5 +21,12 @@ var classv8_1_1internal_1_1compiler_1_1RegisterAllocator =
     [ "Spill", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html#a0f0fa5bd7810b225c2721c028c57cefa", null ],
     [ "SplitAndSpillRangesDefinedByMemoryOperand", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html#a9c62285116fc84ee4068eac98ef4ca8a", null ],
     [ "SplitBetween", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html#a17dafaa2ab828f17cdd4a075b6d3492b", null ],
-    [ "SplitRangeAt", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html#aeb162c1b8d19f9cd2b07d8d06e95451a", null ]
+    [ "SplitRangeAt", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html#aeb162c1b8d19f9cd2b07d8d06e95451a", null ],
+    [ "allocatable_register_codes_", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html#a1078ac92839ac1c0f8812531cb84101c", null ],
+    [ "check_fp_aliasing_", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html#a18c5a26164593a2329f04604c5dc1a44", null ],
+    [ "data_", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html#aec8e8681cdec0091de854665b612089f", null ],
+    [ "mode_", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html#aa800dd1d57781cfd232e7307debe9c73", null ],
+    [ "no_combining_", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html#afee5915acf394881b922c8a35f905683", null ],
+    [ "num_allocatable_registers_", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html#ac23c6782ee34f9c67c12dbf0162ba275", null ],
+    [ "num_registers_", "classv8_1_1internal_1_1compiler_1_1RegisterAllocator.html#a8d658a3c3ba25f4ccb6d620045da63b5", null ]
 ];

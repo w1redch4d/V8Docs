@@ -1,6 +1,6 @@
 var wasm_builtin_list_8h =
 [
-    [ "v8::internal::wasm::BuiltinLookup", "classv8_1_1internal_1_1wasm_1_1BuiltinLookup.html", null ],
+    [ "v8::internal::wasm::BuiltinLookup", "classv8_1_1internal_1_1wasm_1_1BuiltinLookup.html", "classv8_1_1internal_1_1wasm_1_1BuiltinLookup" ],
     [ "BUILTIN_COUNTER", "wasm-builtin-list_8h.html#a25ef3115687867db3b1cab158f6773a5", null ],
     [ "BUILTIN_ID", "wasm-builtin-list_8h.html#a742bde252d737df9446487972f9226dc", null ],
     [ "BUILTIN_ID_TRAP", "wasm-builtin-list_8h.html#aa1072d7c9ff0046dfb42848b6eb829b9", null ],

@@ -6,6 +6,7 @@ var instruction_selector_8h =
     [ "v8::internal::compiler::FlagsContinuationT< Adapter >::ConditionalCompare", "structv8_1_1internal_1_1compiler_1_1FlagsContinuationT_1_1ConditionalCompare.html", "structv8_1_1internal_1_1compiler_1_1FlagsContinuationT_1_1ConditionalCompare" ],
     [ "v8::internal::compiler::PushParameterT< Adapter >", "structv8_1_1internal_1_1compiler_1_1PushParameterT.html", "structv8_1_1internal_1_1compiler_1_1PushParameterT" ],
     [ "v8::internal::compiler::InstructionSelectorT< Adapter >", "classv8_1_1internal_1_1compiler_1_1InstructionSelectorT.html", "classv8_1_1internal_1_1compiler_1_1InstructionSelectorT" ],
+    [ "v8::internal::compiler::InstructionSelectorT< Adapter >::FrameStateInput", "structv8_1_1internal_1_1compiler_1_1InstructionSelectorT_1_1FrameStateInput.html", "structv8_1_1internal_1_1compiler_1_1InstructionSelectorT_1_1FrameStateInput" ],
     [ "v8::internal::compiler::InstructionSelectorT< Adapter >::FrameStateInput::Hash", "structv8_1_1internal_1_1compiler_1_1InstructionSelectorT_1_1FrameStateInput_1_1Hash.html", "structv8_1_1internal_1_1compiler_1_1InstructionSelectorT_1_1FrameStateInput_1_1Hash" ],
     [ "v8::internal::compiler::InstructionSelectorT< Adapter >::FrameStateInput::Equal", "structv8_1_1internal_1_1compiler_1_1InstructionSelectorT_1_1FrameStateInput_1_1Equal.html", "structv8_1_1internal_1_1compiler_1_1InstructionSelectorT_1_1FrameStateInput_1_1Equal" ],
     [ "DECLARE_GENERATOR_T", "instruction-selector_8h.html#ade05b68a100c0bf904a6517051aceb66", null ],

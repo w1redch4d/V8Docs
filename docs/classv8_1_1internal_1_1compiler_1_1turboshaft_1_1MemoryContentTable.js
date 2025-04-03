@@ -2,12 +2,26 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable =
 [
     [ "Replacement", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a9ad4fda6589c564f9fcaa6bb0794c089", null ],
     [ "MemoryContentTable", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a6f9ca17a01d9d407e922ff4a663d487f", null ],
+    [ "AddKeyInBaseOffsetMaps", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a60ceaf76394c82038323bf523a5de725", null ],
     [ "Find", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a4ae970dac960e224bba2e51a73ba1393", null ],
     [ "Insert", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a900b7a3b54c15178d34e30a6649ce3c4", null ],
     [ "Insert", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a4cf98c3454b7a0aef5dffb2f7a634dda", null ],
+    [ "Insert", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a3827fde6a661848e20310433a218386b", null ],
+    [ "InsertImmutable", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a6c468f605b4e11fcc00d7b43dd11fd3f", null ],
     [ "Invalidate", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a9965ceffb794ee23ddab053fcd8f0f78", null ],
     [ "Invalidate", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a98bb29e12187f2d6401a94b5ba9c8b75", null ],
+    [ "InvalidateAtOffset", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#aedba10ebee84293088ec7dbb7ab34f14", null ],
     [ "InvalidateMaybeAliasing", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#adf7995d7264f5fc935c7d57ce504107f", null ],
     [ "OnNewKey", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#aadf53764f8f00c7be9e413302fb88fea", null ],
-    [ "OnValueChange", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a2d527099474cc4ff937e010bc08ceb5f", null ]
+    [ "OnValueChange", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a2d527099474cc4ff937e010bc08ceb5f", null ],
+    [ "RemoveKeyFromBaseOffsetMaps", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#ae7768a665988fe3e026c63ad4fe7769e", null ],
+    [ "ResolveBase", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#ad0b82a09a9c226e99ab3fba6e20eeb64", null ],
+    [ "all_keys_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a7a2e61a829e1598a832d2458c5301233", null ],
+    [ "base_keys_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a88122925deb3ec8702350d954b39dad1", null ],
+    [ "index_keys_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a848b474f0ad2153e2f790389efc1fdd1", null ],
+    [ "kMaxKeys", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#aaaf975ecf1a0144c4017b3d1119a18c1", null ],
+    [ "non_aliasing_objects_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a35131646720f597eb9a906ef19343f38", null ],
+    [ "object_maps_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a48e7b9e06367bdc4d18a0678f5863bfc", null ],
+    [ "offset_keys_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#a3b5e02406e98501bff5bdbdd7c3a94a4", null ],
+    [ "replacements_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html#abeefa2559895fc1581490d59ce650360", null ]
 ];

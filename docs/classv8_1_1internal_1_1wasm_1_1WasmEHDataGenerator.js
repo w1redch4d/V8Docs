@@ -6,5 +6,6 @@ var classv8_1_1internal_1_1wasm_1_1WasmEHDataGenerator =
     [ "AddTryBlock", "classv8_1_1internal_1_1wasm_1_1WasmEHDataGenerator.html#a44e518335f88d0f090ee79d05110d8fe", null ],
     [ "EndTryCatchBlocks", "classv8_1_1internal_1_1wasm_1_1WasmEHDataGenerator.html#acff97aa858148eb93601f14ec197bd27", null ],
     [ "GetCurrentTryBlockIndex", "classv8_1_1internal_1_1wasm_1_1WasmEHDataGenerator.html#a9229f8390d2d0046ea57e12080f106e9", null ],
-    [ "RecordPotentialExceptionThrowingInstruction", "classv8_1_1internal_1_1wasm_1_1WasmEHDataGenerator.html#aac61c2229782bdd77738edbcb3168fcf", null ]
+    [ "RecordPotentialExceptionThrowingInstruction", "classv8_1_1internal_1_1wasm_1_1WasmEHDataGenerator.html#aac61c2229782bdd77738edbcb3168fcf", null ],
+    [ "current_try_block_index_", "classv8_1_1internal_1_1wasm_1_1WasmEHDataGenerator.html#a1d8617343974cde4de69a227d151b1df", null ]
 ];

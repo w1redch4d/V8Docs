@@ -22,5 +22,9 @@ var classv8_1_1bigint_1_1ProcessorImpl =
     [ "MultiplySingle", "classv8_1_1bigint_1_1ProcessorImpl.html#a30431185b484e54c44dcf0e6622af51c", null ],
     [ "should_terminate", "classv8_1_1bigint_1_1ProcessorImpl.html#a3c5bed87f4cb200ae5fd127c99b57a76", null ],
     [ "ToString", "classv8_1_1bigint_1_1ProcessorImpl.html#a46c0192fba5a87f3fe0adcaaedff1e93", null ],
-    [ "ToStringImpl", "classv8_1_1bigint_1_1ProcessorImpl.html#af230f9ee1424643adcf2a19b49c22e75", null ]
+    [ "ToStringImpl", "classv8_1_1bigint_1_1ProcessorImpl.html#af230f9ee1424643adcf2a19b49c22e75", null ],
+    [ "kWorkEstimateThreshold", "classv8_1_1bigint_1_1ProcessorImpl.html#a6dfe520c5f965673782087231218f679", null ],
+    [ "platform_", "classv8_1_1bigint_1_1ProcessorImpl.html#af8974140bc05a1bb6189abdc6ae8d5f3", null ],
+    [ "status_", "classv8_1_1bigint_1_1ProcessorImpl.html#ae66e47ef94e8df5c21f4187f45bc6b87", null ],
+    [ "work_estimate_", "classv8_1_1bigint_1_1ProcessorImpl.html#aad36c293a29816a1bc9acf3737650d8f", null ]
 ];

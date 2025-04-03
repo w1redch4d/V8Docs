@@ -11,7 +11,7 @@ var namespaceheap_1_1base =
     [ "StackVisitor", "classheap_1_1base_1_1StackVisitor.html", "classheap_1_1base_1_1StackVisitor" ],
     [ "SuspendTagCheckingScope", "classheap_1_1base_1_1SuspendTagCheckingScope.html", "classheap_1_1base_1_1SuspendTagCheckingScope" ],
     [ "Worklist", "classheap_1_1base_1_1Worklist.html", "classheap_1_1base_1_1Worklist" ],
-    [ "WorklistBase", "classheap_1_1base_1_1WorklistBase.html", null ],
+    [ "WorklistBase", "classheap_1_1base_1_1WorklistBase.html", "classheap_1_1base_1_1WorklistBase" ],
     [ "BytesAndDurationBuffer", "namespaceheap_1_1base.html#a058d509bb180b86002525e7690e1a627", null ],
     [ "IterateStackCallback", "namespaceheap_1_1base.html#a3a3052634783a67cc17df34998e11fd3", null ],
     [ "SlotCallbackResult", "namespaceheap_1_1base.html#af211f1740517ece6877e81f91b8c6759", [

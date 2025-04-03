@@ -1,6 +1,6 @@
 var load_store_simplification_reducer_8h =
 [
-    [ "v8::internal::compiler::turboshaft::LoadStoreSimplificationConfiguration", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadStoreSimplificationConfiguration.html", null ],
+    [ "v8::internal::compiler::turboshaft::LoadStoreSimplificationConfiguration", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadStoreSimplificationConfiguration.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadStoreSimplificationConfiguration" ],
     [ "v8::internal::compiler::turboshaft::LoadStoreSimplificationReducer< Next >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadStoreSimplificationReducer.html", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadStoreSimplificationReducer" ],
     [ "__", "load-store-simplification-reducer_8h.html#a0a87998f4e8cee4888f2a89df3d5639b", null ],
     [ "Assert", "load-store-simplification-reducer_8h.html#a706ac5b1a53bd04067f81924b92cb9f6", null ],

@@ -8,10 +8,13 @@ var classv8_1_1internal_1_1InternalIndex =
     [ "as_uint32", "classv8_1_1internal_1_1InternalIndex.html#aafa6859d56d201903171f9d5b425eb5f", null ],
     [ "is_found", "classv8_1_1internal_1_1InternalIndex.html#ad381db083f3f9b72f16908eac7027823", null ],
     [ "is_not_found", "classv8_1_1internal_1_1InternalIndex.html#a1f31d68081d7459e9a44710b535e860d", null ],
+    [ "NotFound", "classv8_1_1internal_1_1InternalIndex.html#a6242d762c44be4717a2e76f109604b4b", null ],
     [ "operator!=", "classv8_1_1internal_1_1InternalIndex.html#a524503fc3e75e1eeea91ef96aab6d13e", null ],
     [ "operator*", "classv8_1_1internal_1_1InternalIndex.html#af4e2516c8f0071af3ab32a896517019d", null ],
     [ "operator++", "classv8_1_1internal_1_1InternalIndex.html#a1dc20d523192250af58efca36e89fe83", null ],
     [ "operator<", "classv8_1_1internal_1_1InternalIndex.html#af7508553218dfd23f8024af53c7b4e9d", null ],
     [ "operator==", "classv8_1_1internal_1_1InternalIndex.html#a5eb83cdaa645d7e171b8dcaaa246f580", null ],
-    [ "raw_value", "classv8_1_1internal_1_1InternalIndex.html#a68157a158d5779f453cb5613eb3570cc", null ]
+    [ "raw_value", "classv8_1_1internal_1_1InternalIndex.html#a68157a158d5779f453cb5613eb3570cc", null ],
+    [ "entry_", "classv8_1_1internal_1_1InternalIndex.html#aa4888c427d82d6a1538f05175e18cf68", null ],
+    [ "kNotFound", "classv8_1_1internal_1_1InternalIndex.html#a4503898fe78f71db5bb97ab0008f0853", null ]
 ];

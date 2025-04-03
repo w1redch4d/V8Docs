@@ -10,6 +10,11 @@ var classv8_1_1internal_1_1JSListFormat =
       [ "DISJUNCTION", "classv8_1_1internal_1_1JSListFormat.html#ac1219974413f22ca3c6e35ccc6134701ae39ed8f6d91467690502fede5e314d18", null ],
       [ "UNIT", "classv8_1_1internal_1_1JSListFormat.html#ac1219974413f22ca3c6e35ccc6134701aec8fc2c42b9c76effd648a14b311411f", null ]
     ] ],
+    [ "FormatList", "classv8_1_1internal_1_1JSListFormat.html#ae5275a8cb22a8e0653c4aa4ed0c77e7c", null ],
+    [ "FormatListToParts", "classv8_1_1internal_1_1JSListFormat.html#aaac54b3bf7a61e6a4f60f4cbf9d6965e", null ],
+    [ "GetAvailableLocales", "classv8_1_1internal_1_1JSListFormat.html#ae1ae515f9a7181252e40b9ab7e33099e", null ],
+    [ "New", "classv8_1_1internal_1_1JSListFormat.html#a7fc339b38efaab841f5287435ea70509", null ],
+    [ "ResolvedOptions", "classv8_1_1internal_1_1JSListFormat.html#ac1cc58a1f2e9ec62f007b15ccdf1dd83", null ],
     [ "set_style", "classv8_1_1internal_1_1JSListFormat.html#a6a4fb579b463600f40ec408e2a493889", null ],
     [ "set_type", "classv8_1_1internal_1_1JSListFormat.html#ab06460df08d01e49cd75d754c273417c", null ],
     [ "style", "classv8_1_1internal_1_1JSListFormat.html#a818b7d18413ce160035dd17d6723de9a", null ],

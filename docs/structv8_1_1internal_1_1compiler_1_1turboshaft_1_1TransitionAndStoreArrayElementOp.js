@@ -18,6 +18,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TransitionAndStoreArrayEle
     [ "value", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TransitionAndStoreArrayElementOp.html#af95225cabad170529b029ffecdb68bea", null ],
     [ "value_representation", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TransitionAndStoreArrayElementOp.html#a43d7f4304c10b86b9fdf6bdeeb668f31", null ],
     [ "double_map", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TransitionAndStoreArrayElementOp.html#aeb6fe709d541cd70ca8f8d070e5c7404", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TransitionAndStoreArrayElementOp.html#a2bb68e4dbf1c7afc3829299334c96f62", null ],
     [ "fast_map", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TransitionAndStoreArrayElementOp.html#a701de7df89c9e8b772065aa3c6230eb1", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1TransitionAndStoreArrayElementOp.html#abca751c64f7622476408acdbec91263b", null ]
 ];

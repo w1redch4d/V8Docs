@@ -1,6 +1,6 @@
 var classv8_1_1internal_1_1HeapNumber =
 [
-    [ "BodyDescriptor", "classv8_1_1internal_1_1HeapNumber_1_1BodyDescriptor.html", null ],
+    [ "BodyDescriptor", "classv8_1_1internal_1_1HeapNumber_1_1BodyDescriptor.html", "classv8_1_1internal_1_1HeapNumber_1_1BodyDescriptor" ],
     [ "HeapNumberShortPrint", "classv8_1_1internal_1_1HeapNumber.html#a51583d854e285a9e799484e36b88d6b7", null ],
     [ "set_value", "classv8_1_1internal_1_1HeapNumber.html#ac6726d8db750c4b11885a6b6e724f640", null ],
     [ "set_value_as_bits", "classv8_1_1internal_1_1HeapNumber.html#a000c5874e11d2593af6897a898762b35", null ],
@@ -15,5 +15,16 @@ var classv8_1_1internal_1_1HeapNumber =
     [ "maglev::MaglevAssembler", "classv8_1_1internal_1_1HeapNumber.html#a23e0bac3332bb8e3ba46ae8b831d896e", null ],
     [ "maglev::MaglevGraphBuilder", "classv8_1_1internal_1_1HeapNumber.html#a79207812fbc2a0a6e0e7a3e8ab7fdb05", null ],
     [ "OffsetsForDebug", "classv8_1_1internal_1_1HeapNumber.html#a1e7ef7315cd297d6b6a956b93204f742", null ],
-    [ "TorqueGeneratedHeapNumberAsserts", "classv8_1_1internal_1_1HeapNumber.html#a4b17ae0009b3582da88b380f10edb9c2", null ]
+    [ "TorqueGeneratedHeapNumberAsserts", "classv8_1_1internal_1_1HeapNumber.html#a4b17ae0009b3582da88b380f10edb9c2", null ],
+    [ "kExponentBias", "classv8_1_1internal_1_1HeapNumber.html#a87eae572809064057a6641c6b5805b42", null ],
+    [ "kExponentBits", "classv8_1_1internal_1_1HeapNumber.html#a7badd159303921f42ed5c74ad7c9fa00", null ],
+    [ "kExponentMask", "classv8_1_1internal_1_1HeapNumber.html#a5fc3ecac0d194d03ccc4eabc9b3f5023", null ],
+    [ "kExponentShift", "classv8_1_1internal_1_1HeapNumber.html#aa70a7fa7eb34d309e4cfac3c2954650b", null ],
+    [ "kInfinityOrNanExponent", "classv8_1_1internal_1_1HeapNumber.html#a35bb7c72d798b1e4c47339a61dfa1f33", null ],
+    [ "kMantissaBits", "classv8_1_1internal_1_1HeapNumber.html#a3a9f18d204db4321136c3263b54eadbd", null ],
+    [ "kMantissaBitsInTopWord", "classv8_1_1internal_1_1HeapNumber.html#a6198e16a781f4aa92fcc8babace8f5ea", null ],
+    [ "kMantissaMask", "classv8_1_1internal_1_1HeapNumber.html#a53057546a7ea98c7bfab2a274f06079f", null ],
+    [ "kNonMantissaBitsInTopWord", "classv8_1_1internal_1_1HeapNumber.html#af83833ed477b0b07a40419938d43e406", null ],
+    [ "kSignMask", "classv8_1_1internal_1_1HeapNumber.html#a50eaa87f7bf62832731d20f644d4a33e", null ],
+    [ "value_", "classv8_1_1internal_1_1HeapNumber.html#a75aca33374c7b1ea555c0220f4752a74", null ]
 ];

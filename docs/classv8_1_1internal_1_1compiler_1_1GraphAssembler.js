@@ -17,6 +17,7 @@ var classv8_1_1internal_1_1compiler_1_1GraphAssembler =
     [ "BitcastWordToTagged", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#ac0a554bc1acbd68133cd6967a178122a", null ],
     [ "BitcastWordToTaggedSigned", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a214598dc5d64e3d0831714bc27255692", null ],
     [ "Branch", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#adeeaac2efb7447992ebb7716532443fd", null ],
+    [ "BranchImpl", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a1ae53faac1ace857c9e5bd38d2f40656", null ],
     [ "BranchWithCriticalSafetyCheck", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a86f8630b33dce7b6f9edd1b9cd9f9eb7", null ],
     [ "BranchWithHint", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a0c8a60743222571ec35fd7245873a548", null ],
     [ "Call", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a9bd80f86e6ba2b349e33e14e17ea058a", null ],
@@ -103,5 +104,16 @@ var classv8_1_1internal_1_1compiler_1_1GraphAssembler =
     [ "UniqueIntPtrConstant", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#ab64cc7541dd2c61090e4dbe57adad927", null ],
     [ "Unreachable", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#aec71d1a547f9e04e3bb7e9837421f540", null ],
     [ "UnreachableWithoutConnectToEnd", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a91fd903c85ebf87e89f3db000ff40663", null ],
-    [ "UpdateEffectControlWith", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a1c7b38dcd5ba55775999e4f6543676ea", null ]
+    [ "UpdateEffectControlWith", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a1c7b38dcd5ba55775999e4f6543676ea", null ],
+    [ "control_", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a76445bf98c55a113f5c3f125cbded35e", null ],
+    [ "default_branch_semantics_", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#ab8385bf72958628d79633ea41c673ef8", null ],
+    [ "effect_", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a1984bcefc4a4e486d3aaf16d0e6d22fe", null ],
+    [ "inline_reducers_", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a2656d9ee3cc87c988e3e0b33e966e33a", null ],
+    [ "inline_reductions_blocked_", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a7c8981f7a7b506d38df89170489be57f", null ],
+    [ "loop_headers_", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a89606b1a21219b436be82ff1a3670922", null ],
+    [ "loop_nesting_level_", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a08739ba39ae738f4332833a7ec8bb6c4", null ],
+    [ "mark_loop_exits_", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a830ff0c5ccdc73af9f2b808cd9809694", null ],
+    [ "mcgraph_", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a950b2f89e62a260412cccccf291e9cc4", null ],
+    [ "node_changed_callback_", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a2337a4506c90c6ccaedacd74de064d0e", null ],
+    [ "temp_zone_", "classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#acc9febb4fa6c69dfc7da399f059f9795", null ]
 ];

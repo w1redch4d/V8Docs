@@ -12,5 +12,7 @@ var revectorizer_8cc =
     [ "SIMPLE_CASE", "revectorizer_8cc.html#acc836faf3f1f442a7f1a675ef92e634c", null ],
     [ "SIMPLE_SIMD_OP", "revectorizer_8cc.html#a87bc0cd7537033b3cb8d17a195ce04ea", null ],
     [ "SPLAT_CASE", "revectorizer_8cc.html#a7db703ba3d22c6e196df84090169c6f6", null ],
-    [ "TRACE", "revectorizer_8cc.html#a5f6aa8edcd99914757600b5d3b259bb7", null ]
+    [ "TRACE", "revectorizer_8cc.html#a5f6aa8edcd99914757600b5d3b259bb7", null ],
+    [ "node_", "revectorizer_8cc.html#aba6993474022e5c735bf3b9326a3fbb2", null ],
+    [ "prev_", "revectorizer_8cc.html#a8995a507d8cc5dd2e7dadb9ca44f38ea", null ]
 ];

@@ -26,5 +26,11 @@ var classcppgc_1_1internal_1_1RawHeap =
     [ "operator=", "classcppgc_1_1internal_1_1RawHeap.html#a1f478fa1cf20428209b2bd70e36a5f60", null ],
     [ "size", "classcppgc_1_1internal_1_1RawHeap.html#aea0946fc0c4a655af1a6c08e327eee67", null ],
     [ "Space", "classcppgc_1_1internal_1_1RawHeap.html#a41ee49f6494ac73f8bf1fb3d683a7c12", null ],
-    [ "Space", "classcppgc_1_1internal_1_1RawHeap.html#aebf117f843702e97e840b0f51453bdd6", null ]
+    [ "Space", "classcppgc_1_1internal_1_1RawHeap.html#aebf117f843702e97e840b0f51453bdd6", null ],
+    [ "Space", "classcppgc_1_1internal_1_1RawHeap.html#acb8ddeb85fbee11ffda5c6e01aeb5cc6", null ],
+    [ "Space", "classcppgc_1_1internal_1_1RawHeap.html#a861a4aa7077aba87a011cd00e9df553e", null ],
+    [ "SpaceIndexForCustomSpace", "classcppgc_1_1internal_1_1RawHeap.html#a326ea0c043f4d1d174a570a1fefc9e52", null ],
+    [ "kNumberOfRegularSpaces", "classcppgc_1_1internal_1_1RawHeap.html#ae5d90a6e91ae4c34a898306a705d3623", null ],
+    [ "main_heap_", "classcppgc_1_1internal_1_1RawHeap.html#afd89c0fb377411c30fca2e1625df5488", null ],
+    [ "spaces_", "classcppgc_1_1internal_1_1RawHeap.html#a148c426848f1127d72a8038ddd5e3b6b", null ]
 ];

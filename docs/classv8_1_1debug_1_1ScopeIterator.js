@@ -16,6 +16,8 @@ var classv8_1_1debug_1_1ScopeIterator =
     [ "~ScopeIterator", "classv8_1_1debug_1_1ScopeIterator.html#a828d31fcdb06fbffce8363c5d58e5374", null ],
     [ "ScopeIterator", "classv8_1_1debug_1_1ScopeIterator.html#ad3f6332a9409883a763bc6c20dde367e", null ],
     [ "Advance", "classv8_1_1debug_1_1ScopeIterator.html#a92fec1678b3ce45e7e1d0c6d12ae5ddb", null ],
+    [ "CreateForFunction", "classv8_1_1debug_1_1ScopeIterator.html#a0426555c120a3c61a40417f6fbd682a0", null ],
+    [ "CreateForGeneratorObject", "classv8_1_1debug_1_1ScopeIterator.html#a7f2f2b7bb3e6ee9b10a231caeca4fff6", null ],
     [ "Done", "classv8_1_1debug_1_1ScopeIterator.html#a72ac197a5ef82056d44362b5ced56d0e", null ],
     [ "GetEndLocation", "classv8_1_1debug_1_1ScopeIterator.html#ad1e0c7c9a7b5d225d4255bfc23c13bcf", null ],
     [ "GetFunctionDebugName", "classv8_1_1debug_1_1ScopeIterator.html#a292596fe2353bc88492f633d46572f85", null ],

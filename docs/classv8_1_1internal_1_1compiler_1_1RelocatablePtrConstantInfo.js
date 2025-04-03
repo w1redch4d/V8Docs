@@ -8,5 +8,8 @@ var classv8_1_1internal_1_1compiler_1_1RelocatablePtrConstantInfo =
     [ "RelocatablePtrConstantInfo", "classv8_1_1internal_1_1compiler_1_1RelocatablePtrConstantInfo.html#a8e8fbcf5a77010576da0526be86c4ee7", null ],
     [ "rmode", "classv8_1_1internal_1_1compiler_1_1RelocatablePtrConstantInfo.html#a3234485bf3f31cd1f1cf671a24d9fae4", null ],
     [ "type", "classv8_1_1internal_1_1compiler_1_1RelocatablePtrConstantInfo.html#aac906baf4ac692f537e25a845e8c80a8", null ],
-    [ "value", "classv8_1_1internal_1_1compiler_1_1RelocatablePtrConstantInfo.html#a0181dff9072fcf67609c3a9c6e804bfb", null ]
+    [ "value", "classv8_1_1internal_1_1compiler_1_1RelocatablePtrConstantInfo.html#a0181dff9072fcf67609c3a9c6e804bfb", null ],
+    [ "rmode_", "classv8_1_1internal_1_1compiler_1_1RelocatablePtrConstantInfo.html#abf41b60c1d4ac8337c7c8495db1629ea", null ],
+    [ "type_", "classv8_1_1internal_1_1compiler_1_1RelocatablePtrConstantInfo.html#a4cc35c01807c9e787a1f9812a596d5bc", null ],
+    [ "value_", "classv8_1_1internal_1_1compiler_1_1RelocatablePtrConstantInfo.html#a6aed5178bbe873bead209d1fec79d55e", null ]
 ];

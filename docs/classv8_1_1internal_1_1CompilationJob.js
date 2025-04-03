@@ -15,5 +15,6 @@ var classv8_1_1internal_1_1CompilationJob =
     [ "CompilationJob", "classv8_1_1internal_1_1CompilationJob.html#ac093e889ba60a5f4fcc8d72ea16e2c65", null ],
     [ "~CompilationJob", "classv8_1_1internal_1_1CompilationJob.html#aa6b088dd198b465ed86e1df0b1020f24", null ],
     [ "state", "classv8_1_1internal_1_1CompilationJob.html#a74bf51dfcb1b01a06445bcc1c57a1db9", null ],
-    [ "UpdateState", "classv8_1_1internal_1_1CompilationJob.html#a12ee3c64b905b8cd7150a61005f576b4", null ]
+    [ "UpdateState", "classv8_1_1internal_1_1CompilationJob.html#a12ee3c64b905b8cd7150a61005f576b4", null ],
+    [ "state_", "classv8_1_1internal_1_1CompilationJob.html#a17636cbf8fd2631027dfbddb0e8f4e5c", null ]
 ];

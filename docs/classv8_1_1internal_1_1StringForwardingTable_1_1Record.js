@@ -6,8 +6,10 @@ var classv8_1_1internal_1_1StringForwardingTable_1_1Record =
     [ "ExternalResourceAddress", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a584585d13f7102bbe1c91ff9152a8d6c", null ],
     [ "forward_string", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a45549b0a30a0e4f5b479038fb9e3b872", null ],
     [ "ForwardStringObjectOrHash", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a75dd1c4396eca0e2e94c77b43b9d80ee", null ],
+    [ "ForwardStringOrHashSlot", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#aad63cfd147fe249bebd66dd140c0da02", null ],
     [ "original_string", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#af08ee6df9ae3a71b11b8b697558ac2c0", null ],
     [ "OriginalStringObject", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a9955babd7f969a209d125e08fe237edf", null ],
+    [ "OriginalStringSlot", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a0857f9514c9424d62314af2bb65329d8", null ],
     [ "raw_hash", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a2d023c028d0c643b6c7f4d800f68bd5b", null ],
     [ "set_external_resource", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a95cdf9ce089abcfc2e0c540df3b242dc", null ],
     [ "set_external_resource", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a3bd5dbc0265a019c543eba83fe666223", null ],
@@ -18,5 +20,11 @@ var classv8_1_1internal_1_1StringForwardingTable_1_1Record =
     [ "SetInternalized", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a1007d82ae831d9e408d6143311835f3c", null ],
     [ "TryUpdateExternalResource", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#ae6116687ffce720f0e95e7ca38f6f4ee", null ],
     [ "TryUpdateExternalResource", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a1c8e5d5f0a4daedc2b49ee56971d093f", null ],
-    [ "StringForwardingTable::Block", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#abb91c4860c9fc749f6d6d556bfeb541a", null ]
+    [ "StringForwardingTable::Block", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#abb91c4860c9fc749f6d6d556bfeb541a", null ],
+    [ "external_resource_", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a5e968365bc448ccb4919f31f511a8b5e", null ],
+    [ "forward_string_or_hash_", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a397fcc74a8b0a76d2cee501b9258cf83", null ],
+    [ "kExternalResourceAddressMask", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#af46beb10d443eef3566fcf7d4155a0e7", null ],
+    [ "kExternalResourceEncodingMask", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#a8f90e186c6173afae3ed9d433b95a644", null ],
+    [ "kExternalResourceIsOneByteTag", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#aac50a3298e6f7cbb6e2a030d31391a35", null ],
+    [ "original_string_", "classv8_1_1internal_1_1StringForwardingTable_1_1Record.html#ac5e2840ab7367e6acebc2cf8e4f81b79", null ]
 ];

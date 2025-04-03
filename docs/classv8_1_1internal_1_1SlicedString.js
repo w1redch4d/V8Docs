@@ -14,5 +14,8 @@ var classv8_1_1internal_1_1SlicedString =
     [ "String::GetUnderlying", "classv8_1_1internal_1_1SlicedString.html#a320b037dd4259059334aa354c3b37fe3", null ],
     [ "ToDirectStringAssembler", "classv8_1_1internal_1_1SlicedString.html#a09816edeed66c9edbd22158b56fe25e1", null ],
     [ "TorqueGeneratedSlicedStringAsserts", "classv8_1_1internal_1_1SlicedString.html#aea4d7ef3ee908fd62fd424720e6ca480", null ],
-    [ "V8HeapExplorer", "classv8_1_1internal_1_1SlicedString.html#a29c5c7a1e13f0404746b9261f3764a7f", null ]
+    [ "V8HeapExplorer", "classv8_1_1internal_1_1SlicedString.html#a29c5c7a1e13f0404746b9261f3764a7f", null ],
+    [ "kMinLength", "classv8_1_1internal_1_1SlicedString.html#a95a118dd83a3563559cea7f8d52294b5", null ],
+    [ "offset_", "classv8_1_1internal_1_1SlicedString.html#a8f6cd2fdcdd78e07df12482f895310ce", null ],
+    [ "parent_", "classv8_1_1internal_1_1SlicedString.html#ace88a5d90041a15e7e1a7edf42b78f04", null ]
 ];

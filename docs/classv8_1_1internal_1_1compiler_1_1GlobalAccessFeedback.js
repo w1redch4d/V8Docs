@@ -10,5 +10,7 @@ var classv8_1_1internal_1_1compiler_1_1GlobalAccessFeedback =
     [ "IsScriptContextSlot", "classv8_1_1internal_1_1compiler_1_1GlobalAccessFeedback.html#ae131e290453c8a4f0e98363e3fd29569", null ],
     [ "property_cell", "classv8_1_1internal_1_1compiler_1_1GlobalAccessFeedback.html#a57fc05827672a05f98ccc0cd390012fe", null ],
     [ "script_context", "classv8_1_1internal_1_1compiler_1_1GlobalAccessFeedback.html#a214d97b68ffbfc21ec732b8a1ab6afa5", null ],
-    [ "slot_index", "classv8_1_1internal_1_1compiler_1_1GlobalAccessFeedback.html#a97777a2ce802d0f14199715d438770f0", null ]
+    [ "slot_index", "classv8_1_1internal_1_1compiler_1_1GlobalAccessFeedback.html#a97777a2ce802d0f14199715d438770f0", null ],
+    [ "cell_or_context_", "classv8_1_1internal_1_1compiler_1_1GlobalAccessFeedback.html#a301280524a4387202e0f8620d1db339d", null ],
+    [ "index_and_immutable_", "classv8_1_1internal_1_1compiler_1_1GlobalAccessFeedback.html#a2f17f48ba4ff743443c0b511b76b3094", null ]
 ];

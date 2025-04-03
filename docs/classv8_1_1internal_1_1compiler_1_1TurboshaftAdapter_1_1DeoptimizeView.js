@@ -8,5 +8,9 @@ var classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1DeoptimizeView =
     [ "is_deoptimize_if", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1DeoptimizeView.html#a31b17e0fc834189e9c354e41ab0f2a70", null ],
     [ "is_deoptimize_unless", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1DeoptimizeView.html#ab915b08f9167a07ea557880ea1b764f1", null ],
     [ "operator node_t", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1DeoptimizeView.html#a8470ae2c17af8e0fcb29960185e2971c", null ],
-    [ "reason", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1DeoptimizeView.html#aa8cb880c3814ceb77c57bf35c93c2955", null ]
+    [ "reason", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1DeoptimizeView.html#aa8cb880c3814ceb77c57bf35c93c2955", null ],
+    [ "deoptimize_if_op_", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1DeoptimizeView.html#ac99a52babfd73bd86d8e19b984c43a47", null ],
+    [ "deoptimize_op_", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1DeoptimizeView.html#a3fa098aac4521092a3dffde613af1dc3", null ],
+    [ "node_", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1DeoptimizeView.html#ad51def761d6ee4ebe7090a6e219bd22f", null ],
+    [ "parameters_", "classv8_1_1internal_1_1compiler_1_1TurboshaftAdapter_1_1DeoptimizeView.html#a9c91940b134b7ca85c443e1b758138da", null ]
 ];

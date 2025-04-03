@@ -11,6 +11,7 @@ var classv8_1_1internal_1_1compiler_1_1Arm64OperandGeneratorT =
     [ "IsFloatConstant", "classv8_1_1internal_1_1compiler_1_1Arm64OperandGeneratorT.html#a9dd2ea2ed8a348138ae9cbbc94d557ee", null ],
     [ "IsImmediateZero", "classv8_1_1internal_1_1compiler_1_1Arm64OperandGeneratorT.html#ac025a1b77223fac8732d53833de57890", null ],
     [ "IsIntegerConstant", "classv8_1_1internal_1_1compiler_1_1Arm64OperandGeneratorT.html#a73b0661e86610c50c91acd5d653c9554", null ],
+    [ "IsLoadStoreImmediate", "classv8_1_1internal_1_1compiler_1_1Arm64OperandGeneratorT.html#aebba3da0bc55594129c931f624ede57e", null ],
     [ "UseImmediateOrTemp", "classv8_1_1internal_1_1compiler_1_1Arm64OperandGeneratorT.html#a990a558bef6e6eef9f2ef19b364bd482", null ],
     [ "UseOperand", "classv8_1_1internal_1_1compiler_1_1Arm64OperandGeneratorT.html#a77d975f447f5166b7fca3d138e67eb82", null ],
     [ "UseRegisterAtEndOrImmediateZero", "classv8_1_1internal_1_1compiler_1_1Arm64OperandGeneratorT.html#a0b87bcf1b8f44e5985deb45dab9f72f2", null ],

@@ -12,8 +12,12 @@ var classcppgc_1_1internal_1_1FreeList =
     [ "Clear", "classcppgc_1_1internal_1_1FreeList.html#aae10706d4f39e53db1a9bc1c3cd43bd3", null ],
     [ "CollectStatistics", "classcppgc_1_1internal_1_1FreeList.html#aba8ce8f85211a701bab47a2a53a89465", null ],
     [ "ContainsForTesting", "classcppgc_1_1internal_1_1FreeList.html#ade7bc18fd1b534a32eec9d94a7a512c9", null ],
+    [ "IsConsistent", "classcppgc_1_1internal_1_1FreeList.html#a8dc6bb34d7eb43f87532b85f3fb352f5", null ],
     [ "IsEmpty", "classcppgc_1_1internal_1_1FreeList.html#ab203ff82ddf576d553f25498d0940a91", null ],
     [ "operator=", "classcppgc_1_1internal_1_1FreeList.html#af931a0c548ccd7e729623a50605a8d7c", null ],
     [ "operator=", "classcppgc_1_1internal_1_1FreeList.html#a3864d30b5212bb7673ac114a7dfe26c1", null ],
-    [ "Size", "classcppgc_1_1internal_1_1FreeList.html#a3690b5b875579fa41db98fcc0be1d557", null ]
+    [ "Size", "classcppgc_1_1internal_1_1FreeList.html#a3690b5b875579fa41db98fcc0be1d557", null ],
+    [ "biggest_free_list_index_", "classcppgc_1_1internal_1_1FreeList.html#a72d06c9dc6706d1e88a3b5d7425857fd", null ],
+    [ "free_list_heads_", "classcppgc_1_1internal_1_1FreeList.html#a95e79ca87e81fb332ec71f09d72c4f36", null ],
+    [ "free_list_tails_", "classcppgc_1_1internal_1_1FreeList.html#a609933f9606c056cad75154a72579069", null ]
 ];

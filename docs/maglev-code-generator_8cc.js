@@ -1,9 +1,25 @@
 var maglev_code_generator_8cc =
 [
     [ "__", "maglev-code-generator_8cc.html#a0a87998f4e8cee4888f2a89df3d5639b", null ],
+    [ "deopt_literals_", "maglev-code-generator_8cc.html#a4154f33a50a44a13792b4063f5a48757", null ],
+    [ "kAllocatableRegisters", "maglev-code-generator_8cc.html#a209259cb3971efcecd950a2683342bef", null ],
+    [ "kAllocatableRegistersT", "maglev-code-generator_8cc.html#a85503faf1f5c146718f375016b654dcd", null ],
+    [ "kNotDuplicated", "maglev-code-generator_8cc.html#ac7ae8fb4cdadde0976e8df67b79c3df3", null ],
+    [ "local_isolate_", "maglev-code-generator_8cc.html#a5714dec757620f5816cac41f218da9bf", null ],
+    [ "masm_", "maglev-code-generator_8cc.html#adade6e3b43bc4bfc70490c9536cc70ba", null ],
+    [ "materializing_register_moves_", "maglev-code-generator_8cc.html#a1e9ffd536ec9bf1ef6218964682ce2e3", null ],
+    [ "materializing_stack_slot_moves_", "maglev-code-generator_8cc.html#ae206610237b9840f2fcdb2f987fe9fe7", null ],
+    [ "moves_from_register_", "maglev-code-generator_8cc.html#a4fa6d8d57b76a1fee815efce3a36bcfe", null ],
+    [ "moves_from_stack_slot_", "maglev-code-generator_8cc.html#a266f8c5d6dbaf4d892b1063e60ec6fee", null ],
     [ "needs_decompression", "maglev-code-generator_8cc.html#a15dbaeb6e79be8ce6289c78f0fe19aab", null ],
+    [ "object_ids_", "maglev-code-generator_8cc.html#a001ffc982335e2bd498b01cd443b3032", null ],
+    [ "protected_deopt_literals_", "maglev-code-generator_8cc.html#a6cf406a104e39ed8582dc73d17a8e70b", null ],
     [ "registers", "maglev-code-generator_8cc.html#ab6c2dc98768603fa8f30bd361f2c53d3", null ],
+    [ "scratch_", "maglev-code-generator_8cc.html#ae200aeba3c585a417a62171aa182ddd8", null ],
+    [ "scratch_has_cycle_start_", "maglev-code-generator_8cc.html#ac1de3d376189a19d799d7b9d563b6bb4", null ],
     [ "source", "maglev-code-generator_8cc.html#ada8b48e004e823cabe5fcb41baf29163", null ],
     [ "stack_slots", "maglev-code-generator_8cc.html#ab2db56d89ae9e1f5d8022a39e2c19a84", null ],
-    [ "target", "maglev-code-generator_8cc.html#a3c635dfb06e7090635c7fed4f7504693", null ]
+    [ "target", "maglev-code-generator_8cc.html#a3c635dfb06e7090635c7fed4f7504693", null ],
+    [ "translation_array_builder_", "maglev-code-generator_8cc.html#a6fe83ee801517df10c3f03c58977b396", null ],
+    [ "zone_", "maglev-code-generator_8cc.html#a4979f6e7e64e9ee56f4229d03fa20c69", null ]
 ];

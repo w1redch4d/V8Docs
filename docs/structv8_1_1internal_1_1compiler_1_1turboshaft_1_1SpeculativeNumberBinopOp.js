@@ -11,5 +11,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SpeculativeNumberBinopOp =
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SpeculativeNumberBinopOp.html#a81408dd94341da451e7997a18c259ad5", null ],
     [ "right", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SpeculativeNumberBinopOp.html#accdc86971984ce92e12a40b92ec76360", null ],
     [ "Validate", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SpeculativeNumberBinopOp.html#a1e03e4680a6db0b01723c06119da8b58", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SpeculativeNumberBinopOp.html#af5b07bfdb9aaa04c8e3526722273f897", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1SpeculativeNumberBinopOp.html#a55c66b438de2a7bcfa9e62fc5c9ac4b1", null ]
 ];

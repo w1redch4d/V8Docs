@@ -1,4 +1,4 @@
 var snapshot_compression_8h =
 [
-    [ "v8::internal::SnapshotCompression", "classv8_1_1internal_1_1SnapshotCompression.html", null ]
+    [ "v8::internal::SnapshotCompression", "classv8_1_1internal_1_1SnapshotCompression.html", "classv8_1_1internal_1_1SnapshotCompression" ]
 ];

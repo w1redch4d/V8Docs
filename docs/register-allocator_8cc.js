@@ -6,5 +6,6 @@ var register_allocator_8cc =
     [ "DelayedInsertionMap", "register-allocator_8cc.html#a8f327dff45895dce788438c82748d39e", null ],
     [ "DelayedInsertionMapKey", "register-allocator_8cc.html#a494bd9f4b57e067f0b03c7a321d6a1af", null ],
     [ "AreUseIntervalsIntersecting", "register-allocator_8cc.html#ad4f980586114d373e7837834012029e9", null ],
+    [ "AreUseIntervalsIntersectingVector", "register-allocator_8cc.html#a77adccb5aa52ed84ef89bbb8c7f8b520", null ],
     [ "operator<<", "register-allocator_8cc.html#a4343c6cb055ec2b4274edfb1ce50f3ec", null ]
 ];

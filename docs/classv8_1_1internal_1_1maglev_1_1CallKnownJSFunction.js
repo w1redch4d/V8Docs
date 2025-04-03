@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction =
 [
+    [ "Base", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a629de8e5f51ef98ecc1ecb3ab6f4ad2e", null ],
     [ "CallKnownJSFunction", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a7f2dfb78ae672e5bbb5cfa135ef705bb", null ],
     [ "arg", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#ada184ca8cacc7e025657a51f0aabb1f8", null ],
     [ "args", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a6ff6fc9d9778beefe3443be4ecf3cb9b", null ],
@@ -19,5 +20,13 @@ var classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction =
     [ "set_arg", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a24154904f51922a3c5a894309b1776f6", null ],
     [ "SetValueLocationConstraints", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#ad123932391b7ca67b43aa412d3606ac0", null ],
     [ "shared_function_info", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a188509a585cf8e4d99895944312b2025", null ],
-    [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a952dba38a0cbddf41d7222712991f495", null ]
+    [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a952dba38a0cbddf41d7222712991f495", null ],
+    [ "expected_parameter_count_", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a9bda55c0c75ec6d32deea5116db449dd", null ],
+    [ "kClosureIndex", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a197e0667548c5ad1df59ba4092a1057b", null ],
+    [ "kContextIndex", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a67010b8449c746df33f7d935f3a0772d", null ],
+    [ "kFixedInputCount", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a84c4cb04e18edd5b15783e504e745431", null ],
+    [ "kNewTargetIndex", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a740fb39f9237ee7191d861620ec5f188", null ],
+    [ "kProperties", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#aab329a997e23d2a0f5393dd10b52257c", null ],
+    [ "kReceiverIndex", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#a591df940d94d1c28546cc1e4e0441fa6", null ],
+    [ "shared_function_info_", "classv8_1_1internal_1_1maglev_1_1CallKnownJSFunction.html#adb74ba9618f1279473720cbc24cb229a", null ]
 ];

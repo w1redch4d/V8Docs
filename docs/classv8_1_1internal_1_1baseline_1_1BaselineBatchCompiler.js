@@ -2,9 +2,24 @@ var classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler =
 [
     [ "BaselineBatchCompiler", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a5368828b1083a279e5cde72eccc42e7e", null ],
     [ "~BaselineBatchCompiler", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a2775630b3396cefb7d37bd0ea9de793a", null ],
+    [ "ClearBatch", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a92fd7934e9dbc1c18fd446a21a7d8fa0", null ],
+    [ "CompileBatch", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#aaeecf00c1ac5c97cd5686295e6a29006", null ],
+    [ "CompileBatchConcurrent", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#aca8c084942d318e6ebfa7d087d894046", null ],
+    [ "concurrent", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a9e041e22e7c96703461bce850c050ea9", null ],
+    [ "Enqueue", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a1bb2aef918342ba626e7d7e83e23cdb2", null ],
     [ "EnqueueFunction", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#ad62d456b851d2e007d67286d517e04a4", null ],
     [ "EnqueueSFI", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#af4986e381085b2473cc317468e10d310", null ],
+    [ "EnsureQueueCapacity", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#aafc9d881f3e5a168e650e002ed2b558e", null ],
     [ "InstallBatch", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#ac6c8120edd456e4fe8d64e9f4ba647c4", null ],
     [ "is_enabled", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a09147a1f2443a604f70fc3acc898b4db", null ],
-    [ "set_enabled", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a05e3d91d6080d2e85faec5b15e32b87b", null ]
+    [ "MaybeCompileFunction", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#abf442ae552dd791ed5e305c71c7c38f6", null ],
+    [ "set_enabled", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a05e3d91d6080d2e85faec5b15e32b87b", null ],
+    [ "ShouldCompileBatch", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a2d7a50f9d8cf9cf10c7b9d6d02534c8e", null ],
+    [ "compilation_queue_", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#ad95d3dc57376c3d558f83fb5d9d6713a", null ],
+    [ "concurrent_compiler_", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#ae89b488139f9a4e6daffb43691bece6d", null ],
+    [ "enabled_", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a964c425e88091ccf70eaf3b0b47bd00e", null ],
+    [ "estimated_instruction_size_", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a2a171a96c4f6ff602c1cc52f524e63df", null ],
+    [ "isolate_", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#adfceaf7289fb1c30ae2f87387b308cda", null ],
+    [ "kInitialQueueSize", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a9dfe998f557f0e736f2dad18304e1586", null ],
+    [ "last_index_", "classv8_1_1internal_1_1baseline_1_1BaselineBatchCompiler.html#a2060297ef9e5009fa5f77fee0e63f043", null ]
 ];

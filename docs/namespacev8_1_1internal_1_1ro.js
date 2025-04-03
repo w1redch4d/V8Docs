@@ -10,5 +10,6 @@ var namespacev8_1_1internal_1_1ro =
       [ "kRelocateSegment", "namespacev8_1_1internal_1_1ro.html#a1a92e180f0b9735eccf89f400b6c26a8a0317268558bf2ce18282511e405f8120", null ],
       [ "kReadOnlyRootsTable", "namespacev8_1_1internal_1_1ro.html#a1a92e180f0b9735eccf89f400b6c26a8a2d0d4a7f2172b8a9cc129914338cd629", null ],
       [ "kFinalizeReadOnlySpace", "namespacev8_1_1internal_1_1ro.html#a1a92e180f0b9735eccf89f400b6c26a8af9b09cee9eeebcbef1771870e693a372", null ]
-    ] ]
+    ] ],
+    [ "kNumberOfBytecodes", "namespacev8_1_1internal_1_1ro.html#a69e4f6e0a5842d9c5be4f185c81a93eb", null ]
 ];

@@ -9,6 +9,7 @@ var late_load_elimination_reducer_8h =
     [ "v8::internal::compiler::turboshaft::LoadEliminationReplacement", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadEliminationReplacement.html", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadEliminationReplacement" ],
     [ "v8::internal::compiler::turboshaft::MemoryContentTable", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable.html", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1MemoryContentTable" ],
     [ "v8::internal::compiler::turboshaft::LateLoadEliminationAnalyzer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer.html", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer" ],
+    [ "v8::internal::compiler::turboshaft::LateLoadEliminationAnalyzer::Snapshot", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer_1_1Snapshot.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationAnalyzer_1_1Snapshot" ],
     [ "v8::internal::compiler::turboshaft::LateLoadEliminationReducer< Next >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationReducer.html", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1LateLoadEliminationReducer" ],
     [ "__", "late-load-elimination-reducer_8h.html#a0a87998f4e8cee4888f2a89df3d5639b", null ],
     [ "Assert", "late-load-elimination-reducer_8h.html#a706ac5b1a53bd04067f81924b92cb9f6", null ],

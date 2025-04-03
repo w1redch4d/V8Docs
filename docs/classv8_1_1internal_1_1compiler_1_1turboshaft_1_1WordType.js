@@ -1,10 +1,21 @@
 var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType =
 [
+    [ "Payload_InlineSet", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#ab875e44aae58788a270801de28f74411", null ],
+    [ "Payload_OutlineSet", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#ac1c7ece596840796c6e6f40c4368900b", null ],
+    [ "Payload_Range", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a6e7f3873457c5c46e3b328c603e341bb", null ],
     [ "value_type", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a22a957adf619dca88675b29247b03736", null ],
     [ "word_t", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a700a38d5d74b8f459ddb68ea9f7ad2e6", null ],
+    [ "SubKind", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a0784b820f0173a1ad912e5f5bbf59b30", [
+      [ "kRange", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a0784b820f0173a1ad912e5f5bbf59b30a2cc58b76b278d74f669ba5d28d67e271", null ],
+      [ "kSet", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a0784b820f0173a1ad912e5f5bbf59b30a0d164365a292452ae852fa83d4b39ea9", null ]
+    ] ],
+    [ "WordType", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a51d54fcebe91614c977e65ea3c405640", null ],
     [ "AllocateOnHeap", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a100692bf307b290ff91e79cd56b028ad", null ],
+    [ "Any", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a5ee26e4f9bdb9949b6631c3200d1ceb8", null ],
+    [ "Constant", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#aba54430f13d6e774ae599b26df114286", null ],
     [ "Contains", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a737852bf3d9a59a5ee427babe1547a21", null ],
     [ "Equals", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a4788dd6e21e39521d942eaa3b97c5e21", null ],
+    [ "Intersect", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#ab90a0c1614ceb30f20902a4a3cfe105b", null ],
     [ "is_any", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a152cfdcd015c10a6d43b61918e393522", null ],
     [ "is_constant", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a8b7060ec168c3d1ed28e47ba8b6777d2", null ],
     [ "is_constant", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a6b6d86705736e8f1eec58687260084b4", null ],
@@ -12,15 +23,25 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType =
     [ "is_set", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a632a938c65d93fe502f598008d5acaec", null ],
     [ "is_wrapping", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a64147267c8d32c5c12efae1e197ca110", null ],
     [ "IsSubtypeOf", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a753ca3f9378a743ede13ba59fca2697f", null ],
+    [ "LeastUpperBound", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a5dd4bf2c30075d99f86f0d0ce0a271d5", null ],
     [ "PrintTo", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a29ce59570659caecf60cea1c171e01e9", null ],
+    [ "Range", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#aded6e3ba3637f732a69c53d6d7d1c825", null ],
     [ "range", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#ace628cf0688190f946d6c2fbb4847632", null ],
     [ "range_from", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a9f1b8296cf3a5fb4f876e6f8d8785cad", null ],
     [ "range_to", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#ae245e4fef0f753da714542c306920bf4", null ],
+    [ "Set", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a4da31b627a79fef2c8c0d951a2814e80", null ],
+    [ "Set", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#af33f3f33bb68200848462f369cc7ceb9", null ],
+    [ "Set", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a7c7646fde480cbb012cd151c28bd29de", null ],
+    [ "Set", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a46f892638961b85fe39e4d4b361f6b2c", null ],
     [ "set_element", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a7a468b421229fc801ac4c8eb521d0724", null ],
     [ "set_elements", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#aadd72c0ffee5462ad8e8c74cfe89bb59", null ],
     [ "set_size", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a9300d213a8d9e28dc713e39211d899a9", null ],
+    [ "sub_kind", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#af85350baf3df99d4b218d4d4a6dd06da", null ],
     [ "try_get_constant", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a9e21ed7dc57bbf71a0d6eabe25cd7a67", null ],
     [ "unsigned_max", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#afe205c4301c4865a366e2bfa94c53ed1", null ],
     [ "unsigned_min", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a6addb7a0cb747efe5d80a9d963289ec6", null ],
-    [ "Type", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a18dba29b4f3e91d6d2bc53472a6bb7cc", null ]
+    [ "Type", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a18dba29b4f3e91d6d2bc53472a6bb7cc", null ],
+    [ "KIND", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#ad32d09be875da002b97ce95153374968", null ],
+    [ "kMaxInlineSetSize", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#a0f597158e2e324bc82bd63eeb2028be0", null ],
+    [ "kMaxSetSize", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WordType.html#aa2c6f6d9cd0f2a846e1951a36610ac22", null ]
 ];

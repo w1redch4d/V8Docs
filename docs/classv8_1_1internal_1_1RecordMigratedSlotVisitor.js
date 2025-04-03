@@ -2,6 +2,7 @@ var classv8_1_1internal_1_1RecordMigratedSlotVisitor =
 [
     [ "RecordMigratedSlotVisitor", "classv8_1_1internal_1_1RecordMigratedSlotVisitor.html#ab172b2831dbf736806f42554812338ce", null ],
     [ "RecordMigratedSlot", "classv8_1_1internal_1_1RecordMigratedSlotVisitor.html#a9ff63be9d4837000a4eab3ac21697170", null ],
+    [ "UsePrecomputedObjectSize", "classv8_1_1internal_1_1RecordMigratedSlotVisitor.html#a7a57beed7f1a5d2b2e07f3bb75983f15", null ],
     [ "VisitCodeTarget", "classv8_1_1internal_1_1RecordMigratedSlotVisitor.html#a3b152c30ba854d8663280f74861f1566", null ],
     [ "VisitEmbeddedPointer", "classv8_1_1internal_1_1RecordMigratedSlotVisitor.html#a6eeedbde3bbe55f4f0872d7c75e72aa9", null ],
     [ "VisitEphemeron", "classv8_1_1internal_1_1RecordMigratedSlotVisitor.html#ac418d0aadd8da17d89a71811c863fb1d", null ],

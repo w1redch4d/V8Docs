@@ -8,6 +8,7 @@ var classv8_1_1internal_1_1compiler_1_1RiscvOperandGeneratorT =
     [ "GetIntegerConstantValue", "classv8_1_1internal_1_1compiler_1_1RiscvOperandGeneratorT.html#a8054bd3c76d1d94ee195736efadd51be", null ],
     [ "GetIntegerConstantValue", "classv8_1_1internal_1_1compiler_1_1RiscvOperandGeneratorT.html#a51d073a894abe407727a5cd8310fabd5", null ],
     [ "GetOptionalIntegerConstant", "classv8_1_1internal_1_1compiler_1_1RiscvOperandGeneratorT.html#a0545b1a107fad31080fc1075316e9a40", null ],
+    [ "ImmediateFitsAddrMode1Instruction", "classv8_1_1internal_1_1compiler_1_1RiscvOperandGeneratorT.html#a87beddf0bb6495cdb923fc3297164f72", null ],
     [ "IsFloatConstant", "classv8_1_1internal_1_1compiler_1_1RiscvOperandGeneratorT.html#a6e1d436dde54eae6018d6b5becde42ed", null ],
     [ "IsIntegerConstant", "classv8_1_1internal_1_1compiler_1_1RiscvOperandGeneratorT.html#a8ea1002961d5ba2114c71d08e169b33c", null ],
     [ "IsIntegerConstant", "classv8_1_1internal_1_1compiler_1_1RiscvOperandGeneratorT.html#a412108b47c757809c111396e322ec9d4", null ],

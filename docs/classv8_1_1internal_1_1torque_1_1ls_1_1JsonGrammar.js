@@ -1,6 +1,10 @@
 var classv8_1_1internal_1_1torque_1_1ls_1_1JsonGrammar =
 [
     [ "JsonGrammar", "classv8_1_1internal_1_1torque_1_1ls_1_1JsonGrammar.html#af0df57767e41e2c27bd7ab528928f6a7", null ],
+    [ "MatchDecimalLiteral", "classv8_1_1internal_1_1torque_1_1ls_1_1JsonGrammar.html#a77cf6d4748028e9369eab524529d8563", null ],
+    [ "MatchHexLiteral", "classv8_1_1internal_1_1torque_1_1ls_1_1JsonGrammar.html#a198bf921a09ca12e4e8604093a03ce9a", null ],
+    [ "MatchStringLiteral", "classv8_1_1internal_1_1torque_1_1ls_1_1JsonGrammar.html#a8b67dd4f6648e30e760629d5f4e4dc05", null ],
+    [ "MatchWhitespace", "classv8_1_1internal_1_1torque_1_1ls_1_1JsonGrammar.html#a2319b9a9df11a5821ca9d26eeab8bc0c", null ],
     [ "array", "classv8_1_1internal_1_1torque_1_1ls_1_1JsonGrammar.html#ae6410d93df89c1704712d64890be6467", null ],
     [ "decimalLiteral", "classv8_1_1internal_1_1torque_1_1ls_1_1JsonGrammar.html#afabab6f11b6688a450a4004bf38e7764", null ],
     [ "elementList", "classv8_1_1internal_1_1torque_1_1ls_1_1JsonGrammar.html#a770a577906b593a164dc3c22488eabee", null ],

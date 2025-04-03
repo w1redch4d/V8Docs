@@ -10,5 +10,6 @@ var classv8_1_1internal_1_1GlobalHandleVector =
     [ "Pop", "classv8_1_1internal_1_1GlobalHandleVector.html#a63993d39f70a49080c3fa7c38114fd95", null ],
     [ "Push", "classv8_1_1internal_1_1GlobalHandleVector.html#af4878bc9f596e397d7ea4f8280b7e3e5", null ],
     [ "Reserve", "classv8_1_1internal_1_1GlobalHandleVector.html#afaff4d6ba6e4040aff2dd507c36c4c2f", null ],
-    [ "size", "classv8_1_1internal_1_1GlobalHandleVector.html#a319880103206d369f629cb71702d5abf", null ]
+    [ "size", "classv8_1_1internal_1_1GlobalHandleVector.html#a319880103206d369f629cb71702d5abf", null ],
+    [ "locations_", "classv8_1_1internal_1_1GlobalHandleVector.html#a2128102782f80314ec825493cab11dbe", null ]
 ];

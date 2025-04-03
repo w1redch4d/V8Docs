@@ -9,6 +9,9 @@ var classv8_1_1base_1_1OwnedVector =
     [ "data", "classv8_1_1base_1_1OwnedVector.html#aca6e4c581676d905c3e58cd723e92245", null ],
     [ "empty", "classv8_1_1base_1_1OwnedVector.html#a06e21ab8fe667b1e60f93d4ea690d92a", null ],
     [ "end", "classv8_1_1base_1_1OwnedVector.html#ab59c68b40c3d01264716e7574c1a9af7", null ],
+    [ "New", "classv8_1_1base_1_1OwnedVector.html#a42ecef112e14110278466c7fa925ecbd", null ],
+    [ "NewByCopying", "classv8_1_1base_1_1OwnedVector.html#a4dc48abdb19c795a8f80e4a546f45a63", null ],
+    [ "NewForOverwrite", "classv8_1_1base_1_1OwnedVector.html#affe5e36cb00bedefbfee8762910e34d0", null ],
     [ "operator!=", "classv8_1_1base_1_1OwnedVector.html#abeb80e8dfcbcaf7e8f3ac467d4f4004a", null ],
     [ "operator=", "classv8_1_1base_1_1OwnedVector.html#aa0be3edf236b21ffb6d6f4cd4bb1bdae", null ],
     [ "operator=", "classv8_1_1base_1_1OwnedVector.html#af39ee4810195d07cd3f150823592c0fe", null ],
@@ -18,5 +21,7 @@ var classv8_1_1base_1_1OwnedVector =
     [ "ReleaseData", "classv8_1_1base_1_1OwnedVector.html#a5b3a688a8665f148975c2bf3875fabab", null ],
     [ "rend", "classv8_1_1base_1_1OwnedVector.html#acb060902ddcb01c6a9a73a442ff45914", null ],
     [ "size", "classv8_1_1base_1_1OwnedVector.html#a26c158458db822b4e91ca63ec1026131", null ],
-    [ "OwnedVector", "classv8_1_1base_1_1OwnedVector.html#aca86997574205ba90489a8b7e1f227a5", null ]
+    [ "OwnedVector", "classv8_1_1base_1_1OwnedVector.html#aca86997574205ba90489a8b7e1f227a5", null ],
+    [ "data_", "classv8_1_1base_1_1OwnedVector.html#a77b1d4cf1d9d91e23f2f0996b94df894", null ],
+    [ "length_", "classv8_1_1base_1_1OwnedVector.html#a6d2ae5b55c15b24d2d390c8c257d94ed", null ]
 ];

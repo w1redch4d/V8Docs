@@ -5,8 +5,10 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareMapsOp =
     [ "heap_object", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareMapsOp.html#ae133a315924c4e46f1b3b4c93c978d6c", null ],
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareMapsOp.html#ae11d6914acd0053968412e0d4ed7ce43", null ],
     [ "map", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareMapsOp.html#a56cb8937cb2631992c3ab3a3bb27e278", null ],
+    [ "New", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareMapsOp.html#ad1b20fdf5ae3a34755c9aabda2bbf6dc", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareMapsOp.html#a495e882db2b20a54f080dac3312ddbae", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareMapsOp.html#a25b41b0d3c84fbd2d5dfa508af5d6edf", null ],
     [ "PrintOptions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareMapsOp.html#a919b4a158f9ae8fe0e10484f2736a527", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareMapsOp.html#a2ea0a20b2376370afd07322d216a181d", null ],
     [ "maps", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1CompareMapsOp.html#a1935b78286d948d36668a88136988f54", null ]
 ];

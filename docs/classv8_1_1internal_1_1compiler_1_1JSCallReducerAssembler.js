@@ -58,5 +58,8 @@ var classv8_1_1internal_1_1compiler_1_1JSCallReducerAssembler =
     [ "Try", "classv8_1_1internal_1_1compiler_1_1JSCallReducerAssembler.html#a41eb1ebbdeb1a6a0d3c0dd91d744b89e", null ],
     [ "TypeGuardFixedArrayLength", "classv8_1_1internal_1_1compiler_1_1JSCallReducerAssembler.html#ab3f2c8f598ef2d25bac0b7a6cd7bf3e2", null ],
     [ "TypeGuardNonInternal", "classv8_1_1internal_1_1compiler_1_1JSCallReducerAssembler.html#a29ed27df6ea2a554337e02a58a55d0bb", null ],
-    [ "TypeGuardUnsignedSmall", "classv8_1_1internal_1_1compiler_1_1JSCallReducerAssembler.html#a12035668c8fadfcd8f2630b32ba106d9", null ]
+    [ "TypeGuardUnsignedSmall", "classv8_1_1internal_1_1compiler_1_1JSCallReducerAssembler.html#a12035668c8fadfcd8f2630b32ba106d9", null ],
+    [ "dependencies_", "classv8_1_1internal_1_1compiler_1_1JSCallReducerAssembler.html#a7186a896a451af22f5cb078b1a51e533", null ],
+    [ "kMarkLoopExits", "classv8_1_1internal_1_1compiler_1_1JSCallReducerAssembler.html#a81b926ba9c3598b04457be340422ad33", null ],
+    [ "node_", "classv8_1_1internal_1_1compiler_1_1JSCallReducerAssembler.html#a943c65285c4a58d65fef06716f249b5a", null ]
 ];

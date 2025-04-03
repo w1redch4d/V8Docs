@@ -13,5 +13,10 @@ var classv8_1_1internal_1_1QuickCheckDetails =
     [ "Rationalize", "classv8_1_1internal_1_1QuickCheckDetails.html#ae1375575f05c1b8495d884f11f89e1d3", null ],
     [ "set_cannot_match", "classv8_1_1internal_1_1QuickCheckDetails.html#ade659b1430587d338aa382e56b712cdf", null ],
     [ "set_characters", "classv8_1_1internal_1_1QuickCheckDetails.html#ab9efae22271416e09adc1849f4332592", null ],
-    [ "value", "classv8_1_1internal_1_1QuickCheckDetails.html#a76dc597450cb0efa662d7a145e41dd4e", null ]
+    [ "value", "classv8_1_1internal_1_1QuickCheckDetails.html#a76dc597450cb0efa662d7a145e41dd4e", null ],
+    [ "cannot_match_", "classv8_1_1internal_1_1QuickCheckDetails.html#afe540fddd5905b8a66be4f7595563fbc", null ],
+    [ "characters_", "classv8_1_1internal_1_1QuickCheckDetails.html#a5663f89bdd8a738c8d355877a3f9e053", null ],
+    [ "mask_", "classv8_1_1internal_1_1QuickCheckDetails.html#ab8287c9b4f9271f16d74c7dbba414e5c", null ],
+    [ "positions_", "classv8_1_1internal_1_1QuickCheckDetails.html#ab2329b17215459172a21cda33770e158", null ],
+    [ "value_", "classv8_1_1internal_1_1QuickCheckDetails.html#a2345f0fb2978e712ee481a997bf44a79", null ]
 ];

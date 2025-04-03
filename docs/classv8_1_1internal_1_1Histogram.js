@@ -5,6 +5,7 @@ var classv8_1_1internal_1_1Histogram =
     [ "AddSample", "classv8_1_1internal_1_1Histogram.html#a1fa018dc2756acdc3a1bb4fdbe97ae86", null ],
     [ "AssertReportsToCounters", "classv8_1_1internal_1_1Histogram.html#ae429483e2d91a0b3d6e1c9284caf7d8a", null ],
     [ "counters", "classv8_1_1internal_1_1Histogram.html#a6a6901fd4d5beab9988608f11731a32f", null ],
+    [ "CreateHistogram", "classv8_1_1internal_1_1Histogram.html#a0c9189f86892db9903fa4d89abc6f5bb", null ],
     [ "Enabled", "classv8_1_1internal_1_1Histogram.html#a8c6f22e6b5446dfc455a8af4e97eb21b", null ],
     [ "EnsureCreated", "classv8_1_1internal_1_1Histogram.html#a7dbdf36c4520bd8737ff7629be6c7cbd", null ],
     [ "Initialize", "classv8_1_1internal_1_1Histogram.html#ac71e79ce91bc8921b07c4f2d74071b1c", null ],
@@ -16,5 +17,12 @@ var classv8_1_1internal_1_1Histogram =
     [ "Reset", "classv8_1_1internal_1_1Histogram.html#a74a1b1e9c261914088b73e0b36bbb737", null ],
     [ "Counters", "classv8_1_1internal_1_1Histogram.html#a5545327f141103b96b160ddc48274bc0", null ],
     [ "CountersInitializer", "classv8_1_1internal_1_1Histogram.html#aac0d0694a753074ac1f2495fd1ad7ae1", null ],
-    [ "HistogramResetter", "classv8_1_1internal_1_1Histogram.html#a2a62503a380be69bdb8d632c45133756", null ]
+    [ "HistogramResetter", "classv8_1_1internal_1_1Histogram.html#a2a62503a380be69bdb8d632c45133756", null ],
+    [ "counters_", "classv8_1_1internal_1_1Histogram.html#a970075b5aaa22a36933df456138cc504", null ],
+    [ "histogram_", "classv8_1_1internal_1_1Histogram.html#ae064389355aeda1284f05a1977dc478d", null ],
+    [ "max_", "classv8_1_1internal_1_1Histogram.html#a1cd72939839eb345548cde7e78347962", null ],
+    [ "min_", "classv8_1_1internal_1_1Histogram.html#aeeb51be0225edda30de750523fd84ccf", null ],
+    [ "mutex_", "classv8_1_1internal_1_1Histogram.html#ad265ff88b852bc45ce0b71ecaa0f8f69", null ],
+    [ "name_", "classv8_1_1internal_1_1Histogram.html#aa8b33b867f0246617e5eda39613014ee", null ],
+    [ "num_buckets_", "classv8_1_1internal_1_1Histogram.html#a61360e522801691fa6baff0d69321c16", null ]
 ];

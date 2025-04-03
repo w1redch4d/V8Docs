@@ -8,6 +8,10 @@ var structv8_1_1internal_1_1compiler_1_1BinopMatcher =
     [ "left", "structv8_1_1internal_1_1compiler_1_1BinopMatcher.html#a40416527a0d4f77e376c76944ef57af4", null ],
     [ "LeftEqualsRight", "structv8_1_1internal_1_1compiler_1_1BinopMatcher.html#a0251bc077e966d1b805a59b6fd9ca27d", null ],
     [ "OwnsInput", "structv8_1_1internal_1_1compiler_1_1BinopMatcher.html#a5a89138fad6bd49c8fc682fef4a0c0b8", null ],
+    [ "PutConstantOnRight", "structv8_1_1internal_1_1compiler_1_1BinopMatcher.html#aa6d515ea1205b2547b27fa10dd8b0ff6", null ],
     [ "right", "structv8_1_1internal_1_1compiler_1_1BinopMatcher.html#af8b4e8af40da338bc030838b1f8082e1", null ],
-    [ "SwapInputs", "structv8_1_1internal_1_1compiler_1_1BinopMatcher.html#acbb68d801f083367216a37f3610c0952", null ]
+    [ "SwapInputs", "structv8_1_1internal_1_1compiler_1_1BinopMatcher.html#acbb68d801f083367216a37f3610c0952", null ],
+    [ "left_", "structv8_1_1internal_1_1compiler_1_1BinopMatcher.html#a9525e5e3e8e79f72d1bf89517b64bee8", null ],
+    [ "representation", "structv8_1_1internal_1_1compiler_1_1BinopMatcher.html#ac2fa418032c7f2abc4534814f821c1f6", null ],
+    [ "right_", "structv8_1_1internal_1_1compiler_1_1BinopMatcher.html#aaf9a9b166f6c985e0a74c2cc8e5ac7e7", null ]
 ];

@@ -1,6 +1,7 @@
 var date_8h =
 [
     [ "v8::internal::DateCache", "classv8_1_1internal_1_1DateCache.html", "classv8_1_1internal_1_1DateCache" ],
+    [ "v8::internal::DateCache::CacheItem", "structv8_1_1internal_1_1DateCache_1_1CacheItem.html", "structv8_1_1internal_1_1DateCache_1_1CacheItem" ],
     [ "DateBuffer", "date_8h.html#a5bc2ed46078dfb8e00b4bbf199e3194d", null ],
     [ "ToDateStringMode", "date_8h.html#a43677d922e2ed624bc279d3494a7ce37", [
       [ "kLocalDate", "date_8h.html#a43677d922e2ed624bc279d3494a7ce37a735595b6db016d26c792db09bf5a4002", null ],

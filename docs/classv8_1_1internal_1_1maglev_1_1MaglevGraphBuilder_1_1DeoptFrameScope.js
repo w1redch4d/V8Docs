@@ -7,5 +7,8 @@ var classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1DeoptFrameScope =
     [ "data", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1DeoptFrameScope.html#ac840d37e2cb9f5a9386a06fb5f472a49", null ],
     [ "data", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1DeoptFrameScope.html#a3913bcba68152ded0b6687a62ec5a0e8", null ],
     [ "IsLazyDeoptContinuationFrame", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1DeoptFrameScope.html#a96698dbc680cc9255a2eacf0de681694", null ],
-    [ "parent", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1DeoptFrameScope.html#a6352936581c55f60fa001e4bb2862fdc", null ]
+    [ "parent", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1DeoptFrameScope.html#a6352936581c55f60fa001e4bb2862fdc", null ],
+    [ "builder_", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1DeoptFrameScope.html#a0f1b8e2d48a6a5f26e89ce593482d6f3", null ],
+    [ "data_", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1DeoptFrameScope.html#a67581d7214361f4a72c22f4649171c4b", null ],
+    [ "parent_", "classv8_1_1internal_1_1maglev_1_1MaglevGraphBuilder_1_1DeoptFrameScope.html#a3f09b51a294b9f46c09d42de3bb3dd53", null ]
 ];

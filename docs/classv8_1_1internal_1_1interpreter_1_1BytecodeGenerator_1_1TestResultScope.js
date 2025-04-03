@@ -14,5 +14,9 @@ var classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TestResultScope =
     [ "set_fallthrough", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TestResultScope.html#a3b8af1b3c2425809b48ea7c2050bfc65", null ],
     [ "set_then_labels", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TestResultScope.html#a5251df54084a84bd712c7c9db6d930b3", null ],
     [ "SetResultConsumedByTest", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TestResultScope.html#a184aea9fcd7a8bced57a4e4d00742479", null ],
-    [ "then_labels", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TestResultScope.html#af88ea069efe3fab2c787b3306328ac48", null ]
+    [ "then_labels", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TestResultScope.html#af88ea069efe3fab2c787b3306328ac48", null ],
+    [ "else_labels_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TestResultScope.html#a0c5bba0d5936e31117854475c2690aaa", null ],
+    [ "fallthrough_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TestResultScope.html#ab5b01e5393950871c36e1d0c21ac3bda", null ],
+    [ "result_consumed_by_test_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TestResultScope.html#a45ae91d4adba32c270010fc504df9aef", null ],
+    [ "then_labels_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1TestResultScope.html#a32adecd992d71d807f6517e807f7381f", null ]
 ];

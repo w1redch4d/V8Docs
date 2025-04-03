@@ -1,6 +1,7 @@
 var bootstrapper_8cc =
 [
     [ "v8::internal::Genesis", "classv8_1_1internal_1_1Genesis.html", "classv8_1_1internal_1_1Genesis" ],
+    [ "v8::internal::Genesis::ExtensionStates", "classv8_1_1internal_1_1Genesis_1_1ExtensionStates.html", "classv8_1_1internal_1_1Genesis_1_1ExtensionStates" ],
     [ "CALENDAR_FUNC_LIST", "bootstrapper_8cc.html#af94d1de7442d8ea6f1bca17de14e35c9", null ],
     [ "CALENDAR_FUNC_LIST_INTL", "bootstrapper_8cc.html#a66410a9152e1c42d18cdb81204d83580", null ],
     [ "DECLARE_FEATURE_INITIALIZATION", "bootstrapper_8cc.html#ac7688cd88bf5fc5997455a50ad7aeb61", null ],
@@ -53,6 +54,14 @@ var bootstrapper_8cc =
     [ "ZONED_DATE_TIME_FUNC_LIST", "bootstrapper_8cc.html#a4cf852603995b172e3107181a4979df4", null ],
     [ "ZONED_DATE_TIME_GETTER_LIST", "bootstrapper_8cc.html#aa6e9053f1f878f15da736ba8fccee21d", null ],
     [ "ZONED_DATE_TIME_GETTER_LIST_INTL", "bootstrapper_8cc.html#a90ad0fae13995c0dd385d12c7a3d2de2", null ],
+    [ "AddToWeakNativeContextList", "bootstrapper_8cc.html#a69f6de63b98f953da3a636efe4fb2c6a", null ],
+    [ "GCFunctionName", "bootstrapper_8cc.html#a86c81578b4535e9ba86a0de1f15bf434", null ],
+    [ "Hash", "bootstrapper_8cc.html#a936d6b51abee1fbe72db0ea5c8fc369f", null ],
     [ "InstallError", "bootstrapper_8cc.html#ad6a87719e955c3d58bf7c12a1d33a76f", null ],
-    [ "SimpleInstallFunction", "bootstrapper_8cc.html#a0d9ddccbc8883ed03a104e38cb679871", null ]
+    [ "InstallWithIntrinsicDefaultProto", "bootstrapper_8cc.html#a97c0de53c12907d3ec1eaf05347bfda6", null ],
+    [ "isValidCpuTraceMarkFunctionName", "bootstrapper_8cc.html#a975b4c2460028e3d386d1ed9c3e60a83", null ],
+    [ "PropertyAlreadyExists", "bootstrapper_8cc.html#a1fdfdbb54a06224bc0c90b0900350577", null ],
+    [ "SimpleInstallFunction", "bootstrapper_8cc.html#a0d9ddccbc8883ed03a104e38cb679871", null ],
+    [ "previous_stack_height_", "bootstrapper_8cc.html#acf22bba74e8226ed4d5ad8ed7d3341bf", null ],
+    [ "top", "bootstrapper_8cc.html#a4207747a56c3a39732b02c9d5ee14caa", null ]
 ];

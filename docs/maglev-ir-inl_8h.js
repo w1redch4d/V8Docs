@@ -26,5 +26,6 @@ var maglev_ir_inl_8h =
     [ "UseAny", "maglev-ir-inl_8h.html#a956e82b8c8498f0e8e56b7faa49ce1b3", null ],
     [ "UseFixed", "maglev-ir-inl_8h.html#a748c18cb3ddde7a81624a7b56208c33e", null ],
     [ "UseFixed", "maglev-ir-inl_8h.html#af36e1c2df4d7735b438888b7dee3fd36", null ],
-    [ "UseRegister", "maglev-ir-inl_8h.html#adc77305d9502282fcb1a26eb85bba1bc", null ]
+    [ "UseRegister", "maglev-ir-inl_8h.html#adc77305d9502282fcb1a26eb85bba1bc", null ],
+    [ "kNoVreg", "maglev-ir-inl_8h.html#aa43cf0651586da94be8d1801deb0d30f", null ]
 ];

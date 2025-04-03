@@ -6,5 +6,8 @@ var classv8_1_1Deserializer =
     [ "GetSharedValueConveyor", "classv8_1_1Deserializer.html#ab74bda053cb8e80c1eb654d37c4b520a", null ],
     [ "GetWasmModuleFromId", "classv8_1_1Deserializer.html#ad0401bf8069571059f2b620c779105af", null ],
     [ "operator=", "classv8_1_1Deserializer.html#a94f7ba2698757f2e733955f166a3e797", null ],
-    [ "ReadValue", "classv8_1_1Deserializer.html#af3cd58925006f6a6ac4869fadb6585a4", null ]
+    [ "ReadValue", "classv8_1_1Deserializer.html#af3cd58925006f6a6ac4869fadb6585a4", null ],
+    [ "data_", "classv8_1_1Deserializer.html#ad63c0ece6237f342571e12e08a8ba3b5", null ],
+    [ "deserializer_", "classv8_1_1Deserializer.html#ae28715c765fd3ef6b842292afc184865", null ],
+    [ "isolate_", "classv8_1_1Deserializer.html#a81a8222e8dd556a088e59ff173f4e6c2", null ]
 ];

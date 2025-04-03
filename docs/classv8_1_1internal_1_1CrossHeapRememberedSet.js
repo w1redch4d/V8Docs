@@ -6,5 +6,7 @@ var classv8_1_1internal_1_1CrossHeapRememberedSet =
     [ "IsEmpty", "classv8_1_1internal_1_1CrossHeapRememberedSet.html#a9f27316fb4b55bd3431c7e03cbd59bcb", null ],
     [ "RememberReferenceIfNeeded", "classv8_1_1internal_1_1CrossHeapRememberedSet.html#a924260c285a98b7182ad0f29cac1d4d1", null ],
     [ "Reset", "classv8_1_1internal_1_1CrossHeapRememberedSet.html#ad8c4e34e09433c2b6dd6b5498c724442", null ],
-    [ "Visit", "classv8_1_1internal_1_1CrossHeapRememberedSet.html#a5cc7554dd6f664c83e963329de8a4dde", null ]
+    [ "Visit", "classv8_1_1internal_1_1CrossHeapRememberedSet.html#a5cc7554dd6f664c83e963329de8a4dde", null ],
+    [ "heap_base_", "classv8_1_1internal_1_1CrossHeapRememberedSet.html#a08c8391fa86551861ff8d5fa362e48fc", null ],
+    [ "remembered_v8_to_cppgc_references_", "classv8_1_1internal_1_1CrossHeapRememberedSet.html#adfc9606dd9642f853e0b22e376fa97d9", null ]
 ];

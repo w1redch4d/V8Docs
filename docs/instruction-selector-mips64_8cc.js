@@ -28,6 +28,20 @@ var instruction_selector_mips64_8cc =
     [ "EXPORT_TEMPLATE_DEFINE", "instruction-selector-mips64_8cc.html#a07b00ecc9a497366b4b4f2ba83a53553", null ],
     [ "TryEmitExtendingLoad", "instruction-selector-mips64_8cc.html#a30e0322abbcb9eae528741ee030d3b34", null ],
     [ "TryMatchImmediate", "instruction-selector-mips64_8cc.html#ad814b02d035e200c5e0b569dd8d6d53d", null ],
+    [ "VisitBinop", "instruction-selector-mips64_8cc.html#ad8c2c73199a0d3035c12e3bdc28fa25f", null ],
+    [ "VisitBinop", "instruction-selector-mips64_8cc.html#a7f2743aeee329271378505a04711cfb0", null ],
+    [ "VisitBinop", "instruction-selector-mips64_8cc.html#aa2470354b64a7c5ca14e9dfc624c7e86", null ],
+    [ "VisitBinop", "instruction-selector-mips64_8cc.html#a11b8b2b46944d6bd770c49191d5b3782", null ],
+    [ "VisitBinop", "instruction-selector-mips64_8cc.html#a6c2e15b56934bade99879e08ef92adaf", null ],
+    [ "VisitBinop", "instruction-selector-mips64_8cc.html#aee8b77abb402ac97849cebc30a36280d", null ],
+    [ "VisitBinop", "instruction-selector-mips64_8cc.html#ac3499bc9c80431418974736dfd2e38d0", null ],
+    [ "VisitBinop", "instruction-selector-mips64_8cc.html#a4fbb2aaee959d2aa0ffb04f6e443513f", null ],
+    [ "VisitRR", "instruction-selector-mips64_8cc.html#ae8d4be5602856e76f64cf5005ff39d4e", null ],
+    [ "VisitRRI", "instruction-selector-mips64_8cc.html#a6421dcf68fc97472a19728af49962b1e", null ],
+    [ "VisitRRIR", "instruction-selector-mips64_8cc.html#ad07ce0f978834939f8304ecfc9fe9e47", null ],
+    [ "VisitRRO", "instruction-selector-mips64_8cc.html#aa404891a5f2ca15c2b8a673184da6b00", null ],
     [ "VisitRRR", "instruction-selector-mips64_8cc.html#a7aeb12887b3dd9714d384e37c5f35d71", null ],
-    [ "VisitRRRR", "instruction-selector-mips64_8cc.html#a7db6b39d27384355c628b81182385413", null ]
+    [ "VisitRRRR", "instruction-selector-mips64_8cc.html#a7db6b39d27384355c628b81182385413", null ],
+    [ "VisitSimdShift", "instruction-selector-mips64_8cc.html#af986c6abde636c374622143afafd5d81", null ],
+    [ "VisitUniqueRRR", "instruction-selector-mips64_8cc.html#a25078289ba41b82e790d0c35053bdae2", null ]
 ];

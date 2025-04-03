@@ -9,5 +9,6 @@ var runtime_8cc =
     [ "operator<<", "runtime_8cc.html#a1e14085b35d202d56a60989c044073f5", null ],
     [ "data_", "runtime_8cc.html#a19d91a1b24741b006fcebfd7fa70f851", null ],
     [ "g_num_isolates_for_testing", "runtime_8cc.html#a63c9385f715eb7c4aba5d75f90a250f0", null ],
+    [ "kIntrinsicFunctions", "runtime_8cc.html#af5cbe3423c082126cb869e9ee290cbeb", null ],
     [ "length_", "runtime_8cc.html#a7d5350e32a84386f3508693ad02992b1", null ]
 ];

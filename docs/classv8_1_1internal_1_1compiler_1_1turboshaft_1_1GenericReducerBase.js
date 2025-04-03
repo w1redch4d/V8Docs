@@ -7,6 +7,8 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericReducerBase =
     [ "Call", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericReducerBase.html#a025be9dbe5965c0205b830f35fa11ddc", null ],
     [ "CanAutoInlineBlocksWithSinglePredecessor", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericReducerBase.html#af690dfc8882c5928a0b62c39da5115c5", null ],
     [ "CatchBlockBegin", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericReducerBase.html#a1f28aa8399dbe4714851b3536db365ca", null ],
+    [ "CatchIfInCatchScope", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericReducerBase.html#a98fad1d2806b59d55d05aaeb1964b140", null ],
+    [ "CheckException", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericReducerBase.html#a93d9d89d01295993b371f644e0ed2274", null ],
     [ "FastApiCall", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericReducerBase.html#a936da99ac2d17f84424f1124ab40de9c", null ],
     [ "FixLoopPhi", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericReducerBase.html#ab8bb7cb03bdf630e0f69dc47cdd10b92", null ],
     [ "Goto", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1GenericReducerBase.html#ae7ffe7d1879c661050498ccee6033e63", null ],

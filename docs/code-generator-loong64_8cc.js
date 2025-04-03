@@ -19,5 +19,13 @@ var code_generator_loong64_8cc =
     [ "TRACE", "code-generator-loong64_8cc.html#a5f6aa8edcd99914757600b5d3b259bb7", null ],
     [ "UNSUPPORTED_COND", "code-generator-loong64_8cc.html#a7f39fa22dccc5274a592becbb43303c0", null ],
     [ "AssembleBranchToLabels", "code-generator-loong64_8cc.html#a607d414510cad926115d8bd1c15546d8", null ],
-    [ "SignExtend", "code-generator-loong64_8cc.html#a1479dfc8cbfa03a4f12e3ee55153fafb", null ]
+    [ "HasRegisterInput", "code-generator-loong64_8cc.html#a3774af211d609ef676fc7bc0ea44598d", null ],
+    [ "SignExtend", "code-generator-loong64_8cc.html#a1479dfc8cbfa03a4f12e3ee55153fafb", null ],
+    [ "indirect_pointer_tag_", "code-generator-loong64_8cc.html#ac65776d707ac07cc6389ba76807fa3a7", null ],
+    [ "mode_", "code-generator-loong64_8cc.html#adc5709192230b7fde07de03eb2974043", null ],
+    [ "must_save_lr_", "code-generator-loong64_8cc.html#a41a2de46b73ead1c0417e8f1751a5022", null ],
+    [ "object_", "code-generator-loong64_8cc.html#a5563c55e446f92e237e9fb9b07b423b6", null ],
+    [ "offset_", "code-generator-loong64_8cc.html#ab11f8f1256e847420fa280346be66736", null ],
+    [ "value_", "code-generator-loong64_8cc.html#ac1b34591c0a6bb909fcc2d34d0b5aaff", null ],
+    [ "zone_", "code-generator-loong64_8cc.html#a4979f6e7e64e9ee56f4229d03fa20c69", null ]
 ];

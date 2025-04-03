@@ -10,6 +10,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1DeoptimizeIfOp =
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1DeoptimizeIfOp.html#a1e9715b7248d652e09bbc5a077bd7835", null ],
     [ "PrintOptions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1DeoptimizeIfOp.html#ac3499c4edce6689d6dab704fc0c962e9", null ],
     [ "Validate", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1DeoptimizeIfOp.html#acaa541624fff724030e0448c73ebfb88", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1DeoptimizeIfOp.html#a2dc776b2caf7920c5f6c65093c170cdc", null ],
     [ "negated", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1DeoptimizeIfOp.html#af6528e870f79b5680e80317c3308471e", null ],
     [ "parameters", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1DeoptimizeIfOp.html#a8e54147578a6bcf428899563d5859e8b", null ]
 ];

@@ -7,6 +7,7 @@ var classv8_1_1base_1_1Vector =
     [ "Vector", "classv8_1_1base_1_1Vector.html#a8304953a1115570c7e4012f46a8dd310", null ],
     [ "at", "classv8_1_1base_1_1Vector.html#aa0f26e5409d7f4de2ad0657b7741468a", null ],
     [ "begin", "classv8_1_1base_1_1Vector.html#ad0021e2947c974d78adbbc1d543d43a5", null ],
+    [ "cast", "classv8_1_1base_1_1Vector.html#ae9beccd123505a6a33f09578a54ebe1d", null ],
     [ "cbegin", "classv8_1_1base_1_1Vector.html#af7b9547f931158b74412c2adc609962e", null ],
     [ "cend", "classv8_1_1base_1_1Vector.html#acb525b73f575a582703066e41255c573", null ],
     [ "Clone", "classv8_1_1base_1_1Vector.html#a104a34018b080b9c76aef69115ac6930", null ],
@@ -19,6 +20,7 @@ var classv8_1_1base_1_1Vector =
     [ "last", "classv8_1_1base_1_1Vector.html#af0d570a4d05b9c40232d589cc21b4de0", null ],
     [ "last", "classv8_1_1base_1_1Vector.html#a29bffc07601d094cd8144fa11baae846", null ],
     [ "length", "classv8_1_1base_1_1Vector.html#a1eb4ed5d322a219428bdb9f9a2cb6708", null ],
+    [ "New", "classv8_1_1base_1_1Vector.html#ac8077068004f61ec7c96c84ab3f32639", null ],
     [ "operator Vector< const U >", "classv8_1_1base_1_1Vector.html#a3ae755267bbb06eb47283edbf4352886", null ],
     [ "operator!=", "classv8_1_1base_1_1Vector.html#abed3a0b5eb8b86f708ae93f17d8d752e", null ],
     [ "operator!=", "classv8_1_1base_1_1Vector.html#a2f23f386adadd3b135a21176ea66d575", null ],
@@ -34,5 +36,7 @@ var classv8_1_1base_1_1Vector =
     [ "size", "classv8_1_1base_1_1Vector.html#a8f91dff816409fb9bceaa94c6caeec32", null ],
     [ "SubVector", "classv8_1_1base_1_1Vector.html#a2a7f93a33a4938bd73b628789f214d3d", null ],
     [ "SubVectorFrom", "classv8_1_1base_1_1Vector.html#aab9b38b61ae9c6ca2c00f0f3f579e088", null ],
-    [ "Truncate", "classv8_1_1base_1_1Vector.html#a898259c506adf68941450249416587e1", null ]
+    [ "Truncate", "classv8_1_1base_1_1Vector.html#a898259c506adf68941450249416587e1", null ],
+    [ "length_", "classv8_1_1base_1_1Vector.html#aef69ca2a2c7687c591ba83122dd5ee13", null ],
+    [ "start_", "classv8_1_1base_1_1Vector.html#a8705ecb87ae766d00641de790c88932a", null ]
 ];

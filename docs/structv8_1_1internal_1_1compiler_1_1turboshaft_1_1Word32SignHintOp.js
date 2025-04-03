@@ -9,5 +9,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Word32SignHintOp =
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Word32SignHintOp.html#aa21e2e9a06ece42029128d8e3f1b6979", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Word32SignHintOp.html#a3fd6d0eeb758def1cb771a89186f85f1", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Word32SignHintOp.html#a1322641cec8285f8e22a0995285e7c31", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Word32SignHintOp.html#a1946c59c9b74c018c59bbeb719f2865e", null ],
     [ "sign", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Word32SignHintOp.html#a6d87350530d07063efde75037721ec53", null ]
 ];

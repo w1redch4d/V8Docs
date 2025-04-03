@@ -26,5 +26,7 @@ var scanner_inl_8h =
     [ "KeywordOrIdentifierToken", "scanner-inl_8h.html#ab19d281fb4b9813d6ba8c203cb7e0800", null ],
     [ "MayTerminateString", "scanner-inl_8h.html#a83633fac5db9b7aa5563bb53c2c69864", null ],
     [ "MultilineCommentCharacterNeedsSlowPath", "scanner-inl_8h.html#ab3495cab48dba9c170dff946cd7a4c3c", null ],
-    [ "TerminatesLiteral", "scanner-inl_8h.html#a6667ca9ebb607607c6ff855657fb2064", null ]
+    [ "TerminatesLiteral", "scanner-inl_8h.html#a6667ca9ebb607607c6ff855657fb2064", null ],
+    [ "character_scan_flags", "scanner-inl_8h.html#a6850ca10d05037cfb1862e4624b84668", null ],
+    [ "one_char_tokens", "scanner-inl_8h.html#a59fa6678f287020c32ecbad991126cc3", null ]
 ];

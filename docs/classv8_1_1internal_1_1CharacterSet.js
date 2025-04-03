@@ -6,5 +6,7 @@ var classv8_1_1internal_1_1CharacterSet =
     [ "is_standard", "classv8_1_1internal_1_1CharacterSet.html#aee94c59a1f5be9ea72778b29a303beb5", null ],
     [ "ranges", "classv8_1_1internal_1_1CharacterSet.html#af3cb78cf3902be5f28a654a9659af385", null ],
     [ "set_standard_set_type", "classv8_1_1internal_1_1CharacterSet.html#a59831cbad7a99c19dd9d1ac03c34de9f", null ],
-    [ "standard_set_type", "classv8_1_1internal_1_1CharacterSet.html#ab0c8675924fcdb76c55c122433414181", null ]
+    [ "standard_set_type", "classv8_1_1internal_1_1CharacterSet.html#ab0c8675924fcdb76c55c122433414181", null ],
+    [ "ranges_", "classv8_1_1internal_1_1CharacterSet.html#acaba1097ca5e326a48c2a58b9d4d3bd5", null ],
+    [ "standard_set_type_", "classv8_1_1internal_1_1CharacterSet.html#aa5f35d8e55c328400946b5346ad9edb2", null ]
 ];

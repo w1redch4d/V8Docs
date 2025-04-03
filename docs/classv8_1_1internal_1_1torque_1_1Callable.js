@@ -11,8 +11,15 @@ var classv8_1_1internal_1_1torque_1_1Callable =
     [ "IsExternal", "classv8_1_1internal_1_1torque_1_1Callable.html#a629a2629030419b5fb479d57ae7ca0c4", null ],
     [ "IsTransitioning", "classv8_1_1internal_1_1torque_1_1Callable.html#ad01de7521cd1ffb2bc2d4261a43892d1", null ],
     [ "parameter_names", "classv8_1_1internal_1_1torque_1_1Callable.html#a6aec30ef4618acd2d91b4bc83b46ac72", null ],
+    [ "PrefixNameForCCDebugOutput", "classv8_1_1internal_1_1torque_1_1Callable.html#accac6a151b13394207b26ef5189b2ebc", null ],
+    [ "PrefixNameForCCOutput", "classv8_1_1internal_1_1torque_1_1Callable.html#a80aaa2b8370630242a2f3b92828900cc", null ],
     [ "ReadableName", "classv8_1_1internal_1_1torque_1_1Callable.html#acd1dc4199b5b89b4b5d054372260784a", null ],
     [ "ShouldBeInlined", "classv8_1_1internal_1_1torque_1_1Callable.html#a1f44cb5989cbe7ce4ceaf1eeb2e294da", null ],
     [ "ShouldGenerateExternalCode", "classv8_1_1internal_1_1torque_1_1Callable.html#aa2a8d6edfa815fd2823d3c9184dfe833", null ],
-    [ "signature", "classv8_1_1internal_1_1torque_1_1Callable.html#a5801af645c202b15307ac0f763028e5f", null ]
+    [ "signature", "classv8_1_1internal_1_1torque_1_1Callable.html#a5801af645c202b15307ac0f763028e5f", null ],
+    [ "body_", "classv8_1_1internal_1_1torque_1_1Callable.html#a185bed9ba198e773442818788d4190b8", null ],
+    [ "external_name_", "classv8_1_1internal_1_1torque_1_1Callable.html#a11c2a1de26030ee5cab656d8a5bc4f92", null ],
+    [ "readable_name_", "classv8_1_1internal_1_1torque_1_1Callable.html#a8d9d512ad4a3cc5be6479b7a25f7f110", null ],
+    [ "returns_", "classv8_1_1internal_1_1torque_1_1Callable.html#abb08e4fc6efbf7edefe7e6f054dd44ce", null ],
+    [ "signature_", "classv8_1_1internal_1_1torque_1_1Callable.html#a192493f724bd75ecf46e208fca714759", null ]
 ];

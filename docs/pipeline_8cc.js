@@ -53,5 +53,18 @@ var pipeline_8cc =
     [ "CheckNoDeprecatedMaps", "pipeline_8cc.html#a3b0b17a896dc48a4d8b81e853a198cae", null ],
     [ "operator<<", "pipeline_8cc.html#ab4b087a36eefc604007db4100e2e44c7", null ],
     [ "PrintCode", "pipeline_8cc.html#a2ccd7d2125ac506417d6d848af6ba521", null ],
-    [ "TraceSchedule", "pipeline_8cc.html#ab05c182371a6b4107bfa20b1c8c3dc5c", null ]
+    [ "TraceSchedule", "pipeline_8cc.html#ab05c182371a6b4107bfa20b1c8c3dc5c", null ],
+    [ "broker_", "pipeline_8cc.html#afbebf1cf74ae95d61dd83bba3f1f03c9", null ],
+    [ "current_broker_", "pipeline_8cc.html#a89edd0c72e54caed2851cbdb1ba00cf9", null ],
+    [ "data_", "pipeline_8cc.html#a05830a5d68767745c60828e365b5d16b", null ],
+    [ "high_throughput_scope_", "pipeline_8cc.html#a198851a64604e5a305c553ab6efa8ce6", null ],
+    [ "info_", "pipeline_8cc.html#af557ebb703ebd3c9e815d70b9504ba36", null ],
+    [ "kMachineGraphVerifierZoneName", "pipeline_8cc.html#aeb7a7ef262c66afc97041196ecb871cb", null ],
+    [ "kPipelineCompilationJobZoneName", "pipeline_8cc.html#a542ddd960a7b0ab628b953398c6c817e", null ],
+    [ "origin_scope_", "pipeline_8cc.html#afa36354e3f4278acadb4f2076ae3e246", null ],
+    [ "phase_scope_", "pipeline_8cc.html#af4599114b076349a807a00f80161ed13", null ],
+    [ "reducer_", "pipeline_8cc.html#a399e8cec0f2f56368f66b8990165c1ca", null ],
+    [ "table_", "pipeline_8cc.html#a1cf7b21ed85cb3d716fa4007ab54cc7c", null ],
+    [ "turboshaft_data_", "pipeline_8cc.html#ab837822e85ed55b8e616bf8a67b5e0de", null ],
+    [ "zone_scope_", "pipeline_8cc.html#af112cc082e35d508fbc496d98304f935", null ]
 ];

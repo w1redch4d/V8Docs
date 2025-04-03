@@ -8,6 +8,14 @@ var classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering =
     ] ],
     [ "JSTypeHintLowering", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#aa1057e55786019ac075196cca80909fa", null ],
     [ "JSTypeHintLowering", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#ab5785eab154d4b1697500a3cca438b92", null ],
+    [ "broker", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#abaeb4fe5e42ffed7a10523a636533b9f", null ],
+    [ "BuildDeoptIfFeedbackIsInsufficient", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#a4e224032b30f0647227af87cdbc110b7", null ],
+    [ "feedback_vector", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#aeb45d012623e67e52c75d689967a4780", null ],
+    [ "flags", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#ad732519ad4e7dd05cba7dc000b7bfdd2", null ],
+    [ "GetBinaryOperationHint", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#a20de8107d118ef4e32181febd752ff7a", null ],
+    [ "GetCompareOperationHint", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#a0d46d6e597ed3812d207c95f23ec54f8", null ],
+    [ "isolate", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#a65043712bfa51af750f6ebc8ab708c8a", null ],
+    [ "jsgraph", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#a759e57daa7ccd7a31ffd7ebf2c4f1be1", null ],
     [ "operator=", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#aa6901c58184ac7d98d16c5977a57b2d8", null ],
     [ "ReduceBinaryOperation", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#ad14ede070953ded2f4a4fc1ce100692e", null ],
     [ "ReduceCallOperation", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#af8f7199ab1f07ddcdb18ffe7e05a8a51", null ],
@@ -21,5 +29,9 @@ var classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering =
     [ "ReduceStoreNamedOperation", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#af17f19f05bda4105eed4d37f523b466c", null ],
     [ "ReduceToNumberOperation", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#ab39ea0cd4bcec2ac2ec388eb00a7e093", null ],
     [ "ReduceUnaryOperation", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#ada9905375bde3d035eb3b1502cd5961f", null ],
-    [ "JSSpeculativeBinopBuilder", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#a9bedef980633fc8b35b0af29aaf59d36", null ]
+    [ "JSSpeculativeBinopBuilder", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#a9bedef980633fc8b35b0af29aaf59d36", null ],
+    [ "broker_", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#ae0a57c85cf399908530e521151045d9d", null ],
+    [ "feedback_vector_", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#a0150a46c7e0305b13d1156bfa6213281", null ],
+    [ "flags_", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#afe80691b1a216502237bd6ac5ab42f72", null ],
+    [ "jsgraph_", "classv8_1_1internal_1_1compiler_1_1JSTypeHintLowering.html#a93ab71fae0c26575aa892c5604fd0105", null ]
 ];

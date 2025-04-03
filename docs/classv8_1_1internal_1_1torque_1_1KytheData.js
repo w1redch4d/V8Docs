@@ -1,4 +1,25 @@
 var classv8_1_1internal_1_1torque_1_1KytheData =
 [
-    [ "KytheData", "classv8_1_1internal_1_1torque_1_1KytheData.html#ac726b3e8455ef0089014758ffe58bfbf", null ]
+    [ "KytheData", "classv8_1_1internal_1_1torque_1_1KytheData.html#ac726b3e8455ef0089014758ffe58bfbf", null ],
+    [ "AddBindingDefinition", "classv8_1_1internal_1_1torque_1_1KytheData.html#ae946f67cbf35421850c1966086f12b57", null ],
+    [ "AddBindingDefinition", "classv8_1_1internal_1_1torque_1_1KytheData.html#a86005f64bfd9b71b25990aa9b7a7f048", null ],
+    [ "AddBindingDefinitionImpl", "classv8_1_1internal_1_1torque_1_1KytheData.html#a35cb03796d0bd148104e9813c63897ce", null ],
+    [ "AddBindingUse", "classv8_1_1internal_1_1torque_1_1KytheData.html#a1e16bdb74520c4507abe96f9b263fb87", null ],
+    [ "AddBindingUse", "classv8_1_1internal_1_1torque_1_1KytheData.html#a80bcec0fb2f82983ec4ef615ec19bcf1", null ],
+    [ "AddCall", "classv8_1_1internal_1_1torque_1_1KytheData.html#afd8003a8e44ffa6810bd935e7c96b17e", null ],
+    [ "AddClassFieldDefinition", "classv8_1_1internal_1_1torque_1_1KytheData.html#ad09c40ea36a7680408364ffce4484f0b", null ],
+    [ "AddClassFieldUse", "classv8_1_1internal_1_1torque_1_1KytheData.html#ac7c832aa059c8fcbd13ffd7cbacd53c8", null ],
+    [ "AddConstantDefinition", "classv8_1_1internal_1_1torque_1_1KytheData.html#a1bb4b4581257950707f7f85bcf2cbb85", null ],
+    [ "AddConstantUse", "classv8_1_1internal_1_1torque_1_1KytheData.html#afc303d37397ab7ab0e30a42d6e2369e9", null ],
+    [ "AddFunctionDefinition", "classv8_1_1internal_1_1torque_1_1KytheData.html#a9b92209ffe8ddab2ac4ff69f0ba5959a", null ],
+    [ "AddTypeDefinition", "classv8_1_1internal_1_1torque_1_1KytheData.html#ab60bdb01af1f383e3ffcbbbadf0aee96", null ],
+    [ "AddTypeUse", "classv8_1_1internal_1_1torque_1_1KytheData.html#af6f93f36677ad0dddbc35fd51af1984e", null ],
+    [ "SetConsumer", "classv8_1_1internal_1_1torque_1_1KytheData.html#a57c37ba7bcf85681e34d38fe60e4f01a", null ],
+    [ "callables_", "classv8_1_1internal_1_1torque_1_1KytheData.html#acebedf0e9d65c0f566f6633b437b97de", null ],
+    [ "class_fields_", "classv8_1_1internal_1_1torque_1_1KytheData.html#a632098f7c2f48d1f8890c9eecc58f1a4", null ],
+    [ "constants_", "classv8_1_1internal_1_1torque_1_1KytheData.html#a77e647627a3c15b223b3cf1de14e51e3", null ],
+    [ "consumer_", "classv8_1_1internal_1_1torque_1_1KytheData.html#a0b1e7b1ffc2a62bc93e2df9fac832e78", null ],
+    [ "field_uses_", "classv8_1_1internal_1_1torque_1_1KytheData.html#ab68f69c5ef4836247a63b78b5d86fd74", null ],
+    [ "local_bindings_", "classv8_1_1internal_1_1torque_1_1KytheData.html#a4555929343d9eacbbdbdd52ea87b00ce", null ],
+    [ "types_", "classv8_1_1internal_1_1torque_1_1KytheData.html#aabea3c7eec93dba1701f5589bf8879a6", null ]
 ];

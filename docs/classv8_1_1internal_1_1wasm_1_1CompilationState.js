@@ -15,6 +15,7 @@ var classv8_1_1internal_1_1wasm_1_1CompilationState =
     [ "GetWireBytesStorage", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#ac94f5604f1684b2f28391cef5a2dffb7", null ],
     [ "InitCompileJob", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#ab81cbf88e8bd750d5d7e198464e923f3", null ],
     [ "InitializeAfterDeserialization", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a9ebb11cd7d9fb9633666bdebbd038a5f", null ],
+    [ "New", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#aebd99e1827252230ee8d9f13ff472d25", null ],
     [ "operator delete", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#a3cad8313a10e79a902008f9d380bca51", null ],
     [ "PublishCode", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#ad47276201a3451517914237634bef777", null ],
     [ "set_compilation_id", "classv8_1_1internal_1_1wasm_1_1CompilationState.html#aaae5bb20ea313ddf1ccf1393ca5ade67", null ],

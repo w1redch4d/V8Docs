@@ -6,5 +6,8 @@ var classv8_1_1base_1_1debug_1_1StackTrace =
     [ "Addresses", "classv8_1_1base_1_1debug_1_1StackTrace.html#a67f157a46da73b0a1b32fb376c9775a8", null ],
     [ "OutputToStream", "classv8_1_1base_1_1debug_1_1StackTrace.html#a21b1d3df259afb289dfb51256efe21cc", null ],
     [ "Print", "classv8_1_1base_1_1debug_1_1StackTrace.html#a783b7cf0f5190b6f5fe2c888b4cff2cc", null ],
-    [ "ToString", "classv8_1_1base_1_1debug_1_1StackTrace.html#a57358ffc35221767c7237bd148e5aa4b", null ]
+    [ "ToString", "classv8_1_1base_1_1debug_1_1StackTrace.html#a57358ffc35221767c7237bd148e5aa4b", null ],
+    [ "count_", "classv8_1_1base_1_1debug_1_1StackTrace.html#a0a8e4d6c05c1bfd9ce6955eb15915489", null ],
+    [ "kMaxTraces", "classv8_1_1base_1_1debug_1_1StackTrace.html#afad67b995bf43f567a73364a667cc7dd", null ],
+    [ "trace_", "classv8_1_1base_1_1debug_1_1StackTrace.html#aa201f11670d2763ae806204dba8a378b", null ]
 ];

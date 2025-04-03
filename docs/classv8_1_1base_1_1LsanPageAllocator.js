@@ -14,5 +14,8 @@ var classv8_1_1base_1_1LsanPageAllocator =
     [ "RecommitPages", "classv8_1_1base_1_1LsanPageAllocator.html#ab22ed7b15de62d745242e20a34e23aeb", null ],
     [ "ReleasePages", "classv8_1_1base_1_1LsanPageAllocator.html#afce0e6b140f92c1866732b13bb1c0694", null ],
     [ "SetPermissions", "classv8_1_1base_1_1LsanPageAllocator.html#a0f5faf5c47e1176996096134d87ca2b8", null ],
-    [ "SetRandomMmapSeed", "classv8_1_1base_1_1LsanPageAllocator.html#a1aef2aced2520541315dfbb4ad61ba5f", null ]
+    [ "SetRandomMmapSeed", "classv8_1_1base_1_1LsanPageAllocator.html#a1aef2aced2520541315dfbb4ad61ba5f", null ],
+    [ "allocate_page_size_", "classv8_1_1base_1_1LsanPageAllocator.html#a3b4e42fde9482c513f8c246e1cf32534", null ],
+    [ "commit_page_size_", "classv8_1_1base_1_1LsanPageAllocator.html#a1b41830b14d136ca30bdef8d0a6783e3", null ],
+    [ "page_allocator_", "classv8_1_1base_1_1LsanPageAllocator.html#a267c844757b53d731057a7a7f039f312", null ]
 ];

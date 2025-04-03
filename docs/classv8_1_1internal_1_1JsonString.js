@@ -10,6 +10,11 @@ var classv8_1_1internal_1_1JsonString =
     [ "length", "classv8_1_1internal_1_1JsonString.html#a06e576fbf6ea7dedd923698a805a6d31", null ],
     [ "needs_conversion", "classv8_1_1internal_1_1JsonString.html#ab5ef18149f73247264966d26af8afa03", null ],
     [ "start", "classv8_1_1internal_1_1JsonString.html#ae199ecf32192c473021cf614754a227c", null ],
+    [ "has_escape_", "classv8_1_1internal_1_1JsonString.html#a76204efa9dbf96076517a2418d3de7d3", null ],
     [ "index_", "classv8_1_1internal_1_1JsonString.html#a9635ddc20f8ea91bb41ec1b6ea847597", null ],
+    [ "internalize_", "classv8_1_1internal_1_1JsonString.html#aa0f8ae620856c262854113d74fb755af", null ],
+    [ "is_index_", "classv8_1_1internal_1_1JsonString.html#a2ba79e1d1f7636e3a804875ad6e59650", null ],
+    [ "length_", "classv8_1_1internal_1_1JsonString.html#ac08c1b731f1ef7160b452be407b9e2ca", null ],
+    [ "needs_conversion_", "classv8_1_1internal_1_1JsonString.html#a87459e3f64891cc337fe74cf4fc65568", null ],
     [ "start_", "classv8_1_1internal_1_1JsonString.html#aedd282033e04a9603a666fa571cfbe25", null ]
 ];

@@ -1,5 +1,6 @@
 var structv8_1_1internal_1_1temporal_1_1TimeDurationRecord =
 [
+    [ "Create", "structv8_1_1internal_1_1temporal_1_1TimeDurationRecord.html#aff9949a42f0602ca35c18b7cd388fda2", null ],
     [ "days", "structv8_1_1internal_1_1temporal_1_1TimeDurationRecord.html#a66d87aa5e7fd6859ec0a22c5f437c9cd", null ],
     [ "hours", "structv8_1_1internal_1_1temporal_1_1TimeDurationRecord.html#abc5e508e151505ed7d69214197f76983", null ],
     [ "microseconds", "structv8_1_1internal_1_1temporal_1_1TimeDurationRecord.html#a44a3633c553775b8b700af20e21ba0d8", null ],

@@ -25,5 +25,7 @@ var classv8_1_1internal_1_1StringShape =
     [ "operator==", "classv8_1_1internal_1_1StringShape.html#aaea1448e766491c50d7b07fc0aef55c5", null ],
     [ "representation_and_encoding_tag", "classv8_1_1internal_1_1StringShape.html#ada299d4bf2c2efd693f8ade3880873c7", null ],
     [ "representation_encoding_and_shared_tag", "classv8_1_1internal_1_1StringShape.html#a50bc327ab721867dd04d242e8b9b99db", null ],
-    [ "representation_tag", "classv8_1_1internal_1_1StringShape.html#a64df22396a36a5004e67a9397de827cf", null ]
+    [ "representation_tag", "classv8_1_1internal_1_1StringShape.html#a64df22396a36a5004e67a9397de827cf", null ],
+    [ "set_valid", "classv8_1_1internal_1_1StringShape.html#a7720b925e3ed9cc8c2904e96aedf9f6c", null ],
+    [ "type_", "classv8_1_1internal_1_1StringShape.html#a60d8b2ca7236fc02d7334a5521edc67a", null ]
 ];

@@ -38,7 +38,7 @@ var dir_2666c81470adc64840ad535dbb7c3c8b =
     [ "sandboxed-pointer.h", "sandboxed-pointer_8h.html", "sandboxed-pointer_8h" ],
     [ "tagged-payload.h", "tagged-payload_8h.html", "tagged-payload_8h" ],
     [ "testing.cc", "sandbox_2testing_8cc.html", null ],
-    [ "testing.h", "testing_8h.html", null ],
+    [ "testing.h", "src_2sandbox_2testing_8h.html", null ],
     [ "trusted-pointer-table-inl.h", "trusted-pointer-table-inl_8h.html", null ],
     [ "trusted-pointer-table.cc", "trusted-pointer-table_8cc.html", null ],
     [ "trusted-pointer-table.h", "trusted-pointer-table_8h.html", null ]

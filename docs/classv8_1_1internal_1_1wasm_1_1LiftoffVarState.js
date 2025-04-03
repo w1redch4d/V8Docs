@@ -30,5 +30,8 @@ var classv8_1_1internal_1_1wasm_1_1LiftoffVarState =
     [ "reg_class", "classv8_1_1internal_1_1wasm_1_1LiftoffVarState.html#a8c1f5cee963ff86a81c8c8c807bb7416", null ],
     [ "set_offset", "classv8_1_1internal_1_1wasm_1_1LiftoffVarState.html#adcebc5850980f99fb9f6915e4b027364", null ],
     [ "i32_const_", "classv8_1_1internal_1_1wasm_1_1LiftoffVarState.html#a453562322df726878f9414a9fc758167", null ],
-    [ "reg_", "classv8_1_1internal_1_1wasm_1_1LiftoffVarState.html#ab4beb8da9afdfa668cb7d641b9ba19a2", null ]
+    [ "kind_", "classv8_1_1internal_1_1wasm_1_1LiftoffVarState.html#a727aca6c816dc0f001e7565490820f6e", null ],
+    [ "loc_", "classv8_1_1internal_1_1wasm_1_1LiftoffVarState.html#acc35ce9abf5038cdf9fcd15961fa978f", null ],
+    [ "reg_", "classv8_1_1internal_1_1wasm_1_1LiftoffVarState.html#ab4beb8da9afdfa668cb7d641b9ba19a2", null ],
+    [ "spill_offset_", "classv8_1_1internal_1_1wasm_1_1LiftoffVarState.html#ae4f0f6dd72f011c3cd4ec6b31f7ccf1d", null ]
 ];

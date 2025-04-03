@@ -27,5 +27,14 @@ var classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterI
     [ "set_type_hint", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#a9bf72f0a9cfc552ac8363a702d16e024", null ],
     [ "set_variable_hint", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#a140a530be31de213980569133b4adf71", null ],
     [ "type_hint", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#ac439f8d0d4fb1ba7a4cdf64fef36a6de", null ],
-    [ "variable_hint", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#ae815a782515f2703b454ea509e0eaccb", null ]
+    [ "variable_hint", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#ae815a782515f2703b454ea509e0eaccb", null ],
+    [ "allocated_", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#aa4307de0c7f28e57bf5b2a75babf8688", null ],
+    [ "equivalence_id_", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#a48fdea1f8dc5277515e42567396ebcbf", null ],
+    [ "materialized_", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#ace2b9059988fd40fbe2734b7ae6e5874", null ],
+    [ "needs_flush_", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#aef56ef177b7e1d8a9ed8d9819c1bc9be", null ],
+    [ "next_", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#aa29edab806df63c453cc6f787128ba58", null ],
+    [ "prev_", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#a3e2cae762f56bea4b21b89afb8310879", null ],
+    [ "register_", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#a0486487a97918dc97e4a1418c4f10e8a", null ],
+    [ "type_hint_", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#a6218fe2ca18ed73a0dba60b54706f98f", null ],
+    [ "variable_hint_", "classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html#acea6a1443a50cdb75adb01780c6092f6", null ]
 ];

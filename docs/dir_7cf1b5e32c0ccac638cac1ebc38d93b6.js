@@ -32,7 +32,7 @@ var dir_7cf1b5e32c0ccac638cac1ebc38d93b6 =
     [ "code-stub-assembler-inl.h", "code-stub-assembler-inl_8h.html", "code-stub-assembler-inl_8h" ],
     [ "code-stub-assembler.cc", "code-stub-assembler_8cc.html", "code-stub-assembler_8cc" ],
     [ "code-stub-assembler.h", "code-stub-assembler_8h.html", "code-stub-assembler_8h" ],
-    [ "compilation-cache.cc", "compilation-cache_8cc.html", null ],
+    [ "compilation-cache.cc", "compilation-cache_8cc.html", "compilation-cache_8cc" ],
     [ "compilation-cache.h", "compilation-cache_8h.html", "compilation-cache_8h" ],
     [ "compiler.cc", "compiler_8cc.html", "compiler_8cc" ],
     [ "compiler.h", "compiler_8h.html", "compiler_8h" ],

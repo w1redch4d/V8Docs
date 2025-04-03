@@ -277,5 +277,8 @@ var classv8_1_1internal_1_1compiler_1_1SimplifiedOperatorBuilder =
     [ "TruncateTaggedToWord32", "classv8_1_1internal_1_1compiler_1_1SimplifiedOperatorBuilder.html#add05029b5bcf4b8466970b6bb718741f", null ],
     [ "TypeOf", "classv8_1_1internal_1_1compiler_1_1SimplifiedOperatorBuilder.html#a8677dfb449af7b7f852f885d7f733a7b", null ],
     [ "Unsigned32Divide", "classv8_1_1internal_1_1compiler_1_1SimplifiedOperatorBuilder.html#ad31f93a955299228d797b3d07f7fd5e8", null ],
-    [ "VerifyType", "classv8_1_1internal_1_1compiler_1_1SimplifiedOperatorBuilder.html#a13023971f7273cde902c1421a1083753", null ]
+    [ "VerifyType", "classv8_1_1internal_1_1compiler_1_1SimplifiedOperatorBuilder.html#a13023971f7273cde902c1421a1083753", null ],
+    [ "zone", "classv8_1_1internal_1_1compiler_1_1SimplifiedOperatorBuilder.html#ae9c4d008dbfc886580d9bcf2197d8cda", null ],
+    [ "cache_", "classv8_1_1internal_1_1compiler_1_1SimplifiedOperatorBuilder.html#ae1aa15b496e31733482e495c11c9d664", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1SimplifiedOperatorBuilder.html#a512d71394600542051f5bc036bb29935", null ]
 ];

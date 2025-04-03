@@ -8,5 +8,6 @@ var classv8_1_1internal_1_1wasm_1_1WellKnownImportsList =
     [ "get", "classv8_1_1internal_1_1wasm_1_1WellKnownImportsList.html#ac04c98fc419332403e4f6a49a06efd9e", null ],
     [ "Initialize", "classv8_1_1internal_1_1wasm_1_1WellKnownImportsList.html#abbba4e066bc80fe0f197eb30c5cb5e31", null ],
     [ "Initialize", "classv8_1_1internal_1_1wasm_1_1WellKnownImportsList.html#aeaafe5f17892d90ba434f1f143620c42", null ],
-    [ "Update", "classv8_1_1internal_1_1wasm_1_1WellKnownImportsList.html#abe712fc917a6f52fda6c5371d19aef45", null ]
+    [ "Update", "classv8_1_1internal_1_1wasm_1_1WellKnownImportsList.html#abe712fc917a6f52fda6c5371d19aef45", null ],
+    [ "statuses_", "classv8_1_1internal_1_1wasm_1_1WellKnownImportsList.html#add866dd143321b9923468f928422f012", null ]
 ];

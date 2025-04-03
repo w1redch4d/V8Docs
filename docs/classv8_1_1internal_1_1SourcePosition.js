@@ -1,9 +1,17 @@
 var classv8_1_1internal_1_1SourcePosition =
 [
+    [ "ExternalFileIdField", "classv8_1_1internal_1_1SourcePosition.html#a22ef4f127313cbbc781943775c0fac11", null ],
+    [ "ExternalLineField", "classv8_1_1internal_1_1SourcePosition.html#afae3087e0b450be81be4a46cca2c8ce5", null ],
+    [ "InliningIdField", "classv8_1_1internal_1_1SourcePosition.html#aa921352a4259c4e5ebb86d1eec475d9e", null ],
+    [ "IsExternalField", "classv8_1_1internal_1_1SourcePosition.html#a4cfadc92bf54bc4afbe661ec5e277ced", null ],
+    [ "ScriptOffsetField", "classv8_1_1internal_1_1SourcePosition.html#a5953ed03b7cad047e09504dde2e5bfed", null ],
     [ "SourcePosition", "classv8_1_1internal_1_1SourcePosition.html#a78ced7619260b682b523003df5aeb885", null ],
+    [ "SourcePosition", "classv8_1_1internal_1_1SourcePosition.html#ac1761c9dbf30f48ea9d32f18aa7eaade", null ],
+    [ "External", "classv8_1_1internal_1_1SourcePosition.html#a66e9696a426ad51d4e726faadf1623a2", null ],
     [ "ExternalFileId", "classv8_1_1internal_1_1SourcePosition.html#a221da0559752d79215b71d5bfc89b63d", null ],
     [ "ExternalLine", "classv8_1_1internal_1_1SourcePosition.html#aa9bd778073306524e6c81c3fd994481d", null ],
     [ "FirstInfo", "classv8_1_1internal_1_1SourcePosition.html#a9127672c8b423913017dd02a3cc47a0e", null ],
+    [ "FromRaw", "classv8_1_1internal_1_1SourcePosition.html#a0dda2b6075541741eb2101ac49965c9e", null ],
     [ "InliningId", "classv8_1_1internal_1_1SourcePosition.html#a4f6f04a3737d21954fe3773063b46f2f", null ],
     [ "InliningStack", "classv8_1_1internal_1_1SourcePosition.html#ac0a855f2ce67c30a5aa8e351be608cab", null ],
     [ "InliningStack", "classv8_1_1internal_1_1SourcePosition.html#a40fa6c6bd64fd28293519277e6d1fe4a", null ],
@@ -12,6 +20,7 @@ var classv8_1_1internal_1_1SourcePosition =
     [ "IsJavaScript", "classv8_1_1internal_1_1SourcePosition.html#ae0bdcfec0faf10c4f0fe164d14991fa4", null ],
     [ "IsKnown", "classv8_1_1internal_1_1SourcePosition.html#ac7845ddff63e1b193c963c60d743f0be", null ],
     [ "Print", "classv8_1_1internal_1_1SourcePosition.html#a4be401a86ada9c8f6e681565915e7d57", null ],
+    [ "Print", "classv8_1_1internal_1_1SourcePosition.html#a220be90cc7cb4acd56d28d71e07559e9", null ],
     [ "PrintJson", "classv8_1_1internal_1_1SourcePosition.html#afba5470728af203c593993f55d1324de", null ],
     [ "raw", "classv8_1_1internal_1_1SourcePosition.html#a54969e55ca67bfe1f234d84e0e5b7069", null ],
     [ "ScriptOffset", "classv8_1_1internal_1_1SourcePosition.html#a303c0c4fa47bd9368489bdd75b5931ec", null ],
@@ -19,5 +28,8 @@ var classv8_1_1internal_1_1SourcePosition =
     [ "SetExternalLine", "classv8_1_1internal_1_1SourcePosition.html#afe520384126785cfa567abd7d635dc53", null ],
     [ "SetInliningId", "classv8_1_1internal_1_1SourcePosition.html#a64ec29311418609cc62efd1399244a3c", null ],
     [ "SetIsExternal", "classv8_1_1internal_1_1SourcePosition.html#aa0b438f728a0a15d6010eb1e033906dd", null ],
-    [ "SetScriptOffset", "classv8_1_1internal_1_1SourcePosition.html#a4d0477ee08373342de4898036fa76497", null ]
+    [ "SetScriptOffset", "classv8_1_1internal_1_1SourcePosition.html#a4d0477ee08373342de4898036fa76497", null ],
+    [ "Unknown", "classv8_1_1internal_1_1SourcePosition.html#a55c6238897a170cf326f1387d12fddc3", null ],
+    [ "kNotInlined", "classv8_1_1internal_1_1SourcePosition.html#a82ff8870419b8c79f71ed1093390b277", null ],
+    [ "value_", "classv8_1_1internal_1_1SourcePosition.html#a6ae9f6672ca4907bd1dd8a5863dcc31d", null ]
 ];

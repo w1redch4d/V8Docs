@@ -13,5 +13,9 @@ var classv8_1_1internal_1_1AccountingAllocator =
     [ "TraceZoneCreation", "classv8_1_1internal_1_1AccountingAllocator.html#a88662c33cce4a292445c491fb555ec2e", null ],
     [ "TraceZoneCreationImpl", "classv8_1_1internal_1_1AccountingAllocator.html#a59caa2d80ceb8d194addcad7116ec330", null ],
     [ "TraceZoneDestruction", "classv8_1_1internal_1_1AccountingAllocator.html#a624caa8eedaae0ce96a1bbd6ae7f6b10", null ],
-    [ "TraceZoneDestructionImpl", "classv8_1_1internal_1_1AccountingAllocator.html#a0d6d067f6bef2338450958328873434f", null ]
+    [ "TraceZoneDestructionImpl", "classv8_1_1internal_1_1AccountingAllocator.html#a0d6d067f6bef2338450958328873434f", null ],
+    [ "bounded_page_allocator_", "classv8_1_1internal_1_1AccountingAllocator.html#a5d0dc5dbc4046325433df7822a9e9195", null ],
+    [ "current_memory_usage_", "classv8_1_1internal_1_1AccountingAllocator.html#a36a523177d36e086bb6038b2f87f3c74", null ],
+    [ "max_memory_usage_", "classv8_1_1internal_1_1AccountingAllocator.html#aabee9ac3ef8d6d252f481cc7438d1dfd", null ],
+    [ "reserved_area_", "classv8_1_1internal_1_1AccountingAllocator.html#ac6493c45cf50a7ced6203d8dac82fc68", null ]
 ];

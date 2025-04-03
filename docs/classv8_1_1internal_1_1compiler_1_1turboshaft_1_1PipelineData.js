@@ -1,5 +1,10 @@
 var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData =
 [
+    [ "BuiltinComponent", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a0cacd9e5bd059754ec9dea74de4fc40a", null ],
+    [ "CodegenComponent", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#ab5920289a5f5777a809f5de51dfa7eeb", null ],
+    [ "GraphComponent", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a8266176d9b3d15e86f63e1cb8d0a18b5", null ],
+    [ "InstructionComponent", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a6916a0e218d9615cb0a6299def5576e0", null ],
+    [ "RegisterComponent", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a1262a21f26a086181c1fd54928263f25", null ],
     [ "PipelineData", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a7262d52423512c10d7629a38177c6672", null ],
     [ "allocator", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a011e181f60455f07e72f80e1f2c19754", null ],
     [ "assembler_options", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a4f7480aa777332de33d20fe8058841c4", null ],
@@ -51,5 +56,24 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData =
     [ "set_source_position_output", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a7dd8b28926ff355928682a3caa25ef37", null ],
     [ "source_position_output", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a3fdd4896f5796425a9e67c08c03affe6", null ],
     [ "source_positions", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a7a5565eb5427942e3c53967d8d59279b", null ],
-    [ "zone_stats", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#ad9df8187835673eaecff57ef75e90a55", null ]
+    [ "zone_stats", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#ad9df8187835673eaecff57ef75e90a55", null ],
+    [ "assembler_options_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#acc2ee6278cdf2a4a7d3c96e092b3bedc", null ],
+    [ "broker_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a6ba957e77d5f8ead80fb6dec8b9bb10e", null ],
+    [ "builtin_component_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a9cf08da7ab14893f62f2d28175e6e1cc", null ],
+    [ "code_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#aa9113f4709e2b6ef6672f1cc13cd1ecb", null ],
+    [ "codegen_component_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a586900d90ad65ce7d045b3ba71a1e5ef", null ],
+    [ "compilation_zone_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#aedec9c9acd24cd99a20dcbab26265b39", null ],
+    [ "debug_name_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a3e253e8270c0e6ae9c51c795114740ed", null ],
+    [ "dependencies_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#af7e28354642adc21d75687e28d21b857", null ],
+    [ "graph_component_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#ac151dd41350296dd118a048ad7a3457b", null ],
+    [ "info_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a9dc14ce8b37587a2e0bb8a9ae71d145d", null ],
+    [ "instruction_component_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#add1f62e708dfefead772e415b7e9e2c9", null ],
+    [ "isolate_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a93c3f73b6544b4b6a4dac8a45eea2319", null ],
+    [ "pipeline_kind_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a03d706d2d86e6aa56a12270160b00f91", null ],
+    [ "pipeline_statistics_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#ab804879f1dcc9f6117f9fe143f776d6f", null ],
+    [ "register_component_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#aaf76498f08c6bcf257e32948f55545b1", null ],
+    [ "runtime_call_stats_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a90ac7a549968d18ccf004c43dff23293", null ],
+    [ "source_position_output_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#acf0b3d6aa275d74269d6012d9c5824c9", null ],
+    [ "start_source_position_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a17711abcf677569f8db9e2ce80ccbee8", null ],
+    [ "zone_stats_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a248806454c3c6973ce1bc88f65fca4b7", null ]
 ];

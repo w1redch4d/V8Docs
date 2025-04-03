@@ -5,8 +5,16 @@ var classv8_1_1internal_1_1HandleScope =
     [ "HandleScope", "classv8_1_1internal_1_1HandleScope.html#a6fbe2a46476762a98efbe90b8b6c5c58", null ],
     [ "~HandleScope", "classv8_1_1internal_1_1HandleScope.html#a79ddbf7d9d9fab9b2d5ae1be6f6876cd", null ],
     [ "CloseAndEscape", "classv8_1_1internal_1_1HandleScope.html#a07a99ae0ce38fcde51b7dbaa08a23e86", null ],
+    [ "CloseScope", "classv8_1_1internal_1_1HandleScope.html#a4157e4690f304707ff86e54965500925", null ],
+    [ "CreateHandle", "classv8_1_1internal_1_1HandleScope.html#aaa41d7957b4fee82fded13453ed0f29e", null ],
+    [ "current_level_address", "classv8_1_1internal_1_1HandleScope.html#ad8e3d2e7853cee42d7d255e45afb1f5e", null ],
+    [ "current_limit_address", "classv8_1_1internal_1_1HandleScope.html#a49204b2b24d948e6a4b2cec31f043a0c", null ],
+    [ "current_next_address", "classv8_1_1internal_1_1HandleScope.html#a4ab0caf3631e3b3f5aa40d20696ca6cc", null ],
+    [ "DeleteExtensions", "classv8_1_1internal_1_1HandleScope.html#a49d50c5b71e4d3aed324e3ce63bb681d", null ],
+    [ "Extend", "classv8_1_1internal_1_1HandleScope.html#a5b556c2e04dfb23111980028b9f3cc53", null ],
     [ "isolate", "classv8_1_1internal_1_1HandleScope.html#a2d4843517a16479cf9e76fee9ea51d27", null ],
-    [ "operator delete", "classv8_1_1internal_1_1HandleScope.html#adf86687102c927b783e6292e18db45db", null ],
+    [ "NumberOfHandles", "classv8_1_1internal_1_1HandleScope.html#a24b3e5fe5858089d5f677b6e81fb17b4", null ],
+    [ "operator delete", "classv8_1_1internal_1_1HandleScope.html#a9d7f2d1645bf5777a72af1e13ca2310e", null ],
     [ "operator new", "classv8_1_1internal_1_1HandleScope.html#a040b1705bf912c80139e855ebfc4bb37", null ],
     [ "operator new", "classv8_1_1internal_1_1HandleScope.html#a0a9e8a9426d75264a67f66898b8cef59", null ],
     [ "operator=", "classv8_1_1internal_1_1HandleScope.html#a1f4ae215a7747614e4e680b72d07b04c", null ],
@@ -16,5 +24,9 @@ var classv8_1_1internal_1_1HandleScope =
     [ "LocalHandles", "classv8_1_1internal_1_1HandleScope.html#abad62a3b0437f522db52a762d32cf2c2", null ],
     [ "LocalHandleScope", "classv8_1_1internal_1_1HandleScope.html#ac14af6222147fc57fe8e81f2869fe181", null ],
     [ "PersistentHandles", "classv8_1_1internal_1_1HandleScope.html#a32940eb93d052b7e392760bb8f49bebc", null ],
-    [ "v8::HandleScope", "classv8_1_1internal_1_1HandleScope.html#a8b16bf00a6bc5a91a76e86067d2f9dfc", null ]
+    [ "v8::HandleScope", "classv8_1_1internal_1_1HandleScope.html#a8b16bf00a6bc5a91a76e86067d2f9dfc", null ],
+    [ "isolate_", "classv8_1_1internal_1_1HandleScope.html#a23e98bec07fcceda664cd02651136563", null ],
+    [ "kCheckHandleThreshold", "classv8_1_1internal_1_1HandleScope.html#aba5a5d86706677947f728ef03adddee3", null ],
+    [ "prev_limit_", "classv8_1_1internal_1_1HandleScope.html#af8d4f2f7c8f615f20a9ad5d794dadebf", null ],
+    [ "prev_next_", "classv8_1_1internal_1_1HandleScope.html#aaa823fb44c52afae2823ba0a1576a858", null ]
 ];

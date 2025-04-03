@@ -6,5 +6,7 @@ var classv8_1_1internal_1_1SharedFunctionInfo_1_1ScriptIterator =
     [ "CurrentIndex", "classv8_1_1internal_1_1SharedFunctionInfo_1_1ScriptIterator.html#a5e9eb89d470e1a82d263b87fbe2d3fc4", null ],
     [ "Next", "classv8_1_1internal_1_1SharedFunctionInfo_1_1ScriptIterator.html#ad7206cd329aa92330c7a9cb6a0c8936b", null ],
     [ "operator=", "classv8_1_1internal_1_1SharedFunctionInfo_1_1ScriptIterator.html#ac54cca29d0492520d4fca6fa3fb5a788", null ],
-    [ "Reset", "classv8_1_1internal_1_1SharedFunctionInfo_1_1ScriptIterator.html#a69276fb20cd7e68d82d94fbabc0ceb29", null ]
+    [ "Reset", "classv8_1_1internal_1_1SharedFunctionInfo_1_1ScriptIterator.html#a69276fb20cd7e68d82d94fbabc0ceb29", null ],
+    [ "index_", "classv8_1_1internal_1_1SharedFunctionInfo_1_1ScriptIterator.html#a2a6b0a91e729124da0cef84cccb4eb66", null ],
+    [ "infos_", "classv8_1_1internal_1_1SharedFunctionInfo_1_1ScriptIterator.html#a78ca8e20c1fc2b7a4378e804272eaeb7", null ]
 ];

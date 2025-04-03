@@ -1,7 +1,26 @@
 var classv8_1_1internal_1_1CpuFeatures =
 [
     [ "CpuFeatures", "classv8_1_1internal_1_1CpuFeatures.html#ab201985089a19b0d3c7c42d88023da15", null ],
+    [ "dcache_line_size", "classv8_1_1internal_1_1CpuFeatures.html#ab2552a12f4ef4f13591b303696db29b9", null ],
+    [ "FlushICache", "classv8_1_1internal_1_1CpuFeatures.html#afa83236be0698dd1980722b5f56e966e", null ],
+    [ "icache_line_size", "classv8_1_1internal_1_1CpuFeatures.html#ac676ee97ad12a0fda46389cd57c23844", null ],
+    [ "IsSupported", "classv8_1_1internal_1_1CpuFeatures.html#a44305c4c7840c90b5cf4a0b6ebd791af", null ],
     [ "operator=", "classv8_1_1internal_1_1CpuFeatures.html#aa9ad5a07095ff98d40ee472322ad4165", null ],
+    [ "PrintFeatures", "classv8_1_1internal_1_1CpuFeatures.html#ab494f1c6e7fd14ba490530c2bd6a60bd", null ],
+    [ "PrintTarget", "classv8_1_1internal_1_1CpuFeatures.html#ae0fe4123ba495285648ec2a6232bd85f", null ],
+    [ "Probe", "classv8_1_1internal_1_1CpuFeatures.html#a81ae78f6f799c911bf55ca0e4099b6aa", null ],
+    [ "ProbeImpl", "classv8_1_1internal_1_1CpuFeatures.html#af6cc8344bc8cd1157441e24af6aa030e", null ],
+    [ "SetSupported", "classv8_1_1internal_1_1CpuFeatures.html#ad945190224fe2ce2f85997380e5407b9", null ],
+    [ "SetUnsupported", "classv8_1_1internal_1_1CpuFeatures.html#ae8c651152ecd9656789fb9930db69043", null ],
+    [ "SupportedFeatures", "classv8_1_1internal_1_1CpuFeatures.html#a481a85a8743cc9ef2303e3d9d58d4869", null ],
+    [ "SupportsOptimizer", "classv8_1_1internal_1_1CpuFeatures.html#a71ba2dffd690fda8713ca3e9099589a0", null ],
+    [ "SupportsWasmSimd128", "classv8_1_1internal_1_1CpuFeatures.html#a7b36448a7bd94e1f4a8288e0ed6313d5", null ],
     [ "ExternalReference", "classv8_1_1internal_1_1CpuFeatures.html#a6cad52a007e84a78f169131b667e2d49", null ],
-    [ "FlushInstructionCache", "classv8_1_1internal_1_1CpuFeatures.html#ab61383cb15b54cb6479c441c3500f234", null ]
+    [ "FlushInstructionCache", "classv8_1_1internal_1_1CpuFeatures.html#ab61383cb15b54cb6479c441c3500f234", null ],
+    [ "dcache_line_size_", "classv8_1_1internal_1_1CpuFeatures.html#a998571e44624cd38f2d1d1f868fcea0b", null ],
+    [ "icache_line_size_", "classv8_1_1internal_1_1CpuFeatures.html#a969bfb7b14676f419578f948e850355d", null ],
+    [ "initialized_", "classv8_1_1internal_1_1CpuFeatures.html#a3483d1fb0b62ee0ab2bc30583f55da2c", null ],
+    [ "supported_", "classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597", null ],
+    [ "supports_cetss_", "classv8_1_1internal_1_1CpuFeatures.html#adaeb818e67f2bce74895b733da63f451", null ],
+    [ "supports_wasm_simd_128_", "classv8_1_1internal_1_1CpuFeatures.html#a6120397cf8d6aeb2a07a11b37049d5cb", null ]
 ];

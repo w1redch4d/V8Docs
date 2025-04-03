@@ -2,7 +2,7 @@ var js_disposable_stack_8h =
 [
     [ "v8::internal::JSDisposableStackBase", "classv8_1_1internal_1_1JSDisposableStackBase.html", "classv8_1_1internal_1_1JSDisposableStackBase" ],
     [ "v8::internal::JSSyncDisposableStack", "classv8_1_1internal_1_1JSSyncDisposableStack.html", null ],
-    [ "v8::internal::JSAsyncDisposableStack", "classv8_1_1internal_1_1JSAsyncDisposableStack.html", null ],
+    [ "v8::internal::JSAsyncDisposableStack", "classv8_1_1internal_1_1JSAsyncDisposableStack.html", "classv8_1_1internal_1_1JSAsyncDisposableStack" ],
     [ "DisposeCallTypeBit", "js-disposable-stack_8h.html#af4361622d785cc9661a8dc08e855825e", null ],
     [ "DisposeHintBit", "js-disposable-stack_8h.html#a07bea9d579bf0422bacd8110a9e4301d", null ],
     [ "DisposableStackResourcesType", "js-disposable-stack_8h.html#a104729b53559a949ec96aede2767a0e4", [

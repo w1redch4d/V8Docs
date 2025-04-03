@@ -28,5 +28,8 @@ var classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Packet =
     [ "ParseSequence", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Packet.html#ac5227bde531f3e0d443b5ebf2a830ccd", null ],
     [ "Rewind", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Packet.html#aeba611a3a8e327fd2849e9fac8c861a0", null ],
     [ "SetError", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Packet.html#a1dd653b5152762ebc16745ecb508c455", null ],
-    [ "SetSequence", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Packet.html#a9b681c616027bf8fcaa87ebc9da9c5c2", null ]
+    [ "SetSequence", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Packet.html#a9b681c616027bf8fcaa87ebc9da9c5c2", null ],
+    [ "data_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Packet.html#aae3730383cc28899c2fafec5d15843df", null ],
+    [ "read_index_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Packet.html#a6efc6d845d429c00de9c91425e658b7b", null ],
+    [ "seq_", "classv8_1_1internal_1_1wasm_1_1gdb__server_1_1Packet.html#a0f566518db28ecc69fb7a76fa7d95600", null ]
 ];

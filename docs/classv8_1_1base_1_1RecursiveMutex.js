@@ -7,5 +7,6 @@ var classv8_1_1base_1_1RecursiveMutex =
     [ "Lock", "classv8_1_1base_1_1RecursiveMutex.html#a37a8771b715dac556b099bd4f90a5e12", null ],
     [ "operator=", "classv8_1_1base_1_1RecursiveMutex.html#a77bd263112c4764fec7ccb3a9cfb2bf7", null ],
     [ "TryLock", "classv8_1_1base_1_1RecursiveMutex.html#a89d4edea230fbbc34089442fdd68cff5", null ],
-    [ "Unlock", "classv8_1_1base_1_1RecursiveMutex.html#a7b1000f25567ddf72687c1b77426dd18", null ]
+    [ "Unlock", "classv8_1_1base_1_1RecursiveMutex.html#a7b1000f25567ddf72687c1b77426dd18", null ],
+    [ "native_handle_", "classv8_1_1base_1_1RecursiveMutex.html#a2b7e851641c2444e8a19a40f510252e4", null ]
 ];

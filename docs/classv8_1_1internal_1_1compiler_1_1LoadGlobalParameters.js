@@ -7,5 +7,8 @@ var classv8_1_1internal_1_1compiler_1_1LoadGlobalParameters =
     [ "hash_value", "classv8_1_1internal_1_1compiler_1_1LoadGlobalParameters.html#a5a21de017311f501c03b96f560459054", null ],
     [ "operator!=", "classv8_1_1internal_1_1compiler_1_1LoadGlobalParameters.html#ad23304264a206b4c6703b5febf2d89bc", null ],
     [ "operator<<", "classv8_1_1internal_1_1compiler_1_1LoadGlobalParameters.html#a6085443ba599b738a0dc6f1d98fda40a", null ],
-    [ "operator==", "classv8_1_1internal_1_1compiler_1_1LoadGlobalParameters.html#a64cd128069c0c6c08969fa8f9d1ea532", null ]
+    [ "operator==", "classv8_1_1internal_1_1compiler_1_1LoadGlobalParameters.html#a64cd128069c0c6c08969fa8f9d1ea532", null ],
+    [ "feedback_", "classv8_1_1internal_1_1compiler_1_1LoadGlobalParameters.html#aa2e7dfa87ff447697e2161a9d8eb8f29", null ],
+    [ "name_", "classv8_1_1internal_1_1compiler_1_1LoadGlobalParameters.html#ab46373342ff4569b155fd2c109a336a5", null ],
+    [ "typeof_mode_", "classv8_1_1internal_1_1compiler_1_1LoadGlobalParameters.html#a094d325126972ad60bc3db9bba9d6174", null ]
 ];

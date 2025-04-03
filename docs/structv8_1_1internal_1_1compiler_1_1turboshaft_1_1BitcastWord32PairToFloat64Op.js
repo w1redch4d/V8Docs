@@ -5,5 +5,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BitcastWord32PairToFloat64
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BitcastWord32PairToFloat64Op.html#a495a003f3d4c3a38a939273b6570b0ca", null ],
     [ "low_word32", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BitcastWord32PairToFloat64Op.html#a284511eda840d12bfb841c3b21581323", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BitcastWord32PairToFloat64Op.html#aa97c84e4ca2f5255fa5334300dcb1a12", null ],
-    [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BitcastWord32PairToFloat64Op.html#ab33db388e44d522264f3a88bd66f1732", null ]
+    [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BitcastWord32PairToFloat64Op.html#ab33db388e44d522264f3a88bd66f1732", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BitcastWord32PairToFloat64Op.html#aaba0c9275322e7946b44f4df9e0aed6f", null ]
 ];

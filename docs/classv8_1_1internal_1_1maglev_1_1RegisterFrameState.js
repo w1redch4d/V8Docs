@@ -21,5 +21,12 @@ var classv8_1_1internal_1_1maglev_1_1RegisterFrameState =
     [ "unblock", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a634ce28caf22af716ed96defbac31207", null ],
     [ "unblocked_free", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#aaa8e87b02cf8c45afb0d853d8c891fe1", null ],
     [ "UnblockedFreeIsEmpty", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a2c7301e9092234999c57ca7f6ac65ebe", null ],
-    [ "used", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a4a76fd9a4c89ac750455ab2f13e5e38d", null ]
+    [ "used", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a4a76fd9a4c89ac750455ab2f13e5e38d", null ],
+    [ "blocked_", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#aae9fd7ae7e79733cf59e17deb0956529", null ],
+    [ "free_", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#aa0d245a481ddfb8a16bebaa471cf97a2", null ],
+    [ "kAllocatableRegisters", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#aeead682a166c38dc2330626c1b7f65ca", null ],
+    [ "kEmptyRegList", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#abe5fe22eb5ad75b740ff636e9d684a9c", null ],
+    [ "kIsDoubleRegister", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#aa48368676f8b9833fa4fababcc48ba5b", null ],
+    [ "kIsGeneralRegister", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#aa3ae4e6975b4c5befc900c32e4885340", null ],
+    [ "values_", "classv8_1_1internal_1_1maglev_1_1RegisterFrameState.html#a494b4c4bd6137fa2b96e502a43d10b8e", null ]
 ];

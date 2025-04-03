@@ -127,6 +127,7 @@ var wasm_interpreter_8cc =
     [ "GetRegModeString", "wasm-interpreter_8cc.html#ae892bc3fc097ca0fd13e112d1b7c6def", null ],
     [ "InitInstructionTableOnce", "wasm-interpreter_8cc.html#a6b2245f4bf4d9616edf76d19ca7e60b2", null ],
     [ "InitTrapHandlersOnce", "wasm-interpreter_8cc.html#ad5e91dcbe2e58fb914c784fb76f983a9", null ],
+    [ "StructFieldOffset", "wasm-interpreter_8cc.html#af44f3b95276f84af374d9504025798d9", null ],
     [ "TrapMemOutOfBounds", "wasm-interpreter_8cc.html#a28ea4bff9d9e8909178d9747cb95e5a2", null ],
     [ "V8_DECLARE_ONCE", "wasm-interpreter_8cc.html#a3940992556e43c2afa5ea308909b6c84", null ],
     [ "V8_DECLARE_ONCE", "wasm-interpreter_8cc.html#a39100ec044584ca24cbacc187b95bb07", null ],

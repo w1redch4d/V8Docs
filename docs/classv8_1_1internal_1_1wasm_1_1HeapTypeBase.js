@@ -46,8 +46,12 @@ var classv8_1_1internal_1_1wasm_1_1HeapTypeBase =
     [ "is_index", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a84bdc079b88e430c9517248e23535bb1", null ],
     [ "is_string_view", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#ab10a579f1b3e311a1cb324a601061e40", null ],
     [ "is_top", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a11c8671ee8b244622a1c93daa12a3a3b", null ],
+    [ "is_valid", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a06f3ad6fce833e2f38e8a8ab53241133", null ],
     [ "name", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a3ee41346d419f3a9f97a7bd23d8c5172", null ],
     [ "representation", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a29cb627019a6d355e8afa9450ec2a9c7", null ],
     [ "representation_non_shared", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a4277658885203443b34bb5604c6c14d5", null ],
-    [ "ValueTypeBase", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a74695e5d99fb7e48526c96f7242552c3", null ]
+    [ "ValueTypeBase", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a74695e5d99fb7e48526c96f7242552c3", null ],
+    [ "kFirstSentinel", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a41d49de2f445605c90a94411d55356bf", null ],
+    [ "kLastSentinel", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a87747df10e4aa1bfb8db69f56c45ffa8", null ],
+    [ "representation_", "classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a272915b2883ed2a91cc6e44365784e55", null ]
 ];

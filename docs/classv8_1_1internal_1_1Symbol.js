@@ -7,13 +7,16 @@ var classv8_1_1internal_1_1Symbol =
     [ "IsPrivateNameBit", "classv8_1_1internal_1_1Symbol.html#aa5404e0353f55d5e09a278e6c97fcd2b", null ],
     [ "IsWellKnownSymbolBit", "classv8_1_1internal_1_1Symbol.html#ab7e10cf652c7c658eb5f882371bfee19", null ],
     [ "description", "classv8_1_1internal_1_1Symbol.html#a80290afdd1731c38d8560d05aba80530", null ],
+    [ "flags", "classv8_1_1internal_1_1Symbol.html#a1ba72a1868eee08f275e83eb84b60c0b", null ],
     [ "is_in_public_symbol_table", "classv8_1_1internal_1_1Symbol.html#ae401490cb70541e41bf883f662b63b06", null ],
     [ "is_interesting_symbol", "classv8_1_1internal_1_1Symbol.html#a3ef05e6f9c1b5ff23a9d18ef28db3ac3", null ],
     [ "is_private", "classv8_1_1internal_1_1Symbol.html#a3d711a37fc279512f1b32aabfcd887ff", null ],
     [ "is_private_brand", "classv8_1_1internal_1_1Symbol.html#af5ac57bef688b604122b478a9e0d8a4d", null ],
     [ "is_private_name", "classv8_1_1internal_1_1Symbol.html#adc9e1c8c77ca2722b654fb6101bd5606", null ],
     [ "is_well_known_symbol", "classv8_1_1internal_1_1Symbol.html#af3bee32f9e821f1577ee1254c3fffd0c", null ],
+    [ "PrivateSymbolToName", "classv8_1_1internal_1_1Symbol.html#ae46b4b01f9c11bf9c13f49b0106602ee", null ],
     [ "set_description", "classv8_1_1internal_1_1Symbol.html#a493d2e9960e0e0229d468bcf13bfd444", null ],
+    [ "set_flags", "classv8_1_1internal_1_1Symbol.html#a58f474a1ff11d33cd44ec6171df5be28", null ],
     [ "set_is_in_public_symbol_table", "classv8_1_1internal_1_1Symbol.html#a76c1fdd4470088126a90807d50f33535", null ],
     [ "set_is_interesting_symbol", "classv8_1_1internal_1_1Symbol.html#acd24d477438d57b146dbee17bbacc93c", null ],
     [ "set_is_private", "classv8_1_1internal_1_1Symbol.html#a05bc0feaca909ebfaac40bd6977bb4d1", null ],
@@ -28,5 +31,7 @@ var classv8_1_1internal_1_1Symbol =
     [ "ObjectTraits< Symbol >", "classv8_1_1internal_1_1Symbol.html#a411a2d4f3560329110f3761f5d398222", null ],
     [ "OffsetsForDebug", "classv8_1_1internal_1_1Symbol.html#a1e7ef7315cd297d6b6a956b93204f742", null ],
     [ "TorqueGeneratedSymbolAsserts", "classv8_1_1internal_1_1Symbol.html#a1358e8f243655e3f07b1287072b10da9", null ],
-    [ "V8HeapExplorer", "classv8_1_1internal_1_1Symbol.html#a29c5c7a1e13f0404746b9261f3764a7f", null ]
+    [ "V8HeapExplorer", "classv8_1_1internal_1_1Symbol.html#a29c5c7a1e13f0404746b9261f3764a7f", null ],
+    [ "description_", "classv8_1_1internal_1_1Symbol.html#a16b8242502b3469960bfe7b7e2f7ec6d", null ],
+    [ "flags_", "classv8_1_1internal_1_1Symbol.html#a3ea32529e07d588b6185d06c9a0a30f6", null ]
 ];

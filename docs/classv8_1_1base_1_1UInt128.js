@@ -6,5 +6,8 @@ var classv8_1_1base_1_1UInt128 =
     [ "DivModPowerOf2", "classv8_1_1base_1_1UInt128.html#a55b2f0a7468e0661f9236341f44551bb", null ],
     [ "IsZero", "classv8_1_1base_1_1UInt128.html#a9beef9f255e76effbd67b37f35c46022", null ],
     [ "Multiply", "classv8_1_1base_1_1UInt128.html#a936a97ce5f4eacbb149f813c645e242c", null ],
-    [ "Shift", "classv8_1_1base_1_1UInt128.html#a5a93b47c5e677ae838029a4105d6d832", null ]
+    [ "Shift", "classv8_1_1base_1_1UInt128.html#a5a93b47c5e677ae838029a4105d6d832", null ],
+    [ "high_bits_", "classv8_1_1base_1_1UInt128.html#af3937d529947f7939e851c31e7cfbfee", null ],
+    [ "kMask32", "classv8_1_1base_1_1UInt128.html#a93dc5dd8e6d020b279ae97045cb556b0", null ],
+    [ "low_bits_", "classv8_1_1base_1_1UInt128.html#a7858f09a121a7a9729890c361551e39b", null ]
 ];

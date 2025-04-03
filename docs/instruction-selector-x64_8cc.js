@@ -36,6 +36,8 @@ var instruction_selector_x64_8cc =
     [ "TryMatchScaledIndex64", "instruction-selector-x64_8cc.html#a0b312c1d5692426fd31a1e986b901bdf", null ],
     [ "TryMatchScaledIndex64", "instruction-selector-x64_8cc.html#a4f0bbb1d864f84074b02d3b385197b98", null ],
     [ "ValueFitsIntoImmediate", "instruction-selector-x64_8cc.html#aaa05fbcbb91b52842b7308426f2385f7", null ],
+    [ "VisitBinop", "instruction-selector-x64_8cc.html#a4817abebd1e8f58e47767b478dc16a97", null ],
+    [ "VisitBinop", "instruction-selector-x64_8cc.html#a150ece918b489cd954baba0286308a83", null ],
     [ "base", "instruction-selector-x64_8cc.html#a6a7a70fa2731b7ee389ef8a1cfce04c5", null ],
     [ "index", "instruction-selector-x64_8cc.html#a44a6c439c9a0f791173657640beff5a7", null ],
     [ "offset", "instruction-selector-x64_8cc.html#a97bd6c077f3c7769f575b82988b9b668", null ]

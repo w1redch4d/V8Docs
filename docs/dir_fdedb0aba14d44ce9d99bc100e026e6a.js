@@ -4,7 +4,7 @@ var dir_fdedb0aba14d44ce9d99bc100e026e6a =
     [ "assert-scope.h", "assert-scope_8h.html", "assert-scope_8h" ],
     [ "checks.h", "checks_8h.html", "checks_8h" ],
     [ "code-memory-access-inl.h", "code-memory-access-inl_8h.html", null ],
-    [ "code-memory-access.cc", "code-memory-access_8cc.html", null ],
+    [ "code-memory-access.cc", "code-memory-access_8cc.html", "code-memory-access_8cc" ],
     [ "code-memory-access.h", "code-memory-access_8h.html", "code-memory-access_8h" ],
     [ "globals.h", "common_2globals_8h.html", "common_2globals_8h" ],
     [ "high-allocation-throughput-scope.h", "high-allocation-throughput-scope_8h.html", "high-allocation-throughput-scope_8h" ],

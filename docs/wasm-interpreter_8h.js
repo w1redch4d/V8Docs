@@ -37,6 +37,10 @@ var wasm_interpreter_8h =
     [ "v8::internal::wasm::WasmEHDataGenerator", "classv8_1_1internal_1_1wasm_1_1WasmEHDataGenerator.html", "classv8_1_1internal_1_1wasm_1_1WasmEHDataGenerator" ],
     [ "v8::internal::wasm::WasmBytecode", "classv8_1_1internal_1_1wasm_1_1WasmBytecode.html", "classv8_1_1internal_1_1wasm_1_1WasmBytecode" ],
     [ "v8::internal::wasm::WasmBytecodeGenerator", "classv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator.html", "classv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator" ],
+    [ "v8::internal::wasm::WasmBytecodeGenerator::BlockData", "structv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator_1_1BlockData.html", "structv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator_1_1BlockData" ],
+    [ "v8::internal::wasm::WasmBytecodeGenerator::Simd128Hash", "structv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator_1_1Simd128Hash.html", "structv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator_1_1Simd128Hash" ],
+    [ "v8::internal::wasm::WasmBytecodeGenerator::RollbackStack", "classv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator_1_1RollbackStack.html", "classv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator_1_1RollbackStack" ],
+    [ "v8::internal::wasm::WasmBytecodeGenerator::RollbackStack::Entry", "structv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator_1_1RollbackStack_1_1Entry.html", "structv8_1_1internal_1_1wasm_1_1WasmBytecodeGenerator_1_1RollbackStack_1_1Entry" ],
     [ "v8::internal::wasm::ClearThreadInWasmScope", "classv8_1_1internal_1_1wasm_1_1ClearThreadInWasmScope.html", "classv8_1_1internal_1_1wasm_1_1ClearThreadInWasmScope" ],
     [ "DEFINE_INSTR_HANDLER", "wasm-interpreter_8h.html#a3c75054618d632d22b9354cca067009c", null ],
     [ "INSTRUCTION_HANDLER_FUNC", "wasm-interpreter_8h.html#a7aabc58025e6dbcafd34ed841d46375f", null ],
@@ -77,6 +81,7 @@ var wasm_interpreter_8h =
     [ "GetRegMode", "wasm-interpreter_8h.html#a0708809a25831cd5fcd7b6fac612a1ae", null ],
     [ "ReadFnId", "wasm-interpreter_8h.html#a570806c1d6dbbd9380db0a63ce9a702d", null ],
     [ "trace_PushSlot", "wasm-interpreter_8h.html#a83cd186233a54eb3f0c9768675cf64f7", null ],
+    [ "value_type", "wasm-interpreter_8h.html#a0dc6377b617bf569ed28973352a44899", null ],
     [ "value_type< double >", "wasm-interpreter_8h.html#a60678b991f4cee849081b212e1f3c038", null ],
     [ "value_type< float >", "wasm-interpreter_8h.html#aef245dd6e86e8c3b099a3cdc8e4a57a3", null ],
     [ "value_type< int32_t >", "wasm-interpreter_8h.html#ac2f64000e79bed04a0717c9c320443f6", null ],
@@ -85,5 +90,11 @@ var wasm_interpreter_8h =
     [ "value_type< uint32_t >", "wasm-interpreter_8h.html#a7c87bd4f597e3f981f77c12ed22010ca", null ],
     [ "value_type< uint64_t >", "wasm-interpreter_8h.html#a1a71d7a4fadd81b1d710c569f7e73c2b", null ],
     [ "value_type< WasmRef >", "wasm-interpreter_8h.html#aaab819548034d62f39ccb5e6f3a67204", null ],
-    [ "void", "wasm-interpreter_8h.html#ac81d27d6edb00aeed62a3e4745b8cba0", null ]
+    [ "void", "wasm-interpreter_8h.html#ac81d27d6edb00aeed62a3e4745b8cba0", null ],
+    [ "kCodeOffsetSize", "wasm-interpreter_8h.html#a8c0cc0f39bb603e027500f53ad71f82a", null ],
+    [ "kInstructionTableMask", "wasm-interpreter_8h.html#a9861ce4bc9b1bda23c5a70aef42bca55", null ],
+    [ "kInstructionTableSize", "wasm-interpreter_8h.html#ad5d89398305b2657bac32eb769250990", null ],
+    [ "kOperatorModeCount", "wasm-interpreter_8h.html#a4782702f20c1a1743add173ca5b9c2ab", null ],
+    [ "kRegModes", "wasm-interpreter_8h.html#a41fc1969746a6944176cf38b876c7936", null ],
+    [ "kSlotSize", "wasm-interpreter_8h.html#a19ce57ad28a206186b8dd82ac3378115", null ]
 ];

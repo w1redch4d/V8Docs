@@ -5,5 +5,6 @@ var classv8_1_1internal_1_1NewLargeObjectSpace =
     [ "Available", "classv8_1_1internal_1_1NewLargeObjectSpace.html#af9c72dc892af0840e149f8cbcbef5336", null ],
     [ "Flip", "classv8_1_1internal_1_1NewLargeObjectSpace.html#a235266ffb16e5e9cefa6d949b7235748", null ],
     [ "FreeDeadObjects", "classv8_1_1internal_1_1NewLargeObjectSpace.html#a05ebdbd448eb623bafb96961987600eb", null ],
-    [ "SetCapacity", "classv8_1_1internal_1_1NewLargeObjectSpace.html#a560dd4f90399a35d0190ca947cbaac63", null ]
+    [ "SetCapacity", "classv8_1_1internal_1_1NewLargeObjectSpace.html#a560dd4f90399a35d0190ca947cbaac63", null ],
+    [ "capacity_", "classv8_1_1internal_1_1NewLargeObjectSpace.html#a07a91acf42944676b1a902eeea3ad919", null ]
 ];

@@ -1,6 +1,7 @@
 var futex_emulation_8cc =
 [
     [ "v8::internal::FutexWaitList", "classv8_1_1internal_1_1FutexWaitList.html", "classv8_1_1internal_1_1FutexWaitList" ],
+    [ "v8::internal::FutexWaitList::HeadAndTail", "structv8_1_1internal_1_1FutexWaitList_1_1HeadAndTail.html", "structv8_1_1internal_1_1FutexWaitList_1_1HeadAndTail" ],
     [ "v8::internal::ResolveAsyncWaiterPromisesTask", "classv8_1_1internal_1_1ResolveAsyncWaiterPromisesTask.html", "classv8_1_1internal_1_1ResolveAsyncWaiterPromisesTask" ],
     [ "v8::internal::AsyncWaiterTimeoutTask", "classv8_1_1internal_1_1AsyncWaiterTimeoutTask.html", "classv8_1_1internal_1_1AsyncWaiterTimeoutTask" ],
     [ "AtomicsWaitEvent", "futex-emulation_8cc.html#a4ea3214a4d9ab732893a86f39c5885d4", null ],

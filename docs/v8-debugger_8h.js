@@ -3,6 +3,7 @@ var v8_debugger_8h =
     [ "v8_inspector::WrapSerializationOptions", "structv8__inspector_1_1WrapSerializationOptions.html", "structv8__inspector_1_1WrapSerializationOptions" ],
     [ "v8_inspector::WrapOptions", "structv8__inspector_1_1WrapOptions.html", "structv8__inspector_1_1WrapOptions" ],
     [ "v8_inspector::V8Debugger", "classv8__inspector_1_1V8Debugger.html", "classv8__inspector_1_1V8Debugger" ],
+    [ "v8_inspector::V8Debugger::CachedStackFrameKey", "structv8__inspector_1_1V8Debugger_1_1CachedStackFrameKey.html", "structv8__inspector_1_1V8Debugger_1_1CachedStackFrameKey" ],
     [ "v8_inspector::V8Debugger::CachedStackFrameKey::Equal", "structv8__inspector_1_1V8Debugger_1_1CachedStackFrameKey_1_1Equal.html", "structv8__inspector_1_1V8Debugger_1_1CachedStackFrameKey_1_1Equal" ],
     [ "v8_inspector::V8Debugger::CachedStackFrameKey::Hash", "structv8__inspector_1_1V8Debugger_1_1CachedStackFrameKey_1_1Hash.html", "structv8__inspector_1_1V8Debugger_1_1CachedStackFrameKey_1_1Hash" ],
     [ "TerminateExecutionCallback", "v8-debugger_8h.html#aa8742aa0d06c28ac1097b9027f7eb2bc", null ],

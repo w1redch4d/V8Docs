@@ -20,5 +20,9 @@ var classv8_1_1internal_1_1CodeStubArguments =
     [ "MayHavePaddingArguments", "classv8_1_1internal_1_1CodeStubArguments.html#ab3ccf0411cc2f11ac23dc7ffac918da0", null ],
     [ "PopAndReturn", "classv8_1_1internal_1_1CodeStubArguments.html#a51a35185d9a2320b1f34452f4f19a376", null ],
     [ "SetArgumentValue", "classv8_1_1internal_1_1CodeStubArguments.html#a3184431e77f0795c15f7b1208f5a9009", null ],
-    [ "SetReceiver", "classv8_1_1internal_1_1CodeStubArguments.html#ae4b6e7718cfad7ef1ef2ee0c6846a8d5", null ]
+    [ "SetReceiver", "classv8_1_1internal_1_1CodeStubArguments.html#ae4b6e7718cfad7ef1ef2ee0c6846a8d5", null ],
+    [ "argc_", "classv8_1_1internal_1_1CodeStubArguments.html#a33b9b8ad45f106727a657f30d954e363", null ],
+    [ "assembler_", "classv8_1_1internal_1_1CodeStubArguments.html#ab9f5db6a51e68cf2b37aee8b5a6fae3d", null ],
+    [ "base_", "classv8_1_1internal_1_1CodeStubArguments.html#ab04f2769f2bcbd19a09518bac3556739", null ],
+    [ "fp_", "classv8_1_1internal_1_1CodeStubArguments.html#acbc94202f8a251a2d46710db39c9366c", null ]
 ];

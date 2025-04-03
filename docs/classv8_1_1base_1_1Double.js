@@ -7,6 +7,7 @@ var classv8_1_1base_1_1Double =
     [ "AsDiyFp", "classv8_1_1base_1_1Double.html#aa9f07c288d60d1529fd6b02af51233a6", null ],
     [ "AsNormalizedDiyFp", "classv8_1_1base_1_1Double.html#a0bb553edd302cd70f12b9bf00a14b20e", null ],
     [ "AsUint64", "classv8_1_1base_1_1Double.html#a19891de67d75137c6fc1acbcbb66590a", null ],
+    [ "DiyFpToUint64", "classv8_1_1base_1_1Double.html#ae10c62a2c137f0428c1f6c190604141c", null ],
     [ "Exponent", "classv8_1_1base_1_1Double.html#a0c4b1ee8e0e90f085bf8082ded8d2ba6", null ],
     [ "IsDenormal", "classv8_1_1base_1_1Double.html#a5e2cbce4866ca78c848f8bb45559a668", null ],
     [ "IsInfinite", "classv8_1_1base_1_1Double.html#a424289d8df0c2cd52370d22f50731ab9", null ],
@@ -15,6 +16,18 @@ var classv8_1_1base_1_1Double =
     [ "NormalizedBoundaries", "classv8_1_1base_1_1Double.html#a6ed21152e9f40f53fefe29c50e8e12a6", null ],
     [ "Sign", "classv8_1_1base_1_1Double.html#ac5aad4529bf735aee75416862385b0ed", null ],
     [ "Significand", "classv8_1_1base_1_1Double.html#af4515d481056a88de2510ff326da9275", null ],
+    [ "SignificandSizeForOrderOfMagnitude", "classv8_1_1base_1_1Double.html#a7b008f3920f4bcafb2917e44cfbfc7f5", null ],
     [ "UpperBoundary", "classv8_1_1base_1_1Double.html#aca3409ded75fab2dd028ba811763dfa5", null ],
-    [ "value", "classv8_1_1base_1_1Double.html#a67251918972949199a6e4a91c9a986bc", null ]
+    [ "value", "classv8_1_1base_1_1Double.html#a67251918972949199a6e4a91c9a986bc", null ],
+    [ "d64_", "classv8_1_1base_1_1Double.html#ae979f6111a206ce34d5344a5faf92153", null ],
+    [ "kDenormalExponent", "classv8_1_1base_1_1Double.html#a7ba40eb14a5cc7d174824e9291439840", null ],
+    [ "kExponentBias", "classv8_1_1base_1_1Double.html#a70a02dfb52e7f2ca63049cd6a04d1c98", null ],
+    [ "kExponentMask", "classv8_1_1base_1_1Double.html#a509e2cf0fc5e637e311d52ce4b8f51d0", null ],
+    [ "kHiddenBit", "classv8_1_1base_1_1Double.html#abb3f6a76b820bd9594eac2ec9152e368", null ],
+    [ "kInfinity", "classv8_1_1base_1_1Double.html#a8f6f45ccff028f87e439bc5efc012f28", null ],
+    [ "kMaxExponent", "classv8_1_1base_1_1Double.html#a609477815f7f800ad51dd436fe258417", null ],
+    [ "kPhysicalSignificandSize", "classv8_1_1base_1_1Double.html#a9d122a735836bb16f9a690e629f8ca40", null ],
+    [ "kSignificandMask", "classv8_1_1base_1_1Double.html#a391fee3ff5ef598b7e8c509026c018fb", null ],
+    [ "kSignificandSize", "classv8_1_1base_1_1Double.html#a173f8dc5ee4a8a2f0ffae591bb4e0405", null ],
+    [ "kSignMask", "classv8_1_1base_1_1Double.html#a051d00801bbcbdb4d6f0c59298409aaf", null ]
 ];

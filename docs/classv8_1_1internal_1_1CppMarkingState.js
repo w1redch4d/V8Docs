@@ -6,5 +6,7 @@ var classv8_1_1internal_1_1CppMarkingState =
     [ "IsLocalEmpty", "classv8_1_1internal_1_1CppMarkingState.html#ae8ac95f50022244afacde9aadea45536", null ],
     [ "MarkAndPush", "classv8_1_1internal_1_1CppMarkingState.html#a73a1458bd1ec8b8b15ac575757451250", null ],
     [ "operator=", "classv8_1_1internal_1_1CppMarkingState.html#a0d6954c62de31358bd9c6dad08ae0b02", null ],
-    [ "Publish", "classv8_1_1internal_1_1CppMarkingState.html#ab7d3d60cd074c213ad484f1a17df0977", null ]
+    [ "Publish", "classv8_1_1internal_1_1CppMarkingState.html#ab7d3d60cd074c213ad484f1a17df0977", null ],
+    [ "marking_state_", "classv8_1_1internal_1_1CppMarkingState.html#a590c43e7cec7919aca4f4eed851449cd", null ],
+    [ "owned_marking_state_", "classv8_1_1internal_1_1CppMarkingState.html#a17f5ec38f0b58d19b385d64fc5d52a39", null ]
 ];

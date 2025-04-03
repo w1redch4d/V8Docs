@@ -13,5 +13,11 @@ var classv8_1_1internal_1_1ClassBoilerplate =
       [ "kSetter", "classv8_1_1internal_1_1ClassBoilerplate.html#a5474505e0ac613ae3c7201eca67ccbc7a5813096375f4c6d773167cea7a309db4", null ],
       [ "kAutoAccessor", "classv8_1_1internal_1_1ClassBoilerplate.html#a5474505e0ac613ae3c7201eca67ccbc7a15c44cbbdee9cca177b9c1ac296eb59b", null ]
     ] ],
-    [ "AddToPropertiesTemplate", "classv8_1_1internal_1_1ClassBoilerplate.html#a2f4cdcc116e037d4d18836927ab061bd", null ]
+    [ "AddToElementsTemplate", "classv8_1_1internal_1_1ClassBoilerplate.html#a6c4a966c07df014957e41e2561bf5478", null ],
+    [ "AddToPropertiesTemplate", "classv8_1_1internal_1_1ClassBoilerplate.html#a2d5fb43df9a2ced28bbaa68035accfc0", null ],
+    [ "AddToPropertiesTemplate", "classv8_1_1internal_1_1ClassBoilerplate.html#a2f4cdcc116e037d4d18836927ab061bd", null ],
+    [ "New", "classv8_1_1internal_1_1ClassBoilerplate.html#ac42f55bd0031c76c690863988e0581f1", null ],
+    [ "OBJECT_CONSTRUCTORS", "classv8_1_1internal_1_1ClassBoilerplate.html#ad8437822a23fcf7646696c9382ba8d8f", null ],
+    [ "kMinimumClassPropertiesCount", "classv8_1_1internal_1_1ClassBoilerplate.html#a3cb247fe842669c83c2b3f587497bbc8", null ],
+    [ "kMinimumPrototypePropertiesCount", "classv8_1_1internal_1_1ClassBoilerplate.html#a2601877e0de901316eac55dbbaf37212", null ]
 ];

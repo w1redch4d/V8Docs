@@ -13,6 +13,7 @@ var classv8_1_1base_1_1BoundedPageAllocator =
     [ "AllocatePages", "classv8_1_1base_1_1BoundedPageAllocator.html#a0de34af3c63e3a50ed6f8613720286b6", null ],
     [ "AllocatePagesAt", "classv8_1_1base_1_1BoundedPageAllocator.html#a282d7487ccd135307e166d5af65f65a6", null ],
     [ "AllocatePageSize", "classv8_1_1base_1_1BoundedPageAllocator.html#af7b999d6c3a3526636230bf6b7d72784", null ],
+    [ "AllocationStatusToString", "classv8_1_1base_1_1BoundedPageAllocator.html#a6c000e1f1efaf321f5df3b4738cbe77c", null ],
     [ "begin", "classv8_1_1base_1_1BoundedPageAllocator.html#aa8e5cc481084f4dfa3ee3dc68084f8e5", null ],
     [ "CommitPageSize", "classv8_1_1base_1_1BoundedPageAllocator.html#a68462e5a1751aa3a8fb0068deca16c5f", null ],
     [ "contains", "classv8_1_1base_1_1BoundedPageAllocator.html#a76e61198e5317b3a67b18de065ce1f14", null ],
@@ -28,5 +29,13 @@ var classv8_1_1base_1_1BoundedPageAllocator =
     [ "SealPages", "classv8_1_1base_1_1BoundedPageAllocator.html#a32b14d93303a4af5466367ba5f74824e", null ],
     [ "SetPermissions", "classv8_1_1base_1_1BoundedPageAllocator.html#ae5b6f900d5722eb27be5eb376b8228a3", null ],
     [ "SetRandomMmapSeed", "classv8_1_1base_1_1BoundedPageAllocator.html#a53d343cc7d2acb2f059e6dd4ea29bc0f", null ],
-    [ "size", "classv8_1_1base_1_1BoundedPageAllocator.html#a459d26a32a75ec7e9585463866ccbb38", null ]
+    [ "size", "classv8_1_1base_1_1BoundedPageAllocator.html#a459d26a32a75ec7e9585463866ccbb38", null ],
+    [ "allocate_page_size_", "classv8_1_1base_1_1BoundedPageAllocator.html#a106675cf9ddf90fde0f2c332f00442a9", null ],
+    [ "allocation_status_", "classv8_1_1base_1_1BoundedPageAllocator.html#af2e36f511c7f7bd4936cb863dff23a07", null ],
+    [ "commit_page_size_", "classv8_1_1base_1_1BoundedPageAllocator.html#a122331a9de46f460a27b8a60e9c6d211", null ],
+    [ "mutex_", "classv8_1_1base_1_1BoundedPageAllocator.html#aaabd45a4d6ff4de06fb844db89642915", null ],
+    [ "page_allocator_", "classv8_1_1base_1_1BoundedPageAllocator.html#aeecd64d15c0257b9dd9fdcbc3818ef39", null ],
+    [ "page_freeing_mode_", "classv8_1_1base_1_1BoundedPageAllocator.html#a51f8c5593cbaa83d1e6adf2329b16200", null ],
+    [ "page_initialization_mode_", "classv8_1_1base_1_1BoundedPageAllocator.html#a5747d9a86be090fe02af516cab372d1c", null ],
+    [ "region_allocator_", "classv8_1_1base_1_1BoundedPageAllocator.html#a0b5e659399f7e1604c84d0800ac97e03", null ]
 ];

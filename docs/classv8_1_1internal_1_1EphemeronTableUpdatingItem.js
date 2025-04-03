@@ -6,5 +6,6 @@ var classv8_1_1internal_1_1EphemeronTableUpdatingItem =
     ] ],
     [ "EphemeronTableUpdatingItem", "classv8_1_1internal_1_1EphemeronTableUpdatingItem.html#a7e6d6b29e5e1b29d8f9d55450683e545", null ],
     [ "~EphemeronTableUpdatingItem", "classv8_1_1internal_1_1EphemeronTableUpdatingItem.html#ac54e0464bf7d4c9057d9a4480f6a6697", null ],
-    [ "Process", "classv8_1_1internal_1_1EphemeronTableUpdatingItem.html#ac949b97b5c3389e75e56760c50a48f20", null ]
+    [ "Process", "classv8_1_1internal_1_1EphemeronTableUpdatingItem.html#ac949b97b5c3389e75e56760c50a48f20", null ],
+    [ "heap_", "classv8_1_1internal_1_1EphemeronTableUpdatingItem.html#a9d091bd8570c5496a36cae397b82ab77", null ]
 ];

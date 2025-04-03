@@ -2,6 +2,7 @@ var ast_value_factory_8h =
 [
     [ "v8::internal::AstRawString", "classv8_1_1internal_1_1AstRawString.html", "classv8_1_1internal_1_1AstRawString" ],
     [ "v8::internal::AstConsString", "classv8_1_1internal_1_1AstConsString.html", "classv8_1_1internal_1_1AstConsString" ],
+    [ "v8::internal::AstConsString::Segment", "structv8_1_1internal_1_1AstConsString_1_1Segment.html", "structv8_1_1internal_1_1AstConsString_1_1Segment" ],
     [ "v8::internal::AstBigInt", "classv8_1_1internal_1_1AstBigInt.html", "classv8_1_1internal_1_1AstBigInt" ],
     [ "v8::internal::AstRawStringMapMatcher", "structv8_1_1internal_1_1AstRawStringMapMatcher.html", "structv8_1_1internal_1_1AstRawStringMapMatcher" ],
     [ "v8::internal::AstStringConstants", "classv8_1_1internal_1_1AstStringConstants.html", "classv8_1_1internal_1_1AstStringConstants" ],

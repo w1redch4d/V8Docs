@@ -1,6 +1,7 @@
 var assembler_arm_8h =
 [
     [ "v8::internal::Operand", "classv8_1_1internal_1_1Operand.html", "classv8_1_1internal_1_1Operand" ],
+    [ "v8::internal::Operand::Value", "unionv8_1_1internal_1_1Operand_1_1Value.html", "unionv8_1_1internal_1_1Operand_1_1Value" ],
     [ "v8::internal::MemOperand", "classv8_1_1internal_1_1MemOperand.html", "classv8_1_1internal_1_1MemOperand" ],
     [ "v8::internal::NeonMemOperand", "classv8_1_1internal_1_1NeonMemOperand.html", "classv8_1_1internal_1_1NeonMemOperand" ],
     [ "v8::internal::NeonListOperand", "classv8_1_1internal_1_1NeonListOperand.html", "classv8_1_1internal_1_1NeonListOperand" ],

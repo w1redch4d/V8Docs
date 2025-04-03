@@ -1,9 +1,9 @@
 var wasm_objects_inl_8h =
 [
-    [ "v8::internal::CastTraits< WasmExportedFunction >", "structv8_1_1internal_1_1CastTraits_3_01WasmExportedFunction_01_4.html", null ],
-    [ "v8::internal::CastTraits< WasmJSFunction >", "structv8_1_1internal_1_1CastTraits_3_01WasmJSFunction_01_4.html", null ],
-    [ "v8::internal::CastTraits< WasmCapiFunction >", "structv8_1_1internal_1_1CastTraits_3_01WasmCapiFunction_01_4.html", null ],
-    [ "v8::internal::CastTraits< WasmExternalFunction >", "structv8_1_1internal_1_1CastTraits_3_01WasmExternalFunction_01_4.html", null ],
+    [ "v8::internal::CastTraits< WasmExportedFunction >", "structv8_1_1internal_1_1CastTraits_3_01WasmExportedFunction_01_4.html", "structv8_1_1internal_1_1CastTraits_3_01WasmExportedFunction_01_4" ],
+    [ "v8::internal::CastTraits< WasmJSFunction >", "structv8_1_1internal_1_1CastTraits_3_01WasmJSFunction_01_4.html", "structv8_1_1internal_1_1CastTraits_3_01WasmJSFunction_01_4" ],
+    [ "v8::internal::CastTraits< WasmCapiFunction >", "structv8_1_1internal_1_1CastTraits_3_01WasmCapiFunction_01_4.html", "structv8_1_1internal_1_1CastTraits_3_01WasmCapiFunction_01_4" ],
+    [ "v8::internal::CastTraits< WasmExternalFunction >", "structv8_1_1internal_1_1CastTraits_3_01WasmExternalFunction_01_4.html", "structv8_1_1internal_1_1CastTraits_3_01WasmExternalFunction_01_4" ],
     [ "OPTIONAL_ACCESSORS", "wasm-objects-inl_8h.html#a53e88973a1c157bcd7163b40f88545ca", null ],
     [ "PRIMITIVE_ACCESSORS", "wasm-objects-inl_8h.html#a524271b5340ad91dd6529b475f9a5ce5", null ],
     [ "ACCESSORS", "wasm-objects-inl_8h.html#a35901452236bbf7629871be3c0e0f04c", null ],

@@ -7,5 +7,6 @@ var classv8_1_1internal_1_1compiler_1_1BytecodeLivenessMap =
     [ "GetLiveness", "classv8_1_1internal_1_1compiler_1_1BytecodeLivenessMap.html#a7c19e66ef4070e5d70892c2009716be9", null ],
     [ "GetOutLiveness", "classv8_1_1internal_1_1compiler_1_1BytecodeLivenessMap.html#a91fadc6b57179a828951b090a041da1c", null ],
     [ "GetOutLiveness", "classv8_1_1internal_1_1compiler_1_1BytecodeLivenessMap.html#a6837f01d5d47ebd95ba25a85a8b2f912", null ],
-    [ "InsertNewLiveness", "classv8_1_1internal_1_1compiler_1_1BytecodeLivenessMap.html#a417d4a9433b4e298bf3c38442cf9254d", null ]
+    [ "InsertNewLiveness", "classv8_1_1internal_1_1compiler_1_1BytecodeLivenessMap.html#a417d4a9433b4e298bf3c38442cf9254d", null ],
+    [ "liveness_", "classv8_1_1internal_1_1compiler_1_1BytecodeLivenessMap.html#a832043e0b9670bb7fabde75aad45d654", null ]
 ];

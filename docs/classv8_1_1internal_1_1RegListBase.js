@@ -2,9 +2,11 @@ var classv8_1_1internal_1_1RegListBase =
 [
     [ "Iterator", "classv8_1_1internal_1_1RegListBase_1_1Iterator.html", "classv8_1_1internal_1_1RegListBase_1_1Iterator" ],
     [ "ReverseIterator", "classv8_1_1internal_1_1RegListBase_1_1ReverseIterator.html", "classv8_1_1internal_1_1RegListBase_1_1ReverseIterator" ],
+    [ "num_registers_sized_storage_t", "classv8_1_1internal_1_1RegListBase.html#ad85757cb3cffef9f7a04eebad4c4dd02", null ],
     [ "storage_t", "classv8_1_1internal_1_1RegListBase.html#a6f1ba780b2d4796ab6cae34685f34dcb", null ],
     [ "RegListBase", "classv8_1_1internal_1_1RegListBase.html#a5d925d927c8d35be7f8753d05c93e55a", null ],
     [ "RegListBase", "classv8_1_1internal_1_1RegListBase.html#a097d48cc6913052c0529ef6a236dc3d5", null ],
+    [ "RegListBase", "classv8_1_1internal_1_1RegListBase.html#a46e2004066b979c2fd8b57af4689960a", null ],
     [ "begin", "classv8_1_1internal_1_1RegListBase.html#a44cb700e1d57613b7ea3fccda7f08d54", null ],
     [ "bits", "classv8_1_1internal_1_1RegListBase.html#ae72b648167186792e2a8be007e5458bd", null ],
     [ "clear", "classv8_1_1internal_1_1RegListBase.html#a6f885c401ebbf3ab0b356ac8d53c97f9", null ],
@@ -12,6 +14,8 @@ var classv8_1_1internal_1_1RegListBase =
     [ "Count", "classv8_1_1internal_1_1RegListBase.html#a8a586367d3a47c009d14bd52a47cd45b", null ],
     [ "end", "classv8_1_1internal_1_1RegListBase.html#af3b91a6336b68fb9392925ab5c6361bb", null ],
     [ "first", "classv8_1_1internal_1_1RegListBase.html#a1c9b30c12b89e4aa9bd12f3c9919072a", null ],
+    [ "FromBits", "classv8_1_1internal_1_1RegListBase.html#ab2fe6740034402edd50720504a8fbd30", null ],
+    [ "FromBits", "classv8_1_1internal_1_1RegListBase.html#aed120668a5cef2948def0e9b3b25e822", null ],
     [ "has", "classv8_1_1internal_1_1RegListBase.html#a3856ba5b1ccfe7deabfc70a4ce9ed6be", null ],
     [ "is_empty", "classv8_1_1internal_1_1RegListBase.html#a367df28bdf4931ccbde44a11e8d5e731", null ],
     [ "last", "classv8_1_1internal_1_1RegListBase.html#a2c77983781a6f181ae72bca00b565c7b", null ],
@@ -28,5 +32,6 @@ var classv8_1_1internal_1_1RegListBase =
     [ "PopFirst", "classv8_1_1internal_1_1RegListBase.html#af13887cd9efff73950713f8c7e53954b", null ],
     [ "rbegin", "classv8_1_1internal_1_1RegListBase.html#a3af2d47283becf6423a62fb0fd091c9b", null ],
     [ "rend", "classv8_1_1internal_1_1RegListBase.html#a6ab4d3db35cb6d2e73b1fc89ca8b031b", null ],
-    [ "set", "classv8_1_1internal_1_1RegListBase.html#a1f08fc10b3a7af8861cf2c6db5319ee7", null ]
+    [ "set", "classv8_1_1internal_1_1RegListBase.html#a1f08fc10b3a7af8861cf2c6db5319ee7", null ],
+    [ "regs_", "classv8_1_1internal_1_1RegListBase.html#a900bafb539436df289ae68adfdbb9342", null ]
 ];

@@ -1,8 +1,15 @@
 var classv8_1_1internal_1_1wasm_1_1LiftoffRegister =
 [
+    [ "storage_t", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#ad4717e1e77df8d604f11ccd6c0a98a9b", null ],
     [ "LiftoffRegister", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#afa29ee36e13d42c9eb6dece0e28016e3", null ],
     [ "LiftoffRegister", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#afe8abbcd102bd23ad827f255eeae9d08", null ],
+    [ "LiftoffRegister", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#ae737a3bf56490d5dfe43bdc13bbe6adb", null ],
+    [ "ForFpPair", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a27bed6d224c2fe6769a6321295bc9725", null ],
+    [ "ForPair", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#aba984185e44078fb6d825166349baf59", null ],
     [ "fp", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a1996b4ab7a93d190356ec17bd19a5371", null ],
+    [ "from_code", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a435030157e362bc9c5e91f14baa3bd3d", null ],
+    [ "from_external_code", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#aae826e47c601d5b05efd51f52c497d49", null ],
+    [ "from_liftoff_code", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a24497762c993ca062927725a767e5c55", null ],
     [ "gp", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#afea974be4a8509ca2745cefe9522f434", null ],
     [ "high", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a7a854f2d7639af8ad66bcc9ef723b33a", null ],
     [ "high_fp", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a07b3baff5528ee1d17cd00c64f90f58e", null ],
@@ -19,5 +26,7 @@ var classv8_1_1internal_1_1wasm_1_1LiftoffRegister =
     [ "operator!=", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a6d9fa3ecaafa12166879fb320b572c60", null ],
     [ "operator==", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a009c99e8e28dba64e719ef04e2840ea4", null ],
     [ "overlaps", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a362e2adb6a60df3a3dfe814edc1f2d25", null ],
-    [ "reg_class", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a9bd0779866c41b7b3f7ffe73f3a466a0", null ]
+    [ "reg_class", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a9bd0779866c41b7b3f7ffe73f3a466a0", null ],
+    [ "code_", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a36a9b84185d4df18af1575a18bf3fca9", null ],
+    [ "needed_bits", "classv8_1_1internal_1_1wasm_1_1LiftoffRegister.html#a9ef2a6cde4d9da78c823a3e48f48b1b1", null ]
 ];

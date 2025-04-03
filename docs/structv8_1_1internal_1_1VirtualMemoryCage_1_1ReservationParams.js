@@ -1,6 +1,7 @@
 var structv8_1_1internal_1_1VirtualMemoryCage_1_1ReservationParams =
 [
     [ "base_alignment", "structv8_1_1internal_1_1VirtualMemoryCage_1_1ReservationParams.html#afc9887890427c0fea43abb68622a975a", null ],
+    [ "kAnyBaseAlignment", "structv8_1_1internal_1_1VirtualMemoryCage_1_1ReservationParams.html#aaca045d93711d362d7eae8d91053e9ab", null ],
     [ "page_allocator", "structv8_1_1internal_1_1VirtualMemoryCage_1_1ReservationParams.html#ad9b7d547e3b296ff9242def4d15abe7a", null ],
     [ "page_freeing_mode", "structv8_1_1internal_1_1VirtualMemoryCage_1_1ReservationParams.html#aa088ef0e48b77cd345adb963a3f6fb14", null ],
     [ "page_initialization_mode", "structv8_1_1internal_1_1VirtualMemoryCage_1_1ReservationParams.html#a3da0924bd72e8be3bab61ab567c1c122", null ],

@@ -6,5 +6,6 @@ var classv8_1_1internal_1_1maglev_1_1FixedInputNodeTMixin =
     [ "has_inputs", "classv8_1_1internal_1_1maglev_1_1FixedInputNodeTMixin.html#a432ee05f9a9aae49cd0c0962c794bcb4", null ],
     [ "input_count", "classv8_1_1internal_1_1maglev_1_1FixedInputNodeTMixin.html#afb08e2997294ee25253fb853ab1dc424", null ],
     [ "VerifyInputs", "classv8_1_1internal_1_1maglev_1_1FixedInputNodeTMixin.html#a571ab334cccd4a3615b80fff28d3c116", null ],
+    [ "kInputCount", "classv8_1_1internal_1_1maglev_1_1FixedInputNodeTMixin.html#a96c3309f1825b6c25f09119364b4fe26", null ],
     [ "kInputTypes", "classv8_1_1internal_1_1maglev_1_1FixedInputNodeTMixin.html#a346e1d39e2eea04761c31b45281e7306", null ]
 ];

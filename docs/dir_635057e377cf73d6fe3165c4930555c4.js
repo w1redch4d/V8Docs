@@ -11,7 +11,7 @@ var dir_635057e377cf73d6fe3165c4930555c4 =
     [ "unified-heap-marking-state-inl.h", "unified-heap-marking-state-inl_8h.html", "unified-heap-marking-state-inl_8h" ],
     [ "unified-heap-marking-state.cc", "unified-heap-marking-state_8cc.html", null ],
     [ "unified-heap-marking-state.h", "unified-heap-marking-state_8h.html", "unified-heap-marking-state_8h" ],
-    [ "unified-heap-marking-verifier.cc", "unified-heap-marking-verifier_8cc.html", null ],
+    [ "unified-heap-marking-verifier.cc", "unified-heap-marking-verifier_8cc.html", "unified-heap-marking-verifier_8cc" ],
     [ "unified-heap-marking-verifier.h", "unified-heap-marking-verifier_8h.html", "unified-heap-marking-verifier_8h" ],
     [ "unified-heap-marking-visitor.cc", "unified-heap-marking-visitor_8cc.html", null ],
     [ "unified-heap-marking-visitor.h", "unified-heap-marking-visitor_8h.html", "unified-heap-marking-visitor_8h" ]

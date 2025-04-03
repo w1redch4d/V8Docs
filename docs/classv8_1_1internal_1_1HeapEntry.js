@@ -28,7 +28,9 @@ var classv8_1_1internal_1_1HeapEntry =
     [ "add_child", "classv8_1_1internal_1_1HeapEntry.html#a431fc57aecebe519a6c9cd18376d7e63", null ],
     [ "add_self_size", "classv8_1_1internal_1_1HeapEntry.html#ab8ac8b9c2f22aef82161c497ad912b57", null ],
     [ "child", "classv8_1_1internal_1_1HeapEntry.html#aa75a282d9c3185aa60c8e40268b48cda", null ],
+    [ "children_begin", "classv8_1_1internal_1_1HeapEntry.html#a864a690570c98a885a118fc974030007", null ],
     [ "children_count", "classv8_1_1internal_1_1HeapEntry.html#afd1e43f07da2b8d6a831d7a9584b4d60", null ],
+    [ "children_end", "classv8_1_1internal_1_1HeapEntry.html#a0d86ab84eea0b131b8d62c948d1e113e", null ],
     [ "detachedness", "classv8_1_1internal_1_1HeapEntry.html#a36beeddf9b9c2dbd14b04170767784f3", null ],
     [ "id", "classv8_1_1internal_1_1HeapEntry.html#a381a2ceaf83a8ced0a67de901c7eaa23", null ],
     [ "index", "classv8_1_1internal_1_1HeapEntry.html#a27b8f0f70caba5c21c44f4ca77048a09", null ],
@@ -47,7 +49,16 @@ var classv8_1_1internal_1_1HeapEntry =
     [ "snapshot", "classv8_1_1internal_1_1HeapEntry.html#a4b457b1ea004b0ce77338c81c73b465c", null ],
     [ "trace_node_id", "classv8_1_1internal_1_1HeapEntry.html#aa24ab9f99c63a95e85c1c48f1027dffd", null ],
     [ "type", "classv8_1_1internal_1_1HeapEntry.html#afd6c145a81759e90b101b3d826be8964", null ],
+    [ "TypeAsString", "classv8_1_1internal_1_1HeapEntry.html#a2e5f60a876f673156b109012568c516a", null ],
     [ "VerifyReference", "classv8_1_1internal_1_1HeapEntry.html#a4b3d53a0f1523585c4c7fce8bdf5cbe2", null ],
     [ "children_count_", "classv8_1_1internal_1_1HeapEntry.html#a692aafe9a018bb73112217f59ab1cd88", null ],
-    [ "children_end_index_", "classv8_1_1internal_1_1HeapEntry.html#ae166004adb44ee4282f95e1bb443acaf", null ]
+    [ "children_end_index_", "classv8_1_1internal_1_1HeapEntry.html#ae166004adb44ee4282f95e1bb443acaf", null ],
+    [ "detachedness_", "classv8_1_1internal_1_1HeapEntry.html#a45f833db840617bd36b36484412bdfe1", null ],
+    [ "id_", "classv8_1_1internal_1_1HeapEntry.html#a35838f8d181e0345f810446b22b971e7", null ],
+    [ "index_", "classv8_1_1internal_1_1HeapEntry.html#ae6efdfedc5c74322f24e2cc519053322", null ],
+    [ "name_", "classv8_1_1internal_1_1HeapEntry.html#aedbb3ce0623b5161a06a89204c469d4a", null ],
+    [ "self_size_", "classv8_1_1internal_1_1HeapEntry.html#a64b228fac4a17ad0b8af6f1b260761d9", null ],
+    [ "snapshot_", "classv8_1_1internal_1_1HeapEntry.html#a815dbf6c2e60d9ea69d72aa48c068f66", null ],
+    [ "trace_node_id_", "classv8_1_1internal_1_1HeapEntry.html#abc191ae3ef5bee688c24e8ed406556f3", null ],
+    [ "type_", "classv8_1_1internal_1_1HeapEntry.html#a9be10d9d1039f1854aa84ab30acf6a8f", null ]
 ];

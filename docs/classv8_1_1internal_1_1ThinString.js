@@ -15,5 +15,6 @@ var classv8_1_1internal_1_1ThinString =
     [ "StringBuiltinsAssembler", "classv8_1_1internal_1_1ThinString.html#a03e9ee00da7d49d1b31af9c8d63023b2", null ],
     [ "ToDirectStringAssembler", "classv8_1_1internal_1_1ThinString.html#a09816edeed66c9edbd22158b56fe25e1", null ],
     [ "TorqueGeneratedThinStringAsserts", "classv8_1_1internal_1_1ThinString.html#aa948fdff997bb81ac1e6997ec7e2ac51", null ],
-    [ "V8HeapExplorer", "classv8_1_1internal_1_1ThinString.html#a29c5c7a1e13f0404746b9261f3764a7f", null ]
+    [ "V8HeapExplorer", "classv8_1_1internal_1_1ThinString.html#a29c5c7a1e13f0404746b9261f3764a7f", null ],
+    [ "actual_", "classv8_1_1internal_1_1ThinString.html#a3086d110b4c321385126eada390475e1", null ]
 ];

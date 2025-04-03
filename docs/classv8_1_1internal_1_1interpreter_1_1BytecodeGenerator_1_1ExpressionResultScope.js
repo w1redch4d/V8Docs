@@ -11,5 +11,9 @@ var classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ExpressionResultS
     [ "SetResultIsBoolean", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ExpressionResultScope.html#a6c09741d534d8113f326acecdacc2056", null ],
     [ "SetResultIsInternalizedString", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ExpressionResultScope.html#acd542f6c229ee7be7a113783afc2eae1", null ],
     [ "SetResultIsString", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ExpressionResultScope.html#af2cf321187eb341e8a97c5a7cd9a10d4", null ],
-    [ "type_hint", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ExpressionResultScope.html#a82bbb9c8a6e673611fdd27e1b736b6c7", null ]
+    [ "type_hint", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ExpressionResultScope.html#a82bbb9c8a6e673611fdd27e1b736b6c7", null ],
+    [ "allocator_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ExpressionResultScope.html#a08e097c203fdb7ce5875a72a70b4e757", null ],
+    [ "kind_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ExpressionResultScope.html#a2a0d0265ab0bacb969ddcd5ff2b3fad9", null ],
+    [ "outer_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ExpressionResultScope.html#af1f39c15b7ed6f4d450b511e613d06f9", null ],
+    [ "type_hint_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1ExpressionResultScope.html#aa91c02dd59e8e6931573d847c525791a", null ]
 ];

@@ -2,6 +2,7 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer =
 [
     [ "Adapter", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a1d92b2e0f1bb9a7b7ad4159d0ead947d", null ],
     [ "Args", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a8932a7850ae2375b14ce7664ab738bd3", null ],
+    [ "table_t", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#af7f7572c50a45a015c738c72c7e0c43f", null ],
     [ "TypeInferenceReducer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a64d9459778ac6b3e4cd62d4ed1a8a119", null ],
     [ "Analyze", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a7c9228be4dee248ee93d9483052e42cb", null ],
     [ "Bind", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#ac3bc4f88f4e645cbdd2dcbc1ba1da41b", null ],
@@ -11,6 +12,10 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer =
     [ "FloatBinop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a9ee073be491d5f5068bf881c561a8bf6", null ],
     [ "GetInputGraphType", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#ac60548ccd324159383c8f7aee10b944c", null ],
     [ "GetOutputGraphType", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a7992044a50f3831b916bda0b26a7d247", null ],
+    [ "GetTupleType", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#aaac86f2a5ee199d7065df924ebcc214b", null ],
+    [ "GetType", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a9c2942b6205e98e98d94ccf916f9451d", null ],
+    [ "GetTypeOrInvalid", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#aa7d44924d7650a16c5cf9851c40adbb2", null ],
+    [ "NeedsTyping", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#abe1707dc52c438f284b03f6e0d50572f", null ],
     [ "OverflowCheckedBinop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#af29641e0c42c5324842844a5de93d324", null ],
     [ "PendingLoopPhi", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#aef64829c26a3add80f87dfd7b34f4d37", null ],
     [ "Phi", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a275d4c83ac71171743a36527a0b3f9ba", null ],
@@ -18,7 +23,18 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer =
     [ "ReduceInputGraphOperation", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a8220822dd3bcb1a9024e9fa47ecd6180", null ],
     [ "ReduceOperation", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a8f6ae7a83e148b62cbdb32cfd9f6685c", null ],
     [ "RefineOperationType", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a324b66cc726c92ee754b93b0aba2319c", null ],
+    [ "RefineTypeFromInputGraph", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a05e727015e4a016fe7a67c981cd994cc", null ],
     [ "RefineTypesAfterBranch", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a1a7f2e58f94c1b6f326e0a68cdf5595a", null ],
     [ "RemoveLast", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a99a11686f616613725751899a302793b", null ],
-    [ "WordBinop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#ac75e808b103d52cd03856a63f27f60e6", null ]
+    [ "SetType", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#acce608a1aae17c8d25266e1a66b1edc8", null ],
+    [ "WordBinop", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#ac75e808b103d52cd03856a63f27f60e6", null ],
+    [ "analyzer_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a89e3cbd8492910fbc494a3b4b99c8914", null ],
+    [ "args_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a5cce268dd30ff7791db1c45119a6e7aa", null ],
+    [ "block_to_snapshot_mapping_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#ab0b39afcf2d329eb1bc4bef5652bc0fb", null ],
+    [ "current_block_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#ac4902580b45895a66ce3abf03aa5349a", null ],
+    [ "input_graph_types_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#afd7bf7bc58239fc0b406cabefa28737f", null ],
+    [ "op_to_key_mapping_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#acf755127851083a32d4137e53a655c4f", null ],
+    [ "output_graph_types_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#ac20f2e3ce856466742bd018932e7b3ea", null ],
+    [ "predecessors_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#a09723d1280a20e12f1f9a60abca6d47e", null ],
+    [ "table_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1TypeInferenceReducer.html#ad8e0241aa3674f8a72b899ef45179bd0", null ]
 ];

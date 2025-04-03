@@ -11,5 +11,9 @@ var namespacev8_1_1internal_1_1baseline =
     [ "ConcurrentBaselineCompiler", "classv8_1_1internal_1_1baseline_1_1ConcurrentBaselineCompiler.html", "classv8_1_1internal_1_1baseline_1_1ConcurrentBaselineCompiler" ],
     [ "EnsureAccumulatorPreservedScope", "classv8_1_1internal_1_1baseline_1_1EnsureAccumulatorPreservedScope.html", "classv8_1_1internal_1_1baseline_1_1EnsureAccumulatorPreservedScope" ],
     [ "SaveAccumulatorScope", "classv8_1_1internal_1_1baseline_1_1SaveAccumulatorScope.html", "classv8_1_1internal_1_1baseline_1_1SaveAccumulatorScope" ],
-    [ "kFallbackBuiltinCallJumpModeForBaseline", "namespacev8_1_1internal_1_1baseline.html#ae4d64d08fe9d632b9b0da28aa5805a0b", null ]
+    [ "CanCompileWithConcurrentBaseline", "namespacev8_1_1internal_1_1baseline.html#a7682efb6a5473e33b6f193cd544918f5", null ],
+    [ "JumpIfHelper", "namespacev8_1_1internal_1_1baseline.html#a8dd149349384f58f0573cccfe87ee369", null ],
+    [ "JumpIfHelper", "namespacev8_1_1internal_1_1baseline.html#a8dd149349384f58f0573cccfe87ee369", null ],
+    [ "kFallbackBuiltinCallJumpModeForBaseline", "namespacev8_1_1internal_1_1baseline.html#ae4d64d08fe9d632b9b0da28aa5805a0b", null ],
+    [ "stack_bias", "namespacev8_1_1internal_1_1baseline.html#a99f38be0fa142e886a2d5937f6fe0d5e", null ]
 ];

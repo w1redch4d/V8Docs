@@ -1,9 +1,12 @@
 var classv8_1_1base_1_1time__internal_1_1TimeBase =
 [
     [ "TimeBase", "classv8_1_1base_1_1time__internal_1_1TimeBase.html#a92ad71fc34272ac99612af8bb07ac6e3", null ],
+    [ "FromInternalValue", "classv8_1_1base_1_1time__internal_1_1TimeBase.html#ab6c61eaafee179c1a0d6ac7913616112", null ],
     [ "IsMax", "classv8_1_1base_1_1time__internal_1_1TimeBase.html#ab4dd459c4eade69880cdfb0738cae7c5", null ],
     [ "IsMin", "classv8_1_1base_1_1time__internal_1_1TimeBase.html#a48dd39a5e3d606c8bb9e4291606644b9", null ],
     [ "IsNull", "classv8_1_1base_1_1time__internal_1_1TimeBase.html#acf50e8599f7e76ab3cc07a32f8df30a9", null ],
+    [ "Max", "classv8_1_1base_1_1time__internal_1_1TimeBase.html#a1be1b2af4f22220c161b6366822e39af", null ],
+    [ "Min", "classv8_1_1base_1_1time__internal_1_1TimeBase.html#ad77924f02719e479246332068bf81a7f", null ],
     [ "operator!=", "classv8_1_1base_1_1time__internal_1_1TimeBase.html#ac435bcdee48e95035574d941c7d26aaf", null ],
     [ "operator+", "classv8_1_1base_1_1time__internal_1_1TimeBase.html#a4edf292aa4b5f8307754087234b74fc9", null ],
     [ "operator+=", "classv8_1_1base_1_1time__internal_1_1TimeBase.html#afdea05b253469a66b1714e431a5e8988", null ],

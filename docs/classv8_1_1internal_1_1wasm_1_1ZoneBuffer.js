@@ -26,5 +26,10 @@ var classv8_1_1internal_1_1wasm_1_1ZoneBuffer =
     [ "write_u32v", "classv8_1_1internal_1_1wasm_1_1ZoneBuffer.html#a7ffcc928ef74a9b3ddd6a6eda163e4f0", null ],
     [ "write_u64", "classv8_1_1internal_1_1wasm_1_1ZoneBuffer.html#a7a0b4f6a4eb2bab7fd189b270d050ac4", null ],
     [ "write_u64v", "classv8_1_1internal_1_1wasm_1_1ZoneBuffer.html#a1c45bb07042ddfa9049d1606e375aa25", null ],
-    [ "write_u8", "classv8_1_1internal_1_1wasm_1_1ZoneBuffer.html#a2fff58b0f564988f0c17ec5b507d75a8", null ]
+    [ "write_u8", "classv8_1_1internal_1_1wasm_1_1ZoneBuffer.html#a2fff58b0f564988f0c17ec5b507d75a8", null ],
+    [ "buffer_", "classv8_1_1internal_1_1wasm_1_1ZoneBuffer.html#ad66d302f5005fc62a2156e26576b2f64", null ],
+    [ "end_", "classv8_1_1internal_1_1wasm_1_1ZoneBuffer.html#ab6477bb04f6b6e5590f76e80d1322964", null ],
+    [ "kInitialSize", "classv8_1_1internal_1_1wasm_1_1ZoneBuffer.html#ae5759ac5a08faf68220f5d4a58e92c80", null ],
+    [ "pos_", "classv8_1_1internal_1_1wasm_1_1ZoneBuffer.html#ab2a317129f288ce640deb2a7742e0779", null ],
+    [ "zone_", "classv8_1_1internal_1_1wasm_1_1ZoneBuffer.html#aeb9a05d071d940284c46bbf2d3fc4c52", null ]
 ];

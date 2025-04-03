@@ -1,6 +1,10 @@
 var classv8_1_1internal_1_1Code =
 [
-    [ "BodyDescriptor", "classv8_1_1internal_1_1Code_1_1BodyDescriptor.html", null ],
+    [ "BodyDescriptor", "classv8_1_1internal_1_1Code_1_1BodyDescriptor.html", "classv8_1_1internal_1_1Code_1_1BodyDescriptor" ],
+    [ "BytecodeToPCPosition", "classv8_1_1internal_1_1Code.html#a29605bda4a91a8a19d3324df0c2f0bd3", [
+      [ "kPcAtStartOfBytecode", "classv8_1_1internal_1_1Code.html#a29605bda4a91a8a19d3324df0c2f0bd3a23d7c4d887a37c7dc12e326c7e953684", null ],
+      [ "kPcAtEndOfBytecode", "classv8_1_1internal_1_1Code.html#a29605bda4a91a8a19d3324df0c2f0bd3a4eff0a954a3e2a40cf2f75d5bda95997", null ]
+    ] ],
     [ "body_end", "classv8_1_1internal_1_1Code.html#aa5b44099d94cbb8e2df9d67225d57bef", null ],
     [ "body_size", "classv8_1_1internal_1_1Code.html#a90d6e86198f168a2895245866eeccf72", null ],
     [ "body_start", "classv8_1_1internal_1_1Code.html#a2818909dccc94c011d6a940be3c3480e", null ],
@@ -25,7 +29,9 @@ var classv8_1_1internal_1_1Code =
     [ "embedded_objects_cleared", "classv8_1_1internal_1_1Code.html#adf72a15dc588ce1a94f66e4df9267bf1", null ],
     [ "entrypoint_tag", "classv8_1_1internal_1_1Code.html#a0fe4e1181e777e4259539b5bd6771320", null ],
     [ "FlushICache", "classv8_1_1internal_1_1Code.html#ab8710c29dd59b5676719eda7ebc3fcdc", null ],
+    [ "FromTargetAddress", "classv8_1_1internal_1_1Code.html#a3c3fb5e8346dc65fd070426a46ad42d7", null ],
     [ "GetBaselineEndPCForBytecodeOffset", "classv8_1_1internal_1_1Code.html#a8c667dcdf0753e57c4ce9328ba697f8b", null ],
+    [ "GetBaselinePCForBytecodeOffset", "classv8_1_1internal_1_1Code.html#a0fbca4f35b7c89e21c6350d3d08defc3", null ],
     [ "GetBaselinePCForNextExecutedBytecode", "classv8_1_1internal_1_1Code.html#a907c7495cd06f4d5787db5a703dac649", null ],
     [ "GetBaselineStartPCForBytecodeOffset", "classv8_1_1internal_1_1Code.html#a7247f1c849b847c999304dc05a49d6cc", null ],
     [ "GetBytecodeOffsetForBaselinePC", "classv8_1_1internal_1_1Code.html#ac701eeffc763da07b7ab27411f1e873e", null ],
@@ -64,11 +70,16 @@ var classv8_1_1internal_1_1Code =
     [ "is_wasm_code", "classv8_1_1internal_1_1Code.html#a691e9ffecd18a537efcb04e98601c226", null ],
     [ "IsIsolateIndependent", "classv8_1_1internal_1_1Code.html#aef14bd2ddb2ca965c21eb639e7842f09", null ],
     [ "IsWeakObject", "classv8_1_1internal_1_1Code.html#a854a44fc471e2773d7dcbfe5c524f57e", null ],
+    [ "IsWeakObjectInDeoptimizationLiteralArray", "classv8_1_1internal_1_1Code.html#acfaf2a4c5b61346e43aa241c87eb0a79", null ],
+    [ "IsWeakObjectInOptimizedCode", "classv8_1_1internal_1_1Code.html#abec772fd13168fdb18260646e1d855dd", null ],
     [ "IterateDeoptimizationLiterals", "classv8_1_1internal_1_1Code.html#ac08eb0584cefedb70fac4f7130ce85cd", null ],
     [ "kind", "classv8_1_1internal_1_1Code.html#a428f0352c6a170c1b39bfa94869d97b6", null ],
     [ "metadata_end", "classv8_1_1internal_1_1Code.html#a3d9dd07d4cb2f7d9034840496fe1121b", null ],
     [ "metadata_start", "classv8_1_1internal_1_1Code.html#af39eb9862f26df1e9e6a97dcecf6b72e", null ],
+    [ "OBJECT_CONSTRUCTORS", "classv8_1_1internal_1_1Code.html#ab07f8bb6362b6d394bf65a5b6de64c16", null ],
     [ "parameter_count_without_receiver", "classv8_1_1internal_1_1Code.html#a11bf52488666a72b8da9c21ca8d3f16e", null ],
+    [ "raw_deoptimization_data_or_interpreter_data", "classv8_1_1internal_1_1Code.html#a416ec8b4e02295f22d38cccdabfa0e7f", null ],
+    [ "raw_position_table", "classv8_1_1internal_1_1Code.html#ae67b1c66961e9a3f0795dd2dbd4ec50f", null ],
     [ "relocation_end", "classv8_1_1internal_1_1Code.html#a9be50927a64af2441a53eecbb44ee52f", null ],
     [ "relocation_size", "classv8_1_1internal_1_1Code.html#aa66e496ec9ee982212d541a36252a33c", null ],
     [ "relocation_start", "classv8_1_1internal_1_1Code.html#ad2f8d1c3648e2a46720d5ec4643bf601", null ],
@@ -78,6 +89,7 @@ var classv8_1_1internal_1_1Code =
     [ "set_builtin_id", "classv8_1_1internal_1_1Code.html#ab4d22b343e9bf3f15ffce9b42495db21", null ],
     [ "set_bytecode_or_interpreter_data", "classv8_1_1internal_1_1Code.html#a69ed9d814db68dac62c780faa972e1ae", null ],
     [ "set_embedded_objects_cleared", "classv8_1_1internal_1_1Code.html#a33cb6b89f69bedadde1d1308cbb3a1b2", null ],
+    [ "set_instruction_start", "classv8_1_1internal_1_1Code.html#a010277108a0171e8e96f88a5080e859b", null ],
     [ "SetInstructionStartForOffHeapBuiltin", "classv8_1_1internal_1_1Code.html#aa7190ff3e11894500a63f6dc875aa8f0", null ],
     [ "SetInstructionStreamAndInstructionStart", "classv8_1_1internal_1_1Code.html#a35161e44b8375e7280e0541332864e5c", null ],
     [ "SetMarkedForDeoptimization", "classv8_1_1internal_1_1Code.html#a54bf786efdcc780d2c3ef182c50a38c8", null ],
@@ -95,5 +107,12 @@ var classv8_1_1internal_1_1Code =
     [ "UpdateInstructionStart", "classv8_1_1internal_1_1Code.html#aeb49629a834fa1ed986d742496fd8626", null ],
     [ "uses_deoptimization_data", "classv8_1_1internal_1_1Code.html#ac700945a84a3bb9e1bb3c65c8d93610d", null ],
     [ "uses_safepoint_table", "classv8_1_1internal_1_1Code.html#a1fc0046d75e95fa3ada34f752747132d", null ],
-    [ "Deserializer", "classv8_1_1internal_1_1Code.html#a50e4261afb01849e141b624e214e1045", null ]
+    [ "Deserializer", "classv8_1_1internal_1_1Code.html#a50e4261afb01849e141b624e214e1045", null ],
+    [ "Factory", "classv8_1_1internal_1_1Code.html#a9c8d584ddb9076af64f8f9d8cedde9d1", null ],
+    [ "FactoryBase< Factory >", "classv8_1_1internal_1_1Code.html#a97c6023d9f61b38d64870bd6e5a48976", null ],
+    [ "FactoryBase< LocalFactory >", "classv8_1_1internal_1_1Code.html#a6062016222c7d488079a4eeefc2f0e69", null ],
+    [ "kArgumentsBits", "classv8_1_1internal_1_1Code.html#afc85158e43b6593d59c6438ce9ddf8ab", null ],
+    [ "kIsTurbofannedBit", "classv8_1_1internal_1_1Code.html#a2fb5e36f79d2194b5ea3d032c48a817b", null ],
+    [ "kMarkedForDeoptimizationBit", "classv8_1_1internal_1_1Code.html#a407472d202e070f89c3bd23a485d67be", null ],
+    [ "kMaxArguments", "classv8_1_1internal_1_1Code.html#a9115cb13cc6486de35b21a2bb82aee65", null ]
 ];

@@ -1,6 +1,6 @@
 var classv8_1_1internal_1_1IrRegExpData =
 [
-    [ "BodyDescriptor", "classv8_1_1internal_1_1IrRegExpData_1_1BodyDescriptor.html", null ],
+    [ "BodyDescriptor", "classv8_1_1internal_1_1IrRegExpData_1_1BodyDescriptor.html", "classv8_1_1internal_1_1IrRegExpData_1_1BodyDescriptor" ],
     [ "bytecode", "classv8_1_1internal_1_1IrRegExpData.html#a13a8fe23cc9d80714f94b496c1202f45", null ],
     [ "CanTierUp", "classv8_1_1internal_1_1IrRegExpData.html#ad188725e78265e772a2b147b58a8ad5d", null ],
     [ "clear_bytecode", "classv8_1_1internal_1_1IrRegExpData.html#af7d1d7be4fac550f3dccafe06452a12c", null ],

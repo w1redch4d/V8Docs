@@ -2,6 +2,7 @@ var platform_win32_8cc =
 [
     [ "v8::base::WindowsTimezoneCache", "classv8_1_1base_1_1WindowsTimezoneCache.html", "classv8_1_1base_1_1WindowsTimezoneCache" ],
     [ "v8::base::Win32Time", "classv8_1_1base_1_1Win32Time.html", "classv8_1_1base_1_1Win32Time" ],
+    [ "v8::base::Win32Time::TimeStamp", "unionv8_1_1base_1_1Win32Time_1_1TimeStamp.html", "unionv8_1_1base_1_1Win32Time_1_1TimeStamp" ],
     [ "v8::base::Win32MemoryMappedFile", "classv8_1_1base_1_1Win32MemoryMappedFile.html", "classv8_1_1base_1_1Win32MemoryMappedFile" ],
     [ "v8::base::Thread::PlatformData", "classv8_1_1base_1_1Thread_1_1PlatformData.html", "classv8_1_1base_1_1Thread_1_1PlatformData" ],
     [ "DBGHELP_FUNCTION_LIST", "platform-win32_8cc.html#add09f6a0b989fa16f6586b67b6747818", null ],
@@ -22,8 +23,16 @@ var platform_win32_8cc =
       [ "CONSOLE", "platform-win32_8cc.html#a8005e899c1a17ecebe9530c2a894e16da314edcd936f538fc0078686ba11bc3ed", null ],
       [ "ODS", "platform-win32_8cc.html#a8005e899c1a17ecebe9530c2a894e16dac4b76d6fb9cec3b484bff6cd89595737", null ]
     ] ],
+    [ "ConvertUtf8StringToUtf16", "platform-win32_8cc.html#a4e7e0727a558ff03a0d5a9a05f16aec3", null ],
     [ "DEFINE_LAZY_LEAKY_OBJECT_GETTER", "platform-win32_8cc.html#af84f800e82451651cc6efe8ddf189a3d", null ],
+    [ "HasConsole", "platform-win32_8cc.html#aba5fca3206a2e43fd022191bc482fee5", null ],
+    [ "LoadDbgHelpAndTlHelp32", "platform-win32_8cc.html#a75fc3bc0bebec25fca957538b908d468", null ],
+    [ "LoadSymbols", "platform-win32_8cc.html#aa1efc562c41c382a0d23b20f79ac5096", null ],
+    [ "ThreadEntry", "platform-win32_8cc.html#a6be283378286baff0b449c4de32dfbea", null ],
+    [ "VPrintHelper", "platform-win32_8cc.html#af8febcbbfb3cba7fe1561814f25234c5", null ],
+    [ "kNoThread", "platform-win32_8cc.html#aaac7db617d2f8be2fc20678d6ece00f3", null ],
     [ "MapViewOfFile3", "platform-win32_8cc.html#a0ea0d9c94b340f3ae61dfe095e71567c", null ],
+    [ "output_mode", "platform-win32_8cc.html#ae2d1e44ecac3d5b36ddb03961fc57cd3", null ],
     [ "UnmapViewOfFile2", "platform-win32_8cc.html#a7a8e5f39a6cedb50fe0f14dfc60faa17", null ],
     [ "VirtualAlloc2", "platform-win32_8cc.html#a5d9767851cd6623e1037e8cc2e344bf0", null ]
 ];

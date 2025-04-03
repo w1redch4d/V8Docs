@@ -40,5 +40,10 @@ var classv8_1_1internal_1_1torque_1_1Declarable =
     [ "SetIdentifierPosition", "classv8_1_1internal_1_1torque_1_1Declarable.html#aaa65b353bd378e548ca6ac1e3c50d67d", null ],
     [ "SetIsUserDefined", "classv8_1_1internal_1_1torque_1_1Declarable.html#afa725f03af6bfb98c580e6b66af4d05b", null ],
     [ "SetPosition", "classv8_1_1internal_1_1torque_1_1Declarable.html#abdc3680c29b47c77c983dbcd8fb8db7e", null ],
-    [ "type_name", "classv8_1_1internal_1_1torque_1_1Declarable.html#acc1cc69e301ebd9b090da0971befdee1", null ]
+    [ "type_name", "classv8_1_1internal_1_1torque_1_1Declarable.html#acc1cc69e301ebd9b090da0971befdee1", null ],
+    [ "identifier_position_", "classv8_1_1internal_1_1torque_1_1Declarable.html#a1c1bd3b7f64de4d80bd8cfbad1e5c115", null ],
+    [ "is_user_defined_", "classv8_1_1internal_1_1torque_1_1Declarable.html#a1200a74f658d946ebd294d4ef0d95edf", null ],
+    [ "kind_", "classv8_1_1internal_1_1torque_1_1Declarable.html#a13dd393ef4b557e234672844d7dff1f9", null ],
+    [ "parent_scope_", "classv8_1_1internal_1_1torque_1_1Declarable.html#a206854d7ec7f2b090e6b744f32dad1d6", null ],
+    [ "position_", "classv8_1_1internal_1_1torque_1_1Declarable.html#a8579a22295c9c099b5a999333cb837c3", null ]
 ];

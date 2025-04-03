@@ -14,5 +14,12 @@ var classv8_1_1internal_1_1GCTracer_1_1Scope =
     [ "Scope", "classv8_1_1internal_1_1GCTracer_1_1Scope.html#a1feed3c9549c656d1a6c3e604371aa27", null ],
     [ "~Scope", "classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6ba49dbbdd654d00f0f7f2322d1e877a", null ],
     [ "Scope", "classv8_1_1internal_1_1GCTracer_1_1Scope.html#af5aebb294d32dbd8d88c508ef02421da", null ],
-    [ "operator=", "classv8_1_1internal_1_1GCTracer_1_1Scope.html#aeaeada2baf39440ca4269a8bc889153f", null ]
+    [ "IncrementalOffset", "classv8_1_1internal_1_1GCTracer_1_1Scope.html#ae4abffc0ac3d7764d71e579329f2e580", null ],
+    [ "Name", "classv8_1_1internal_1_1GCTracer_1_1Scope.html#aebc492832e6cb5dd3413b00a07e1b45c", null ],
+    [ "NeedsYoungEpoch", "classv8_1_1internal_1_1GCTracer_1_1Scope.html#a777fda7c455a0df8b0df3c4a00fe6130", null ],
+    [ "operator=", "classv8_1_1internal_1_1GCTracer_1_1Scope.html#aeaeada2baf39440ca4269a8bc889153f", null ],
+    [ "scope_", "classv8_1_1internal_1_1GCTracer_1_1Scope.html#ac108423d774e5b008e6f9a851547a5ab", null ],
+    [ "start_time_", "classv8_1_1internal_1_1GCTracer_1_1Scope.html#a1c53792fb18695506683d2ba77b156e5", null ],
+    [ "thread_kind_", "classv8_1_1internal_1_1GCTracer_1_1Scope.html#a7d7c323869e318a666c9386d79ec80d9", null ],
+    [ "tracer_", "classv8_1_1internal_1_1GCTracer_1_1Scope.html#ab00c9fd56378a0931ad1b99e7b640987", null ]
 ];

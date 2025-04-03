@@ -10,5 +10,9 @@ var classv8_1_1internal_1_1maglev_1_1MaglevGraphLabeller =
     [ "PrintNodeLabel", "classv8_1_1internal_1_1maglev_1_1MaglevGraphLabeller.html#af73e37e0ae4e5de7b9692cad0d3bda5d", null ],
     [ "RegisterBasicBlock", "classv8_1_1internal_1_1maglev_1_1MaglevGraphLabeller.html#ae01d821db8de8af37b6ffa8827925318", null ],
     [ "RegisterNode", "classv8_1_1internal_1_1maglev_1_1MaglevGraphLabeller.html#abc74393a7d8e9be6fe7dcd744234c175", null ],
-    [ "RegisterNode", "classv8_1_1internal_1_1maglev_1_1MaglevGraphLabeller.html#a2183047d3dc4dfe23f3ad5f908dae230", null ]
+    [ "RegisterNode", "classv8_1_1internal_1_1maglev_1_1MaglevGraphLabeller.html#a2183047d3dc4dfe23f3ad5f908dae230", null ],
+    [ "block_ids_", "classv8_1_1internal_1_1maglev_1_1MaglevGraphLabeller.html#a0cc311ca8883807a65f14bef299e54b8", null ],
+    [ "next_block_label_", "classv8_1_1internal_1_1maglev_1_1MaglevGraphLabeller.html#ab33ac7b954ddd9512839ac62abb38bb2", null ],
+    [ "next_node_label_", "classv8_1_1internal_1_1maglev_1_1MaglevGraphLabeller.html#a59f1ff2e3b372d9105a20810d77405ff", null ],
+    [ "nodes_", "classv8_1_1internal_1_1maglev_1_1MaglevGraphLabeller.html#a02ad524e453ade4c3d20a90f54d2f4b8", null ]
 ];

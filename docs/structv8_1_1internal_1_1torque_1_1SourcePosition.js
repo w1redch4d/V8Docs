@@ -2,6 +2,7 @@ var structv8_1_1internal_1_1torque_1_1SourcePosition =
 [
     [ "CompareStartIgnoreColumn", "structv8_1_1internal_1_1torque_1_1SourcePosition.html#a98a3cc8ffe03dc534bb05fcbe2b99b45", null ],
     [ "Contains", "structv8_1_1internal_1_1torque_1_1SourcePosition.html#a18755834b599cd339ea34bb7023c45c4", null ],
+    [ "Invalid", "structv8_1_1internal_1_1torque_1_1SourcePosition.html#a341dc8ede0926a39a3c7296c6b1e9d9f", null ],
     [ "operator!=", "structv8_1_1internal_1_1torque_1_1SourcePosition.html#ab75c20c82fb1ea2f800ff5d717fd598b", null ],
     [ "operator==", "structv8_1_1internal_1_1torque_1_1SourcePosition.html#ab61988c71ada64703b8a2d21c7eb4fe0", null ],
     [ "end", "structv8_1_1internal_1_1torque_1_1SourcePosition.html#a3a77687b98f22ad57a3bbe630261d65d", null ],

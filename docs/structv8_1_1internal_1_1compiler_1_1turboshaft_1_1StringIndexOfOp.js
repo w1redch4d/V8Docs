@@ -6,5 +6,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringIndexOfOp =
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringIndexOfOp.html#ab0524c0281028590f3c4022a71d5ef68", null ],
     [ "position", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringIndexOfOp.html#aa4d98ca54217db6e36f26d82be3e25cf", null ],
     [ "search", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringIndexOfOp.html#ae2fd1e9570a2196fd798dbb3534774b1", null ],
-    [ "string", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringIndexOfOp.html#ac65feaa18144d09bcdb383195db913dd", null ]
+    [ "string", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringIndexOfOp.html#ac65feaa18144d09bcdb383195db913dd", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringIndexOfOp.html#a5bf8e6d83ea35e465cde55f47ab8029c", null ]
 ];

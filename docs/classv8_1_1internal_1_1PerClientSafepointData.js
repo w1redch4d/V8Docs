@@ -6,5 +6,8 @@ var classv8_1_1internal_1_1PerClientSafepointData =
     [ "isolate", "classv8_1_1internal_1_1PerClientSafepointData.html#afc8762e97f075c728d25cef29e2c100c", null ],
     [ "running", "classv8_1_1internal_1_1PerClientSafepointData.html#a94b1eb6dd81e04fc9e4c6a000004b6e4", null ],
     [ "safepoint", "classv8_1_1internal_1_1PerClientSafepointData.html#a02033dc2a967320661ac5b0731d16937", null ],
-    [ "set_locked_and_running", "classv8_1_1internal_1_1PerClientSafepointData.html#a57cb95883fff9fcf11bebfe5521c8517", null ]
+    [ "set_locked_and_running", "classv8_1_1internal_1_1PerClientSafepointData.html#a57cb95883fff9fcf11bebfe5521c8517", null ],
+    [ "isolate_", "classv8_1_1internal_1_1PerClientSafepointData.html#aa430dad06b355a03f14be64fd8adcbb0", null ],
+    [ "locked_", "classv8_1_1internal_1_1PerClientSafepointData.html#ae46d37d50dda1280b961e6eb8c9750aa", null ],
+    [ "running_", "classv8_1_1internal_1_1PerClientSafepointData.html#aec60165bb33bdeccfe15cb4632663608", null ]
 ];

@@ -20,5 +20,6 @@ var classv8_1_1internal_1_1torque_1_1Stack =
     [ "PushMany", "classv8_1_1internal_1_1torque_1_1Stack.html#a8078506c0e56059f3befce7b3bcaf130", null ],
     [ "Size", "classv8_1_1internal_1_1torque_1_1Stack.html#a70a8da5dbe63da34fee17426d10918f3", null ],
     [ "Top", "classv8_1_1internal_1_1torque_1_1Stack.html#a0fb72208032a3f2edadd73517eb01057", null ],
-    [ "TopRange", "classv8_1_1internal_1_1torque_1_1Stack.html#a75188f83515af9604460894fd83b6273", null ]
+    [ "TopRange", "classv8_1_1internal_1_1torque_1_1Stack.html#a75188f83515af9604460894fd83b6273", null ],
+    [ "elements_", "classv8_1_1internal_1_1torque_1_1Stack.html#af5d66e3d9fe8ee30d6d58ba5f9e127e0", null ]
 ];

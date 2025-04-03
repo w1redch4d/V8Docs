@@ -6,6 +6,8 @@ var classv8_1_1internal_1_1FreeList =
     [ "AddCategory", "classv8_1_1internal_1_1FreeList.html#a5e449f34c8035d4f353c10cb8bfc6272", null ],
     [ "Allocate", "classv8_1_1internal_1_1FreeList.html#ae19f2fc3e48a4807cd603ef0dea1861b", null ],
     [ "Available", "classv8_1_1internal_1_1FreeList.html#abf51753a0ae52b9c3b3143fe2d6e2dc6", null ],
+    [ "CreateFreeList", "classv8_1_1internal_1_1FreeList.html#a3493244ef61ab0a37c8c7c43c5f21c0c", null ],
+    [ "CreateFreeListForNewSpace", "classv8_1_1internal_1_1FreeList.html#a9f37f7601004b9fdb436a0a92bb2b716", null ],
     [ "decrease_wasted_bytes", "classv8_1_1internal_1_1FreeList.html#ab3d5e267a023ee05cfdcfcc3d0973edc", null ],
     [ "DecreaseAvailableBytes", "classv8_1_1internal_1_1FreeList.html#aaa0347de311efbb00cc0f6151da34d46", null ],
     [ "EvictFreeListItems", "classv8_1_1internal_1_1FreeList.html#a5a58fc6be55c434e8e28e32f478a76e0", null ],

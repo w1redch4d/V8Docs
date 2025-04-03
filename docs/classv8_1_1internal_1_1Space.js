@@ -16,6 +16,7 @@ var classv8_1_1internal_1_1Space =
     [ "last_page", "classv8_1_1internal_1_1Space.html#a2619bc72988fcb0ec36f5d17bbd8c9ef", null ],
     [ "last_page", "classv8_1_1internal_1_1Space.html#a68f0a6d24f038d22e7cc60f9161c7a97", null ],
     [ "memory_chunk_list", "classv8_1_1internal_1_1Space.html#ae3b1fd859e31d5f16ad6e5aafb48eae9", null ],
+    [ "MoveExternalBackingStoreBytes", "classv8_1_1internal_1_1Space.html#a0bb12027c2842ed45b62aaf6c21ea881", null ],
     [ "NotifyBlackAreaCreated", "classv8_1_1internal_1_1Space.html#a52ee82d45fe147a8aa74eb95a3bdcfbd", null ],
     [ "NotifyBlackAreaDestroyed", "classv8_1_1internal_1_1Space.html#a3992a536d007d256bfca932ae1976e87", null ],
     [ "operator=", "classv8_1_1internal_1_1Space.html#a6633e872d70f81951ad55f54916a384e", null ],

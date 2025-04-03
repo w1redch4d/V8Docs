@@ -3,10 +3,12 @@ var classv8_1_1internal_1_1DirectHandleVector =
     [ "const_iterator", "classv8_1_1internal_1_1DirectHandleVector.html#a273e46e51b2593d11a3c01576d12499b", null ],
     [ "const_reference", "classv8_1_1internal_1_1DirectHandleVector.html#ad6b50471c78fa0b769c3e20989398694", null ],
     [ "difference_type", "classv8_1_1internal_1_1DirectHandleVector.html#a85380db7b53577069ab98066f879157d", null ],
+    [ "element_type", "classv8_1_1internal_1_1DirectHandleVector.html#a793afdea57b427d5d0adbbf11a055c5a", null ],
     [ "iterator", "classv8_1_1internal_1_1DirectHandleVector.html#a9cf558e0eb4fa005de80b75417689341", null ],
     [ "reference", "classv8_1_1internal_1_1DirectHandleVector.html#a55d029eb8ddcc4d0ff48ea8588f79441", null ],
     [ "size_type", "classv8_1_1internal_1_1DirectHandleVector.html#acf51874853d2d7aa4f0c7f8db8bf21b8", null ],
     [ "value_type", "classv8_1_1internal_1_1DirectHandleVector.html#a6708ab4e939358e1fff680978b5e3072", null ],
+    [ "vector_type", "classv8_1_1internal_1_1DirectHandleVector.html#a20c509676b7316ff458b89f44e5bba9b", null ],
     [ "DirectHandleVector", "classv8_1_1internal_1_1DirectHandleVector.html#a4c9c6807b4e7a5833768f67b2155a8bc", null ],
     [ "DirectHandleVector", "classv8_1_1internal_1_1DirectHandleVector.html#ae389d317abec9ed23bd6fbe947b7f30b", null ],
     [ "DirectHandleVector", "classv8_1_1internal_1_1DirectHandleVector.html#afabb67a24916f0a52104220e034a106e", null ],
@@ -43,5 +45,6 @@ var classv8_1_1internal_1_1DirectHandleVector =
     [ "operator<=", "classv8_1_1internal_1_1DirectHandleVector.html#aa5b8aca9eb3d2c70d01d6b7d7c422c03", null ],
     [ "operator==", "classv8_1_1internal_1_1DirectHandleVector.html#a1184e8c17cacc6f6cde179b6dbd868ff", null ],
     [ "operator>", "classv8_1_1internal_1_1DirectHandleVector.html#ad085789360fda92e59341584a0eba204", null ],
-    [ "operator>=", "classv8_1_1internal_1_1DirectHandleVector.html#acf36c0792dc134ba1f38740a49150f6b", null ]
+    [ "operator>=", "classv8_1_1internal_1_1DirectHandleVector.html#acf36c0792dc134ba1f38740a49150f6b", null ],
+    [ "backing_", "classv8_1_1internal_1_1DirectHandleVector.html#a5bbcb410b43abf16ce11eb178fd10d3a", null ]
 ];

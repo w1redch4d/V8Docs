@@ -19,5 +19,7 @@ var classv8_1_1internal_1_1RegExpClassRanges =
     [ "max_match", "classv8_1_1internal_1_1RegExpClassRanges.html#a5e0d5463cd4f2376f093b1712959c4df", null ],
     [ "min_match", "classv8_1_1internal_1_1RegExpClassRanges.html#a3861762195a9335b52d3c96fb98e45e2", null ],
     [ "ranges", "classv8_1_1internal_1_1RegExpClassRanges.html#a9f560f5a63450bec39e8cc1bcd03bb05", null ],
-    [ "standard_type", "classv8_1_1internal_1_1RegExpClassRanges.html#a41fa07975ac3b581b3272ff925f47d2a", null ]
+    [ "standard_type", "classv8_1_1internal_1_1RegExpClassRanges.html#a41fa07975ac3b581b3272ff925f47d2a", null ],
+    [ "class_ranges_flags_", "classv8_1_1internal_1_1RegExpClassRanges.html#ac9261937f389f79fe5ec69557e3dcfc2", null ],
+    [ "set_", "classv8_1_1internal_1_1RegExpClassRanges.html#aae0859c33448386f40fd69fc4ed8473b", null ]
 ];

@@ -5,5 +5,7 @@ var classv8_1_1base_1_1DoublyThreadedList_1_1iterator =
     [ "operator*", "classv8_1_1base_1_1DoublyThreadedList_1_1iterator.html#a7387bd5a105a8ae5304d3755a7016ff7", null ],
     [ "operator++", "classv8_1_1base_1_1DoublyThreadedList_1_1iterator.html#a7b7e135343dff11059fef2c96215d176", null ],
     [ "operator++", "classv8_1_1base_1_1DoublyThreadedList_1_1iterator.html#ab23a1f4f6aecb94543679c57f0238f75", null ],
-    [ "operator==", "classv8_1_1base_1_1DoublyThreadedList_1_1iterator.html#ac439d441302bcfa8b2a2aeb034f205d0", null ]
+    [ "operator==", "classv8_1_1base_1_1DoublyThreadedList_1_1iterator.html#ac439d441302bcfa8b2a2aeb034f205d0", null ],
+    [ "curr_", "classv8_1_1base_1_1DoublyThreadedList_1_1iterator.html#a11dc8a3495db9bc2231061bec68791b1", null ],
+    [ "DoublyThreadedList", "classv8_1_1base_1_1DoublyThreadedList_1_1iterator.html#a466972c823eefb1c307db1fc1b7ee36c", null ]
 ];

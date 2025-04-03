@@ -3,6 +3,11 @@ var classv8_1_1internal_1_1PersistentHandles =
     [ "PersistentHandles", "classv8_1_1internal_1_1PersistentHandles.html#a2a2c3c5e1e894effd82d9ca9e3965878", null ],
     [ "~PersistentHandles", "classv8_1_1internal_1_1PersistentHandles.html#a390104f96a1efcc7bb2c3f2cfe66e00a", null ],
     [ "PersistentHandles", "classv8_1_1internal_1_1PersistentHandles.html#a60dbcd19edc99bc7a9f3b9bdd8616f16", null ],
+    [ "AddBlock", "classv8_1_1internal_1_1PersistentHandles.html#ac90cf870fa130a5b7052af28ec821ec1", null ],
+    [ "Attach", "classv8_1_1internal_1_1PersistentHandles.html#abddc4cd68a1be9c7f7a7c43309a12f47", null ],
+    [ "Detach", "classv8_1_1internal_1_1PersistentHandles.html#a36978b8a35b42fea949857ca7b73e34d", null ],
+    [ "FRIEND_TEST", "classv8_1_1internal_1_1PersistentHandles.html#a5cf3eebf0d41d03b0b0c7e99940b5a80", null ],
+    [ "GetHandle", "classv8_1_1internal_1_1PersistentHandles.html#a0a499897e58c2d68cb94780029d6dea9", null ],
     [ "isolate", "classv8_1_1internal_1_1PersistentHandles.html#a9854d715348a55c04d9fdd3d0dc5b227", null ],
     [ "Iterate", "classv8_1_1internal_1_1PersistentHandles.html#afb512921c49c8fb170a62767667fd5c7", null ],
     [ "NewHandle", "classv8_1_1internal_1_1PersistentHandles.html#a3bafee761282049666e0e6b5feb175c0", null ],
@@ -11,5 +16,11 @@ var classv8_1_1internal_1_1PersistentHandles =
     [ "operator=", "classv8_1_1internal_1_1PersistentHandles.html#a25e84002c1740087beb6c83add37f829", null ],
     [ "HandleScopeImplementer", "classv8_1_1internal_1_1PersistentHandles.html#a4212b6d1addb496cb92d67a2e399a1f3", null ],
     [ "LocalHeap", "classv8_1_1internal_1_1PersistentHandles.html#a7e184dfc60742f164fdcd5cda27c53b0", null ],
-    [ "PersistentHandlesList", "classv8_1_1internal_1_1PersistentHandles.html#a23768a0c563d02f5792cae709750fa03", null ]
+    [ "PersistentHandlesList", "classv8_1_1internal_1_1PersistentHandles.html#a23768a0c563d02f5792cae709750fa03", null ],
+    [ "block_limit_", "classv8_1_1internal_1_1PersistentHandles.html#a30a1afa3a67d92ac9979a2b40f57c382", null ],
+    [ "block_next_", "classv8_1_1internal_1_1PersistentHandles.html#a395c02f1ee4c7ec2e6c074113d8f24da", null ],
+    [ "blocks_", "classv8_1_1internal_1_1PersistentHandles.html#a31beb5f22b50a37704663fe352dacdfa", null ],
+    [ "isolate_", "classv8_1_1internal_1_1PersistentHandles.html#ab1997480a5f0482de16ed3b870fcbbdf", null ],
+    [ "next_", "classv8_1_1internal_1_1PersistentHandles.html#a38b16b36b1bf1d32e6e633f2372e1e45", null ],
+    [ "prev_", "classv8_1_1internal_1_1PersistentHandles.html#a5fb00df5602b20ce69f422e286922da1", null ]
 ];

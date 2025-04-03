@@ -22,5 +22,10 @@ var namespacev8_1_1internal_1_1wasm_1_1gdb__server =
     [ "StoreValue", "namespacev8_1_1internal_1_1wasm_1_1gdb__server.html#ad4aabd0b433a307a395db37385f1b33c", null ],
     [ "StringSplit", "namespacev8_1_1internal_1_1wasm_1_1gdb__server.html#aed859cdca9536491c0f2f6dd227ad061", null ],
     [ "StringSplit", "namespacev8_1_1internal_1_1wasm_1_1gdb__server.html#a834093c020b1b91e93b4065bb5624f1c", null ],
-    [ "UInt8ToHex", "namespacev8_1_1internal_1_1wasm_1_1gdb__server.html#a1a719d52ccabfecbc5b880099019a790", null ]
+    [ "UInt8ToHex", "namespacev8_1_1internal_1_1wasm_1_1gdb__server.html#a1a719d52ccabfecbc5b880099019a790", null ],
+    [ "kHexChars", "namespacev8_1_1internal_1_1wasm_1_1gdb__server.html#aa0fddfddf678cada9207743c861b03cd", null ],
+    [ "kMaxWasmCallStack", "namespacev8_1_1internal_1_1wasm_1_1gdb__server.html#a7e1a8f0ef1319c959964bf6091423329", null ],
+    [ "kSigSegv", "namespacev8_1_1internal_1_1wasm_1_1gdb__server.html#a87a075ecc0b02c3100d616abc0128fc9", null ],
+    [ "kSigTrace", "namespacev8_1_1internal_1_1wasm_1_1gdb__server.html#a7c2ba566873121e6e72f9d5191d3d27b", null ],
+    [ "kThreadId", "namespacev8_1_1internal_1_1wasm_1_1gdb__server.html#a77c47ba1dc50d5a27082c98f975a3baa", null ]
 ];

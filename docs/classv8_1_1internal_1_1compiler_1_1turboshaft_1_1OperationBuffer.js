@@ -16,5 +16,10 @@ var classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer =
     [ "RemoveLast", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a90e7526135709e6a20f192bbfa6ba327", null ],
     [ "Reset", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a1f0ac1639d9573e6e558d6c8c21da973", null ],
     [ "size", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a24f3cfe4c7354b4047fd6e2951b95a81", null ],
-    [ "SlotCount", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a01eec5c7fd74c604c50cffbbfcdf2c23", null ]
+    [ "SlotCount", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a01eec5c7fd74c604c50cffbbfcdf2c23", null ],
+    [ "begin_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#ad2670c4ee240dffd054b2d958f92cb0d", null ],
+    [ "end_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a9b9445cde7db9896be301e53a5430dd6", null ],
+    [ "end_cap_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a8433155d0e8ef1a82cba5c8d4cc54357", null ],
+    [ "operation_sizes_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a96ebd1e82206db2f0f667dca7163bc90", null ],
+    [ "zone_", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1OperationBuffer.html#a9c2d680ff05fa9735b1a62360c45ca8e", null ]
 ];

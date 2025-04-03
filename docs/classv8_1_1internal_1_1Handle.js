@@ -10,6 +10,8 @@ var classv8_1_1internal_1_1Handle =
     [ "Handle", "classv8_1_1internal_1_1Handle.html#a7c6038eb721b55fc6d12886160b72d37", null ],
     [ "Handle", "classv8_1_1internal_1_1Handle.html#aa9e83dec0bf4aaf3e4120764e44ab85c", null ],
     [ "equals", "classv8_1_1internal_1_1Handle.html#a0f47c1abaebd32cb5be45a5c77d366d4", null ],
+    [ "New", "classv8_1_1internal_1_1Handle.html#a7b256f04a4bb83fc9ae183d661f5368b", null ],
+    [ "null", "classv8_1_1internal_1_1Handle.html#a7fde29e675604ed824bd306445f2c6de", null ],
     [ "operator*", "classv8_1_1internal_1_1Handle.html#a5e595e337b973c6cc91533965638b078", null ],
     [ "operator->", "classv8_1_1internal_1_1Handle.html#ad950479a2814eedfdae22f0c878d60df", null ],
     [ "PatchValue", "classv8_1_1internal_1_1Handle.html#af231770dc6850a25ac8046faef586a28", null ],

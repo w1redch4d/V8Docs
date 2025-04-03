@@ -6,7 +6,7 @@ var dir_daf96c7b8ee792ef44214d4c17cd1e56 =
     [ "bitwise.cc", "bitwise_8cc.html", "bitwise_8cc" ],
     [ "digit-arithmetic.h", "digit-arithmetic_8h.html", "digit-arithmetic_8h" ],
     [ "div-barrett.cc", "div-barrett_8cc.html", null ],
-    [ "div-burnikel.cc", "div-burnikel_8cc.html", null ],
+    [ "div-burnikel.cc", "div-burnikel_8cc.html", "div-burnikel_8cc" ],
     [ "div-helpers.cc", "div-helpers_8cc.html", "div-helpers_8cc" ],
     [ "div-helpers.h", "div-helpers_8h.html", "div-helpers_8h" ],
     [ "div-schoolbook.cc", "div-schoolbook_8cc.html", "div-schoolbook_8cc" ],

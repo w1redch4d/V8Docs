@@ -14,5 +14,11 @@ var classv8_1_1internal_1_1ProfileTree =
     [ "pending_nodes_count", "classv8_1_1internal_1_1ProfileTree.html#aa802e9a0e558ff7a6d89fec49a02dc52", null ],
     [ "Print", "classv8_1_1internal_1_1ProfileTree.html#a058403550bc253e2f070f8e06f860905", null ],
     [ "root", "classv8_1_1internal_1_1ProfileTree.html#a27b0717b0dc502909a24ff5cbb19633f", null ],
-    [ "TakePendingNodes", "classv8_1_1internal_1_1ProfileTree.html#ae1adb894a98c0e6203dd9d935af9a509", null ]
+    [ "TakePendingNodes", "classv8_1_1internal_1_1ProfileTree.html#ae1adb894a98c0e6203dd9d935af9a509", null ],
+    [ "TraverseDepthFirst", "classv8_1_1internal_1_1ProfileTree.html#aa402b7a7fbb047cd1600e90e2a5fbec3", null ],
+    [ "code_entries_", "classv8_1_1internal_1_1ProfileTree.html#a178a8258a544923cd3405ac9cd4ceee6", null ],
+    [ "isolate_", "classv8_1_1internal_1_1ProfileTree.html#aa8b30e7723afe6d700e0e195c0ac83c9", null ],
+    [ "next_node_id_", "classv8_1_1internal_1_1ProfileTree.html#a0a40c70ba051d096ae2daa7c4a475169", null ],
+    [ "pending_nodes_", "classv8_1_1internal_1_1ProfileTree.html#a12a09e453fb37a4aae2c52d238ad3e96", null ],
+    [ "root_", "classv8_1_1internal_1_1ProfileTree.html#a8a692d98ebae1f3b6313f9653fbf7b74", null ]
 ];

@@ -2,6 +2,24 @@ var classv8_1_1D8Console =
 [
     [ "D8Console", "classv8_1_1D8Console.html#a04bffbc1b2dd0650645a2292f5d5b61a", null ],
     [ "~D8Console", "classv8_1_1D8Console.html#ab9a64182f7e5fa4c26112d44ed371fb0", null ],
+    [ "Assert", "classv8_1_1D8Console.html#ac81628ed100112f5f16ada9da313a23c", null ],
+    [ "Debug", "classv8_1_1D8Console.html#a11236b1174dd789c5c4ad2e4717f0625", null ],
     [ "DisposeProfiler", "classv8_1_1D8Console.html#abf483864020467abffe1bdf748f6a571", null ],
-    [ "profiler", "classv8_1_1D8Console.html#a1387346502376e238fe1caf24f231e49", null ]
+    [ "Error", "classv8_1_1D8Console.html#a09b40f3617ff23ef6019c04230472337", null ],
+    [ "Info", "classv8_1_1D8Console.html#a6d3303f82353ed485227bc8dddcd1fc4", null ],
+    [ "Log", "classv8_1_1D8Console.html#ab95b618438ea0beebc0b138a48b770fa", null ],
+    [ "Profile", "classv8_1_1D8Console.html#a7728e13ccf0ea595950b5d6418275dba", null ],
+    [ "ProfileEnd", "classv8_1_1D8Console.html#a257916e5039b43e5ca1ccbf9e9b0daca", null ],
+    [ "profiler", "classv8_1_1D8Console.html#a1387346502376e238fe1caf24f231e49", null ],
+    [ "Time", "classv8_1_1D8Console.html#afb9d0a63d17fb78865be20de479afaab", null ],
+    [ "TimeEnd", "classv8_1_1D8Console.html#aa6ce5eee4c06cf2e177552be8648fd3d", null ],
+    [ "TimeLog", "classv8_1_1D8Console.html#a4b20d1168e4b61cfb8bf132fee678b78", null ],
+    [ "TimeStamp", "classv8_1_1D8Console.html#accef496f3123b2bc03b154664511d63c", null ],
+    [ "Trace", "classv8_1_1D8Console.html#a395cda52b878d0e1d17f4734bd46b452", null ],
+    [ "Warn", "classv8_1_1D8Console.html#ac8246a5758c63271e67daba3db4f4afa", null ],
+    [ "isolate_", "classv8_1_1D8Console.html#ac4911a766ebea7cdfe59f87d755786d6", null ],
+    [ "origin_", "classv8_1_1D8Console.html#a2b6abe3d78da958fc024f36474ed1cc2", null ],
+    [ "profiler_", "classv8_1_1D8Console.html#a006b0e0bb552a6bb3f21da79c3ccc42b", null ],
+    [ "profiler_active_", "classv8_1_1D8Console.html#a1f4d2dab09575b920d71fd8014de19e3", null ],
+    [ "timers_", "classv8_1_1D8Console.html#aa71a140b897d167147784a9f6b8ed2bc", null ]
 ];

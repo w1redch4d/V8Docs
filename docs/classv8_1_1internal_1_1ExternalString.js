@@ -1,6 +1,6 @@
 var classv8_1_1internal_1_1ExternalString =
 [
-    [ "BodyDescriptor", "classv8_1_1internal_1_1ExternalString_1_1BodyDescriptor.html", null ],
+    [ "BodyDescriptor", "classv8_1_1internal_1_1ExternalString_1_1BodyDescriptor.html", "classv8_1_1internal_1_1ExternalString_1_1BodyDescriptor" ],
     [ "DisposeResource", "classv8_1_1internal_1_1ExternalString.html#a46cd007503bb0fdc5f76d32236b7efc2", null ],
     [ "ExternalPayloadSize", "classv8_1_1internal_1_1ExternalString.html#a50383ab69115cd668af8e3bcb305bdcf", null ],
     [ "GetResourceRefForDeserialization", "classv8_1_1internal_1_1ExternalString.html#a7d405f75ac29f871fb445dfb5d922d31", null ],
@@ -15,5 +15,6 @@ var classv8_1_1internal_1_1ExternalString =
     [ "compiler::AccessBuilder", "classv8_1_1internal_1_1ExternalString.html#af3a8d08083fa2453a64cb634d3071b43", null ],
     [ "OffsetsForDebug", "classv8_1_1internal_1_1ExternalString.html#a1e7ef7315cd297d6b6a956b93204f742", null ],
     [ "TorqueGeneratedExternalStringAsserts", "classv8_1_1internal_1_1ExternalString.html#a965da2ec6709d0e152bfd21b247739d5", null ],
+    [ "ObjectTraits< ExternalString >", "classv8_1_1internal_1_1ExternalString.html#a2cf40f203006d4684934f998f7222669", null ],
     [ "resource_data_", "classv8_1_1internal_1_1ExternalString.html#ae662afa5935f45a577d225a9b5c50886", null ]
 ];

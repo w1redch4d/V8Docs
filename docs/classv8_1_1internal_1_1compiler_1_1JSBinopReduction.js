@@ -19,10 +19,13 @@ var classv8_1_1internal_1_1compiler_1_1JSBinopReduction =
     [ "control", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a835b418121861b4c44bb379f1332a3d1", null ],
     [ "ConvertInputsToNumber", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a0c3edbdd8c46761d38a05b8cd3ff5821", null ],
     [ "ConvertInputsToUI32", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a324487f05e21c0cbf8deade5d02d2323", null ],
+    [ "ConvertPlainPrimitiveToNumber", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a7f04cff86ac2884dbb25f46dfe33a52a", null ],
+    [ "ConvertToUI32", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a0fcf37554babe0e8be5cb0e01c39c457", null ],
     [ "effect", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#aae1d4da70e36852d507609f40fa45ec4", null ],
     [ "GetBinaryOperationHint", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a09da162c1395c4f1c3a6baffd84bfcdd", null ],
     [ "GetCompareBigIntOperationHint", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#ab13d07ec865f37b91f409240530337aa", null ],
     [ "GetCompareNumberOperationHint", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a4e1da8d127ba5877a0ebe63beb10ef3a", null ],
+    [ "GetCompareOperationHint", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#aef4c6239be2748ec14bfee7b04697370", null ],
     [ "graph", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a46ce618fde72ea617e2ae82efcb50cca", null ],
     [ "IsInternalizedStringCompareOperation", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a86ebf986a32f62ac0512a702e7abdb95", null ],
     [ "isolate", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#ac055acbfb2e034037c5a500edff600e8", null ],
@@ -46,5 +49,8 @@ var classv8_1_1internal_1_1compiler_1_1JSBinopReduction =
     [ "simplified", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a6ef0f8f53c0406178db07df95a3a9af4", null ],
     [ "SwapInputs", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a8a83369e484a9816711b052b914d2b75", null ],
     [ "type", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a46a58239c538e3357a0413d3e8b53328", null ],
-    [ "zone", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a98951926211f2a97717105069a8e671a", null ]
+    [ "update_effect", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a61e0e8954a1c6852f02f3f0938069c62", null ],
+    [ "zone", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a98951926211f2a97717105069a8e671a", null ],
+    [ "lowering_", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a2df0eec534a503341d0852ed1f9326fd", null ],
+    [ "node_", "classv8_1_1internal_1_1compiler_1_1JSBinopReduction.html#a0b3a374fe53e629c0643c8776f59343b", null ]
 ];

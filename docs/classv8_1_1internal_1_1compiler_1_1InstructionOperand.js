@@ -36,8 +36,11 @@ var classv8_1_1internal_1_1compiler_1_1InstructionOperand =
     [ "IsSimd256StackSlot", "classv8_1_1internal_1_1compiler_1_1InstructionOperand.html#a1f83d9983a274424f0db4f3cd402c65f", null ],
     [ "IsStackSlot", "classv8_1_1internal_1_1compiler_1_1InstructionOperand.html#aa3e34b9e2d6b5deba50af40699db3d0c", null ],
     [ "kind", "classv8_1_1internal_1_1compiler_1_1InstructionOperand.html#ab3a17fbf744bde7ee1957eb4f7c42174", null ],
+    [ "New", "classv8_1_1internal_1_1compiler_1_1InstructionOperand.html#a27d3d351dfc7150a18721eb609aad091", null ],
     [ "operator!=", "classv8_1_1internal_1_1compiler_1_1InstructionOperand.html#adb5e7ee7299c2fc30546f0450e4d53f8", null ],
     [ "operator==", "classv8_1_1internal_1_1compiler_1_1InstructionOperand.html#ab112e5fa9f0e71b128655228bec7eeba", null ],
     [ "Print", "classv8_1_1internal_1_1compiler_1_1InstructionOperand.html#a8c972de828fbb66586b96c0911ac3d88", null ],
+    [ "ReplaceWith", "classv8_1_1internal_1_1compiler_1_1InstructionOperand.html#a15887ba6659295069e44ae205b48a982", null ],
+    [ "kInvalidVirtualRegister", "classv8_1_1internal_1_1compiler_1_1InstructionOperand.html#acbe2539e980eb4f4522519b5e01c7fda", null ],
     [ "value_", "classv8_1_1internal_1_1compiler_1_1InstructionOperand.html#a4152277dc0b28ea539e0aab97dfff29b", null ]
 ];

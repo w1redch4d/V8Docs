@@ -7,7 +7,7 @@ var dir_4ee34a990ac0cd4ceb75130c67cb9983 =
     [ "default-job.cc", "default-job_8cc.html", null ],
     [ "default-job.h", "default-job_8h.html", "default-job_8h" ],
     [ "default-platform.cc", "default-platform_8cc.html", "default-platform_8cc" ],
-    [ "default-platform.h", "default-platform_8h.html", "default-platform_8h" ],
+    [ "default-platform.h", "src_2libplatform_2default-platform_8h.html", "src_2libplatform_2default-platform_8h" ],
     [ "default-thread-isolated-allocator.cc", "default-thread-isolated-allocator_8cc.html", null ],
     [ "default-thread-isolated-allocator.h", "default-thread-isolated-allocator_8h.html", "default-thread-isolated-allocator_8h" ],
     [ "default-worker-threads-task-runner.cc", "default-worker-threads-task-runner_8cc.html", null ],

@@ -9,6 +9,7 @@ var classv8_1_1internal_1_1MarkingWorklists_1_1Local =
     [ "IsWrapperEmpty", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a8bacecc45ec14ea38cda1a2f323ec844", null ],
     [ "MergeOnHold", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#abb9414270a1b1952ec53698efa81c457", null ],
     [ "Pop", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#ad18f481e245908a3d53ca909c3a67130", null ],
+    [ "PopContext", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a4ceb138814c5c3b5e5192054e664eacb", null ],
     [ "PopOnHold", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a5efc7d1b1a2586cd728cc511344d90fd", null ],
     [ "Publish", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#af05276565afe3da867d57cf4d731b900", null ],
     [ "PublishCppHeapObjects", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#ab563bc532f97a1da526c4a7c2db8e3f0", null ],
@@ -17,5 +18,19 @@ var classv8_1_1internal_1_1MarkingWorklists_1_1Local =
     [ "PushOnHold", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#ab8ba48ac1d8bf9b1cd10ee3cca5d8f0a", null ],
     [ "ShareWork", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a0598d0ebcf98e7a896f43d9726594874", null ],
     [ "SwitchToContext", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a4c53e156f6929b9d002a6d135547ed5d", null ],
-    [ "SwitchToSharedForTesting", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a0302bd19013c71470ae0227818848960", null ]
+    [ "SwitchToContextImpl", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a4aa7d827dc4b3ccb228213974dcf1d92", null ],
+    [ "SwitchToContextSlow", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a44cade2329715cb2fb8066961e665339", null ],
+    [ "SwitchToSharedForTesting", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a0302bd19013c71470ae0227818848960", null ],
+    [ "active_", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a1e9d7afaedb8b3395200a5dca02a6a6f", null ],
+    [ "active_context_", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a7146d392dc2d5828793df24c5300440f", null ],
+    [ "context_worklists_", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a2a5a52fdeda3e86cef2b0d321780900a", null ],
+    [ "cpp_marking_state_", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a8bac85ff24cadec0c757e763bfb61d00", null ],
+    [ "is_per_context_mode_", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a8926916938fe3d3388439a8da4aaca62", null ],
+    [ "kNoCppMarkingState", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a9129871cbe80dbd2ea3c602d9fb016f6", null ],
+    [ "kOtherContext", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a9c3a6a3c46368f5154d1852598064aef", null ],
+    [ "kSharedContext", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#af3565ff5f0610f2295e1438500e0028e", null ],
+    [ "on_hold_", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#ad27498cb99b34aa340718ef6e04199f6", null ],
+    [ "other_", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a33ffe4dbccf7e6d6394ae0a96703f320", null ],
+    [ "shared_", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#aca2306bb11afc25f4c26918e34128b8a", null ],
+    [ "worklist_by_context_", "classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#ae38c4d9ec282337d432aed6d419242b2", null ]
 ];

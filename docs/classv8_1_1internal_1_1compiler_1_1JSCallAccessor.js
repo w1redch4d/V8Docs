@@ -6,5 +6,6 @@ var classv8_1_1internal_1_1compiler_1_1JSCallAccessor =
     [ "frequency", "classv8_1_1internal_1_1compiler_1_1JSCallAccessor.html#a055fb623aba1a72fe1a1a9d8bf98350c", null ],
     [ "new_target", "classv8_1_1internal_1_1compiler_1_1JSCallAccessor.html#af9d94238f1ab39433066c7f59973154e", null ],
     [ "receiver", "classv8_1_1internal_1_1compiler_1_1JSCallAccessor.html#af5f791c424dc4724dbaaa05167a087e5", null ],
-    [ "target", "classv8_1_1internal_1_1compiler_1_1JSCallAccessor.html#a5e23a44a2ad8e94b982dd8cc9e467d4d", null ]
+    [ "target", "classv8_1_1internal_1_1compiler_1_1JSCallAccessor.html#a5e23a44a2ad8e94b982dd8cc9e467d4d", null ],
+    [ "call_", "classv8_1_1internal_1_1compiler_1_1JSCallAccessor.html#a9c6563071a3dba02752daa77cea5cc02", null ]
 ];

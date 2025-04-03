@@ -12,10 +12,20 @@ var classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis =
     [ "GetOutLivenessFor", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#a61b418ef9cb2a3abdb2f111eafe96730", null ],
     [ "IsLoopHeader", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#ad808c62759c34def9f0061c4937c91cd", null ],
     [ "liveness_analyzed", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#a8667d982bc7d466f67ac35b80b5c4e23", null ],
+    [ "liveness_map", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#aa9bd000aa66cdfc88850d57b9ef32e38", null ],
+    [ "liveness_map", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#a5766a9eb398c6ba75e7730629220c5a8", null ],
     [ "operator=", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#a8ffa5f9233d984940c25e29a61a7681d", null ],
     [ "osr_bailout_id", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#aac3f48b3229b8ca8330e7603dbeeecd2", null ],
     [ "osr_entry_point", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#a4c32d8fb1934b5374be02981cf40d043", null ],
     [ "resume_jump_targets", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#a5a9474b2516df0f6e41339edfeccbe8e", null ],
     [ "TryGetLoopInfoFor", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#aba53934c06e9c8a90bc5b701f159d5da", null ],
-    [ "BytecodeAnalysisImpl", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#ad2d2a99b55542f09fcc4d3caff15e8b5", null ]
+    [ "BytecodeAnalysisImpl", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#ad2d2a99b55542f09fcc4d3caff15e8b5", null ],
+    [ "analyze_liveness_", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#a78d6cdbc82d609a0eed18841f88b64f3", null ],
+    [ "bytecode_count_", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#a0523d36334a41498769582b73fdd0bb0", null ],
+    [ "end_to_header_", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#adacd4c7a0fe8cbad15b65de9b30ce082", null ],
+    [ "header_to_info_", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#a5d776f07335b69a4d55d1124e1d28e51", null ],
+    [ "liveness_map_", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#a61cf745408a6ea492e3043c387ddd1a3", null ],
+    [ "osr_bailout_id_", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#a2d638a6a906bcbb3a9f85ebb39bf43d0", null ],
+    [ "osr_entry_point_", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#a0f866c611d19fdd116b0603f139e8eb1", null ],
+    [ "resume_jump_targets_", "classv8_1_1internal_1_1compiler_1_1BytecodeAnalysis.html#af7af671a41301adc05ea3b976e0ca4fc", null ]
 ];

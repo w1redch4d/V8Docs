@@ -1,7 +1,26 @@
 var classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer =
 [
     [ "WasmExecutionTimer", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#acf9f2838c8fbefa362876de5c6c23308", null ],
+    [ "AddSample", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#aae5ab88f3287112a2b8aeb628d87691a", null ],
+    [ "BeginInterval", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a97e6a538dc147a8319ae486432c8e2c7", null ],
+    [ "EndInterval", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#aec6960e2fe0cc2f25d4f17324b2d31b3", null ],
     [ "Start", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a9980eaef3a83fe22b55831f4ba9a5235", null ],
+    [ "StartInternal", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a4db20887356de3c1b06cf2b7afb4b0b0", null ],
     [ "Stop", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#ac921d0ff945732ed812f2f571a99877f", null ],
-    [ "Terminate", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#aeec0626a7c4785164dcfb86b66ad1366", null ]
+    [ "StopInternal", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#aa316a6a738d1d3421df130ea594faa34", null ],
+    [ "Terminate", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#aeec0626a7c4785164dcfb86b66ad1366", null ],
+    [ "cooldown_interval_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a468e47955de27e81e8aacacac81815d1", null ],
+    [ "execute_ratio_histogram_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#aad5e2b3c4699e44ffce27501e0ec2d43", null ],
+    [ "isolate_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#ad6d7a8e248ec6be9a3b25db15f010148", null ],
+    [ "kMaxPercentValue", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#aa0215cf2c0e0de12a919f8698e9ec9ca", null ],
+    [ "next_interval_time_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a390ae01f4ce05f535838535eb6ec2739", null ],
+    [ "sample_duration_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#aa14e10ccc0562a859fb11f287bd09e10", null ],
+    [ "samples_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a49c590f5f269734a1654430d1936089e", null ],
+    [ "slow_threshold_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a96f33a9c6562db195aabd46dcc7ba676", null ],
+    [ "slow_threshold_samples_count_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a433c7a9010b5cae759c33384f3376187", null ],
+    [ "slow_wasm_histogram_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a62b0ffc8c49a8768022f81fa14331d06", null ],
+    [ "start_interval_time_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a2d68a3ffd6c390f15df231b544489680", null ],
+    [ "window_execute_timer_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a6e27354194d73e14926e860048e5bfbc", null ],
+    [ "window_has_started_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a9ad5cb54626a382864985593ca482bce", null ],
+    [ "window_running_time_", "classv8_1_1internal_1_1wasm_1_1WasmExecutionTimer.html#a3df3a98c18dc2b9e22625eac20a781ba", null ]
 ];

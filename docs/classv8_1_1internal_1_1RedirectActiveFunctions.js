@@ -5,5 +5,7 @@ var classv8_1_1internal_1_1RedirectActiveFunctions =
       [ "kUseDebugBytecode", "classv8_1_1internal_1_1RedirectActiveFunctions.html#adc698240171719da974983113c4dc6fdaafe6e88a7a53ecc9e0b053d550500b1a", null ]
     ] ],
     [ "RedirectActiveFunctions", "classv8_1_1internal_1_1RedirectActiveFunctions.html#ac1fbcb8aa7c675b191bd82a57909ee35", null ],
-    [ "VisitThread", "classv8_1_1internal_1_1RedirectActiveFunctions.html#a1983b531c36842734c1018e5e841a637", null ]
+    [ "VisitThread", "classv8_1_1internal_1_1RedirectActiveFunctions.html#a1983b531c36842734c1018e5e841a637", null ],
+    [ "mode_", "classv8_1_1internal_1_1RedirectActiveFunctions.html#ad83c81db91756b6fe09c97399097acec", null ],
+    [ "shared_", "classv8_1_1internal_1_1RedirectActiveFunctions.html#ad407314b2ee7ada7d479ebe384336b1b", null ]
 ];

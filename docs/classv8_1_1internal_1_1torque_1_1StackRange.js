@@ -5,5 +5,7 @@ var classv8_1_1internal_1_1torque_1_1StackRange =
     [ "end", "classv8_1_1internal_1_1torque_1_1StackRange.html#a9389be2872b41b3e20d5746fb64a1390", null ],
     [ "Extend", "classv8_1_1internal_1_1torque_1_1StackRange.html#a0f4dcf13dfe295abbc500a5e5065a184", null ],
     [ "operator==", "classv8_1_1internal_1_1torque_1_1StackRange.html#a18fea1e3ab7bea4eb1bbea20355ac0cc", null ],
-    [ "Size", "classv8_1_1internal_1_1torque_1_1StackRange.html#ad23e1c54fe2afbc6a9d664b0b05c54a5", null ]
+    [ "Size", "classv8_1_1internal_1_1torque_1_1StackRange.html#ad23e1c54fe2afbc6a9d664b0b05c54a5", null ],
+    [ "begin_", "classv8_1_1internal_1_1torque_1_1StackRange.html#a3e96008ebe06ef16abadb1ab8d49f380", null ],
+    [ "end_", "classv8_1_1internal_1_1torque_1_1StackRange.html#a0fa2e794fd1bda6ccbaab3cb954308e0", null ]
 ];

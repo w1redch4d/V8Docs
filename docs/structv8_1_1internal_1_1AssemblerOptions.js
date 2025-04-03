@@ -1,5 +1,6 @@
 var structv8_1_1internal_1_1AssemblerOptions =
 [
+    [ "Default", "structv8_1_1internal_1_1AssemblerOptions.html#a6a99f8f40b0a08a82fdd40cfc010b7cb", null ],
     [ "builtin_call_jump_mode", "structv8_1_1internal_1_1AssemblerOptions.html#ac463b8525fe81a8865656767792226ff", null ],
     [ "code_range_base", "structv8_1_1internal_1_1AssemblerOptions.html#a993f283760efdfc09ae2df792b1d61ee", null ],
     [ "collect_win64_unwind_info", "structv8_1_1internal_1_1AssemblerOptions.html#a23bf6f4ee2bad573c020e81753dfa9da", null ],

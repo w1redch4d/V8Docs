@@ -4,6 +4,7 @@ var classv8_1_1internal_1_1PropertyArray =
     [ "HashField", "classv8_1_1internal_1_1PropertyArray.html#ad78f737d8d8a78e631e7e8edf64395c2", null ],
     [ "LengthField", "classv8_1_1internal_1_1PropertyArray.html#acf861384eb6b3e86f51223a1a05dc620", null ],
     [ "CompareAndSwap", "classv8_1_1internal_1_1PropertyArray.html#a3042a9147eb04c4cb7916455f3682f2e", null ],
+    [ "CopyElements", "classv8_1_1internal_1_1PropertyArray.html#a0a649f28bc672ba58880ee40f7d33be0", null ],
     [ "data_start", "classv8_1_1internal_1_1PropertyArray.html#aebe0855b53554aab597b76f4eb535636", null ],
     [ "get", "classv8_1_1internal_1_1PropertyArray.html#a78ba6f9455f00efde2e23f0809590a49", null ],
     [ "get", "classv8_1_1internal_1_1PropertyArray.html#ae1be53984761f8f63b4ddd3be160b862", null ],
@@ -13,11 +14,16 @@ var classv8_1_1internal_1_1PropertyArray =
     [ "initialize_length", "classv8_1_1internal_1_1PropertyArray.html#ad40e772c8ac2e2f5db9d0d9945a59c33", null ],
     [ "length", "classv8_1_1internal_1_1PropertyArray.html#ac9a453d18f5165516cf5791f05348548", null ],
     [ "length", "classv8_1_1internal_1_1PropertyArray.html#a5b774eb3aa7a18f413be90ab07d6d0e1", null ],
+    [ "OffsetOfElementAt", "classv8_1_1internal_1_1PropertyArray.html#a3806c5c8a506219bff0c1448ef3eb1fd", null ],
     [ "RawFieldOfElementAt", "classv8_1_1internal_1_1PropertyArray.html#a9c8f9a179ff9373d4d57d3374d666700", null ],
     [ "set", "classv8_1_1internal_1_1PropertyArray.html#a1762d5f7b2fb68636afbd007d845e83a", null ],
     [ "set", "classv8_1_1internal_1_1PropertyArray.html#a30e7a20dc226bd82ce89e61e50d52277", null ],
     [ "set", "classv8_1_1internal_1_1PropertyArray.html#ac1ae1c6f6a0e9649ab81c2dec600b9a2", null ],
     [ "SetHash", "classv8_1_1internal_1_1PropertyArray.html#a236452639733ce20ac075de4232f4990", null ],
+    [ "SizeFor", "classv8_1_1internal_1_1PropertyArray.html#a7f3f1e3dd698aff37b020dfb781f9702", null ],
     [ "Swap", "classv8_1_1internal_1_1PropertyArray.html#a1297917f380044d159913acdb4d32267", null ],
-    [ "Swap", "classv8_1_1internal_1_1PropertyArray.html#a67060000d5809daf99c9c6720573252e", null ]
+    [ "Swap", "classv8_1_1internal_1_1PropertyArray.html#a67060000d5809daf99c9c6720573252e", null ],
+    [ "kLengthFieldSize", "classv8_1_1internal_1_1PropertyArray.html#a63ff4fcc4e77a43b61cb1473ea689463", null ],
+    [ "kMaxLength", "classv8_1_1internal_1_1PropertyArray.html#a579c57b2a0a71c4be1492231266a1474", null ],
+    [ "kNoHashSentinel", "classv8_1_1internal_1_1PropertyArray.html#aca6022daa11a32e80ae3a6ddc2659d4f", null ]
 ];

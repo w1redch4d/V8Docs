@@ -11,5 +11,6 @@ var classv8_1_1internal_1_1compiler_1_1NodeObserver =
     [ "OnNodeChanged", "classv8_1_1internal_1_1compiler_1_1NodeObserver.html#a951332ee5d6467254fe27d92899ce8a4", null ],
     [ "OnNodeCreated", "classv8_1_1internal_1_1compiler_1_1NodeObserver.html#adb3053fe88ea129215f7f3d6049fcb25", null ],
     [ "operator=", "classv8_1_1internal_1_1compiler_1_1NodeObserver.html#a3fc4845f5d60934500f8240dbadaef04", null ],
-    [ "set_has_observed_changes", "classv8_1_1internal_1_1compiler_1_1NodeObserver.html#addc2db92cb452a28cb84fd3c7405bfff", null ]
+    [ "set_has_observed_changes", "classv8_1_1internal_1_1compiler_1_1NodeObserver.html#addc2db92cb452a28cb84fd3c7405bfff", null ],
+    [ "has_observed_changes_", "classv8_1_1internal_1_1compiler_1_1NodeObserver.html#a7e6790e301e7feecebee042e8c0fbd97", null ]
 ];

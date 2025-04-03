@@ -8,5 +8,8 @@ var structv8_1_1internal_1_1compiler_1_1DiamondMatcher =
     [ "IfTrue", "structv8_1_1internal_1_1compiler_1_1DiamondMatcher.html#aa462e38c96f91e104ffbf18c454afe26", null ],
     [ "Matched", "structv8_1_1internal_1_1compiler_1_1DiamondMatcher.html#a8bd0a2ad14e09c58ed322b6599b4ce06", null ],
     [ "Merge", "structv8_1_1internal_1_1compiler_1_1DiamondMatcher.html#a2a15b518882402703c8ee669c24c6097", null ],
-    [ "TrueInputOf", "structv8_1_1internal_1_1compiler_1_1DiamondMatcher.html#a64c1ca45fba1ed873cb09b1a63f1f794", null ]
+    [ "TrueInputOf", "structv8_1_1internal_1_1compiler_1_1DiamondMatcher.html#a64c1ca45fba1ed873cb09b1a63f1f794", null ],
+    [ "branch_", "structv8_1_1internal_1_1compiler_1_1DiamondMatcher.html#af226bd4394eb375ca458cd5625013775", null ],
+    [ "if_false_", "structv8_1_1internal_1_1compiler_1_1DiamondMatcher.html#a1b50f5ced2257f8efa16e30122a9cd81", null ],
+    [ "if_true_", "structv8_1_1internal_1_1compiler_1_1DiamondMatcher.html#a3dbc27e8e9c9e30bb363e9317591503f", null ]
 ];

@@ -1,6 +1,8 @@
 var classv8_1_1internal_1_1compiler_1_1CompilationDependency =
 [
     [ "CompilationDependency", "classv8_1_1internal_1_1compiler_1_1CompilationDependency.html#a12a6cb3a9a14098f227dd06a1ca8bc07", null ],
+    [ "Equals", "classv8_1_1internal_1_1compiler_1_1CompilationDependency.html#a98e50285a719adeb660ba303ea38d347", null ],
+    [ "Hash", "classv8_1_1internal_1_1compiler_1_1CompilationDependency.html#ab94d98bdf12746e2705a7fc15b04aa98", null ],
     [ "Install", "classv8_1_1internal_1_1compiler_1_1CompilationDependency.html#ad273fb5f676b29de644fa466ee87f70a", null ],
     [ "IsValid", "classv8_1_1internal_1_1compiler_1_1CompilationDependency.html#ab3f4247cd9932ab33a4de12022389b8a", null ],
     [ "PrepareInstall", "classv8_1_1internal_1_1compiler_1_1CompilationDependency.html#a2add87c9f8ff23214026485692c93dfb", null ],

@@ -16,5 +16,7 @@ var classv8_1_1internal_1_1compiler_1_1JSGenericLowering =
     [ "ReplaceWithBuiltinCall", "classv8_1_1internal_1_1compiler_1_1JSGenericLowering.html#aea37dcc55921876d55b9cebce8e76361", null ],
     [ "ReplaceWithBuiltinCall", "classv8_1_1internal_1_1compiler_1_1JSGenericLowering.html#afebbf523851a48b155427eeb41f58d5c", null ],
     [ "ReplaceWithRuntimeCall", "classv8_1_1internal_1_1compiler_1_1JSGenericLowering.html#a39abc5ee3c04bde1be94d223e467aa2e", null ],
-    [ "zone", "classv8_1_1internal_1_1compiler_1_1JSGenericLowering.html#a48291ee4f32fc4bbc63c640021721e0e", null ]
+    [ "zone", "classv8_1_1internal_1_1compiler_1_1JSGenericLowering.html#a48291ee4f32fc4bbc63c640021721e0e", null ],
+    [ "broker_", "classv8_1_1internal_1_1compiler_1_1JSGenericLowering.html#a280b4fe2835bea7580be20ab4e448474", null ],
+    [ "jsgraph_", "classv8_1_1internal_1_1compiler_1_1JSGenericLowering.html#a22cc1117f7d7e1f12720131184d0598e", null ]
 ];

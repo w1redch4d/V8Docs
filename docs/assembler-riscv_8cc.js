@@ -1,5 +1,11 @@
 var assembler_riscv_8cc =
 [
+    [ "CpuFeaturesImpliedByCompiler", "assembler-riscv_8cc.html#abd06571dd8f8f47f40ec4901b53271ac", null ],
+    [ "SetBranchOffset", "assembler-riscv_8cc.html#af9aab29983dfa6d07b8a8c881737b32b", null ],
+    [ "SetCBranchOffset", "assembler-riscv_8cc.html#adee8e75172643e44269a219060e79030", null ],
+    [ "SetCJalOffset", "assembler-riscv_8cc.html#adb2e3dd02745b0a9f120fa4485ed9afc", null ],
+    [ "SetJalOffset", "assembler-riscv_8cc.html#ad91bf4ff489dd693587e971b29962597", null ],
+    [ "SetLoadOffset", "assembler-riscv_8cc.html#a564226d754ee8aa9f45eab1b7a7bc566", null ],
     [ "signExtend", "assembler-riscv_8cc.html#a68614c2e6af433d623ea047cce22d7fb", null ],
     [ "ToNumber", "assembler-riscv_8cc.html#a5a857fe236959ea037b3dd560a3414f0", null ],
     [ "ToRegister", "assembler-riscv_8cc.html#aad4614e9eaee9371d87d0f56ffb440e3", null ],

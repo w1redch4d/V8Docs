@@ -4,6 +4,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor =
     [ "BigIntUnaryOp", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1BigIntUnaryOp.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1BigIntUnaryOp" ],
     [ "DateCurrentTime", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1DateCurrentTime.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1DateCurrentTime" ],
     [ "DebugPrint", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1DebugPrint.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1DebugPrint" ],
+    [ "Descriptor", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1Descriptor" ],
     [ "HandleNoHeapWritesInterrupts", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1HandleNoHeapWritesInterrupts.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1HandleNoHeapWritesInterrupts" ],
     [ "HasInPrototypeChain", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1HasInPrototypeChain.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1HasInPrototypeChain" ],
     [ "NewClosure", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1NewClosure.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1NewClosure" ],
@@ -24,5 +25,7 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor =
     [ "ThrowSuperNotCalled", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowSuperNotCalled.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1ThrowSuperNotCalled" ],
     [ "TransitionElementsKind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TransitionElementsKind.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TransitionElementsKind" ],
     [ "TryMigrateInstance", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstance.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstance" ],
-    [ "TryMigrateInstanceAndMarkMapAsMigrationTarget", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstanceAndMarkMapAsMigrationTarget.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstanceAndMarkMapAsMigrationTarget" ]
+    [ "TryMigrateInstanceAndMarkMapAsMigrationTarget", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstanceAndMarkMapAsMigrationTarget.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor_1_1TryMigrateInstanceAndMarkMapAsMigrationTarget" ],
+    [ "Never", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor.html#a576802237210cd8d06400a0ca3373040", null ],
+    [ "Void", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1RuntimeCallDescriptor.html#a06c157bfa83f03b75e3b3b8556aaad1e", null ]
 ];

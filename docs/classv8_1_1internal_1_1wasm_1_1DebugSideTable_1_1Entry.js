@@ -13,5 +13,8 @@ var classv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1Entry =
     [ "FindChangedValue", "classv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1Entry.html#a664a128c8230be478e60675d45c526f5", null ],
     [ "pc_offset", "classv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1Entry.html#a74e5dbb94e62452fc1982f9245e9074e", null ],
     [ "Print", "classv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1Entry.html#ab5fed7a0ebf618749f71e834f3848f3e", null ],
-    [ "stack_height", "classv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1Entry.html#a3b4dc918a28124ef564be1d918422bd2", null ]
+    [ "stack_height", "classv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1Entry.html#a3b4dc918a28124ef564be1d918422bd2", null ],
+    [ "changed_values_", "classv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1Entry.html#a5ecdd0f84abe56b729e264a5d18cd256", null ],
+    [ "pc_offset_", "classv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1Entry.html#a4981b849f23a063b626d6d4cf0c4991e", null ],
+    [ "stack_height_", "classv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1Entry.html#a998c36134a3e96dd8ff6bf543ab6f61d", null ]
 ];

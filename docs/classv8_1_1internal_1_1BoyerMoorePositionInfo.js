@@ -8,5 +8,10 @@ var classv8_1_1internal_1_1BoyerMoorePositionInfo =
     [ "raw_bitset", "classv8_1_1internal_1_1BoyerMoorePositionInfo.html#aa6fed5e994ab851666be369218cf8137", null ],
     [ "Set", "classv8_1_1internal_1_1BoyerMoorePositionInfo.html#a18adf42a94077863370eb95c3a22724b", null ],
     [ "SetAll", "classv8_1_1internal_1_1BoyerMoorePositionInfo.html#a68eb37dd42e93e681118b5a238220edb", null ],
-    [ "SetInterval", "classv8_1_1internal_1_1BoyerMoorePositionInfo.html#a58892430013a753962bda28430f7daf8", null ]
+    [ "SetInterval", "classv8_1_1internal_1_1BoyerMoorePositionInfo.html#a58892430013a753962bda28430f7daf8", null ],
+    [ "kMapSize", "classv8_1_1internal_1_1BoyerMoorePositionInfo.html#a1358f54b5653511509595f92e53654a3", null ],
+    [ "kMask", "classv8_1_1internal_1_1BoyerMoorePositionInfo.html#a2ea56c5df7e4b9c86e482b8b089cac3e", null ],
+    [ "map_", "classv8_1_1internal_1_1BoyerMoorePositionInfo.html#a43aabdfc305599678eea53412116d03c", null ],
+    [ "map_count_", "classv8_1_1internal_1_1BoyerMoorePositionInfo.html#a9c528235c2bd4ce1f6b6c5e23eae46f1", null ],
+    [ "w_", "classv8_1_1internal_1_1BoyerMoorePositionInfo.html#ae8b83104d9186e50ef1b36dae3e7d43e", null ]
 ];

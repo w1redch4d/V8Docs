@@ -1,7 +1,9 @@
 var classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo =
 [
     [ "~MaglevCompilationInfo", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a7763ea7a6218dfc8a75e74ddf67aea75", null ],
+    [ "MaglevCompilationInfo", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#af41c2addfb3017e43f2f88396fdb6872", null ],
     [ "broker", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#af6ee3e193757ecf58fe2c1689b24fe91", null ],
+    [ "canonical_handles", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#aa6c3c093440e8196ebca3c56c02eb03f", null ],
     [ "collect_source_positions", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a7462adec45a3ddd3bb86aaa268ffa0c6", null ],
     [ "could_not_inline_all_candidates", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a1087c1e7e299040ecca5f84eb3c67f71", null ],
     [ "DetachCanonicalHandles", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#aba17d96b1347346841f7cd6259a36f97", null ],
@@ -11,6 +13,8 @@ var classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo =
     [ "graph_labeller", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a6a2aed87721f3f7f9defdda19edd877a", null ],
     [ "has_graph_labeller", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#ad5ab460a0b5300e8fb41bc7505b4e79a", null ],
     [ "is_detached", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a541028c013c9b02306bed6711a0cfbde", null ],
+    [ "New", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a24c2087913cead16cd2d98bb41c53412", null ],
+    [ "NewForTurboshaft", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a08861cbecc63351be49da4a9c610e6e7", null ],
     [ "ReopenAndCanonicalizeHandlesInNewScope", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a34f2db523bd534b45f7ab32d57a1e95d", null ],
     [ "set_canonical_handles", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a745dfc27f36d1fef19e7a970a3bc4130", null ],
     [ "set_code", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#acf0c9bd06cea6446a40bddadc2e5a71a", null ],
@@ -22,5 +26,19 @@ var classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo =
     [ "toplevel_function", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#ab58109f948ccca4689e4f8c874efe4c8", null ],
     [ "toplevel_is_osr", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#abb15c7e1cb7edcfebda76997c5d588e0", null ],
     [ "toplevel_osr_offset", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#af7fbc70f6739ed9f79f88c0b6d7a9754", null ],
-    [ "zone", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#ab1519fdaa3fcd7f3e5795e3fed1c7396", null ]
+    [ "zone", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#ab1519fdaa3fcd7f3e5795e3fed1c7396", null ],
+    [ "broker_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a33f325bca3161ed0091c4fe229500e3a", null ],
+    [ "canonical_handles_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a7731f778c876ab2e49cb652d2c94e16a", null ],
+    [ "code_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a3425a8965f31928567fd89d06ece716d", null ],
+    [ "collect_source_positions_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#aef4fc3b71f72f8389bd494324fb9ae63", null ],
+    [ "could_not_inline_all_candidates_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a093a00a885e49eb514951fd3bd331c7e", null ],
+    [ "for_turboshaft_frontend_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#ac3d5f7eb97ef694d69a139837f829301", null ],
+    [ "graph_labeller_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a498b54c0d26e0833344d43b2dc953082", null ],
+    [ "osr_offset_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a89ec16c67198b7068cbf29c6253ca007", null ],
+    [ "owns_broker_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a73026ba2c6905d06c80a252505ad26f6", null ],
+    [ "ph_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#aaf5ab42797fd704b900a622971fd8503", null ],
+    [ "specialize_to_function_context_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#ab37c9528e0499daaf2192a55f719d94f", null ],
+    [ "toplevel_compilation_unit_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a7536bf0b018589c078f95d9aaad53ca9", null ],
+    [ "toplevel_function_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#acdbfda94750f80ed7abe8c25345a6931", null ],
+    [ "zone_", "classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#a4944609530f4502c738ef60b87bb1244", null ]
 ];

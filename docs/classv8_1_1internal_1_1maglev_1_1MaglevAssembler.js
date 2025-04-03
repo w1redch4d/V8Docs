@@ -95,9 +95,12 @@ var classv8_1_1internal_1_1maglev_1_1MaglevAssembler =
     [ "FromAnyToRegister", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a021d9ab48ff736c0cba72e4f6d36cc7a", null ],
     [ "FunctionEntryStackCheck", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a3923abc8d6fa71426ca51fe90d4c4c94", null ],
     [ "GenerateCheckConstTrackingLetCellFooter", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a8962ec7e7903d85275b7755a6907e358", null ],
+    [ "GetAllocatableDoubleRegisters", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a9f458fc48ce93d5a271126205260f232", null ],
+    [ "GetAllocatableRegisters", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#acc2548b7e39e351c78942521abfd6ef5", null ],
     [ "GetDeoptLabel", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a12b42a89570b66a4a0c1b9b1f2244443", null ],
     [ "GetFramePointer", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a68a465ec06d7c3b07339a459f85f1f77", null ],
     [ "GetFramePointerOffsetForStackSlot", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#aa86fa31c543fcc2921793ad9e49583a6", null ],
+    [ "GetFramePointerOffsetForStackSlot", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#ac7b42d650f4b25a4e516db592051d666", null ],
     [ "GetStackSlot", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a17fea401d24bd95e1f590da7cb38d121", null ],
     [ "IncrementAddress", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a85e5b10ae7aeea5a4361fb73e22ba899", null ],
     [ "IncrementInt32", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a0db0d396401ef9399239075a4d8d99f7", null ],
@@ -241,6 +244,7 @@ var classv8_1_1internal_1_1maglev_1_1MaglevAssembler =
     [ "SmiTagInt32AndJumpIfFail", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a1fb4c2ce9ff80a5b2b6bd9efbb630293", null ],
     [ "SmiTagInt32AndJumpIfSuccess", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#ad44ddc885c11873f5884967c0f67a3ca", null ],
     [ "SmiTagInt32AndJumpIfSuccess", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#ade85cad3ffec3646e1b5d9d1ed7bd1a5", null ],
+    [ "SmiTagInt32AndSetFlags", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a50da31fbc30401cee6aa95e0237414ae", null ],
     [ "SmiTagUint32AndJumpIfFail", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a1eaab9dd744fe885ad6fefd3038e7c6b", null ],
     [ "SmiTagUint32AndJumpIfFail", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a3054ec006f22221bb79829aca8bbd747", null ],
     [ "SmiTagUint32AndJumpIfSuccess", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#afad4dea7c0b72e0d2508bf1ae7819174", null ],
@@ -287,5 +291,7 @@ var classv8_1_1internal_1_1maglev_1_1MaglevAssembler =
     [ "UncheckedSmiTagInt32", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#aed5a98d30ec968e86c02cef38f3ff564", null ],
     [ "UncheckedSmiTagInt32", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a99214062c5d26b9653f2292f087962d2", null ],
     [ "UncheckedSmiTagUint32", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#ae77f7bb4b526b5da7a1497c37f137774", null ],
-    [ "UncheckedSmiTagUint32", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a9ecf38dc0915583427c61e8f047fca68", null ]
+    [ "UncheckedSmiTagUint32", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a9ecf38dc0915583427c61e8f047fca68", null ],
+    [ "code_gen_state_", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#afceb51b1ed5a3c6e5a71663facee59dd", null ],
+    [ "scratch_register_scope_", "classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a3d0421b91bf2f71bed9d32ff0871daa0", null ]
 ];

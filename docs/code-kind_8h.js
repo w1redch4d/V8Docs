@@ -29,5 +29,8 @@ var code_kind_8h =
     [ "CodeKindToString", "code-kind_8h.html#a3f079b83cc93eae0af1b87d0c3659972", null ],
     [ "CodeKindUsesBytecodeOffsetTable", "code-kind_8h.html#aecd51f6b6944b23620df84477f574420", null ],
     [ "CodeKindUsesBytecodeOrInterpreterData", "code-kind_8h.html#aa0c8db32b2b1158f647515bc47773314", null ],
-    [ "CodeKindUsesDeoptimizationData", "code-kind_8h.html#aea140ac87264ea2d2213e8fc0172d476", null ]
+    [ "CodeKindUsesDeoptimizationData", "code-kind_8h.html#aea140ac87264ea2d2213e8fc0172d476", null ],
+    [ "kCodeKindCount", "code-kind_8h.html#a241eba18a071b0fc4393c3c72c462d93", null ],
+    [ "kJSFunctionCodeKindsMask", "code-kind_8h.html#aa9aa8410124fd79f75494344286ca9e7", null ],
+    [ "kOptimizedJSFunctionCodeKindsMask", "code-kind_8h.html#a9e4a7d612068e927456f1e431ea40fac", null ]
 ];

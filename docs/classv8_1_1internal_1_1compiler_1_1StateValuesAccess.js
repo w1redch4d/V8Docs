@@ -7,5 +7,6 @@ var classv8_1_1internal_1_1compiler_1_1StateValuesAccess =
     [ "begin_without_receiver", "classv8_1_1internal_1_1compiler_1_1StateValuesAccess.html#aa94bd044ed0dd21a2225d7198c1bab5e", null ],
     [ "begin_without_receiver_and_skip", "classv8_1_1internal_1_1compiler_1_1StateValuesAccess.html#a529f72b012769d5f71dd674e1c04c9a8", null ],
     [ "end", "classv8_1_1internal_1_1compiler_1_1StateValuesAccess.html#a0812a933ac7af8887bac35477b28bc51", null ],
-    [ "size", "classv8_1_1internal_1_1compiler_1_1StateValuesAccess.html#a9e2921e60716c1f896abb073f8c1e02f", null ]
+    [ "size", "classv8_1_1internal_1_1compiler_1_1StateValuesAccess.html#a9e2921e60716c1f896abb073f8c1e02f", null ],
+    [ "node_", "classv8_1_1internal_1_1compiler_1_1StateValuesAccess.html#aa3559fc3ada53fbb1059d011556ba710", null ]
 ];

@@ -1,8 +1,15 @@
 var classv8_1_1internal_1_1TracedNode =
 [
+    [ "HasOldHost", "classv8_1_1internal_1_1TracedNode.html#aab94702be26371260ab4159c239068e4", null ],
     [ "IndexType", "classv8_1_1internal_1_1TracedNode.html#a1f5ce4281252f14a5ee7e71bf3af720e", null ],
+    [ "IsDroppable", "classv8_1_1internal_1_1TracedNode.html#ae47183eb3972f33d71ae6342c7fed870", null ],
+    [ "IsInUse", "classv8_1_1internal_1_1TracedNode.html#a22bf24479bd85741058ea1898e883d9a", null ],
+    [ "IsInYoungList", "classv8_1_1internal_1_1TracedNode.html#af747f97c13ea615cc5963edf9a8bf26b", null ],
+    [ "IsWeak", "classv8_1_1internal_1_1TracedNode.html#a1f7b5c8ab0d2b63c8aa93069dc6a9463", null ],
     [ "TracedNode", "classv8_1_1internal_1_1TracedNode.html#a5af1dafc175c3544ff30c8283fb528b4", null ],
     [ "clear_markbit", "classv8_1_1internal_1_1TracedNode.html#ab51a027ca331c7d13dc1dd5c6ae5d7c1", null ],
+    [ "FromLocation", "classv8_1_1internal_1_1TracedNode.html#a68154da2b1a8ac3bca4823f64cff5a68", null ],
+    [ "FromLocation", "classv8_1_1internal_1_1TracedNode.html#a0167be02c6f264b83cfe3a4545ac2892", null ],
     [ "has_old_host", "classv8_1_1internal_1_1TracedNode.html#adfaf6258cc3ddd09bd6f712090c720e2", null ],
     [ "index", "classv8_1_1internal_1_1TracedNode.html#a11b6f28cdef6b432f34790c373d0365d", null ],
     [ "is_droppable", "classv8_1_1internal_1_1TracedNode.html#a3f579b6d866a5f244535a13cd0e2da9e", null ],
@@ -24,5 +31,10 @@ var classv8_1_1internal_1_1TracedNode =
     [ "set_markbit", "classv8_1_1internal_1_1TracedNode.html#a0d85e792939d003e12b1dd58602ab937", null ],
     [ "set_next_free", "classv8_1_1internal_1_1TracedNode.html#add7259129e5fec4f3d8f8d66294d428b", null ],
     [ "set_raw_object", "classv8_1_1internal_1_1TracedNode.html#a2e75b6d478f29b524aef3ee61ca981a6", null ],
-    [ "set_weak", "classv8_1_1internal_1_1TracedNode.html#ab0009984c0ba5c32131878bdb0eeeea7", null ]
+    [ "set_weak", "classv8_1_1internal_1_1TracedNode.html#ab0009984c0ba5c32131878bdb0eeeea7", null ],
+    [ "flags_", "classv8_1_1internal_1_1TracedNode.html#ac0413704e9dd012d4f573d1975fb5fee", null ],
+    [ "index_", "classv8_1_1internal_1_1TracedNode.html#a9e4ab67436a0b5b7ec91d3dc1fcc886b", null ],
+    [ "is_marked_", "classv8_1_1internal_1_1TracedNode.html#a3685cd283ee460f9532ae3cb6319fd83", null ],
+    [ "next_free_index_", "classv8_1_1internal_1_1TracedNode.html#a15b17dc87d5fa98e8eb07b8ddc7a1ca3", null ],
+    [ "object_", "classv8_1_1internal_1_1TracedNode.html#a2f86567562bf3cca08cdf507ebfb24e3", null ]
 ];

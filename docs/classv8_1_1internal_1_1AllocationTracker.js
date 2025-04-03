@@ -1,12 +1,29 @@
 var classv8_1_1internal_1_1AllocationTracker =
 [
     [ "FunctionInfo", "structv8_1_1internal_1_1AllocationTracker_1_1FunctionInfo.html", "structv8_1_1internal_1_1AllocationTracker_1_1FunctionInfo" ],
+    [ "ScriptData", "classv8_1_1internal_1_1AllocationTracker_1_1ScriptData.html", "classv8_1_1internal_1_1AllocationTracker_1_1ScriptData" ],
+    [ "ScriptId", "classv8_1_1internal_1_1AllocationTracker.html#a8da5c2efc534da6567ade00c56c70cae", null ],
+    [ "ScriptsDataMap", "classv8_1_1internal_1_1AllocationTracker.html#a4cba352d8b34af23c510359c8b67155a", null ],
     [ "AllocationTracker", "classv8_1_1internal_1_1AllocationTracker.html#ae705bae00ff323c41efc0b1d50afc62c", null ],
     [ "~AllocationTracker", "classv8_1_1internal_1_1AllocationTracker.html#a2ffca96d666edbe1664a1e3c2e16fc59", null ],
     [ "AllocationTracker", "classv8_1_1internal_1_1AllocationTracker.html#ae85e96140bebe5f435070caa9887024f", null ],
+    [ "AddFunctionInfo", "classv8_1_1internal_1_1AllocationTracker.html#a8dc85fcde8c1bb8ad633d7ceaf92d8b2", null ],
     [ "address_to_trace", "classv8_1_1internal_1_1AllocationTracker.html#abe906f13bce17704f49abd7036239da7", null ],
     [ "AllocationEvent", "classv8_1_1internal_1_1AllocationTracker.html#af59e0f4c414b6fe00ff0729e616ae219", null ],
     [ "function_info_list", "classv8_1_1internal_1_1AllocationTracker.html#af631ec59c724997126dc62428dacaaf9", null ],
+    [ "functionInfoIndexForVMState", "classv8_1_1internal_1_1AllocationTracker.html#a45e9bdead8b15ff607262ae84127b038", null ],
+    [ "GetOrCreateLineEnds", "classv8_1_1internal_1_1AllocationTracker.html#ad9aa02ab868dd494fc59f10d1bb0c170", null ],
+    [ "GetScriptPositionInfo", "classv8_1_1internal_1_1AllocationTracker.html#aabe11140e21db2de81f0d8dc3e3d9b34", null ],
     [ "operator=", "classv8_1_1internal_1_1AllocationTracker.html#abf683658060697f7492747b2d6e95970", null ],
-    [ "trace_tree", "classv8_1_1internal_1_1AllocationTracker.html#a18f99dbd53e7832091b9839ed2ccfb30", null ]
+    [ "trace_tree", "classv8_1_1internal_1_1AllocationTracker.html#a18f99dbd53e7832091b9839ed2ccfb30", null ],
+    [ "address_to_trace_", "classv8_1_1internal_1_1AllocationTracker.html#a3e196ef67967218217b9d2c5131fa7c1", null ],
+    [ "allocation_trace_buffer_", "classv8_1_1internal_1_1AllocationTracker.html#a4f124d5e95ed5b432c35c208db680577", null ],
+    [ "function_info_list_", "classv8_1_1internal_1_1AllocationTracker.html#aa14c977f404d697deaca6d78d4a581c5", null ],
+    [ "id_to_function_info_index_", "classv8_1_1internal_1_1AllocationTracker.html#a0d323296de1708a7877a6d733e4d9da8", null ],
+    [ "ids_", "classv8_1_1internal_1_1AllocationTracker.html#a09898522d9f5a3ddb83ac341da54c775", null ],
+    [ "info_index_for_other_state_", "classv8_1_1internal_1_1AllocationTracker.html#a11021be4a0873ee3ea9ead9e081e48b7", null ],
+    [ "kMaxAllocationTraceLength", "classv8_1_1internal_1_1AllocationTracker.html#ac8b14ca549f6776ca3a67585a56ba805", null ],
+    [ "names_", "classv8_1_1internal_1_1AllocationTracker.html#a4ff70d57e19c616436e54ffc1856ced7", null ],
+    [ "scripts_data_map_", "classv8_1_1internal_1_1AllocationTracker.html#ad2e4eef4cfca8809b1debd7e5de5c80d", null ],
+    [ "trace_tree_", "classv8_1_1internal_1_1AllocationTracker.html#a870259fdd00406cd018dd6f122b30962", null ]
 ];

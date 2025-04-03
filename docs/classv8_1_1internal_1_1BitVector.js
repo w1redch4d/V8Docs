@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1BitVector =
 [
+    [ "DataStorage", "unionv8_1_1internal_1_1BitVector_1_1DataStorage.html", "unionv8_1_1internal_1_1BitVector_1_1DataStorage" ],
     [ "Iterator", "classv8_1_1internal_1_1BitVector_1_1Iterator.html", "classv8_1_1internal_1_1BitVector_1_1Iterator" ],
     [ "BitVector", "classv8_1_1internal_1_1BitVector.html#a0214b20c95fbdb46e4e5a70146c3c01e", null ],
     [ "BitVector", "classv8_1_1internal_1_1BitVector.html#af544ed726491e87d70f462496b19d05f", null ],
@@ -9,14 +10,17 @@ var classv8_1_1internal_1_1BitVector =
     [ "Add", "classv8_1_1internal_1_1BitVector.html#a4446fcb95f6c07eee24b939ad888d77a", null ],
     [ "AddAll", "classv8_1_1internal_1_1BitVector.html#a9b626acb987feb2d6c3712c79923e711", null ],
     [ "begin", "classv8_1_1internal_1_1BitVector.html#aabb63bf27b0516332cd68435e8fda3e4", null ],
+    [ "bit", "classv8_1_1internal_1_1BitVector.html#a2588f5553990e0217f333d6e2edbe011", null ],
     [ "Clear", "classv8_1_1internal_1_1BitVector.html#a2564bb9fd70855dd9766f1f77e5ef6c9", null ],
     [ "Contains", "classv8_1_1internal_1_1BitVector.html#a95c0fe99904fe4d054c2e7d4bce8ea53", null ],
     [ "CopyFrom", "classv8_1_1internal_1_1BitVector.html#a5494f246d07fa844a5e56a06c56bc036", null ],
     [ "Count", "classv8_1_1internal_1_1BitVector.html#a2043a09de5f550a73a3e71f830adadd2", null ],
+    [ "data_length", "classv8_1_1internal_1_1BitVector.html#a94c047e459b283f00f9bd958c040b248", null ],
     [ "end", "classv8_1_1internal_1_1BitVector.html#a0f86fbc9d992eef06e1b1e44b05d03b0", null ],
     [ "Equals", "classv8_1_1internal_1_1BitVector.html#ada07af95cb13d6b10882f074d447d9d2", null ],
     [ "Intersect", "classv8_1_1internal_1_1BitVector.html#a5b468bd284791716ad897fc27cf07395", null ],
     [ "IntersectIsChanged", "classv8_1_1internal_1_1BitVector.html#a2dab1d13a6d9b69796f8651ae6e8957e", null ],
+    [ "is_inline", "classv8_1_1internal_1_1BitVector.html#aa90af3c21631632cef49c541cadc5ecc", null ],
     [ "IsEmpty", "classv8_1_1internal_1_1BitVector.html#ac4a457cebea5680e9b0038847e4e1fda", null ],
     [ "length", "classv8_1_1internal_1_1BitVector.html#a57aca0b620092de2f8dce99ce7ac9003", null ],
     [ "operator=", "classv8_1_1internal_1_1BitVector.html#a3543d0b57d90d272817a3b02f60fcaf0", null ],
@@ -25,5 +29,12 @@ var classv8_1_1internal_1_1BitVector =
     [ "Resize", "classv8_1_1internal_1_1BitVector.html#aa6175da4f2c5997521f22edef65a269a", null ],
     [ "Subtract", "classv8_1_1internal_1_1BitVector.html#a07b8b9969692ffedff9b1b00259ca16b", null ],
     [ "Union", "classv8_1_1internal_1_1BitVector.html#ab583aee18185d9c0f683943e19a2150f", null ],
-    [ "UnionIsChanged", "classv8_1_1internal_1_1BitVector.html#a4bcf5e8797dc3e7c11090fd6f54bfa7f", null ]
+    [ "UnionIsChanged", "classv8_1_1internal_1_1BitVector.html#a4bcf5e8797dc3e7c11090fd6f54bfa7f", null ],
+    [ "word", "classv8_1_1internal_1_1BitVector.html#aa0e377a3419b4c2bd87326ef7a242e27", null ],
+    [ "data_", "classv8_1_1internal_1_1BitVector.html#a2fe6481e7fdb3f4d8993ff456f6986b9", null ],
+    [ "data_begin_", "classv8_1_1internal_1_1BitVector.html#ad7bf8efce0345345ea2f0d997eef3698", null ],
+    [ "data_end_", "classv8_1_1internal_1_1BitVector.html#a74fd3561da5f17b6458e78818a79401d", null ],
+    [ "kDataBits", "classv8_1_1internal_1_1BitVector.html#addda39fe62a3548cb64642d720b8432a", null ],
+    [ "kDataBitShift", "classv8_1_1internal_1_1BitVector.html#a56717551de48e5b156c00b1b5b9f1f82", null ],
+    [ "length_", "classv8_1_1internal_1_1BitVector.html#ac5941de0fd50a1f6aeca8834ea612a09", null ]
 ];

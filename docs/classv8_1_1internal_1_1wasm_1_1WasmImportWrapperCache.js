@@ -12,5 +12,9 @@ var classv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache =
     [ "LazyInitialize", "classv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache.html#a62f4cb8fc02e1bbfe2ed0f09ce2aa050", null ],
     [ "LogForIsolate", "classv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache.html#ad49664eee6f5df0f367014a789b71d21", null ],
     [ "Lookup", "classv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache.html#a14ee1f266c89689eb799afe5f843dc41", null ],
-    [ "MaybeGet", "classv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache.html#a3c758fbb283c41e0fbf8a62a5f233ff5", null ]
+    [ "MaybeGet", "classv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache.html#a3c758fbb283c41e0fbf8a62a5f233ff5", null ],
+    [ "code_allocator_", "classv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache.html#ad0d98cb0e4b11bce8cbbe290a2a84dc8", null ],
+    [ "codes_", "classv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache.html#aa08216cffa361023d9d4380a69b1672f", null ],
+    [ "entry_map_", "classv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache.html#a2fe4a8b98819f0d73c564e59bd3a4f98", null ],
+    [ "mutex_", "classv8_1_1internal_1_1wasm_1_1WasmImportWrapperCache.html#aced2fbbe4f448074e661879efdcc55ba", null ]
 ];

@@ -10,5 +10,6 @@ var classv8_1_1internal_1_1TrustedObject =
     [ "ReadProtectedPointerField", "classv8_1_1internal_1_1TrustedObject.html#ab5925977746033beaf818229dd305452", null ],
     [ "ReadProtectedPointerField", "classv8_1_1internal_1_1TrustedObject.html#a0f1e736845cb23f76ea53c3e1b43e2c3", null ],
     [ "WriteProtectedPointerField", "classv8_1_1internal_1_1TrustedObject.html#a839a65b36476a066b6053d45f18c2ecb", null ],
-    [ "WriteProtectedPointerField", "classv8_1_1internal_1_1TrustedObject.html#a9565e02981aa3ea3417b86ddd518c664", null ]
+    [ "WriteProtectedPointerField", "classv8_1_1internal_1_1TrustedObject.html#a9565e02981aa3ea3417b86ddd518c664", null ],
+    [ "kHeaderSize", "classv8_1_1internal_1_1TrustedObject.html#ac98a534794000484db08cfaf849ae073", null ]
 ];

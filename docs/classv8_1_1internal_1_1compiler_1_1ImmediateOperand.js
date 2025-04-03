@@ -12,5 +12,6 @@ var classv8_1_1internal_1_1compiler_1_1ImmediateOperand =
     [ "indexed_value", "classv8_1_1internal_1_1compiler_1_1ImmediateOperand.html#ae6dc83a8f5a627d40b9b173b96395560", null ],
     [ "inline_int32_value", "classv8_1_1internal_1_1compiler_1_1ImmediateOperand.html#aca73a26acaba08fd16a813ccc8bf6227", null ],
     [ "inline_int64_value", "classv8_1_1internal_1_1compiler_1_1ImmediateOperand.html#aafe7dfb4c5cdb158a06f0cd3baad92d0", null ],
+    [ "New", "classv8_1_1internal_1_1compiler_1_1ImmediateOperand.html#a1818ade3b5c5028d470698ac4f171b95", null ],
     [ "type", "classv8_1_1internal_1_1compiler_1_1ImmediateOperand.html#ad27b9b489c68668cbd889aab7ca5ed95", null ]
 ];

@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache =
 [
+    [ "Key", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#acc9599d55f411eddb4dd8a0b19910b8b", null ],
     [ "SlotKind", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#a9bdd6ae3be2f32387abb88ceefda9218", [
       [ "kStoreGlobalSloppy", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#a9bdd6ae3be2f32387abb88ceefda9218a13eec10b047a631a9e084d345e00f49a", null ],
       [ "kStoreGlobalStrict", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#a9bdd6ae3be2f32387abb88ceefda9218adb97171f91f2d4c855609158d40ae360", null ],
@@ -16,8 +17,11 @@ var classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache
     [ "Get", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#a2b0b2fd09c8869798d60b62dd0b1f009", null ],
     [ "Get", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#aa2623bf0b4f5e1b0c0a24769daa14da0", null ],
     [ "Get", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#a7ab4f96d3e9013c9cdb77c91aaf5fbe2", null ],
+    [ "GetImpl", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#ade9a860615b4c05c8a2691401b7c91fb", null ],
     [ "Put", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#af0eed4f1539acb57757ed321b761487d", null ],
     [ "Put", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#a64260763a07f3eb75c719642cdd47abf", null ],
     [ "Put", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#ad1d1bc669052550843abb19f85642561", null ],
-    [ "Put", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#a6cb99d417ff93c72d05addeffacca049", null ]
+    [ "Put", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#a6cb99d417ff93c72d05addeffacca049", null ],
+    [ "PutImpl", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#aeafd1e48e53e8272271c27838fcdf524", null ],
+    [ "map_", "classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator_1_1FeedbackSlotCache.html#a652f33d282fbee414167febad4efdc4a", null ]
 ];

@@ -1,17 +1,32 @@
 var classv8_1_1internal_1_1BreakLocation =
 [
+    [ "BreakLocation", "classv8_1_1internal_1_1BreakLocation.html#a5aa040a5f6b5c504a964d25fc43b7ac7", null ],
+    [ "BreakLocation", "classv8_1_1internal_1_1BreakLocation.html#a724288973f2ea9f20764e500b4b3a0d8", null ],
+    [ "AllAtCurrentStatement", "classv8_1_1internal_1_1BreakLocation.html#a336b5ba32283fa0d5e71800fa28ca99d", null ],
+    [ "BreakIndexFromCodeOffset", "classv8_1_1internal_1_1BreakLocation.html#adba17cd8570e3f1e894432c80d898a18", null ],
+    [ "ClearDebugBreak", "classv8_1_1internal_1_1BreakLocation.html#a751d8e2ee01d144cd957f3ebe16517b4", null ],
     [ "code_offset", "classv8_1_1internal_1_1BreakLocation.html#aaeb1885b7e05b42cbb7df75136313f8e", null ],
+    [ "FromFrame", "classv8_1_1internal_1_1BreakLocation.html#ae044ee54e8b28e0325c040be247a3c7d", null ],
     [ "generator_suspend_id", "classv8_1_1internal_1_1BreakLocation.html#a3bfecffd40e31473de90778b76c19d76", null ],
     [ "GetGeneratorObjectForSuspendedFrame", "classv8_1_1internal_1_1BreakLocation.html#a7511244caaf8035f68691ddd048d610b", null ],
     [ "HasBreakPoint", "classv8_1_1internal_1_1BreakLocation.html#aed075ff2836df7c831b8cdde69171afa", null ],
+    [ "Invalid", "classv8_1_1internal_1_1BreakLocation.html#a8ae1e2a19d0f64da049b63f8f403277d", null ],
     [ "IsCall", "classv8_1_1internal_1_1BreakLocation.html#a659abff1a914bfe1fd0ff46ad1dbf08a", null ],
     [ "IsDebugBreakAtEntry", "classv8_1_1internal_1_1BreakLocation.html#ab02bdcf0f030991efd88f20d33b294d4", null ],
     [ "IsDebugBreakSlot", "classv8_1_1internal_1_1BreakLocation.html#a66a3a2889a047e4196510ffda3f29902", null ],
     [ "IsDebuggerStatement", "classv8_1_1internal_1_1BreakLocation.html#af8ffd88487b0a6f6d06a21cb230d69ed", null ],
+    [ "IsPausedInJsFunctionEntry", "classv8_1_1internal_1_1BreakLocation.html#a5d467f23e6f755382659a19e30978bcf", null ],
     [ "IsReturn", "classv8_1_1internal_1_1BreakLocation.html#aa2256137fb16a80137c8fc70b6b4047b", null ],
     [ "IsReturnOrSuspend", "classv8_1_1internal_1_1BreakLocation.html#ae77f17c5b92edc556014552cbaa7596e", null ],
     [ "IsSuspend", "classv8_1_1internal_1_1BreakLocation.html#adba7e58d5ac51a0c924c69624d034436", null ],
     [ "position", "classv8_1_1internal_1_1BreakLocation.html#acbcfb74c28ab9bcc47a7c7c7895bcf2d", null ],
+    [ "SetDebugBreak", "classv8_1_1internal_1_1BreakLocation.html#a701d25e23a53e7964f5a97d59b0f7a8d", null ],
     [ "type", "classv8_1_1internal_1_1BreakLocation.html#afedb2190ca8639a677f82e345f291954", null ],
-    [ "BreakIterator", "classv8_1_1internal_1_1BreakLocation.html#a5fbb7407696454879cf016b20a0380f0", null ]
+    [ "BreakIterator", "classv8_1_1internal_1_1BreakLocation.html#a5fbb7407696454879cf016b20a0380f0", null ],
+    [ "abstract_code_", "classv8_1_1internal_1_1BreakLocation.html#a252b6bd879781e8256d260dd520f0247", null ],
+    [ "code_offset_", "classv8_1_1internal_1_1BreakLocation.html#aa100c7e13bffa6d722c57490717fc018", null ],
+    [ "generator_obj_reg_index_", "classv8_1_1internal_1_1BreakLocation.html#a63187e75e40e350fb2b7817489dde7fa", null ],
+    [ "generator_suspend_id_", "classv8_1_1internal_1_1BreakLocation.html#afe76c09016cb9af519d53d65a8347d7e", null ],
+    [ "position_", "classv8_1_1internal_1_1BreakLocation.html#a6d3ba8e41e0cc75ffd7a7b249b319c07", null ],
+    [ "type_", "classv8_1_1internal_1_1BreakLocation.html#a99fbc8041af4932997f589308368e35c", null ]
 ];

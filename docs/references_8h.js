@@ -7,5 +7,6 @@ var references_8h =
       [ "kOld", "references_8h.html#a46b9a1b06854a0906e24b2eb20af28f9a0aa38c28f349d65a6819e03844b73dff", null ],
       [ "kCode", "references_8h.html#a46b9a1b06854a0906e24b2eb20af28f9a718079e26a42bbd362d452f28ff26cbd", null ],
       [ "kTrusted", "references_8h.html#a46b9a1b06854a0906e24b2eb20af28f9aea89848074d781cbd54fcacbdca3f826", null ]
-    ] ]
+    ] ],
+    [ "kNumberOfSnapshotSpaces", "references_8h.html#ab38c60ebd40012d4da7fa6e8ad7f6500", null ]
 ];

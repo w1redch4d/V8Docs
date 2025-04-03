@@ -1,10 +1,17 @@
 var classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder =
 [
+    [ "ConstantArraySlice", "structv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder_1_1ConstantArraySlice.html", "structv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder_1_1ConstantArraySlice" ],
+    [ "Entry", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder_1_1Entry.html", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder_1_1Entry" ],
+    [ "index_t", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a276e364182464469d01f61b4c57cde1a", null ],
     [ "ConstantArrayBuilder", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a6371038963d35f5030bf3458fe04edfd", null ],
+    [ "AllocateIndex", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#ad86afc4dcdf065e6f55f471d80edbe2a", null ],
+    [ "AllocateIndexArray", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#ae67053a78e8a824bb602f2af69f96823", null ],
+    [ "AllocateReservedEntry", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#af3e8b148b2e8751195e01e857daf30e3", null ],
     [ "At", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a30aa5e52cf5ee209b4e69953f5b89e00", null ],
     [ "CommitReservedEntry", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#af3014688f8e213a8434a1f73b3ddf9aa", null ],
     [ "CreateReservedEntry", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#af4a586c9f94fd12743165acd3e61ccf1", null ],
     [ "DiscardReservedEntry", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a38ce057d19d0131b717c39e9c159d2c2", null ],
+    [ "IndexToSlice", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a4ad43f7ee269f5145335e559b167a9a7", null ],
     [ "Insert", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a08aad4b0abc2d5e07fb4b4655aa4cc30", null ],
     [ "Insert", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a250f3d279d13c04507044802d43668df", null ],
     [ "Insert", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#aabe03912596990a84fd3a2fd91acfdad", null ],
@@ -13,8 +20,17 @@ var classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder =
     [ "Insert", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#ae66d165128c06d1056d6c385231df345", null ],
     [ "InsertDeferred", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a05304110504b6b54751376738dc54965", null ],
     [ "InsertJumpTable", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#ae5281b1365dcb84cf8ee21b24549da44", null ],
+    [ "OperandSizeToSlice", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a4d4efbb19812c5e823891dd915dd00f6", null ],
     [ "SetDeferredAt", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#abb53efcc055df3ccfc181d3eab6f7728", null ],
     [ "SetJumpTableSmi", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a1d679e81a454e61dca297f10070b6dcb", null ],
     [ "size", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a0620f41346bea747d9465251e4c40b0f", null ],
-    [ "ToFixedArray", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#aac52dafd1cc9de09283be60626d25733", null ]
+    [ "ToFixedArray", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#aac52dafd1cc9de09283be60626d25733", null ],
+    [ "constants_map_", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#acbfd50948e25e3789de481cad718984b", null ],
+    [ "heap_number_map_", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a5167ca45fe4e3a0e400cf4e6f828b5d7", null ],
+    [ "idx_slice_", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#adae429a5b7ca412f457ecc14650703ca", null ],
+    [ "k16BitCapacity", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#aa8e09522d1215aaf36760e41c0ca6403", null ],
+    [ "k32BitCapacity", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a654feea91715a8a137f1fe884f599139", null ],
+    [ "k8BitCapacity", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#a185835694d75f46dec545714852bc191", null ],
+    [ "smi_map_", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#ab3ad1fad250573789e8bbaf97dab7362", null ],
+    [ "smi_pairs_", "classv8_1_1internal_1_1interpreter_1_1ConstantArrayBuilder.html#ae5346071849c783b038327f79be8c903", null ]
 ];

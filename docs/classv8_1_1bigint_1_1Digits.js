@@ -11,6 +11,7 @@ var classv8_1_1bigint_1_1Digits =
     [ "operator+", "classv8_1_1bigint_1_1Digits.html#abf0a14225133914ba6e9b70c16667dd5", null ],
     [ "operator==", "classv8_1_1bigint_1_1Digits.html#a5f4f817b27c191f3a11f81bf54f372a4", null ],
     [ "operator[]", "classv8_1_1bigint_1_1Digits.html#aacafd951db63a5507ffbe0eddccf1f2b", null ],
+    [ "read_4byte_aligned", "classv8_1_1bigint_1_1Digits.html#a25b3de8b4e241b63af1d5c1a19d6692b", null ],
     [ "TrimOne", "classv8_1_1bigint_1_1Digits.html#a47575f99388d4318fd934812de52414f", null ],
     [ "ShiftedDigits", "classv8_1_1bigint_1_1Digits.html#a993fc9557a049661e7ca1e0ad01bb154", null ],
     [ "digits_", "classv8_1_1bigint_1_1Digits.html#a39392caaefab81600b657af43bffa298", null ],

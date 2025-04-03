@@ -16,6 +16,8 @@ var indirect_pointer_tag_8h =
     ] ],
     [ "IndirectPointerTagFromInstanceType", "indirect-pointer-tag_8h.html#aee64ca3286990f1fb36c5d424ddbadb3", null ],
     [ "InstanceTypeFromIndirectPointerTag", "indirect-pointer-tag_8h.html#a4953ff7f11d0ff0748ba6ce77fb4d1ca", null ],
+    [ "IsPerIsolateTrustedPointerType", "indirect-pointer-tag_8h.html#af4903b5426a694ea409995132b5bfee6", null ],
+    [ "IsSharedTrustedPointerType", "indirect-pointer-tag_8h.html#adac5dedfc114087bc131afeedd406851", null ],
     [ "IsTrustedSpaceMigrationInProgressForObjectsWithTag", "indirect-pointer-tag_8h.html#ab866b8d64ddecaf3272f21e4f512face", null ],
     [ "IsValidIndirectPointerTag", "indirect-pointer-tag_8h.html#a5675c1dbeedd670908c93da4c7a62e12", null ],
     [ "kAllTagsForAndBasedTypeChecking", "indirect-pointer-tag_8h.html#a93cc7da12e527ed04e2a86dad29159f2", null ],

@@ -12,6 +12,7 @@ var classv8_1_1internal_1_1maglev_1_1MaybeReduceResult =
     [ "MaybeReduceResult", "classv8_1_1internal_1_1maglev_1_1MaybeReduceResult.html#aeb54a1652de6996beef414a3833301dc", null ],
     [ "MaybeReduceResult", "classv8_1_1internal_1_1maglev_1_1MaybeReduceResult.html#a3ad3f05c899c6984c384e0e777b64858", null ],
     [ "Checked", "classv8_1_1internal_1_1maglev_1_1MaybeReduceResult.html#a9d8e5f18d5c0bae901ac8c0ab1371542", null ],
+    [ "Fail", "classv8_1_1internal_1_1maglev_1_1MaybeReduceResult.html#a3304759bbc6b51b6f26d591c1aae5817", null ],
     [ "GetPayload", "classv8_1_1internal_1_1maglev_1_1MaybeReduceResult.html#afd99b53ae56ecd3169e4034b65f9d480", null ],
     [ "HasValue", "classv8_1_1internal_1_1maglev_1_1MaybeReduceResult.html#a1688cec73c87b92367fbf7c366f747f7", null ],
     [ "IsDone", "classv8_1_1internal_1_1maglev_1_1MaybeReduceResult.html#abe739ac7c00b47d8e2da022bf7442f40", null ],

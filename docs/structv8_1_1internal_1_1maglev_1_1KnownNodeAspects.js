@@ -15,6 +15,8 @@ var structv8_1_1internal_1_1maglev_1_1KnownNodeAspects =
     ] ],
     [ "KnownNodeAspects", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#a370c772e425387d32bfd1094e7ea4be1", null ],
     [ "KnownNodeAspects", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#ad0e6d9b8ba169b31f45157301376c683", null ],
+    [ "KnownNodeAspects", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#accf000842a862ef6abeb8d016f8614c1", null ],
+    [ "KnownNodeAspects", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#abf83485fa44271e4008c1285dc20bdf5", null ],
     [ "ClearAvailableExpressions", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#a901b82858b849c31df76511a588d7935", null ],
     [ "ClearUnstableMaps", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#ab13a32c593d71147d74ee2826b34263b", null ],
     [ "ClearUnstableMapsIfAny", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#a046fbe845161d796be2456b59c2ac5e8", null ],
@@ -41,8 +43,13 @@ var structv8_1_1internal_1_1maglev_1_1KnownNodeAspects =
     [ "Zone::New", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#a7b1af7e0383ecd784a0a09f3f4e8d1e4", null ],
     [ "any_map_for_any_node_is_unstable", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#a57e2bcba82a93b1a9588e3433599e371", null ],
     [ "available_expressions", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#a1a3472de7806e1da98ac58d096e5f103", null ],
+    [ "effect_epoch_", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#a919ad3c216899915a3b19b646b5b50ad", null ],
+    [ "kEffectEpochForPureInstructions", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#ac9c7f65a0379ca1639114952ed6f775b", null ],
+    [ "kEffectEpochOverflow", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#aecadd9b2eac78f015fa5b6dc71f12d5f", null ],
     [ "loaded_constant_properties", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#ac140c6f469f48d78b91367fa4953decb", null ],
     [ "loaded_context_constants", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#a470eb3a9ce07d841a930525c925af5c2", null ],
     [ "loaded_context_slots", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#afb7a3bfe16a2f5b9841c7db3b0181b19", null ],
-    [ "loaded_properties", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#a59b3e9f7e1fed9450018942548903c23", null ]
+    [ "loaded_properties", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#a59b3e9f7e1fed9450018942548903c23", null ],
+    [ "may_have_aliasing_contexts_", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#aff9f5cbddab96ab188d599e7916e8be9", null ],
+    [ "node_infos", "structv8_1_1internal_1_1maglev_1_1KnownNodeAspects.html#a30b2eb1be0ec2f5a0d31f8fa825784bc", null ]
 ];

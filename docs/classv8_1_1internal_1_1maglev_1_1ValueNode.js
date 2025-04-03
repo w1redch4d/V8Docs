@@ -2,6 +2,7 @@ var classv8_1_1internal_1_1maglev_1_1ValueNode =
 [
     [ "LiveRange", "structv8_1_1internal_1_1maglev_1_1ValueNode_1_1LiveRange.html", "structv8_1_1internal_1_1maglev_1_1ValueNode_1_1LiveRange" ],
     [ "ReservedField", "classv8_1_1internal_1_1maglev_1_1ValueNode.html#a6e869884a8dcdeed8b7b98c173ddab26", null ],
+    [ "TaggedResultNeedsDecompressField", "classv8_1_1internal_1_1maglev_1_1ValueNode.html#a3874677faf6af09f3738407a68450d95", null ],
     [ "ValueNode", "classv8_1_1internal_1_1maglev_1_1ValueNode.html#a6910a29f2cf84677459f215b9564bac6", null ],
     [ "add_use", "classv8_1_1internal_1_1maglev_1_1ValueNode.html#ae59e40daf9097283e67d219b5098a885", null ],
     [ "AddRegister", "classv8_1_1internal_1_1maglev_1_1ValueNode.html#a33be00000965050087003c50954c82e1", null ],

@@ -12,5 +12,7 @@ var wasm_disassembler_8cc =
     [ "GetDefaultAlignment", "wasm-disassembler_8cc.html#ac105d19625fe3f8a009c652a5791444a", null ],
     [ "PrintSignatureOneLine", "wasm-disassembler_8cc.html#a81251854c862c305158319cd9f2e526d", null ],
     [ "PrintStringAsJSON", "wasm-disassembler_8cc.html#ae04e1b6cb3f29c84cf5dc62a513cb1b5", null ],
-    [ "PrintStringRaw", "wasm-disassembler_8cc.html#a22984f4309607d9e4e15a60cdb5d8fb1", null ]
+    [ "PrintStringRaw", "wasm-disassembler_8cc.html#a22984f4309607d9e4e15a60cdb5d8fb1", null ],
+    [ "kHexChars", "wasm-disassembler_8cc.html#a59b1786326ff7b8b46309160dbdf6b0a", null ],
+    [ "kUpperHexChars", "wasm-disassembler_8cc.html#a2ac574b5ea632ccd7ffca9af6cae7fed", null ]
 ];

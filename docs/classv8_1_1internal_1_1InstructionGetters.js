@@ -48,6 +48,7 @@ var classv8_1_1internal_1_1InstructionGetters =
     [ "IsArithShift", "classv8_1_1internal_1_1InstructionGetters.html#a2d3ea5788427954fc0d81973ee501441", null ],
     [ "IsAUIPC", "classv8_1_1internal_1_1InstructionGetters.html#a757d6416acd2bd96db60d21f6b19aba8", null ],
     [ "IsForbiddenAfterBranch", "classv8_1_1internal_1_1InstructionGetters.html#a1dc82b9ffbbe2b6c9d5034f89a857b6c", null ],
+    [ "IsForbiddenAfterBranchInstr", "classv8_1_1internal_1_1InstructionGetters.html#abe1de234e947c6c4fc43b9dc028f752e", null ],
     [ "IsForbiddenInBranchDelay", "classv8_1_1internal_1_1InstructionGetters.html#af0bf5f62e14a2cd5a639d3b6d0672ac0", null ],
     [ "IsLinkingInstruction", "classv8_1_1internal_1_1InstructionGetters.html#aba96ec30888c0035ab9e21581502183d", null ],
     [ "IsLoad", "classv8_1_1internal_1_1InstructionGetters.html#a6ce75e8db19b4fda5f0dd6eac03ad86f", null ],

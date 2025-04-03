@@ -14,5 +14,6 @@ var classv8__inspector_1_1String16Builder =
     [ "appendUnsignedAsHex", "classv8__inspector_1_1String16Builder.html#aeaef769fd2d93cf2ea0d5a2cc54489ac", null ],
     [ "appendUnsignedAsHex", "classv8__inspector_1_1String16Builder.html#a90b834a8d46a413ec2c8a054bccb618f", null ],
     [ "reserveCapacity", "classv8__inspector_1_1String16Builder.html#ac3def8d68c3012580b5f9d214df57854", null ],
-    [ "toString", "classv8__inspector_1_1String16Builder.html#a37f172602b3477d91e4c9af9324b1d13", null ]
+    [ "toString", "classv8__inspector_1_1String16Builder.html#a37f172602b3477d91e4c9af9324b1d13", null ],
+    [ "m_buffer", "classv8__inspector_1_1String16Builder.html#a6d5160eaff7acb3b42389725b7a38bea", null ]
 ];

@@ -19,5 +19,6 @@ var classv8_1_1internal_1_1torque_1_1TypeBase =
     [ "IsStructType", "classv8_1_1internal_1_1torque_1_1TypeBase.html#a2fd8ec504e73deeefcd6547e4e006e70", null ],
     [ "IsTopType", "classv8_1_1internal_1_1torque_1_1TypeBase.html#abe70a1910f05986eae93a71b70440a66", null ],
     [ "IsUnionType", "classv8_1_1internal_1_1torque_1_1TypeBase.html#ab2f14a23e78702e44ccf5c3df29dad1f", null ],
-    [ "kind", "classv8_1_1internal_1_1torque_1_1TypeBase.html#a982bab06fe872a73f18a71bda9d606e0", null ]
+    [ "kind", "classv8_1_1internal_1_1torque_1_1TypeBase.html#a982bab06fe872a73f18a71bda9d606e0", null ],
+    [ "kind_", "classv8_1_1internal_1_1torque_1_1TypeBase.html#a4cabdec54c69685868313f6ac79714ef", null ]
 ];

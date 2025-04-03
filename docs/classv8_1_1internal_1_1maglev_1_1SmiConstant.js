@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1maglev_1_1SmiConstant =
 [
+    [ "Base", "classv8_1_1internal_1_1maglev_1_1SmiConstant.html#a3f05a510ae456061b9c2b727b6a1394e", null ],
     [ "OutputRegister", "classv8_1_1internal_1_1maglev_1_1SmiConstant.html#ac475c5f42b441c0093fed49b3451dd82", null ],
     [ "SmiConstant", "classv8_1_1internal_1_1maglev_1_1SmiConstant.html#ae076d21a7b23b62c10c5595896ac8f0d", null ],
     [ "DoLoadToRegister", "classv8_1_1internal_1_1maglev_1_1SmiConstant.html#a5233cb0828016fd3db83291d5e9b3671", null ],
@@ -8,5 +9,6 @@ var classv8_1_1internal_1_1maglev_1_1SmiConstant =
     [ "PrintParams", "classv8_1_1internal_1_1maglev_1_1SmiConstant.html#a83e72a3562c1af28236e5329928a932d", null ],
     [ "SetValueLocationConstraints", "classv8_1_1internal_1_1maglev_1_1SmiConstant.html#ab007af6222b61ad514ccf529aff54e4a", null ],
     [ "ToBoolean", "classv8_1_1internal_1_1maglev_1_1SmiConstant.html#a8d215336a3c078fa9b02b400be3c149c", null ],
-    [ "value", "classv8_1_1internal_1_1maglev_1_1SmiConstant.html#aa838f812e3b9daef1580fa02912d8879", null ]
+    [ "value", "classv8_1_1internal_1_1maglev_1_1SmiConstant.html#aa838f812e3b9daef1580fa02912d8879", null ],
+    [ "value_", "classv8_1_1internal_1_1maglev_1_1SmiConstant.html#ad8f6131955d8f42791732d9f5db6c18a", null ]
 ];

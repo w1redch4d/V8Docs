@@ -1,10 +1,22 @@
 var classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange =
 [
     [ "SpillMoveInsertionList", "structv8_1_1internal_1_1compiler_1_1TopLevelLiveRange_1_1SpillMoveInsertionList.html", "structv8_1_1internal_1_1compiler_1_1TopLevelLiveRange_1_1SpillMoveInsertionList" ],
+    [ "DeferredFixedField", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#aa4b8b4c3540eb5a0c0541dce490c713b", null ],
+    [ "HasSlotUseField", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#abca298f14de5743945be5c98685f4ad3", null ],
+    [ "IsNonLoopPhiField", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a9e64f155adc0336e987014789fd8c878", null ],
+    [ "IsPhiField", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a45a9be592d3b7a3b8fb941f0e8c7065d", null ],
+    [ "SpillAtLoopHeaderNotBeneficialField", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a5dac517d9485bf1282d18d3e2f2af033", null ],
+    [ "SpillRangeModeField", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a4bfde25a8be46739a4a4704eb8dcd76f", null ],
+    [ "SpillTypeField", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a56cfed7ad9d6eb2708cb1cf295fe5e77", null ],
     [ "SlotUseKind", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a102b255f300aaa18427ecf8aabed4e1f", [
       [ "kNoSlotUse", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a102b255f300aaa18427ecf8aabed4e1fa80340fc5d16a52fc7061e429187cc372", null ],
       [ "kDeferredSlotUse", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a102b255f300aaa18427ecf8aabed4e1faa56b177bc3944969fa3120cc7ca457bf", null ],
       [ "kGeneralSlotUse", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a102b255f300aaa18427ecf8aabed4e1fa7c0e76a243c1c694478fc68a38063afb", null ]
+    ] ],
+    [ "SpillRangeMode", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a9912ca8f466c72b5aad349499407f31d", [
+      [ "kNotSet", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a9912ca8f466c72b5aad349499407f31da1d3c4e43a22068a00f0d40976c118ce2", null ],
+      [ "kSpillAtDefinition", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a9912ca8f466c72b5aad349499407f31da1bd9e90c9b4d3925bd8f6b289e2dc8e3", null ],
+      [ "kSpillLater", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a9912ca8f466c72b5aad349499407f31da7d0de3e2e41635f5b60e3866df7fcced", null ]
     ] ],
     [ "SpillType", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a3de181c0abbe3c9a93b1423b9553e6cd", [
       [ "kNoSpillType", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a3de181c0abbe3c9a93b1423b9553e6cdab21f9aaefe15d75ac2449a302e352920", null ],
@@ -71,8 +83,16 @@ var classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange =
     [ "UpdateSpillRangePostMerge", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a374133d33ed5a335bcfc2d7b5f863cf1", null ],
     [ "vreg", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#aef02715ee75ec8f8b06bdef421b6aca4", null ],
     [ "LiveRange", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a05b53ec81357069e15d5d0e582589f6a", null ],
+    [ "bundle_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a619f7e02f1700ee3b17b332b98085835", null ],
+    [ "children_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a8e3b81828515f942417567f4a0e5dad4", null ],
+    [ "has_preassigned_slot_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a21e4685944cd5d489f8c4d4ca0eaccba", null ],
+    [ "last_child_id_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a29d6c6f3829494e19c3741db6e52865a", null ],
     [ "list_of_blocks_requiring_spill_operands_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a671c9f4e58b5f67ad91d7ca501fc2189", null ],
+    [ "positions_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a9cec269c4bf6173962a73b8d6591c261", null ],
     [ "spill_move_insertion_locations_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#ab832788e1185d2afbbe1af3deef25a49", null ],
     [ "spill_operand_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#ac40d30ea4ac1ce172f2c840691d7623b", null ],
-    [ "spill_range_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a728c81505920fd8d44d6cc2465d10f9f", null ]
+    [ "spill_range_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a728c81505920fd8d44d6cc2465d10f9f", null ],
+    [ "spill_start_index_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a58feb46a0ae929a0a9bffc62cac0c116", null ],
+    [ "spilled_in_deferred_blocks_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a9af33f74530670449f3ca080191fa227", null ],
+    [ "vreg_", "classv8_1_1internal_1_1compiler_1_1TopLevelLiveRange.html#a70e6be33a01166a09e094499bd1253d8", null ]
 ];

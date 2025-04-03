@@ -10,7 +10,10 @@ var classv8_1_1internal_1_1wasm_1_1CompileTimeImports =
     [ "contains", "classv8_1_1internal_1_1wasm_1_1CompileTimeImports.html#aa10cbaf2a25c618bfdda0ed3cf4b76da", null ],
     [ "empty", "classv8_1_1internal_1_1wasm_1_1CompileTimeImports.html#a7bddfd43d06279d0cc613b668aa7e052", null ],
     [ "flags", "classv8_1_1internal_1_1wasm_1_1CompileTimeImports.html#a4785c511045f4d9880f1e1407dcf18e8", null ],
+    [ "FromSerialized", "classv8_1_1internal_1_1wasm_1_1CompileTimeImports.html#a7c828ba84d9b4fc26381e0c0eb832aa6", null ],
     [ "has_string_constants", "classv8_1_1internal_1_1wasm_1_1CompileTimeImports.html#a3a42250749ca938e52a5116f2e5720eb", null ],
     [ "operator=", "classv8_1_1internal_1_1wasm_1_1CompileTimeImports.html#a79cf061dba368270f4162a527032b2fb", null ],
-    [ "operator=", "classv8_1_1internal_1_1wasm_1_1CompileTimeImports.html#a6d5542637da0ca4047a0837987157661", null ]
+    [ "operator=", "classv8_1_1internal_1_1wasm_1_1CompileTimeImports.html#a6d5542637da0ca4047a0837987157661", null ],
+    [ "bits_", "classv8_1_1internal_1_1wasm_1_1CompileTimeImports.html#a24366355f96c97ce35a5130e3dd8bc76", null ],
+    [ "constants_module_", "classv8_1_1internal_1_1wasm_1_1CompileTimeImports.html#a29db7e467acd550946417cf10e482c9b", null ]
 ];

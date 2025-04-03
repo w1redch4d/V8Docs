@@ -1,7 +1,26 @@
 var classv8_1_1internal_1_1BuiltinsSorter =
 [
+    [ "BuiltinDensitySlot", "structv8_1_1internal_1_1BuiltinsSorter_1_1BuiltinDensitySlot.html", "structv8_1_1internal_1_1BuiltinsSorter_1_1BuiltinDensitySlot" ],
     [ "BuiltinsSorter", "classv8_1_1internal_1_1BuiltinsSorter.html#a8611623629618ed23f523e7a7b6c4074", null ],
     [ "~BuiltinsSorter", "classv8_1_1internal_1_1BuiltinsSorter.html#a0da7033dbb36d57d1d7835ae1584eb54", null ],
+    [ "FindBestPredecessorOf", "classv8_1_1internal_1_1BuiltinsSorter.html#a9b58ae8a8a9b157f6f5b5772501ca9aa", null ],
+    [ "InitializeCallGraph", "classv8_1_1internal_1_1BuiltinsSorter.html#a65274ce039186fa52dfc8530a8c1f4bf", null ],
+    [ "InitializeClusters", "classv8_1_1internal_1_1BuiltinsSorter.html#ada1856f1be6158999fef435a6da77d04", null ],
+    [ "MergeBestPredecessors", "classv8_1_1internal_1_1BuiltinsSorter.html#af963038a1f0360e8ee8c44ae98793fe3", null ],
+    [ "ProcessBlockCountLineInfo", "classv8_1_1internal_1_1BuiltinsSorter.html#a381c673d4b613af2736bffbb67a2dfdb", null ],
+    [ "ProcessBuiltinDensityLineInfo", "classv8_1_1internal_1_1BuiltinsSorter.html#a61175b381eb259277010ff9750c412e7", null ],
     [ "SortBuiltins", "classv8_1_1internal_1_1BuiltinsSorter.html#a4f77887458972ef24cad404b6c31e856", null ],
-    [ "Cluster", "classv8_1_1internal_1_1BuiltinsSorter.html#a037e8c5141681b4bc50ecf53f86a58e6", null ]
+    [ "SortClusters", "classv8_1_1internal_1_1BuiltinsSorter.html#a6cde6473769f213514edc772e3b015a0", null ],
+    [ "Cluster", "classv8_1_1internal_1_1BuiltinsSorter.html#a037e8c5141681b4bc50ecf53f86a58e6", null ],
+    [ "builtin_cluster_map_", "classv8_1_1internal_1_1BuiltinsSorter.html#a07e8ba5b534fe513c5379b35c0b23da1", null ],
+    [ "builtin_density_map_", "classv8_1_1internal_1_1BuiltinsSorter.html#acf5ec2204a63ac556b1a212381b6f24e", null ],
+    [ "builtin_density_order_", "classv8_1_1internal_1_1BuiltinsSorter.html#a07010ac85db4e3589f7aee1f76f00ebe", null ],
+    [ "builtin_size_", "classv8_1_1internal_1_1BuiltinsSorter.html#a8e423d350c318501172dbcf8eb59d834", null ],
+    [ "call_graph_", "classv8_1_1internal_1_1BuiltinsSorter.html#acdd746865500d832eeda933c97ed9bd0", null ],
+    [ "clusters_", "classv8_1_1internal_1_1BuiltinsSorter.html#a604ea7a0d6e53a57cf12a90dd708e139", null ],
+    [ "kBuiltinCallBlockDensityMarker", "classv8_1_1internal_1_1BuiltinsSorter.html#a64b45405649694b4ad9728ba3191b2ab", null ],
+    [ "kBuiltinDensityMarker", "classv8_1_1internal_1_1BuiltinsSorter.html#aa455a4d96bdb4a7fb7f499551b16b56d", null ],
+    [ "kMaxClusterSize", "classv8_1_1internal_1_1BuiltinsSorter.html#a2f2fd4047c85cb6e84f8403374f543af", null ],
+    [ "kMaxDensityDecreaseThreshold", "classv8_1_1internal_1_1BuiltinsSorter.html#af2042ed2114f9608d4cc2eb061cd1056", null ],
+    [ "kMinEdgeProbabilityThreshold", "classv8_1_1internal_1_1BuiltinsSorter.html#a8fc21805ef16abead0d191f9ca6ca3ca", null ]
 ];

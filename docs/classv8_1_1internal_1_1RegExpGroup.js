@@ -8,5 +8,9 @@ var classv8_1_1internal_1_1RegExpGroup =
     [ "IsAnchoredAtEnd", "classv8_1_1internal_1_1RegExpGroup.html#aa449fb935d9206c51ee728f863c27b9c", null ],
     [ "IsAnchoredAtStart", "classv8_1_1internal_1_1RegExpGroup.html#a181b64de65cb774d5507ace764485e98", null ],
     [ "max_match", "classv8_1_1internal_1_1RegExpGroup.html#a7a9fba7afb22bb2d47362c7fa64c3566", null ],
-    [ "min_match", "classv8_1_1internal_1_1RegExpGroup.html#a5d0eede464baba7699a68f9983820bf6", null ]
+    [ "min_match", "classv8_1_1internal_1_1RegExpGroup.html#a5d0eede464baba7699a68f9983820bf6", null ],
+    [ "body_", "classv8_1_1internal_1_1RegExpGroup.html#acef4a0af5e310cae77e3a069ab2b5e2f", null ],
+    [ "flags_", "classv8_1_1internal_1_1RegExpGroup.html#a9a992657bb1de125d5bcd467c1e91256", null ],
+    [ "max_match_", "classv8_1_1internal_1_1RegExpGroup.html#a686b59966c1fc3b16debaa3ce21bc0ce", null ],
+    [ "min_match_", "classv8_1_1internal_1_1RegExpGroup.html#ac614500fe73c346747aa24c1c9cb90ce", null ]
 ];

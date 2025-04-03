@@ -25,5 +25,6 @@ var classv8_1_1internal_1_1Utf16CharacterStream =
     [ "buffer_pos_", "classv8_1_1internal_1_1Utf16CharacterStream.html#a058db637f2822a7f2a01ddf62ae2d039", null ],
     [ "buffer_start_", "classv8_1_1internal_1_1Utf16CharacterStream.html#a280cbd9f8fde89ecdf69a753e49e6cb7", null ],
     [ "has_parser_error_", "classv8_1_1internal_1_1Utf16CharacterStream.html#a07c9c6b4a20e8005919b7a81a656f7b9", null ],
+    [ "kEndOfInput", "classv8_1_1internal_1_1Utf16CharacterStream.html#ab5779256e73e32483d2cb9bdf74c57e7", null ],
     [ "runtime_call_stats_", "classv8_1_1internal_1_1Utf16CharacterStream.html#a1caf68cd2f6f0ae2b646d9f773b04c6f", null ]
 ];

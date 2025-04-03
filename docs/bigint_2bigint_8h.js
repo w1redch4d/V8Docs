@@ -51,5 +51,9 @@ var bigint_2bigint_8h =
     [ "SubtractSignedResultLength", "bigint_2bigint_8h.html#a094c9fb5b7db00ac8500a661cb607a1e", null ],
     [ "ToStringResultLength", "bigint_2bigint_8h.html#a066cfb8ab735b5197b71ee354e64a57a", null ],
     [ "kBarrettThreshold", "bigint_2bigint_8h.html#ad173c7b9153dbd4f8bcf0ed84847f70a", null ],
+    [ "kCharBits", "bigint_2bigint_8h.html#aa4c076706fb6ffd142c6033db038c700", null ],
+    [ "kCharValue", "bigint_2bigint_8h.html#a45a5993a86664366e86c25ca2f6da62a", null ],
+    [ "kDigitBits", "bigint_2bigint_8h.html#a4879833909bc4b7a5117ec7d35362977", null ],
+    [ "kStackParts", "bigint_2bigint_8h.html#a90bf467e766b2a0e6c247b305440b28b", null ],
     [ "kStringZapValue", "bigint_2bigint_8h.html#a5757a9a976e85d7caf294fb78c834204", null ]
 ];

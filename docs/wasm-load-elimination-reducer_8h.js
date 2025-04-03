@@ -7,6 +7,7 @@ var wasm_load_elimination_reducer_8h =
     [ "v8::internal::compiler::turboshaft::wle::BaseData", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1wle_1_1BaseData.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1wle_1_1BaseData" ],
     [ "v8::internal::compiler::turboshaft::wle::WasmMemoryContentTable", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1wle_1_1WasmMemoryContentTable.html", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1wle_1_1WasmMemoryContentTable" ],
     [ "v8::internal::compiler::turboshaft::WasmLoadEliminationAnalyzer", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoadEliminationAnalyzer.html", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoadEliminationAnalyzer" ],
+    [ "v8::internal::compiler::turboshaft::WasmLoadEliminationAnalyzer::Snapshot", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoadEliminationAnalyzer_1_1Snapshot.html", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoadEliminationAnalyzer_1_1Snapshot" ],
     [ "v8::internal::compiler::turboshaft::WasmLoadEliminationReducer< Next >", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoadEliminationReducer.html", "classv8_1_1internal_1_1compiler_1_1turboshaft_1_1WasmLoadEliminationReducer" ],
     [ "__", "wasm-load-elimination-reducer_8h.html#a0a87998f4e8cee4888f2a89df3d5639b", null ],
     [ "Assert", "wasm-load-elimination-reducer_8h.html#a706ac5b1a53bd04067f81924b92cb9f6", null ],
@@ -38,5 +39,12 @@ var wasm_load_elimination_reducer_8h =
     [ "V8_COMPILER_TURBOSHAFT_ASSEMBLER_MACROS_DEFINED", "wasm-load-elimination-reducer_8h.html#a9c3257a55e134fb56189c60aa5683c67", null ],
     [ "WHILE", "wasm-load-elimination-reducer_8h.html#a782fd3fac3a92dd08b03673fed0b70fe", null ],
     [ "hash_value", "wasm-load-elimination-reducer_8h.html#a84d76d3e23491e67713eceb4d79dd294", null ],
-    [ "RepIsCompatible", "wasm-load-elimination-reducer_8h.html#a22629fefa270fc29cad3161f010b43ec", null ]
+    [ "RepIsCompatible", "wasm-load-elimination-reducer_8h.html#a22629fefa270fc29cad3161f010b43ec", null ],
+    [ "kAnyConvertExternIndex", "wasm-load-elimination-reducer_8h.html#a4cbe7944297474fffffced8f225ceb4c", null ],
+    [ "kArrayLengthFieldIndex", "wasm-load-elimination-reducer_8h.html#a3337a7e51870eb2a84586d1657d08fea", null ],
+    [ "kAssertNotNullIndex", "wasm-load-elimination-reducer_8h.html#a86bf8d3a20cb06c69bf0daf4797d73ab", null ],
+    [ "kLoadLikeSize", "wasm-load-elimination-reducer_8h.html#a1e1df9300e6eb40c8e9bd9b793f9e17c", null ],
+    [ "kLoadLikeType", "wasm-load-elimination-reducer_8h.html#a6acd0c233957190769efae6d8e651888", null ],
+    [ "kStringAsWtf16Index", "wasm-load-elimination-reducer_8h.html#acc72dec1a4502e05cca978e162e7dc03", null ],
+    [ "kStringPrepareForGetCodeunitIndex", "wasm-load-elimination-reducer_8h.html#ad78cf8ece388aaa9af7f9c2a79264d4f", null ]
 ];

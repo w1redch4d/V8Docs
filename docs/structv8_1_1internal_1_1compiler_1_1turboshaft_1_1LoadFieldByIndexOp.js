@@ -5,5 +5,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadFieldByIndexOp =
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadFieldByIndexOp.html#ad31c7eb38bd7bcde907bf270e1e4202d", null ],
     [ "object", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadFieldByIndexOp.html#a0ebc63a44236fb95789ad6b43de314b6", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadFieldByIndexOp.html#a43fc28319a76d2588a032e1afe7b2fa3", null ],
-    [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadFieldByIndexOp.html#ad622f7e7d14e90cdd6a359612ec7156e", null ]
+    [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadFieldByIndexOp.html#ad622f7e7d14e90cdd6a359612ec7156e", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1LoadFieldByIndexOp.html#ab0882db38f4882a62b463d0059b9a84e", null ]
 ];

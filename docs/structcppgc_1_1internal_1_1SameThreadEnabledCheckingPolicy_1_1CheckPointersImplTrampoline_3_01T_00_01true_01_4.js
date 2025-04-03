@@ -1,0 +1,4 @@
+var structcppgc_1_1internal_1_1SameThreadEnabledCheckingPolicy_1_1CheckPointersImplTrampoline_3_01T_00_01true_01_4 =
+[
+    [ "Call", "structcppgc_1_1internal_1_1SameThreadEnabledCheckingPolicy_1_1CheckPointersImplTrampoline_3_01T_00_01true_01_4.html#a55da865a66e2fafaf9be23f35c431850", null ]
+];

@@ -8,5 +8,7 @@ var classv8_1_1internal_1_1NegativeLookaroundChoiceNode =
     [ "FilterOneByte", "classv8_1_1internal_1_1NegativeLookaroundChoiceNode.html#ae3d4db6698d30545a10f578d2e986fb6", null ],
     [ "GetQuickCheckDetails", "classv8_1_1internal_1_1NegativeLookaroundChoiceNode.html#ada390b6fda9574973a221eee6379afa9", null ],
     [ "lookaround_node", "classv8_1_1internal_1_1NegativeLookaroundChoiceNode.html#ad295121f3618139ed840d93aab8f3c5d", null ],
-    [ "try_to_emit_quick_check_for_alternative", "classv8_1_1internal_1_1NegativeLookaroundChoiceNode.html#a8510ca58dc92b3a81fdea20d87cea24a", null ]
+    [ "try_to_emit_quick_check_for_alternative", "classv8_1_1internal_1_1NegativeLookaroundChoiceNode.html#a8510ca58dc92b3a81fdea20d87cea24a", null ],
+    [ "kContinueIndex", "classv8_1_1internal_1_1NegativeLookaroundChoiceNode.html#ad5eb9c9cc7bc34ceb94fd4eb7dee6e90", null ],
+    [ "kLookaroundIndex", "classv8_1_1internal_1_1NegativeLookaroundChoiceNode.html#a2f0523b466c3bc41ddbf6edfe14361ed", null ]
 ];

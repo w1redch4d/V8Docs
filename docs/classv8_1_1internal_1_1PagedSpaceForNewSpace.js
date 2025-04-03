@@ -3,6 +3,7 @@ var classv8_1_1internal_1_1PagedSpaceForNewSpace =
     [ "PagedSpaceForNewSpace", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a0d835760aaac322e5223eb95fa949461", null ],
     [ "AddPage", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#ac9df75ea37efea81ebdd35569315e97f", null ],
     [ "AllocatedSinceLastGC", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#ae1f7285c9f96f81ca1a73149ec36d6e9", null ],
+    [ "AllocatePage", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#acae4ca9da1bf9bad8229ab6039b66843", null ],
     [ "AllocatePageUpToCapacityForTesting", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#ab40243a876e2453d62bf492ac935d58c", null ],
     [ "Available", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#aa0cc04bf1adad585ed2753879f5266d0", null ],
     [ "CreateAllocatorPolicy", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a1943d80da8f4c5738521b5f739e6973b", null ],
@@ -23,5 +24,10 @@ var classv8_1_1internal_1_1PagedSpaceForNewSpace =
     [ "TearDown", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a212bdd445e02b1446f5ca0aef3d862d0", null ],
     [ "TotalCapacity", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#afb7d94925d47c11989b144e6ea5b4da9", null ],
     [ "UsableCapacity", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a8d76dee4a083dde2834ba5b67d17d64d", null ],
-    [ "PagedNewSpaceAllocatorPolicy", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a67abb399c28482b7ce7bef06439ad112", null ]
+    [ "PagedNewSpaceAllocatorPolicy", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a67abb399c28482b7ce7bef06439ad112", null ],
+    [ "current_capacity_", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a435f1a40006bc261609beba82014f2e9", null ],
+    [ "initial_capacity_", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#acc6bcfc9f85a25237babe7e10d0cbf6c", null ],
+    [ "last_lab_page_", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a0827d81d4e05f1fca73ae4f8fcefbb15", null ],
+    [ "max_capacity_", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a4be0f28ab8fdd87f2e7d4b7d925fef91", null ],
+    [ "target_capacity_", "classv8_1_1internal_1_1PagedSpaceForNewSpace.html#a77cb394b7d78f7290994564aad8206ed", null ]
 ];

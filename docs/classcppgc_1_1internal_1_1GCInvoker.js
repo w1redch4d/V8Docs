@@ -10,5 +10,6 @@ var classcppgc_1_1internal_1_1GCInvoker =
     [ "operator=", "classcppgc_1_1internal_1_1GCInvoker.html#aca0b979db8b76ac4f83d2bbbd123895f", null ],
     [ "overridden_stack_state", "classcppgc_1_1internal_1_1GCInvoker.html#a9a48765a7c49d7b2d14cf6f99e43cef0", null ],
     [ "set_override_stack_state", "classcppgc_1_1internal_1_1GCInvoker.html#aa7e8eaef318529c7ccda594116639452", null ],
-    [ "StartIncrementalGarbageCollection", "classcppgc_1_1internal_1_1GCInvoker.html#ac11f523606be87a44f7abde724858849", null ]
+    [ "StartIncrementalGarbageCollection", "classcppgc_1_1internal_1_1GCInvoker.html#ac11f523606be87a44f7abde724858849", null ],
+    [ "impl_", "classcppgc_1_1internal_1_1GCInvoker.html#a8ada7053eef822c7ea9d4eb1c792ec29", null ]
 ];

@@ -7,9 +7,11 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringComparisonOp =
     ] ],
     [ "StringComparisonOp", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringComparisonOp.html#a984db42fa921af9a4e8a8bc427ec2e68", null ],
     [ "inputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringComparisonOp.html#a76e269b08a0a40d7ef2402107246390c", null ],
+    [ "IsCommutative", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringComparisonOp.html#a04dd97d198c68eb66139e0d64b0ac322", null ],
     [ "left", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringComparisonOp.html#ac986337294612543a9562e0302e9d4e5", null ],
     [ "options", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringComparisonOp.html#aa5f259fe6340c81658fdac04438a808f", null ],
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringComparisonOp.html#a836d61b17ae2d85221e9a18f6f377112", null ],
     [ "right", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringComparisonOp.html#a69266b3416b1e24743799e5f311dd8a6", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringComparisonOp.html#ab15ef050dc1aa6cdb4b81cc71391d516", null ],
     [ "kind", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1StringComparisonOp.html#ad5282434d35772a7744a1faa5cf2620d", null ]
 ];

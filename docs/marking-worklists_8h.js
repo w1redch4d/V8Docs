@@ -1,6 +1,7 @@
 var marking_worklists_8h =
 [
     [ "cppgc::internal::MarkingWorklists", "classcppgc_1_1internal_1_1MarkingWorklists.html", "classcppgc_1_1internal_1_1MarkingWorklists" ],
+    [ "cppgc::internal::MarkingWorklists::ExternalMarkingWorklist", "classcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist.html", "classcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist" ],
     [ "cppgc::internal::MarkingWorklists::WeakCallbackItem", "structcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem.html", "structcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem" ],
     [ "cppgc::internal::MarkingWorklists::ConcurrentMarkingBailoutItem", "structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html", "structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem" ],
     [ "cppgc::internal::MarkingWorklists::EphemeronPairItem", "structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem.html", "structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem" ],

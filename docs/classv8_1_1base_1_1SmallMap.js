@@ -14,7 +14,9 @@ var classv8_1_1base_1_1SmallMap =
     [ "begin", "classv8_1_1base_1_1SmallMap.html#a1fb7f96abbfca75ef9c140f58d8c325d", null ],
     [ "begin", "classv8_1_1base_1_1SmallMap.html#a9ed8aee62f65f6036e21af1e21fa2cb7", null ],
     [ "clear", "classv8_1_1base_1_1SmallMap.html#a8c67b85473dd3c495fe5c9d1c6ab71c1", null ],
+    [ "ConvertToRealMap", "classv8_1_1base_1_1SmallMap.html#a7ad7060ae47a6802ac01f86146a1949f", null ],
     [ "count", "classv8_1_1base_1_1SmallMap.html#aacc13084df6dcb46012a4fd9cf59e6bc", null ],
+    [ "Destroy", "classv8_1_1base_1_1SmallMap.html#a0226b811841f1208245409518e33b5ed", null ],
     [ "emplace", "classv8_1_1base_1_1SmallMap.html#a94cd40b27cebd31d599785201cf146f0", null ],
     [ "empty", "classv8_1_1base_1_1SmallMap.html#ae31275fe9b92ec355548b740cd1421c6", null ],
     [ "end", "classv8_1_1base_1_1SmallMap.html#aaf738e2e5eb39662090f9318f33ff375", null ],
@@ -23,6 +25,7 @@ var classv8_1_1base_1_1SmallMap =
     [ "erase", "classv8_1_1base_1_1SmallMap.html#a86ac5a8c916c89019dee7055d0a9e555", null ],
     [ "find", "classv8_1_1base_1_1SmallMap.html#afd2d83ae7b792212451631c09175afff", null ],
     [ "find", "classv8_1_1base_1_1SmallMap.html#a513d28055286feccdddde8ad163a5834", null ],
+    [ "InitFrom", "classv8_1_1base_1_1SmallMap.html#a3986095bd6ad49fe229e28c77eac65b9", null ],
     [ "insert", "classv8_1_1base_1_1SmallMap.html#afeefaba7996bd314393fc9a6d6207b07", null ],
     [ "insert", "classv8_1_1base_1_1SmallMap.html#a2fa057dc98234611b23f04bfd2393ae3", null ],
     [ "map", "classv8_1_1base_1_1SmallMap.html#a960778c4e4067fc2fd4da4cee31c804a", null ],
@@ -33,5 +36,8 @@ var classv8_1_1base_1_1SmallMap =
     [ "try_emplace", "classv8_1_1base_1_1SmallMap.html#ae924a36e27c06dcd36d2a5c75e384f79", null ],
     [ "UsingFullMap", "classv8_1_1base_1_1SmallMap.html#a915307b8297b5ec19adcf8353de6b045", null ],
     [ "array_", "classv8_1_1base_1_1SmallMap.html#a2af2430f305eb5a8d7e3c821dee8e689", null ],
-    [ "map_", "classv8_1_1base_1_1SmallMap.html#a51112333c750dc8157271fef86939614", null ]
+    [ "functor_", "classv8_1_1base_1_1SmallMap.html#ae556ea39ac7c6e295f12e9dc1152cebc", null ],
+    [ "kUsingFullMapSentinel", "classv8_1_1base_1_1SmallMap.html#ad5090e74de189bd755ee12cdf6b61efd", null ],
+    [ "map_", "classv8_1_1base_1_1SmallMap.html#a51112333c750dc8157271fef86939614", null ],
+    [ "size_", "classv8_1_1base_1_1SmallMap.html#ae78310c8a108b039ba3ffbb853e5e871", null ]
 ];

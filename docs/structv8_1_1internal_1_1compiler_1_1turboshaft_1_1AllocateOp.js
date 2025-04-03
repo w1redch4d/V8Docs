@@ -6,5 +6,6 @@ var structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateOp =
     [ "outputs_rep", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateOp.html#a31d7ba9af5f97dcdb6ea3f19461f6888", null ],
     [ "PrintOptions", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateOp.html#aa2abea148a71d20d4397f4b796e5b668", null ],
     [ "size", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateOp.html#a7f84d25a9dbb4c7d3c2b44a4f3e41e4a", null ],
+    [ "effects", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateOp.html#aaf12032cc879656284ddeeeecd78f7de", null ],
     [ "type", "structv8_1_1internal_1_1compiler_1_1turboshaft_1_1AllocateOp.html#ab123700250551c3fe3a6c0e2d57a6056", null ]
 ];

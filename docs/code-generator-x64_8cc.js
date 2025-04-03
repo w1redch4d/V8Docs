@@ -46,5 +46,17 @@ var code_generator_x64_8cc =
     [ "GetSecondMacroFusionInstKind", "code-generator-x64_8cc.html#ac8319fbb96114e7c89c5b6c7bacf1d40", null ],
     [ "IsMacroFused", "code-generator-x64_8cc.html#a26f1041d287f0bb2fe8f6d8c142d3512", null ],
     [ "ShouldAlignForJCCErratum", "code-generator-x64_8cc.html#ab48bda2589f8c50e94fa12c52b2c617f", null ],
-    [ "ShouldClearOutputRegisterBeforeInstruction", "code-generator-x64_8cc.html#a444af32b52e2ca021246781e218d1a14", null ]
+    [ "ShouldClearOutputRegisterBeforeInstruction", "code-generator-x64_8cc.html#a444af32b52e2ca021246781e218d1a14", null ],
+    [ "indirect_pointer_tag_", "code-generator-x64_8cc.html#ac65776d707ac07cc6389ba76807fa3a7", null ],
+    [ "input_", "code-generator-x64_8cc.html#a8136e0c518eae601ca3c84adba6a2e0b", null ],
+    [ "isolate_", "code-generator-x64_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b", null ],
+    [ "mode_", "code-generator-x64_8cc.html#adc5709192230b7fde07de03eb2974043", null ],
+    [ "object_", "code-generator-x64_8cc.html#a5563c55e446f92e237e9fb9b07b423b6", null ],
+    [ "operand_", "code-generator-x64_8cc.html#a3c25bf72b3cb024cd811fc165a198db4", null ],
+    [ "result_", "code-generator-x64_8cc.html#a39e85b51fb74a0c30b8d334dbde75396", null ],
+    [ "scratch0_", "code-generator-x64_8cc.html#ac15c8035db0676f79a4eeae4edd9ca09", null ],
+    [ "scratch1_", "code-generator-x64_8cc.html#a460fb6d04dc26e9fae0093b9e62635ad", null ],
+    [ "unwinding_info_writer_", "code-generator-x64_8cc.html#a169281d819fe1cec036d4799afb2accf", null ],
+    [ "value_", "code-generator-x64_8cc.html#ac1b34591c0a6bb909fcc2d34d0b5aaff", null ],
+    [ "zone_", "code-generator-x64_8cc.html#a4979f6e7e64e9ee56f4229d03fa20c69", null ]
 ];

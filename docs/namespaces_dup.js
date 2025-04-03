@@ -4,6 +4,7 @@ var namespaces_dup =
     [ "cppgc", "namespacecppgc.html", "namespacecppgc" ],
     [ "disasm", "namespacedisasm.html", "namespacedisasm" ],
     [ "heap", "namespaceheap.html", "namespaceheap" ],
+    [ "perfetto", "namespaceperfetto.html", "namespaceperfetto" ],
     [ "std", "namespacestd.html", "namespacestd" ],
     [ "U_ICU_NAMESPACE", "namespaceU__ICU__NAMESPACE.html", "namespaceU__ICU__NAMESPACE" ],
     [ "unibrow", "namespaceunibrow.html", "namespaceunibrow" ],

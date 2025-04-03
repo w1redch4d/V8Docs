@@ -1,9 +1,27 @@
 var regexp_bytecode_peephole_8cc =
 [
+    [ "argument_check_", "regexp-bytecode-peephole_8cc.html#a83f69dfac1ab5c62033f92a5ee858fb4", null ],
+    [ "argument_ignored_", "regexp-bytecode-peephole_8cc.html#a8837e8f671e230bcedddbd503a76faba", null ],
+    [ "argument_mapping_", "regexp-bytecode-peephole_8cc.html#a6ec76264a9cb3443037217e1a5018887", null ],
+    [ "bytecode_", "regexp-bytecode-peephole_8cc.html#ad6b4eb5e6847ac3cdec973f5ae89297d", null ],
+    [ "bytecode_replacement_", "regexp-bytecode-peephole_8cc.html#abfc803c55f34bc8a7b02f777bd841a1d", null ],
     [ "check_length", "regexp-bytecode-peephole_8cc.html#a2718f3d5af03abad463c2ccf26cf9a7d", null ],
     [ "check_offset", "regexp-bytecode-peephole_8cc.html#a16d10f3c5073b2cc09aa7d49352642ae", null ],
+    [ "children_", "regexp-bytecode-peephole_8cc.html#a9c99c2b74f5a7dea3a7a9e1c02d5227a", null ],
+    [ "index_in_sequence_", "regexp-bytecode-peephole_8cc.html#ab35d3568d149806f1383240261b169aa", null ],
+    [ "jump_destination_fixups_", "regexp-bytecode-peephole_8cc.html#af1484b575d9e0d83ec73519520ba4345", null ],
+    [ "jump_edges_", "regexp-bytecode-peephole_8cc.html#a73e96110afdb850d8f8058db36585bcb", null ],
+    [ "jump_edges_mapped_", "regexp-bytecode-peephole_8cc.html#aa7771ed268fc458e1bf661564c436c8b", null ],
+    [ "jump_source_fixups_", "regexp-bytecode-peephole_8cc.html#a7255802f1922f5cabb8f792b29bee343", null ],
+    [ "jump_usage_counts_", "regexp-bytecode-peephole_8cc.html#a27d9402b2fcc1b7e2e6918c5407d2557", null ],
+    [ "kDummyBytecode", "regexp-bytecode-peephole_8cc.html#ab20d5c880b66065d97b24b288aa0b880", null ],
     [ "length", "regexp-bytecode-peephole_8cc.html#a9f59b34b1f25fe00023291b678246bcc", null ],
     [ "new_length", "regexp-bytecode-peephole_8cc.html#ae6409a32d85daa404e52072329e0a5ad", null ],
     [ "offset", "regexp-bytecode-peephole_8cc.html#aed7ea92f45bd273dde380a45ddced592", null ],
-    [ "type", "regexp-bytecode-peephole_8cc.html#ac8f6ab7f2ee9a965a79e486799c42823", null ]
+    [ "optimized_bytecode_buffer_", "regexp-bytecode-peephole_8cc.html#aa903a19325e7e2ae7212fcf2aa74c2ed", null ],
+    [ "parent_", "regexp-bytecode-peephole_8cc.html#a8f20ddbd20ff167996ce994778f8ebf5", null ],
+    [ "sequences_", "regexp-bytecode-peephole_8cc.html#a07a4feed521ffacf5c4d4055f1ce9379", null ],
+    [ "start_offset_", "regexp-bytecode-peephole_8cc.html#a1ceb4b3b1de36c7bfce3e6c61b105f80", null ],
+    [ "type", "regexp-bytecode-peephole_8cc.html#ac8f6ab7f2ee9a965a79e486799c42823", null ],
+    [ "zone_", "regexp-bytecode-peephole_8cc.html#a4979f6e7e64e9ee56f4229d03fa20c69", null ]
 ];

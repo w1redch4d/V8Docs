@@ -15,8 +15,15 @@ var classv8_1_1internal_1_1PrototypeIterator =
     [ "AdvanceFollowingProxiesIgnoringAccessChecks", "classv8_1_1internal_1_1PrototypeIterator.html#adf3d3652db0df44685665f1e708ad513", null ],
     [ "AdvanceIgnoringProxies", "classv8_1_1internal_1_1PrototypeIterator.html#ab057cee4da776bc58be4bd5275a00e59", null ],
     [ "GetCurrent", "classv8_1_1internal_1_1PrototypeIterator.html#a78bb0889205677221dc4d44d093c1a67", null ],
+    [ "GetCurrent", "classv8_1_1internal_1_1PrototypeIterator.html#afea2823f84527f93742478fc937d1fe4", null ],
     [ "HasAccess", "classv8_1_1internal_1_1PrototypeIterator.html#a2dd20c86003a6f0502a40ed5994fbef9", null ],
     [ "IsAtEnd", "classv8_1_1internal_1_1PrototypeIterator.html#abdcad32ac0a91310661b717d396a62f3", null ],
     [ "isolate", "classv8_1_1internal_1_1PrototypeIterator.html#a3467b08d7afe2c069a4234aa29456d78", null ],
-    [ "operator=", "classv8_1_1internal_1_1PrototypeIterator.html#a26e25318258b536f31e1599d77a73ed0", null ]
+    [ "operator=", "classv8_1_1internal_1_1PrototypeIterator.html#a26e25318258b536f31e1599d77a73ed0", null ],
+    [ "handle_", "classv8_1_1internal_1_1PrototypeIterator.html#a3df7b538b2a06048dd85c7eab975208c", null ],
+    [ "is_at_end_", "classv8_1_1internal_1_1PrototypeIterator.html#a128eff45dac8aa0d7b8cb2c3739ae98a", null ],
+    [ "isolate_", "classv8_1_1internal_1_1PrototypeIterator.html#a1f3d88fa2b42c1858709921c0d3fede0", null ],
+    [ "object_", "classv8_1_1internal_1_1PrototypeIterator.html#a6c34cca6c74f9c731e2f62c1ef2f4194", null ],
+    [ "seen_proxies_", "classv8_1_1internal_1_1PrototypeIterator.html#a338eb89b3b7a6f82a071a894ffd1de18", null ],
+    [ "where_to_end_", "classv8_1_1internal_1_1PrototypeIterator.html#a344df4de06050b319c6cd252950637a5", null ]
 ];

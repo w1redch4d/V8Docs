@@ -7,5 +7,8 @@ var classv8_1_1internal_1_1compiler_1_1CreateClosureParameters =
     [ "hash_value", "classv8_1_1internal_1_1compiler_1_1CreateClosureParameters.html#a372fb94241fb6498da2392b1b7a9ce13", null ],
     [ "operator!=", "classv8_1_1internal_1_1compiler_1_1CreateClosureParameters.html#a21337953ea09ae3755a67681a3ac6b93", null ],
     [ "operator<<", "classv8_1_1internal_1_1compiler_1_1CreateClosureParameters.html#ac41d8460a7cfe5fe382cd3844479db42", null ],
-    [ "operator==", "classv8_1_1internal_1_1compiler_1_1CreateClosureParameters.html#adabdbdddeff5759bc6492ca54997d29a", null ]
+    [ "operator==", "classv8_1_1internal_1_1compiler_1_1CreateClosureParameters.html#adabdbdddeff5759bc6492ca54997d29a", null ],
+    [ "allocation_", "classv8_1_1internal_1_1compiler_1_1CreateClosureParameters.html#afb0c52d1a2d8e95e93f51790f9784cf5", null ],
+    [ "code_", "classv8_1_1internal_1_1compiler_1_1CreateClosureParameters.html#a83cb5fbedea6f9e23e39d8c44f796625", null ],
+    [ "shared_info_", "classv8_1_1internal_1_1compiler_1_1CreateClosureParameters.html#a3222ec86c3d7539023bc12ebca52c39b", null ]
 ];

@@ -1,13 +1,26 @@
 var classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder =
 [
     [ "PropertyAccessBuilder", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#a16c48348085bf5e6cdca011c2a51452c", null ],
+    [ "broker", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#aad2654949a70bd592f3a49f835cfb7e3", null ],
     [ "BuildCheckMaps", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#ade265e667ff9d402700687730bfa93db", null ],
     [ "BuildCheckNumber", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#ad0f17c79742df8b190cc66649fad867a", null ],
     [ "BuildCheckNumberFitsInt32", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#a4c6f4cd2c8ba30b2a74353b06cae214a", null ],
     [ "BuildCheckSmi", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#ab906dc9a873c56918b89d2d42ac264f1", null ],
     [ "BuildCheckValue", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#aa46cbfd656dc5bcfed12165182c729f6", null ],
+    [ "BuildLoadDataField", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#ad0ce9cc8b1bb878adfd0851ded3fa814", null ],
     [ "BuildLoadDataField", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#af1c72c1753f35d9ff073ea922045a285", null ],
+    [ "common", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#a2cbf8c6d03289b276ed21912d0c70eef", null ],
+    [ "ConvertRepresentation", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#a156173a89be22da25900d79d21968eff", null ],
+    [ "dependencies", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#a0634a66ea253a4f824a782fbc66580b9", null ],
     [ "FoldLoadDictPrototypeConstant", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#aead5188176c38f287d8950a30e56ffd7", null ],
+    [ "graph", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#a0c5d05fa44c363833b9b48b898cc42cd", null ],
+    [ "isolate", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#ae6a6065f6608c99b2dbe55d4fd2c867f", null ],
+    [ "jsgraph", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#a3cc69563f9ac1e6d56b371b8e34669ac", null ],
+    [ "ResolveHolder", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#a2146ae130272ef61e54ca54765db758f", null ],
+    [ "simplified", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#a4720d708ba2087a3ab6cd48848a4cad0", null ],
     [ "TryBuildNumberCheck", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#a7b013d190c89dc38eee69aa5d1162dcd", null ],
-    [ "TryBuildStringCheck", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#ad5afd59b46ef03550421d4a626b8b2e4", null ]
+    [ "TryBuildStringCheck", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#ad5afd59b46ef03550421d4a626b8b2e4", null ],
+    [ "TryFoldLoadConstantDataField", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#a0ec2bc63027cb858b474f3c647b839f5", null ],
+    [ "broker_", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#acbbc050940ecd00dd29d9b336faea09d", null ],
+    [ "jsgraph_", "classv8_1_1internal_1_1compiler_1_1PropertyAccessBuilder.html#ac64ae0b5276b06c73f4426d462e5a320", null ]
 ];

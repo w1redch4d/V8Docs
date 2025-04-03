@@ -1,6 +1,6 @@
 var classv8_1_1internal_1_1SloppyArgumentsElements =
 [
-    [ "BodyDescriptor", "classv8_1_1internal_1_1SloppyArgumentsElements_1_1BodyDescriptor.html", null ],
+    [ "BodyDescriptor", "classv8_1_1internal_1_1SloppyArgumentsElements_1_1BodyDescriptor.html", "classv8_1_1internal_1_1SloppyArgumentsElements_1_1BodyDescriptor" ],
     [ "arguments", "classv8_1_1internal_1_1SloppyArgumentsElements.html#aeacf0227158ed39a3b2af7e505e37dcf", null ],
     [ "context", "classv8_1_1internal_1_1SloppyArgumentsElements.html#a11e45f79b8a0e2d76754886286115255", null ],
     [ "mapped_entries", "classv8_1_1internal_1_1SloppyArgumentsElements.html#af7fe537454be346fba5586890ad41cf0", null ],

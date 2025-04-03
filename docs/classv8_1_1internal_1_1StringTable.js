@@ -5,7 +5,10 @@ var classv8_1_1internal_1_1StringTable =
     [ "StringTable", "classv8_1_1internal_1_1StringTable.html#a74fbb19b84e6e10d8c6035c6ab76d057", null ],
     [ "~StringTable", "classv8_1_1internal_1_1StringTable.html#ab3b7ec404750cdda66d17f3631ebeeb6", null ],
     [ "Capacity", "classv8_1_1internal_1_1StringTable.html#a5adf7b4c35726d98a26a7c53a7a235f7", null ],
+    [ "deleted_element", "classv8_1_1internal_1_1StringTable.html#abeac36e6a289d88ba75d9e9053852588", null ],
     [ "DropOldData", "classv8_1_1internal_1_1StringTable.html#ac7051d18932bb54945f2bfac94d75765", null ],
+    [ "empty_element", "classv8_1_1internal_1_1StringTable.html#a7984801fc99c4f6b456bb1b5cb2c8b25", null ],
+    [ "EnsureCapacity", "classv8_1_1internal_1_1StringTable.html#a3302dd59a9c0c9c541d8480aa279e56e", null ],
     [ "GetCurrentMemoryUsage", "classv8_1_1internal_1_1StringTable.html#a555360d5fd7323fc90a54c0611bb7661", null ],
     [ "InsertEmptyStringForBootstrapping", "classv8_1_1internal_1_1StringTable.html#a2de7cc3357e4b0aa8ba2b7a076dad74a", null ],
     [ "InsertForIsolateDeserialization", "classv8_1_1internal_1_1StringTable.html#a051b71e6bcdecdbcab3f6a09fedd4cd8", null ],
@@ -15,5 +18,9 @@ var classv8_1_1internal_1_1StringTable =
     [ "NotifyElementsRemoved", "classv8_1_1internal_1_1StringTable.html#a8a7915726542f03275e2cddbe03ddef3", null ],
     [ "NumberOfElements", "classv8_1_1internal_1_1StringTable.html#af1710e7f05758accc40ed9c2581d97f9", null ],
     [ "Print", "classv8_1_1internal_1_1StringTable.html#ac0bb81daf9fafd55b8a3b95fab8a7bb0", null ],
-    [ "VerifyIfOwnedBy", "classv8_1_1internal_1_1StringTable.html#a8706a5f8e7482f7ba97bb60df880b1d4", null ]
+    [ "TryStringToIndexOrLookupExisting", "classv8_1_1internal_1_1StringTable.html#a00eace67662ee9e54284b0f1bd8dbccc", null ],
+    [ "VerifyIfOwnedBy", "classv8_1_1internal_1_1StringTable.html#a8706a5f8e7482f7ba97bb60df880b1d4", null ],
+    [ "data_", "classv8_1_1internal_1_1StringTable.html#acf9a03fe720e5f7d13f1c48e6f1f34de", null ],
+    [ "isolate_", "classv8_1_1internal_1_1StringTable.html#aaac63b44ee19104c7726b98e6ae55626", null ],
+    [ "write_mutex_", "classv8_1_1internal_1_1StringTable.html#a245835c37c33b36c3cec04c1c1524e5b", null ]
 ];

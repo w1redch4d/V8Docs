@@ -1,12 +1,39 @@
 var classv8_1_1platform_1_1DefaultForegroundTaskRunner =
 [
+    [ "DelayedEntry", "structv8_1_1platform_1_1DefaultForegroundTaskRunner_1_1DelayedEntry.html", "structv8_1_1platform_1_1DefaultForegroundTaskRunner_1_1DelayedEntry" ],
+    [ "DelayedEntryCompare", "structv8_1_1platform_1_1DefaultForegroundTaskRunner_1_1DelayedEntryCompare.html", "structv8_1_1platform_1_1DefaultForegroundTaskRunner_1_1DelayedEntryCompare" ],
     [ "RunTaskScope", "classv8_1_1platform_1_1DefaultForegroundTaskRunner_1_1RunTaskScope.html", "classv8_1_1platform_1_1DefaultForegroundTaskRunner_1_1RunTaskScope" ],
+    [ "TaskQueueEntry", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#af9494c9e3c24620786aa52ee34a9cf01", null ],
     [ "TimeFunction", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a1222d6bb883a836840ee781e3dfbc33f", null ],
+    [ "Nestability", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#aedfeccc40aa81591df9086316ca40775", [
+      [ "kNestable", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#aedfeccc40aa81591df9086316ca40775a638333e753b79b4b7bbd3a4e60c797a0", null ],
+      [ "kNonNestable", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#aedfeccc40aa81591df9086316ca40775ac2d3867cf27d18a27c75e8af8d8aa553", null ]
+    ] ],
     [ "DefaultForegroundTaskRunner", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a5dc5e969e4a3ba22fb80999d609308f7", null ],
+    [ "HasPoppableTaskInQueue", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#aff49e24846159020cf77568f4f437dca", null ],
     [ "IdleTasksEnabled", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a44360ea2412113db3a6caed4e58b59ae", null ],
     [ "MonotonicallyIncreasingTime", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#ae86e21d09c2828455645d9579623ecbf", null ],
+    [ "MoveExpiredDelayedTasksLocked", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#aee195abc2736f01851cff41712d912b2", null ],
     [ "NonNestableTasksEnabled", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#af63dc3934e882a7c879a64f413f2123a", null ],
+    [ "PopTaskFromDelayedQueueLocked", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a9902e318a5483ff7c793b52fa9454aeb", null ],
     [ "PopTaskFromIdleQueue", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a4864af369db103469b3daea83ddbd8e7", null ],
     [ "PopTaskFromQueue", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a2034bcb0e46b55dad446e7cf76d22c87", null ],
-    [ "Terminate", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a09ab9f269f09c73814cddbc967265cce", null ]
+    [ "PostDelayedTaskImpl", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a67c3d3acd670b2082d701137ac7d3575", null ],
+    [ "PostDelayedTaskLocked", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a4ebed6f350c3d93f795c98c1c4e4091e", null ],
+    [ "PostIdleTaskImpl", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a5cc7f03669e90f9894652d7665d96bf4", null ],
+    [ "PostNonNestableDelayedTaskImpl", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#aae8e1a80a41d26a1f1cb6af29de1d796", null ],
+    [ "PostNonNestableTaskImpl", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a116db816734a1a59f97994b765fb6ead", null ],
+    [ "PostTaskImpl", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a5173bb23b01ef70f48bc8537eeb6ce28", null ],
+    [ "PostTaskLocked", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a3156caab99cdade0489bd21d20235c54", null ],
+    [ "Terminate", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a09ab9f269f09c73814cddbc967265cce", null ],
+    [ "WaitForTaskLocked", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#aa0321470d61750dfe66e00fe490eaf8e", null ],
+    [ "delayed_task_queue_", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#afe7bb9b3bb70a5d4f4b231f7b5d2d705", null ],
+    [ "event_loop_control_", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#ae72c75345f47070b034d8b7386e84f40", null ],
+    [ "idle_task_queue_", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a54e3ae0e3cf43bee771365a7d99019aa", null ],
+    [ "idle_task_support_", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#adb85fe99b73b3210294751f14ea151e2", null ],
+    [ "mutex_", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a9404c5593857a4df3e20f7a6790abb64", null ],
+    [ "nesting_depth_", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#adae19141fa0d671a783352f596b8eae2", null ],
+    [ "task_queue_", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a750a4b2616c7081f8346f38c90713f34", null ],
+    [ "terminated_", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#aff720229b776ddf20578ff6375248ac8", null ],
+    [ "time_function_", "classv8_1_1platform_1_1DefaultForegroundTaskRunner.html#a631750e6a7cb0f2c82bfd05cdefc135b", null ]
 ];

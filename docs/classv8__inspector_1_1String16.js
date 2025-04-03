@@ -12,8 +12,18 @@ var classv8__inspector_1_1String16 =
     [ "String16", "classv8__inspector_1_1String16.html#aed6361b7d161ee8e835d74471d6be470", null ],
     [ "String16", "classv8__inspector_1_1String16.html#ae5a2d3e0e49a272e8316cc0733a4b464", null ],
     [ "characters16", "classv8__inspector_1_1String16.html#ab33497995f49f11772607d2083f548e6", null ],
+    [ "concat", "classv8__inspector_1_1String16.html#a5151ece8e5ff475551c37b39e550102c", null ],
     [ "find", "classv8__inspector_1_1String16.html#aadd53e8ebc365e3df8ba64a9f5720875", null ],
     [ "find", "classv8__inspector_1_1String16.html#aeec2bc3331cc96ef6af2c78d6f6f9bca", null ],
+    [ "fromDouble", "classv8__inspector_1_1String16.html#a5d752b6497239d27527a3aae2fd666ec", null ],
+    [ "fromDouble", "classv8__inspector_1_1String16.html#a0789dcd06ca2fb2c15941b6bf5e934c3", null ],
+    [ "fromInteger", "classv8__inspector_1_1String16.html#a3e664239410a5b580b79035d574d4ae3", null ],
+    [ "fromInteger", "classv8__inspector_1_1String16.html#a4fc20e66a7339e6b936c1c5bf0ad70e4", null ],
+    [ "fromInteger64", "classv8__inspector_1_1String16.html#a4b370d25ae1b9aefa7385bf419fde547", null ],
+    [ "fromUInt64", "classv8__inspector_1_1String16.html#a7fef75f2b525ae38cbc4271b85419d0b", null ],
+    [ "fromUTF16LE", "classv8__inspector_1_1String16.html#a66136682837e13583a022f8b7b0097ea", null ],
+    [ "fromUTF16LE", "classv8__inspector_1_1String16.html#a55d51b257f158d4a137e1823778b8ca4", null ],
+    [ "fromUTF8", "classv8__inspector_1_1String16.html#a0f9b532b278d874599932185bde29caa", null ],
     [ "getTrimmedOffsetAndLength", "classv8__inspector_1_1String16.html#abc10493b106a171dd92851963a1bf6eb", null ],
     [ "hash", "classv8__inspector_1_1String16.html#a11633cd949be5a01f498d2aa4dd986db", null ],
     [ "isEmpty", "classv8__inspector_1_1String16.html#a657d71247a270c0ad98b244e5d245259", null ],
@@ -34,5 +44,8 @@ var classv8__inspector_1_1String16 =
     [ "toInteger", "classv8__inspector_1_1String16.html#a42f9e02c4e94865e7ca5b2e5d90d5140", null ],
     [ "toInteger64", "classv8__inspector_1_1String16.html#a833e28f5bf79b5a4ab16e80bfd53cd1f", null ],
     [ "toUInt64", "classv8__inspector_1_1String16.html#ac3a310a2c2cfb7740243ce8acef2331e", null ],
-    [ "utf8", "classv8__inspector_1_1String16.html#a8afd212b82b113e558ed0b34539a2066", null ]
+    [ "utf8", "classv8__inspector_1_1String16.html#a8afd212b82b113e558ed0b34539a2066", null ],
+    [ "hash_code", "classv8__inspector_1_1String16.html#aff4d52c244061014d18bbd000b3e9d73", null ],
+    [ "kNotFound", "classv8__inspector_1_1String16.html#ad2ff01e5e03f69840076a635aeec44b8", null ],
+    [ "m_impl", "classv8__inspector_1_1String16.html#a6f3cb655ef99aff73766e29fb5698ee1", null ]
 ];

@@ -73,5 +73,6 @@ var feedback_vector_8h =
     [ "IsSetNamedICKind", "feedback-vector_8h.html#a3cf1600da066ae97a741af17fc84a690", null ],
     [ "IsStoreGlobalICKind", "feedback-vector_8h.html#a03d9f58838aa55dee0d0cac358590f11", null ],
     [ "IsStoreInArrayLiteralICKind", "feedback-vector_8h.html#a882664eb01ca6647a8037d34c8d24cb8", null ],
-    [ "operator<<", "feedback-vector_8h.html#a6f6cd24a5822eba89e8b1193a7c80110", null ]
+    [ "operator<<", "feedback-vector_8h.html#a6f6cd24a5822eba89e8b1193a7c80110", null ],
+    [ "kFeedbackSlotKindCount", "feedback-vector_8h.html#a4a1e81563092cf315efac084c0152a3f", null ]
 ];

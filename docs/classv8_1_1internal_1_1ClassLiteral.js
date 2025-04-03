@@ -1,7 +1,10 @@
 var classv8_1_1internal_1_1ClassLiteral =
 [
+    [ "HasStaticComputedNames", "classv8_1_1internal_1_1ClassLiteral.html#a9f1ce25dba78e845881c6a889880c14e", null ],
+    [ "IsAnonymousExpression", "classv8_1_1internal_1_1ClassLiteral.html#ab7b2c91dbe24adeaa429aaa544cdf2d7", null ],
     [ "Property", "classv8_1_1internal_1_1ClassLiteral.html#a25d35ed1e1693b5f8760cf01f82e8dc2", null ],
     [ "StaticElement", "classv8_1_1internal_1_1ClassLiteral.html#af2bd559f96bff1a35b1044d014b345bc", null ],
+    [ "ClassLiteral", "classv8_1_1internal_1_1ClassLiteral.html#a4a1a646b569ea07d393ac3866c883b39", null ],
     [ "constructor", "classv8_1_1internal_1_1ClassLiteral.html#ac2ff81f4633e39b0db236f457829e648", null ],
     [ "end_position", "classv8_1_1internal_1_1ClassLiteral.html#a3e0340275364dad22be964fee1782c2d", null ],
     [ "extends", "classv8_1_1internal_1_1ClassLiteral.html#aaf1f17ad8f0acc0ba4d6ca8252fdb0fe", null ],
@@ -16,5 +19,16 @@ var classv8_1_1internal_1_1ClassLiteral =
     [ "start_position", "classv8_1_1internal_1_1ClassLiteral.html#a4d55d9de17acb8c4ba2697986cb9e43c", null ],
     [ "static_home_object", "classv8_1_1internal_1_1ClassLiteral.html#a3455bd2b7b3fddaeb648e16054433592", null ],
     [ "static_initializer", "classv8_1_1internal_1_1ClassLiteral.html#ac28f196ee8097159a16534ae3421b9a9", null ],
-    [ "AstNodeFactory", "classv8_1_1internal_1_1ClassLiteral.html#a8d587c8ad3515ff6433eb83c578e795f", null ]
+    [ "AstNodeFactory", "classv8_1_1internal_1_1ClassLiteral.html#a8d587c8ad3515ff6433eb83c578e795f", null ],
+    [ "constructor_", "classv8_1_1internal_1_1ClassLiteral.html#a28d7e0aa158e1e393772b88f859077cd", null ],
+    [ "end_position_", "classv8_1_1internal_1_1ClassLiteral.html#ab94606036038c05d27aa232a8f8f86d2", null ],
+    [ "extends_", "classv8_1_1internal_1_1ClassLiteral.html#aed6034b490c5c4c75c0a33ab9f59753c", null ],
+    [ "home_object_", "classv8_1_1internal_1_1ClassLiteral.html#a224777f1b998f4021ffb41e9aabd7e33", null ],
+    [ "instance_members_initializer_function_", "classv8_1_1internal_1_1ClassLiteral.html#ab4f2e390d359a302c278c1760161f7e2", null ],
+    [ "private_members_", "classv8_1_1internal_1_1ClassLiteral.html#a27556363349ba020442895a5730f827a", null ],
+    [ "public_members_", "classv8_1_1internal_1_1ClassLiteral.html#ab60d6eacb714b7737aae56f89b5f20dc", null ],
+    [ "scope_", "classv8_1_1internal_1_1ClassLiteral.html#a9cc760ea907371c8555ea09459afc55d", null ],
+    [ "static_home_object_", "classv8_1_1internal_1_1ClassLiteral.html#a056010b6062d997fdb2c6f42fa79ea08", null ],
+    [ "static_initializer_", "classv8_1_1internal_1_1ClassLiteral.html#a5488f528af9e6404f7374e00f047eea7", null ],
+    [ "Zone", "classv8_1_1internal_1_1ClassLiteral.html#af226857e939d10936a217f2b09d796a8", null ]
 ];

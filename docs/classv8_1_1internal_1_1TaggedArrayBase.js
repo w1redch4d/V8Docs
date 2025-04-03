@@ -1,10 +1,15 @@
 var classv8_1_1internal_1_1TaggedArrayBase =
 [
+    [ "ElementMemberT", "classv8_1_1internal_1_1TaggedArrayBase.html#af00a4d013b112443786ae78db8f8da7e", null ],
+    [ "ElementT", "classv8_1_1internal_1_1TaggedArrayBase.html#a65c5680546591adfaf30dc193af318fb", null ],
     [ "Header", "classv8_1_1internal_1_1TaggedArrayBase.html#a3bd906a6498281da5bdbd7012c3c8f85", null ],
     [ "Shape", "classv8_1_1internal_1_1TaggedArrayBase.html#a331068c16d5af0fb620dde0de02c3959", null ],
+    [ "SlotType", "classv8_1_1internal_1_1TaggedArrayBase.html#a61f5ee449b70857335727c159909b0ba", null ],
     [ "Allocate", "classv8_1_1internal_1_1TaggedArrayBase.html#aae52d42945c2cf7722c3608e52bfa3c7", null ],
+    [ "Allocate", "classv8_1_1internal_1_1TaggedArrayBase.html#a0434042b75751cec073fe239ecf6e175", null ],
     [ "AllocatedSize", "classv8_1_1internal_1_1TaggedArrayBase.html#a4e6167f02e00826820e75cd7ce7a36f6", null ],
     [ "compare_and_swap", "classv8_1_1internal_1_1TaggedArrayBase.html#a1dc4f7c35f12025920eb62c11c808e98", null ],
+    [ "CopyElements", "classv8_1_1internal_1_1TaggedArrayBase.html#a42e6db821dc6326e1129a49a73e4bf34", null ],
     [ "FLEXIBLE_ARRAY_MEMBER", "classv8_1_1internal_1_1TaggedArrayBase.html#a10ae3b555af6505fd37e0529361e22cc", null ],
     [ "get", "classv8_1_1internal_1_1TaggedArrayBase.html#aecb08dbef910032f48dcd03cf89b3319", null ],
     [ "get", "classv8_1_1internal_1_1TaggedArrayBase.html#a05fcdb6369d0bec2fb4b528e9bd06749", null ],
@@ -12,6 +17,9 @@ var classv8_1_1internal_1_1TaggedArrayBase =
     [ "get", "classv8_1_1internal_1_1TaggedArrayBase.html#a83cff7bdb17d8fe1d353bbfd554341ff", null ],
     [ "IsCowArray", "classv8_1_1internal_1_1TaggedArrayBase.html#afa9339170209e82deb5bf6bcc3a2a5f1", null ],
     [ "IsInBounds", "classv8_1_1internal_1_1TaggedArrayBase.html#a88dc6f15bd1f6c2584e378c0bb5e113c", null ],
+    [ "MoveElements", "classv8_1_1internal_1_1TaggedArrayBase.html#aa3e42e9c76e97c5af09b834006b1076b", null ],
+    [ "NewCapacityForIndex", "classv8_1_1internal_1_1TaggedArrayBase.html#af1f3dabe5bb9267b7491a7a69a4ec1e5", null ],
+    [ "OffsetOfElementAt", "classv8_1_1internal_1_1TaggedArrayBase.html#a7ec732649337c7c9c172276da0dca4b6", null ],
     [ "RawFieldOfElementAt", "classv8_1_1internal_1_1TaggedArrayBase.html#a241947be79597ac16eeea4f10e1634f7", null ],
     [ "RawFieldOfFirstElement", "classv8_1_1internal_1_1TaggedArrayBase.html#adb791c9d33d96346d3775c5d617b8962", null ],
     [ "RightTrim", "classv8_1_1internal_1_1TaggedArrayBase.html#a08fcbdc23f1a059f153b1ae9f5434bc9", null ],
@@ -23,5 +31,12 @@ var classv8_1_1internal_1_1TaggedArrayBase =
     [ "set", "classv8_1_1internal_1_1TaggedArrayBase.html#a04c42f60243f6f4717ff864db2cd5484", null ],
     [ "set", "classv8_1_1internal_1_1TaggedArrayBase.html#a544d1338cddb62a3ebb15e5e9a13b8fc", null ],
     [ "set", "classv8_1_1internal_1_1TaggedArrayBase.html#ad114132674ce960701ca9afefdd38f40", null ],
-    [ "swap", "classv8_1_1internal_1_1TaggedArrayBase.html#a4a17f90d30494d98acb0e31f6c6b2ec7", null ]
+    [ "SizeFor", "classv8_1_1internal_1_1TaggedArrayBase.html#afe7f2d7adb5ae1d1c0d27a2dcba39575", null ],
+    [ "swap", "classv8_1_1internal_1_1TaggedArrayBase.html#a4a17f90d30494d98acb0e31f6c6b2ec7", null ],
+    [ "kDefaultMode", "classv8_1_1internal_1_1TaggedArrayBase.html#acc06b9eea7719d57238723e80b36c2e8", null ],
+    [ "kElementsAreMaybeObject", "classv8_1_1internal_1_1TaggedArrayBase.html#ad0be2151c926a98721c4368bcfda586b", null ],
+    [ "kElementSize", "classv8_1_1internal_1_1TaggedArrayBase.html#ae867ffde91b884e41ca948481194e9b8", null ],
+    [ "kMaxCapacity", "classv8_1_1internal_1_1TaggedArrayBase.html#ada1003d16de4dbcfb091a4a68db5abe9", null ],
+    [ "kMaxRegularCapacity", "classv8_1_1internal_1_1TaggedArrayBase.html#ace0d9fbb0011c0a38eb46d9519285b99", null ],
+    [ "kSupportsSmiElements", "classv8_1_1internal_1_1TaggedArrayBase.html#a2b39488f7e0c889241d569eea601a111", null ]
 ];

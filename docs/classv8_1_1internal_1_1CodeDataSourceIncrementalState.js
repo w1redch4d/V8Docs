@@ -1,14 +1,31 @@
 var classv8_1_1internal_1_1CodeDataSourceIncrementalState =
 [
+    [ "Function", "structv8_1_1internal_1_1CodeDataSourceIncrementalState_1_1Function.html", "structv8_1_1internal_1_1CodeDataSourceIncrementalState_1_1Function" ],
+    [ "ScriptUniqueId", "structv8_1_1internal_1_1CodeDataSourceIncrementalState_1_1ScriptUniqueId.html", "structv8_1_1internal_1_1CodeDataSourceIncrementalState_1_1ScriptUniqueId" ],
+    [ "JsFunctionNameIid", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a05fc6f556c022460610f5c7d688ea0dd", null ],
     [ "CodeDataSourceIncrementalState", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a646861df160dd48a2f64743e09a46a1a", null ],
     [ "FlushInternedData", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a840489c6a27c6628e7f49d2c0ed0a702", null ],
     [ "has_buffered_interned_data", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a57067c74113a385a6259ce599b68b42e", null ],
     [ "Init", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a1ab613c0ce43ec1672def359da1296bf", null ],
     [ "InternIsolate", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a8f416931cd1b9ba7d870e6175863da66", null ],
     [ "InternJsFunction", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#ad4825168ce1569a50c2899a5725acb47", null ],
+    [ "InternJsFunctionName", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a45f24ebcae16292724ff3d7c8a72983e", null ],
     [ "InternJsScript", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a67e03c8a5b86cc974a959b68ef50f3a6", null ],
     [ "InternWasmScript", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#ac77bd344aef8ab6e2bef950f4c25478a", null ],
     [ "is_initialized", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a99d5a1ce7453b035f5962ed73fac6d83", null ],
     [ "log_instructions", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#ac12963c0140581db3ba331caeee841c6", null ],
-    [ "log_script_sources", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a8d12b89eda0890d0b719729dff04d95e", null ]
+    [ "log_script_sources", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a8d12b89eda0890d0b719729dff04d95e", null ],
+    [ "next_function_iid", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a3f71b74bc877fb13f626fa6ed418e8c1", null ],
+    [ "next_isolate_iid", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#af0b54023a8a68362df3edd244c3f67f6", null ],
+    [ "next_js_function_name_iid", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#afd779c1d471b7df8971bf43842981c65", null ],
+    [ "next_script_iid", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#acd3ae44cbe00d79ad6b765cceae55168", null ],
+    [ "functions_", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#aa49eb3ab6736071e6eee5a6051ccb33d", null ],
+    [ "initialized_", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a6bfcfe6e538ab2b1de334a918ed12313", null ],
+    [ "isolates_", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#ad690f44a4dd8aa845d612096d9fb9b91", null ],
+    [ "js_function_names_", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#af6585dc72f474bd92b5315eb71d611ec", null ],
+    [ "log_instructions_", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a763e206a4e429e5b326c3aa4fc1ba684", null ],
+    [ "log_script_sources_", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a799a59a93cbaa9bb26977b9d6abf299a", null ],
+    [ "scripts_", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a97584887108325c2f7c03b199e135b8d", null ],
+    [ "serialized_interned_data_", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#af5058caa63f4ecd7f5a8403bed736d0b", null ],
+    [ "two_byte_function_names_", "classv8_1_1internal_1_1CodeDataSourceIncrementalState.html#a93ee9daa9b44876dc80a4753a0706ef0", null ]
 ];

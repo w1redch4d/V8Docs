@@ -15,13 +15,22 @@ var classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector =
     [ "empty", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a2b903b4b403d3e986fca9c8d421d8b5f", null ],
     [ "end", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a1e0c3cc3f571fd29dceaae3957844896", null ],
     [ "end", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a3244defe287746d414a634c89f429a26", null ],
+    [ "EnsureOneMoreCapacityAt", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a8b710c7db6944d594e030a6f51dc32d6", null ],
     [ "front", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a712bdd125dbbd11c245f58f01efe255b", null ],
     [ "front", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a7d88ca04fea139e851536610fbdecb10", null ],
+    [ "GrowAt", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a71c05c5428b564abdd1bbb36e2aa56b1", null ],
     [ "insert", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a838475ea7f477afb8ea3a4e2338103c6", null ],
     [ "operator[]", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a373beb4ddc2792a4ff8c6661870e3ad6", null ],
     [ "operator[]", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#ae7121e44265988df5a7188db57a10bb2", null ],
     [ "pop_front", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a7b51c9615d73210b594c33eb67ffc98e", null ],
     [ "push_front", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#aa010883d8781571c9901cbc899164b14", null ],
     [ "size", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a718f900f22e7a7e8f0eaf32323d3ed61", null ],
-    [ "SplitAt", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a8c99ffcf0be1ead9daf501a8e09bc0f6", null ]
+    [ "space_at_back", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a4d5186a1cc438bb0925393b2661d0258", null ],
+    [ "space_at_front", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a493edcfc5299e133ae7953c2f82980be", null ],
+    [ "SplitAt", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a8c99ffcf0be1ead9daf501a8e09bc0f6", null ],
+    [ "data_begin_", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#ac8ad69401e9f1cad6ccbc46de802816b", null ],
+    [ "data_end_", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a36adef0f02c2f11b95569e86c3f0dbcc", null ],
+    [ "kMinCapacity", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#aa816612e746bcccd3491177b0b0568b8", null ],
+    [ "storage_begin_", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a6e878a92d03e7d69f87fd85ab86113d7", null ],
+    [ "storage_end_", "classv8_1_1internal_1_1compiler_1_1DoubleEndedSplitVector.html#a378836c6e8e3a62ce82346ee528957ae", null ]
 ];

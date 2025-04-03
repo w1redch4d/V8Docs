@@ -16,5 +16,16 @@ var code_generator_ia32_8cc =
     [ "ASSEMBLE_SIMD_SHIFT", "code-generator-ia32_8cc.html#aec4d64c2198b7f245a7a7c9fc91feb6d", null ],
     [ "ATOMIC_BINOP_CASE", "code-generator-ia32_8cc.html#a18f01a2f158b46d26f0f07d2bb25521e", null ],
     [ "ATOMIC_BINOP_CASE", "code-generator-ia32_8cc.html#a652a5112b5c9ddedf93305b32576c9be", null ],
-    [ "kScratchDoubleReg", "code-generator-ia32_8cc.html#a9dd0c0394c2c4403d04203fb3d9df209", null ]
+    [ "kScratchDoubleReg", "code-generator-ia32_8cc.html#a9dd0c0394c2c4403d04203fb3d9df209", null ],
+    [ "FlagsConditionToCondition", "code-generator-ia32_8cc.html#aa9d9b05a9e6b08795ab6f81ea10d8508", null ],
+    [ "input_", "code-generator-ia32_8cc.html#a8136e0c518eae601ca3c84adba6a2e0b", null ],
+    [ "isolate_", "code-generator-ia32_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b", null ],
+    [ "mode_", "code-generator-ia32_8cc.html#adc5709192230b7fde07de03eb2974043", null ],
+    [ "object_", "code-generator-ia32_8cc.html#a5563c55e446f92e237e9fb9b07b423b6", null ],
+    [ "operand_", "code-generator-ia32_8cc.html#a3c25bf72b3cb024cd811fc165a198db4", null ],
+    [ "result_", "code-generator-ia32_8cc.html#a39e85b51fb74a0c30b8d334dbde75396", null ],
+    [ "scratch0_", "code-generator-ia32_8cc.html#ac15c8035db0676f79a4eeae4edd9ca09", null ],
+    [ "scratch1_", "code-generator-ia32_8cc.html#a460fb6d04dc26e9fae0093b9e62635ad", null ],
+    [ "value_", "code-generator-ia32_8cc.html#ac1b34591c0a6bb909fcc2d34d0b5aaff", null ],
+    [ "zone_", "code-generator-ia32_8cc.html#a4979f6e7e64e9ee56f4229d03fa20c69", null ]
 ];

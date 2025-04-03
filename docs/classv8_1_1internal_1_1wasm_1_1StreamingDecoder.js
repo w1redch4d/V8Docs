@@ -3,6 +3,8 @@ var classv8_1_1internal_1_1wasm_1_1StreamingDecoder =
     [ "MoreFunctionsCanBeSerializedCallback", "classv8_1_1internal_1_1wasm_1_1StreamingDecoder.html#a307e38ca6391ec621378afe7692af184", null ],
     [ "~StreamingDecoder", "classv8_1_1internal_1_1wasm_1_1StreamingDecoder.html#a9ae54d561b63d246d058f3c56096fef8", null ],
     [ "Abort", "classv8_1_1internal_1_1wasm_1_1StreamingDecoder.html#afc622e22fb7fd4638e042d8e0e627bc3", null ],
+    [ "CreateAsyncStreamingDecoder", "classv8_1_1internal_1_1wasm_1_1StreamingDecoder.html#a64bbde97cda65ad78a00333670c8fb05", null ],
+    [ "CreateSyncStreamingDecoder", "classv8_1_1internal_1_1wasm_1_1StreamingDecoder.html#a85ac60144cafda34085b93959ef39f75", null ],
     [ "deserializing", "classv8_1_1internal_1_1wasm_1_1StreamingDecoder.html#a21f5f8ae3c13e6de3cb50c327389fb86", null ],
     [ "Finish", "classv8_1_1internal_1_1wasm_1_1StreamingDecoder.html#a3f5381373a723800f618ab69b57091e3", null ],
     [ "NotifyCompilationDiscarded", "classv8_1_1internal_1_1wasm_1_1StreamingDecoder.html#aef042556f0d0ecb3d1ae73d3ed37de9d", null ],

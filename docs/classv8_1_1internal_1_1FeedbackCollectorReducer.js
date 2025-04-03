@@ -5,7 +5,9 @@ var classv8_1_1internal_1_1FeedbackCollectorReducer =
     [ "CombineExceptionFeedback", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a6a6a63eb087c8e7077499f0b2c0e0f80", null ],
     [ "CombineFeedback", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a0fee8eb3f14f40e986745f9f279407f8", null ],
     [ "CombineFeedbackOnException", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a3c7f351a62fd1fbb5e1ab49158e5eb5f", null ],
+    [ "DefaultUpdateFeedbackMode", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a3919bb8866902f952cd3f3bc0a5a86a3", null ],
     [ "FeedbackIs", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#afcf4cbec0650f9ddc570e64cb90dcecd", null ],
+    [ "HasFeedbackCollector", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a1ac6a9f2e3d96623ebb787148384b8f3", null ],
     [ "IsFeedbackVector", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#aa77a22b4ba3cf4df8241f2dd089c8cb4", null ],
     [ "IsOffsetInBounds", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#ad60f68526cdefe87c1c30bf0505c6676", null ],
     [ "LoadFeedbackVector", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#abf91b8b5ffbc02e359ba48dc6d684055", null ],
@@ -18,5 +20,10 @@ var classv8_1_1internal_1_1FeedbackCollectorReducer =
     [ "SmiBitwiseOr", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a00d67dfc11eb205c6537dd42289bee91", null ],
     [ "SmiEqual", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a582e2e6d9758567ebb4847b2095ac74e", null ],
     [ "StoreFeedbackVectorSlot", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#ad27657d7fbf009cf2babe51ccfcaaaeb", null ],
-    [ "UpdateFeedback", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a19c7ca5a05b20b273560764150cca58a", null ]
+    [ "UpdateFeedback", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a19c7ca5a05b20b273560764150cca58a", null ],
+    [ "feedback_", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a468a5116438f4347c093cf86be125878", null ],
+    [ "feedback_on_exception_", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a8143227e5d094ce286abacf6b4dec2b6", null ],
+    [ "maybe_feedback_vector_", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a38ca3c93fc790b58d29d77d20b4201a0", null ],
+    [ "mode_", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#a627aa61278956be41b4fa20c358e9a61", null ],
+    [ "slot_id_", "classv8_1_1internal_1_1FeedbackCollectorReducer.html#ad7e32fdc08f07e22330896fd6563418d", null ]
 ];

@@ -1,6 +1,6 @@
 var wasm_opcodes_8h =
 [
-    [ "v8::internal::wasm::WasmOpcodes", "classv8_1_1internal_1_1wasm_1_1WasmOpcodes.html", null ],
+    [ "v8::internal::wasm::WasmOpcodes", "classv8_1_1internal_1_1wasm_1_1WasmOpcodes.html", "classv8_1_1internal_1_1wasm_1_1WasmOpcodes" ],
     [ "DECLARE_ENUM", "wasm-opcodes_8h.html#a7d2c155ea000ce10186ec42888d87818", null ],
     [ "DECLARE_NAMED_ENUM", "wasm-opcodes_8h.html#ab129e4fb5566902cf254132bb16d2491", null ],
     [ "DECLARE_PREFIX", "wasm-opcodes_8h.html#a4a4e358a0990333912358fd8d895a088", null ],

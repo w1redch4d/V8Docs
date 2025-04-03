@@ -5,6 +5,7 @@ var gc_tracer_8h =
     [ "v8::internal::GCTracer::Scope", "classv8_1_1internal_1_1GCTracer_1_1Scope.html", "classv8_1_1internal_1_1GCTracer_1_1Scope" ],
     [ "v8::internal::GCTracer::Event", "classv8_1_1internal_1_1GCTracer_1_1Event.html", "classv8_1_1internal_1_1GCTracer_1_1Event" ],
     [ "v8::internal::GCTracer::RecordGCPhasesInfo", "classv8_1_1internal_1_1GCTracer_1_1RecordGCPhasesInfo.html", "classv8_1_1internal_1_1GCTracer_1_1RecordGCPhasesInfo" ],
+    [ "v8::internal::GCTracer::BackgroundCounter", "structv8_1_1internal_1_1GCTracer_1_1BackgroundCounter.html", "structv8_1_1internal_1_1GCTracer_1_1BackgroundCounter" ],
     [ "DEFINE_SCOPE", "gc-tracer_8h.html#a8adeaa71513f63d6347d07113bee0110", null ],
     [ "TRACE_GC", "gc-tracer_8h.html#a5565074f0fda27fbaa5cace7ea4a4108", null ],
     [ "TRACE_GC1", "gc-tracer_8h.html#a1a0dfe6e8b266ce4c5b58ec1bd55c993", null ],

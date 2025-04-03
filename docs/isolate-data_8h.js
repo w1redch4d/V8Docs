@@ -21,5 +21,6 @@ var isolate_data_8h =
       [ "FIELD", "isolate-data_8h.html#a2b6fbba70fe6e40ab0c37b8da85b7508a81caed1d723723c56c76c073f194cc07", null ],
       [ "FIELD", "isolate-data_8h.html#a2b6fbba70fe6e40ab0c37b8da85b7508a66aaa324a02d97cece5bf0b4916ae79b", null ]
     ] ],
+    [ "kFastCCallAlignmentPaddingCount", "isolate-data_8h.html#a7553f838d246f0f54497d3d88ed7337f", null ],
     [ "kNumIsolateFieldIds", "isolate-data_8h.html#ae8747a5fe3747b9add3bf2d837c1a199", null ]
 ];

@@ -14,5 +14,8 @@ var classv8_1_1internal_1_1compiler_1_1Verifier =
       [ "UNTYPED", "classv8_1_1internal_1_1compiler_1_1Verifier.html#a78ad088def8544aa3b97a7610387725ea67b4a636debb3f54a700e32407fb15ff", null ]
     ] ],
     [ "Verifier", "classv8_1_1internal_1_1compiler_1_1Verifier.html#a513c85a2a4db5598f3c43ddb08b783a8", null ],
-    [ "operator=", "classv8_1_1internal_1_1compiler_1_1Verifier.html#aedcf277c9c1910120faf8f436db82abf", null ]
+    [ "operator=", "classv8_1_1internal_1_1compiler_1_1Verifier.html#aedcf277c9c1910120faf8f436db82abf", null ],
+    [ "Run", "classv8_1_1internal_1_1compiler_1_1Verifier.html#a63a73b6c09545b61ee69aebb7f86c45a", null ],
+    [ "VerifyEdgeInputReplacement", "classv8_1_1internal_1_1compiler_1_1Verifier.html#ab262c42f5331cbb6e489e73b310dac31", null ],
+    [ "VerifyNode", "classv8_1_1internal_1_1compiler_1_1Verifier.html#ad4ccd74b2c1820f3e00a863eb4d73515", null ]
 ];

@@ -1,5 +1,8 @@
 var classv8_1_1internal_1_1wasm_1_1DebugInfoImpl =
 [
+    [ "CachedDebuggingCode", "structv8_1_1internal_1_1wasm_1_1DebugInfoImpl_1_1CachedDebuggingCode.html", "structv8_1_1internal_1_1wasm_1_1DebugInfoImpl_1_1CachedDebuggingCode" ],
+    [ "FrameInspectionScope", "structv8_1_1internal_1_1wasm_1_1DebugInfoImpl_1_1FrameInspectionScope.html", "structv8_1_1internal_1_1wasm_1_1DebugInfoImpl_1_1FrameInspectionScope" ],
+    [ "PerIsolateDebugData", "structv8_1_1internal_1_1wasm_1_1DebugInfoImpl_1_1PerIsolateDebugData.html", "structv8_1_1internal_1_1wasm_1_1DebugInfoImpl_1_1PerIsolateDebugData" ],
     [ "DebugInfoImpl", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a5b80fc3249c1896c1e1b8b65410cd5ab", null ],
     [ "DebugInfoImpl", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#ab9d2a51456ebdb1084d71a3da22c2128", null ],
     [ "ClearStepping", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#aa3852f28fdd847a3bd08d551fa19b573", null ],
@@ -9,12 +12,16 @@ var classv8_1_1internal_1_1wasm_1_1DebugInfoImpl =
     [ "EstimateCurrentMemoryConsumption", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#aff714e05d3f40e6115754ab748c7e9f8", null ],
     [ "FindAllBreakpoints", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a698858917360271f1cd8f6265381abb2", null ],
     [ "FloodWithBreakpoints", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a246196d91f0949ef76618b2b2a01fbcc", null ],
+    [ "GetDebugSideTable", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a5e1cac71b004ec7608477c42c53e073a", null ],
     [ "GetDebugSideTableIfExists", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#aff5ea928c2b2bf34b15ad19a2e3baab1", null ],
     [ "GetFunctionAtAddress", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a3820042da662564bde987e47edc53eb5", null ],
     [ "GetLocalValue", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a434002dc86767b7b199d330eafc92d37", null ],
     [ "GetNumLocals", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#ae7de3aea77498974ee74b66400772bb3", null ],
     [ "GetStackDepth", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a4d989c36174c7fad343bac5de4b2fd7a", null ],
     [ "GetStackValue", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a28f65f93347ad32856f92db45a194fc5", null ],
+    [ "GetValue", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#af5c2c002078314c3ba25f2228dcf19f7", null ],
+    [ "HasRemovedBreakpoints", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a80b0dcb1270a13471501b30016dd8424", null ],
+    [ "IsAtReturn", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#ac26d17cf0a76314eb7990376a10277b8", null ],
     [ "IsFrameBlackboxed", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#aef01fa35dbb20892258dc0ed279b3420", null ],
     [ "IsStepping", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a6bc9d7cd14615ca3ee7c76ab8e0b7f11", null ],
     [ "operator=", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a34f893f40075681a2b7c86d126a2ee4e", null ],
@@ -25,5 +32,14 @@ var classv8_1_1internal_1_1wasm_1_1DebugInfoImpl =
     [ "RemoveDebugSideTables", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a869b9aecdef22d7ce5d4fdd15e56d7dd", null ],
     [ "RemoveIsolate", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#ab644ca0748a1a8ced74a70f09201f15a", null ],
     [ "SetBreakpoint", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#ae31d22191d31914a4a045130f4578676", null ],
-    [ "UpdateBreakpoints", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a3022f47768a8e98943a9151d94052021", null ]
+    [ "UpdateBreakpoints", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a3022f47768a8e98943a9151d94052021", null ],
+    [ "UpdateReturnAddress", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a96f357164b0f9a59d00bb0f2a7e285ab", null ],
+    [ "UpdateReturnAddresses", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a27a350f23ba879478f92799af246b6a1", null ],
+    [ "cached_debugging_code_", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a10a2072484cc06e6b1f17b28250bb23e", null ],
+    [ "debug_side_tables_", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#ab5267a8228ba046040e92d7599cc08d9", null ],
+    [ "debug_side_tables_mutex_", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a444427e65600b9d184278af53a9ede3e", null ],
+    [ "kMaxCachedDebuggingCode", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a2684f32f3d13bfb37c7adddabe75c482", null ],
+    [ "mutex_", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#aae43ac3da2ce695306a5f51e7de2e751", null ],
+    [ "native_module_", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#af432a6031293d80cc709696c9caa5a36", null ],
+    [ "per_isolate_data_", "classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a268b22e247cde22057d5bce5daa49bb5", null ]
 ];

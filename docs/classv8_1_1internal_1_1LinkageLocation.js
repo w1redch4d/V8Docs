@@ -1,8 +1,25 @@
 var classv8_1_1internal_1_1LinkageLocation =
 [
+    [ "LocationField", "classv8_1_1internal_1_1LinkageLocation.html#ac8c1c71d672efd14326165abc4192814", null ],
+    [ "TypeField", "classv8_1_1internal_1_1LinkageLocation.html#a90bbbf8996c0517d0d3b62609789c033", null ],
+    [ "LocationType", "classv8_1_1internal_1_1LinkageLocation.html#a54ad7f709f0523673ca398405ebe1f38", [
+      [ "REGISTER", "classv8_1_1internal_1_1LinkageLocation.html#a54ad7f709f0523673ca398405ebe1f38a87d4e761bbdecf8c87a14654c580ed64", null ],
+      [ "STACK_SLOT", "classv8_1_1internal_1_1LinkageLocation.html#a54ad7f709f0523673ca398405ebe1f38a557a3d94c98dd45762d91e6cc0ae14ac", null ]
+    ] ],
+    [ "LinkageLocation", "classv8_1_1internal_1_1LinkageLocation.html#adff3fa46f3baf2fe8ad64bd8225f7464", null ],
     [ "AsCalleeFrameSlot", "classv8_1_1internal_1_1LinkageLocation.html#a26a8a36b282142f38691d581591404b6", null ],
     [ "AsCallerFrameSlot", "classv8_1_1internal_1_1LinkageLocation.html#ad13b347d761fe5f8ae478af983671bee", null ],
     [ "AsRegister", "classv8_1_1internal_1_1LinkageLocation.html#a6403b52043ecbb74a3b758899d48409e", null ],
+    [ "ConvertToTailCallerLocation", "classv8_1_1internal_1_1LinkageLocation.html#ae6e998c26a85a22af824570b5124a1f2", null ],
+    [ "ForAnyRegister", "classv8_1_1internal_1_1LinkageLocation.html#a0fa5b98edb50c389e7da0409ae6feb4c", null ],
+    [ "ForCalleeFrameSlot", "classv8_1_1internal_1_1LinkageLocation.html#a54cdc01ae6b7662a9ed60310d3c7ef62", null ],
+    [ "ForCallerFrameSlot", "classv8_1_1internal_1_1LinkageLocation.html#a08f6dc0630735cc44a3ca6dfd144d19d", null ],
+    [ "ForNullRegister", "classv8_1_1internal_1_1LinkageLocation.html#a3688bea6b816d6a921fe76564b989e93", null ],
+    [ "ForRegister", "classv8_1_1internal_1_1LinkageLocation.html#a062c7c929c5e10f340892618d777b808", null ],
+    [ "ForSavedCallerConstantPool", "classv8_1_1internal_1_1LinkageLocation.html#a7ae97b0038fb5b08227e8f3d9cea2986", null ],
+    [ "ForSavedCallerFramePtr", "classv8_1_1internal_1_1LinkageLocation.html#a5ee6279e978b7cc1af0c61a21f1a2a2b", null ],
+    [ "ForSavedCallerFunction", "classv8_1_1internal_1_1LinkageLocation.html#aa79e8e247ff55acff54ac8614d1aa02f", null ],
+    [ "ForSavedCallerReturnAddress", "classv8_1_1internal_1_1LinkageLocation.html#aba3d0243df6b7ac0f2a4f939d6b95467", null ],
     [ "GetLocation", "classv8_1_1internal_1_1LinkageLocation.html#a897db92ebdb3b4f6db4fbe5e4c82063b", null ],
     [ "GetSizeInPointers", "classv8_1_1internal_1_1LinkageLocation.html#a4fa803da6b9345f20eca2de3f62a5aca", null ],
     [ "GetType", "classv8_1_1internal_1_1LinkageLocation.html#a4cf4a8fddabbaf760817351b4881f558", null ],
@@ -11,6 +28,11 @@ var classv8_1_1internal_1_1LinkageLocation =
     [ "IsCallerFrameSlot", "classv8_1_1internal_1_1LinkageLocation.html#a6560eb18bf67347a54083baf3e9b2daa", null ],
     [ "IsNullRegister", "classv8_1_1internal_1_1LinkageLocation.html#a6e2cb768a16cb37927da9b49b13e99be", null ],
     [ "IsRegister", "classv8_1_1internal_1_1LinkageLocation.html#ac3fb18206691002882e896268ffb97c4", null ],
+    [ "IsSameLocation", "classv8_1_1internal_1_1LinkageLocation.html#a7d864714ffe2b73d552c8cbc93c23f02", null ],
     [ "operator!=", "classv8_1_1internal_1_1LinkageLocation.html#a76f3496a9810dc62055246379f61308e", null ],
-    [ "operator==", "classv8_1_1internal_1_1LinkageLocation.html#ac924a2ae6d289ebcb17fd0c6bf9ac70f", null ]
+    [ "operator==", "classv8_1_1internal_1_1LinkageLocation.html#ac924a2ae6d289ebcb17fd0c6bf9ac70f", null ],
+    [ "ANY_REGISTER", "classv8_1_1internal_1_1LinkageLocation.html#a5f367811e761dedea08580eba51d1ab5", null ],
+    [ "bit_field_", "classv8_1_1internal_1_1LinkageLocation.html#aef36b097924939622766c3167039baf0", null ],
+    [ "machine_type_", "classv8_1_1internal_1_1LinkageLocation.html#af8c572a4266dbd0f7fc27e0f97610d10", null ],
+    [ "MAX_STACK_SLOT", "classv8_1_1internal_1_1LinkageLocation.html#a400102fe321e08bc209a1217011b0adc", null ]
 ];

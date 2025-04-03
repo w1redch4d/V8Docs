@@ -24,5 +24,17 @@ var classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState =
     [ "stack_check_offset", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#af8a626742b956a06c5fe68c20391f5f6", null ],
     [ "stack_slots", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#afc2328227507e51cca67af65cefc1aa6", null ],
     [ "tagged_slots", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#a088f0d221c60417e080da2f387f52e19", null ],
-    [ "TakeDeferredCode", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#a515c9d667bc154931b8b83cf10bfc6da", null ]
+    [ "TakeDeferredCode", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#a515c9d667bc154931b8b83cf10bfc6da", null ],
+    [ "compilation_info_", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#a62dc2a0059a3aca4177767bea9f08c19", null ],
+    [ "deferred_code_", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#ab9fd13b9f3fb074963b7b44789fc66cd", null ],
+    [ "eager_deopts_", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#af88b3b40931c2ac4ea145a61952d3d8b", null ],
+    [ "entry_label_", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#af4cf5b71754239114f160808f9d0d8a8", null ],
+    [ "handlers_", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#a46b6a0e4de244125c71f28b97a17b9d5", null ],
+    [ "lazy_deopts_", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#a1fd26cd6f0854b92fb0ed039d9942d61", null ],
+    [ "max_call_stack_args_", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#ad2d75ba702b34d059063175570b8d6df", null ],
+    [ "max_deopted_stack_size_", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#ac0f858ce5dc396013fa8c141fe1fe275", null ],
+    [ "osr_entry_", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#a35e0c6b73897b8e3ade7ba7768884c4e", null ],
+    [ "safepoint_table_builder_", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#a4cd71809b0e1c7c1afa1aa3361573532", null ],
+    [ "tagged_slots_", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#a4d6a41a9b1fa6c4ff3d5eb7234df879f", null ],
+    [ "untagged_slots_", "classv8_1_1internal_1_1maglev_1_1MaglevCodeGenState.html#a7535540e69c8e1e06795a539542a6e0a", null ]
 ];

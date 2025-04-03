@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1wasm_1_1BytecodeIterator =
 [
+    [ "iterator_base", "classv8_1_1internal_1_1wasm_1_1BytecodeIterator_1_1iterator__base.html", "classv8_1_1internal_1_1wasm_1_1BytecodeIterator_1_1iterator__base" ],
     [ "offset_iterator", "classv8_1_1internal_1_1wasm_1_1BytecodeIterator_1_1offset__iterator.html", "classv8_1_1internal_1_1wasm_1_1BytecodeIterator_1_1offset__iterator" ],
     [ "opcode_iterator", "classv8_1_1internal_1_1wasm_1_1BytecodeIterator_1_1opcode__iterator.html", "classv8_1_1internal_1_1wasm_1_1BytecodeIterator_1_1opcode__iterator" ],
     [ "BytecodeIterator", "classv8_1_1internal_1_1wasm_1_1BytecodeIterator.html#ade4696f4ab7021de44d5174f477b83f8", null ],

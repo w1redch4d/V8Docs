@@ -1,6 +1,13 @@
 var classv8_1_1internal_1_1compiler_1_1LiveRange =
 [
+    [ "AssignedRegisterField", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a4c2178cc9034bbd87ba3e813347c9de4", null ],
+    [ "ControlFlowRegisterHint", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a4f7944447ed4ed83f429fda77ec8e178", null ],
+    [ "RecombineField", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a8cbe40ad1b957c6fcb3f952e7e71068b", null ],
+    [ "RepresentationField", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#acee721a1b820deacb1230a143eebbcf9", null ],
+    [ "SpilledField", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a055b86efcd6dacdd4321e91fc5d0b0d4", null ],
     [ "LiveRange", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a56c17e625ffcaaae8a1b8f9c90fd19a6", null ],
+    [ "LiveRange", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#ac0688b1e19e8c5c4c8350ba37325e2ce", null ],
+    [ "AdvanceLastProcessedMarker", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a334b28998fa5ece02a84a9b42c2a4128", null ],
     [ "assigned_register", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a5e1809d81c4b2458999e7beeb32b08ec", null ],
     [ "AttachToNext", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a7c7ea3796423fde3770d1199ac7b7a41", null ],
     [ "CanBeSpilled", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#aab10b96f98c11e2776da61237606537c", null ],
@@ -11,6 +18,7 @@ var classv8_1_1internal_1_1compiler_1_1LiveRange =
     [ "current_hint_position", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a209bbb7133077ec08e25094aeb53528d", null ],
     [ "End", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#add748c4c1b4297bf4ee2d8f0d18c5d3d", null ],
     [ "FirstIntersection", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a5241741f85f3101df0b0646fa30b3f90", null ],
+    [ "FirstSearchIntervalForPosition", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a10dc31c525ab08aa8fb8e71fa41c4ee3", null ],
     [ "GetAssignedOperand", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#ac0cdda189e0157ea59999cf56723cd3a", null ],
     [ "HasRegisterAssigned", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a798985721d1a2fc70e8501afdfeea1d8", null ],
     [ "intervals", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a63fefd9fafc8fa4bbcd1d09254e73764", null ],
@@ -38,6 +46,7 @@ var classv8_1_1internal_1_1compiler_1_1LiveRange =
     [ "ResetCurrentHintPosition", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a48e14203e92904a977bf5e7d4522f6c5", null ],
     [ "set_assigned_register", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#ac7e169474916a8a4b63786c435a197e4", null ],
     [ "set_controlflow_hint", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a34ce5562b38b6168fdf0a416593cbcdd", null ],
+    [ "set_spilled", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a3f6d6b153c6df84ed06ea6bd574659a0", null ],
     [ "SetRecombine", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#abefea048ea38fb4e181bec73e951f7d6", null ],
     [ "SetUseHints", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a8eedd6d46ccdb74dbecbf6f498db1603", null ],
     [ "ShouldBeAllocatedBefore", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#aa441b110551c82f14c50cf238796736c", null ],
@@ -52,5 +61,17 @@ var classv8_1_1internal_1_1compiler_1_1LiveRange =
     [ "UnsetUseHints", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a1fcf65b7ec0fc8d55652f95a77f73295", null ],
     [ "Unspill", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a424c9836cb36f187bac0245f8cc246f3", null ],
     [ "UpdateBundleRegister", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a9a4bf46875dc8d39f3321824288d0ac8", null ],
-    [ "TopLevelLiveRange", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a129402ecd87e17260440c4799385799b", null ]
+    [ "TopLevelLiveRange", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a129402ecd87e17260440c4799385799b", null ],
+    [ "bits_", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a60e8456c1414b4f5c42174557c2a05b5", null ],
+    [ "current_hint_position_index_", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a97adaf506f3b278a1ef8687af6083b41", null ],
+    [ "current_interval_", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#af6ab1f61a0e8136f760de2a9a8cb3500", null ],
+    [ "end_", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#aaac464ef266cf1284b4f0b5f915cd03d", null ],
+    [ "intervals_", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#ad0b4e2efb94ba16aeb6f43d4e9ca47ac", null ],
+    [ "next_", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a5ccd520dee113a703b1e2675aad51f59", null ],
+    [ "next_start_", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a34428327c86aee07a24a59d420377aee", null ],
+    [ "positions_span_", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a22dbf0533c1fd8327a00bf0aca0043dc", null ],
+    [ "relative_id_", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a30ee7a0831fd68942cbe5176045dd61e", null ],
+    [ "start_", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a100d8deba4abd655be1abbbbfb7764bc", null ],
+    [ "top_level_", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a0c56d7234df78de4e65fe5cbc2cdd5a0", null ],
+    [ "Zone", "classv8_1_1internal_1_1compiler_1_1LiveRange.html#a1961cf603405f10245abb4776146a727", null ]
 ];

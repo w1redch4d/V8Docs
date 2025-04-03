@@ -18,5 +18,6 @@ var classv8_1_1internal_1_1MaybeDirectHandle =
     [ "indirect_handle", "classv8_1_1internal_1_1MaybeDirectHandle.html#a59ac0f101055dcab549e4de14cf1c3d1", null ],
     [ "indirect_handle", "classv8_1_1internal_1_1MaybeDirectHandle.html#a4a077cf3f0545cd77ac6e7417d8f6049", null ],
     [ "MaybeDirectHandle", "classv8_1_1internal_1_1MaybeDirectHandle.html#a378be75bc8ed04ce779a8b7958294299", null ],
-    [ "UncheckedCast", "classv8_1_1internal_1_1MaybeDirectHandle.html#a6be7407a972be358770b529b55e87808", null ]
+    [ "UncheckedCast", "classv8_1_1internal_1_1MaybeDirectHandle.html#a6be7407a972be358770b529b55e87808", null ],
+    [ "handle_", "classv8_1_1internal_1_1MaybeDirectHandle.html#aca40953788d5686d8f88a5e908534cf0", null ]
 ];

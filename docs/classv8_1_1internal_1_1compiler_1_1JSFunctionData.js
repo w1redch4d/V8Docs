@@ -1,5 +1,6 @@
 var classv8_1_1internal_1_1compiler_1_1JSFunctionData =
 [
+    [ "UsedFields", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a6b2555aec27f52e71aa10edfc56790f2", null ],
     [ "UsedField", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a82b1d8e9f24ea355253cc6715ec986d0", [
       [ "kHasFeedbackVector", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a82b1d8e9f24ea355253cc6715ec986d0a5cb0a5889b97bca2a128398fa3d1a15f", null ],
       [ "kPrototypeOrInitialMap", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a82b1d8e9f24ea355253cc6715ec986d0ab55ceda7ddda82c39cb8b4d719d67f84", null ],
@@ -13,6 +14,7 @@ var classv8_1_1internal_1_1compiler_1_1JSFunctionData =
       [ "kInitialMapInstanceSizeWithMinSlack", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a82b1d8e9f24ea355253cc6715ec986d0a58bd713276d0bd9810777c702f6a68e5", null ]
     ] ],
     [ "JSFunctionData", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a2dbfe7069f946a5f5bf087017a49c04e", null ],
+    [ "Cache", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a19674f4b53f9787dec0a7401946f7424", null ],
     [ "context", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a0dc95d6c2d0e1a145cca4be2bf0d6439", null ],
     [ "has_any_used_field", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#ac9fb385ab0c4be29557785f24869b281", null ],
     [ "has_initial_map", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#ac55f43fdec1a0c8ecd57cbdd2d4729a7", null ],
@@ -25,5 +27,16 @@ var classv8_1_1internal_1_1compiler_1_1JSFunctionData =
     [ "PrototypeRequiresRuntimeLookup", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#ab6f67053a285938be4f17eaa5bf62430", null ],
     [ "raw_feedback_cell", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a68041a388af78b65476e3f0905644606", null ],
     [ "set_used_field", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a1e1a365c1c2f01ddfd52fea2de0ec24e", null ],
-    [ "shared", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a60d1bec6b6ef6a37b8df8879b7e57906", null ]
+    [ "shared", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a60d1bec6b6ef6a37b8df8879b7e57906", null ],
+    [ "context_", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a54d0b4fa923e9094f97a24acde2521ff", null ],
+    [ "feedback_cell_", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#ac2c9e5987ca35437b7d6ae80ba0769bf", null ],
+    [ "has_initial_map_", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a328b089cc3e4d1a97efc9bde4a4cd2e5", null ],
+    [ "has_instance_prototype_", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#ae96d85ff625c24ff8a9ebae3eede0c86", null ],
+    [ "initial_map_", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#acd4e4998300e2a5f728ab7dd023388e6", null ],
+    [ "initial_map_instance_size_with_min_slack_", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#ac3ed6b1ecd6acdf6dfe22d5113233ddc", null ],
+    [ "instance_prototype_", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a0c513a32dffbc8a08bf8f8ae9203a97f", null ],
+    [ "prototype_or_initial_map_", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a4ff3a50c3bd2d466d4002eda8298c7e1", null ],
+    [ "PrototypeRequiresRuntimeLookup_", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a6b735037b6d3958c88c7765f1e820522", null ],
+    [ "shared_", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#aad8d84c1ab0de9419ec5e71e2ea3a325", null ],
+    [ "used_fields_", "classv8_1_1internal_1_1compiler_1_1JSFunctionData.html#a7df5ca2b76fcb2c9dcb6782c9b9ed030", null ]
 ];

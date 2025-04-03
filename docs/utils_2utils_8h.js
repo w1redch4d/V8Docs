@@ -21,6 +21,11 @@ var utils_2utils_8h =
     ] ],
     [ "Abs", "utils_2utils_8h.html#a19966fc011b2b016a1962dba734443f4", null ],
     [ "AddLong", "utils_2utils_8h.html#a9c4666e8f169f8416327b6bbc27c9398", null ],
+    [ "ArithmeticShiftRight", "utils_2utils_8h.html#a9860d42ff487a051d945dbc5961a7c35", null ],
+    [ "ByteReverse", "utils_2utils_8h.html#af53a839b8395922f49d2ec23783cca6f", null ],
+    [ "ByteReverse16", "utils_2utils_8h.html#a2fe25537b95538d188342db099f42503", null ],
+    [ "ByteReverse32", "utils_2utils_8h.html#a4500c7eba87051b0ef4508948c2f09fc", null ],
+    [ "ByteReverse64", "utils_2utils_8h.html#ae28420877a5d4bc0f55c1519bbaaa1ff", null ],
     [ "CompareChars", "utils_2utils_8h.html#ab445b21ec193011f4497d3b64b5be58d", null ],
     [ "CompareCharsEqual", "utils_2utils_8h.html#a75979deb107a3b8ddf9cd65c994d9a67", null ],
     [ "CompareCharsEqualUnsigned", "utils_2utils_8h.html#a487bd487c67e1ea057d678d119ddabd6", null ],
@@ -62,5 +67,6 @@ var utils_2utils_8h =
     [ "WriteBytes", "utils_2utils_8h.html#a05586c337bc884ad9a2dc30d65e077fe", null ],
     [ "WriteChars", "utils_2utils_8h.html#a79fc425df81a19a4b6f18a762454ce65", null ],
     [ "ZapCode", "utils_2utils_8h.html#a2ff969a6287c6bac777d288a9acac319", null ],
-    [ "format", "utils_2utils_8h.html#af373c5445f93f44aba5e30e0323486dc", null ]
+    [ "format", "utils_2utils_8h.html#af373c5445f93f44aba5e30e0323486dc", null ],
+    [ "kZeroHashSeed", "utils_2utils_8h.html#aa5210fce6cfe6385101ff5592851a59f", null ]
 ];

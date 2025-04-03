@@ -33,5 +33,16 @@ var classv8_1_1internal_1_1RegExpNode =
     [ "set_replacement", "classv8_1_1internal_1_1RegExpNode.html#afccef1ce89c24131c19700562124539c", null ],
     [ "SetDoNotInline", "classv8_1_1internal_1_1RegExpNode.html#a2b16796491472e8a6fe85a65d7394d89", null ],
     [ "zone", "classv8_1_1internal_1_1RegExpNode.html#a82955fbb278f24c0c65a62b871140d13", null ],
-    [ "replacement_", "classv8_1_1internal_1_1RegExpNode.html#aac19aaa0fa38bce51ee5b9977c9cf2c5", null ]
+    [ "bm_info_", "classv8_1_1internal_1_1RegExpNode.html#a32a3c84bd6ac61f8277ca16b902175fd", null ],
+    [ "eats_at_least_", "classv8_1_1internal_1_1RegExpNode.html#aaa13fbc6225435e0f5776bc3f0251475", null ],
+    [ "info_", "classv8_1_1internal_1_1RegExpNode.html#ac4b8309aa1d12e6143cddb360e77f72b", null ],
+    [ "kFirstCharBudget", "classv8_1_1internal_1_1RegExpNode.html#af28889602c9ab46365f8959ef1cc0b95", null ],
+    [ "kMaxCopiesCodeGenerated", "classv8_1_1internal_1_1RegExpNode.html#aee16545e1cda3652a44891cefb9e60ad", null ],
+    [ "kNodeIsTooComplexForGreedyLoops", "classv8_1_1internal_1_1RegExpNode.html#acdf311f0dacb16f281babbdd2ed30a70", null ],
+    [ "kRecursionBudget", "classv8_1_1internal_1_1RegExpNode.html#ac77fc160c5ff5db7808583c401c65ede", null ],
+    [ "label_", "classv8_1_1internal_1_1RegExpNode.html#a4fbedfc648b29620ba0a7d87a6eeea39", null ],
+    [ "on_work_list_", "classv8_1_1internal_1_1RegExpNode.html#a3a1502c180972f2191863d4c480ebdc9", null ],
+    [ "replacement_", "classv8_1_1internal_1_1RegExpNode.html#aac19aaa0fa38bce51ee5b9977c9cf2c5", null ],
+    [ "trace_count_", "classv8_1_1internal_1_1RegExpNode.html#ae7ee40d270dee0772674605d150ca812", null ],
+    [ "zone_", "classv8_1_1internal_1_1RegExpNode.html#a0bb4f21f69f53894e766a74a9db5a908", null ]
 ];

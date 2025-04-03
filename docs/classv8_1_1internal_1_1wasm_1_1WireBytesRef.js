@@ -6,5 +6,7 @@ var classv8_1_1internal_1_1wasm_1_1WireBytesRef =
     [ "is_empty", "classv8_1_1internal_1_1wasm_1_1WireBytesRef.html#a45fb66d092f08cdf54005a1ebdfbd901", null ],
     [ "is_set", "classv8_1_1internal_1_1wasm_1_1WireBytesRef.html#a94db77b7254197e7ed15d4851dcc3934", null ],
     [ "length", "classv8_1_1internal_1_1wasm_1_1WireBytesRef.html#a774ebe7b8a6138f9fa8dc6d4817912c3", null ],
-    [ "offset", "classv8_1_1internal_1_1wasm_1_1WireBytesRef.html#a4f2dffb7efc3721571b5f1604d5d448a", null ]
+    [ "offset", "classv8_1_1internal_1_1wasm_1_1WireBytesRef.html#a4f2dffb7efc3721571b5f1604d5d448a", null ],
+    [ "length_", "classv8_1_1internal_1_1wasm_1_1WireBytesRef.html#a35b9b5e80a3edc2d5685b2159ee95c28", null ],
+    [ "offset_", "classv8_1_1internal_1_1wasm_1_1WireBytesRef.html#a611ccad1848cc6ba12b01d0c114c5f22", null ]
 ];

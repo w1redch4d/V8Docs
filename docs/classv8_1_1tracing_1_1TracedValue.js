@@ -2,6 +2,7 @@ var classv8_1_1tracing_1_1TracedValue =
 [
     [ "~TracedValue", "classv8_1_1tracing_1_1TracedValue.html#adf041abb4683c515a75c15d629ff937b", null ],
     [ "TracedValue", "classv8_1_1tracing_1_1TracedValue.html#aad34bef8d91483b3dd10d0c8d6054d14", null ],
+    [ "TracedValue", "classv8_1_1tracing_1_1TracedValue.html#a1b36fd2906eb1b63bbb02391f4ef3276", null ],
     [ "AppendAsTraceFormat", "classv8_1_1tracing_1_1TracedValue.html#a87e2daa913cf7f97deaeca85dcbbfa3a", null ],
     [ "AppendBoolean", "classv8_1_1tracing_1_1TracedValue.html#aad1a3b416c12c41b85ff27d1f063e713", null ],
     [ "AppendDouble", "classv8_1_1tracing_1_1TracedValue.html#a8f82bc850922fb6643635bd0bfaad024", null ],
@@ -12,6 +13,7 @@ var classv8_1_1tracing_1_1TracedValue =
     [ "BeginArray", "classv8_1_1tracing_1_1TracedValue.html#ac0c5414e7634c2c02105b5ae07edb4df", null ],
     [ "BeginDictionary", "classv8_1_1tracing_1_1TracedValue.html#a3f77a895bbed3cccc54af4c9b1721e68", null ],
     [ "BeginDictionary", "classv8_1_1tracing_1_1TracedValue.html#aed41b353b98d8ed34ae348223337f55f", null ],
+    [ "Create", "classv8_1_1tracing_1_1TracedValue.html#aeed37b2670611319618ffd75c3b0dc24", null ],
     [ "EndArray", "classv8_1_1tracing_1_1TracedValue.html#a5d0e4c486e3ebe66715011230a4eb9a7", null ],
     [ "EndDictionary", "classv8_1_1tracing_1_1TracedValue.html#a8b667d6b3badd4861abd4b2d36e46448", null ],
     [ "operator=", "classv8_1_1tracing_1_1TracedValue.html#a3a3c06e08a11f6f823fb1daee6aa6402", null ],
@@ -22,5 +24,9 @@ var classv8_1_1tracing_1_1TracedValue =
     [ "SetString", "classv8_1_1tracing_1_1TracedValue.html#a7803988d232d9d0c2c6f48cf25ffc5d5", null ],
     [ "SetString", "classv8_1_1tracing_1_1TracedValue.html#a0fcd968d5e2ca81a2f17038595ac3e70", null ],
     [ "SetValue", "classv8_1_1tracing_1_1TracedValue.html#a6a9764d84c27cff1fdb44f0a47c11809", null ],
-    [ "SetValue", "classv8_1_1tracing_1_1TracedValue.html#a58c05b74cfa39c4acceaed103e61a525", null ]
+    [ "SetValue", "classv8_1_1tracing_1_1TracedValue.html#a58c05b74cfa39c4acceaed103e61a525", null ],
+    [ "WriteComma", "classv8_1_1tracing_1_1TracedValue.html#a6e54e93b15c6873d4802ca8065d75232", null ],
+    [ "WriteName", "classv8_1_1tracing_1_1TracedValue.html#a730c21a9f153f4f6034de6a133ce44d6", null ],
+    [ "data_", "classv8_1_1tracing_1_1TracedValue.html#a1d1c43d62765cb377a4131ccbf8f1241", null ],
+    [ "first_item_", "classv8_1_1tracing_1_1TracedValue.html#a6be35d986797e61ed43f4c59bcef97ba", null ]
 ];

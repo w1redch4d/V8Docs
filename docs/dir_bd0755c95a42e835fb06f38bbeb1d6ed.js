@@ -39,7 +39,7 @@ var dir_bd0755c95a42e835fb06f38bbeb1d6ed =
     [ "local-isolate.h", "local-isolate_8h.html", "local-isolate_8h" ],
     [ "messages.cc", "messages_8cc.html", "messages_8cc" ],
     [ "messages.h", "messages_8h.html", "messages_8h" ],
-    [ "microtask-queue.cc", "microtask-queue_8cc.html", null ],
+    [ "microtask-queue.cc", "microtask-queue_8cc.html", "microtask-queue_8cc" ],
     [ "microtask-queue.h", "microtask-queue_8h.html", "microtask-queue_8h" ],
     [ "pointer-authentication-dummy.h", "pointer-authentication-dummy_8h.html", null ],
     [ "pointer-authentication.h", "pointer-authentication_8h.html", "pointer-authentication_8h" ],
@@ -58,7 +58,7 @@ var dir_bd0755c95a42e835fb06f38bbeb1d6ed =
     [ "thread-local-top.h", "thread-local-top_8h.html", "thread-local-top_8h" ],
     [ "tiering-manager.cc", "tiering-manager_8cc.html", "tiering-manager_8cc" ],
     [ "tiering-manager.h", "tiering-manager_8h.html", "tiering-manager_8h" ],
-    [ "v8threads.cc", "v8threads_8cc.html", null ],
+    [ "v8threads.cc", "v8threads_8cc.html", "v8threads_8cc" ],
     [ "v8threads.h", "v8threads_8h.html", "v8threads_8h" ],
     [ "vm-state-inl.h", "vm-state-inl_8h.html", "vm-state-inl_8h" ],
     [ "vm-state.h", "vm-state_8h.html", "vm-state_8h" ]

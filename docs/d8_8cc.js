@@ -14,7 +14,7 @@ var d8_8cc =
     [ "v8::TerminateTask", "classv8_1_1TerminateTask.html", "classv8_1_1TerminateTask" ],
     [ "v8::Serializer", "classv8_1_1Serializer.html", "classv8_1_1Serializer" ],
     [ "v8::Deserializer", "classv8_1_1Deserializer.html", "classv8_1_1Deserializer" ],
-    [ "v8::D8Testing", "classv8_1_1D8Testing.html", null ],
+    [ "v8::D8Testing", "classv8_1_1D8Testing.html", "classv8_1_1D8Testing" ],
     [ "JSApiInstanceType", "d8_8cc.html#ae01494a908e0f3df867de7e40593452f", [
       [ "kGenericApiObject", "d8_8cc.html#ae01494a908e0f3df867de7e40593452fa8f20532ac08b5e0dd0cae58258b5f238", null ],
       [ "kEventTarget", "d8_8cc.html#ae01494a908e0f3df867de7e40593452fa512e0fe26faf1df69dddc9fe7832e35c", null ],
@@ -23,11 +23,14 @@ var d8_8cc =
       [ "kHTMLElement", "d8_8cc.html#ae01494a908e0f3df867de7e40593452fa723400cf5787bdfccceeee5f9447e326", null ],
       [ "kHTMLDivElement", "d8_8cc.html#ae01494a908e0f3df867de7e40593452fa9c8c5408a8415d49d60b799fc9c5c14f", null ]
     ] ],
+    [ "CreateTraceConfigFromJSON", "d8_8cc.html#a6f28c76d47ee617b6fbe1090498b19c1", null ],
     [ "Dummy", "d8_8cc.html#ac650e19aff88fabc2d187261fd631a99", null ],
     [ "ends_with", "d8_8cc.html#a2baa5273ccac96a5dafbc49c0164a882", null ],
     [ "main", "d8_8cc.html#a0ddf1224851353fc92bfbff6f499fa97", null ],
     [ "NewDOMFunctionTemplate", "d8_8cc.html#a7265a71047875401db63ac4afbbaffa5", null ],
+    [ "PrintMessageCallback", "d8_8cc.html#a6dde848dc347e67e7ace972f36c13d87", null ],
     [ "WriteAndFlush", "d8_8cc.html#ab73dc190ee98badd240190d177af3e6a", null ],
     [ "WriteToFile", "d8_8cc.html#a41014504eaed8d1447157e71667d08d5", null ],
-    [ "check_d8_flag_contradictions", "d8_8cc.html#a9894968a06b13ddf9cfacec5757ae53f", null ]
+    [ "check_d8_flag_contradictions", "d8_8cc.html#a9894968a06b13ddf9cfacec5757ae53f", null ],
+    [ "dummy_delegate", "d8_8cc.html#aca926f946c06e2386db7aefa032bef75", null ]
 ];

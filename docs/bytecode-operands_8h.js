@@ -1,6 +1,6 @@
 var bytecode_operands_8h =
 [
-    [ "v8::internal::interpreter::BytecodeOperands", "classv8_1_1internal_1_1interpreter_1_1BytecodeOperands.html", null ],
+    [ "v8::internal::interpreter::BytecodeOperands", "classv8_1_1internal_1_1interpreter_1_1BytecodeOperands.html", "classv8_1_1internal_1_1interpreter_1_1BytecodeOperands" ],
     [ "COUNT_OPERAND_TYPES", "bytecode-operands_8h.html#abd47839b2330d973e7af4cc1bf595fec", null ],
     [ "DECLARE_OPERAND_SCALE", "bytecode-operands_8h.html#a0661e55b1b18edbaf802dd053ff40228", null ],
     [ "DECLARE_OPERAND_TYPE", "bytecode-operands_8h.html#abd9db8280e45dd5a3c4f4784c4dc1487", null ],

@@ -21,5 +21,8 @@ var classv8_1_1internal_1_1SlotBase =
     [ "operator>", "classv8_1_1internal_1_1SlotBase.html#a146790857bdff1b45f034660f5b7f58a", null ],
     [ "operator>=", "classv8_1_1internal_1_1SlotBase.html#aa26f2fda71044c828a42a7011f3836df", null ],
     [ "ToVoidPtr", "classv8_1_1internal_1_1SlotBase.html#a44a0db6b697cd37e8cf4aee985780619", null ],
-    [ "operator+", "classv8_1_1internal_1_1SlotBase.html#a79a4abdb7bf81110a629b3427163adf0", null ]
+    [ "operator+", "classv8_1_1internal_1_1SlotBase.html#a79a4abdb7bf81110a629b3427163adf0", null ],
+    [ "kSlotDataAlignment", "classv8_1_1internal_1_1SlotBase.html#a632db4026c79803f12fd0f4a293bd98f", null ],
+    [ "kSlotDataSize", "classv8_1_1internal_1_1SlotBase.html#ae0f13ed68b785bcc9852e6885626f510", null ],
+    [ "ptr_", "classv8_1_1internal_1_1SlotBase.html#afb6eccbc9f6d4c67c7e8fea0ea13e950", null ]
 ];

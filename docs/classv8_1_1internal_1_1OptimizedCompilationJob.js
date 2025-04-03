@@ -14,6 +14,7 @@ var classv8_1_1internal_1_1OptimizedCompilationJob =
     [ "PrepareJob", "classv8_1_1internal_1_1OptimizedCompilationJob.html#ac48cf85f467ed991a11f6f37d63ad38a", null ],
     [ "PrepareJobImpl", "classv8_1_1internal_1_1OptimizedCompilationJob.html#a8a6e63ebb0edceb14d0e5e65d00c471e", null ],
     [ "RegisterWeakObjectsInOptimizedCode", "classv8_1_1internal_1_1OptimizedCompilationJob.html#a32d831a8e270fbadd67f4d037541f19a", null ],
+    [ "compiler_name_", "classv8_1_1internal_1_1OptimizedCompilationJob.html#a880100deb98e86ca24b13854ea698498", null ],
     [ "time_taken_to_execute_", "classv8_1_1internal_1_1OptimizedCompilationJob.html#acca739c8ea36c8360ad1dc2e5f5bde18", null ],
     [ "time_taken_to_finalize_", "classv8_1_1internal_1_1OptimizedCompilationJob.html#adbd456d1dfc112f51ebff9e48e9f625a", null ],
     [ "time_taken_to_prepare_", "classv8_1_1internal_1_1OptimizedCompilationJob.html#a58f4b83f208590de104f76cc8cd8e370", null ],

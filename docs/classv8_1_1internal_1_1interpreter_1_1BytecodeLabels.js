@@ -6,5 +6,7 @@ var classv8_1_1internal_1_1interpreter_1_1BytecodeLabels =
     [ "empty", "classv8_1_1internal_1_1interpreter_1_1BytecodeLabels.html#a54e7bfa693244cd31bc124b1137998f9", null ],
     [ "is_bound", "classv8_1_1internal_1_1interpreter_1_1BytecodeLabels.html#a0930daa42baab1bfb09bb8d3b6be5a2c", null ],
     [ "New", "classv8_1_1internal_1_1interpreter_1_1BytecodeLabels.html#a2b2c1eaa548b6f7e8640281b8b98ec40", null ],
-    [ "operator=", "classv8_1_1internal_1_1interpreter_1_1BytecodeLabels.html#abb2196fed2cf7fc51a15c77bd89c65cb", null ]
+    [ "operator=", "classv8_1_1internal_1_1interpreter_1_1BytecodeLabels.html#abb2196fed2cf7fc51a15c77bd89c65cb", null ],
+    [ "is_bound_", "classv8_1_1internal_1_1interpreter_1_1BytecodeLabels.html#a3493d62733de0bbf2f5399b71b7d5334", null ],
+    [ "labels_", "classv8_1_1internal_1_1interpreter_1_1BytecodeLabels.html#a005138f363de78388824057337bb2067", null ]
 ];
