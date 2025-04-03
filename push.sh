@@ -1,5 +1,5 @@
 files=()
-batch_size=20
+batch_size=550
 
 # Find and process files
 find ../doxyout/html -type f -name "*.png" | while read -r file; do
