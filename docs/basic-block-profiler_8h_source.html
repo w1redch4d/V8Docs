@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/diagnostics/basic-block-profiler.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/diagnostics/basic-block-profiler.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('basic-block-profiler_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_941f38c4e38886800e591b0dff3cead0.html">diagnostics</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">basic-block-profiler.h</div></div>
 </div><!--header-->
@@ -107,7 +115,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="mutex_8h.html">src/base/platform/mutex.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="common_2globals_8h.html">src/common/globals.h</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="shared-function-info_8h.html">src/objects/shared-function-info.h</a>&quot;</span></div>
@@ -121,10 +129,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BasicBlockProfilerData.html">   24</a></span><span class="keyword">class </span><a class="code hl_class" href="classv8_1_1internal_1_1BasicBlockProfilerData.html">BasicBlockProfilerData</a> {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a5df4ed1c5e989044d2da00b1224c7639">BasicBlockProfilerData</a>(<span class="keywordtype">size_t</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a471e8e4b3d662730422392818d6e5b03">n_blocks</a>);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a5df4ed1c5e989044d2da00b1224c7639">BasicBlockProfilerData</a>(</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a5df4ed1c5e989044d2da00b1224c7639">BasicBlockProfilerData</a>(</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;OnHeapBasicBlockProfilerData&gt;</a> js_heap_data,</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a5df4ed1c5e989044d2da00b1224c7639">BasicBlockProfilerData</a>(</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a5df4ed1c5e989044d2da00b1224c7639">BasicBlockProfilerData</a>(</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;OnHeapBasicBlockProfilerData&gt;</a> js_heap_data);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a033320f4d0e1c9d4e720e2601e0a3f7f">   33</a></span>  <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a033320f4d0e1c9d4e720e2601e0a3f7f">BasicBlockProfilerData</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1BasicBlockProfilerData.html">BasicBlockProfilerData</a>&amp;) = <span class="keyword">delete</span>;</div>
@@ -132,7 +140,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a471e8e4b3d662730422392818d6e5b03">   36</a></span>  <span class="keywordtype">size_t</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a471e8e4b3d662730422392818d6e5b03">n_blocks</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#afa4304cd40d50acca71a447a1b50b286">block_ids_</a>.size(), <a class="code hl_variable" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a4e3942b4c8b9ef11b455666c1a13e9a5">counts_</a>.size());</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#afa4304cd40d50acca71a447a1b50b286">block_ids_</a>.size(), <a class="code hl_variable" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a4e3942b4c8b9ef11b455666c1a13e9a5">counts_</a>.size());</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#afa4304cd40d50acca71a447a1b50b286">block_ids_</a>.size();</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  }</div>
 </div>
@@ -157,7 +165,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#ad04b6e277f9d5a976de53f2b092f2d9a">operator&lt;&lt;</a>(std::ostream&amp; os,</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                                  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1BasicBlockProfilerData.html">BasicBlockProfilerData</a>&amp; s);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#af896f3019526ef49a6ec23532a681f48">ResetCounts</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#af896f3019526ef49a6ec23532a681f48">ResetCounts</a>();</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfilerData.html#a8e08037b77097b33c187f0d41a82be92">CopyFromJSHeap</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;OnHeapBasicBlockProfilerData&gt;</a> js_heap_data);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
@@ -182,17 +190,17 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BasicBlockProfiler.html#ae886b13c1e737ef2ab7ac25673164243">   81</a></span>  <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#ae886b13c1e737ef2ab7ac25673164243">BasicBlockProfiler</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1BasicBlockProfiler.html">BasicBlockProfiler</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a61ef578ddf8f73dcc9f4c83ca14fe73f">   82</a></span>  <a class="code hl_class" href="classv8_1_1internal_1_1BasicBlockProfiler.html">BasicBlockProfiler</a>&amp; <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a61ef578ddf8f73dcc9f4c83ca14fe73f">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1BasicBlockProfiler.html">BasicBlockProfiler</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a1116936ee589c0594cf02c5ecc13165f">   84</a></span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1BasicBlockProfiler.html">BasicBlockProfiler</a>* <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a1116936ee589c0594cf02c5ecc13165f">Get</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a1116936ee589c0594cf02c5ecc13165f">   84</a></span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1BasicBlockProfiler.html">BasicBlockProfiler</a>* <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a1116936ee589c0594cf02c5ecc13165f">Get</a>();</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <a class="code hl_class" href="classv8_1_1internal_1_1BasicBlockProfilerData.html">BasicBlockProfilerData</a>* <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a2784e19196c858e931f8a3eb793833ab">NewData</a>(<span class="keywordtype">size_t</span> n_blocks);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#adb3adc0bf500c0df62cb1ea866833a73">ResetCounts</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a09700037043904cdce05dec2337af117">HasData</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#ae86f3600b8e72c3ccce827a138caccf5">Print</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, std::ostream&amp; os);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a7a9a2c6aa155011ea2738419cf52d131">Log</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, std::ostream&amp; os);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#adb3adc0bf500c0df62cb1ea866833a73">ResetCounts</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a09700037043904cdce05dec2337af117">HasData</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#ae86f3600b8e72c3ccce827a138caccf5">Print</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, std::ostream&amp; os);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a7a9a2c6aa155011ea2738419cf52d131">Log</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, std::ostream&amp; os);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="comment">// Coverage bitmap in this context includes only on heap BasicBlockProfiler</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="comment">// data. It is used to export coverage of builtins function loaded from</span></div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="comment">// snapshot.</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> std::vector&lt;bool&gt; <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#ab65b430fe5e9c99ff298aff108eebff2">GetCoverageBitmap</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> std::vector&lt;bool&gt; <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#ab65b430fe5e9c99ff298aff108eebff2">GetCoverageBitmap</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BasicBlockProfiler.html#ac9e1156ea07fc32efddb420f09d3512d">   96</a></span>  <span class="keyword">const</span> <a class="code hl_typedef" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a8ea4dbd82fbf8084b7e80a266987030f">DataList</a>* <a class="code hl_function" href="classv8_1_1internal_1_1BasicBlockProfiler.html#ac9e1156ea07fc32efddb420f09d3512d">data_list</a>() { <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="classv8_1_1internal_1_1BasicBlockProfiler.html#a7f65e8644e75bf8a262cf7b48c68f64e">data_list_</a>; }</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
@@ -223,9 +231,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a8d3ebf78988688806ceba25f5f8603cc">  120</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1BuiltinsCallGraph.html">BuiltinsCallGraph</a>* <a class="code hl_function" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a8d3ebf78988688806ceba25f5f8603cc">Get</a>();</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a405b8c8aebc9df3794c27bcaa74c170c">AddBuiltinCall</a>(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#acc2e164143496f18b5ec68f8ab70af52">Builtin</a> caller, <a class="code hl_enumeration" href="namespacev8_1_1internal.html#acc2e164143496f18b5ec68f8ab70af52">Builtin</a> callee, int32_t block_id);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="keyword">const</span> <a class="code hl_typedef" href="namespacev8_1_1internal.html#ac736a45496fa9df98554bd758d6e03f7">BuiltinCallees</a>* <a class="code hl_function" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a3a8d557d831ac4264c0f4a4ce0683435">GetBuiltinCallees</a>(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#acc2e164143496f18b5ec68f8ab70af52">Builtin</a> builtin);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a8642e2bbebf37c5de3deb23392435c89">  123</a></span>  V8_INLINE <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a8642e2bbebf37c5de3deb23392435c89">all_hash_matched</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a74ecb45bd8dae031dc413e4e80535892">all_hash_matched_</a>; }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a8642e2bbebf37c5de3deb23392435c89">  123</a></span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a8642e2bbebf37c5de3deb23392435c89">all_hash_matched</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a74ecb45bd8dae031dc413e4e80535892">all_hash_matched_</a>; }</div>
 <div class="foldopen" id="foldopen00124" data-start="{" data-end="}">
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a6ac6acc17c58ab5fd4495a55bbdca418">  124</a></span>  V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a6ac6acc17c58ab5fd4495a55bbdca418">set_all_hash_matched</a>(<span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a8642e2bbebf37c5de3deb23392435c89">all_hash_matched</a>) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a6ac6acc17c58ab5fd4495a55bbdca418">  124</a></span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a6ac6acc17c58ab5fd4495a55bbdca418">set_all_hash_matched</a>(<span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a8642e2bbebf37c5de3deb23392435c89">all_hash_matched</a>) {</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a74ecb45bd8dae031dc413e4e80535892">all_hash_matched_</a> = <a class="code hl_function" href="classv8_1_1internal_1_1BuiltinsCallGraph.html#a8642e2bbebf37c5de3deb23392435c89">all_hash_matched</a>;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  }</div>
 </div>
@@ -299,9 +307,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1Tagged_html"><div class="ttname"><a href="classv8_1_1internal_1_1Tagged.html">v8::internal::Tagged</a></div><div class="ttdef"><b>Definition</b> <a href="waiter-queue-node_8h_source.html#l00022">waiter-queue-node.h:22</a></div></div>
 <div class="ttc" id="acommon_2globals_8h_html"><div class="ttname"><a href="common_2globals_8h.html">globals.h</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a97bd6c077f3c7769f575b82988b9b668"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a></div><div class="ttdeci">int32_t offset</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00072">instruction-selector-ia32.cc:72</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="amutex_8h_html"><div class="ttname"><a href="mutex_8h.html">mutex.h</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a663d0c6641e71205777ff51f5f2be115"><div class="ttname"><a href="namespacev8_1_1internal.html#a663d0c6641e71205777ff51f5f2be115">v8::internal::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, AtomicMemoryOrder order)</div><div class="ttdef"><b>Definition</b> <a href="atomic-memory-order_8h_source.html#l00022">atomic-memory-order.h:22</a></div></div>
@@ -311,11 +316,18 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_acc2e164143496f18b5ec68f8ab70af52"><div class="ttname"><a href="namespacev8_1_1internal.html#acc2e164143496f18b5ec68f8ab70af52">v8::internal::Builtin</a></div><div class="ttdeci">Builtin</div><div class="ttdef"><b>Definition</b> <a href="builtins_8h_source.html#l00048">builtins.h:48</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="ashared-function-info_8h_html"><div class="ttname"><a href="shared-function-info_8h.html">shared-function-info.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:27 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_941f38c4e38886800e591b0dff3cead0.html">diagnostics</a></li><li class="navelem"><a class="el" href="basic-block-profiler_8h.html">basic-block-profiler.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:35 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

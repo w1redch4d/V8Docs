@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/inspector/v8-value-utils.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/inspector/v8-value-utils.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('v8-value-utils_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9c68e836c1d42065b8bcfa0e92a4079e.html">inspector</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">v8-value-utils.cc</div></div>
 </div><!--header-->
@@ -100,48 +108,59 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="v8-value-utils_8h.html">src/inspector/v8-value-utils.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;include/v8-container.h&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;include/v8-context.h&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;include/v8-exception.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="v8-container_8h.html">include/v8-container.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="v8-context_8h.html">include/v8-context.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="v8-exception_8h.html">include/v8-exception.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8__inspector.html">v8_inspector</a> {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespacev8__inspector.html#a9a9cb7fd48cb5fe180706b5b80cd8ab4">   13</a></span>v8::Maybe&lt;bool&gt; <a class="code hl_function" href="namespacev8__inspector.html#a9a9cb7fd48cb5fe180706b5b80cd8ab4">createDataProperty</a>(v8::Local&lt;v8::Context&gt; <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>,</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                                   v8::Local&lt;v8::Object&gt; <span class="keywordtype">object</span>,</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                                   v8::Local&lt;v8::Name&gt; <a class="code hl_variable" href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a>,</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                                   v8::Local&lt;v8::Value&gt; value) {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  v8::TryCatch tryCatch(<a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>-&gt;GetIsolate());</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  v8::Isolate::DisallowJavascriptExecutionScope throwJs(</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespacev8__inspector.html#a9a9cb7fd48cb5fe180706b5b80cd8ab4">   13</a></span><a class="code hl_class" href="classv8_1_1Maybe.html">v8::Maybe&lt;bool&gt;</a> <a class="code hl_function" href="namespacev8__inspector.html#a9a9cb7fd48cb5fe180706b5b80cd8ab4">createDataProperty</a>(<a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Context&gt;</a> <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>,</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>                                   <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Object&gt;</a> <span class="keywordtype">object</span>,</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>                                   <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Name&gt;</a> <a class="code hl_variable" href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a>,</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>                                   <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a> value) {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <a class="code hl_class" href="classv8_1_1TryCatch.html">v8::TryCatch</a> tryCatch(<a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>-&gt;GetIsolate());</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_class" href="classv8_1_1Isolate_1_1DisallowJavascriptExecutionScope.html">v8::Isolate::DisallowJavascriptExecutionScope</a> throwJs(</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>-&gt;GetIsolate(),</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      v8::Isolate::DisallowJavascriptExecutionScope::THROW_ON_FAILURE);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      <a class="code hl_enumvalue" href="classv8_1_1Isolate_1_1DisallowJavascriptExecutionScope.html#aeb586bef085fba34f97c09afd07ea843a86b9510557fcdcca937b0bc5a9634478">v8::Isolate::DisallowJavascriptExecutionScope::THROW_ON_FAILURE</a>);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keywordflow">return</span> <span class="keywordtype">object</span>-&gt;CreateDataProperty(<a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>, <a class="code hl_variable" href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a>, value);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
 </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="foldopen" id="foldopen00024" data-start="{" data-end="}">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespacev8__inspector.html#a9f2ca85ca82de16a563cc6b11753d405">   24</a></span>v8::Maybe&lt;bool&gt; <a class="code hl_function" href="namespacev8__inspector.html#a9a9cb7fd48cb5fe180706b5b80cd8ab4">createDataProperty</a>(v8::Local&lt;v8::Context&gt; <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>,</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                                   v8::Local&lt;v8::Array&gt; array, <span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>,</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                                   v8::Local&lt;v8::Value&gt; value) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  v8::TryCatch tryCatch(<a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>-&gt;GetIsolate());</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  v8::Isolate::DisallowJavascriptExecutionScope throwJs(</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="namespacev8__inspector.html#a9f2ca85ca82de16a563cc6b11753d405">   24</a></span><a class="code hl_class" href="classv8_1_1Maybe.html">v8::Maybe&lt;bool&gt;</a> <a class="code hl_function" href="namespacev8__inspector.html#a9a9cb7fd48cb5fe180706b5b80cd8ab4">createDataProperty</a>(<a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Context&gt;</a> <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>                                   <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Array&gt;</a> array, <span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                                   <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a> value) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_class" href="classv8_1_1TryCatch.html">v8::TryCatch</a> tryCatch(<a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>-&gt;GetIsolate());</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_class" href="classv8_1_1Isolate_1_1DisallowJavascriptExecutionScope.html">v8::Isolate::DisallowJavascriptExecutionScope</a> throwJs(</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>-&gt;GetIsolate(),</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      v8::Isolate::DisallowJavascriptExecutionScope::THROW_ON_FAILURE);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <a class="code hl_enumvalue" href="classv8_1_1Isolate_1_1DisallowJavascriptExecutionScope.html#aeb586bef085fba34f97c09afd07ea843a86b9510557fcdcca937b0bc5a9634478">v8::Isolate::DisallowJavascriptExecutionScope::THROW_ON_FAILURE</a>);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordflow">return</span> array-&gt;CreateDataProperty(<a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>, <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>, value);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
 </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}  <span class="comment">// namespace v8_inspector</span></div>
+<div class="ttc" id="aclassv8_1_1Isolate_1_1DisallowJavascriptExecutionScope_html"><div class="ttname"><a href="classv8_1_1Isolate_1_1DisallowJavascriptExecutionScope.html">v8::Isolate::DisallowJavascriptExecutionScope</a></div><div class="ttdef"><b>Definition</b> <a href="v8-isolate_8h_source.html#l00374">v8-isolate.h:374</a></div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_1_1DisallowJavascriptExecutionScope_html_aeb586bef085fba34f97c09afd07ea843a86b9510557fcdcca937b0bc5a9634478"><div class="ttname"><a href="classv8_1_1Isolate_1_1DisallowJavascriptExecutionScope.html#aeb586bef085fba34f97c09afd07ea843a86b9510557fcdcca937b0bc5a9634478">v8::Isolate::DisallowJavascriptExecutionScope::THROW_ON_FAILURE</a></div><div class="ttdeci">@ THROW_ON_FAILURE</div><div class="ttdef"><b>Definition</b> <a href="v8-isolate_8h_source.html#l00376">v8-isolate.h:376</a></div></div>
+<div class="ttc" id="aclassv8_1_1Local_html"><div class="ttname"><a href="classv8_1_1Local.html">v8::Local</a></div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00260">v8-local-handle.h:266</a></div></div>
+<div class="ttc" id="aclassv8_1_1Maybe_html"><div class="ttname"><a href="classv8_1_1Maybe.html">v8::Maybe</a></div><div class="ttdef"><b>Definition</b> <a href="v8-maybe_8h_source.html#l00032">v8-maybe.h:32</a></div></div>
+<div class="ttc" id="aclassv8_1_1TryCatch_html"><div class="ttname"><a href="classv8_1_1TryCatch.html">v8::TryCatch</a></div><div class="ttdef"><b>Definition</b> <a href="v8-exception_8h_source.html#l00138">v8-exception.h:138</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_ae55190dbead0a94298bdfa37911694e3"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a></div><div class="ttdeci">turboshaft::OptionalOpIndex index</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00071">instruction-selector-ia32.cc:71</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_a0835767fe473cead88c1afdf3175bce8"><div class="ttname"><a href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a></div><div class="ttdeci">TNode&lt; Context &gt; context</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01496">js-call-reducer.cc:1496</a></div></div>
 <div class="ttc" id="anamespacev8__inspector_html"><div class="ttname"><a href="namespacev8__inspector.html">v8_inspector</a></div><div class="ttdef"><b>Definition</b> <a href="debug-interface_8h_source.html#l00025">debug-interface.h:25</a></div></div>
 <div class="ttc" id="anamespacev8__inspector_html_a9a9cb7fd48cb5fe180706b5b80cd8ab4"><div class="ttname"><a href="namespacev8__inspector.html#a9a9cb7fd48cb5fe180706b5b80cd8ab4">v8_inspector::createDataProperty</a></div><div class="ttdeci">v8::Maybe&lt; bool &gt; createDataProperty(v8::Local&lt; v8::Context &gt; context, v8::Local&lt; v8::Object &gt; object, v8::Local&lt; v8::Name &gt; key, v8::Local&lt; v8::Value &gt; value)</div><div class="ttdef"><b>Definition</b> <a href="#l00013">v8-value-utils.cc:13</a></div></div>
+<div class="ttc" id="av8-container_8h_html"><div class="ttname"><a href="v8-container_8h.html">v8-container.h</a></div></div>
+<div class="ttc" id="av8-context_8h_html"><div class="ttname"><a href="v8-context_8h.html">v8-context.h</a></div></div>
+<div class="ttc" id="av8-exception_8h_html"><div class="ttname"><a href="v8-exception_8h.html">v8-exception.h</a></div></div>
 <div class="ttc" id="av8-value-utils_8h_html"><div class="ttname"><a href="v8-value-utils_8h.html">v8-value-utils.h</a></div></div>
 <div class="ttc" id="avalue-mirror_8cc_html_af6b78a5a5b7a4e51ea415c001e9eb58b"><div class="ttname"><a href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a></div><div class="ttdeci">std::unique_ptr&lt; ValueMirror &gt; key</div><div class="ttdef"><b>Definition</b> <a href="value-mirror_8cc_source.html#l00949">value-mirror.cc:949</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:38 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9c68e836c1d42065b8bcfa0e92a4079e.html">inspector</a></li><li class="navelem"><a class="el" href="v8-value-utils_8cc.html">v8-value-utils.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:47 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/maglev/maglev-compiler.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/maglev/maglev-compiler.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('maglev-compiler_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bfacb70f1a53f7c6799a7e763eeb3a96.html">maglev</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">maglev-compiler.cc</div></div>
 </div><!--header-->
@@ -107,7 +115,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="iterator_8h.html">src/base/iterator.h</a>&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="threaded-list_8h.html">src/base/threaded-list.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="interface-descriptors-inl_8h.html">src/codegen/interface-descriptors-inl.h</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="machine-type_8h.html">src/codegen/machine-type.h</a>&quot;</span></div>
@@ -331,7 +339,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1CurrentHeapBrokerScope.html">compiler::CurrentHeapBrokerScope</a> current_broker(compilation_info-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1maglev_1_1MaglevCompilationInfo.html#af6ee3e193757ecf58fe2c1689b24fe91">broker</a>());</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <a class="code hl_class" href="classv8_1_1internal_1_1maglev_1_1MaglevCodeGenerator.html">MaglevCodeGenerator</a>* <span class="keyword">const</span> code_generator =</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      compilation_info-&gt;code_generator();</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(code_generator);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(code_generator);</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Code&gt;</a> <a class="code hl_variable" href="namespacev8_1_1internal.html#a85b33c0aa285b5a6b0c9963edf565da7">code</a>;</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  {</div>
@@ -439,8 +447,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aiterator_8h_html"><div class="ttname"><a href="iterator_8h.html">iterator.h</a></div></div>
 <div class="ttc" id="ajs-function_8h_html"><div class="ttname"><a href="js-function_8h.html">js-function.h</a></div></div>
 <div class="ttc" id="ajs-heap-broker_8h_html"><div class="ttname"><a href="js-heap-broker_8h.html">js-heap-broker.h</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
 <div class="ttc" id="amachine-type_8h_html"><div class="ttname"><a href="machine-type_8h.html">machine-type.h</a></div></div>
 <div class="ttc" id="amaglev-basic-block_8h_html"><div class="ttname"><a href="maglev-basic-block_8h.html">maglev-basic-block.h</a></div></div>
 <div class="ttc" id="amaglev-code-generator_8h_html"><div class="ttname"><a href="maglev-code-generator_8h.html">maglev-code-generator.h</a></div></div>
@@ -471,16 +477,21 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aregister-configuration_8h_html"><div class="ttname"><a href="register-configuration_8h.html">register-configuration.h</a></div></div>
 <div class="ttc" id="aregister_8h_html"><div class="ttname"><a href="register_8h.html">register.h</a></div></div>
 <div class="ttc" id="areglist_8h_html"><div class="ttname"><a href="reglist_8h.html">reglist.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1Brief_html"><div class="ttname"><a href="structv8_1_1internal_1_1Brief.html">v8::internal::Brief</a></div><div class="ttdef"><b>Definition</b> <a href="objects_8h_source.html#l00628">objects.h:628</a></div></div>
 <div class="ttc" id="athreaded-list_8h_html"><div class="ttname"><a href="threaded-list_8h.html">threaded-list.h</a></div></div>
 <div class="ttc" id="atrace-event-no-perfetto_8h_html_a3feabb76c0ac2918798bc11ab55c6a79"><div class="ttname"><a href="trace-event-no-perfetto_8h.html#a3feabb76c0ac2918798bc11ab55c6a79">TRACE_EVENT0</a></div><div class="ttdeci">#define TRACE_EVENT0(category_group, name)</div><div class="ttdef"><b>Definition</b> <a href="trace-event-no-perfetto_8h_source.html#l00032">trace-event-no-perfetto.h:32</a></div></div>
 <div class="ttc" id="atrace-event-no-perfetto_8h_html_a97689377430b094caec680dd7dd230fe"><div class="ttname"><a href="trace-event-no-perfetto_8h.html#a97689377430b094caec680dd7dd230fe">TRACE_DISABLED_BY_DEFAULT</a></div><div class="ttdeci">#define TRACE_DISABLED_BY_DEFAULT(name)</div><div class="ttdef"><b>Definition</b> <a href="trace-event-no-perfetto_8h_source.html#l00025">trace-event-no-perfetto.h:25</a></div></div>
 <div class="ttc" id="azone_8h_html"><div class="ttname"><a href="zone_8h.html">zone.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:42 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bfacb70f1a53f7c6799a7e763eeb3a96.html">maglev</a></li><li class="navelem"><a class="el" href="maglev-compiler_8cc.html">maglev-compiler.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:51 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

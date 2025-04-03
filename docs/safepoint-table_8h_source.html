@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/codegen/safepoint-table.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/codegen/safepoint-table.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('safepoint-table_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7cf1b5e32c0ccac638cac1ebc38d93b6.html">codegen</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">safepoint-table.h</div></div>
 </div><!--header-->
@@ -104,7 +112,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="bit-field_8h.html">src/base/bit-field.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="safepoint-table-base_8h.html">src/codegen/safepoint-table-base.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="assert-scope_8h.html">src/common/assert-scope.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="allocation_8h.html">src/utils/allocation.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="src_2utils_2allocation_8h.html">src/utils/allocation.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="bit-vector_8h.html">src/utils/bit-vector.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="utils_2utils_8h.html">src/utils/utils.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="zone-containers_8h.html">src/zone/zone-containers.h</a>&quot;</span></div>
@@ -130,7 +138,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      : <a class="code hl_class" href="classv8_1_1internal_1_1SafepointEntryBase.html">SafepointEntryBase</a>(<a class="code hl_function" href="classv8_1_1internal_1_1SafepointEntryBase.html#aa06c3586853536860e226cd4e07e0242">pc</a>, deopt_index, <a class="code hl_function" href="classv8_1_1internal_1_1SafepointEntryBase.html#ad4c05df267a117b73060ac4b37b277dd">trampoline_pc</a>),</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointEntry.html#aa4f7858f7f8bdd810497ca251032af44">tagged_register_indexes_</a>(<a class="code hl_function" href="classv8_1_1internal_1_1SafepointEntry.html#aeff71cd9b4a5d9104e4dfef22bbef8a4">tagged_register_indexes</a>),</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointEntry.html#a4ae13952ded0c65732db0812aa307242">tagged_slots_</a>(<a class="code hl_function" href="classv8_1_1internal_1_1SafepointEntry.html#ae51dca4f4d60f0b5a20910319fbacf45">tagged_slots</a>) {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1SafepointEntryBase.html#ae7c3b22f8c6646f21bfa2e901c909724">is_initialized</a>());</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1SafepointEntryBase.html#ae7c3b22f8c6646f21bfa2e901c909724">is_initialized</a>());</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  }</div>
 </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
@@ -144,15 +152,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointEntry.html#aeff71cd9b4a5d9104e4dfef22bbef8a4">   44</a></span>  uint32_t <a class="code hl_function" href="classv8_1_1internal_1_1SafepointEntry.html#aeff71cd9b4a5d9104e4dfef22bbef8a4">tagged_register_indexes</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1SafepointEntryBase.html#ae7c3b22f8c6646f21bfa2e901c909724">is_initialized</a>());</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1SafepointEntryBase.html#ae7c3b22f8c6646f21bfa2e901c909724">is_initialized</a>());</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointEntry.html#aa4f7858f7f8bdd810497ca251032af44">tagged_register_indexes_</a>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  }</div>
 </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointEntry.html#ae51dca4f4d60f0b5a20910319fbacf45">   49</a></span>  <a class="code hl_class" href="classv8_1_1base_1_1Vector.html">base::Vector&lt;const uint8_t&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointEntry.html#ae51dca4f4d60f0b5a20910319fbacf45">tagged_slots</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1SafepointEntryBase.html#ae7c3b22f8c6646f21bfa2e901c909724">is_initialized</a>());</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1SafepointEntry.html#a4ae13952ded0c65732db0812aa307242">tagged_slots_</a>.<a class="code hl_function" href="classv8_1_1base_1_1Vector.html#adc40a57a246645ccf947f03f5c8dee62">data</a>());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1SafepointEntryBase.html#ae7c3b22f8c6646f21bfa2e901c909724">is_initialized</a>());</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1SafepointEntry.html#a4ae13952ded0c65732db0812aa307242">tagged_slots_</a>.<a class="code hl_function" href="classv8_1_1base_1_1Vector.html#adc40a57a246645ccf947f03f5c8dee62">data</a>());</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointEntry.html#a4ae13952ded0c65732db0812aa307242">tagged_slots_</a>;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
 </div>
@@ -170,9 +178,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="comment">// The isolate and pc arguments are used for figuring out whether pc</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="comment">// belongs to the embedded or un-embedded code blob.</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#ad12383d7f529ae2dd04d9f36a3e23b9c">   66</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#ad12383d7f529ae2dd04d9f36a3e23b9c">SafepointTable</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#ad12383d7f529ae2dd04d9f36a3e23b9c">   66</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#ad12383d7f529ae2dd04d9f36a3e23b9c">SafepointTable</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>,</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                          <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;InstructionStream&gt;</a> code);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#ad12383d7f529ae2dd04d9f36a3e23b9c">SafepointTable</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Code&gt;</a> code);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#ad12383d7f529ae2dd04d9f36a3e23b9c">SafepointTable</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Code&gt;</a> code);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#if V8_ENABLE_WEBASSEMBLY</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#ad12383d7f529ae2dd04d9f36a3e23b9c">SafepointTable</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html">wasm::WasmCode</a>* code);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#endif  </span><span class="comment">// V8_ENABLE_WEBASSEMBLY</span></div>
@@ -194,8 +202,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
 <div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#ad178610f02f276501e11a5c5c961b3ac">   86</a></span>  <a class="code hl_class" href="classv8_1_1internal_1_1SafepointEntry.html">SafepointEntry</a> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#ad178610f02f276501e11a5c5c961b3ac">GetEntry</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_define" href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1SafepointTable.html#a0a76442dbdcb56992b49cf99bfda166d">length_</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> entry_ptr =</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1SafepointTable.html#a0a76442dbdcb56992b49cf99bfda166d">length_</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> entry_ptr =</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointTable.html#ad4a579a5936a6a0fb4f859f894a546cb">safepoint_table_address_</a> + kHeaderSize + <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> * <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#affddfd370ddac29546aa8b35313f28b1">entry_size</a>();</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a> = <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a5049db730f41600dba4e0e334ba8bd2a">read_bytes</a>(&amp;entry_ptr, <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a76f911249b05ed72194c11d805caa97e">pc_size</a>());</div>
@@ -208,8 +216,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <span class="comment">// SafepointTableBuilder::Emit.</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      deopt_index = <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a5049db730f41600dba4e0e334ba8bd2a">read_bytes</a>(&amp;entry_ptr, <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a1f904e14a9497a5828b80a8529d8e9e5">deopt_index_size</a>()) - 1;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      trampoline_pc = <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a5049db730f41600dba4e0e334ba8bd2a">read_bytes</a>(&amp;entry_ptr, <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a76f911249b05ed72194c11d805caa97e">pc_size</a>()) - 1;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(deopt_index &gt;= 0 || deopt_index == <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointEntryBase.html#a92e9af47c11a0128f47aa33ce8af7621">SafepointEntry::kNoDeoptIndex</a>);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(trampoline_pc &gt;= 0 ||</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(deopt_index &gt;= 0 || deopt_index == <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointEntryBase.html#a92e9af47c11a0128f47aa33ce8af7621">SafepointEntry::kNoDeoptIndex</a>);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(trampoline_pc &gt;= 0 ||</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>             trampoline_pc == <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointEntryBase.html#ae9823bcc6eb7bcdc6be78ee7b60af4e8">SafepointEntry::kNoTrampolinePC</a>);</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">int</span> tagged_register_indexes =</div>
@@ -229,17 +237,17 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="comment">// Returns the entry for the given pc.</span></div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <a class="code hl_class" href="classv8_1_1internal_1_1SafepointEntry.html">SafepointEntry</a> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a894fd386f9558cdcc2f990e1046ef7e6">FindEntry</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <a class="code hl_class" href="classv8_1_1internal_1_1SafepointEntry.html">SafepointEntry</a> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a894fd386f9558cdcc2f990e1046ef7e6">FindEntry</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1SafepointEntry.html">SafepointEntry</a> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a894fd386f9558cdcc2f990e1046ef7e6">FindEntry</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;GcSafeCode&gt;</a> code,</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                                  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                                  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>);</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="comment">// Tries to find the entry for the given pc. If the entry does not exist, it</span></div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="comment">// returns an uninitialized entry.</span></div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <a class="code hl_class" href="classv8_1_1internal_1_1SafepointEntry.html">SafepointEntry</a> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a079bbd9de5aee144ba660eb2ba3ab070">TryFindEntry</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <a class="code hl_class" href="classv8_1_1internal_1_1SafepointEntry.html">SafepointEntry</a> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a079bbd9de5aee144ba660eb2ba3ab070">TryFindEntry</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a057e4f18218a4f7073b96148677e3571">Print</a>(std::ostream&amp;) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#ad12383d7f529ae2dd04d9f36a3e23b9c">SafepointTable</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;GcSafeCode&gt;</a> code);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#ad12383d7f529ae2dd04d9f36a3e23b9c">SafepointTable</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;GcSafeCode&gt;</a> code);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <span class="comment">// Layout information.</span></div>
 <div class="foldopen" id="foldopen00134" data-start="" data-end="">
@@ -264,7 +272,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="comment">// limited to a bit below 1MB anyway (see v8_flags.stack_size).</span></div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#a3b05ace3aa236bd3238138b649af16b8">  152</a></span>  <span class="keyword">using </span><a class="code hl_class" href="classv8_1_1base_1_1BitField.html">TaggedSlotsBytesField</a> = <a class="code hl_class" href="classv8_1_1base_1_1BitField.html">DeoptIndexSizeField::Next&lt;int, 22&gt;</a>;</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#ad12383d7f529ae2dd04d9f36a3e23b9c">SafepointTable</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> instruction_start, <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> safepoint_table_address);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#ad12383d7f529ae2dd04d9f36a3e23b9c">SafepointTable</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> instruction_start, <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> safepoint_table_address);</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
 <div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#affddfd370ddac29546aa8b35313f28b1">  156</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#affddfd370ddac29546aa8b35313f28b1">entry_size</a>()<span class="keyword"> const </span>{</div>
@@ -296,7 +304,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
 <div class="foldopen" id="foldopen00175" data-start="{" data-end="}">
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#a5049db730f41600dba4e0e334ba8bd2a">  175</a></span>  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a5049db730f41600dba4e0e334ba8bd2a">read_bytes</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a>* ptr, <span class="keywordtype">int</span> bytes) {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#a5049db730f41600dba4e0e334ba8bd2a">  175</a></span>  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTable.html#a5049db730f41600dba4e0e334ba8bd2a">read_bytes</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a>* ptr, <span class="keywordtype">int</span> bytes) {</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    uint32_t <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = 0;</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> b = 0; b &lt; bytes; ++b, ++*ptr) {</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>      <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> |= uint32_t{*<span class="keyword">reinterpret_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(*ptr)} &lt;&lt; (8 * b);</div>
@@ -307,10 +315,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <a class="code hl_define" href="assert-scope_8h.html#a6e895bc6891844f9b40e1e97d3fbd395">DISALLOW_GARBAGE_COLLECTION</a>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8769459fea404ce34890fa9f8ad4a93">no_gc_</a>)</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#a4de0f06aac8ebb2bf7afabe87045e4c4">  185</a></span>  const <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointTable.html#a4de0f06aac8ebb2bf7afabe87045e4c4">instruction_start_</a>;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#a4de0f06aac8ebb2bf7afabe87045e4c4">  185</a></span>  const <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointTable.html#a4de0f06aac8ebb2bf7afabe87045e4c4">instruction_start_</a>;</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="comment">// Safepoint table layout.</span></div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#ad4a579a5936a6a0fb4f859f894a546cb">  188</a></span>  const <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointTable.html#ad4a579a5936a6a0fb4f859f894a546cb">safepoint_table_address_</a>;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#ad4a579a5936a6a0fb4f859f894a546cb">  188</a></span>  const <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointTable.html#ad4a579a5936a6a0fb4f859f894a546cb">safepoint_table_address_</a>;</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#a4e668c42321406f0aeb80397b3182e5e">  189</a></span>  const <a class="code hl_typedef" href="namespacev8_1_1internal.html#a20e09ada04eddedae5af824bdcd8d2d0">SafepointTableStackSlotsField_t</a> <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointTable.html#a4e668c42321406f0aeb80397b3182e5e">stack_slots_</a>;</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#a0a76442dbdcb56992b49cf99bfda166d">  190</a></span>  const <span class="keywordtype">int</span> <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointTable.html#a0a76442dbdcb56992b49cf99bfda166d">length_</a>;</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTable.html#ab879f6aaf20cf6195c775998d492d821">  191</a></span>  const uint32_t <a class="code hl_variable" href="classv8_1_1internal_1_1SafepointTable.html#ab879f6aaf20cf6195c775998d492d821">entry_configuration_</a>;</div>
@@ -359,7 +367,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
 <div class="foldopen" id="foldopen00226" data-start="{" data-end="}">
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SafepointTableBuilder_1_1Safepoint.html#a2bf425c25685ae85e7cabd0d65b3e140">  226</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1SafepointTableBuilder_1_1Safepoint.html#a2bf425c25685ae85e7cabd0d65b3e140">DefineTaggedRegister</a>(<span class="keywordtype">int</span> reg_code) {</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>      <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(reg_code,</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(reg_code,</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>                <a class="code hl_variable" href="namespacev8_1_1internal.html#a1f752d6859d2360901fc2a58c9548fd8">kBitsPerByte</a> * <span class="keyword">sizeof</span>(EntryBuilder::register_indexes));</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>      entry_-&gt;register_indexes |= 1u &lt;&lt; reg_code;</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    }</div>
@@ -382,7 +390,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  <a class="code hl_class" href="classv8_1_1internal_1_1SafepointTableBuilder_1_1Safepoint.html">Safepoint</a> DefineSafepoint(<a class="code hl_class" href="classv8_1_1internal_1_1Assembler.html">Assembler</a>* assembler, <span class="keywordtype">int</span> <a class="code hl_variable" href="liftoff-compiler_8cc.html#ac8403346601a16f8902bbe271ff3c261">pc_offset</a> = 0);</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  <span class="comment">// Emit the safepoint table after the body.</span></div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> Emit(<a class="code hl_class" href="classv8_1_1internal_1_1Assembler.html">Assembler</a>* assembler, <span class="keywordtype">int</span> stack_slot_count);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> Emit(<a class="code hl_class" href="classv8_1_1internal_1_1Assembler.html">Assembler</a>* assembler, <span class="keywordtype">int</span> stack_slot_count);</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  <span class="comment">// Find the Deoptimization Info with pc offset {pc} and update its</span></div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  <span class="comment">// trampoline field. Calling this function ensures that the safepoint</span></div>
@@ -430,7 +438,6 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>}  <span class="comment">// namespace v8</span></div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="preprocessor">#endif  </span><span class="comment">// V8_CODEGEN_SAFEPOINT_TABLE_H_</span></div>
-<div class="ttc" id="aallocation_8h_html"><div class="ttname"><a href="allocation_8h.html">allocation.h</a></div></div>
 <div class="ttc" id="aassert-scope_8h_html"><div class="ttname"><a href="assert-scope_8h.html">assert-scope.h</a></div></div>
 <div class="ttc" id="aassert-scope_8h_html_a6e895bc6891844f9b40e1e97d3fbd395"><div class="ttname"><a href="assert-scope_8h.html#a6e895bc6891844f9b40e1e97d3fbd395">DISALLOW_GARBAGE_COLLECTION</a></div><div class="ttdeci">#define DISALLOW_GARBAGE_COLLECTION(name)</div><div class="ttdef"><b>Definition</b> <a href="assert-scope_8h_source.html#l00262">assert-scope.h:262</a></div></div>
 <div class="ttc" id="abit-field_8h_html"><div class="ttname"><a href="bit-field_8h.html">bit-field.h</a></div></div>
@@ -509,23 +516,24 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ajump-threading_8cc_html_a41f8c58d2c01bf65b8ee199c3f87fc80"><div class="ttname"><a href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a></div><div class="ttdeci">ZoneVector&lt; RpoNumber &gt; &amp; result</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00021">jump-threading.cc:21</a></div></div>
 <div class="ttc" id="aliftoff-compiler_8cc_html_a2e9df2951c16c037d2625a34871464cd"><div class="ttname"><a href="liftoff-compiler_8cc.html#a2e9df2951c16c037d2625a34871464cd">entries_</a></div><div class="ttdeci">std::vector&lt; EntryBuilder &gt; entries_</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l00304">liftoff-compiler.cc:304</a></div></div>
 <div class="ttc" id="aliftoff-compiler_8cc_html_ac8403346601a16f8902bbe271ff3c261"><div class="ttname"><a href="liftoff-compiler_8cc.html#ac8403346601a16f8902bbe271ff3c261">pc_offset</a></div><div class="ttdeci">int pc_offset</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l09351">liftoff-compiler.cc:9351</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00487">logging.h:487</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="amaglev-safepoint-table_8h_html_a5d02c3f1046d74fa2c897de88733c3fd"><div class="ttname"><a href="maglev-safepoint-table_8h.html#a5d02c3f1046d74fa2c897de88733c3fd">FIELD_LIST</a></div><div class="ttdeci">#define FIELD_LIST(V)</div><div class="ttdef"><b>Definition</b> <a href="maglev-safepoint-table_8h_source.html#l00117">maglev-safepoint-table.h:117</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a0cfab207d565dcf62ebf50f3987e05de"><div class="ttname"><a href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">v8::internal::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> <a href="heap-snapshot-generator_8cc_source.html#l01584">heap-snapshot-generator.cc:1584</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a1f752d6859d2360901fc2a58c9548fd8"><div class="ttname"><a href="namespacev8_1_1internal.html#a1f752d6859d2360901fc2a58c9548fd8">v8::internal::kBitsPerByte</a></div><div class="ttdeci">constexpr int kBitsPerByte</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00673">globals.h:673</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a20e09ada04eddedae5af824bdcd8d2d0"><div class="ttname"><a href="namespacev8_1_1internal.html#a20e09ada04eddedae5af824bdcd8d2d0">v8::internal::SafepointTableStackSlotsField_t</a></div><div class="ttdeci">uint32_t SafepointTableStackSlotsField_t</div><div class="ttdef"><b>Definition</b> <a href="safepoint-table-base_8h_source.html#l00018">safepoint-table-base.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a3e53d71056b12acacfb8de066c6364fd"><div class="ttname"><a href="namespacev8_1_1internal.html#a3e53d71056b12acacfb8de066c6364fd">v8::internal::kSafepointTableStackSlotsOffset</a></div><div class="ttdeci">constexpr int kSafepointTableStackSlotsOffset</div><div class="ttdef"><b>Definition</b> <a href="safepoint-table-base_8h_source.html#l00017">safepoint-table-base.h:17</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="anamespacewasm_html"><div class="ttname"><a href="namespacewasm.html">wasm</a></div><div class="ttdef"><b>Definition</b> <a href="c-api_8cc_source.html#l00090">c-api.cc:90</a></div></div>
 <div class="ttc" id="apipeline_8cc_html_a1cf7b21ed85cb3d716fa4007ab54cc7c"><div class="ttname"><a href="pipeline_8cc.html#a1cf7b21ed85cb3d716fa4007ab54cc7c">table_</a></div><div class="ttdeci">SourcePositionTable *const table_</div><div class="ttdef"><b>Definition</b> <a href="pipeline_8cc_source.html#l00252">pipeline.cc:252</a></div></div>
 <div class="ttc" id="aread-only-serializer_8cc_html_a69c90eeb8bbd822438c2477c0bc1ced1"><div class="ttname"><a href="read-only-serializer_8cc.html#a69c90eeb8bbd822438c2477c0bc1ced1">tagged_slots</a></div><div class="ttdeci">ro::BitSet tagged_slots</div><div class="ttdef"><b>Definition</b> <a href="read-only-serializer_8cc_source.html#l00142">read-only-serializer.cc:142</a></div></div>
 <div class="ttc" id="asafepoint-table-base_8h_html"><div class="ttname"><a href="safepoint-table-base_8h.html">safepoint-table-base.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00487">logging.h:487</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
+<div class="ttc" id="asrc_2utils_2allocation_8h_html"><div class="ttname"><a href="src_2utils_2allocation_8h.html">allocation.h</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1SafepointTableBuilder_1_1EntryBuilder_html"><div class="ttname"><a href="structv8_1_1internal_1_1SafepointTableBuilder_1_1EntryBuilder.html">v8::internal::SafepointTableBuilder::EntryBuilder</a></div><div class="ttdef"><b>Definition</b> <a href="#l00199">safepoint-table.h:199</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1SafepointTableBuilder_1_1EntryBuilder_html_a13e2847f9b8293d126ea9e0aebd69b23"><div class="ttname"><a href="structv8_1_1internal_1_1SafepointTableBuilder_1_1EntryBuilder.html#a13e2847f9b8293d126ea9e0aebd69b23">v8::internal::SafepointTableBuilder::EntryBuilder::EntryBuilder</a></div><div class="ttdeci">EntryBuilder(Zone *zone, int pc)</div><div class="ttdef"><b>Definition</b> <a href="#l00205">safepoint-table.h:205</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1SafepointTableBuilder_1_1EntryBuilder_html_a560ded6120f5df97493878889b546089"><div class="ttname"><a href="structv8_1_1internal_1_1SafepointTableBuilder_1_1EntryBuilder.html#a560ded6120f5df97493878889b546089">v8::internal::SafepointTableBuilder::EntryBuilder::stack_indexes</a></div><div class="ttdeci">GrowableBitVector * stack_indexes</div><div class="ttdef"><b>Definition</b> <a href="#l00203">safepoint-table.h:203</a></div></div>
@@ -535,10 +543,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="azone-containers_8h_html"><div class="ttname"><a href="zone-containers_8h.html">zone-containers.h</a></div></div>
 <div class="ttc" id="azone_8h_html"><div class="ttname"><a href="zone_8h.html">zone.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:17:05 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7cf1b5e32c0ccac638cac1ebc38d93b6.html">codegen</a></li><li class="navelem"><a class="el" href="safepoint-table_8h.html">safepoint-table.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:53:09 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

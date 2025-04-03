@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/minor-mark-sweep.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/minor-mark-sweep.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('minor-mark-sweep_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">minor-mark-sweep.h</div></div>
 </div><!--header-->
@@ -106,9 +114,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="common_2globals_8h.html">src/common/globals.h</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="heap_8h.html">src/heap/heap.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="src_2heap_2heap_8h.html">src/heap/heap.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="index-generator_8h.html">src/heap/index-generator.h</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="marking-state_8h.html">src/heap/marking-state.h</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="marking-worklist_8h.html">src/heap/marking-worklist.h</a>&quot;</span></div>
@@ -205,7 +213,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Visitor&gt;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationRememberedSetsMarkingWorklist_1_1MarkingItem.html#a0e6c74d1180b0832f933c7497bf93f52">MarkTypedPointers</a>(Visitor* visitor);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Visitor, <span class="keyword">typename</span> TSlot&gt;</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    V8_INLINE SlotCallbackResult <a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationRememberedSetsMarkingWorklist_1_1MarkingItem.html#af40cd55f322289a1e363b18879799747">CheckAndMarkObject</a>(Visitor* visitor,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> SlotCallbackResult <a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationRememberedSetsMarkingWorklist_1_1MarkingItem.html#af40cd55f322289a1e363b18879799747">CheckAndMarkObject</a>(Visitor* visitor,</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                                    TSlot slot);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1YoungGenerationRememberedSetsMarkingWorklist_1_1MarkingItem.html#a52fbf5844d16c19a642a80106864ab9d">  101</a></span>    <a class="code hl_class" href="classv8_1_1internal_1_1MutablePageMetadata.html">MutablePageMetadata</a>* <span class="keyword">const</span> <a class="code hl_variable" href="classv8_1_1internal_1_1YoungGenerationRememberedSetsMarkingWorklist_1_1MarkingItem.html#a52fbf5844d16c19a642a80106864ab9d">chunk_</a>;</div>
@@ -234,10 +242,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <a class="code hl_class" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html">MinorMarkSweepCollector</a>* <a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationRootMarkingVisitor.html#a426dff42d82c88617c82f557fed9a493">collector</a>);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1YoungGenerationRootMarkingVisitor.html#af1b486380678ce0abf662e20f4765e01">  122</a></span>  <a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationRootMarkingVisitor.html#af1b486380678ce0abf662e20f4765e01">~YoungGenerationRootMarkingVisitor</a>();</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationRootMarkingVisitor.html#aaa72e0d22b64910b5313fade56d67768">VisitRootPointer</a>(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#ae1439207c9f98c41dbdea3eca3572d54">Root</a> root, <span class="keyword">const</span> <span class="keywordtype">char</span>* description,</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationRootMarkingVisitor.html#aaa72e0d22b64910b5313fade56d67768">VisitRootPointer</a>(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#ae1439207c9f98c41dbdea3eca3572d54">Root</a> root, <span class="keyword">const</span> <span class="keywordtype">char</span>* description,</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                  <a class="code hl_class" href="classv8_1_1internal_1_1FullObjectSlot.html">FullObjectSlot</a> p) <span class="keyword">final</span>;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationRootMarkingVisitor.html#a6dc4c0a1c821876ff1f7df731db91626">VisitRootPointers</a>(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#ae1439207c9f98c41dbdea3eca3572d54">Root</a> root, <span class="keyword">const</span> <span class="keywordtype">char</span>* description,</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationRootMarkingVisitor.html#a6dc4c0a1c821876ff1f7df731db91626">VisitRootPointers</a>(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#ae1439207c9f98c41dbdea3eca3572d54">Root</a> root, <span class="keyword">const</span> <span class="keywordtype">char</span>* description,</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                                   <a class="code hl_class" href="classv8_1_1internal_1_1FullObjectSlot.html">FullObjectSlot</a> <a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>,</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                                   <a class="code hl_class" href="classv8_1_1internal_1_1FullObjectSlot.html">FullObjectSlot</a> <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>) <span class="keyword">final</span>;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
@@ -292,7 +300,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <a class="code hl_class" href="classv8_1_1internal_1_1YoungGenerationRememberedSetsMarkingWorklist.html">YoungGenerationRememberedSetsMarkingWorklist</a>*</div>
 <div class="foldopen" id="foldopen00172" data-start="{" data-end="}">
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#a0f77d754100f5212dd8778b3dfe92e03">  172</a></span>  <a class="code hl_function" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#a0f77d754100f5212dd8778b3dfe92e03">remembered_sets_marking_handler</a>() {</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#a08c2b9c91d5ad171e1879b3d158771ee">remembered_sets_marking_handler_</a>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#a08c2b9c91d5ad171e1879b3d158771ee">remembered_sets_marking_handler_</a>);</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#a08c2b9c91d5ad171e1879b3d158771ee">remembered_sets_marking_handler_</a>.get();</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  }</div>
 </div>
@@ -333,7 +341,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#ac933b5beb57063616485eccbaeeddc74">MarkLiveObjects</a>();</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#a886294a73bdb95cb1e8ff06c61b0f8df">MarkRoots</a>(<a class="code hl_class" href="classv8_1_1internal_1_1YoungGenerationRootMarkingVisitor.html">YoungGenerationRootMarkingVisitor</a>&amp; root_visitor,</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                 <span class="keywordtype">bool</span> was_marked_incrementally);</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#a51d347befdc0f1a50f54ab192ad15a06">DrainMarkingWorklist</a>();</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#a51d347befdc0f1a50f54ab192ad15a06">DrainMarkingWorklist</a>();</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#a9c91e160b9119e6940ed5168aee47b25">MarkRootsFromTracedHandles</a>(</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>      <a class="code hl_class" href="classv8_1_1internal_1_1YoungGenerationRootMarkingVisitor.html">YoungGenerationRootMarkingVisitor</a>&amp; root_visitor);</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#abe312eaca72f1792c5d494450e2d32ac">MarkRootsFromConservativeStack</a>(</div>
@@ -389,8 +397,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="preprocessor">#endif  </span><span class="comment">// V8_HEAP_MINOR_MARK_SWEEP_H_</span></div>
 <div class="ttc" id="aclassheap_1_1base_1_1Worklist_html"><div class="ttname"><a href="classheap_1_1base_1_1Worklist.html">heap::base::Worklist</a></div><div class="ttdef"><b>Definition</b> <a href="worklist_8h_source.html#l00057">worklist.h:57</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1FullObjectSlot_html"><div class="ttname"><a href="classv8_1_1internal_1_1FullObjectSlot.html">v8::internal::FullObjectSlot</a></div><div class="ttdef"><b>Definition</b> <a href="slots_8h_source.html#l00099">slots.h:99</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00192">heap.h:192</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a6f82eea8ed7b7ed46e19979091da00df"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a6f82eea8ed7b7ed46e19979091da00df">v8::internal::Heap::ResizeNewSpaceMode</a></div><div class="ttdeci">ResizeNewSpaceMode</div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l01788">heap.h:1788</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00192">heap.h:192</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a6f82eea8ed7b7ed46e19979091da00df"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a6f82eea8ed7b7ed46e19979091da00df">v8::internal::Heap::ResizeNewSpaceMode</a></div><div class="ttdeci">ResizeNewSpaceMode</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l01788">heap.h:1788</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1IncrementalMarking_html"><div class="ttname"><a href="classv8_1_1internal_1_1IncrementalMarking.html">v8::internal::IncrementalMarking</a></div><div class="ttdef"><b>Definition</b> <a href="incremental-marking_8h_source.html#l00054">incremental-marking.h:54</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1IndexGenerator_html"><div class="ttname"><a href="classv8_1_1internal_1_1IndexGenerator.html">v8::internal::IndexGenerator</a></div><div class="ttdef"><b>Definition</b> <a href="index-generator_8h_source.html#l00020">index-generator.h:20</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingState_html"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingState.html">v8::internal::MarkingState</a></div><div class="ttdef"><b>Definition</b> <a href="marking-state_8h_source.html#l00055">marking-state.h:56</a></div></div>
@@ -500,14 +508,10 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="acommon_2globals_8h_html"><div class="ttname"><a href="common_2globals_8h.html">globals.h</a></div></div>
 <div class="ttc" id="adebug-coverage_8cc_html_a37722a150250e2a5a98e5e0d11e53449"><div class="ttname"><a href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a></div><div class="ttdeci">int start</div><div class="ttdef"><b>Definition</b> <a href="debug-coverage_8cc_source.html#l00595">debug-coverage.cc:595</a></div></div>
 <div class="ttc" id="adebug-coverage_8cc_html_abce9f5dc9c83f2639b72024fdee5d388"><div class="ttname"><a href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a></div><div class="ttdeci">int end</div><div class="ttdef"><b>Definition</b> <a href="debug-coverage_8cc_source.html#l00596">debug-coverage.cc:596</a></div></div>
-<div class="ttc" id="aheap_8h_html"><div class="ttname"><a href="heap_8h.html">heap.h</a></div></div>
 <div class="ttc" id="aindex-generator_8h_html"><div class="ttname"><a href="index-generator_8h.html">index-generator.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="amarking-state_8h_html"><div class="ttname"><a href="marking-state_8h.html">marking-state.h</a></div></div>
 <div class="ttc" id="amarking-worklist_8h_html"><div class="ttname"><a href="marking-worklist_8h.html">marking-worklist.h</a></div></div>
-<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
+<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a0cfab207d565dcf62ebf50f3987e05de"><div class="ttname"><a href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">v8::internal::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> <a href="heap-snapshot-generator_8cc_source.html#l01584">heap-snapshot-generator.cc:1584</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a3a92b5a19abd073d4bc764cc428c843da6fb3551e3657204372d76d2d9b83a3b9"><div class="ttname"><a href="namespacev8_1_1internal.html#a3a92b5a19abd073d4bc764cc428c843da6fb3551e3657204372d76d2d9b83a3b9">v8::internal::YoungGenerationMarkingVisitationMode::kParallel</a></div><div class="ttdeci">@ kParallel</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
@@ -518,13 +522,21 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aparallel-work-item_8h_html"><div class="ttname"><a href="parallel-work-item_8h.html">parallel-work-item.h</a></div></div>
 <div class="ttc" id="apretenuring-handler_8h_html"><div class="ttname"><a href="pretenuring-handler_8h.html">pretenuring-handler.h</a></div></div>
 <div class="ttc" id="aslot-set_8h_html"><div class="ttname"><a href="slot-set_8h.html">slot-set.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
+<div class="ttc" id="asrc_2heap_2heap_8h_html"><div class="ttname"><a href="src_2heap_2heap_8h.html">heap.h</a></div></div>
 <div class="ttc" id="asweeper_8h_html"><div class="ttname"><a href="sweeper_8h.html">sweeper.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
 <div class="ttc" id="ayoung-generation-marking-visitor_8h_html"><div class="ttname"><a href="young-generation-marking-visitor_8h.html">young-generation-marking-visitor.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:34 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="minor-mark-sweep_8h.html">minor-mark-sweep.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:42 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/wasm/stacks.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/wasm/stacks.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('stacks_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2b581e8501b9ee14adb2dc81ebf46f49.html">wasm</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">stacks.cc</div></div>
 </div><!--header-->
@@ -100,7 +108,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="stacks_8h.html">src/wasm/stacks.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="base_2platform_2platform_8h.html">src/base/platform/platform.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2platform_2platform_8h.html">src/base/platform/platform.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="simulator_8h.html">src/execution/simulator.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="wasm-engine_8h.html">src/wasm/wasm-engine.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
@@ -136,12 +144,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="comment">// v8_flags.stack_size is a size of the central stack and maximum</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="comment">// size of a secondary stack to grow.</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> size_limit = <a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.stack_size;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  PageAllocator* allocator = <a class="code hl_function" href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">GetPlatformPageAllocator</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_class" href="classv8_1_1PageAllocator.html">PageAllocator</a>* allocator = <a class="code hl_function" href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">GetPlatformPageAllocator</a>();</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keyword">auto</span> page_size = allocator-&gt;AllocatePageSize();</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordtype">size_t</span> initial_size =</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      std::min&lt;size_t&gt;(size_limit, kJsStackSizeKB + <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a994462eb362f71bc3b9f388741cb9546">kJSLimitOffsetKB</a>) * <a class="code hl_variable" href="namespacev8_1_1internal.html#ab368fe5f67cc93158861582746107fec">KB</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      std::min&lt;size_t&gt;(size_limit, kJsStackSizeKB + <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a994462eb362f71bc3b9f388741cb9546">kJSLimitOffsetKB</a>) * <a class="code hl_variable" href="namespacev8_1_1internal.html#a93b2e7c72fa0878021b495b6f3cec820">KB</a>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a5785e798c8470c422e04c5feaa4767b9">first_segment_</a> =</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keyword">new</span> <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html">StackSegment</a>(<a class="code hl_function" href="macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(initial_size, page_size) / page_size);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keyword">new</span> <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html">StackSegment</a>(<a class="code hl_function" href="src_2base_2macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(initial_size, page_size) / page_size);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a5785e798c8470c422e04c5feaa4767b9">first_segment_</a>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a313e3d4865b5e23b3286314d7eb04bb3">size_</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a5785e798c8470c422e04c5feaa4767b9">first_segment_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a6c15483e16aa4aafad4a2820244e739b">size_</a>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a1967caaa127c4089bc4e3b725b13af7f">limit_</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a5785e798c8470c422e04c5feaa4767b9">first_segment_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a4c67f66eae961c77d4becdca29e1b185">limit_</a>;</div>
@@ -162,18 +170,18 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#aff142674ef0d76f64acc646d03efb682">   59</a></span><a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#aff142674ef0d76f64acc646d03efb682">StackMemory::StackSegment::StackSegment</a>(<span class="keywordtype">size_t</span> pages) {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(pages, 1);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  PageAllocator* allocator = <a class="code hl_function" href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">GetPlatformPageAllocator</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(pages, 1);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_class" href="classv8_1_1PageAllocator.html">PageAllocator</a>* allocator = <a class="code hl_function" href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">GetPlatformPageAllocator</a>();</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a6c15483e16aa4aafad4a2820244e739b">size_</a> = pages * allocator-&gt;AllocatePageSize();</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a4c67f66eae961c77d4becdca29e1b185">limit_</a> = <span class="keyword">static_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      allocator-&gt;AllocatePages(<span class="keyword">nullptr</span>, <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a6c15483e16aa4aafad4a2820244e739b">size_</a>, allocator-&gt;AllocatePageSize(),</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                               PageAllocator::kReadWrite));</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                               <a class="code hl_enumvalue" href="classv8_1_1PageAllocator.html#a88f74b164fe97e053259f67a95758415abf9beddb1231fa2c23ab417197ea9f8a">PageAllocator::kReadWrite</a>));</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
 </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
 <div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a84360b284911cac0593c68a4877fc0fb">   68</a></span><a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a84360b284911cac0593c68a4877fc0fb">StackMemory::StackSegment::~StackSegment</a>() {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  PageAllocator* allocator = <a class="code hl_function" href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">GetPlatformPageAllocator</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <a class="code hl_class" href="classv8_1_1PageAllocator.html">PageAllocator</a>* allocator = <a class="code hl_function" href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">GetPlatformPageAllocator</a>();</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordflow">if</span> (!allocator-&gt;DecommitPages(<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a1967caaa127c4089bc4e3b725b13af7f">limit_</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a313e3d4865b5e23b3286314d7eb04bb3">size_</a>)) {</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a977b087d4ee58955efe72b33136a4e94">V8::FatalProcessOutOfMemory</a>(<span class="keyword">nullptr</span>, <span class="stringliteral">&quot;Decommit stack memory&quot;</span>);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  }</div>
@@ -181,15 +189,15 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#adee01dd193649dfcbdab02aa95c53038">   75</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#adee01dd193649dfcbdab02aa95c53038">StackMemory::Grow</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> current_fp) {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#ae7acb17d7c35b8a1dea91889433481e5">owned_</a>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#adee01dd193649dfcbdab02aa95c53038">   75</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#adee01dd193649dfcbdab02aa95c53038">StackMemory::Grow</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> current_fp) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#ae7acb17d7c35b8a1dea91889433481e5">owned_</a>);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#afb6fff140b3fd4b6a6fb76817f31ff14">next_segment_</a> != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#afb6fff140b3fd4b6a6fb76817f31ff14">next_segment_</a>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    PageAllocator* allocator = <a class="code hl_function" href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">GetPlatformPageAllocator</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_class" href="classv8_1_1PageAllocator.html">PageAllocator</a>* allocator = <a class="code hl_function" href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">GetPlatformPageAllocator</a>();</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">auto</span> page_size = allocator-&gt;AllocatePageSize();</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> size_limit = <a class="code hl_function" href="macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.stack_size * KB, page_size);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(size_limit, <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a313e3d4865b5e23b3286314d7eb04bb3">size_</a>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> size_limit = <a class="code hl_function" href="src_2base_2macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.stack_size * KB, page_size);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(size_limit, <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a313e3d4865b5e23b3286314d7eb04bb3">size_</a>);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">size_t</span> room_to_grow = size_limit - <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a313e3d4865b5e23b3286314d7eb04bb3">size_</a>;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">size_t</span> new_size = std::min(2 * <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a6c15483e16aa4aafad4a2820244e739b">size_</a>, room_to_grow);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">if</span> (new_size &lt; page_size) {</div>
@@ -216,10 +224,10 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
 <div class="foldopen" id="foldopen00108" data-start="{" data-end="}">
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a32d2baf91aa7de031d40a9a113056238">  108</a></span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a32d2baf91aa7de031d40a9a113056238">StackMemory::Shrink</a>() {</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#ae7acb17d7c35b8a1dea91889433481e5">owned_</a>);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a86eb173f6d705375433f5353da8ab093">prev_segment_</a>, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a2d389f7e99db7bf8bc3691449bea983f">old_fp</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a3a028de919c953293f3317e52dc4bffb">old_fp</a>;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a32d2baf91aa7de031d40a9a113056238">  108</a></span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a32d2baf91aa7de031d40a9a113056238">StackMemory::Shrink</a>() {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#ae7acb17d7c35b8a1dea91889433481e5">owned_</a>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a86eb173f6d705375433f5353da8ab093">prev_segment_</a>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a2d389f7e99db7bf8bc3691449bea983f">old_fp</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a3a028de919c953293f3317e52dc4bffb">old_fp</a>;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a313e3d4865b5e23b3286314d7eb04bb3">size_</a> -= <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a6c15483e16aa4aafad4a2820244e739b">size_</a>;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a3a028de919c953293f3317e52dc4bffb">old_fp</a> = 0;</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory.html#a78b72b8e7da7365dca5ffda6e20b5f8b">active_segment_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1StackMemory_1_1StackSegment.html#a86eb173f6d705375433f5353da8ab093">prev_segment_</a>;</div>
@@ -286,7 +294,8 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>}  <span class="comment">// namespace v8::internal::wasm</span></div>
-<div class="ttc" id="abase_2platform_2platform_8h_html"><div class="ttname"><a href="base_2platform_2platform_8h.html">platform.h</a></div></div>
+<div class="ttc" id="aclassv8_1_1PageAllocator_html"><div class="ttname"><a href="classv8_1_1PageAllocator.html">v8::PageAllocator</a></div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l00455">v8-platform.h:455</a></div></div>
+<div class="ttc" id="aclassv8_1_1PageAllocator_html_a88f74b164fe97e053259f67a95758415abf9beddb1231fa2c23ab417197ea9f8a"><div class="ttname"><a href="classv8_1_1PageAllocator.html#a88f74b164fe97e053259f67a95758415abf9beddb1231fa2c23ab417197ea9f8a">v8::PageAllocator::kReadWrite</a></div><div class="ttdeci">@ kReadWrite</div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l00489">v8-platform.h:489</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1Vector_html"><div class="ttname"><a href="classv8_1_1base_1_1Vector.html">v8::base::Vector</a></div><div class="ttdef"><b>Definition</b> <a href="zone-list_8h_source.html#l00015">zone-list.h:15</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1Vector_html_a8f91dff816409fb9bceaa94c6caeec32"><div class="ttname"><a href="classv8_1_1base_1_1Vector.html#a8f91dff816409fb9bceaa94c6caeec32">v8::base::Vector::size</a></div><div class="ttdeci">constexpr size_t size() const</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00070">vector.h:70</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1Vector_html_ad0021e2947c974d78adbbc1d543d43a5"><div class="ttname"><a href="classv8_1_1base_1_1Vector.html#ad0021e2947c974d78adbbc1d543d43a5">v8::base::Vector::begin</a></div><div class="ttdeci">constexpr T * begin() const</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00096">vector.h:96</a></div></div>
@@ -323,27 +332,31 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="acodegen_2assembler_8cc_html_a50218915641ec8f39877c2565e95a604"><div class="ttname"><a href="codegen_2assembler_8cc.html#a50218915641ec8f39877c2565e95a604">size_</a></div><div class="ttdeci">const int size_</div><div class="ttdef"><b>Definition</b> <a href="codegen_2assembler_8cc_source.html#l00132">assembler.cc:132</a></div></div>
 <div class="ttc" id="aisolate_8cc_html_a787a832ab591758654210dd93e0b6a1b"><div class="ttname"><a href="isolate_8cc.html#a787a832ab591758654210dd93e0b6a1b">limit_</a></div><div class="ttdeci">const int limit_</div><div class="ttdef"><b>Definition</b> <a href="isolate_8cc_source.html#l01118">isolate.cc:1118</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_ab5fb7c0f4ce150bebf9a9ee7dc7d37a0"><div class="ttname"><a href="jump-threading_8cc.html#ab5fb7c0f4ce150bebf9a9ee7dc7d37a0">stack</a></div><div class="ttdeci">ZoneStack&lt; RpoNumber &gt; &amp; stack</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00022">jump-threading.cc:22</a></div></div>
-<div class="ttc" id="alogging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00486">logging.h:486</a></div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="amacros_8h_html_a5113f5db9eec9c30ecea57b8d4175f2d"><div class="ttname"><a href="macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a></div><div class="ttdeci">constexpr T RoundUp(T x, intptr_t m)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00375">macros.h:375</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1wasm_html"><div class="ttname"><a href="namespacev8_1_1internal_1_1wasm.html">v8::internal::wasm</a></div><div class="ttdef"><b>Definition</b> <a href="asm-parser_8cc_source.html#l00024">asm-parser.cc:24</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1wasm_html_a0dc6377b617bf569ed28973352a44899"><div class="ttname"><a href="namespacev8_1_1internal_1_1wasm.html#a0dc6377b617bf569ed28973352a44899">v8::internal::wasm::value_type</a></div><div class="ttdeci">static ValueType value_type()</div><div class="ttdef"><b>Definition</b> <a href="wasm-interpreter_8h_source.html#l01174">wasm-interpreter.h:1174</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a1b38d6a01927e639b91b6a039899ac1a"><div class="ttname"><a href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">v8::internal::GetPlatformPageAllocator</a></div><div class="ttdeci">v8::PageAllocator * GetPlatformPageAllocator()</div><div class="ttdef"><b>Definition</b> <a href="utils_2allocation_8cc_source.html#l00066">allocation.cc:66</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a3430752cde9f29d73e97ceed1bce0856"><div class="ttname"><a href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">v8::internal::PrintF</a></div><div class="ttdeci">void PrintF(const char *format,...)</div><div class="ttdef"><b>Definition</b> <a href="utils_2utils_8cc_source.html#l00039">utils.cc:39</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a82c1746016699f0092cef67ba2e71956"><div class="ttname"><a href="namespacev8_1_1internal.html#a82c1746016699f0092cef67ba2e71956">v8::internal::kZapValue</a></div><div class="ttdeci">constexpr uint32_t kZapValue</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00996">globals.h:996</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a93b2e7c72fa0878021b495b6f3cec820"><div class="ttname"><a href="namespacev8_1_1internal.html#a93b2e7c72fa0878021b495b6f3cec820">v8::internal::KB</a></div><div class="ttdeci">refactor address components for immediate indexing filter for tracing turbofan compilation trace turbo cfg trace TurboFan s graph trimmer trace TurboFan s control equivalence trace TurboFan s register allocator trace stack load store counters for optimized code in run fuzzing &amp;&amp;concurrent_recompilation trace_turbo trace_turbo_scheduled trace_turbo_stack_accesses verify TurboFan machine graph of code stubs enable FixedArray bounds checks print TurboFan statistics of wasm compilations maximum cumulative size of bytecode considered for inlining scale factor of bytecode size used to calculate the inlining budget * KB</div><div class="ttdef"><b>Definition</b> <a href="flags_8cc_source.html#l01294">flags.cc:1294</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9db791c05a0359859a321dcfec42e37"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8::internal::v8_flags</a></div><div class="ttdeci">V8_EXPORT_PRIVATE FlagValues v8_flags</div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_ab368fe5f67cc93158861582746107fec"><div class="ttname"><a href="namespacev8_1_1internal.html#ab368fe5f67cc93158861582746107fec">v8::internal::KB</a></div><div class="ttdeci">refactor address components for immediate indexing filter for tracing turbofan compilation trace turbo cfg trace TurboFan s graph trimmer trace TurboFan s control equivalence trace TurboFan s register allocator trace stack load store counters for optimized code in run fuzzing &amp;&amp;concurrent_recompilation trace_turbo trace_turbo_scheduled trace_turbo_stack_accesses verify TurboFan machine graph of code stubs enable FixedArray bounds checks print TurboFan statistics of wasm compilations maximum cumulative size of bytecode considered for inlining scale factor of bytecode size used to calculate the inlining budget * KB</div><div class="ttdef"><b>Definition</b> <a href="flags_8cc_source.html#l01294">flags.cc:1294</a></div></div>
 <div class="ttc" id="aregexp-interpreter_8cc_html_a7144ab7df3bc3b973eafae8df2e928d5"><div class="ttname"><a href="regexp-interpreter_8cc.html#a7144ab7df3bc3b973eafae8df2e928d5">kMaxSize</a></div><div class="ttdeci">static constexpr int kMaxSize</div><div class="ttdef"><b>Definition</b> <a href="regexp-interpreter_8cc_source.html#l00163">regexp-interpreter.cc:163</a></div></div>
 <div class="ttc" id="asimulator_8h_html"><div class="ttname"><a href="simulator_8h.html">simulator.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00486">logging.h:486</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a5113f5db9eec9c30ecea57b8d4175f2d"><div class="ttname"><a href="src_2base_2macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a></div><div class="ttdeci">constexpr T RoundUp(T x, intptr_t m)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00375">macros.h:375</a></div></div>
+<div class="ttc" id="asrc_2base_2platform_2platform_8h_html"><div class="ttname"><a href="src_2base_2platform_2platform_8h.html">platform.h</a></div></div>
 <div class="ttc" id="astacks_8h_html"><div class="ttname"><a href="stacks_8h.html">stacks.h</a></div></div>
 <div class="ttc" id="awasm-engine_8h_html"><div class="ttname"><a href="wasm-engine_8h.html">wasm-engine.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:05 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2b581e8501b9ee14adb2dc81ebf46f49.html">wasm</a></li><li class="navelem"><a class="el" href="stacks_8cc.html">stacks.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:19 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

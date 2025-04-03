@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/asmjs/asm-scanner.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/asmjs/asm-scanner.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('asm-scanner_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ab1785456217f833b5218fcd4d1c3cb7.html">asmjs</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">asm-scanner.h</div></div>
 </div><!--header-->
@@ -106,7 +114,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="asm-names_8h.html">src/asmjs/asm-names.h</a>&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="strings_8h.html">src/base/strings.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8.html">v8</a> {</div>
@@ -124,7 +132,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// * Identifiers are accumulated into local + global string tables</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">//   (for performance).</span></div>
 <div class="foldopen" id="foldopen00030" data-start="{" data-end="};">
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AsmJsScanner.html">   30</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1AsmJsScanner.html">AsmJsScanner</a> {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AsmJsScanner.html">   30</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1AsmJsScanner.html">AsmJsScanner</a> {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AsmJsScanner.html#a9ee98f57c97cacbcf109fa721a746d7e">   32</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="classv8_1_1internal_1_1AsmJsScanner.html#a9ee98f57c97cacbcf109fa721a746d7e">token_t</a> = int32_t;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
@@ -144,7 +152,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AsmJsScanner.html#a318225b7b7ea7128e3592816f0340649">   47</a></span>  <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="classv8_1_1internal_1_1AsmJsScanner.html#a318225b7b7ea7128e3592816f0340649">GetIdentifierString</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// Identifier strings don&#39;t work after a rewind.</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!rewind_);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!rewind_);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">return</span> identifier_string_;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  }</div>
 </div>
@@ -153,7 +161,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AsmJsScanner.html#adf4ad97555682e60f96ca47b453842f0">   54</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1AsmJsScanner.html#adf4ad97555682e60f96ca47b453842f0">IsPrecededByNewline</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// Newline tracking doesn&#39;t work if you back up.</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!rewind_);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!rewind_);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> preceded_by_newline_;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  }</div>
 </div>
@@ -184,13 +192,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="comment">// 0 for each scope separately).</span></div>
 <div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AsmJsScanner.html#a1fce685fc9fe291ec1a152b17aa411a7">   84</a></span>  <span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="classv8_1_1internal_1_1AsmJsScanner.html#a1fce685fc9fe291ec1a152b17aa411a7">LocalIndex</a>(<a class="code hl_typedef" href="classv8_1_1internal_1_1AsmJsScanner.html#a9ee98f57c97cacbcf109fa721a746d7e">token_t</a> token) {</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsLocal(token));</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsLocal(token));</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordflow">return</span> -(token - kLocalsStart);</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  }</div>
 </div>
 <div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AsmJsScanner.html#a1af4b43f1783dc477ad8b1fe39596676">   88</a></span>  <span class="keyword">static</span> <span class="keywordtype">size_t</span> <a class="code hl_function" href="classv8_1_1internal_1_1AsmJsScanner.html#a1af4b43f1783dc477ad8b1fe39596676">GlobalIndex</a>(<a class="code hl_typedef" href="classv8_1_1internal_1_1AsmJsScanner.html#a9ee98f57c97cacbcf109fa721a746d7e">token_t</a> token) {</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsGlobal(token));</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsGlobal(token));</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">return</span> token - kGlobalsStart;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  }</div>
 </div>
@@ -201,14 +209,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AsmJsScanner.html#acf8a34a1f3af275425badca575cc5d67">   96</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1AsmJsScanner.html#acf8a34a1f3af275425badca575cc5d67">IsUnsigned</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1Token.html">Token</a>() == kUnsigned; }</div>
 <div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AsmJsScanner.html#ad80bf356468f956243d8d805096f6428">   97</a></span>  uint32_t <a class="code hl_function" href="classv8_1_1internal_1_1AsmJsScanner.html#ad80bf356468f956243d8d805096f6428">AsUnsigned</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsUnsigned());</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsUnsigned());</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">return</span> unsigned_value_;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  }</div>
 </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AsmJsScanner.html#a4ce38352913e079f6979ea53092050a4">  101</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1AsmJsScanner.html#a4ce38352913e079f6979ea53092050a4">IsDouble</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1Token.html">Token</a>() == kDouble; }</div>
 <div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AsmJsScanner.html#add70724567221cea212c676fad9ea450">  102</a></span>  <span class="keywordtype">double</span> <a class="code hl_function" href="classv8_1_1internal_1_1AsmJsScanner.html#add70724567221cea212c676fad9ea450">AsDouble</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsDouble());</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsDouble());</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">return</span> double_value_;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  }</div>
 </div>
@@ -334,20 +342,23 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1Token_html"><div class="ttname"><a href="classv8_1_1internal_1_1Token.html">v8::internal::Token</a></div><div class="ttdef"><b>Definition</b> <a href="token_8h_source.html#l00211">token.h:211</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Utf16CharacterStream_html"><div class="ttname"><a href="classv8_1_1internal_1_1Utf16CharacterStream.html">v8::internal::Utf16CharacterStream</a></div><div class="ttdef"><b>Definition</b> <a href="scanner_8h_source.html#l00040">scanner.h:40</a></div></div>
 <div class="ttc" id="adebug-scopes_8cc_html_a17737f39802637971a0bf8f2a175c120"><div class="ttname"><a href="debug-scopes_8cc.html#a17737f39802637971a0bf8f2a175c120">position_</a></div><div class="ttdeci">const int position_</div><div class="ttdef"><b>Definition</b> <a href="debug-scopes_8cc_source.html#l00125">debug-scopes.cc:125</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a57f73be761c205242d27bc2062756c33"><div class="ttname"><a href="namespacev8_1_1base.html#a57f73be761c205242d27bc2062756c33">v8::base::uc32</a></div><div class="ttdeci">uint32_t uc32</div><div class="ttdef"><b>Definition</b> <a href="strings_8h_source.html#l00019">strings.h:19</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a032e2ecc55e345c58981826b78e45a9d"><div class="ttname"><a href="namespacev8_1_1internal.html#a032e2ecc55e345c58981826b78e45a9d">v8::internal::IsIdentifierStart</a></div><div class="ttdeci">bool IsIdentifierStart(base::uc32 c)</div><div class="ttdef"><b>Definition</b> <a href="char-predicates-inl_8h_source.html#l00133">char-predicates-inl.h:133</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ad5d7f793b947daacced155efc4b5f5c6"><div class="ttname"><a href="namespacev8_1_1internal.html#ad5d7f793b947daacced155efc4b5f5c6">v8::internal::IsIdentifierPart</a></div><div class="ttdeci">bool IsIdentifierPart(base::uc32 c)</div><div class="ttdef"><b>Definition</b> <a href="char-predicates-inl_8h_source.html#l00140">char-predicates-inl.h:140</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="astrings_8h_html"><div class="ttname"><a href="strings_8h.html">strings.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:16:42 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ab1785456217f833b5218fcd4d1c3cb7.html">asmjs</a></li><li class="navelem"><a class="el" href="asm-scanner_8h.html">asm-scanner.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:52:44 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/compiler/revectorizer.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/compiler/revectorizer.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('revectorizer_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">revectorizer.h</div></div>
 </div><!--header-->
@@ -127,7 +135,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">class </span>SourcePositionTable;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1compiler_1_1MemoryOffsetComparer.html">   33</a></span><span class="keyword">struct </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_struct" href="structv8_1_1internal_1_1compiler_1_1MemoryOffsetComparer.html">MemoryOffsetComparer</a> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1compiler_1_1MemoryOffsetComparer.html">   33</a></span><span class="keyword">struct </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_struct" href="structv8_1_1internal_1_1compiler_1_1MemoryOffsetComparer.html">MemoryOffsetComparer</a> {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* lhs, <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* rhs) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
 </div>
@@ -139,7 +147,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// PackNode must satisfy that they can be scheduled in the same basic block and</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// are mutually independent.</span></div>
 <div class="foldopen" id="foldopen00043" data-start="{" data-end="};">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1PackNode.html">   43</a></span><span class="keyword">class </span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1PackNode.html">PackNode</a> final : <span class="keyword">public</span> <a class="code hl_define" href="compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a>(ZoneObject) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1PackNode.html">   43</a></span><span class="keyword">class </span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1PackNode.html">PackNode</a> final : <span class="keyword">public</span> <a class="code hl_define" href="src_2base_2compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a>(ZoneObject) {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> <span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1PackNode.html#ad360a6cb6866f5561b4bad206d789163">   45</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1PackNode.html#ad360a6cb6866f5561b4bad206d789163">PackNode</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Zone.html">Zone</a>* zone, <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1ZoneVector.html">ZoneVector&lt;Node*&gt;</a>&amp; node_group)</div>
@@ -158,7 +166,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="comment">// returns the index operand of this PackNode.</span></div>
 <div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1PackNode.html#a34c4cc0c0c7b5656596f6f5c4d7da6f0">   56</a></span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1PackNode.html">PackNode</a>* <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1PackNode.html#a34c4cc0c0c7b5656596f6f5c4d7da6f0">GetOperand</a>(<span class="keywordtype">size_t</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>) {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1PackNode.html#a54d3ca6ca42e53d72c9fa31fed9c1ced">operands_</a>.size());</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1PackNode.html#a54d3ca6ca42e53d72c9fa31fed9c1ced">operands_</a>.size());</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1PackNode.html#a54d3ca6ca42e53d72c9fa31fed9c1ced">operands_</a>[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>];</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  }</div>
 </div>
@@ -198,7 +206,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment">//                |</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment">//         [Store0, Store1]</span></div>
 <div class="foldopen" id="foldopen00090" data-start="{" data-end="};">
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1SLPTree.html">   90</a></span><span class="keyword">class </span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1SLPTree.html">SLPTree</a> : <span class="keyword">public</span> <a class="code hl_define" href="compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a>(ZoneObject) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1SLPTree.html">   90</a></span><span class="keyword">class </span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1SLPTree.html">SLPTree</a> : <span class="keyword">public</span> <a class="code hl_define" href="src_2base_2compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a>(ZoneObject) {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> <span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00092" data-start="{" data-end="}">
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1SLPTree.html#af454f5f0f49595be92e44c56b9c80bf9">   92</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1SLPTree.html#af454f5f0f49595be92e44c56b9c80bf9">SLPTree</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Zone.html">Zone</a>* <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1SLPTree.html#a510c51b5509a2b9363a6b343ce394969">zone</a>, <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Graph.html">Graph</a>* <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1SLPTree.html#a7d05ff119caf4808137f8024ee1ba74e">graph</a>)</div>
@@ -239,7 +247,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="comment">// Recursion: create a new PackNode and call BuildTreeRec recursively</span></div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1PackNode.html">PackNode</a>* <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1SLPTree.html#a4f02e6c4fa6ed2311e5c74ee450f11fe">NewPackNodeAndRecurs</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1ZoneVector.html">ZoneVector&lt;Node*&gt;</a>&amp; node_group,</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                                 <span class="keywordtype">int</span> start_index, <span class="keywordtype">int</span> count, <span class="keywordtype">unsigned</span> depth);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                                 <span class="keywordtype">int</span> start_index, <span class="keywordtype">int</span> <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>, <span class="keywordtype">unsigned</span> depth);</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1SLPTree.html#a9f4974b676aa4f470bcda7815a8774ad">CanBePacked</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1ZoneVector.html">ZoneVector&lt;Node*&gt;</a>&amp; node_group);</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
@@ -279,8 +287,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment">// successfully, it will estimate the cost of the 256-bit transformation for</span></div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">// each PackNode and conduct the final revectorization if benefitial.</span></div>
 <div class="foldopen" id="foldopen00163" data-start="{" data-end="};">
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1Revectorizer.html">  163</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Revectorizer.html">Revectorizer</a> final</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    : <span class="keyword">public</span> <a class="code hl_define" href="compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a>(ZoneObject) {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1Revectorizer.html">  163</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Revectorizer.html">Revectorizer</a> final</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    : <span class="keyword">public</span> <a class="code hl_define" href="src_2base_2compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a>(ZoneObject) {</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Revectorizer.html">Revectorizer</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Zone.html">Zone</a>* zone, <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Graph.html">Graph</a>* <a class="code hl_variable" href="add-type-assertions-reducer_8cc.html#a2360aba01fa93c8493ba96683c4fb89c">graph</a>, <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1MachineGraph.html">MachineGraph</a>* mcgraph,</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>               <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html">SourcePositionTable</a>* <a class="code hl_variable" href="graph-builder_8cc.html#acc2fa1f7c7062f53a2840f0064a43ef1">source_positions</a>);</div>
@@ -408,16 +416,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1SLPTree_html_af754140681da65bffffeb0f378d60c59"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1SLPTree.html#af754140681da65bffffeb0f378d60c59">v8::internal::compiler::SLPTree::AllOnStack</a></div><div class="ttdeci">bool AllOnStack(const ZoneVector&lt; Node * &gt; &amp;node_group)</div><div class="ttdef"><b>Definition</b> <a href="revectorizer_8cc_source.html#l00509">revectorizer.cc:509</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1SourcePositionTable_html"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1SourcePositionTable.html">v8::internal::compiler::SourcePositionTable</a></div><div class="ttdef"><b>Definition</b> <a href="compiler-source-position-table_8h_source.html#l00016">compiler-source-position-table.h:17</a></div></div>
 <div class="ttc" id="acode-generator-arm_8cc_html_a4979f6e7e64e9ee56f4229d03fa20c69"><div class="ttname"><a href="code-generator-arm_8cc.html#a4979f6e7e64e9ee56f4229d03fa20c69">zone_</a></div><div class="ttdeci">Zone * zone_</div><div class="ttdef"><b>Definition</b> <a href="code-generator-arm_8cc_source.html#l00230">code-generator-arm.cc:230</a></div></div>
-<div class="ttc" id="acompiler-specific_8h_html_acdc864be6142f2d4cc124fdec850b74b"><div class="ttname"><a href="compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a></div><div class="ttdeci">#define NON_EXPORTED_BASE(code)</div><div class="ttdef"><b>Definition</b> <a href="compiler-specific_8h_source.html#l00093">compiler-specific.h:93</a></div></div>
 <div class="ttc" id="agraph-builder_8cc_html_acc2fa1f7c7062f53a2840f0064a43ef1"><div class="ttname"><a href="graph-builder_8cc.html#acc2fa1f7c7062f53a2840f0064a43ef1">source_positions</a></div><div class="ttdeci">SourcePositionTable * source_positions</div><div class="ttdef"><b>Definition</b> <a href="graph-builder_8cc_source.html#l00063">graph-builder.cc:63</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_ae55190dbead0a94298bdfa37911694e3"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a></div><div class="ttdeci">turboshaft::OptionalOpIndex index</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00071">instruction-selector-ia32.cc:71</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_ad83e8682ed733ee0cf359fa4f48441b0"><div class="ttname"><a href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a></div><div class="ttdeci">TNode&lt; Object &gt; callback</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01500">js-call-reducer.cc:1500</a></div></div>
 <div class="ttc" id="ajs-inlining-heuristic_8cc_html_ab88cd70dad2e152cea983610f2a16e68"><div class="ttname"><a href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a></div><div class="ttdeci">Node * node</div><div class="ttdef"><b>Definition</b> <a href="js-inlining-heuristic_8cc_source.html#l00316">js-inlining-heuristic.cc:316</a></div></div>
 <div class="ttc" id="alinear-scheduler_8h_html"><div class="ttname"><a href="linear-scheduler_8h.html">linear-scheduler.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
 <div class="ttc" id="amachine-graph_8h_html"><div class="ttname"><a href="machine-graph_8h.html">machine-graph.h</a></div></div>
 <div class="ttc" id="amachine-operator_8h_html"><div class="ttname"><a href="machine-operator_8h.html">machine-operator.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_1_1turboshaft_html_ab1edef1b2ad32876e53471dfb13cbf4d"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#ab1edef1b2ad32876e53471dfb13cbf4d">v8::internal::compiler::turboshaft::FunctionType</a></div><div class="ttdeci">bool(* FunctionType)(const Operation &amp;op, Zone *zone)</div><div class="ttdef"><b>Definition</b> <a href="use-map_8h_source.html#l00012">use-map.h:12</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a0cfab207d565dcf62ebf50f3987e05de"><div class="ttname"><a href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">v8::internal::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> <a href="heap-snapshot-generator_8cc_source.html#l01584">heap-snapshot-generator.cc:1584</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
@@ -427,16 +432,23 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anode_8h_html"><div class="ttname"><a href="node_8h.html">node.h</a></div></div>
 <div class="ttc" id="aschedule_8h_html"><div class="ttname"><a href="schedule_8h.html">schedule.h</a></div></div>
 <div class="ttc" id="asmall-vector_8h_html"><div class="ttname"><a href="small-vector_8h.html">small-vector.h</a></div></div>
+<div class="ttc" id="asrc_2base_2compiler-specific_8h_html_acdc864be6142f2d4cc124fdec850b74b"><div class="ttname"><a href="src_2base_2compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a></div><div class="ttdeci">#define NON_EXPORTED_BASE(code)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2compiler-specific_8h_source.html#l00093">compiler-specific.h:93</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1compiler_1_1MemoryOffsetComparer_html"><div class="ttname"><a href="structv8_1_1internal_1_1compiler_1_1MemoryOffsetComparer.html">v8::internal::compiler::MemoryOffsetComparer</a></div><div class="ttdef"><b>Definition</b> <a href="#l00033">revectorizer.h:33</a></div></div>
+<div class="ttc" id="astructv8_1_1internal_1_1count_html"><div class="ttname"><a href="structv8_1_1internal_1_1count.html">v8::internal::count</a></div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00567">v8-fast-api-calls.h:567</a></div></div>
 <div class="ttc" id="aturbofan-graph_8h_html"><div class="ttname"><a href="turbofan-graph_8h.html">turbofan-graph.h</a></div></div>
 <div class="ttc" id="awasm-inlining-into-js_8cc_html_a6840fc9a847ee35259b33874b0b2923a"><div class="ttname"><a href="wasm-inlining-into-js_8cc.html#a6840fc9a847ee35259b33874b0b2923a">mcgraph_</a></div><div class="ttdeci">MachineGraph * mcgraph_</div><div class="ttdef"><b>Definition</b> <a href="wasm-inlining-into-js_8cc_source.html#l00364">wasm-inlining-into-js.cc:364</a></div></div>
 <div class="ttc" id="awasm-inlining-into-js_8cc_html_a8152ced5371933c8a62f5ea099c1b05b"><div class="ttname"><a href="wasm-inlining-into-js_8cc.html#a8152ced5371933c8a62f5ea099c1b05b">graph_</a></div><div class="ttdeci">Graph * graph_</div><div class="ttdef"><b>Definition</b> <a href="wasm-inlining-into-js_8cc_source.html#l00367">wasm-inlining-into-js.cc:367</a></div></div>
 <div class="ttc" id="azone-containers_8h_html"><div class="ttname"><a href="zone-containers_8h.html">zone-containers.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:17:18 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="revectorizer_8h.html">revectorizer.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:53:22 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

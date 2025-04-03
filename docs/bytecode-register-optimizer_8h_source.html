@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/interpreter/bytecode-register-optimizer.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/interpreter/bytecode-register-optimizer.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('bytecode-register-optimizer_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4904b5727094acb85f1fb3ce4b540d24.html">interpreter</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">bytecode-register-optimizer.h</div></div>
 </div><!--header-->
@@ -102,7 +110,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define V8_INTERPRETER_BYTECODE_REGISTER_OPTIMIZER_H_</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="variables_8h.html">src/ast/variables.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="compiler-specific_8h.html">src/base/compiler-specific.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2compiler-specific_8h.html">src/base/compiler-specific.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="common_2globals_8h.html">src/common/globals.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="bytecode-generator_8h.html">src/interpreter/bytecode-generator.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="bytecode-register-allocator_8h.html">src/interpreter/bytecode-register-allocator.h</a>&quot;</span></div>
@@ -118,9 +126,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">// liberally for correctness and convenience and this stage removes</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">// transfers that are not required and preserves correctness.</span></div>
 <div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html">   24</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html">BytecodeRegisterOptimizer</a> final</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    : <span class="keyword">public</span> <a class="code hl_define" href="compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a>(BytecodeRegisterAllocator::Observer),</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      <span class="keyword">public</span> <a class="code hl_define" href="compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a>(ZoneObject) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html">   24</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html">BytecodeRegisterOptimizer</a> final</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    : <span class="keyword">public</span> <a class="code hl_define" href="src_2base_2compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a>(BytecodeRegisterAllocator::Observer),</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>      <span class="keyword">public</span> <a class="code hl_define" href="src_2base_2compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a>(ZoneObject) {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html#a69f173a241184a5bfae92aa5e6959e5d">   28</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html#a69f173a241184a5bfae92aa5e6959e5d">TypeHint</a> = <a class="code hl_enumeration" href="classv8_1_1internal_1_1interpreter_1_1BytecodeGenerator.html#a2d5a8e929cf387e9bc2bef81b56da4cd">BytecodeGenerator::TypeHint</a>;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
@@ -178,7 +186,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="comment">// Prepares for |bytecode|.</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keyword">template</span> &lt;Bytecode <span class="keywordtype">byte</span>code, ImplicitRegisterUse implicit_register_use&gt;</div>
 <div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html#a53ff1b3b3655aa5e82093c5bf0ba594e">   75</a></span>  V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html#a53ff1b3b3655aa5e82093c5bf0ba594e">PrepareForBytecode</a>() {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html#a53ff1b3b3655aa5e82093c5bf0ba594e">   75</a></span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html#a53ff1b3b3655aa5e82093c5bf0ba594e">PrepareForBytecode</a>() {</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordflow">if</span> (Bytecodes::IsJump(bytecode) || Bytecodes::IsSwitch(bytecode) ||</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        bytecode == Bytecode::kDebugger ||</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        bytecode == Bytecode::kSuspendGenerator ||</div>
@@ -205,7 +213,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="comment">// clobbered when the bytecode is dispatched.</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">if</span> (BytecodeOperands::WritesOrClobbersAccumulator(implicit_register_use)) {</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      PrepareOutputRegister(accumulator_);</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(GetTypeHint(accumulator_), TypeHint::kAny);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(GetTypeHint(accumulator_), TypeHint::kAny);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  }</div>
 </div>
@@ -276,7 +284,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00167" data-start="{" data-end="}">
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html#ac9193bc8fafb9a8bc93f8cc7bbc1ad08">  167</a></span>  <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html">RegisterInfo</a>* <a class="code hl_function" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html#ac9193bc8fafb9a8bc93f8cc7bbc1ad08">GetRegisterInfo</a>(<a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1Register.html">Register</a> <a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>) {</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> = GetRegisterInfoTableIndex(<a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>);</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>, register_info_table_.size());</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>, register_info_table_.size());</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordflow">return</span> register_info_table_[<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>];</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  }</div>
 </div>
@@ -290,7 +298,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00177" data-start="{" data-end="}">
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html#a7ae3faba1faf703d3c536676356f76d6">  177</a></span>  <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer_1_1RegisterInfo.html">RegisterInfo</a>* <a class="code hl_function" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html#a7ae3faba1faf703d3c536676356f76d6">NewRegisterInfo</a>(<a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1Register.html">Register</a> <a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>) {</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> = GetRegisterInfoTableIndex(<a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>);</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>, register_info_table_.size());</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>, register_info_table_.size());</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    GrowRegisterMap(<a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>);</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">return</span> register_info_table_[<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>];</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  }</div>
@@ -331,7 +339,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00206" data-start="{" data-end="}">
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html#adce9b15e76c6a8031eb50df1e5113ffe">  206</a></span>  uint32_t <a class="code hl_function" href="classv8_1_1internal_1_1interpreter_1_1BytecodeRegisterOptimizer.html#adce9b15e76c6a8031eb50df1e5113ffe">NextEquivalenceId</a>() {</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    equivalence_id_++;</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <a class="code hl_define" href="logging_8h.html#aa958a8a4e5dda3abaa031977268ae60e">CHECK_NE</a>(equivalence_id_, kInvalidEquivalenceId);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aa958a8a4e5dda3abaa031977268ae60e">CHECK_NE</a>(equivalence_id_, kInvalidEquivalenceId);</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordflow">return</span> equivalence_id_;</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  }</div>
 </div>
@@ -420,25 +428,29 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Register_html"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Register.html">v8::internal::interpreter::Register</a></div><div class="ttdef"><b>Definition</b> <a href="bytecode-register_8h_source.html#l00027">bytecode-register.h:27</a></div></div>
 <div class="ttc" id="acode-generator-arm_8cc_html_a4979f6e7e64e9ee56f4229d03fa20c69"><div class="ttname"><a href="code-generator-arm_8cc.html#a4979f6e7e64e9ee56f4229d03fa20c69">zone_</a></div><div class="ttdeci">Zone * zone_</div><div class="ttdef"><b>Definition</b> <a href="code-generator-arm_8cc_source.html#l00230">code-generator-arm.cc:230</a></div></div>
 <div class="ttc" id="acommon_2globals_8h_html"><div class="ttname"><a href="common_2globals_8h.html">globals.h</a></div></div>
-<div class="ttc" id="acompiler-specific_8h_html"><div class="ttname"><a href="compiler-specific_8h.html">compiler-specific.h</a></div></div>
-<div class="ttc" id="acompiler-specific_8h_html_acdc864be6142f2d4cc124fdec850b74b"><div class="ttname"><a href="compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a></div><div class="ttdeci">#define NON_EXPORTED_BASE(code)</div><div class="ttdef"><b>Definition</b> <a href="compiler-specific_8h_source.html#l00093">compiler-specific.h:93</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_ae55190dbead0a94298bdfa37911694e3"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a></div><div class="ttdeci">turboshaft::OptionalOpIndex index</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00071">instruction-selector-ia32.cc:71</a></div></div>
 <div class="ttc" id="aliftoff-compiler_8cc_html_a0b22b2be5dbaab38c23b09bdd78d7c43"><div class="ttname"><a href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a></div><div class="ttdeci">LiftoffRegister reg</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l00512">liftoff-compiler.cc:512</a></div></div>
-<div class="ttc" id="alogging_8h_html_aa958a8a4e5dda3abaa031977268ae60e"><div class="ttname"><a href="logging_8h.html#aa958a8a4e5dda3abaa031977268ae60e">CHECK_NE</a></div><div class="ttdeci">#define CHECK_NE(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2compiler-specific_8h_html"><div class="ttname"><a href="src_2base_2compiler-specific_8h.html">compiler-specific.h</a></div></div>
+<div class="ttc" id="asrc_2base_2compiler-specific_8h_html_acdc864be6142f2d4cc124fdec850b74b"><div class="ttname"><a href="src_2base_2compiler-specific_8h.html#acdc864be6142f2d4cc124fdec850b74b">NON_EXPORTED_BASE</a></div><div class="ttdeci">#define NON_EXPORTED_BASE(code)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2compiler-specific_8h_source.html#l00093">compiler-specific.h:93</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aa958a8a4e5dda3abaa031977268ae60e"><div class="ttname"><a href="src_2base_2logging_8h.html#aa958a8a4e5dda3abaa031977268ae60e">CHECK_NE</a></div><div class="ttdeci">#define CHECK_NE(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
 <div class="ttc" id="avariables_8h_html"><div class="ttname"><a href="variables_8h.html">variables.h</a></div></div>
 <div class="ttc" id="azone-containers_8h_html"><div class="ttname"><a href="zone-containers_8h.html">zone-containers.h</a></div></div>
 <div class="ttc" id="azone_8h_html"><div class="ttname"><a href="zone_8h.html">zone.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:40 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4904b5727094acb85f1fb3ce4b540d24.html">interpreter</a></li><li class="navelem"><a class="el" href="bytecode-register-optimizer_8h.html">bytecode-register-optimizer.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:49 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

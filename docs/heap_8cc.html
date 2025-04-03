@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/heap.cc File Reference</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/heap.cc File Reference</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('heap_8cc.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -99,7 +107,7 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">heap.cc File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="heap_8h_source.html">src/heap/heap.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="src_2heap_2heap_8h_source.html">src/heap/heap.h</a>&quot;</code><br />
 <code>#include &lt;atomic&gt;</code><br />
 <code>#include &lt;cinttypes&gt;</code><br />
 <code>#include &lt;iomanip&gt;</code><br />
@@ -107,12 +115,12 @@ $(function(){ initResizable(false); });
 <code>#include &lt;optional&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;unordered_set&gt;</code><br />
-<code>#include &quot;include/v8-locker.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="v8-locker_8h_source.html">include/v8-locker.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="api-inl_8h_source.html">src/api/api-inl.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="bits_8h_source.html">src/base/bits.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base_2flags_8h_source.html">src/base/flags.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="logging_8h_source.html">src/base/logging.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="macros_8h_source.html">src/base/macros.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2base_2logging_8h_source.html">src/base/logging.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2base_2macros_8h_source.html">src/base/macros.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="once_8h_source.html">src/base/once.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="base_2platform_2memory_8h_source.html">src/base/platform/memory.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mutex_8h_source.html">src/base/platform/mutex.h</a>&quot;</code><br />
@@ -192,7 +200,7 @@ $(function(){ initResizable(false); });
 <code>#include &quot;<a class="el" href="visit-object_8h_source.html">src/heap/visit-object.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="zapping_8h_source.html">src/heap/zapping.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="bootstrapper_8h_source.html">src/init/bootstrapper.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="v8_8h_source.html">src/init/v8.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2init_2v8_8h_source.html">src/init/v8.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="interpreter_8h_source.html">src/interpreter/interpreter.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="log_8h_source.html">src/logging/log.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="runtime-call-stats-scope_8h_source.html">src/logging/runtime-call-stats-scope.h</a>&quot;</code><br />
@@ -281,7 +289,7 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aff3808eac4cead55a58c0e35f5b92cb3" id="r_aff3808eac4cead55a58c0e35f5b92cb3"><td class="memItemLeft" align="right" valign="top">static GCType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal.html#aff3808eac4cead55a58c0e35f5b92cb3">v8::internal::GetGCTypeFromGarbageCollector</a> (<a class="el" href="namespacev8_1_1internal.html#ad504e70236bfcc0478d67053d1ed9ac0">GarbageCollector</a> collector)</td></tr>
+<tr class="memitem:aff3808eac4cead55a58c0e35f5b92cb3" id="r_aff3808eac4cead55a58c0e35f5b92cb3"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacev8.html#ac109d6f27e0c0f9ef4e98bcf7a806cf2">GCType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal.html#aff3808eac4cead55a58c0e35f5b92cb3">v8::internal::GetGCTypeFromGarbageCollector</a> (<a class="el" href="namespacev8_1_1internal.html#ad504e70236bfcc0478d67053d1ed9ac0">GarbageCollector</a> collector)</td></tr>
 <tr class="separator:aff3808eac4cead55a58c0e35f5b92cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -342,11 +350,11 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>) void     \</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>) void     \</div>
 <div class="line">  Heap::RightTrimArray&lt;T&gt;(Tagged&lt;T&gt; <span class="keywordtype">object</span>, <span class="keywordtype">int</span> new_capacity, \</div>
 <div class="line">                          <span class="keywordtype">int</span> old_capacity);</div>
 <div class="ttc" id="aexport-template_8h_html_a8687a18b601021d53d8f4417c60584c5"><div class="ttname"><a href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a></div><div class="ttdeci">#define EXPORT_TEMPLATE_DEFINE(export)</div><div class="ttdef"><b>Definition</b> <a href="export-template_8h_source.html#l00063">export-template.h:63</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="heap_8cc_source.html#l03525">3525</a> of file <a class="el" href="heap_8cc_source.html">heap.cc</a>.</p>
 
@@ -493,10 +501,13 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:18 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="heap_8cc.html">heap.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:34 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

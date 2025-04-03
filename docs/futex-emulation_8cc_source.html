@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/execution/futex-emulation.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/execution/futex-emulation.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('futex-emulation_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bd0755c95a42e835fb06f38bbeb1d6ed.html">execution</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">futex-emulation.cc</div></div>
 </div><!--header-->
@@ -104,8 +112,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="api-inl_8h.html">src/api/api-inl.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="lazy-instance_8h.html">src/base/lazy-instance.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="small-map_8h.html">src/base/small-map.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="execution_2isolate_8h.html">src/execution/isolate.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="vm-state-inl_8h.html">src/execution/vm-state-inl.h</a>&quot;</span></div>
@@ -118,7 +126,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8_1_1internal.html">v8::internal</a> {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a4ea3214a4d9ab732893a86f39c5885d4">   25</a></span><span class="keyword">using </span><a class="code hl_typedef" href="namespacev8_1_1internal.html#a4ea3214a4d9ab732893a86f39c5885d4">AtomicsWaitEvent</a> = v8::Isolate::AtomicsWaitEvent;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a4ea3214a4d9ab732893a86f39c5885d4">   25</a></span><span class="keyword">using </span><a class="code hl_enumeration" href="classv8_1_1Isolate.html#aa4cfd46a1a22b1ec8fd061c7bbb8b331">AtomicsWaitEvent</a> = <a class="code hl_enumeration" href="classv8_1_1Isolate.html#aa4cfd46a1a22b1ec8fd061c7bbb8b331">v8::Isolate::AtomicsWaitEvent</a>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">// A {FutexWaitList} manages all contexts waiting (synchronously or</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">// asynchronously) on any address.</span></div>
@@ -134,10 +142,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FutexWaitList.html#aa66f13dbdb1d558a23d1f3c43afbb912">   38</a></span>  <span class="keyword">static</span> <span class="keywordtype">void</span>* <a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#aa66f13dbdb1d558a23d1f3c43afbb912">ToWaitLocation</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;JSArrayBuffer&gt;</a> array_buffer, <span class="keywordtype">size_t</span> addr) {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(addr, array_buffer-&gt;GetByteLength());</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(addr, array_buffer-&gt;GetByteLength());</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="comment">// Use the cheaper JSArrayBuffer::backing_store() accessor, but DCHECK that</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="comment">// it matches the start of the JSArrayBuffer::GetBackingStore().</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(array_buffer-&gt;backing_store(),</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(array_buffer-&gt;backing_store(),</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>              array_buffer-&gt;GetBackingStore()-&gt;buffer_start());</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(array_buffer-&gt;backing_store()) + addr;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  }</div>
@@ -146,8 +154,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="comment">// Deletes &quot;node&quot; and returns the next node of its list.</span></div>
 <div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FutexWaitList.html#a6d5bda4fbae777b75a1113fd58435373">   48</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* <a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a6d5bda4fbae777b75a1113fd58435373">DeleteAsyncWaiterNode</a>(<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(node-&gt;async_state_-&gt;isolate_for_async_waiters);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(node-&gt;async_state_-&gt;isolate_for_async_waiters);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* next = node-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitListNode.html#ac04fa8e0dc7a2d1f93cfa531c706c2d1">next_</a>;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">if</span> (node-&gt;prev_ != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      node-&gt;prev_-&gt;next_ = next;</div>
@@ -177,7 +185,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>          new_head = <a class="code hl_variable" href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a>;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        new_tail = <a class="code hl_variable" href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        node = node-&gt;next_;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        node = node-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitListNode.html#ac04fa8e0dc7a2d1f93cfa531c706c2d1">next_</a>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      }</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    *head = new_head;</div>
@@ -231,7 +239,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
 <div class="foldopen" id="foldopen00126" data-start="{" data-end="}">
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FutexWaitListNode.html#ad19ad8a605fdd0d5d7c8a59e884fae22">  126</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitListNode.html#ad19ad8a605fdd0d5d7c8a59e884fae22">FutexWaitListNode::CancelTimeoutTask</a>() {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitListNode.html#ae46d402383ecaeedc98dc88b0d7c5e14">IsAsync</a>());</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitListNode.html#ae46d402383ecaeedc98dc88b0d7c5e14">IsAsync</a>());</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitListNode.html#aacf70876874801d555553407aef3312d">async_state_</a>-&gt;timeout_task_id == <a class="code hl_variable" href="classv8_1_1internal_1_1CancelableTaskManager.html#aeced01d51e2e17fe43f5286404519146">CancelableTaskManager::kInvalidTaskId</a>) {</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  }</div>
@@ -246,7 +254,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FutexWaitListNode.html#ac310901c8f49584034847958877782ab">  139</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitListNode.html#ac310901c8f49584034847958877782ab">FutexWaitListNode::NotifyWake</a>() {</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitListNode.html#ae46d402383ecaeedc98dc88b0d7c5e14">IsAsync</a>());</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitListNode.html#ae46d402383ecaeedc98dc88b0d7c5e14">IsAsync</a>());</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <span class="comment">// Lock the FutexEmulation mutex before notifying. We know that the mutex</span></div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <span class="comment">// will have been unlocked if we are currently waiting on the condition</span></div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  <span class="comment">// variable. The mutex will not be locked if FutexEmulation::Wait hasn&#39;t</span></div>
@@ -302,7 +310,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
 <div class="foldopen" id="foldopen00181" data-start="{" data-end="}">
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FutexEmulation.html#a5058561db3da3b8eee301914f24868cb">  181</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FutexEmulation.html#a5058561db3da3b8eee301914f24868cb">FutexEmulation::NotifyAsyncWaiter</a>(<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node) {</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="comment">// This function can run in any thread.</span></div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitList.html">FutexWaitList</a>* wait_list = GetWaitList();</div>
@@ -338,8 +346,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
 <div class="foldopen" id="foldopen00215" data-start="{" data-end="}">
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FutexWaitList.html#a0f8a0f9c4de08fe17ad6211e97800a34">  215</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a0f8a0f9c4de08fe17ad6211e97800a34">FutexWaitList::AddNode</a>(<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node) {</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <a class="code hl_define" href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(node-&gt;prev_);</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <a class="code hl_define" href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(node-&gt;next_);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(node-&gt;prev_);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(node-&gt;next_);</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="keyword">auto</span> [it, inserted] =</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      <a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitList.html#aa723275a3f6fae142e65ae1518901693">location_lists_</a>.insert({node-&gt;wait_location_, <a class="code hl_struct" href="structv8_1_1internal_1_1FutexWaitList_1_1HeadAndTail.html">HeadAndTail</a>{<a class="code hl_variable" href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a>, node}});</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  <span class="keywordflow">if</span> (!inserted) {</div>
@@ -357,8 +365,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="keywordflow">if</span> (!node-&gt;prev_ &amp;&amp; !node-&gt;next_) {</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="comment">// If the node was the last one on its list, delete the whole list.</span></div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordtype">size_t</span> erased = <a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitList.html#aa723275a3f6fae142e65ae1518901693">location_lists_</a>.erase(node-&gt;wait_location_);</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(1, erased);</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(erased);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(1, erased);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(erased);</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (node-&gt;prev_ &amp;&amp; node-&gt;next_) {</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="comment">// If we have both a successor and a predecessor, skip the lookup in the</span></div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="comment">// list and just update those two nodes directly.</span></div>
@@ -369,19 +377,19 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="comment">// Otherwise we have to lookup in the list to find the head and tail</span></div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="comment">// pointers.</span></div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keyword">auto</span> it = <a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitList.html#aa723275a3f6fae142e65ae1518901693">location_lists_</a>.find(node-&gt;wait_location_);</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitList.html#aa723275a3f6fae142e65ae1518901693">location_lists_</a>.end(), it);</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a95fe3351ab2af602e97bb07771da5fd3">NodeIsOnList</a>(node, it-&gt;second.head));</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitList.html#aa723275a3f6fae142e65ae1518901693">location_lists_</a>.end(), it);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a95fe3351ab2af602e97bb07771da5fd3">NodeIsOnList</a>(node, it-&gt;second.head));</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keywordflow">if</span> (node-&gt;prev_) {</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!node-&gt;next_);</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!node-&gt;next_);</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      node-&gt;prev_-&gt;next_ = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node, it-&gt;second.tail);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node, it-&gt;second.tail);</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      it-&gt;second.tail = node-&gt;prev_;</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      node-&gt;prev_ = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node, it-&gt;second.head);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node, it-&gt;second.head);</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      it-&gt;second.head = node-&gt;next_;</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;next_);</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;next_);</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      node-&gt;next_-&gt;prev_ = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      node-&gt;next_ = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    }</div>
@@ -410,7 +418,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span> </div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> WaitJsTranslateReturn(Isolate* isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> res) {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> WaitJsTranslateReturn(<a class="code hl_class" href="classv8_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> res) {</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacev8_1_1internal.html#a511c3dd03bb4fc2b91ed9ef5535e202e">IsSmi</a>(res)) {</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordtype">int</span> val = <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a2e32de9e93a2cdfae189371f22782dad">Smi::ToInt</a>(res);</div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <span class="keywordflow">switch</span> (val) {</div>
@@ -477,7 +485,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>                                    <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;JSArrayBuffer&gt;</a> array_buffer,</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                                    <span class="keywordtype">size_t</span> addr, T value,</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                                    <span class="keywordtype">double</span> rel_timeout_ms) {</div>
-<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(addr, array_buffer-&gt;GetByteLength());</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(addr, array_buffer-&gt;GetByteLength());</div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span> </div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  <span class="keywordtype">bool</span> use_timeout = rel_timeout_ms != <a class="code hl_define" href="common_2globals_8h.html#a085553a5c34c736329b329bffb0a3de1">V8_INFINITY</a>;</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>  int64_t rel_timeout_ns = -1;</div>
@@ -520,7 +528,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1FutexEmulation.html#a1a8a7966dd8d7e4ad313a07e32362bbf">WaitSync</a>(isolate, array_buffer, addr, value, use_timeout,</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                    rel_timeout_ns, call_type);</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>  }</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(mode, <a class="code hl_enumvalue" href="classv8_1_1internal_1_1FutexEmulation.html#a0c49a3df8fe3fd2cb0fa8ec204c3a045abe392c81102047b2256ecba4460c0a94">WaitMode::kAsync</a>);</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(mode, <a class="code hl_enumvalue" href="classv8_1_1internal_1_1FutexEmulation.html#a0c49a3df8fe3fd2cb0fa8ec204c3a045abe392c81102047b2256ecba4460c0a94">WaitMode::kAsync</a>);</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1FutexEmulation.html#a5b7d42b92773aeab3587c46d86d68d24">WaitAsync</a>(isolate, array_buffer, addr, value, use_timeout,</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>                   rel_timeout_ns, call_type);</div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>}</div>
@@ -546,7 +554,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>  <span class="keywordflow">if</span> (isolate-&gt;has_exception()) <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).exception();</div>
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>;</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>  <a class="code hl_typedef" href="namespacev8_1_1internal.html#a4ea3214a4d9ab732893a86f39c5885d4">AtomicsWaitEvent</a> callback_result = AtomicsWaitEvent::kWokenUp;</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>  <a class="code hl_enumeration" href="classv8_1_1Isolate.html#aa4cfd46a1a22b1ec8fd061c7bbb8b331">AtomicsWaitEvent</a> callback_result = AtomicsWaitEvent::kWokenUp;</div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>  <a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitList.html">FutexWaitList</a>* wait_list = GetWaitList();</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>  <a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node = isolate-&gt;futex_wait_list_node();</div>
@@ -570,7 +578,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span><span class="preprocessor">#if defined(V8_TARGET_BIG_ENDIAN)</span></div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>    <span class="comment">// If loading a Wasm value, it needs to be reversed on Big Endian platforms.</span></div>
 <div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>    <span class="keywordflow">if</span> (call_type == <a class="code hl_enumvalue" href="classv8_1_1internal_1_1FutexEmulation.html#a3f260698c592acda71b87bb581f30334aa4680e94a71b753e6e52c8acd575b8f2">CallType::kIsWasm</a>) {</div>
-<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<span class="keyword">sizeof</span>(T) == <a class="code hl_variable" href="namespacev8_1_1internal.html#a914d19dea357ee280bea7580796a62b5">kInt32Size</a> || <span class="keyword">sizeof</span>(T) == <a class="code hl_variable" href="namespacev8_1_1internal.html#a191fd08d000c1fc6a1c0d14655f1b711">kInt64Size</a>);</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<span class="keyword">sizeof</span>(T) == <a class="code hl_variable" href="namespacev8_1_1internal.html#a914d19dea357ee280bea7580796a62b5">kInt32Size</a> || <span class="keyword">sizeof</span>(T) == <a class="code hl_variable" href="namespacev8_1_1internal.html#a191fd08d000c1fc6a1c0d14655f1b711">kInt64Size</a>);</div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>      loaded_value = <a class="code hl_function" href="namespacev8_1_1internal.html#af53a839b8395922f49d2ec23783cca6f">ByteReverse</a>(loaded_value);</div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    }</div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span><span class="preprocessor">#endif</span></div>
@@ -586,7 +594,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>    wait_list-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a0f8a0f9c4de08fe17ad6211e97800a34">AddNode</a>(node);</div>
 <div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span> </div>
 <div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
-<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>      <span class="keywordflow">if</span> (V8_UNLIKELY(node-&gt;interrupted_)) {</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>      <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(node-&gt;interrupted_)) {</div>
 <div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>        <span class="comment">// Reset the interrupted flag while still holding the mutex.</span></div>
 <div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>        node-&gt;interrupted_ = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span> </div>
@@ -619,7 +627,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span>        }</div>
 <div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span>      }</div>
 <div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span> </div>
-<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span>      <span class="keywordflow">if</span> (V8_UNLIKELY(node-&gt;interrupted_)) {</div>
+<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span>      <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(node-&gt;interrupted_)) {</div>
 <div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span>        <span class="comment">// An interrupt occurred while the mutex was unlocked. Don&#39;t wait yet.</span></div>
 <div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span>        <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span>      }</div>
@@ -646,10 +654,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>        }</div>
 <div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span> </div>
 <div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>        <a class="code hl_class" href="classv8_1_1base_1_1TimeDelta.html">base::TimeDelta</a> time_until_timeout = timeout_time - current_time;</div>
-<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>        <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(time_until_timeout.<a class="code hl_function" href="classv8_1_1base_1_1TimeDelta.html#ad9006b332aa15e66f2ddb8e8ba910892">InMicroseconds</a>(), 0);</div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(time_until_timeout.<a class="code hl_function" href="classv8_1_1base_1_1TimeDelta.html#ad9006b332aa15e66f2ddb8e8ba910892">InMicroseconds</a>(), 0);</div>
 <div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>        <span class="keywordtype">bool</span> wait_for_result =</div>
 <div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>            node-&gt;cond_.WaitFor(wait_list-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a473b79cf3f8d11aca3d7688d91bae5d2">mutex</a>(), time_until_timeout);</div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>        <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(wait_for_result);</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>        <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(wait_for_result);</div>
 <div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>        node-&gt;cond_.Wait(wait_list-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a473b79cf3f8d11aca3d7688d91bae5d2">mutex</a>());</div>
 <div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>      }</div>
@@ -660,7 +668,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>    node-&gt;waiting_ = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>    wait_list-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a7aae049debaca1319024523380a995f9">RemoveNode</a>(node);</div>
 <div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>  } <span class="keywordflow">while</span> (<span class="keyword">false</span>);</div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!node-&gt;waiting_);</div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!node-&gt;waiting_);</div>
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span> </div>
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>  isolate-&gt;RunAtomicsWaitCallback(callback_result, array_buffer, addr, value,</div>
 <div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>                                  rel_timeout_ms, <span class="keyword">nullptr</span>);</div>
@@ -676,10 +684,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span> </div>
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>Global&lt;T&gt; GetWeakGlobal(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, Local&lt;T&gt; <span class="keywordtype">object</span>) {</div>
-<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>  <span class="keyword">auto</span>* v8_isolate = <span class="keyword">reinterpret_cast&lt;</span>v8::Isolate*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>  v8::Global&lt;T&gt; global{v8_isolate, <span class="keywordtype">object</span>};</div>
-<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>  global.SetWeak();</div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span><a class="code hl_class" href="classv8_1_1Global.html">Global&lt;T&gt;</a> GetWeakGlobal(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1Local.html">Local&lt;T&gt;</a> <span class="keywordtype">object</span>) {</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>  <span class="keyword">auto</span>* v8_isolate = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>  <a class="code hl_class" href="classv8_1_1Global.html">v8::Global&lt;T&gt;</a> global{v8_isolate, <span class="keywordtype">object</span>};</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>  global.<a class="code hl_function" href="classv8_1_1PersistentBase.html#aebb8a2c97e219102f613ff3749c956f6">SetWeak</a>();</div>
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>  <span class="keywordflow">return</span> global;</div>
 <div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>}</div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>}  <span class="comment">// namespace</span></div>
@@ -730,7 +738,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span><span class="preprocessor">#if defined(V8_TARGET_BIG_ENDIAN)</span></div>
 <div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>    <span class="comment">// If loading a Wasm value, it needs to be reversed on Big Endian platforms.</span></div>
 <div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>    <span class="keywordflow">if</span> (call_type == <a class="code hl_enumvalue" href="classv8_1_1internal_1_1FutexEmulation.html#a3f260698c592acda71b87bb581f30334aa4680e94a71b753e6e52c8acd575b8f2">CallType::kIsWasm</a>) {</div>
-<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<span class="keyword">sizeof</span>(T) == <a class="code hl_variable" href="namespacev8_1_1internal.html#a914d19dea357ee280bea7580796a62b5">kInt32Size</a> || <span class="keyword">sizeof</span>(T) == <a class="code hl_variable" href="namespacev8_1_1internal.html#a191fd08d000c1fc6a1c0d14655f1b711">kInt64Size</a>);</div>
+<div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<span class="keyword">sizeof</span>(T) == <a class="code hl_variable" href="namespacev8_1_1internal.html#a914d19dea357ee280bea7580796a62b5">kInt32Size</a> || <span class="keyword">sizeof</span>(T) == <a class="code hl_variable" href="namespacev8_1_1internal.html#a191fd08d000c1fc6a1c0d14655f1b711">kInt64Size</a>);</div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>      loaded_value = <a class="code hl_function" href="namespacev8_1_1internal.html#af53a839b8395922f49d2ec23783cca6f">ByteReverse</a>(loaded_value);</div>
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>    }</div>
 <div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span><span class="preprocessor">#endif</span></div>
@@ -772,13 +780,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>      <span class="comment">//   d. Perform ! CreateDataPropertyOrThrow(resultObject, &quot;value&quot;,</span></div>
 <div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>      <span class="comment">//     &quot;not-equal&quot;).</span></div>
 <div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>      <span class="comment">//   e. Return resultObject.</span></div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>      <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(</div>
 <div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>                isolate, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, factory-&gt;async_string(),</div>
-<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>                factory-&gt;false_value(), Just(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>))</div>
+<div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>                factory-&gt;false_value(), <a class="code hl_function" href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">Just</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>))</div>
 <div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>                .FromJust());</div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>      <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(</div>
 <div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>                isolate, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, factory-&gt;value_string(),</div>
-<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>                factory-&gt;not_equal_string(), Just(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>))</div>
+<div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>                factory-&gt;not_equal_string(), <a class="code hl_function" href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">Just</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>))</div>
 <div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>                .FromJust());</div>
 <div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00637" name="l00637"></a><span class="lineno">  637</span> </div>
@@ -789,13 +797,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>      <span class="comment">//   d. Perform ! CreateDataPropertyOrThrow(resultObject, &quot;value&quot;,</span></div>
 <div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>      <span class="comment">//     &quot;timed-out&quot;).</span></div>
 <div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>      <span class="comment">//   e. Return resultObject.</span></div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>      <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(</div>
 <div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>                isolate, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, factory-&gt;async_string(),</div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>                factory-&gt;false_value(), Just(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>))</div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>                factory-&gt;false_value(), <a class="code hl_function" href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">Just</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>))</div>
 <div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>                .FromJust());</div>
-<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>      <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(</div>
+<div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(</div>
 <div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>                isolate, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, factory-&gt;value_string(),</div>
-<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>                factory-&gt;timed_out_string(), Just(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>))</div>
+<div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>                factory-&gt;timed_out_string(), <a class="code hl_function" href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">Just</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>))</div>
 <div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>                .FromJust());</div>
 <div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span> </div>
@@ -813,13 +821,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>      <span class="comment">// 27. Perform ! CreateDataPropertyOrThrow(resultObject, &quot;value&quot;,</span></div>
 <div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>      <span class="comment">// promiseCapability.[[Promise]]).</span></div>
 <div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>      <span class="comment">// 28. Return resultObject.</span></div>
-<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>      <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(</div>
+<div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(</div>
 <div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>                isolate, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, factory-&gt;async_string(), factory-&gt;true_value(),</div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>                Just(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>))</div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>                <a class="code hl_function" href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">Just</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>))</div>
 <div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>                .FromJust());</div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>      <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(isolate, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>,</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(isolate, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>,</div>
 <div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>                                           factory-&gt;value_string(),</div>
-<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>                                           promise_capability, Just(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>))</div>
+<div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>                                           promise_capability, <a class="code hl_function" href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">Just</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>))</div>
 <div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>                .FromJust());</div>
 <div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>  }</div>
@@ -864,7 +872,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>    <span class="comment">// execute this code.</span></div>
 <div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span>    <span class="keywordtype">bool</span> matching_backing_store =</div>
 <div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>        !node-&gt;IsAsync() || !node-&gt;async_state_-&gt;backing_store.expired();</div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>    <span class="keywordflow">if</span> (V8_LIKELY(matching_backing_store)) {</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a4f489f1b838163ab33f251c9e470d938">V8_LIKELY</a>(matching_backing_store)) {</div>
 <div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>      node-&gt;waiting_ = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span> </div>
 <div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>      <span class="comment">// Retrieve the next node to iterate before calling NotifyAsyncWaiter,</span></div>
@@ -890,7 +898,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>    <span class="comment">// We delete the node if possible (no timeout, or context is gone).</span></div>
 <div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>    <span class="comment">// ---</span></div>
 <div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>    <span class="keywordtype">bool</span> delete_this_node = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
 <div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>    <span class="keywordflow">if</span> (node-&gt;async_state_-&gt;timeout_time.IsNull()) {</div>
 <div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>      <span class="comment">// Backing store has been deleted and the node is still waiting, and</span></div>
 <div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>      <span class="comment">// there&#39;s no timeout. It&#39;s never going to be woken up, so we can clean it</span></div>
@@ -900,8 +908,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>      <span class="comment">// This cleanup code is not very efficient, since it only kicks in when</span></div>
 <div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>      <span class="comment">// a new BackingStore has been created in the same memory area where the</span></div>
 <div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>      <span class="comment">// deleted BackingStore was.</span></div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
-<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1CancelableTaskManager.html#aeced01d51e2e17fe43f5286404519146">CancelableTaskManager::kInvalidTaskId</a>,</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
+<div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1CancelableTaskManager.html#aeced01d51e2e17fe43f5286404519146">CancelableTaskManager::kInvalidTaskId</a>,</div>
 <div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span>                node-&gt;async_state_-&gt;timeout_task_id);</div>
 <div class="line"><a id="l00755" name="l00755"></a><span class="lineno">  755</span>      delete_this_node = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00756" name="l00756"></a><span class="lineno">  756</span>    }</div>
@@ -933,19 +941,19 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span> </div>
 <div class="foldopen" id="foldopen00782" data-start="{" data-end="}">
 <div class="line"><a id="l00782" name="l00782"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FutexEmulation.html#aaa0e4a01836397705dc2bdd174a0302e">  782</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FutexEmulation.html#aaa0e4a01836397705dc2bdd174a0302e">FutexEmulation::CleanupAsyncWaiterPromise</a>(<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node) {</div>
-<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
+<div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
 <div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>  <span class="comment">// This function must run in the main thread of node&#39;s Isolate. This function</span></div>
 <div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>  <span class="comment">// may allocate memory. To avoid deadlocks, we shouldn&#39;t be holding the</span></div>
 <div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>  <span class="comment">// FutexEmulationGlobalState::mutex.</span></div>
 <div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span> </div>
 <div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate = node-&gt;async_state_-&gt;isolate_for_async_waiters;</div>
-<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>  <span class="keyword">auto</span> v8_isolate = <span class="keyword">reinterpret_cast&lt;</span>v8::Isolate*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
+<div class="line"><a id="l00789" name="l00789"></a><span class="lineno">  789</span>  <span class="keyword">auto</span> v8_isolate = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
 <div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span> </div>
 <div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>  <span class="keywordflow">if</span> (!node-&gt;async_state_-&gt;promise.IsEmpty()) {</div>
 <div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>    <span class="keyword">auto</span> promise = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSPromise&gt;</a>(</div>
 <div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>        <a class="code hl_function" href="classv8_1_1Utils.html#a5bbbf1336cd2ac62f7ab5014210ecf2e">Utils::OpenDirectHandle</a>(*node-&gt;async_state_-&gt;promise.Get(v8_isolate)));</div>
 <div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>    <span class="comment">// Promise keeps the NativeContext alive.</span></div>
-<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!node-&gt;async_state_-&gt;native_context.IsEmpty());</div>
+<div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!node-&gt;async_state_-&gt;native_context.IsEmpty());</div>
 <div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>    <span class="keyword">auto</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#afe601ad9b4b4c61d8a6a700e7db12c2a">native_context</a> = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;NativeContext&gt;</a>(<a class="code hl_function" href="classv8_1_1Utils.html#a5bbbf1336cd2ac62f7ab5014210ecf2e">Utils::OpenDirectHandle</a>(</div>
 <div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>        *node-&gt;async_state_-&gt;native_context.Get(v8_isolate)));</div>
 <div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span> </div>
@@ -953,25 +961,25 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;OrderedHashSet&gt;</a> promises(</div>
 <div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>        <a class="code hl_variable" href="namespacev8_1_1internal.html#afe601ad9b4b4c61d8a6a700e7db12c2a">native_context</a>-&gt;atomics_waitasync_promises(), isolate);</div>
 <div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>    <span class="keywordtype">bool</span> was_deleted = <a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#ab1cbfbe89395f59dd111a3fe488c2120">OrderedHashSet::Delete</a>(isolate, *promises, *promise);</div>
-<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(was_deleted);</div>
-<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>    <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(was_deleted);</div>
+<div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(was_deleted);</div>
+<div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span>    <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(was_deleted);</div>
 <div class="line"><a id="l00805" name="l00805"></a><span class="lineno">  805</span>    promises = <a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#a6c7fd10ad6283999ad93f84f65783106">OrderedHashSet::Shrink</a>(isolate, promises);</div>
 <div class="line"><a id="l00806" name="l00806"></a><span class="lineno">  806</span>    <a class="code hl_variable" href="namespacev8_1_1internal.html#afe601ad9b4b4c61d8a6a700e7db12c2a">native_context</a>-&gt;set_atomics_waitasync_promises(*promises);</div>
 <div class="line"><a id="l00807" name="l00807"></a><span class="lineno">  807</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00808" name="l00808"></a><span class="lineno">  808</span>    <span class="comment">// NativeContext keeps the Promise alive; if the Promise is dead then</span></div>
 <div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>    <span class="comment">// surely NativeContext is too.</span></div>
-<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;async_state_-&gt;native_context.IsEmpty());</div>
+<div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;async_state_-&gt;native_context.IsEmpty());</div>
 <div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>  }</div>
 <div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>}</div>
 </div>
 <div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span> </div>
 <div class="foldopen" id="foldopen00814" data-start="{" data-end="}">
 <div class="line"><a id="l00814" name="l00814"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FutexEmulation.html#aa1d04a031fc98cf02a916d60c8acc90f">  814</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FutexEmulation.html#aa1d04a031fc98cf02a916d60c8acc90f">FutexEmulation::ResolveAsyncWaiterPromise</a>(<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node) {</div>
-<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
+<div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
 <div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>  <span class="comment">// This function must run in the main thread of node&#39;s Isolate.</span></div>
 <div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span> </div>
 <div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate = node-&gt;async_state_-&gt;isolate_for_async_waiters;</div>
-<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>  v8::Isolate* v8_isolate = <span class="keyword">reinterpret_cast&lt;</span>v8::Isolate*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
+<div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>  <a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* v8_isolate = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
 <div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span> </div>
 <div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>  <span class="comment">// Try to cancel the timeout task (if one exists). If the timeout task exists,</span></div>
 <div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>  <span class="comment">// cancelling it will always succeed. It&#39;s not possible for the timeout task</span></div>
@@ -981,30 +989,30 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>  <span class="comment">// to be alive - FutexEmulation::IsolateDeinit removes all FutexWaitListNodes</span></div>
 <div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>  <span class="comment">// owned by an Isolate which is going to die.</span></div>
 <div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>  <span class="keywordtype">bool</span> success = node-&gt;CancelTimeoutTask();</div>
-<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(success);</div>
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(success);</div>
+<div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(success);</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(success);</div>
 <div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span> </div>
 <div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>  <span class="keywordflow">if</span> (!node-&gt;async_state_-&gt;promise.IsEmpty()) {</div>
-<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!node-&gt;async_state_-&gt;native_context.IsEmpty());</div>
-<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    Local&lt;v8::Context&gt; <a class="code hl_variable" href="namespacev8_1_1internal.html#afe601ad9b4b4c61d8a6a700e7db12c2a">native_context</a> =</div>
+<div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!node-&gt;async_state_-&gt;native_context.IsEmpty());</div>
+<div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    <a class="code hl_class" href="classv8_1_1Local.html">Local&lt;v8::Context&gt;</a> <a class="code hl_variable" href="namespacev8_1_1internal.html#afe601ad9b4b4c61d8a6a700e7db12c2a">native_context</a> =</div>
 <div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>        node-&gt;async_state_-&gt;native_context.Get(v8_isolate);</div>
-<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>    v8::Context::Scope contextScope(<a class="code hl_variable" href="namespacev8_1_1internal.html#afe601ad9b4b4c61d8a6a700e7db12c2a">native_context</a>);</div>
+<div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span>    <a class="code hl_class" href="classv8_1_1Context_1_1Scope.html">v8::Context::Scope</a> contextScope(<a class="code hl_variable" href="namespacev8_1_1internal.html#afe601ad9b4b4c61d8a6a700e7db12c2a">native_context</a>);</div>
 <div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>    <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSPromise&gt;</a> promise = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSPromise&gt;</a>(</div>
 <div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>        <a class="code hl_function" href="classv8_1_1Utils.html#a09ad82a6479237cb1f3dab296eb0fd45">Utils::OpenHandle</a>(*node-&gt;async_state_-&gt;promise.Get(v8_isolate)));</div>
 <div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>    <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;String&gt;</a> result_string;</div>
 <div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>    <span class="comment">// When waiters are notified, their timeout_time is reset. Having a</span></div>
 <div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span>    <span class="comment">// non-zero timeout_time here means the waiter timed out.</span></div>
 <div class="line"><a id="l00842" name="l00842"></a><span class="lineno">  842</span>    <span class="keywordflow">if</span> (node-&gt;async_state_-&gt;timeout_time != <a class="code hl_class" href="classv8_1_1base_1_1TimeTicks.html">base::TimeTicks</a>()) {</div>
-<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;waiting_);</div>
+<div class="line"><a id="l00843" name="l00843"></a><span class="lineno">  843</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;waiting_);</div>
 <div class="line"><a id="l00844" name="l00844"></a><span class="lineno">  844</span>      result_string = isolate-&gt;factory()-&gt;timed_out_string();</div>
 <div class="line"><a id="l00845" name="l00845"></a><span class="lineno">  845</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!node-&gt;waiting_);</div>
+<div class="line"><a id="l00846" name="l00846"></a><span class="lineno">  846</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!node-&gt;waiting_);</div>
 <div class="line"><a id="l00847" name="l00847"></a><span class="lineno">  847</span>      result_string = isolate-&gt;factory()-&gt;ok_string();</div>
 <div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>    }</div>
 <div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>    <a class="code hl_class" href="classv8_1_1internal_1_1MaybeHandle.html">MaybeHandle&lt;Object&gt;</a> resolve_result =</div>
 <div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span>        <a class="code hl_function" href="classv8_1_1internal_1_1JSPromise.html#ab5498a7e4026703f904ad2ab3018c250">JSPromise::Resolve</a>(promise, result_string);</div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!resolve_result.<a class="code hl_function" href="classv8_1_1internal_1_1MaybeHandle.html#a76d0200bf11d6f7628c7119d730efa44">is_null</a>());</div>
-<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>    <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(resolve_result);</div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!resolve_result.<a class="code hl_function" href="classv8_1_1internal_1_1MaybeHandle.html#a76d0200bf11d6f7628c7119d730efa44">is_null</a>());</div>
+<div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>    <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(resolve_result);</div>
 <div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span>  }</div>
 <div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>}</div>
 </div>
@@ -1020,7 +1028,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span> </div>
 <div class="line"><a id="l00864" name="l00864"></a><span class="lineno">  864</span>    <span class="keyword">auto</span>&amp; isolate_map = wait_list-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitList.html#afa44c244ad782a1a3936ec59eb893d2e">isolate_promises_to_resolve_</a>;</div>
 <div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span>    <span class="keyword">auto</span> it = isolate_map.find(isolate);</div>
-<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>    <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(isolate_map.end(), it);</div>
+<div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(isolate_map.end(), it);</div>
 <div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span> </div>
 <div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>    node = it-&gt;second.head;</div>
 <div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span>    isolate_map.erase(it);</div>
@@ -1032,15 +1040,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00875" name="l00875"></a><span class="lineno">  875</span>  <span class="comment">// memory.</span></div>
 <div class="line"><a id="l00876" name="l00876"></a><span class="lineno">  876</span>  <a class="code hl_class" href="classv8_1_1internal_1_1HandleScope.html">HandleScope</a> handle_scope(isolate);</div>
 <div class="line"><a id="l00877" name="l00877"></a><span class="lineno">  877</span>  <span class="keywordflow">while</span> (node) {</div>
-<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
-<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(isolate, node-&gt;async_state_-&gt;isolate_for_async_waiters);</div>
-<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!node-&gt;waiting_);</div>
+<div class="line"><a id="l00878" name="l00878"></a><span class="lineno">  878</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
+<div class="line"><a id="l00879" name="l00879"></a><span class="lineno">  879</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(isolate, node-&gt;async_state_-&gt;isolate_for_async_waiters);</div>
+<div class="line"><a id="l00880" name="l00880"></a><span class="lineno">  880</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!node-&gt;waiting_);</div>
 <div class="line"><a id="l00881" name="l00881"></a><span class="lineno">  881</span>    <a class="code hl_function" href="classv8_1_1internal_1_1FutexEmulation.html#aa1d04a031fc98cf02a916d60c8acc90f">ResolveAsyncWaiterPromise</a>(node);</div>
 <div class="line"><a id="l00882" name="l00882"></a><span class="lineno">  882</span>    <a class="code hl_function" href="classv8_1_1internal_1_1FutexEmulation.html#aaa0e4a01836397705dc2bdd174a0302e">CleanupAsyncWaiterPromise</a>(node);</div>
 <div class="line"><a id="l00883" name="l00883"></a><span class="lineno">  883</span>    <span class="comment">// We&#39;ve already tried to cancel the timeout task for the node; since we&#39;re</span></div>
 <div class="line"><a id="l00884" name="l00884"></a><span class="lineno">  884</span>    <span class="comment">// now in the same thread the timeout task is supposed to run, we know the</span></div>
 <div class="line"><a id="l00885" name="l00885"></a><span class="lineno">  885</span>    <span class="comment">// timeout task will never happen, and it&#39;s safe to delete the node here.</span></div>
-<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1CancelableTaskManager.html#aeced01d51e2e17fe43f5286404519146">CancelableTaskManager::kInvalidTaskId</a>,</div>
+<div class="line"><a id="l00886" name="l00886"></a><span class="lineno">  886</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1CancelableTaskManager.html#aeced01d51e2e17fe43f5286404519146">CancelableTaskManager::kInvalidTaskId</a>,</div>
 <div class="line"><a id="l00887" name="l00887"></a><span class="lineno">  887</span>              node-&gt;async_state_-&gt;timeout_task_id);</div>
 <div class="line"><a id="l00888" name="l00888"></a><span class="lineno">  888</span>    node = <a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a6d5bda4fbae777b75a1113fd58435373">FutexWaitList::DeleteAsyncWaiterNode</a>(node);</div>
 <div class="line"><a id="l00889" name="l00889"></a><span class="lineno">  889</span>  }</div>
@@ -1050,7 +1058,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00892" data-start="{" data-end="}">
 <div class="line"><a id="l00892" name="l00892"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FutexEmulation.html#a0614214316afd90448fe9b2597a035b4">  892</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FutexEmulation.html#a0614214316afd90448fe9b2597a035b4">FutexEmulation::HandleAsyncWaiterTimeout</a>(<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node) {</div>
 <div class="line"><a id="l00893" name="l00893"></a><span class="lineno">  893</span>  <span class="comment">// This function must run in the main thread of node&#39;s Isolate.</span></div>
-<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
+<div class="line"><a id="l00894" name="l00894"></a><span class="lineno">  894</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
 <div class="line"><a id="l00895" name="l00895"></a><span class="lineno">  895</span> </div>
 <div class="line"><a id="l00896" name="l00896"></a><span class="lineno">  896</span>  <a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitList.html">FutexWaitList</a>* wait_list = GetWaitList();</div>
 <div class="line"><a id="l00897" name="l00897"></a><span class="lineno">  897</span> </div>
@@ -1093,7 +1101,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>      <a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>*&amp; tail = it-&gt;second.tail;</div>
 <div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>      <a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a8afeb038e45ac283b5ec5a661144c3f7">FutexWaitList::DeleteNodesForIsolate</a>(isolate, &amp;head, &amp;tail);</div>
 <div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>      <span class="comment">// head and tail are either both nullptr or both non-nullptr.</span></div>
-<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(head == <span class="keyword">nullptr</span>, tail == <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(head == <span class="keyword">nullptr</span>, tail == <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>      <span class="keywordflow">if</span> (head == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>        it = location_lists.erase(it);</div>
 <div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>      } <span class="keywordflow">else</span> {</div>
@@ -1107,8 +1115,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>    <span class="keyword">auto</span> it = isolate_map.find(isolate);</div>
 <div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>    <span class="keywordflow">if</span> (it != isolate_map.end()) {</div>
 <div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>      <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node = it-&gt;second.head; node;) {</div>
-<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
-<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>        <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(isolate, node-&gt;async_state_-&gt;isolate_for_async_waiters);</div>
+<div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
+<div class="line"><a id="l00950" name="l00950"></a><span class="lineno">  950</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(isolate, node-&gt;async_state_-&gt;isolate_for_async_waiters);</div>
 <div class="line"><a id="l00951" name="l00951"></a><span class="lineno">  951</span>        node-&gt;async_state_-&gt;timeout_task_id =</div>
 <div class="line"><a id="l00952" name="l00952"></a><span class="lineno">  952</span>            <a class="code hl_variable" href="classv8_1_1internal_1_1CancelableTaskManager.html#aeced01d51e2e17fe43f5286404519146">CancelableTaskManager::kInvalidTaskId</a>;</div>
 <div class="line"><a id="l00953" name="l00953"></a><span class="lineno">  953</span>        node = <a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a6d5bda4fbae777b75a1113fd58435373">FutexWaitList::DeleteAsyncWaiterNode</a>(node);</div>
@@ -1137,7 +1145,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>    <span class="keywordflow">if</span> (!node-&gt;waiting_) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>    <span class="keywordflow">if</span> (node-&gt;IsAsync()) {</div>
 <div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>      <span class="keywordflow">if</span> (node-&gt;async_state_-&gt;backing_store.expired()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(array_buffer-&gt;GetBackingStore(),</div>
+<div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(array_buffer-&gt;GetBackingStore(),</div>
 <div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>                node-&gt;async_state_-&gt;backing_store.lock());</div>
 <div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>    }</div>
 <div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>    num_waiters++;</div>
@@ -1158,11 +1166,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>  <span class="keyword">auto</span>&amp; isolate_map = wait_list-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitList.html#afa44c244ad782a1a3936ec59eb893d2e">isolate_promises_to_resolve_</a>;</div>
 <div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; it : isolate_map) {</div>
 <div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node = it.second.head; node; node = node-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitListNode.html#ac04fa8e0dc7a2d1f93cfa531c706c2d1">next_</a>) {</div>
-<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
+<div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
 <div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>      <span class="keywordflow">if</span> (node-&gt;waiting_) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>      <span class="keywordflow">if</span> (wait_location != node-&gt;wait_location_) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>      <span class="keywordflow">if</span> (node-&gt;async_state_-&gt;backing_store.expired()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(array_buffer-&gt;GetBackingStore(),</div>
+<div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(array_buffer-&gt;GetBackingStore(),</div>
 <div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>                node-&gt;async_state_-&gt;backing_store.lock());</div>
 <div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>      num_waiters++;</div>
 <div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>    }</div>
@@ -1178,34 +1186,34 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>  <span class="keyword">auto</span> VerifyNode = [](<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* <a class="code hl_variable" href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a>, <a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* head,</div>
 <div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>                       <a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* tail) {</div>
 <div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>    <span class="keywordflow">if</span> (node-&gt;next_ != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>      <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(node, tail);</div>
-<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node, node-&gt;next_-&gt;prev_);</div>
+<div class="line"><a id="l01014" name="l01014"></a><span class="lineno"> 1014</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(node, tail);</div>
+<div class="line"><a id="l01015" name="l01015"></a><span class="lineno"> 1015</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node, node-&gt;next_-&gt;prev_);</div>
 <div class="line"><a id="l01016" name="l01016"></a><span class="lineno"> 1016</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node, tail);</div>
+<div class="line"><a id="l01017" name="l01017"></a><span class="lineno"> 1017</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node, tail);</div>
 <div class="line"><a id="l01018" name="l01018"></a><span class="lineno"> 1018</span>    }</div>
 <div class="line"><a id="l01019" name="l01019"></a><span class="lineno"> 1019</span>    <span class="keywordflow">if</span> (node-&gt;prev_ != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>      <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(node, head);</div>
-<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node, node-&gt;prev_-&gt;next_);</div>
+<div class="line"><a id="l01020" name="l01020"></a><span class="lineno"> 1020</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(node, head);</div>
+<div class="line"><a id="l01021" name="l01021"></a><span class="lineno"> 1021</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node, node-&gt;prev_-&gt;next_);</div>
 <div class="line"><a id="l01022" name="l01022"></a><span class="lineno"> 1022</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node, head);</div>
+<div class="line"><a id="l01023" name="l01023"></a><span class="lineno"> 1023</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node, head);</div>
 <div class="line"><a id="l01024" name="l01024"></a><span class="lineno"> 1024</span>    }</div>
 <div class="line"><a id="l01025" name="l01025"></a><span class="lineno"> 1025</span> </div>
-<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a95fe3351ab2af602e97bb07771da5fd3">NodeIsOnList</a>(node, head));</div>
+<div class="line"><a id="l01026" name="l01026"></a><span class="lineno"> 1026</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FutexWaitList.html#a95fe3351ab2af602e97bb07771da5fd3">NodeIsOnList</a>(node, head));</div>
 <div class="line"><a id="l01027" name="l01027"></a><span class="lineno"> 1027</span>  };</div>
 <div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span> </div>
 <div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [addr, head_and_tail] : <a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitList.html#aa723275a3f6fae142e65ae1518901693">location_lists_</a>) {</div>
 <div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>    <span class="keyword">auto</span> [head, tail] = head_and_tail;</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node = head; <a class="code hl_variable" href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a>; node = node-&gt;next_) {</div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node = head; <a class="code hl_variable" href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a>; node = node-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitListNode.html#ac04fa8e0dc7a2d1f93cfa531c706c2d1">next_</a>) {</div>
 <div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>      VerifyNode(node, head, tail);</div>
 <div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>    }</div>
 <div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>  }</div>
 <div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span> </div>
 <div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; [isolate, head_and_tail] : <a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitList.html#afa44c244ad782a1a3936ec59eb893d2e">isolate_promises_to_resolve_</a>) {</div>
 <div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>    <span class="keyword">auto</span> [head, tail] = head_and_tail;</div>
-<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node = head; <a class="code hl_variable" href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a>; node = node-&gt;next_) {</div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
+<div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1FutexWaitListNode.html">FutexWaitListNode</a>* node = head; <a class="code hl_variable" href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a>; node = node-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1FutexWaitListNode.html#ac04fa8e0dc7a2d1f93cfa531c706c2d1">next_</a>) {</div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(node-&gt;IsAsync());</div>
 <div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>      VerifyNode(node, head, tail);</div>
-<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(isolate, node-&gt;async_state_-&gt;isolate_for_async_waiters);</div>
+<div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(isolate, node-&gt;async_state_-&gt;isolate_for_async_waiters);</div>
 <div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>    }</div>
 <div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>  }</div>
 <div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span><span class="preprocessor">#endif  </span><span class="comment">// DEBUG</span></div>
@@ -1225,6 +1233,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01055" name="l01055"></a><span class="lineno"> 1055</span>}  <span class="comment">// namespace v8::internal</span></div>
 <div class="ttc" id="aapi-inl_8h_html"><div class="ttname"><a href="api-inl_8h.html">api-inl.h</a></div></div>
 <div class="ttc" id="acancelable-task_8h_html"><div class="ttname"><a href="cancelable-task_8h.html">cancelable-task.h</a></div></div>
+<div class="ttc" id="aclassv8_1_1Context_1_1Scope_html"><div class="ttname"><a href="classv8_1_1Context_1_1Scope.html">v8::Context::Scope</a></div><div class="ttdef"><b>Definition</b> <a href="v8-context_8h_source.html#l00383">v8-context.h:383</a></div></div>
+<div class="ttc" id="aclassv8_1_1Global_html"><div class="ttname"><a href="classv8_1_1Global.html">v8::Global</a></div><div class="ttdef"><b>Definition</b> <a href="v8-persistent-handle_8h_source.html#l00347">v8-persistent-handle.h:347</a></div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1Isolate.html">v8::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="v8-isolate_8h_source.html#l00261">v8-isolate.h:261</a></div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html_aa4cfd46a1a22b1ec8fd061c7bbb8b331"><div class="ttname"><a href="classv8_1_1Isolate.html#aa4cfd46a1a22b1ec8fd061c7bbb8b331">v8::Isolate::AtomicsWaitEvent</a></div><div class="ttdeci">AtomicsWaitEvent</div><div class="ttdef"><b>Definition</b> <a href="v8-isolate_8h_source.html#l01181">v8-isolate.h:1181</a></div></div>
+<div class="ttc" id="aclassv8_1_1Local_html"><div class="ttname"><a href="classv8_1_1Local.html">v8::Local</a></div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00260">v8-local-handle.h:266</a></div></div>
+<div class="ttc" id="aclassv8_1_1PersistentBase_html_aebb8a2c97e219102f613ff3749c956f6"><div class="ttname"><a href="classv8_1_1PersistentBase.html#aebb8a2c97e219102f613ff3749c956f6">v8::PersistentBase::SetWeak</a></div><div class="ttdeci">V8_INLINE void SetWeak(P *parameter, typename WeakCallbackInfo&lt; P &gt;::Callback callback, WeakCallbackType type)</div><div class="ttdef"><b>Definition</b> <a href="v8-persistent-handle_8h_source.html#l00484">v8-persistent-handle.h:484</a></div></div>
 <div class="ttc" id="aclassv8_1_1Utils_html"><div class="ttname"><a href="classv8_1_1Utils.html">v8::Utils</a></div><div class="ttdef"><b>Definition</b> <a href="api_8h_source.html#l00212">api.h:212</a></div></div>
 <div class="ttc" id="aclassv8_1_1Utils_html_a09ad82a6479237cb1f3dab296eb0fd45"><div class="ttname"><a href="classv8_1_1Utils.html#a09ad82a6479237cb1f3dab296eb0fd45">v8::Utils::OpenHandle</a></div><div class="ttdeci">static v8::internal::Handle&lt; To &gt; OpenHandle(v8::Local&lt; From &gt; handle)</div><div class="ttdef"><b>Definition</b> <a href="api_8h_source.html#l00274">api.h:274</a></div></div>
 <div class="ttc" id="aclassv8_1_1Utils_html_a5bbbf1336cd2ac62f7ab5014210ecf2e"><div class="ttname"><a href="classv8_1_1Utils.html#a5bbbf1336cd2ac62f7ab5014210ecf2e">v8::Utils::OpenDirectHandle</a></div><div class="ttdeci">static v8::internal::DirectHandle&lt; To &gt; OpenDirectHandle(v8::Local&lt; From &gt; handle)</div><div class="ttdef"><b>Definition</b> <a href="api_8h_source.html#l00279">api.h:279</a></div></div>
@@ -1327,7 +1341,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1Smi_html_a2e32de9e93a2cdfae189371f22782dad"><div class="ttname"><a href="classv8_1_1internal_1_1Smi.html#a2e32de9e93a2cdfae189371f22782dad">v8::internal::Smi::ToInt</a></div><div class="ttdeci">static constexpr int ToInt(const Tagged&lt; Object &gt; object)</div><div class="ttdef"><b>Definition</b> <a href="smi_8h_source.html#l00033">smi.h:33</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Smi_html_a755464f4d2c3a71ffd82cd474bbc50f3"><div class="ttname"><a href="classv8_1_1internal_1_1Smi.html#a755464f4d2c3a71ffd82cd474bbc50f3">v8::internal::Smi::FromInt</a></div><div class="ttdeci">static constexpr Tagged&lt; Smi &gt; FromInt(int value)</div><div class="ttdef"><b>Definition</b> <a href="smi_8h_source.html#l00038">smi.h:38</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Tagged_html"><div class="ttname"><a href="classv8_1_1internal_1_1Tagged.html">v8::internal::Tagged</a></div><div class="ttdef"><b>Definition</b> <a href="waiter-queue-node_8h_source.html#l00022">waiter-queue-node.h:22</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1V8_html"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html">v8::internal::V8</a></div><div class="ttdef"><b>Definition</b> <a href="v8_8h_source.html#l00020">v8.h:20</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1V8_html"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html">v8::internal::V8</a></div><div class="ttdef"><b>Definition</b> <a href="src_2init_2v8_8h_source.html#l00020">v8.h:20</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1VMState_html"><div class="ttname"><a href="classv8_1_1internal_1_1VMState.html">v8::internal::VMState</a></div><div class="ttdef"><b>Definition</b> <a href="vm-state_8h_source.html#l00021">vm-state.h:21</a></div></div>
 <div class="ttc" id="acommon_2globals_8h_html_a085553a5c34c736329b329bffb0a3de1"><div class="ttname"><a href="common_2globals_8h.html#a085553a5c34c736329b329bffb0a3de1">V8_INFINITY</a></div><div class="ttdeci">#define V8_INFINITY</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00023">globals.h:23</a></div></div>
 <div class="ttc" id="aconversions_8h_html"><div class="ttname"><a href="conversions_8h.html">conversions.h</a></div></div>
@@ -1342,17 +1356,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="alazy-instance_8h_html"><div class="ttname"><a href="lazy-instance_8h.html">lazy-instance.h</a></div></div>
 <div class="ttc" id="alazy-instance_8h_html_a219abfaf8244b8fa42f0c18aca72c58f"><div class="ttname"><a href="lazy-instance_8h.html#a219abfaf8244b8fa42f0c18aca72c58f">DEFINE_LAZY_LEAKY_OBJECT_GETTER</a></div><div class="ttdeci">#define DEFINE_LAZY_LEAKY_OBJECT_GETTER(T, FunctionName,...)</div><div class="ttdef"><b>Definition</b> <a href="lazy-instance_8h_source.html#l00249">lazy-instance.h:249</a></div></div>
 <div class="ttc" id="aliftoff-compiler_8cc_html_ab600894d6947e13cf9b2a5a775e70324"><div class="ttname"><a href="liftoff-compiler_8cc.html#ab600894d6947e13cf9b2a5a775e70324">state</a></div><div class="ttdeci">LiftoffAssembler::CacheState state</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l00453">liftoff-compiler.cc:453</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a2209830df6b59d1ec1fdf66b9352924f"><div class="ttname"><a href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a></div><div class="ttdeci">#define DCHECK_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00491">logging.h:491</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00486">logging.h:486</a></div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="amul-fft_8cc_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="mul-fft_8cc.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition</b> <a href="mul-fft_8cc_source.html#l00296">mul-fft.cc:296</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="hashing_8h_source.html#l00364">hashing.h:364</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
@@ -1360,7 +1363,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_a271f8ea99b7c0bbd771df015d4e4cf21a26a5934e256740899f4fd130f028fc70"><div class="ttname"><a href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a26a5934e256740899f4fd130f028fc70">v8::internal::kNotEqual</a></div><div class="ttdeci">@ kNotEqual</div><div class="ttdef"><b>Definition</b> <a href="constants-arm_8h_source.html#l00111">constants-arm.h:111</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a4a7a0d7631497f73ac7e69b8cfd67a66"><div class="ttname"><a href="namespacev8_1_1internal.html#a4a7a0d7631497f73ac7e69b8cfd67a66">v8::internal::TryAbortResult</a></div><div class="ttdeci">TryAbortResult</div><div class="ttdef"><b>Definition</b> <a href="cancelable-task_8h_source.html#l00027">cancelable-task.h:27</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a4a7a0d7631497f73ac7e69b8cfd67a66a0520cdffcc0a02e02cfef3c23c0a5a5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a4a7a0d7631497f73ac7e69b8cfd67a66a0520cdffcc0a02e02cfef3c23c0a5a5a">v8::internal::TryAbortResult::kTaskRunning</a></div><div class="ttdeci">@ kTaskRunning</div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a4ea3214a4d9ab732893a86f39c5885d4"><div class="ttname"><a href="namespacev8_1_1internal.html#a4ea3214a4d9ab732893a86f39c5885d4">v8::internal::AtomicsWaitEvent</a></div><div class="ttdeci">v8::Isolate::AtomicsWaitEvent AtomicsWaitEvent</div><div class="ttdef"><b>Definition</b> <a href="#l00025">futex-emulation.cc:25</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a511c3dd03bb4fc2b91ed9ef5535e202e"><div class="ttname"><a href="namespacev8_1_1internal.html#a511c3dd03bb4fc2b91ed9ef5535e202e">v8::internal::IsSmi</a></div><div class="ttdeci">V8_INLINE constexpr bool IsSmi(TaggedImpl&lt; kRefType, StorageType &gt; obj)</div><div class="ttdef"><b>Definition</b> <a href="objects_8h_source.html#l00655">objects.h:655</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5297fd2c72981b2220e6b9a831570fb3"><div class="ttname"><a href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">v8::internal::Tagged&lt; Object &gt;</a></div><div class="ttdeci">Tagged&lt; Object &gt;</div><div class="ttdef"><b>Definition</b> <a href="allocation-site-inl_8h_source.html#l00029">allocation-site-inl.h:30</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a60f13a8c00d0433f9336368824ac21a1"><div class="ttname"><a href="namespacev8_1_1internal.html#a60f13a8c00d0433f9336368824ac21a1">v8::internal::direct_handle</a></div><div class="ttdeci">V8_INLINE DirectHandle&lt; T &gt; direct_handle(Tagged&lt; T &gt; object, Isolate *isolate)</div><div class="ttdef"><b>Definition</b> <a href="handles-inl_8h_source.html#l00141">handles-inl.h:141</a></div></div>
@@ -1376,18 +1378,35 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="anamespacev8_html_a4bce9e4e66d366fa8bd12770af5d4ae7"><div class="ttname"><a href="namespacev8.html#a4bce9e4e66d366fa8bd12770af5d4ae7">v8::ToLocal</a></div><div class="ttdeci">bool ToLocal(v8::internal::MaybeDirectHandle&lt; v8::internal::Object &gt; maybe, Local&lt; T &gt; *local)</div><div class="ttdef"><b>Definition</b> <a href="api_8h_source.html#l00303">api.h:303</a></div></div>
+<div class="ttc" id="anamespacev8_html_aef5115fb284980e6c3772b55f8e8ca72"><div class="ttname"><a href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">v8::Just</a></div><div class="ttdeci">Maybe&lt; T &gt; Just(const T &amp;t)</div><div class="ttdef"><b>Definition</b> <a href="v8-maybe_8h_source.html#l00116">v8-maybe.h:116</a></div></div>
 <div class="ttc" id="aobjects-inl_8h_html"><div class="ttname"><a href="objects-inl_8h.html">objects-inl.h</a></div></div>
 <div class="ttc" id="asmall-map_8h_html"><div class="ttname"><a href="small-map_8h.html">small-map.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a2209830df6b59d1ec1fdf66b9352924f"><div class="ttname"><a href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a></div><div class="ttdeci">#define DCHECK_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00491">logging.h:491</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00486">logging.h:486</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1FutexWaitListNode_1_1AsyncState_html"><div class="ttname"><a href="structv8_1_1internal_1_1FutexWaitListNode_1_1AsyncState.html">v8::internal::FutexWaitListNode::AsyncState</a></div><div class="ttdef"><b>Definition</b> <a href="futex-emulation_8h_source.html#l00083">futex-emulation.h:83</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1FutexWaitList_1_1HeadAndTail_html"><div class="ttname"><a href="structv8_1_1internal_1_1FutexWaitList_1_1HeadAndTail.html">v8::internal::FutexWaitList::HeadAndTail</a></div><div class="ttdef"><b>Definition</b> <a href="#l00095">futex-emulation.cc:95</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1FutexWaitList_1_1HeadAndTail_html_a915dc498f0c18c0eaaf1dcc5aab1167d"><div class="ttname"><a href="structv8_1_1internal_1_1FutexWaitList_1_1HeadAndTail.html#a915dc498f0c18c0eaaf1dcc5aab1167d">v8::internal::FutexWaitList::HeadAndTail::tail</a></div><div class="ttdeci">FutexWaitListNode * tail</div><div class="ttdef"><b>Definition</b> <a href="#l00097">futex-emulation.cc:97</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1FutexWaitList_1_1HeadAndTail_html_ab5998bb1c41015103fc107fd0e80c88e"><div class="ttname"><a href="structv8_1_1internal_1_1FutexWaitList_1_1HeadAndTail.html#ab5998bb1c41015103fc107fd0e80c88e">v8::internal::FutexWaitList::HeadAndTail::head</a></div><div class="ttdeci">FutexWaitListNode * head</div><div class="ttdef"><b>Definition</b> <a href="#l00096">futex-emulation.cc:96</a></div></div>
+<div class="ttc" id="av8config_8h_html_a4f489f1b838163ab33f251c9e470d938"><div class="ttname"><a href="v8config_8h.html#a4f489f1b838163ab33f251c9e470d938">V8_LIKELY</a></div><div class="ttdeci">#define V8_LIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00650">v8config.h:650</a></div></div>
+<div class="ttc" id="av8config_8h_html_a67bd29db07c711b0fb11ff1c324ebb60"><div class="ttname"><a href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a></div><div class="ttdeci">#define V8_UNLIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00649">v8config.h:649</a></div></div>
 <div class="ttc" id="avm-state-inl_8h_html"><div class="ttname"><a href="vm-state-inl_8h.html">vm-state-inl.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:28 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bd0755c95a42e835fb06f38bbeb1d6ed.html">execution</a></li><li class="navelem"><a class="el" href="futex-emulation_8cc.html">futex-emulation.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:36 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/zone/zone.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/zone/zone.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('zone_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6d796c19addd4e06cc1b17d9fc75201a.html">zone</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">zone.cc</div></div>
 </div><!--header-->
@@ -104,7 +112,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="asan_8h.html">src/base/sanitizer/asan.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="v8_8h.html">src/init/v8.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="src_2init_2v8_8h.html">src/init/v8.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="utils_2utils_8h.html">src/utils/utils.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="type-stats_8h.html">src/zone/type-stats.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
@@ -138,35 +146,35 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1Zone.html#a18483b56097296d48c8dd8a7629d23b6">   40</a></span><a class="code hl_function" href="classv8_1_1internal_1_1Zone.html#a18483b56097296d48c8dd8a7629d23b6">Zone::~Zone</a>() {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_function" href="classv8_1_1internal_1_1Zone.html#ae9dfff91c451f6e52ef4c2aa7c6946b8">DeleteAll</a>();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a75f8ea480057ba17c1c9b33af80868fd">segment_bytes_allocated_</a>.load(), 0);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a75f8ea480057ba17c1c9b33af80868fd">segment_bytes_allocated_</a>.load(), 0);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>}</div>
 </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1Zone.html#a1d4688f66d15aa955237f583791f6435">   45</a></span><span class="keywordtype">void</span>* <a class="code hl_function" href="classv8_1_1internal_1_1Zone.html#a1d4688f66d15aa955237f583791f6435">Zone::AsanNew</a>(<span class="keywordtype">size_t</span> size) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#adb38bbbe79bedb709d009869dd959b31">sealed_</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#adb38bbbe79bedb709d009869dd959b31">sealed_</a>);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="comment">// Round up the requested size to fit the alignment.</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  size = <a class="code hl_function" href="macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(size, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a9eb64570fe0243183dca97d450925644">kAlignmentInBytes</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  size = <a class="code hl_function" href="src_2base_2macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(size, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a9eb64570fe0243183dca97d450925644">kAlignmentInBytes</a>);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="comment">// Check if the requested size is available without expanding.</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> size_with_redzone = size + kASanRedzoneBytes;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(size_with_redzone &gt; <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a> - <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>)) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(size_with_redzone &gt; <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a> - <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>)) {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <a class="code hl_function" href="classv8_1_1internal_1_1Zone.html#a55bd8000be351052a2264616a05608bb">Expand</a>(size_with_redzone);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(size_with_redzone, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a> - <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(size_with_redzone, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a> - <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a> += size_with_redzone;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> redzone_position = <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> + <a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(redzone_position + kASanRedzoneBytes, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> redzone_position = <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> + <a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(redzone_position + kASanRedzoneBytes, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>);</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <a class="code hl_define" href="asan_8h.html#a4c8a2cbf67db1e75378e5928fc82f5d4">ASAN_POISON_MEMORY_REGION</a>(<span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(redzone_position),</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                            kASanRedzoneBytes);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="comment">// Check that the result has the proper alignment and return it.</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a9eb64570fe0243183dca97d450925644">kAlignmentInBytes</a>));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a9eb64570fe0243183dca97d450925644">kAlignmentInBytes</a>));</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
 </div>
@@ -192,16 +200,16 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  keep-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#afc72b6c0bcc19388e22a4ffb956fa91a">ZapContents</a>();</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#afe7a57a9cf3ea3094cfc5cbddbeb46be">segment_head_</a> = keep;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a> = <a class="code hl_function" href="macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(keep-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#a2e1f71cda77e5d633b40dab3b9c1a8bf">start</a>(), <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a9eb64570fe0243183dca97d450925644">kAlignmentInBytes</a>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a> = <a class="code hl_function" href="src_2base_2macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(keep-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#a2e1f71cda77e5d633b40dab3b9c1a8bf">start</a>(), <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a9eb64570fe0243183dca97d450925644">kAlignmentInBytes</a>);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a> = keep-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#ad25f0125844054e3b76c5f9df9f44e2d">end</a>();</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<a class="code hl_function" href="classv8_1_1internal_1_1Zone.html#a5598fd0d6fbe395c364a7cc5722433ee">allocation_size</a>(), <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a9eb64570fe0243183dca97d450925644">kAlignmentInBytes</a>);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a75f8ea480057ba17c1c9b33af80868fd">segment_bytes_allocated_</a>, keep-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#a609cee3988219fc14aab98f2f2d5faff">total_size</a>());</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<a class="code hl_function" href="classv8_1_1internal_1_1Zone.html#a5598fd0d6fbe395c364a7cc5722433ee">allocation_size</a>(), <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a9eb64570fe0243183dca97d450925644">kAlignmentInBytes</a>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a75f8ea480057ba17c1c9b33af80868fd">segment_bytes_allocated_</a>, keep-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#a609cee3988219fc14aab98f2f2d5faff">total_size</a>());</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
 </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#ifdef DEBUG</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keywordtype">bool</span> Zone::Contains(<span class="keyword">const</span> <span class="keywordtype">void</span>* ptr)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> address = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(ptr);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> address = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(ptr);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1Segment.html">Segment</a>* segment = <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#afe7a57a9cf3ea3094cfc5cbddbeb46be">segment_head_</a>; segment != <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>       segment = segment-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#a15176147d172a789613fb8194e0d8a9f">next</a>()) {</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keywordflow">if</span> (address &gt;= segment-&gt;start() &amp;&amp; address &lt; segment-&gt;<a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>()) {</div>
@@ -255,8 +263,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1Zone.html#a55bd8000be351052a2264616a05608bb">  146</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1Zone.html#a55bd8000be351052a2264616a05608bb">Zone::Expand</a>(<span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <span class="comment">// Make sure the requested size is already properly aligned and that</span></div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <span class="comment">// there isn&#39;t enough room in the Zone to satisfy the request.</span></div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(size, <a class="code hl_function" href="macros_8h.html#aa0de4a420e74c8df8076fc2aaf4af27a">RoundDown</a>(size, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a9eb64570fe0243183dca97d450925644">kAlignmentInBytes</a>));</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a> - <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>, size);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(size, <a class="code hl_function" href="src_2base_2macros_8h.html#aa0de4a420e74c8df8076fc2aaf4af27a">RoundDown</a>(size, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a9eb64570fe0243183dca97d450925644">kAlignmentInBytes</a>));</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a> - <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>, size);</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="comment">// Compute the new segment size. We use a &#39;high water mark&#39;</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="comment">// strategy, where we increase the segment size every time we expand</span></div>
@@ -290,7 +298,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a977b087d4ee58955efe72b33136a4e94">V8::FatalProcessOutOfMemory</a>(<span class="keyword">nullptr</span>, <span class="stringliteral">&quot;Zone&quot;</span>);</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  }</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(segment-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#a609cee3988219fc14aab98f2f2d5faff">total_size</a>(), new_size);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(segment-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#a609cee3988219fc14aab98f2f2d5faff">total_size</a>(), new_size);</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a75f8ea480057ba17c1c9b33af80868fd">segment_bytes_allocated_</a> += segment-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#a609cee3988219fc14aab98f2f2d5faff">total_size</a>();</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  segment-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#ab4851303c0750994872ef72e2e0becd7">set_zone</a>(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  segment-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#aafd40a351dec49b6d12309af80fbd9f3">set_next</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#afe7a57a9cf3ea3094cfc5cbddbeb46be">segment_head_</a>);</div>
@@ -302,10 +310,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#ad7c328f3c0ae6da04c9fd87805133a3b">allocator_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1AccountingAllocator.html#a62742bd24d0b7d015b3d647391ef8eeb">TraceAllocateSegment</a>(segment);</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="comment">// Recompute &#39;top&#39; and &#39;limit&#39; based on the new segment.</span></div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a> = <a class="code hl_function" href="macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(segment-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#a2e1f71cda77e5d633b40dab3b9c1a8bf">start</a>(), <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a9eb64570fe0243183dca97d450925644">kAlignmentInBytes</a>);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a> = <a class="code hl_function" href="src_2base_2macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(segment-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#a2e1f71cda77e5d633b40dab3b9c1a8bf">start</a>(), <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a9eb64570fe0243183dca97d450925644">kAlignmentInBytes</a>);</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a> = segment-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#ad25f0125844054e3b76c5f9df9f44e2d">end</a>();</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a>);</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(size, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a> - <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a>);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(size, <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#aabf77ceacd16fa240a9a820b9072bfcb">limit_</a> - <a class="code hl_variable" href="classv8_1_1internal_1_1Zone.html#a2e1ebcdcad6962b651389d066a69b573">position_</a>);</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>}</div>
 </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
@@ -331,7 +339,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="keywordflow">while</span> (current != <a class="code hl_variable" href="classv8_1_1internal_1_1ZoneSnapshot.html#aa80198c905ef8f06b85c3f8db5d25dba">segment_head_</a>) {</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    <span class="comment">// If this check failed, then either you passed a wrong zone, or the zone</span></div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="comment">// was reset to an earlier snapshot already. We cannot move forward again.</span></div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <a class="code hl_define" href="logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a>(current);</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a>(current);</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Segment.html">Segment</a>* next = current-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Segment.html#a15176147d172a789613fb8194e0d8a9f">next</a>();</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    zone-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Zone.html#a7e7422612d7bbf3d4883aa3c1d2b8b9b">ReleaseSegment</a>(current);</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    current = next;</div>
@@ -340,9 +348,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  <span class="comment">// Un-poison the trailing segment content so we can re-use or zap it later.</span></div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1ZoneSnapshot.html#aa80198c905ef8f06b85c3f8db5d25dba">segment_head_</a> != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keywordtype">void</span>* <span class="keyword">const</span> <a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a> = <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="classv8_1_1internal_1_1ZoneSnapshot.html#a516b358479c2d276d958a6f540e6caac">position_</a>);</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(current-&gt;start()));</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(current-&gt;end()));</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> length = current-&gt;end() - <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(current-&gt;start()));</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(current-&gt;end()));</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keyword">const</span> <span class="keywordtype">size_t</span> length = current-&gt;end() - <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>);</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <a class="code hl_define" href="asan_8h.html#a1bde985325c2af6ffc519c47b9092f35">ASAN_UNPOISON_MEMORY_REGION</a>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, length);</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  }</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
@@ -415,30 +423,34 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="agraph-builder-interface_8cc_html_af1b3ab10d00009483229c6592a7ed9d7"><div class="ttname"><a href="graph-builder-interface_8cc.html#af1b3ab10d00009483229c6592a7ed9d7">allocator_</a></div><div class="ttdeci">LocalsAllocator * allocator_</div><div class="ttdef"><b>Definition</b> <a href="graph-builder-interface_8cc_source.html#l00066">graph-builder-interface.cc:66</a></div></div>
 <div class="ttc" id="aisolate_8cc_html_a787a832ab591758654210dd93e0b6a1b"><div class="ttname"><a href="isolate_8cc.html#a787a832ab591758654210dd93e0b6a1b">limit_</a></div><div class="ttdeci">const int limit_</div><div class="ttdef"><b>Definition</b> <a href="isolate_8cc_source.html#l01118">isolate.cc:1118</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_a41f8c58d2c01bf65b8ee199c3f87fc80"><div class="ttname"><a href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a></div><div class="ttdeci">ZoneVector&lt; RpoNumber &gt; &amp; result</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00021">jump-threading.cc:21</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_a9154b181227e4b02e465befe50219158"><div class="ttname"><a href="logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a></div><div class="ttdeci">#define CHECK_NOT_NULL(val)</div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="amachine-graph-verifier_8cc_html_a7dac8366c11fbcad2f49d85fe8fc4fbe"><div class="ttname"><a href="machine-graph-verifier_8cc.html#a7dac8366c11fbcad2f49d85fe8fc4fbe">name_</a></div><div class="ttdeci">const char * name_</div><div class="ttdef"><b>Definition</b> <a href="machine-graph-verifier_8cc_source.html#l01077">machine-graph-verifier.cc:1077</a></div></div>
-<div class="ttc" id="amacros_8h_html_a5113f5db9eec9c30ecea57b8d4175f2d"><div class="ttname"><a href="macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a></div><div class="ttdeci">constexpr T RoundUp(T x, intptr_t m)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00375">macros.h:375</a></div></div>
-<div class="ttc" id="amacros_8h_html_aa0de4a420e74c8df8076fc2aaf4af27a"><div class="ttname"><a href="macros_8h.html#aa0de4a420e74c8df8076fc2aaf4af27a">RoundDown</a></div><div class="ttdeci">constexpr T RoundDown(T x, intptr_t m)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00359">macros.h:359</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab7a19c1f785f31f2b190afc19875368a"><div class="ttname"><a href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a></div><div class="ttdeci">constexpr bool IsAligned(T value, U alignment)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00391">macros.h:391</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="asetup-heap-internal_8cc_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> <a href="setup-heap-internal_8cc_source.html#l00126">setup-heap-internal.cc:126</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a9154b181227e4b02e465befe50219158"><div class="ttname"><a href="src_2base_2logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a></div><div class="ttdeci">#define CHECK_NOT_NULL(val)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a5113f5db9eec9c30ecea57b8d4175f2d"><div class="ttname"><a href="src_2base_2macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a></div><div class="ttdeci">constexpr T RoundUp(T x, intptr_t m)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00375">macros.h:375</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_aa0de4a420e74c8df8076fc2aaf4af27a"><div class="ttname"><a href="src_2base_2macros_8h.html#aa0de4a420e74c8df8076fc2aaf4af27a">RoundDown</a></div><div class="ttdeci">constexpr T RoundDown(T x, intptr_t m)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00359">macros.h:359</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab7a19c1f785f31f2b190afc19875368a"><div class="ttname"><a href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a></div><div class="ttdeci">constexpr bool IsAligned(T value, U alignment)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00391">macros.h:391</a></div></div>
+<div class="ttc" id="asrc_2init_2v8_8h_html"><div class="ttname"><a href="src_2init_2v8_8h.html">v8.h</a></div></div>
 <div class="ttc" id="atype-stats_8h_html"><div class="ttname"><a href="type-stats_8h.html">type-stats.h</a></div></div>
 <div class="ttc" id="autils_2utils_8h_html"><div class="ttname"><a href="utils_2utils_8h.html">utils.h</a></div></div>
-<div class="ttc" id="av8_8h_html"><div class="ttname"><a href="v8_8h.html">v8.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a67bd29db07c711b0fb11ff1c324ebb60"><div class="ttname"><a href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a></div><div class="ttdeci">#define V8_UNLIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00649">v8config.h:649</a></div></div>
 <div class="ttc" id="azone_8h_html"><div class="ttname"><a href="zone_8h.html">zone.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:10 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6d796c19addd4e06cc1b17d9fc75201a.html">zone</a></li><li class="navelem"><a class="el" href="zone_8cc.html">zone.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:23 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

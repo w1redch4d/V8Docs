@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/init/v8.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/init/v8.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('v8_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_93ef7a03ae011ca5032e526d863e8f9f.html">init</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">v8.cc</div></div>
 </div><!--header-->
@@ -98,16 +106,16 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Use of this source code is governed by a BSD-style license that can be</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// found in the LICENSE file.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="v8_8h.html">src/init/v8.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="src_2init_2v8_8h.html">src/init/v8.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;include/cppgc/platform.h&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;include/v8-sandbox.h&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="include_2cppgc_2platform_8h.html">include/cppgc/platform.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="v8-sandbox_8h.html">include/v8-sandbox.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="api_8h.html">src/api/api.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="atomicops_8h.html">src/base/atomicops.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="once_8h.html">src/base/once.h</a>&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="base_2platform_2platform_8h.html">src/base/platform/platform.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2platform_2platform_8h.html">src/base/platform/platform.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="cpu-features_8h.html">src/codegen/cpu-features.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="interface-descriptors_8h.html">src/codegen/interface-descriptors.h</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="code-memory-access_8h.html">src/common/code-memory-access.h</a>&quot;</span></div>
@@ -124,7 +132,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="heap-profiler_8h.html">src/profiler/heap-profiler.h</a>&quot;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;<a class="code" href="hardware-support_8h.html">src/sandbox/hardware-support.h</a>&quot;</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &quot;<a class="code" href="sandbox_8h.html">src/sandbox/sandbox.h</a>&quot;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="testing_8h.html">src/sandbox/testing.h</a>&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &quot;<a class="code" href="src_2sandbox_2testing_8h.html">src/sandbox/testing.h</a>&quot;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &quot;<a class="code" href="snapshot_8h.html">src/snapshot/snapshot.h</a>&quot;</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#if defined(V8_USE_PERFETTO)</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="code-data-source_8h.html">src/tracing/code-data-source.h</a>&quot;</span></div>
@@ -143,7 +151,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">namespace </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">internal</a> {</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>v8::Platform* <a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">V8::platform_</a> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><a class="code hl_class" href="classv8_1_1Platform.html">v8::Platform</a>* <a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">V8::platform_</a> = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keyword">const</span> OOMDetails <a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a463330dc3687530eca07a8140fcfac5b">V8::kNoOOMDetails</a>{<span class="keyword">false</span>, <span class="keyword">nullptr</span>};</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">const</span> OOMDetails <a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a9e7fc2b36059579987c527b14d77e9dd">V8::kHeapOOM</a>{<span class="keyword">true</span>, <span class="keyword">nullptr</span>};</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
@@ -164,7 +172,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> AdvanceStartupState(V8StartupState expected_next_state) {</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  V8StartupState current_state = v8_startup_state_;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <a class="code hl_define" href="logging_8h.html#aa958a8a4e5dda3abaa031977268ae60e">CHECK_NE</a>(current_state, V8StartupState::kPlatformDisposed);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aa958a8a4e5dda3abaa031977268ae60e">CHECK_NE</a>(current_state, V8StartupState::kPlatformDisposed);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  V8StartupState next_state =</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keyword">static_cast&lt;</span>V8StartupState<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(current_state) + 1);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keywordflow">if</span> (next_state != expected_next_state) {</div>
@@ -176,12 +184,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// isolate-&gt;Dispose();</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">// v8::V8::Dispose();</span></div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// v8::V8::DisposePlatform();</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_define" href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;Wrong initialization order: from %d to %d, expected to %d!&quot;</span>,</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;Wrong initialization order: from %d to %d, expected to %d!&quot;</span>,</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>          <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(current_state), <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(next_state),</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>          <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(expected_next_state));</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordflow">if</span> (!v8_startup_state_.compare_exchange_strong(current_state, next_state)) {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_define" href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="stringliteral">&quot;Multiple threads are initializating V8 in the wrong order: expected &quot;</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="stringliteral">&quot;%d got %d!&quot;</span>,</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(current_state),</div>
@@ -197,12 +205,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment">// static</span></div>
 <div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#a5f5a64c4edc23f8a5674a05038417260">  103</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a5f5a64c4edc23f8a5674a05038417260">V8::InitializePlatform</a>(v8::Platform* platform) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#a5f5a64c4edc23f8a5674a05038417260">  103</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a5f5a64c4edc23f8a5674a05038417260">V8::InitializePlatform</a>(<a class="code hl_class" href="classv8_1_1Platform.html">v8::Platform</a>* platform) {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  AdvanceStartupState(V8StartupState::kPlatformInitializing);</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!<a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a>);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <a class="code hl_define" href="logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a>(platform);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!<a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a>);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a>(platform);</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a> = platform;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <a class="code hl_function" href="namespacev8_1_1base.html#a54ee556bc0dcd71e6592cc6ad0f6aaad">v8::base::SetPrintStackTrace</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a>-&gt;GetStackTracePrinter());</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <a class="code hl_function" href="namespacev8_1_1base.html#a54ee556bc0dcd71e6592cc6ad0f6aaad">v8::base::SetPrintStackTrace</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a>-&gt;<a class="code hl_function" href="classv8_1_1Platform.html#aadb2594e6ff9a6f6a0657412ff5a7206">GetStackTracePrinter</a>());</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <a class="code hl_function" href="classv8_1_1tracing_1_1TracingCategoryObserver.html#a137821162209f9746ad6c035e58bc82a">v8::tracing::TracingCategoryObserver::SetUp</a>();</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="preprocessor">#if defined(V8_ENABLE_ETW_STACK_WALKING)</span></div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.enable_etw_stack_walking ||</div>
@@ -222,9 +230,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">// static</span></div>
 <div class="foldopen" id="foldopen00126" data-start="{" data-end="}">
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#a49a17687b051975bafd9017cf4e54d80">  126</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a49a17687b051975bafd9017cf4e54d80">V8::InitializePlatformForTesting</a>(v8::Platform* platform) {</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#a49a17687b051975bafd9017cf4e54d80">  126</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a49a17687b051975bafd9017cf4e54d80">V8::InitializePlatformForTesting</a>(<a class="code hl_class" href="classv8_1_1Platform.html">v8::Platform</a>* platform) {</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keywordflow">if</span> (v8_startup_state_ != V8StartupState::kIdle) {</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_define" href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        <span class="stringliteral">&quot;The platform was initialized before. Note that running multiple tests &quot;</span></div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>        <span class="stringliteral">&quot;in the same process is not supported.&quot;</span>);</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  }</div>
@@ -244,7 +252,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00142" data-start="{" data-end="}">
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#ab4aa4e31049426a132ca36166302c4d8">  142</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#ab4aa4e31049426a132ca36166302c4d8">V8::Initialize</a>() {</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  AdvanceStartupState(V8StartupState::kV8Initializing);</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a>);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a>);</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <a class="code hl_function" href="classv8_1_1internal_1_1FlagList.html#a7e0ea5afcd3a038ec945c706f8e6a953">FlagList::EnforceFlagImplications</a>();</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
@@ -265,7 +273,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="comment">// The --jitless and --interpreted-frames-native-stack flags are incompatible</span></div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  <span class="comment">// since the latter requires code generation while the former prohibits code</span></div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <span class="comment">// generation.</span></div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.interpreted_frames_native_stack || !<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.jitless);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.interpreted_frames_native_stack || !<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.jitless);</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <a class="code hl_enumeration" href="namespacev8_1_1base.html#a37a9b036b2bb53802e6b5d0842ca0fad">base::AbortMode</a> abort_mode = <a class="code hl_enumvalue" href="namespacev8_1_1base.html#a37a9b036b2bb53802e6b5d0842ca0fada6867faeaa475fda467e48267db2bb8a8">base::AbortMode::kDefault</a>;</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
@@ -287,8 +295,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <a class="code hl_function" href="classv8_1_1base_1_1OS.html#a88254250a2960488a56dd500cb2e988b">base::OS::Initialize</a>(abort_mode, <a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.gc_fake_mmap);</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.random_seed) {</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">GetPlatformPageAllocator</a>()-&gt;SetRandomMmapSeed(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.random_seed);</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#a927fdd6d2695ea1cee819f49508ace7e">GetPlatformVirtualAddressSpace</a>()-&gt;SetRandomSeed(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.random_seed);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">GetPlatformPageAllocator</a>()-&gt;<a class="code hl_function" href="classv8_1_1PageAllocator.html#a9481a73527915fd200f6e1e9ed4b3eba">SetRandomMmapSeed</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.random_seed);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#a927fdd6d2695ea1cee819f49508ace7e">GetPlatformVirtualAddressSpace</a>()-&gt;<a class="code hl_function" href="classv8_1_1VirtualAddressSpace.html#a2c87529d4f8aa2f73a41a74b50bacb61">SetRandomSeed</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.random_seed);</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  }</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.print_flag_values) <a class="code hl_function" href="classv8_1_1internal_1_1FlagList.html#a874c773c17b6103d4b188bfa11206307">FlagList::PrintValues</a>();</div>
@@ -301,7 +309,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">#ifdef V8_ENABLE_SANDBOX</span></div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="comment">// If enabled, the sandbox must be initialized first.</span></div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  Sandbox::InitializeDefaultOncePerProcess(<a class="code hl_function" href="namespacev8_1_1internal.html#a927fdd6d2695ea1cee819f49508ace7e">GetPlatformVirtualAddressSpace</a>());</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(kSandboxSize, Sandbox::current()-&gt;<a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>());</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(kSandboxSize, Sandbox::current()-&gt;<a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>());</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <span class="comment">// Enable sandbox testing mode if requested.</span></div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <span class="comment">//</span></div>
@@ -353,7 +361,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00249" data-start="{" data-end="}">
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#ae0a49ddcad5c2757cf07dce86cf7e3f7">  249</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#ae0a49ddcad5c2757cf07dce86cf7e3f7">V8::Dispose</a>() {</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  AdvanceStartupState(V8StartupState::kV8Disposing);</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a>);</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a>);</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="preprocessor">#if V8_ENABLE_WEBASSEMBLY</span></div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmEngine.html#a3bda543358e208aec76ae5da75d96eb2">wasm::WasmEngine::GlobalTearDown</a>();</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="preprocessor">#endif  </span><span class="comment">// V8_ENABLE_WEBASSEMBLY</span></div>
@@ -371,7 +379,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00265" data-start="{" data-end="}">
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#a8d2df8b0007f08aaac09c20c9e03268c">  265</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a8d2df8b0007f08aaac09c20c9e03268c">V8::DisposePlatform</a>() {</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  AdvanceStartupState(V8StartupState::kPlatformDisposing);</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a>);</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a>);</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="preprocessor">#if defined(V8_OS_WIN) &amp;&amp; defined(V8_ENABLE_ETW_STACK_WALKING)</span></div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.enable_etw_stack_walking ||</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.enable_etw_by_custom_filter_only) {</div>
@@ -396,23 +404,23 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
 <div class="foldopen" id="foldopen00290" data-start="{" data-end="}">
-<div class="line"><a id="l00290" name="l00290"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#a5eb1d47c492fa1e85e7d7c31dd5cf2bb">  290</a></span>v8::Platform* <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a5eb1d47c492fa1e85e7d7c31dd5cf2bb">V8::GetCurrentPlatform</a>() {</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  v8::Platform* platform = <span class="keyword">reinterpret_cast&lt;</span>v8::Platform*<span class="keyword">&gt;</span>(</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#a5eb1d47c492fa1e85e7d7c31dd5cf2bb">  290</a></span><a class="code hl_class" href="classv8_1_1Platform.html">v8::Platform</a>* <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a5eb1d47c492fa1e85e7d7c31dd5cf2bb">V8::GetCurrentPlatform</a>() {</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  <a class="code hl_class" href="classv8_1_1Platform.html">v8::Platform</a>* platform = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classv8_1_1Platform.html">v8::Platform</a>*<span class="keyword">&gt;</span>(</div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>      <a class="code hl_function" href="namespacev8_1_1base.html#a2e581b5cd5e9342670c135a3b365160c">base::Relaxed_Load</a>(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacev8_1_1base.html#a01be57ce2e59dc0d5816703b58ce1e95">base::AtomicWord</a>*<span class="keyword">&gt;</span>(&amp;<a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a>)));</div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(platform);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(platform);</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  <span class="keywordflow">return</span> platform;</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>}</div>
 </div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
 <div class="foldopen" id="foldopen00297" data-start="{" data-end="}">
-<div class="line"><a id="l00297" name="l00297"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#a01b0c617b00a393381659b7ef884da5a">  297</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a01b0c617b00a393381659b7ef884da5a">V8::SetPlatformForTesting</a>(v8::Platform* platform) {</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#a01b0c617b00a393381659b7ef884da5a">  297</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a01b0c617b00a393381659b7ef884da5a">V8::SetPlatformForTesting</a>(<a class="code hl_class" href="classv8_1_1Platform.html">v8::Platform</a>* platform) {</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  <a class="code hl_function" href="namespacev8_1_1base.html#a00edf83b5d65612ce19389ada4d812d7">base::Relaxed_Store</a>(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacev8_1_1base.html#a01be57ce2e59dc0d5816703b58ce1e95">base::AtomicWord</a>*<span class="keyword">&gt;</span>(&amp;<a class="code hl_variable" href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">platform_</a>),</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                      <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacev8_1_1base.html#a01be57ce2e59dc0d5816703b58ce1e95">base::AtomicWord</a><span class="keyword">&gt;</span>(platform));</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>}</div>
 </div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
 <div class="foldopen" id="foldopen00302" data-start="{" data-end="}">
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#a474be8cbefa4b1c26661a238d14179c0">  302</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a474be8cbefa4b1c26661a238d14179c0">V8::SetSnapshotBlob</a>(StartupData* snapshot_blob) {</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1V8.html#a474be8cbefa4b1c26661a238d14179c0">  302</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a474be8cbefa4b1c26661a238d14179c0">V8::SetSnapshotBlob</a>(<a class="code hl_class" href="classv8_1_1StartupData.html">StartupData</a>* snapshot_blob) {</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="preprocessor">#ifdef V8_USE_EXTERNAL_STARTUP_DATA</span></div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>  <a class="code hl_function" href="namespacev8_1_1base.html#a3bd25eac4abfeaa53389ab881003596d">base::CallOnce</a>(&amp;init_snapshot_once, &amp;<a class="code hl_function" href="namespacev8_1_1internal.html#ae391e31522592705b0d5d4f7fc86a7a1">SetSnapshotFromFile</a>, snapshot_blob);</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="preprocessor">#else</span></div>
@@ -423,12 +431,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="keywordtype">double</span> Platform::SystemClockTimeMillis() {</div>
+<div class="foldopen" id="foldopen00312" data-start="{" data-end="}">
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno"><a class="line" href="classv8_1_1Platform.html#accf17a5dcca8d35e130a0d2e9d4fa0fc">  312</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="classv8_1_1Platform.html#accf17a5dcca8d35e130a0d2e9d4fa0fc">Platform::SystemClockTimeMillis</a>() {</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1base_1_1OS.html#ad95b9514ae4123f8d0a5456d6f2cc204">base::OS::TimeCurrentMillis</a>();</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>}</div>
+</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span> </div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="keywordtype">void</span> ThreadIsolatedAllocator::SetDefaultPermissionsForSignalHandler() {</div>
+<div class="foldopen" id="foldopen00317" data-start="{" data-end="}">
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno"><a class="line" href="classv8_1_1ThreadIsolatedAllocator.html#a77577ea268051d52c432fc9022181ea5">  317</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1ThreadIsolatedAllocator.html#a77577ea268051d52c432fc9022181ea5">ThreadIsolatedAllocator::SetDefaultPermissionsForSignalHandler</a>() {</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="preprocessor">#if V8_HAS_PKU_JIT_WRITE_PROTECT</span></div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  internal::RwxMemoryWriteScope::SetDefaultPermissionsForSignalHandler();</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span><span class="preprocessor">#endif</span></div>
@@ -436,10 +447,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <span class="comment">// SecurityHardwareSupport::SetDefaultPermissionsForSignalHandler.</span></div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <a class="code hl_function" href="classv8_1_1internal_1_1SandboxHardwareSupport.html#a745bcb9a2676821650e2e40bcc943716">internal::SandboxHardwareSupport::SetDefaultPermissionsForSignalHandler</a>();</div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>}</div>
+</div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span><span class="comment">// static</span></div>
 <div class="foldopen" id="foldopen00327" data-start="{" data-end="}">
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SandboxHardwareSupport.html#a4fa0993f50f5c31a32d65a0b7dcb6447">  327</a></span><span class="keywordtype">void</span> SandboxHardwareSupport::InitializeBeforeThreadCreation() {</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno"><a class="line" href="classv8_1_1SandboxHardwareSupport.html#a669b40dffc0df78a8f194149e5c774d1">  327</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1SandboxHardwareSupport.html#a669b40dffc0df78a8f194149e5c774d1">SandboxHardwareSupport::InitializeBeforeThreadCreation</a>() {</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>  <a class="code hl_function" href="classv8_1_1internal_1_1SandboxHardwareSupport.html#a4fa0993f50f5c31a32d65a0b7dcb6447">internal::SandboxHardwareSupport::InitializeBeforeThreadCreation</a>();</div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>}</div>
 </div>
@@ -447,9 +459,16 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>}  <span class="comment">// namespace v8</span></div>
 <div class="ttc" id="aapi_8h_html"><div class="ttname"><a href="api_8h.html">api.h</a></div></div>
 <div class="ttc" id="aatomicops_8h_html"><div class="ttname"><a href="atomicops_8h.html">atomicops.h</a></div></div>
-<div class="ttc" id="abase_2platform_2platform_8h_html"><div class="ttname"><a href="base_2platform_2platform_8h.html">platform.h</a></div></div>
 <div class="ttc" id="abootstrapper_8h_html"><div class="ttname"><a href="bootstrapper_8h.html">bootstrapper.h</a></div></div>
+<div class="ttc" id="aclassv8_1_1PageAllocator_html_a9481a73527915fd200f6e1e9ed4b3eba"><div class="ttname"><a href="classv8_1_1PageAllocator.html#a9481a73527915fd200f6e1e9ed4b3eba">v8::PageAllocator::SetRandomMmapSeed</a></div><div class="ttdeci">virtual void SetRandomMmapSeed(int64_t seed)=0</div></div>
+<div class="ttc" id="aclassv8_1_1Platform_html"><div class="ttname"><a href="classv8_1_1Platform.html">v8::Platform</a></div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l01058">v8-platform.h:1058</a></div></div>
+<div class="ttc" id="aclassv8_1_1Platform_html_aadb2594e6ff9a6f6a0657412ff5a7206"><div class="ttname"><a href="classv8_1_1Platform.html#aadb2594e6ff9a6f6a0657412ff5a7206">v8::Platform::GetStackTracePrinter</a></div><div class="ttdeci">virtual StackTracePrinter GetStackTracePrinter()</div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l01323">v8-platform.h:1323</a></div></div>
+<div class="ttc" id="aclassv8_1_1Platform_html_accf17a5dcca8d35e130a0d2e9d4fa0fc"><div class="ttname"><a href="classv8_1_1Platform.html#accf17a5dcca8d35e130a0d2e9d4fa0fc">v8::Platform::SystemClockTimeMillis</a></div><div class="ttdeci">static V8_EXPORT double SystemClockTimeMillis()</div><div class="ttdef"><b>Definition</b> <a href="#l00312">v8.cc:312</a></div></div>
 <div class="ttc" id="aclassv8_1_1RegisteredExtension_html_a77b6380f53298a8a5c22f9900d4bd194"><div class="ttname"><a href="classv8_1_1RegisteredExtension.html#a77b6380f53298a8a5c22f9900d4bd194">v8::RegisteredExtension::UnregisterAll</a></div><div class="ttdeci">static void UnregisterAll()</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l00652">api.cc:652</a></div></div>
+<div class="ttc" id="aclassv8_1_1SandboxHardwareSupport_html_a669b40dffc0df78a8f194149e5c774d1"><div class="ttname"><a href="classv8_1_1SandboxHardwareSupport.html#a669b40dffc0df78a8f194149e5c774d1">v8::SandboxHardwareSupport::InitializeBeforeThreadCreation</a></div><div class="ttdeci">static V8_EXPORT void InitializeBeforeThreadCreation()</div><div class="ttdef"><b>Definition</b> <a href="#l00327">v8.cc:327</a></div></div>
+<div class="ttc" id="aclassv8_1_1StartupData_html"><div class="ttname"><a href="classv8_1_1StartupData.html">v8::StartupData</a></div><div class="ttdef"><b>Definition</b> <a href="v8-snapshot_8h_source.html#l00021">v8-snapshot.h:21</a></div></div>
+<div class="ttc" id="aclassv8_1_1ThreadIsolatedAllocator_html_a77577ea268051d52c432fc9022181ea5"><div class="ttname"><a href="classv8_1_1ThreadIsolatedAllocator.html#a77577ea268051d52c432fc9022181ea5">v8::ThreadIsolatedAllocator::SetDefaultPermissionsForSignalHandler</a></div><div class="ttdeci">static void SetDefaultPermissionsForSignalHandler()</div><div class="ttdef"><b>Definition</b> <a href="#l00317">v8.cc:317</a></div></div>
+<div class="ttc" id="aclassv8_1_1VirtualAddressSpace_html_a2c87529d4f8aa2f73a41a74b50bacb61"><div class="ttname"><a href="classv8_1_1VirtualAddressSpace.html#a2c87529d4f8aa2f73a41a74b50bacb61">v8::VirtualAddressSpace::SetRandomSeed</a></div><div class="ttdeci">virtual void SetRandomSeed(int64_t seed)=0</div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1OS_html_a88254250a2960488a56dd500cb2e988b"><div class="ttname"><a href="classv8_1_1base_1_1OS.html#a88254250a2960488a56dd500cb2e988b">v8::base::OS::Initialize</a></div><div class="ttdeci">static void Initialize(AbortMode abort_mode, const char *const gc_fake_mmap)</div><div class="ttdef"><b>Definition</b> <a href="platform-fuchsia_8cc_source.html#l00245">platform-fuchsia.cc:245</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1OS_html_ad95b9514ae4123f8d0a5456d6f2cc204"><div class="ttname"><a href="classv8_1_1base_1_1OS.html#ad95b9514ae4123f8d0a5456d6f2cc204">v8::base::OS::TimeCurrentMillis</a></div><div class="ttdeci">static double TimeCurrentMillis()</div><div class="ttdef"><b>Definition</b> <a href="platform-posix_8cc_source.html#l00912">platform-posix.cc:912</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Bootstrapper_html_aebe5e8b735f78ccb34cdc57bd6af4167"><div class="ttname"><a href="classv8_1_1internal_1_1Bootstrapper.html#aebe5e8b735f78ccb34cdc57bd6af4167">v8::internal::Bootstrapper::InitializeOncePerProcess</a></div><div class="ttdeci">static void InitializeOncePerProcess()</div><div class="ttdef"><b>Definition</b> <a href="bootstrapper_8cc_source.html#l00157">bootstrapper.cc:157</a></div></div>
@@ -470,18 +489,18 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1IsolateGroup_html_af86edc13db0cb86083a7711def812dc1"><div class="ttname"><a href="classv8_1_1internal_1_1IsolateGroup.html#af86edc13db0cb86083a7711def812dc1">v8::internal::IsolateGroup::InitializeOncePerProcess</a></div><div class="ttdeci">static void InitializeOncePerProcess()</div><div class="ttdef"><b>Definition</b> <a href="isolate-group_8cc_source.html#l00138">isolate-group.cc:138</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html_a04b11e5e7cb6d5a5c85e53cae6915221"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html#a04b11e5e7cb6d5a5c85e53cae6915221">v8::internal::Isolate::InitializeOncePerProcess</a></div><div class="ttdeci">static void InitializeOncePerProcess()</div><div class="ttdef"><b>Definition</b> <a href="isolate_8cc_source.html#l00585">isolate.cc:585</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html_a9388baf904ce8112f7d1b40d7a1c8d0e"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html#a9388baf904ce8112f7d1b40d7a1c8d0e">v8::internal::Isolate::GetTurboCfgFileName</a></div><div class="ttdeci">static std::string GetTurboCfgFileName(Isolate *isolate)</div><div class="ttdef"><b>Definition</b> <a href="isolate_8cc_source.html#l07015">isolate.cc:7015</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1SandboxHardwareSupport_html_a4fa0993f50f5c31a32d65a0b7dcb6447"><div class="ttname"><a href="classv8_1_1internal_1_1SandboxHardwareSupport.html#a4fa0993f50f5c31a32d65a0b7dcb6447">v8::internal::SandboxHardwareSupport::InitializeBeforeThreadCreation</a></div><div class="ttdeci">static void InitializeBeforeThreadCreation()</div><div class="ttdef"><b>Definition</b> <a href="#l00327">v8.cc:327</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1SandboxHardwareSupport_html_a4fa0993f50f5c31a32d65a0b7dcb6447"><div class="ttname"><a href="classv8_1_1internal_1_1SandboxHardwareSupport.html#a4fa0993f50f5c31a32d65a0b7dcb6447">v8::internal::SandboxHardwareSupport::InitializeBeforeThreadCreation</a></div><div class="ttdeci">static void InitializeBeforeThreadCreation()</div><div class="ttdef"><b>Definition</b> <a href="hardware-support_8cc_source.html#l00082">hardware-support.cc:82</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1SandboxHardwareSupport_html_a745bcb9a2676821650e2e40bcc943716"><div class="ttname"><a href="classv8_1_1internal_1_1SandboxHardwareSupport.html#a745bcb9a2676821650e2e40bcc943716">v8::internal::SandboxHardwareSupport::SetDefaultPermissionsForSignalHandler</a></div><div class="ttdeci">static void SetDefaultPermissionsForSignalHandler()</div><div class="ttdef"><b>Definition</b> <a href="hardware-support_8cc_source.html#l00085">hardware-support.cc:85</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1ThreadIsolation_html_a133b458abd67d1cc6fd1997eacc3911d"><div class="ttname"><a href="classv8_1_1internal_1_1ThreadIsolation.html#a133b458abd67d1cc6fd1997eacc3911d">v8::internal::ThreadIsolation::Initialize</a></div><div class="ttdeci">static void Initialize(ThreadIsolatedAllocator *allocator)</div><div class="ttdef"><b>Definition</b> <a href="code-memory-access_8cc_source.html#l00081">code-memory-access.cc:81</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a01b0c617b00a393381659b7ef884da5a"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a01b0c617b00a393381659b7ef884da5a">v8::internal::V8::SetPlatformForTesting</a></div><div class="ttdeci">static V8_EXPORT_PRIVATE void SetPlatformForTesting(v8::Platform *platform)</div><div class="ttdef"><b>Definition</b> <a href="#l00297">v8.cc:297</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a118a0629e468cb5f65237387efc846e0"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">v8::internal::V8::platform_</a></div><div class="ttdeci">static v8::Platform * platform_</div><div class="ttdef"><b>Definition</b> <a href="v8_8h_source.html#l00057">v8.h:57</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a463330dc3687530eca07a8140fcfac5b"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a463330dc3687530eca07a8140fcfac5b">v8::internal::V8::kNoOOMDetails</a></div><div class="ttdeci">static V8_EXPORT_PRIVATE const OOMDetails kNoOOMDetails</div><div class="ttdef"><b>Definition</b> <a href="v8_8h_source.html#l00036">v8.h:36</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a118a0629e468cb5f65237387efc846e0"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a118a0629e468cb5f65237387efc846e0">v8::internal::V8::platform_</a></div><div class="ttdeci">static v8::Platform * platform_</div><div class="ttdef"><b>Definition</b> <a href="src_2init_2v8_8h_source.html#l00057">v8.h:57</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a463330dc3687530eca07a8140fcfac5b"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a463330dc3687530eca07a8140fcfac5b">v8::internal::V8::kNoOOMDetails</a></div><div class="ttdeci">static V8_EXPORT_PRIVATE const OOMDetails kNoOOMDetails</div><div class="ttdef"><b>Definition</b> <a href="src_2init_2v8_8h_source.html#l00036">v8.h:36</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a474be8cbefa4b1c26661a238d14179c0"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a474be8cbefa4b1c26661a238d14179c0">v8::internal::V8::SetSnapshotBlob</a></div><div class="ttdeci">static void SetSnapshotBlob(StartupData *snapshot_blob)</div><div class="ttdef"><b>Definition</b> <a href="#l00302">v8.cc:302</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a49a17687b051975bafd9017cf4e54d80"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a49a17687b051975bafd9017cf4e54d80">v8::internal::V8::InitializePlatformForTesting</a></div><div class="ttdeci">static V8_EXPORT_PRIVATE void InitializePlatformForTesting(v8::Platform *platform)</div><div class="ttdef"><b>Definition</b> <a href="#l00126">v8.cc:126</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a5eb1d47c492fa1e85e7d7c31dd5cf2bb"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a5eb1d47c492fa1e85e7d7c31dd5cf2bb">v8::internal::V8::GetCurrentPlatform</a></div><div class="ttdeci">static V8_EXPORT_PRIVATE v8::Platform * GetCurrentPlatform()</div><div class="ttdef"><b>Definition</b> <a href="#l00290">v8.cc:290</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a5f5a64c4edc23f8a5674a05038417260"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a5f5a64c4edc23f8a5674a05038417260">v8::internal::V8::InitializePlatform</a></div><div class="ttdeci">static void InitializePlatform(v8::Platform *platform)</div><div class="ttdef"><b>Definition</b> <a href="#l00103">v8.cc:103</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a8d2df8b0007f08aaac09c20c9e03268c"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a8d2df8b0007f08aaac09c20c9e03268c">v8::internal::V8::DisposePlatform</a></div><div class="ttdeci">static void DisposePlatform()</div><div class="ttdef"><b>Definition</b> <a href="#l00265">v8.cc:265</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a9e7fc2b36059579987c527b14d77e9dd"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a9e7fc2b36059579987c527b14d77e9dd">v8::internal::V8::kHeapOOM</a></div><div class="ttdeci">static V8_EXPORT_PRIVATE const OOMDetails kHeapOOM</div><div class="ttdef"><b>Definition</b> <a href="v8_8h_source.html#l00037">v8.h:37</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a9e7fc2b36059579987c527b14d77e9dd"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a9e7fc2b36059579987c527b14d77e9dd">v8::internal::V8::kHeapOOM</a></div><div class="ttdeci">static V8_EXPORT_PRIVATE const OOMDetails kHeapOOM</div><div class="ttdef"><b>Definition</b> <a href="src_2init_2v8_8h_source.html#l00037">v8.h:37</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1V8_html_ab4aa4e31049426a132ca36166302c4d8"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#ab4aa4e31049426a132ca36166302c4d8">v8::internal::V8::Initialize</a></div><div class="ttdeci">static void Initialize()</div><div class="ttdef"><b>Definition</b> <a href="#l00142">v8.cc:142</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1V8_html_ae0a49ddcad5c2757cf07dce86cf7e3f7"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#ae0a49ddcad5c2757cf07dce86cf7e3f7">v8::internal::V8::Dispose</a></div><div class="ttdeci">static void Dispose()</div><div class="ttdef"><b>Definition</b> <a href="#l00249">v8.cc:249</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1wasm_1_1WasmEngine_html_a0dc3794ded31c3d4f26cb020d2ffe332"><div class="ttname"><a href="classv8_1_1internal_1_1wasm_1_1WasmEngine.html#a0dc3794ded31c3d4f26cb020d2ffe332">v8::internal::wasm::WasmEngine::InitializeOncePerProcess</a></div><div class="ttdeci">static void InitializeOncePerProcess()</div><div class="ttdef"><b>Definition</b> <a href="wasm-engine_8cc_source.html#l02084">wasm-engine.cc:2084</a></div></div>
@@ -500,13 +519,8 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aframes_8h_html"><div class="ttname"><a href="frames_8h.html">frames.h</a></div></div>
 <div class="ttc" id="ahardware-support_8h_html"><div class="ttname"><a href="hardware-support_8h.html">hardware-support.h</a></div></div>
 <div class="ttc" id="aheap-profiler_8h_html"><div class="ttname"><a href="heap-profiler_8h.html">heap-profiler.h</a></div></div>
+<div class="ttc" id="ainclude_2cppgc_2platform_8h_html"><div class="ttname"><a href="include_2cppgc_2platform_8h.html">platform.h</a></div></div>
 <div class="ttc" id="ainterface-descriptors_8h_html"><div class="ttname"><a href="interface-descriptors_8h.html">interface-descriptors.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00047">logging.h:47</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_a9154b181227e4b02e465befe50219158"><div class="ttname"><a href="logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a></div><div class="ttdeci">#define CHECK_NOT_NULL(val)</div></div>
-<div class="ttc" id="alogging_8h_html_aa958a8a4e5dda3abaa031977268ae60e"><div class="ttname"><a href="logging_8h.html#aa958a8a4e5dda3abaa031977268ae60e">CHECK_NE</a></div><div class="ttdeci">#define CHECK_NE(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a00edf83b5d65612ce19389ada4d812d7"><div class="ttname"><a href="namespacev8_1_1base.html#a00edf83b5d65612ce19389ada4d812d7">v8::base::Relaxed_Store</a></div><div class="ttdeci">void Relaxed_Store(volatile Atomic8 *ptr, Atomic8 value)</div><div class="ttdef"><b>Definition</b> <a href="atomicops_8h_source.html#l00189">atomicops.h:189</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a01be57ce2e59dc0d5816703b58ce1e95"><div class="ttname"><a href="namespacev8_1_1base.html#a01be57ce2e59dc0d5816703b58ce1e95">v8::base::AtomicWord</a></div><div class="ttdeci">Atomic32 AtomicWord</div><div class="ttdef"><b>Definition</b> <a href="atomicops_8h_source.html#l00076">atomicops.h:76</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a2e581b5cd5e9342670c135a3b365160c"><div class="ttname"><a href="namespacev8_1_1base.html#a2e581b5cd5e9342670c135a3b365160c">v8::base::Relaxed_Load</a></div><div class="ttdeci">Atomic8 Relaxed_Load(volatile const Atomic8 *ptr)</div><div class="ttdef"><b>Definition</b> <a href="atomicops_8h_source.html#l00234">atomicops.h:234</a></div></div>
@@ -534,15 +548,26 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="asetup-heap-internal_8cc_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> <a href="setup-heap-internal_8cc_source.html#l00126">setup-heap-internal.cc:126</a></div></div>
 <div class="ttc" id="asimulator_8h_html"><div class="ttname"><a href="simulator_8h.html">simulator.h</a></div></div>
 <div class="ttc" id="asnapshot_8h_html"><div class="ttname"><a href="snapshot_8h.html">snapshot.h</a></div></div>
-<div class="ttc" id="atesting_8h_html"><div class="ttname"><a href="testing_8h.html">testing.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00047">logging.h:47</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a9154b181227e4b02e465befe50219158"><div class="ttname"><a href="src_2base_2logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a></div><div class="ttdeci">#define CHECK_NOT_NULL(val)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aa958a8a4e5dda3abaa031977268ae60e"><div class="ttname"><a href="src_2base_2logging_8h.html#aa958a8a4e5dda3abaa031977268ae60e">CHECK_NE</a></div><div class="ttdeci">#define CHECK_NE(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2platform_2platform_8h_html"><div class="ttname"><a href="src_2base_2platform_2platform_8h.html">platform.h</a></div></div>
+<div class="ttc" id="asrc_2init_2v8_8h_html"><div class="ttname"><a href="src_2init_2v8_8h.html">v8.h</a></div></div>
+<div class="ttc" id="asrc_2sandbox_2testing_8h_html"><div class="ttname"><a href="src_2sandbox_2testing_8h.html">testing.h</a></div></div>
 <div class="ttc" id="atracing-category-observer_8h_html"><div class="ttname"><a href="tracing-category-observer_8h.html">tracing-category-observer.h</a></div></div>
-<div class="ttc" id="av8_8h_html"><div class="ttname"><a href="v8_8h.html">v8.h</a></div></div>
+<div class="ttc" id="av8-sandbox_8h_html"><div class="ttname"><a href="v8-sandbox_8h.html">v8-sandbox.h</a></div></div>
 <div class="ttc" id="awasm-engine_8h_html"><div class="ttname"><a href="wasm-engine_8h.html">wasm-engine.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:38 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_93ef7a03ae011ca5032e526d863e8f9f.html">init</a></li><li class="navelem"><a class="el" href="v8_8cc.html">v8.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:47 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

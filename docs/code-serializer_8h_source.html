@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/snapshot/code-serializer.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/snapshot/code-serializer.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('code-serializer_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0d52d89f10096f53df22fcdccd9461ad.html">snapshot</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">code-serializer.h</div></div>
 </div><!--header-->
@@ -101,7 +109,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef V8_SNAPSHOT_CODE_SERIALIZER_H_</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define V8_SNAPSHOT_CODE_SERIALIZER_H_</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="script-details_8h.html">src/codegen/script-details.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="serializer_8h.html">src/snapshot/serializer.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="snapshot-data_8h.html">src/snapshot/snapshot-data.h</a>&quot;</span></div>
@@ -113,7 +121,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">class </span>BackgroundMergeTask;</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AlignedCachedData.html">   19</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1AlignedCachedData.html">AlignedCachedData</a> {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AlignedCachedData.html">   19</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1AlignedCachedData.html">AlignedCachedData</a> {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_class" href="classv8_1_1internal_1_1AlignedCachedData.html">AlignedCachedData</a>(<span class="keyword">const</span> uint8_t* data, <span class="keywordtype">int</span> length);</div>
 <div class="foldopen" id="foldopen00022" data-start="{" data-end="}">
@@ -134,14 +142,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="foldopen" id="foldopen00036" data-start="{" data-end="}">
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AlignedCachedData.html#a3e0291bb66016c6e9efea89531cdc447">   36</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1AlignedCachedData.html#a3e0291bb66016c6e9efea89531cdc447">AcquireDataOwnership</a>() {</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!owns_data_);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!owns_data_);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    owns_data_ = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  }</div>
 </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AlignedCachedData.html#a66bc0fcfaffefeb0b64d3de138bf1df8">   41</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1AlignedCachedData.html#a66bc0fcfaffefeb0b64d3de138bf1df8">ReleaseDataOwnership</a>() {</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(owns_data_);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(owns_data_);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    owns_data_ = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  }</div>
 </div>
@@ -154,7 +162,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
 </div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">typedef</span> v8::ScriptCompiler::CachedData::CompatibilityCheckResult</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">typedef</span> <a class="code hl_enumeration" href="structv8_1_1ScriptCompiler_1_1CachedData.html#a6d6c63396ffc1ae0ca835b48a726ffc4">v8::ScriptCompiler::CachedData::CompatibilityCheckResult</a></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a1c09ed066163123b5e733e573e5c0560">   54</a></span>    <a class="code hl_typedef" href="namespacev8_1_1internal.html#a1c09ed066163123b5e733e573e5c0560">SerializedCodeSanityCheckResult</a>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// If this fails, update the static_assert AND the code_cache_reject_reason</span></div>
@@ -175,28 +183,28 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a2eb15a1c1b67e166e4e3e91c6c52f17d">   69</a></span>    <a class="code hl_class" href="classv8_1_1internal_1_1MaybeHandle.html">MaybeIndirectHandle&lt;SharedFunctionInfo&gt;</a> <a class="code hl_variable" href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a2eb15a1c1b67e166e4e3e91c6c52f17d">maybe_result</a>;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a1e1deee21ba7cf9fbbc3fa2023a1aeb7">   70</a></span>    std::vector&lt;IndirectHandle&lt;Script&gt;&gt; <a class="code hl_variable" href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a1e1deee21ba7cf9fbbc3fa2023a1aeb7">scripts</a>;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a4ffc295f8071ecbc59e0a408d3e0f434">   71</a></span>    std::unique_ptr&lt;PersistentHandles&gt; <a class="code hl_variable" href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a4ffc295f8071ecbc59e0a408d3e0f434">persistent_handles</a>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a5285b8363f5542b2c7cfc14271d1459c">   72</a></span>    <a class="code hl_typedef" href="namespacev8_1_1internal.html#a1c09ed066163123b5e733e573e5c0560">SerializedCodeSanityCheckResult</a> <a class="code hl_variable" href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a5285b8363f5542b2c7cfc14271d1459c">sanity_check_result</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a5285b8363f5542b2c7cfc14271d1459c">   72</a></span>    <a class="code hl_enumeration" href="structv8_1_1ScriptCompiler_1_1CachedData.html#a6d6c63396ffc1ae0ca835b48a726ffc4">SerializedCodeSanityCheckResult</a> <a class="code hl_variable" href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a5285b8363f5542b2c7cfc14271d1459c">sanity_check_result</a>;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  };</div>
 </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1CodeSerializer.html#a67bbe9e0511589dd24814d43b38aa562">   75</a></span>  <a class="code hl_function" href="classv8_1_1internal_1_1CodeSerializer.html#a67bbe9e0511589dd24814d43b38aa562">CodeSerializer</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1CodeSerializer.html">CodeSerializer</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1CodeSerializer.html#a37855bcfa9aaefb599dba574d50c6dbe">   76</a></span>  <a class="code hl_class" href="classv8_1_1internal_1_1CodeSerializer.html">CodeSerializer</a>&amp; <a class="code hl_function" href="classv8_1_1internal_1_1CodeSerializer.html#a37855bcfa9aaefb599dba574d50c6dbe">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1CodeSerializer.html">CodeSerializer</a>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> ScriptCompiler::CachedData* <a class="code hl_function" href="classv8_1_1internal_1_1CodeSerializer.html#a54c209a647a1b2e1133c9c4d3cd8c76e">Serialize</a>(</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <a class="code hl_struct" href="structv8_1_1ScriptCompiler_1_1CachedData.html">ScriptCompiler::CachedData</a>* <a class="code hl_function" href="classv8_1_1internal_1_1CodeSerializer.html#a54c209a647a1b2e1133c9c4d3cd8c76e">Serialize</a>(</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;SharedFunctionInfo&gt;</a> info);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_class" href="classv8_1_1internal_1_1AlignedCachedData.html">AlignedCachedData</a>* <a class="code hl_function" href="classv8_1_1internal_1_1CodeSerializer.html#a6842ca958395f17cb09a339ad58693a9">SerializeSharedFunctionInfo</a>(</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;SharedFunctionInfo&gt;</a> info);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  V8_WARN_UNUSED_RESULT <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1MaybeDirectHandle.html">MaybeDirectHandle&lt;SharedFunctionInfo&gt;</a></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1MaybeDirectHandle.html">MaybeDirectHandle&lt;SharedFunctionInfo&gt;</a></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <a class="code hl_function" href="classv8_1_1internal_1_1CodeSerializer.html#adf0b3823862bdca92c84619362bb810f">Deserialize</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1AlignedCachedData.html">AlignedCachedData</a>* cached_data,</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>              <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;String&gt;</a> source, <span class="keyword">const</span> <a class="code hl_struct" href="structv8_1_1internal_1_1ScriptDetails.html">ScriptDetails</a>&amp; script_details,</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>              <a class="code hl_class" href="classv8_1_1internal_1_1MaybeDirectHandle.html">MaybeDirectHandle&lt;Script&gt;</a> maybe_cached_script = {});</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  V8_WARN_UNUSED_RESULT <span class="keyword">static</span> OffThreadDeserializeData</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">static</span> OffThreadDeserializeData</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_function" href="classv8_1_1internal_1_1CodeSerializer.html#a9d1b8a5b5cfa1be24f952453fa753f85">StartDeserializeOffThread</a>(<a class="code hl_class" href="classv8_1_1internal_1_1LocalIsolate.html">LocalIsolate</a>* isolate,</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                            <a class="code hl_class" href="classv8_1_1internal_1_1AlignedCachedData.html">AlignedCachedData</a>* cached_data);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  V8_WARN_UNUSED_RESULT <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1MaybeHandle.html">MaybeHandle&lt;SharedFunctionInfo&gt;</a></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1MaybeHandle.html">MaybeHandle&lt;SharedFunctionInfo&gt;</a></div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <a class="code hl_function" href="classv8_1_1internal_1_1CodeSerializer.html#ac4f1b214ee71ddb314bf4e28831a30d1">FinishOffThreadDeserialize</a>(</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, OffThreadDeserializeData&amp;&amp; data,</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>      <a class="code hl_class" href="classv8_1_1internal_1_1AlignedCachedData.html">AlignedCachedData</a>* cached_data, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;String&gt;</a> source,</div>
@@ -239,18 +247,18 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1SerializedCodeData.html">SerializedCodeData</a> FromCachedData(</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1AlignedCachedData.html">AlignedCachedData</a>* cached_data,</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      uint32_t expected_source_hash,</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      <a class="code hl_typedef" href="namespacev8_1_1internal.html#a1c09ed066163123b5e733e573e5c0560">SerializedCodeSanityCheckResult</a>* rejection_result);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      <a class="code hl_enumeration" href="structv8_1_1ScriptCompiler_1_1CachedData.html#a6d6c63396ffc1ae0ca835b48a726ffc4">SerializedCodeSanityCheckResult</a>* rejection_result);</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="comment">// For cached data which is consumed before the source is available (e.g.</span></div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="comment">// off-thread).</span></div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1SerializedCodeData.html">SerializedCodeData</a> FromCachedDataWithoutSource(</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>      <a class="code hl_class" href="classv8_1_1internal_1_1LocalIsolate.html">LocalIsolate</a>* local_isolate, <a class="code hl_class" href="classv8_1_1internal_1_1AlignedCachedData.html">AlignedCachedData</a>* cached_data,</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      <a class="code hl_typedef" href="namespacev8_1_1internal.html#a1c09ed066163123b5e733e573e5c0560">SerializedCodeSanityCheckResult</a>* rejection_result);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>      <a class="code hl_enumeration" href="structv8_1_1ScriptCompiler_1_1CachedData.html#a6d6c63396ffc1ae0ca835b48a726ffc4">SerializedCodeSanityCheckResult</a>* rejection_result);</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="comment">// For cached data which was previously already sanity checked by</span></div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="comment">// FromCachedDataWithoutSource. The rejection result from that call should be</span></div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <span class="comment">// passed into this one.</span></div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1SerializedCodeData.html">SerializedCodeData</a> FromPartiallySanityCheckedCachedData(</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      <a class="code hl_class" href="classv8_1_1internal_1_1AlignedCachedData.html">AlignedCachedData</a>* cached_data, uint32_t expected_source_hash,</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>      <a class="code hl_typedef" href="namespacev8_1_1internal.html#a1c09ed066163123b5e733e573e5c0560">SerializedCodeSanityCheckResult</a>* rejection_result);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>      <a class="code hl_enumeration" href="structv8_1_1ScriptCompiler_1_1CachedData.html#a6d6c63396ffc1ae0ca835b48a726ffc4">SerializedCodeSanityCheckResult</a>* rejection_result);</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <span class="comment">// Used when producing.</span></div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <a class="code hl_class" href="classv8_1_1internal_1_1SerializedCodeData.html">SerializedCodeData</a>(<span class="keyword">const</span> std::vector&lt;uint8_t&gt;* payload,</div>
@@ -263,7 +271,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="keyword">static</span> uint32_t SourceHash(<a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;String&gt;</a> source,</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>                             <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;FixedArray&gt;</a> wrapped_arguments,</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                             ScriptOriginOptions origin_options);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                             <a class="code hl_class" href="classv8_1_1ScriptOriginOptions.html">ScriptOriginOptions</a> origin_options);</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classv8_1_1internal_1_1SerializedCodeData.html">SerializedCodeData</a>(<a class="code hl_class" href="classv8_1_1internal_1_1AlignedCachedData.html">AlignedCachedData</a>* data);</div>
@@ -279,12 +287,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  }</div>
 </div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <a class="code hl_typedef" href="namespacev8_1_1internal.html#a1c09ed066163123b5e733e573e5c0560">SerializedCodeSanityCheckResult</a> SanityCheck(</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <a class="code hl_enumeration" href="structv8_1_1ScriptCompiler_1_1CachedData.html#a6d6c63396ffc1ae0ca835b48a726ffc4">SerializedCodeSanityCheckResult</a> SanityCheck(</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      uint32_t expected_ro_snapshot_checksum,</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      uint32_t expected_source_hash) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <a class="code hl_typedef" href="namespacev8_1_1internal.html#a1c09ed066163123b5e733e573e5c0560">SerializedCodeSanityCheckResult</a> SanityCheckJustSource(</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <a class="code hl_enumeration" href="structv8_1_1ScriptCompiler_1_1CachedData.html#a6d6c63396ffc1ae0ca835b48a726ffc4">SerializedCodeSanityCheckResult</a> SanityCheckJustSource(</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>      uint32_t expected_source_hash) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <a class="code hl_typedef" href="namespacev8_1_1internal.html#a1c09ed066163123b5e733e573e5c0560">SerializedCodeSanityCheckResult</a> SanityCheckWithoutSource(</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <a class="code hl_enumeration" href="structv8_1_1ScriptCompiler_1_1CachedData.html#a6d6c63396ffc1ae0ca835b48a726ffc4">SerializedCodeSanityCheckResult</a> SanityCheckWithoutSource(</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      uint32_t expected_ro_snapshot_checksum) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>};</div>
 </div>
@@ -296,6 +304,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aapi_8cc_html_a87cb119678e603084928af555fe13e36"><div class="ttname"><a href="api_8cc.html#a87cb119678e603084928af555fe13e36">data_</a></div><div class="ttdeci">const char * data_</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l00673">api.cc:673</a></div></div>
 <div class="ttc" id="aapi_8cc_html_af0c9b7dcc98dce1d0edf7cb6ce49103b"><div class="ttname"><a href="api_8cc.html#af0c9b7dcc98dce1d0edf7cb6ce49103b">length_</a></div><div class="ttdeci">size_t length_</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l00674">api.cc:674</a></div></div>
 <div class="ttc" id="aassert-scope_8h_html_a6e895bc6891844f9b40e1e97d3fbd395"><div class="ttname"><a href="assert-scope_8h.html#a6e895bc6891844f9b40e1e97d3fbd395">DISALLOW_GARBAGE_COLLECTION</a></div><div class="ttdeci">#define DISALLOW_GARBAGE_COLLECTION(name)</div><div class="ttdef"><b>Definition</b> <a href="assert-scope_8h_source.html#l00262">assert-scope.h:262</a></div></div>
+<div class="ttc" id="aclassv8_1_1ScriptOriginOptions_html"><div class="ttname"><a href="classv8_1_1ScriptOriginOptions.html">v8::ScriptOriginOptions</a></div><div class="ttdef"><b>Definition</b> <a href="v8-message_8h_source.html#l00028">v8-message.h:28</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1Vector_html"><div class="ttname"><a href="classv8_1_1base_1_1Vector.html">v8::base::Vector</a></div><div class="ttdef"><b>Definition</b> <a href="zone-list_8h_source.html#l00015">zone-list.h:15</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1AlignedCachedData_html"><div class="ttname"><a href="classv8_1_1internal_1_1AlignedCachedData.html">v8::internal::AlignedCachedData</a></div><div class="ttdef"><b>Definition</b> <a href="#l00019">code-serializer.h:19</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1AlignedCachedData_html_a25a30c27cb0c26599c37db951b222c5c"><div class="ttname"><a href="classv8_1_1internal_1_1AlignedCachedData.html#a25a30c27cb0c26599c37db951b222c5c">v8::internal::AlignedCachedData::HasDataOwnership</a></div><div class="ttdeci">bool HasDataOwnership() const</div><div class="ttdef"><b>Definition</b> <a href="#l00034">code-serializer.h:34</a></div></div>
@@ -343,11 +352,8 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="acodegen_2assembler_8cc_html_a50218915641ec8f39877c2565e95a604"><div class="ttname"><a href="codegen_2assembler_8cc.html#a50218915641ec8f39877c2565e95a604">size_</a></div><div class="ttdeci">const int size_</div><div class="ttdef"><b>Definition</b> <a href="codegen_2assembler_8cc_source.html#l00132">assembler.cc:132</a></div></div>
 <div class="ttc" id="acommon_2globals_8h_html_a94d672d4fa68c63cf5d7e3006fae440f"><div class="ttname"><a href="common_2globals_8h.html#a94d672d4fa68c63cf5d7e3006fae440f">POINTER_SIZE_ALIGN</a></div><div class="ttdeci">#define POINTER_SIZE_ALIGN(value)</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01787">globals.h:1787</a></div></div>
 <div class="ttc" id="aexperimental-interpreter_8cc_html_ac8769459fea404ce34890fa9f8ad4a93"><div class="ttname"><a href="experimental-interpreter_8cc.html#ac8769459fea404ce34890fa9f8ad4a93">no_gc_</a></div><div class="ttdeci">DisallowGarbageCollection no_gc_</div><div class="ttdef"><b>Definition</b> <a href="experimental-interpreter_8cc_source.html#l01432">experimental-interpreter.cc:1432</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
-<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a0166c55019a8ae518b6bb1ac17ad4706"><div class="ttname"><a href="namespacev8_1_1internal.html#a0166c55019a8ae518b6bb1ac17ad4706">v8::internal::DeleteArray</a></div><div class="ttdeci">void DeleteArray(T *array)</div><div class="ttdef"><b>Definition</b> <a href="allocation_8h_source.html#l00063">allocation.h:63</a></div></div>
+<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a0166c55019a8ae518b6bb1ac17ad4706"><div class="ttname"><a href="namespacev8_1_1internal.html#a0166c55019a8ae518b6bb1ac17ad4706">v8::internal::DeleteArray</a></div><div class="ttdeci">void DeleteArray(T *array)</div><div class="ttdef"><b>Definition</b> <a href="src_2utils_2allocation_8h_source.html#l00063">allocation.h:63</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a1c09ed066163123b5e733e573e5c0560"><div class="ttname"><a href="namespacev8_1_1internal.html#a1c09ed066163123b5e733e573e5c0560">v8::internal::SerializedCodeSanityCheckResult</a></div><div class="ttdeci">v8::ScriptCompiler::CachedData::CompatibilityCheckResult SerializedCodeSanityCheckResult</div><div class="ttdef"><b>Definition</b> <a href="#l00054">code-serializer.h:54</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a271f8ea99b7c0bbd771df015d4e4cf21a943ef56601cf77621c78e618318f254b"><div class="ttname"><a href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a943ef56601cf77621c78e618318f254b">v8::internal::cs</a></div><div class="ttdeci">@ cs</div><div class="ttdef"><b>Definition</b> <a href="constants-arm_8h_source.html#l00087">constants-arm.h:87</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
@@ -359,6 +365,11 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="asnapshot-data_8h_html"><div class="ttname"><a href="snapshot-data_8h.html">snapshot-data.h</a></div></div>
 <div class="ttc" id="asnapshot_8cc_html_a1faba62e500380135d7edb25b045e096"><div class="ttname"><a href="snapshot_8cc.html#a1faba62e500380135d7edb25b045e096">kReadOnlySnapshotChecksumOffset</a></div><div class="ttdeci">static const uint32_t kReadOnlySnapshotChecksumOffset</div><div class="ttdef"><b>Definition</b> <a href="snapshot_8cc_source.html#l00096">snapshot.cc:96</a></div></div>
 <div class="ttc" id="asnapshot_8cc_html_afe5959d120387d346001e540b3d4357d"><div class="ttname"><a href="snapshot_8cc.html#afe5959d120387d346001e540b3d4357d">kChecksumOffset</a></div><div class="ttdeci">static const uint32_t kChecksumOffset</div><div class="ttdef"><b>Definition</b> <a href="snapshot_8cc_source.html#l00095">snapshot.cc:95</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
+<div class="ttc" id="astructv8_1_1ScriptCompiler_1_1CachedData_html"><div class="ttname"><a href="structv8_1_1ScriptCompiler_1_1CachedData.html">v8::ScriptCompiler::CachedData</a></div><div class="ttdef"><b>Definition</b> <a href="v8-script_8h_source.html#l00413">v8-script.h:413</a></div></div>
+<div class="ttc" id="astructv8_1_1ScriptCompiler_1_1CachedData_html_a6d6c63396ffc1ae0ca835b48a726ffc4"><div class="ttname"><a href="structv8_1_1ScriptCompiler_1_1CachedData.html#a6d6c63396ffc1ae0ca835b48a726ffc4">v8::ScriptCompiler::CachedData::CompatibilityCheckResult</a></div><div class="ttdeci">CompatibilityCheckResult</div><div class="ttdef"><b>Definition</b> <a href="v8-script_8h_source.html#l00430">v8-script.h:430</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData_html"><div class="ttname"><a href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html">v8::internal::CodeSerializer::OffThreadDeserializeData</a></div><div class="ttdef"><b>Definition</b> <a href="#l00062">code-serializer.h:62</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData_html_a1e1deee21ba7cf9fbbc3fa2023a1aeb7"><div class="ttname"><a href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a1e1deee21ba7cf9fbbc3fa2023a1aeb7">v8::internal::CodeSerializer::OffThreadDeserializeData::scripts</a></div><div class="ttdeci">std::vector&lt; IndirectHandle&lt; Script &gt; &gt; scripts</div><div class="ttdef"><b>Definition</b> <a href="#l00070">code-serializer.h:70</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData_html_a2eb15a1c1b67e166e4e3e91c6c52f17d"><div class="ttname"><a href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a2eb15a1c1b67e166e4e3e91c6c52f17d">v8::internal::CodeSerializer::OffThreadDeserializeData::maybe_result</a></div><div class="ttdeci">MaybeIndirectHandle&lt; SharedFunctionInfo &gt; maybe_result</div><div class="ttdef"><b>Definition</b> <a href="#l00069">code-serializer.h:69</a></div></div>
@@ -367,11 +378,15 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="astructv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData_html_a5285b8363f5542b2c7cfc14271d1459c"><div class="ttname"><a href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#a5285b8363f5542b2c7cfc14271d1459c">v8::internal::CodeSerializer::OffThreadDeserializeData::sanity_check_result</a></div><div class="ttdeci">SerializedCodeSanityCheckResult sanity_check_result</div><div class="ttdef"><b>Definition</b> <a href="#l00072">code-serializer.h:72</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData_html_ade4ed6a80953ee7f5aefa6e7664eec8b"><div class="ttname"><a href="structv8_1_1internal_1_1CodeSerializer_1_1OffThreadDeserializeData.html#ade4ed6a80953ee7f5aefa6e7664eec8b">v8::internal::CodeSerializer::OffThreadDeserializeData::HasResult</a></div><div class="ttdeci">bool HasResult() const</div><div class="ttdef"><b>Definition</b> <a href="#l00064">code-serializer.h:64</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1ScriptDetails_html"><div class="ttname"><a href="structv8_1_1internal_1_1ScriptDetails.html">v8::internal::ScriptDetails</a></div><div class="ttdef"><b>Definition</b> <a href="script-details_8h_source.html#l00016">script-details.h:16</a></div></div>
+<div class="ttc" id="av8config_8h_html_a63258e4bf5dc9fb8c78f881c8405d83b"><div class="ttname"><a href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a></div><div class="ttdeci">#define V8_WARN_UNUSED_RESULT</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00660">v8config.h:660</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:59 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0d52d89f10096f53df22fcdccd9461ad.html">snapshot</a></li><li class="navelem"><a class="el" href="code-serializer_8h.html">code-serializer.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:13 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

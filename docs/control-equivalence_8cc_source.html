@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/compiler/control-equivalence.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/compiler/control-equivalence.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('control-equivalence_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">control-equivalence.cc</div></div>
 </div><!--header-->
@@ -123,7 +131,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><a class="code hl_define" href="compiler-specific_8h.html#afa507b2adbdb23fe6a10c8278fe5088c">STATIC_CONST_MEMBER_DEFINITION</a> <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#aad54f059377aa4faa76feef11772fb82">ControlEquivalence::kInvalidClass</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><a class="code hl_define" href="src_2base_2compiler-specific_8h.html#afa507b2adbdb23fe6a10c8278fe5088c">STATIC_CONST_MEMBER_DEFINITION</a> <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#aad54f059377aa4faa76feef11772fb82">ControlEquivalence::kInvalidClass</a>;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
@@ -143,7 +151,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="comment">// Potentially introduce artificial dependency from start to end.</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordflow">if</span> (blist.empty()) {</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#ab179b4e42573331bee97687d2c73aa80a4e13ef84b9068e0b45ef8616d0db5f5f">kInputDirection</a>, <a class="code hl_variable" href="js-call-reducer_8cc.html#a90c9411d2f3b478b9cb3fe5a9814959e">direction</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#ab179b4e42573331bee97687d2c73aa80a4e13ef84b9068e0b45ef8616d0db5f5f">kInputDirection</a>, <a class="code hl_variable" href="js-call-reducer_8cc.html#a90c9411d2f3b478b9cb3fe5a9814959e">direction</a>);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a8c0c8b6ec8e2ecae026240c0b359a84a">VisitBackedge</a>(node, <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a782df2f02d5562e9fba41ab8e81e5537">graph_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1Graph.html#ad462a181900566667f3d9456bea555a1">end</a>(), <a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#ab179b4e42573331bee97687d2c73aa80a4e13ef84b9068e0b45ef8616d0db5f5f">kInputDirection</a>);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
@@ -264,8 +272,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    }</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="comment">// Pop node from stack when done with all inputs and uses.</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(entry.<a class="code hl_variable" href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1DFSStackEntry.html#a7bffb02fc1010f175b8ebe9afab46f54">input</a> == node-&gt;input_edges().end());</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(entry.<a class="code hl_variable" href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1DFSStackEntry.html#abb3e7150b52587d762222a7d242fa09b">use</a> == node-&gt;use_edges().end());</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(entry.<a class="code hl_variable" href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1DFSStackEntry.html#a7bffb02fc1010f175b8ebe9afab46f54">input</a> == node-&gt;input_edges().end());</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(entry.<a class="code hl_variable" href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1DFSStackEntry.html#abb3e7150b52587d762222a7d242fa09b">use</a> == node-&gt;use_edges().end());</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a538b315ef218c37db851d1cb5196a220">VisitPost</a>(node, entry.<a class="code hl_variable" href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1DFSStackEntry.html#a618d452f4efedc5939199b92a0bb5c64">parent_node</a>, entry.<a class="code hl_variable" href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1DFSStackEntry.html#ace490d4499ad296ebf8dd36c7fbd7aee">direction</a>);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a029136e81117715fe37cc77727e5bd4a">DFSPop</a>(stack, node);</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  }</div>
@@ -302,8 +310,8 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a1058b0e1f50ef394395e70dcd9625530">  188</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a1058b0e1f50ef394395e70dcd9625530">ControlEquivalence::DFSPush</a>(<a class="code hl_class" href="classv8_1_1internal_1_1ZoneStack.html">DFSStack</a>&amp; stack, <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node, <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* from,</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>                                 <a class="code hl_enumeration" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#ab179b4e42573331bee97687d2c73aa80">DFSDirection</a> dir) {</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#ae21e0c87c367cb61154cc84026eba0e8">Participates</a>(node));</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a1381bd91131a976262bc1abd8e8a8e88">GetData</a>(node)-&gt;visited);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#ae21e0c87c367cb61154cc84026eba0e8">Participates</a>(node));</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a1381bd91131a976262bc1abd8e8a8e88">GetData</a>(node)-&gt;visited);</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a1381bd91131a976262bc1abd8e8a8e88">GetData</a>(node)-&gt;<a class="code hl_variable" href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1NodeData.html#a7a4fe40e0549cee030a365e1d1b840c3">on_stack</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node_1_1InputEdges_1_1iterator.html">Node::InputEdges::iterator</a> input = node-&gt;input_edges().begin();</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node_1_1UseEdges_1_1iterator.html">Node::UseEdges::iterator</a> use = node-&gt;use_edges().begin();</div>
@@ -314,7 +322,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
 <div class="foldopen" id="foldopen00199" data-start="{" data-end="}">
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a029136e81117715fe37cc77727e5bd4a">  199</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a029136e81117715fe37cc77727e5bd4a">ControlEquivalence::DFSPop</a>(<a class="code hl_class" href="classv8_1_1internal_1_1ZoneStack.html">DFSStack</a>&amp; stack, <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node) {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(stack.top().node, node);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(stack.top().node, node);</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a1381bd91131a976262bc1abd8e8a8e88">GetData</a>(node)-&gt;<a class="code hl_variable" href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1NodeData.html#a7a4fe40e0549cee030a365e1d1b840c3">on_stack</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ControlEquivalence.html#a1381bd91131a976262bc1abd8e8a8e88">GetData</a>(node)-&gt;<a class="code hl_variable" href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1NodeData.html#a4b5db2682bef650287ec1c1c30ee495c">visited</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  stack.pop();</div>
@@ -395,19 +403,19 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Node_1_1InputEdges_1_1iterator_html"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Node_1_1InputEdges_1_1iterator.html">v8::internal::compiler::Node::InputEdges::iterator</a></div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00499">node.h:499</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Node_1_1UseEdges_1_1iterator_html"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Node_1_1UseEdges_1_1iterator.html">v8::internal::compiler::Node::UseEdges::iterator</a></div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00613">node.h:613</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Node_html"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Node.html">v8::internal::compiler::Node</a></div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00042">node.h:42</a></div></div>
-<div class="ttc" id="acompiler-specific_8h_html_afa507b2adbdb23fe6a10c8278fe5088c"><div class="ttname"><a href="compiler-specific_8h.html#afa507b2adbdb23fe6a10c8278fe5088c">STATIC_CONST_MEMBER_DEFINITION</a></div><div class="ttdeci">#define STATIC_CONST_MEMBER_DEFINITION</div><div class="ttdef"><b>Definition</b> <a href="compiler-specific_8h_source.html#l00052">compiler-specific.h:52</a></div></div>
 <div class="ttc" id="acontrol-equivalence_8h_html"><div class="ttname"><a href="control-equivalence_8h.html">control-equivalence.h</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_a90c9411d2f3b478b9cb3fe5a9814959e"><div class="ttname"><a href="js-call-reducer_8cc.html#a90c9411d2f3b478b9cb3fe5a9814959e">direction</a></div><div class="ttdeci">ArrayReduceDirection direction</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01577">js-call-reducer.cc:1577</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_a5f6aa8edcd99914757600b5d3b259bb7"><div class="ttname"><a href="jump-threading_8cc.html#a5f6aa8edcd99914757600b5d3b259bb7">TRACE</a></div><div class="ttdeci">#define TRACE(...)</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00012">jump-threading.cc:12</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_ab5fb7c0f4ce150bebf9a9ee7dc7d37a0"><div class="ttname"><a href="jump-threading_8cc.html#ab5fb7c0f4ce150bebf9a9ee7dc7d37a0">stack</a></div><div class="ttdeci">ZoneStack&lt; RpoNumber &gt; &amp; stack</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00022">jump-threading.cc:22</a></div></div>
 <div class="ttc" id="aliveedit-diff_8cc_html_a04c639350347f4e8fc657f49d82eb9ec"><div class="ttname"><a href="liveedit-diff_8cc.html#a04c639350347f4e8fc657f49d82eb9ec">from</a></div><div class="ttdeci">Point from</div><div class="ttdef"><b>Definition</b> <a href="liveedit-diff_8cc_source.html#l00098">liveedit-diff.cc:98</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9db791c05a0359859a321dcfec42e37"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8::internal::v8_flags</a></div><div class="ttdeci">V8_EXPORT_PRIVATE FlagValues v8_flags</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aade2d6b9c5697367d9ae0e5cb3dc4fcf"><div class="ttname"><a href="namespacev8_1_1internal.html#aade2d6b9c5697367d9ae0e5cb3dc4fcf">v8::internal::use</a></div><div class="ttdeci">other heap size generate builtins concurrently on separate threads in mksnapshot track concurrent recompilation artificial compilation delay in ms max number of threads that concurrent Turbofan can use(0 for unbounded)&quot;) DEFINE_BOOL( stress_concurrent_inlining</div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="anode-properties_8h_html"><div class="ttname"><a href="node-properties_8h.html">node-properties.h</a></div></div>
+<div class="ttc" id="asrc_2base_2compiler-specific_8h_html_afa507b2adbdb23fe6a10c8278fe5088c"><div class="ttname"><a href="src_2base_2compiler-specific_8h.html#afa507b2adbdb23fe6a10c8278fe5088c">STATIC_CONST_MEMBER_DEFINITION</a></div><div class="ttdeci">#define STATIC_CONST_MEMBER_DEFINITION</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2compiler-specific_8h_source.html#l00052">compiler-specific.h:52</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1Bracket_html"><div class="ttname"><a href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1Bracket.html">v8::internal::compiler::ControlEquivalence::Bracket</a></div><div class="ttdef"><b>Definition</b> <a href="control-equivalence_8h_source.html#l00061">control-equivalence.h:61</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1Bracket_html_a8c21a771ce625a5b10931d92d77b6203"><div class="ttname"><a href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1Bracket.html#a8c21a771ce625a5b10931d92d77b6203">v8::internal::compiler::ControlEquivalence::Bracket::recent_class</a></div><div class="ttdeci">size_t recent_class</div><div class="ttdef"><b>Definition</b> <a href="control-equivalence_8h_source.html#l00063">control-equivalence.h:63</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1Bracket_html_ac376e37403a47d7cee63cb7d1393b918"><div class="ttname"><a href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1Bracket.html#ac376e37403a47d7cee63cb7d1393b918">v8::internal::compiler::ControlEquivalence::Bracket::recent_size</a></div><div class="ttdeci">size_t recent_size</div><div class="ttdef"><b>Definition</b> <a href="control-equivalence_8h_source.html#l00064">control-equivalence.h:64</a></div></div>
@@ -420,10 +428,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="astructv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1NodeData_html_a4b5db2682bef650287ec1c1c30ee495c"><div class="ttname"><a href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1NodeData.html#a4b5db2682bef650287ec1c1c30ee495c">v8::internal::compiler::ControlEquivalence::NodeData::visited</a></div><div class="ttdeci">bool visited</div><div class="ttdef"><b>Definition</b> <a href="control-equivalence_8h_source.html#l00092">control-equivalence.h:92</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1NodeData_html_a7a4fe40e0549cee030a365e1d1b840c3"><div class="ttname"><a href="structv8_1_1internal_1_1compiler_1_1ControlEquivalence_1_1NodeData.html#a7a4fe40e0549cee030a365e1d1b840c3">v8::internal::compiler::ControlEquivalence::NodeData::on_stack</a></div><div class="ttdeci">bool on_stack</div><div class="ttdef"><b>Definition</b> <a href="control-equivalence_8h_source.html#l00093">control-equivalence.h:93</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:17:11 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="control-equivalence_8cc.html">control-equivalence.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:53:15 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

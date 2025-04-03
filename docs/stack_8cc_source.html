@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/base/stack.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/base/stack.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('stack_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_f26de3521c1cbfccc9c42237961a101c.html">base</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">stack.cc</div></div>
 </div><!--header-->
@@ -189,15 +197,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="keywordtype">void</span> IteratePointersInUnsafeStackIfNecessary(StackVisitor* visitor,</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                                             <span class="keyword">const</span> Stack::Segment&amp; segment) {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#ifdef V8_USE_SAFE_STACK</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_define" href="logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a>(segment.unsafe_stack_start);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <a class="code hl_define" href="logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a>(segment.unsafe_stack_top);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a>(segment.unsafe_stack_start);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a>(segment.unsafe_stack_top);</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="comment">// Source:</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="comment">// https://github.com/llvm/llvm-project/blob/main/compiler-rt/lib/safestack/safestack.cpp</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> kSafeStackAlignmentBytes = 16;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <a class="code hl_define" href="logging_8h.html#a1c7c9b7f14b9a33ea69cbe4578016a19">CHECK_GE</a>(segment.unsafe_stack_start, segment.unsafe_stack_top);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(0u, <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(segment.unsafe_stack_top) &amp;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a1c7c9b7f14b9a33ea69cbe4578016a19">CHECK_GE</a>(segment.unsafe_stack_start, segment.unsafe_stack_top);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(0u, <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(segment.unsafe_stack_top) &amp;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                   (kSafeStackAlignmentBytes - 1));</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(0u, <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(segment.unsafe_stack_start) &amp;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(0u, <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(segment.unsafe_stack_start) &amp;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                   (kSafeStackAlignmentBytes - 1));</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">void</span>* <span class="keyword">const</span>* current =</div>
@@ -212,7 +220,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">// This method should never be inlined to ensure that a possible redzone cannot</span></div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">// contain any data that needs to be scanned.</span></div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>V8_NOINLINE</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><a class="code hl_define" href="v8config_8h.html#aae8e4cfdd8ebf80e774cb42d8b4980e6">V8_NOINLINE</a></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment">// No ASAN support as method accesses redzones while walking the stack.</span></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><a class="code hl_define" href="asan_8h.html#aa50cd3d3fb9ae19a5973bdb4e6a6ce38">DISABLE_ASAN</a></div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment">// No HW ASAN support as stack iteration constructs pointers from arbitrary</span></div>
@@ -224,15 +232,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><a class="code hl_define" href="tsan_8h.html#a99bab37c223b6487be7b5e1a66573d3b">DISABLE_TSAN</a></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="keywordtype">void</span> IteratePointersInStack(StackVisitor* visitor,</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                            <span class="keyword">const</span> Stack::Segment&amp; segment) {</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <a class="code hl_define" href="logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a>(segment.top);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <a class="code hl_define" href="logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a>(segment.start);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <a class="code hl_define" href="logging_8h.html#a1c7c9b7f14b9a33ea69cbe4578016a19">CHECK_GE</a>(segment.start, segment.top);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a>(segment.top);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a>(segment.start);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a1c7c9b7f14b9a33ea69cbe4578016a19">CHECK_GE</a>(segment.start, segment.top);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="comment">// All supported platforms should have their stack aligned to at least</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <span class="comment">// sizeof(void*).</span></div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> kMinStackAlignment = <span class="keyword">sizeof</span>(<span class="keywordtype">void</span>*);</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(0u,</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(0u,</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>           <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(segment.top) &amp; (kMinStackAlignment - 1));</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(0u, <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(segment.start) &amp;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(0u, <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(segment.start) &amp;</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                   (kMinStackAlignment - 1));</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keywordtype">void</span>* <span class="keyword">const</span>* current =</div>
@@ -280,7 +288,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="comment">// All supported platforms should have their stack aligned to at least</span></div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="comment">// sizeof(void*).</span></div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> kMinStackAlignment = <span class="keyword">sizeof</span>(<span class="keywordtype">void</span>*);</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(0u, <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(segment.top) &amp;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(0u, <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(segment.top) &amp;</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                     (kMinStackAlignment - 1));</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    IteratePointersInStack(visitor, segment);</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    IteratePointersInUnsafeStackIfNecessary(visitor, segment);</div>
@@ -291,7 +299,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="preprocessor">#ifdef DEBUG</span></div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment">// static</span></div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="keywordtype">bool</span> Stack::IsOnCurrentStack(<span class="keyword">const</span> <span class="keywordtype">void</span>* ptr) {</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(ptr);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(ptr);</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="keyword">const</span> <span class="keywordtype">void</span>* current_stack_start = <a class="code hl_function" href="classv8_1_1base_1_1Stack.html#a34f1903403111111ba950ef7b9ea8c61">v8::base::Stack::GetStackStartUnchecked</a>();</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="keyword">const</span> <span class="keywordtype">void</span>* current_stack_top = <a class="code hl_function" href="classv8_1_1base_1_1Stack.html#ae12df3e0075295b6db4c5f3575736b5a">v8::base::Stack::GetCurrentStackPosition</a>();</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="keywordflow">return</span> ptr &lt;= current_stack_start &amp;&amp; ptr &gt;= current_stack_top;</div>
@@ -329,27 +337,31 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aearley-parser_8cc_html_a69620d3d0bf3441e9802e4853271cad4"><div class="ttname"><a href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a></div><div class="ttdeci">LineAndColumn current</div><div class="ttdef"><b>Definition</b> <a href="earley-parser_8cc_source.html#l00022">earley-parser.cc:22</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_ad83e8682ed733ee0cf359fa4f48441b0"><div class="ttname"><a href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a></div><div class="ttdeci">TNode&lt; Object &gt; callback</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01500">js-call-reducer.cc:1500</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_ae4dfd7b0d66121016d6466d2ff10e8ba"><div class="ttname"><a href="js-call-reducer_8cc.html#ae4dfd7b0d66121016d6466d2ff10e8ba">_</a></div><div class="ttdeci">#define _</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l00054">js-call-reducer.cc:54</a></div></div>
-<div class="ttc" id="alogging_8h_html_a1c7c9b7f14b9a33ea69cbe4578016a19"><div class="ttname"><a href="logging_8h.html#a1c7c9b7f14b9a33ea69cbe4578016a19">CHECK_GE</a></div><div class="ttdeci">#define CHECK_GE(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_a9154b181227e4b02e465befe50219158"><div class="ttname"><a href="logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a></div><div class="ttdeci">#define CHECK_NOT_NULL(val)</div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
 <div class="ttc" id="amemory-tagging_8h_html"><div class="ttname"><a href="memory-tagging_8h.html">memory-tagging.h</a></div></div>
 <div class="ttc" id="amsan_8h_html"><div class="ttname"><a href="msan_8h.html">msan.h</a></div></div>
 <div class="ttc" id="amsan_8h_html_a3247bf8fa2f4372cc59ac92e7432cc9c"><div class="ttname"><a href="msan_8h.html#a3247bf8fa2f4372cc59ac92e7432cc9c">MSAN_MEMORY_IS_INITIALIZED</a></div><div class="ttdeci">#define MSAN_MEMORY_IS_INITIALIZED(start, size)</div><div class="ttdef"><b>Definition</b> <a href="msan_8h_source.html#l00035">msan.h:35</a></div></div>
 <div class="ttc" id="amul-fft_8cc_html_a339d22b3e442946380f98ed19e320db2"><div class="ttname"><a href="mul-fft_8cc.html#a339d22b3e442946380f98ed19e320db2">s</a></div><div class="ttdeci">int s</div><div class="ttdef"><b>Definition</b> <a href="mul-fft_8cc_source.html#l00297">mul-fft.cc:297</a></div></div>
-<div class="ttc" id="anamespaceheap_1_1base_html"><div class="ttname"><a href="namespaceheap_1_1base.html">heap::base</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
+<div class="ttc" id="anamespaceheap_1_1base_html"><div class="ttname"><a href="namespaceheap_1_1base.html">heap::base</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespaceheap_1_1base_html_a7b25b8e88549865bf90d76cf74d1dba9"><div class="ttname"><a href="namespaceheap_1_1base.html#a7b25b8e88549865bf90d76cf74d1dba9">heap::base::PushAllRegistersAndIterateStack</a></div><div class="ttdeci">void PushAllRegistersAndIterateStack(const Stack *sp, StackVisitor *sv, IterateStackCallback callback)</div><div class="ttdef"><b>Definition</b> <a href="zos_2push__registers__asm_8cc_source.html#l00019">push_registers_asm.cc:19</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a1c7c9b7f14b9a33ea69cbe4578016a19"><div class="ttname"><a href="src_2base_2logging_8h.html#a1c7c9b7f14b9a33ea69cbe4578016a19">CHECK_GE</a></div><div class="ttdeci">#define CHECK_GE(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a9154b181227e4b02e465befe50219158"><div class="ttname"><a href="src_2base_2logging_8h.html#a9154b181227e4b02e465befe50219158">CHECK_NOT_NULL</a></div><div class="ttdeci">#define CHECK_NOT_NULL(val)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
 <div class="ttc" id="astack_8h_html"><div class="ttname"><a href="stack_8h.html">stack.h</a></div></div>
 <div class="ttc" id="astructheap_1_1base_1_1Stack_1_1Segment_html"><div class="ttname"><a href="structheap_1_1base_1_1Stack_1_1Segment.html">heap::base::Stack::Segment</a></div><div class="ttdef"><b>Definition</b> <a href="stack_8h_source.html#l00114">stack.h:114</a></div></div>
 <div class="ttc" id="astructheap_1_1base_1_1Stack_1_1Segment_html_a4d0ac6e30338efdc282b9b78110e5858"><div class="ttname"><a href="structheap_1_1base_1_1Stack_1_1Segment.html#a4d0ac6e30338efdc282b9b78110e5858">heap::base::Stack::Segment::start</a></div><div class="ttdeci">const void * start</div><div class="ttdef"><b>Definition</b> <a href="stack_8h_source.html#l00118">stack.h:118</a></div></div>
 <div class="ttc" id="astructheap_1_1base_1_1Stack_1_1Segment_html_aba5ccdde041aa245db271b9124dece2e"><div class="ttname"><a href="structheap_1_1base_1_1Stack_1_1Segment.html#aba5ccdde041aa245db271b9124dece2e">heap::base::Stack::Segment::top</a></div><div class="ttdeci">const void * top</div><div class="ttdef"><b>Definition</b> <a href="stack_8h_source.html#l00119">stack.h:119</a></div></div>
 <div class="ttc" id="atsan_8h_html"><div class="ttname"><a href="tsan_8h.html">tsan.h</a></div></div>
 <div class="ttc" id="atsan_8h_html_a99bab37c223b6487be7b5e1a66573d3b"><div class="ttname"><a href="tsan_8h.html#a99bab37c223b6487be7b5e1a66573d3b">DISABLE_TSAN</a></div><div class="ttdeci">#define DISABLE_TSAN</div><div class="ttdef"><b>Definition</b> <a href="tsan_8h_source.html#l00016">tsan.h:16</a></div></div>
+<div class="ttc" id="av8config_8h_html_aae8e4cfdd8ebf80e774cb42d8b4980e6"><div class="ttname"><a href="v8config_8h.html#aae8e4cfdd8ebf80e774cb42d8b4980e6">V8_NOINLINE</a></div><div class="ttdeci">#define V8_NOINLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00575">v8config.h:575</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:30 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_f26de3521c1cbfccc9c42237961a101c.html">base</a></li><li class="navelem"><a class="el" href="stack_8cc.html">stack.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:38 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

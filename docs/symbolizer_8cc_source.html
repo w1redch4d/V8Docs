@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/profiler/symbolizer.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/profiler/symbolizer.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('symbolizer_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cfc0c72890b8d1e009b6260caa55cd65.html">profiler</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">symbolizer.cc</div></div>
 </div><!--header-->
@@ -114,31 +122,31 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1Symbolizer.html#a56cd6e2334f84509c7cfc4ea32bc2b4f">   18</a></span><a class="code hl_class" href="classv8_1_1internal_1_1CodeEntry.html">CodeEntry</a>* <a class="code hl_function" href="classv8_1_1internal_1_1Symbolizer.html#a56cd6e2334f84509c7cfc4ea32bc2b4f">Symbolizer::FindEntry</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> address,</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                                 <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a>* out_instruction_start) {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1Symbolizer.html#a56cd6e2334f84509c7cfc4ea32bc2b4f">   18</a></span><a class="code hl_class" href="classv8_1_1internal_1_1CodeEntry.html">CodeEntry</a>* <a class="code hl_function" href="classv8_1_1internal_1_1Symbolizer.html#a56cd6e2334f84509c7cfc4ea32bc2b4f">Symbolizer::FindEntry</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> address,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>                                 <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a>* out_instruction_start) {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1Symbolizer.html#a663097ba3a5fe8989302c43a558686ae">code_map_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1InstructionStreamMap.html#a7c0c6c7df61052abe2a88b4e39b637bf">FindEntry</a>(address, out_instruction_start);</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
 </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><a class="code hl_class" href="classv8_1_1internal_1_1CodeEntry.html">CodeEntry</a>* EntryForVMState(StateTag tag) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><a class="code hl_class" href="classv8_1_1internal_1_1CodeEntry.html">CodeEntry</a>* EntryForVMState(<a class="code hl_enumeration" href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2">StateTag</a> tag) {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordflow">switch</span> (tag) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">case</span> GC:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2a9863458b79cfb4140bf1536b5706410e">GC</a>:</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1CodeEntry.html#a5f7ddaef7fa675c29c3d0629d8e586c7">CodeEntry::gc_entry</a>();</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">case</span> JS:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">case</span> PARSER:</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">case</span> COMPILER:</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">case</span> BYTECODE_COMPILER:</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">case</span> ATOMICS_WAIT:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2abb1fd20769a1c35f2ec136d8dfe99ea5">JS</a>:</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2aa134555c8f49f8b1e94cfca2bd7565b2">PARSER</a>:</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2a45b2b60857af687131d30d95972e460a">COMPILER</a>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2a559f013a08d330dc5cddcc5a9d038f2d">BYTECODE_COMPILER</a>:</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2a9f6275326d129a99bd97d183218847da">ATOMICS_WAIT</a>:</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">// DOM events handlers are reported as OTHER / EXTERNAL entries.</span></div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment">// To avoid confusing people, let&#39;s put all these entries into</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// one bucket.</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordflow">case</span> OTHER:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">case</span> EXTERNAL:</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">case</span> LOGGING:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2ad18343d9dbdacdcaf05683076638f86a">OTHER</a>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2a825ae0debbacb70bd55b9049af6cb9e1">EXTERNAL</a>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2aaebbcb8ee2b4c75a7021e98b32c86af7">LOGGING</a>:</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1CodeEntry.html#a93e85bca3eb607001a5403135f4e721b">CodeEntry::program_entry</a>();</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">case</span> IDLE:</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2ab7c9b8c4d5920370856a0fc30c2b6bb8">IDLE</a>:</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1CodeEntry.html#abc51c0639e1f1667dcbacd33cfecf806">CodeEntry::idle_entry</a>();</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}</div>
@@ -158,28 +166,28 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">// the latest version of generated code is used to find a source line number</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">// for a JS function. Then, the detected source line is passed to</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="comment">// ProfileNode to increase the tick count for this source line.</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> no_line_info = v8::CpuProfileNode::kNoLineNumberInfo;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> no_line_info = <a class="code hl_variable" href="classv8_1_1CpuProfileNode.html#ad54213fe8a795cb6669566f0272fc5ba">v8::CpuProfileNode::kNoLineNumberInfo</a>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordtype">int</span> src_line = no_line_info;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordtype">bool</span> src_line_not_found = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordflow">if</span> (sample.pc != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">if</span> (sample.has_external_callback &amp;&amp; sample.state == EXTERNAL) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">if</span> (sample.has_external_callback &amp;&amp; sample.state == <a class="code hl_enumvalue" href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2a825ae0debbacb70bd55b9049af6cb9e1">EXTERNAL</a>) {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="comment">// Don&#39;t use PC when in external callback code, as it can point</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      <span class="comment">// inside a callback&#39;s code, and we will erroneously report</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="comment">// that a callback calls itself.</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      stack_trace.push_back(</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>          {<a class="code hl_function" href="classv8_1_1internal_1_1Symbolizer.html#a56cd6e2334f84509c7cfc4ea32bc2b4f">FindEntry</a>(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(sample.external_callback_entry)),</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>          {<a class="code hl_function" href="classv8_1_1internal_1_1Symbolizer.html#a56cd6e2334f84509c7cfc4ea32bc2b4f">FindEntry</a>(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(sample.external_callback_entry)),</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>           no_line_info});</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> attributed_pc = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(sample.pc);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> pc_entry_instruction_start = kNullAddress;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> attributed_pc = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(sample.pc);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> pc_entry_instruction_start = <a class="code hl_variable" href="namespacev8_1_1internal.html#acf6bafb5b8483a580f375393c413ee02">kNullAddress</a>;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <a class="code hl_class" href="classv8_1_1internal_1_1CodeEntry.html">CodeEntry</a>* pc_entry =</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>          <a class="code hl_function" href="classv8_1_1internal_1_1Symbolizer.html#a56cd6e2334f84509c7cfc4ea32bc2b4f">FindEntry</a>(attributed_pc, &amp;pc_entry_instruction_start);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="comment">// If there is no pc_entry, we&#39;re likely in native code. Find out if the</span></div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="comment">// top of the stack (the return address) was pointing inside a JS</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <span class="comment">// function, meaning that we have encountered a frameless invocation.</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <span class="keywordflow">if</span> (!pc_entry &amp;&amp; !sample.has_external_callback) {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        attributed_pc = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(sample.tos);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        attributed_pc = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(sample.tos);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        pc_entry = <a class="code hl_function" href="classv8_1_1internal_1_1Symbolizer.html#a56cd6e2334f84509c7cfc4ea32bc2b4f">FindEntry</a>(attributed_pc, &amp;pc_entry_instruction_start);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <span class="comment">// If pc is in the function code before it set up stack frame or after the</span></div>
@@ -191,7 +199,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>            <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(attributed_pc - pc_entry_instruction_start);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="comment">// TODO(petermarshall): pc_offset can still be negative in some cases.</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        src_line = pc_entry-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1CodeEntry.html#abe5b05a42c59591ff122d293bf484789">GetSourceLine</a>(<a class="code hl_variable" href="liftoff-compiler_8cc.html#ac8403346601a16f8902bbe271ff3c261">pc_offset</a>);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">if</span> (src_line == v8::CpuProfileNode::kNoLineNumberInfo) {</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">if</span> (src_line == <a class="code hl_variable" href="classv8_1_1CpuProfileNode.html#ad54213fe8a795cb6669566f0272fc5ba">v8::CpuProfileNode::kNoLineNumberInfo</a>) {</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>          src_line = pc_entry-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1CodeEntry.html#affc328044ac66c290e92ddd9dfc1a685">line_number</a>();</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        }</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        src_line_not_found = <span class="keyword">false</span>;</div>
@@ -216,8 +224,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; sample.frames_count; ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> stack_pos = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(sample.stack[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> instruction_start = kNullAddress;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> stack_pos = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(sample.stack[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> instruction_start = <a class="code hl_variable" href="namespacev8_1_1internal.html#acf6bafb5b8483a580f375393c413ee02">kNullAddress</a>;</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <a class="code hl_class" href="classv8_1_1internal_1_1CodeEntry.html">CodeEntry</a>* entry = <a class="code hl_function" href="classv8_1_1internal_1_1Symbolizer.html#a56cd6e2334f84509c7cfc4ea32bc2b4f">FindEntry</a>(stack_pos, &amp;instruction_start);</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <span class="keywordtype">int</span> line_number = no_line_info;</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      <span class="keywordflow">if</span> (entry) {</div>
@@ -239,7 +247,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>          <span class="comment">// up the line number for the most-inlined frame here.</span></div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>          <span class="comment">// TODO(petermarshall): Remove this and use a tree with a node per</span></div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>          <span class="comment">// inlining_id.</span></div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>          <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!inline_stack-&gt;empty());</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>          <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!inline_stack-&gt;empty());</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>          <span class="keywordtype">size_t</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = stack_trace.size() - inline_stack-&gt;size();</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>          stack_trace[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>].line_number = most_inlined_frame_line_number;</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        }</div>
@@ -247,7 +255,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="comment">// the first JS caller.</span></div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">if</span> (src_line_not_found) {</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>          src_line = entry-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1CodeEntry.html#abe5b05a42c59591ff122d293bf484789">GetSourceLine</a>(<a class="code hl_variable" href="liftoff-compiler_8cc.html#ac8403346601a16f8902bbe271ff3c261">pc_offset</a>);</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>          <span class="keywordflow">if</span> (src_line == v8::CpuProfileNode::kNoLineNumberInfo) {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>          <span class="keywordflow">if</span> (src_line == <a class="code hl_variable" href="classv8_1_1CpuProfileNode.html#ad54213fe8a795cb6669566f0272fc5ba">v8::CpuProfileNode::kNoLineNumberInfo</a>) {</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            src_line = entry-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1CodeEntry.html#affc328044ac66c290e92ddd9dfc1a685">line_number</a>();</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>          }</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>          src_line_not_found = <span class="keyword">false</span>;</div>
@@ -290,6 +298,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>}  <span class="comment">// namespace v8</span></div>
+<div class="ttc" id="aclassv8_1_1CpuProfileNode_html_ad54213fe8a795cb6669566f0272fc5ba"><div class="ttname"><a href="classv8_1_1CpuProfileNode.html#ad54213fe8a795cb6669566f0272fc5ba">v8::CpuProfileNode::kNoLineNumberInfo</a></div><div class="ttdeci">static const int kNoLineNumberInfo</div><div class="ttdef"><b>Definition</b> <a href="v8-profiler_8h_source.html#l00175">v8-profiler.h:175</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1CodeEntry_html"><div class="ttname"><a href="classv8_1_1internal_1_1CodeEntry.html">v8::internal::CodeEntry</a></div><div class="ttdef"><b>Definition</b> <a href="profile-generator_8h_source.html#l00063">profile-generator.h:63</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1CodeEntry_html_a396b67d24be3802886b503602e54d940"><div class="ttname"><a href="classv8_1_1internal_1_1CodeEntry.html#a396b67d24be3802886b503602e54d940">v8::internal::CodeEntry::builtin</a></div><div class="ttdeci">Builtin builtin() const</div><div class="ttdef"><b>Definition</b> <a href="profile-generator_8h_source.html#l00137">profile-generator.h:137</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1CodeEntry_html_a5f7ddaef7fa675c29c3d0629d8e586c7"><div class="ttname"><a href="classv8_1_1internal_1_1CodeEntry.html#a5f7ddaef7fa675c29c3d0629d8e586c7">v8::internal::CodeEntry::gc_entry</a></div><div class="ttdeci">static V8_EXPORT_PRIVATE CodeEntry * gc_entry()</div><div class="ttdef"><b>Definition</b> <a href="profile-generator_8cc_source.html#l00114">profile-generator.cc:114</a></div></div>
@@ -311,26 +320,41 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1Symbolizer_html_ae1ff7da1052dbec3f9ad5150e9280c1d"><div class="ttname"><a href="classv8_1_1internal_1_1Symbolizer.html#ae1ff7da1052dbec3f9ad5150e9280c1d">v8::internal::Symbolizer::Symbolizer</a></div><div class="ttdeci">Symbolizer(InstructionStreamMap *instruction_stream_map)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">symbolizer.cc:15</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Symbolizer_html_ae78e1d9f5caf0c55bffbb1d2c48a6653"><div class="ttname"><a href="classv8_1_1internal_1_1Symbolizer.html#ae78e1d9f5caf0c55bffbb1d2c48a6653">v8::internal::Symbolizer::SymbolizeTickSample</a></div><div class="ttdeci">SymbolizedSample SymbolizeTickSample(const TickSample &amp;sample)</div><div class="ttdef"><b>Definition</b> <a href="#l00048">symbolizer.cc:48</a></div></div>
 <div class="ttc" id="aliftoff-compiler_8cc_html_ac8403346601a16f8902bbe271ff3c261"><div class="ttname"><a href="liftoff-compiler_8cc.html#ac8403346601a16f8902bbe271ff3c261">pc_offset</a></div><div class="ttdeci">int pc_offset</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l09351">liftoff-compiler.cc:9351</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a0cfab207d565dcf62ebf50f3987e05de"><div class="ttname"><a href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">v8::internal::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> <a href="heap-snapshot-generator_8cc_source.html#l01584">heap-snapshot-generator.cc:1584</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9db791c05a0359859a321dcfec42e37"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8::internal::v8_flags</a></div><div class="ttdeci">V8_EXPORT_PRIVATE FlagValues v8_flags</div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_acf6bafb5b8483a580f375393c413ee02"><div class="ttname"><a href="namespacev8_1_1internal.html#acf6bafb5b8483a580f375393c413ee02">v8::internal::kNullAddress</a></div><div class="ttdeci">static constexpr Address kNullAddress</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00053">v8-internal.h:53</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ad6e8970791e32935e40902d3f4cd1b8c"><div class="ttname"><a href="namespacev8_1_1internal.html#ad6e8970791e32935e40902d3f4cd1b8c">v8::internal::ProfileStackTrace</a></div><div class="ttdeci">std::vector&lt; CodeEntryAndLineNumber &gt; ProfileStackTrace</div><div class="ttdef"><b>Definition</b> <a href="profile-generator_8h_source.html#l00263">profile-generator.h:263</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4bd667bae597459fddd3443cbec0cb2"><div class="ttname"><a href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2">v8::StateTag</a></div><div class="ttdeci">StateTag</div><div class="ttdef"><b>Definition</b> <a href="v8-unwinder_8h_source.html#l00036">v8-unwinder.h:36</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4bd667bae597459fddd3443cbec0cb2a45b2b60857af687131d30d95972e460a"><div class="ttname"><a href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2a45b2b60857af687131d30d95972e460a">v8::COMPILER</a></div><div class="ttdeci">@ COMPILER</div><div class="ttdef"><b>Definition</b> <a href="v8-unwinder_8h_source.html#l00041">v8-unwinder.h:41</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4bd667bae597459fddd3443cbec0cb2a559f013a08d330dc5cddcc5a9d038f2d"><div class="ttname"><a href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2a559f013a08d330dc5cddcc5a9d038f2d">v8::BYTECODE_COMPILER</a></div><div class="ttdeci">@ BYTECODE_COMPILER</div><div class="ttdef"><b>Definition</b> <a href="v8-unwinder_8h_source.html#l00040">v8-unwinder.h:40</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4bd667bae597459fddd3443cbec0cb2a825ae0debbacb70bd55b9049af6cb9e1"><div class="ttname"><a href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2a825ae0debbacb70bd55b9049af6cb9e1">v8::EXTERNAL</a></div><div class="ttdeci">@ EXTERNAL</div><div class="ttdef"><b>Definition</b> <a href="v8-unwinder_8h_source.html#l00043">v8-unwinder.h:43</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4bd667bae597459fddd3443cbec0cb2a9863458b79cfb4140bf1536b5706410e"><div class="ttname"><a href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2a9863458b79cfb4140bf1536b5706410e">v8::GC</a></div><div class="ttdeci">@ GC</div><div class="ttdef"><b>Definition</b> <a href="v8-unwinder_8h_source.html#l00038">v8-unwinder.h:38</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4bd667bae597459fddd3443cbec0cb2a9f6275326d129a99bd97d183218847da"><div class="ttname"><a href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2a9f6275326d129a99bd97d183218847da">v8::ATOMICS_WAIT</a></div><div class="ttdeci">@ ATOMICS_WAIT</div><div class="ttdef"><b>Definition</b> <a href="v8-unwinder_8h_source.html#l00044">v8-unwinder.h:44</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4bd667bae597459fddd3443cbec0cb2aa134555c8f49f8b1e94cfca2bd7565b2"><div class="ttname"><a href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2aa134555c8f49f8b1e94cfca2bd7565b2">v8::PARSER</a></div><div class="ttdeci">@ PARSER</div><div class="ttdef"><b>Definition</b> <a href="v8-unwinder_8h_source.html#l00039">v8-unwinder.h:39</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4bd667bae597459fddd3443cbec0cb2aaebbcb8ee2b4c75a7021e98b32c86af7"><div class="ttname"><a href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2aaebbcb8ee2b4c75a7021e98b32c86af7">v8::LOGGING</a></div><div class="ttdeci">@ LOGGING</div><div class="ttdef"><b>Definition</b> <a href="v8-unwinder_8h_source.html#l00046">v8-unwinder.h:46</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4bd667bae597459fddd3443cbec0cb2ab7c9b8c4d5920370856a0fc30c2b6bb8"><div class="ttname"><a href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2ab7c9b8c4d5920370856a0fc30c2b6bb8">v8::IDLE</a></div><div class="ttdeci">@ IDLE</div><div class="ttdef"><b>Definition</b> <a href="v8-unwinder_8h_source.html#l00045">v8-unwinder.h:45</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4bd667bae597459fddd3443cbec0cb2abb1fd20769a1c35f2ec136d8dfe99ea5"><div class="ttname"><a href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2abb1fd20769a1c35f2ec136d8dfe99ea5">v8::JS</a></div><div class="ttdeci">@ JS</div><div class="ttdef"><b>Definition</b> <a href="v8-unwinder_8h_source.html#l00037">v8-unwinder.h:37</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4bd667bae597459fddd3443cbec0cb2ad18343d9dbdacdcaf05683076638f86a"><div class="ttname"><a href="namespacev8.html#af4bd667bae597459fddd3443cbec0cb2ad18343d9dbdacdcaf05683076638f86a">v8::OTHER</a></div><div class="ttdeci">@ OTHER</div><div class="ttdef"><b>Definition</b> <a href="v8-unwinder_8h_source.html#l00042">v8-unwinder.h:42</a></div></div>
 <div class="ttc" id="aprofile-generator_8h_html"><div class="ttname"><a href="profile-generator_8h.html">profile-generator.h</a></div></div>
 <div class="ttc" id="aprofiler-stats_8h_html"><div class="ttname"><a href="profiler-stats_8h.html">profiler-stats.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1Symbolizer_1_1SymbolizedSample_html"><div class="ttname"><a href="structv8_1_1internal_1_1Symbolizer_1_1SymbolizedSample.html">v8::internal::Symbolizer::SymbolizedSample</a></div><div class="ttdef"><b>Definition</b> <a href="symbolizer_8h_source.html#l00023">symbolizer.h:23</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1TickSample_html"><div class="ttname"><a href="structv8_1_1internal_1_1TickSample.html">v8::internal::TickSample</a></div><div class="ttdef"><b>Definition</b> <a href="tick-sample_8h_source.html#l00018">tick-sample.h:18</a></div></div>
 <div class="ttc" id="asymbolizer_8h_html"><div class="ttname"><a href="symbolizer_8h.html">symbolizer.h</a></div></div>
 <div class="ttc" id="atick-sample_8h_html"><div class="ttname"><a href="tick-sample_8h.html">tick-sample.h</a></div></div>
 <div class="ttc" id="avm-state_8h_html"><div class="ttname"><a href="vm-state_8h.html">vm-state.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:51 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cfc0c72890b8d1e009b6260caa55cd65.html">profiler</a></li><li class="navelem"><a class="el" href="symbolizer_8cc.html">symbolizer.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:04 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

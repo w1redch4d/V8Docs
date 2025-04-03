@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/inspector/v8-inspector-session-impl.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/inspector/v8-inspector-session-impl.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('v8-inspector-session-impl_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9c68e836c1d42065b8bcfa0e92a4079e.html">inspector</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">v8-inspector-session-impl.h</div></div>
 </div><!--header-->
@@ -104,12 +112,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;src/inspector/protocol/Forward.h&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;src/inspector/protocol/Runtime.h&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;src/inspector/protocol/Schema.h&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;include/v8-inspector.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="v8-inspector_8h.html">include/v8-inspector.h</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8__inspector.html">v8_inspector</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
@@ -127,13 +135,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">using </span>protocol::Response;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html">   33</a></span><span class="keyword">class </span><a class="code hl_class" href="classv8__inspector_1_1V8InspectorSessionImpl.html">V8InspectorSessionImpl</a> : <span class="keyword">public</span> V8InspectorSession,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html">   33</a></span><span class="keyword">class </span><a class="code hl_class" href="classv8__inspector_1_1V8InspectorSessionImpl.html">V8InspectorSessionImpl</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8__inspector_1_1V8InspectorSession.html">V8InspectorSession</a>,</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                               <span class="keyword">public</span> protocol::FrontendChannel {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keyword">static</span> std::unique_ptr&lt;V8InspectorSessionImpl&gt; <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#aa10f306ae68949dd0274545267935c3e">create</a>(</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <a class="code hl_class" href="classv8__inspector_1_1V8InspectorImpl.html">V8InspectorImpl</a>*, <span class="keywordtype">int</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#aec2cb3079d50c6d51d7cd434557510ca">contextGroupId</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a860d4ddb6043f7dfe9ef8968a475bb95">sessionId</a>,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      V8Inspector::Channel*, StringView state,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      v8_inspector::V8Inspector::ClientTrustLevel,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <a class="code hl_class" href="classv8__inspector_1_1V8Inspector_1_1Channel.html">V8Inspector::Channel</a>*, <a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> state,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <a class="code hl_enumeration" href="classv8__inspector_1_1V8Inspector.html#ac773f495eceb33da26a30ded4f6fc7ae">v8_inspector::V8Inspector::ClientTrustLevel</a>,</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>      std::shared_ptr&lt;V8DebuggerBarrier&gt;);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ac37bc3a2f8333e8bbf6297df0d913fb5">~V8InspectorSessionImpl</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ae68c90367c8369cdf015bb03f71b9b9a">   42</a></span>  <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ae68c90367c8369cdf015bb03f71b9b9a">V8InspectorSessionImpl</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8__inspector_1_1V8InspectorSessionImpl.html">V8InspectorSessionImpl</a>&amp;) = <span class="keyword">delete</span>;</div>
@@ -160,59 +168,59 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ae79b1ea64009b3ec5f9bd5346566444a">reportAllContexts</a>(<a class="code hl_class" href="classv8__inspector_1_1V8RuntimeAgentImpl.html">V8RuntimeAgentImpl</a>*);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#aa4365dda3f50b5d7dc449ed8bdfbd3ae">setCustomObjectFormatterEnabled</a>(<span class="keywordtype">bool</span>);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  std::unique_ptr&lt;protocol::Runtime::RemoteObject&gt; <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a7f61332c57b7f55612f4f611a0804607">wrapObject</a>(</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      v8::Local&lt;v8::Context&gt;, v8::Local&lt;v8::Value&gt;, <span class="keyword">const</span> <a class="code hl_class" href="classv8__inspector_1_1String16.html">String16</a>&amp; groupName,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Context&gt;</a>, <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a>, <span class="keyword">const</span> <a class="code hl_class" href="classv8__inspector_1_1String16.html">String16</a>&amp; groupName,</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      <span class="keywordtype">bool</span> generatePreview);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  std::unique_ptr&lt;protocol::Runtime::RemoteObject&gt; <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ac1421f97baa9e595ebe1361f2e2ddf3c">wrapTable</a>(</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      v8::Local&lt;v8::Context&gt;, v8::Local&lt;v8::Object&gt; table,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      v8::MaybeLocal&lt;v8::Array&gt; columns);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Context&gt;</a>, <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Object&gt;</a> table,</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <a class="code hl_class" href="classv8_1_1MaybeLocal.html">v8::MaybeLocal&lt;v8::Array&gt;</a> columns);</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  std::vector&lt;std::unique_ptr&lt;protocol::Schema::Domain&gt;&gt; <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a25f767f9a9309c1dd1a61d405b128691">supportedDomainsImpl</a>();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  Response <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ac48a39baa4852e6c2019036bab00050c">unwrapObject</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8__inspector_1_1String16.html">String16</a>&amp; objectId, v8::Local&lt;v8::Value&gt;*,</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                        v8::Local&lt;v8::Context&gt;*, <a class="code hl_class" href="classv8__inspector_1_1String16.html">String16</a>* objectGroup);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  Response <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ac48a39baa4852e6c2019036bab00050c">unwrapObject</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8__inspector_1_1String16.html">String16</a>&amp; objectId, <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a>*,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                        <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Context&gt;</a>*, <a class="code hl_class" href="classv8__inspector_1_1String16.html">String16</a>* objectGroup);</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a8340dcfb45a32ce543273cfbf5367037">releaseObjectGroup</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8__inspector_1_1String16.html">String16</a>&amp; objectGroup);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">// V8InspectorSession implementation.</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ac25e6517a60114fa350b9c694664b447">dispatchProtocolMessage</a>(StringView message) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ac25e6517a60114fa350b9c694664b447">dispatchProtocolMessage</a>(<a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> message) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  std::vector&lt;uint8_t&gt; <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#aadbd1e6288f45223ad6bfb47920a6de0">state</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  std::vector&lt;std::unique_ptr&lt;protocol::Schema::API::Domain&gt;&gt; <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a4a1c6a593752f8aa5202b75886cc5d48">supportedDomains</a>()</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a4bfdec07dd9669cec68782a22f5013b8">addInspectedObject</a>(</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      std::unique_ptr&lt;V8InspectorSession::Inspectable&gt;) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a59eca206e5b86424fe6928e9aef95997">schedulePauseOnNextStatement</a>(StringView breakReason,</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                                    StringView breakDetails) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a59eca206e5b86424fe6928e9aef95997">schedulePauseOnNextStatement</a>(<a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> breakReason,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>                                    <a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> breakDetails) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ae410b69f998f54888911b1ec587295ea">cancelPauseOnNextStatement</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a9310c532efbbd6a6c4b781b473893997">breakProgram</a>(StringView breakReason, StringView breakDetails) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a9310c532efbbd6a6c4b781b473893997">breakProgram</a>(<a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> breakReason, <a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> breakDetails) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#aedfb3f30c1a62404bd7008b5d47f251c">setSkipAllPauses</a>(<span class="keywordtype">bool</span>) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a79f730fb2e0cb8750dbda9bf76256dc6">resume</a>(<span class="keywordtype">bool</span> terminateOnResume = <span class="keyword">false</span>) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#aec2ad1cf3a986a15c476d7efa14fb3e9">stepOver</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  std::vector&lt;std::unique_ptr&lt;protocol::Debugger::API::SearchMatch&gt;&gt;</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a81ccca5cf186912d52461f8487aa7786">searchInTextByLines</a>(StringView text, StringView query, <span class="keywordtype">bool</span> caseSensitive,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a81ccca5cf186912d52461f8487aa7786">searchInTextByLines</a>(<a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> text, <a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> query, <span class="keywordtype">bool</span> caseSensitive,</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                      <span class="keywordtype">bool</span> isRegex) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a8340dcfb45a32ce543273cfbf5367037">releaseObjectGroup</a>(StringView objectGroup) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ac48a39baa4852e6c2019036bab00050c">unwrapObject</a>(std::unique_ptr&lt;StringBuffer&gt;*, StringView objectId,</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    v8::Local&lt;v8::Value&gt;*, v8::Local&lt;v8::Context&gt;*,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a8340dcfb45a32ce543273cfbf5367037">releaseObjectGroup</a>(<a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> objectGroup) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ac48a39baa4852e6c2019036bab00050c">unwrapObject</a>(std::unique_ptr&lt;StringBuffer&gt;*, <a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> objectId,</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>                    <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a>*, <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Context&gt;</a>*,</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                    std::unique_ptr&lt;StringBuffer&gt;* objectGroup) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  std::unique_ptr&lt;protocol::Runtime::API::RemoteObject&gt; <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a7f61332c57b7f55612f4f611a0804607">wrapObject</a>(</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      v8::Local&lt;v8::Context&gt;, v8::Local&lt;v8::Value&gt;, StringView groupName,</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Context&gt;</a>, <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a>, <a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> groupName,</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>      <span class="keywordtype">bool</span> generatePreview) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  V8InspectorSession::Inspectable* <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a381b4fee29510793fcd2c0902c4d289a">inspectedObject</a>(<span class="keywordtype">unsigned</span> num);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <a class="code hl_class" href="classv8__inspector_1_1V8InspectorSession_1_1Inspectable.html">V8InspectorSession::Inspectable</a>* <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a381b4fee29510793fcd2c0902c4d289a">inspectedObject</a>(<span class="keywordtype">unsigned</span> num);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#abc82104cb2728e474f6a55b3c0c2bc82">  100</a></span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#abc82104cb2728e474f6a55b3c0c2bc82">kInspectedObjectBufferSize</a> = 5;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ac807767a2fe90139cebe0b65b51c8c13">triggerPreciseCoverageDeltaUpdate</a>(StringView occasion) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  EvaluateResult <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ae7d12541a51c600fb910b7324062a626">evaluate</a>(v8::Local&lt;v8::Context&gt; <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>, StringView expression,</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ac807767a2fe90139cebe0b65b51c8c13">triggerPreciseCoverageDeltaUpdate</a>(<a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> occasion) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <a class="code hl_struct" href="structv8__inspector_1_1V8InspectorSession_1_1EvaluateResult.html">EvaluateResult</a> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ae7d12541a51c600fb910b7324062a626">evaluate</a>(<a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Context&gt;</a> <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>, <a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> expression,</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                          <span class="keywordtype">bool</span> includeCommandLineAPI = <span class="keyword">false</span>) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a79a55fb00d119e81a296681cb33b0552">stop</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a22d609aa95c919b55c42730a6caf339b">  107</a></span>  V8Inspector::ClientTrustLevel <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a22d609aa95c919b55c42730a6caf339b">clientTrustLevel</a>() {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a22d609aa95c919b55c42730a6caf339b">  107</a></span>  <a class="code hl_enumeration" href="classv8__inspector_1_1V8Inspector.html#ac773f495eceb33da26a30ded4f6fc7ae">V8Inspector::ClientTrustLevel</a> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a22d609aa95c919b55c42730a6caf339b">clientTrustLevel</a>() {</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a80bfbe1cf74e143deabe52e68ad1824b">m_clientTrustLevel</a>;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  }</div>
 </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ae68c90367c8369cdf015bb03f71b9b9a">V8InspectorSessionImpl</a>(<a class="code hl_class" href="classv8__inspector_1_1V8InspectorImpl.html">V8InspectorImpl</a>*, <span class="keywordtype">int</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#aec2cb3079d50c6d51d7cd434557510ca">contextGroupId</a>, <span class="keywordtype">int</span> <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a860d4ddb6043f7dfe9ef8968a475bb95">sessionId</a>,</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                         V8Inspector::Channel*, StringView state,</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                         V8Inspector::ClientTrustLevel,</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>                         <a class="code hl_class" href="classv8__inspector_1_1V8Inspector_1_1Channel.html">V8Inspector::Channel</a>*, <a class="code hl_class" href="classv8__inspector_1_1StringView.html">StringView</a> state,</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>                         <a class="code hl_enumeration" href="classv8__inspector_1_1V8Inspector.html#ac773f495eceb33da26a30ded4f6fc7ae">V8Inspector::ClientTrustLevel</a>,</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>                         std::shared_ptr&lt;V8DebuggerBarrier&gt;);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  protocol::DictionaryValue* <a class="code hl_function" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a216023a8337a9787a1672a4cacc622f9">agentState</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8__inspector_1_1String16.html">String16</a>&amp; name);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
@@ -230,7 +238,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a2b65519caa0ea452af6c3037ab8f4fc4">  129</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a2b65519caa0ea452af6c3037ab8f4fc4">m_contextGroupId</a>;</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#acd6a300278a33693e8fabd47dbb30452">  130</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#acd6a300278a33693e8fabd47dbb30452">m_sessionId</a>;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ae73e4fac2a25065a8484bae774efa40c">  131</a></span>  <a class="code hl_class" href="classv8__inspector_1_1V8InspectorImpl.html">V8InspectorImpl</a>* <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ae73e4fac2a25065a8484bae774efa40c">m_inspector</a>;</div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a00d9e085ea37e1619df16ff43194247c">  132</a></span>  V8Inspector::Channel* <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a00d9e085ea37e1619df16ff43194247c">m_channel</a>;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a00d9e085ea37e1619df16ff43194247c">  132</a></span>  <a class="code hl_class" href="classv8__inspector_1_1V8Inspector_1_1Channel.html">V8Inspector::Channel</a>* <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a00d9e085ea37e1619df16ff43194247c">m_channel</a>;</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#aa4e9cb6b7525c759fee9ce9f79ff25a2">  133</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#aa4e9cb6b7525c759fee9ce9f79ff25a2">m_customObjectFormatterEnabled</a>;</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ab4efc35da279ffed0971acf27a7a891f">  135</a></span>  protocol::UberDispatcher <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ab4efc35da279ffed0971acf27a7a891f">m_dispatcher</a>;</div>
@@ -245,16 +253,19 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  std::vector&lt;std::unique_ptr&lt;V8InspectorSession::Inspectable&gt;&gt;</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a56d340c31cf1d65a976b680cae6590ec">  145</a></span>      <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a56d340c31cf1d65a976b680cae6590ec">m_inspectedObjects</a>;</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ac16d4d0149839d353bc239b65d12bc2f">  146</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#ac16d4d0149839d353bc239b65d12bc2f">use_binary_protocol_</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a80bfbe1cf74e143deabe52e68ad1824b">  147</a></span>  V8Inspector::ClientTrustLevel <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a80bfbe1cf74e143deabe52e68ad1824b">m_clientTrustLevel</a> = V8Inspector::kUntrusted;</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno"><a class="line" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a80bfbe1cf74e143deabe52e68ad1824b">  147</a></span>  <a class="code hl_enumeration" href="classv8__inspector_1_1V8Inspector.html#ac773f495eceb33da26a30ded4f6fc7ae">V8Inspector::ClientTrustLevel</a> <a class="code hl_variable" href="classv8__inspector_1_1V8InspectorSessionImpl.html#a80bfbe1cf74e143deabe52e68ad1824b">m_clientTrustLevel</a> = <a class="code hl_enumvalue" href="classv8__inspector_1_1V8Inspector.html#ac773f495eceb33da26a30ded4f6fc7aea47071103db6d6a7aec98fde651efbf69">V8Inspector::kUntrusted</a>;</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>};</div>
 </div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>}  <span class="comment">// namespace v8_inspector</span></div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#endif  </span><span class="comment">// V8_INSPECTOR_V8_INSPECTOR_SESSION_IMPL_H_</span></div>
+<div class="ttc" id="aclassv8_1_1Local_html"><div class="ttname"><a href="classv8_1_1Local.html">v8::Local</a></div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00260">v8-local-handle.h:266</a></div></div>
+<div class="ttc" id="aclassv8_1_1MaybeLocal_html"><div class="ttname"><a href="classv8_1_1MaybeLocal.html">v8::MaybeLocal</a></div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00632">v8-local-handle.h:632</a></div></div>
 <div class="ttc" id="aclassv8__inspector_1_1InjectedScript_html"><div class="ttname"><a href="classv8__inspector_1_1InjectedScript.html">v8_inspector::InjectedScript</a></div><div class="ttdef"><b>Definition</b> <a href="injected-script_8h_source.html#l00077">injected-script.h:77</a></div></div>
 <div class="ttc" id="aclassv8__inspector_1_1RemoteObjectIdBase_html"><div class="ttname"><a href="classv8__inspector_1_1RemoteObjectIdBase.html">v8_inspector::RemoteObjectIdBase</a></div><div class="ttdef"><b>Definition</b> <a href="remote-object-id_8h_source.html#l00016">remote-object-id.h:16</a></div></div>
 <div class="ttc" id="aclassv8__inspector_1_1String16_html"><div class="ttname"><a href="classv8__inspector_1_1String16.html">v8_inspector::String16</a></div><div class="ttdef"><b>Definition</b> <a href="string-16_8h_source.html#l00024">string-16.h:24</a></div></div>
+<div class="ttc" id="aclassv8__inspector_1_1StringView_html"><div class="ttname"><a href="classv8__inspector_1_1StringView.html">v8_inspector::StringView</a></div><div class="ttdef"><b>Definition</b> <a href="v8-inspector_8h_source.html#l00050">v8-inspector.h:50</a></div></div>
 <div class="ttc" id="aclassv8__inspector_1_1V8ConsoleAgentImpl_html"><div class="ttname"><a href="classv8__inspector_1_1V8ConsoleAgentImpl.html">v8_inspector::V8ConsoleAgentImpl</a></div><div class="ttdef"><b>Definition</b> <a href="v8-console-agent-impl_8h_source.html#l00019">v8-console-agent-impl.h:19</a></div></div>
 <div class="ttc" id="aclassv8__inspector_1_1V8DebuggerAgentImpl_html"><div class="ttname"><a href="classv8__inspector_1_1V8DebuggerAgentImpl.html">v8_inspector::V8DebuggerAgentImpl</a></div><div class="ttdef"><b>Definition</b> <a href="v8-debugger-agent-impl_8h_source.html#l00031">v8-debugger-agent-impl.h:31</a></div></div>
 <div class="ttc" id="aclassv8__inspector_1_1V8HeapProfilerAgentImpl_html"><div class="ttname"><a href="classv8__inspector_1_1V8HeapProfilerAgentImpl.html">v8_inspector::V8HeapProfilerAgentImpl</a></div><div class="ttdef"><b>Definition</b> <a href="v8-heap-profiler-agent-impl_8h_source.html#l00024">v8-heap-profiler-agent-impl.h:24</a></div></div>
@@ -322,18 +333,28 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8__inspector_1_1V8InspectorSessionImpl_html_aec2ad1cf3a986a15c476d7efa14fb3e9"><div class="ttname"><a href="classv8__inspector_1_1V8InspectorSessionImpl.html#aec2ad1cf3a986a15c476d7efa14fb3e9">v8_inspector::V8InspectorSessionImpl::stepOver</a></div><div class="ttdeci">void stepOver() override</div><div class="ttdef"><b>Definition</b> <a href="v8-inspector-session-impl_8cc_source.html#l00483">v8-inspector-session-impl.cc:483</a></div></div>
 <div class="ttc" id="aclassv8__inspector_1_1V8InspectorSessionImpl_html_aec2cb3079d50c6d51d7cd434557510ca"><div class="ttname"><a href="classv8__inspector_1_1V8InspectorSessionImpl.html#aec2cb3079d50c6d51d7cd434557510ca">v8_inspector::V8InspectorSessionImpl::contextGroupId</a></div><div class="ttdeci">int contextGroupId() const</div><div class="ttdef"><b>Definition</b> <a href="#l00054">v8-inspector-session-impl.h:54</a></div></div>
 <div class="ttc" id="aclassv8__inspector_1_1V8InspectorSessionImpl_html_aedfb3f30c1a62404bd7008b5d47f251c"><div class="ttname"><a href="classv8__inspector_1_1V8InspectorSessionImpl.html#aedfb3f30c1a62404bd7008b5d47f251c">v8_inspector::V8InspectorSessionImpl::setSkipAllPauses</a></div><div class="ttdeci">void setSkipAllPauses(bool) override</div><div class="ttdef"><b>Definition</b> <a href="v8-inspector-session-impl_8cc_source.html#l00475">v8-inspector-session-impl.cc:475</a></div></div>
+<div class="ttc" id="aclassv8__inspector_1_1V8InspectorSession_1_1Inspectable_html"><div class="ttname"><a href="classv8__inspector_1_1V8InspectorSession_1_1Inspectable.html">v8_inspector::V8InspectorSession::Inspectable</a></div><div class="ttdef"><b>Definition</b> <a href="v8-inspector_8h_source.html#l00171">v8-inspector.h:171</a></div></div>
+<div class="ttc" id="aclassv8__inspector_1_1V8InspectorSession_html"><div class="ttname"><a href="classv8__inspector_1_1V8InspectorSession.html">v8_inspector::V8InspectorSession</a></div><div class="ttdef"><b>Definition</b> <a href="v8-inspector_8h_source.html#l00166">v8-inspector.h:166</a></div></div>
+<div class="ttc" id="aclassv8__inspector_1_1V8Inspector_1_1Channel_html"><div class="ttname"><a href="classv8__inspector_1_1V8Inspector_1_1Channel.html">v8_inspector::V8Inspector::Channel</a></div><div class="ttdef"><b>Definition</b> <a href="v8-inspector_8h_source.html#l00397">v8-inspector.h:397</a></div></div>
+<div class="ttc" id="aclassv8__inspector_1_1V8Inspector_html_ac773f495eceb33da26a30ded4f6fc7ae"><div class="ttname"><a href="classv8__inspector_1_1V8Inspector.html#ac773f495eceb33da26a30ded4f6fc7ae">v8_inspector::V8Inspector::ClientTrustLevel</a></div><div class="ttdeci">ClientTrustLevel</div><div class="ttdef"><b>Definition</b> <a href="v8-inspector_8h_source.html#l00405">v8-inspector.h:405</a></div></div>
+<div class="ttc" id="aclassv8__inspector_1_1V8Inspector_html_ac773f495eceb33da26a30ded4f6fc7aea47071103db6d6a7aec98fde651efbf69"><div class="ttname"><a href="classv8__inspector_1_1V8Inspector.html#ac773f495eceb33da26a30ded4f6fc7aea47071103db6d6a7aec98fde651efbf69">v8_inspector::V8Inspector::kUntrusted</a></div><div class="ttdeci">@ kUntrusted</div><div class="ttdef"><b>Definition</b> <a href="v8-inspector_8h_source.html#l00405">v8-inspector.h:405</a></div></div>
 <div class="ttc" id="aclassv8__inspector_1_1V8ProfilerAgentImpl_html"><div class="ttname"><a href="classv8__inspector_1_1V8ProfilerAgentImpl.html">v8_inspector::V8ProfilerAgentImpl</a></div><div class="ttdef"><b>Definition</b> <a href="v8-profiler-agent-impl_8h_source.html#l00026">v8-profiler-agent-impl.h:26</a></div></div>
 <div class="ttc" id="aclassv8__inspector_1_1V8RuntimeAgentImpl_html"><div class="ttname"><a href="classv8__inspector_1_1V8RuntimeAgentImpl.html">v8_inspector::V8RuntimeAgentImpl</a></div><div class="ttdef"><b>Definition</b> <a href="v8-runtime-agent-impl_8h_source.html#l00058">v8-runtime-agent-impl.h:58</a></div></div>
 <div class="ttc" id="aclassv8__inspector_1_1V8SchemaAgentImpl_html"><div class="ttname"><a href="classv8__inspector_1_1V8SchemaAgentImpl.html">v8_inspector::V8SchemaAgentImpl</a></div><div class="ttdef"><b>Definition</b> <a href="v8-schema-agent-impl_8h_source.html#l00020">v8-schema-agent-impl.h:20</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_a0835767fe473cead88c1afdf3175bce8"><div class="ttname"><a href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a></div><div class="ttdeci">TNode&lt; Context &gt; context</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01496">js-call-reducer.cc:1496</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
 <div class="ttc" id="anamespacev8__inspector_html"><div class="ttname"><a href="namespacev8__inspector.html">v8_inspector</a></div><div class="ttdef"><b>Definition</b> <a href="debug-interface_8h_source.html#l00025">debug-interface.h:25</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="astructv8__inspector_1_1V8InspectorSession_1_1EvaluateResult_html"><div class="ttname"><a href="structv8__inspector_1_1V8InspectorSession_1_1EvaluateResult.html">v8_inspector::V8InspectorSession::EvaluateResult</a></div><div class="ttdef"><b>Definition</b> <a href="v8-inspector_8h_source.html#l00210">v8-inspector.h:210</a></div></div>
 <div class="ttc" id="atorque-parser_8cc_html_ab636e5fae4112c1d24553e6bd3258d85"><div class="ttname"><a href="torque-parser_8cc.html#ab636e5fae4112c1d24553e6bd3258d85">method</a></div><div class="ttdeci">Symbol method</div><div class="ttdef"><b>Definition</b> <a href="torque-parser_8cc_source.html#l02822">torque-parser.cc:2822</a></div></div>
+<div class="ttc" id="av8-inspector_8h_html"><div class="ttname"><a href="v8-inspector_8h.html">v8-inspector.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:38 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_9c68e836c1d42065b8bcfa0e92a4079e.html">inspector</a></li><li class="navelem"><a class="el" href="v8-inspector-session-impl_8h.html">v8-inspector-session-impl.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:47 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

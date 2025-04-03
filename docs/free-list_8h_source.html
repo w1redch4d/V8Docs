@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/free-list.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/free-list.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('free-list_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">free-list.h</div></div>
 </div><!--header-->
@@ -103,7 +111,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="common_2globals_8h.html">src/common/globals.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="allocation-result_8h.html">src/heap/allocation-result.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="mutable-page-metadata_8h.html">src/heap/mutable-page-metadata.h</a>&quot;</span></div>
@@ -167,7 +175,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="comment">// Performs a single try to pick a node of at least |minimum_size| from the</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="comment">// category. Stores the actual size in |node_size|. Returns nullptr if no</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="comment">// node is found.</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FreeSpace&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1FreeListCategory.html#ada21e8428aa07c2bf16af74dd26a7058">PickNodeFromList</a>(<span class="keywordtype">size_t</span> minimum_size,</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FreeSpace&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1FreeListCategory.html#ada21e8428aa07c2bf16af74dd26a7058">PickNodeFromList</a>(<span class="keywordtype">size_t</span> minimum_size,</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>                                                       <span class="keywordtype">size_t</span>* node_size);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="comment">// Picks a node of at least |minimum_size| from the category. Stores the</span></div>
@@ -238,9 +246,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeList.html">  135</a></span><span class="keyword">class </span><a class="code hl_class" href="classv8_1_1internal_1_1FreeList.html">FreeList</a> {</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="comment">// Creates a Freelist of the default class.</span></div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> std::unique_ptr&lt;FreeList&gt; <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#a3493244ef61ab0a37c8c7c43c5f21c0c">CreateFreeList</a>();</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> std::unique_ptr&lt;FreeList&gt; <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#a3493244ef61ab0a37c8c7c43c5f21c0c">CreateFreeList</a>();</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <span class="comment">// Creates a Freelist for new space.</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> std::unique_ptr&lt;FreeList&gt;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> std::unique_ptr&lt;FreeList&gt;</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#a9f37f7601004b9fdb436a0a92bb2b716">CreateFreeListForNewSpace</a>();</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#a3bbe47a0c0527a6b642b828f4ce8b6fb">FreeList</a>(<span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#aae1948bb0d72d2a9cda2fbaac3720499">number_of_categories</a>, <span class="keywordtype">size_t</span> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#ac932560dcf31ce70c131ce0931fe6ea7">min_block_size</a>);</div>
@@ -258,11 +266,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="comment">// bytes. Returns the actual node size in node_size which can be bigger than</span></div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  <span class="comment">// size_in_bytes. This method returns null if the allocation request cannot be</span></div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="comment">// handled by the free list.</span></div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeList.html#ae19f2fc3e48a4807cd603ef0dea1861b">  158</a></span>  <span class="keyword">virtual</span> V8_WARN_UNUSED_RESULT <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FreeSpace&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#ae19f2fc3e48a4807cd603ef0dea1861b">Allocate</a>(</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeList.html#ae19f2fc3e48a4807cd603ef0dea1861b">  158</a></span>  <span class="keyword">virtual</span> <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FreeSpace&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#ae19f2fc3e48a4807cd603ef0dea1861b">Allocate</a>(</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      <span class="keywordtype">size_t</span> size_in_bytes, <span class="keywordtype">size_t</span>* node_size, <a class="code hl_enumeration" href="namespacev8_1_1internal.html#abddbb63b815c1d69390fef2325df451a">AllocationOrigin</a> origin) = 0;</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="comment">// Returns a page containing an entry for a given type, or nullptr otherwise.</span></div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeList.html#aef14735d2f4bc87bfc8f5cf62fc4a310">  162</a></span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">virtual</span> <a class="code hl_class" href="classv8_1_1internal_1_1PageMetadata.html">PageMetadata</a>* <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#aef14735d2f4bc87bfc8f5cf62fc4a310">GetPageForSize</a>(</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeList.html#aef14735d2f4bc87bfc8f5cf62fc4a310">  162</a></span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">virtual</span> <a class="code hl_class" href="classv8_1_1internal_1_1PageMetadata.html">PageMetadata</a>* <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#aef14735d2f4bc87bfc8f5cf62fc4a310">GetPageForSize</a>(</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>      <span class="keywordtype">size_t</span> size_in_bytes) = 0;</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#ab4abea8fbd917cb43b9b440ef1010342">Reset</a>();</div>
@@ -301,7 +309,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <span class="comment">// Used after booting the VM.</span></div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#aeeb8bd0cb83326e7985985b468597d14">RepairLists</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Heap.html">Heap</a>* <a class="code hl_namespace" href="namespaceheap.html">heap</a>);</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#a5a58fc6be55c434e8e28e32f478a76e0">EvictFreeListItems</a>(<a class="code hl_class" href="classv8_1_1internal_1_1PageMetadata.html">PageMetadata</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#a5a58fc6be55c434e8e28e32f478a76e0">EvictFreeListItems</a>(<a class="code hl_class" href="classv8_1_1internal_1_1PageMetadata.html">PageMetadata</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>);</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeList.html#aae1948bb0d72d2a9cda2fbaac3720499">  195</a></span>  <span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#aae1948bb0d72d2a9cda2fbaac3720499">number_of_categories</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1FreeList.html#a3eccafb7155354520aef3fbf7ccbccd8">number_of_categories_</a>; }</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeList.html#aa0ecab6f30220582f2caa7387651441a">  196</a></span>  <a class="code hl_typedef" href="namespacev8_1_1internal.html#a422c9cdecff174a4aa4e22377c1efdf2">FreeListCategoryType</a> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#aa0ecab6f30220582f2caa7387651441a">last_category</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1FreeList.html#abb5a579515e5c76b3f564bfb7c728f29">last_category_</a>; }</div>
@@ -330,7 +338,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#a5e449f34c8035d4f353c10cb8bfc6272">AddCategory</a>(<a class="code hl_class" href="classv8_1_1internal_1_1FreeListCategory.html">FreeListCategory</a>* category);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="keyword">virtual</span> <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#ae9eb2b754f476bc5b138d7b5e9407550">RemoveCategory</a>(<a class="code hl_class" href="classv8_1_1internal_1_1FreeListCategory.html">FreeListCategory</a>* category);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="keyword">virtual</span> <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#ae9eb2b754f476bc5b138d7b5e9407550">RemoveCategory</a>(<a class="code hl_class" href="classv8_1_1internal_1_1FreeListCategory.html">FreeListCategory</a>* category);</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#af3cbe43b30d422110caba0e7f86bf673">PrintCategories</a>(<a class="code hl_typedef" href="namespacev8_1_1internal.html#a422c9cdecff174a4aa4e22377c1efdf2">FreeListCategoryType</a> type);</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> <span class="keyword">protected</span>:</div>
@@ -346,7 +354,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
 <div class="foldopen" id="foldopen00229" data-start="{" data-end="}">
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeList_1_1FreeListCategoryIterator.html#a16e9e52828594776ee31059e28a3664c">  229</a></span>    <a class="code hl_class" href="classv8_1_1internal_1_1FreeListCategory.html">FreeListCategory</a>* <a class="code hl_function" href="classv8_1_1internal_1_1FreeList_1_1FreeListCategoryIterator.html#a16e9e52828594776ee31059e28a3664c">Next</a>() {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FreeList_1_1FreeListCategoryIterator.html#af37f714fd744b254770c99e195eb4f31">HasNext</a>());</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FreeList_1_1FreeListCategoryIterator.html#af37f714fd744b254770c99e195eb4f31">HasNext</a>());</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>      <a class="code hl_class" href="classv8_1_1internal_1_1FreeListCategory.html">FreeListCategory</a>* tmp = <a class="code hl_variable" href="classv8_1_1internal_1_1FreeList_1_1FreeListCategoryIterator.html#add90affe501fcb59af752b2047712535">current_</a>;</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>      <a class="code hl_variable" href="classv8_1_1internal_1_1FreeList_1_1FreeListCategoryIterator.html#add90affe501fcb59af752b2047712535">current_</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1FreeList_1_1FreeListCategoryIterator.html#add90affe501fcb59af752b2047712535">current_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1FreeListCategory.html#a48aaedc1d59b0538a585771f8daf4963">next</a>();</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="liftoff-compiler_8cc.html#a50f5e33a2768a7272ffd11d31200fdfe">tmp</a>;</div>
@@ -359,13 +367,13 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">size_t</span> SumFreeLists();</div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">bool</span> IsVeryLong();</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">size_t</span> SumFreeLists();</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">bool</span> IsVeryLong();</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
 <div class="foldopen" id="foldopen00245" data-start="{" data-end="}">
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeList.html#a759dc276e64a73ba23f3377dda99667e">  245</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FreeList.html#a759dc276e64a73ba23f3377dda99667e">VerifyAvailable</a>() {</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsVeryLong() || <a class="code hl_variable" href="classv8_1_1internal_1_1FreeList.html#aecf06c16c572b5c0965ee21945e270d3">available_</a> == SumFreeLists());</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsVeryLong() || <a class="code hl_variable" href="classv8_1_1internal_1_1FreeList.html#aecf06c16c572b5c0965ee21945e270d3">available_</a> == SumFreeLists());</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  }</div>
 </div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
@@ -419,14 +427,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="comment">// Performances are expected to be worst than FreeListLegacy, but memory</span></div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="comment">// consumption should be lower (since fragmentation should be lower).</span></div>
 <div class="foldopen" id="foldopen00295" data-start="{" data-end="};">
-<div class="line"><a id="l00295" name="l00295"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeListMany.html">  295</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1FreeListMany.html">FreeListMany</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1FreeList.html">FreeList</a> {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeListMany.html">  295</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1FreeListMany.html">FreeListMany</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1FreeList.html">FreeList</a> {</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  <a class="code hl_class" href="classv8_1_1internal_1_1PageMetadata.html">PageMetadata</a>* GetPageForSize(<span class="keywordtype">size_t</span> size_in_bytes) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <a class="code hl_class" href="classv8_1_1internal_1_1FreeListMany.html">FreeListMany</a>();</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <a class="code hl_class" href="classv8_1_1internal_1_1FreeListMany.html">~FreeListMany</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
-<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  V8_WARN_UNUSED_RESULT <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FreeSpace&gt;</a> Allocate(</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FreeSpace&gt;</a> Allocate(</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>      <span class="keywordtype">size_t</span> size_in_bytes, <span class="keywordtype">size_t</span>* node_size,</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#abddbb63b815c1d69390fef2325df451a">AllocationOrigin</a> origin) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span> </div>
@@ -484,11 +492,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="comment">// category greater or equal to c, that may hold an object of size c.</span></div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span><span class="comment">// Allocation is done using the same strategy as FreeListMany (ie, best fit).</span></div>
 <div class="foldopen" id="foldopen00354" data-start="{" data-end="};">
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeListManyCached.html">  354</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1FreeListManyCached.html">FreeListManyCached</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1FreeListMany.html">FreeListMany</a> {</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeListManyCached.html">  354</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1FreeListManyCached.html">FreeListManyCached</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1FreeListMany.html">FreeListMany</a> {</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>  <a class="code hl_class" href="classv8_1_1internal_1_1FreeListManyCached.html">FreeListManyCached</a>();</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  V8_WARN_UNUSED_RESULT <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FreeSpace&gt;</a> Allocate(</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FreeSpace&gt;</a> Allocate(</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>      <span class="keywordtype">size_t</span> size_in_bytes, <span class="keywordtype">size_t</span>* node_size,</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#abddbb63b815c1d69390fef2325df451a">AllocationOrigin</a> origin) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
@@ -524,10 +532,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span><span class="preprocessor">#ifdef DEBUG</span></div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>  <span class="keywordtype">void</span> CheckCacheIntegrity() {</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt;= last_category_; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>++) {</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(next_nonempty_category[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>] == last_category_ + 1 ||</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(next_nonempty_category[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>] == last_category_ + 1 ||</div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>             categories_[next_nonempty_category[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]] != <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>; j &lt; next_nonempty_category[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]; j++) {</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(categories_[j] == <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(categories_[j] == <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>      }</div>
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    }</div>
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>  }</div>
@@ -572,7 +580,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span><span class="comment">// done on purpose, since this class&#39;s only purpose is to be used by</span></div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span><span class="comment">// FreeListManyCachedOrigin, which is precise for the scavenger.</span></div>
 <div class="foldopen" id="foldopen00434" data-start="{" data-end="};">
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeListManyCachedFastPathBase.html">  434</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1FreeListManyCachedFastPathBase.html">FreeListManyCachedFastPathBase</a></div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeListManyCachedFastPathBase.html">  434</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1FreeListManyCachedFastPathBase.html">FreeListManyCachedFastPathBase</a></div>
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>    : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1FreeListManyCached.html">FreeListManyCached</a> {</div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeListManyCachedFastPathBase.html#acae04c87ddac627d037661ad5926b04b">  437</a></span>  <span class="keyword">enum class</span> <a class="code hl_enumeration" href="classv8_1_1internal_1_1FreeListManyCachedFastPathBase.html#acae04c87ddac627d037661ad5926b04b">SmallBlocksMode</a> { kAllow, kProhibit };</div>
@@ -589,7 +597,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>  }</div>
 </div>
 <div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span> </div>
-<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>  V8_WARN_UNUSED_RESULT <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FreeSpace&gt;</a> Allocate(</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FreeSpace&gt;</a> Allocate(</div>
 <div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>      <span class="keywordtype">size_t</span> size_in_bytes, <span class="keywordtype">size_t</span>* node_size,</div>
 <div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#abddbb63b815c1d69390fef2325df451a">AllocationOrigin</a> origin) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span> </div>
@@ -609,7 +617,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00466" data-start="{" data-end="}">
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeListManyCachedFastPathBase.html#a7bbd534b8d3181b9fd439cbbe2169c46">  466</a></span>  <a class="code hl_typedef" href="namespacev8_1_1internal.html#a422c9cdecff174a4aa4e22377c1efdf2">FreeListCategoryType</a> <a class="code hl_function" href="classv8_1_1internal_1_1FreeListManyCachedFastPathBase.html#a7bbd534b8d3181b9fd439cbbe2169c46">SelectFastAllocationFreeListCategoryType</a>(</div>
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>      <span class="keywordtype">size_t</span> size_in_bytes) {</div>
-<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(size_in_bytes &lt; kMaxBlockSize);</div>
+<div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(size_in_bytes &lt; kMaxBlockSize);</div>
 <div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span> </div>
 <div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>    <span class="keywordflow">if</span> (size_in_bytes &gt;= categories_min[last_category_]) <span class="keywordflow">return</span> last_category_;</div>
 <div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span> </div>
@@ -662,10 +670,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span><span class="comment">// for the later is one that is very efficient, but introduces some</span></div>
 <div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span><span class="comment">// fragmentation (FreeListManyCachedFastPath).</span></div>
 <div class="foldopen" id="foldopen00510" data-start="{" data-end="};">
-<div class="line"><a id="l00510" name="l00510"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeListManyCachedOrigin.html">  510</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1FreeListManyCachedOrigin.html">FreeListManyCachedOrigin</a></div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FreeListManyCachedOrigin.html">  510</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1FreeListManyCachedOrigin.html">FreeListManyCachedOrigin</a></div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>    : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1FreeListManyCachedFastPath.html">FreeListManyCachedFastPath</a> {</div>
 <div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>  V8_WARN_UNUSED_RESULT <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FreeSpace&gt;</a> Allocate(</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FreeSpace&gt;</a> Allocate(</div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>      <span class="keywordtype">size_t</span> size_in_bytes, <span class="keywordtype">size_t</span>* node_size,</div>
 <div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#abddbb63b815c1d69390fef2325df451a">AllocationOrigin</a> origin) <span class="keyword">override</span>;</div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>};</div>
@@ -771,7 +779,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1FreeList_html_aef14735d2f4bc87bfc8f5cf62fc4a310"><div class="ttname"><a href="classv8_1_1internal_1_1FreeList.html#aef14735d2f4bc87bfc8f5cf62fc4a310">v8::internal::FreeList::GetPageForSize</a></div><div class="ttdeci">virtual V8_EXPORT_PRIVATE PageMetadata * GetPageForSize(size_t size_in_bytes)=0</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1FreeList_html_af3cbe43b30d422110caba0e7f86bf673"><div class="ttname"><a href="classv8_1_1internal_1_1FreeList.html#af3cbe43b30d422110caba0e7f86bf673">v8::internal::FreeList::PrintCategories</a></div><div class="ttdeci">void PrintCategories(FreeListCategoryType type)</div><div class="ttdef"><b>Definition</b> <a href="free-list_8cc_source.html#l00528">free-list.cc:528</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1FreeList_html_afcf7f72515a76f1313d11c172a89d164"><div class="ttname"><a href="classv8_1_1internal_1_1FreeList.html#afcf7f72515a76f1313d11c172a89d164">v8::internal::FreeList::TryFindNodeIn</a></div><div class="ttdeci">Tagged&lt; FreeSpace &gt; TryFindNodeIn(FreeListCategoryType type, size_t minimum_size, size_t *node_size)</div><div class="ttdef"><b>Definition</b> <a href="free-list_8cc_source.html#l00139">free-list.cc:139</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00192">heap.h:192</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00192">heap.h:192</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MutablePageMetadata_html"><div class="ttname"><a href="classv8_1_1internal_1_1MutablePageMetadata.html">v8::internal::MutablePageMetadata</a></div><div class="ttdef"><b>Definition</b> <a href="mutable-page-metadata_8h_source.html#l00046">mutable-page-metadata.h:46</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1PageMetadata_html"><div class="ttname"><a href="classv8_1_1internal_1_1PageMetadata.html">v8::internal::PageMetadata</a></div><div class="ttdef"><b>Definition</b> <a href="page-metadata_8h_source.html#l00024">page-metadata.h:24</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1PagedSpace_html"><div class="ttname"><a href="classv8_1_1internal_1_1PagedSpace.html">v8::internal::PagedSpace</a></div><div class="ttdef"><b>Definition</b> <a href="paged-spaces_8h_source.html#l00367">paged-spaces.h:367</a></div></div>
@@ -784,12 +792,9 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="afree-space_8h_html"><div class="ttname"><a href="free-space_8h.html">free-space.h</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_ad83e8682ed733ee0cf359fa4f48441b0"><div class="ttname"><a href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a></div><div class="ttdeci">TNode&lt; Object &gt; callback</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01500">js-call-reducer.cc:1500</a></div></div>
 <div class="ttc" id="aliftoff-compiler_8cc_html_a50f5e33a2768a7272ffd11d31200fdfe"><div class="ttname"><a href="liftoff-compiler_8cc.html#a50f5e33a2768a7272ffd11d31200fdfe">tmp</a></div><div class="ttdeci">Register tmp</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l07416">liftoff-compiler.cc:7416</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="amap_8h_html"><div class="ttname"><a href="map_8h.html">map.h</a></div></div>
 <div class="ttc" id="amutable-page-metadata_8h_html"><div class="ttname"><a href="mutable-page-metadata_8h.html">mutable-page-metadata.h</a></div></div>
-<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
+<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a044f3a8fe8dabbdeee3db1b16e85a1ba"><div class="ttname"><a href="namespacev8_1_1internal.html#a044f3a8fe8dabbdeee3db1b16e85a1ba">v8::internal::kFirstCategory</a></div><div class="ttdeci">static constexpr FreeListCategoryType kFirstCategory</div><div class="ttdef"><b>Definition</b> <a href="#l00039">free-list.h:39</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a12d50d7bb2c9d8a916ff0785e6eff241"><div class="ttname"><a href="namespacev8_1_1internal.html#a12d50d7bb2c9d8a916ff0785e6eff241">v8::internal::kTaggedSize</a></div><div class="ttdeci">constexpr int kTaggedSize</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00534">globals.h:534</a></div></div>
@@ -802,13 +807,20 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_abddbb63b815c1d69390fef2325df451a"><div class="ttname"><a href="namespacev8_1_1internal.html#abddbb63b815c1d69390fef2325df451a">v8::internal::AllocationOrigin</a></div><div class="ttdeci">AllocationOrigin</div><div class="ttdef"><b>Definition</b> <a href="allocation-result_8h_source.html#l00015">allocation-result.h:15</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_adaaee8620068888ef2b3c120d05d8cd3"><div class="ttname"><a href="namespacev8_1_1internal.html#adaaee8620068888ef2b3c120d05d8cd3">v8::internal::kInvalidCategory</a></div><div class="ttdeci">static constexpr FreeListCategoryType kInvalidCategory</div><div class="ttdef"><b>Definition</b> <a href="#l00040">free-list.h:40</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="autils_2utils_8h_html"><div class="ttname"><a href="utils_2utils_8h.html">utils.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a63258e4bf5dc9fb8c78f881c8405d83b"><div class="ttname"><a href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a></div><div class="ttdeci">#define V8_WARN_UNUSED_RESULT</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00660">v8config.h:660</a></div></div>
 <div class="ttc" id="awasm-inlining-into-js_8cc_html_a66874a4e937e4192b2b42e57f55251e8"><div class="ttname"><a href="wasm-inlining-into-js_8cc.html#a66874a4e937e4192b2b42e57f55251e8">type</a></div><div class="ttdeci">wasm::ValueType type</div><div class="ttdef"><b>Definition</b> <a href="wasm-inlining-into-js_8cc_source.html#l00028">wasm-inlining-into-js.cc:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:30 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="free-list_8h.html">free-list.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:38 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

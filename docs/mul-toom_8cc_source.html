@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/bigint/mul-toom.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/bigint/mul-toom.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('mul-toom_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_daf96c7b8ee792ef44214d4c17cd1e56.html">bigint</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">mul-toom.cc</div></div>
 </div><!--header-->
@@ -155,7 +163,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span> ProcessorImpl::Toom3Main(RWDigits Z, Digits <a class="code hl_function" href="flag-definitions_8h.html#aea315e922a204d2310a710fc8416122a">X</a>, Digits Y) {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(Z.len() &gt;= <a class="code hl_function" href="flag-definitions_8h.html#aea315e922a204d2310a710fc8416122a">X</a>.len() + Y.len());</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(Z.len() &gt;= <a class="code hl_function" href="flag-definitions_8h.html#aea315e922a204d2310a710fc8416122a">X</a>.len() + Y.len());</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="comment">// Phase 1: Splitting.</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = <a class="code hl_define" href="util_8h.html#a9f18e36014e8bde6ef0df8bdf2198a07">DIV_CEIL</a>(std::max(<a class="code hl_function" href="flag-definitions_8h.html#aea315e922a204d2310a710fc8416122a">X</a>.len(), Y.len()), 3);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  Digits X0(<a class="code hl_function" href="flag-definitions_8h.html#aea315e922a204d2310a710fc8416122a">X</a>, 0, <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>);</div>
@@ -193,7 +201,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  RWDigits r_m1(t + 3 * r_len, r_len);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="comment">// We can also share the  backing stores of Z, r_0, R0.</span></div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(Z.len() &gt;= r_len);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(Z.len() &gt;= r_len);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  RWDigits r_0(Z, 0, r_len);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="comment">// Phase 2a: Evaluation, steps 0, 1, m1.</span></div>
@@ -283,9 +291,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  R1.Normalize();</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  R2.Normalize();</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  R3.Normalize();</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(R1_sign == <span class="keyword">false</span> || R1.len() == 0);</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(R2_sign == <span class="keyword">false</span> || R2.len() == 0);</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(R3_sign == <span class="keyword">false</span> || R3.len() == 0);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(R1_sign == <span class="keyword">false</span> || R1.len() == 0);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(R2_sign == <span class="keyword">false</span> || R2.len() == 0);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(R3_sign == <span class="keyword">false</span> || R3.len() == 0);</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="comment">// Phase 5: Recomposition. R0 is already in place. Overflow can&#39;t happen.</span></div>
@@ -297,7 +305,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>}</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keywordtype">void</span> ProcessorImpl::MultiplyToomCook(RWDigits Z, Digits <a class="code hl_function" href="flag-definitions_8h.html#aea315e922a204d2310a710fc8416122a">X</a>, Digits Y) {</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="flag-definitions_8h.html#aea315e922a204d2310a710fc8416122a">X</a>.len() &gt;= Y.len());</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="flag-definitions_8h.html#aea315e922a204d2310a710fc8416122a">X</a>.len() &gt;= Y.len());</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <span class="keywordtype">int</span> k = Y.len();</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <span class="comment">// TODO(jkummerow): Would it be a measurable improvement to share the</span></div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  <span class="comment">// scratch memory for several invocations?</span></div>
@@ -323,7 +331,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="adigit-arithmetic_8h_html"><div class="ttname"><a href="digit-arithmetic_8h.html">digit-arithmetic.h</a></div></div>
 <div class="ttc" id="aflag-definitions_8h_html_aea315e922a204d2310a710fc8416122a"><div class="ttname"><a href="flag-definitions_8h.html#aea315e922a204d2310a710fc8416122a">X</a></div><div class="ttdeci">too high values may cause the compiler to set high thresholds for inlining to as much as possible avoid inlined allocation of objects that cannot escape trace load stores from virtual maglev objects use TurboFan fast string builder analyze liveness of environment slots and zap dead values trace TurboFan load elimination emit data about basic block usage in builtins to this enable builtin reordering when run mksnapshot flag for emit warnings when applying builtin profile data verify register allocation in TurboFan randomly schedule instructions to stress dependency tracking enable store store elimination in TurboFan rewrite far to near simulate GC compiler thread race related to allow float parameters to be passed in simulator mode JS Wasm Run additional turbo_optimize_inlined_js_wasm_wrappers enable experimental feedback collection in generic lowering enable Turboshaft s WasmLoadElimination run instruction selection on Turboshaft IR directly enable Turboshaft s loop unrolling enable an additional Turboshaft phase that performs optimizations based on type information build the Turboshaft graph from Maglev trace emitted Turboshaft instructions profile guided optimization for empty feedback vector invocation count for maglev for functions which according to profile_guided_optimization are likely to deoptimize before reaching this invocation count Immediately re optimize code after some lazy deopts Enables the lazy new space shrinking strategy max size of a semi the new space consists of two semi spaces young and full garbage collection phases are not overlapping Collect garbage after keeps maps alive for&lt; n &gt; old space garbage collections print one detailed trace line in allocation gc speed Starts incremental marking with kUserVisible priority threshold for starting incremental marking immediately in percent of available minor GC task trigger in percent of the current heap limit use a separate phase for stack scanning in scavenge max worker number of concurrent for NumberOfWorkerThreads start background threads that allocate memory concurrent_array_buffer_sweeping use parallel threads to clear weak refs in the atomic pause trace progress of the incremental marking trace object counts and memory usage report a tick only when allocated zone memory changes by this amount TracingFlags::gc_stats TracingFlags::gc_stats track native contexts that are expected to be garbage collected verify heap pointers before and after GC use memory reducer for small heaps External memory limits are computed as part of global limits in v8 Heap specifies heap growing factor Perform compaction on full GCs based on V8 s default heuristics Perform compaction on every full GC Perform code space compaction when finalizing a full GC with stack Stress GC compaction to flush out Stress GC compaction by selecting random percent of pages as evacuation candidates Overrides stress_compaction flush of bytecode when it has not been executed recently Flush code when tab goes into the background Use per context worklist for marking force incremental marking for small heaps and run it more often force marking at random points between and X(inclusive) percent &quot; &quot;of the regular marking start limit&quot;) DEFINE_INT(stress_scavenge</div></div>
 <div class="ttc" id="ajs-temporal-objects_8cc_html_a171b4bcf022a10159f27162dac007763"><div class="ttname"><a href="js-temporal-objects_8cc.html#a171b4bcf022a10159f27162dac007763">remainder</a></div><div class="ttdeci">double remainder</div><div class="ttdef"><b>Definition</b> <a href="js-temporal-objects_8cc_source.html#l00108">js-temporal-objects.cc:108</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="amul-toom_8cc_html_a12ad17a2ec8dffe320fbd81db8ed54d5"><div class="ttname"><a href="mul-toom_8cc.html#a12ad17a2ec8dffe320fbd81db8ed54d5">MARK_INVALID</a></div><div class="ttdeci">#define MARK_INVALID(D)</div><div class="ttdef"><b>Definition</b> <a href="#l00058">mul-toom.cc:58</a></div></div>
 <div class="ttc" id="anamespacev8_1_1bigint_html_a4121e0c5972746cf583cb4ad81280f99"><div class="ttname"><a href="namespacev8_1_1bigint.html#a4121e0c5972746cf583cb4ad81280f99">v8::bigint::kHalfDigitBits</a></div><div class="ttdeci">static constexpr int kHalfDigitBits</div><div class="ttdef"><b>Definition</b> <a href="digit-arithmetic_8h_source.html#l00016">digit-arithmetic.h:16</a></div></div>
 <div class="ttc" id="anamespacev8_1_1bigint_html_a4879833909bc4b7a5117ec7d35362977"><div class="ttname"><a href="namespacev8_1_1bigint.html#a4879833909bc4b7a5117ec7d35362977">v8::bigint::kDigitBits</a></div><div class="ttdeci">static constexpr int kDigitBits</div><div class="ttdef"><b>Definition</b> <a href="bigint_2bigint_8h_source.html#l00051">bigint.h:51</a></div></div>
@@ -336,13 +343,17 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a271f8ea99b7c0bbd771df015d4e4cf21ae695019b1d6a3dc7d791935ee35f2b0e"><div class="ttname"><a href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21ae695019b1d6a3dc7d791935ee35f2b0e">v8::internal::carry</a></div><div class="ttdeci">@ carry</div><div class="ttdef"><b>Definition</b> <a href="assembler-ia32_8h_source.html#l00077">assembler-ia32.h:77</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="autil_8h_html_a9f18e36014e8bde6ef0df8bdf2198a07"><div class="ttname"><a href="util_8h.html#a9f18e36014e8bde6ef0df8bdf2198a07">DIV_CEIL</a></div><div class="ttdeci">#define DIV_CEIL(x, y)</div><div class="ttdef"><b>Definition</b> <a href="util_8h_source.html#l00019">util.h:19</a></div></div>
 <div class="ttc" id="avector-arithmetic_8h_html"><div class="ttname"><a href="vector-arithmetic_8h.html">vector-arithmetic.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:16:44 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_daf96c7b8ee792ef44214d4c17cd1e56.html">bigint</a></li><li class="navelem"><a class="el" href="mul-toom_8cc.html">mul-toom.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:52:47 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

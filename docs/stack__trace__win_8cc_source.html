@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/base/debug/stack_trace_win.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/base/debug/stack_trace_win.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('stack__trace__win_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="dir_13e391163e675a715970e04f284ae7cf.html">debug</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">stack_trace_win.cc</div></div>
 </div><!--header-->
@@ -118,8 +126,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8.html">v8</a> {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">namespace </span><a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a> {</div>
@@ -266,7 +274,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><a class="code hl_function" href="classv8_1_1base_1_1debug_1_1StackTrace.html#ad72ea72fc524e37ae45abecb2f4748ff">StackTrace::StackTrace</a>() {</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <span class="comment">// When walking our own stack, use CaptureStackBackTrace().</span></div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#a0a8e4d6c05c1bfd9ce6955eb15915489">count_</a> = CaptureStackBackTrace(0, <a class="code hl_define" href="macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a>(<a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#aa201f11670d2763ae806204dba8a378b">trace_</a>), <a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#aa201f11670d2763ae806204dba8a378b">trace_</a>, <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#a0a8e4d6c05c1bfd9ce6955eb15915489">count_</a> = CaptureStackBackTrace(0, <a class="code hl_define" href="src_2base_2macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a>(<a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#aa201f11670d2763ae806204dba8a378b">trace_</a>), <a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#aa201f11670d2763ae806204dba8a378b">trace_</a>, <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>}</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><a class="code hl_function" href="classv8_1_1base_1_1debug_1_1StackTrace.html#ad72ea72fc524e37ae45abecb2f4748ff">StackTrace::StackTrace</a>(EXCEPTION_POINTERS* exception_pointers) {</div>
@@ -315,11 +323,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <span class="keywordflow">while</span> (StackWalk64(machine_type, GetCurrentProcess(), GetCurrentThread(),</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                     &amp;stack_frame, &amp;context_copy, <span class="keyword">nullptr</span>,</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>                     &amp;SymFunctionTableAccess64, &amp;SymGetModuleBase64, <span class="keyword">nullptr</span>) &amp;&amp;</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>         <a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#a0a8e4d6c05c1bfd9ce6955eb15915489">count_</a> &lt; <a class="code hl_define" href="macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a>(<a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#aa201f11670d2763ae806204dba8a378b">trace_</a>)) {</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>         <a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#a0a8e4d6c05c1bfd9ce6955eb15915489">count_</a> &lt; <a class="code hl_define" href="src_2base_2macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a>(<a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#aa201f11670d2763ae806204dba8a378b">trace_</a>)) {</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#aa201f11670d2763ae806204dba8a378b">trace_</a>[<a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#a0a8e4d6c05c1bfd9ce6955eb15915489">count_</a>++] = <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(stack_frame.AddrPC.Offset);</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  }</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = <a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#a0a8e4d6c05c1bfd9ce6955eb15915489">count_</a>; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; <a class="code hl_define" href="macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a>(<a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#aa201f11670d2763ae806204dba8a378b">trace_</a>); ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) <a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#aa201f11670d2763ae806204dba8a378b">trace_</a>[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>] = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = <a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#a0a8e4d6c05c1bfd9ce6955eb15915489">count_</a>; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; <a class="code hl_define" href="src_2base_2macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a>(<a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#aa201f11670d2763ae806204dba8a378b">trace_</a>); ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) <a class="code hl_variable" href="classv8_1_1base_1_1debug_1_1StackTrace.html#aa201f11670d2763ae806204dba8a378b">trace_</a>[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>] = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>}</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1base_1_1debug_1_1StackTrace.html#a783b7cf0f5190b6f5fe2c888b4cff2cc">StackTrace::Print</a>()<span class="keyword"> const </span>{ <a class="code hl_function" href="classv8_1_1base_1_1debug_1_1StackTrace.html#a21b1d3df259afb289dfb51256efe21cc">OutputToStream</a>(&amp;std::cerr); }</div>
@@ -351,22 +359,25 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="adebug-coverage_8cc_html_a86988a65e0d3ece7990c032c159786d6"><div class="ttname"><a href="debug-coverage_8cc.html#a86988a65e0d3ece7990c032c159786d6">count</a></div><div class="ttdeci">uint32_t count</div><div class="ttdef"><b>Definition</b> <a href="debug-coverage_8cc_source.html#l00594">debug-coverage.cc:594</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a115c48491bb37004f5ac67eb46ac2c23"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a></div><div class="ttdeci">turboshaft::OpIndex base</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00070">instruction-selector-ia32.cc:70</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_a0835767fe473cead88c1afdf3175bce8"><div class="ttname"><a href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a></div><div class="ttdeci">TNode&lt; Context &gt; context</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01496">js-call-reducer.cc:1496</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ac55fdd6aa61539c49b1b1f5d38a0ed73"><div class="ttname"><a href="macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a></div><div class="ttdeci">#define arraysize(array)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00067">macros.h:67</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_1_1debug_html_aac7d055a059da2d6b943f148fb9aa85f"><div class="ttname"><a href="namespacev8_1_1base_1_1debug.html#aac7d055a059da2d6b943f148fb9aa85f">v8::base::debug::EnableInProcessStackDumping</a></div><div class="ttdeci">V8_BASE_EXPORT bool EnableInProcessStackDumping()</div><div class="ttdef"><b>Definition</b> <a href="stack__trace__android_8cc_source.html#l00057">stack_trace_android.cc:57</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_1_1debug_html_aca05d554d6c0f3b8e46e9b6dcc27ff30"><div class="ttname"><a href="namespacev8_1_1base_1_1debug.html#aca05d554d6c0f3b8e46e9b6dcc27ff30">v8::base::debug::DisableSignalStackDump</a></div><div class="ttdeci">V8_BASE_EXPORT void DisableSignalStackDump()</div><div class="ttdef"><b>Definition</b> <a href="stack__trace__android_8cc_source.html#l00069">stack_trace_android.cc:69</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ac55fdd6aa61539c49b1b1f5d38a0ed73"><div class="ttname"><a href="src_2base_2macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a></div><div class="ttdeci">#define arraysize(array)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00067">macros.h:67</a></div></div>
 <div class="ttc" id="astack__trace_8h_html"><div class="ttname"><a href="stack__trace_8h.html">stack_trace.h</a></div></div>
 <div class="ttc" id="awin32-headers_8h_html_a050c65e107f0c828f856a231f4b4e788"><div class="ttname"><a href="win32-headers_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a></div><div class="ttdeci">int BOOL</div><div class="ttdef"><b>Definition</b> <a href="win32-headers_8h_source.html#l00051">win32-headers.h:51</a></div></div>
 <div class="ttc" id="awin32-headers_8h_html_a9aa60e1ead64be77ad551e745cbfd4d3"><div class="ttname"><a href="win32-headers_8h.html#a9aa60e1ead64be77ad551e745cbfd4d3">WINAPI</a></div><div class="ttdeci">#define WINAPI</div><div class="ttdef"><b>Definition</b> <a href="win32-headers_8h_source.html#l00058">win32-headers.h:58</a></div></div>
 <div class="ttc" id="awin32-headers_8h_html_ad342ac907eb044443153a22f964bf0af"><div class="ttname"><a href="win32-headers_8h.html#ad342ac907eb044443153a22f964bf0af">DWORD</a></div><div class="ttdeci">unsigned long DWORD</div><div class="ttdef"><b>Definition</b> <a href="win32-headers_8h_source.html#l00052">win32-headers.h:52</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:16:42 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="dir_13e391163e675a715970e04f284ae7cf.html">debug</a></li><li class="navelem"><a class="el" href="stack__trace__win_8cc.html">stack_trace_win.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:52:45 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

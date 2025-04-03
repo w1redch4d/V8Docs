@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/interpreter/bytecode-array-iterator.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/interpreter/bytecode-array-iterator.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('bytecode-array-iterator_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4904b5727094acb85f1fb3ce4b540d24.html">interpreter</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">bytecode-array-iterator.h</div></div>
 </div><!--header-->
@@ -103,7 +111,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;include/v8-callbacks.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="v8-callbacks_8h.html">include/v8-callbacks.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="common_2globals_8h.html">src/common/globals.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="handles_8h.html">src/handles/handles.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="bytecode-register_8h.html">src/interpreter/bytecode-register.h</a>&quot;</span></div>
@@ -122,18 +130,18 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keyword">class </span>BytecodeArrayIterator;</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset.html">   28</a></span><span class="keyword">struct </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_struct" href="structv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset.html">JumpTableTargetOffset</a> {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset.html">   28</a></span><span class="keyword">struct </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_struct" href="structv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset.html">JumpTableTargetOffset</a> {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset.html#af95da56119f39abeb8ebd27c5edf6ba4">   29</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset.html#af95da56119f39abeb8ebd27c5edf6ba4">case_value</a>;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset.html#a4bbfe66e2a9b6fe0b1abf8dbcf59bc73">   30</a></span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="structv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset.html#a4bbfe66e2a9b6fe0b1abf8dbcf59bc73">target_offset</a>;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
 </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="foldopen" id="foldopen00033" data-start="{" data-end="};">
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffsets.html">   33</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffsets.html">JumpTableTargetOffsets</a> final {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffsets.html">   33</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffsets.html">JumpTableTargetOffsets</a> final {</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="comment">// Minimal iterator implementation for use in ranged-for.</span></div>
 <div class="foldopen" id="foldopen00036" data-start="{" data-end="};">
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffsets_1_1iterator.html">   36</a></span>  <span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffsets_1_1iterator.html">iterator</a> final {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffsets_1_1iterator.html">   36</a></span>  <span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffsets_1_1iterator.html">iterator</a> final {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>   <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffsets_1_1iterator.html">iterator</a>(<span class="keywordtype">int</span> case_value, <span class="keywordtype">int</span> table_offset, <span class="keywordtype">int</span> table_end,</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>             <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1BytecodeArrayIterator.html">BytecodeArrayIterator</a>* <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffsets_1_1iterator.html">iterator</a>);</div>
@@ -170,7 +178,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="foldopen" id="foldopen00070" data-start="{" data-end="};">
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1BytecodeArrayIterator.html">   70</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1BytecodeArrayIterator.html">BytecodeArrayIterator</a> {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1BytecodeArrayIterator.html">   70</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1BytecodeArrayIterator.html">BytecodeArrayIterator</a> {</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1BytecodeArrayIterator.html">BytecodeArrayIterator</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;BytecodeArray&gt;</a> bytecode_array,</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>                                 <span class="keywordtype">int</span> initial_offset = 0);</div>
@@ -204,10 +212,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1BytecodeArrayIterator.html#a19773553f1efae064d09f8c69fd3da1f">  100</a></span>  <span class="keyword">inline</span> <a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#a11bcbd6d6c1eed58e8536b777ae09e16">Bytecode</a> <a class="code hl_function" href="classv8_1_1internal_1_1interpreter_1_1BytecodeArrayIterator.html#a19773553f1efae064d09f8c69fd3da1f">current_bytecode</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!done());</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!done());</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    uint8_t current_byte = *cursor_;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#a11bcbd6d6c1eed58e8536b777ae09e16">Bytecode</a> current_bytecode = Bytecodes::FromByte(current_byte);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!Bytecodes::IsPrefixScalingBytecode(current_bytecode));</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!Bytecodes::IsPrefixScalingBytecode(current_bytecode));</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">return</span> current_bytecode;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  }</div>
 </div>
@@ -400,8 +408,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="adebug-coverage_8cc_html_abce9f5dc9c83f2639b72024fdee5d388"><div class="ttname"><a href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a></div><div class="ttdeci">int end</div><div class="ttdef"><b>Definition</b> <a href="debug-coverage_8cc_source.html#l00596">debug-coverage.cc:596</a></div></div>
 <div class="ttc" id="ahandles_8h_html"><div class="ttname"><a href="handles_8h.html">handles.h</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a97bd6c077f3c7769f575b82988b9b668"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a></div><div class="ttdeci">int32_t offset</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00072">instruction-selector-ia32.cc:72</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1interpreter_html_a11bcbd6d6c1eed58e8536b777ae09e16"><div class="ttname"><a href="namespacev8_1_1internal_1_1interpreter.html#a11bcbd6d6c1eed58e8536b777ae09e16">v8::internal::interpreter::Bytecode</a></div><div class="ttdeci">Bytecode</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l00584">bytecodes.h:584</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1interpreter_html_a39fea0bd5e7271ce703cd41313e7eefc"><div class="ttname"><a href="namespacev8_1_1internal_1_1interpreter.html#a39fea0bd5e7271ce703cd41313e7eefc">v8::internal::interpreter::OperandType</a></div><div class="ttdeci">OperandType</div><div class="ttdef"><b>Definition</b> <a href="bytecode-operands_8h_source.html#l00103">bytecode-operands.h:103</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1interpreter_html_af4cfe621e83bc78f064aa62806795d64"><div class="ttname"><a href="namespacev8_1_1internal_1_1interpreter.html#af4cfe621e83bc78f064aa62806795d64">v8::internal::interpreter::OperandScale</a></div><div class="ttdeci">OperandScale</div><div class="ttdef"><b>Definition</b> <a href="bytecode-operands_8h_source.html#l00069">bytecode-operands.h:69</a></div></div>
@@ -414,14 +420,20 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aruntime_8h_html"><div class="ttname"><a href="runtime_8h.html">runtime.h</a></div></div>
 <div class="ttc" id="asetup-heap-internal_8cc_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> <a href="setup-heap-internal_8cc_source.html#l00126">setup-heap-internal.cc:126</a></div></div>
 <div class="ttc" id="asmi_8h_html"><div class="ttname"><a href="smi_8h.html">smi.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset_html"><div class="ttname"><a href="structv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset.html">v8::internal::interpreter::JumpTableTargetOffset</a></div><div class="ttdef"><b>Definition</b> <a href="#l00028">bytecode-array-iterator.h:28</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset_html_a4bbfe66e2a9b6fe0b1abf8dbcf59bc73"><div class="ttname"><a href="structv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset.html#a4bbfe66e2a9b6fe0b1abf8dbcf59bc73">v8::internal::interpreter::JumpTableTargetOffset::target_offset</a></div><div class="ttdeci">int target_offset</div><div class="ttdef"><b>Definition</b> <a href="#l00030">bytecode-array-iterator.h:30</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset_html_af95da56119f39abeb8ebd27c5edf6ba4"><div class="ttname"><a href="structv8_1_1internal_1_1interpreter_1_1JumpTableTargetOffset.html#af95da56119f39abeb8ebd27c5edf6ba4">v8::internal::interpreter::JumpTableTargetOffset::case_value</a></div><div class="ttdeci">int case_value</div><div class="ttdef"><b>Definition</b> <a href="#l00029">bytecode-array-iterator.h:29</a></div></div>
+<div class="ttc" id="av8-callbacks_8h_html"><div class="ttname"><a href="v8-callbacks_8h.html">v8-callbacks.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:39 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4904b5727094acb85f1fb3ce4b540d24.html">interpreter</a></li><li class="navelem"><a class="el" href="bytecode-array-iterator_8h.html">bytecode-array-iterator.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:48 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

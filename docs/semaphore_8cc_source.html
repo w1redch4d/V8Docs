@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/base/platform/semaphore.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/base/platform/semaphore.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('semaphore_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="dir_c00de8f55a27e6d67f70bde7b77593d5.html">platform</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">semaphore.cc</div></div>
 </div><!--header-->
@@ -108,7 +116,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;errno.h&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="elapsed-timer_8h.html">src/base/platform/elapsed-timer.h</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="time_8h.html">src/base/platform/time.h</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
@@ -119,7 +127,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><a class="code hl_function" href="classv8_1_1base_1_1Semaphore.html#a6e6256b4b8007e24a6cd75d88016013b">Semaphore::Semaphore</a>(<span class="keywordtype">int</span> count) {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a> = dispatch_semaphore_create(count);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a>);</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><a class="code hl_function" href="classv8_1_1base_1_1Semaphore.html#afd16677fe47438f0a8e4a722c4198fa7">Semaphore::~Semaphore</a>() { dispatch_release(<a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a>); }</div>
@@ -140,17 +148,17 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#elif V8_OS_POSIX</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><a class="code hl_function" href="classv8_1_1base_1_1Semaphore.html#a6e6256b4b8007e24a6cd75d88016013b">Semaphore::Semaphore</a>(<span class="keywordtype">int</span> count) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(count, 0);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(count, 0);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = sem_init(&amp;<a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a>, 0, count);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><a class="code hl_function" href="classv8_1_1base_1_1Semaphore.html#afd16677fe47438f0a8e4a722c4198fa7">Semaphore::~Semaphore</a>() {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = sem_destroy(&amp;<a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a>);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1base_1_1Semaphore.html#a95ee194fdea88172c20132a95ac8ca59">Semaphore::Signal</a>() {</div>
@@ -159,7 +167,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="comment">// semaphore is destroyed while sem_post is still executed. A work around is</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="comment">// to extend the lifetime of the semaphore.</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> != 0) {</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_define" href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;Error when signaling semaphore, errno: %d&quot;</span>, errno);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;Error when signaling semaphore, errno: %d&quot;</span>, errno);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  }</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
@@ -169,8 +177,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = sem_wait(&amp;<a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a>);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> == 0) <span class="keywordflow">return</span>;  <span class="comment">// Semaphore was signalled.</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">// Signal caused spurious wakeup.</span></div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(-1, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(EINTR, errno);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(-1, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(EINTR, errno);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  }</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
@@ -196,38 +204,38 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="comment">// Signal caused spurious wakeup.</span></div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(-1, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(EINTR, errno);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(-1, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(EINTR, errno);</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  }</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#elif V8_OS_WIN</span></div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><a class="code hl_function" href="classv8_1_1base_1_1Semaphore.html#a6e6256b4b8007e24a6cd75d88016013b">Semaphore::Semaphore</a>(<span class="keywordtype">int</span> count) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(count, 0);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(count, 0);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a> = ::CreateSemaphoreA(<span class="keyword">nullptr</span>, count, 0x7FFFFFFF, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a>);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><a class="code hl_function" href="classv8_1_1base_1_1Semaphore.html#afd16677fe47438f0a8e4a722c4198fa7">Semaphore::~Semaphore</a>() {</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <a class="code hl_typedef" href="win32-headers_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = CloseHandle(<a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a>);</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1base_1_1Semaphore.html#a95ee194fdea88172c20132a95ac8ca59">Semaphore::Signal</a>() {</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <a class="code hl_typedef" href="win32-headers_8h.html#a2a3e0cda5f1249bef6db47c5eb8e3813">LONG</a> dummy;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <a class="code hl_typedef" href="win32-headers_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = ReleaseSemaphore(<a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a>, 1, &amp;dummy);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1base_1_1Semaphore.html#afa492a527fe740fb20024a4146833f32">Semaphore::Wait</a>() {</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <a class="code hl_typedef" href="win32-headers_8h.html#ad342ac907eb044443153a22f964bf0af">DWORD</a> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = WaitForSingleObject(<a class="code hl_variable" href="classv8_1_1base_1_1Semaphore.html#aa2e6ab037a5a5e3d16e0bb95f1a55de4">native_handle_</a>, INFINITE);</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> == WAIT_OBJECT_0);</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> == WAIT_OBJECT_0);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>}</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
@@ -241,7 +249,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> == WAIT_OBJECT_0) {</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>      }</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> == WAIT_TIMEOUT);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> == WAIT_TIMEOUT);</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      now = <a class="code hl_function" href="classv8_1_1base_1_1TimeTicks.html#ab0886bf0e84f1e1fcdc101021c2c0775">TimeTicks::Now</a>();</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      <a class="code hl_typedef" href="win32-headers_8h.html#ad342ac907eb044443153a22f964bf0af">DWORD</a> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = WaitForSingleObject(</div>
@@ -249,7 +257,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> == WAIT_TIMEOUT) {</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      }</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> == WAIT_OBJECT_0);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> == WAIT_OBJECT_0);</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    }</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  }</div>
@@ -257,7 +265,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">#elif V8_OS_STARBOARD</span></div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><a class="code hl_function" href="classv8_1_1base_1_1Semaphore.html#a6e6256b4b8007e24a6cd75d88016013b">Semaphore::Semaphore</a>(<span class="keywordtype">int</span> count) : native_handle_(count) { <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(count, 0); }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><a class="code hl_function" href="classv8_1_1base_1_1Semaphore.html#a6e6256b4b8007e24a6cd75d88016013b">Semaphore::Semaphore</a>(<span class="keywordtype">int</span> count) : native_handle_(count) { <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(count, 0); }</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>Semaphore::~Semaphore() {}</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
@@ -287,24 +295,27 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aelapsed-timer_8h_html"><div class="ttname"><a href="elapsed-timer_8h.html">elapsed-timer.h</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a115c48491bb37004f5ac67eb46ac2c23"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a></div><div class="ttdeci">turboshaft::OpIndex base</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00070">instruction-selector-ia32.cc:70</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_a41f8c58d2c01bf65b8ee199c3f87fc80"><div class="ttname"><a href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a></div><div class="ttdeci">ZoneVector&lt; RpoNumber &gt; &amp; result</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00021">jump-threading.cc:21</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00047">logging.h:47</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="amacros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="asemaphore_8h_html"><div class="ttname"><a href="semaphore_8h.html">semaphore.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00047">logging.h:47</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="atime_8h_html"><div class="ttname"><a href="time_8h.html">time.h</a></div></div>
 <div class="ttc" id="awin32-headers_8h_html_a050c65e107f0c828f856a231f4b4e788"><div class="ttname"><a href="win32-headers_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a></div><div class="ttdeci">int BOOL</div><div class="ttdef"><b>Definition</b> <a href="win32-headers_8h_source.html#l00051">win32-headers.h:51</a></div></div>
 <div class="ttc" id="awin32-headers_8h_html_a2a3e0cda5f1249bef6db47c5eb8e3813"><div class="ttname"><a href="win32-headers_8h.html#a2a3e0cda5f1249bef6db47c5eb8e3813">LONG</a></div><div class="ttdeci">long LONG</div><div class="ttdef"><b>Definition</b> <a href="win32-headers_8h_source.html#l00053">win32-headers.h:53</a></div></div>
 <div class="ttc" id="awin32-headers_8h_html_ad342ac907eb044443153a22f964bf0af"><div class="ttname"><a href="win32-headers_8h.html#ad342ac907eb044443153a22f964bf0af">DWORD</a></div><div class="ttdeci">unsigned long DWORD</div><div class="ttdef"><b>Definition</b> <a href="win32-headers_8h_source.html#l00052">win32-headers.h:52</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:16:43 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="dir_c00de8f55a27e6d67f70bde7b77593d5.html">platform</a></li><li class="navelem"><a class="el" href="semaphore_8cc.html">semaphore.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:52:45 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/parsing/pending-compilation-error-handler.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/parsing/pending-compilation-error-handler.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('pending-compilation-error-handler_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3fb67633942bd84f7aa391e58ba835b3.html">parsing</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">pending-compilation-error-handler.cc</div></div>
 </div><!--header-->
@@ -102,7 +110,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="ast-value-factory_8h.html">src/ast/ast-value-factory.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="export-template_8h.html">src/base/export-template.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="debug_8h.html">src/debug/debug.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="execution_2isolate_8h.html">src/execution/isolate.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="messages_8h.html">src/execution/messages.h</a>&quot;</span></div>
@@ -116,7 +124,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00020" data-start="{" data-end="}">
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html#a7e2e58367629d06fcf2cde3beb8278ee">   20</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html#a7e2e58367629d06fcf2cde3beb8278ee">PendingCompilationErrorHandler::MessageDetails::SetString</a>(</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;String&gt;</a> <span class="keywordtype">string</span>, <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html#a3253a726ef1cda85f6621b005c350a46">args_</a>[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>].type, <a class="code hl_enumvalue" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html#ab7aa7c1ddff6fc9725c7875444060ee5a4de5c905635d50f5631d3be9a680a6fd">kMainThreadHandle</a>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html#a3253a726ef1cda85f6621b005c350a46">args_</a>[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>].type, <a class="code hl_enumvalue" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html#ab7aa7c1ddff6fc9725c7875444060ee5a4de5c905635d50f5631d3be9a680a6fd">kMainThreadHandle</a>);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html#a3253a726ef1cda85f6621b005c350a46">args_</a>[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>].<a class="code hl_variable" href="structv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails_1_1MessageArgument.html#a5af9a062c975b8aa2946d0daf056329c">type</a> = <a class="code hl_enumvalue" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html#ab7aa7c1ddff6fc9725c7875444060ee5a4de5c905635d50f5631d3be9a680a6fd">kMainThreadHandle</a>;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html#a3253a726ef1cda85f6621b005c350a46">args_</a>[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>].<a class="code hl_variable" href="structv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails_1_1MessageArgument.html#a2c94186e59519f7ec355c9e91e4f79d3">js_string</a> = <a class="code hl_variable" href="namespacev8_1_1internal.html#af68b330f02476361ab10f531933b3381">string</a>;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
@@ -125,7 +133,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html#ad81d968ddca38a60ff1cbf747c8b43a7">   27</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html#a7e2e58367629d06fcf2cde3beb8278ee">PendingCompilationErrorHandler::MessageDetails::SetString</a>(</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;String&gt;</a> <span class="keywordtype">string</span>, <a class="code hl_class" href="classv8_1_1internal_1_1LocalIsolate.html">LocalIsolate</a>* isolate) {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(args_[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>].type, kMainThreadHandle);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(args_[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>].type, kMainThreadHandle);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  args_[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>].type = kMainThreadHandle;</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  args_[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>].js_string = isolate-&gt;heap()-&gt;NewPersistentHandle(<span class="keywordtype">string</span>);</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
@@ -159,12 +167,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">// `index` may be &gt;= argc; in that case we return a default value to pass on</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">// elsewhere.</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, kMaxArgumentCount);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, kMaxArgumentCount);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordflow">switch</span> (args_[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>].type) {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">case</span> kMainThreadHandle:</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <span class="keywordflow">return</span> args_[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>].js_string;</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a6762e3845e3e870981025a55d605f1dea94a9c1aa93ea09cd7898dddd588022e6">kNone</a>:</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1Handle.html#a7fde29e675604ed824bd306445f2c6de">Handle&lt;String&gt;::null</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>      <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;String&gt;::null</a>();</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordflow">case</span> kConstCharString:</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>      <span class="keywordflow">return</span> isolate-&gt;factory()</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>          -&gt;NewStringFromUtf8(<a class="code hl_function" href="namespacev8_1_1base.html#ab7bb05a38073e903d44170c3fed70276">base::CStrVector</a>(args_[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>].c_string),</div>
@@ -248,7 +256,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> IsolateT&gt;</div>
 <div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#aee34c47bc6e73730289e44f8f5c74a0e">  133</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#aee34c47bc6e73730289e44f8f5c74a0e">PendingCompilationErrorHandler::PrepareWarnings</a>(IsolateT* isolate) {</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a2e1e503fce11daf86e4935f6d6920473">has_pending_error</a>());</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a2e1e503fce11daf86e4935f6d6920473">has_pending_error</a>());</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html">MessageDetails</a>&amp; warning : <a class="code hl_variable" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a924d5367ce10e111a53056d8830bc735">warning_messages_</a>) {</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    warning.Prepare(isolate);</div>
@@ -262,15 +270,15 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00144" data-start="{" data-end="}">
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#ab2d79c9ef83b90a1d2c819f8510b21f6">  144</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#ab2d79c9ef83b90a1d2c819f8510b21f6">PendingCompilationErrorHandler::ReportWarnings</a>(</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Script&gt;</a> script)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a2e1e503fce11daf86e4935f6d6920473">has_pending_error</a>());</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a2e1e503fce11daf86e4935f6d6920473">has_pending_error</a>());</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html">MessageDetails</a>&amp; warning : <a class="code hl_variable" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a924d5367ce10e111a53056d8830bc735">warning_messages_</a>) {</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <a class="code hl_class" href="classv8_1_1internal_1_1MessageLocation.html">MessageLocation</a> location = warning.GetLocation(script);</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;String&gt;</a> argument = warning.ArgString(isolate, 0);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(warning.ArgCount(), 2);  <span class="comment">// Arg1 is only used for errors.</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(warning.ArgCount(), 2);  <span class="comment">// Arg1 is only used for errors.</span></div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSMessageObject&gt;</a> message = <a class="code hl_function" href="classv8_1_1internal_1_1MessageHandler.html#abfd4ce24a2c96e2e1d103d77183ccc8b">MessageHandler::MakeMessageObject</a>(</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        isolate, warning.message(), &amp;location, argument);</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    message-&gt;set_error_level(v8::Isolate::kMessageWarning);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    message-&gt;set_error_level(<a class="code hl_enumvalue" href="classv8_1_1Isolate.html#acfc7c4d5c93913201249045e2655d3ddab954b1b5390d996328add7bc1521af6b">v8::Isolate::kMessageWarning</a>);</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <a class="code hl_function" href="classv8_1_1internal_1_1MessageHandler.html#a0bf1c61a55f287e31af1fe6fd5e72362">MessageHandler::ReportMessage</a>(isolate, &amp;location, message);</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  }</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>}</div>
@@ -282,17 +290,17 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    IsolateT* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1AstValueFactory.html">AstValueFactory</a>* ast_value_factory) {</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a693897b31a85741888860c77fc44e9ce">stack_overflow</a>()) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a2e1e503fce11daf86e4935f6d6920473">has_pending_error</a>());</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a2e1e503fce11daf86e4935f6d6920473">has_pending_error</a>());</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="comment">// Internalize ast values for throwing the pending error.</span></div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  ast_value_factory-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1AstValueFactory.html#a87567921c4503a5240c413851cd19aba">Internalize</a>(isolate);</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a94768f6059c7050e5624451871faf703">error_details_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails.html#a46792ef20bdb808d64de22715d967ca9">Prepare</a>(isolate);</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>}</div>
 </div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>) <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#af3479c9e7d9874bece9838ca1a63d5ed">PendingCompilationErrorHandler::</a></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>) <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#af3479c9e7d9874bece9838ca1a63d5ed">PendingCompilationErrorHandler::</a></div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#af3479c9e7d9874bece9838ca1a63d5ed">    PrepareErrors</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1AstValueFactory.html">AstValueFactory</a>* ast_value_factory);</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>) <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#af3479c9e7d9874bece9838ca1a63d5ed">PendingCompilationErrorHandler::</a></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>) <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#af3479c9e7d9874bece9838ca1a63d5ed">PendingCompilationErrorHandler::</a></div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#af3479c9e7d9874bece9838ca1a63d5ed">    PrepareErrors</a>(<a class="code hl_class" href="classv8_1_1internal_1_1LocalIsolate.html">LocalIsolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1AstValueFactory.html">AstValueFactory</a>* ast_value_factory);</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a466e18ae8ae91652b5a28ae1938d0cf8">PendingCompilationErrorHandler::ReportErrors</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate,</div>
@@ -300,7 +308,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a693897b31a85741888860c77fc44e9ce">stack_overflow</a>()) {</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    isolate-&gt;StackOverflow();</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a2e1e503fce11daf86e4935f6d6920473">has_pending_error</a>());</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a2e1e503fce11daf86e4935f6d6920473">has_pending_error</a>());</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <a class="code hl_function" href="classv8_1_1internal_1_1PendingCompilationErrorHandler.html#a2b4b3f019bde7274eae83ec8a7594e84">ThrowPendingError</a>(isolate, script);</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  }</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>}</div>
@@ -345,13 +353,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>}  <span class="comment">// namespace v8</span></div>
 <div class="ttc" id="aast-value-factory_8h_html"><div class="ttname"><a href="ast-value-factory_8h.html">ast-value-factory.h</a></div></div>
 <div class="ttc" id="aclassstd_1_1string_html"><div class="ttname"><a href="classstd_1_1string.html">string</a></div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html_acfc7c4d5c93913201249045e2655d3ddab954b1b5390d996328add7bc1521af6b"><div class="ttname"><a href="classv8_1_1Isolate.html#acfc7c4d5c93913201249045e2655d3ddab954b1b5390d996328add7bc1521af6b">v8::Isolate::kMessageWarning</a></div><div class="ttdeci">@ kMessageWarning</div><div class="ttdef"><b>Definition</b> <a href="v8-isolate_8h_source.html#l00631">v8-isolate.h:631</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1AstRawString_html"><div class="ttname"><a href="classv8_1_1internal_1_1AstRawString.html">v8::internal::AstRawString</a></div><div class="ttdef"><b>Definition</b> <a href="ast-value-factory_8h_source.html#l00051">ast-value-factory.h:51</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1AstValueFactory_html"><div class="ttname"><a href="classv8_1_1internal_1_1AstValueFactory.html">v8::internal::AstValueFactory</a></div><div class="ttdef"><b>Definition</b> <a href="ast-value-factory_8h_source.html#l00313">ast-value-factory.h:313</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1AstValueFactory_html_a87567921c4503a5240c413851cd19aba"><div class="ttname"><a href="classv8_1_1internal_1_1AstValueFactory.html#a87567921c4503a5240c413851cd19aba">v8::internal::AstValueFactory::Internalize</a></div><div class="ttdeci">void Internalize(IsolateT *isolate)</div><div class="ttdef"><b>Definition</b> <a href="ast-value-factory_8cc_source.html#l00372">ast-value-factory.cc:372</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1DirectHandle_html"><div class="ttname"><a href="classv8_1_1internal_1_1DirectHandle.html">v8::internal::DirectHandle</a></div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00643">handles.h:652</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Factory_html"><div class="ttname"><a href="classv8_1_1internal_1_1Factory.html">v8::internal::Factory</a></div><div class="ttdef"><b>Definition</b> <a href="factory_8h_source.html#l00139">factory.h:139</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Handle_html"><div class="ttname"><a href="classv8_1_1internal_1_1Handle.html">v8::internal::Handle</a></div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00145">handles.h:145</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Handle_html_a7fde29e675604ed824bd306445f2c6de"><div class="ttname"><a href="classv8_1_1internal_1_1Handle.html#a7fde29e675604ed824bd306445f2c6de">v8::internal::Handle::null</a></div><div class="ttdeci">static const Handle&lt; T &gt; null()</div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00202">handles.h:202</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html">v8::internal::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l00575">isolate.h:575</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1LocalIsolate_html"><div class="ttname"><a href="classv8_1_1internal_1_1LocalIsolate.html">v8::internal::LocalIsolate</a></div><div class="ttdef"><b>Definition</b> <a href="local-isolate_8h_source.html#l00045">local-isolate.h:45</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MessageFormatter_html_a0e07d70f586be8c65477298f0e4c3b10"><div class="ttname"><a href="classv8_1_1internal_1_1MessageFormatter.html#a0e07d70f586be8c65477298f0e4c3b10">v8::internal::MessageFormatter::Format</a></div><div class="ttdeci">static Handle&lt; String &gt; Format(Isolate *isolate, MessageTemplate index, base::Vector&lt; const DirectHandle&lt; Object &gt; &gt; args)</div><div class="ttdef"><b>Definition</b> <a href="messages_8cc_source.html#l00395">messages.cc:395</a></div></div>
@@ -388,11 +396,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aexport-template_8h_html_a8687a18b601021d53d8f4417c60584c5"><div class="ttname"><a href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a></div><div class="ttdeci">#define EXPORT_TEMPLATE_DEFINE(export)</div><div class="ttdef"><b>Definition</b> <a href="export-template_8h_source.html#l00063">export-template.h:63</a></div></div>
 <div class="ttc" id="ahandles_8h_html"><div class="ttname"><a href="handles_8h.html">handles.h</a></div></div>
 <div class="ttc" id="alocal-heap-inl_8h_html"><div class="ttname"><a href="local-heap-inl_8h.html">local-heap-inl.h</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00486">logging.h:486</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="amessages_8h_html"><div class="ttname"><a href="messages_8h.html">messages.h</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_ab277246c6caecad159bbc8755cf6bb54"><div class="ttname"><a href="namespacev8_1_1base.html#ab277246c6caecad159bbc8755cf6bb54">v8::base::VectorOf</a></div><div class="ttdeci">constexpr Vector&lt; T &gt; VectorOf(T *start, size_t size)</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00360">vector.h:360</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_ab7bb05a38073e903d44170c3fed70276"><div class="ttname"><a href="namespacev8_1_1base.html#ab7bb05a38073e903d44170c3fed70276">v8::base::CStrVector</a></div><div class="ttdeci">Vector&lt; const char &gt; CStrVector(const char *data)</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00331">vector.h:331</a></div></div>
@@ -407,13 +410,21 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="aobjects-inl_8h_html"><div class="ttname"><a href="objects-inl_8h.html">objects-inl.h</a></div></div>
 <div class="ttc" id="apending-compilation-error-handler_8h_html"><div class="ttname"><a href="pending-compilation-error-handler_8h.html">pending-compilation-error-handler.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00486">logging.h:486</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails_1_1MessageArgument_html_a2c94186e59519f7ec355c9e91e4f79d3"><div class="ttname"><a href="structv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails_1_1MessageArgument.html#a2c94186e59519f7ec355c9e91e4f79d3">v8::internal::PendingCompilationErrorHandler::MessageDetails::MessageArgument::js_string</a></div><div class="ttdeci">Handle&lt; String &gt; js_string</div><div class="ttdef"><b>Definition</b> <a href="pending-compilation-error-handler_8h_source.html#l00177">pending-compilation-error-handler.h:177</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails_1_1MessageArgument_html_a5af9a062c975b8aa2946d0daf056329c"><div class="ttname"><a href="structv8_1_1internal_1_1PendingCompilationErrorHandler_1_1MessageDetails_1_1MessageArgument.html#a5af9a062c975b8aa2946d0daf056329c">v8::internal::PendingCompilationErrorHandler::MessageDetails::MessageArgument::type</a></div><div class="ttdeci">Type type</div><div class="ttdef"><b>Definition</b> <a href="pending-compilation-error-handler_8h_source.html#l00179">pending-compilation-error-handler.h:179</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:50 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3fb67633942bd84f7aa391e58ba835b3.html">parsing</a></li><li class="navelem"><a class="el" href="pending-compilation-error-handler_8cc.html">pending-compilation-error-handler.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:03 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

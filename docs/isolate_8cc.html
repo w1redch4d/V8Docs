@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/execution/isolate.cc File Reference</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/execution/isolate.cc File Reference</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('isolate_8cc.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bd0755c95a42e835fb06f38bbeb1d6ed.html">execution</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -111,15 +119,15 @@ $(function(){ initResizable(false); });
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;unordered_map&gt;</code><br />
 <code>#include &lt;utility&gt;</code><br />
-<code>#include &quot;include/v8-template.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="v8-template_8h_source.html">include/v8-template.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="api-arguments-inl_8h_source.html">src/api/api-arguments-inl.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="api-inl_8h_source.html">src/api/api-inl.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ast-value-factory_8h_source.html">src/ast/ast-value-factory.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="scopes_8h_source.html">src/ast/scopes.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="hashmap_8h_source.html">src/base/hashmap.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="logging_8h_source.html">src/base/logging.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2base_2logging_8h_source.html">src/base/logging.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mutex_8h_source.html">src/base/platform/mutex.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="base_2platform_2platform_8h_source.html">src/base/platform/platform.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2base_2platform_2platform_8h_source.html">src/base/platform/platform.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="wrappers_8h_source.html">src/base/platform/wrappers.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="sys-info_8h_source.html">src/base/sys-info.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="random-number-generator_8h_source.html">src/base/utils/random-number-generator.h</a>&quot;</code><br />
@@ -167,7 +175,7 @@ $(function(){ initResizable(false); });
 <code>#include &quot;<a class="el" href="stub-cache_8h_source.html">src/ic/stub-cache.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="bootstrapper_8h_source.html">src/init/bootstrapper.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="setup-isolate_8h_source.html">src/init/setup-isolate.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="v8_8h_source.html">src/init/v8.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2init_2v8_8h_source.html">src/init/v8.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="bytecode-array-iterator_8h_source.html">src/interpreter/bytecode-array-iterator.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="bytecodes_8h_source.html">src/interpreter/bytecodes.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="interpreter_8h_source.html">src/interpreter/interpreter.h</a>&quot;</code><br />
@@ -265,13 +273,13 @@ Functions</h2></td></tr>
 <tr class="separator:ab0c0e9237bdee75f1cf852ca7544c8e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c9ba031665dc5477df3ae55bc3cd51c" id="r_a1c9ba031665dc5477df3ae55bc3cd51c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal.html#a1c9ba031665dc5477df3ae55bc3cd51c">v8::internal::FreeCurrentEmbeddedBlob</a> ()</td></tr>
 <tr class="separator:a1c9ba031665dc5477df3ae55bc3cd51c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a144877fdc5051896f2d01fcc98cdabc7" id="r_a144877fdc5051896f2d01fcc98cdabc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacev8_1_1internal.html#a4e2118a7c0d730210e0cb87b511cba70">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal.html#a144877fdc5051896f2d01fcc98cdabc7">v8::internal::NoExtension</a> (const <a class="el" href="classv8_1_1FunctionCallbackInfo.html">v8::FunctionCallbackInfo</a>&lt; v8::Value &gt; &amp;)</td></tr>
+<tr class="memitem:a144877fdc5051896f2d01fcc98cdabc7" id="r_a144877fdc5051896f2d01fcc98cdabc7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacev8_1_1internal.html#a4e2118a7c0d730210e0cb87b511cba70">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal.html#a144877fdc5051896f2d01fcc98cdabc7">v8::internal::NoExtension</a> (const <a class="el" href="classv8_1_1FunctionCallbackInfo.html">v8::FunctionCallbackInfo</a>&lt; <a class="el" href="classv8_1_1Value.html">v8::Value</a> &gt; &amp;)</td></tr>
 <tr class="separator:a144877fdc5051896f2d01fcc98cdabc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5127402afb837492233e1ecd0ca13f5c" id="r_a5127402afb837492233e1ecd0ca13f5c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal.html#a5127402afb837492233e1ecd0ca13f5c">v8::internal::PrintFrames</a> (<a class="el" href="classv8_1_1internal_1_1Isolate.html">Isolate</a> *isolate, <a class="el" href="classv8_1_1internal_1_1StringStream.html">StringStream</a> *accumulator, <a class="el" href="classv8_1_1internal_1_1StackFrame.html#abe64e1340233eb31145fd14e7c5ee433">StackFrame::PrintMode</a> mode)</td></tr>
 <tr class="separator:a5127402afb837492233e1ecd0ca13f5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac57b646dd88e4f8a2c363a719e01e9eb" id="r_ac57b646dd88e4f8a2c363a719e01e9eb"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classv8_1_1base_1_1RandomNumberGenerator.html">base::RandomNumberGenerator</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal.html#ac57b646dd88e4f8a2c363a719e01e9eb">v8::internal::ensure_rng_exists</a> (<a class="el" href="classv8_1_1base_1_1RandomNumberGenerator.html">base::RandomNumberGenerator</a> **rng, int seed)</td></tr>
 <tr class="separator:ac57b646dd88e4f8a2c363a719e01e9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9aa8863309a8f82fdd3eb6611386a0d2" id="r_a9aa8863309a8f82fdd3eb6611386a0d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal.html#a9aa8863309a8f82fdd3eb6611386a0d2">v8::internal::DefaultWasmAsyncResolvePromiseCallback</a> (v8::Isolate *isolate, v8::Local&lt; v8::Context &gt; <a class="el" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>, v8::Local&lt; v8::Promise::Resolver &gt; resolver, v8::Local&lt; v8::Value &gt; <a class="el" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, WasmAsyncSuccess success)</td></tr>
+<tr class="memitem:a9aa8863309a8f82fdd3eb6611386a0d2" id="r_a9aa8863309a8f82fdd3eb6611386a0d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal.html#a9aa8863309a8f82fdd3eb6611386a0d2">v8::internal::DefaultWasmAsyncResolvePromiseCallback</a> (<a class="el" href="classv8_1_1Isolate.html">v8::Isolate</a> *isolate, <a class="el" href="classv8_1_1Local.html">v8::Local</a>&lt; <a class="el" href="classv8_1_1Context.html">v8::Context</a> &gt; <a class="el" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>, <a class="el" href="classv8_1_1Local.html">v8::Local</a>&lt; <a class="el" href="classv8_1_1Promise_1_1Resolver.html">v8::Promise::Resolver</a> &gt; resolver, <a class="el" href="classv8_1_1Local.html">v8::Local</a>&lt; <a class="el" href="classv8_1_1Value.html">v8::Value</a> &gt; <a class="el" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, <a class="el" href="namespacev8.html#abe9cd7b76c8aeb2bdc0ff3bec860dc21">WasmAsyncSuccess</a> success)</td></tr>
 <tr class="separator:a9aa8863309a8f82fdd3eb6611386a0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -808,10 +816,13 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:16 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bd0755c95a42e835fb06f38bbeb1d6ed.html">execution</a></li><li class="navelem"><a class="el" href="isolate_8cc.html">isolate.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:32 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

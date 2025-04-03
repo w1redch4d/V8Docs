@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/profiler/tracing-cpu-profiler.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/profiler/tracing-cpu-profiler.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('tracing-cpu-profiler_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cfc0c72890b8d1e009b6260caa55cd65.html">profiler</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">tracing-cpu-profiler.h</div></div>
 </div><!--header-->
@@ -103,9 +111,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;include/v8-platform.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="v8-platform_8h.html">include/v8-platform.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="atomic-utils_8h.html">src/base/atomic-utils.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="mutex_8h.html">src/base/platform/mutex.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="tracing_2trace-event_8h.html">src/tracing/trace-event.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
@@ -120,7 +128,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>#if <a class="code hl_variable" href="js-temporal-objects_8cc.html#a509014a43807c7ead9395235bce125e0">defined</a>(V8_USE_PERFETTO)</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    : <span class="keyword">public</span> perfetto::TrackEventSessionObserver {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    : <span class="keyword">private</span> v8::TracingController::TraceStateObserver {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    : <span class="keyword">private</span> <a class="code hl_class" href="classv8_1_1TracingController_1_1TraceStateObserver.html">v8::TracingController::TraceStateObserver</a> {</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1TracingCpuProfilerImpl.html#a84669ceb457c5d8a0c1050512bed3564">TracingCpuProfilerImpl</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>*);</div>
@@ -154,6 +162,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="preprocessor">#endif  </span><span class="comment">// V8_PROFILER_TRACING_CPU_PROFILER_H_</span></div>
 <div class="ttc" id="aatomic-utils_8h_html"><div class="ttname"><a href="atomic-utils_8h.html">atomic-utils.h</a></div></div>
+<div class="ttc" id="aclassv8_1_1TracingController_1_1TraceStateObserver_html"><div class="ttname"><a href="classv8_1_1TracingController_1_1TraceStateObserver.html">v8::TracingController::TraceStateObserver</a></div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l00430">v8-platform.h:430</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1Mutex_html"><div class="ttname"><a href="classv8_1_1base_1_1Mutex.html">v8::base::Mutex</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00055">mutex.h:55</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html">v8::internal::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l00575">isolate.h:575</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1TracingCpuProfilerImpl_html"><div class="ttname"><a href="classv8_1_1internal_1_1TracingCpuProfilerImpl.html">v8::internal::TracingCpuProfilerImpl</a></div><div class="ttdef"><b>Definition</b> <a href="#l00022">tracing-cpu-profiler.h:26</a></div></div>
@@ -170,16 +179,20 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1TracingCpuProfilerImpl_html_aefabffb503c067687f7cf0cad891c51d"><div class="ttname"><a href="classv8_1_1internal_1_1TracingCpuProfilerImpl.html#aefabffb503c067687f7cf0cad891c51d">v8::internal::TracingCpuProfilerImpl::StopProfiling</a></div><div class="ttdeci">void StopProfiling()</div><div class="ttdef"><b>Definition</b> <a href="tracing-cpu-profiler_8cc_source.html#l00097">tracing-cpu-profiler.cc:97</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1TracingCpuProfilerImpl_html_af55e298f7818318a90a5ae737e79e493"><div class="ttname"><a href="classv8_1_1internal_1_1TracingCpuProfilerImpl.html#af55e298f7818318a90a5ae737e79e493">v8::internal::TracingCpuProfilerImpl::profiler_</a></div><div class="ttdeci">std::unique_ptr&lt; CpuProfiler &gt; profiler_</div><div class="ttdef"><b>Definition</b> <a href="#l00049">tracing-cpu-profiler.h:49</a></div></div>
 <div class="ttc" id="ajs-temporal-objects_8cc_html_a509014a43807c7ead9395235bce125e0"><div class="ttname"><a href="js-temporal-objects_8cc.html#a509014a43807c7ead9395235bce125e0">defined</a></div><div class="ttdeci">bool defined</div><div class="ttdef"><b>Definition</b> <a href="js-temporal-objects_8cc_source.html#l07418">js-temporal-objects.cc:7418</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
 <div class="ttc" id="amutex_8h_html"><div class="ttname"><a href="mutex_8h.html">mutex.h</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
 <div class="ttc" id="atracing_2trace-event_8h_html"><div class="ttname"><a href="tracing_2trace-event_8h.html">trace-event.h</a></div></div>
+<div class="ttc" id="av8-platform_8h_html"><div class="ttname"><a href="v8-platform_8h.html">v8-platform.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:51 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_cfc0c72890b8d1e009b6260caa55cd65.html">profiler</a></li><li class="navelem"><a class="el" href="tracing-cpu-profiler_8h.html">tracing-cpu-profiler.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:04 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

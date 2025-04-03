@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/compiler/js-context-specialization.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/compiler/js-context-specialization.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('js-context-specialization_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">js-context-specialization.cc</div></div>
 </div><!--header-->
@@ -100,7 +108,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="js-context-specialization_8h.html">src/compiler/js-context-specialization.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="access-builder_8h.html">src/compiler/access-builder.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="common-operator_8h.html">src/compiler/common-operator.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="compilation-dependencies_8h.html">src/compiler/compilation-dependencies.h</a>&quot;</span></div>
@@ -144,7 +152,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
 <div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a23aaf6b54900386c78b6d70c2056c10a">   47</a></span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a23aaf6b54900386c78b6d70c2056c10a">JSContextSpecialization::ReduceParameter</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node) {</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kParameter, node-&gt;opcode());</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kParameter, node-&gt;opcode());</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordtype">int</span> <span class="keyword">const</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#a59ecd823aeea937b8f68f1771bc80f7b">ParameterIndexOf</a>(node-&gt;op());</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> == <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1Linkage.html#a5af631b276d4212e50c632da47f3e4a5">Linkage::kJSCallClosureParamIndex</a>) {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">// Constant-fold the function parameter {node}.</span></div>
@@ -163,9 +171,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a324c7835562148df35b148e4e301d69c">   62</a></span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a324c7835562148df35b148e4e301d69c">JSContextSpecialization::SimplifyJSLoadContext</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node,</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                                         <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* new_context,</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                                                         <span class="keywordtype">size_t</span> new_depth) {</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSLoadContext, node-&gt;opcode());</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSLoadContext, node-&gt;opcode());</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html">ContextAccess</a>&amp; access = <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#adc279b7897463ff42ba3bbe7c3babb0a">ContextAccessOf</a>(node-&gt;op());</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(new_depth, access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>());</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(new_depth, access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>());</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keywordflow">if</span> (new_depth == access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>() &amp;&amp;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      new_context == <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#a5f45d1e594a11e33ce03474e9d2b828b">NodeProperties::GetContextInput</a>(node)) {</div>
@@ -183,9 +191,9 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a465a00bcf32ec4d6a0f524afbe89be4b">   81</a></span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a465a00bcf32ec4d6a0f524afbe89be4b">JSContextSpecialization::SimplifyJSLoadScriptContext</a>(</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node, <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* new_context, <span class="keywordtype">size_t</span> new_depth) {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSLoadScriptContext, node-&gt;opcode());</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSLoadScriptContext, node-&gt;opcode());</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html">ContextAccess</a>&amp; access = <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#adc279b7897463ff42ba3bbe7c3babb0a">ContextAccessOf</a>(node-&gt;op());</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(new_depth, access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>());</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(new_depth, access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>());</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordflow">if</span> (new_depth == access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>() &amp;&amp;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      new_context == <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#a5f45d1e594a11e33ce03474e9d2b828b">NodeProperties::GetContextInput</a>(node)) {</div>
@@ -204,9 +212,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a8c61a614942f7245c692b5535d7df466">   99</a></span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a8c61a614942f7245c692b5535d7df466">JSContextSpecialization::SimplifyJSStoreContext</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node,</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                                                          <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* new_context,</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                                                          <span class="keywordtype">size_t</span> new_depth) {</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSStoreContext, node-&gt;opcode());</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSStoreContext, node-&gt;opcode());</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html">ContextAccess</a>&amp; access = <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#adc279b7897463ff42ba3bbe7c3babb0a">ContextAccessOf</a>(node-&gt;op());</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(new_depth, access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>());</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(new_depth, access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>());</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keywordflow">if</span> (new_depth == access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>() &amp;&amp;</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      new_context == <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#a5f45d1e594a11e33ce03474e9d2b828b">NodeProperties::GetContextInput</a>(node)) {</div>
@@ -224,9 +232,9 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a1a9407c178b7223bbb3ea6ad278dc393">  118</a></span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a1a9407c178b7223bbb3ea6ad278dc393">JSContextSpecialization::SimplifyJSStoreScriptContext</a>(</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node, <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* new_context, <span class="keywordtype">size_t</span> new_depth) {</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSStoreScriptContext, node-&gt;opcode());</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSStoreScriptContext, node-&gt;opcode());</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html">ContextAccess</a>&amp; access = <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#adc279b7897463ff42ba3bbe7c3babb0a">ContextAccessOf</a>(node-&gt;op());</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(new_depth, access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>());</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(new_depth, access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>());</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="keywordflow">if</span> (new_depth == access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>() &amp;&amp;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      new_context == <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#a5f45d1e594a11e33ce03474e9d2b828b">NodeProperties::GetContextInput</a>(node)) {</div>
@@ -244,7 +252,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="keywordtype">bool</span> IsContextParameter(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node) {</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kParameter, node-&gt;opcode());</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kParameter, node-&gt;opcode());</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#a59ecd823aeea937b8f68f1771bc80f7b">ParameterIndexOf</a>(node-&gt;op()) ==</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>         <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1StartNode.html">StartNode</a>{<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#a971f00ddfb8cc4f999d246d7cd7c4c47">NodeProperties::GetValueInput</a>(node, 0)}</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>             .<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1StartNode.html#ae1f335fbdba5b48a8cda740488342ce8">ContextParameterIndex_MaybeNonStandardLayout</a>();</div>
@@ -256,7 +264,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="comment">// distance remains from the specialization context.</span></div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>OptionalContextRef GetSpecializationContext(JSHeapBroker* <a class="code hl_variable" href="graph-builder_8cc.html#af88aca2403db6e64cd8bca9eda102a86">broker</a>, Node* node,</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                                            <span class="keywordtype">size_t</span>* distance,</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                                            Maybe&lt;OuterContext&gt; maybe_outer) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>                                            <a class="code hl_class" href="classv8_1_1Maybe.html">Maybe&lt;OuterContext&gt;</a> maybe_outer) {</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="keywordflow">switch</span> (node-&gt;opcode()) {</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">case</span> IrOpcode::kHeapConstant: {</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>      <span class="comment">// TODO(jgruber,chromium:1209798): Using kAssumeMemoryFence works around</span></div>
@@ -274,7 +282,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordflow">case</span> IrOpcode::kParameter: {</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      OuterContext outer;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      <span class="keywordflow">if</span> (maybe_outer.To(&amp;outer) &amp;&amp; IsContextParameter(node) &amp;&amp;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      <span class="keywordflow">if</span> (maybe_outer.<a class="code hl_function" href="classv8_1_1Maybe.html#a7d1d77e5fd55f125fb4c41db1335bd09">To</a>(&amp;outer) &amp;&amp; IsContextParameter(node) &amp;&amp;</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>          *distance &gt;= outer.distance) {</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        *distance -= outer.distance;</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#af7eecddbda53e1692928d7c349446d4a">MakeRef</a>(<a class="code hl_variable" href="graph-builder_8cc.html#af88aca2403db6e64cd8bca9eda102a86">broker</a>, outer.context);</div>
@@ -291,7 +299,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
 <div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a23e588dbf9eb63c8018043129072bab7">  184</a></span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a23e588dbf9eb63c8018043129072bab7">JSContextSpecialization::ReduceJSLoadContext</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node) {</div>
-<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSLoadContext, node-&gt;opcode());</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSLoadContext, node-&gt;opcode());</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html">ContextAccess</a>&amp; access = <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#adc279b7897463ff42ba3bbe7c3babb0a">ContextAccessOf</a>(node-&gt;op());</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <span class="keywordtype">size_t</span> depth = access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>();</div>
@@ -357,10 +365,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
 <div class="foldopen" id="foldopen00248" data-start="{" data-end="}">
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a7f3ff2f031836dee66cfbccf4c5d84ec">  248</a></span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a7f3ff2f031836dee66cfbccf4c5d84ec">JSContextSpecialization::ReduceJSLoadScriptContext</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node) {</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSLoadScriptContext, node-&gt;opcode());</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSLoadScriptContext, node-&gt;opcode());</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html">ContextAccess</a>&amp; access = <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#adc279b7897463ff42ba3bbe7c3babb0a">ContextAccessOf</a>(node-&gt;op());</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a1a16581cdacbefb2b99843ef83d3cb78">immutable</a>());</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a1a16581cdacbefb2b99843ef83d3cb78">immutable</a>());</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <span class="keywordtype">size_t</span> depth = access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>();</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  <span class="comment">// First walk up the context chain in the graph as far as possible.</span></div>
@@ -385,7 +393,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        node, <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a0f0ebc0b1996f84dfdf590af2f2e99d5">jsgraph</a>()-&gt;ConstantNoHole(concrete, <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a9157356985c762db2d9ca3c4746344bc">broker</a>()), depth);</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  }</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(concrete.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextRef.html#a9c59096dca4e0de6a610035559b67a1c">object</a>()-&gt;IsScriptContext());</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(concrete.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextRef.html#a9c59096dca4e0de6a610035559b67a1c">object</a>()-&gt;IsScriptContext());</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <span class="keyword">auto</span> maybe_property =</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>      concrete.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextRef.html#a9c59096dca4e0de6a610035559b67a1c">object</a>()-&gt;GetScriptContextSideProperty(access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#ac3715cda171e71f9479d0c73ccfa2321">index</a>());</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  <span class="keyword">auto</span> <span class="keyword">property</span> =</div>
@@ -485,7 +493,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
 <div class="foldopen" id="foldopen00374" data-start="{" data-end="}">
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#af673c7b896fbe86ec82dcbedb0633e89">  374</a></span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#af673c7b896fbe86ec82dcbedb0633e89">JSContextSpecialization::ReduceJSStoreContext</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node) {</div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSStoreContext, node-&gt;opcode());</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSStoreContext, node-&gt;opcode());</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html">ContextAccess</a>&amp; access = <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#adc279b7897463ff42ba3bbe7c3babb0a">ContextAccessOf</a>(node-&gt;op());</div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>  <span class="keywordtype">size_t</span> depth = access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>();</div>
@@ -518,8 +526,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span> </div>
 <div class="foldopen" id="foldopen00405" data-start="{" data-end="}">
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#aeb87e52b15ae79ae4852eb91a05cef6a">  405</a></span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#aeb87e52b15ae79ae4852eb91a05cef6a">JSContextSpecialization::ReduceJSStoreScriptContext</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node) {</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.const_tracking_let);</div>
-<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSStoreScriptContext, node-&gt;opcode());</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.const_tracking_let);</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kJSStoreScriptContext, node-&gt;opcode());</div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span> </div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html">ContextAccess</a>&amp; access = <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#adc279b7897463ff42ba3bbe7c3babb0a">ContextAccessOf</a>(node-&gt;op());</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>  <span class="keywordtype">size_t</span> depth = access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#a71a69209dab5cc786908fcd8605b4d08">depth</a>();</div>
@@ -547,7 +555,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a1a9407c178b7223bbb3ea6ad278dc393">SimplifyJSStoreScriptContext</a>(</div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>        node, <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a0f0ebc0b1996f84dfdf590af2f2e99d5">jsgraph</a>()-&gt;ConstantNoHole(concrete, <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1JSContextSpecialization.html#a9157356985c762db2d9ca3c4746344bc">broker</a>()), depth);</div>
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>  }</div>
-<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(concrete.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextRef.html#a9c59096dca4e0de6a610035559b67a1c">object</a>()-&gt;IsScriptContext());</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(concrete.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextRef.html#a9c59096dca4e0de6a610035559b67a1c">object</a>()-&gt;IsScriptContext());</div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>  <span class="keyword">auto</span> maybe_property =</div>
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>      concrete.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextRef.html#a9c59096dca4e0de6a610035559b67a1c">object</a>()-&gt;GetScriptContextSideProperty(access.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ContextAccess.html#ac3715cda171e71f9479d0c73ccfa2321">index</a>());</div>
 <div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>  <span class="keywordflow">if</span> (!maybe_property) {</div>
@@ -670,7 +678,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span> </div>
 <div class="foldopen" id="foldopen00555" data-start="{" data-end="}">
 <div class="line"><a id="l00555" name="l00555"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal_1_1compiler.html#aae4bb502abe1641f20fa7ee3a082d77d">  555</a></span>OptionalContextRef <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#aae4bb502abe1641f20fa7ee3a082d77d">GetModuleContext</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1JSHeapBroker.html">JSHeapBroker</a>* <a class="code hl_variable" href="graph-builder_8cc.html#af88aca2403db6e64cd8bca9eda102a86">broker</a>, <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node,</div>
-<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>                                    Maybe&lt;OuterContext&gt; maybe_context) {</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>                                    <a class="code hl_class" href="classv8_1_1Maybe.html">Maybe&lt;OuterContext&gt;</a> maybe_context) {</div>
 <div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>  <span class="keywordtype">size_t</span> depth = std::numeric_limits&lt;size_t&gt;::max();</div>
 <div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a> = <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#ad5cb34b871599bcf1a80e99256c31af0">NodeProperties::GetOuterContext</a>(node, &amp;depth);</div>
 <div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span> </div>
@@ -678,7 +686,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    <span class="keywordflow">while</span> (c.map(<a class="code hl_variable" href="graph-builder_8cc.html#af88aca2403db6e64cd8bca9eda102a86">broker</a>).instance_type() != MODULE_CONTEXT_TYPE) {</div>
 <div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>      <span class="keywordtype">size_t</span> depth = 1;</div>
 <div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>      c = c.previous(<a class="code hl_variable" href="graph-builder_8cc.html#af88aca2403db6e64cd8bca9eda102a86">broker</a>, &amp;depth);</div>
-<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>      <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(depth, 0);</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(depth, 0);</div>
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>    }</div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>    <span class="keywordflow">return</span> c;</div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>  };</div>
@@ -702,7 +710,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>    }</div>
 <div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>    <span class="keywordflow">case</span> IrOpcode::kParameter: {</div>
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span>      <a class="code hl_struct" href="structv8_1_1internal_1_1compiler_1_1OuterContext.html">OuterContext</a> outer;</div>
-<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>      <span class="keywordflow">if</span> (maybe_context.To(&amp;outer) &amp;&amp; IsContextParameter(<a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>)) {</div>
+<div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>      <span class="keywordflow">if</span> (maybe_context.<a class="code hl_function" href="classv8_1_1Maybe.html#a7d1d77e5fd55f125fb4c41db1335bd09">To</a>(&amp;outer) &amp;&amp; IsContextParameter(<a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>)) {</div>
 <div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span>        <span class="keywordflow">return</span> find_context(<a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#af7eecddbda53e1692928d7c349446d4a">MakeRef</a>(<a class="code hl_variable" href="graph-builder_8cc.html#af88aca2403db6e64cd8bca9eda102a86">broker</a>, outer.<a class="code hl_variable" href="structv8_1_1internal_1_1compiler_1_1OuterContext.html#a3a552b3145bc1c228dbcb7bcbbed09f2">context</a>));</div>
 <div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>      }</div>
 <div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>      <span class="keywordflow">break</span>;</div>
@@ -727,7 +735,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>      <span class="keyword">module</span>-&gt;AsSourceTextModule().import_meta(broker());</div>
 <div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>  <span class="keywordflow">if</span> (!import_meta.has_value()) <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1Reducer.html#af5fd251e94125282e7e21ad3280b407c">NoChange</a>();</div>
 <div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>  <span class="keywordflow">if</span> (!import_meta-&gt;IsJSObject()) {</div>
-<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(import_meta-&gt;IsTheHole());</div>
+<div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(import_meta-&gt;IsTheHole());</div>
 <div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>    <span class="comment">// The import.meta object has not yet been created. Let JSGenericLowering</span></div>
 <div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>    <span class="comment">// replace the operator with a runtime call.</span></div>
 <div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1Reducer.html#af5fd251e94125282e7e21ad3280b407c">NoChange</a>();</div>
@@ -750,6 +758,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>}  <span class="comment">// namespace v8</span></div>
 <div class="ttc" id="aaccess-builder_8h_html"><div class="ttname"><a href="access-builder_8h.html">access-builder.h</a></div></div>
 <div class="ttc" id="aadd-type-assertions-reducer_8cc_html_ac95762835153c98e6dce41a8cad1e463"><div class="ttname"><a href="add-type-assertions-reducer_8cc.html#ac95762835153c98e6dce41a8cad1e463">simplified</a></div><div class="ttdeci">SimplifiedOperatorBuilder * simplified</div><div class="ttdef"><b>Definition</b> <a href="add-type-assertions-reducer_8cc_source.html#l00020">add-type-assertions-reducer.cc:20</a></div></div>
+<div class="ttc" id="aclassv8_1_1Maybe_html"><div class="ttname"><a href="classv8_1_1Maybe.html">v8::Maybe</a></div><div class="ttdef"><b>Definition</b> <a href="v8-maybe_8h_source.html#l00032">v8-maybe.h:32</a></div></div>
+<div class="ttc" id="aclassv8_1_1Maybe_html_a7d1d77e5fd55f125fb4c41db1335bd09"><div class="ttname"><a href="classv8_1_1Maybe.html#a7d1d77e5fd55f125fb4c41db1335bd09">v8::Maybe::To</a></div><div class="ttdeci">V8_WARN_UNUSED_RESULT V8_INLINE bool To(T *out) const</div><div class="ttdef"><b>Definition</b> <a href="v8-maybe_8h_source.html#l00054">v8-maybe.h:54</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1ContextSidePropertyCell_html_a91fb6df23460e0c44053731d39ae3174a09d48c4bb23f25a1fc9cf525e7916526"><div class="ttname"><a href="classv8_1_1internal_1_1ContextSidePropertyCell.html#a91fb6df23460e0c44053731d39ae3174a09d48c4bb23f25a1fc9cf525e7916526">v8::internal::ContextSidePropertyCell::kConst</a></div><div class="ttdeci">@ kConst</div><div class="ttdef"><b>Definition</b> <a href="property-cell_8h_source.html#l00110">property-cell.h:110</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1ContextSidePropertyCell_html_a91fb6df23460e0c44053731d39ae3174a0b89ee327c6f9d80415e49ca8adef8d2"><div class="ttname"><a href="classv8_1_1internal_1_1ContextSidePropertyCell.html#a91fb6df23460e0c44053731d39ae3174a0b89ee327c6f9d80415e49ca8adef8d2">v8::internal::ContextSidePropertyCell::kMutableInt32</a></div><div class="ttdeci">@ kMutableInt32</div><div class="ttdef"><b>Definition</b> <a href="property-cell_8h_source.html#l00115">property-cell.h:114</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1ContextSidePropertyCell_html_a91fb6df23460e0c44053731d39ae3174a5fc78d9130364645dffccc4518a03feb"><div class="ttname"><a href="classv8_1_1internal_1_1ContextSidePropertyCell.html#a91fb6df23460e0c44053731d39ae3174a5fc78d9130364645dffccc4518a03feb">v8::internal::ContextSidePropertyCell::kOther</a></div><div class="ttdeci">@ kOther</div><div class="ttdef"><b>Definition</b> <a href="property-cell_8h_source.html#l00108">property-cell.h:108</a></div></div>
@@ -842,11 +852,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ajs-heap-broker_8h_html_a41ae80356afe83bab814649bd31cea99"><div class="ttname"><a href="js-heap-broker_8h.html#a41ae80356afe83bab814649bd31cea99">TRACE_BROKER_MISSING</a></div><div class="ttdeci">#define TRACE_BROKER_MISSING(broker, x)</div><div class="ttdef"><b>Definition</b> <a href="js-heap-broker_8h_source.html#l00054">js-heap-broker.h:54</a></div></div>
 <div class="ttc" id="ajs-operator_8h_html"><div class="ttname"><a href="js-operator_8h.html">js-operator.h</a></div></div>
 <div class="ttc" id="alinkage_8h_html"><div class="ttname"><a href="linkage_8h.html">linkage.h</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_html_a45e66bc0df94fd85d0728c0d613de8bd"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler.html#a45e66bc0df94fd85d0728c0d613de8bd">v8::internal::compiler::HeapConstantOf</a></div><div class="ttdeci">Handle&lt; HeapObject &gt; HeapConstantOf(const Operator *op)</div><div class="ttdef"><b>Definition</b> <a href="common-operator_8cc_source.html#l01370">common-operator.cc:1370</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_html_a59ecd823aeea937b8f68f1771bc80f7b"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler.html#a59ecd823aeea937b8f68f1771bc80f7b">v8::internal::compiler::ParameterIndexOf</a></div><div class="ttdeci">int ParameterIndexOf(const Operator *const op)</div><div class="ttdef"><b>Definition</b> <a href="common-operator_8cc_source.html#l00202">common-operator.cc:202</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_html_a9f6070dcac0ef726223db99c74326904"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler.html#a9f6070dcac0ef726223db99c74326904">v8::internal::compiler::MakeRefAssumeMemoryFence</a></div><div class="ttdeci">ref_traits&lt; T &gt;::ref_type MakeRefAssumeMemoryFence(JSHeapBroker *broker, Tagged&lt; T &gt; object)</div><div class="ttdef"><b>Definition</b> <a href="js-heap-broker_8h_source.html#l00642">js-heap-broker.h:642</a></div></div>
@@ -862,13 +867,21 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aproperty-access-builder_8h_html"><div class="ttname"><a href="property-access-builder_8h.html">property-access-builder.h</a></div></div>
 <div class="ttc" id="aproperty-cell_8h_html"><div class="ttname"><a href="property-cell_8h.html">property-cell.h</a></div></div>
 <div class="ttc" id="asimplified-operator_8h_html"><div class="ttname"><a href="simplified-operator_8h.html">simplified-operator.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1compiler_1_1OuterContext_html"><div class="ttname"><a href="structv8_1_1internal_1_1compiler_1_1OuterContext.html">v8::internal::compiler::OuterContext</a></div><div class="ttdef"><b>Definition</b> <a href="js-context-specialization_8h_source.html#l00020">js-context-specialization.h:20</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1compiler_1_1OuterContext_html_a3a552b3145bc1c228dbcb7bcbbed09f2"><div class="ttname"><a href="structv8_1_1internal_1_1compiler_1_1OuterContext.html#a3a552b3145bc1c228dbcb7bcbbed09f2">v8::internal::compiler::OuterContext::context</a></div><div class="ttdeci">IndirectHandle&lt; Context &gt; context</div><div class="ttdef"><b>Definition</b> <a href="js-context-specialization_8h_source.html#l00025">js-context-specialization.h:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:17:12 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="js-context-specialization_8cc.html">js-context-specialization.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:53:16 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

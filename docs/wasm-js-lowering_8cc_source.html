@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/compiler/wasm-js-lowering.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/compiler/wasm-js-lowering.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('wasm-js-lowering_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">wasm-js-lowering.cc</div></div>
 </div><!--header-->
@@ -130,7 +138,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="keywordflow">if</span> (node-&gt;opcode() == IrOpcode::kTrapIf) {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1WasmJSLowering.html#a46245be4765ed4426943f5f8180ba7ec">gasm_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#aad8da5db6c2dc9d8133f2a386f2a150f">GotoIf</a>(trap_condition, &amp;ool_trap);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node-&gt;opcode(), IrOpcode::kTrapUnless);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(node-&gt;opcode(), IrOpcode::kTrapUnless);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1WasmJSLowering.html#a46245be4765ed4426943f5f8180ba7ec">gasm_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#ad7609ff7281d9a7037feb15e87de8c46">GotoIfNot</a>(trap_condition, &amp;ool_trap);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      }</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      effect = <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1WasmJSLowering.html#a46245be4765ed4426943f5f8180ba7ec">gasm_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GraphAssembler.html#a9415873a35173b66f2a8212f3d482aea">effect</a>();</div>
@@ -218,21 +226,24 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="acompiler-source-position-table_8h_html"><div class="ttname"><a href="compiler-source-position-table_8h.html">compiler-source-position-table.h</a></div></div>
 <div class="ttc" id="agraph-builder-interface_8cc_html_aa0b4f9294a511ef435ea6f57ca76ca27"><div class="ttname"><a href="graph-builder-interface_8cc.html#aa0b4f9294a511ef435ea6f57ca76ca27">control</a></div><div class="ttdeci">TFNode * control</div><div class="ttdef"><b>Definition</b> <a href="graph-builder-interface_8cc_source.html#l00081">graph-builder-interface.cc:81</a></div></div>
 <div class="ttc" id="aliveedit_8cc_html_a401e942526aac47cef94f478182486e7"><div class="ttname"><a href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a></div><div class="ttdeci">int position</div><div class="ttdef"><b>Definition</b> <a href="liveedit_8cc_source.html#l00290">liveedit.cc:290</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_html"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler.html">v8::internal::compiler</a></div><div class="ttdef"><b>Definition</b> <a href="builtins-utils-gen_8h_source.html#l00014">builtins-utils-gen.h:14</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_acc2e164143496f18b5ec68f8ab70af52"><div class="ttname"><a href="namespacev8_1_1internal.html#acc2e164143496f18b5ec68f8ab70af52">v8::internal::Builtin</a></div><div class="ttdeci">Builtin</div><div class="ttdef"><b>Definition</b> <a href="builtins_8h_source.html#l00048">builtins.h:48</a></div></div>
 <div class="ttc" id="anode-properties_8h_html"><div class="ttname"><a href="node-properties_8h.html">node-properties.h</a></div></div>
 <div class="ttc" id="aopcodes_8h_html"><div class="ttname"><a href="opcodes_8h.html">opcodes.h</a></div></div>
 <div class="ttc" id="aoperator_8h_html"><div class="ttname"><a href="operator_8h.html">operator.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="awasm-inlining-into-js_8cc_html_a6840fc9a847ee35259b33874b0b2923a"><div class="ttname"><a href="wasm-inlining-into-js_8cc.html#a6840fc9a847ee35259b33874b0b2923a">mcgraph_</a></div><div class="ttdeci">MachineGraph * mcgraph_</div><div class="ttdef"><b>Definition</b> <a href="wasm-inlining-into-js_8cc_source.html#l00364">wasm-inlining-into-js.cc:364</a></div></div>
 <div class="ttc" id="awasm-inlining-into-js_8cc_html_a7cec33ed26cd21c9e4c50cde703c52a8"><div class="ttname"><a href="wasm-inlining-into-js_8cc.html#a7cec33ed26cd21c9e4c50cde703c52a8">source_position_table_</a></div><div class="ttdeci">SourcePositionTable * source_position_table_</div><div class="ttdef"><b>Definition</b> <a href="wasm-inlining-into-js_8cc_source.html#l00370">wasm-inlining-into-js.cc:370</a></div></div>
 <div class="ttc" id="awasm-inlining-into-js_8cc_html_a95528db2a2d7890a344f1c4065bb3dca"><div class="ttname"><a href="wasm-inlining-into-js_8cc.html#a95528db2a2d7890a344f1c4065bb3dca">gasm_</a></div><div class="ttdeci">WasmGraphAssembler gasm_</div><div class="ttdef"><b>Definition</b> <a href="wasm-inlining-into-js_8cc_source.html#l00369">wasm-inlining-into-js.cc:369</a></div></div>
 <div class="ttc" id="awasm-js-lowering_8h_html"><div class="ttname"><a href="wasm-js-lowering_8h.html">wasm-js-lowering.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:24 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="wasm-js-lowering_8cc.html">wasm-js-lowering.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:32 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

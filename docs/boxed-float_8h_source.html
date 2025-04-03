@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/utils/boxed-float.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/utils/boxed-float.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('boxed-float_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">boxed-float.h</div></div>
 </div><!--header-->
@@ -104,7 +112,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="hashing_8h.html">src/base/hashing.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="double_8h.html">src/base/numbers/double.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="common_2globals_8h.html">src/common/globals.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
@@ -128,7 +136,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// Check that the provided value is not a NaN, because the bit pattern of a</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// NaN may be changed by a base::bit_cast, e.g. for signalling NaNs on</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// ia32.</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!std::isnan(value));</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!std::isnan(value));</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  }</div>
 </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
@@ -160,7 +168,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>};</div>
 </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#ad2a6667bad8237190f082df3bf3569b2">   59</a></span><a class="code hl_define" href="macros_8h.html#a3c9a48e8e060c72842954a93b093ea0d">ASSERT_TRIVIALLY_COPYABLE</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Float32.html">Float32</a>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#ad2a6667bad8237190f082df3bf3569b2">   59</a></span><a class="code hl_define" href="src_2base_2macros_8h.html#a3c9a48e8e060c72842954a93b093ea0d">ASSERT_TRIVIALLY_COPYABLE</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Float32.html">Float32</a>);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">// Safety wrapper for a 64-bit floating-point value to make sure we don&#39;t lose</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// the exact bit pattern during deoptimization when passing this value.</span></div>
@@ -178,7 +186,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="comment">// Check that the provided value is not a NaN, because the bit pattern of a</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// NaN may be changed by a base::bit_cast, e.g. for signalling NaNs on</span></div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">// ia32.</span></div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!std::isnan(value));</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!std::isnan(value));</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  }</div>
 </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
@@ -225,7 +233,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>};</div>
 </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#ab079b74a8ca015f0c3499cabbe6ed8f2">  114</a></span><a class="code hl_define" href="macros_8h.html#a3c9a48e8e060c72842954a93b093ea0d">ASSERT_TRIVIALLY_COPYABLE</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Float64.html">Float64</a>);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#ab079b74a8ca015f0c3499cabbe6ed8f2">  114</a></span><a class="code hl_define" href="src_2base_2macros_8h.html#a3c9a48e8e060c72842954a93b093ea0d">ASSERT_TRIVIALLY_COPYABLE</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Float64.html">Float64</a>);</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
@@ -271,19 +279,22 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="adouble_8h_html"><div class="ttname"><a href="double_8h.html">double.h</a></div></div>
 <div class="ttc" id="ahashing_8h_html"><div class="ttname"><a href="hashing_8h.html">hashing.h</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a115c48491bb37004f5ac67eb46ac2c23"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a></div><div class="ttdeci">turboshaft::OpIndex base</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00070">instruction-selector-ia32.cc:70</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_a3c9a48e8e060c72842954a93b093ea0d"><div class="ttname"><a href="macros_8h.html#a3c9a48e8e060c72842954a93b093ea0d">ASSERT_TRIVIALLY_COPYABLE</a></div><div class="ttdeci">#define ASSERT_TRIVIALLY_COPYABLE(T)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00267">macros.h:267</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a017daf2c5f1c8ac934d0b66bf652c6df"><div class="ttname"><a href="namespacev8_1_1base.html#a017daf2c5f1c8ac934d0b66bf652c6df">v8::base::hash_value</a></div><div class="ttdeci">V8_INLINE size_t hash_value(unsigned int v)</div><div class="ttdef"><b>Definition</b> <a href="hashing_8h_source.html#l00205">hashing.h:205</a></div></div>
-<div class="ttc" id="anamespacev8_1_1base_html_a6c410bc41f21b97060b8520c074eb957"><div class="ttname"><a href="namespacev8_1_1base.html#a6c410bc41f21b97060b8520c074eb957">v8::base::bit_cast</a></div><div class="ttdeci">V8_INLINE Dest bit_cast(Source const &amp;source)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00095">macros.h:95</a></div></div>
+<div class="ttc" id="anamespacev8_1_1base_html_a6c410bc41f21b97060b8520c074eb957"><div class="ttname"><a href="namespacev8_1_1base.html#a6c410bc41f21b97060b8520c074eb957">v8::base::bit_cast</a></div><div class="ttdeci">V8_INLINE Dest bit_cast(Source const &amp;source)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00095">macros.h:95</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a537741b09de72b84db07f387a2e1bfa1"><div class="ttname"><a href="namespacev8_1_1internal.html#a537741b09de72b84db07f387a2e1bfa1">v8::internal::kHoleNanInt64</a></div><div class="ttdeci">constexpr uint64_t kHoleNanInt64</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01935">globals.h:1935</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a3c9a48e8e060c72842954a93b093ea0d"><div class="ttname"><a href="src_2base_2macros_8h.html#a3c9a48e8e060c72842954a93b093ea0d">ASSERT_TRIVIALLY_COPYABLE</a></div><div class="ttdeci">#define ASSERT_TRIVIALLY_COPYABLE(T)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00267">macros.h:267</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:01 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li><li class="navelem"><a class="el" href="boxed-float_8h.html">boxed-float.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:15 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/maglev/x64/maglev-assembler-x64.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/maglev/x64/maglev-assembler-x64.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('maglev-assembler-x64_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bfacb70f1a53f7c6799a7e763eeb3a96.html">maglev</a></li><li class="navelem"><a class="el" href="dir_2e58d8b5ee07260cf251cdd1ce0b8874.html">x64</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">maglev-assembler-x64.cc</div></div>
 </div><!--header-->
@@ -98,7 +106,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Use of this source code is governed by a BSD-style license that can be</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// found in the LICENSE file.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="interface-descriptors-inl_8h.html">src/codegen/interface-descriptors-inl.h</a>&quot;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="common_2globals_8h.html">src/common/globals.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="instruction_8h.html">src/compiler/backend/instruction.h</a>&quot;</span></div>
@@ -135,7 +143,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                 <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a9609de810273be552e48d8582efe83e6">AllocationAlignment</a> alignment) {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="comment">// TODO(victorgomes): Call the runtime for large object allocation.</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="comment">// TODO(victorgomes): Support double alignment.</span></div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(alignment, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a9609de810273be552e48d8582efe83e6a89dfe630590dbfe7004e6de0fabec67b">kTaggedAligned</a>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(alignment, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a9609de810273be552e48d8582efe83e6a89dfe630590dbfe7004e6de0fabec67b">kTaggedAligned</a>);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.single_generation) {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    alloc_type = <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a604d5beeb6fc8639670f737ed201e20aa0aa38c28f349d65a6819e03844b73dff">AllocationType::kOld</a>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  }</div>
@@ -153,7 +161,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                      size_in_bytes, done);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">// Store new top and tag object.</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> movq(<a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> ExternalReferenceAsOperand(top), new_top);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> addq(<span class="keywordtype">object</span>, Immediate(kHeapObjectTag));</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> addq(<span class="keywordtype">object</span>, Immediate(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa2507eb9d594b9767347031fb02d0b20">kHeapObjectTag</a>));</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> bind(*done);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>}  <span class="comment">// namespace</span></div>
@@ -182,7 +190,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    cmpq(char_code, Immediate(<a class="code hl_variable" href="classv8_1_1internal_1_1String.html#a3e735a6d2804639dc73f00bc098ac9f8">String::kMaxOneByteCharCode</a>));</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_define" href="builtins-number-tsa_8cc.html#a706ac5b1a53bd04067f81924b92cb9f6">Assert</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a8a8553177c73d99dff3e240634f68bc5">below_equal</a>, AbortReason::kUnexpectedValue);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  }</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(char_code, scratch);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(char_code, scratch);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <a class="code hl_function" href="namespacev8_1_1internal_1_1ETWJITInterface.html#a6782da00e5166055555c65db3a9ec7eb">Register</a> table = scratch;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_function" href="classv8_1_1internal_1_1MacroAssembler.html#a8dc6e3e71809036e502db6693442d9d2">LoadRoot</a>(table, RootIndex::kSingleCharacterStringTable);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <a class="code hl_function" href="classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#ab9a761266963090e1a960f16d0161e95">LoadTaggedFieldByIndex</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, table, char_code, <a class="code hl_variable" href="namespacev8_1_1internal.html#a12d50d7bb2c9d8a916ff0785e6eff241">kTaggedSize</a>,</div>
@@ -194,7 +202,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                                         Register <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, Register char_code,</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                         Register scratch,</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                                         CharCodeMaskMode mask_mode) {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(char_code, scratch);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(char_code, scratch);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  ZoneLabelRef done(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keywordflow">if</span> (mask_mode == <a class="code hl_enumvalue" href="classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#aaf8155536809634a8aefe5b446e33626adba7d87de7c55b5d49ee4bbcd119c452">CharCodeMaskMode::kMustApplyMask</a>) {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    andl(char_code, Immediate(0xFFFF));</div>
@@ -213,11 +221,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <span class="keywordflow">if</span> (char_code == <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>) {</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>          <span class="comment">// This is guaranteed to be true since we&#39;ve already checked</span></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>          <span class="comment">// char_code != scratch.</span></div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>          <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(scratch, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>          <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(scratch, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>          <a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> <a class="code hl_function" href="classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a7c2a4016f774a981910bac8008f21116">Move</a>(scratch, char_code);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>          char_code = scratch;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!register_snapshot.live_tagged_registers.has(char_code));</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!register_snapshot.live_tagged_registers.has(char_code));</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        register_snapshot.live_registers.set(char_code);</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        <a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> <a class="code hl_function" href="classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a7b2baffec4d80da1136eb2e5922eb817">AllocateTwoByteString</a>(register_snapshot, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, 1);</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> <a class="code hl_function" href="classv8_1_1internal_1_1Assembler.html#a86331d765cf988aad017c24f2e09c436">movw</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a4ade4a000542fce40933e0b8bbb53ff5">FieldOperand</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, <a class="code hl_define" href="tagged-field_8h.html#a5284b5dce86d72e01944bab90ed2cbab">OFFSET_OF_DATA_START</a>(SeqTwoByteString)),</div>
@@ -247,9 +255,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>         <a class="code hl_enumeration" href="classv8_1_1internal_1_1maglev_1_1BuiltinStringPrototypeCharCodeOrCodePointAt.html#abb11d413c16c46884de34eb1ac0e4d83">BuiltinStringPrototypeCharCodeOrCodePointAt::Mode</a> mode,</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>         RegisterSnapshot register_snapshot, ZoneLabelRef done, Register <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>,</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>         Register <span class="keywordtype">string</span>, Register <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>) {</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!register_snapshot.live_registers.has(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>));</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!register_snapshot.live_registers.has(<span class="keywordtype">string</span>));</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!register_snapshot.live_registers.has(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>));</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!register_snapshot.live_registers.has(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>));</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!register_snapshot.live_registers.has(<span class="keywordtype">string</span>));</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!register_snapshot.live_registers.has(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>));</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        {</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>          SaveRegisterStateForCall save_register_state(masm, register_snapshot);</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>          <a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> <a class="code hl_function" href="classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a47d4efc9dcbaf8a096b4273e1f7319f8">Push</a>(<span class="keywordtype">string</span>);</div>
@@ -261,7 +269,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>              <a class="code hl_enumvalue" href="classv8_1_1internal_1_1maglev_1_1BuiltinStringPrototypeCharCodeOrCodePointAt.html#abb11d413c16c46884de34eb1ac0e4d83a2c9588b01801f78910a611e16927d552">BuiltinStringPrototypeCharCodeOrCodePointAt::kCodePointAt</a>) {</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            <a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> <a class="code hl_function" href="classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a4dab4946478f3478a7d2a4c1f1fe8390">CallRuntime</a>(Runtime::kStringCodePointAt);</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>          } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(mode,</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(mode,</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                      <a class="code hl_enumvalue" href="classv8_1_1internal_1_1maglev_1_1BuiltinStringPrototypeCharCodeOrCodePointAt.html#abb11d413c16c46884de34eb1ac0e4d83a7a35fee3a236cae6f4a265f21c86098d">BuiltinStringPrototypeCharCodeOrCodePointAt::kCharCodeAt</a>);</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            <a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> <a class="code hl_function" href="classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a4dab4946478f3478a7d2a4c1f1fe8390">CallRuntime</a>(Runtime::kStringCharCodeAt);</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>          }</div>
@@ -402,7 +410,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>      movzxwl(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, <a class="code hl_function" href="namespacev8_1_1internal.html#a4ade4a000542fce40933e0b8bbb53ff5">FieldOperand</a>(<span class="keywordtype">string</span>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#ad062ccc55d6b3a92f3d004481233ef48aafe36709a0572eea2ea47a8fc7e78be7">times_2</a>,</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                                   <a class="code hl_define" href="tagged-field_8h.html#a5284b5dce86d72e01944bab90ed2cbab">OFFSET_OF_DATA_START</a>(SeqTwoByteString)));</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(mode,</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(mode,</div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>                <a class="code hl_enumvalue" href="classv8_1_1internal_1_1maglev_1_1BuiltinStringPrototypeCharCodeOrCodePointAt.html#abb11d413c16c46884de34eb1ac0e4d83a2c9588b01801f78910a611e16927d552">BuiltinStringPrototypeCharCodeOrCodePointAt::kCodePointAt</a>);</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>      <a class="code hl_function" href="namespacev8_1_1internal_1_1ETWJITInterface.html#a6782da00e5166055555c65db3a9ec7eb">Register</a> string_backup = <a class="code hl_variable" href="namespacev8_1_1internal.html#af68b330f02476361ab10f531933b3381">string</a>;</div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> == <span class="keywordtype">string</span>) {</div>
@@ -484,7 +492,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a86c556f6ce13aaa72d7872e706b346a9">MaglevAssembler::TryTruncateDoubleToInt32</a>(Register dst, <a class="code hl_typedef" href="namespacev8_1_1internal.html#a308fe35daa1d2a917bbe846050e4ab35">DoubleRegister</a> src,</div>
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                                               Label* fail) {</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(src, <a class="code hl_variable" href="namespacev8_1_1internal.html#a3872092483d11583a20d7a89b5df8eed">kScratchDoubleReg</a>);</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(src, <a class="code hl_variable" href="namespacev8_1_1internal.html#a3872092483d11583a20d7a89b5df8eed">kScratchDoubleReg</a>);</div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>  <span class="comment">// Truncating conversion of the input float64 value to an int32.</span></div>
 <div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>  Cvttpd2dq(<a class="code hl_variable" href="namespacev8_1_1internal.html#a3872092483d11583a20d7a89b5df8eed">kScratchDoubleReg</a>, src);</div>
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>  <span class="comment">// Convert that int32 value back to float64.</span></div>
@@ -562,8 +570,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>}</div>
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span> </div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#ab532ca511717f597e24ceadc78fc96d5">MaglevAssembler::OSRPrologue</a>(Graph* <a class="code hl_variable" href="add-type-assertions-reducer_8cc.html#a2360aba01fa93c8493ba96683c4fb89c">graph</a>) {</div>
-<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="add-type-assertions-reducer_8cc.html#a2360aba01fa93c8493ba96683c4fb89c">graph</a>-&gt;is_osr());</div>
-<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!<a class="code hl_variable" href="add-type-assertions-reducer_8cc.html#a2360aba01fa93c8493ba96683c4fb89c">graph</a>-&gt;has_recursive_calls());</div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="add-type-assertions-reducer_8cc.html#a2360aba01fa93c8493ba96683c4fb89c">graph</a>-&gt;is_osr());</div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!<a class="code hl_variable" href="add-type-assertions-reducer_8cc.html#a2360aba01fa93c8493ba96683c4fb89c">graph</a>-&gt;has_recursive_calls());</div>
 <div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span> </div>
 <div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span>  uint32_t source_frame_size =</div>
 <div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>      <a class="code hl_variable" href="add-type-assertions-reducer_8cc.html#a2360aba01fa93c8493ba96683c4fb89c">graph</a>-&gt;min_maglev_stackslots_for_unoptimized_frame_size();</div>
@@ -579,7 +587,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span> </div>
 <div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span>  uint32_t target_frame_size =</div>
 <div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>      <a class="code hl_variable" href="add-type-assertions-reducer_8cc.html#a2360aba01fa93c8493ba96683c4fb89c">graph</a>-&gt;tagged_stack_slots() + <a class="code hl_variable" href="add-type-assertions-reducer_8cc.html#a2360aba01fa93c8493ba96683c4fb89c">graph</a>-&gt;untagged_stack_slots();</div>
-<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>  <a class="code hl_define" href="logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a>(source_frame_size, target_frame_size);</div>
+<div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a>(source_frame_size, target_frame_size);</div>
 <div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span> </div>
 <div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>  <span class="keywordflow">if</span> (source_frame_size &lt; target_frame_size) {</div>
 <div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>    <a class="code hl_define" href="codegen_2assembler_8h.html#a76c4e520168782df773c203738c512fa">ASM_CODE_COMMENT_STRING</a>(<span class="keyword">this</span>, <span class="stringliteral">&quot;Growing frame for OSR&quot;</span>);</div>
@@ -592,7 +600,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>      <a class="code hl_function" href="classv8_1_1internal_1_1Assembler.html#a6af5438f6630662677a88c26623945d6">pushq</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a86d3328383670dd58368a5f91326793a">kScratchRegister</a>);</div>
 <div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>    }</div>
 <div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>    uint32_t size_so_far = source_frame_size + additional_tagged;</div>
-<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>    <a class="code hl_define" href="logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a>(size_so_far, target_frame_size);</div>
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a>(size_so_far, target_frame_size);</div>
 <div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>    <span class="keywordflow">if</span> (size_so_far &lt; target_frame_size) {</div>
 <div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>      subq(rsp,</div>
 <div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>           Immediate((target_frame_size - size_so_far) * <a class="code hl_variable" href="namespacev8_1_1internal.html#a72cbfdfeabb9a401f279f7b80bcff67a">kSystemPointerSize</a>));</div>
@@ -601,7 +609,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>}</div>
 <div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span> </div>
 <div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1MacroAssembler.html#ad2ed8abad7c2d3e544daa948f1c90fe7">MaglevAssembler::Prologue</a>(Graph* <a class="code hl_variable" href="add-type-assertions-reducer_8cc.html#a2360aba01fa93c8493ba96683c4fb89c">graph</a>) {</div>
-<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="add-type-assertions-reducer_8cc.html#a2360aba01fa93c8493ba96683c4fb89c">graph</a>-&gt;is_osr());</div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="add-type-assertions-reducer_8cc.html#a2360aba01fa93c8493ba96683c4fb89c">graph</a>-&gt;is_osr());</div>
 <div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span> </div>
 <div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>  <a class="code hl_function" href="classv8_1_1internal_1_1MacroAssembler.html#a6d0ce507addc84a2bbed808cfbbec625">CodeEntry</a>();</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span> </div>
@@ -616,7 +624,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbofan) {</div>
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>    <span class="keyword">using </span><a class="code hl_enumvalue" href="namespacev8_1_1internal_1_1maglev.html#a164d68197b23dfc33057ef19283ad5e7a4b630f29c3700bdc3805d9cbf7592d94">D</a> = MaglevOptimizeCodeOrTailCallOptimizedCodeSlotDescriptor;</div>
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>    <a class="code hl_function" href="namespacev8_1_1internal_1_1ETWJITInterface.html#a6782da00e5166055555c65db3a9ec7eb">Register</a> feedback_vector = D::GetRegisterParameter(D::kFeedbackVector);</div>
-<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="namespacev8_1_1internal.html#a976c6c26a43011a580e41e6f744290a4">AreAliased</a>(feedback_vector, <a class="code hl_variable" href="namespacev8_1_1internal.html#a5a0157313321a5134dc824502f239d61">kJavaScriptCallArgCountRegister</a>,</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="namespacev8_1_1internal.html#a976c6c26a43011a580e41e6f744290a4">AreAliased</a>(feedback_vector, <a class="code hl_variable" href="namespacev8_1_1internal.html#a5a0157313321a5134dc824502f239d61">kJavaScriptCallArgCountRegister</a>,</div>
 <div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>                       <a class="code hl_variable" href="namespacev8_1_1internal.html#af3ad7ce74f497b9a2cb016c43ed77acc">kJSFunctionRegister</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a972c0774332fdea5491955853c58bf3d">kContextRegister</a>,</div>
 <div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>                       <a class="code hl_variable" href="namespacev8_1_1internal.html#af2c2acff6ee6e55e3667009b690eae43">kJavaScriptCallNewTargetRegister</a>,</div>
 <div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span>                       <a class="code hl_variable" href="namespacev8_1_1internal.html#ae34907feef99499e9efeb1408f0ebf26">kJavaScriptCallDispatchHandleRegister</a>));</div>
@@ -661,7 +669,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>      <a class="code hl_function" href="classv8_1_1internal_1_1maglev_1_1MaglevAssembler.html#a7c2a4016f774a981910bac8008f21116">Move</a>(rbx, <a class="code hl_variable" href="read-only-serializer_8cc.html#a69c90eeb8bbd822438c2477c0bc1ced1">tagged_slots</a> / kLoopUnrollSize);</div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>      <span class="comment">// We enter the loop unconditionally, so make sure we need to loop at</span></div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>      <span class="comment">// least once.</span></div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>      <a class="code hl_define" href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(<a class="code hl_variable" href="read-only-serializer_8cc.html#a69c90eeb8bbd822438c2477c0bc1ced1">tagged_slots</a> / kLoopUnrollSize, 0);</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(<a class="code hl_variable" href="read-only-serializer_8cc.html#a69c90eeb8bbd822438c2477c0bc1ced1">tagged_slots</a> / kLoopUnrollSize, 0);</div>
 <div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>      Label loop;</div>
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>      <a class="code hl_function" href="classv8_1_1internal_1_1Assembler.html#a94b6e449bfdecb7917c909a37ff2ff85">bind</a>(&amp;loop);</div>
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; kLoopUnrollSize; ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
@@ -771,13 +779,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ainterface-descriptors-inl_8h_html"><div class="ttname"><a href="interface-descriptors-inl_8h.html">interface-descriptors-inl.h</a></div></div>
 <div class="ttc" id="ajs-temporal-objects_8cc_html_a0667ab99c341e3655dd57d35e516c02b"><div class="ttname"><a href="js-temporal-objects_8cc.html#a0667ab99c341e3655dd57d35e516c02b">second</a></div><div class="ttdeci">double second</div><div class="ttdef"><b>Definition</b> <a href="js-temporal-objects_8cc_source.html#l00063">js-temporal-objects.cc:63</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_a41f8c58d2c01bf65b8ee199c3f87fc80"><div class="ttname"><a href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a></div><div class="ttdeci">ZoneVector&lt; RpoNumber &gt; &amp; result</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00021">jump-threading.cc:21</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_a56e883b55c80205b4d1727679c68b2bd"><div class="ttname"><a href="logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a></div><div class="ttdeci">#define CHECK_LE(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00486">logging.h:486</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="alogging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00487">logging.h:487</a></div></div>
 <div class="ttc" id="amaglev-assembler-inl_8h_html"><div class="ttname"><a href="maglev-assembler-inl_8h.html">maglev-assembler-inl.h</a></div></div>
 <div class="ttc" id="amaglev-assembler_8h_html"><div class="ttname"><a href="maglev-assembler_8h.html">maglev-assembler.h</a></div></div>
 <div class="ttc" id="amaglev-graph_8h_html"><div class="ttname"><a href="maglev-graph_8h.html">maglev-graph.h</a></div></div>
@@ -827,6 +828,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_a9609de810273be552e48d8582efe83e6a89dfe630590dbfe7004e6de0fabec67b"><div class="ttname"><a href="namespacev8_1_1internal.html#a9609de810273be552e48d8582efe83e6a89dfe630590dbfe7004e6de0fabec67b">v8::internal::kTaggedAligned</a></div><div class="ttdeci">@ kTaggedAligned</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01534">globals.h:1534</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a972c0774332fdea5491955853c58bf3d"><div class="ttname"><a href="namespacev8_1_1internal.html#a972c0774332fdea5491955853c58bf3d">v8::internal::kContextRegister</a></div><div class="ttdeci">constexpr Register kContextRegister</div><div class="ttdef"><b>Definition</b> <a href="register-arm_8h_source.html#l00307">register-arm.h:307</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a976c6c26a43011a580e41e6f744290a4"><div class="ttname"><a href="namespacev8_1_1internal.html#a976c6c26a43011a580e41e6f744290a4">v8::internal::AreAliased</a></div><div class="ttdeci">V8_EXPORT_PRIVATE bool AreAliased(const CPURegister &amp;reg1, const CPURegister &amp;reg2, const CPURegister &amp;reg3=NoReg, const CPURegister &amp;reg4=NoReg, const CPURegister &amp;reg5=NoReg, const CPURegister &amp;reg6=NoReg, const CPURegister &amp;reg7=NoReg, const CPURegister &amp;reg8=NoReg)</div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_aa2507eb9d594b9767347031fb02d0b20"><div class="ttname"><a href="namespacev8_1_1internal.html#aa2507eb9d594b9767347031fb02d0b20">v8::internal::kHeapObjectTag</a></div><div class="ttdeci">const int kHeapObjectTag</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00072">v8-internal.h:72</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9db791c05a0359859a321dcfec42e37"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8::internal::v8_flags</a></div><div class="ttdeci">V8_EXPORT_PRIVATE FlagValues v8_flags</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ab0ae72cf03464e00d457857ecbc91b35"><div class="ttname"><a href="namespacev8_1_1internal.html#ab0ae72cf03464e00d457857ecbc91b35">v8::internal::mode</a></div><div class="ttdeci">too high values may cause the compiler to set high thresholds for inlining to as much as possible avoid inlined allocation of objects that cannot escape trace load stores from virtual maglev objects use TurboFan fast string builder analyze liveness of environment slots and zap dead values trace TurboFan load elimination emit data about basic block usage in builtins to this enable builtin reordering when run mksnapshot flag for emit warnings when applying builtin profile data verify register allocation in TurboFan randomly schedule instructions to stress dependency tracking enable store store elimination in TurboFan rewrite far to near simulate GC compiler thread race related to allow float parameters to be passed in simulator mode JS Wasm Run additional turbo_optimize_inlined_js_wasm_wrappers enable experimental feedback collection in generic lowering enable Turboshaft s WasmLoadElimination run instruction selection on Turboshaft IR directly enable Turboshaft s loop unrolling enable an additional Turboshaft phase that performs optimizations based on type information build the Turboshaft graph from Maglev trace emitted Turboshaft instructions profile guided optimization for empty feedback vector invocation count for maglev for functions which according to profile_guided_optimization are likely to deoptimize before reaching this invocation count Immediately re optimize code after some lazy deopts Enables the lazy new space shrinking strategy max size of a semi the new space consists of two semi spaces young and full garbage collection phases are not overlapping Collect garbage after keeps maps alive for&lt; n &gt; old space garbage collections print one detailed trace line in allocation gc speed Starts incremental marking with kUserVisible priority threshold for starting incremental marking immediately in percent of available minor GC task trigger in percent of the current heap limit use a separate phase for stack scanning in scavenge max worker number of concurrent for NumberOfWorkerThreads start background threads that allocate memory concurrent_array_buffer_sweeping use parallel threads to clear weak refs in the atomic pause trace progress of the incremental marking trace object counts and memory usage report a tick only when allocated zone memory changes by this amount TracingFlags::gc_stats TracingFlags::gc_stats track native contexts that are expected to be garbage collected verify heap pointers before and after GC use memory reducer for small heaps External memory limits are computed as part of global limits in v8 Heap specifies heap growing factor Perform compaction on full GCs based on V8 s default heuristics Perform compaction on every full GC Perform code space compaction when finalizing a full GC with stack Stress GC compaction to flush out Stress GC compaction by selecting random percent of pages as evacuation candidates Overrides stress_compaction flush of bytecode when it has not been executed recently Flush code when tab goes into the background Use per context worklist for marking force incremental marking for small heaps and run it more often force marking at random points between and force scavenge at random points between and reclaim otherwise unreachable unmodified wrapper objects when possible Delay before memory reducer start virtual randomize memory reservations by ignoring any hints passed when allocating pages use incremental marking for CppHeap cppheap_concurrent_marking c value for membalancer A special constant to balance between memory and space tradeoff The smaller the more memory it uses enable use of SSE4 instructions if available enable use of AVX VNNI instructions if available enable use of POPCNT instruction if available force all emitted branches to be in long mode(MIPS/PPC only)&quot;) DEFINE_BOOL(partial_constant_pool</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ad062ccc55d6b3a92f3d004481233ef48a5ea24a9c35e0127c467633897f707029"><div class="ttname"><a href="namespacev8_1_1internal.html#ad062ccc55d6b3a92f3d004481233ef48a5ea24a9c35e0127c467633897f707029">v8::internal::times_1</a></div><div class="ttdeci">@ times_1</div><div class="ttdef"><b>Definition</b> <a href="assembler-ia32_8h_source.html#l00211">assembler-ia32.h:211</a></div></div>
@@ -839,12 +841,22 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="aread-only-serializer_8cc_html_a69c90eeb8bbd822438c2477c0bc1ced1"><div class="ttname"><a href="read-only-serializer_8cc.html#a69c90eeb8bbd822438c2477c0bc1ced1">tagged_slots</a></div><div class="ttdeci">ro::BitSet tagged_slots</div><div class="ttdef"><b>Definition</b> <a href="read-only-serializer_8cc_source.html#l00142">read-only-serializer.cc:142</a></div></div>
 <div class="ttc" id="aregexp-bytecode-peephole_8cc_html_a8f20ddbd20ff167996ce994778f8ebf5"><div class="ttname"><a href="regexp-bytecode-peephole_8cc.html#a8f20ddbd20ff167996ce994778f8ebf5">parent_</a></div><div class="ttdeci">BytecodeSequenceNode * parent_</div><div class="ttdef"><b>Definition</b> <a href="regexp-bytecode-peephole_8cc_source.html#l00158">regexp-bytecode-peephole.cc:158</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a56e883b55c80205b4d1727679c68b2bd"><div class="ttname"><a href="src_2base_2logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a></div><div class="ttdeci">#define CHECK_LE(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00486">logging.h:486</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00487">logging.h:487</a></div></div>
 <div class="ttc" id="atagged-field_8h_html_a5284b5dce86d72e01944bab90ed2cbab"><div class="ttname"><a href="tagged-field_8h.html#a5284b5dce86d72e01944bab90ed2cbab">OFFSET_OF_DATA_START</a></div><div class="ttdeci">#define OFFSET_OF_DATA_START(Type)</div><div class="ttdef"><b>Definition</b> <a href="tagged-field_8h_source.html#l00165">tagged-field.h:165</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:22 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bfacb70f1a53f7c6799a7e763eeb3a96.html">maglev</a></li><li class="navelem"><a class="el" href="dir_2e58d8b5ee07260cf251cdd1ce0b8874.html">x64</a></li><li class="navelem"><a class="el" href="maglev-assembler-x64_8cc.html">maglev-assembler-x64.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:55:30 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

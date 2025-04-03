@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/pretenuring-handler.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/pretenuring-handler.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('pretenuring-handler_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">pretenuring-handler.cc</div></div>
 </div><!--header-->
@@ -127,7 +135,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="comment">// MinorMS allows for a much larger new space, thus we require a lower</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="comment">// survival rate for pretenuring.</span></div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> kMinorMSPretenureMaxRatio = 0.8;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> kMinorMSMinCapacity = 16 * <a class="code hl_variable" href="namespacev8_1_1internal.html#a08e1140ec7d96bfd4d6b21a808ccd654">MB</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> kMinorMSMinCapacity = 16 * <a class="code hl_variable" href="namespacev8_1_1internal.html#af46551c5713d2a3a1be4dca973e521e0">MB</a>;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.minor_ms) <span class="keywordflow">return</span> kScavengerPretenureRatio;</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordflow">if</span> (new_space_capacity &lt;= kMinorMSMinCapacity)</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordflow">return</span> kMinorMSPretenureMaxRatio;</div>
@@ -189,7 +197,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        new_space_capacity_was_above_pretenuring_threshold, new_space_capacity);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  }</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.trace_pretenuring_statistics)) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.trace_pretenuring_statistics)) {</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#ada9f491dce0173d9e92b0dfaeaf8b64c">PrintIsolate</a>(isolate,</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>                 <span class="stringliteral">&quot;pretenuring: AllocationSite(%p): (created, found, ratio) &quot;</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                 <span class="stringliteral">&quot;(%d, %d, %f) %s =&gt; %s\n&quot;</span>,</div>
@@ -254,7 +262,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordflow">if</span> (!IsAllocationSite(site) || site-&gt;IsZombie()) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> value = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(site_and_count.second);</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, value);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, value);</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">if</span> (site-&gt;IncrementMementoFoundCount(value) &gt;= kMinMementoCount) {</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>      <span class="comment">// For sites in the global map the count is accessed through the site.</span></div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      <a class="code hl_variable" href="classv8_1_1internal_1_1PretenuringHandler.html#ad610e3a13ab68e7a0859c53156aded4a">global_pretenuring_feedback_</a>.insert(std::make_pair(site, 0));</div>
@@ -280,7 +288,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> kDefaultMinNewSpaceCapacityForPretenuring =</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      8192 * KB * <a class="code hl_variable" href="classv8_1_1internal_1_1Heap.html#ad066a03f343d821140af2c59eb65dd0c">Heap::kPointerMultiplier</a>;</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1PretenuringHandler.html#a4cec7414a37be5db20d9b76472074e6f">heap_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Heap.html#ae12ef5f250417c33f81f5f599feffe17">tracer</a>()-&gt;IsInAtomicPause());</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1PretenuringHandler.html#a4cec7414a37be5db20d9b76472074e6f">heap_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Heap.html#ae12ef5f250417c33f81f5f599feffe17">tracer</a>()-&gt;IsInAtomicPause());</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.allocation_site_pretenuring) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
@@ -313,13 +321,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    allocation_sites++;</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    site = site_and_count.first;</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="comment">// Count is always access through the site.</span></div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, site_and_count.second);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, site_and_count.second);</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keywordtype">int</span> found_count = site-&gt;memento_found_count();</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <span class="comment">// An entry in the storage does not imply that the count is &gt; 0 because</span></div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="comment">// allocation sites might have been reset due to too many objects dying</span></div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="comment">// in old space.</span></div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordflow">if</span> (found_count &gt; 0) {</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsAllocationSite(site));</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsAllocationSite(site));</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>      active_allocation_sites++;</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      allocation_mementos_found += found_count;</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      <span class="keywordflow">if</span> (DigestPretenuringFeedback(<a class="code hl_variable" href="classv8_1_1internal_1_1PretenuringHandler.html#a4cec7414a37be5db20d9b76472074e6f">heap_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Heap.html#ae5160ad63bc51ff7b36e8f247be48f63">isolate</a>(), site,</div>
@@ -369,7 +377,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1CppHeap.html#a6ae13c1f6a906672819ff2dc5223d3db">isolate</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#aa1d56784c93784d8154d8bc2f5c62721">stack_guard</a>()-&gt;RequestDeoptMarkedAllocationSites();</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  }</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.trace_pretenuring_statistics) &amp;&amp;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.trace_pretenuring_statistics) &amp;&amp;</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      (allocation_mementos_found &gt; 0 || tenure_decisions &gt; 0 ||</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>       dont_tenure_decisions &gt; 0)) {</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#ada9f491dce0173d9e92b0dfaeaf8b64c">PrintIsolate</a>(</div>
@@ -410,14 +418,14 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1AllocationSite_html_a90e0736002b73f20d96abede63a5395baf3524c38c65ca5f5e600304ff3072c70"><div class="ttname"><a href="classv8_1_1internal_1_1AllocationSite.html#a90e0736002b73f20d96abede63a5395baf3524c38c65ca5f5e600304ff3072c70">v8::internal::AllocationSite::kUndecided</a></div><div class="ttdeci">@ kUndecided</div><div class="ttdef"><b>Definition</b> <a href="allocation-site_8h_source.html#l00028">allocation-site.h:28</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1CppHeap_html_a6ae13c1f6a906672819ff2dc5223d3db"><div class="ttname"><a href="classv8_1_1internal_1_1CppHeap.html#a6ae13c1f6a906672819ff2dc5223d3db">v8::internal::CppHeap::isolate</a></div><div class="ttdeci">Isolate * isolate() const</div><div class="ttdef"><b>Definition</b> <a href="cpp-heap_8h_source.html#l00171">cpp-heap.h:171</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1GlobalHandleVector_html"><div class="ttname"><a href="classv8_1_1internal_1_1GlobalHandleVector.html">v8::internal::GlobalHandleVector</a></div><div class="ttdef"><b>Definition</b> <a href="pretenuring-handler_8h_source.html#l00018">pretenuring-handler.h:18</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00192">heap.h:192</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a13477e3c7f84edd0e53ef605672043ba"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a13477e3c7f84edd0e53ef605672043ba">v8::internal::Heap::allocation_sites_list</a></div><div class="ttdeci">Tagged&lt; Object &gt; allocation_sites_list()</div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00468">heap.h:468</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a1d103d64b4ee81f0c943ff1810a43e52"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a1d103d64b4ee81f0c943ff1810a43e52">v8::internal::Heap::new_space</a></div><div class="ttdeci">NewSpace * new_space() const</div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00719">heap.h:719</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00192">heap.h:192</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a13477e3c7f84edd0e53ef605672043ba"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a13477e3c7f84edd0e53ef605672043ba">v8::internal::Heap::allocation_sites_list</a></div><div class="ttdeci">Tagged&lt; Object &gt; allocation_sites_list()</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00468">heap.h:468</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a1d103d64b4ee81f0c943ff1810a43e52"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a1d103d64b4ee81f0c943ff1810a43e52">v8::internal::Heap::new_space</a></div><div class="ttdeci">NewSpace * new_space() const</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00719">heap.h:719</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a7a11a699cd963225c196e93b8e6d4bd2"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a7a11a699cd963225c196e93b8e6d4bd2">v8::internal::Heap::sticky_space</a></div><div class="ttdeci">StickySpace * sticky_space() const</div><div class="ttdef"><b>Definition</b> <a href="heap-inl_8h_source.html#l00433">heap-inl.h:433</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a854950bc5a3a266324db62d05b62e525"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a854950bc5a3a266324db62d05b62e525">v8::internal::Heap::NewSpaceTargetCapacity</a></div><div class="ttdeci">size_t NewSpaceTargetCapacity() const</div><div class="ttdef"><b>Definition</b> <a href="heap_8cc_source.html#l03868">heap.cc:3868</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_ad066a03f343d821140af2c59eb65dd0c"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#ad066a03f343d821140af2c59eb65dd0c">v8::internal::Heap::kPointerMultiplier</a></div><div class="ttdeci">static const int kPointerMultiplier</div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00300">heap.h:300</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_ad066a03f343d821140af2c59eb65dd0c"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#ad066a03f343d821140af2c59eb65dd0c">v8::internal::Heap::kPointerMultiplier</a></div><div class="ttdeci">static const int kPointerMultiplier</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00300">heap.h:300</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_adb1f6d50826482943e00761d66eee5d5"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#adb1f6d50826482943e00761d66eee5d5">v8::internal::Heap::ForeachAllocationSite</a></div><div class="ttdeci">void ForeachAllocationSite(Tagged&lt; Object &gt; list, const std::function&lt; void(Tagged&lt; AllocationSite &gt;)&gt; &amp;visitor)</div><div class="ttdef"><b>Definition</b> <a href="heap_8cc_source.html#l02952">heap.cc:2952</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_ae12ef5f250417c33f81f5f599feffe17"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#ae12ef5f250417c33f81f5f599feffe17">v8::internal::Heap::tracer</a></div><div class="ttdeci">GCTracer * tracer()</div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00792">heap.h:792</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_ae12ef5f250417c33f81f5f599feffe17"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#ae12ef5f250417c33f81f5f599feffe17">v8::internal::Heap::tracer</a></div><div class="ttdeci">GCTracer * tracer()</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00792">heap.h:792</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_ae5160ad63bc51ff7b36e8f247be48f63"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#ae5160ad63bc51ff7b36e8f247be48f63">v8::internal::Heap::isolate</a></div><div class="ttdeci">Isolate * isolate() const</div><div class="ttdef"><b>Definition</b> <a href="heap-inl_8h_source.html#l00059">heap-inl.h:59</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html_aa1d56784c93784d8154d8bc2f5c62721"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html#aa1d56784c93784d8154d8bc2f5c62721">v8::internal::Isolate::stack_guard</a></div><div class="ttdeci">StackGuard * stack_guard()</div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l01187">isolate.h:1187</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MapWord_html"><div class="ttname"><a href="classv8_1_1internal_1_1MapWord.html">v8::internal::MapWord</a></div><div class="ttdef"><b>Definition</b> <a href="objects_8h_source.html#l00782">objects.h:782</a></div></div>
@@ -443,26 +451,30 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aflags_2flags_8h_html"><div class="ttname"><a href="flags_2flags_8h.html">flags.h</a></div></div>
 <div class="ttc" id="agc-tracer-inl_8h_html"><div class="ttname"><a href="gc-tracer-inl_8h.html">gc-tracer-inl.h</a></div></div>
 <div class="ttc" id="aglobal-handles-inl_8h_html"><div class="ttname"><a href="global-handles-inl_8h.html">global-handles-inl.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a08e1140ec7d96bfd4d6b21a808ccd654"><div class="ttname"><a href="namespacev8_1_1internal.html#a08e1140ec7d96bfd4d6b21a808ccd654">v8::internal::MB</a></div><div class="ttdeci">too high values may cause the compiler to set high thresholds for inlining to as much as possible avoid inlined allocation of objects that cannot escape trace load stores from virtual maglev objects use TurboFan fast string builder analyze liveness of environment slots and zap dead values trace TurboFan load elimination emit data about basic block usage in builtins to this enable builtin reordering when run mksnapshot flag for emit warnings when applying builtin profile data verify register allocation in TurboFan randomly schedule instructions to stress dependency tracking enable store store elimination in TurboFan rewrite far to near simulate GC compiler thread race related to allow float parameters to be passed in simulator mode JS Wasm Run additional turbo_optimize_inlined_js_wasm_wrappers enable experimental feedback collection in generic lowering enable Turboshaft s WasmLoadElimination run instruction selection on Turboshaft IR directly enable Turboshaft s loop unrolling enable an additional Turboshaft phase that performs optimizations based on type information build the Turboshaft graph from Maglev trace emitted Turboshaft instructions profile guided optimization for empty feedback vector invocation count for maglev for functions which according to profile_guided_optimization are likely to deoptimize before reaching this invocation count Immediately re optimize code after some lazy deopts Enables the lazy new space shrinking strategy max size of a semi the new space consists of two semi spaces young and full garbage collection phases are not overlapping Collect garbage after keeps maps alive for&lt; n &gt; old space garbage collections print one detailed trace line in allocation gc speed Starts incremental marking with kUserVisible priority threshold for starting incremental marking immediately in percent of available minor GC task trigger in percent of the current heap limit use a separate phase for stack scanning in scavenge max worker number of concurrent for NumberOfWorkerThreads start background threads that allocate memory concurrent_array_buffer_sweeping use parallel threads to clear weak refs in the atomic pause trace progress of the incremental marking trace object counts and memory usage * MB</div><div class="ttdef"><b>Definition</b> <a href="flags_8cc_source.html#l02095">flags.cc:2095</a></div></div>
+<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a4382c244e839ce16a4beafabd1c6bd1d"><div class="ttname"><a href="namespacev8_1_1internal.html#a4382c244e839ce16a4beafabd1c6bd1d">v8::internal::Tagged</a></div><div class="ttdeci">Tagged(T object) -&gt; Tagged&lt; T &gt;</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a604d5beeb6fc8639670f737ed201e20aa0aa38c28f349d65a6819e03844b73dff"><div class="ttname"><a href="namespacev8_1_1internal.html#a604d5beeb6fc8639670f737ed201e20aa0aa38c28f349d65a6819e03844b73dff">v8::internal::AllocationType::kOld</a></div><div class="ttdeci">@ kOld</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9db791c05a0359859a321dcfec42e37"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8::internal::v8_flags</a></div><div class="ttdeci">V8_EXPORT_PRIVATE FlagValues v8_flags</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ada9f491dce0173d9e92b0dfaeaf8b64c"><div class="ttname"><a href="namespacev8_1_1internal.html#ada9f491dce0173d9e92b0dfaeaf8b64c">v8::internal::PrintIsolate</a></div><div class="ttdeci">void PrintIsolate(void *isolate, const char *format,...)</div><div class="ttdef"><b>Definition</b> <a href="utils_2utils_8cc_source.html#l00061">utils.cc:61</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_af46551c5713d2a3a1be4dca973e521e0"><div class="ttname"><a href="namespacev8_1_1internal.html#af46551c5713d2a3a1be4dca973e521e0">v8::internal::MB</a></div><div class="ttdeci">too high values may cause the compiler to set high thresholds for inlining to as much as possible avoid inlined allocation of objects that cannot escape trace load stores from virtual maglev objects use TurboFan fast string builder analyze liveness of environment slots and zap dead values trace TurboFan load elimination emit data about basic block usage in builtins to this enable builtin reordering when run mksnapshot flag for emit warnings when applying builtin profile data verify register allocation in TurboFan randomly schedule instructions to stress dependency tracking enable store store elimination in TurboFan rewrite far to near simulate GC compiler thread race related to allow float parameters to be passed in simulator mode JS Wasm Run additional turbo_optimize_inlined_js_wasm_wrappers enable experimental feedback collection in generic lowering enable Turboshaft s WasmLoadElimination run instruction selection on Turboshaft IR directly enable Turboshaft s loop unrolling enable an additional Turboshaft phase that performs optimizations based on type information build the Turboshaft graph from Maglev trace emitted Turboshaft instructions profile guided optimization for empty feedback vector invocation count for maglev for functions which according to profile_guided_optimization are likely to deoptimize before reaching this invocation count Immediately re optimize code after some lazy deopts Enables the lazy new space shrinking strategy max size of a semi the new space consists of two semi spaces young and full garbage collection phases are not overlapping Collect garbage after keeps maps alive for&lt; n &gt; old space garbage collections print one detailed trace line in allocation gc speed Starts incremental marking with kUserVisible priority threshold for starting incremental marking immediately in percent of available minor GC task trigger in percent of the current heap limit use a separate phase for stack scanning in scavenge max worker number of concurrent for NumberOfWorkerThreads start background threads that allocate memory concurrent_array_buffer_sweeping use parallel threads to clear weak refs in the atomic pause trace progress of the incremental marking trace object counts and memory usage * MB</div><div class="ttdef"><b>Definition</b> <a href="flags_8cc_source.html#l02095">flags.cc:2095</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="anamespacev8_html_a65227471e4ee0ccd275854a995f12a62"><div class="ttname"><a href="namespacev8.html#a65227471e4ee0ccd275854a995f12a62">v8::kRelaxedLoad</a></div><div class="ttdeci">static constexpr RelaxedLoadTag kRelaxedLoad</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l02834">globals.h:2834</a></div></div>
 <div class="ttc" id="anew-spaces_8h_html"><div class="ttname"><a href="new-spaces_8h.html">new-spaces.h</a></div></div>
 <div class="ttc" id="apretenuring-handler_8h_html"><div class="ttname"><a href="pretenuring-handler_8h.html">pretenuring-handler.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="av8config_8h_html_a67bd29db07c711b0fb11ff1c324ebb60"><div class="ttname"><a href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a></div><div class="ttdeci">#define V8_UNLIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00649">v8config.h:649</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:35 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="pretenuring-handler_8cc.html">pretenuring-handler.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:44 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

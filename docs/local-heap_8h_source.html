@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/local-heap.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/local-heap.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('local-heap_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">local-heap.h</div></div>
 </div><!--header-->
@@ -104,8 +112,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;atomic&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="condition-variable_8h.html">src/base/platform/condition-variable.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="mutex_8h.html">src/base/platform/mutex.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="assert-scope_8h.html">src/common/assert-scope.h</a>&quot;</span></div>
@@ -141,7 +149,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">//            for a collection. Useful when threads do not need heap access for</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">//            some time or for blocking operations like locking a mutex.</span></div>
 <div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html">   47</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1LocalHeap.html">LocalHeap</a> {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html">   47</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1LocalHeap.html">LocalHeap</a> {</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html#a3a30a1d009aa9e17f2e7bf1390f99eb8">   49</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="classv8_1_1internal_1_1LocalHeap.html#a3a30a1d009aa9e17f2e7bf1390f99eb8">GCEpilogueCallback</a> = void(<span class="keywordtype">void</span>*);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
@@ -154,10 +162,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="comment">// from the main thread.</span></div>
 <div class="foldopen" id="foldopen00058" data-start="{" data-end="}">
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html#abb1f846eec81a8f873cd4213c17202a7">   58</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1LocalHeap.html#abb1f846eec81a8f873cd4213c17202a7">Safepoint</a>() {</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(AllowSafepoints::IsAllowed());</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(AllowSafepoints::IsAllowed());</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_class" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html">ThreadState</a> current = <a class="code hl_variable" href="deoptimizer_8cc.html#a74a38defd07f033742bdf0c540f3c848">state_</a>.load_relaxed();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">if</span> (V8_UNLIKELY(current.IsRunningWithSlowPathFlag())) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(current.IsRunningWithSlowPathFlag())) {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      SafepointSlowPath();</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  }</div>
@@ -272,7 +280,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="comment">// Allocate an uninitialized object.</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  V8_WARN_UNUSED_RESULT <span class="keyword">inline</span> <a class="code hl_class" href="classv8_1_1internal_1_1AllocationResult.html">AllocationResult</a> AllocateRaw(</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">inline</span> <a class="code hl_class" href="classv8_1_1internal_1_1AllocationResult.html">AllocationResult</a> AllocateRaw(</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      <span class="keywordtype">int</span> size_in_bytes, <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a604d5beeb6fc8639670f737ed201e20a">AllocationType</a> allocation,</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#abddbb63b815c1d69390fef2325df451a">AllocationOrigin</a> origin = AllocationOrigin::kRuntime,</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a9609de810273be552e48d8582efe83e6">AllocationAlignment</a> alignment = kTaggedAligned);</div>
@@ -286,7 +294,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="comment">// Allocates an uninitialized object and crashes when object</span></div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <span class="comment">// cannot be allocated.</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  V8_WARN_UNUSED_RESULT <span class="keyword">inline</span> Address AllocateRawOrFail(</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">inline</span> Address AllocateRawOrFail(</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>      <span class="keywordtype">int</span> size_in_bytes, <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a604d5beeb6fc8639670f737ed201e20a">AllocationType</a> allocation,</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#abddbb63b815c1d69390fef2325df451a">AllocationOrigin</a> origin = AllocationOrigin::kRuntime,</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a9609de810273be552e48d8582efe83e6">AllocationAlignment</a> alignment = kTaggedAligned);</div>
@@ -301,7 +309,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordflow">return</span> is_main_thread() &amp;&amp; <a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a> == <a class="code hl_namespace" href="namespaceheap.html">heap</a>;</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  }</div>
 </div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  V8_INLINE <span class="keywordtype">bool</span> is_in_trampoline() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">bool</span> is_in_trampoline() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
 <div class="foldopen" id="foldopen00197" data-start="{" data-end="}">
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html#ae1f2279f48180f0685779a8949314a71">  197</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1LocalHeap.html#ae1f2279f48180f0685779a8949314a71">deserialization_complete</a>()<span class="keyword"> const </span>{</div>
@@ -333,11 +341,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <span class="comment">// variant checks if we are on the main thread or not. Use the other two</span></div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  <span class="comment">// variants if this already known.</span></div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Callback&gt;</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  V8_INLINE <span class="keywordtype">void</span> ExecuteWhileParked(Callback <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a>);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> ExecuteWhileParked(Callback <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a>);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Callback&gt;</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  V8_INLINE <span class="keywordtype">void</span> ExecuteMainThreadWhileParked(Callback <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a>);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> ExecuteMainThreadWhileParked(Callback <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a>);</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Callback&gt;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  V8_INLINE <span class="keywordtype">void</span> ExecuteBackgroundThreadWhileParked(Callback <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a>);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> ExecuteBackgroundThreadWhileParked(Callback <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a>);</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html#af1434ed3b2d75cfae92158bc3e7892b8">  232</a></span>  <span class="keyword">using </span><a class="code hl_class" href="classv8_1_1base_1_1BitField.html">ParkedBit</a> = <a class="code hl_class" href="classv8_1_1base_1_1BitField.html">base::BitField8&lt;bool, 0, 1&gt;</a>;</div>
@@ -357,7 +365,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html#a041cf37f7fc79421d32a6e0acd9d9c12">  243</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html#a041cf37f7fc79421d32a6e0acd9d9c12">IsRunning</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> !ParkedBit::decode(raw_state_); }</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
 <div class="foldopen" id="foldopen00245" data-start="{" data-end="}">
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html#a3f7461040b3e004f5e7fc4d6a325c2a6">  245</a></span>    <span class="keyword">constexpr</span> <a class="code hl_class" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html">ThreadState</a> <a class="code hl_function" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html#a3f7461040b3e004f5e7fc4d6a325c2a6">SetRunning</a>() const V8_WARN_UNUSED_RESULT {</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html#a3f7461040b3e004f5e7fc4d6a325c2a6">  245</a></span>    <span class="keyword">constexpr</span> <a class="code hl_class" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html">ThreadState</a> <a class="code hl_function" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html#a3f7461040b3e004f5e7fc4d6a325c2a6">SetRunning</a>() const <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> {</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>      <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html">ThreadState</a>(raw_state_ &amp; ~ParkedBit::kMask);</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    }</div>
 </div>
@@ -365,7 +373,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html#a7809b23f552a2a62b203dccad0cf8876">  249</a></span>    <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html#a7809b23f552a2a62b203dccad0cf8876">IsParked</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> ParkedBit::decode(raw_state_); }</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
 <div class="foldopen" id="foldopen00251" data-start="{" data-end="}">
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html#ab76c4cc24f11d04d2693e72c6bfb21f3">  251</a></span>    <span class="keyword">constexpr</span> <a class="code hl_class" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html">ThreadState</a> <a class="code hl_function" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html#ab76c4cc24f11d04d2693e72c6bfb21f3">SetParked</a>() const V8_WARN_UNUSED_RESULT {</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html#ab76c4cc24f11d04d2693e72c6bfb21f3">  251</a></span>    <span class="keyword">constexpr</span> <a class="code hl_class" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html">ThreadState</a> <a class="code hl_function" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html#ab76c4cc24f11d04d2693e72c6bfb21f3">SetParked</a>() const <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> {</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>      <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html">ThreadState</a>(ParkedBit::kMask | raw_state_);</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    }</div>
 </div>
@@ -468,12 +476,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Callback&gt;</div>
-<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>  V8_INLINE <span class="keywordtype">void</span> ExecuteWithStackMarker(Callback <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a>);</div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> ExecuteWithStackMarker(Callback <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a>);</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
 <div class="foldopen" id="foldopen00328" data-start="{" data-end="}">
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html#a79b36ce5e62dc8e842bb22d7626a2df6">  328</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1LocalHeap.html#a79b36ce5e62dc8e842bb22d7626a2df6">Park</a>() {</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(AllowSafepoints::IsAllowed());</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsSafeForConservativeStackScanning());</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(AllowSafepoints::IsAllowed());</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsSafeForConservativeStackScanning());</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>    <a class="code hl_class" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html">ThreadState</a> expected = ThreadState::Running();</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="deoptimizer_8cc.html#a74a38defd07f033742bdf0c540f3c848">state_</a>.CompareExchangeWeak(expected, ThreadState::Parked())) {</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>      ParkSlowPath();</div>
@@ -483,7 +491,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span> </div>
 <div class="foldopen" id="foldopen00337" data-start="{" data-end="}">
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html#a4ab67c6c2333e0b32f6323e6b3ad0288">  337</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1LocalHeap.html#a4ab67c6c2333e0b32f6323e6b3ad0288">Unpark</a>() {</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(AllowSafepoints::IsAllowed());</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(AllowSafepoints::IsAllowed());</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    <a class="code hl_class" href="classv8_1_1internal_1_1LocalHeap_1_1ThreadState.html">ThreadState</a> expected = ThreadState::Parked();</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="deoptimizer_8cc.html#a74a38defd07f033742bdf0c540f3c848">state_</a>.CompareExchangeWeak(expected, ThreadState::Running())) {</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>      UnparkSlowPath();</div>
@@ -499,7 +507,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>  <span class="keywordtype">void</span> SleepInUnpark();</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> Callback&gt;</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>  V8_INLINE <span class="keywordtype">void</span> ParkAndExecuteCallback(Callback <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a>);</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> ParkAndExecuteCallback(Callback <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a>);</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span> </div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>  <span class="keywordtype">void</span> EnsurePersistentHandles();</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
@@ -514,7 +522,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>  <span class="keywordtype">void</span> SetUpSharedMarking();</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html#a27ae7bbe81ddaecd96603c11e01e122f">  367</a></span>  <a class="code hl_class" href="classv8_1_1internal_1_1Heap.html">Heap</a>* <a class="code hl_variable" href="classv8_1_1internal_1_1LocalHeap.html#a27ae7bbe81ddaecd96603c11e01e122f">heap_</a>;</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html#a2e736c6f288441ae0233d8477bccb75e">  368</a></span>  V8_NO_UNIQUE_ADDRESS <a class="code hl_class" href="classv8_1_1internal_1_1PtrComprCageAccessScope.html">PtrComprCageAccessScope</a> <a class="code hl_variable" href="classv8_1_1internal_1_1LocalHeap.html#a2e736c6f288441ae0233d8477bccb75e">ptr_compr_cage_access_scope_</a>;</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html#a2e736c6f288441ae0233d8477bccb75e">  368</a></span>  <a class="code hl_define" href="v8config_8h.html#a186211b188a47e98752181e615371856">V8_NO_UNIQUE_ADDRESS</a> <a class="code hl_class" href="classv8_1_1internal_1_1PtrComprCageAccessScope.html">PtrComprCageAccessScope</a> <a class="code hl_variable" href="classv8_1_1internal_1_1LocalHeap.html#a2e736c6f288441ae0233d8477bccb75e">ptr_compr_cage_access_scope_</a>;</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html#ab3e4bedf16dfa1304346f48aad9f7846">  369</a></span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="classv8_1_1internal_1_1LocalHeap.html#ab3e4bedf16dfa1304346f48aad9f7846">is_main_thread_</a>;</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1LocalHeap.html#a6139e5f4603b427d4e7fdd09b8e05de5">  371</a></span>  <a class="code hl_class" href="classv8_1_1internal_1_1LocalHeap_1_1AtomicThreadState.html">AtomicThreadState</a> <a class="code hl_variable" href="classv8_1_1internal_1_1LocalHeap.html#a6139e5f4603b427d4e7fdd09b8e05de5">state_</a>;</div>
@@ -567,7 +575,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1GlobalSafepoint_html"><div class="ttname"><a href="classv8_1_1internal_1_1GlobalSafepoint.html">v8::internal::GlobalSafepoint</a></div><div class="ttdef"><b>Definition</b> <a href="safepoint_8h_source.html#l00168">safepoint.h:168</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Handle_html"><div class="ttname"><a href="classv8_1_1internal_1_1Handle.html">v8::internal::Handle</a></div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00145">handles.h:145</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1HeapAllocator_html"><div class="ttname"><a href="classv8_1_1internal_1_1HeapAllocator.html">v8::internal::HeapAllocator</a></div><div class="ttdef"><b>Definition</b> <a href="heap-allocator_8h_source.html#l00035">heap-allocator.h:35</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00192">heap.h:192</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00192">heap.h:192</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1IsolateSafepointScope_html"><div class="ttname"><a href="classv8_1_1internal_1_1IsolateSafepointScope.html">v8::internal::IsolateSafepointScope</a></div><div class="ttdef"><b>Definition</b> <a href="safepoint_8h_source.html#l00157">safepoint.h:157</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1IsolateSafepoint_html"><div class="ttname"><a href="classv8_1_1internal_1_1IsolateSafepoint.html">v8::internal::IsolateSafepoint</a></div><div class="ttdef"><b>Definition</b> <a href="safepoint_8h_source.html#l00027">safepoint.h:27</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html">v8::internal::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l00575">isolate.h:575</a></div></div>
@@ -646,13 +654,9 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="agc-callbacks_8h_html"><div class="ttname"><a href="gc-callbacks_8h.html">gc-callbacks.h</a></div></div>
 <div class="ttc" id="aglobal-handles_8h_html"><div class="ttname"><a href="global-handles_8h.html">global-handles.h</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_ad83e8682ed733ee0cf359fa4f48441b0"><div class="ttname"><a href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a></div><div class="ttdeci">TNode&lt; Object &gt; callback</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01500">js-call-reducer.cc:1500</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="amutex_8h_html"><div class="ttname"><a href="mutex_8h.html">mutex.h</a></div></div>
-<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a0614c2ae76c43a80b446e8e2965dd333"><div class="ttname"><a href="namespacev8_1_1internal.html#a0614c2ae76c43a80b446e8e2965dd333">v8::internal::ClearRecordedSlots</a></div><div class="ttdeci">ClearRecordedSlots</div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00135">heap.h:135</a></div></div>
+<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a0614c2ae76c43a80b446e8e2965dd333"><div class="ttname"><a href="namespacev8_1_1internal.html#a0614c2ae76c43a80b446e8e2965dd333">v8::internal::ClearRecordedSlots</a></div><div class="ttdeci">ClearRecordedSlots</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00135">heap.h:135</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a12bba79f0b2c466b43e23e173e34465d"><div class="ttname"><a href="namespacev8_1_1internal.html#a12bba79f0b2c466b43e23e173e34465d">v8::internal::kNullMaybeHandle</a></div><div class="ttdeci">constexpr NullMaybeHandleType kNullMaybeHandle</div><div class="ttdef"><b>Definition</b> <a href="maybe-handles_8h_source.html#l00017">maybe-handles.h:17</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a34c412e70714b6b814e60c4b6883e0ee"><div class="ttname"><a href="namespacev8_1_1internal.html#a34c412e70714b6b814e60c4b6883e0ee">v8::internal::ThreadKind</a></div><div class="ttdeci">ThreadKind</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01714">globals.h:1714</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a49789a3c0b6ae064c053bd61f6dacd51"><div class="ttname"><a href="namespacev8_1_1internal.html#a49789a3c0b6ae064c053bd61f6dacd51">v8::internal::V8_CONSTINIT</a></div><div class="ttdeci">thread_local Isolate::PerIsolateThreadData *g_current_per_isolate_thread_data_ V8_CONSTINIT</div><div class="ttdef"><b>Definition</b> <a href="isolate_8cc_source.html#l00524">isolate.cc:524</a></div></div>
@@ -666,16 +670,27 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="apersistent-handles_8h_html"><div class="ttname"><a href="persistent-handles_8h.html">persistent-handles.h</a></div></div>
 <div class="ttc" id="aptr-compr_8h_html"><div class="ttname"><a href="ptr-compr_8h.html">ptr-compr.h</a></div></div>
 <div class="ttc" id="aroots_8h_html_a0b0983f6d312afc257118d1a9b32f376"><div class="ttname"><a href="roots_8h.html#a0b0983f6d312afc257118d1a9b32f376">MUTABLE_ROOT_LIST</a></div><div class="ttdeci">#define MUTABLE_ROOT_LIST(V)</div><div class="ttdef"><b>Definition</b> <a href="roots_8h_source.html#l00483">roots.h:483</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="astack_8h_html"><div class="ttname"><a href="stack_8h.html">stack.h</a></div></div>
 <div class="ttc" id="athread-local-storage_8h_html"><div class="ttname"><a href="thread-local-storage_8h.html">thread-local-storage.h</a></div></div>
 <div class="ttc" id="athread-local-storage_8h_html_a0cf33d5c49ab5502e0d4d9c167db7b7b"><div class="ttname"><a href="thread-local-storage_8h.html#a0cf33d5c49ab5502e0d4d9c167db7b7b">V8_TLS_MODEL</a></div><div class="ttdeci">#define V8_TLS_MODEL</div><div class="ttdef"><b>Definition</b> <a href="thread-local-storage_8h_source.html#l00042">thread-local-storage.h:42</a></div></div>
 <div class="ttc" id="athread-local-storage_8h_html_ab02be78da6b626a72fed599d14aa0f39"><div class="ttname"><a href="thread-local-storage_8h.html#ab02be78da6b626a72fed599d14aa0f39">V8_TLS_DECLARE_GETTER</a></div><div class="ttdeci">#define V8_TLS_DECLARE_GETTER(Name, Type, Member)</div><div class="ttdef"><b>Definition</b> <a href="thread-local-storage_8h_source.html#l00055">thread-local-storage.h:55</a></div></div>
+<div class="ttc" id="av8config_8h_html_a186211b188a47e98752181e615371856"><div class="ttname"><a href="v8config_8h.html#a186211b188a47e98752181e615371856">V8_NO_UNIQUE_ADDRESS</a></div><div class="ttdeci">#define V8_NO_UNIQUE_ADDRESS</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00711">v8config.h:711</a></div></div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
+<div class="ttc" id="av8config_8h_html_a63258e4bf5dc9fb8c78f881c8405d83b"><div class="ttname"><a href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a></div><div class="ttdeci">#define V8_WARN_UNUSED_RESULT</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00660">v8config.h:660</a></div></div>
+<div class="ttc" id="av8config_8h_html_a67bd29db07c711b0fb11ff1c324ebb60"><div class="ttname"><a href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a></div><div class="ttdeci">#define V8_UNLIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00649">v8config.h:649</a></div></div>
 <div class="ttc" id="avalue-mirror_8cc_html_a1ca88ee8dc0e8e51d60cf01ab8e8702a"><div class="ttname"><a href="value-mirror_8cc.html#a1ca88ee8dc0e8e51d60cf01ab8e8702a">value</a></div><div class="ttdeci">std::unique_ptr&lt; ValueMirror &gt; value</div><div class="ttdef"><b>Definition</b> <a href="value-mirror_8cc_source.html#l00950">value-mirror.cc:950</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:33 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="local-heap_8h.html">local-heap.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:41 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

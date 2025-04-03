@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/wasm/interpreter/wasm-interpreter-simd.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/wasm/interpreter/wasm-interpreter-simd.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('wasm-interpreter-simd_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2b581e8501b9ee14adb2dc81ebf46f49.html">wasm</a></li><li class="navelem"><a class="el" href="dir_a862c7b2610aec3798f9919b88c5b5ec.html">interpreter</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">wasm-interpreter-simd.cc</div></div>
 </div><!--header-->
@@ -444,7 +452,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="keywordflow">return</span> opcode &lt;= 0xfd113;</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <span class="comment">// Handle relaxed SIMD opcodes (in [0xfd100, 0xfd1ff]).</span></div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opcode &gt;= 0xfd200 || kIsReservedSimdOpcode[opcode &amp; 0xff]) {</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <a class="code hl_define" href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;Unknown or unimplemented opcode #%d:%s&quot;</span>, code-&gt;start[<a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>],</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;Unknown or unimplemented opcode #%d:%s&quot;</span>, code-&gt;start[<a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>],</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>          <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmOpcodes.html#af1c95490c43c5d39ff2bd108d0da549c">WasmOpcodes::OpcodeName</a>(<span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespacev8_1_1internal_1_1wasm.html#a737911f89bb20433e3eb3d67fac6be64">WasmOpcode</a><span class="keyword">&gt;</span>(code-&gt;start[<a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>])));</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#acdec713c25068019f935e35976f5b666">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>  } <span class="keywordflow">else</span> {</div>
@@ -467,7 +475,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="adecoder_8h_html"><div class="ttname"><a href="decoder_8h.html">decoder.h</a></div></div>
 <div class="ttc" id="aexperimental-interpreter_8cc_html_ac8c81e61335635fa4709d82412b31f06"><div class="ttname"><a href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a></div><div class="ttdeci">int pc</div><div class="ttdef"><b>Definition</b> <a href="experimental-interpreter_8cc_source.html#l00554">experimental-interpreter.cc:554</a></div></div>
 <div class="ttc" id="afunction-body-decoder-impl_8h_html"><div class="ttname"><a href="function-body-decoder-impl_8h.html">function-body-decoder-impl.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00047">logging.h:47</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_1_1turboshaft_html_af12601237178ff406a2239683ebd71f4"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#af12601237178ff406a2239683ebd71f4">v8::internal::compiler::turboshaft::Simd128</a></div><div class="ttdeci">WordWithBits&lt; 128 &gt; Simd128</div><div class="ttdef"><b>Definition</b> <a href="index_8h_source.html#l00234">index.h:234</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1wasm_html_a5fa4dc062a23b402104dd47efeca93d8"><div class="ttname"><a href="namespacev8_1_1internal_1_1wasm.html#a5fa4dc062a23b402104dd47efeca93d8">v8::internal::wasm::pc_t</a></div><div class="ttdeci">size_t pc_t</div><div class="ttdef"><b>Definition</b> <a href="wasm-interpreter_8h_source.html#l00072">wasm-interpreter.h:72</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1wasm_html_a737911f89bb20433e3eb3d67fac6be64"><div class="ttname"><a href="namespacev8_1_1internal_1_1wasm.html#a737911f89bb20433e3eb3d67fac6be64">v8::internal::wasm::WasmOpcode</a></div><div class="ttdeci">WasmOpcode</div><div class="ttdef"><b>Definition</b> <a href="wasm-opcodes_8h_source.html#l00913">wasm-opcodes.h:913</a></div></div>
@@ -477,6 +484,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_acdec713c25068019f935e35976f5b666"><div class="ttname"><a href="namespacev8_1_1internal.html#acdec713c25068019f935e35976f5b666">v8::internal::UNREACHABLE</a></div><div class="ttdeci">UNREACHABLE()</div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="anamespacewasm_html"><div class="ttname"><a href="namespacewasm.html">wasm</a></div><div class="ttdef"><b>Definition</b> <a href="c-api_8cc_source.html#l00090">c-api.cc:90</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00047">logging.h:47</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1wasm_1_1Decoder_1_1NoValidationTag_html"><div class="ttname"><a href="structv8_1_1internal_1_1wasm_1_1Decoder_1_1NoValidationTag.html">v8::internal::wasm::Decoder::NoValidationTag</a></div><div class="ttdef"><b>Definition</b> <a href="decoder_8h_source.html#l00091">decoder.h:91</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1wasm_1_1InterpreterCode_html"><div class="ttname"><a href="structv8_1_1internal_1_1wasm_1_1InterpreterCode.html">v8::internal::wasm::InterpreterCode</a></div><div class="ttdef"><b>Definition</b> <a href="wasm-interpreter_8h_source.html#l00081">wasm-interpreter.h:81</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1wasm_1_1MemoryAccessImmediate_html"><div class="ttname"><a href="structv8_1_1internal_1_1wasm_1_1MemoryAccessImmediate.html">v8::internal::wasm::MemoryAccessImmediate</a></div><div class="ttdef"><b>Definition</b> <a href="function-body-decoder-impl_8h_source.html#l00832">function-body-decoder-impl.h:832</a></div></div>
@@ -498,10 +506,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="awasm-interpreter_8h_html"><div class="ttname"><a href="wasm-interpreter_8h.html">wasm-interpreter.h</a></div></div>
 <div class="ttc" id="awasm-opcodes-inl_8h_html"><div class="ttname"><a href="wasm-opcodes-inl_8h.html">wasm-opcodes-inl.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:04 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2b581e8501b9ee14adb2dc81ebf46f49.html">wasm</a></li><li class="navelem"><a class="el" href="dir_a862c7b2610aec3798f9919b88c5b5ec.html">interpreter</a></li><li class="navelem"><a class="el" href="wasm-interpreter-simd_8cc.html">wasm-interpreter-simd.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:18 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

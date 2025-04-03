@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/utils/detachable-vector.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/utils/detachable-vector.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('detachable-vector_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">detachable-vector.h</div></div>
 </div><!--header-->
@@ -105,14 +113,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8.html">v8</a> {</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">internal</a> {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DetachableVectorBase.html">   18</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1DetachableVectorBase.html">DetachableVectorBase</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DetachableVectorBase.html">   18</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1DetachableVectorBase.html">DetachableVectorBase</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="comment">// Clear our reference to the backing store. Does not delete it!</span></div>
 <div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
@@ -176,7 +184,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="foldopen" id="foldopen00072" data-start="{" data-end="}">
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DetachableVector.html#a957f0ef5a66f9f919c9e30e63f7c9d4b">   72</a></span>  T&amp; <a class="code hl_function" href="classv8_1_1internal_1_1DetachableVector.html#a957f0ef5a66f9f919c9e30e63f7c9d4b">at</a>(<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1DetachableVectorBase.html#ad26d69ca039f13303067eab6be0f2ece">size_</a>);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1DetachableVectorBase.html#ad26d69ca039f13303067eab6be0f2ece">size_</a>);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1DetachableVector.html#a02e22a8adac433fcb3b116d544da4982">data</a>()[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>];</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
 </div>
@@ -197,7 +205,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="foldopen" id="foldopen00089" data-start="{" data-end="}">
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DetachableVector.html#a8433867def47de9a1095a8d220c8e9a8">   89</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1DetachableVector.html#a8433867def47de9a1095a8d220c8e9a8">Resize</a>(<span class="keywordtype">size_t</span> new_capacity) {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1DetachableVectorBase.html#ad26d69ca039f13303067eab6be0f2ece">size_</a>, new_capacity);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1DetachableVectorBase.html#ad26d69ca039f13303067eab6be0f2ece">size_</a>, new_capacity);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    T* new_data_ = <span class="keyword">new</span> T[new_capacity];</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    std::copy(<a class="code hl_function" href="classv8_1_1internal_1_1DetachableVector.html#a02e22a8adac433fcb3b116d544da4982">data</a>(), <a class="code hl_function" href="classv8_1_1internal_1_1DetachableVector.html#a02e22a8adac433fcb3b116d544da4982">data</a>() + <a class="code hl_variable" href="classv8_1_1internal_1_1DetachableVectorBase.html#ad26d69ca039f13303067eab6be0f2ece">size_</a>, new_data_);</div>
@@ -240,20 +248,23 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1DetachableVector_html_a957f0ef5a66f9f919c9e30e63f7c9d4b"><div class="ttname"><a href="classv8_1_1internal_1_1DetachableVector.html#a957f0ef5a66f9f919c9e30e63f7c9d4b">v8::internal::DetachableVector::at</a></div><div class="ttdeci">T &amp; at(size_t i) const</div><div class="ttdef"><b>Definition</b> <a href="#l00072">detachable-vector.h:72</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1DetachableVector_html_acbc716ab4164af6b01042c2ff03b9382"><div class="ttname"><a href="classv8_1_1internal_1_1DetachableVector.html#acbc716ab4164af6b01042c2ff03b9382">v8::internal::DetachableVector::back</a></div><div class="ttdeci">T &amp; back() const</div><div class="ttdef"><b>Definition</b> <a href="#l00076">detachable-vector.h:76</a></div></div>
 <div class="ttc" id="acodegen_2assembler_8cc_html_a50218915641ec8f39877c2565e95a604"><div class="ttname"><a href="codegen_2assembler_8cc.html#a50218915641ec8f39877c2565e95a604">size_</a></div><div class="ttdeci">const int size_</div><div class="ttdef"><b>Definition</b> <a href="codegen_2assembler_8cc_source.html#l00132">assembler.cc:132</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ac1a33b5fd9af1653d346746cdb5c1ac0"><div class="ttname"><a href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">v8::internal::value</a></div><div class="ttdeci">return value</div><div class="ttdef"><b>Definition</b> <a href="map-inl_8h_source.html#l00870">map-inl.h:870</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:01 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li><li class="navelem"><a class="el" href="detachable-vector_8h.html">detachable-vector.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:15 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

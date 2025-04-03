@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/compiler/backend/move-optimizer.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/compiler/backend/move-optimizer.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('move-optimizer_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="dir_ea3a8a4e4b987044b4a5aa16ea5873dc.html">backend</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">move-optimizer.cc</div></div>
 </div><!--header-->
@@ -176,7 +184,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a> = -1;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <span class="keywordtype">int</span> aliases =</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>          config-&gt;GetAliases(rep, loc.register_code(), other_rep1, &amp;base);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(aliases &gt; 0 || (aliases == 0 &amp;&amp; base == -1));</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(aliases &gt; 0 || (aliases == 0 &amp;&amp; base == -1));</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <span class="keywordflow">while</span> (aliases--) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span> (Contains(AllocatedOperand(<a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1LocationOperand.html#af9e0a334eaf58a05f9ea5b7139221140aafe479edbb7a04d078220746abc95b19">LocationOperand::REGISTER</a>, other_rep1,</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                                      base + aliases))) {</div>
@@ -184,7 +192,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      }</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      aliases = config-&gt;GetAliases(rep, loc.register_code(), other_rep2, &amp;base);</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(aliases &gt; 0 || (aliases == 0 &amp;&amp; base == -1));</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(aliases &gt; 0 || (aliases == 0 &amp;&amp; base == -1));</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      <span class="keywordflow">while</span> (aliases--) {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">if</span> (Contains(AllocatedOperand(<a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1LocationOperand.html#af9e0a334eaf58a05f9ea5b7139221140aafe479edbb7a04d078220746abc95b19">LocationOperand::REGISTER</a>, other_rep2,</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                                      base + aliases))) {</div>
@@ -267,7 +275,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ParallelMove.html">ParallelMove</a>* moves = instruction-&gt;parallel_moves()[0];</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="keywordflow">if</span> (moves == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(instruction-&gt;parallel_moves()[1] == <span class="keyword">nullptr</span> ||</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(instruction-&gt;parallel_moves()[1] == <span class="keyword">nullptr</span> ||</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>         instruction-&gt;parallel_moves()[1]-&gt;empty());</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  OperandSet outputs(&amp;<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html#ac053f3960b0b21ed7cf8dd9465dc8cd9">operand_buffer1</a>);</div>
@@ -391,7 +399,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>      to-&gt;GetOrCreateParallelMove(<a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1Instruction.html#ac16ebb6b4b65e5787eebc6ddeb3ed53aa8c9ab8994753986fef8c266fa05355cd">Instruction::GapPosition::START</a>, <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html#aa864edefed6012aa728c68f299a919b1">code_zone</a>());</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html#a39b04fa555bc623052988867960cd761">CompressMoves</a>(&amp;to_move, dest);</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(dest-&gt;empty());</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(dest-&gt;empty());</div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html">MoveOperands</a>* <a class="code hl_variable" href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a> : to_move) {</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>    dest-&gt;push_back(<a class="code hl_variable" href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a>);</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  }</div>
@@ -403,7 +411,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  <span class="keywordflow">if</span> (right == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <a class="code hl_class" href="classv8_1_1internal_1_1ZoneVector.html">MoveOpVector</a>&amp; eliminated = <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html#a412ea56f9fc40327e05aea21f33285a3">local_vector</a>();</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(eliminated.<a class="code hl_function" href="classv8_1_1internal_1_1ZoneVector.html#a40b4c6f563e6b4253b77a7351e3c88b2">empty</a>());</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(eliminated.<a class="code hl_function" href="classv8_1_1internal_1_1ZoneVector.html#a40b4c6f563e6b4253b77a7351e3c88b2">empty</a>());</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  <span class="keywordflow">if</span> (!left-&gt;empty()) {</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>    <span class="comment">// Modify the right moves in place and collect moves that will be killed by</span></div>
@@ -425,7 +433,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  }</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  <span class="comment">// Nuke right.</span></div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  right-&gt;clear();</div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(eliminated.<a class="code hl_function" href="classv8_1_1internal_1_1ZoneVector.html#a40b4c6f563e6b4253b77a7351e3c88b2">empty</a>());</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(eliminated.<a class="code hl_function" href="classv8_1_1internal_1_1ZoneVector.html#a40b4c6f563e6b4253b77a7351e3c88b2">empty</a>());</div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>}</div>
 </div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
@@ -433,7 +441,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html#a036465b10bbbac7957100e3c0fb95022">  326</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html#a036465b10bbbac7957100e3c0fb95022">MoveOptimizer::CompressGaps</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Instruction.html">Instruction</a>* instruction) {</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  <span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = FindFirstNonEmptySlot(instruction);</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>  <span class="keywordtype">bool</span> has_moves = <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt;= <a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1Instruction.html#ac16ebb6b4b65e5787eebc6ddeb3ed53aa11e45069c25ab5b77d5c250d7bae847a">Instruction::LAST_GAP_POSITION</a>;</div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(has_moves);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(has_moves);</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  <span class="keywordflow">if</span> (<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> == <a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1Instruction.html#ac16ebb6b4b65e5787eebc6ddeb3ed53aa11e45069c25ab5b77d5c250d7bae847a">Instruction::LAST_GAP_POSITION</a>) {</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    std::swap(instruction-&gt;parallel_moves()[<a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1Instruction.html#ac16ebb6b4b65e5787eebc6ddeb3ed53aa9021cbe7ad6b8f9c056ab8bc75237c58">Instruction::FIRST_GAP_POSITION</a>],</div>
@@ -450,10 +458,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>      instruction-&gt;parallel_moves()[<a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1Instruction.html#ac16ebb6b4b65e5787eebc6ddeb3ed53aa9021cbe7ad6b8f9c056ab8bc75237c58">Instruction::FIRST_GAP_POSITION</a>];</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ParallelMove.html">ParallelMove</a>* last =</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>      instruction-&gt;parallel_moves()[<a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1Instruction.html#ac16ebb6b4b65e5787eebc6ddeb3ed53aa11e45069c25ab5b77d5c250d7bae847a">Instruction::LAST_GAP_POSITION</a>];</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(first);</div>
-<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(last);</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(first);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(last);</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!has_moves ||</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!has_moves ||</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>         (first != <span class="keyword">nullptr</span> &amp;&amp; (last == <span class="keyword">nullptr</span> || last-&gt;empty())));</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>}</div>
 </div>
@@ -488,7 +496,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
 <div class="foldopen" id="foldopen00377" data-start="{" data-end="}">
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html#a3f0da1309a02af9ac1d82b44afef7832">  377</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html#a3f0da1309a02af9ac1d82b44afef7832">MoveOptimizer::OptimizeMerge</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1InstructionBlock.html">InstructionBlock</a>* block) {</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(1, block-&gt;PredecessorCount());</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(1, block-&gt;PredecessorCount());</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>  <span class="comment">// Ensure that the last instruction in all incoming blocks don&#39;t contain</span></div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>  <span class="comment">// things that would prevent moving gap moves across them.</span></div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>  <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1RpoNumber.html">RpoNumber</a>&amp; pred_index : block-&gt;predecessors()) {</div>
@@ -548,7 +556,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>    OperandSet conflicting_srcs(&amp;<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html#ac053f3960b0b21ed7cf8dd9465dc8cd9">operand_buffer1</a>);</div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> iter = move_map.<a class="code hl_function" href="classv8_1_1base_1_1SmallMap.html#a1fb7f96abbfca75ef9c140f58d8c325d">begin</a>(); iter != move_map.<a class="code hl_function" href="classv8_1_1base_1_1SmallMap.html#aaf738e2e5eb39662090f9318f33ff375">end</a>();) {</div>
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>      <span class="keyword">auto</span> [move, <a class="code hl_variable" href="debug-coverage_8cc.html#a86988a65e0d3ece7990c032c159786d6">count</a>] = *iter;</div>
-<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>      <span class="keywordflow">if</span> (count != block-&gt;PredecessorCount()) {</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>      <span class="keywordflow">if</span> (<a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> != block-&gt;PredecessorCount()) {</div>
 <div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>        <span class="comment">// Not all the moves in all the gaps are the same. Maybe some are. If</span></div>
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>        <span class="comment">// there are such moves, we could move them, but the destination of the</span></div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>        <span class="comment">// moves staying behind can&#39;t appear as a source of a common move,</span></div>
@@ -567,8 +575,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>      changed = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>      <span class="keywordflow">for</span> (<span class="keyword">auto</span> iter = move_map.<a class="code hl_function" href="classv8_1_1base_1_1SmallMap.html#a1fb7f96abbfca75ef9c140f58d8c325d">begin</a>(); iter != move_map.<a class="code hl_function" href="classv8_1_1base_1_1SmallMap.html#aaf738e2e5eb39662090f9318f33ff375">end</a>();) {</div>
 <div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>        <span class="keyword">auto</span> [move, <a class="code hl_variable" href="debug-coverage_8cc.html#a86988a65e0d3ece7990c032c159786d6">count</a>] = *iter;</div>
-<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>        <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(block-&gt;PredecessorCount(), count);</div>
-<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>        <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(count);</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(block-&gt;PredecessorCount(), <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>);</div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>        <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>);</div>
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>        <span class="keywordflow">if</span> (conflicting_srcs.ContainsOpOrAlias(move.source)) {</div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>          conflicting_srcs.InsertOp(move.destination);</div>
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>          iter = move_map.<a class="code hl_function" href="classv8_1_1base_1_1SmallMap.html#a9a517e59d13bcb358916e8a69d72cc9d">erase</a>(iter);</div>
@@ -582,7 +590,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span> </div>
 <div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>  <span class="keywordflow">if</span> (move_map.<a class="code hl_function" href="classv8_1_1base_1_1SmallMap.html#ae31275fe9b92ec355548b740cd1421c6">empty</a>()) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span> </div>
-<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a0a0af5b095a4cca0e42ca82256441999">instr</a>);</div>
+<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a0a0af5b095a4cca0e42ca82256441999">instr</a>);</div>
 <div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>  <span class="keywordtype">bool</span> gap_initialized = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="jump-threading_8cc.html#a0a0af5b095a4cca0e42ca82256441999">instr</a>-&gt;parallel_moves()[0] != <span class="keyword">nullptr</span> &amp;&amp;</div>
 <div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span>      !<a class="code hl_variable" href="jump-threading_8cc.html#a0a0af5b095a4cca0e42ca82256441999">instr</a>-&gt;parallel_moves()[0]-&gt;empty()) {</div>
@@ -665,7 +673,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00551" data-start="{" data-end="}">
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html#a38cce70385ca2fbaa0c2f18fd94ba624">  551</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html#a38cce70385ca2fbaa0c2f18fd94ba624">MoveOptimizer::FinalizeMoves</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Instruction.html">Instruction</a>* <a class="code hl_variable" href="jump-threading_8cc.html#a0a0af5b095a4cca0e42ca82256441999">instr</a>) {</div>
 <div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>  <a class="code hl_class" href="classv8_1_1internal_1_1ZoneVector.html">MoveOpVector</a>&amp; loads = <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOptimizer.html#a412ea56f9fc40327e05aea21f33285a3">local_vector</a>();</div>
-<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(loads.<a class="code hl_function" href="classv8_1_1internal_1_1ZoneVector.html#a40b4c6f563e6b4253b77a7351e3c88b2">empty</a>());</div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(loads.<a class="code hl_function" href="classv8_1_1internal_1_1ZoneVector.html#a40b4c6f563e6b4253b77a7351e3c88b2">empty</a>());</div>
 <div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span> </div>
 <div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ParallelMove.html">ParallelMove</a>* parallel_moves = <a class="code hl_variable" href="jump-threading_8cc.html#a0a0af5b095a4cca0e42ca82256441999">instr</a>-&gt;parallel_moves()[0];</div>
 <div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>  <span class="keywordflow">if</span> (parallel_moves == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
@@ -777,11 +785,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a115c48491bb37004f5ac67eb46ac2c23"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a></div><div class="ttdeci">turboshaft::OpIndex base</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00070">instruction-selector-ia32.cc:70</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_ae4dfd7b0d66121016d6466d2ff10e8ba"><div class="ttname"><a href="js-call-reducer_8cc.html#ae4dfd7b0d66121016d6466d2ff10e8ba">_</a></div><div class="ttdeci">#define _</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l00054">js-call-reducer.cc:54</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_a0a0af5b095a4cca0e42ca82256441999"><div class="ttname"><a href="jump-threading_8cc.html#a0a0af5b095a4cca0e42ca82256441999">instr</a></div><div class="ttdeci">Instruction * instr</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00063">jump-threading.cc:63</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="amacros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="amove-optimizer_8cc_html_a7d29d08d620eab44f81de00093b866e0"><div class="ttname"><a href="move-optimizer_8cc.html#a7d29d08d620eab44f81de00093b866e0">set_</a></div><div class="ttdeci">ZoneVector&lt; InstructionOperand &gt; * set_</div><div class="ttdef"><b>Definition</b> <a href="#l00107">move-optimizer.cc:107</a></div></div>
 <div class="ttc" id="amove-optimizer_8cc_html_ad74e9352231afe4216ef03a069ac4185"><div class="ttname"><a href="move-optimizer_8cc.html#ad74e9352231afe4216ef03a069ac4185">fp_reps_</a></div><div class="ttdeci">int fp_reps_</div><div class="ttdef"><b>Definition</b> <a href="#l00108">move-optimizer.cc:108</a></div></div>
 <div class="ttc" id="amove-optimizer_8cc_html_adb1a4461ad083604a932b7eeba4780de"><div class="ttname"><a href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a></div><div class="ttdeci">InstructionOperand destination</div><div class="ttdef"><b>Definition</b> <a href="#l00017">move-optimizer.cc:17</a></div></div>
@@ -809,11 +812,20 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="anamespacev8_html_ac650e19aff88fabc2d187261fd631a99"><div class="ttname"><a href="namespacev8.html#ac650e19aff88fabc2d187261fd631a99">v8::Dummy</a></div><div class="ttdeci">void Dummy(char *arg)</div><div class="ttdef"><b>Definition</b> <a href="d8_8cc_source.html#l04423">d8.cc:4423</a></div></div>
 <div class="ttc" id="aregister-configuration_8h_html"><div class="ttname"><a href="register-configuration_8h.html">register-configuration.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00281">macros.h:281</a></div></div>
+<div class="ttc" id="astructv8_1_1internal_1_1count_html"><div class="ttname"><a href="structv8_1_1internal_1_1count.html">v8::internal::count</a></div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00567">v8-fast-api-calls.h:567</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:17:08 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="dir_ea3a8a4e4b987044b4a5aa16ea5873dc.html">backend</a></li><li class="navelem"><a class="el" href="move-optimizer_8cc.html">move-optimizer.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:53:12 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

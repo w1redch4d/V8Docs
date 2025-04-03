@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/objects/deoptimization-data.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/objects/deoptimization-data.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('deoptimization-data_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">deoptimization-data.cc</div></div>
 </div><!--header-->
@@ -191,7 +199,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#ifdef DEBUG</span></div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">void</span> DeoptimizationData::Verify(<a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;BytecodeArray&gt;</a> bytecode)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#ifdef V8_USE_ZLIB</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  }</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">#endif  </span><span class="comment">// V8_USE_ZLIB</span></div>
@@ -201,7 +209,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">int</span> idx = TranslationIndex(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>).value();</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    DeoptimizationFrameTranslation::Iterator iterator(FrameTranslation(), idx);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keyword">auto</span> [frame_count, jsframe_count] = iterator.EnterBeginOpcode();</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(frame_count, jsframe_count);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(frame_count, jsframe_count);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    BytecodeOffset bailout = <a class="code hl_function" href="classv8_1_1internal_1_1BytecodeOffset.html#a36a2eb998e6f5c34e063f2eada76538a">BytecodeOffset::None</a>();</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">bool</span> first_frame = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordflow">while</span> (frame_count &gt; 0) {</div>
@@ -218,8 +226,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      }</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      iterator.SkipOperands(<a class="code hl_function" href="namespacev8_1_1internal.html#a4d1013079e1cf0e846db134873b7ce66">TranslationOpcodeOperandCount</a>(frame));</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    }</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(frame_count, 0);</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(jsframe_count, 0);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(frame_count, 0);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(jsframe_count, 0);</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="comment">// Check the bytecode offset exists in the bytecode array</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordflow">if</span> (bailout != <a class="code hl_function" href="classv8_1_1internal_1_1BytecodeOffset.html#a36a2eb998e6f5c34e063f2eada76538a">BytecodeOffset::None</a>()) {</div>
@@ -227,11 +235,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      interpreter::BytecodeArrayIterator bytecode_iterator(bytecode);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <span class="keywordflow">while</span> (bytecode_iterator.current_offset() &lt; bailout.ToInt()) {</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>        bytecode_iterator.Advance();</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(bytecode_iterator.current_offset(), bailout.ToInt());</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(bytecode_iterator.current_offset(), bailout.ToInt());</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      }</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(bailout.ToInt(), 0);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(bailout.ToInt(), bytecode-&gt;length());</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(bailout.ToInt(), 0);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(bailout.ToInt(), bytecode-&gt;length());</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="preprocessor">#endif  </span><span class="comment">// ENABLE_SLOW_DCHECKS</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  }</div>
@@ -299,7 +307,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <a class="code hl_class" href="classv8_1_1base_1_1Vector.html">base::Vector&lt;const uint8_t&gt;</a> buffer, <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>)</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    : <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>(buffer), <a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>) {</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">#ifdef V8_USE_ZLIB</span></div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    const int size =</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        base::ReadUnalignedValue&lt;uint32_t&gt;(reinterpret_cast&lt;Address&gt;(</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            &amp;buffer_[DeoptimizationFrameTranslation::kUncompressedSizeOffset]));</div>
@@ -321,11 +329,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    return;</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  }</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>#endif  <span class="comment">// V8_USE_ZLIB</span></div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> &gt;= 0 &amp;&amp; <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> &lt; <a class="code hl_variable" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a445de7b505d187b8ee72d08b637782af">buffer_</a>.<a class="code hl_function" href="classv8_1_1base_1_1Vector.html#a1eb4ed5d322a219428bdb9f9a2cb6708">length</a>());</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> &gt;= 0 &amp;&amp; <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> &lt; <a class="code hl_variable" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a445de7b505d187b8ee72d08b637782af">buffer_</a>.<a class="code hl_function" href="classv8_1_1base_1_1Vector.html#a1eb4ed5d322a219428bdb9f9a2cb6708">length</a>());</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <span class="comment">// Starting at a location other than a BEGIN would make</span></div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="comment">// MATCH_PREVIOUS_TRANSLATION instructions not work.</span></div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      <a class="code hl_function" href="namespacev8_1_1internal.html#a21e0674288cca53956238c1f9902cf93">TranslationOpcodeIsBegin</a>(<span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a445de7b505d187b8ee72d08b637782af">buffer_</a>[<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>])));</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>}</div>
 </div>
@@ -339,15 +347,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
 <div class="foldopen" id="foldopen00228" data-start="{" data-end="}">
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a28c618cae6ac5ce2c36df0774cea6c16">  228</a></span>int32_t <a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a28c618cae6ac5ce2c36df0774cea6c16">DeoptTranslationIterator::NextOperand</a>() {</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <span class="keywordflow">return</span> uncompressed_contents_[<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>++];</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (remaining_ops_to_use_from_previous_translation_) {</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    int32_t value = <a class="code hl_function" href="namespacev8_1_1base.html#afaf4fbb628ec20624f10b6873b770de1">base::VLQDecode</a>(<a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.begin(), &amp;previous_index_);</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(previous_index_, <a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(previous_index_, <a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>);</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">value</a>;</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    int32_t value = <a class="code hl_function" href="namespacev8_1_1base.html#afaf4fbb628ec20624f10b6873b770de1">base::VLQDecode</a>(<a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.begin(), &amp;<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>);</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>, <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.length());</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>, <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.length());</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">value</a>;</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  }</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>}</div>
@@ -357,9 +365,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a1c2b87d0acb7775721372c1ba92d8770">  242</a></span><a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> <a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a1c2b87d0acb7775721372c1ba92d8770">DeoptTranslationIterator::NextOpcodeAtPreviousIndex</a>() {</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> opcode =</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>[previous_index_++]);</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(opcode), <a class="code hl_variable" href="namespacev8_1_1internal.html#a6a677e61bc3d3f67b0284aa3864632f2">kNumTranslationOpcodes</a>);</div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(opcode, TranslationOpcode::MATCH_PREVIOUS_TRANSLATION);</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(previous_index_, <a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(opcode), <a class="code hl_variable" href="namespacev8_1_1internal.html#a6a677e61bc3d3f67b0284aa3864632f2">kNumTranslationOpcodes</a>);</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(opcode, TranslationOpcode::MATCH_PREVIOUS_TRANSLATION);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(previous_index_, <a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>);</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  <span class="keywordflow">return</span> opcode;</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>}</div>
 </div>
@@ -367,20 +375,20 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00251" data-start="{" data-end="}">
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#ab0569cd92bbee3dcf651936a61e33b68">  251</a></span>uint32_t <a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#ab0569cd92bbee3dcf651936a61e33b68">DeoptTranslationIterator::NextUnsignedOperandAtPreviousIndex</a>() {</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  uint32_t value = <a class="code hl_function" href="namespacev8_1_1base.html#a905798632d5e921ed209f7d72b34d144">base::VLQDecodeUnsigned</a>(<a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.begin(), &amp;previous_index_);</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(previous_index_, <a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(previous_index_, <a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>);</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">value</a>;</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>}</div>
 </div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
 <div class="foldopen" id="foldopen00257" data-start="{" data-end="}">
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a5121398bf1290509b9d14f72288c1f9d">  257</a></span>uint32_t <a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a5121398bf1290509b9d14f72288c1f9d">DeoptTranslationIterator::NextOperandUnsigned</a>() {</div>
-<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keywordflow">return</span> uncompressed_contents_[<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>++];</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (remaining_ops_to_use_from_previous_translation_) {</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordflow">return</span> NextUnsignedOperandAtPreviousIndex();</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    uint32_t value = <a class="code hl_function" href="namespacev8_1_1base.html#a905798632d5e921ed209f7d72b34d144">base::VLQDecodeUnsigned</a>(<a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.begin(), &amp;<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>);</div>
-<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>, <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.length());</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>, <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.length());</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">value</a>;</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  }</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>}</div>
@@ -388,7 +396,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
 <div class="foldopen" id="foldopen00269" data-start="{" data-end="}">
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a8b98657c4b31fbde341075323e47d020">  269</a></span><a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> <a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a8b98657c4b31fbde341075323e47d020">DeoptTranslationIterator::NextOpcode</a>() {</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a><span class="keyword">&gt;</span>(NextOperandUnsigned());</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  }</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  <span class="keywordflow">if</span> (remaining_ops_to_use_from_previous_translation_) {</div>
@@ -397,7 +405,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  <span class="keywordflow">if</span> (remaining_ops_to_use_from_previous_translation_) {</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="keywordflow">return</span> NextOpcodeAtPreviousIndex();</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  }</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <a class="code hl_define" href="logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a>(<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>, <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.length());</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a>(<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>, <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.length());</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  uint8_t opcode_byte = <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>[<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>++];</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  <span class="comment">// If the opcode byte is greater than any valid opcode, then the opcode is</span></div>
@@ -416,8 +424,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  }</div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> opcode = <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a><span class="keyword">&gt;</span>(opcode_byte);</div>
-<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>, <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.length());</div>
-<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(opcode), <a class="code hl_variable" href="namespacev8_1_1internal.html#a6a677e61bc3d3f67b0284aa3864632f2">kNumTranslationOpcodes</a>);</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>, <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.length());</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(opcode), <a class="code hl_variable" href="namespacev8_1_1internal.html#a6a677e61bc3d3f67b0284aa3864632f2">kNumTranslationOpcodes</a>);</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacev8_1_1internal.html#a21e0674288cca53956238c1f9902cf93">TranslationOpcodeIsBegin</a>(opcode)) {</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keywordtype">int</span> temp_index = <a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>;</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="comment">// The first argument for BEGIN is the distance, in bytes, since the</span></div>
@@ -427,11 +435,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        <a class="code hl_function" href="namespacev8_1_1base.html#a905798632d5e921ed209f7d72b34d144">base::VLQDecodeUnsigned</a>(<a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.begin(), &amp;temp_index);</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>    <span class="keywordflow">if</span> (lookback_distance) {</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>      previous_index_ = <a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a> - 1 - lookback_distance;</div>
-<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a21e0674288cca53956238c1f9902cf93">TranslationOpcodeIsBegin</a>(</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a21e0674288cca53956238c1f9902cf93">TranslationOpcodeIsBegin</a>(</div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>          <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>[previous_index_])));</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>      <span class="comment">// The previous BEGIN should specify zero as its lookback distance,</span></div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>      <span class="comment">// meaning it won&#39;t use MATCH_PREVIOUS_TRANSLATION.</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>[previous_index_ + 1], 0);</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>[previous_index_ + 1], 0);</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    }</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    ops_since_previous_index_was_updated_ = 1;</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (opcode == TranslationOpcode::MATCH_PREVIOUS_TRANSLATION) {</div>
@@ -451,8 +459,8 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00329" data-start="{" data-end="}">
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a1736aeaceea21a9e4583f3e3ee60535c">  329</a></span><a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a1736aeaceea21a9e4583f3e3ee60535c">DeoptTranslationIterator::EnterBeginOpcode</a>() {</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>  <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> opcode = NextOpcode();</div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a21e0674288cca53956238c1f9902cf93">TranslationOpcodeIsBegin</a>(opcode));</div>
-<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(opcode);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a21e0674288cca53956238c1f9902cf93">TranslationOpcodeIsBegin</a>(opcode));</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(opcode);</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>  NextOperand();  <span class="comment">// Skip lookback distance.</span></div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>  <span class="keywordtype">int</span> frame_count = NextOperand();</div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  <span class="keywordtype">int</span> jsframe_count = NextOperand();</div>
@@ -464,7 +472,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a838317d4b123ebe85c2dacc1c782d66e">  339</a></span><a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> <a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a838317d4b123ebe85c2dacc1c782d66e">DeoptTranslationIterator::SeekNextJSFrame</a>() {</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>  <span class="keywordflow">while</span> (HasNextOpcode()) {</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> opcode = NextOpcode();</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="namespacev8_1_1internal.html#a21e0674288cca53956238c1f9902cf93">TranslationOpcodeIsBegin</a>(opcode));</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="namespacev8_1_1internal.html#a21e0674288cca53956238c1f9902cf93">TranslationOpcodeIsBegin</a>(opcode));</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacev8_1_1internal.html#a818172cf25a6255fa082d7cb12bf28d5">IsTranslationJsFrameOpcode</a>(opcode)) {</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>      <span class="keywordflow">return</span> opcode;</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    } <span class="keywordflow">else</span> {</div>
@@ -480,7 +488,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#aa4f47d1e65ab85885be693166201e322">  353</a></span><a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> <a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#aa4f47d1e65ab85885be693166201e322">DeoptTranslationIterator::SeekNextFrame</a>() {</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  <span class="keywordflow">while</span> (HasNextOpcode()) {</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> opcode = NextOpcode();</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="namespacev8_1_1internal.html#a21e0674288cca53956238c1f9902cf93">TranslationOpcodeIsBegin</a>(opcode));</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="namespacev8_1_1internal.html#a21e0674288cca53956238c1f9902cf93">TranslationOpcodeIsBegin</a>(opcode));</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacev8_1_1internal.html#a0e4dac52e7b89542cf7bb61f3f4c934d">IsTranslationFrameOpcode</a>(opcode)) {</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>      <span class="keywordflow">return</span> opcode;</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    } <span class="keywordflow">else</span> {</div>
@@ -494,7 +502,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
 <div class="foldopen" id="foldopen00367" data-start="{" data-end="}">
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a574a92070bb8edbc607d2532d04ec5d1">  367</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a574a92070bb8edbc607d2532d04ec5d1">DeoptTranslationIterator::HasNextOpcode</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_ &lt; static_cast&lt;int&gt;</a>(uncompressed_contents_.size());</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a> &lt; <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>.length() ||</div>
@@ -506,7 +514,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00376" data-start="{" data-end="}">
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a8439797799c76d38f7df7b6e284d7d47">  376</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a8439797799c76d38f7df7b6e284d7d47">DeoptTranslationIterator::SkipOpcodeAndItsOperandsAtPreviousIndex</a>() {</div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>  <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> opcode = NextOpcodeAtPreviousIndex();</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> count = <a class="code hl_function" href="namespacev8_1_1internal.html#a4d1013079e1cf0e846db134873b7ce66">TranslationOpcodeOperandCount</a>(opcode); count != 0; --<a class="code hl_variable" href="debug-coverage_8cc.html#a86988a65e0d3ece7990c032c159786d6">count</a>) {</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> = <a class="code hl_function" href="namespacev8_1_1internal.html#a4d1013079e1cf0e846db134873b7ce66">TranslationOpcodeOperandCount</a>(opcode); <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> != 0; --<a class="code hl_variable" href="debug-coverage_8cc.html#a86988a65e0d3ece7990c032c159786d6">count</a>) {</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    NextUnsignedOperandAtPreviousIndex();</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>  }</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>}</div>
@@ -522,7 +530,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span> </div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DeoptimizationFrameTranslation_1_1Iterator.html">DeoptimizationFrameTranslation::Iterator</a> iterator(<span class="keyword">this</span>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>);</div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>  <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> opcode = iterator.NextOpcode();</div>
-<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a21e0674288cca53956238c1f9902cf93">TranslationOpcodeIsBegin</a>(opcode));</div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a21e0674288cca53956238c1f9902cf93">TranslationOpcodeIsBegin</a>(opcode));</div>
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>  os &lt;&lt; opcode &lt;&lt; <span class="stringliteral">&quot; &quot;</span>;</div>
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#aa0583a56e74fc370e3beb7c28b940650">DeoptimizationFrameTranslationPrintSingleOpcode</a>(</div>
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>      os, opcode, iterator, protected_literal_array, literal_array);</div>
@@ -592,15 +600,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="adeoptimization-data_8h_html"><div class="ttname"><a href="deoptimization-data_8h.html">deoptimization-data.h</a></div></div>
 <div class="ttc" id="aexperimental-interpreter_8cc_html_ac8c81e61335635fa4709d82412b31f06"><div class="ttname"><a href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a></div><div class="ttdeci">int pc</div><div class="ttdef"><b>Definition</b> <a href="experimental-interpreter_8cc_source.html#l00554">experimental-interpreter.cc:554</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a115c48491bb37004f5ac67eb46ac2c23"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a></div><div class="ttdeci">turboshaft::OpIndex base</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00070">instruction-selector-ia32.cc:70</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_a45a0717f39b7011dc823c1fe7b83e6fc"><div class="ttname"><a href="logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a></div><div class="ttdeci">#define CHECK_LT(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00486">logging.h:486</a></div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="amacros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a905798632d5e921ed209f7d72b34d144"><div class="ttname"><a href="namespacev8_1_1base.html#a905798632d5e921ed209f7d72b34d144">v8::base::VLQDecodeUnsigned</a></div><div class="ttdeci">uint32_t VLQDecodeUnsigned(GetNextFunction &amp;&amp;get_next)</div><div class="ttdef"><b>Definition</b> <a href="vlq_8h_source.html#l00080">vlq.h:80</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_afaf4fbb628ec20624f10b6873b770de1"><div class="ttname"><a href="namespacev8_1_1base.html#afaf4fbb628ec20624f10b6873b770de1">v8::base::VLQDecode</a></div><div class="ttdeci">int32_t VLQDecode(const uint8_t *data_start, int *index)</div><div class="ttdef"><b>Definition</b> <a href="vlq_8h_source.html#l00107">vlq.h:107</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_html_ae4485095ac326da984aa059bae76f724"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler.html#ae4485095ac326da984aa059bae76f724">v8::internal::compiler::NodeId</a></div><div class="ttdeci">uint32_t NodeId</div><div class="ttdef"><b>Definition</b> <a href="graph-reducer_8h_source.html#l00028">graph-reducer.h:28</a></div></div>
@@ -632,13 +631,27 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="ashared-function-info_8h_html"><div class="ttname"><a href="shared-function-info_8h.html">shared-function-info.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a45a0717f39b7011dc823c1fe7b83e6fc"><div class="ttname"><a href="src_2base_2logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a></div><div class="ttdeci">#define CHECK_LT(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00486">logging.h:486</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1DeoptimizationFrameTranslation_1_1FrameCount_html"><div class="ttname"><a href="structv8_1_1internal_1_1DeoptimizationFrameTranslation_1_1FrameCount.html">v8::internal::DeoptimizationFrameTranslation::FrameCount</a></div><div class="ttdef"><b>Definition</b> <a href="deoptimization-data_8h_source.html#l00179">deoptimization-data.h:179</a></div></div>
+<div class="ttc" id="astructv8_1_1internal_1_1count_html"><div class="ttname"><a href="structv8_1_1internal_1_1count.html">v8::internal::count</a></div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00567">v8-fast-api-calls.h:567</a></div></div>
 <div class="ttc" id="atranslated-state_8h_html"><div class="ttname"><a href="translated-state_8h.html">translated-state.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a67bd29db07c711b0fb11ff1c324ebb60"><div class="ttname"><a href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a></div><div class="ttdeci">#define V8_UNLIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00649">v8config.h:649</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:23 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li><li class="navelem"><a class="el" href="deoptimization-data_8cc.html">deoptimization-data.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:55:31 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

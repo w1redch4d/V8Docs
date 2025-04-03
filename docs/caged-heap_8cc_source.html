@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/cppgc/caged-heap.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/cppgc/caged-heap.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('caged-heap_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">caged-heap.cc</div></div>
 </div><!--header-->
@@ -98,30 +106,30 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Use of this source code is governed by a BSD-style license that can be</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// found in the LICENSE file.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;include/cppgc/internal/caged-heap.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="include_2cppgc_2internal_2caged-heap_8h.html">include/cppgc/internal/caged-heap.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;map&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="heap_2cppgc_2platform_8h.html">src/heap/cppgc/platform.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;v8config.h&quot;</span>  <span class="comment">// NOLINT(build/include_directory)</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="src_2heap_2cppgc_2platform_8h.html">src/heap/cppgc/platform.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="v8config_8h.html">v8config.h</a>&quot;</span>  <span class="comment">// NOLINT(build/include_directory)</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#if !defined(CPPGC_CAGED_HEAP)</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#error &quot;Must be compiled with caged heap enabled&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;include/cppgc/internal/api-constants.h&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;include/cppgc/internal/caged-heap-local-data.h&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;include/cppgc/member.h&quot;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;include/cppgc/platform.h&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="api-constants_8h.html">include/cppgc/internal/api-constants.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="caged-heap-local-data_8h.html">include/cppgc/internal/caged-heap-local-data.h</a>&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="member_8h.html">include/cppgc/member.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="include_2cppgc_2platform_8h.html">include/cppgc/platform.h</a>&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="bounded-page-allocator_8h.html">src/base/bounded-page-allocator.h</a>&quot;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="lazy-instance_8h.html">src/base/lazy-instance.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="base_2platform_2platform_8h.html">src/base/platform/platform.h</a>&quot;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="caged-heap_8h.html">src/heap/cppgc/caged-heap.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2platform_2platform_8h.html">src/base/platform/platform.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="src_2heap_2cppgc_2caged-heap_8h.html">src/heap/cppgc/caged-heap.h</a>&quot;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="heap_2cppgc_2globals_8h.html">src/heap/cppgc/globals.h</a>&quot;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="heap-base_8h.html">src/heap/cppgc/heap-base.h</a>&quot;</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="heap-page_8h.html">src/heap/cppgc/heap-page.h</a>&quot;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="member-storage_8h.html">src/heap/cppgc/member-storage.h</a>&quot;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="src_2heap_2cppgc_2member-storage_8h.html">src/heap/cppgc/member-storage.h</a>&quot;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecppgc.html">cppgc</a> {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">namespace </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">internal</a> {</div>
@@ -133,8 +141,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>VirtualMemory ReserveCagedHeap(PageAllocator&amp; platform_allocator) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0u, api_constants::kCagedHeapMaxReservationSize %</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>VirtualMemory ReserveCagedHeap(<a class="code hl_typedef" href="namespacecppgc.html#a59d5ddc0a3695ff60bd21c6d2ff7c612">PageAllocator</a>&amp; platform_allocator) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0u, api_constants::kCagedHeapMaxReservationSize %</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                    platform_allocator.AllocatePageSize());</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> kAllocationTries = 4;</div>
@@ -164,7 +172,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">size_t</span> kTryReserveAlignment =</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        api_constants::kCagedHeapReservationAlignment;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif  </span><span class="comment">// !defined(CPPGC_POINTER_COMPRESSION)</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span>* hint = <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="macros_8h.html#aa0de4a420e74c8df8076fc2aaf4af27a">RoundDown</a>(</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span>* hint = <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(<a class="code hl_function" href="src_2base_2macros_8h.html#aa0de4a420e74c8df8076fc2aaf4af27a">RoundDown</a>(</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(platform_allocator.GetRandomMmapAddr()),</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        kTryReserveAlignment));</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
@@ -180,7 +188,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">// static</span></div>
 <div class="foldopen" id="foldopen00086" data-start="{" data-end="}">
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1CagedHeap.html#a7a122e5b6dd5b05ea179323429ab2aa4">   86</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1CagedHeap.html#a7a122e5b6dd5b05ea179323429ab2aa4">CagedHeap::InitializeIfNeeded</a>(PageAllocator&amp; platform_allocator,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1CagedHeap.html#a7a122e5b6dd5b05ea179323429ab2aa4">   86</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1CagedHeap.html#a7a122e5b6dd5b05ea179323429ab2aa4">CagedHeap::InitializeIfNeeded</a>(<a class="code hl_class" href="classv8_1_1PageAllocator.html">PageAllocator</a>&amp; platform_allocator,</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>                                   <span class="keywordtype">size_t</span> desired_heap_size) {</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1base_1_1LeakyObject.html">v8::base::LeakyObject&lt;CagedHeap&gt;</a> caged_heap(platform_allocator,</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>                                                     desired_heap_size);</div>
@@ -190,13 +198,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">// static</span></div>
 <div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1CagedHeap.html#af6307cef0cf2e4881a841abdab6f31bf">   93</a></span><a class="code hl_class" href="classcppgc_1_1internal_1_1CagedHeap.html">CagedHeap</a>&amp; <a class="code hl_function" href="classcppgc_1_1internal_1_1CagedHeap.html#af6307cef0cf2e4881a841abdab6f31bf">CagedHeap::Instance</a>() {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="classcppgc_1_1internal_1_1CagedHeap.html#aa30a6d9e9e36dfe702b9f06fdcf5322e">instance_</a>);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="classcppgc_1_1internal_1_1CagedHeap.html#aa30a6d9e9e36dfe702b9f06fdcf5322e">instance_</a>);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <span class="keywordflow">return</span> *<a class="code hl_variable" href="classcppgc_1_1internal_1_1CagedHeap.html#aa30a6d9e9e36dfe702b9f06fdcf5322e">instance_</a>;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
 </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1CagedHeap.html#acb78ac029a94526b0203c7ad774b6515">   98</a></span><a class="code hl_function" href="classcppgc_1_1internal_1_1CagedHeap.html#a6e3631210cecdc8d79a947ea5d8617fa">CagedHeap::CagedHeap</a>(PageAllocator&amp; platform_allocator,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1CagedHeap.html#acb78ac029a94526b0203c7ad774b6515">   98</a></span><a class="code hl_function" href="classcppgc_1_1internal_1_1CagedHeap.html#a6e3631210cecdc8d79a947ea5d8617fa">CagedHeap::CagedHeap</a>(<a class="code hl_class" href="classv8_1_1PageAllocator.html">PageAllocator</a>&amp; platform_allocator,</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                     <span class="keywordtype">size_t</span> desired_heap_size)</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    : reserved_area_(ReserveCagedHeap(platform_allocator)) {</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <span class="keyword">using </span>CagedAddress = <a class="code hl_typedef" href="classv8_1_1base_1_1BoundedPageAllocator.html#a2878ffce6a3901b1af8696368e33d58d">CagedHeap::AllocatorType::Address</a>;</div>
@@ -217,7 +225,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#if defined(CPPGC_POINTER_COMPRESSION)</span></div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="comment">// With pointer compression only single heap per thread is allowed.</span></div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!CageBaseGlobal::IsSet());</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!CageBaseGlobal::IsSet());</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  CageBaseGlobalUpdater::UpdateCageBase(CagedHeapBase::g_heap_base_);</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#endif  </span><span class="comment">// defined(CPPGC_POINTER_COMPRESSION)</span></div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
@@ -228,7 +236,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> local_data_size =</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>      CagedHeapLocalData::CalculateLocalDataSizeForHeapSize(total_heap_size);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="keyword">const</span> CagedAddress caged_heap_start = <a class="code hl_function" href="macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="keyword">const</span> CagedAddress caged_heap_start = <a class="code hl_function" href="src_2base_2macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <span class="keyword">reinterpret_cast&lt;</span>CagedAddress<span class="keyword">&gt;</span>(cage_start) + local_data_size, <a class="code hl_variable" href="namespacecppgc_1_1internal.html#a31164e981f2a7080855c4ba02f1a910b">kPageSize</a>);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> local_data_size_with_padding =</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      caged_heap_start - <span class="keyword">reinterpret_cast&lt;</span>CagedAddress<span class="keyword">&gt;</span>(cage_start);</div>
@@ -246,12 +254,12 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
 <div class="foldopen" id="foldopen00146" data-start="{" data-end="}">
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1CagedHeap.html#a7baf45aa8b44b34fcedca724a15359c9">  146</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1CagedHeap.html#a7baf45aa8b44b34fcedca724a15359c9">CagedHeap::CommitAgeTable</a>(PageAllocator&amp; platform_allocator) {</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <span class="keywordflow">if</span> (!platform_allocator.SetPermissions(</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1CagedHeap.html#a7baf45aa8b44b34fcedca724a15359c9">  146</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1CagedHeap.html#a7baf45aa8b44b34fcedca724a15359c9">CagedHeap::CommitAgeTable</a>(<a class="code hl_class" href="classv8_1_1PageAllocator.html">PageAllocator</a>&amp; platform_allocator) {</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <span class="keywordflow">if</span> (!platform_allocator.<a class="code hl_function" href="classv8_1_1PageAllocator.html#aa3817d5bfaba9ec280a6cfb60e6adda0">SetPermissions</a>(</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>          <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(CagedHeapBase::g_heap_base_),</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>          <a class="code hl_function" href="macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(CagedHeapBase::g_age_table_size_,</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                  platform_allocator.CommitPageSize()),</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>          PageAllocator::kReadWrite)) {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>          <a class="code hl_function" href="src_2base_2macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(CagedHeapBase::g_age_table_size_,</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>                  platform_allocator.<a class="code hl_function" href="classv8_1_1PageAllocator.html#ad817d87004151e3824997415f2dc57e9">CommitPageSize</a>()),</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>          <a class="code hl_enumvalue" href="classv8_1_1PageAllocator.html#a88f74b164fe97e053259f67a95758415abf9beddb1231fa2c23ab417197ea9f8a">PageAllocator::kReadWrite</a>)) {</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <a class="code hl_function" href="namespacecppgc_1_1internal.html#af2de8a2a288069d21c5077af318676da">GetGlobalOOMHandler</a>()(<span class="stringliteral">&quot;Oilpan: CagedHeap commit CageHeapLocalData.&quot;</span>);</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  }</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
@@ -259,45 +267,59 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>}  <span class="comment">// namespace cppgc</span></div>
-<div class="ttc" id="abase_2platform_2platform_8h_html"><div class="ttname"><a href="base_2platform_2platform_8h.html">platform.h</a></div></div>
+<div class="ttc" id="aapi-constants_8h_html"><div class="ttname"><a href="api-constants_8h.html">api-constants.h</a></div></div>
 <div class="ttc" id="abounded-page-allocator_8h_html"><div class="ttname"><a href="bounded-page-allocator_8h.html">bounded-page-allocator.h</a></div></div>
-<div class="ttc" id="acaged-heap_8h_html"><div class="ttname"><a href="caged-heap_8h.html">caged-heap.h</a></div></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1CagedHeap_html"><div class="ttname"><a href="classcppgc_1_1internal_1_1CagedHeap.html">cppgc::internal::CagedHeap</a></div><div class="ttdef"><b>Definition</b> <a href="caged-heap_8h_source.html#l00026">caged-heap.h:26</a></div></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1CagedHeap_html_a3d108aaf2dabd29d293236b47724f6b2"><div class="ttname"><a href="classcppgc_1_1internal_1_1CagedHeap.html#a3d108aaf2dabd29d293236b47724f6b2">cppgc::internal::CagedHeap::page_bounded_allocator_</a></div><div class="ttdeci">std::unique_ptr&lt; AllocatorType &gt; page_bounded_allocator_</div><div class="ttdef"><b>Definition</b> <a href="caged-heap_8h_source.html#l00080">caged-heap.h:80</a></div></div>
+<div class="ttc" id="acaged-heap-local-data_8h_html"><div class="ttname"><a href="caged-heap-local-data_8h.html">caged-heap-local-data.h</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1CagedHeap_html"><div class="ttname"><a href="classcppgc_1_1internal_1_1CagedHeap.html">cppgc::internal::CagedHeap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2cppgc_2caged-heap_8h_source.html#l00026">caged-heap.h:26</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1CagedHeap_html_a3d108aaf2dabd29d293236b47724f6b2"><div class="ttname"><a href="classcppgc_1_1internal_1_1CagedHeap.html#a3d108aaf2dabd29d293236b47724f6b2">cppgc::internal::CagedHeap::page_bounded_allocator_</a></div><div class="ttdeci">std::unique_ptr&lt; AllocatorType &gt; page_bounded_allocator_</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2cppgc_2caged-heap_8h_source.html#l00080">caged-heap.h:80</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1CagedHeap_html_a6e3631210cecdc8d79a947ea5d8617fa"><div class="ttname"><a href="classcppgc_1_1internal_1_1CagedHeap.html#a6e3631210cecdc8d79a947ea5d8617fa">cppgc::internal::CagedHeap::CagedHeap</a></div><div class="ttdeci">CagedHeap(const CagedHeap &amp;)=delete</div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1CagedHeap_html_a7a122e5b6dd5b05ea179323429ab2aa4"><div class="ttname"><a href="classcppgc_1_1internal_1_1CagedHeap.html#a7a122e5b6dd5b05ea179323429ab2aa4">cppgc::internal::CagedHeap::InitializeIfNeeded</a></div><div class="ttdeci">static void InitializeIfNeeded(PageAllocator &amp;platform_allocator, size_t desired_heap_size)</div><div class="ttdef"><b>Definition</b> <a href="#l00086">caged-heap.cc:86</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1CagedHeap_html_a7baf45aa8b44b34fcedca724a15359c9"><div class="ttname"><a href="classcppgc_1_1internal_1_1CagedHeap.html#a7baf45aa8b44b34fcedca724a15359c9">cppgc::internal::CagedHeap::CommitAgeTable</a></div><div class="ttdeci">static void CommitAgeTable(PageAllocator &amp;platform_allocator)</div><div class="ttdef"><b>Definition</b> <a href="#l00146">caged-heap.cc:146</a></div></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1CagedHeap_html_aa30a6d9e9e36dfe702b9f06fdcf5322e"><div class="ttname"><a href="classcppgc_1_1internal_1_1CagedHeap.html#aa30a6d9e9e36dfe702b9f06fdcf5322e">cppgc::internal::CagedHeap::instance_</a></div><div class="ttdeci">static CagedHeap * instance_</div><div class="ttdef"><b>Definition</b> <a href="caged-heap_8h_source.html#l00075">caged-heap.h:75</a></div></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1CagedHeap_html_aea77216f0c18b677459a6ff52c447fc2"><div class="ttname"><a href="classcppgc_1_1internal_1_1CagedHeap.html#aea77216f0c18b677459a6ff52c447fc2">cppgc::internal::CagedHeap::reserved_area_</a></div><div class="ttdeci">const VirtualMemory reserved_area_</div><div class="ttdef"><b>Definition</b> <a href="caged-heap_8h_source.html#l00077">caged-heap.h:77</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1CagedHeap_html_aa30a6d9e9e36dfe702b9f06fdcf5322e"><div class="ttname"><a href="classcppgc_1_1internal_1_1CagedHeap.html#aa30a6d9e9e36dfe702b9f06fdcf5322e">cppgc::internal::CagedHeap::instance_</a></div><div class="ttdeci">static CagedHeap * instance_</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2cppgc_2caged-heap_8h_source.html#l00075">caged-heap.h:75</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1CagedHeap_html_aea77216f0c18b677459a6ff52c447fc2"><div class="ttname"><a href="classcppgc_1_1internal_1_1CagedHeap.html#aea77216f0c18b677459a6ff52c447fc2">cppgc::internal::CagedHeap::reserved_area_</a></div><div class="ttdeci">const VirtualMemory reserved_area_</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2cppgc_2caged-heap_8h_source.html#l00077">caged-heap.h:77</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1CagedHeap_html_af6307cef0cf2e4881a841abdab6f31bf"><div class="ttname"><a href="classcppgc_1_1internal_1_1CagedHeap.html#af6307cef0cf2e4881a841abdab6f31bf">cppgc::internal::CagedHeap::Instance</a></div><div class="ttdeci">static CagedHeap &amp; Instance()</div><div class="ttdef"><b>Definition</b> <a href="#l00093">caged-heap.cc:93</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1VirtualMemory_html_a9d4500f1d70f44c8ba545078a0f64ea8"><div class="ttname"><a href="classcppgc_1_1internal_1_1VirtualMemory.html#a9d4500f1d70f44c8ba545078a0f64ea8">cppgc::internal::VirtualMemory::address</a></div><div class="ttdeci">void * address() const</div><div class="ttdef"><b>Definition</b> <a href="virtual-memory_8h_source.html#l00038">virtual-memory.h:38</a></div></div>
+<div class="ttc" id="aclassv8_1_1PageAllocator_html"><div class="ttname"><a href="classv8_1_1PageAllocator.html">v8::PageAllocator</a></div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l00455">v8-platform.h:455</a></div></div>
+<div class="ttc" id="aclassv8_1_1PageAllocator_html_a88f74b164fe97e053259f67a95758415abf9beddb1231fa2c23ab417197ea9f8a"><div class="ttname"><a href="classv8_1_1PageAllocator.html#a88f74b164fe97e053259f67a95758415abf9beddb1231fa2c23ab417197ea9f8a">v8::PageAllocator::kReadWrite</a></div><div class="ttdeci">@ kReadWrite</div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l00489">v8-platform.h:489</a></div></div>
+<div class="ttc" id="aclassv8_1_1PageAllocator_html_aa3817d5bfaba9ec280a6cfb60e6adda0"><div class="ttname"><a href="classv8_1_1PageAllocator.html#aa3817d5bfaba9ec280a6cfb60e6adda0">v8::PageAllocator::SetPermissions</a></div><div class="ttdeci">virtual bool SetPermissions(void *address, size_t length, Permission permissions)=0</div></div>
+<div class="ttc" id="aclassv8_1_1PageAllocator_html_ad817d87004151e3824997415f2dc57e9"><div class="ttname"><a href="classv8_1_1PageAllocator.html#ad817d87004151e3824997415f2dc57e9">v8::PageAllocator::CommitPageSize</a></div><div class="ttdeci">virtual size_t CommitPageSize()=0</div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1BoundedPageAllocator_html_a2878ffce6a3901b1af8696368e33d58d"><div class="ttname"><a href="classv8_1_1base_1_1BoundedPageAllocator.html#a2878ffce6a3901b1af8696368e33d58d">v8::base::BoundedPageAllocator::Address</a></div><div class="ttdeci">uintptr_t Address</div><div class="ttdef"><b>Definition</b> <a href="bounded-page-allocator_8h_source.html#l00067">bounded-page-allocator.h:67</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1LeakyObject_html"><div class="ttname"><a href="classv8_1_1base_1_1LeakyObject.html">v8::base::LeakyObject</a></div><div class="ttdef"><b>Definition</b> <a href="isolate-group_8h_source.html#l00029">isolate-group.h:29</a></div></div>
 <div class="ttc" id="aheap-base_8h_html"><div class="ttname"><a href="heap-base_8h.html">heap-base.h</a></div></div>
 <div class="ttc" id="aheap-page_8h_html"><div class="ttname"><a href="heap-page_8h.html">heap-page.h</a></div></div>
 <div class="ttc" id="aheap_2cppgc_2globals_8h_html"><div class="ttname"><a href="heap_2cppgc_2globals_8h.html">globals.h</a></div></div>
-<div class="ttc" id="aheap_2cppgc_2platform_8h_html"><div class="ttname"><a href="heap_2cppgc_2platform_8h.html">platform.h</a></div></div>
+<div class="ttc" id="ainclude_2cppgc_2internal_2caged-heap_8h_html"><div class="ttname"><a href="include_2cppgc_2internal_2caged-heap_8h.html">caged-heap.h</a></div></div>
+<div class="ttc" id="ainclude_2cppgc_2platform_8h_html"><div class="ttname"><a href="include_2cppgc_2platform_8h.html">platform.h</a></div></div>
 <div class="ttc" id="alazy-instance_8h_html"><div class="ttname"><a href="lazy-instance_8h.html">lazy-instance.h</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="amacros_8h_html_a5113f5db9eec9c30ecea57b8d4175f2d"><div class="ttname"><a href="macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a></div><div class="ttdeci">constexpr T RoundUp(T x, intptr_t m)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00375">macros.h:375</a></div></div>
-<div class="ttc" id="amacros_8h_html_aa0de4a420e74c8df8076fc2aaf4af27a"><div class="ttname"><a href="macros_8h.html#aa0de4a420e74c8df8076fc2aaf4af27a">RoundDown</a></div><div class="ttdeci">constexpr T RoundDown(T x, intptr_t m)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00359">macros.h:359</a></div></div>
-<div class="ttc" id="amember-storage_8h_html"><div class="ttname"><a href="member-storage_8h.html">member-storage.h</a></div></div>
+<div class="ttc" id="amember_8h_html"><div class="ttname"><a href="member_8h.html">member.h</a></div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_a31164e981f2a7080855c4ba02f1a910b"><div class="ttname"><a href="namespacecppgc_1_1internal.html#a31164e981f2a7080855c4ba02f1a910b">cppgc::internal::kPageSize</a></div><div class="ttdeci">constexpr size_t kPageSize</div><div class="ttdef"><b>Definition</b> <a href="heap_2cppgc_2globals_8h_source.html#l00042">globals.h:42</a></div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_af2de8a2a288069d21c5077af318676da"><div class="ttname"><a href="namespacecppgc_1_1internal.html#af2de8a2a288069d21c5077af318676da">cppgc::internal::GetGlobalOOMHandler</a></div><div class="ttdeci">FatalOutOfMemoryHandler &amp; GetGlobalOOMHandler()</div><div class="ttdef"><b>Definition</b> <a href="heap_2cppgc_2platform_8cc_source.html#l00073">platform.cc:73</a></div></div>
 <div class="ttc" id="anamespacecppgc_html"><div class="ttname"><a href="namespacecppgc.html">cppgc</a></div><div class="ttdef"><b>Definition</b> <a href="cross-heap-remembered-set_8h_source.html#l00014">cross-heap-remembered-set.h:14</a></div></div>
+<div class="ttc" id="anamespacecppgc_html_a59d5ddc0a3695ff60bd21c6d2ff7c612"><div class="ttname"><a href="namespacecppgc.html#a59d5ddc0a3695ff60bd21c6d2ff7c612">cppgc::PageAllocator</a></div><div class="ttdeci">v8::PageAllocator PageAllocator</div><div class="ttdef"><b>Definition</b> <a href="include_2cppgc_2platform_8h_source.html#l00022">platform.h:22</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_1_1bits_html_a1c2014140148fb7f980c9720dd6700cb"><div class="ttname"><a href="namespacev8_1_1base_1_1bits.html#a1c2014140148fb7f980c9720dd6700cb">v8::base::bits::RoundUpToPowerOfTwo64</a></div><div class="ttdeci">V8_BASE_EXPORT constexpr uint64_t RoundUpToPowerOfTwo64(uint64_t value)</div><div class="ttdef"><b>Definition</b> <a href="bits_8h_source.html#l00235">bits.h:235</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a214ae6bbc219c3bf43cb03f9cf6c165ca60cb412ba4cb9de9b67d9a9981f1f81a"><div class="ttname"><a href="namespacev8_1_1base.html#a214ae6bbc219c3bf43cb03f9cf6c165ca60cb412ba4cb9de9b67d9a9981f1f81a">v8::base::PageInitializationMode::kAllocatedPagesMustBeZeroInitialized</a></div><div class="ttdeci">@ kAllocatedPagesMustBeZeroInitialized</div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a40af50cfd5f644e039f2664d17ff298aa8045b5e8d8f2790b6de4ecf6650f5f35"><div class="ttname"><a href="namespacev8_1_1base.html#a40af50cfd5f644e039f2664d17ff298aa8045b5e8d8f2790b6de4ecf6650f5f35">v8::base::PageFreeingMode::kMakeInaccessible</a></div><div class="ttdeci">@ kMakeInaccessible</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a5113f5db9eec9c30ecea57b8d4175f2d"><div class="ttname"><a href="src_2base_2macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a></div><div class="ttdeci">constexpr T RoundUp(T x, intptr_t m)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00375">macros.h:375</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_aa0de4a420e74c8df8076fc2aaf4af27a"><div class="ttname"><a href="src_2base_2macros_8h.html#aa0de4a420e74c8df8076fc2aaf4af27a">RoundDown</a></div><div class="ttdeci">constexpr T RoundDown(T x, intptr_t m)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00359">macros.h:359</a></div></div>
+<div class="ttc" id="asrc_2base_2platform_2platform_8h_html"><div class="ttname"><a href="src_2base_2platform_2platform_8h.html">platform.h</a></div></div>
+<div class="ttc" id="asrc_2heap_2cppgc_2caged-heap_8h_html"><div class="ttname"><a href="src_2heap_2cppgc_2caged-heap_8h.html">caged-heap.h</a></div></div>
+<div class="ttc" id="asrc_2heap_2cppgc_2member-storage_8h_html"><div class="ttname"><a href="src_2heap_2cppgc_2member-storage_8h.html">member-storage.h</a></div></div>
+<div class="ttc" id="asrc_2heap_2cppgc_2platform_8h_html"><div class="ttname"><a href="src_2heap_2cppgc_2platform_8h.html">platform.h</a></div></div>
+<div class="ttc" id="av8config_8h_html"><div class="ttname"><a href="v8config_8h.html">v8config.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:30 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li><li class="navelem"><a class="el" href="caged-heap_8cc.html">caged-heap.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:38 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/cppgc/marking-worklists.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/cppgc/marking-worklists.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('marking-worklists_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">marking-worklists.h</div></div>
 </div><!--header-->
@@ -103,7 +111,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;include/cppgc/visitor.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="include_2cppgc_2visitor_8h.html">include/cppgc/visitor.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="mutex_8h.html">src/base/platform/mutex.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="worklist_8h.html">src/heap/base/worklist.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="heap-object-header_8h.html">src/heap/cppgc/heap-object-header.h</a>&quot;</span></div>
@@ -115,7 +123,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1MarkingWorklists.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classcppgc_1_1internal_1_1MarkingWorklists.html">MarkingWorklists</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> <span class="keyword">private</span>:</div>
 <div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist.html">   20</a></span>  <span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist.html">ExternalMarkingWorklist</a> {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist.html">   20</a></span>  <span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist.html">ExternalMarkingWorklist</a> {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>   <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">template</span> &lt;AccessMode = AccessMode::kNonAtomic&gt;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> Push(<a class="code hl_class" href="classcppgc_1_1internal_1_1HeapObjectHeader.html">HeapObjectHeader</a>*);</div>
@@ -147,11 +155,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1MarkingWorklists.html#a2247af7a2530259e71780f7fea668232">   49</a></span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classcppgc_1_1internal_1_1MarkingWorklists.html#a2247af7a2530259e71780f7fea668232">kMutatorThreadId</a> = 0;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1MarkingWorklists.html#ab091df8916ffee6f61d06a6cc190506a">   51</a></span>  <span class="keyword">using </span><a class="code hl_typedef" href="classcppgc_1_1internal_1_1MarkingWorklists.html#ab091df8916ffee6f61d06a6cc190506a">MarkingItem</a> = cppgc::TraceDescriptor;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1MarkingWorklists.html#ab091df8916ffee6f61d06a6cc190506a">   51</a></span>  <span class="keyword">using </span><a class="code hl_struct" href="structcppgc_1_1TraceDescriptor.html">MarkingItem</a> = <a class="code hl_struct" href="structcppgc_1_1TraceDescriptor.html">cppgc::TraceDescriptor</a>;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="foldopen" id="foldopen00053" data-start="{" data-end="};">
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem.html">   53</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem.html">WeakCallbackItem</a> {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem.html#a760ed3691f0b254851ce723947e2c0c8">   54</a></span>    cppgc::WeakCallback <a class="code hl_variable" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem.html#a760ed3691f0b254851ce723947e2c0c8">callback</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem.html#a760ed3691f0b254851ce723947e2c0c8">   54</a></span>    <a class="code hl_typedef" href="namespacecppgc.html#ab696ca9fd777f05c31de82cda17a4436">cppgc::WeakCallback</a> <a class="code hl_variable" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem.html#a760ed3691f0b254851ce723947e2c0c8">callback</a>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem.html#ac3b1ce44793107fb068e41f7ee3e1e13">   55</a></span>    <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem.html#ac3b1ce44793107fb068e41f7ee3e1e13">parameter</a>;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  };</div>
 </div>
@@ -159,7 +167,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00058" data-start="{" data-end="};">
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html">   58</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html">ConcurrentMarkingBailoutItem</a> {</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html#aaa20b0ca5520d6749c21cad8ce6652c0">   59</a></span>    <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html#aaa20b0ca5520d6749c21cad8ce6652c0">parameter</a>;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html#a04600702bdf48ee15533f634cf0bbee6">   60</a></span>    TraceCallback <a class="code hl_variable" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html#a04600702bdf48ee15533f634cf0bbee6">callback</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html#a04600702bdf48ee15533f634cf0bbee6">   60</a></span>    <a class="code hl_typedef" href="namespacecppgc.html#af97d391c993ccebc888fa1a9de87f72a">TraceCallback</a> <a class="code hl_variable" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html#a04600702bdf48ee15533f634cf0bbee6">callback</a>;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html#ac6ca04e5b88e40b8820029f12870cc11">   61</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html#ac6ca04e5b88e40b8820029f12870cc11">bailedout_size</a>;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  };</div>
 </div>
@@ -168,7 +176,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem.html">   64</a></span>  <span class="keyword">struct </span><a class="code hl_struct" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem.html">EphemeronPairItem</a> {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem.html#ad443ab3a059b611ba1ad2ebd527cf14e">   65</a></span>    <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem.html#ad443ab3a059b611ba1ad2ebd527cf14e">key</a>;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem.html#a26f82d47fdcfeab34ed3426c2c27ad2a">   66</a></span>    <span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code hl_variable" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem.html#a26f82d47fdcfeab34ed3426c2c27ad2a">value</a>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem.html#a4fa4894eb4be78b45f30a49d9a837767">   67</a></span>    TraceDescriptor <a class="code hl_variable" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem.html#a4fa4894eb4be78b45f30a49d9a837767">value_desc</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem.html#a4fa4894eb4be78b45f30a49d9a837767">   67</a></span>    <a class="code hl_struct" href="structcppgc_1_1TraceDescriptor.html">TraceDescriptor</a> <a class="code hl_variable" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1EphemeronPairItem.html#a4fa4894eb4be78b45f30a49d9a837767">value_desc</a>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  };</div>
 </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
@@ -306,7 +314,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="keyword">template</span> &lt;AccessMode mode&gt;</div>
 <div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist.html#a75235b1145d7199964daa1d61c084dd3">  171</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist.html#a75235b1145d7199964daa1d61c084dd3">MarkingWorklists::ExternalMarkingWorklist::Push</a>(<a class="code hl_class" href="classcppgc_1_1internal_1_1HeapObjectHeader.html">HeapObjectHeader</a>* <span class="keywordtype">object</span>) {</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<span class="keywordtype">object</span>);</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <a class="code hl_struct" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist_1_1ConditionalMutexGuard.html">ConditionalMutexGuard&lt;mode&gt;</a> guard(&amp;<a class="code hl_variable" href="classcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist.html#a376a8bd36e3339081e5f0f88f3a4bd3e">lock_</a>);</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <a class="code hl_variable" href="classcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist.html#a88cb788479d9b2b51cdc9c0bffbef59e">objects_</a>.insert(<span class="keywordtype">object</span>);</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>}</div>
@@ -328,7 +336,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <a class="code hl_struct" href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ExternalMarkingWorklist_1_1ConditionalMutexGuard.html">ConditionalMutexGuard&lt;mode&gt;</a> guard(&amp;lock_);</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  std::unordered_set&lt;HeapObjectHeader*&gt; extracted;</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  std::swap(extracted, objects_);</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(objects_.empty());</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(objects_.empty());</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="keywordflow">return</span> extracted;</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>}</div>
 </div>
@@ -396,15 +404,19 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1base_1_1LockGuard_html"><div class="ttname"><a href="classv8_1_1base_1_1LockGuard.html">v8::base::LockGuard</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00534">mutex.h:534</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1SpinningMutex_html"><div class="ttname"><a href="classv8_1_1base_1_1SpinningMutex.html">v8::base::SpinningMutex</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00201">mutex.h:201</a></div></div>
 <div class="ttc" id="aheap-object-header_8h_html"><div class="ttname"><a href="heap-object-header_8h.html">heap-object-header.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
+<div class="ttc" id="ainclude_2cppgc_2visitor_8h_html"><div class="ttname"><a href="include_2cppgc_2visitor_8h.html">visitor.h</a></div></div>
 <div class="ttc" id="amutex_8h_html"><div class="ttname"><a href="mutex_8h.html">mutex.h</a></div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_ac0b40b7e4ac65024fbfcf57d01fa808e"><div class="ttname"><a href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808e">cppgc::internal::AccessMode</a></div><div class="ttdeci">AccessMode</div><div class="ttdef"><b>Definition</b> <a href="heap_2cppgc_2globals_8h_source.html#l00025">globals.h:25</a></div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71"><div class="ttname"><a href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71">cppgc::internal::AccessMode::kAtomic</a></div><div class="ttdeci">@ kAtomic</div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_ac0b40b7e4ac65024fbfcf57d01fa808eab8d79eac5929c97b59b121e933e4438d"><div class="ttname"><a href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808eab8d79eac5929c97b59b121e933e4438d">cppgc::internal::AccessMode::kNonAtomic</a></div><div class="ttdeci">@ kNonAtomic</div></div>
 <div class="ttc" id="anamespacecppgc_html"><div class="ttname"><a href="namespacecppgc.html">cppgc</a></div><div class="ttdef"><b>Definition</b> <a href="cross-heap-remembered-set_8h_source.html#l00014">cross-heap-remembered-set.h:14</a></div></div>
+<div class="ttc" id="anamespacecppgc_html_ab696ca9fd777f05c31de82cda17a4436"><div class="ttname"><a href="namespacecppgc.html#ab696ca9fd777f05c31de82cda17a4436">cppgc::WeakCallback</a></div><div class="ttdeci">void(*)(const LivenessBroker &amp;, const void *) WeakCallback</div><div class="ttdef"><b>Definition</b> <a href="include_2cppgc_2visitor_8h_source.html#l00037">visitor.h:37</a></div></div>
+<div class="ttc" id="anamespacecppgc_html_af97d391c993ccebc888fa1a9de87f72a"><div class="ttname"><a href="namespacecppgc.html#af97d391c993ccebc888fa1a9de87f72a">cppgc::TraceCallback</a></div><div class="ttdeci">void(*)(Visitor *visitor, const void *object) TraceCallback</div><div class="ttdef"><b>Definition</b> <a href="trace-trait_8h_source.html#l00038">trace-trait.h:38</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
+<div class="ttc" id="astructcppgc_1_1TraceDescriptor_html"><div class="ttname"><a href="structcppgc_1_1TraceDescriptor.html">cppgc::TraceDescriptor</a></div><div class="ttdef"><b>Definition</b> <a href="trace-trait_8h_source.html#l00044">trace-trait.h:44</a></div></div>
 <div class="ttc" id="astructcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem_html"><div class="ttname"><a href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html">cppgc::internal::MarkingWorklists::ConcurrentMarkingBailoutItem</a></div><div class="ttdef"><b>Definition</b> <a href="#l00058">marking-worklists.h:58</a></div></div>
 <div class="ttc" id="astructcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem_html_a04600702bdf48ee15533f634cf0bbee6"><div class="ttname"><a href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html#a04600702bdf48ee15533f634cf0bbee6">cppgc::internal::MarkingWorklists::ConcurrentMarkingBailoutItem::callback</a></div><div class="ttdeci">TraceCallback callback</div><div class="ttdef"><b>Definition</b> <a href="#l00060">marking-worklists.h:60</a></div></div>
 <div class="ttc" id="astructcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem_html_aaa20b0ca5520d6749c21cad8ce6652c0"><div class="ttname"><a href="structcppgc_1_1internal_1_1MarkingWorklists_1_1ConcurrentMarkingBailoutItem.html#aaa20b0ca5520d6749c21cad8ce6652c0">cppgc::internal::MarkingWorklists::ConcurrentMarkingBailoutItem::parameter</a></div><div class="ttdeci">const void * parameter</div><div class="ttdef"><b>Definition</b> <a href="#l00059">marking-worklists.h:59</a></div></div>
@@ -422,10 +434,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="astructcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem_html_ac3b1ce44793107fb068e41f7ee3e1e13"><div class="ttname"><a href="structcppgc_1_1internal_1_1MarkingWorklists_1_1WeakCallbackItem.html#ac3b1ce44793107fb068e41f7ee3e1e13">cppgc::internal::MarkingWorklists::WeakCallbackItem::parameter</a></div><div class="ttdeci">const void * parameter</div><div class="ttdef"><b>Definition</b> <a href="#l00055">marking-worklists.h:55</a></div></div>
 <div class="ttc" id="aworklist_8h_html"><div class="ttname"><a href="worklist_8h.html">worklist.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:31 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li><li class="navelem"><a class="el" href="marking-worklists_8h.html">marking-worklists.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:39 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

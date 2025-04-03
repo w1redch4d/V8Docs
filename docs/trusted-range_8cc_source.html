@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/trusted-range.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/trusted-range.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('trusted-range_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">trusted-range.cc</div></div>
 </div><!--header-->
@@ -103,7 +111,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="lazy-instance_8h.html">src/base/lazy-instance.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="once_8h.html">src/base/once.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="heap-inl_8h.html">src/heap/heap-inl.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="allocation_8h.html">src/utils/allocation.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="src_2utils_2allocation_8h.html">src/utils/allocation.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8.html">v8</a> {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">internal</a> {</div>
@@ -111,13 +119,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifdef V8_ENABLE_SANDBOX</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">bool</span> TrustedRange::InitReservation(<span class="keywordtype">size_t</span> requested) {</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(requested, kMaximalTrustedRangeSize);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(requested, kMinimumTrustedRangeSize);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(requested, kMaximalTrustedRangeSize);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(requested, kMinimumTrustedRangeSize);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">auto</span> page_allocator = <a class="code hl_function" href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">GetPlatformPageAllocator</a>();</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="namespacecppgc_1_1internal.html#a31164e981f2a7080855c4ba02f1a910b">kPageSize</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1MutablePageMetadata.html#a8ca68362b7531b2ab93a045cdcedfdde">MutablePageMetadata::kPageSize</a>;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(kPageSize, page_allocator-&gt;AllocatePageSize()));</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(kPageSize, page_allocator-&gt;AllocatePageSize()));</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="comment">// We want the trusted range to be allocated above 4GB, for a few reasons:</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="comment">//   1. Certain (sandbox) bugs allow access to (only) the first 4GB of the</span></div>
@@ -131,10 +139,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="comment">//</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="comment">// To achieve this, we simply require 4GB alignment of the allocation and</span></div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="comment">// assume that we can never map the zeroth page.</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> base_alignment = <span class="keywordtype">size_t</span>{4} * GB;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> base_alignment = <span class="keywordtype">size_t</span>{4} * <a class="code hl_variable" href="namespacev8_1_1internal.html#a24ba7f85e96394b19164ecd7df3988c5">GB</a>;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keyword">const</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> requested_start_hint =</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <a class="code hl_function" href="macros_8h.html#aa0de4a420e74c8df8076fc2aaf4af27a">RoundDown</a>(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(page_allocator-&gt;GetRandomMmapAddr()),</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keyword">const</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> requested_start_hint =</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>      <a class="code hl_function" href="src_2base_2macros_8h.html#aa0de4a420e74c8df8076fc2aaf4af27a">RoundDown</a>(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(page_allocator-&gt;GetRandomMmapAddr()),</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                base_alignment);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  VirtualMemoryCage::ReservationParams params;</div>
@@ -143,7 +151,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  params.page_size = <a class="code hl_variable" href="namespacecppgc_1_1internal.html#a31164e981f2a7080855c4ba02f1a910b">kPageSize</a>;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  params.base_alignment = base_alignment;</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  params.requested_start_hint = requested_start_hint;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  params.permissions = PageAllocator::Permission::kNoAccess;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  params.permissions = <a class="code hl_enumvalue" href="classv8_1_1PageAllocator.html#a88f74b164fe97e053259f67a95758415a501acdacad072f7d6e5737159141301d">PageAllocator::Permission::kNoAccess</a>;</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  params.page_initialization_mode =</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <a class="code hl_enumvalue" href="namespacev8_1_1base.html#a214ae6bbc219c3bf43cb03f9cf6c165ca4f69ff55cee8b7af23d6473dfdaff203">base::PageInitializationMode::kAllocatedPagesCanBeUninitialized</a>;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  params.page_freeing_mode = <a class="code hl_enumvalue" href="namespacev8_1_1base.html#a40af50cfd5f644e039f2664d17ff298aa8045b5e8d8f2790b6de4ecf6650f5f35">base::PageFreeingMode::kMakeInaccessible</a>;</div>
@@ -159,10 +167,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="comment">// initialized and fields are left empty. To mitigate these, we make the</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// first pages of trusted space inaccessible so that any access is</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="comment">// guaranteed to crash safely.</span></div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">size_t</span> guard_region_size = 1 * <a class="code hl_variable" href="namespacev8_1_1internal.html#a08e1140ec7d96bfd4d6b21a808ccd654">MB</a>;</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(guard_region_size, <a class="code hl_variable" href="cpp-heap_8cc.html#a17ab68c0df05711b0315b9614b588f9d">page_allocator_</a>-&gt;AllocatePageSize()));</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#a17ab68c0df05711b0315b9614b588f9d">page_allocator_</a>-&gt;AllocatePagesAt(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a>(), guard_region_size,</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                                           PageAllocator::kNoAccess));</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">size_t</span> guard_region_size = 1 * <a class="code hl_variable" href="namespacev8_1_1internal.html#af46551c5713d2a3a1be4dca973e521e0">MB</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(guard_region_size, <a class="code hl_variable" href="cpp-heap_8cc.html#a17ab68c0df05711b0315b9614b588f9d">page_allocator_</a>-&gt;<a class="code hl_function" href="classv8_1_1PageAllocator.html#a92c2f6dbb3afa6c47dafd4c12ab4641f">AllocatePageSize</a>()));</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#a17ab68c0df05711b0315b9614b588f9d">page_allocator_</a>-&gt;AllocatePagesAt(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a>(), guard_region_size,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                                           <a class="code hl_enumvalue" href="classv8_1_1PageAllocator.html#a88f74b164fe97e053259f67a95758415a501acdacad072f7d6e5737159141301d">PageAllocator::kNoAccess</a>));</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordflow">return</span> success;</div>
@@ -202,7 +210,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>}  <span class="comment">// namespace v8</span></div>
-<div class="ttc" id="aallocation_8h_html"><div class="ttname"><a href="allocation_8h.html">allocation.h</a></div></div>
+<div class="ttc" id="aclassv8_1_1PageAllocator_html_a88f74b164fe97e053259f67a95758415a501acdacad072f7d6e5737159141301d"><div class="ttname"><a href="classv8_1_1PageAllocator.html#a88f74b164fe97e053259f67a95758415a501acdacad072f7d6e5737159141301d">v8::PageAllocator::kNoAccess</a></div><div class="ttdeci">@ kNoAccess</div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l00487">v8-platform.h:487</a></div></div>
+<div class="ttc" id="aclassv8_1_1PageAllocator_html_a92c2f6dbb3afa6c47dafd4c12ab4641f"><div class="ttname"><a href="classv8_1_1PageAllocator.html#a92c2f6dbb3afa6c47dafd4c12ab4641f">v8::PageAllocator::AllocatePageSize</a></div><div class="ttdeci">virtual size_t AllocatePageSize()=0</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MutablePageMetadata_html_a8ca68362b7531b2ab93a045cdcedfdde"><div class="ttname"><a href="classv8_1_1internal_1_1MutablePageMetadata.html#a8ca68362b7531b2ab93a045cdcedfdde">v8::internal::MutablePageMetadata::kPageSize</a></div><div class="ttdeci">static const int kPageSize</div><div class="ttdef"><b>Definition</b> <a href="mutable-page-metadata_8h_source.html#l00062">mutable-page-metadata.h:62</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1V8HeapCompressionSchemeImpl_html_a8c1d4aee11379da6604c94b46bd1b71d"><div class="ttname"><a href="classv8_1_1internal_1_1V8HeapCompressionSchemeImpl.html#a8c1d4aee11379da6604c94b46bd1b71d">v8::internal::V8HeapCompressionSchemeImpl::InitBase</a></div><div class="ttdeci">static V8_INLINE void InitBase(Address base)</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1V8_html_a977b087d4ee58955efe72b33136a4e94"><div class="ttname"><a href="classv8_1_1internal_1_1V8.html#a977b087d4ee58955efe72b33136a4e94">v8::internal::V8::FatalProcessOutOfMemory</a></div><div class="ttdeci">static V8_EXPORT_PRIVATE void FatalProcessOutOfMemory(Isolate *isolate, const char *location, const OOMDetails &amp;details=kNoOOMDetails)</div></div>
@@ -211,29 +220,34 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aheap-inl_8h_html"><div class="ttname"><a href="heap-inl_8h.html">heap-inl.h</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a115c48491bb37004f5ac67eb46ac2c23"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a></div><div class="ttdeci">turboshaft::OpIndex base</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00070">instruction-selector-ia32.cc:70</a></div></div>
 <div class="ttc" id="alazy-instance_8h_html"><div class="ttname"><a href="lazy-instance_8h.html">lazy-instance.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="amacros_8h_html_aa0de4a420e74c8df8076fc2aaf4af27a"><div class="ttname"><a href="macros_8h.html#aa0de4a420e74c8df8076fc2aaf4af27a">RoundDown</a></div><div class="ttdeci">constexpr T RoundDown(T x, intptr_t m)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00359">macros.h:359</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab7a19c1f785f31f2b190afc19875368a"><div class="ttname"><a href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a></div><div class="ttdeci">constexpr bool IsAligned(T value, U alignment)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00391">macros.h:391</a></div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_a31164e981f2a7080855c4ba02f1a910b"><div class="ttname"><a href="namespacecppgc_1_1internal.html#a31164e981f2a7080855c4ba02f1a910b">cppgc::internal::kPageSize</a></div><div class="ttdeci">constexpr size_t kPageSize</div><div class="ttdef"><b>Definition</b> <a href="heap_2cppgc_2globals_8h_source.html#l00042">globals.h:42</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a214ae6bbc219c3bf43cb03f9cf6c165ca4f69ff55cee8b7af23d6473dfdaff203"><div class="ttname"><a href="namespacev8_1_1base.html#a214ae6bbc219c3bf43cb03f9cf6c165ca4f69ff55cee8b7af23d6473dfdaff203">v8::base::PageInitializationMode::kAllocatedPagesCanBeUninitialized</a></div><div class="ttdeci">@ kAllocatedPagesCanBeUninitialized</div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a3bd25eac4abfeaa53389ab881003596d"><div class="ttname"><a href="namespacev8_1_1base.html#a3bd25eac4abfeaa53389ab881003596d">v8::base::CallOnce</a></div><div class="ttdeci">void CallOnce(OnceType *once, std::function&lt; void()&gt; init_func)</div><div class="ttdef"><b>Definition</b> <a href="once_8h_source.html#l00090">once.h:90</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a40af50cfd5f644e039f2664d17ff298aa8045b5e8d8f2790b6de4ecf6650f5f35"><div class="ttname"><a href="namespacev8_1_1base.html#a40af50cfd5f644e039f2664d17ff298aa8045b5e8d8f2790b6de4ecf6650f5f35">v8::base::PageFreeingMode::kMakeInaccessible</a></div><div class="ttdeci">@ kMakeInaccessible</div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a08e1140ec7d96bfd4d6b21a808ccd654"><div class="ttname"><a href="namespacev8_1_1internal.html#a08e1140ec7d96bfd4d6b21a808ccd654">v8::internal::MB</a></div><div class="ttdeci">too high values may cause the compiler to set high thresholds for inlining to as much as possible avoid inlined allocation of objects that cannot escape trace load stores from virtual maglev objects use TurboFan fast string builder analyze liveness of environment slots and zap dead values trace TurboFan load elimination emit data about basic block usage in builtins to this enable builtin reordering when run mksnapshot flag for emit warnings when applying builtin profile data verify register allocation in TurboFan randomly schedule instructions to stress dependency tracking enable store store elimination in TurboFan rewrite far to near simulate GC compiler thread race related to allow float parameters to be passed in simulator mode JS Wasm Run additional turbo_optimize_inlined_js_wasm_wrappers enable experimental feedback collection in generic lowering enable Turboshaft s WasmLoadElimination run instruction selection on Turboshaft IR directly enable Turboshaft s loop unrolling enable an additional Turboshaft phase that performs optimizations based on type information build the Turboshaft graph from Maglev trace emitted Turboshaft instructions profile guided optimization for empty feedback vector invocation count for maglev for functions which according to profile_guided_optimization are likely to deoptimize before reaching this invocation count Immediately re optimize code after some lazy deopts Enables the lazy new space shrinking strategy max size of a semi the new space consists of two semi spaces young and full garbage collection phases are not overlapping Collect garbage after keeps maps alive for&lt; n &gt; old space garbage collections print one detailed trace line in allocation gc speed Starts incremental marking with kUserVisible priority threshold for starting incremental marking immediately in percent of available minor GC task trigger in percent of the current heap limit use a separate phase for stack scanning in scavenge max worker number of concurrent for NumberOfWorkerThreads start background threads that allocate memory concurrent_array_buffer_sweeping use parallel threads to clear weak refs in the atomic pause trace progress of the incremental marking trace object counts and memory usage * MB</div><div class="ttdef"><b>Definition</b> <a href="flags_8cc_source.html#l02095">flags.cc:2095</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a1b38d6a01927e639b91b6a039899ac1a"><div class="ttname"><a href="namespacev8_1_1internal.html#a1b38d6a01927e639b91b6a039899ac1a">v8::internal::GetPlatformPageAllocator</a></div><div class="ttdeci">v8::PageAllocator * GetPlatformPageAllocator()</div><div class="ttdef"><b>Definition</b> <a href="utils_2allocation_8cc_source.html#l00066">allocation.cc:66</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a24ba7f85e96394b19164ecd7df3988c5"><div class="ttname"><a href="namespacev8_1_1internal.html#a24ba7f85e96394b19164ecd7df3988c5">v8::internal::GB</a></div><div class="ttdeci">constexpr int GB</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00057">v8-internal.h:57</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_af46551c5713d2a3a1be4dca973e521e0"><div class="ttname"><a href="namespacev8_1_1internal.html#af46551c5713d2a3a1be4dca973e521e0">v8::internal::MB</a></div><div class="ttdeci">too high values may cause the compiler to set high thresholds for inlining to as much as possible avoid inlined allocation of objects that cannot escape trace load stores from virtual maglev objects use TurboFan fast string builder analyze liveness of environment slots and zap dead values trace TurboFan load elimination emit data about basic block usage in builtins to this enable builtin reordering when run mksnapshot flag for emit warnings when applying builtin profile data verify register allocation in TurboFan randomly schedule instructions to stress dependency tracking enable store store elimination in TurboFan rewrite far to near simulate GC compiler thread race related to allow float parameters to be passed in simulator mode JS Wasm Run additional turbo_optimize_inlined_js_wasm_wrappers enable experimental feedback collection in generic lowering enable Turboshaft s WasmLoadElimination run instruction selection on Turboshaft IR directly enable Turboshaft s loop unrolling enable an additional Turboshaft phase that performs optimizations based on type information build the Turboshaft graph from Maglev trace emitted Turboshaft instructions profile guided optimization for empty feedback vector invocation count for maglev for functions which according to profile_guided_optimization are likely to deoptimize before reaching this invocation count Immediately re optimize code after some lazy deopts Enables the lazy new space shrinking strategy max size of a semi the new space consists of two semi spaces young and full garbage collection phases are not overlapping Collect garbage after keeps maps alive for&lt; n &gt; old space garbage collections print one detailed trace line in allocation gc speed Starts incremental marking with kUserVisible priority threshold for starting incremental marking immediately in percent of available minor GC task trigger in percent of the current heap limit use a separate phase for stack scanning in scavenge max worker number of concurrent for NumberOfWorkerThreads start background threads that allocate memory concurrent_array_buffer_sweeping use parallel threads to clear weak refs in the atomic pause trace progress of the incremental marking trace object counts and memory usage * MB</div><div class="ttdef"><b>Definition</b> <a href="flags_8cc_source.html#l02095">flags.cc:2095</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="aonce_8h_html"><div class="ttname"><a href="once_8h.html">once.h</a></div></div>
 <div class="ttc" id="aonce_8h_html_ae8d7b17dca3d0e2db0a28995f83f5644"><div class="ttname"><a href="once_8h.html#ae8d7b17dca3d0e2db0a28995f83f5644">V8_DECLARE_ONCE</a></div><div class="ttdeci">#define V8_DECLARE_ONCE(NAME)</div><div class="ttdef"><b>Definition</b> <a href="once_8h_source.html#l00072">once.h:72</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_aa0de4a420e74c8df8076fc2aaf4af27a"><div class="ttname"><a href="src_2base_2macros_8h.html#aa0de4a420e74c8df8076fc2aaf4af27a">RoundDown</a></div><div class="ttdeci">constexpr T RoundDown(T x, intptr_t m)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00359">macros.h:359</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab7a19c1f785f31f2b190afc19875368a"><div class="ttname"><a href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a></div><div class="ttdeci">constexpr bool IsAligned(T value, U alignment)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00391">macros.h:391</a></div></div>
+<div class="ttc" id="asrc_2utils_2allocation_8h_html"><div class="ttname"><a href="src_2utils_2allocation_8h.html">allocation.h</a></div></div>
 <div class="ttc" id="atrusted-range_8h_html"><div class="ttname"><a href="trusted-range_8h.html">trusted-range.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:36 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="trusted-range_8cc.html">trusted-range.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:44 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/tracing/traced-value.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/tracing/traced-value.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('traced-value_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8c27da8e777a7195961d7f24190c7014.html">tracing</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">traced-value.h</div></div>
 </div><!--header-->
@@ -106,15 +114,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;include/v8-platform.h&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="v8-platform_8h.html">include/v8-platform.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="tracing_2trace-event_8h.html">src/tracing/trace-event.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8.html">v8</a> {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span>tracing {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="foldopen" id="foldopen00020" data-start="{" data-end="};">
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classv8_1_1tracing_1_1TracedValue.html">   20</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1tracing_1_1TracedValue.html">TracedValue</a> : <span class="keyword">public</span> <a class="code hl_typedef" href="heap_2cppgc_2trace-event_8h.html#a46f6df097d5f7c8481f2d949ccd9a43f">ConvertableToTraceFormat</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classv8_1_1tracing_1_1TracedValue.html">   20</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1tracing_1_1TracedValue.html">TracedValue</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1ConvertableToTraceFormat.html">ConvertableToTraceFormat</a></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#ifdef V8_USE_PERFETTO</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    ,</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                                      <span class="keyword">public</span> perfetto::DebugAnnotation</div>
@@ -190,6 +198,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}  <span class="comment">// namespace v8</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif  </span><span class="comment">// V8_TRACING_TRACED_VALUE_H_</span></div>
+<div class="ttc" id="aclassv8_1_1ConvertableToTraceFormat_html"><div class="ttname"><a href="classv8_1_1ConvertableToTraceFormat.html">v8::ConvertableToTraceFormat</a></div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l00355">v8-platform.h:355</a></div></div>
 <div class="ttc" id="aclassv8_1_1tracing_1_1TracedValue_html"><div class="ttname"><a href="classv8_1_1tracing_1_1TracedValue.html">v8::tracing::TracedValue</a></div><div class="ttdef"><b>Definition</b> <a href="#l00020">traced-value.h:25</a></div></div>
 <div class="ttc" id="aclassv8_1_1tracing_1_1TracedValue_html_a04cf45559656695c0c77e110761306cb"><div class="ttname"><a href="classv8_1_1tracing_1_1TracedValue.html#a04cf45559656695c0c77e110761306cb">v8::tracing::TracedValue::AppendString</a></div><div class="ttdeci">void AppendString(const std::string &amp;value)</div><div class="ttdef"><b>Definition</b> <a href="#l00058">traced-value.h:58</a></div></div>
 <div class="ttc" id="aclassv8_1_1tracing_1_1TracedValue_html_a0fcd968d5e2ca81a2f17038595ac3e70"><div class="ttname"><a href="classv8_1_1tracing_1_1TracedValue.html#a0fcd968d5e2ca81a2f17038595ac3e70">v8::tracing::TracedValue::SetString</a></div><div class="ttdeci">void SetString(const char *name, std::unique_ptr&lt; char[]&gt; value)</div><div class="ttdef"><b>Definition</b> <a href="#l00044">traced-value.h:44</a></div></div>
@@ -200,16 +209,19 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1tracing_1_1TracedValue_html_a7803988d232d9d0c2c6f48cf25ffc5d5"><div class="ttname"><a href="classv8_1_1tracing_1_1TracedValue.html#a7803988d232d9d0c2c6f48cf25ffc5d5">v8::tracing::TracedValue::SetString</a></div><div class="ttdeci">void SetString(const char *name, const std::string &amp;value)</div><div class="ttdef"><b>Definition</b> <a href="#l00041">traced-value.h:41</a></div></div>
 <div class="ttc" id="aclassv8_1_1tracing_1_1TracedValue_html_aad34bef8d91483b3dd10d0c8d6054d14"><div class="ttname"><a href="classv8_1_1tracing_1_1TracedValue.html#aad34bef8d91483b3dd10d0c8d6054d14">v8::tracing::TracedValue::TracedValue</a></div><div class="ttdeci">TracedValue(const TracedValue &amp;)=delete</div></div>
 <div class="ttc" id="adebug-coverage_8cc_html_abc6469847a0f17e8596638583d739b8b"><div class="ttname"><a href="debug-coverage_8cc.html#abc6469847a0f17e8596638583d739b8b">nesting_stack_</a></div><div class="ttdeci">std::vector&lt; CoverageBlock &gt; nesting_stack_</div><div class="ttdef"><b>Definition</b> <a href="debug-coverage_8cc_source.html#l00217">debug-coverage.cc:217</a></div></div>
-<div class="ttc" id="aheap_2cppgc_2trace-event_8h_html_a46f6df097d5f7c8481f2d949ccd9a43f"><div class="ttname"><a href="heap_2cppgc_2trace-event_8h.html#a46f6df097d5f7c8481f2d949ccd9a43f">ConvertableToTraceFormat</a></div><div class="ttdeci">v8::ConvertableToTraceFormat ConvertableToTraceFormat</div><div class="ttdef"><b>Definition</b> <a href="heap_2cppgc_2trace-event_8h_source.html#l00010">trace-event.h:10</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="atracing_2trace-event_8h_html"><div class="ttname"><a href="tracing_2trace-event_8h.html">trace-event.h</a></div></div>
+<div class="ttc" id="av8-platform_8h_html"><div class="ttname"><a href="v8-platform_8h.html">v8-platform.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:01 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8c27da8e777a7195961d7f24190c7014.html">tracing</a></li><li class="navelem"><a class="el" href="traced-value_8h.html">traced-value.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:15 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

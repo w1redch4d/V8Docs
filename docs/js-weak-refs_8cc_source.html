@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/objects/js-weak-refs.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/objects/js-weak-refs.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('js-weak-refs_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">js-weak-refs.cc</div></div>
 </div><!--header-->
@@ -113,7 +121,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Undefined&gt;</a> undefined = <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).undefined_value();</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;WeakCell&gt;</a> head = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;WeakCell&gt;</a>(cleared_cells());</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsUndefined(head-&gt;prev(), isolate));</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsUndefined(head-&gt;prev(), isolate));</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Union&lt;Undefined, WeakCell&gt;</a>&gt; tail = head-&gt;next();</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  head-&gt;set_next(undefined);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keywordflow">if</span> (IsWeakCell(tail)) <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;WeakCell&gt;</a>(tail)-&gt;set_prev(undefined);</div>
@@ -148,7 +156,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">// ES#sec-cleanup-finalization-registry</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// static</span></div>
 <div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSFinalizationRegistry.html#ac96f7509b33f8e246a299245e5e363f9">   50</a></span>Maybe&lt;bool&gt; <a class="code hl_function" href="classv8_1_1internal_1_1JSFinalizationRegistry.html#ac96f7509b33f8e246a299245e5e363f9">JSFinalizationRegistry::Cleanup</a>(</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSFinalizationRegistry.html#ac96f7509b33f8e246a299245e5e363f9">   50</a></span><a class="code hl_class" href="classv8_1_1Maybe.html">Maybe&lt;bool&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1JSFinalizationRegistry.html#ac96f7509b33f8e246a299245e5e363f9">JSFinalizationRegistry::Cleanup</a>(</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate,</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSFinalizationRegistry&gt;</a> finalization_registry) {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="comment">// 1. Assert: finalizationRegistry has [[Cells]] and [[CleanupCallback]]</span></div>
@@ -180,12 +188,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                        <a class="code hl_function" href="namespacev8_1_1base.html#ab277246c6caecad159bbc8755cf6bb54">base::VectorOf</a>(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>))</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            .is_null()) {</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <span class="keywordflow">if</span> (key_map_may_need_shrink) <a class="code hl_function" href="classv8_1_1internal_1_1JSFinalizationRegistry.html#a313415e97ce5c1625b4096a125ff6ae0">ShrinkKeyMap</a>(isolate, finalization_registry);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="keywordflow">return</span> Nothing&lt;bool&gt;();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8.html#a44029b173d135df05011f8b904718cbc">Nothing&lt;bool&gt;</a>();</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  }</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <span class="keywordflow">if</span> (key_map_may_need_shrink) <a class="code hl_function" href="classv8_1_1internal_1_1JSFinalizationRegistry.html#a313415e97ce5c1625b4096a125ff6ae0">ShrinkKeyMap</a>(isolate, finalization_registry);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordflow">return</span> Just(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">Just</a>(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
 </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
@@ -193,7 +201,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSFinalizationRegistry.html#a7066e6a07c444d9c75895d90abdb841e">   90</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSFinalizationRegistry.html#a7066e6a07c444d9c75895d90abdb841e">JSFinalizationRegistry::RemoveCellFromUnregisterTokenMap</a>(</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;WeakCell&gt;</a> weak_cell) {</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  <a class="code hl_class" href="classv8_1_1internal_1_1PerThreadAssertScopeEmpty.html">DisallowGarbageCollection</a> no_gc;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!IsUndefined(weak_cell-&gt;unregister_token(), isolate));</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!IsUndefined(weak_cell-&gt;unregister_token(), isolate));</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Undefined&gt;</a> undefined = <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).undefined_value();</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="comment">// Remove weak_cell from the linked list of other WeakCells with the same</span></div>
@@ -206,7 +214,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> unregister_token = weak_cell-&gt;unregister_token();</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    uint32_t <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a> = <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a2e32de9e93a2cdfae189371f22782dad">Smi::ToInt</a>(<a class="code hl_function" href="classv8_1_1internal_1_1Object.html#aaaea701b4535f34d23f5fa54eb02e95a">Object::GetHash</a>(unregister_token));</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a> entry = key_map-&gt;FindEntry(isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>);</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#ad381db083f3f9b72f16908eac7027823">is_found</a>());</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#ad381db083f3f9b72f16908eac7027823">is_found</a>());</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">if</span> (IsUndefined(weak_cell-&gt;key_list_next(), isolate)) {</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>      <span class="comment">// weak_cell is the only one associated with its key; remove the key</span></div>
@@ -217,7 +225,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      <span class="comment">// weak_cell is the list head for its key; we need to change the value</span></div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="comment">// of the key in the hash table.</span></div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;WeakCell&gt;</a> next = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;WeakCell&gt;</a>(weak_cell-&gt;key_list_next());</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(next-&gt;key_list_prev(), weak_cell);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(next-&gt;key_list_prev(), weak_cell);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      next-&gt;set_key_list_prev(undefined);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>      key_map-&gt;ValueAtPut(entry, next);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
@@ -241,6 +249,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}  <span class="comment">// namespace v8</span></div>
+<div class="ttc" id="aclassv8_1_1Maybe_html"><div class="ttname"><a href="classv8_1_1Maybe.html">v8::Maybe</a></div><div class="ttdef"><b>Definition</b> <a href="v8-maybe_8h_source.html#l00032">v8-maybe.h:32</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1DirectHandle_html"><div class="ttname"><a href="classv8_1_1internal_1_1DirectHandle.html">v8::internal::DirectHandle</a></div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00643">handles.h:652</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Execution_html_aa96bbcf276f7f9944ea565c658279e55"><div class="ttname"><a href="classv8_1_1internal_1_1Execution.html#aa96bbcf276f7f9944ea565c658279e55">v8::internal::Execution::Call</a></div><div class="ttdeci">V8_EXPORT_PRIVATE static V8_WARN_UNUSED_RESULT MaybeHandle&lt; Object &gt; Call(Isolate *isolate, DirectHandle&lt; Object &gt; callable, DirectHandle&lt; Object &gt; receiver, base::Vector&lt; const DirectHandle&lt; Object &gt; &gt; args)</div><div class="ttdef"><b>Definition</b> <a href="execution_8cc_source.html#l00519">execution.cc:519</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1HandleScope_html"><div class="ttname"><a href="classv8_1_1internal_1_1HandleScope.html">v8::internal::HandleScope</a></div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00258">handles.h:258</a></div></div>
@@ -262,8 +271,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ajs-call-reducer_8cc_html_ad83e8682ed733ee0cf359fa4f48441b0"><div class="ttname"><a href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a></div><div class="ttdeci">TNode&lt; Object &gt; callback</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01500">js-call-reducer.cc:1500</a></div></div>
 <div class="ttc" id="ajs-weak-refs-inl_8h_html"><div class="ttname"><a href="js-weak-refs-inl_8h.html">js-weak-refs-inl.h</a></div></div>
 <div class="ttc" id="ajs-weak-refs_8h_html"><div class="ttname"><a href="js-weak-refs_8h.html">js-weak-refs.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_ab277246c6caecad159bbc8755cf6bb54"><div class="ttname"><a href="namespacev8_1_1base.html#ab277246c6caecad159bbc8755cf6bb54">v8::base::VectorOf</a></div><div class="ttdeci">constexpr Vector&lt; T &gt; VectorOf(T *start, size_t size)</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00360">vector.h:360</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a60f13a8c00d0433f9336368824ac21a1"><div class="ttname"><a href="namespacev8_1_1internal.html#a60f13a8c00d0433f9336368824ac21a1">v8::internal::direct_handle</a></div><div class="ttdeci">V8_INLINE DirectHandle&lt; T &gt; direct_handle(Tagged&lt; T &gt; object, Isolate *isolate)</div><div class="ttdef"><b>Definition</b> <a href="handles-inl_8h_source.html#l00141">handles-inl.h:141</a></div></div>
@@ -271,11 +278,18 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_ab9df0bf289155b5ae1d6da682adf1d6f"><div class="ttname"><a href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">v8::internal::handle</a></div><div class="ttdeci">V8_INLINE Handle&lt; T &gt; handle(Tagged&lt; T &gt; object, Isolate *isolate)</div><div class="ttdef"><b>Definition</b> <a href="handles-inl_8h_source.html#l00070">handles-inl.h:70</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="anamespacev8_html_a44029b173d135df05011f8b904718cbc"><div class="ttname"><a href="namespacev8.html#a44029b173d135df05011f8b904718cbc">v8::Nothing</a></div><div class="ttdeci">Maybe&lt; T &gt; Nothing()</div><div class="ttdef"><b>Definition</b> <a href="v8-maybe_8h_source.html#l00111">v8-maybe.h:111</a></div></div>
+<div class="ttc" id="anamespacev8_html_aef5115fb284980e6c3772b55f8e8ca72"><div class="ttname"><a href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">v8::Just</a></div><div class="ttdeci">Maybe&lt; T &gt; Just(const T &amp;t)</div><div class="ttdef"><b>Definition</b> <a href="v8-maybe_8h_source.html#l00116">v8-maybe.h:116</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:36 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li><li class="navelem"><a class="el" href="js-weak-refs_8cc.html">js-weak-refs.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:55:49 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

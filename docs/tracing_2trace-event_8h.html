@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/tracing/trace-event.h File Reference</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/tracing/trace-event.h File Reference</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('tracing_2trace-event_8h.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8c27da8e777a7195961d7f24190c7014.html">tracing</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -103,217 +111,231 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <div class="textblock"><code>#include &lt;stddef.h&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
-<code>#include &quot;v8config.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="v8config_8h_source.html">v8config.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="trace-event-no-perfetto_8h_source.html">src/tracing/trace-event-no-perfetto.h</a>&quot;</code><br />
-<code>#include &quot;include/v8-platform.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="v8-platform_8h_source.html">include/v8-platform.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="atomicops_8h_source.html">src/base/atomicops.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="macros_8h_source.html">src/base/macros.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2base_2macros_8h_source.html">src/base/macros.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for trace-event.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="tracing_2trace-event_8h__incl.png" border="0" usemap="#a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2tracing_2trace-event_8h" alt=""/></div>
-<map name="a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2tracing_2trace-event_8h" id="a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2tracing_2trace-event_8h">
-<area shape="rect" title=" " alt="" coords="1908,5,2120,73"/>
-<area shape="rect" title=" " alt="" coords="1710,470,1782,499"/>
-<area shape="poly" title=" " alt="" coords="1993,75,1967,122,1948,175,1942,231,1942,312,1942,372,1935,397,1916,423,1890,446,1860,462,1828,473,1798,480,1797,475,1827,468,1858,457,1887,441,1912,420,1930,394,1937,371,1937,311,1937,231,1942,174,1962,120,1988,72"/>
-<area shape="rect" title=" " alt="" coords="1977,130,2051,160"/>
-<area shape="poly" title=" " alt="" coords="2017,73,2017,115,2012,115,2012,73"/>
-<area shape="rect" title=" " alt="" coords="2075,130,2161,160"/>
-<area shape="poly" title=" " alt="" coords="2049,71,2095,118,2092,121,2045,75"/>
-<area shape="rect" href="trace-event-no-perfetto_8h.html" title=" " alt="" coords="2186,121,2346,170"/>
-<area shape="poly" title=" " alt="" coords="2096,71,2196,112,2194,117,2094,76"/>
-<area shape="rect" title=" " alt="" coords="2370,130,2525,160"/>
-<area shape="poly" title=" " alt="" coords="2121,62,2359,118,2380,124,2379,129,2358,124,2120,67"/>
-<area shape="rect" href="atomicops_8h.html" title=" " alt="" coords="213,130,365,160"/>
-<area shape="poly" title=" " alt="" coords="1908,50,381,141,381,136,1907,44"/>
-<area shape="rect" href="macros_8h.html" title=" " alt="" coords="1606,218,1740,247"/>
-<area shape="poly" title=" " alt="" coords="1956,76,1713,212,1710,207,1954,71"/>
-<area shape="rect" title=" " alt="" coords="5,218,74,247"/>
-<area shape="poly" title=" " alt="" coords="248,163,89,217,87,212,246,158"/>
-<area shape="rect" title=" " alt="" coords="98,218,160,247"/>
-<area shape="poly" title=" " alt="" coords="263,163,170,213,167,208,261,158"/>
-<area shape="rect" title=" " alt="" coords="184,218,252,247"/>
-<area shape="poly" title=" " alt="" coords="279,162,241,208,237,204,275,159"/>
-<area shape="rect" href="base-export_8h.html" title=" " alt="" coords="343,470,506,499"/>
-<area shape="poly" title=" " alt="" coords="297,159,401,421,415,454,410,456,396,423,292,161"/>
-<area shape="rect" href="build__config_8h.html" title=" " alt="" coords="731,470,894,499"/>
-<area shape="poly" title=" " alt="" coords="303,159,343,216,361,255,374,295,383,333,387,365,395,393,403,406,417,420,438,432,467,443,544,460,632,470,716,477,716,482,632,476,543,465,466,448,436,437,414,424,399,409,390,395,382,366,378,334,369,296,356,257,339,219,299,162"/>
-<area shape="poly" title=" " alt="" coords="365,149,1591,223,1590,229,365,154"/>
-<area shape="rect" title=" " alt="" coords="980,547,1115,577"/>
-<area shape="poly" title=" " alt="" coords="507,493,965,548,964,553,507,498"/>
-<area shape="poly" title=" " alt="" coords="858,497,990,540,988,545,856,502"/>
-<area shape="poly" title=" " alt="" coords="1678,247,1684,295,1685,364,1680,402,1670,438,1654,472,1630,501,1604,514,1558,524,1424,541,1268,553,1131,560,1131,555,1268,548,1423,536,1557,519,1603,509,1627,497,1650,469,1665,436,1675,401,1680,364,1679,296,1673,248"/>
-<area shape="rect" title=" " alt="" coords="1710,295,1764,325"/>
-<area shape="poly" title=" " alt="" coords="1687,246,1717,282,1713,285,1683,250"/>
-<area shape="rect" title=" " alt="" coords="1531,470,1617,499"/>
-<area shape="poly" title=" " alt="" coords="1670,249,1588,456,1583,454,1665,247"/>
-<area shape="rect" href="compiler-specific_8h.html" title=" " alt="" coords="1710,382,1902,412"/>
-<area shape="poly" title=" " alt="" coords="1711,246,1746,265,1778,294,1796,330,1806,366,1800,368,1791,332,1773,297,1743,269,1709,250"/>
-<area shape="rect" href="logging_8h.html" title=" " alt="" coords="960,295,1095,325"/>
-<area shape="poly" title=" " alt="" coords="1606,244,1111,302,1110,297,1605,239"/>
-<area shape="poly" title=" " alt="" coords="1812,413,1815,456,1809,480,1796,501,1782,510,1760,517,1697,530,1514,548,1306,558,1131,562,1131,557,1306,553,1514,543,1696,525,1759,512,1780,505,1792,497,1804,478,1809,456,1807,413"/>
-<area shape="poly" title=" " alt="" coords="959,316,815,322,644,333,495,350,444,362,417,375,408,392,406,413,415,455,410,456,400,413,403,391,414,371,442,357,494,345,644,327,815,316,959,311"/>
-<area shape="poly" title=" " alt="" coords="960,315,876,320,785,330,704,347,674,360,655,375,648,386,646,397,648,408,655,420,683,447,718,464,715,469,679,451,651,423,643,410,640,397,643,384,651,371,672,355,703,342,784,324,876,314,959,310"/>
-<area shape="poly" title=" " alt="" coords="1096,316,1597,370,1695,381,1694,386,1597,376,1095,321"/>
-<area shape="rect" title=" " alt="" coords="1435,382,1497,412"/>
-<area shape="poly" title=" " alt="" coords="1096,314,1245,332,1332,348,1418,370,1426,373,1425,378,1416,376,1331,354,1244,337,1095,319"/>
-<area shape="rect" title=" " alt="" coords="1521,382,1584,412"/>
-<area shape="poly" title=" " alt="" coords="1096,310,1180,315,1285,325,1398,343,1510,370,1517,373,1515,378,1508,376,1397,348,1284,330,1180,320,1096,315"/>
-<area shape="rect" title=" " alt="" coords="665,382,734,412"/>
-<area shape="poly" title=" " alt="" coords="960,324,859,344,747,376,740,378,738,373,745,370,857,339,959,319"/>
-<area shape="rect" title=" " alt="" coords="758,382,828,412"/>
-<area shape="poly" title=" " alt="" coords="979,328,913,349,840,375,834,378,832,373,839,371,911,344,977,323"/>
-<area shape="rect" title=" " alt="" coords="852,382,910,412"/>
-<area shape="poly" title=" " alt="" coords="1005,328,920,377,917,372,1002,323"/>
-<area shape="rect" title=" " alt="" coords="1432,470,1487,499"/>
-<area shape="poly" title=" " alt="" coords="1096,315,1250,336,1323,352,1374,371,1408,406,1444,455,1440,458,1404,409,1371,375,1322,357,1249,341,1095,320"/>
-<area shape="rect" title=" " alt="" coords="934,382,996,412"/>
-<area shape="poly" title=" " alt="" coords="1019,327,986,372,982,369,1015,324"/>
-<area shape="rect" href="abort-mode_8h.html" title=" " alt="" coords="427,382,590,412"/>
-<area shape="poly" title=" " alt="" coords="960,322,799,344,609,376,582,381,581,376,608,370,799,339,959,317"/>
-<area shape="rect" href="immediate-crash_8h.html" title=" " alt="" coords="1020,373,1163,422"/>
-<area shape="poly" title=" " alt="" coords="1040,324,1067,359,1062,362,1036,327"/>
-<area shape="rect" href="template-utils_8h.html" title=" " alt="" coords="1187,382,1361,412"/>
-<area shape="poly" title=" " alt="" coords="1070,323,1220,375,1218,380,1068,328"/>
-<area shape="poly" title=" " alt="" coords="497,415,451,461,447,457,493,411"/>
-<area shape="poly" title=" " alt="" coords="1088,423,1058,533,1053,532,1083,422"/>
-<area shape="poly" title=" " alt="" coords="1020,423,875,467,873,462,1019,418"/>
-<area shape="poly" title=" " alt="" coords="1354,410,1695,471,1694,477,1353,415"/>
-<area shape="poly" title=" " alt="" coords="1325,410,1517,464,1515,469,1324,415"/>
-<area shape="poly" title=" " alt="" coords="1306,410,1419,462,1417,467,1304,415"/>
-<area shape="rect" title=" " alt="" coords="1248,470,1301,499"/>
-<area shape="poly" title=" " alt="" coords="1277,413,1277,454,1272,454,1272,413"/>
-<area shape="rect" title=" " alt="" coords="1325,470,1407,499"/>
-<area shape="poly" title=" " alt="" coords="1291,411,1342,457,1338,461,1288,415"/>
-<area shape="rect" title=" " alt="" coords="1085,470,1146,499"/>
-<area shape="poly" title=" " alt="" coords="1249,415,1156,465,1154,460,1246,410"/>
-<area shape="rect" title=" " alt="" coords="1170,470,1224,499"/>
-<area shape="poly" title=" " alt="" coords="1263,414,1221,460,1217,457,1259,411"/>
+<div class="center"><img src="tracing_2trace-event_8h__incl.png" border="0" usemap="#asrc_2tracing_2trace-event_8h" alt=""/></div>
+<map name="asrc_2tracing_2trace-event_8h" id="asrc_2tracing_2trace-event_8h">
+<area shape="rect" title=" " alt="" coords="967,5,1140,35"/>
+<area shape="rect" title=" " alt="" coords="98,432,171,461"/>
+<area shape="poly" title=" " alt="" coords="967,31,734,52,449,88,318,110,209,136,167,150,135,164,116,179,109,194,109,273,116,351,130,416,124,417,111,352,104,274,104,193,112,176,133,160,165,145,207,131,317,105,449,83,734,47,967,25"/>
+<area shape="rect" title=" " alt="" coords="19,587,93,617"/>
+<area shape="poly" title=" " alt="" coords="967,26,792,32,576,43,368,61,284,72,219,86,142,100,74,112,47,121,26,137,13,160,8,193,8,448,11,482,20,516,44,572,39,574,15,517,6,483,3,448,3,193,8,158,22,133,44,117,73,106,142,95,218,80,283,67,368,55,575,38,791,27,966,21"/>
+<area shape="rect" href="v8config_8h.html" title=" " alt="" coords="668,509,754,539"/>
+<area shape="poly" title=" " alt="" coords="1140,25,1385,45,1686,80,1826,102,1942,128,1987,143,2022,158,2044,175,2052,193,2052,361,2047,394,2033,418,2011,434,1983,443,1915,452,1840,464,1744,482,1615,496,1303,514,993,523,769,525,769,520,993,517,1303,509,1614,490,1743,476,1840,459,1915,447,1982,437,2008,429,2029,415,2042,393,2047,360,2047,194,2040,178,2019,163,1985,148,1941,134,1825,108,1685,85,1384,50,1140,30"/>
+<area shape="rect" href="trace-event-no-perfetto_8h.html" title=" " alt="" coords="2086,83,2247,132"/>
+<area shape="poly" title=" " alt="" coords="1140,19,1311,22,1542,32,1804,50,2068,80,2072,81,2071,86,2068,86,1804,55,1542,37,1311,28,1140,25"/>
+<area shape="rect" href="v8-platform_8h.html" title=" " alt="" coords="352,180,507,209"/>
+<area shape="poly" title=" " alt="" coords="1003,38,496,178,494,172,1002,33"/>
+<area shape="rect" href="atomicops_8h.html" title=" " alt="" coords="977,92,1130,122"/>
+<area shape="poly" title=" " alt="" coords="1056,35,1056,77,1051,77,1051,35"/>
+<area shape="rect" href="src_2base_2macros_8h.html" title=" " alt="" coords="1615,180,1748,209"/>
+<area shape="poly" title=" " alt="" coords="1105,33,1616,172,1614,178,1104,38"/>
+<area shape="poly" title=" " alt="" coords="668,533,109,597,108,592,667,528"/>
+<area shape="poly" title=" " alt="" coords="351,199,310,205,268,216,227,233,191,259,165,295,149,338,140,380,137,416,132,416,135,379,144,336,160,293,187,255,224,229,266,211,309,200,351,194"/>
+<area shape="poly" title=" " alt="" coords="351,199,259,209,210,219,163,234,122,255,89,282,67,316,61,336,59,358,59,448,59,571,53,571,53,448,53,358,55,335,62,314,85,278,119,250,161,229,209,214,258,204,351,194"/>
+<area shape="poly" title=" " alt="" coords="352,202,319,208,288,219,259,236,235,259,219,288,214,316,217,343,228,368,246,393,269,417,327,459,352,471,386,481,474,497,652,516,652,522,473,503,385,486,350,476,324,464,265,421,242,397,223,371,212,344,208,316,214,286,231,256,256,232,285,214,318,203,351,196"/>
+<area shape="rect" title=" " alt="" coords="467,257,533,287"/>
+<area shape="poly" title=" " alt="" coords="445,208,478,244,474,248,441,212"/>
+<area shape="rect" title=" " alt="" coords="647,257,716,287"/>
+<area shape="poly" title=" " alt="" coords="477,207,633,254,632,259,476,212"/>
+<area shape="rect" title=" " alt="" coords="556,257,622,287"/>
+<area shape="poly" title=" " alt="" coords="461,208,547,248,545,253,458,212"/>
+<area shape="rect" title=" " alt="" coords="387,344,445,374"/>
+<area shape="poly" title=" " alt="" coords="431,210,421,329,416,329,426,209"/>
+<area shape="rect" href="v8-source-location_8h.html" title=" " alt="" coords="246,257,391,287"/>
+<area shape="poly" title=" " alt="" coords="410,212,353,250,350,246,407,208"/>
+<area shape="poly" title=" " alt="" coords="309,289,295,309,283,334,279,359,281,371,286,382,322,421,365,453,414,477,465,494,517,507,567,515,652,521,652,526,566,520,516,512,463,499,412,481,363,457,319,425,282,385,276,373,273,359,278,332,291,307,305,286"/>
+<area shape="poly" title=" " alt="" coords="336,285,391,333,387,337,333,289"/>
+<area shape="rect" title=" " alt="" coords="296,344,363,374"/>
+<area shape="poly" title=" " alt="" coords="323,287,328,329,323,330,318,288"/>
+<area shape="poly" title=" " alt="" coords="977,112,920,117,857,129,794,150,736,182,722,195,710,211,693,244,688,242,706,208,718,191,733,178,792,145,856,124,919,112,977,106"/>
+<area shape="poly" title=" " alt="" coords="1035,125,985,159,911,205,823,251,729,290,677,304,631,312,552,315,474,318,429,324,377,338,369,340,367,335,375,332,428,319,473,312,552,310,631,306,675,299,727,284,820,246,908,200,982,155,1032,120"/>
+<area shape="rect" title=" " alt="" coords="1529,180,1591,209"/>
+<area shape="poly" title=" " alt="" coords="1130,115,1305,140,1511,177,1514,178,1513,183,1510,182,1304,145,1130,121"/>
+<area shape="rect" href="base-export_8h.html" title=" " alt="" coords="1489,432,1652,461"/>
+<area shape="poly" title=" " alt="" coords="1130,110,1247,126,1315,142,1386,163,1456,192,1522,230,1581,276,1607,303,1630,334,1637,347,1638,359,1630,385,1618,406,1603,423,1599,420,1614,402,1626,383,1633,358,1632,348,1626,336,1603,307,1578,280,1519,234,1453,197,1384,168,1313,147,1246,132,1130,116"/>
+<area shape="rect" href="build__config_8h.html" title=" " alt="" coords="629,432,792,461"/>
+<area shape="poly" title=" " alt="" coords="1034,125,909,203,821,249,729,290,695,299,663,301,606,298,581,297,557,302,533,314,510,337,503,348,501,359,503,370,510,382,531,403,557,419,585,430,615,438,613,443,583,435,554,424,528,408,506,385,498,372,495,359,498,346,506,333,530,310,555,297,580,292,606,292,663,296,694,293,727,284,819,244,906,198,1031,121"/>
+<area shape="poly" title=" " alt="" coords="1130,115,1338,141,1600,177,1599,182,1337,146,1130,120"/>
+<area shape="poly" title=" " alt="" coords="1489,460,1452,464,1063,499,769,521,769,516,1062,493,1452,459,1488,455"/>
+<area shape="poly" title=" " alt="" coords="713,462,713,494,708,494,708,462"/>
+<area shape="poly" title=" " alt="" coords="1749,207,1838,232,1885,249,1927,270,1961,293,1984,320,1989,336,1990,352,1985,368,1975,385,1949,415,1922,435,1894,447,1864,453,1799,456,1720,464,1634,476,1520,487,1246,504,770,524,769,518,1246,499,1520,481,1634,471,1720,459,1798,451,1864,447,1892,442,1919,430,1945,411,1971,382,1981,366,1985,351,1984,337,1979,323,1958,297,1924,274,1883,254,1837,237,1748,212"/>
+<area shape="rect" title=" " alt="" coords="1075,257,1128,287"/>
+<area shape="poly" title=" " alt="" coords="1614,210,1603,212,1475,225,1374,230,1272,238,1144,260,1143,255,1271,232,1373,225,1475,220,1602,207,1614,205"/>
+<area shape="rect" title=" " alt="" coords="1354,432,1440,461"/>
+<area shape="poly" title=" " alt="" coords="1682,210,1676,246,1663,293,1641,342,1626,365,1607,386,1581,401,1543,414,1457,436,1455,431,1542,409,1579,396,1604,382,1622,362,1636,340,1658,291,1671,244,1677,210"/>
+<area shape="rect" href="src_2base_2compiler-specific_8h.html" title=" " alt="" coords="1769,344,1962,374"/>
+<area shape="poly" title=" " alt="" coords="1699,208,1840,332,1836,336,1695,212"/>
+<area shape="rect" href="src_2base_2logging_8h.html" title=" " alt="" coords="1152,257,1288,287"/>
+<area shape="poly" title=" " alt="" coords="1615,210,1603,212,1303,260,1303,255,1602,207,1614,205"/>
+<area shape="poly" title=" " alt="" coords="1846,377,1769,422,1718,445,1665,464,1585,480,1478,492,1221,511,962,521,770,525,770,519,962,515,1221,505,1478,487,1584,474,1663,459,1716,440,1766,417,1843,372"/>
+<area shape="poly" title=" " alt="" coords="1152,288,1140,290,963,305,824,310,685,316,604,324,508,338,460,348,459,343,508,332,603,319,685,311,823,304,962,300,1140,284,1152,283"/>
+<area shape="poly" title=" " alt="" coords="1288,272,1374,276,1469,285,1554,304,1586,317,1607,333,1617,354,1615,378,1606,400,1594,421,1589,418,1601,398,1610,376,1611,355,1603,337,1583,321,1552,309,1469,291,1374,281,1288,277"/>
+<area shape="poly" title=" " alt="" coords="1156,290,1066,313,999,337,984,349,974,361,964,374,948,386,879,416,808,434,807,429,877,411,945,381,960,370,970,358,980,345,996,333,1065,308,1155,285"/>
+<area shape="poly" title=" " alt="" coords="1288,280,1754,341,1753,346,1287,285"/>
+<area shape="rect" title=" " alt="" coords="1257,344,1319,374"/>
+<area shape="poly" title=" " alt="" coords="1233,286,1269,331,1265,334,1229,289"/>
+<area shape="rect" title=" " alt="" coords="1343,344,1406,374"/>
+<area shape="poly" title=" " alt="" coords="1247,285,1337,334,1335,339,1245,290"/>
+<area shape="rect" title=" " alt="" coords="687,344,756,374"/>
+<area shape="poly" title=" " alt="" coords="1152,288,1140,290,1035,301,952,305,871,313,769,338,761,340,759,335,767,332,870,308,952,299,1035,295,1140,284,1152,283"/>
+<area shape="rect" title=" " alt="" coords="780,344,850,374"/>
+<area shape="poly" title=" " alt="" coords="1153,288,862,338,854,340,853,335,861,332,1152,282"/>
+<area shape="rect" title=" " alt="" coords="1208,432,1264,461"/>
+<area shape="poly" title=" " alt="" coords="1224,287,1236,416,1231,417,1219,288"/>
+<area shape="rect" title=" " alt="" coords="873,344,935,374"/>
+<area shape="poly" title=" " alt="" coords="1153,288,1058,308,954,338,946,341,944,336,953,332,1056,303,1151,282"/>
+<area shape="rect" href="abort-mode_8h.html" title=" " alt="" coords="1430,344,1594,374"/>
+<area shape="poly" title=" " alt="" coords="1270,285,1450,337,1448,342,1268,290"/>
+<area shape="rect" href="immediate-crash_8h.html" title=" " alt="" coords="520,335,664,384"/>
+<area shape="poly" title=" " alt="" coords="1152,288,1140,290,1012,303,910,310,808,318,679,337,678,332,808,312,910,304,1011,298,1140,284,1152,283"/>
+<area shape="rect" href="template-utils_8h.html" title=" " alt="" coords="1009,344,1183,374"/>
+<area shape="poly" title=" " alt="" coords="1201,290,1130,338,1127,333,1198,285"/>
+<area shape="poly" title=" " alt="" coords="1524,373,1555,418,1550,421,1519,376"/>
+<area shape="poly" title=" " alt="" coords="596,384,602,422,609,442,619,460,641,482,666,499,663,504,637,486,615,463,605,444,597,423,591,385"/>
+<area shape="poly" title=" " alt="" coords="627,382,680,420,677,424,624,386"/>
+<area shape="poly" title=" " alt="" coords="1012,377,947,386,725,408,508,426,187,445,186,440,507,420,725,403,946,381,1011,372"/>
+<area shape="poly" title=" " alt="" coords="1147,372,1340,426,1338,431,1146,377"/>
+<area shape="poly" title=" " alt="" coords="1120,372,1201,421,1199,426,1118,377"/>
+<area shape="rect" title=" " alt="" coords="1131,432,1184,461"/>
+<area shape="poly" title=" " alt="" coords="1108,373,1141,418,1136,421,1104,376"/>
+<area shape="rect" title=" " alt="" coords="862,432,944,461"/>
+<area shape="poly" title=" " alt="" coords="1065,377,949,428,947,423,1063,372"/>
+<area shape="rect" title=" " alt="" coords="968,432,1029,461"/>
+<area shape="poly" title=" " alt="" coords="1082,377,1027,424,1024,420,1078,373"/>
+<area shape="rect" title=" " alt="" coords="1053,432,1107,461"/>
+<area shape="poly" title=" " alt="" coords="1096,375,1088,417,1083,416,1091,374"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="tracing_2trace-event_8h__dep__incl.png" border="0" usemap="#a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2tracing_2trace-event_8hdep" alt=""/></div>
-<map name="a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2tracing_2trace-event_8hdep" id="a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2tracing_2trace-event_8hdep">
-<area shape="rect" title=" " alt="" coords="4184,5,4396,73"/>
-<area shape="rect" href="api_8cc.html" title=" " alt="" coords="1972,390,2184,458"/>
-<area shape="poly" title=" " alt="" coords="4169,44,3674,48,3013,60,2693,70,2421,84,2224,101,2163,112,2133,123,2108,151,2090,183,2078,219,2071,257,2069,331,2075,390,2070,390,2064,331,2066,256,2073,218,2085,181,2104,148,2130,119,2162,107,2223,96,2420,78,2693,65,3013,54,3674,42,4169,38"/>
-<area shape="rect" href="optimized-compilation-info_8cc.html" title=" " alt="" coords="2639,256,2851,342"/>
-<area shape="poly" title=" " alt="" coords="4169,45,3852,52,3458,66,3268,76,3102,89,2975,105,2931,114,2902,123,2860,150,2824,185,2794,222,2771,257,2766,254,2790,219,2820,181,2857,146,2900,119,2929,109,2974,100,3101,84,3267,71,3458,60,3852,46,4169,40"/>
-<area shape="rect" href="optimizing-compile-dispatcher_8cc.html" title=" " alt="" coords="3273,121,3497,208"/>
-<area shape="poly" title=" " alt="" coords="4169,48,4034,56,3870,71,3693,93,3516,124,3498,128,3497,123,3515,118,3692,87,3870,65,4034,51,4169,43"/>
-<area shape="rect" href="pipeline-statistics_8h.html" title=" " alt="" coords="3572,121,3784,208"/>
-<area shape="poly" title=" " alt="" coords="4169,57,3992,83,3894,101,3797,124,3785,127,3784,122,3796,118,3893,96,3991,78,4168,52"/>
-<area shape="rect" href="pipeline_8cc.html" title=" " alt="" coords="3692,390,3904,458"/>
-<area shape="poly" title=" " alt="" coords="4169,48,3996,57,3805,72,3644,94,3590,108,3561,123,3550,142,3548,161,3562,207,3578,250,3596,281,3620,309,3655,340,3688,366,3725,387,3722,392,3685,370,3651,344,3617,312,3592,284,3573,252,3557,209,3543,162,3545,141,3558,119,3588,103,3643,89,3805,67,3996,52,4168,43"/>
-<area shape="rect" href="wasm-compiler_8cc.html" title=" " alt="" coords="3808,130,4042,198"/>
-<area shape="poly" title=" " alt="" coords="4178,81,4024,133,4022,128,4176,76"/>
-<area shape="rect" href="execution_2arguments_8h.html" title=" " alt="" coords="1224,130,1436,198"/>
-<area shape="poly" title=" " alt="" coords="4168,47,3290,75,2681,97,2060,124,1437,159,1436,154,2059,118,2681,92,3289,69,4168,41"/>
-<area shape="rect" href="ic_8cc.html" title=" " alt="" coords="5,390,218,458"/>
-<area shape="poly" title=" " alt="" coords="4168,43,3264,48,1929,60,1269,70,706,84,306,102,188,112,154,118,138,123,114,150,98,182,89,218,86,256,91,330,104,390,99,391,86,331,80,256,84,217,93,180,110,147,135,119,153,112,188,107,305,96,705,79,1269,65,1929,54,3264,42,4168,38"/>
-<area shape="rect" href="microtask-queue_8cc.html" title=" " alt="" coords="4065,121,4278,208"/>
-<area shape="poly" title=" " alt="" coords="4250,86,4215,122,4211,119,4246,82"/>
-<area shape="rect" href="protectors_8cc.html" title=" " alt="" coords="4302,130,4516,198"/>
-<area shape="poly" title=" " alt="" coords="4334,82,4379,128,4375,132,4330,86"/>
-<area shape="rect" href="stack-guard_8cc.html" title=" " alt="" coords="4540,130,4760,198"/>
-<area shape="poly" title=" " alt="" coords="4403,76,4528,118,4555,127,4553,132,4527,124,4401,81"/>
-<area shape="rect" href="tiering-manager_8cc.html" title=" " alt="" coords="4784,121,4996,208"/>
-<area shape="poly" title=" " alt="" coords="4412,52,4584,78,4680,97,4773,118,4784,121,4783,127,4772,124,4679,102,4583,83,4411,57"/>
-<area shape="rect" href="vm-state-inl_8h.html" title=" " alt="" coords="2144,130,2362,198"/>
-<area shape="poly" title=" " alt="" coords="4168,44,3784,49,3267,61,3002,72,2755,85,2542,102,2381,124,2344,133,2343,127,2380,118,2541,97,2754,80,3002,66,3267,56,3784,44,4168,39"/>
-<area shape="rect" href="heap_8cc.html" title=" " alt="" coords="2167,265,2379,333"/>
-<area shape="poly" title=" " alt="" coords="4168,45,3737,54,3174,70,2672,94,2505,108,2453,115,2426,123,2407,141,2398,161,2390,184,2375,209,2346,240,2317,267,2313,263,2343,236,2371,206,2385,182,2393,159,2402,138,2424,119,2452,110,2504,102,2672,88,3174,65,3737,49,4168,40"/>
-<area shape="rect" href="incremental-marking_8cc.html" title=" " alt="" coords="2403,256,2615,342"/>
-<area shape="poly" title=" " alt="" coords="4169,46,3833,56,3408,73,3021,95,2882,109,2800,124,2759,141,2730,161,2702,184,2664,210,2584,257,2581,253,2661,205,2698,179,2727,156,2756,136,2799,118,2881,104,3021,90,3408,68,3833,51,4169,41"/>
-<area shape="rect" href="heap_2cppgc_2trace-event_8h.html" title=" " alt="" coords="5020,121,5232,208"/>
-<area shape="poly" title=" " alt="" coords="4412,43,4537,51,4687,66,4849,88,5009,118,5020,121,5019,126,5008,124,4848,93,4687,71,4537,57,4412,48"/>
-<area shape="rect" href="finalization-registry-cleanup-task_8cc.html" title=" " alt="" coords="5256,121,5468,208"/>
-<area shape="poly" title=" " alt="" coords="4412,38,4578,43,4787,55,5016,79,5132,97,5245,118,5256,121,5255,126,5244,124,5132,102,5016,84,4786,60,4578,48,4412,43"/>
-<area shape="rect" href="gc-tracer_8h.html" title=" " alt="" coords="2437,130,2650,198"/>
-<area shape="poly" title=" " alt="" coords="4169,46,3841,54,3413,69,2993,92,2819,107,2687,124,2646,132,2645,127,2686,118,2818,101,2992,87,3413,64,3841,49,4169,40"/>
-<area shape="rect" href="heap-controller_8cc.html" title=" " alt="" coords="5492,130,5704,198"/>
-<area shape="poly" title=" " alt="" coords="4412,42,4661,52,4969,68,5266,90,5388,103,5481,118,5515,127,5514,132,5480,124,5387,109,5265,95,4968,73,4660,57,4412,47"/>
-<area shape="rect" href="ic-stats_8cc.html" title=" " alt="" coords="2875,265,3087,333"/>
-<area shape="poly" title=" " alt="" coords="4169,46,3842,55,3439,71,3249,81,3089,94,2975,108,2940,115,2924,123,2914,138,2909,155,2910,173,2915,192,2932,230,2955,263,2950,266,2928,233,2910,194,2905,174,2904,155,2909,136,2920,119,2939,110,2974,102,3089,88,3249,76,3439,65,3842,50,4169,41"/>
-<area shape="rect" href="v8-console-message_8cc.html" title=" " alt="" coords="5728,121,5940,208"/>
-<area shape="poly" title=" " alt="" coords="4412,40,4707,48,5083,63,5450,86,5602,101,5717,118,5728,121,5727,126,5716,124,5601,106,5450,91,5083,68,4706,53,4412,46"/>
-<area shape="rect" href="v8-console_8cc.html" title=" " alt="" coords="5965,130,6178,198"/>
-<area shape="poly" title=" " alt="" coords="4412,39,4751,45,5196,59,5423,69,5634,82,5816,98,5953,118,5988,127,5987,132,5952,124,5815,104,5634,87,5423,74,5196,64,4751,50,4412,44"/>
-<area shape="rect" href="v8-debugger_8cc.html" title=" " alt="" coords="6203,130,6428,198"/>
-<area shape="poly" title=" " alt="" coords="4412,39,4795,43,5309,56,5573,66,5819,80,6030,97,6191,118,6228,127,6226,133,6190,124,6030,102,5819,85,5573,71,5309,61,4795,49,4412,44"/>
-<area shape="rect" href="v8-runtime-agent-impl_8cc.html" title=" " alt="" coords="6452,121,6664,208"/>
-<area shape="poly" title=" " alt="" coords="4412,38,4840,39,5427,49,5730,59,6014,74,6257,93,6358,105,6441,118,6452,121,6451,126,6440,124,6357,110,6257,98,6013,79,5730,65,5427,55,4840,45,4412,43"/>
-<area shape="rect" href="v8-stack-trace-impl_8cc.html" title=" " alt="" coords="6688,121,6900,208"/>
-<area shape="poly" title=" " alt="" coords="4412,40,4927,49,5632,66,6293,89,6534,103,6677,118,6688,121,6687,126,6676,124,6534,108,6293,94,5632,71,4927,54,4412,45"/>
-<area shape="rect" href="log-inl_8h.html" title=" " alt="" coords="6924,130,7136,198"/>
-<area shape="poly" title=" " alt="" coords="4412,39,4972,48,5751,64,6486,87,6755,102,6913,118,6948,127,6947,132,6912,124,6754,107,6486,92,5751,69,4972,53,4412,45"/>
-<area shape="rect" href="parser_8cc.html" title=" " alt="" coords="7160,130,7372,198"/>
-<area shape="poly" title=" " alt="" coords="4412,39,5017,46,5870,61,6298,72,6679,85,6975,101,7079,109,7149,118,7184,127,7183,132,7148,124,7079,114,6974,106,6679,90,6298,78,5870,67,5017,52,4412,44"/>
-<area shape="rect" href="profile-generator_8cc.html" title=" " alt="" coords="3111,256,3323,342"/>
-<area shape="poly" title=" " alt="" coords="4168,44,3922,49,3630,61,3492,71,3375,85,3287,102,3258,112,3240,123,3220,152,3211,186,3208,222,3211,255,3206,255,3203,222,3205,185,3215,149,3236,119,3255,107,3286,97,3374,80,3492,66,3629,56,3921,43,4168,39"/>
-<area shape="rect" href="tracing-cpu-profiler_8cc.html" title=" " alt="" coords="7376,256,7588,342"/>
-<area shape="poly" title=" " alt="" coords="4412,38,5093,39,6059,48,6534,58,6944,73,7243,92,7337,105,7386,119,7417,169,7462,254,7458,256,7413,172,7383,123,7336,110,7243,98,6944,78,6534,64,6059,54,5093,44,4412,43"/>
-<area shape="rect" href="tracing-cpu-profiler_8h.html" title=" " alt="" coords="7448,121,7660,208"/>
-<area shape="poly" title=" " alt="" coords="4412,39,5070,46,6011,60,6485,71,6907,84,7235,100,7352,109,7429,118,7448,122,7447,127,7428,124,7351,114,7235,105,6907,90,6485,76,6011,66,5070,51,4412,44"/>
-<area shape="rect" href="trace-event_8cc.html" title=" " alt="" coords="3347,265,3559,333"/>
-<area shape="poly" title=" " alt="" coords="4169,44,3926,48,3640,60,3507,70,3392,84,3307,101,3279,112,3263,123,3249,143,3246,163,3251,183,3263,206,3277,220,3300,234,3360,262,3358,267,3297,239,3274,224,3259,209,3246,185,3241,163,3244,141,3259,119,3277,107,3306,96,3391,79,3506,65,3640,55,3926,43,4168,38"/>
-<area shape="rect" href="traced-value_8h.html" title=" " alt="" coords="2935,130,3147,198"/>
-<area shape="poly" title=" " alt="" coords="4168,42,3975,45,3724,56,3445,81,3304,99,3167,124,3131,132,3130,127,3166,118,3303,94,3445,75,3724,51,3975,39,4168,37"/>
-<area shape="rect" href="tracing-category-observer_8cc.html" title=" " alt="" coords="149,256,365,342"/>
-<area shape="poly" title=" " alt="" coords="4168,44,3579,51,2724,65,1852,89,1487,105,1212,124,975,146,791,169,609,203,377,258,366,261,364,256,376,253,608,198,790,164,974,141,1211,118,1487,99,1852,83,2724,60,3579,45,4168,39"/>
-<area shape="rect" href="tracing-category-observer_8h.html" title=" " alt="" coords="149,121,365,208"/>
-<area shape="poly" title=" " alt="" coords="4169,44,3644,49,2825,61,1845,85,1336,102,837,124,583,139,365,156,365,151,583,134,837,118,1336,97,1845,80,2825,56,3644,43,4169,39"/>
-<area shape="rect" href="liftoff-compiler_8cc.html" title=" " alt="" coords="7684,121,7896,208"/>
-<area shape="poly" title=" " alt="" coords="4412,38,5115,44,6133,57,6648,67,7106,81,7463,98,7589,108,7673,118,7684,121,7683,126,7672,124,7589,113,7462,103,7106,86,6647,73,6133,62,5115,49,4412,44"/>
-<area shape="rect" href="module-compiler_8cc.html" title=" " alt="" coords="7921,130,8147,198"/>
-<area shape="poly" title=" " alt="" coords="4412,38,5159,43,6251,57,6805,67,7298,80,7683,97,7819,107,7909,118,7947,127,7946,132,7908,124,7818,113,7682,103,7298,86,6805,72,6251,62,5159,49,4412,44"/>
-<area shape="rect" href="module-decoder_8cc.html" title=" " alt="" coords="8171,130,8396,198"/>
-<area shape="poly" title=" " alt="" coords="4412,38,5204,42,6375,54,6971,64,7502,78,7916,96,8062,107,8160,118,8197,127,8196,132,8159,124,8062,112,7916,101,7502,84,6971,70,6375,60,5204,48,4412,43"/>
-<area shape="rect" href="module-instantiate_8cc.html" title=" " alt="" coords="8419,130,8660,198"/>
-<area shape="poly" title=" " alt="" coords="4412,38,5250,42,6499,54,7135,64,7704,78,8147,96,8304,107,8408,118,8448,127,8446,132,8407,124,8303,112,8146,101,7703,83,7135,70,6499,59,5249,47,4412,43"/>
-<area shape="rect" href="code-assembler-compilation-job_8h.html" title=" " alt="" coords="3686,256,3911,342"/>
-<area shape="poly" title=" " alt="" coords="3729,218,3762,253,3758,257,3725,221"/>
-<area shape="poly" title=" " alt="" coords="3666,223,3661,283,3666,313,3676,341,3697,367,3724,388,3720,392,3693,371,3672,344,3661,314,3656,283,3660,223"/>
-<area shape="rect" href="pipeline-data-inl_8h.html" title=" " alt="" coords="3935,256,4147,342"/>
-<area shape="poly" title=" " alt="" coords="3799,207,3935,256,3934,261,3798,212"/>
-<area shape="rect" href="pipeline-statistics_8cc.html" title=" " alt="" coords="4407,256,4619,342"/>
-<area shape="poly" title=" " alt="" coords="3800,205,3890,220,3967,227,4099,228,4231,230,4307,237,4396,253,4407,256,4406,261,4395,258,4307,243,4231,235,4099,234,3967,233,3889,226,3799,211"/>
-<area shape="rect" href="pipelines_8h.html" title=" " alt="" coords="4171,256,4383,342"/>
-<area shape="poly" title=" " alt="" coords="3800,205,3901,223,3981,229,4061,235,4160,253,4171,256,4170,261,4159,258,4060,240,3981,234,3901,228,3799,211"/>
-<area shape="poly" title=" " alt="" coords="3801,358,3801,390,3796,390,3796,358"/>
-<area shape="poly" title=" " alt="" coords="3944,352,3865,392,3863,387,3942,347"/>
-<area shape="poly" title=" " alt="" coords="4156,346,4023,380,3906,405,3904,400,4022,375,4155,341"/>
-<area shape="rect" href="builtins-utils_8h.html" title=" " alt="" coords="1592,256,1804,342"/>
-<area shape="poly" title=" " alt="" coords="1438,201,1592,257,1590,262,1436,206"/>
-<area shape="rect" href="execution_2arguments-inl_8h.html" title=" " alt="" coords="1338,265,1568,333"/>
-<area shape="poly" title=" " alt="" coords="1373,208,1424,263,1420,266,1369,211"/>
-<area shape="rect" href="arguments_8cc.html" title=" " alt="" coords="389,265,605,333"/>
-<area shape="poly" title=" " alt="" coords="1209,176,1085,186,936,203,776,227,617,258,585,267,584,262,616,253,775,221,935,198,1084,181,1208,171"/>
-<area shape="rect" href="frames_8cc.html" title=" " alt="" coords="1828,265,2040,333"/>
-<area shape="poly" title=" " alt="" coords="1452,180,1626,210,1818,253,1848,262,1846,267,1816,258,1625,215,1451,185"/>
-<area shape="rect" href="elements_8cc.html" title=" " alt="" coords="629,265,842,333"/>
-<area shape="poly" title=" " alt="" coords="1209,186,1040,216,854,258,824,267,823,262,852,253,1039,210,1208,181"/>
-<area shape="rect" href="js-objects_8cc.html" title=" " alt="" coords="865,265,1078,333"/>
-<area shape="poly" title=" " alt="" coords="1227,207,1063,267,1061,262,1225,202"/>
-<area shape="rect" href="objects_8cc.html" title=" " alt="" coords="1101,265,1314,333"/>
-<area shape="poly" title=" " alt="" coords="1291,211,1240,266,1236,263,1288,208"/>
-<area shape="poly" title=" " alt="" coords="1820,341,1973,389,1971,394,1818,346"/>
-<area shape="poly" title=" " alt="" coords="1348,340,1327,345,1229,360,1100,373,789,395,470,412,218,422,218,417,469,406,789,390,1100,368,1228,354,1326,340,1347,335"/>
-<area shape="poly" title=" " alt="" coords="2200,210,2156,257,2135,291,2117,327,2091,391,2086,389,2112,324,2130,288,2152,254,2196,207"/>
-<area shape="poly" title=" " alt="" coords="2160,207,2015,267,2013,262,2158,202"/>
-<area shape="poly" title=" " alt="" coords="2263,213,2270,264,2265,265,2257,214"/>
-<area shape="poly" title=" " alt="" coords="2332,203,2428,253,2425,258,2329,208"/>
-<area shape="poly" title=" " alt="" coords="2463,208,2342,267,2340,262,2461,203"/>
-<area shape="poly" title=" " alt="" coords="2534,214,2523,256,2517,254,2528,213"/>
-<area shape="poly" title=" " alt="" coords="7526,223,7508,257,7503,254,7521,220"/>
-<area shape="poly" title=" " alt="" coords="2954,207,2842,257,2839,253,2952,203"/>
-<area shape="poly" title=" " alt="" coords="3022,214,2998,266,2993,264,3017,211"/>
-<area shape="poly" title=" " alt="" coords="3099,206,3162,253,3159,257,3095,210"/>
-<area shape="poly" title=" " alt="" coords="3163,199,3336,253,3363,262,3361,267,3335,258,3161,204"/>
-<area shape="poly" title=" " alt="" coords="172,219,154,237,139,257,124,290,116,326,112,390,107,390,111,325,119,288,135,254,150,234,168,215"/>
-<area shape="poly" title=" " alt="" coords="260,223,260,255,254,255,254,223"/>
+<div class="center"><img src="tracing_2trace-event_8h__dep__incl.png" border="0" usemap="#asrc_2tracing_2trace-event_8hdep" alt=""/></div>
+<map name="asrc_2tracing_2trace-event_8hdep" id="asrc_2tracing_2trace-event_8hdep">
+<area shape="rect" title=" " alt="" coords="3256,5,3429,35"/>
+<area shape="rect" href="api_8cc.html" title=" " alt="" coords="1548,276,1649,306"/>
+<area shape="poly" title=" " alt="" coords="3241,24,2845,26,2321,35,2068,42,1853,53,1697,67,1650,76,1627,85,1610,106,1598,130,1592,157,1589,185,1591,237,1598,276,1592,277,1586,238,1583,184,1586,156,1593,128,1605,103,1624,81,1648,71,1697,62,1852,48,2068,37,2321,29,2845,21,3241,19"/>
+<area shape="rect" href="optimized-compilation-info_8cc.html" title=" " alt="" coords="2013,180,2176,228"/>
+<area shape="poly" title=" " alt="" coords="3241,24,2973,26,2638,35,2477,43,2336,53,2230,67,2193,76,2169,85,2146,105,2127,130,2104,181,2099,178,2122,127,2142,101,2166,81,2191,71,2229,62,2336,48,2476,37,2638,30,2973,21,3241,19"/>
+<area shape="rect" href="optimizing-compile-dispatcher_8cc.html" title=" " alt="" coords="2450,83,2675,132"/>
+<area shape="poly" title=" " alt="" coords="3241,31,2992,52,2694,86,2675,88,2675,83,2693,80,2991,47,3241,26"/>
+<area shape="rect" href="pipeline-statistics_8h.html" title=" " alt="" coords="2750,83,2901,132"/>
+<area shape="poly" title=" " alt="" coords="3242,35,3087,56,2914,86,2902,88,2901,83,2913,80,3086,51,3241,30"/>
+<area shape="rect" href="pipeline_8cc.html" title=" " alt="" coords="2818,276,2985,306"/>
+<area shape="poly" title=" " alt="" coords="3241,27,3098,34,2941,45,2807,62,2763,73,2739,85,2731,100,2731,119,2743,164,2764,205,2779,226,2815,254,2855,273,2853,278,2813,259,2775,230,2760,208,2738,166,2725,120,2726,99,2735,81,2761,68,2806,57,2940,40,3098,28,3241,22"/>
+<area shape="rect" href="wasm-compiler_8cc.html" title=" " alt="" coords="2925,92,3133,122"/>
+<area shape="poly" title=" " alt="" coords="3276,42,3082,95,3081,89,3275,37"/>
+<area shape="rect" href="execution_2arguments_8h.html" title=" " alt="" coords="933,92,1120,122"/>
+<area shape="poly" title=" " alt="" coords="3241,27,1580,86,1121,105,1120,99,1580,80,3241,22"/>
+<area shape="rect" href="ic_8cc.html" title=" " alt="" coords="5,276,88,306"/>
+<area shape="poly" title=" " alt="" coords="3241,24,2524,28,1477,37,960,45,520,55,207,69,115,77,76,85,58,105,46,128,38,155,36,183,38,236,46,276,40,277,33,237,30,183,33,154,41,126,53,102,73,81,114,71,206,63,519,50,960,40,1477,32,2524,22,3240,19"/>
+<area shape="rect" href="microtask-queue_8cc.html" title=" " alt="" coords="3158,83,3325,132"/>
+<area shape="poly" title=" " alt="" coords="3316,47,3271,84,3268,80,3313,43"/>
+<area shape="rect" href="protectors_8cc.html" title=" " alt="" coords="3349,92,3538,122"/>
+<area shape="poly" title=" " alt="" coords="3373,43,3429,90,3425,94,3369,47"/>
+<area shape="rect" href="stack-guard_8cc.html" title=" " alt="" coords="3562,83,3702,132"/>
+<area shape="poly" title=" " alt="" coords="3406,37,3562,83,3561,88,3405,42"/>
+<area shape="rect" href="tiering-manager_8cc.html" title=" " alt="" coords="3725,83,3874,132"/>
+<area shape="poly" title=" " alt="" coords="3445,33,3573,54,3714,80,3725,83,3724,88,3713,86,3572,59,3444,38"/>
+<area shape="rect" href="vm-state-inl_8h.html" title=" " alt="" coords="1637,83,1800,132"/>
+<area shape="poly" title=" " alt="" coords="3241,26,2523,44,2116,61,1947,73,1819,86,1801,89,1800,83,1818,80,1947,67,2116,56,2523,38,3241,20"/>
+<area shape="rect" href="heap_8cc.html" title=" " alt="" coords="1686,189,1812,219"/>
+<area shape="poly" title=" " alt="" coords="3241,24,2911,26,2481,34,2271,41,2086,52,1945,67,1896,76,1864,85,1819,129,1763,191,1759,187,1815,125,1861,81,1894,70,1944,61,2086,47,2270,36,2481,28,2910,20,3241,19"/>
+<area shape="rect" href="incremental-marking_8cc.html" title=" " alt="" coords="1837,180,1989,228"/>
+<area shape="poly" title=" " alt="" coords="3241,27,2617,47,2300,64,2186,74,2119,86,1954,181,1951,177,2118,80,2186,69,2300,59,2617,41,3241,21"/>
+<area shape="rect" href="heap_2cppgc_2trace-event_8h.html" title=" " alt="" coords="3899,83,4050,132"/>
+<area shape="poly" title=" " alt="" coords="3445,26,3650,46,3769,61,3887,80,3899,83,3898,88,3886,86,3768,66,3649,51,3444,31"/>
+<area shape="rect" href="finalization-registry-cleanup-task_8cc.html" title=" " alt="" coords="4075,83,4245,132"/>
+<area shape="poly" title=" " alt="" coords="3444,23,3724,41,3894,58,4063,80,4075,82,4074,88,4062,86,3893,63,3724,46,3444,28"/>
+<area shape="rect" href="gc-tracer_8h.html" title=" " alt="" coords="1875,92,2018,122"/>
+<area shape="poly" title=" " alt="" coords="3241,26,2626,45,2286,63,2145,73,2038,86,1995,94,1994,89,2037,80,2144,68,2285,57,2626,40,3240,21"/>
+<area shape="rect" href="heap-controller_8cc.html" title=" " alt="" coords="4269,92,4456,122"/>
+<area shape="poly" title=" " alt="" coords="3444,21,3602,26,3804,37,4030,54,4258,80,4306,89,4305,95,4257,86,4030,59,3804,42,3601,31,3444,26"/>
+<area shape="rect" href="ic-stats_8cc.html" title=" " alt="" coords="2201,189,2316,219"/>
+<area shape="poly" title=" " alt="" coords="3241,26,2964,32,2622,43,2324,61,2227,72,2198,79,2184,85,2177,97,2176,110,2180,124,2189,138,2213,165,2240,186,2236,191,2210,169,2184,141,2175,126,2171,111,2172,95,2181,81,2196,74,2227,67,2324,56,2621,38,2964,27,3240,20"/>
+<area shape="rect" href="v8-console-message_8cc.html" title=" " alt="" coords="4480,83,4653,132"/>
+<area shape="poly" title=" " alt="" coords="3444,18,3635,21,3890,30,4178,48,4325,62,4468,80,4480,82,4480,88,4467,86,4324,68,4177,54,3890,35,3635,26,3444,24"/>
+<area shape="rect" href="v8-console_8cc.html" title=" " alt="" coords="4676,92,4865,122"/>
+<area shape="poly" title=" " alt="" coords="3444,18,3665,19,3968,26,4315,45,4492,61,4666,80,4715,89,4714,95,4665,86,4492,66,4315,51,3968,32,3665,24,3444,23"/>
+<area shape="rect" href="v8-debugger_8cc.html" title=" " alt="" coords="4889,92,5089,122"/>
+<area shape="poly" title=" " alt="" coords="3444,21,4167,40,4577,58,4748,68,4878,80,4930,89,4929,95,4877,86,4747,74,4577,63,4167,45,3444,26"/>
+<area shape="rect" href="v8-runtime-agent-impl_8cc.html" title=" " alt="" coords="5114,83,5289,132"/>
+<area shape="poly" title=" " alt="" coords="3444,20,3794,25,4273,36,4751,53,4951,66,5101,80,5113,82,5113,87,5101,86,4950,71,4751,59,4273,41,3794,30,3444,25"/>
+<area shape="rect" href="v8-stack-trace-impl_8cc.html" title=" " alt="" coords="5312,83,5469,132"/>
+<area shape="poly" title=" " alt="" coords="3444,19,3830,22,4367,31,4907,49,5131,63,5302,80,5312,82,5311,87,5301,86,5131,68,4906,54,4367,36,3830,27,3444,24"/>
+<area shape="rect" href="log-inl_8h.html" title=" " alt="" coords="5492,92,5636,122"/>
+<area shape="poly" title=" " alt="" coords="3444,18,3862,19,4451,26,4758,34,5046,45,5294,60,5482,80,5522,89,5520,95,5481,86,5294,66,5046,50,4758,39,4451,32,3862,25,3444,24"/>
+<area shape="rect" href="parser_8cc.html" title=" " alt="" coords="5659,92,5807,122"/>
+<area shape="poly" title=" " alt="" coords="3444,18,3891,19,4528,25,4862,32,5175,44,5445,59,5648,80,5689,89,5688,95,5647,86,5444,65,5175,49,4862,38,4528,30,3891,24,3444,24"/>
+<area shape="rect" href="profile-generator_8cc.html" title=" " alt="" coords="2341,180,2475,228"/>
+<area shape="poly" title=" " alt="" coords="3241,24,3026,26,2769,34,2649,42,2545,53,2467,67,2441,76,2426,85,2412,106,2405,131,2404,156,2406,179,2401,180,2398,156,2400,130,2407,103,2422,81,2439,71,2466,62,2544,48,2648,37,2769,29,3026,21,3241,19"/>
+<area shape="rect" href="tracing-cpu-profiler_8cc.html" title=" " alt="" coords="5829,180,5965,228"/>
+<area shape="poly" title=" " alt="" coords="3444,19,3992,20,4763,27,5142,35,5468,46,5706,61,5781,70,5821,81,5847,101,5867,127,5892,178,5887,180,5862,130,5843,105,5819,85,5780,75,5706,66,5468,51,5141,40,4763,33,3992,25,3444,24"/>
+<area shape="rect" href="tracing-cpu-profiler_8h.html" title=" " alt="" coords="5882,83,6019,132"/>
+<area shape="poly" title=" " alt="" coords="3444,20,4729,39,5446,57,5709,68,5864,80,5882,84,5881,89,5863,86,5708,73,5446,62,4729,44,3444,25"/>
+<area shape="rect" href="trace-event_8cc.html" title=" " alt="" coords="2500,189,2676,219"/>
+<area shape="poly" title=" " alt="" coords="3241,23,3028,25,2776,33,2657,41,2555,52,2480,66,2455,75,2440,85,2433,96,2431,106,2441,130,2457,149,2477,165,2523,186,2521,191,2474,169,2453,153,2436,133,2426,107,2428,94,2437,81,2453,70,2478,61,2555,46,2656,35,2775,27,3028,20,3241,18"/>
+<area shape="rect" href="traced-value_8h.html" title=" " alt="" coords="2195,83,2324,132"/>
+<area shape="poly" title=" " alt="" coords="3241,24,3070,26,2846,35,2596,53,2468,68,2344,86,2326,89,2325,84,2343,80,2468,62,2595,48,2846,29,3070,21,3241,18"/>
+<area shape="rect" href="tracing-category-observer_8cc.html" title=" " alt="" coords="84,180,238,228"/>
+<area shape="poly" title=" " alt="" coords="3241,25,2105,42,1422,60,1137,72,921,86,732,103,584,121,438,146,251,182,239,185,238,180,250,177,437,141,584,116,731,98,921,80,1137,67,1422,55,2105,37,3241,20"/>
+<area shape="rect" href="tracing-category-observer_8h.html" title=" " alt="" coords="86,83,236,132"/>
+<area shape="poly" title=" " alt="" coords="3241,25,2177,43,1406,61,613,86,237,104,237,99,613,80,1406,56,2177,38,3241,20"/>
+<area shape="rect" href="liftoff-compiler_8cc.html" title=" " alt="" coords="6043,83,6215,132"/>
+<area shape="poly" title=" " alt="" coords="3445,18,3956,18,4705,24,5099,32,5470,43,5789,59,6031,80,6043,82,6042,87,6030,86,5789,64,5469,48,5099,37,4705,30,3956,24,3445,24"/>
+<area shape="rect" href="module-compiler_8cc.html" title=" " alt="" coords="6239,92,6440,122"/>
+<area shape="poly" title=" " alt="" coords="3445,19,3989,19,4795,26,5221,33,5621,44,5967,60,6228,80,6282,89,6281,95,6228,86,5967,65,5621,50,5220,38,4795,31,3989,24,3445,24"/>
+<area shape="rect" href="module-decoder_8cc.html" title=" " alt="" coords="6464,92,6664,122"/>
+<area shape="poly" title=" " alt="" coords="3444,20,5023,39,5925,57,6257,68,6453,80,6507,89,6506,95,6453,86,6257,73,5925,62,5023,44,3444,25"/>
+<area shape="rect" href="module-instantiate_8cc.html" title=" " alt="" coords="6688,92,6904,122"/>
+<area shape="poly" title=" " alt="" coords="3444,18,4063,18,4999,23,5496,30,5965,42,6371,58,6676,80,6734,89,6733,95,6676,86,6370,63,5965,47,5496,36,4999,29,4063,23,3444,24"/>
+<area shape="rect" href="code-assembler-compilation-job_8h.html" title=" " alt="" coords="2801,180,3001,228"/>
+<area shape="poly" title=" " alt="" coords="2856,142,2884,177,2880,181,2851,145"/>
+<area shape="poly" title=" " alt="" coords="2802,146,2792,166,2786,187,2785,208,2792,227,2803,242,2818,255,2853,273,2851,278,2815,259,2800,246,2787,230,2780,208,2781,186,2787,164,2797,144"/>
+<area shape="rect" href="pipeline-data-inl_8h.html" title=" " alt="" coords="3026,180,3177,228"/>
+<area shape="poly" title=" " alt="" coords="2909,135,3033,177,3031,182,2908,140"/>
+<area shape="rect" href="pipeline-statistics_8cc.html" title=" " alt="" coords="3394,180,3545,228"/>
+<area shape="poly" title=" " alt="" coords="2917,129,3048,147,3151,153,3253,159,3382,177,3394,179,3392,185,3381,182,3252,165,3150,158,3047,152,2916,135"/>
+<area shape="rect" href="pipelines_8h.html" title=" " alt="" coords="3201,180,3369,228"/>
+<area shape="poly" title=" " alt="" coords="2917,130,3055,154,3190,177,3201,179,3200,185,3189,182,3054,159,2916,135"/>
+<area shape="poly" title=" " alt="" coords="2904,244,2904,276,2898,276,2898,244"/>
+<area shape="poly" title=" " alt="" coords="3033,237,2936,278,2934,273,3031,232"/>
+<area shape="poly" title=" " alt="" coords="3186,232,2970,278,2969,273,3185,226"/>
+<area shape="rect" href="builtins-utils_8h.html" title=" " alt="" coords="1233,180,1369,228"/>
+<area shape="poly" title=" " alt="" coords="1083,125,1233,177,1232,182,1081,130"/>
+<area shape="rect" href="execution_2arguments-inl_8h.html" title=" " alt="" coords="1034,180,1209,228"/>
+<area shape="poly" title=" " alt="" coords="1053,131,1099,177,1096,181,1049,135"/>
+<area shape="rect" href="arguments_8cc.html" title=" " alt="" coords="263,189,454,219"/>
+<area shape="poly" title=" " alt="" coords="918,122,708,147,467,182,421,191,420,186,466,177,708,142,917,117"/>
+<area shape="rect" href="frames_8cc.html" title=" " alt="" coords="1394,189,1561,219"/>
+<area shape="poly" title=" " alt="" coords="1117,123,1382,177,1420,186,1419,191,1381,182,1116,128"/>
+<area shape="rect" href="elements_8cc.html" title=" " alt="" coords="478,189,644,219"/>
+<area shape="poly" title=" " alt="" coords="932,128,656,182,618,191,617,186,655,177,931,123"/>
+<area shape="rect" href="js-objects_8cc.html" title=" " alt="" coords="668,189,833,219"/>
+<area shape="poly" title=" " alt="" coords="972,130,793,191,791,186,970,125"/>
+<area shape="rect" href="objects_8cc.html" title=" " alt="" coords="857,189,1009,219"/>
+<area shape="poly" title=" " alt="" coords="1004,135,949,191,945,187,1000,131"/>
+<area shape="poly" title=" " alt="" coords="1385,227,1549,273,1548,278,1383,232"/>
+<area shape="poly" title=" " alt="" coords="1019,231,879,249,737,263,466,281,238,290,88,292,88,287,238,284,465,276,737,257,878,243,1018,226"/>
+<area shape="poly" title=" " alt="" coords="1697,146,1610,277,1605,274,1692,143"/>
+<area shape="poly" title=" " alt="" coords="1645,140,1514,191,1513,186,1644,135"/>
+<area shape="poly" title=" " alt="" coords="1733,145,1747,188,1742,190,1728,147"/>
+<area shape="poly" title=" " alt="" coords="1782,136,1866,177,1863,182,1780,141"/>
+<area shape="poly" title=" " alt="" coords="1904,132,1779,191,1777,186,1902,127"/>
+<area shape="poly" title=" " alt="" coords="1939,138,1924,180,1919,178,1934,136"/>
+<area shape="poly" title=" " alt="" coords="5932,146,5913,180,5908,178,5927,144"/>
+<area shape="poly" title=" " alt="" coords="2207,142,2137,181,2135,177,2204,137"/>
+<area shape="poly" title=" " alt="" coords="2262,147,2261,189,2256,189,2257,147"/>
+<area shape="poly" title=" " alt="" coords="2311,138,2372,177,2369,181,2308,142"/>
+<area shape="poly" title=" " alt="" coords="2340,129,2540,186,2538,191,2339,134"/>
+<area shape="poly" title=" " alt="" coords="110,143,91,161,74,181,62,205,55,231,49,276,44,276,50,230,57,204,70,178,87,157,107,139"/>
+<area shape="poly" title=" " alt="" coords="164,147,164,179,158,179,158,147"/>
 </map>
 </div>
 </div>
@@ -355,7 +377,7 @@ Macros</h2></td></tr>
 <tr class="separator:ade494fd6f2bf694906514489253dfdb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f023575153e5228e5e9a47933fd98cf" id="r_a6f023575153e5228e5e9a47933fd98cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6f023575153e5228e5e9a47933fd98cf">TRACE_EVENT_API_GET_CATEGORY_GROUP_ENABLED</a></td></tr>
 <tr class="separator:a6f023575153e5228e5e9a47933fd98cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3818bfd6c2825f502139d99c5727551d" id="r_a3818bfd6c2825f502139d99c5727551d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3818bfd6c2825f502139d99c5727551d">TRACE_EVENT_API_GET_NUM_TRACES_RECORDED</a>&#160;&#160;&#160;<a class="el" href="logging_8h.html#add09d39ec888c2d7e12877586f29368d">UNIMPLEMENTED</a>()</td></tr>
+<tr class="memitem:a3818bfd6c2825f502139d99c5727551d" id="r_a3818bfd6c2825f502139d99c5727551d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3818bfd6c2825f502139d99c5727551d">TRACE_EVENT_API_GET_NUM_TRACES_RECORDED</a>&#160;&#160;&#160;<a class="el" href="src_2base_2logging_8h.html#add09d39ec888c2d7e12877586f29368d">UNIMPLEMENTED</a>()</td></tr>
 <tr class="separator:a3818bfd6c2825f502139d99c5727551d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebcb0c0375da587ec3722e88ed1297ff" id="r_aebcb0c0375da587ec3722e88ed1297ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebcb0c0375da587ec3722e88ed1297ff">TRACE_EVENT_API_ADD_TRACE_EVENT</a>&#160;&#160;&#160;<a class="el" href="namespacev8_1_1internal_1_1tracing.html#a04dbc56148bee952c2d0ca6c80359827">v8::internal::tracing::AddTraceEventImpl</a></td></tr>
 <tr class="separator:aebcb0c0375da587ec3722e88ed1297ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -412,35 +434,35 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a04dbc56148bee952c2d0ca6c80359827" id="r_a04dbc56148bee952c2d0ca6c80359827"><td class="memItemLeft" align="right" valign="top">static V8_INLINE uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#a04dbc56148bee952c2d0ca6c80359827">v8::internal::tracing::AddTraceEventImpl</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, int32_t num_args, const char **arg_names, const uint8_t *arg_types, const uint64_t *arg_values, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>)</td></tr>
+<tr class="memitem:a04dbc56148bee952c2d0ca6c80359827" id="r_a04dbc56148bee952c2d0ca6c80359827"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#a04dbc56148bee952c2d0ca6c80359827">v8::internal::tracing::AddTraceEventImpl</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, int32_t num_args, const char **arg_names, const uint8_t *arg_types, const uint64_t *arg_values, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>)</td></tr>
 <tr class="separator:a04dbc56148bee952c2d0ca6c80359827"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5c7f294a4ab85a0300731c159844cb6" id="r_ac5c7f294a4ab85a0300731c159844cb6"><td class="memItemLeft" align="right" valign="top">static V8_INLINE uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#ac5c7f294a4ab85a0300731c159844cb6">v8::internal::tracing::AddTraceEventWithTimestampImpl</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, int32_t num_args, const char **arg_names, const uint8_t *arg_types, const uint64_t *arg_values, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>, int64_t timestamp)</td></tr>
+<tr class="memitem:ac5c7f294a4ab85a0300731c159844cb6" id="r_ac5c7f294a4ab85a0300731c159844cb6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#ac5c7f294a4ab85a0300731c159844cb6">v8::internal::tracing::AddTraceEventWithTimestampImpl</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, int32_t num_args, const char **arg_names, const uint8_t *arg_types, const uint64_t *arg_values, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>, int64_t timestamp)</td></tr>
 <tr class="separator:ac5c7f294a4ab85a0300731c159844cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b31dbc5c9eeb4e5cab153e76de4f9c5" id="r_a9b31dbc5c9eeb4e5cab153e76de4f9c5"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
 requires (std::is_integral&lt;<a class="el" href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;<a class="el" href="namespacev8_1_1internal_1_1tracing.html#ae13237ddb021775ff353b3a809929d02">::value</a> || std::is_enum&lt;<a class="el" href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a>&gt;<a class="el" href="namespacev8_1_1internal_1_1tracing.html#ae13237ddb021775ff353b3a809929d02">::value</a>)</td></tr>
-<tr class="memitem:a9b31dbc5c9eeb4e5cab153e76de4f9c5"><td class="memTemplItemLeft" align="right" valign="top">static V8_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#a9b31dbc5c9eeb4e5cab153e76de4f9c5">v8::internal::tracing::SetTraceValue</a> (<a class="el" href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a> arg, unsigned char *<a class="el" href="namespacev8_1_1internal_1_1tracing.html#a96000282e12b2483531025283d63154d">type</a>, uint64_t *<a class="el" href="namespacev8_1_1internal_1_1tracing.html#ae13237ddb021775ff353b3a809929d02">value</a>)</td></tr>
+<tr class="memitem:a9b31dbc5c9eeb4e5cab153e76de4f9c5"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#a9b31dbc5c9eeb4e5cab153e76de4f9c5">v8::internal::tracing::SetTraceValue</a> (<a class="el" href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a> arg, unsigned char *<a class="el" href="namespacev8_1_1internal_1_1tracing.html#a96000282e12b2483531025283d63154d">type</a>, uint64_t *<a class="el" href="namespacev8_1_1internal_1_1tracing.html#ae13237ddb021775ff353b3a809929d02">value</a>)</td></tr>
 <tr class="separator:a9b31dbc5c9eeb4e5cab153e76de4f9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d5d82417029b8f2142bff36cf762824" id="r_a0d5d82417029b8f2142bff36cf762824"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#a0d5d82417029b8f2142bff36cf762824">v8::internal::tracing::INTERNAL_DECLARE_SET_TRACE_VALUE</a> (const <a class="el" href="classv8_1_1internal_1_1tracing_1_1TraceStringWithCopy.html">TraceStringWithCopy</a> &amp;, <a class="el" href="trace-event-no-perfetto_8h.html#a554a106347cb2db78ac01e9586ef7e87">TRACE_VALUE_TYPE_COPY_STRING</a>) static V8_INLINE void <a class="el" href="namespacev8_1_1internal_1_1tracing.html#a9b31dbc5c9eeb4e5cab153e76de4f9c5">SetTraceValue</a>(<a class="el" href="heap_2cppgc_2trace-event_8h.html#a46f6df097d5f7c8481f2d949ccd9a43f">ConvertableToTraceFormat</a> *convertable_value</td></tr>
+<tr class="memitem:a0d5d82417029b8f2142bff36cf762824" id="r_a0d5d82417029b8f2142bff36cf762824"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#a0d5d82417029b8f2142bff36cf762824">v8::internal::tracing::INTERNAL_DECLARE_SET_TRACE_VALUE</a> (const <a class="el" href="classv8_1_1internal_1_1tracing_1_1TraceStringWithCopy.html">TraceStringWithCopy</a> &amp;, <a class="el" href="trace-event-no-perfetto_8h.html#a554a106347cb2db78ac01e9586ef7e87">TRACE_VALUE_TYPE_COPY_STRING</a>) static <a class="el" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> void <a class="el" href="namespacev8_1_1internal_1_1tracing.html#a9b31dbc5c9eeb4e5cab153e76de4f9c5">SetTraceValue</a>(<a class="el" href="classv8_1_1ConvertableToTraceFormat.html">ConvertableToTraceFormat</a> *convertable_value</td></tr>
 <tr class="separator:a0d5d82417029b8f2142bff36cf762824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3d21c32b45741817d2f7077bd4e3c32" id="r_ab3d21c32b45741817d2f7077bd4e3c32"><td class="memTemplParams" colspan="2">template&lt;typename <a class="el" href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; <br />
-requires std::is_convertible&lt;<a class="el" href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a>*, <a class="el" href="heap_2cppgc_2trace-event_8h.html#a46f6df097d5f7c8481f2d949ccd9a43f">ConvertableToTraceFormat</a>*&gt;<a class="el" href="namespacev8_1_1internal_1_1tracing.html#ae13237ddb021775ff353b3a809929d02">::value</a></td></tr>
-<tr class="memitem:ab3d21c32b45741817d2f7077bd4e3c32"><td class="memTemplItemLeft" align="right" valign="top">static V8_INLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#ab3d21c32b45741817d2f7077bd4e3c32">v8::internal::tracing::SetTraceValue</a> (std::unique_ptr&lt; <a class="el" href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; ptr, unsigned char *<a class="el" href="namespacev8_1_1internal_1_1tracing.html#a96000282e12b2483531025283d63154d">type</a>, uint64_t *<a class="el" href="namespacev8_1_1internal_1_1tracing.html#ae13237ddb021775ff353b3a809929d02">value</a>)</td></tr>
+requires std::is_convertible&lt;<a class="el" href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a>*, <a class="el" href="classv8_1_1ConvertableToTraceFormat.html">ConvertableToTraceFormat</a>*&gt;<a class="el" href="namespacev8_1_1internal_1_1tracing.html#ae13237ddb021775ff353b3a809929d02">::value</a></td></tr>
+<tr class="memitem:ab3d21c32b45741817d2f7077bd4e3c32"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#ab3d21c32b45741817d2f7077bd4e3c32">v8::internal::tracing::SetTraceValue</a> (std::unique_ptr&lt; <a class="el" href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a> &gt; ptr, unsigned char *<a class="el" href="namespacev8_1_1internal_1_1tracing.html#a96000282e12b2483531025283d63154d">type</a>, uint64_t *<a class="el" href="namespacev8_1_1internal_1_1tracing.html#ae13237ddb021775ff353b3a809929d02">value</a>)</td></tr>
 <tr class="separator:ab3d21c32b45741817d2f7077bd4e3c32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cedccf8b69ecc66d118678e8a8b476d" id="r_a1cedccf8b69ecc66d118678e8a8b476d"><td class="memItemLeft" align="right" valign="top">static V8_INLINE uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#a1cedccf8b69ecc66d118678e8a8b476d">v8::internal::tracing::AddTraceEvent</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>)</td></tr>
+<tr class="memitem:a1cedccf8b69ecc66d118678e8a8b476d" id="r_a1cedccf8b69ecc66d118678e8a8b476d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#a1cedccf8b69ecc66d118678e8a8b476d">v8::internal::tracing::AddTraceEvent</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>)</td></tr>
 <tr class="separator:a1cedccf8b69ecc66d118678e8a8b476d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefee40a87dd5f52cc17df7b30499be96" id="r_aefee40a87dd5f52cc17df7b30499be96"><td class="memTemplParams" colspan="2">template&lt;class ARG1_TYPE &gt; </td></tr>
-<tr class="memitem:aefee40a87dd5f52cc17df7b30499be96"><td class="memTemplItemLeft" align="right" valign="top">static V8_INLINE uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#aefee40a87dd5f52cc17df7b30499be96">v8::internal::tracing::AddTraceEvent</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>, const char *arg1_name, ARG1_TYPE &amp;&amp;arg1_val)</td></tr>
+<tr class="memitem:aefee40a87dd5f52cc17df7b30499be96"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#aefee40a87dd5f52cc17df7b30499be96">v8::internal::tracing::AddTraceEvent</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>, const char *arg1_name, ARG1_TYPE &amp;&amp;arg1_val)</td></tr>
 <tr class="separator:aefee40a87dd5f52cc17df7b30499be96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7b70a6c795f1e7ea7039aec0ca8ac64" id="r_ac7b70a6c795f1e7ea7039aec0ca8ac64"><td class="memTemplParams" colspan="2">template&lt;class ARG1_TYPE , class ARG2_TYPE &gt; </td></tr>
-<tr class="memitem:ac7b70a6c795f1e7ea7039aec0ca8ac64"><td class="memTemplItemLeft" align="right" valign="top">static V8_INLINE uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#ac7b70a6c795f1e7ea7039aec0ca8ac64">v8::internal::tracing::AddTraceEvent</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>, const char *arg1_name, ARG1_TYPE &amp;&amp;arg1_val, const char *arg2_name, ARG2_TYPE &amp;&amp;arg2_val)</td></tr>
+<tr class="memitem:ac7b70a6c795f1e7ea7039aec0ca8ac64"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#ac7b70a6c795f1e7ea7039aec0ca8ac64">v8::internal::tracing::AddTraceEvent</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>, const char *arg1_name, ARG1_TYPE &amp;&amp;arg1_val, const char *arg2_name, ARG2_TYPE &amp;&amp;arg2_val)</td></tr>
 <tr class="separator:ac7b70a6c795f1e7ea7039aec0ca8ac64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6be9c385b357e2a1945547e78e1e95d" id="r_ab6be9c385b357e2a1945547e78e1e95d"><td class="memItemLeft" align="right" valign="top">static V8_INLINE uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#ab6be9c385b357e2a1945547e78e1e95d">v8::internal::tracing::AddTraceEventWithTimestamp</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>, int64_t timestamp)</td></tr>
+<tr class="memitem:ab6be9c385b357e2a1945547e78e1e95d" id="r_ab6be9c385b357e2a1945547e78e1e95d"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#ab6be9c385b357e2a1945547e78e1e95d">v8::internal::tracing::AddTraceEventWithTimestamp</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>, int64_t timestamp)</td></tr>
 <tr class="separator:ab6be9c385b357e2a1945547e78e1e95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecc02ef1a2c7fb41f685c01dcc2e5c6c" id="r_aecc02ef1a2c7fb41f685c01dcc2e5c6c"><td class="memTemplParams" colspan="2">template&lt;class ARG1_TYPE &gt; </td></tr>
-<tr class="memitem:aecc02ef1a2c7fb41f685c01dcc2e5c6c"><td class="memTemplItemLeft" align="right" valign="top">static V8_INLINE uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#aecc02ef1a2c7fb41f685c01dcc2e5c6c">v8::internal::tracing::AddTraceEventWithTimestamp</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>, int64_t timestamp, const char *arg1_name, ARG1_TYPE &amp;&amp;arg1_val)</td></tr>
+<tr class="memitem:aecc02ef1a2c7fb41f685c01dcc2e5c6c"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#aecc02ef1a2c7fb41f685c01dcc2e5c6c">v8::internal::tracing::AddTraceEventWithTimestamp</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>, int64_t timestamp, const char *arg1_name, ARG1_TYPE &amp;&amp;arg1_val)</td></tr>
 <tr class="separator:aecc02ef1a2c7fb41f685c01dcc2e5c6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a476dc0573910799ae4fb0f56cee56878" id="r_a476dc0573910799ae4fb0f56cee56878"><td class="memTemplParams" colspan="2">template&lt;class ARG1_TYPE , class ARG2_TYPE &gt; </td></tr>
-<tr class="memitem:a476dc0573910799ae4fb0f56cee56878"><td class="memTemplItemLeft" align="right" valign="top">static V8_INLINE uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#a476dc0573910799ae4fb0f56cee56878">v8::internal::tracing::AddTraceEventWithTimestamp</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>, int64_t timestamp, const char *arg1_name, ARG1_TYPE &amp;&amp;arg1_val, const char *arg2_name, ARG2_TYPE &amp;&amp;arg2_val)</td></tr>
+<tr class="memitem:a476dc0573910799ae4fb0f56cee56878"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> uint64_t&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacev8_1_1internal_1_1tracing.html#a476dc0573910799ae4fb0f56cee56878">v8::internal::tracing::AddTraceEventWithTimestamp</a> (char phase, const uint8_t *category_group_enabled, const char *name, const char *scope, uint64_t id, uint64_t bind_id, unsigned int <a class="el" href="namespacev8_1_1internal.html#a62f9ba01cabe0363e57940200d641ea5">flags</a>, int64_t timestamp, const char *arg1_name, ARG1_TYPE &amp;&amp;arg1_val, const char *arg2_name, ARG2_TYPE &amp;&amp;arg2_val)</td></tr>
 <tr class="separator:a476dc0573910799ae4fb0f56cee56878"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
@@ -475,13 +497,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">static</span> V8_INLINE <span class="keywordtype">void</span> SetTraceValue(actual_type arg, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* type, \</div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="keyword">static</span> <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> SetTraceValue(actual_type arg, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* type, \</div>
 <div class="line">                                      uint64_t* value) {                    \</div>
 <div class="line">    *type = value_type_id;                                                  \</div>
 <div class="line">    *value = 0;                                                             \</div>
 <div class="line">    static_assert(<span class="keyword">sizeof</span>(arg) &lt;= <span class="keyword">sizeof</span>(*value));                           \</div>
 <div class="line">    memcpy(value, &amp;arg, <span class="keyword">sizeof</span>(arg));                                       \</div>
 <div class="line">  }</div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="tracing_2trace-event_8h_source.html#l00442">442</a> of file <a class="el" href="tracing_2trace-event_8h_source.html">trace-event.h</a>.</p>
 
@@ -1178,7 +1201,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_function" href="classv8_1_1internal_1_1tracing_1_1TraceEventHelper.html#a48e669c3364af398893025153693147a">v8::internal::tracing::TraceEventHelper::GetTracingController</a>() \</div>
-<div class="line">      -&gt;GetCategoryGroupEnabled</div>
+<div class="line">      -&gt;<a class="code hl_function" href="classv8_1_1TracingController.html#a243d39dc17e79d5fce5ca2db1240bd14">GetCategoryGroupEnabled</a></div>
+<div class="ttc" id="aclassv8_1_1TracingController_html_a243d39dc17e79d5fce5ca2db1240bd14"><div class="ttname"><a href="classv8_1_1TracingController.html#a243d39dc17e79d5fce5ca2db1240bd14">v8::TracingController::GetCategoryGroupEnabled</a></div><div class="ttdeci">virtual const uint8_t * GetCategoryGroupEnabled(const char *name)</div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l00390">v8-platform.h:390</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1tracing_1_1TraceEventHelper_html_a48e669c3364af398893025153693147a"><div class="ttname"><a href="classv8_1_1internal_1_1tracing_1_1TraceEventHelper.html#a48e669c3364af398893025153693147a">v8::internal::tracing::TraceEventHelper::GetTracingController</a></div><div class="ttdeci">static V8_EXPORT_PRIVATE v8::TracingController * GetTracingController()</div><div class="ttdef"><b>Definition</b> <a href="trace-event_8cc_source.html#l00019">trace-event.cc:19</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="tracing_2trace-event_8h_source.html#l00080">80</a> of file <a class="el" href="tracing_2trace-event_8h_source.html">trace-event.h</a>.</p>
@@ -1192,7 +1216,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define TRACE_EVENT_API_GET_NUM_TRACES_RECORDED&#160;&#160;&#160;<a class="el" href="logging_8h.html#add09d39ec888c2d7e12877586f29368d">UNIMPLEMENTED</a>()</td>
+          <td class="memname">#define TRACE_EVENT_API_GET_NUM_TRACES_RECORDED&#160;&#160;&#160;<a class="el" href="src_2base_2logging_8h.html#add09d39ec888c2d7e12877586f29368d">UNIMPLEMENTED</a>()</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1236,7 +1260,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">  <a class="code hl_function" href="classv8_1_1internal_1_1tracing_1_1TraceEventHelper.html#a48e669c3364af398893025153693147a">v8::internal::tracing::TraceEventHelper::GetTracingController</a>() \</div>
-<div class="line">      -&gt;UpdateTraceEventDuration</div>
+<div class="line">      -&gt;<a class="code hl_function" href="classv8_1_1TracingController.html#ac1fda6cdae5f6515b896b3df05d5a97e">UpdateTraceEventDuration</a></div>
+<div class="ttc" id="aclassv8_1_1TracingController_html_ac1fda6cdae5f6515b896b3df05d5a97e"><div class="ttname"><a href="classv8_1_1TracingController.html#ac1fda6cdae5f6515b896b3df05d5a97e">v8::TracingController::UpdateTraceEventDuration</a></div><div class="ttdeci">virtual void UpdateTraceEventDuration(const uint8_t *category_enabled_flag, const char *name, uint64_t handle)</div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l00426">v8-platform.h:426</a></div></div>
 </div><!-- fragment -->
 <p class="definition">Definition at line <a class="el" href="tracing_2trace-event_8h_source.html#l00126">126</a> of file <a class="el" href="tracing_2trace-event_8h_source.html">trace-event.h</a>.</p>
 
@@ -1341,10 +1366,13 @@ Variables</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:18 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_8c27da8e777a7195961d7f24190c7014.html">tracing</a></li><li class="navelem"><a class="el" href="tracing_2trace-event_8h.html">trace-event.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:34 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

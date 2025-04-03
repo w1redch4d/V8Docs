@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/read-only-heap.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/read-only-heap.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('read-only-heap_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">read-only-heap.cc</div></div>
 </div><!--header-->
@@ -115,7 +123,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="smi_8h.html">src/objects/smi.h</a>&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="js-dispatch-table-inl_8h.html">src/sandbox/js-dispatch-table-inl.h</a>&quot;</span></div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="read-only-deserializer_8h.html">src/snapshot/read-only-deserializer.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="allocation_8h.html">src/utils/allocation.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="src_2utils_2allocation_8h.html">src/utils/allocation.h</a>&quot;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8.html">v8</a> {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">internal</a> {</div>
@@ -141,7 +149,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a6915accad52df5f18da9952f61d30eff">   42</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a6915accad52df5f18da9952f61d30eff">ReadOnlyHeap::SetUp</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate,</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                         <a class="code hl_class" href="classv8_1_1internal_1_1SnapshotData.html">SnapshotData</a>* read_only_snapshot_data,</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                         <span class="keywordtype">bool</span> can_rehash) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(isolate);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(isolate);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_class" href="classv8_1_1internal_1_1IsolateGroup.html">IsolateGroup</a>* group = isolate-&gt;isolate_group();</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordflow">if</span> (read_only_snapshot_data != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">bool</span> read_only_heap_created = <span class="keyword">false</span>;</div>
@@ -169,7 +177,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// before tearing down the Isolate that holds this ReadOnlyArtifacts and</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="comment">// is not thread-safe.</span></div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyArtifacts.html">ReadOnlyArtifacts</a>* artifacts = group-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1IsolateGroup.html#abfa975d78c479b11cea9c2430a9dd697">read_only_artifacts</a>();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!artifacts);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!artifacts);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    artifacts = group-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1IsolateGroup.html#ac8d2d7268831e99f77829b2b219b98cd">InitializeReadOnlyArtifacts</a>();</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#acb443f04e8d2d623c3d9d8503b1e4d3b">CreateInitialHeapForBootstrapping</a>(isolate, artifacts);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
@@ -196,13 +204,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a02cce37c308dde175044c9153f33f5fc">   93</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a02cce37c308dde175044c9153f33f5fc">ReadOnlyHeap::DeserializeIntoIsolate</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate,</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>                                          <a class="code hl_class" href="classv8_1_1internal_1_1SnapshotData.html">SnapshotData</a>* read_only_snapshot_data,</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>                                          <span class="keywordtype">bool</span> can_rehash) {</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(read_only_snapshot_data);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(read_only_snapshot_data);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyDeserializer.html">ReadOnlyDeserializer</a> des(isolate, read_only_snapshot_data, can_rehash);</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  des.<a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyDeserializer.html#a96c5845ef91637b3717a29a5e458f47b">DeserializeIntoIsolate</a>();</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#af847f437f3fc0d635ae0776169d0b515">OnCreateRootsComplete</a>(isolate);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.extensible_ro_snapshot &amp;&amp;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.extensible_ro_snapshot &amp;&amp;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                  isolate-&gt;serializer_enabled())) {</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="comment">// If this isolate will be serialized, leave RO space unfinalized and</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">// allocatable s.t. it can be extended (e.g. by future Context::New calls).</span></div>
@@ -217,8 +225,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
 <div class="foldopen" id="foldopen00114" data-start="{" data-end="}">
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeap.html#af847f437f3fc0d635ae0776169d0b515">  114</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#af847f437f3fc0d635ae0776169d0b515">ReadOnlyHeap::OnCreateRootsComplete</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(isolate);</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a6cee08e89cc5760f6fad684a2d007adb">roots_init_complete_</a>);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(isolate);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a6cee08e89cc5760f6fad684a2d007adb">roots_init_complete_</a>);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a374fcb582478fe6a298ea61a920ac043">InitializeFromIsolateRoots</a>(isolate);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a6cee08e89cc5760f6fad684a2d007adb">roots_init_complete_</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
@@ -226,7 +234,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a85ae0201f829a88905484254aa831ac5">  121</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a85ae0201f829a88905484254aa831ac5">ReadOnlyHeap::OnCreateHeapObjectsComplete</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(isolate);</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(isolate);</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <span class="comment">// InitFromIsolate mutates MemoryChunk flags which would race with any</span></div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="comment">// concurrently-running sweeper tasks. Ensure that sweeping has been</span></div>
@@ -262,7 +270,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="keywordtype">void</span>* <span class="keyword">const</span> isolate_ro_roots =</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      isolate-&gt;roots_table().read_only_roots_begin().location();</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  std::memcpy(isolate_ro_roots, <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a3de376109f27086dab274a73bcecf1e5">read_only_roots_</a>,</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>              <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a57fc8e958421256f52e6ac92573ff8c7">kEntriesCount</a> * <span class="keyword">sizeof</span>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a>));</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>              <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a57fc8e958421256f52e6ac92573ff8c7">kEntriesCount</a> * <span class="keyword">sizeof</span>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a>));</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>}</div>
 </div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
@@ -271,13 +279,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keywordtype">void</span>* <span class="keyword">const</span> isolate_ro_roots =</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>      isolate-&gt;roots_table().read_only_roots_begin().location();</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  std::memcpy(<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a3de376109f27086dab274a73bcecf1e5">read_only_roots_</a>, isolate_ro_roots,</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>              <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a57fc8e958421256f52e6ac92573ff8c7">kEntriesCount</a> * <span class="keyword">sizeof</span>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a>));</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>              <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a57fc8e958421256f52e6ac92573ff8c7">kEntriesCount</a> * <span class="keyword">sizeof</span>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a>));</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
 </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
 <div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeap.html#ab5fd8038b4db8aa0d99c1f93a9c793d0">  164</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#ab5fd8038b4db8aa0d99c1f93a9c793d0">ReadOnlyHeap::InitFromIsolate</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a6cee08e89cc5760f6fad684a2d007adb">roots_init_complete_</a>);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a6cee08e89cc5760f6fad684a2d007adb">roots_init_complete_</a>);</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#aa71f1723aa4f8e5476f9142023712325">read_only_space_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlySpace.html#a4a8b604fe3efeeacae526f165891d534">ShrinkPages</a>();</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyArtifacts.html">ReadOnlyArtifacts</a>* artifacts =</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      isolate-&gt;isolate_group()-&gt;read_only_artifacts();</div>
@@ -318,7 +326,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment">// static</span></div>
 <div class="foldopen" id="foldopen00201" data-start="{" data-end="}">
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a025965942bf9463372230d9525dcda3f">  201</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a025965942bf9463372230d9525dcda3f">ReadOnlyHeap::PopulateReadOnlySpaceStatistics</a>(</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    SharedMemoryStatistics* statistics) {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <a class="code hl_class" href="classv8_1_1SharedMemoryStatistics.html">SharedMemoryStatistics</a>* statistics) {</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  statistics-&gt;read_only_space_size_ = 0;</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  statistics-&gt;read_only_space_used_size_ = 0;</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  statistics-&gt;read_only_space_physical_size_ = 0;</div>
@@ -335,7 +343,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment">// static</span></div>
 <div class="foldopen" id="foldopen00217" data-start="{" data-end="}">
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a27e42af8000235aeb8fc6695f6296aca">  217</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a27e42af8000235aeb8fc6695f6296aca">ReadOnlyHeap::Contains</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> address) {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a27e42af8000235aeb8fc6695f6296aca">  217</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a27e42af8000235aeb8fc6695f6296aca">ReadOnlyHeap::Contains</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> address) {</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunk.html#a6c55e8cf2661fa6a347dd1096cc4f62b">MemoryChunk::FromAddress</a>(address)-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunk.html#ac99a79cf81d068110579f35df8b72474">InReadOnlySpace</a>();</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>}</div>
 </div>
@@ -385,7 +393,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html#a6a96c9ba215ea34533c0e735f770e4d5">page_iterator_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#ab31d4d7c7fa98954c2fabf46645655c4">Reset</a>(*<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html#a6765805490608749f78776b6c317c0f7">current_page_</a>);</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  }</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html#a6765805490608749f78776b6c317c0f7">current_page_</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html#a5cb5d510736dc199958f0557538a3a49">ro_space_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlySpace.html#aea66eba52f7e4acf1b4505c79a522c99">pages</a>().end());</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html#a6765805490608749f78776b6c317c0f7">current_page_</a>, <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html#a5cb5d510736dc199958f0557538a3a49">ro_space_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlySpace.html#aea66eba52f7e4acf1b4505c79a522c99">pages</a>().end());</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a>();</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>}</div>
 </div>
@@ -395,19 +403,19 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyPageMetadata.html">ReadOnlyPageMetadata</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>,</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    <a class="code hl_enumeration" href="namespacev8_1_1internal.html#aa9106e7f85086ebf60aac41c0a8fee78">SkipFreeSpaceOrFiller</a> skip_free_space_or_filler)</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    : <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html">ReadOnlyPageObjectIterator</a>(</div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>          <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> == nullptr ? kNullAddress : <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;GetAreaStart(),</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>          <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> == nullptr ? <a class="code hl_variable" href="namespacev8_1_1internal.html#acf6bafb5b8483a580f375393c413ee02">kNullAddress</a> : <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;GetAreaStart(),</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>          skip_free_space_or_filler) {}</div>
 </div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
 <div class="foldopen" id="foldopen00268" data-start="{" data-end="}">
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#a5866ff5c6ee15f77e8d95959a086a993">  268</a></span><a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#a918db9a122c58b6ccae902952e73e678">ReadOnlyPageObjectIterator::ReadOnlyPageObjectIterator</a>(</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyPageMetadata.html">ReadOnlyPageMetadata</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> current_addr,</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyPageMetadata.html">ReadOnlyPageMetadata</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> current_addr,</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <a class="code hl_enumeration" href="namespacev8_1_1internal.html#aa9106e7f85086ebf60aac41c0a8fee78">SkipFreeSpaceOrFiller</a> skip_free_space_or_filler)</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    : <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#acb59b78019967496cc8549f4cf19f958">page_</a>(<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>),</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      current_addr_(current_addr),</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>      skip_free_space_or_filler_(skip_free_space_or_filler) {</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(current_addr, <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;GetAreaStart());</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(current_addr, <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;GetAreaStart() + <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;area_size());</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(current_addr, <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;GetAreaStart());</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(current_addr, <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;GetAreaStart() + <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;area_size());</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>}</div>
 </div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
@@ -415,9 +423,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#acc0d5d81d8f0899f90be94d9c54d2a74">  278</a></span><a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#acc0d5d81d8f0899f90be94d9c54d2a74">ReadOnlyPageObjectIterator::Next</a>() {</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#a40241b1b30776555685d4a37122b3008">page_</a> == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1HeapObject.html">HeapObject</a>();</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#a40241b1b30776555685d4a37122b3008">page_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyPageMetadata.html#affc8b4b18a078ae1d9d6d1047c6354cb">GetAreaStart</a>() + <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#a40241b1b30776555685d4a37122b3008">page_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunkMetadata.html#acd8dfb2e8657abe513a212fea3bf4683">area_size</a>();</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#a40241b1b30776555685d4a37122b3008">page_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyPageMetadata.html#affc8b4b18a078ae1d9d6d1047c6354cb">GetAreaStart</a>() + <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#a40241b1b30776555685d4a37122b3008">page_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunkMetadata.html#acd8dfb2e8657abe513a212fea3bf4683">area_size</a>();</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>  <span class="keywordflow">for</span> (;;) {</div>
-<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#add5a3265fc22af63f9aa73ed38d1e992">current_addr_</a>, <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#add5a3265fc22af63f9aa73ed38d1e992">current_addr_</a>, <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>);</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#add5a3265fc22af63f9aa73ed38d1e992">current_addr_</a> == <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>) <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1HeapObject.html">HeapObject</a>();</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> <span class="keywordtype">object</span> = <a class="code hl_function" href="classv8_1_1internal_1_1HeapObject.html#a15742205ff1152213fb1a203c2859073">HeapObject::FromAddress</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html#add5a3265fc22af63f9aa73ed38d1e992">current_addr_</a>);</div>
@@ -444,7 +452,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>}  <span class="comment">// namespace v8</span></div>
-<div class="ttc" id="aallocation_8h_html"><div class="ttname"><a href="allocation_8h.html">allocation.h</a></div></div>
+<div class="ttc" id="aclassv8_1_1SharedMemoryStatistics_html"><div class="ttname"><a href="classv8_1_1SharedMemoryStatistics.html">v8::SharedMemoryStatistics</a></div><div class="ttdef"><b>Definition</b> <a href="v8-statistics_8h_source.html#l00116">v8-statistics.h:116</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1LockGuard_html"><div class="ttname"><a href="classv8_1_1base_1_1LockGuard.html">v8::base::LockGuard</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00534">mutex.h:534</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1BaseSpace_html_ab5ef3ad0d021ca0254846ad0c121ac90"><div class="ttname"><a href="classv8_1_1internal_1_1BaseSpace.html#ab5ef3ad0d021ca0254846ad0c121ac90">v8::internal::BaseSpace::CommittedMemory</a></div><div class="ttdeci">virtual size_t CommittedMemory() const</div><div class="ttdef"><b>Definition</b> <a href="base-space_8h_source.html#l00036">base-space.h:36</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1HeapObject_html"><div class="ttname"><a href="classv8_1_1internal_1_1HeapObject.html">v8::internal::HeapObject</a></div><div class="ttdef"><b>Definition</b> <a href="heap-object_8h_source.html#l00144">heap-object.h:144</a></div></div>
@@ -532,21 +540,15 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aheap-write-barrier-inl_8h_html"><div class="ttname"><a href="heap-write-barrier-inl_8h.html">heap-write-barrier-inl.h</a></div></div>
 <div class="ttc" id="aisolate-group_8h_html"><div class="ttname"><a href="isolate-group_8h.html">isolate-group.h</a></div></div>
 <div class="ttc" id="ajs-dispatch-table-inl_8h_html"><div class="ttname"><a href="js-dispatch-table-inl_8h.html">js-dispatch-table-inl.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="amemory-chunk-metadata_8h_html"><div class="ttname"><a href="memory-chunk-metadata_8h.html">memory-chunk-metadata.h</a></div></div>
 <div class="ttc" id="amutable-page-metadata_8h_html"><div class="ttname"><a href="mutable-page-metadata_8h.html">mutable-page-metadata.h</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a57f5ecf71b9a2757b0555b2be4c640b8"><div class="ttname"><a href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">v8::internal::Tagged&lt; HeapObject &gt;</a></div><div class="ttdeci">kInterpreterTrampolineOffset Tagged&lt; HeapObject &gt;</div><div class="ttdef"><b>Definition</b> <a href="shared-function-info-inl_8h_source.html#l00116">shared-function-info-inl.h:116</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9106e7f85086ebf60aac41c0a8fee78"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9106e7f85086ebf60aac41c0a8fee78">v8::internal::SkipFreeSpaceOrFiller</a></div><div class="ttdeci">SkipFreeSpaceOrFiller</div><div class="ttdef"><b>Definition</b> <a href="read-only-heap_8h_source.html#l00132">read-only-heap.h:132</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9106e7f85086ebf60aac41c0a8fee78a1ea590aa4a64767508460736ac0edaa9"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9106e7f85086ebf60aac41c0a8fee78a1ea590aa4a64767508460736ac0edaa9">v8::internal::SkipFreeSpaceOrFiller::kYes</a></div><div class="ttdeci">@ kYes</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9db791c05a0359859a321dcfec42e37"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8::internal::v8_flags</a></div><div class="ttdeci">V8_EXPORT_PRIVATE FlagValues v8_flags</div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_acf6bafb5b8483a580f375393c413ee02"><div class="ttname"><a href="namespacev8_1_1internal.html#acf6bafb5b8483a580f375393c413ee02">v8::internal::kNullAddress</a></div><div class="ttdeci">static constexpr Address kNullAddress</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00053">v8-internal.h:53</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="aobjects-inl_8h_html"><div class="ttname"><a href="objects-inl_8h.html">objects-inl.h</a></div></div>
 <div class="ttc" id="aptr-compr-inl_8h_html"><div class="ttname"><a href="ptr-compr-inl_8h.html">ptr-compr-inl.h</a></div></div>
@@ -555,11 +557,23 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aread-only-spaces_8h_html"><div class="ttname"><a href="read-only-spaces_8h.html">read-only-spaces.h</a></div></div>
 <div class="ttc" id="asmi_8h_html"><div class="ttname"><a href="smi_8h.html">smi.h</a></div></div>
 <div class="ttc" id="aspaces_8h_html_a56ff3dec24b9951f79e32d38157610a8"><div class="ttname"><a href="spaces_8h.html#a56ff3dec24b9951f79e32d38157610a8">DCHECK_OBJECT_SIZE</a></div><div class="ttdeci">#define DCHECK_OBJECT_SIZE(size)</div><div class="ttdef"><b>Definition</b> <a href="spaces_8h_source.html#l00051">spaces.h:51</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2utils_2allocation_8h_html"><div class="ttname"><a href="src_2utils_2allocation_8h.html">allocation.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a67bd29db07c711b0fb11ff1c324ebb60"><div class="ttname"><a href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a></div><div class="ttdeci">#define V8_UNLIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00649">v8config.h:649</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:35 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="read-only-heap_8cc.html">read-only-heap.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:44 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

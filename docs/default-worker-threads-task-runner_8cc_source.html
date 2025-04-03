@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/libplatform/default-worker-threads-task-runner.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/libplatform/default-worker-threads-task-runner.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('default-worker-threads-task-runner_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4ee34a990ac0cd4ceb75130c67cb9983.html">libplatform</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">default-worker-threads-task-runner.cc</div></div>
 </div><!--header-->
@@ -140,7 +148,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
 <div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner.html#a440d7f9b43ae7d6fc43f719bddf58e92">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner.html#a440d7f9b43ae7d6fc43f719bddf58e92">DefaultWorkerThreadsTaskRunner::PostTaskImpl</a>(</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::unique_ptr&lt;Task&gt; task, <span class="keyword">const</span> SourceLocation&amp; location) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::unique_ptr&lt;Task&gt; task, <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1SourceLocation.html">SourceLocation</a>&amp; location) {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::MutexGuard</a> guard(&amp;<a class="code hl_variable" href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner.html#a05d6ec1cba7b63bb201b61f4f1eb7ebc">lock_</a>);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner.html#ac72b207aabe726d46cae2153ad585066">terminated_</a>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_variable" href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner.html#abe9b838b30076df54470dcb282f814a5">queue_</a>.<a class="code hl_function" href="classv8_1_1platform_1_1DelayedTaskQueue.html#aa4f4f6172490d2235ef8d705ec53dbea">Append</a>(std::move(task));</div>
@@ -155,7 +163,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner.html#a09e3d772d767a1cc9693d508f8ed0d08">   51</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner.html#a09e3d772d767a1cc9693d508f8ed0d08">DefaultWorkerThreadsTaskRunner::PostDelayedTaskImpl</a>(</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    std::unique_ptr&lt;Task&gt; task, <span class="keywordtype">double</span> delay_in_seconds,</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">const</span> SourceLocation&amp; location) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1SourceLocation.html">SourceLocation</a>&amp; location) {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::MutexGuard</a> guard(&amp;<a class="code hl_variable" href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner.html#a05d6ec1cba7b63bb201b61f4f1eb7ebc">lock_</a>);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner.html#ac72b207aabe726d46cae2153ad585066">terminated_</a>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_variable" href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner.html#abe9b838b30076df54470dcb282f814a5">queue_</a>.<a class="code hl_function" href="classv8_1_1platform_1_1DelayedTaskQueue.html#aa7998da388406fc305c6321ab40b5bbe">AppendDelayed</a>(std::move(task), delay_in_seconds);</div>
@@ -169,9 +177,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner.html#ae0d7f45780f8c9f3f57995cecaaa2ea4">   64</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner.html#ae0d7f45780f8c9f3f57995cecaaa2ea4">DefaultWorkerThreadsTaskRunner::PostIdleTaskImpl</a>(</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::unique_ptr&lt;IdleTask&gt; task, <span class="keyword">const</span> SourceLocation&amp; location) {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::unique_ptr&lt;IdleTask&gt; task, <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1SourceLocation.html">SourceLocation</a>&amp; location) {</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="comment">// There are no idle worker tasks.</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
 </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
@@ -188,7 +196,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    : Thread(</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>          <a class="code hl_class" href="classv8_1_1base_1_1Thread_1_1Options.html">Options</a>(<span class="stringliteral">&quot;V8 DefaultWorkerThreadsTaskRunner WorkerThread&quot;</span>, <a class="code hl_variable" href="module-compiler_8cc.html#a12a507bc765598b5db4100af52f045e3">priority</a>)),</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      runner_(runner) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1Thread.html#a4c2159b224419ce01ca653ffcd5e28c2">Start</a>());</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1Thread.html#a4c2159b224419ce01ca653ffcd5e28c2">Start</a>());</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
 </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
@@ -223,7 +231,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        runner_-&gt;idle_threads_.push_back(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keywordtype">bool</span> notified =</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            condition_var_.WaitFor(&amp;runner_-&gt;lock_, next_task.<a class="code hl_variable" href="structv8_1_1platform_1_1DelayedTaskQueue_1_1MaybeNextTask.html#a6290f78f903fd3e4f56029d7bc913bc6">wait_time</a>);</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(notified);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(notified);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  }</div>
@@ -238,9 +246,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>}  <span class="comment">// namespace platform</span></div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>}  <span class="comment">// namespace v8</span></div>
+<div class="ttc" id="aclassv8_1_1SourceLocation_html"><div class="ttname"><a href="classv8_1_1SourceLocation.html">v8::SourceLocation</a></div><div class="ttdef"><b>Definition</b> <a href="v8-source-location_8h_source.html#l00031">v8-source-location.h:31</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1LockGuard_html"><div class="ttname"><a href="classv8_1_1base_1_1LockGuard.html">v8::base::LockGuard</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00534">mutex.h:534</a></div></div>
-<div class="ttc" id="aclassv8_1_1base_1_1Thread_1_1Options_html"><div class="ttname"><a href="classv8_1_1base_1_1Thread_1_1Options.html">v8::base::Thread::Options</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00547">platform.h:547</a></div></div>
-<div class="ttc" id="aclassv8_1_1base_1_1Thread_html_a2aa417033f76f771344890c3d9cf46a5"><div class="ttname"><a href="classv8_1_1base_1_1Thread.html#a2aa417033f76f771344890c3d9cf46a5">v8::base::Thread::Priority</a></div><div class="ttdeci">Priority</div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00545">platform.h:545</a></div></div>
+<div class="ttc" id="aclassv8_1_1base_1_1Thread_1_1Options_html"><div class="ttname"><a href="classv8_1_1base_1_1Thread_1_1Options.html">v8::base::Thread::Options</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00547">platform.h:547</a></div></div>
+<div class="ttc" id="aclassv8_1_1base_1_1Thread_html_a2aa417033f76f771344890c3d9cf46a5"><div class="ttname"><a href="classv8_1_1base_1_1Thread.html#a2aa417033f76f771344890c3d9cf46a5">v8::base::Thread::Priority</a></div><div class="ttdeci">Priority</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00545">platform.h:545</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1Thread_html_a4c2159b224419ce01ca653ffcd5e28c2"><div class="ttname"><a href="classv8_1_1base_1_1Thread.html#a4c2159b224419ce01ca653ffcd5e28c2">v8::base::Thread::Start</a></div><div class="ttdeci">V8_WARN_UNUSED_RESULT bool Start()</div><div class="ttdef"><b>Definition</b> <a href="platform-posix_8cc_source.html#l01241">platform-posix.cc:1241</a></div></div>
 <div class="ttc" id="aclassv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner_1_1WorkerThread_html_a23c1ba2e1632a9002b3d36c3c20b1ad0"><div class="ttname"><a href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner_1_1WorkerThread.html#a23c1ba2e1632a9002b3d36c3c20b1ad0">v8::platform::DefaultWorkerThreadsTaskRunner::WorkerThread::~WorkerThread</a></div><div class="ttdeci">~WorkerThread() override</div><div class="ttdef"><b>Definition</b> <a href="#l00083">default-worker-threads-task-runner.cc:83</a></div></div>
 <div class="ttc" id="aclassv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner_1_1WorkerThread_html_a76b568f11368a08e5e91cfe7939d5b0e"><div class="ttname"><a href="classv8_1_1platform_1_1DefaultWorkerThreadsTaskRunner_1_1WorkerThread.html#a76b568f11368a08e5e91cfe7939d5b0e">v8::platform::DefaultWorkerThreadsTaskRunner::WorkerThread::Notify</a></div><div class="ttdeci">void Notify()</div><div class="ttdef"><b>Definition</b> <a href="#l00117">default-worker-threads-task-runner.cc:117</a></div></div>
@@ -267,12 +276,12 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1platform_1_1DelayedTaskQueue_html_aa7998da388406fc305c6321ab40b5bbe"><div class="ttname"><a href="classv8_1_1platform_1_1DelayedTaskQueue.html#aa7998da388406fc305c6321ab40b5bbe">v8::platform::DelayedTaskQueue::AppendDelayed</a></div><div class="ttdeci">void AppendDelayed(std::unique_ptr&lt; Task &gt; task, double delay_in_seconds)</div><div class="ttdef"><b>Definition</b> <a href="delayed-task-queue_8cc_source.html#l00031">delayed-task-queue.cc:31</a></div></div>
 <div class="ttc" id="adefault-worker-threads-task-runner_8h_html"><div class="ttname"><a href="default-worker-threads-task-runner_8h.html">default-worker-threads-task-runner.h</a></div></div>
 <div class="ttc" id="adelayed-task-queue_8h_html"><div class="ttname"><a href="delayed-task-queue_8h.html">delayed-task-queue.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00067">logging.h:67</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="amacros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="amodule-compiler_8cc_html_a12a507bc765598b5db4100af52f045e3"><div class="ttname"><a href="module-compiler_8cc.html#a12a507bc765598b5db4100af52f045e3">priority</a></div><div class="ttdeci">size_t priority</div><div class="ttdef"><b>Definition</b> <a href="module-compiler_8cc_source.html#l00294">module-compiler.cc:294</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00067">logging.h:67</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="astructv8_1_1platform_1_1DelayedTaskQueue_1_1MaybeNextTask_html"><div class="ttname"><a href="structv8_1_1platform_1_1DelayedTaskQueue_1_1MaybeNextTask.html">v8::platform::DelayedTaskQueue::MaybeNextTask</a></div><div class="ttdef"><b>Definition</b> <a href="delayed-task-queue_8h_source.html#l00049">delayed-task-queue.h:49</a></div></div>
 <div class="ttc" id="astructv8_1_1platform_1_1DelayedTaskQueue_1_1MaybeNextTask_html_a6290f78f903fd3e4f56029d7bc913bc6"><div class="ttname"><a href="structv8_1_1platform_1_1DelayedTaskQueue_1_1MaybeNextTask.html#a6290f78f903fd3e4f56029d7bc913bc6">v8::platform::DelayedTaskQueue::MaybeNextTask::wait_time</a></div><div class="ttdeci">base::TimeDelta wait_time</div><div class="ttdef"><b>Definition</b> <a href="delayed-task-queue_8h_source.html#l00052">delayed-task-queue.h:52</a></div></div>
 <div class="ttc" id="astructv8_1_1platform_1_1DelayedTaskQueue_1_1MaybeNextTask_html_a6ecbfcf1c8f1c922054c3ac20157ea2ca39cb230ec8eb09f465cd0627bc492c25"><div class="ttname"><a href="structv8_1_1platform_1_1DelayedTaskQueue_1_1MaybeNextTask.html#a6ecbfcf1c8f1c922054c3ac20157ea2ca39cb230ec8eb09f465cd0627bc492c25">v8::platform::DelayedTaskQueue::MaybeNextTask::kTask</a></div><div class="ttdeci">@ kTask</div><div class="ttdef"><b>Definition</b> <a href="delayed-task-queue_8h_source.html#l00050">delayed-task-queue.h:50</a></div></div>
@@ -283,10 +292,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="astructv8_1_1platform_1_1DelayedTaskQueue_1_1MaybeNextTask_html_aaff5e30baec5f7d0537e5908e1531d10"><div class="ttname"><a href="structv8_1_1platform_1_1DelayedTaskQueue_1_1MaybeNextTask.html#aaff5e30baec5f7d0537e5908e1531d10">v8::platform::DelayedTaskQueue::MaybeNextTask::state</a></div><div class="ttdeci">enum v8::platform::DelayedTaskQueue::MaybeNextTask::@84 state</div></div>
 <div class="ttc" id="atime_8h_html"><div class="ttname"><a href="time_8h.html">time.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:40 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4ee34a990ac0cd4ceb75130c67cb9983.html">libplatform</a></li><li class="navelem"><a class="el" href="default-worker-threads-task-runner_8cc.html">default-worker-threads-task-runner.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:50 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

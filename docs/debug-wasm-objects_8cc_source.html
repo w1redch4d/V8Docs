@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/debug/debug-wasm-objects.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/debug/debug-wasm-objects.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('debug-wasm-objects_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_44d5bc2300862405dbe586a8cb303c4f.html">debug</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">debug-wasm-objects.cc</div></div>
 </div><!--header-->
@@ -148,8 +156,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">constexpr</span> <span class="keywordtype">int</span> kWasmValueMapIndex = kNumProxies;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">constexpr</span> <span class="keywordtype">int</span> kNumDebugMaps = kWasmValueMapIndex + 1;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>Handle&lt;FixedArray&gt; GetOrCreateDebugMaps(Isolate* isolate) {</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  Handle&lt;FixedArray&gt; maps = isolate-&gt;wasm_debug_maps();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;FixedArray&gt;</a> GetOrCreateDebugMaps(Isolate* isolate) {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;FixedArray&gt;</a> maps = isolate-&gt;wasm_debug_maps();</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordflow">if</span> (maps-&gt;length() == 0) {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    maps = isolate-&gt;factory()-&gt;NewFixedArrayWithHoles(kNumDebugMaps);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    isolate-&gt;native_context()-&gt;set_wasm_debug_maps(*maps);</div>
@@ -163,16 +171,16 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">// set to |null| and is marked non-extensible (by default).</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">// TODO(bmeurer): remove the extensibility opt-out and replace it with a proper</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">// way to add non-intercepted named properties.</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>Handle&lt;Map&gt; GetOrCreateDebugProxyMap(</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Map&gt;</a> GetOrCreateDebugProxyMap(</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    Isolate* isolate, DebugProxyId <span class="keywordtype">id</span>,</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    v8::Local&lt;v8::FunctionTemplate&gt; (*create_template_fn)(v8::Isolate*),</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::FunctionTemplate&gt;</a> (*create_template_fn)(<a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>*),</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordtype">bool</span> make_non_extensible = <span class="keyword">true</span>) {</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keyword">auto</span> maps = GetOrCreateDebugMaps(isolate);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_define" href="logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a>(kNumProxies, maps-&gt;length());</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a>(kNumProxies, maps-&gt;length());</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keywordflow">if</span> (!maps-&gt;is_the_hole(isolate, <span class="keywordtype">id</span>)) {</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;Map&gt;</a>(maps-&gt;get(<span class="keywordtype">id</span>)), isolate);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  }</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keyword">auto</span> tmp = (*create_template_fn)(<span class="keyword">reinterpret_cast&lt;</span>v8::Isolate*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>));</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keyword">auto</span> tmp = (*create_template_fn)(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>));</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keyword">auto</span> fun =</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      <a class="code hl_function" href="classv8_1_1internal_1_1ApiNatives.html#a8c3652e604de77b7475d0ca84dc83975">ApiNatives::InstantiateFunction</a>(isolate, <a class="code hl_function" href="classv8_1_1Utils.html#a5bbbf1336cd2ac62f7ab5014210ecf2e">Utils::OpenDirectHandle</a>(*tmp))</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>          .ToHandleChecked();</div>
@@ -191,7 +199,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">struct </span>IndexedDebugProxy {</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="debug-wasm-objects_8cc.html#a55b2e3d39e1b01003f127279f780ba80">   96</a></span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> DebugProxyId <a class="code hl_variable" href="debug-wasm-objects_8cc.html#a55b2e3d39e1b01003f127279f780ba80">kId</a> = id;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keyword">static</span> Handle&lt;JSObject&gt; Create(Isolate* isolate, Handle&lt;Provider&gt; provider,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;JSObject&gt;</a> Create(Isolate* isolate, <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Provider&gt;</a> provider,</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                                 <span class="keywordtype">bool</span> make_map_non_extensible = <span class="keyword">true</span>) {</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keyword">auto</span> object_map = GetOrCreateDebugProxyMap(isolate, <a class="code hl_variable" href="debug-wasm-objects_8cc.html#a55b2e3d39e1b01003f127279f780ba80">kId</a>, &amp;T::CreateTemplate,</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                                               make_map_non_extensible);</div>
@@ -207,16 +215,16 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    kFieldCount,</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  };</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keyword">static</span> v8::Local&lt;v8::FunctionTemplate&gt; CreateTemplate(v8::Isolate* isolate) {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    Local&lt;v8::FunctionTemplate&gt; templ = v8::FunctionTemplate::New(isolate);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::FunctionTemplate&gt;</a> CreateTemplate(<a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* isolate) {</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    Local&lt;v8::FunctionTemplate&gt; templ = <a class="code hl_function" href="classv8_1_1FunctionTemplate.html#a41c3051fd8bba064a0de7f2d16488d99">v8::FunctionTemplate::New</a>(isolate);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    templ-&gt;SetClassName(</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        v8::String::NewFromUtf8(isolate, T::kClassName).ToLocalChecked());</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>        <a class="code hl_function" href="classv8_1_1String.html#a6aca1685df0fc16b7e3c4ff957dd8205">v8::String::NewFromUtf8</a>(isolate, T::kClassName).ToLocalChecked());</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    templ-&gt;InstanceTemplate()-&gt;SetInternalFieldCount(T::kFieldCount);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    templ-&gt;InstanceTemplate()-&gt;SetHandler(</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        v8::IndexedPropertyHandlerConfiguration(</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <a class="code hl_struct" href="structv8_1_1IndexedPropertyHandlerConfiguration.html">v8::IndexedPropertyHandlerConfiguration</a>(</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            &amp;T::IndexedGetter, {}, &amp;T::IndexedQuery, {}, &amp;T::IndexedEnumerator,</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            {}, &amp;T::IndexedDescriptor, {},</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            v8::PropertyHandlerFlags::kHasNoSideEffect));</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            <a class="code hl_enumvalue" href="namespacev8.html#af4789f0aeb8680e353901a35810cac1aa5168ab38be99edd5ce1e4cb991b21f51">v8::PropertyHandlerFlags::kHasNoSideEffect</a>));</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="keywordflow">return</span> templ;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  }</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
@@ -226,34 +234,34 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  }</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> V&gt;</div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <span class="keyword">static</span> Handle&lt;JSObject&gt; GetHolder(<span class="keyword">const</span> PropertyCallbackInfo&lt;V&gt;&amp; info) {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;JSObject&gt;</a> GetHolder(<span class="keyword">const</span> PropertyCallbackInfo&lt;V&gt;&amp; info) {</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSObject&gt;</a>(<a class="code hl_function" href="classv8_1_1Utils.html#a09ad82a6479237cb1f3dab296eb0fd45">Utils::OpenHandle</a>(*info.HolderV2()));</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  }</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keyword">static</span> Handle&lt;Provider&gt; GetProvider(DirectHandle&lt;JSObject&gt; holder,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Provider&gt;</a> GetProvider(DirectHandle&lt;JSObject&gt; holder,</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                                      Isolate* isolate) {</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;Provider&gt;</a>(holder-&gt;GetEmbedderField(kProviderField)),</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                  isolate);</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  }</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> V&gt;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <span class="keyword">static</span> Handle&lt;Provider&gt; GetProvider(<span class="keyword">const</span> PropertyCallbackInfo&lt;V&gt;&amp; info) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Provider&gt;</a> GetProvider(<span class="keyword">const</span> PropertyCallbackInfo&lt;V&gt;&amp; info) {</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordflow">return</span> GetProvider(GetHolder(info), GetIsolate(info));</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  }</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <span class="keyword">static</span> v8::Intercepted IndexedGetter(</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <span class="keyword">static</span> <a class="code hl_enumeration" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7">v8::Intercepted</a> IndexedGetter(</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      uint32_t <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, <span class="keyword">const</span> PropertyCallbackInfo&lt;v8::Value&gt;&amp; info) {</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keyword">auto</span> isolate = GetIsolate(info);</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keyword">auto</span> provider = GetProvider(info);</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> &lt; T::Count(isolate, provider)) {</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      <span class="keyword">auto</span> value = T::Get(isolate, provider, <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>);</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>      info.GetReturnValue().Set(Utils::ToLocal(value));</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      <span class="keywordflow">return</span> v8::Intercepted::kYes;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a1ea590aa4a64767508460736ac0edaa9">v8::Intercepted::kYes</a>;</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    }</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">return</span> v8::Intercepted::kNo;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a8cc8e60acfa3ae6089df773013fd73a2">v8::Intercepted::kNo</a>;</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  }</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keyword">static</span> v8::Intercepted IndexedDescriptor(</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="keyword">static</span> <a class="code hl_enumeration" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7">v8::Intercepted</a> IndexedDescriptor(</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>      uint32_t <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, <span class="keyword">const</span> PropertyCallbackInfo&lt;v8::Value&gt;&amp; info) {</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keyword">auto</span> isolate = GetIsolate(info);</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keyword">auto</span> provider = GetProvider(info);</div>
@@ -264,20 +272,20 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      descriptor.set_writable(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>      descriptor.set_value(<a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSAny&gt;</a>(T::Get(isolate, provider, <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>)));</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      info.GetReturnValue().Set(Utils::ToLocal(descriptor.ToObject(isolate)));</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <span class="keywordflow">return</span> v8::Intercepted::kYes;</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a1ea590aa4a64767508460736ac0edaa9">v8::Intercepted::kYes</a>;</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    }</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordflow">return</span> v8::Intercepted::kNo;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a8cc8e60acfa3ae6089df773013fd73a2">v8::Intercepted::kNo</a>;</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  }</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="keyword">static</span> v8::Intercepted IndexedQuery(</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="keyword">static</span> <a class="code hl_enumeration" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7">v8::Intercepted</a> IndexedQuery(</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>      uint32_t <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, <span class="keyword">const</span> PropertyCallbackInfo&lt;v8::Integer&gt;&amp; info) {</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> &lt; T::Count(GetIsolate(info), GetProvider(info))) {</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      info.GetReturnValue().Set(Integer::New(</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>      info.GetReturnValue().Set(<a class="code hl_function" href="classv8_1_1Integer.html#acd94a64ebeb75a97c42a20c15738fca4">Integer::New</a>(</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>          info.GetIsolate(),</div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>          PropertyAttribute::DontDelete | PropertyAttribute::ReadOnly));</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      <span class="keywordflow">return</span> v8::Intercepted::kYes;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>          <a class="code hl_enumvalue" href="namespacev8.html#a05f25f935e108a1ea2d150e274602b87a82a2064c866b0237d3904d30942531c6">PropertyAttribute::DontDelete</a> | <a class="code hl_enumvalue" href="namespacev8.html#a05f25f935e108a1ea2d150e274602b87ae573d0077ef51499dfd8cb937c1fb9c3">PropertyAttribute::ReadOnly</a>));</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a1ea590aa4a64767508460736ac0edaa9">v8::Intercepted::kYes</a>;</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">return</span> v8::Intercepted::kNo;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a8cc8e60acfa3ae6089df773013fd73a2">v8::Intercepted::kNo</a>;</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  }</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> IndexedEnumerator(<span class="keyword">const</span> PropertyCallbackInfo&lt;v8::Array&gt;&amp; info) {</div>
@@ -299,22 +307,22 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="comment">// of functions in them.</span></div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T, DebugProxyId <span class="keywordtype">id</span>, <span class="keyword">typename</span> Prov<span class="keywordtype">id</span>er = WasmInstanceObject&gt;</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="keyword">struct </span>NamedDebugProxy : IndexedDebugProxy&lt;T, id, Provider&gt; {</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <span class="keyword">static</span> v8::Local&lt;v8::FunctionTemplate&gt; CreateTemplate(v8::Isolate* isolate) {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::FunctionTemplate&gt;</a> CreateTemplate(<a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* isolate) {</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>    <span class="keyword">auto</span> templ = IndexedDebugProxy&lt;T, id, Provider&gt;::CreateTemplate(isolate);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    templ-&gt;InstanceTemplate()-&gt;SetHandler(v8::NamedPropertyHandlerConfiguration(</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>    templ-&gt;InstanceTemplate()-&gt;SetHandler(<a class="code hl_struct" href="structv8_1_1NamedPropertyHandlerConfiguration.html">v8::NamedPropertyHandlerConfiguration</a>(</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>        &amp;T::NamedGetter, {}, &amp;T::NamedQuery, {}, &amp;T::NamedEnumerator, {},</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        &amp;T::NamedDescriptor, {}, v8::PropertyHandlerFlags::kHasNoSideEffect));</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        &amp;T::NamedDescriptor, {}, <a class="code hl_enumvalue" href="namespacev8.html#af4789f0aeb8680e353901a35810cac1aa5168ab38be99edd5ce1e4cb991b21f51">v8::PropertyHandlerFlags::kHasNoSideEffect</a>));</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keywordflow">return</span> templ;</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  }</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> IndexedEnumerator(<span class="keyword">const</span> PropertyCallbackInfo&lt;v8::Array&gt;&amp; info) {</div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    info.GetReturnValue().Set(v8::Array::New(info.GetIsolate()));</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    info.GetReturnValue().Set(<a class="code hl_function" href="classv8_1_1Array.html#a369cbd533bf7aa08d9ce1e2ddb4e6536">v8::Array::New</a>(info.GetIsolate()));</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  }</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="keyword">static</span> Handle&lt;NameDictionary&gt; GetNameTable(Handle&lt;JSObject&gt; holder,</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;NameDictionary&gt;</a> GetNameTable(<a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;JSObject&gt;</a> holder,</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                                             Isolate* isolate) {</div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    Handle&lt;Symbol&gt; symbol = isolate-&gt;factory()-&gt;wasm_debug_proxy_names_symbol();</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    Handle&lt;Object&gt; table_or_undefined =</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Symbol&gt;</a> symbol = isolate-&gt;factory()-&gt;wasm_debug_proxy_names_symbol();</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Object&gt;</a> table_or_undefined =</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        JSObject::GetProperty(isolate, holder, symbol).ToHandleChecked();</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordflow">if</span> (!IsUndefined(*table_or_undefined, isolate)) {</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;NameDictionary&gt;</a>(table_or_undefined);</div>
@@ -326,7 +334,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>      HandleScope scope(isolate);</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>      <span class="keyword">auto</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a> = T::GetName(isolate, provider, <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>);</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>      <span class="keywordflow">if</span> (table-&gt;FindEntry(isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>).is_found()) <span class="keywordflow">continue</span>;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      Handle&lt;Smi&gt; <a class="code hl_variable" href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">value</a>(<a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a755464f4d2c3a71ffd82cd474bbc50f3">Smi::FromInt</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>), isolate);</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>      <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Smi&gt;</a> <a class="code hl_variable" href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">value</a>(<a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a755464f4d2c3a71ffd82cd474bbc50f3">Smi::FromInt</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>), isolate);</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>      table = NameDictionary::Add(isolate, table, <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>, value,</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>                                  <a class="code hl_function" href="classv8_1_1internal_1_1PropertyDetails.html#aa655d92f27712f4e2e554e7f33ce4093">PropertyDetails::Empty</a>());</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
@@ -338,7 +346,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="keyword">static</span> std::optional&lt;uint32_t&gt; FindName(Local&lt;v8::Name&gt; name,</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                                          <span class="keyword">const</span> PropertyCallbackInfo&lt;V&gt;&amp; info) {</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="keywordflow">if</span> (!name-&gt;IsString()) <span class="keywordflow">return</span> {};</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keyword">auto</span> name_str = <a class="code hl_function" href="classv8_1_1Utils.html#a09ad82a6479237cb1f3dab296eb0fd45">Utils::OpenHandle</a>(*name.As&lt;v8::String&gt;());</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keyword">auto</span> name_str = <a class="code hl_function" href="classv8_1_1Utils.html#a09ad82a6479237cb1f3dab296eb0fd45">Utils::OpenHandle</a>(*name.As&lt;<a class="code hl_class" href="classv8_1_1String.html">v8::String</a>&gt;());</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordflow">if</span> (name_str-&gt;length() == 0 || name_str-&gt;Get(0) != <span class="charliteral">&#39;$&#39;</span>) <span class="keywordflow">return</span> {};</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keyword">auto</span> isolate = T::GetIsolate(info);</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keyword">auto</span> table = GetNameTable(T::GetHolder(info), isolate);</div>
@@ -347,28 +355,28 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>    <span class="keywordflow">return</span> {};</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  }</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span> </div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  <span class="keyword">static</span> v8::Intercepted NamedGetter(</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  <span class="keyword">static</span> <a class="code hl_enumeration" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7">v8::Intercepted</a> NamedGetter(</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      Local&lt;v8::Name&gt; name, <span class="keyword">const</span> PropertyCallbackInfo&lt;v8::Value&gt;&amp; info) {</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = FindName(name, info)) {</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>      <span class="keywordflow">return</span> T::IndexedGetter(*<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, info);</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>    }</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keywordflow">return</span> v8::Intercepted::kNo;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a8cc8e60acfa3ae6089df773013fd73a2">v8::Intercepted::kNo</a>;</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  }</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  <span class="keyword">static</span> v8::Intercepted NamedQuery(</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  <span class="keyword">static</span> <a class="code hl_enumeration" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7">v8::Intercepted</a> NamedQuery(</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      Local&lt;v8::Name&gt; name, <span class="keyword">const</span> PropertyCallbackInfo&lt;v8::Integer&gt;&amp; info) {</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = FindName(name, info)) {</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>      <span class="keywordflow">return</span> T::IndexedQuery(*<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, info);</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    }</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordflow">return</span> v8::Intercepted::kNo;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a8cc8e60acfa3ae6089df773013fd73a2">v8::Intercepted::kNo</a>;</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>  }</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span> </div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <span class="keyword">static</span> v8::Intercepted NamedDescriptor(</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <span class="keyword">static</span> <a class="code hl_enumeration" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7">v8::Intercepted</a> NamedDescriptor(</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>      Local&lt;v8::Name&gt; name, <span class="keyword">const</span> PropertyCallbackInfo&lt;v8::Value&gt;&amp; info) {</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = FindName(name, info)) {</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>      <span class="keywordflow">return</span> T::IndexedDescriptor(*<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, info);</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    }</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keywordflow">return</span> v8::Intercepted::kNo;</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a8cc8e60acfa3ae6089df773013fd73a2">v8::Intercepted::kNo</a>;</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  }</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> NamedEnumerator(<span class="keyword">const</span> PropertyCallbackInfo&lt;v8::Array&gt;&amp; info) {</div>
@@ -393,7 +401,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(instance-&gt;module()-&gt;functions.size());</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  }</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <span class="keyword">static</span> Handle&lt;Object&gt; <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2b5e79bd829824237e784a6cde29309e">Get</a>(Isolate* isolate,</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Object&gt;</a> <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2b5e79bd829824237e784a6cde29309e">Get</a>(Isolate* isolate,</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>                            DirectHandle&lt;WasmInstanceObject&gt; instance,</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                            uint32_t <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>) {</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    DirectHandle&lt;WasmTrustedInstanceData&gt; trusted_data{</div>
@@ -424,7 +432,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(instance-&gt;module()-&gt;globals.size());</div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>  }</div>
 <div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
-<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  <span class="keyword">static</span> Handle&lt;Object&gt; <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2b5e79bd829824237e784a6cde29309e">Get</a>(Isolate* isolate,</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Object&gt;</a> <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2b5e79bd829824237e784a6cde29309e">Get</a>(Isolate* isolate,</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                            DirectHandle&lt;WasmInstanceObject&gt; instance,</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>                            uint32_t <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>) {</div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    DirectHandle&lt;WasmModuleObject&gt; module(instance-&gt;module_object(), isolate);</div>
@@ -455,7 +463,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <span class="keywordflow">return</span> instance-&gt;trusted_data(isolate)-&gt;memory_objects()-&gt;length();</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>  }</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
-<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>  <span class="keyword">static</span> Handle&lt;Object&gt; <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2b5e79bd829824237e784a6cde29309e">Get</a>(Isolate* isolate,</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Object&gt;</a> <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2b5e79bd829824237e784a6cde29309e">Get</a>(Isolate* isolate,</div>
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>                            DirectHandle&lt;WasmInstanceObject&gt; instance,</div>
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>                            uint32_t <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>) {</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>(instance-&gt;trusted_data(isolate)-&gt;memory_object(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>),</div>
@@ -482,7 +490,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>    <span class="keywordflow">return</span> instance-&gt;trusted_data(isolate)-&gt;tables()-&gt;length();</div>
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>  }</div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
-<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>  <span class="keyword">static</span> Handle&lt;Object&gt; <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2b5e79bd829824237e784a6cde29309e">Get</a>(Isolate* isolate,</div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Object&gt;</a> <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2b5e79bd829824237e784a6cde29309e">Get</a>(Isolate* isolate,</div>
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                            DirectHandle&lt;WasmInstanceObject&gt; instance,</div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                            uint32_t <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>) {</div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>(instance-&gt;trusted_data(isolate)-&gt;tables()-&gt;get(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>),</div>
@@ -504,7 +512,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span><span class="keyword">struct </span>LocalsProxy : NamedDebugProxy&lt;LocalsProxy, kLocalsProxy, FixedArray&gt; {</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> <span class="keyword">const</span>* <a class="code hl_variable" href="debug-wasm-objects_8cc.html#a563a6d39229d235f16609645626ce49c">kClassName</a> = <span class="stringliteral">&quot;Locals&quot;</span>;</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span> </div>
-<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>  <span class="keyword">static</span> Handle&lt;JSObject&gt; Create(WasmFrame* frame) {</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;JSObject&gt;</a> Create(WasmFrame* frame) {</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    <span class="keyword">auto</span> isolate = frame-&gt;isolate();</div>
 <div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    <span class="keyword">auto</span> debug_info = frame-&gt;native_module()-&gt;GetDebugInfo();</div>
 <div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>    <span class="comment">// TODO(bmeurer): Check if pc is inspectable.</span></div>
@@ -530,7 +538,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>    <span class="keywordflow">return</span> values-&gt;length() - 2;</div>
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>  }</div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span> </div>
-<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>  <span class="keyword">static</span> Handle&lt;Object&gt; <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2b5e79bd829824237e784a6cde29309e">Get</a>(Isolate* isolate, DirectHandle&lt;FixedArray&gt; values,</div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Object&gt;</a> <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2b5e79bd829824237e784a6cde29309e">Get</a>(Isolate* isolate, DirectHandle&lt;FixedArray&gt; values,</div>
 <div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>                            uint32_t <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>) {</div>
 <div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>(values-&gt;get(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>), isolate);</div>
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>  }</div>
@@ -553,7 +561,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span><span class="keyword">struct </span>StackProxy : IndexedDebugProxy&lt;StackProxy, kStackProxy, FixedArray&gt; {</div>
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">char</span> <span class="keyword">const</span>* <a class="code hl_variable" href="debug-wasm-objects_8cc.html#a563a6d39229d235f16609645626ce49c">kClassName</a> = <span class="stringliteral">&quot;Stack&quot;</span>;</div>
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span> </div>
-<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>  <span class="keyword">static</span> Handle&lt;JSObject&gt; Create(WasmFrame* frame) {</div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;JSObject&gt;</a> Create(WasmFrame* frame) {</div>
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>    <span class="keyword">auto</span> isolate = frame-&gt;isolate();</div>
 <div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>    <span class="keyword">auto</span> debug_info =</div>
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>        frame-&gt;trusted_instance_data()-&gt;native_module()-&gt;GetDebugInfo();</div>
@@ -576,7 +584,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span>    <span class="keywordflow">return</span> values-&gt;length();</div>
 <div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span>  }</div>
 <div class="line"><a id="l00482" name="l00482"></a><span class="lineno">  482</span> </div>
-<div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span>  <span class="keyword">static</span> Handle&lt;Object&gt; <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2b5e79bd829824237e784a6cde29309e">Get</a>(Isolate* isolate, DirectHandle&lt;FixedArray&gt; values,</div>
+<div class="line"><a id="l00483" name="l00483"></a><span class="lineno">  483</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Object&gt;</a> <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2b5e79bd829824237e784a6cde29309e">Get</a>(Isolate* isolate, DirectHandle&lt;FixedArray&gt; values,</div>
 <div class="line"><a id="l00484" name="l00484"></a><span class="lineno">  484</span>                            uint32_t <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>) {</div>
 <div class="line"><a id="l00485" name="l00485"></a><span class="lineno">  485</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>(values-&gt;get(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>), isolate);</div>
 <div class="line"><a id="l00486" name="l00486"></a><span class="lineno">  486</span>  }</div>
@@ -586,9 +594,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span><span class="comment">// on the |instance|, stored under the |wasm_debug_proxy_cache_symbol|.</span></div>
 <div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span><span class="comment">// This is used to cache the various instance debug proxies (functions,</span></div>
 <div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span><span class="comment">// globals, tables, and memories) on the WasmInstanceObject.</span></div>
-<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>Handle&lt;FixedArray&gt; GetOrCreateInstanceProxyCache(</div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span><a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;FixedArray&gt;</a> GetOrCreateInstanceProxyCache(</div>
 <div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>    Isolate* isolate, DirectHandle&lt;WasmInstanceObject&gt; instance) {</div>
-<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>  Handle&lt;Object&gt; cache;</div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>  <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Object&gt;</a> cache;</div>
 <div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>  DirectHandle&lt;Symbol&gt; symbol =</div>
 <div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span>      isolate-&gt;factory()-&gt;wasm_debug_proxy_cache_symbol();</div>
 <div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="classv8_1_1internal_1_1Object.html#ad7dc2b339d7369929cc389421d491575">Object::GetProperty</a>(isolate, instance, symbol).ToHandle(&amp;cache) ||</div>
@@ -602,15 +610,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span><span class="comment">// Creates an instance of the |Proxy| on-demand and caches that on the</span></div>
 <div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span><span class="comment">// |instance|.</span></div>
 <div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Proxy&gt;</div>
-<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>Handle&lt;JSObject&gt; GetOrCreateInstanceProxy(Isolate* isolate,</div>
-<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>                                          Handle&lt;WasmInstanceObject&gt; instance) {</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span><a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;JSObject&gt;</a> GetOrCreateInstanceProxy(Isolate* isolate,</div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>                                          <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;WasmInstanceObject&gt;</a> instance) {</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>  <span class="keyword">static_assert</span>(Proxy::kId &lt; kNumInstanceProxies);</div>
 <div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>  DirectHandle&lt;FixedArray&gt; proxies =</div>
 <div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>      GetOrCreateInstanceProxyCache(isolate, instance);</div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>  <span class="keywordflow">if</span> (!proxies-&gt;is_the_hole(isolate, Proxy::kId)) {</div>
 <div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSObject&gt;</a>(proxies-&gt;get(Proxy::kId)), isolate);</div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>  }</div>
-<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>  Handle&lt;JSObject&gt; proxy = Proxy::Create(isolate, instance);</div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>  <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;JSObject&gt;</a> proxy = Proxy::Create(isolate, instance);</div>
 <div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>  proxies-&gt;set(Proxy::kId, *proxy);</div>
 <div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>  <span class="keywordflow">return</span> proxy;</div>
 <div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>}</div>
@@ -658,7 +666,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span><span class="comment">// http://bit.ly/devtools-wasm-entities for more details.</span></div>
 <div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span><span class="keyword">class </span>ContextProxyPrototype {</div>
 <div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>  <span class="keyword">static</span> Handle&lt;JSObject&gt; Create(Isolate* isolate) {</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;JSObject&gt;</a> Create(Isolate* isolate) {</div>
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>    <span class="keyword">auto</span> object_map =</div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>        GetOrCreateDebugProxyMap(isolate, kContextProxy, &amp;CreateTemplate);</div>
 <div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>    <span class="keywordflow">return</span> isolate-&gt;factory()-&gt;NewJSObjectFromMap(</div>
@@ -667,15 +675,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>  }</div>
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span> </div>
 <div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span> <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  <span class="keyword">static</span> v8::Local&lt;v8::FunctionTemplate&gt; CreateTemplate(v8::Isolate* isolate) {</div>
-<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>    Local&lt;v8::FunctionTemplate&gt; templ = v8::FunctionTemplate::New(isolate);</div>
-<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>    templ-&gt;InstanceTemplate()-&gt;SetHandler(v8::NamedPropertyHandlerConfiguration(</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span>  <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::FunctionTemplate&gt;</a> CreateTemplate(<a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* isolate) {</div>
+<div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>    Local&lt;v8::FunctionTemplate&gt; templ = <a class="code hl_function" href="classv8_1_1FunctionTemplate.html#a41c3051fd8bba064a0de7f2d16488d99">v8::FunctionTemplate::New</a>(isolate);</div>
+<div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>    templ-&gt;InstanceTemplate()-&gt;SetHandler(<a class="code hl_struct" href="structv8_1_1NamedPropertyHandlerConfiguration.html">v8::NamedPropertyHandlerConfiguration</a>(</div>
 <div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span>        &amp;NamedGetter, {}, {}, {}, {}, {}, {}, {},</div>
-<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>        <span class="keyword">static_cast&lt;</span>v8::PropertyHandlerFlags<span class="keyword">&gt;</span>(</div>
+<div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>        <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespacev8.html#af4789f0aeb8680e353901a35810cac1a">v8::PropertyHandlerFlags</a><span class="keyword">&gt;</span>(</div>
 <div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>            <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>                v8::PropertyHandlerFlags::kOnlyInterceptStrings) |</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>                <a class="code hl_enumvalue" href="namespacev8.html#af4789f0aeb8680e353901a35810cac1aa5258a8ba1695c486fea7d5b126c95509">v8::PropertyHandlerFlags::kOnlyInterceptStrings</a>) |</div>
 <div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span>            <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(</div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>                v8::PropertyHandlerFlags::kHasNoSideEffect))));</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>                <a class="code hl_enumvalue" href="namespacev8.html#af4789f0aeb8680e353901a35810cac1aa5168ab38be99edd5ce1e4cb991b21f51">v8::PropertyHandlerFlags::kHasNoSideEffect</a>))));</div>
 <div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>    <span class="keywordflow">return</span> templ;</div>
 <div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>  }</div>
 <div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span> </div>
@@ -691,7 +699,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00595" name="l00595"></a><span class="lineno">  595</span>                                   <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSAny&gt;</a>(JSObject::GetProperty(</div>
 <div class="line"><a id="l00596" name="l00596"></a><span class="lineno">  596</span>                                       isolate, <a class="code hl_variable" href="js-call-reducer_8cc.html#a8aab47cc18f1dda0f6b8034f5c64d43d">receiver</a>, delegate_name)));</div>
 <div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>        <span class="keywordflow">if</span> (!IsUndefined(*delegate, isolate)) {</div>
-<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>          Handle&lt;Object&gt; <a class="code hl_variable" href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">value</a>;</div>
+<div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>          <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Object&gt;</a> <a class="code hl_variable" href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">value</a>;</div>
 <div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>          <a class="code hl_define" href="execution_2isolate_8h.html#a45bb81ab232e9f2663545ec92dc0b950">ASSIGN_RETURN_ON_EXCEPTION</a>(</div>
 <div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>              isolate, value, <a class="code hl_function" href="classv8_1_1internal_1_1Object.html#ad7dc2b339d7369929cc389421d491575">Object::GetProperty</a>(isolate, delegate, name));</div>
 <div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>          <span class="keywordflow">if</span> (!IsUndefined(*value, isolate)) <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">value</a>;</div>
@@ -701,7 +709,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>    <span class="keywordflow">return</span> {};</div>
 <div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>  }</div>
 <div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span> </div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>  <span class="keyword">static</span> v8::Intercepted NamedGetter(</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>  <span class="keyword">static</span> <a class="code hl_enumeration" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7">v8::Intercepted</a> NamedGetter(</div>
 <div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>      Local&lt;v8::Name&gt; name, <span class="keyword">const</span> PropertyCallbackInfo&lt;v8::Value&gt;&amp; info) {</div>
 <div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>    <span class="keyword">auto</span> name_string = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;String&gt;</a>(<a class="code hl_function" href="classv8_1_1Utils.html#a09ad82a6479237cb1f3dab296eb0fd45">Utils::OpenHandle</a>(*name));</div>
 <div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>    <span class="keyword">auto</span> isolate = <span class="keyword">reinterpret_cast&lt;</span>Isolate*<span class="keyword">&gt;</span>(info.GetIsolate());</div>
@@ -709,18 +717,18 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>    DirectHandle&lt;Object&gt; <a class="code hl_variable" href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">value</a>;</div>
 <div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>    <span class="keywordflow">if</span> (GetNamedProperty(isolate, <a class="code hl_variable" href="js-call-reducer_8cc.html#a8aab47cc18f1dda0f6b8034f5c64d43d">receiver</a>, name_string).ToHandle(&amp;value)) {</div>
 <div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>      info.GetReturnValue().Set(Utils::ToLocal(value));</div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>      <span class="keywordflow">return</span> v8::Intercepted::kYes;</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>      <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a1ea590aa4a64767508460736ac0edaa9">v8::Intercepted::kYes</a>;</div>
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>    }</div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>    <span class="keywordflow">return</span> v8::Intercepted::kNo;</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>    <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a8cc8e60acfa3ae6089df773013fd73a2">v8::Intercepted::kNo</a>;</div>
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>  }</div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>};</div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span> </div>
 <div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span><span class="keyword">class </span>ContextProxy {</div>
 <div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>  <span class="keyword">static</span> Handle&lt;JSObject&gt; Create(WasmFrame* frame) {</div>
+<div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>  <span class="keyword">static</span> <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;JSObject&gt;</a> Create(WasmFrame* frame) {</div>
 <div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>    Isolate* isolate = frame-&gt;isolate();</div>
 <div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>    <span class="keyword">auto</span> <span class="keywordtype">object</span> = isolate-&gt;factory()-&gt;NewSlowJSObjectWithNullProto();</div>
-<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>    Handle&lt;WasmInstanceObject&gt; instance(frame-&gt;wasm_instance(), isolate);</div>
+<div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>    <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;WasmInstanceObject&gt;</a> instance(frame-&gt;wasm_instance(), isolate);</div>
 <div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>    <a class="code hl_function" href="classv8_1_1internal_1_1JSObject.html#a16c9b19de5218c056da014960fba72ae">JSObject::AddProperty</a>(isolate, <span class="keywordtype">object</span>, <span class="stringliteral">&quot;instance&quot;</span>, instance, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a352f65439007f2f1b85c997c1ba11436ac96c4a6f8b2f89bb1dbaebb75becb0c2">FROZEN</a>);</div>
 <div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>    DirectHandle&lt;WasmModuleObject&gt; module_object(instance-&gt;module_object(),</div>
 <div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>                                                 isolate);</div>
@@ -760,7 +768,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>  <span class="keywordtype">bool</span> Done()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="compilation-dependencies_8cc.html#a4bff822c17b2233630b34a767cc130d5">type_</a> == ScopeTypeWith; }</div>
 <div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span> </div>
 <div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>  <span class="keywordtype">void</span> Advance()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!Done());</div>
+<div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!Done());</div>
 <div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>    <span class="keywordflow">switch</span> (type_) {</div>
 <div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>      <span class="keywordflow">case</span> ScopeTypeWasmExpressionStack:</div>
 <div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>        <a class="code hl_variable" href="compilation-dependencies_8cc.html#a4bff822c17b2233630b34a767cc130d5">type_</a> = <a class="code hl_enumvalue" href="classv8_1_1debug_1_1ScopeIterator.html#af260ab9b643c76c1adf63339eb8ebc9dac18e5cc54c28b7ac38c35a2afc185617">debug::ScopeIterator::ScopeTypeLocal</a>;</div>
@@ -779,11 +787,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span> </div>
 <div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>  <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a434c900ce7c0bf1e00e51ac751092850">ScopeType</a> GetType()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="compilation-dependencies_8cc.html#a4bff822c17b2233630b34a767cc130d5">type_</a>; }</div>
 <div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span> </div>
-<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>  v8::Local&lt;v8::Object&gt; GetObject()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>  <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Object&gt;</a> GetObject()<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>    Isolate* isolate = <a class="code hl_variable" href="debug-wasm-objects_8cc.html#ad19547b0a0a04442bd3df674cbe7a85f">frame_</a>-&gt;isolate();</div>
 <div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>    <span class="keywordflow">switch</span> (type_) {</div>
 <div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>      <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classv8_1_1debug_1_1ScopeIterator.html#af260ab9b643c76c1adf63339eb8ebc9dad838c76eed598933277822e9b15141b6">debug::ScopeIterator::ScopeTypeModule</a>: {</div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>        Handle&lt;WasmInstanceObject&gt; instance{<a class="code hl_variable" href="debug-wasm-objects_8cc.html#ad19547b0a0a04442bd3df674cbe7a85f">frame_</a>-&gt;wasm_instance(), isolate};</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>        <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;WasmInstanceObject&gt;</a> instance{<a class="code hl_variable" href="debug-wasm-objects_8cc.html#ad19547b0a0a04442bd3df674cbe7a85f">frame_</a>-&gt;wasm_instance(), isolate};</div>
 <div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>        DirectHandle&lt;JSObject&gt; <span class="keywordtype">object</span> =</div>
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>            isolate-&gt;factory()-&gt;NewSlowJSObjectWithNullProto();</div>
 <div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>        <a class="code hl_function" href="classv8_1_1internal_1_1JSObject.html#a16c9b19de5218c056da014960fba72ae">JSObject::AddProperty</a>(isolate, <span class="keywordtype">object</span>, <span class="stringliteral">&quot;instance&quot;</span>, instance, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a352f65439007f2f1b85c997c1ba11436ac96c4a6f8b2f89bb1dbaebb75becb0c2">FROZEN</a>);</div>
@@ -828,7 +836,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>        <a class="code hl_function" href="namespacev8_1_1internal.html#acdec713c25068019f935e35976f5b666">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>    }</div>
 <div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>  }</div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>  v8::Local&lt;v8::Value&gt; GetFunctionDebugName()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>  <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a> GetFunctionDebugName()<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    <span class="keywordflow">return</span> Utils::ToLocal(<a class="code hl_variable" href="debug-wasm-objects_8cc.html#ad19547b0a0a04442bd3df674cbe7a85f">frame_</a>-&gt;isolate()-&gt;factory()-&gt;empty_string());</div>
 <div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>  }</div>
 <div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span> </div>
@@ -840,8 +848,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span> </div>
 <div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>  debug::Location GetEndLocation()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> {}; }</div>
 <div class="line"><a id="l00746" name="l00746"></a><span class="lineno">  746</span> </div>
-<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>  <span class="keywordtype">bool</span> SetVariableValue(v8::Local&lt;v8::String&gt; name,</div>
-<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                        v8::Local&lt;v8::Value&gt; value)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00747" name="l00747"></a><span class="lineno">  747</span>  <span class="keywordtype">bool</span> SetVariableValue(<a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::String&gt;</a> name,</div>
+<div class="line"><a id="l00748" name="l00748"></a><span class="lineno">  748</span>                        <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a> value)<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span>  }</div>
 <div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span> </div>
@@ -862,7 +870,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>  <span class="keywordtype">bool</span> Done()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="compilation-dependencies_8cc.html#a4bff822c17b2233630b34a767cc130d5">type_</a> == ScopeTypeWith; }</div>
 <div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span> </div>
 <div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>  <span class="keywordtype">void</span> Advance()<span class="keyword"> override </span>{</div>
-<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!Done());</div>
+<div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!Done());</div>
 <div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="compilation-dependencies_8cc.html#a4bff822c17b2233630b34a767cc130d5">type_</a>) {</div>
 <div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>      <span class="keywordflow">case</span> ScopeTypeModule:</div>
 <div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>        <span class="comment">// We use ScopeTypeWith type as marker for done.</span></div>
@@ -871,13 +879,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>      <span class="keywordflow">case</span> ScopeTypeWasmExpressionStack:</div>
 <div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>      <span class="keywordflow">case</span> ScopeTypeLocal:</div>
 <div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>      <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>        <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>    }</div>
 <div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>  }</div>
 <div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span> </div>
 <div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>  <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a434c900ce7c0bf1e00e51ac751092850">ScopeType</a> GetType()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="compilation-dependencies_8cc.html#a4bff822c17b2233630b34a767cc130d5">type_</a>; }</div>
 <div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span> </div>
-<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>  v8::Local&lt;v8::Object&gt; GetObject()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>  <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Object&gt;</a> GetObject()<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>    Isolate* isolate = <a class="code hl_variable" href="debug-wasm-objects_8cc.html#ad19547b0a0a04442bd3df674cbe7a85f">frame_</a>-&gt;isolate();</div>
 <div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>    <span class="keywordflow">switch</span> (<a class="code hl_variable" href="compilation-dependencies_8cc.html#a4bff822c17b2233630b34a767cc130d5">type_</a>) {</div>
 <div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>      <span class="keywordflow">case</span> debug::ScopeIterator::ScopeTypeModule: {</div>
@@ -915,10 +923,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>      <span class="keywordflow">case</span> debug::ScopeIterator::ScopeTypeLocal:</div>
 <div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>      <span class="keywordflow">case</span> debug::ScopeIterator::ScopeTypeWasmExpressionStack:</div>
 <div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>      <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>        <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>    }</div>
 <div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>  }</div>
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>  v8::Local&lt;v8::Value&gt; GetFunctionDebugName()<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>  <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a> GetFunctionDebugName()<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>    <span class="keywordflow">return</span> Utils::ToLocal(<a class="code hl_variable" href="debug-wasm-objects_8cc.html#ad19547b0a0a04442bd3df674cbe7a85f">frame_</a>-&gt;isolate()-&gt;factory()-&gt;empty_string());</div>
 <div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>  }</div>
 <div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span> </div>
@@ -930,8 +938,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span> </div>
 <div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>  debug::Location GetEndLocation()<span class="keyword"> override </span>{ <span class="keywordflow">return</span> {}; }</div>
 <div class="line"><a id="l00836" name="l00836"></a><span class="lineno">  836</span> </div>
-<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>  <span class="keywordtype">bool</span> SetVariableValue(v8::Local&lt;v8::String&gt; name,</div>
-<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>                        v8::Local&lt;v8::Value&gt; value)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00837" name="l00837"></a><span class="lineno">  837</span>  <span class="keywordtype">bool</span> SetVariableValue(<a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::String&gt;</a> name,</div>
+<div class="line"><a id="l00838" name="l00838"></a><span class="lineno">  838</span>                        <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a> value)<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00839" name="l00839"></a><span class="lineno">  839</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00840" name="l00840"></a><span class="lineno">  840</span>  }</div>
 <div class="line"><a id="l00841" name="l00841"></a><span class="lineno">  841</span> </div>
@@ -953,7 +961,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00857" name="l00857"></a><span class="lineno">  857</span> </div>
 <div class="line"><a id="l00858" name="l00858"></a><span class="lineno">  858</span>Handle&lt;String&gt; GetRefTypeName(Isolate* isolate, wasm::ValueType type,</div>
 <div class="line"><a id="l00859" name="l00859"></a><span class="lineno">  859</span>                              wasm::NativeModule* module) {</div>
-<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(type.is_object_reference());</div>
+<div class="line"><a id="l00860" name="l00860"></a><span class="lineno">  860</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(type.is_object_reference());</div>
 <div class="line"><a id="l00861" name="l00861"></a><span class="lineno">  861</span>  StringBuilder <a class="code hl_variable" href="namespacev8_1_1internal.html#a611f0528d5415d4591ad6e8fe9513ac4">name</a>;</div>
 <div class="line"><a id="l00862" name="l00862"></a><span class="lineno">  862</span>  <span class="keyword">module</span>-&gt;GetNamesProvider()-&gt;PrintValueType(name, type);</div>
 <div class="line"><a id="l00863" name="l00863"></a><span class="lineno">  863</span>  <span class="keywordflow">return</span> ToInternalString(name, isolate);</div>
@@ -1092,18 +1100,18 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>        isolate-&gt;factory()-&gt;NewNumberFromUint(length);</div>
 <div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>    <a class="code hl_function" href="classv8_1_1internal_1_1Object.html#a2e8108d7b7d2b826ab90a71b20be7a9d">Object::SetProperty</a>(isolate, proxy, isolate-&gt;factory()-&gt;length_string(),</div>
 <div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>                        length_obj, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a5a9c953b927bbae6c9e0091778fc4e96a3de65b7d55d7330a42c36baee8e0333b">StoreOrigin::kNamed</a>,</div>
-<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>                        Just(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760ac8c06c0e5cdd46711981e472881756de">ShouldThrow::kThrowOnError</a>))</div>
+<div class="line"><a id="l00985" name="l00985"></a><span class="lineno">  985</span>                        <a class="code hl_function" href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">Just</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760ac8c06c0e5cdd46711981e472881756de">ShouldThrow::kThrowOnError</a>))</div>
 <div class="line"><a id="l00986" name="l00986"></a><span class="lineno">  986</span>        .Check();</div>
 <div class="line"><a id="l00987" name="l00987"></a><span class="lineno">  987</span>    <span class="keywordflow">return</span> proxy;</div>
 <div class="line"><a id="l00988" name="l00988"></a><span class="lineno">  988</span>  }</div>
 </div>
 <div class="line"><a id="l00989" name="l00989"></a><span class="lineno">  989</span> </div>
 <div class="foldopen" id="foldopen00990" data-start="{" data-end="}">
-<div class="line"><a id="l00990" name="l00990"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1ArrayProxy.html#af2d0d8a4dc9f546d859b24e30fb4583a">  990</a></span>  <span class="keyword">static</span> v8::Local&lt;v8::FunctionTemplate&gt; <a class="code hl_function" href="structv8_1_1internal_1_1ArrayProxy.html#af2d0d8a4dc9f546d859b24e30fb4583a">CreateTemplate</a>(v8::Isolate* isolate) {</div>
-<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>    Local&lt;v8::FunctionTemplate&gt; templ =</div>
+<div class="line"><a id="l00990" name="l00990"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1ArrayProxy.html#af2d0d8a4dc9f546d859b24e30fb4583a">  990</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::FunctionTemplate&gt;</a> <a class="code hl_function" href="structv8_1_1internal_1_1ArrayProxy.html#af2d0d8a4dc9f546d859b24e30fb4583a">CreateTemplate</a>(<a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* isolate) {</div>
+<div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>    <a class="code hl_class" href="classv8_1_1Local.html">Local&lt;v8::FunctionTemplate&gt;</a> templ =</div>
 <div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>        IndexedDebugProxy::CreateTemplate(isolate);</div>
 <div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>    templ-&gt;InstanceTemplate()-&gt;Set(isolate, <span class="stringliteral">&quot;length&quot;</span>,</div>
-<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>                                   v8::Number::New(isolate, 0));</div>
+<div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>                                   <a class="code hl_function" href="classv8_1_1Number.html#a4d8822be251214dab4cf0212475ede76">v8::Number::New</a>(isolate, 0));</div>
 <div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>    <span class="keywordflow">return</span> templ;</div>
 <div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>  }</div>
 </div>
@@ -1387,6 +1395,14 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aapi-inl_8h_html"><div class="ttname"><a href="api-inl_8h.html">api-inl.h</a></div></div>
 <div class="ttc" id="aapi-natives_8h_html"><div class="ttname"><a href="api-natives_8h.html">api-natives.h</a></div></div>
 <div class="ttc" id="aclasslength_html"><div class="ttname"><a href="classlength.html">length</a></div></div>
+<div class="ttc" id="aclassv8_1_1Array_html_a369cbd533bf7aa08d9ce1e2ddb4e6536"><div class="ttname"><a href="classv8_1_1Array.html#a369cbd533bf7aa08d9ce1e2ddb4e6536">v8::Array::New</a></div><div class="ttdeci">static Local&lt; Array &gt; New(Isolate *isolate, int length=0)</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l08293">api.cc:8293</a></div></div>
+<div class="ttc" id="aclassv8_1_1FunctionTemplate_html_a41c3051fd8bba064a0de7f2d16488d99"><div class="ttname"><a href="classv8_1_1FunctionTemplate.html#a41c3051fd8bba064a0de7f2d16488d99">v8::FunctionTemplate::New</a></div><div class="ttdeci">static Local&lt; FunctionTemplate &gt; New(Isolate *isolate, FunctionCallback callback=nullptr, Local&lt; Value &gt; data=Local&lt; Value &gt;(), Local&lt; Signature &gt; signature=Local&lt; Signature &gt;(), int length=0, ConstructorBehavior behavior=ConstructorBehavior::kAllow, SideEffectType side_effect_type=SideEffectType::kHasSideEffect, const CFunction *c_function=nullptr, uint16_t instance_type=0, uint16_t allowed_receiver_instance_type_range_start=0, uint16_t allowed_receiver_instance_type_range_end=0)</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l01288">api.cc:1288</a></div></div>
+<div class="ttc" id="aclassv8_1_1Integer_html_acd94a64ebeb75a97c42a20c15738fca4"><div class="ttname"><a href="classv8_1_1Integer.html#acd94a64ebeb75a97c42a20c15738fca4">v8::Integer::New</a></div><div class="ttdeci">static Local&lt; Integer &gt; New(Isolate *isolate, int32_t value)</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l09688">api.cc:9688</a></div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1Isolate.html">v8::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="v8-isolate_8h_source.html#l00261">v8-isolate.h:261</a></div></div>
+<div class="ttc" id="aclassv8_1_1Local_html"><div class="ttname"><a href="classv8_1_1Local.html">v8::Local</a></div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00260">v8-local-handle.h:266</a></div></div>
+<div class="ttc" id="aclassv8_1_1Number_html_a4d8822be251214dab4cf0212475ede76"><div class="ttname"><a href="classv8_1_1Number.html#a4d8822be251214dab4cf0212475ede76">v8::Number::New</a></div><div class="ttdeci">static Local&lt; Number &gt; New(Isolate *isolate, double value)</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l09677">api.cc:9677</a></div></div>
+<div class="ttc" id="aclassv8_1_1String_html"><div class="ttname"><a href="classv8_1_1String.html">v8::String</a></div><div class="ttdef"><b>Definition</b> <a href="v8-primitive_8h_source.html#l00124">v8-primitive.h:124</a></div></div>
+<div class="ttc" id="aclassv8_1_1String_html_a6aca1685df0fc16b7e3c4ff957dd8205"><div class="ttname"><a href="classv8_1_1String.html#a6aca1685df0fc16b7e3c4ff957dd8205">v8::String::NewFromUtf8</a></div><div class="ttdeci">static V8_WARN_UNUSED_RESULT MaybeLocal&lt; String &gt; NewFromUtf8(Isolate *isolate, const char *data, NewStringType type=NewStringType::kNormal, int length=-1)</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l07767">api.cc:7767</a></div></div>
 <div class="ttc" id="aclassv8_1_1Utils_html_a09ad82a6479237cb1f3dab296eb0fd45"><div class="ttname"><a href="classv8_1_1Utils.html#a09ad82a6479237cb1f3dab296eb0fd45">v8::Utils::OpenHandle</a></div><div class="ttdeci">static v8::internal::Handle&lt; To &gt; OpenHandle(v8::Local&lt; From &gt; handle)</div><div class="ttdef"><b>Definition</b> <a href="api_8h_source.html#l00274">api.h:274</a></div></div>
 <div class="ttc" id="aclassv8_1_1Utils_html_a5bbbf1336cd2ac62f7ab5014210ecf2e"><div class="ttname"><a href="classv8_1_1Utils.html#a5bbbf1336cd2ac62f7ab5014210ecf2e">v8::Utils::OpenDirectHandle</a></div><div class="ttdeci">static v8::internal::DirectHandle&lt; To &gt; OpenDirectHandle(v8::Local&lt; From &gt; handle)</div><div class="ttdef"><b>Definition</b> <a href="api_8h_source.html#l00279">api.h:279</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1EmbeddedVector_html"><div class="ttname"><a href="classv8_1_1base_1_1EmbeddedVector.html">v8::base::EmbeddedVector</a></div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00397">vector.h:397</a></div></div>
@@ -1454,9 +1470,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ajs-date-time-format_8cc_html_a22ede25ca923109929a8dca3c225b2ad"><div class="ttname"><a href="js-date-time-format_8cc.html#a22ede25ca923109929a8dca3c225b2ad">map</a></div><div class="ttdeci">std::map&lt; const std::string, const std::string &gt; map</div><div class="ttdef"><b>Definition</b> <a href="js-date-time-format_8cc_source.html#l00268">js-date-time-format.cc:268</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_a41f8c58d2c01bf65b8ee199c3f87fc80"><div class="ttname"><a href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a></div><div class="ttdeci">ZoneVector&lt; RpoNumber &gt; &amp; result</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00021">jump-threading.cc:21</a></div></div>
 <div class="ttc" id="aliftoff-compiler_8cc_html_ab8d3010479e75420093f37bb28df0db7"><div class="ttname"><a href="liftoff-compiler_8cc.html#ab8d3010479e75420093f37bb28df0db7">entries</a></div><div class="ttdeci">ZoneVector&lt; Entry &gt; entries</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l00515">liftoff-compiler.cc:515</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00067">logging.h:67</a></div></div>
-<div class="ttc" id="alogging_8h_html_a56e883b55c80205b4d1727679c68b2bd"><div class="ttname"><a href="logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a></div><div class="ttdeci">#define CHECK_LE(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="anames-provider_8h_html"><div class="ttname"><a href="names-provider_8h.html">names-provider.h</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a36caaf43a3f7761ae90d699b961f0239"><div class="ttname"><a href="namespacev8_1_1base.html#a36caaf43a3f7761ae90d699b961f0239">v8::base::SNPrintF</a></div><div class="ttdeci">int SNPrintF(Vector&lt; char &gt; str, const char *format,...)</div><div class="ttdef"><b>Definition</b> <a href="strings_8cc_source.html#l00020">strings.cc:20</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a9664ae877cd992ea375f1b34c6fa1b1b"><div class="ttname"><a href="namespacev8_1_1base.html#a9664ae877cd992ea375f1b34c6fa1b1b">v8::base::StaticCharVector</a></div><div class="ttdeci">constexpr Vector&lt; const char &gt; StaticCharVector(const char(&amp;array)[N])</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00326">vector.h:326</a></div></div>
@@ -1499,8 +1512,23 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_afa9ea55d792121fba92b4cfc8ef8c9d7"><div class="ttname"><a href="namespacev8_1_1internal.html#afa9ea55d792121fba92b4cfc8ef8c9d7">v8::internal::length</a></div><div class="ttdeci">size_t length</div><div class="ttdef"><b>Definition</b> <a href="external-reference_8cc_source.html#l01421">external-reference.cc:1421</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="anamespacev8_html_a05f25f935e108a1ea2d150e274602b87a82a2064c866b0237d3904d30942531c6"><div class="ttname"><a href="namespacev8.html#a05f25f935e108a1ea2d150e274602b87a82a2064c866b0237d3904d30942531c6">v8::DontDelete</a></div><div class="ttdeci">@ DontDelete</div><div class="ttdef"><b>Definition</b> <a href="v8-object_8h_source.html#l00148">v8-object.h:147</a></div></div>
+<div class="ttc" id="anamespacev8_html_a05f25f935e108a1ea2d150e274602b87ae573d0077ef51499dfd8cb937c1fb9c3"><div class="ttname"><a href="namespacev8.html#a05f25f935e108a1ea2d150e274602b87ae573d0077ef51499dfd8cb937c1fb9c3">v8::ReadOnly</a></div><div class="ttdeci">@ ReadOnly</div><div class="ttdef"><b>Definition</b> <a href="v8-object_8h_source.html#l00143">v8-object.h:143</a></div></div>
+<div class="ttc" id="anamespacev8_html_a25d2bd830a15c10ed892862df4c7f2eb"><div class="ttname"><a href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">v8::Handle</a></div><div class="ttdeci">Local&lt; T &gt; Handle</div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00618">v8-local-handle.h:618</a></div></div>
+<div class="ttc" id="anamespacev8_html_aef5115fb284980e6c3772b55f8e8ca72"><div class="ttname"><a href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">v8::Just</a></div><div class="ttdeci">Maybe&lt; T &gt; Just(const T &amp;t)</div><div class="ttdef"><b>Definition</b> <a href="v8-maybe_8h_source.html#l00116">v8-maybe.h:116</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4789f0aeb8680e353901a35810cac1a"><div class="ttname"><a href="namespacev8.html#af4789f0aeb8680e353901a35810cac1a">v8::PropertyHandlerFlags</a></div><div class="ttdeci">PropertyHandlerFlags</div><div class="ttdef"><b>Definition</b> <a href="v8-template_8h_source.html#l00718">v8-template.h:718</a></div></div>
+<div class="ttc" id="anamespacev8_html_af4789f0aeb8680e353901a35810cac1aa5168ab38be99edd5ce1e4cb991b21f51"><div class="ttname"><a href="namespacev8.html#af4789f0aeb8680e353901a35810cac1aa5168ab38be99edd5ce1e4cb991b21f51">v8::PropertyHandlerFlags::kHasNoSideEffect</a></div><div class="ttdeci">@ kHasNoSideEffect</div></div>
+<div class="ttc" id="anamespacev8_html_af4789f0aeb8680e353901a35810cac1aa5258a8ba1695c486fea7d5b126c95509"><div class="ttname"><a href="namespacev8.html#af4789f0aeb8680e353901a35810cac1aa5258a8ba1695c486fea7d5b126c95509">v8::PropertyHandlerFlags::kOnlyInterceptStrings</a></div><div class="ttdeci">@ kOnlyInterceptStrings</div></div>
+<div class="ttc" id="anamespacev8_html_af6fda56e02b3f46cded582193435f3a7"><div class="ttname"><a href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7">v8::Intercepted</a></div><div class="ttdeci">Intercepted</div><div class="ttdef"><b>Definition</b> <a href="v8-template_8h_source.html#l00139">v8-template.h:139</a></div></div>
+<div class="ttc" id="anamespacev8_html_af6fda56e02b3f46cded582193435f3a7a1ea590aa4a64767508460736ac0edaa9"><div class="ttname"><a href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a1ea590aa4a64767508460736ac0edaa9">v8::Intercepted::kYes</a></div><div class="ttdeci">@ kYes</div></div>
+<div class="ttc" id="anamespacev8_html_af6fda56e02b3f46cded582193435f3a7a8cc8e60acfa3ae6089df773013fd73a2"><div class="ttname"><a href="namespacev8.html#af6fda56e02b3f46cded582193435f3a7a8cc8e60acfa3ae6089df773013fd73a2">v8::Intercepted::kNo</a></div><div class="ttdeci">@ kNo</div></div>
 <div class="ttc" id="aproperty-descriptor_8h_html"><div class="ttname"><a href="property-descriptor_8h.html">property-descriptor.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00067">logging.h:67</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a56e883b55c80205b4d1727679c68b2bd"><div class="ttname"><a href="src_2base_2logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a></div><div class="ttdeci">#define CHECK_LE(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="astrings_8h_html"><div class="ttname"><a href="strings_8h.html">strings.h</a></div></div>
+<div class="ttc" id="astructv8_1_1IndexedPropertyHandlerConfiguration_html"><div class="ttname"><a href="structv8_1_1IndexedPropertyHandlerConfiguration.html">v8::IndexedPropertyHandlerConfiguration</a></div><div class="ttdef"><b>Definition</b> <a href="v8-template_8h_source.html#l00831">v8-template.h:831</a></div></div>
+<div class="ttc" id="astructv8_1_1NamedPropertyHandlerConfiguration_html"><div class="ttname"><a href="structv8_1_1NamedPropertyHandlerConfiguration.html">v8::NamedPropertyHandlerConfiguration</a></div><div class="ttdef"><b>Definition</b> <a href="v8-template_8h_source.html#l00752">v8-template.h:752</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1ArrayProxy_html"><div class="ttname"><a href="structv8_1_1internal_1_1ArrayProxy.html">v8::internal::ArrayProxy</a></div><div class="ttdef"><b>Definition</b> <a href="#l00965">debug-wasm-objects.cc:965</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1ArrayProxy_html_a1df6056f8bf9eb6202203ed1a80315cf"><div class="ttname"><a href="structv8_1_1internal_1_1ArrayProxy.html#a1df6056f8bf9eb6202203ed1a80315cf">v8::internal::ArrayProxy::kClassName</a></div><div class="ttdeci">static constexpr char const  * kClassName</div><div class="ttdef"><b>Definition</b> <a href="#l00966">debug-wasm-objects.cc:966</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1ArrayProxy_html_a3dd6de84bd3dc677c7cef08e9836f972"><div class="ttname"><a href="structv8_1_1internal_1_1ArrayProxy.html#a3dd6de84bd3dc677c7cef08e9836f972">v8::internal::ArrayProxy::kObjectIndex</a></div><div class="ttdeci">static const int kObjectIndex</div><div class="ttdef"><b>Definition</b> <a href="#l00968">debug-wasm-objects.cc:968</a></div></div>
@@ -1526,10 +1554,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="awasm-value_8h_html"><div class="ttname"><a href="wasm-value_8h.html">wasm-value.h</a></div></div>
 <div class="ttc" id="awasm_2string-builder_8h_html"><div class="ttname"><a href="wasm_2string-builder_8h.html">string-builder.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:25 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_44d5bc2300862405dbe586a8cb303c4f.html">debug</a></li><li class="navelem"><a class="el" href="debug-wasm-objects_8cc.html">debug-wasm-objects.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:33 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/read-only-heap.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/read-only-heap.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('read-only-heap_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">read-only-heap.h</div></div>
 </div><!--header-->
@@ -105,7 +113,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;utility&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="heap-object_8h.html">src/objects/heap-object.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="objects_8h.html">src/objects/objects.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="roots_8h.html">src/roots/roots.h</a>&quot;</span></div>
@@ -156,23 +164,23 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="comment">// have been created and will not be written to. This should only be called if</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">// a deserializer was not previously provided to Setup. This releases the</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="comment">// ReadOnlyHeap creation lock.</span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a85ae0201f829a88905484254aa831ac5">OnCreateHeapObjectsComplete</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a85ae0201f829a88905484254aa831ac5">OnCreateHeapObjectsComplete</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="comment">// Indicates that all objects reachable by the read only roots table have been</span></div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="comment">// set up.</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#af847f437f3fc0d635ae0776169d0b515">OnCreateRootsComplete</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="comment">// If the read-only heap is shared, then populate |statistics| with its stats,</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <span class="comment">// otherwise the read-only heap stats are set to 0.</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a025965942bf9463372230d9525dcda3f">PopulateReadOnlySpaceStatistics</a>(</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      SharedMemoryStatistics* statistics);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <a class="code hl_class" href="classv8_1_1SharedMemoryStatistics.html">SharedMemoryStatistics</a>* statistics);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="comment">// Returns whether the address is within the read-only space.</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a27e42af8000235aeb8fc6695f6296aca">Contains</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> address);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a27e42af8000235aeb8fc6695f6296aca">Contains</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> address);</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="comment">// Returns whether the object resides in the read-only space.</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a27e42af8000235aeb8fc6695f6296aca">Contains</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> <span class="keywordtype">object</span>);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a61a15ce3dfd30d1d848169cb2298e1f2">SandboxSafeContains</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a27e42af8000235aeb8fc6695f6296aca">Contains</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> <span class="keywordtype">object</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a61a15ce3dfd30d1d848169cb2298e1f2">SandboxSafeContains</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> <span class="keywordtype">object</span>);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="comment">// Returns the current isolates roots table during initialization as opposed</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="comment">// to the shared one in case the latter is not initialized yet.</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a652770a347477915d240b526a800c21c">EarlyGetReadOnlyRoots</a>(</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a> <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a652770a347477915d240b526a800c21c">EarlyGetReadOnlyRoots</a>(</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> <span class="keywordtype">object</span>);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeap.html#afb528e3bb78cdca6b3f6989598c7e3e9">   81</a></span>  <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlySpace.html">ReadOnlySpace</a>* <a class="code hl_function" href="classv8_1_1internal_1_1ReadOnlyHeap.html#afb528e3bb78cdca6b3f6989598c7e3e9">read_only_space</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#aa71f1723aa4f8e5476f9142023712325">read_only_space_</a>; }</div>
@@ -223,7 +231,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="keyword">friend</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a> <a class="code hl_friend" href="classv8_1_1internal_1_1ReadOnlyHeap.html#ab2f5894a1f957ce5a18f3ea9f7d9036d">GetReadOnlyRoots</a>();</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a3de376109f27086dab274a73bcecf1e5">  129</a></span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a3de376109f27086dab274a73bcecf1e5">read_only_roots_</a>[<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a57fc8e958421256f52e6ac92573ff8c7">kEntriesCount</a>];</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a3de376109f27086dab274a73bcecf1e5">  129</a></span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a3de376109f27086dab274a73bcecf1e5">read_only_roots_</a>[<a class="code hl_variable" href="classv8_1_1internal_1_1ReadOnlyHeap.html#a57fc8e958421256f52e6ac92573ff8c7">kEntriesCount</a>];</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>};</div>
 </div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
@@ -237,7 +245,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span><span class="comment">// This class enables iterating over all read-only heap objects on a</span></div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">// ReadOnlyPage.</span></div>
 <div class="foldopen" id="foldopen00139" data-start="{" data-end="};">
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html">  139</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html">ReadOnlyPageObjectIterator</a> final {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html">  139</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html">ReadOnlyPageObjectIterator</a> final {</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyPageObjectIterator.html">ReadOnlyPageObjectIterator</a>(</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyPageMetadata.html">ReadOnlyPageMetadata</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>,</div>
@@ -264,7 +272,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="comment">// This class enables iterating over all read-only heap objects in the</span></div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment">// ReadOnlyHeap/ReadOnlySpace.</span></div>
 <div class="foldopen" id="foldopen00164" data-start="{" data-end="};">
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html">  164</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html">ReadOnlyHeapObjectIterator</a> final {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html">  164</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html">ReadOnlyHeapObjectIterator</a> final {</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html">ReadOnlyHeapObjectIterator</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyHeap.html">ReadOnlyHeap</a>* ro_heap);</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html">ReadOnlyHeapObjectIterator</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlySpace.html">ReadOnlySpace</a>* ro_space);</div>
@@ -282,6 +290,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}  <span class="comment">// namespace v8</span></div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">#endif  </span><span class="comment">// V8_HEAP_READ_ONLY_HEAP_H_</span></div>
+<div class="ttc" id="aclassv8_1_1SharedMemoryStatistics_html"><div class="ttname"><a href="classv8_1_1SharedMemoryStatistics.html">v8::SharedMemoryStatistics</a></div><div class="ttdef"><b>Definition</b> <a href="v8-statistics_8h_source.html#l00116">v8-statistics.h:116</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html">v8::internal::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l00575">isolate.h:575</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1ReadOnlyArtifacts_html"><div class="ttname"><a href="classv8_1_1internal_1_1ReadOnlyArtifacts.html">v8::internal::ReadOnlyArtifacts</a></div><div class="ttdef"><b>Definition</b> <a href="read-only-spaces_8h_source.html#l00070">read-only-spaces.h:70</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1ReadOnlyHeapObjectIterator_html"><div class="ttname"><a href="classv8_1_1internal_1_1ReadOnlyHeapObjectIterator.html">v8::internal::ReadOnlyHeapObjectIterator</a></div><div class="ttdef"><b>Definition</b> <a href="#l00164">read-only-heap.h:164</a></div></div>
@@ -326,10 +335,8 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="acppgc_2sweeper_8cc_html_a876e0ae5632dcb3138e6e718ac01ae8a"><div class="ttname"><a href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a></div><div class="ttdeci">BasePage * page</div><div class="ttdef"><b>Definition</b> <a href="cppgc_2sweeper_8cc_source.html#l00218">sweeper.cc:218</a></div></div>
 <div class="ttc" id="aheap-object_8h_html"><div class="ttname"><a href="heap-object_8h.html">heap-object.h</a></div></div>
 <div class="ttc" id="ajs-dispatch-table_8h_html"><div class="ttname"><a href="js-dispatch-table_8h.html">js-dispatch-table.h</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9106e7f85086ebf60aac41c0a8fee78"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9106e7f85086ebf60aac41c0a8fee78">v8::internal::SkipFreeSpaceOrFiller</a></div><div class="ttdeci">SkipFreeSpaceOrFiller</div><div class="ttdef"><b>Definition</b> <a href="#l00132">read-only-heap.h:132</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ab4c18b4a7d8a0826207b43fd3fdf8589a393a92e2e6ee257d12c0d2f62652ade8"><div class="ttname"><a href="namespacev8_1_1internal.html#ab4c18b4a7d8a0826207b43fd3fdf8589a393a92e2e6ee257d12c0d2f62652ade8">v8::internal::kYes</a></div><div class="ttdeci">@ kYes</div><div class="ttdef"><b>Definition</b> <a href="turboshaft-builtins-assembler-inl_8h_source.html#l00051">turboshaft-builtins-assembler-inl.h:51</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ab4c18b4a7d8a0826207b43fd3fdf8589aa11110d7f919d025a8e017c8ea0f78cf"><div class="ttname"><a href="namespacev8_1_1internal.html#ab4c18b4a7d8a0826207b43fd3fdf8589aa11110d7f919d025a8e017c8ea0f78cf">v8::internal::kNo</a></div><div class="ttdeci">@ kNo</div><div class="ttdef"><b>Definition</b> <a href="turboshaft-builtins-assembler-inl_8h_source.html#l00051">turboshaft-builtins-assembler-inl.h:51</a></div></div>
@@ -337,11 +344,16 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="aobjects_8h_html"><div class="ttname"><a href="objects_8h.html">objects.h</a></div></div>
 <div class="ttc" id="aroots_8h_html"><div class="ttname"><a href="roots_8h.html">roots.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:35 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="read-only-heap_8h.html">read-only-heap.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:44 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

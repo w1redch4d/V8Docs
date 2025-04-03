@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/base/ieee754.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/base/ieee754.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('base_2ieee754_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">ieee754.cc</div></div>
 </div><!--header-->
@@ -115,7 +123,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;<a class="code" href="build__config_8h.html">src/base/build_config.h</a>&quot;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="overflowing-math_8h.html">src/base/overflowing-math.h</a>&quot;</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8.html">v8</a> {</div>
@@ -211,11 +219,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">    (d) = base::bit_cast&lt;double&gt;(bits);          \</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="preprocessor">  } while (false)</span></div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>int32_t __ieee754_rem_pio2(<span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <span class="keywordtype">double</span>* <a class="code hl_variable" href="liveedit-diff_8cc.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) V8_WARN_UNUSED_RESULT;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>int32_t __ieee754_rem_pio2(<span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <span class="keywordtype">double</span>* <a class="code hl_variable" href="liveedit-diff_8cc.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a>;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="keywordtype">int</span> __kernel_rem_pio2(<span class="keywordtype">double</span>* <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <span class="keywordtype">double</span>* <a class="code hl_variable" href="liveedit-diff_8cc.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <span class="keywordtype">int</span> e0, <span class="keywordtype">int</span> nx, <span class="keywordtype">int</span> prec,</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                      <span class="keyword">const</span> int32_t* ipio2) V8_WARN_UNUSED_RESULT;</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keywordtype">double</span> __kernel_cos(<span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) V8_WARN_UNUSED_RESULT;</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keywordtype">double</span> __kernel_sin(<span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <span class="keywordtype">int</span> iy) V8_WARN_UNUSED_RESULT;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                      <span class="keyword">const</span> int32_t* ipio2) <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keywordtype">double</span> __kernel_cos(<span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keywordtype">double</span> __kernel_sin(<span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <span class="keywordtype">int</span> iy) <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a>;</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment">/* __ieee754_rem_pio2(x,y)</span></div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment"> *</span></div>
@@ -409,7 +417,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="comment"> *         magnitude of the latter is at least a quarter of x*x/2,</span></div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span><span class="comment"> *         thus, reducing the rounding error in the subtraction.</span></div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>V8_INLINE <span class="keywordtype">double</span> __kernel_cos(<span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) {</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">double</span> __kernel_cos(<span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>) {</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span></div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>      <a class="code hl_define" href="base_2ieee754_8cc.html#a7cf126dbeb6f30c606e3b42fea65cfef">one</a> = 1.00000000000000000000e+00, <span class="comment">/* 0x3FF00000, 0x00000000 */</span></div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>      <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#af063e6c12112e99237fb099c005e7e97a9f1a65a12203ec503e1d187e38228896">C1</a> = 4.16666666666666019037e-02,  <span class="comment">/* 0x3FA55555, 0x5555554C */</span></div>
@@ -777,7 +785,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span><span class="comment"> *         then                   3    2</span></div>
 <div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span><span class="comment"> *              sin(x) = x + (S1*x + (x *(r-y/2)+y))</span></div>
 <div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span><span class="comment"> */</span></div>
-<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>V8_INLINE <span class="keywordtype">double</span> __kernel_sin(<span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <span class="keywordtype">int</span> iy) {</div>
+<div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">double</span> __kernel_sin(<span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <span class="keywordtype">double</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a>, <span class="keywordtype">int</span> iy) {</div>
 <div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span></div>
 <div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span>      half = 5.00000000000000000000e-01, <span class="comment">/* 0x3FE00000, 0x00000000 */</span></div>
 <div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>      S1 = -1.66666666666666324348e-01,  <span class="comment">/* 0xBFC55555, 0x55555549 */</span></div>
@@ -3204,7 +3212,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aliftoff-compiler_8cc_html_ac96b98a543c504abf4ffd7eaa447e94a"><div class="ttname"><a href="liftoff-compiler_8cc.html#ac96b98a543c504abf4ffd7eaa447e94a">fn</a></div><div class="ttdeci">EmitFn fn</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l02031">liftoff-compiler.cc:2031</a></div></div>
 <div class="ttc" id="aliveedit-diff_8cc_html_a0a2f84ed7838f07779ae24c5a9086d33"><div class="ttname"><a href="liveedit-diff_8cc.html#a0a2f84ed7838f07779ae24c5a9086d33">y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition</b> <a href="liveedit-diff_8cc_source.html#l00060">liveedit-diff.cc:60</a></div></div>
 <div class="ttc" id="aliveedit-diff_8cc_html_a6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition</b> <a href="liveedit-diff_8cc_source.html#l00060">liveedit-diff.cc:60</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
 <div class="ttc" id="amul-fft_8cc_html_a339d22b3e442946380f98ed19e320db2"><div class="ttname"><a href="mul-fft_8cc.html#a339d22b3e442946380f98ed19e320db2">s</a></div><div class="ttdeci">int s</div><div class="ttdef"><b>Definition</b> <a href="mul-fft_8cc_source.html#l00297">mul-fft.cc:297</a></div></div>
 <div class="ttc" id="amul-fft_8cc_html_a742204794ea328ba293fe59cec79b990"><div class="ttname"><a href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>Definition</b> <a href="mul-fft_8cc_source.html#l00294">mul-fft.cc:294</a></div></div>
 <div class="ttc" id="amul-fft_8cc_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="mul-fft_8cc.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition</b> <a href="mul-fft_8cc_source.html#l00296">mul-fft.cc:296</a></div></div>
@@ -3240,7 +3247,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1base_1_1ieee754_html_aebc6a948cb4e74fc3821c0fcbe58aaf1"><div class="ttname"><a href="namespacev8_1_1base_1_1ieee754.html#aebc6a948cb4e74fc3821c0fcbe58aaf1">v8::base::ieee754::atan</a></div><div class="ttdeci">double atan(double x)</div><div class="ttdef"><b>Definition</b> <a href="#l01116">ieee754.cc:1116</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_1_1ieee754_html_aff8ec0ea665af0342860cfe67eb69fcb"><div class="ttname"><a href="namespacev8_1_1base_1_1ieee754.html#aff8ec0ea665af0342860cfe67eb69fcb">v8::base::ieee754::Lg4</a></div><div class="ttdeci">static const double Lg4</div><div class="ttdef"><b>Definition</b> <a href="#l01942">ieee754.cc:1942</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a62db469da34f480113832aa7619c23c3"><div class="ttname"><a href="namespacev8_1_1base.html#a62db469da34f480113832aa7619c23c3">v8::base::NegateWithWraparound</a></div><div class="ttdeci">signed_type NegateWithWraparound(signed_type a)</div><div class="ttdef"><b>Definition</b> <a href="overflowing-math_8h_source.html#l00051">overflowing-math.h:51</a></div></div>
-<div class="ttc" id="anamespacev8_1_1base_html_a6c410bc41f21b97060b8520c074eb957"><div class="ttname"><a href="namespacev8_1_1base.html#a6c410bc41f21b97060b8520c074eb957">v8::base::bit_cast</a></div><div class="ttdeci">V8_INLINE Dest bit_cast(Source const &amp;source)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00095">macros.h:95</a></div></div>
+<div class="ttc" id="anamespacev8_1_1base_html_a6c410bc41f21b97060b8520c074eb957"><div class="ttname"><a href="namespacev8_1_1base.html#a6c410bc41f21b97060b8520c074eb957">v8::base::bit_cast</a></div><div class="ttdeci">V8_INLINE Dest bit_cast(Source const &amp;source)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00095">macros.h:95</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_ad5a29771622da6f7889b7c4b08e6bc20"><div class="ttname"><a href="namespacev8_1_1base.html#ad5a29771622da6f7889b7c4b08e6bc20">v8::base::Divide</a></div><div class="ttdeci">T Divide(T x, T y)</div><div class="ttdef"><b>Definition</b> <a href="overflowing-math_8h_source.html#l00069">overflowing-math.h:69</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a271f8ea99b7c0bbd771df015d4e4cf21ae695019b1d6a3dc7d791935ee35f2b0e"><div class="ttname"><a href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21ae695019b1d6a3dc7d791935ee35f2b0e">v8::internal::carry</a></div><div class="ttdeci">@ carry</div><div class="ttdef"><b>Definition</b> <a href="assembler-ia32_8h_source.html#l00077">assembler-ia32.h:77</a></div></div>
@@ -3249,11 +3256,17 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_af063e6c12112e99237fb099c005e7e97a9f1a65a12203ec503e1d187e38228896"><div class="ttname"><a href="namespacev8_1_1internal.html#af063e6c12112e99237fb099c005e7e97a9f1a65a12203ec503e1d187e38228896">v8::internal::C1</a></div><div class="ttdeci">@ C1</div><div class="ttdef"><b>Definition</b> <a href="base-constants-riscv_8h_source.html#l00656">base-constants-riscv.h:656</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="aoverflowing-math_8h_html"><div class="ttname"><a href="overflowing-math_8h.html">overflowing-math.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
+<div class="ttc" id="av8config_8h_html_a63258e4bf5dc9fb8c78f881c8405d83b"><div class="ttname"><a href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a></div><div class="ttdeci">#define V8_WARN_UNUSED_RESULT</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00660">v8config.h:660</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:16:43 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="base_2ieee754_8cc.html">ieee754.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:52:45 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/runtime/runtime-trace.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/runtime/runtime-trace.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('runtime-trace_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bf9f26469d00835ba20ff8d80ee5a804.html">runtime</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">runtime-trace.cc</div></div>
 </div><!--header-->
@@ -128,7 +136,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>         <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>) {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    bytecode_iterator.Advance();</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  }</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(bytecode_iterator.current_offset() == <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a> ||</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(bytecode_iterator.current_offset() == <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a> ||</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>         ((bytecode_iterator.current_offset() + 1) == <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a> &amp;&amp;</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>          bytecode_iterator.current_operand_scale() &gt;</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>              interpreter::OperandScale::kSingle));</div>
@@ -150,7 +158,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> PrintRegisters(UnoptimizedJSFrame* frame, std::ostream&amp; os, <span class="keywordtype">bool</span> is_input,</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    interpreter::BytecodeArrayIterator&amp; bytecode_iterator,</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    Handle&lt;Object&gt; accumulator) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Object&gt;</a> accumulator) {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span> kAccumulator[] = <span class="stringliteral">&quot;accumulator&quot;</span>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> kRegFieldWidth = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<span class="keyword">sizeof</span>(kAccumulator) - 1);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* kInputColourCode = <span class="stringliteral">&quot;\033[0;36m&quot;</span>;</div>
@@ -218,12 +226,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  SealHandleScope shs(isolate);</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(3, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  Handle&lt;BytecodeArray&gt; bytecode_array = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at&lt;<a class="code hl_variable" href="namespacev8_1_1internal.html#a7c4adbd380fbca7ccd30283b50dc7c4a">BytecodeArray</a>&gt;(0);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(3, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;BytecodeArray&gt;</a> bytecode_array = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at&lt;<a class="code hl_variable" href="namespacev8_1_1internal.html#a7c4adbd380fbca7ccd30283b50dc7c4a">BytecodeArray</a>&gt;(0);</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keywordtype">int</span> bytecode_offset = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.smi_value_at(1);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  Handle&lt;Object&gt; accumulator = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at(2);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Object&gt;</a> accumulator = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at(2);</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a> = bytecode_offset - <a class="code hl_variable" href="classv8_1_1internal_1_1HeapObject.html#a08d8b3cbf29c8d1287956c715df91faa">BytecodeArray::kHeaderSize</a> + kHeapObjectTag;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a> = bytecode_offset - <a class="code hl_variable" href="classv8_1_1internal_1_1HeapObject.html#a08d8b3cbf29c8d1287956c715df91faa">BytecodeArray::kHeaderSize</a> + <a class="code hl_variable" href="namespacev8_1_1internal.html#aa2507eb9d594b9767347031fb02d0b20">kHeapObjectTag</a>;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  interpreter::BytecodeArrayIterator bytecode_iterator(bytecode_array);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  AdvanceToOffsetForTracing(bytecode_iterator, <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>);</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a> == bytecode_iterator.current_offset()) {</div>
@@ -268,12 +276,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  }</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  SealHandleScope shs(isolate);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(3, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  Handle&lt;BytecodeArray&gt; bytecode_array = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at&lt;<a class="code hl_variable" href="namespacev8_1_1internal.html#a7c4adbd380fbca7ccd30283b50dc7c4a">BytecodeArray</a>&gt;(0);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(3, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;BytecodeArray&gt;</a> bytecode_array = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at&lt;<a class="code hl_variable" href="namespacev8_1_1internal.html#a7c4adbd380fbca7ccd30283b50dc7c4a">BytecodeArray</a>&gt;(0);</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="keywordtype">int</span> bytecode_offset = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.smi_value_at(1);</div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  Handle&lt;Object&gt; accumulator = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at(2);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Object&gt;</a> accumulator = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at(2);</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a> = bytecode_offset - <a class="code hl_variable" href="classv8_1_1internal_1_1HeapObject.html#a08d8b3cbf29c8d1287956c715df91faa">BytecodeArray::kHeaderSize</a> + kHeapObjectTag;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a> = bytecode_offset - <a class="code hl_variable" href="classv8_1_1internal_1_1HeapObject.html#a08d8b3cbf29c8d1287956c715df91faa">BytecodeArray::kHeaderSize</a> + <a class="code hl_variable" href="namespacev8_1_1internal.html#aa2507eb9d594b9767347031fb02d0b20">kHeapObjectTag</a>;</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  interpreter::BytecodeArrayIterator bytecode_iterator(bytecode_array);</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  AdvanceToOffsetForTracing(bytecode_iterator, <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>);</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="comment">// The offset comparison here ensures registers only printed when the</span></div>
@@ -301,8 +309,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  }</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  SealHandleScope shs(isolate);</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(3, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  Handle&lt;FeedbackVector&gt; vector = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at&lt;FeedbackVector&gt;(0);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(3, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;FeedbackVector&gt;</a> vector = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at&lt;FeedbackVector&gt;(0);</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <span class="keywordtype">int</span> slot = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.smi_value_at(1);</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <span class="keyword">auto</span> reason = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;String&gt;</a>(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[2]);</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
@@ -338,25 +346,30 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aframes-inl_8h_html"><div class="ttname"><a href="frames-inl_8h.html">frames-inl.h</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a97bd6c077f3c7769f575b82988b9b668"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a></div><div class="ttdeci">int32_t offset</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00072">instruction-selector-ia32.cc:72</a></div></div>
 <div class="ttc" id="ainterpreter_8h_html"><div class="ttname"><a href="interpreter_8h.html">interpreter.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1interpreter_html_a11bcbd6d6c1eed58e8536b777ae09e16"><div class="ttname"><a href="namespacev8_1_1internal_1_1interpreter.html#a11bcbd6d6c1eed58e8536b777ae09e16">v8::internal::interpreter::Bytecode</a></div><div class="ttdeci">Bytecode</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l00584">bytecodes.h:584</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1interpreter_html_a39fea0bd5e7271ce703cd41313e7eefc"><div class="ttname"><a href="namespacev8_1_1internal_1_1interpreter.html#a39fea0bd5e7271ce703cd41313e7eefc">v8::internal::interpreter::OperandType</a></div><div class="ttdeci">OperandType</div><div class="ttdef"><b>Definition</b> <a href="bytecode-operands_8h_source.html#l00103">bytecode-operands.h:103</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5297fd2c72981b2220e6b9a831570fb3"><div class="ttname"><a href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">v8::internal::Tagged&lt; Object &gt;</a></div><div class="ttdeci">Tagged&lt; Object &gt;</div><div class="ttdef"><b>Definition</b> <a href="allocation-site-inl_8h_source.html#l00029">allocation-site-inl.h:30</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a7c4adbd380fbca7ccd30283b50dc7c4a"><div class="ttname"><a href="namespacev8_1_1internal.html#a7c4adbd380fbca7ccd30283b50dc7c4a">v8::internal::BytecodeArray</a></div><div class="ttdeci">BytecodeArray</div><div class="ttdef"><b>Definition</b> <a href="debug-objects-inl_8h_source.html#l00062">debug-objects-inl.h:62</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a8899d90340d811cd369173aac228774e"><div class="ttname"><a href="namespacev8_1_1internal.html#a8899d90340d811cd369173aac228774e">v8::internal::ShortPrint</a></div><div class="ttdeci">void ShortPrint(Tagged&lt; Object &gt; obj, FILE *out)</div><div class="ttdef"><b>Definition</b> <a href="objects_8cc_source.html#l01864">objects.cc:1864</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_aa2507eb9d594b9767347031fb02d0b20"><div class="ttname"><a href="namespacev8_1_1internal.html#aa2507eb9d594b9767347031fb02d0b20">v8::internal::kHeapObjectTag</a></div><div class="ttdeci">const int kHeapObjectTag</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00072">v8-internal.h:72</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9db791c05a0359859a321dcfec42e37"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8::internal::v8_flags</a></div><div class="ttdeci">V8_EXPORT_PRIVATE FlagValues v8_flags</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="anamespacev8_html_a25d2bd830a15c10ed892862df4c7f2eb"><div class="ttname"><a href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">v8::Handle</a></div><div class="ttdeci">Local&lt; T &gt; Handle</div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00618">v8-local-handle.h:618</a></div></div>
 <div class="ttc" id="aostreams_8h_html"><div class="ttname"><a href="ostreams_8h.html">ostreams.h</a></div></div>
 <div class="ttc" id="aruntime-utils_8h_html"><div class="ttname"><a href="runtime-utils_8h.html">runtime-utils.h</a></div></div>
 <div class="ttc" id="asnapshot_8h_html"><div class="ttname"><a href="snapshot_8h.html">snapshot.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:53 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bf9f26469d00835ba20ff8d80ee5a804.html">runtime</a></li><li class="navelem"><a class="el" href="runtime-trace_8cc.html">runtime-trace.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:06 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

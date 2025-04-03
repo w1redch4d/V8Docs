@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/snapshot/snapshot-compression.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/snapshot/snapshot-compression.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('snapshot-compression_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0d52d89f10096f53df22fcdccd9461ad.html">snapshot</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">snapshot-compression.cc</div></div>
 </div><!--header-->
@@ -141,7 +149,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="comment">// manually store the uncompressed size.</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#ae0ee98c9174e5955450c56da22cb8f6a">MemCopy</a>(compressed_data, &amp;payload_length, <span class="keyword">sizeof</span>(payload_length));</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>      zlib_internal::CompressHelper(</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>          zlib_internal::ZRAW, compressed_data + <span class="keyword">sizeof</span>(payload_length),</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>          &amp;compressed_data_size,</div>
@@ -152,7 +160,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="comment">// Reallocating to exactly the size we need.</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  snapshot_data.<a class="code hl_function" href="classv8_1_1internal_1_1SnapshotData.html#a190c9fce5e39ad8139ffb0d5705ca374">Resize</a>(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(compressed_data_size) +</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                       <span class="keyword">sizeof</span>(payload_length));</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(payload_length,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(payload_length,</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>            <a class="code hl_function" href="namespacev8_1_1internal.html#a6798ebcbd8433c5a951420e16a320707">GetUncompressedSize</a>(snapshot_data.<a class="code hl_function" href="classv8_1_1internal_1_1SnapshotData.html#a70047a3344e18358ddcc84b23979c628">RawData</a>().<a class="code hl_function" href="classv8_1_1base_1_1Vector.html#ad0021e2947c974d78adbbc1d543d43a5">begin</a>()));</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.profile_deserialization) {</div>
@@ -181,7 +189,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  snapshot_data.<a class="code hl_function" href="classv8_1_1internal_1_1SerializedData.html#afbfbeb68613a42f9076c7568f8e0afb0">AllocateData</a>(uncompressed_payload_length);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  uLongf uncompressed_size = uncompressed_payload_length;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(zlib_internal::UncompressHelper(</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(zlib_internal::UncompressHelper(</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>               zlib_internal::ZRAW,</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>               <span class="keyword">const_cast&lt;</span>Bytef*<span class="keyword">&gt;</span>(snapshot_data.<a class="code hl_function" href="classv8_1_1internal_1_1SnapshotData.html#a70047a3344e18358ddcc84b23979c628">RawData</a>().<a class="code hl_function" href="classv8_1_1base_1_1Vector.html#ad0021e2947c974d78adbbc1d543d43a5">begin</a>()),</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>               &amp;uncompressed_size, input_bytef,</div>
@@ -212,8 +220,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1SnapshotData_html_a190c9fce5e39ad8139ffb0d5705ca374"><div class="ttname"><a href="classv8_1_1internal_1_1SnapshotData.html#a190c9fce5e39ad8139ffb0d5705ca374">v8::internal::SnapshotData::Resize</a></div><div class="ttdeci">void Resize(uint32_t size)</div><div class="ttdef"><b>Definition</b> <a href="snapshot-data_8h_source.html#l00094">snapshot-data.h:94</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1SnapshotData_html_a70047a3344e18358ddcc84b23979c628"><div class="ttname"><a href="classv8_1_1internal_1_1SnapshotData.html#a70047a3344e18358ddcc84b23979c628">v8::internal::SnapshotData::RawData</a></div><div class="ttdeci">base::Vector&lt; const uint8_t &gt; RawData() const</div><div class="ttdef"><b>Definition</b> <a href="snapshot-data_8h_source.html#l00082">snapshot-data.h:82</a></div></div>
 <div class="ttc" id="aelapsed-timer_8h_html"><div class="ttname"><a href="elapsed-timer_8h.html">elapsed-timer.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="amemcopy_8h_html"><div class="ttname"><a href="memcopy_8h.html">memcopy.h</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a3430752cde9f29d73e97ceed1bce0856"><div class="ttname"><a href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">v8::internal::PrintF</a></div><div class="ttdeci">void PrintF(const char *format,...)</div><div class="ttdef"><b>Definition</b> <a href="utils_2utils_8cc_source.html#l00039">utils.cc:39</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
@@ -223,12 +229,17 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="asetup-heap-internal_8cc_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> <a href="setup-heap-internal_8cc_source.html#l00126">setup-heap-internal.cc:126</a></div></div>
 <div class="ttc" id="asnapshot-compression_8h_html"><div class="ttname"><a href="snapshot-compression_8h.html">snapshot-compression.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="autils_2utils_8h_html"><div class="ttname"><a href="utils_2utils_8h.html">utils.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:00 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0d52d89f10096f53df22fcdccd9461ad.html">snapshot</a></li><li class="navelem"><a class="el" href="snapshot-compression_8cc.html">snapshot-compression.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:13 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

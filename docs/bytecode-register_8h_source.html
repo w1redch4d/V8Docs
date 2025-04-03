@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/interpreter/bytecode-register.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/interpreter/bytecode-register.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('bytecode-register_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4904b5727094acb85f1fb3ce4b540d24.html">interpreter</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">bytecode-register.h</div></div>
 </div><!--header-->
@@ -103,8 +111,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="base_2platform_2platform_8h.html">src/base/platform/platform.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2platform_2platform_8h.html">src/base/platform/platform.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="common_2globals_8h.html">src/common/globals.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="frame-constants_8h.html">src/execution/frame-constants.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="bytecodes_8h.html">src/interpreter/bytecodes.h</a>&quot;</span></div>
@@ -123,7 +131,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// An interpreter Register which is located in the function&#39;s Register file</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">// in its stack-frame. Register hold parameters, this, and expression values.</span></div>
 <div class="foldopen" id="foldopen00027" data-start="{" data-end="};">
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1Register.html">   27</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1Register.html">Register</a> final {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1Register.html">   27</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1Register.html">Register</a> final {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1Register.html#af839c377000d27c20c79c3f15ebaf80d">   29</a></span>  <span class="keyword">constexpr</span> <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1interpreter_1_1Register.html#af839c377000d27c20c79c3f15ebaf80d">Register</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> = kInvalidIndex) : <a class="code hl_variable" href="code-generator-mips64_8cc.html#ac77b0a626f082a92127505b4dd27819f">index_</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>) {}</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
@@ -183,7 +191,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1Register.html#a62f28bbbd642519cf365111b1711bae1">   81</a></span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1Register.html">Register</a> <a class="code hl_function" href="classv8_1_1internal_1_1interpreter_1_1Register.html#a62f28bbbd642519cf365111b1711bae1">FromShortStar</a>(<a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#a11bcbd6d6c1eed58e8536b777ae09e16">Bytecode</a> bytecode) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(Bytecodes::IsShortStar(bytecode));</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(Bytecodes::IsShortStar(bytecode));</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1Register.html">Register</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(Bytecode::kStar0) -</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                    <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(bytecode));</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  }</div>
@@ -194,8 +202,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>() &gt;= 0 &amp;&amp; <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>() &lt; Bytecodes::kShortStarCount) {</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#a11bcbd6d6c1eed58e8536b777ae09e16">Bytecode</a> bytecode =</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>          <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#a11bcbd6d6c1eed58e8536b777ae09e16">Bytecode</a><span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(Bytecode::kStar0) - <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>());</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(bytecode, Bytecode::kFirstShortStar);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(bytecode, Bytecode::kLastShortStar);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(bytecode, Bytecode::kFirstShortStar);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(bytecode, Bytecode::kLastShortStar);</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <span class="keywordflow">return</span> <a class="code hl_variable" href="builtins_8cc.html#a59f2d17923fb62a98f88c328a8afe526">bytecode</a>;</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">return</span> {};</div>
@@ -236,7 +244,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <a class="code hl_define" href="macros_8h.html#a2a32d6008391170e9c8ad2d9c2e113f1">DISALLOW_NEW_AND_DELETE</a>()</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a2a32d6008391170e9c8ad2d9c2e113f1">DISALLOW_NEW_AND_DELETE</a>()</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1Register.html#a28afd1e6e6f6f9473de2b8eb18b05b3e">  122</a></span>  static constexpr <span class="keywordtype">int</span> kInvalidIndex = kMaxInt;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
@@ -280,21 +288,21 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="comment">// |count| registers.</span></div>
 <div class="foldopen" id="foldopen00158" data-start="{" data-end="}">
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1RegisterList.html#ac7127d2f04017a96a857c304caa60f6f">  158</a></span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1RegisterList.html">RegisterList</a> <a class="code hl_function" href="classv8_1_1internal_1_1interpreter_1_1RegisterList.html#ac7127d2f04017a96a857c304caa60f6f">Truncate</a>(<span class="keywordtype">int</span> new_count) {</div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(new_count, 0);</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(new_count, register_count_);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(new_count, 0);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(new_count, register_count_);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1RegisterList.html">RegisterList</a>(first_reg_index_, new_count);</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  }</div>
 </div>
 <div class="foldopen" id="foldopen00163" data-start="{" data-end="}">
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1RegisterList.html#a83f39acbc6ea667ad8577eec3c5511f5">  163</a></span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1RegisterList.html">RegisterList</a> <a class="code hl_function" href="classv8_1_1internal_1_1interpreter_1_1RegisterList.html#a83f39acbc6ea667ad8577eec3c5511f5">PopLeft</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(register_count_, 0);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(register_count_, 0);</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1RegisterList.html">RegisterList</a>(first_reg_index_ + 1, register_count_ - 1);</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  }</div>
 </div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
 <div class="foldopen" id="foldopen00168" data-start="{" data-end="}">
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1RegisterList.html#a861de4e256a75abd1e55fa6ccfc238e7">  168</a></span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1Register.html">Register</a> <a class="code hl_function" href="classv8_1_1internal_1_1interpreter_1_1RegisterList.html#a861de4e256a75abd1e55fa6ccfc238e7">operator[]</a>(<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>), register_count_);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>), register_count_);</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1Register.html">Register</a>(first_reg_index_ + <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>));</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  }</div>
 </div>
@@ -336,16 +344,16 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
 <div class="foldopen" id="foldopen00201" data-start="{" data-end="}">
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1Register.html#a2569a84822394969f42a1069fc788283">  201</a></span><span class="keyword">constexpr</span> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1Register.html">Register</a> Register::FromParameterIndex(<span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>) {</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>, 0);</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>, 0);</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  <span class="keywordtype">int</span> register_index = kFirstParamRegisterIndex - <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>;</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(register_index, 0);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(register_index, 0);</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1interpreter_1_1Register.html">Register</a>(register_index);</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>}</div>
 </div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
 <div class="foldopen" id="foldopen00208" data-start="{" data-end="}">
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1interpreter_1_1Register.html#a60619f21b404d28cafdc37f61941a163">  208</a></span><span class="keyword">constexpr</span> <span class="keywordtype">int</span> Register::ToParameterIndex()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(is_parameter());</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(is_parameter());</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <span class="keywordflow">return</span> kFirstParamRegisterIndex - <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>();</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>}</div>
 </div>
@@ -442,7 +450,6 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>}  <span class="comment">// namespace v8</span></div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">#endif  </span><span class="comment">// V8_INTERPRETER_BYTECODE_REGISTER_H_</span></div>
-<div class="ttc" id="abase_2platform_2platform_8h_html"><div class="ttname"><a href="base_2platform_2platform_8h.html">platform.h</a></div></div>
 <div class="ttc" id="abuiltins_8cc_html_a59f2d17923fb62a98f88c328a8afe526"><div class="ttname"><a href="builtins_8cc.html#a59f2d17923fb62a98f88c328a8afe526">bytecode</a></div><div class="ttdeci">interpreter::Bytecode bytecode</div><div class="ttdef"><b>Definition</b> <a href="builtins_8cc_source.html#l00043">builtins.cc:43</a></div></div>
 <div class="ttc" id="abytecodes_8h_html"><div class="ttname"><a href="bytecodes_8h.html">bytecodes.h</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1InterpreterFrameConstants_html"><div class="ttname"><a href="classv8_1_1internal_1_1InterpreterFrameConstants.html">v8::internal::InterpreterFrameConstants</a></div><div class="ttdef"><b>Definition</b> <a href="frame-constants_8h_source.html#l00764">frame-constants.h:764</a></div></div>
@@ -488,13 +495,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aframe-constants_8h_html"><div class="ttname"><a href="frame-constants_8h.html">frame-constants.h</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a97bd6c077f3c7769f575b82988b9b668"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a></div><div class="ttdeci">int32_t offset</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00072">instruction-selector-ia32.cc:72</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_ae55190dbead0a94298bdfa37911694e3"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a></div><div class="ttdeci">turboshaft::OptionalOpIndex index</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00071">instruction-selector-ia32.cc:71</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_a2a32d6008391170e9c8ad2d9c2e113f1"><div class="ttname"><a href="macros_8h.html#a2a32d6008391170e9c8ad2d9c2e113f1">DISALLOW_NEW_AND_DELETE</a></div><div class="ttdeci">#define DISALLOW_NEW_AND_DELETE()</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00155">macros.h:155</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="amul-fft_8cc_html_acab531abaa74a7e664e3986f2522b33a"><div class="ttname"><a href="mul-fft_8cc.html#acab531abaa74a7e664e3986f2522b33a">r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition</b> <a href="mul-fft_8cc_source.html#l00298">mul-fft.cc:298</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1interpreter_html_a11bcbd6d6c1eed58e8536b777ae09e16"><div class="ttname"><a href="namespacev8_1_1internal_1_1interpreter.html#a11bcbd6d6c1eed58e8536b777ae09e16">v8::internal::interpreter::Bytecode</a></div><div class="ttdeci">Bytecode</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l00584">bytecodes.h:584</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1interpreter_html_a7ab109862bb5d9ab534b3e7a63d856fc"><div class="ttname"><a href="namespacev8_1_1internal_1_1interpreter.html#a7ab109862bb5d9ab534b3e7a63d856fc">v8::internal::interpreter::OperandSize</a></div><div class="ttdeci">OperandSize</div><div class="ttdef"><b>Definition</b> <a href="bytecode-operands_8h_source.html#l00079">bytecode-operands.h:79</a></div></div>
@@ -507,11 +507,22 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_a769b7f5084e5a267fce81535a78ca6a6"><div class="ttname"><a href="namespacev8_1_1internal.html#a769b7f5084e5a267fce81535a78ca6a6">v8::internal::kMinInt8</a></div><div class="ttdeci">constexpr int kMinInt8</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00369">globals.h:369</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aadf15a742fcc4ca06d981efa0d1ca88f"><div class="ttname"><a href="namespacev8_1_1internal.html#aadf15a742fcc4ca06d981efa0d1ca88f">v8::internal::kMaxInt16</a></div><div class="ttdeci">constexpr int kMaxInt16</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00372">globals.h:372</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a2a32d6008391170e9c8ad2d9c2e113f1"><div class="ttname"><a href="src_2base_2macros_8h.html#a2a32d6008391170e9c8ad2d9c2e113f1">DISALLOW_NEW_AND_DELETE</a></div><div class="ttdeci">#define DISALLOW_NEW_AND_DELETE()</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00155">macros.h:155</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
+<div class="ttc" id="asrc_2base_2platform_2platform_8h_html"><div class="ttname"><a href="src_2base_2platform_2platform_8h.html">platform.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:40 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4904b5727094acb85f1fb3ce4b540d24.html">interpreter</a></li><li class="navelem"><a class="el" href="bytecode-register_8h.html">bytecode-register.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:49 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

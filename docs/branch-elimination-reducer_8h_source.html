@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/compiler/turboshaft/branch-elimination-reducer.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/compiler/turboshaft/branch-elimination-reducer.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('branch-elimination-reducer_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="dir_d950b3d0fa1ff1d1c017f7a9e0e0bf7c.html">turboshaft</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">branch-elimination-reducer.h</div></div>
 </div><!--header-->
@@ -104,7 +112,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="bits_8h.html">src/base/bits.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="compiler_2turboshaft_2assembler_8h.html">src/compiler/turboshaft/assembler.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="index_8h.html">src/compiler/turboshaft/index.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="layered-hash-map_8h.html">src/compiler/turboshaft/layered-hash-map.h</a>&quot;</span></div>
@@ -320,11 +328,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keywordflow">if</span> (new_block-&gt;IsBranchTarget()) {</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      <span class="comment">// The current block is a branch target, so we add the branch condition</span></div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      <span class="comment">// along with its value in {known_conditions_}.</span></div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(new_block-&gt;PredecessorCount(), 1);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(new_block-&gt;PredecessorCount(), 1);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      <span class="keyword">const</span> <a class="code hl_struct" href="structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation.html">Operation</a>&amp; op =</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>          new_block-&gt;LastPredecessor()-&gt;LastOperation(<a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> output_graph());</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>      <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BranchOp.html">BranchOp</a>* branch = op.<a class="code hl_function" href="structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation.html#ab0900d5726ed9973e226cdbafc507262">TryCast</a>&lt;<a class="code hl_struct" href="structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BranchOp.html">BranchOp</a>&gt;()) {</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(new_block, <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2cbce91371c0abc5265685f2bf0f7c27">any_of</a>(branch-&gt;if_true, branch-&gt;if_false));</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(new_block, <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a2cbce91371c0abc5265685f2bf0f7c27">any_of</a>(branch-&gt;if_true, branch-&gt;if_false));</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>        <span class="keywordtype">bool</span> condition_value = branch-&gt;if_true == new_block;</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BranchEliminationReducer.html#ac3f8943d9add89d4015e6d330b3e1362">known_conditions_</a>.Contains(branch-&gt;condition())) {</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>          <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BranchEliminationReducer.html#ac3f8943d9add89d4015e6d330b3e1362">known_conditions_</a>.InsertNewKey(branch-&gt;condition(), condition_value);</div>
@@ -653,7 +661,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation.html">Operation</a>&amp; op =</div>
 <div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>            block-&gt;LastPredecessor()-&gt;LastOperation(<a class="code hl_define" href="baseline-assembler-arm-inl_8h.html#a0a87998f4e8cee4888f2a89df3d5639b">__</a> output_graph());</div>
 <div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>        <span class="keywordflow">if</span> (<span class="keyword">const</span> <a class="code hl_struct" href="structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BranchOp.html">BranchOp</a>* branch = op.<a class="code hl_function" href="structv8_1_1internal_1_1compiler_1_1turboshaft_1_1Operation.html#ab0900d5726ed9973e226cdbafc507262">TryCast</a>&lt;<a class="code hl_struct" href="structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BranchOp.html">BranchOp</a>&gt;()) {</div>
-<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>          <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(branch-&gt;if_true-&gt;index() == block-&gt;index() ||</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>          <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(branch-&gt;if_true-&gt;index() == block-&gt;index() ||</div>
 <div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>                 branch-&gt;if_false-&gt;index() == block-&gt;index());</div>
 <div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>          <span class="keywordtype">bool</span> condition_value =</div>
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>              branch-&gt;if_true-&gt;index().valid()</div>
@@ -776,9 +784,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="adefine-assembler-macros_8inc_html"><div class="ttname"><a href="define-assembler-macros_8inc.html">define-assembler-macros.inc</a></div></div>
 <div class="ttc" id="aindex_8h_html"><div class="ttname"><a href="index_8h.html">index.h</a></div></div>
 <div class="ttc" id="alayered-hash-map_8h_html"><div class="ttname"><a href="layered-hash-map_8h.html">layered-hash-map.h</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="amachine-operator-reducer_8cc_html_a0e07aad9de22abf9b9b1b4b437beef30"><div class="ttname"><a href="machine-operator-reducer_8cc.html#a0e07aad9de22abf9b9b1b4b437beef30">condition</a></div><div class="ttdeci">Node * condition</div><div class="ttdef"><b>Definition</b> <a href="machine-operator-reducer_8cc_source.html#l02792">machine-operator-reducer.cc:2792</a></div></div>
 <div class="ttc" id="amove-optimizer_8cc_html_adb1a4461ad083604a932b7eeba4780de"><div class="ttname"><a href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a></div><div class="ttdeci">InstructionOperand destination</div><div class="ttdef"><b>Definition</b> <a href="move-optimizer_8cc_source.html#l00017">move-optimizer.cc:17</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_1_1turboshaft_html"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html">v8::internal::compiler::turboshaft</a></div><div class="ttdef"><b>Definition</b> <a href="builtins_8h_source.html#l00033">builtins.h:33</a></div></div>
@@ -795,6 +800,9 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="arecreate-schedule_8cc_html_a8d8d60cc63a2c85bbdc84a0f9269717e"><div class="ttname"><a href="recreate-schedule_8cc.html#a8d8d60cc63a2c85bbdc84a0f9269717e">parameters</a></div><div class="ttdeci">ZoneAbslFlatHashMap&lt; int, Node * &gt; parameters</div><div class="ttdef"><b>Definition</b> <a href="recreate-schedule_8cc_source.html#l00061">recreate-schedule.cc:61</a></div></div>
 <div class="ttc" id="arecreate-schedule_8cc_html_ab2b1d0cbd6574ecbac299d28e7d0a458"><div class="ttname"><a href="recreate-schedule_8cc.html#ab2b1d0cbd6574ecbac299d28e7d0a458">current_block</a></div><div class="ttdeci">compiler::BasicBlock * current_block</div><div class="ttdef"><b>Definition</b> <a href="recreate-schedule_8cc_source.html#l00059">recreate-schedule.cc:59</a></div></div>
 <div class="ttc" id="arecreate-schedule_8cc_html_ada0ddd83edae7dc0bba2b4fd177d0c51"><div class="ttname"><a href="recreate-schedule_8cc.html#ada0ddd83edae7dc0bba2b4fd177d0c51">input_graph</a></div><div class="ttdeci">const Graph &amp; input_graph</div><div class="ttdef"><b>Definition</b> <a href="recreate-schedule_8cc_source.html#l00048">recreate-schedule.cc:48</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1compiler_1_1turboshaft_1_1BranchOp_html"><div class="ttname"><a href="structv8_1_1internal_1_1compiler_1_1turboshaft_1_1BranchOp.html">v8::internal::compiler::turboshaft::BranchOp</a></div><div class="ttdef"><b>Definition</b> <a href="operations_8h_source.html#l04380">operations.h:4380</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConstantOp_html"><div class="ttname"><a href="structv8_1_1internal_1_1compiler_1_1turboshaft_1_1ConstantOp.html">v8::internal::compiler::turboshaft::ConstantOp</a></div><div class="ttdef"><b>Definition</b> <a href="operations_8h_source.html#l02574">operations.h:2574</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1compiler_1_1turboshaft_1_1GotoOp_html"><div class="ttname"><a href="structv8_1_1internal_1_1compiler_1_1turboshaft_1_1GotoOp.html">v8::internal::compiler::turboshaft::GotoOp</a></div><div class="ttdef"><b>Definition</b> <a href="operations_8h_source.html#l04362">operations.h:4362</a></div></div>
@@ -811,10 +819,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aundef-assembler-macros_8inc_html"><div class="ttname"><a href="undef-assembler-macros_8inc.html">undef-assembler-macros.inc</a></div></div>
 <div class="ttc" id="autils_2utils_8h_html"><div class="ttname"><a href="utils_2utils_8h.html">utils.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:17:20 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="dir_d950b3d0fa1ff1d1c017f7a9e0e0bf7c.html">turboshaft</a></li><li class="navelem"><a class="el" href="branch-elimination-reducer_8h.html">branch-elimination-reducer.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:53:25 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

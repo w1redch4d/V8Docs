@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/cppgc/write-barrier.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/cppgc/write-barrier.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('write-barrier_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">write-barrier.cc</div></div>
 </div><!--header-->
@@ -98,38 +106,38 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Use of this source code is governed by a BSD-style license that can be</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// found in the LICENSE file.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="write-barrier_8h.html">src/heap/cppgc/write-barrier.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="src_2heap_2cppgc_2write-barrier_8h.html">src/heap/cppgc/write-barrier.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;include/cppgc/heap-consistency.h&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;include/cppgc/internal/member-storage.h&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;include/cppgc/internal/pointer-policies.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="heap-consistency_8h.html">include/cppgc/heap-consistency.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="include_2cppgc_2internal_2member-storage_8h.html">include/cppgc/internal/member-storage.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="pointer-policies_8h.html">include/cppgc/internal/pointer-policies.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="heap_2cppgc_2globals_8h.html">src/heap/cppgc/globals.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="heap-object-header_8h.html">src/heap/cppgc/heap-object-header.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="heap-page_8h.html">src/heap/cppgc/heap-page.h</a>&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="cppgc_2heap_8h.html">src/heap/cppgc/heap.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="src_2heap_2cppgc_2heap_8h.html">src/heap/cppgc/heap.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="marker_8h.html">src/heap/cppgc/marker.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="cppgc_2marking-visitor_8h.html">src/heap/cppgc/marking-visitor.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#if defined(CPPGC_CAGED_HEAP)</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;include/cppgc/internal/caged-heap-local-data.h&quot;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="caged-heap-local-data_8h.html">include/cppgc/internal/caged-heap-local-data.h</a>&quot;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecppgc.html">cppgc</a> {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">internal</a> {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>AtomicEntryFlag WriteBarrier::write_barrier_enabled_;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>AtomicEntryFlag <a class="code hl_variable" href="classcppgc_1_1internal_1_1WriteBarrier.html#a1f8a3d181c464a8ebb0d7a0c2eeee540">WriteBarrier::write_barrier_enabled_</a>;</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">template</span> &lt;MarkerBase::WriteBarrierType type&gt;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keywordtype">void</span> ProcessMarkValue(HeapObjectHeader&amp; header, MarkerBase* marker,</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                      <span class="keyword">const</span> <span class="keywordtype">void</span>* value) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(marker-&gt;heap().is_incremental_marking_in_progress());</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(header.IsMarked&lt;<a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71">AccessMode::kAtomic</a>&gt;());</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(marker);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(marker-&gt;heap().is_incremental_marking_in_progress());</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(header.IsMarked&lt;<a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71">AccessMode::kAtomic</a>&gt;());</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(marker);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(header.IsInConstruction&lt;<a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808eab8d79eac5929c97b59b121e933e4438d">AccessMode::kNonAtomic</a>&gt;())) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(header.IsInConstruction&lt;<a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808eab8d79eac5929c97b59b121e933e4438d">AccessMode::kNonAtomic</a>&gt;())) {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment">// In construction objects are traced only if they are unmarked. If marking</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// reaches this object again when it is fully constructed, it will re-mark</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="comment">// it and tracing it as a previously not fully constructed object would know</span></div>
@@ -145,75 +153,85 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}  <span class="comment">// namespace</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keywordtype">void</span> WriteBarrier::DijkstraMarkingBarrierSlowWithSentinelCheck(</div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="}">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1WriteBarrier.html#a1c21d8726481d5747337016f12055189">   52</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1WriteBarrier.html#a1c21d8726481d5747337016f12055189">WriteBarrier::DijkstraMarkingBarrierSlowWithSentinelCheck</a>(</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">const</span> <span class="keywordtype">void</span>* value) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">if</span> (!value || value == kSentinelPointer) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <span class="keywordflow">if</span> (!value || value == <a class="code hl_variable" href="namespacecppgc.html#a6ed40538a8d2b6b06da04df5de1f8786">kSentinelPointer</a>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  DijkstraMarkingBarrierSlow(value);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_function" href="classcppgc_1_1internal_1_1WriteBarrier.html#a0c59b7e403a0bc0a438f737006b46b77">DijkstraMarkingBarrierSlow</a>(value);</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
+</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> WriteBarrier::DijkstraMarkingBarrierSlow(<span class="keyword">const</span> <span class="keywordtype">void</span>* value) {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keyword">const</span> BasePage* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> = <a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#aad13cafeed6c2ea494b7423b9c527b7a">BasePage::FromPayload</a>(value);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_namespace" href="namespaceheap.html">heap</a> = <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;<a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#a1fd6c829347f95514f49a78a9aa3d7f1">heap</a>();</div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1WriteBarrier.html#a0c59b7e403a0bc0a438f737006b46b77">   60</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1WriteBarrier.html#a0c59b7e403a0bc0a438f737006b46b77">WriteBarrier::DijkstraMarkingBarrierSlow</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* value) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keyword">const</span> <a class="code hl_class" href="classcppgc_1_1internal_1_1BasePage.html">BasePage</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> = <a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#aad13cafeed6c2ea494b7423b9c527b7a">BasePage::FromPayload</a>(value);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_namespace" href="namespaceheap.html">heap</a> = <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;heap();</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="comment">// GetWriteBarrierType() checks marking state.</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_namespace" href="namespaceheap.html">heap</a>.marker());</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_namespace" href="namespaceheap.html">heap</a>.marker());</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  <span class="comment">// No write barriers should be executed from atomic pause marking.</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_namespace" href="namespaceheap.html">heap</a>.in_atomic_pause());</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_namespace" href="namespaceheap.html">heap</a>.in_atomic_pause());</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keyword">auto</span>&amp; header =</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="keyword">const_cast&lt;</span>HeapObjectHeader&amp;<span class="keyword">&gt;</span>(<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;<a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#a3e4e942b9d1f96f27df335a9daaacf09">ObjectHeaderFromInnerAddress</a>(value));</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <span class="keyword">const_cast&lt;</span><a class="code hl_class" href="classcppgc_1_1internal_1_1HeapObjectHeader.html">HeapObjectHeader</a>&amp;<span class="keyword">&gt;</span>(<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;ObjectHeaderFromInnerAddress(value));</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordflow">if</span> (!header.TryMarkAtomic()) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  ProcessMarkValue&lt;MarkerBase::WriteBarrierType::kDijkstra&gt;(</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      header, <a class="code hl_namespace" href="namespaceheap.html">heap</a>.marker(), value);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keywordtype">void</span> WriteBarrier::DijkstraMarkingBarrierRangeSlow(</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    HeapHandle&amp; heap_handle, <span class="keyword">const</span> <span class="keywordtype">void</span>* first_element, <span class="keywordtype">size_t</span> element_size,</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">size_t</span> number_of_elements, TraceCallback trace_callback) {</div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1WriteBarrier.html#a2f4d3b496ee2a72cf21db8c446274237">   78</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1WriteBarrier.html#a2f4d3b496ee2a72cf21db8c446274237">WriteBarrier::DijkstraMarkingBarrierRangeSlow</a>(</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_class" href="classcppgc_1_1HeapHandle.html">HeapHandle</a>&amp; heap_handle, <span class="keyword">const</span> <span class="keywordtype">void</span>* first_element, <span class="keywordtype">size_t</span> element_size,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">size_t</span> number_of_elements, <a class="code hl_typedef" href="namespacecppgc.html#af97d391c993ccebc888fa1a9de87f72a">TraceCallback</a> trace_callback) {</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keyword">auto</span>&amp; heap_base = <a class="code hl_function" href="classcppgc_1_1internal_1_1HeapBase.html#ae6932c3546fad18d90d0e45dff4f569d">HeapBase::From</a>(heap_handle);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="comment">// GetWriteBarrierType() checks marking state.</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(heap_base.marker());</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(heap_base.marker());</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="comment">// No write barriers should be executed from atomic pause marking.</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!heap_base.in_atomic_pause());</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!heap_base.in_atomic_pause());</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  cppgc::subtle::DisallowGarbageCollectionScope disallow_gc_scope(heap_base);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <a class="code hl_class" href="classcppgc_1_1subtle_1_1DisallowGarbageCollectionScope.html">cppgc::subtle::DisallowGarbageCollectionScope</a> disallow_gc_scope(heap_base);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keyword">const</span> <span class="keywordtype">char</span>* array = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">char</span>*<span class="keyword">&gt;</span>(first_element);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keywordflow">while</span> (number_of_elements-- &gt; 0) {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    trace_callback(&amp;heap_base.marker()-&gt;Visitor(), array);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    array += element_size;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  }</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordtype">void</span> WriteBarrier::SteeleMarkingBarrierSlowWithSentinelCheck(</div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="}">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1WriteBarrier.html#ab8e5f7d5f2080a79d8e1592e694fb422">   97</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1WriteBarrier.html#ab8e5f7d5f2080a79d8e1592e694fb422">WriteBarrier::SteeleMarkingBarrierSlowWithSentinelCheck</a>(</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keyword">const</span> <span class="keywordtype">void</span>* value) {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordflow">if</span> (!value || value == kSentinelPointer) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordflow">if</span> (!value || value == <a class="code hl_variable" href="namespacecppgc.html#a6ed40538a8d2b6b06da04df5de1f8786">kSentinelPointer</a>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  SteeleMarkingBarrierSlow(value);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <a class="code hl_function" href="classcppgc_1_1internal_1_1WriteBarrier.html#a90a31f7445df47f2075275beecb10459">SteeleMarkingBarrierSlow</a>(value);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>}</div>
+</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keywordtype">void</span> WriteBarrier::SteeleMarkingBarrierSlow(<span class="keyword">const</span> <span class="keywordtype">void</span>* value) {</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keyword">const</span> BasePage* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> = <a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#aad13cafeed6c2ea494b7423b9c527b7a">BasePage::FromPayload</a>(value);</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_namespace" href="namespaceheap.html">heap</a> = <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;<a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#a1fd6c829347f95514f49a78a9aa3d7f1">heap</a>();</div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1WriteBarrier.html#a90a31f7445df47f2075275beecb10459">  105</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1WriteBarrier.html#a90a31f7445df47f2075275beecb10459">WriteBarrier::SteeleMarkingBarrierSlow</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* value) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  <span class="keyword">const</span> <a class="code hl_class" href="classcppgc_1_1internal_1_1BasePage.html">BasePage</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> = <a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#aad13cafeed6c2ea494b7423b9c527b7a">BasePage::FromPayload</a>(value);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_namespace" href="namespaceheap.html">heap</a> = <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;heap();</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="comment">// GetWriteBarrierType() checks marking state.</span></div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_namespace" href="namespaceheap.html">heap</a>.marker());</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_namespace" href="namespaceheap.html">heap</a>.marker());</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="comment">// No write barriers should be executed from atomic pause marking.</span></div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_namespace" href="namespaceheap.html">heap</a>.in_atomic_pause());</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_namespace" href="namespaceheap.html">heap</a>.in_atomic_pause());</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keyword">auto</span>&amp; header =</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="keyword">const_cast&lt;</span>HeapObjectHeader&amp;<span class="keyword">&gt;</span>(<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;<a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#a3e4e942b9d1f96f27df335a9daaacf09">ObjectHeaderFromInnerAddress</a>(value));</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="keyword">const_cast&lt;</span><a class="code hl_class" href="classcppgc_1_1internal_1_1HeapObjectHeader.html">HeapObjectHeader</a>&amp;<span class="keyword">&gt;</span>(<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;ObjectHeaderFromInnerAddress(value));</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="keywordflow">if</span> (!header.IsMarked&lt;<a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71">AccessMode::kAtomic</a>&gt;()) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  ProcessMarkValue&lt;MarkerBase::WriteBarrierType::kSteele&gt;(header, <a class="code hl_namespace" href="namespaceheap.html">heap</a>.marker(),</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>                                                          value);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>}</div>
+</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="preprocessor">#if defined(CPPGC_YOUNG_GENERATION)</span></div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment">// static</span></div>
@@ -221,10 +239,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>                                           <span class="keyword">const</span> AgeTable&amp; age_table,</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>                                           <span class="keyword">const</span> <span class="keywordtype">void</span>* slot,</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                                           uintptr_t value_offset,</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                                           HeapHandle* heap_handle) {</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(slot);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(heap_handle);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <a class="code hl_define" href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(api_constants::kCagedHeapMaxReservationSize, value_offset);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                                           <a class="code hl_class" href="classcppgc_1_1HeapHandle.html">HeapHandle</a>* heap_handle) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(slot);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(heap_handle);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(api_constants::kCagedHeapMaxReservationSize, value_offset);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="comment">// A write during atomic pause (e.g. pre-finalizer) may trigger the slow path</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <span class="comment">// of the barrier. This is a result of the order of bailouts where not marking</span></div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="comment">// results in applying the generational barrier.</span></div>
@@ -241,10 +259,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment">// static</span></div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="keywordtype">void</span> WriteBarrier::GenerationalBarrierForUncompressedSlotSlow(</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keyword">const</span> CagedHeapLocalData&amp; local_data, <span class="keyword">const</span> AgeTable&amp; age_table,</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keyword">const</span> <span class="keywordtype">void</span>* slot, uintptr_t value_offset, HeapHandle* heap_handle) {</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(slot);</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(heap_handle);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <a class="code hl_define" href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(api_constants::kCagedHeapMaxReservationSize, value_offset);</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <span class="keyword">const</span> <span class="keywordtype">void</span>* slot, uintptr_t value_offset, <a class="code hl_class" href="classcppgc_1_1HeapHandle.html">HeapHandle</a>* heap_handle) {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(slot);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(heap_handle);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(api_constants::kCagedHeapMaxReservationSize, value_offset);</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="comment">// A write during atomic pause (e.g. pre-finalizer) may trigger the slow path</span></div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="comment">// of the barrier. This is a result of the order of bailouts where not marking</span></div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <span class="comment">// results in applying the generational barrier.</span></div>
@@ -262,8 +280,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="keywordtype">void</span> WriteBarrier::GenerationalBarrierForSourceObjectSlow(</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keyword">const</span> CagedHeapLocalData&amp; local_data, <span class="keyword">const</span> <span class="keywordtype">void</span>* inner_pointer,</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    HeapHandle* heap_handle) {</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(inner_pointer);</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(heap_handle);</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(inner_pointer);</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(heap_handle);</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <span class="keyword">auto</span>&amp; <a class="code hl_namespace" href="namespaceheap.html">heap</a> = <a class="code hl_function" href="classcppgc_1_1internal_1_1HeapBase.html#ae6932c3546fad18d90d0e45dff4f569d">HeapBase::From</a>(*heap_handle);</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
@@ -279,8 +297,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="preprocessor">#if V8_ENABLE_CHECKS</span></div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="keywordtype">void</span> WriteBarrier::CheckParams(Type expected_type, <span class="keyword">const</span> Params&amp; params) {</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(expected_type, params.type);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1WriteBarrier.html#a23c41cf46d6e6c09033835fda0aaea1e">WriteBarrier::CheckParams</a>(Type expected_type, <span class="keyword">const</span> Params&amp; params) {</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(expected_type, params.type);</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>}</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">#endif  </span><span class="comment">// V8_ENABLE_CHECKS</span></div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
@@ -305,7 +323,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="keywordtype">void</span> YoungGenerationEnabler::Disable() {</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <span class="keyword">auto</span>&amp; instance = Instance();</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">v8::base::SpinningMutexGuard</a> <a class="code hl_define" href="js-call-reducer_8cc.html#ae4dfd7b0d66121016d6466d2ff10e8ba">_</a>(&amp;instance.mutex_);</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, instance.is_enabled_);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, instance.is_enabled_);</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  <span class="keywordflow">if</span> (--instance.is_enabled_ == 0) {</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <a class="code hl_function" href="classcppgc_1_1internal_1_1WriteBarrier_1_1FlagUpdater.html#a0b7388ae651b3308821203b6556c9dfc">WriteBarrier::FlagUpdater::Exit</a>();</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  }</div>
@@ -324,33 +342,33 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="comment">// static</span></div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="keyword">template</span> &lt;WriteBarrierSlotType SlotType&gt;</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keywordtype">void</span> WriteBarrier::CombinedWriteBarrierSlow(<span class="keyword">const</span> <span class="keywordtype">void</span>* slot) {</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(slot);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(slot);</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <span class="keyword">const</span> <span class="keywordtype">void</span>* value = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">#if defined(CPPGC_POINTER_COMPRESSION)</span></div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_enumeration" href="namespacev8_1_1internal.html#acee9c59587b497961ec8549083c66fe1">SlotType</a> == WriteBarrierSlotType::kCompressed) {</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<a class="code hl_enumeration" href="namespacev8_1_1internal.html#acee9c59587b497961ec8549083c66fe1">SlotType</a> == <a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#a7066e2cde3db1ae33d1cb33f45c7d28caf022b1b68086ee81124489a1d5302d9c">WriteBarrierSlotType::kCompressed</a>) {</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    value = CompressedPointer::Decompress(</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>        *<span class="keyword">static_cast&lt;</span><span class="keyword">const </span>CompressedPointer::IntegralType*<span class="keyword">&gt;</span>(slot));</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    value = *<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">void</span>* const*<span class="keyword">&gt;</span>(slot);</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  }</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="keyword">static_assert</span>(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#acee9c59587b497961ec8549083c66fe1">SlotType</a> == WriteBarrierSlotType::kUncompressed);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="keyword">static_assert</span>(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#acee9c59587b497961ec8549083c66fe1">SlotType</a> == <a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#a7066e2cde3db1ae33d1cb33f45c7d28ca83650129be84e9269ee8e409df92265d">WriteBarrierSlotType::kUncompressed</a>);</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  value = *<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><span class="keywordtype">void</span>* const*<span class="keyword">&gt;</span>(slot);</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  WriteBarrier::Params params;</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <span class="keyword">const</span> WriteBarrier::Type type =</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      WriteBarrier::GetWriteBarrierType(slot, value, params);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <span class="keyword">const</span> <a class="code hl_enumeration" href="classcppgc_1_1internal_1_1WriteBarrier.html#a582927b5d3f1625ca58bed42016d0312">WriteBarrier::Type</a> type =</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>      <a class="code hl_function" href="classcppgc_1_1internal_1_1WriteBarrier.html#a5a790553beafc26948b06ab62278eefc">WriteBarrier::GetWriteBarrierType</a>(slot, value, params);</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>  <span class="keywordflow">switch</span> (type) {</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordflow">case</span> WriteBarrier::Type::kGenerational:</div>
-<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      WriteBarrier::GenerationalBarrier&lt;</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>          WriteBarrier::GenerationalBarrierType::kPreciseSlot&gt;(params, slot);</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classcppgc_1_1internal_1_1WriteBarrier.html#a582927b5d3f1625ca58bed42016d0312abff406d6230dbca7fa91f8963077c7d5">WriteBarrier::Type::kGenerational</a>:</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      <a class="code hl_function" href="classcppgc_1_1internal_1_1WriteBarrier.html#a6ad17c2c84edd27ccfd0195e77d5bc09">WriteBarrier::GenerationalBarrier</a>&lt;</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>          <a class="code hl_enumvalue" href="classcppgc_1_1internal_1_1WriteBarrier.html#a1c70a15b9608ef9ecd00b8afb5fcad16a2d57615034f196a776f12eb264c3c28f">WriteBarrier::GenerationalBarrierType::kPreciseSlot</a>&gt;(params, slot);</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordflow">case</span> WriteBarrier::Type::kMarking:</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      WriteBarrier::DijkstraMarkingBarrier(params, value);</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classcppgc_1_1internal_1_1WriteBarrier.html#a582927b5d3f1625ca58bed42016d0312a23a84cb8e23098a38786f3296b9e0e57">WriteBarrier::Type::kMarking</a>:</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <a class="code hl_function" href="classcppgc_1_1internal_1_1WriteBarrier.html#ad8bbc0c512828b14d55c18a6735386e4">WriteBarrier::DijkstraMarkingBarrier</a>(params, value);</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keywordflow">case</span> WriteBarrier::Type::kNone:</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classcppgc_1_1internal_1_1WriteBarrier.html#a582927b5d3f1625ca58bed42016d0312a35c3ace1970663a16e5c65baa5941b13">WriteBarrier::Type::kNone</a>:</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      <span class="comment">// The fast checks are approximate and may trigger spuriously if any heap</span></div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>      <span class="comment">// has marking in progress. `GetWriteBarrierType()` above is exact which</span></div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      <span class="comment">// is the reason we could still observe a bailout here.</span></div>
@@ -358,53 +376,83 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  }</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>}</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
-<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="keyword">template</span> <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> WriteBarrier::CombinedWriteBarrierSlow&lt;</div>
-<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    WriteBarrierSlotType::kUncompressed&gt;(<span class="keyword">const</span> <span class="keywordtype">void</span>* slot);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span><span class="keyword">template</span> <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> WriteBarrier::CombinedWriteBarrierSlow&lt;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    <a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#a7066e2cde3db1ae33d1cb33f45c7d28ca83650129be84e9269ee8e409df92265d">WriteBarrierSlotType::kUncompressed</a>&gt;(<span class="keyword">const</span> <span class="keywordtype">void</span>* slot);</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span><span class="preprocessor">#if defined(CPPGC_POINTER_COMPRESSION)</span></div>
-<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="keyword">template</span> <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> WriteBarrier::CombinedWriteBarrierSlow&lt;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    WriteBarrierSlotType::kCompressed&gt;(<span class="keyword">const</span> <span class="keywordtype">void</span>* slot);</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="keyword">template</span> <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> WriteBarrier::CombinedWriteBarrierSlow&lt;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#a7066e2cde3db1ae33d1cb33f45c7d28caf022b1b68086ee81124489a1d5302d9c">WriteBarrierSlotType::kCompressed</a>&gt;(<span class="keyword">const</span> <span class="keywordtype">void</span>* slot);</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="preprocessor">#endif  </span><span class="comment">// defined(CPPGC_POINTER_COMPRESSION)</span></div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="preprocessor">#endif  </span><span class="comment">// CPPGC_SLIM_WRITE_BARRIER</span></div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>}  <span class="comment">// namespace cppgc</span></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1BasePage_html_a1fd6c829347f95514f49a78a9aa3d7f1"><div class="ttname"><a href="classcppgc_1_1internal_1_1BasePage.html#a1fd6c829347f95514f49a78a9aa3d7f1">cppgc::internal::BasePage::heap</a></div><div class="ttdeci">HeapBase &amp; heap() const</div><div class="ttdef"><b>Definition</b> <a href="heap-page_8cc_source.html#l00035">heap-page.cc:35</a></div></div>
+<div class="ttc" id="acaged-heap-local-data_8h_html"><div class="ttname"><a href="caged-heap-local-data_8h.html">caged-heap-local-data.h</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1HeapHandle_html"><div class="ttname"><a href="classcppgc_1_1HeapHandle.html">cppgc::HeapHandle</a></div><div class="ttdef"><b>Definition</b> <a href="heap-handle_8h_source.html#l00021">heap-handle.h:21</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1BasePage_html"><div class="ttname"><a href="classcppgc_1_1internal_1_1BasePage.html">cppgc::internal::BasePage</a></div><div class="ttdef"><b>Definition</b> <a href="heap-page_8h_source.html#l00030">heap-page.h:30</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1BasePage_html_a3e4e942b9d1f96f27df335a9daaacf09"><div class="ttname"><a href="classcppgc_1_1internal_1_1BasePage.html#a3e4e942b9d1f96f27df335a9daaacf09">cppgc::internal::BasePage::ObjectHeaderFromInnerAddress</a></div><div class="ttdeci">HeapObjectHeader &amp; ObjectHeaderFromInnerAddress(void *address) const</div><div class="ttdef"><b>Definition</b> <a href="heap-page_8h_source.html#l00339">heap-page.h:339</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1BasePage_html_aad13cafeed6c2ea494b7423b9c527b7a"><div class="ttname"><a href="classcppgc_1_1internal_1_1BasePage.html#aad13cafeed6c2ea494b7423b9c527b7a">cppgc::internal::BasePage::FromPayload</a></div><div class="ttdeci">static BasePage * FromPayload(void *)</div><div class="ttdef"><b>Definition</b> <a href="heap-page_8h_source.html#l00314">heap-page.h:314</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1BasePage_html_af1e5606c811fb5dcdbd60e1da987f409"><div class="ttname"><a href="classcppgc_1_1internal_1_1BasePage.html#af1e5606c811fb5dcdbd60e1da987f409">cppgc::internal::BasePage::FromInnerAddress</a></div><div class="ttdeci">static BasePage * FromInnerAddress(const HeapBase *, void *)</div><div class="ttdef"><b>Definition</b> <a href="heap-page_8cc_source.html#l00040">heap-page.cc:40</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1HeapBase_html_ae6932c3546fad18d90d0e45dff4f569d"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapBase.html#ae6932c3546fad18d90d0e45dff4f569d">cppgc::internal::HeapBase::From</a></div><div class="ttdeci">static HeapBase &amp; From(cppgc::HeapHandle &amp;heap_handle)</div><div class="ttdef"><b>Definition</b> <a href="heap-base_8h_source.html#l00088">heap-base.h:88</a></div></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_1_1FlagUpdater_html_a0b7388ae651b3308821203b6556c9dfc"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier_1_1FlagUpdater.html#a0b7388ae651b3308821203b6556c9dfc">cppgc::internal::WriteBarrier::FlagUpdater::Exit</a></div><div class="ttdeci">static void Exit()</div><div class="ttdef"><b>Definition</b> <a href="write-barrier_8h_source.html#l00018">write-barrier.h:18</a></div></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_1_1FlagUpdater_html_ae8155af37a3f60a7f8c37be231e978d5"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier_1_1FlagUpdater.html#ae8155af37a3f60a7f8c37be231e978d5">cppgc::internal::WriteBarrier::FlagUpdater::Enter</a></div><div class="ttdeci">static void Enter()</div><div class="ttdef"><b>Definition</b> <a href="write-barrier_8h_source.html#l00017">write-barrier.h:17</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1HeapObjectHeader_html"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapObjectHeader.html">cppgc::internal::HeapObjectHeader</a></div><div class="ttdef"><b>Definition</b> <a href="heap-object-header_8h_source.html#l00059">heap-object-header.h:59</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_1_1FlagUpdater_html_a0b7388ae651b3308821203b6556c9dfc"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier_1_1FlagUpdater.html#a0b7388ae651b3308821203b6556c9dfc">cppgc::internal::WriteBarrier::FlagUpdater::Exit</a></div><div class="ttdeci">static void Exit()</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2cppgc_2write-barrier_8h_source.html#l00018">write-barrier.h:18</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_1_1FlagUpdater_html_ae8155af37a3f60a7f8c37be231e978d5"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier_1_1FlagUpdater.html#ae8155af37a3f60a7f8c37be231e978d5">cppgc::internal::WriteBarrier::FlagUpdater::Enter</a></div><div class="ttdeci">static void Enter()</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2cppgc_2write-barrier_8h_source.html#l00017">write-barrier.h:17</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a0c59b7e403a0bc0a438f737006b46b77"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a0c59b7e403a0bc0a438f737006b46b77">cppgc::internal::WriteBarrier::DijkstraMarkingBarrierSlow</a></div><div class="ttdeci">static void DijkstraMarkingBarrierSlow(const void *value)</div><div class="ttdef"><b>Definition</b> <a href="#l00060">write-barrier.cc:60</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a1c21d8726481d5747337016f12055189"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a1c21d8726481d5747337016f12055189">cppgc::internal::WriteBarrier::DijkstraMarkingBarrierSlowWithSentinelCheck</a></div><div class="ttdeci">static void DijkstraMarkingBarrierSlowWithSentinelCheck(const void *value)</div><div class="ttdef"><b>Definition</b> <a href="#l00052">write-barrier.cc:52</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a1c70a15b9608ef9ecd00b8afb5fcad16a2d57615034f196a776f12eb264c3c28f"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a1c70a15b9608ef9ecd00b8afb5fcad16a2d57615034f196a776f12eb264c3c28f">cppgc::internal::WriteBarrier::GenerationalBarrierType::kPreciseSlot</a></div><div class="ttdeci">@ kPreciseSlot</div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a1f8a3d181c464a8ebb0d7a0c2eeee540"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a1f8a3d181c464a8ebb0d7a0c2eeee540">cppgc::internal::WriteBarrier::write_barrier_enabled_</a></div><div class="ttdeci">static AtomicEntryFlag write_barrier_enabled_</div><div class="ttdef"><b>Definition</b> <a href="include_2cppgc_2internal_2write-barrier_8h_source.html#l00153">write-barrier.h:153</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a23c41cf46d6e6c09033835fda0aaea1e"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a23c41cf46d6e6c09033835fda0aaea1e">cppgc::internal::WriteBarrier::CheckParams</a></div><div class="ttdeci">static void CheckParams(Type expected_type, const Params &amp;params)</div><div class="ttdef"><b>Definition</b> <a href="include_2cppgc_2internal_2write-barrier_8h_source.html#l00112">write-barrier.h:112</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a2f4d3b496ee2a72cf21db8c446274237"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a2f4d3b496ee2a72cf21db8c446274237">cppgc::internal::WriteBarrier::DijkstraMarkingBarrierRangeSlow</a></div><div class="ttdeci">static void DijkstraMarkingBarrierRangeSlow(HeapHandle &amp;heap_handle, const void *first_element, size_t element_size, size_t number_of_elements, TraceCallback trace_callback)</div><div class="ttdef"><b>Definition</b> <a href="#l00078">write-barrier.cc:78</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a582927b5d3f1625ca58bed42016d0312"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a582927b5d3f1625ca58bed42016d0312">cppgc::internal::WriteBarrier::Type</a></div><div class="ttdeci">Type</div><div class="ttdef"><b>Definition</b> <a href="include_2cppgc_2internal_2write-barrier_8h_source.html#l00041">write-barrier.h:41</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a582927b5d3f1625ca58bed42016d0312a23a84cb8e23098a38786f3296b9e0e57"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a582927b5d3f1625ca58bed42016d0312a23a84cb8e23098a38786f3296b9e0e57">cppgc::internal::WriteBarrier::Type::kMarking</a></div><div class="ttdeci">@ kMarking</div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a582927b5d3f1625ca58bed42016d0312a35c3ace1970663a16e5c65baa5941b13"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a582927b5d3f1625ca58bed42016d0312a35c3ace1970663a16e5c65baa5941b13">cppgc::internal::WriteBarrier::Type::kNone</a></div><div class="ttdeci">@ kNone</div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a582927b5d3f1625ca58bed42016d0312abff406d6230dbca7fa91f8963077c7d5"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a582927b5d3f1625ca58bed42016d0312abff406d6230dbca7fa91f8963077c7d5">cppgc::internal::WriteBarrier::Type::kGenerational</a></div><div class="ttdeci">@ kGenerational</div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a5a790553beafc26948b06ab62278eefc"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a5a790553beafc26948b06ab62278eefc">cppgc::internal::WriteBarrier::GetWriteBarrierType</a></div><div class="ttdeci">static V8_INLINE Type GetWriteBarrierType(const void *slot, const void *value, Params &amp;params)</div><div class="ttdef"><b>Definition</b> <a href="include_2cppgc_2internal_2write-barrier_8h_source.html#l00388">write-barrier.h:388</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a6ad17c2c84edd27ccfd0195e77d5bc09"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a6ad17c2c84edd27ccfd0195e77d5bc09">cppgc::internal::WriteBarrier::GenerationalBarrier</a></div><div class="ttdeci">static V8_INLINE void GenerationalBarrier(const Params &amp;params, const void *slot)</div><div class="ttdef"><b>Definition</b> <a href="include_2cppgc_2internal_2write-barrier_8h_source.html#l00105">write-barrier.h:105</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_a90a31f7445df47f2075275beecb10459"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#a90a31f7445df47f2075275beecb10459">cppgc::internal::WriteBarrier::SteeleMarkingBarrierSlow</a></div><div class="ttdeci">static void SteeleMarkingBarrierSlow(const void *value)</div><div class="ttdef"><b>Definition</b> <a href="#l00105">write-barrier.cc:105</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_ab8e5f7d5f2080a79d8e1592e694fb422"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#ab8e5f7d5f2080a79d8e1592e694fb422">cppgc::internal::WriteBarrier::SteeleMarkingBarrierSlowWithSentinelCheck</a></div><div class="ttdeci">static void SteeleMarkingBarrierSlowWithSentinelCheck(const void *value)</div><div class="ttdef"><b>Definition</b> <a href="#l00097">write-barrier.cc:97</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1WriteBarrier_html_ad8bbc0c512828b14d55c18a6735386e4"><div class="ttname"><a href="classcppgc_1_1internal_1_1WriteBarrier.html#ad8bbc0c512828b14d55c18a6735386e4">cppgc::internal::WriteBarrier::DijkstraMarkingBarrier</a></div><div class="ttdeci">static V8_INLINE void DijkstraMarkingBarrier(const Params &amp;params, const void *object)</div><div class="ttdef"><b>Definition</b> <a href="include_2cppgc_2internal_2write-barrier_8h_source.html#l00419">write-barrier.h:419</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1subtle_1_1DisallowGarbageCollectionScope_html"><div class="ttname"><a href="classcppgc_1_1subtle_1_1DisallowGarbageCollectionScope.html">cppgc::subtle::DisallowGarbageCollectionScope</a></div><div class="ttdef"><b>Definition</b> <a href="heap-consistency_8h_source.html#l00220">heap-consistency.h:220</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1LeakyObject_html"><div class="ttname"><a href="classv8_1_1base_1_1LeakyObject.html">v8::base::LeakyObject</a></div><div class="ttdef"><b>Definition</b> <a href="isolate-group_8h_source.html#l00029">isolate-group.h:29</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1LeakyObject_html_a93c0d4cc7b5530f48dabc3e0f34be29d"><div class="ttname"><a href="classv8_1_1base_1_1LeakyObject.html#a93c0d4cc7b5530f48dabc3e0f34be29d">v8::base::LeakyObject::get</a></div><div class="ttdeci">T * get()</div><div class="ttdef"><b>Definition</b> <a href="lazy-instance_8h_source.html#l00241">lazy-instance.h:241</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1LockGuard_html"><div class="ttname"><a href="classv8_1_1base_1_1LockGuard.html">v8::base::LockGuard</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00534">mutex.h:534</a></div></div>
-<div class="ttc" id="acppgc_2heap_8h_html"><div class="ttname"><a href="cppgc_2heap_8h.html">heap.h</a></div></div>
 <div class="ttc" id="acppgc_2marking-visitor_8h_html"><div class="ttname"><a href="cppgc_2marking-visitor_8h.html">marking-visitor.h</a></div></div>
 <div class="ttc" id="acppgc_2sweeper_8cc_html_a876e0ae5632dcb3138e6e718ac01ae8a"><div class="ttname"><a href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a></div><div class="ttdeci">BasePage * page</div><div class="ttdef"><b>Definition</b> <a href="cppgc_2sweeper_8cc_source.html#l00218">sweeper.cc:218</a></div></div>
+<div class="ttc" id="aheap-consistency_8h_html"><div class="ttname"><a href="heap-consistency_8h.html">heap-consistency.h</a></div></div>
 <div class="ttc" id="aheap-object-header_8h_html"><div class="ttname"><a href="heap-object-header_8h.html">heap-object-header.h</a></div></div>
 <div class="ttc" id="aheap-page_8h_html"><div class="ttname"><a href="heap-page_8h.html">heap-page.h</a></div></div>
 <div class="ttc" id="aheap_2cppgc_2globals_8h_html"><div class="ttname"><a href="heap_2cppgc_2globals_8h.html">globals.h</a></div></div>
+<div class="ttc" id="ainclude_2cppgc_2internal_2member-storage_8h_html"><div class="ttname"><a href="include_2cppgc_2internal_2member-storage_8h.html">member-storage.h</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_ae4dfd7b0d66121016d6466d2ff10e8ba"><div class="ttname"><a href="js-call-reducer_8cc.html#ae4dfd7b0d66121016d6466d2ff10e8ba">_</a></div><div class="ttdeci">#define _</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l00054">js-call-reducer.cc:54</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00487">logging.h:487</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="amarker_8h_html"><div class="ttname"><a href="marker_8h.html">marker.h</a></div></div>
+<div class="ttc" id="anamespacecppgc_1_1internal_html_a7066e2cde3db1ae33d1cb33f45c7d28ca83650129be84e9269ee8e409df92265d"><div class="ttname"><a href="namespacecppgc_1_1internal.html#a7066e2cde3db1ae33d1cb33f45c7d28ca83650129be84e9269ee8e409df92265d">cppgc::internal::WriteBarrierSlotType::kUncompressed</a></div><div class="ttdeci">@ kUncompressed</div></div>
+<div class="ttc" id="anamespacecppgc_1_1internal_html_a7066e2cde3db1ae33d1cb33f45c7d28caf022b1b68086ee81124489a1d5302d9c"><div class="ttname"><a href="namespacecppgc_1_1internal.html#a7066e2cde3db1ae33d1cb33f45c7d28caf022b1b68086ee81124489a1d5302d9c">cppgc::internal::WriteBarrierSlotType::kCompressed</a></div><div class="ttdeci">@ kCompressed</div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71"><div class="ttname"><a href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71">cppgc::internal::AccessMode::kAtomic</a></div><div class="ttdeci">@ kAtomic</div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_ac0b40b7e4ac65024fbfcf57d01fa808eab8d79eac5929c97b59b121e933e4438d"><div class="ttname"><a href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808eab8d79eac5929c97b59b121e933e4438d">cppgc::internal::AccessMode::kNonAtomic</a></div><div class="ttdeci">@ kNonAtomic</div></div>
 <div class="ttc" id="anamespacecppgc_html"><div class="ttname"><a href="namespacecppgc.html">cppgc</a></div><div class="ttdef"><b>Definition</b> <a href="cross-heap-remembered-set_8h_source.html#l00014">cross-heap-remembered-set.h:14</a></div></div>
-<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
+<div class="ttc" id="anamespacecppgc_html_a6ed40538a8d2b6b06da04df5de1f8786"><div class="ttname"><a href="namespacecppgc.html#a6ed40538a8d2b6b06da04df5de1f8786">cppgc::kSentinelPointer</a></div><div class="ttdeci">constexpr internal::SentinelPointer kSentinelPointer</div><div class="ttdef"><b>Definition</b> <a href="sentinel-pointer_8h_source.html#l00035">sentinel-pointer.h:35</a></div></div>
+<div class="ttc" id="anamespacecppgc_html_af97d391c993ccebc888fa1a9de87f72a"><div class="ttname"><a href="namespacecppgc.html#af97d391c993ccebc888fa1a9de87f72a">cppgc::TraceCallback</a></div><div class="ttdeci">void(*)(Visitor *visitor, const void *object) TraceCallback</div><div class="ttdef"><b>Definition</b> <a href="trace-trait_8h_source.html#l00038">trace-trait.h:38</a></div></div>
+<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_acee9c59587b497961ec8549083c66fe1"><div class="ttname"><a href="namespacev8_1_1internal.html#acee9c59587b497961ec8549083c66fe1">v8::internal::SlotType</a></div><div class="ttdeci">SlotType</div><div class="ttdef"><b>Definition</b> <a href="slot-set_8h_source.html#l00232">slot-set.h:232</a></div></div>
-<div class="ttc" id="awrite-barrier_8h_html"><div class="ttname"><a href="write-barrier_8h.html">write-barrier.h</a></div></div>
+<div class="ttc" id="apointer-policies_8h_html"><div class="ttname"><a href="pointer-policies_8h.html">pointer-policies.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00487">logging.h:487</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
+<div class="ttc" id="asrc_2heap_2cppgc_2heap_8h_html"><div class="ttname"><a href="src_2heap_2cppgc_2heap_8h.html">heap.h</a></div></div>
+<div class="ttc" id="asrc_2heap_2cppgc_2write-barrier_8h_html"><div class="ttname"><a href="src_2heap_2cppgc_2write-barrier_8h.html">write-barrier.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a67bd29db07c711b0fb11ff1c324ebb60"><div class="ttname"><a href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a></div><div class="ttdeci">#define V8_UNLIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00649">v8config.h:649</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:31 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li><li class="navelem"><a class="el" href="write-barrier_8cc.html">write-barrier.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:39 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

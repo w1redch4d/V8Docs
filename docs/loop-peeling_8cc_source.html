@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/compiler/loop-peeling.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/compiler/loop-peeling.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('loop-peeling_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">loop-peeling.cc</div></div>
 </div><!--header-->
@@ -342,7 +350,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
 <div class="foldopen" id="foldopen00239" data-start="{" data-end="}">
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1LoopPeeler.html#a1775aaecbd920678553270c27b27e687">  239</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1LoopPeeler.html#a1775aaecbd920678553270c27b27e687">LoopPeeler::EliminateLoopExit</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node) {</div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kLoopExit, node-&gt;opcode());</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(IrOpcode::kLoopExit, node-&gt;opcode());</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <span class="comment">// The exit markers take the loop exit as input. We iterate over uses</span></div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  <span class="comment">// and remove all the markers from the graph.</span></div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Edge.html">Edge</a> edge : node-&gt;use_edges()) {</div>
@@ -350,11 +358,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* marker = edge.from();</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>      <span class="keywordflow">if</span> (marker-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1Node.html#a4503620c5a9219c781579fa834c11d87">opcode</a>() == IrOpcode::kLoopExitValue) {</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#a49531b9e5c9e02b8a5c0da3beb17074c">NodeProperties::ReplaceUses</a>(marker, marker-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1Node.html#ab7247e66dde4e60568becb9f199b1c15">InputAt</a>(0));</div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        marker-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1Node.html#a58916596cbde35951aefa8e3636ad5f8">Kill</a>();</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        marker-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1Node.html#a7029aac5cf13c2986a920e90218ed8ef">Kill</a>();</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (marker-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1Node.html#a4503620c5a9219c781579fa834c11d87">opcode</a>() == IrOpcode::kLoopExitEffect) {</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#a49531b9e5c9e02b8a5c0da3beb17074c">NodeProperties::ReplaceUses</a>(marker, <span class="keyword">nullptr</span>,</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                                    <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#a4e71aa3e1326c73effb795241044a502">NodeProperties::GetEffectInput</a>(marker));</div>
-<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        marker-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1Node.html#a58916596cbde35951aefa8e3636ad5f8">Kill</a>();</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        marker-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1Node.html#a7029aac5cf13c2986a920e90218ed8ef">Kill</a>();</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>      }</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>    }</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  }</div>
@@ -458,7 +466,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1NodeProperties_html_af4c8143368f1981ddab0cef4bf2d1576"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#af4c8143368f1981ddab0cef4bf2d1576">v8::internal::compiler::NodeProperties::GetControlInput</a></div><div class="ttdeci">static Node * GetControlInput(Node *node, int index=0)</div><div class="ttdef"><b>Definition</b> <a href="node-properties_8h_source.html#l00090">node-properties.h:90</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Node_html"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Node.html">v8::internal::compiler::Node</a></div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00042">node.h:42</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Node_html_a4503620c5a9219c781579fa834c11d87"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Node.html#a4503620c5a9219c781579fa834c11d87">v8::internal::compiler::Node::opcode</a></div><div class="ttdeci">constexpr IrOpcode::Value opcode() const</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00053">node.h:53</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Node_html_a58916596cbde35951aefa8e3636ad5f8"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Node.html#a58916596cbde35951aefa8e3636ad5f8">v8::internal::compiler::Node::Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition</b> <a href="node_8cc_source.html#l00147">node.cc:147</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Node_html_a7029aac5cf13c2986a920e90218ed8ef"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Node.html#a7029aac5cf13c2986a920e90218ed8ef">v8::internal::compiler::Node::Kill</a></div><div class="ttdeci">void Kill()</div><div class="ttdef"><b>Definition</b> <a href="node_8cc_source.html#l00147">node.cc:147</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Node_html_a9fddec0f808d54a0b5d97fda3a1043ea"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Node.html#a9fddec0f808d54a0b5d97fda3a1043ea">v8::internal::compiler::Node::InputCount</a></div><div class="ttdeci">int InputCount() const</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00060">node.h:60</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Node_html_ab6aa5c0ce7d3ad1349cebfe168377ebe"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Node.html#ab6aa5c0ce7d3ad1349cebfe168377ebe">v8::internal::compiler::Node::ReplaceInput</a></div><div class="ttdeci">void ReplaceInput(int index, Node *new_to)</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00077">node.h:77</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Node_html_ab7247e66dde4e60568becb9f199b1c15"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Node.html#ab7247e66dde4e60568becb9f199b1c15">v8::internal::compiler::Node::InputAt</a></div><div class="ttdeci">Node * InputAt(int index) const</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00071">node.h:71</a></div></div>
@@ -473,7 +481,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="agraph-builder-interface_8cc_html_a59e33b83f9df42a16e226686bf2d1ba6"><div class="ttname"><a href="graph-builder-interface_8cc.html#a59e33b83f9df42a16e226686bf2d1ba6">loop_node</a></div><div class="ttdeci">TFNode * loop_node</div><div class="ttdef"><b>Definition</b> <a href="graph-builder-interface_8cc_source.html#l00148">graph-builder-interface.cc:148</a></div></div>
 <div class="ttc" id="agraph-builder-interface_8cc_html_aa0b4f9294a511ef435ea6f57ca76ca27"><div class="ttname"><a href="graph-builder-interface_8cc.html#aa0b4f9294a511ef435ea6f57ca76ca27">control</a></div><div class="ttdeci">TFNode * control</div><div class="ttdef"><b>Definition</b> <a href="graph-builder-interface_8cc_source.html#l00081">graph-builder-interface.cc:81</a></div></div>
 <div class="ttc" id="ajs-inlining-heuristic_8cc_html_ab88cd70dad2e152cea983610f2a16e68"><div class="ttname"><a href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a></div><div class="ttdeci">Node * node</div><div class="ttdef"><b>Definition</b> <a href="js-inlining-heuristic_8cc_source.html#l00316">js-inlining-heuristic.cc:316</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="aloop-analysis_8h_html"><div class="ttname"><a href="loop-analysis_8h.html">loop-analysis.h</a></div></div>
 <div class="ttc" id="aloop-peeling_8h_html"><div class="ttname"><a href="loop-peeling_8h.html">loop-peeling.h</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_html_a3af77441604b447631d5a4e6959b67bf"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler.html#a3af77441604b447631d5a4e6959b67bf">v8::internal::compiler::kAssumedLoopEntryIndex</a></div><div class="ttdeci">static const int kAssumedLoopEntryIndex</div><div class="ttdef"><b>Definition</b> <a href="loop-analysis_8h_source.html#l00026">loop-analysis.h:26</a></div></div>
@@ -487,13 +494,17 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anode-origin-table_8h_html"><div class="ttname"><a href="node-origin-table_8h.html">node-origin-table.h</a></div></div>
 <div class="ttc" id="anode-properties_8h_html"><div class="ttname"><a href="node-properties_8h.html">node-properties.h</a></div></div>
 <div class="ttc" id="anode_8h_html"><div class="ttname"><a href="node_8h.html">node.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="aturbofan-graph_8h_html"><div class="ttname"><a href="turbofan-graph_8h.html">turbofan-graph.h</a></div></div>
 <div class="ttc" id="azone_8h_html"><div class="ttname"><a href="zone_8h.html">zone.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:17:13 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="loop-peeling_8cc.html">loop-peeling.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:53:17 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

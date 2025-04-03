@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/object-stats.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/object-stats.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('object-stats_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">object-stats.cc</div></div>
 </div><!--header-->
@@ -159,14 +167,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        *<a class="code hl_variable" href="classv8_1_1internal_1_1FieldStatsCollector.html#a92eed050902f2e14f4f1ef6ba524d85a">tagged_fields_count_</a> - old_pointer_fields_count;</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">int</span> object_size_in_words = host-&gt;Size(<a class="code hl_function" href="classv8_1_1internal_1_1ObjectVisitorWithCageBases.html#a79ee9c5d1dd4d742f9fa3b1c9186b9a7">cage_base</a>()) / <a class="code hl_variable" href="namespacev8_1_1internal.html#a12d50d7bb2c9d8a916ff0785e6eff241">kTaggedSize</a>;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(tagged_fields_count_in_object, object_size_in_words);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(tagged_fields_count_in_object, object_size_in_words);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">size_t</span> raw_fields_count_in_object =</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        object_size_in_words - tagged_fields_count_in_object;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordflow">if</span> (IsJSObject(host, <a class="code hl_function" href="classv8_1_1internal_1_1ObjectVisitorWithCageBases.html#a79ee9c5d1dd4d742f9fa3b1c9186b9a7">cage_base</a>())) {</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>      <a class="code hl_struct" href="structv8_1_1internal_1_1FieldStatsCollector_1_1JSObjectFieldStats.html">JSObjectFieldStats</a> field_stats = <a class="code hl_function" href="classv8_1_1internal_1_1FieldStatsCollector.html#aea3f24d9018645e8e94f0777f6cfb74a">GetInobjectFieldStats</a>(host-&gt;map());</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>      <span class="comment">// Embedder fields are already included into pointer words.</span></div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(field_stats.<a class="code hl_variable" href="structv8_1_1internal_1_1FieldStatsCollector_1_1JSObjectFieldStats.html#a4d473703f69d27f87fc7f2257be00371">embedded_fields_count_</a>,</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(field_stats.<a class="code hl_variable" href="structv8_1_1internal_1_1FieldStatsCollector_1_1JSObjectFieldStats.html#a4d473703f69d27f87fc7f2257be00371">embedded_fields_count_</a>,</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                tagged_fields_count_in_object);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>      tagged_fields_count_in_object -= field_stats.<a class="code hl_variable" href="structv8_1_1internal_1_1FieldStatsCollector_1_1JSObjectFieldStats.html#a4d473703f69d27f87fc7f2257be00371">embedded_fields_count_</a>;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      *<a class="code hl_variable" href="classv8_1_1internal_1_1FieldStatsCollector.html#a92eed050902f2e14f4f1ef6ba524d85a">tagged_fields_count_</a> -= field_stats.<a class="code hl_variable" href="structv8_1_1internal_1_1FieldStatsCollector_1_1JSObjectFieldStats.html#a4d473703f69d27f87fc7f2257be00371">embedded_fields_count_</a>;</div>
@@ -177,14 +185,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      *<a class="code hl_variable" href="classv8_1_1internal_1_1FieldStatsCollector.html#a92eed050902f2e14f4f1ef6ba524d85a">tagged_fields_count_</a> -= field_stats.<a class="code hl_variable" href="structv8_1_1internal_1_1FieldStatsCollector_1_1JSObjectFieldStats.html#a4e5a9bf3e676c5d0b2ca2a4a11124c8d">smi_fields_count_</a>;</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      *<a class="code hl_variable" href="classv8_1_1internal_1_1FieldStatsCollector.html#a0f3c09b8e7b9f9b5cc663ab3730cbafb">inobject_smi_fields_count_</a> += field_stats.<a class="code hl_variable" href="structv8_1_1internal_1_1FieldStatsCollector_1_1JSObjectFieldStats.html#a4e5a9bf3e676c5d0b2ca2a4a11124c8d">smi_fields_count_</a>;</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (IsHeapNumber(host, <a class="code hl_function" href="classv8_1_1internal_1_1ObjectVisitorWithCageBases.html#a79ee9c5d1dd4d742f9fa3b1c9186b9a7">cage_base</a>())) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#ada67458c5a8e8c0ade0017e5d3c56fd3">kDoubleSize</a> / <a class="code hl_variable" href="namespacev8_1_1internal.html#a12d50d7bb2c9d8a916ff0785e6eff241">kTaggedSize</a>, raw_fields_count_in_object);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#ada67458c5a8e8c0ade0017e5d3c56fd3">kDoubleSize</a> / <a class="code hl_variable" href="namespacev8_1_1internal.html#a12d50d7bb2c9d8a916ff0785e6eff241">kTaggedSize</a>, raw_fields_count_in_object);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>      raw_fields_count_in_object -= <a class="code hl_variable" href="namespacev8_1_1internal.html#ada67458c5a8e8c0ade0017e5d3c56fd3">kDoubleSize</a> / <a class="code hl_variable" href="namespacev8_1_1internal.html#a12d50d7bb2c9d8a916ff0785e6eff241">kTaggedSize</a>;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      *<a class="code hl_variable" href="classv8_1_1internal_1_1FieldStatsCollector.html#aca9dbee2950fc28a848ddba8fea07dae">boxed_double_fields_count_</a> += 1;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (IsSeqString(host, <a class="code hl_function" href="classv8_1_1internal_1_1ObjectVisitorWithCageBases.html#a79ee9c5d1dd4d742f9fa3b1c9186b9a7">cage_base</a>())) {</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>      <span class="keywordtype">int</span> string_data =</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>          <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;SeqString&gt;</a>(host)-&gt;length(<a class="code hl_variable" href="namespacev8.html#aee4e677b8d8a86416617b3330778b98a">kAcquireLoad</a>) *</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>          (<a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;String&gt;</a>(host)-&gt;IsOneByteRepresentation() ? 1 : 2) / <a class="code hl_variable" href="namespacev8_1_1internal.html#a12d50d7bb2c9d8a916ff0785e6eff241">kTaggedSize</a>;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(string_data, raw_fields_count_in_object);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(string_data, raw_fields_count_in_object);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>      raw_fields_count_in_object -= string_data;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>      *<a class="code hl_variable" href="classv8_1_1internal_1_1FieldStatsCollector.html#a07c122655afae3297b7ad5e85eeaba4a">string_data_count_</a> += string_data;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
@@ -206,7 +214,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="foldopen" id="foldopen00103" data-start="{" data-end="}">
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FieldStatsCollector.html#abd03d00084cc2d98e905ed662ae7ec0c">  103</a></span>  V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FieldStatsCollector.html#abd03d00084cc2d98e905ed662ae7ec0c">VisitInstructionStreamPointer</a>(</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FieldStatsCollector.html#abd03d00084cc2d98e905ed662ae7ec0c">  103</a></span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FieldStatsCollector.html#abd03d00084cc2d98e905ed662ae7ec0c">VisitInstructionStreamPointer</a>(</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Code&gt;</a> host, <a class="code hl_class" href="classv8_1_1internal_1_1OffHeapFullObjectSlot.html">InstructionStreamSlot</a> slot)<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    *<a class="code hl_variable" href="classv8_1_1internal_1_1FieldStatsCollector.html#a92eed050902f2e14f4f1ef6ba524d85a">tagged_fields_count_</a> += 1;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  }</div>
@@ -310,7 +318,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment">// decide to inline this and unroll the loop, making the compiled code more than</span></div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment">// 100KB larger.</span></div>
 <div class="foldopen" id="foldopen00192" data-start="{" data-end="}">
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a2afd3ecaacb4c4832cb1453c333f73d4">  192</a></span>V8_NOINLINE <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a2afd3ecaacb4c4832cb1453c333f73d4">PrintJSONArray</a>(<span class="keywordtype">size_t</span>* array, <span class="keyword">const</span> <span class="keywordtype">int</span> len) {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a2afd3ecaacb4c4832cb1453c333f73d4">  192</a></span><a class="code hl_define" href="v8config_8h.html#aae8e4cfdd8ebf80e774cb42d8b4980e6">V8_NOINLINE</a> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a2afd3ecaacb4c4832cb1453c333f73d4">PrintJSONArray</a>(<span class="keywordtype">size_t</span>* array, <span class="keyword">const</span> <span class="keywordtype">int</span> len) {</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">PrintF</a>(<span class="stringliteral">&quot;[ &quot;</span>);</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; len; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>++) {</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">PrintF</a>(<span class="stringliteral">&quot;%zu&quot;</span>, array[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]);</div>
@@ -321,7 +329,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
 <div class="foldopen" id="foldopen00201" data-start="{" data-end="}">
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#af4d67841656b01aed1240c4f8616656d">  201</a></span>V8_NOINLINE <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#af4d67841656b01aed1240c4f8616656d">DumpJSONArray</a>(std::stringstream&amp; stream, <span class="keywordtype">size_t</span>* array,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#af4d67841656b01aed1240c4f8616656d">  201</a></span><a class="code hl_define" href="v8config_8h.html#aae8e4cfdd8ebf80e774cb42d8b4980e6">V8_NOINLINE</a> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#af4d67841656b01aed1240c4f8616656d">DumpJSONArray</a>(std::stringstream&amp; stream, <span class="keywordtype">size_t</span>* array,</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>                                      <span class="keyword">const</span> <span class="keywordtype">int</span> len) {</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  stream &lt;&lt; PrintCollection(base::Vector&lt;size_t&gt;(array, len));</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>}</div>
@@ -475,7 +483,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span> </div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="keywordtype">int</span> Log2ForSize(<span class="keywordtype">size_t</span> size) {</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>  <a class="code hl_define" href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(size, 0);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(size, 0);</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#adcbd24d101f3c011ebaace9e01d86589">kSizetSize</a> * 8 - 1 - <a class="code hl_function" href="namespacev8_1_1base_1_1bits.html#a05e2bc2d432bf561a7cf3ced275a87be">base::bits::CountLeadingZeros</a>(size);</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>}</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
@@ -492,7 +500,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00354" data-start="{" data-end="}">
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ObjectStats.html#a651614b2145b2c4b9850e14109cd6a38">  354</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStats.html#a651614b2145b2c4b9850e14109cd6a38">ObjectStats::RecordObjectStats</a>(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#a9312a9fc987dba9376a530956f94e8fe">InstanceType</a> type, <span class="keywordtype">size_t</span> size,</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                                    <span class="keywordtype">size_t</span> over_allocated) {</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(type, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a9312a9fc987dba9376a530956f94e8feadc185a3c3f94edb13394c0c545746580">LAST_TYPE</a>);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(type, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a9312a9fc987dba9376a530956f94e8feadc185a3c3f94edb13394c0c545746580">LAST_TYPE</a>);</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStats.html#ab1d2fe3bc9f146ac82f01ffd0b349843">object_counts_</a>[<a class="code hl_variable" href="wasm-inlining-into-js_8cc.html#a66874a4e937e4192b2b42e57f55251e8">type</a>]++;</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStats.html#aa57b885f877a96f35ff3f3d9829aeda2">object_sizes_</a>[<a class="code hl_variable" href="wasm-inlining-into-js_8cc.html#a66874a4e937e4192b2b42e57f55251e8">type</a>] += <a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>;</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStats.html#a89d861038464e9ee6280d239c87d1463">size_histogram_</a>[<a class="code hl_variable" href="wasm-inlining-into-js_8cc.html#a66874a4e937e4192b2b42e57f55251e8">type</a>][<a class="code hl_function" href="classv8_1_1internal_1_1ObjectStats.html#a32f8e99b4e243ba5b99249220e9aebac">HistogramIndexFromSize</a>(size)]++;</div>
@@ -504,7 +512,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00364" data-start="{" data-end="}">
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ObjectStats.html#a254f99b96e017b8e3f394cdee70bd9e9">  364</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStats.html#a254f99b96e017b8e3f394cdee70bd9e9">ObjectStats::RecordVirtualObjectStats</a>(<a class="code hl_enumeration" href="classv8_1_1internal_1_1ObjectStats.html#af126327fac2128439af512ada2dca996">VirtualInstanceType</a> type,</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>                                           <span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> over_allocated) {</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(type, <a class="code hl_enumvalue" href="classv8_1_1internal_1_1ObjectStats.html#af126327fac2128439af512ada2dca996acc50bb95ca1160249c8f8c79068a0147">LAST_VIRTUAL_TYPE</a>);</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(type, <a class="code hl_enumvalue" href="classv8_1_1internal_1_1ObjectStats.html#af126327fac2128439af512ada2dca996acc50bb95ca1160249c8f8c79068a0147">LAST_VIRTUAL_TYPE</a>);</div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStats.html#ab1d2fe3bc9f146ac82f01ffd0b349843">object_counts_</a>[<a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStats.html#afabf91aa046ba8550b59df4295e9298d">FIRST_VIRTUAL_TYPE</a> + <a class="code hl_variable" href="wasm-inlining-into-js_8cc.html#a66874a4e937e4192b2b42e57f55251e8">type</a>]++;</div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStats.html#aa57b885f877a96f35ff3f3d9829aeda2">object_sizes_</a>[<a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStats.html#afabf91aa046ba8550b59df4295e9298d">FIRST_VIRTUAL_TYPE</a> + <a class="code hl_variable" href="wasm-inlining-into-js_8cc.html#a66874a4e937e4192b2b42e57f55251e8">type</a>] += <a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>;</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStats.html#a89d861038464e9ee6280d239c87d1463">size_histogram_</a>[<a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStats.html#afabf91aa046ba8550b59df4295e9298d">FIRST_VIRTUAL_TYPE</a> + <a class="code hl_variable" href="wasm-inlining-into-js_8cc.html#a66874a4e937e4192b2b42e57f55251e8">type</a>][<a class="code hl_function" href="classv8_1_1internal_1_1ObjectStats.html#a32f8e99b4e243ba5b99249220e9aebac">HistogramIndexFromSize</a>(size)]++;</div>
@@ -550,7 +558,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>                                <a class="code hl_enumeration" href="classv8_1_1internal_1_1ObjectStats.html#af126327fac2128439af512ada2dca996">ObjectStats::VirtualInstanceType</a> type,</div>
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>                                <span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> over_allocated,</div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>                                <a class="code hl_enumeration" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a7ae621d7710c687daa32b02871162d33">CowMode</a> check_cow_array = <a class="code hl_enumvalue" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a7ae621d7710c687daa32b02871162d33a4ebf0903174c672f40709785f5c0626b">kCheckCow</a>);</div>
-<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a45199050e25972cade4cb0db35b27e2e">RecordExternalResourceStats</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> resource,</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a45199050e25972cade4cb0db35b27e2e">RecordExternalResourceStats</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> resource,</div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>                                   <a class="code hl_enumeration" href="classv8_1_1internal_1_1ObjectStats.html#af126327fac2128439af512ada2dca996">ObjectStats::VirtualInstanceType</a> type,</div>
 <div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>                                   <span class="keywordtype">size_t</span> size);</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>  <span class="comment">// Gets size from |ob| and assumes no over allocating.</span></div>
@@ -671,7 +679,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> parent, <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> obj,</div>
 <div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>    <a class="code hl_enumeration" href="classv8_1_1internal_1_1ObjectStats.html#af126327fac2128439af512ada2dca996">ObjectStats::VirtualInstanceType</a> type, <span class="keywordtype">size_t</span> size, <span class="keywordtype">size_t</span> over_allocated,</div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>    <a class="code hl_enumeration" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a7ae621d7710c687daa32b02871162d33">CowMode</a> check_cow_array) {</div>
-<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>  <a class="code hl_define" href="logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a>(over_allocated, size);</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a>(over_allocated, size);</div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a3675d2ead1c636482f65e352bcb4c28b">SameLiveness</a>(parent, obj) || !<a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a7e68e2a36d2979e7372caf302ec55c9d">ShouldRecordObject</a>(obj, check_cow_array)) {</div>
 <div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>  }</div>
@@ -687,7 +695,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span> </div>
 <div class="foldopen" id="foldopen00528" data-start="{" data-end="}">
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a45199050e25972cade4cb0db35b27e2e">  528</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a45199050e25972cade4cb0db35b27e2e">ObjectStatsCollectorImpl::RecordExternalResourceStats</a>(</div>
-<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>    <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> resource, <a class="code hl_enumeration" href="classv8_1_1internal_1_1ObjectStats.html#af126327fac2128439af512ada2dca996">ObjectStats::VirtualInstanceType</a> type, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>    <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> resource, <a class="code hl_enumeration" href="classv8_1_1internal_1_1ObjectStats.html#af126327fac2128439af512ada2dca996">ObjectStats::VirtualInstanceType</a> type, <span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#ac953b1738737d264bae019c2cd5096f8">external_resources_</a>.find(resource) == <a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#ac953b1738737d264bae019c2cd5096f8">external_resources_</a>.end()) {</div>
 <div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#ac953b1738737d264bae019c2cd5096f8">external_resources_</a>.insert(resource);</div>
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#ae601a3fa453f10c7a28db54d272a8a28">stats_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ObjectStats.html#a254f99b96e017b8e3f394cdee70bd9e9">RecordVirtualObjectStats</a>(type, size, 0);</div>
@@ -813,7 +821,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>  <span class="keywordflow">if</span> (IsJSCollection(<span class="keywordtype">object</span>)) {</div>
 <div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> maybe_table = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSCollection&gt;</a>(<span class="keywordtype">object</span>)-&gt;table();</div>
 <div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>    <span class="keywordflow">if</span> (!IsUndefined(maybe_table, <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a46f81461f8915d86094c1e338b70e4f6">isolate</a>())) {</div>
-<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsFixedArray(maybe_table, <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a46f81461f8915d86094c1e338b70e4f6">isolate</a>()));</div>
+<div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsFixedArray(maybe_table, <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a46f81461f8915d86094c1e338b70e4f6">isolate</a>()));</div>
 <div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>      <span class="comment">// TODO(bmeurer): Properly compute over-allocation here.</span></div>
 <div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>      <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a779dd730fa8f6e9c352940f760a7678b">RecordSimpleVirtualObjectStats</a>(<span class="keywordtype">object</span>, <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;HeapObject&gt;</a>(maybe_table),</div>
 <div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>                                     ObjectStats::JS_COLLECTION_TABLE_TYPE);</div>
@@ -910,7 +918,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>    }</div>
 <div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>  }</div>
 <div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span> </div>
-<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(calculated_size, vector-&gt;Size());</div>
+<div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(calculated_size, vector-&gt;Size());</div>
 <div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>}</div>
 </div>
 <div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span> </div>
@@ -1134,7 +1142,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>    <span class="comment">// them manually. The on-heap String object is recorded independently in</span></div>
 <div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>    <span class="comment">// the normal pass.</span></div>
 <div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;ExternalString&gt;</a> <span class="keywordtype">string</span> = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;ExternalString&gt;</a>(raw_source);</div>
-<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>    <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> resource = <span class="keywordtype">string</span>-&gt;resource_as_address();</div>
+<div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>    <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> resource = <span class="keywordtype">string</span>-&gt;resource_as_address();</div>
 <div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span>    <span class="keywordtype">size_t</span> off_heap_size = <span class="keywordtype">string</span>-&gt;ExternalPayloadSize();</div>
 <div class="line"><a id="l00948" name="l00948"></a><span class="lineno">  948</span>    <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a45199050e25972cade4cb0db35b27e2e">RecordExternalResourceStats</a>(</div>
 <div class="line"><a id="l00949" name="l00949"></a><span class="lineno">  949</span>        resource,</div>
@@ -1158,7 +1166,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;ExternalString&gt;</a> <span class="keywordtype">string</span>) {</div>
 <div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>  <span class="comment">// Track the external string resource size in a separate category.</span></div>
 <div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span> </div>
-<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> resource = <span class="keywordtype">string</span>-&gt;resource_as_address();</div>
+<div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> resource = <span class="keywordtype">string</span>-&gt;resource_as_address();</div>
 <div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>  <span class="keywordtype">size_t</span> off_heap_size = <span class="keywordtype">string</span>-&gt;ExternalPayloadSize();</div>
 <div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>  <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a45199050e25972cade4cb0db35b27e2e">RecordExternalResourceStats</a>(</div>
 <div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>      resource,</div>
@@ -1278,7 +1286,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>  }</div>
 <div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span>  <span class="keywordtype">int</span> <span class="keyword">const</span> mode_mask = <a class="code hl_function" href="classv8_1_1internal_1_1RelocInfo.html#af9e13797ecf59af38fcdb4da20c10ba1">RelocInfo::EmbeddedObjectModeMask</a>();</div>
 <div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>  <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1RelocIterator.html">RelocIterator</a> it(code, mode_mask); !it.<a class="code hl_function" href="classv8_1_1internal_1_1RelocIteratorBase.html#a4e36ec3860d142b680388b2280014ea0">done</a>(); it.next()) {</div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1RelocInfo.html#a9de6eaa529e2d449eb3c4c78fc321d2e">RelocInfo::IsEmbeddedObjectMode</a>(it.rinfo()-&gt;rmode()));</div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1RelocInfo.html#a9de6eaa529e2d449eb3c4c78fc321d2e">RelocInfo::IsEmbeddedObjectMode</a>(it.rinfo()-&gt;rmode()));</div>
 <div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> target = it.rinfo()-&gt;target_object(<a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#adb8754abcdb7cc3ddd10212f1739b22e">cage_base</a>());</div>
 <div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span>    <span class="keywordflow">if</span> (IsFixedArrayExact(target, <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#adb8754abcdb7cc3ddd10212f1739b22e">cage_base</a>())) {</div>
 <div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span>      <a class="code hl_function" href="classv8_1_1internal_1_1ObjectStatsCollectorImpl.html#a89569af4b1cf8c4141cf52c047d8fcfc">RecordVirtualObjectsForConstantPoolOrEmbeddedObjects</a>(</div>
@@ -1405,10 +1413,10 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1FullMaybeObjectSlot_html"><div class="ttname"><a href="classv8_1_1internal_1_1FullMaybeObjectSlot.html">v8::internal::FullMaybeObjectSlot</a></div><div class="ttdef"><b>Definition</b> <a href="slots_8h_source.html#l00153">slots.h:154</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1FullObjectSlot_html"><div class="ttname"><a href="classv8_1_1internal_1_1FullObjectSlot.html">v8::internal::FullObjectSlot</a></div><div class="ttdef"><b>Definition</b> <a href="slots_8h_source.html#l00099">slots.h:99</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1HeapObject_html"><div class="ttname"><a href="classv8_1_1internal_1_1HeapObject.html">v8::internal::HeapObject</a></div><div class="ttdef"><b>Definition</b> <a href="heap-object_8h_source.html#l00144">heap-object.h:144</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00192">heap.h:192</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a13477e3c7f84edd0e53ef605672043ba"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a13477e3c7f84edd0e53ef605672043ba">v8::internal::Heap::allocation_sites_list</a></div><div class="ttdeci">Tagged&lt; Object &gt; allocation_sites_list()</div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00468">heap.h:468</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00192">heap.h:192</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a13477e3c7f84edd0e53ef605672043ba"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a13477e3c7f84edd0e53ef605672043ba">v8::internal::Heap::allocation_sites_list</a></div><div class="ttdeci">Tagged&lt; Object &gt; allocation_sites_list()</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00468">heap.h:468</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a588dcf15f8980146a8bd5086b3bc3e64"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a588dcf15f8980146a8bd5086b3bc3e64">v8::internal::Heap::single_character_string_table</a></div><div class="ttdeci">V8_INLINE Tagged&lt; FixedArray &gt; single_character_string_table()</div><div class="ttdef"><b>Definition</b> <a href="heap-inl_8h_source.html#l00076">heap-inl.h:76</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a9b1db24b68d99aa9e67cb3210b6692a2"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a9b1db24b68d99aa9e67cb3210b6692a2">v8::internal::Heap::gc_count</a></div><div class="ttdeci">int gc_count() const</div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l01340">heap.h:1340</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a9b1db24b68d99aa9e67cb3210b6692a2"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a9b1db24b68d99aa9e67cb3210b6692a2">v8::internal::Heap::gc_count</a></div><div class="ttdeci">int gc_count() const</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l01340">heap.h:1340</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_ae5160ad63bc51ff7b36e8f247be48f63"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#ae5160ad63bc51ff7b36e8f247be48f63">v8::internal::Heap::isolate</a></div><div class="ttdeci">Isolate * isolate() const</div><div class="ttdef"><b>Definition</b> <a href="heap-inl_8h_source.html#l00059">heap-inl.h:59</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1InternalIndex_html"><div class="ttname"><a href="classv8_1_1internal_1_1InternalIndex.html">v8::internal::InternalIndex</a></div><div class="ttdef"><b>Definition</b> <a href="internal-index_8h_source.html#l00020">internal-index.h:20</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html">v8::internal::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l00575">isolate.h:575</a></div></div>
@@ -1546,17 +1554,12 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ajs-call-reducer_8cc_html_a0835767fe473cead88c1afdf3175bce8"><div class="ttname"><a href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a></div><div class="ttdeci">TNode&lt; Context &gt; context</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01496">js-call-reducer.cc:1496</a></div></div>
 <div class="ttc" id="ajs-collection-inl_8h_html"><div class="ttname"><a href="js-collection-inl_8h.html">js-collection-inl.h</a></div></div>
 <div class="ttc" id="aliteral-objects-inl_8h_html"><div class="ttname"><a href="literal-objects-inl_8h.html">literal-objects-inl.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_a45a0717f39b7011dc823c1fe7b83e6fc"><div class="ttname"><a href="logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a></div><div class="ttdeci">#define CHECK_LT(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00487">logging.h:487</a></div></div>
 <div class="ttc" id="amark-compact_8cc_html_abd487a5a0c55e6011fa27068c35dfe31"><div class="ttname"><a href="mark-compact_8cc.html#abd487a5a0c55e6011fa27068c35dfe31">marking_state_</a></div><div class="ttdeci">NonAtomicMarkingState * marking_state_</div><div class="ttdef"><b>Definition</b> <a href="mark-compact_8cc_source.html#l05488">mark-compact.cc:5488</a></div></div>
 <div class="ttc" id="amark-compact_8h_html"><div class="ttname"><a href="mark-compact_8h.html">mark-compact.h</a></div></div>
 <div class="ttc" id="amarking-state-inl_8h_html"><div class="ttname"><a href="marking-state-inl_8h.html">marking-state-inl.h</a></div></div>
 <div class="ttc" id="amemcopy_8h_html"><div class="ttname"><a href="memcopy_8h.html">memcopy.h</a></div></div>
 <div class="ttc" id="amutex_8h_html_ab9eda31a32ad469c6c00d977fe45b37f"><div class="ttname"><a href="mutex_8h.html#ab9eda31a32ad469c6c00d977fe45b37f">LAZY_MUTEX_INITIALIZER</a></div><div class="ttdeci">#define LAZY_MUTEX_INITIALIZER</div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00349">mutex.h:349</a></div></div>
-<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
+<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_1_1bits_html_a05e2bc2d432bf561a7cf3ced275a87be"><div class="ttname"><a href="namespacev8_1_1base_1_1bits.html#a05e2bc2d432bf561a7cf3ced275a87be">v8::base::bits::CountLeadingZeros</a></div><div class="ttdeci">constexpr unsigned CountLeadingZeros(T value)</div><div class="ttdef"><b>Definition</b> <a href="bits_8h_source.html#l00100">bits.h:100</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1InstanceTypeChecker_html_a499b0a3964a81c9abb3e89b9b9ca92f2"><div class="ttname"><a href="namespacev8_1_1internal_1_1InstanceTypeChecker.html#a499b0a3964a81c9abb3e89b9b9ca92f2">v8::internal::InstanceTypeChecker::IsExternalString</a></div><div class="ttdeci">V8_INLINE constexpr bool IsExternalString(InstanceType instance_type)</div><div class="ttdef"><b>Definition</b> <a href="instance-type-inl_8h_source.html#l00328">instance-type-inl.h:328</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
@@ -1589,8 +1592,8 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_a63bcc84e97b3c033c4669683df6ceab2"><div class="ttname"><a href="namespacev8_1_1internal.html#a63bcc84e97b3c033c4669683df6ceab2">v8::internal::Cast&lt; NumberDictionary &gt;</a></div><div class="ttdeci">return Cast&lt; NumberDictionary &gt;(elements(cage_base))</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a67a51b6314a9bc8a8c44c5fe14149e6c"><div class="ttname"><a href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">v8::internal::key</a></div><div class="ttdeci">int32_t key</div><div class="ttdef"><b>Definition</b> <a href="external-reference_8cc_source.html#l01345">external-reference.cc:1345</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a72cbfdfeabb9a401f279f7b80bcff67a"><div class="ttname"><a href="namespacev8_1_1internal.html#a72cbfdfeabb9a401f279f7b80bcff67a">v8::internal::kSystemPointerSize</a></div><div class="ttdeci">constexpr int kSystemPointerSize</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00402">globals.h:402</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a85b33c0aa285b5a6b0c9963edf565da7"><div class="ttname"><a href="namespacev8_1_1internal.html#a85b33c0aa285b5a6b0c9963edf565da7">v8::internal::code</a></div><div class="ttdeci">force emit tier up logic from all non turbofan code</div><div class="ttdef"><b>Definition</b> <a href="flags_8cc_source.html#l00515">flags.cc:515</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a9312a9fc987dba9376a530956f94e8fe"><div class="ttname"><a href="namespacev8_1_1internal.html#a9312a9fc987dba9376a530956f94e8fe">v8::internal::InstanceType</a></div><div class="ttdeci">InstanceType</div><div class="ttdef"><b>Definition</b> <a href="instance-type_8h_source.html#l00105">instance-type.h:105</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a9312a9fc987dba9376a530956f94e8feadc185a3c3f94edb13394c0c545746580"><div class="ttname"><a href="namespacev8_1_1internal.html#a9312a9fc987dba9376a530956f94e8feadc185a3c3f94edb13394c0c545746580">v8::internal::LAST_TYPE</a></div><div class="ttdeci">@ LAST_TYPE</div><div class="ttdef"><b>Definition</b> <a href="instance-type_8h_source.html#l00186">instance-type.h:186</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a9f3877ef6710a52328e07f2f6347b577"><div class="ttname"><a href="namespacev8_1_1internal.html#a9f3877ef6710a52328e07f2f6347b577">v8::internal::CodeKind</a></div><div class="ttdeci">CodeKind</div><div class="ttdef"><b>Definition</b> <a href="code-kind_8h_source.html#l00033">code-kind.h:33</a></div></div>
@@ -1617,6 +1620,11 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aprototype-info_8h_html"><div class="ttname"><a href="prototype-info_8h.html">prototype-info.h</a></div></div>
 <div class="ttc" id="asetup-heap-internal_8cc_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> <a href="setup-heap-internal_8cc_source.html#l00126">setup-heap-internal.cc:126</a></div></div>
 <div class="ttc" id="aslots_8h_html"><div class="ttname"><a href="slots_8h.html">slots.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a45a0717f39b7011dc823c1fe7b83e6fc"><div class="ttname"><a href="src_2base_2logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a></div><div class="ttdeci">#define CHECK_LT(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00487">logging.h:487</a></div></div>
 <div class="ttc" id="astructv8_1_1base_1_1LazyInstanceImpl_html"><div class="ttname"><a href="structv8_1_1base_1_1LazyInstanceImpl.html">v8::base::LazyInstanceImpl</a></div><div class="ttdef"><b>Definition</b> <a href="lazy-instance_8h_source.html#l00164">lazy-instance.h:164</a></div></div>
 <div class="ttc" id="astructv8_1_1base_1_1LazyInstanceImpl_html_a66006c64ca089a7f7b66b71f0bf0f264"><div class="ttname"><a href="structv8_1_1base_1_1LazyInstanceImpl.html#a66006c64ca089a7f7b66b71f0bf0f264">v8::base::LazyInstanceImpl::Pointer</a></div><div class="ttdeci">T * Pointer()</div><div class="ttdef"><b>Definition</b> <a href="lazy-instance_8h_source.html#l00179">lazy-instance.h:179</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1FieldStatsCollector_1_1JSObjectFieldStats_html"><div class="ttname"><a href="structv8_1_1internal_1_1FieldStatsCollector_1_1JSObjectFieldStats.html">v8::internal::FieldStatsCollector::JSObjectFieldStats</a></div><div class="ttdef"><b>Definition</b> <a href="#l00124">object-stats.cc:124</a></div></div>
@@ -1627,14 +1635,19 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="astructv8_1_1internal_1_1Object_1_1Hasher_html"><div class="ttname"><a href="structv8_1_1internal_1_1Object_1_1Hasher.html">v8::internal::Object::Hasher</a></div><div class="ttdef"><b>Definition</b> <a href="objects_8h_source.html#l00497">objects.h:497</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1Object_1_1KeyEqualSafe_html"><div class="ttname"><a href="structv8_1_1internal_1_1Object_1_1KeyEqualSafe.html">v8::internal::Object::KeyEqualSafe</a></div><div class="ttdef"><b>Definition</b> <a href="objects_8h_source.html#l00506">objects.h:506</a></div></div>
 <div class="ttc" id="atemplates_8h_html"><div class="ttname"><a href="templates_8h.html">templates.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
+<div class="ttc" id="av8config_8h_html_aae8e4cfdd8ebf80e774cb42d8b4980e6"><div class="ttname"><a href="v8config_8h.html#aae8e4cfdd8ebf80e774cb42d8b4980e6">V8_NOINLINE</a></div><div class="ttdeci">#define V8_NOINLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00575">v8config.h:575</a></div></div>
 <div class="ttc" id="avisit-object_8h_html"><div class="ttname"><a href="visit-object_8h.html">visit-object.h</a></div></div>
 <div class="ttc" id="avisitors_8h_html"><div class="ttname"><a href="visitors_8h.html">visitors.h</a></div></div>
 <div class="ttc" id="awasm-inlining-into-js_8cc_html_a66874a4e937e4192b2b42e57f55251e8"><div class="ttname"><a href="wasm-inlining-into-js_8cc.html#a66874a4e937e4192b2b42e57f55251e8">type</a></div><div class="ttdeci">wasm::ValueType type</div><div class="ttdef"><b>Definition</b> <a href="wasm-inlining-into-js_8cc_source.html#l00028">wasm-inlining-into-js.cc:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:34 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="object-stats_8cc.html">object-stats.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:43 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

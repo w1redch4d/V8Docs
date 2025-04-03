@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/cppgc/remembered-set.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/cppgc/remembered-set.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('remembered-set_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">remembered-set.cc</div></div>
 </div><!--header-->
@@ -104,8 +112,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;include/cppgc/member.h&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;include/cppgc/visitor.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="member_8h.html">include/cppgc/member.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="include_2cppgc_2visitor_8h.html">include/cppgc/visitor.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="basic-slot-set_8h.html">src/heap/base/basic-slot-set.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="heap-base_8h.html">src/heap/cppgc/heap-base.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="heap-object-header_8h.html">src/heap/cppgc/heap-object-header.h</a>&quot;</span></div>
@@ -118,7 +126,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacev8_1_1internal.html#acee9c59587b497961ec8549083c66fe1">SlotType</a> { <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#abe5419355372f787c28119c509343410af022b1b68086ee81124489a1d5302d9c">kCompressed</a>, kUncompressed };</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacev8_1_1internal.html#acee9c59587b497961ec8549083c66fe1">SlotType</a> { <a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#a7066e2cde3db1ae33d1cb33f45c7d28caf022b1b68086ee81124489a1d5302d9c">kCompressed</a>, <a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#a7066e2cde3db1ae33d1cb33f45c7d28ca83650129be84e9269ee8e409df92265d">kUncompressed</a> };</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keywordtype">void</span> EraseFromSet(std::set&lt;void*&gt;&amp; set, <span class="keywordtype">void</span>* begin, <span class="keywordtype">void</span>* <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>) {</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="comment">// TODO(1029379): The 2 binary walks can be optimized with a custom algorithm.</span></div>
@@ -131,12 +139,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> InvalidateCompressedRememberedSlots(</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keyword">const</span> HeapBase&amp; <a class="code hl_namespace" href="namespaceheap.html">heap</a>, <span class="keywordtype">void</span>* begin, <span class="keywordtype">void</span>* <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>,</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    std::set&lt;void*&gt;&amp; remembered_slots_for_verification) {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(begin, <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(begin, <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  BasePage* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> = <a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#af1e5606c811fb5dcdbd60e1da987f409">BasePage::FromInnerAddress</a>(&amp;<a class="code hl_namespace" href="namespaceheap.html">heap</a>, begin);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="comment">// The input range must reside within the same page.</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#af1e5606c811fb5dcdbd60e1da987f409">BasePage::FromInnerAddress</a>(</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#af1e5606c811fb5dcdbd60e1da987f409">BasePage::FromInnerAddress</a>(</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                      &amp;<a class="code hl_namespace" href="namespaceheap.html">heap</a>, <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                                 <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>) - 1)));</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
@@ -165,7 +173,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif  </span><span class="comment">// DEBUG</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#if defined(ENABLE_SLOW_DCHECKS)</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="comment">// Check that no remembered slots are referring to the freed area.</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(std::none_of(slots.begin(), slots.end(), [begin, <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>](<span class="keywordtype">void</span>* slot) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(std::none_of(slots.begin(), slots.end(), [begin, <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>](<span class="keywordtype">void</span>* slot) {</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    void* value = nullptr;</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    value = *reinterpret_cast&lt;void**&gt;(slot);</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    return begin &lt;= value &amp;&amp; value &lt; end;</div>
@@ -179,8 +187,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>               MutatorMarkingState&amp; marking_state,</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>               <span class="keyword">const</span> std::set&lt;void*&gt;&amp; slots_for_verification) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#if defined(DEBUG)</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#af1e5606c811fb5dcdbd60e1da987f409">BasePage::FromInnerAddress</a>(&amp;<a class="code hl_namespace" href="namespaceheap.html">heap</a>, slot), &amp;<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(slots_for_verification.end(), slots_for_verification.find(slot));</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#af1e5606c811fb5dcdbd60e1da987f409">BasePage::FromInnerAddress</a>(&amp;<a class="code hl_namespace" href="namespaceheap.html">heap</a>, slot), &amp;<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(slots_for_verification.end(), slots_for_verification.find(slot));</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif  </span><span class="comment">// defined(DEBUG)</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="comment">// Slot must always point to a valid, not freed object.</span></div>
@@ -202,13 +210,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="preprocessor">#endif  </span><span class="comment">// !defined(CPPGC_POINTER_COMPRESSION)</span></div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="comment">// Slot could be updated to nullptr or kSentinelPointer by the mutator.</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordflow">if</span> (value == kSentinelPointer || value == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordflow">if</span> (value == <a class="code hl_variable" href="namespacecppgc.html#a6ed40538a8d2b6b06da04df5de1f8786">kSentinelPointer</a> || value == <span class="keyword">nullptr</span>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="preprocessor">#if defined(DEBUG)</span></div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="comment">// Check that the slot can not point to a freed object.</span></div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  HeapObjectHeader&amp; header =</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>      <a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#aad13cafeed6c2ea494b7423b9c527b7a">BasePage::FromPayload</a>(value)-&gt;<a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#a3e4e942b9d1f96f27df335a9daaacf09">ObjectHeaderFromInnerAddress</a>(value);</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!header.IsFree());</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!header.IsFree());</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="preprocessor">#endif  </span><span class="comment">// defined(DEBUG)</span></div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  marking_state.DynamicallyMarkAddress(<span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a3878725f90703deddf084b1accc7a2b9">Address</a><span class="keyword">&gt;</span>(value));</div>
@@ -231,7 +239,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <a class="code hl_enumeration" href="namespaceheap_1_1base.html#af211f1740517ece6877e81f91b8c6759">heap::base::SlotCallbackResult</a> VisitCompressedSlot(Address slot) {</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="compactor_8cc.html#a1adada8638c886c8154b711d530885d6">current_page_</a>);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="compactor_8cc.html#a1adada8638c886c8154b711d530885d6">current_page_</a>);</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    VisitSlot&lt;SlotType::kCompressed&gt;(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>, *<a class="code hl_variable" href="compactor_8cc.html#a1adada8638c886c8154b711d530885d6">current_page_</a>, slot,</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                                     <a class="code hl_variable" href="mark-compact_8cc.html#abd487a5a0c55e6011fa27068c35dfe31">marking_state_</a>,</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>                                     remembered_slots_for_verification_);</div>
@@ -240,7 +248,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  }</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <span class="keywordtype">void</span> VisitSlotSet(SlotSet* slot_set) {</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="compactor_8cc.html#a1adada8638c886c8154b711d530885d6">current_page_</a>);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="compactor_8cc.html#a1adada8638c886c8154b711d530885d6">current_page_</a>);</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">if</span> (!slot_set) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
@@ -311,14 +319,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  }</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <span class="keywordflow">for</span> (<span class="keywordtype">void</span>* uncompressed_slot : remembered_uncompressed_slots) {</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keyword">auto</span>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> = <a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#af1e5606c811fb5dcdbd60e1da987f409">BasePage::FromInnerAddress</a>(&amp;<a class="code hl_namespace" href="namespaceheap.html">heap</a>, uncompressed_slot);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>);</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    VisitSlot&lt;SlotType::kUncompressed&gt;(</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        <a class="code hl_namespace" href="namespaceheap.html">heap</a>, *<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a3878725f90703deddf084b1accc7a2b9">Address</a><span class="keyword">&gt;</span>(uncompressed_slot),</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        mutator_marking_state, remembered_slots_for_verification);</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    ++objects_visited;</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  }</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(remembered_slots_for_verification.size(), objects_visited);</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(objects_visited);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(remembered_slots_for_verification.size(), objects_visited);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(objects_visited);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>}</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="comment">// Visits source objects that were recorded in the generational barrier for</span></div>
@@ -327,13 +335,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keyword">const</span> std::set&lt;HeapObjectHeader*&gt;&amp; remembered_source_objects,</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    Visitor&amp; visitor) {</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <span class="keywordflow">for</span> (HeapObjectHeader* source_hoh : remembered_source_objects) {</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(source_hoh);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(source_hoh);</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="comment">// The age checking in the generational barrier is imprecise, since a card</span></div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="comment">// may have mixed young/old objects. Check here precisely if the object is</span></div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <span class="comment">// old.</span></div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    <span class="keywordflow">if</span> (source_hoh-&gt;IsYoung()) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
-<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keyword">const</span> TraceCallback trace_callback =</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="namespacecppgc.html#af97d391c993ccebc888fa1a9de87f72a">TraceCallback</a> trace_callback =</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>        <a class="code hl_function" href="classcppgc_1_1internal_1_1GlobalGCInfoTable.html#a4b8c1b342810ea68458b9a25731c9670">GlobalGCInfoTable::GCInfoFromIndex</a>(source_hoh-&gt;GetGCInfoIndex()).<a class="code hl_variable" href="structcppgc_1_1internal_1_1GCInfo.html#a38d648a24eb18de96f6f9b9b9bda4f09">trace</a>;</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="comment">// Process eagerly to avoid reaccounting.</span></div>
@@ -348,15 +356,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>    std::set&lt;HeapObjectHeader*&gt;&amp; remembered_in_construction_objects,</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    Visitor&amp; visitor, ConservativeTracingVisitor&amp; conservative_visitor) {</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  <span class="keywordflow">for</span> (HeapObjectHeader* hoh : remembered_in_construction_objects) {</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(hoh);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(hoh);</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <span class="comment">// The object must be marked on previous GC.</span></div>
-<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(hoh-&gt;IsMarked());</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(hoh-&gt;IsMarked());</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <span class="keywordflow">if</span> (hoh-&gt;template IsInConstruction&lt;AccessMode::kNonAtomic&gt;()) {</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>      conservative_visitor.TraceConservatively(*hoh);</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>      <span class="comment">// If the object is fully constructed, trace precisely.</span></div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      <span class="keyword">const</span> TraceCallback trace_callback =</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>      <span class="keyword">const</span> <a class="code hl_typedef" href="namespacecppgc.html#af97d391c993ccebc888fa1a9de87f72a">TraceCallback</a> trace_callback =</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>          <a class="code hl_function" href="classcppgc_1_1internal_1_1GlobalGCInfoTable.html#a4b8c1b342810ea68458b9a25731c9670">GlobalGCInfoTable::GCInfoFromIndex</a>(hoh-&gt;GetGCInfoIndex()).<a class="code hl_variable" href="structcppgc_1_1internal_1_1GCInfo.html#a38d648a24eb18de96f6f9b9b9bda4f09">trace</a>;</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>      trace_callback(&amp;visitor, hoh-&gt;ObjectStart());</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    }</div>
@@ -366,10 +374,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>}  <span class="comment">// namespace</span></div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span> </div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="keywordtype">void</span> OldToNewRememberedSet::AddSlot(<span class="keywordtype">void</span>* slot) {</div>
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  BasePage* source_page = <a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#af1e5606c811fb5dcdbd60e1da987f409">BasePage::FromInnerAddress</a>(&amp;<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>, slot);</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(source_page);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(source_page);</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <span class="keyword">auto</span>&amp; slot_set = source_page-&gt;GetOrAllocateSlotSet();</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
@@ -385,7 +393,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>}</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="keywordtype">void</span> OldToNewRememberedSet::AddUncompressedSlot(<span class="keywordtype">void</span>* uncompressed_slot) {</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>  remembered_uncompressed_slots_.insert(uncompressed_slot);</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="preprocessor">#if defined(DEBUG)</span></div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>  remembered_slots_for_verification_.insert(uncompressed_slot);</div>
@@ -393,12 +401,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>}</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span><span class="keywordtype">void</span> OldToNewRememberedSet::AddSourceObject(HeapObjectHeader&amp; hoh) {</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>  remembered_source_objects_.insert(&amp;hoh);</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>}</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="keywordtype">void</span> OldToNewRememberedSet::AddWeakCallback(WeakCallbackItem item) {</div>
-<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  <span class="comment">// TODO(1029379): WeakCallbacks are also executed for weak collections.</span></div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  <span class="comment">// Consider splitting weak-callbacks in custom weak callbacks and ones for</span></div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>  <span class="comment">// collections.</span></div>
@@ -407,13 +415,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="keywordtype">void</span> OldToNewRememberedSet::AddInConstructionObjectToBeRetraced(</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    HeapObjectHeader&amp; hoh) {</div>
-<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>  remembered_in_construction_objects_.current.insert(&amp;hoh);</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>}</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span><span class="keywordtype">void</span> OldToNewRememberedSet::InvalidateRememberedSlotsInRange(<span class="keywordtype">void</span>* begin,</div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                                                             <span class="keywordtype">void</span>* <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>) {</div>
-<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  InvalidateCompressedRememberedSlots(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>, begin, <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>,</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>                                      remembered_slots_for_verification_);</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  InvalidateUncompressedRememberedSlots(remembered_uncompressed_slots_, begin,</div>
@@ -423,14 +431,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="keywordtype">void</span> OldToNewRememberedSet::InvalidateRememberedSourceObject(</div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    HeapObjectHeader&amp; header) {</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>  remembered_source_objects_.erase(&amp;header);</div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>}</div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="keywordtype">void</span> OldToNewRememberedSet::Visit(</div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    Visitor&amp; visitor, ConservativeTracingVisitor&amp; conservative_visitor,</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    MutatorMarkingState&amp; marking_state) {</div>
-<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>  VisitRememberedSlots(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>, marking_state, remembered_uncompressed_slots_,</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                       remembered_slots_for_verification_);</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>  VisitRememberedSourceObjects(remembered_source_objects_, visitor);</div>
@@ -439,19 +447,19 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>}</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="keywordtype">void</span> OldToNewRememberedSet::ExecuteCustomCallbacks(LivenessBroker <a class="code hl_variable" href="graph-builder_8cc.html#af88aca2403db6e64cd8bca9eda102a86">broker</a>) {</div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a> : remembered_weak_callbacks_) {</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a>.callback(<a class="code hl_variable" href="graph-builder_8cc.html#af88aca2403db6e64cd8bca9eda102a86">broker</a>, <a class="code hl_variable" href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a>.parameter);</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>  }</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>}</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="keywordtype">void</span> OldToNewRememberedSet::ReleaseCustomCallbacks() {</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  remembered_weak_callbacks_.clear();</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>}</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span><span class="keywordtype">void</span> OldToNewRememberedSet::Reset() {</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>.generational_gc_supported());</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>  SlotRemover slot_remover(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>);</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>  slot_remover.Run();</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>  remembered_uncompressed_slots_.clear();</div>
@@ -504,30 +512,38 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aheap-base_8h_html"><div class="ttname"><a href="heap-base_8h.html">heap-base.h</a></div></div>
 <div class="ttc" id="aheap-object-header_8h_html"><div class="ttname"><a href="heap-object-header_8h.html">heap-object-header.h</a></div></div>
 <div class="ttc" id="aheap-page_8h_html"><div class="ttname"><a href="heap-page_8h.html">heap-page.h</a></div></div>
+<div class="ttc" id="ainclude_2cppgc_2visitor_8h_html"><div class="ttname"><a href="include_2cppgc_2visitor_8h.html">visitor.h</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_ad83e8682ed733ee0cf359fa4f48441b0"><div class="ttname"><a href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a></div><div class="ttdeci">TNode&lt; Object &gt; callback</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01500">js-call-reducer.cc:1500</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00486">logging.h:486</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="amacros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="amark-compact_8cc_html_abd487a5a0c55e6011fa27068c35dfe31"><div class="ttname"><a href="mark-compact_8cc.html#abd487a5a0c55e6011fa27068c35dfe31">marking_state_</a></div><div class="ttdeci">NonAtomicMarkingState * marking_state_</div><div class="ttdef"><b>Definition</b> <a href="mark-compact_8cc_source.html#l05488">mark-compact.cc:5488</a></div></div>
+<div class="ttc" id="amember_8h_html"><div class="ttname"><a href="member_8h.html">member.h</a></div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_a3878725f90703deddf084b1accc7a2b9"><div class="ttname"><a href="namespacecppgc_1_1internal.html#a3878725f90703deddf084b1accc7a2b9">cppgc::internal::Address</a></div><div class="ttdeci">uint8_t * Address</div><div class="ttdef"><b>Definition</b> <a href="heap_2cppgc_2globals_8h_source.html#l00017">globals.h:17</a></div></div>
+<div class="ttc" id="anamespacecppgc_1_1internal_html_a7066e2cde3db1ae33d1cb33f45c7d28ca83650129be84e9269ee8e409df92265d"><div class="ttname"><a href="namespacecppgc_1_1internal.html#a7066e2cde3db1ae33d1cb33f45c7d28ca83650129be84e9269ee8e409df92265d">cppgc::internal::WriteBarrierSlotType::kUncompressed</a></div><div class="ttdeci">@ kUncompressed</div></div>
+<div class="ttc" id="anamespacecppgc_1_1internal_html_a7066e2cde3db1ae33d1cb33f45c7d28caf022b1b68086ee81124489a1d5302d9c"><div class="ttname"><a href="namespacecppgc_1_1internal.html#a7066e2cde3db1ae33d1cb33f45c7d28caf022b1b68086ee81124489a1d5302d9c">cppgc::internal::WriteBarrierSlotType::kCompressed</a></div><div class="ttdeci">@ kCompressed</div></div>
 <div class="ttc" id="anamespacecppgc_html"><div class="ttname"><a href="namespacecppgc.html">cppgc</a></div><div class="ttdef"><b>Definition</b> <a href="cross-heap-remembered-set_8h_source.html#l00014">cross-heap-remembered-set.h:14</a></div></div>
+<div class="ttc" id="anamespacecppgc_html_a6ed40538a8d2b6b06da04df5de1f8786"><div class="ttname"><a href="namespacecppgc.html#a6ed40538a8d2b6b06da04df5de1f8786">cppgc::kSentinelPointer</a></div><div class="ttdeci">constexpr internal::SentinelPointer kSentinelPointer</div><div class="ttdef"><b>Definition</b> <a href="sentinel-pointer_8h_source.html#l00035">sentinel-pointer.h:35</a></div></div>
+<div class="ttc" id="anamespacecppgc_html_af97d391c993ccebc888fa1a9de87f72a"><div class="ttname"><a href="namespacecppgc.html#af97d391c993ccebc888fa1a9de87f72a">cppgc::TraceCallback</a></div><div class="ttdeci">void(*)(Visitor *visitor, const void *object) TraceCallback</div><div class="ttdef"><b>Definition</b> <a href="trace-trait_8h_source.html#l00038">trace-trait.h:38</a></div></div>
 <div class="ttc" id="anamespaceheap_1_1base_html_af211f1740517ece6877e81f91b8c6759"><div class="ttname"><a href="namespaceheap_1_1base.html#af211f1740517ece6877e81f91b8c6759">heap::base::SlotCallbackResult</a></div><div class="ttdeci">SlotCallbackResult</div><div class="ttdef"><b>Definition</b> <a href="basic-slot-set_8h_source.html#l00022">basic-slot-set.h:22</a></div></div>
 <div class="ttc" id="anamespaceheap_1_1base_html_af211f1740517ece6877e81f91b8c6759ae8ea1f4f1c937202ac0aa2fe5bf33b40"><div class="ttname"><a href="namespaceheap_1_1base.html#af211f1740517ece6877e81f91b8c6759ae8ea1f4f1c937202ac0aa2fe5bf33b40">heap::base::KEEP_SLOT</a></div><div class="ttdeci">@ KEEP_SLOT</div><div class="ttdef"><b>Definition</b> <a href="basic-slot-set_8h_source.html#l00022">basic-slot-set.h:22</a></div></div>
-<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
+<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_ab5fa5880b3e672f78b7e772eebdae914"><div class="ttname"><a href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">v8::base::Address</a></div><div class="ttdeci">uintptr_t Address</div><div class="ttdef"><b>Definition</b> <a href="base_2memory_8h_source.html#l00013">memory.h:13</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_html_ae72af9053b45630a01be9a6140820b5a"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler.html#ae72af9053b45630a01be9a6140820b5a">v8::internal::compiler::begin</a></div><div class="ttdeci">Node::Uses::const_iterator begin(const Node::Uses &amp;uses)</div><div class="ttdef"><b>Definition</b> <a href="node_8h_source.html#l00709">node.h:709</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_abe5419355372f787c28119c509343410af022b1b68086ee81124489a1d5302d9c"><div class="ttname"><a href="namespacev8_1_1internal.html#abe5419355372f787c28119c509343410af022b1b68086ee81124489a1d5302d9c">v8::internal::MachineRepresentation::kCompressed</a></div><div class="ttdeci">@ kCompressed</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_acee9c59587b497961ec8549083c66fe1"><div class="ttname"><a href="namespacev8_1_1internal.html#acee9c59587b497961ec8549083c66fe1">v8::internal::SlotType</a></div><div class="ttdeci">SlotType</div><div class="ttdef"><b>Definition</b> <a href="slot-set_8h_source.html#l00232">slot-set.h:232</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00486">logging.h:486</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="astructcppgc_1_1internal_1_1GCInfo_html_a38d648a24eb18de96f6f9b9b9bda4f09"><div class="ttname"><a href="structcppgc_1_1internal_1_1GCInfo.html#a38d648a24eb18de96f6f9b9b9bda4f09">cppgc::internal::GCInfo::trace</a></div><div class="ttdeci">TraceCallback trace</div><div class="ttdef"><b>Definition</b> <a href="gc-info-table_8h_source.html#l00030">gc-info-table.h:30</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:31 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li><li class="navelem"><a class="el" href="remembered-set_8cc.html">remembered-set.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:39 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

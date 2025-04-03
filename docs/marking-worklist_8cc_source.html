@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/marking-worklist.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/marking-worklist.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('marking-worklist_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">marking-worklist.cc</div></div>
 </div><!--header-->
@@ -139,11 +147,11 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MarkingWorklists.html#a03bdf39a61570cea166a4c86c4dc404a">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1MarkingWorklists.html#a03bdf39a61570cea166a4c86c4dc404a">MarkingWorklists::CreateContextWorklists</a>(</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <span class="keyword">const</span> std::vector&lt;Address&gt;&amp; contexts) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1MarkingWorklists.html#ae03d023951c6a78762a94ab895beb966">context_worklists_</a>.empty());</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1MarkingWorklists.html#ae03d023951c6a78762a94ab895beb966">context_worklists_</a>.empty());</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordflow">if</span> (contexts.empty()) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1MarkingWorklists.html#ae03d023951c6a78762a94ab895beb966">context_worklists_</a>.reserve(contexts.size());</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordflow">for</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a> : contexts) {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordflow">for</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a> : contexts) {</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1MarkingWorklists.html#ae03d023951c6a78762a94ab895beb966">context_worklists_</a>.push_back(</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {<a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>, std::make_unique&lt;MarkingWorklist&gt;()});</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  }</div>
@@ -158,13 +166,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#ifdef DEBUG</span></div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  std::map&lt;InstanceType, int&gt; <a class="code hl_variable" href="debug-coverage_8cc.html#a86988a65e0d3ece7990c032c159786d6">count</a>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordtype">int</span> total_count = 0;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  worklist-&gt;<a class="code hl_function" href="classheap_1_1base_1_1Worklist.html#a4154216599f4f86ddb8dcd2cd1f98708">Iterate</a>([&amp;count, &amp;total_count](<a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> obj) {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  worklist-&gt;<a class="code hl_function" href="classheap_1_1base_1_1Worklist.html#a4154216599f4f86ddb8dcd2cd1f98708">Iterate</a>([&amp;<a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>, &amp;total_count](<a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> obj) {</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    ++total_count;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    count[obj-&gt;map()-&gt;instance_type()]++;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>[obj-&gt;map()-&gt;instance_type()]++;</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  });</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  std::vector&lt;std::pair&lt;int, InstanceType&gt;&gt; rank;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  rank.reserve(count.size());</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> : count) {</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  rank.reserve(<a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>.size());</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> : <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>) {</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    rank.emplace_back(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>.second, <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>.<a class="code hl_class" href="classfirst.html">first</a>);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  }</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  std::map&lt;InstanceType, std::string&gt; instance_type_name;</div>
@@ -181,8 +189,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
 </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">constexpr</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#af3565ff5f0610f2295e1438500e0028e">MarkingWorklists::Local::kSharedContext</a>;</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">constexpr</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a9c3a6a3c46368f5154d1852598064aef">MarkingWorklists::Local::kOtherContext</a>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">constexpr</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#af3565ff5f0610f2295e1438500e0028e">MarkingWorklists::Local::kSharedContext</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keyword">constexpr</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a9c3a6a3c46368f5154d1852598064aef">MarkingWorklists::Local::kOtherContext</a>;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keyword">constexpr</span> std::nullptr_t <a class="code hl_variable" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a9129871cbe80dbd2ea3c602d9fb016f6">MarkingWorklists::Local::kNoCppMarkingState</a>;</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="foldopen" id="foldopen00084" data-start="{" data-end="}">
@@ -272,7 +280,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
 <div class="foldopen" id="foldopen00159" data-start="{" data-end="}">
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#adff0230f509e7956d42e3882e84901c3">  159</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#adff0230f509e7956d42e3882e84901c3">MarkingWorklists::Local::PublishWork</a>() {</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!is_per_context_mode_);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!is_per_context_mode_);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1MarkingWorklists.html#ac47c81127a24ce99a82a33e92bdace34">shared_</a>.Publish();</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
 </div>
@@ -281,7 +289,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
 <div class="foldopen" id="foldopen00166" data-start="{" data-end="}">
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a4ceb138814c5c3b5e5192054e664eacb">  166</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a4ceb138814c5c3b5e5192054e664eacb">MarkingWorklists::Local::PopContext</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a>* <span class="keywordtype">object</span>) {</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(is_per_context_mode_);</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(is_per_context_mode_);</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <span class="comment">// As an optimization we first check only the local segments to avoid locks.</span></div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span>* entry = worklist_by_context_.Start(); entry != <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>       entry = worklist_by_context_.Next(entry)) {</div>
@@ -307,9 +315,9 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
 <div class="foldopen" id="foldopen00191" data-start="{" data-end="}">
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a44cade2329715cb2fb8066961e665339">  191</a></span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_function" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a44cade2329715cb2fb8066961e665339">MarkingWorklists::Local::SwitchToContextSlow</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>) {</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a44cade2329715cb2fb8066961e665339">  191</a></span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_function" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a44cade2329715cb2fb8066961e665339">MarkingWorklists::Local::SwitchToContextSlow</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>) {</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="keyword">auto</span> maybe_index = worklist_by_context_.Get(<a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>);</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(maybe_index.IsNothing())) {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(maybe_index.IsNothing())) {</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="comment">// The context passed is not an actual context:</span></div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="comment">// - Shared context that should use the explicit worklist.</span></div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="comment">// - This context was created during marking and should use the other</span></div>
@@ -327,7 +335,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
 <div class="foldopen" id="foldopen00209" data-start="{" data-end="}">
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a0302bd19013c71470ae0227818848960">  209</a></span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_function" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a0302bd19013c71470ae0227818848960">MarkingWorklists::Local::SwitchToSharedForTesting</a>() {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a0302bd19013c71470ae0227818848960">  209</a></span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_function" href="classv8_1_1internal_1_1MarkingWorklists_1_1Local.html#a0302bd19013c71470ae0227818848960">MarkingWorklists::Local::SwitchToSharedForTesting</a>() {</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <span class="keywordflow">return</span> SwitchToContext(<a class="code hl_variable" href="classv8_1_1internal_1_1MarkingWorklists.html#abaf8fc5e99579296cec2329c5d582755">kSharedContext</a>);</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>}</div>
 </div>
@@ -380,7 +388,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ainstance-type-inl_8h_html"><div class="ttname"><a href="instance-type-inl_8h.html">instance-type-inl.h</a></div></div>
 <div class="ttc" id="ainstance-type_8h_html"><div class="ttname"><a href="instance-type_8h.html">instance-type.h</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_a0835767fe473cead88c1afdf3175bce8"><div class="ttname"><a href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a></div><div class="ttdeci">TNode&lt; Context &gt; context</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01496">js-call-reducer.cc:1496</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="amap_8h_html"><div class="ttname"><a href="map_8h.html">map.h</a></div></div>
 <div class="ttc" id="amarking-worklist-inl_8h_html"><div class="ttname"><a href="marking-worklist-inl_8h.html">marking-worklist-inl.h</a></div></div>
 <div class="ttc" id="amarking-worklist_8h_html"><div class="ttname"><a href="marking-worklist_8h.html">marking-worklist.h</a></div></div>
@@ -390,15 +397,21 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_a0cfab207d565dcf62ebf50f3987e05de"><div class="ttname"><a href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">v8::internal::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> <a href="heap-snapshot-generator_8cc_source.html#l01584">heap-snapshot-generator.cc:1584</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a3430752cde9f29d73e97ceed1bce0856"><div class="ttname"><a href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">v8::internal::PrintF</a></div><div class="ttdeci">void PrintF(const char *format,...)</div><div class="ttdef"><b>Definition</b> <a href="utils_2utils_8cc_source.html#l00039">utils.cc:39</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="aobjects-definitions_8h_html"><div class="ttname"><a href="objects-definitions_8h.html">objects-definitions.h</a></div></div>
 <div class="ttc" id="aobjects-definitions_8h_html_a08f0e6d9ef2bb3e1927e95551a37e589"><div class="ttname"><a href="objects-definitions_8h.html#a08f0e6d9ef2bb3e1927e95551a37e589">INSTANCE_TYPE_LIST</a></div><div class="ttdeci">#define INSTANCE_TYPE_LIST(V)</div><div class="ttdef"><b>Definition</b> <a href="objects-definitions_8h_source.html#l00057">objects-definitions.h:57</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="astructv8_1_1internal_1_1count_html"><div class="ttname"><a href="structv8_1_1internal_1_1count.html">v8::internal::count</a></div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00567">v8-fast-api-calls.h:567</a></div></div>
+<div class="ttc" id="av8config_8h_html_a67bd29db07c711b0fb11ff1c324ebb60"><div class="ttname"><a href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a></div><div class="ttdeci">#define V8_UNLIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00649">v8config.h:649</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:34 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="marking-worklist_8cc.html">marking-worklist.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:42 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/cppgc/visitor.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/cppgc/visitor.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('visitor_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">visitor.cc</div></div>
 </div><!--header-->
@@ -98,7 +106,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Use of this source code is governed by a BSD-style license that can be</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// found in the LICENSE file.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="visitor_8h.html">src/heap/cppgc/visitor.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="src_2heap_2cppgc_2visitor_8h.html">src/heap/cppgc/visitor.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="asan_8h.html">src/base/sanitizer/asan.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="msan_8h.html">src/base/sanitizer/msan.h</a>&quot;</span></div>
@@ -110,7 +118,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="page-memory_8h.html">src/heap/cppgc/page-memory.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#if defined(CPPGC_CAGED_HEAP)</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="caged-heap_8h.html">src/heap/cppgc/caged-heap.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="src_2heap_2cppgc_2caged-heap_8h.html">src/heap/cppgc/caged-heap.h</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#endif  </span><span class="comment">// defined(CPPGC_CAGED_HEAP)</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecppgc.html">cppgc</a> {</div>
@@ -126,7 +134,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a79ea834ddebb47f8bca1d6f5d4dfb8de">   31</a></span><a class="code hl_function" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a79ea834ddebb47f8bca1d6f5d4dfb8de">ConservativeTracingVisitor::ConservativeTracingVisitor</a>(</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_class" href="classcppgc_1_1internal_1_1HeapBase.html">HeapBase</a>&amp; <a class="code hl_namespace" href="namespaceheap.html">heap</a>, <a class="code hl_class" href="classcppgc_1_1internal_1_1PageBackend.html">PageBackend</a>&amp; page_backend, cppgc::Visitor&amp; visitor)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_class" href="classcppgc_1_1internal_1_1HeapBase.html">HeapBase</a>&amp; <a class="code hl_namespace" href="namespaceheap.html">heap</a>, <a class="code hl_class" href="classcppgc_1_1internal_1_1PageBackend.html">PageBackend</a>&amp; page_backend, <a class="code hl_class" href="classcppgc_1_1Visitor.html">cppgc::Visitor</a>&amp; visitor)</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    : <a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>(<a class="code hl_namespace" href="namespaceheap.html">heap</a>), page_backend_(page_backend), visitor_(visitor) {}</div>
 </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
@@ -146,7 +154,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">// Copy into a temporary variable to maintain the original MSAN state.</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_define" href="msan_8h.html#a3247bf8fa2f4372cc59ac92e7432cc9c">MSAN_MEMORY_IS_INITIALIZED</a>(&amp;maybe_full_ptr, <span class="keyword">sizeof</span>(maybe_full_ptr));</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">// First, check the full pointer.</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span> (maybe_full_ptr &gt; SentinelPointer::kSentinelValue)</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span> (maybe_full_ptr &gt; <a class="code hl_variable" href="structcppgc_1_1internal_1_1SentinelPointer.html#a4303ace1859ea823b29de9abfe590a6d">SentinelPointer::kSentinelValue</a>)</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      this-&gt;<a class="code hl_function" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#ade80c90d390cc60399430d64a7e6682e">TraceConservativelyIfNeeded</a>(</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>          <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a3878725f90703deddf084b1accc7a2b9">Address</a><span class="keyword">&gt;</span>(maybe_full_ptr));</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#if defined(CPPGC_POINTER_COMPRESSION)</span></div>
@@ -154,13 +162,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">auto</span> decompressed_low = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a3878725f90703deddf084b1accc7a2b9">Address</a><span class="keyword">&gt;</span>(</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        CompressedPointer::Decompress(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(maybe_full_ptr)));</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">if</span> (decompressed_low &gt;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(SentinelPointer::kSentinelValue))</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="structcppgc_1_1internal_1_1SentinelPointer.html#a4303ace1859ea823b29de9abfe590a6d">SentinelPointer::kSentinelValue</a>))</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      this-&gt;<a class="code hl_function" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#ade80c90d390cc60399430d64a7e6682e">TraceConservativelyIfNeeded</a>(decompressed_low);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">auto</span> decompressed_high = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a3878725f90703deddf084b1accc7a2b9">Address</a><span class="keyword">&gt;</span>(</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        CompressedPointer::Decompress(<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            maybe_full_ptr &gt;&gt; (<span class="keyword">sizeof</span>(uint32_t) * CHAR_BIT))));</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordflow">if</span> (decompressed_high &gt;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(SentinelPointer::kSentinelValue))</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="structcppgc_1_1internal_1_1SentinelPointer.html#a4303ace1859ea823b29de9abfe590a6d">SentinelPointer::kSentinelValue</a>))</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>      this-&gt;<a class="code hl_function" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#ade80c90d390cc60399430d64a7e6682e">TraceConservativelyIfNeeded</a>(decompressed_high);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#endif  </span><span class="comment">// !defined(CPPGC_POINTER_COMPRESSION)</span></div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  }</div>
@@ -172,7 +180,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a3878725f90703deddf084b1accc7a2b9">Address</a> address) {</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#if defined(CPPGC_CAGED_HEAP)</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="comment">// TODO(chromium:1056170): Add support for SIMD in stack scanning.</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keywordflow">if</span> (V8_LIKELY(!CagedHeapBase::IsWithinCage(address))) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a4f489f1b838163ab33f251c9e470d938">V8_LIKELY</a>(!CagedHeapBase::IsWithinCage(address))) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif  </span><span class="comment">// defined(CPPGC_CAGED_HEAP)</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keyword">const</span> <a class="code hl_class" href="classcppgc_1_1internal_1_1BasePage.html">BasePage</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> = <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_class" href="classcppgc_1_1internal_1_1BasePage.html">BasePage</a>*<span class="keyword">&gt;</span>(</div>
@@ -180,7 +188,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(&amp;<a class="code hl_variable" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a12e6d4859ea217da7e504cdfbcdd0436">heap_</a>, &amp;<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;heap());</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(&amp;<a class="code hl_variable" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a12e6d4859ea217da7e504cdfbcdd0436">heap_</a>, &amp;<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;heap());</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keyword">auto</span>* header = <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;TryObjectHeaderFromInnerAddress(address);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
@@ -197,7 +205,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_function" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#acd4d3100a799c29a03b1b02f20cb2223">TryTracePointerConservatively</a>(pointer);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#if defined(CPPGC_POINTER_COMPRESSION)</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keyword">auto</span> try_trace = [<span class="keyword">this</span>](<a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a3878725f90703deddf084b1accc7a2b9">Address</a> ptr) {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">if</span> (ptr &gt; <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a3878725f90703deddf084b1accc7a2b9">Address</a><span class="keyword">&gt;</span>(SentinelPointer::kSentinelValue))</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">if</span> (ptr &gt; <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a3878725f90703deddf084b1accc7a2b9">Address</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="structcppgc_1_1internal_1_1SentinelPointer.html#a4303ace1859ea823b29de9abfe590a6d">SentinelPointer::kSentinelValue</a>))</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <a class="code hl_function" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#acd4d3100a799c29a03b1b02f20cb2223">TryTracePointerConservatively</a>(ptr);</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  };</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="comment">// If pointer compression enabled, we may have random compressed pointers on</span></div>
@@ -213,7 +221,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="comment">// In addition, check half-compressed halfwords, since the compiler is free to</span></div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="comment">// spill intermediate results of compression/decompression onto the stack.</span></div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="keyword">const</span> uintptr_t <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a> = CagedHeapBase::GetBase();</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a>);</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keyword">auto</span> intermediate_decompressed_low = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a3878725f90703deddf084b1accc7a2b9">Address</a><span class="keyword">&gt;</span>(</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(<span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(pointer)) | <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a>);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  try_trace(intermediate_decompressed_low);</div>
@@ -244,7 +252,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00138" data-start="{" data-end="}">
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#ab0aef8d747e931f408728f7d73a4b08d">  138</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#ab0aef8d747e931f408728f7d73a4b08d">ConservativeTracingVisitor::VisitFullyConstructedConservatively</a>(</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <a class="code hl_class" href="classcppgc_1_1internal_1_1HeapObjectHeader.html">HeapObjectHeader</a>&amp; header) {</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <a class="code hl_variable" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a075609ff23b02fd0138fdc2b2e09eb79">visitor_</a>.Visit(</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>  <a class="code hl_variable" href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a075609ff23b02fd0138fdc2b2e09eb79">visitor_</a>.<a class="code hl_function" href="classcppgc_1_1Visitor.html#a523788a0bf2087bcdb889df58e365497">Visit</a>(</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>      header.<a class="code hl_function" href="classcppgc_1_1internal_1_1HeapObjectHeader.html#a2f5a585893bb8836a77a5fdbf344a24a">ObjectStart</a>(),</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      {header.ObjectStart(),</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>       GlobalGCInfoTable::GCInfoFromIndex(header.GetGCInfoIndex()).trace});</div>
@@ -255,18 +263,19 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>}  <span class="comment">// namespace cppgc</span></div>
 <div class="ttc" id="aasan_8h_html"><div class="ttname"><a href="asan_8h.html">asan.h</a></div></div>
 <div class="ttc" id="aasan_8h_html_aa50cd3d3fb9ae19a5973bdb4e6a6ce38"><div class="ttname"><a href="asan_8h.html#aa50cd3d3fb9ae19a5973bdb4e6a6ce38">DISABLE_ASAN</a></div><div class="ttdeci">#define DISABLE_ASAN</div><div class="ttdef"><b>Definition</b> <a href="asan_8h_source.html#l00062">asan.h:62</a></div></div>
-<div class="ttc" id="acaged-heap_8h_html"><div class="ttname"><a href="caged-heap_8h.html">caged-heap.h</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1Visitor_html"><div class="ttname"><a href="classcppgc_1_1Visitor.html">cppgc::Visitor</a></div><div class="ttdef"><b>Definition</b> <a href="include_2cppgc_2visitor_8h_source.html#l00056">visitor.h:56</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1Visitor_html_a523788a0bf2087bcdb889df58e365497"><div class="ttname"><a href="classcppgc_1_1Visitor.html#a523788a0bf2087bcdb889df58e365497">cppgc::Visitor::Visit</a></div><div class="ttdeci">virtual void Visit(const void *self, TraceDescriptor)</div><div class="ttdef"><b>Definition</b> <a href="include_2cppgc_2visitor_8h_source.html#l00354">visitor.h:354</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1BasePage_html"><div class="ttname"><a href="classcppgc_1_1internal_1_1BasePage.html">cppgc::internal::BasePage</a></div><div class="ttdef"><b>Definition</b> <a href="heap-page_8h_source.html#l00030">heap-page.h:30</a></div></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html">cppgc::internal::ConservativeTracingVisitor</a></div><div class="ttdef"><b>Definition</b> <a href="visitor_8h_source.html#l00049">visitor.h:49</a></div></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_a075609ff23b02fd0138fdc2b2e09eb79"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a075609ff23b02fd0138fdc2b2e09eb79">cppgc::internal::ConservativeTracingVisitor::visitor_</a></div><div class="ttdeci">cppgc::Visitor &amp; visitor_</div><div class="ttdef"><b>Definition</b> <a href="visitor_8h_source.html#l00073">visitor.h:73</a></div></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_a12e6d4859ea217da7e504cdfbcdd0436"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a12e6d4859ea217da7e504cdfbcdd0436">cppgc::internal::ConservativeTracingVisitor::heap_</a></div><div class="ttdeci">HeapBase &amp; heap_</div><div class="ttdef"><b>Definition</b> <a href="visitor_8h_source.html#l00071">visitor.h:71</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html">cppgc::internal::ConservativeTracingVisitor</a></div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2cppgc_2visitor_8h_source.html#l00049">visitor.h:49</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_a075609ff23b02fd0138fdc2b2e09eb79"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a075609ff23b02fd0138fdc2b2e09eb79">cppgc::internal::ConservativeTracingVisitor::visitor_</a></div><div class="ttdeci">cppgc::Visitor &amp; visitor_</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2cppgc_2visitor_8h_source.html#l00073">visitor.h:73</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_a12e6d4859ea217da7e504cdfbcdd0436"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a12e6d4859ea217da7e504cdfbcdd0436">cppgc::internal::ConservativeTracingVisitor::heap_</a></div><div class="ttdeci">HeapBase &amp; heap_</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2cppgc_2visitor_8h_source.html#l00071">visitor.h:71</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_a74d24036348551bb1c8a06247512f057"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a74d24036348551bb1c8a06247512f057">cppgc::internal::ConservativeTracingVisitor::TraceConservatively</a></div><div class="ttdeci">void TraceConservatively(const HeapObjectHeader &amp;)</div><div class="ttdef"><b>Definition</b> <a href="#l00039">visitor.cc:39</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_a79ea834ddebb47f8bca1d6f5d4dfb8de"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a79ea834ddebb47f8bca1d6f5d4dfb8de">cppgc::internal::ConservativeTracingVisitor::ConservativeTracingVisitor</a></div><div class="ttdeci">ConservativeTracingVisitor(HeapBase &amp;, PageBackend &amp;, cppgc::Visitor &amp;)</div><div class="ttdef"><b>Definition</b> <a href="#l00031">visitor.cc:31</a></div></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_a9d245e7f2ffe87e095d8eadee71606f2"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a9d245e7f2ffe87e095d8eadee71606f2">cppgc::internal::ConservativeTracingVisitor::VisitInConstructionConservatively</a></div><div class="ttdeci">virtual void VisitInConstructionConservatively(HeapObjectHeader &amp;, TraceConservativelyCallback)</div><div class="ttdef"><b>Definition</b> <a href="visitor_8h_source.html#l00066">visitor.h:66</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_a9d245e7f2ffe87e095d8eadee71606f2"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#a9d245e7f2ffe87e095d8eadee71606f2">cppgc::internal::ConservativeTracingVisitor::VisitInConstructionConservatively</a></div><div class="ttdeci">virtual void VisitInConstructionConservatively(HeapObjectHeader &amp;, TraceConservativelyCallback)</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2cppgc_2visitor_8h_source.html#l00066">visitor.h:66</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_ab0aef8d747e931f408728f7d73a4b08d"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#ab0aef8d747e931f408728f7d73a4b08d">cppgc::internal::ConservativeTracingVisitor::VisitFullyConstructedConservatively</a></div><div class="ttdeci">virtual void VisitFullyConstructedConservatively(HeapObjectHeader &amp;)</div><div class="ttdef"><b>Definition</b> <a href="#l00138">visitor.cc:138</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_acd4d3100a799c29a03b1b02f20cb2223"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#acd4d3100a799c29a03b1b02f20cb2223">cppgc::internal::ConservativeTracingVisitor::TryTracePointerConservatively</a></div><div class="ttdeci">void TryTracePointerConservatively(Address address)</div><div class="ttdef"><b>Definition</b> <a href="#l00070">visitor.cc:70</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_ade80c90d390cc60399430d64a7e6682e"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#ade80c90d390cc60399430d64a7e6682e">cppgc::internal::ConservativeTracingVisitor::TraceConservativelyIfNeeded</a></div><div class="ttdeci">virtual void TraceConservativelyIfNeeded(const void *)</div><div class="ttdef"><b>Definition</b> <a href="#l00091">visitor.cc:91</a></div></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_aeb1281f2e477c3bd8c82b388b96399c1"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#aeb1281f2e477c3bd8c82b388b96399c1">cppgc::internal::ConservativeTracingVisitor::page_backend_</a></div><div class="ttdeci">PageBackend &amp; page_backend_</div><div class="ttdef"><b>Definition</b> <a href="visitor_8h_source.html#l00072">visitor.h:72</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1ConservativeTracingVisitor_html_aeb1281f2e477c3bd8c82b388b96399c1"><div class="ttname"><a href="classcppgc_1_1internal_1_1ConservativeTracingVisitor.html#aeb1281f2e477c3bd8c82b388b96399c1">cppgc::internal::ConservativeTracingVisitor::page_backend_</a></div><div class="ttdeci">PageBackend &amp; page_backend_</div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2cppgc_2visitor_8h_source.html#l00072">visitor.h:72</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1HeapBase_html"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapBase.html">cppgc::internal::HeapBase</a></div><div class="ttdef"><b>Definition</b> <a href="heap-base_8h_source.html#l00082">heap-base.h:82</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1HeapObjectHeader_html"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapObjectHeader.html">cppgc::internal::HeapObjectHeader</a></div><div class="ttdef"><b>Definition</b> <a href="heap-object-header_8h_source.html#l00059">heap-object-header.h:59</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1HeapObjectHeader_html_a2f5a585893bb8836a77a5fdbf344a24a"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapObjectHeader.html#a2f5a585893bb8836a77a5fdbf344a24a">cppgc::internal::HeapObjectHeader::ObjectStart</a></div><div class="ttdeci">Address ObjectStart() const</div><div class="ttdef"><b>Definition</b> <a href="heap-object-header_8h_source.html#l00209">heap-object-header.h:209</a></div></div>
@@ -281,25 +290,31 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aheap-object-header_8h_html"><div class="ttname"><a href="heap-object-header_8h.html">heap-object-header.h</a></div></div>
 <div class="ttc" id="aheap-page_8h_html"><div class="ttname"><a href="heap-page_8h.html">heap-page.h</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a115c48491bb37004f5ac67eb46ac2c23"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a></div><div class="ttdeci">turboshaft::OpIndex base</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00070">instruction-selector-ia32.cc:70</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="amsan_8h_html"><div class="ttname"><a href="msan_8h.html">msan.h</a></div></div>
 <div class="ttc" id="amsan_8h_html_a3247bf8fa2f4372cc59ac92e7432cc9c"><div class="ttname"><a href="msan_8h.html#a3247bf8fa2f4372cc59ac92e7432cc9c">MSAN_MEMORY_IS_INITIALIZED</a></div><div class="ttdeci">#define MSAN_MEMORY_IS_INITIALIZED(start, size)</div><div class="ttdef"><b>Definition</b> <a href="msan_8h_source.html#l00035">msan.h:35</a></div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_a3878725f90703deddf084b1accc7a2b9"><div class="ttname"><a href="namespacecppgc_1_1internal.html#a3878725f90703deddf084b1accc7a2b9">cppgc::internal::Address</a></div><div class="ttdeci">uint8_t * Address</div><div class="ttdef"><b>Definition</b> <a href="heap_2cppgc_2globals_8h_source.html#l00017">globals.h:17</a></div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_a9aee2e1ba3ad41b6fef630ce7821ee00"><div class="ttname"><a href="namespacecppgc_1_1internal.html#a9aee2e1ba3ad41b6fef630ce7821ee00">cppgc::internal::ConstAddress</a></div><div class="ttdeci">const uint8_t * ConstAddress</div><div class="ttdef"><b>Definition</b> <a href="heap_2cppgc_2globals_8h_source.html#l00018">globals.h:18</a></div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_ac0b40b7e4ac65024fbfcf57d01fa808eab8d79eac5929c97b59b121e933e4438d"><div class="ttname"><a href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808eab8d79eac5929c97b59b121e933e4438d">cppgc::internal::AccessMode::kNonAtomic</a></div><div class="ttdeci">@ kNonAtomic</div></div>
 <div class="ttc" id="anamespacecppgc_html"><div class="ttname"><a href="namespacecppgc.html">cppgc</a></div><div class="ttdef"><b>Definition</b> <a href="cross-heap-remembered-set_8h_source.html#l00014">cross-heap-remembered-set.h:14</a></div></div>
-<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
+<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="aobject-view_8h_html"><div class="ttname"><a href="object-view_8h.html">object-view.h</a></div></div>
 <div class="ttc" id="apage-memory_8h_html"><div class="ttname"><a href="page-memory_8h.html">page-memory.h</a></div></div>
-<div class="ttc" id="avisitor_8h_html"><div class="ttname"><a href="visitor_8h.html">visitor.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2heap_2cppgc_2caged-heap_8h_html"><div class="ttname"><a href="src_2heap_2cppgc_2caged-heap_8h.html">caged-heap.h</a></div></div>
+<div class="ttc" id="asrc_2heap_2cppgc_2visitor_8h_html"><div class="ttname"><a href="src_2heap_2cppgc_2visitor_8h.html">visitor.h</a></div></div>
+<div class="ttc" id="astructcppgc_1_1internal_1_1SentinelPointer_html_a4303ace1859ea823b29de9abfe590a6d"><div class="ttname"><a href="structcppgc_1_1internal_1_1SentinelPointer.html#a4303ace1859ea823b29de9abfe590a6d">cppgc::internal::SentinelPointer::kSentinelValue</a></div><div class="ttdeci">static constexpr intptr_t kSentinelValue</div><div class="ttdef"><b>Definition</b> <a href="sentinel-pointer_8h_source.html#l00022">sentinel-pointer.h:22</a></div></div>
+<div class="ttc" id="av8config_8h_html_a4f489f1b838163ab33f251c9e470d938"><div class="ttname"><a href="v8config_8h.html#a4f489f1b838163ab33f251c9e470d938">V8_LIKELY</a></div><div class="ttdeci">#define V8_LIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00650">v8config.h:650</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:31 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li><li class="navelem"><a class="el" href="visitor_8cc.html">visitor.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:39 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

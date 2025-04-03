@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/objects/ordered-hash-table-inl.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/objects/ordered-hash-table-inl.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('ordered-hash-table-inl_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">ordered-hash-table-inl.h</div></div>
 </div><!--header-->
@@ -103,7 +111,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="ordered-hash-table_8h.html">src/objects/ordered-hash-table.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="heap_8h.html">src/heap/heap.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="src_2heap_2heap_8h.html">src/heap/heap.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="compressed-slots_8h.html">src/objects/compressed-slots.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="fixed-array-inl_8h.html">src/objects/fixed-array-inl.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="js-collection-iterator_8h.html">src/objects/js-collection-iterator.h</a>&quot;</span></div>
@@ -127,13 +135,13 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Derived&gt;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><a class="code hl_class" href="classv8_1_1internal_1_1SmallOrderedHashTable.html">SmallOrderedHashTable&lt;Derived&gt;::SmallOrderedHashTable</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> ptr)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><a class="code hl_class" href="classv8_1_1internal_1_1SmallOrderedHashTable.html">SmallOrderedHashTable&lt;Derived&gt;::SmallOrderedHashTable</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> ptr)</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    : <a class="code hl_class" href="classv8_1_1internal_1_1HeapObject.html">HeapObject</a>(ptr) {}</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Derived&gt;</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1SmallOrderedHashTable.html#a1ddb0e5fc0f337f7abd64defedcc0491">SmallOrderedHashTable&lt;Derived&gt;::KeyAt</a>(</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    InternalIndex entry)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry.as_int(), Capacity());</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry.as_int(), Capacity());</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a3d8bef490db0b5b71efc19be04821f36">Offset</a> entry_offset = GetDataEntryOffset(entry.as_int(), Derived::kKeyIndex);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1TaggedField.html#a30c9e50e602f95023bef58c56cc31e4e">TaggedField&lt;Object&gt;::load</a>(*<span class="keyword">this</span>, entry_offset);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
@@ -141,8 +149,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Derived&gt;</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1SmallOrderedHashTable.html#a11beb3ab74b957470c557369d991af55">SmallOrderedHashTable&lt;Derived&gt;::GetDataEntry</a>(</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">int</span> entry, <span class="keywordtype">int</span> relative_index) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry, Capacity());</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(relative_index), Derived::kEntrySize);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry, Capacity());</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(relative_index), Derived::kEntrySize);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a3d8bef490db0b5b71efc19be04821f36">Offset</a> entry_offset = GetDataEntryOffset(entry, relative_index);</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1TaggedField.html#a30c9e50e602f95023bef58c56cc31e4e">TaggedField&lt;Object&gt;::load</a>(*<span class="keyword">this</span>, entry_offset);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
@@ -193,14 +201,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
 <div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OrderedHashMap.html#a620680ad60f740341d0726ff8f515672">   83</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashMap.html#a620680ad60f740341d0726ff8f515672">OrderedHashMap::ValueAt</a>(<a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a> entry) {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#a8d405aded63c405c86fd03e1ff104408">as_int</a>(), <a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#a341f8fdbd9009e959debdfb3271f95f3">UsedCapacity</a>());</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#a8d405aded63c405c86fd03e1ff104408">as_int</a>(), <a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#a341f8fdbd9009e959debdfb3271f95f3">UsedCapacity</a>());</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1TaggedArrayBase.html#aecb08dbef910032f48dcd03cf89b3319">get</a>(<a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#a923a9a57ffb8cccb805318364a29327d">EntryToIndex</a>(entry) + <a class="code hl_variable" href="classv8_1_1internal_1_1OrderedHashMap.html#af9226c777f282b0d357197ff8358cdcf">kValueOffset</a>);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
 </div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="foldopen" id="foldopen00088" data-start="{" data-end="}">
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OrderedHashTable.html#a5ef863f129e8c3c28f8bb7954620c6d0">   88</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1OrderedNameDictionary.html#a164b4150730d1e9c3eb99ec8d60c6f1a">OrderedNameDictionary::ValueAt</a>(<a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a> entry) {</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#a8d405aded63c405c86fd03e1ff104408">as_int</a>(), <a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#a341f8fdbd9009e959debdfb3271f95f3">UsedCapacity</a>());</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#a8d405aded63c405c86fd03e1ff104408">as_int</a>(), <a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#a341f8fdbd9009e959debdfb3271f95f3">UsedCapacity</a>());</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1TaggedArrayBase.html#aecb08dbef910032f48dcd03cf89b3319">get</a>(<a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#a923a9a57ffb8cccb805318364a29327d">EntryToIndex</a>(entry) + <a class="code hl_variable" href="classv8_1_1internal_1_1OrderedNameDictionary.html#ae5e95e204107e4beb54afad3d5522818">kValueOffset</a>);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
@@ -227,7 +235,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00109" data-start="{" data-end="}">
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OrderedNameDictionary.html#a919a0835abd4802099436789eaee110f">  109</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1OrderedNameDictionary.html#a919a0835abd4802099436789eaee110f">OrderedNameDictionary::ValueAtPut</a>(<a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a> entry,</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>                                              <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> value) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#a8d405aded63c405c86fd03e1ff104408">as_int</a>(), <a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#a341f8fdbd9009e959debdfb3271f95f3">UsedCapacity</a>());</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#a8d405aded63c405c86fd03e1ff104408">as_int</a>(), <a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#a341f8fdbd9009e959debdfb3271f95f3">UsedCapacity</a>());</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  this-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1TaggedArrayBase.html#a7e38236693f23879d5e5d5bfc91c95a7">set</a>(<a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#a923a9a57ffb8cccb805318364a29327d">EntryToIndex</a>(entry) + <a class="code hl_variable" href="classv8_1_1internal_1_1OrderedNameDictionary.html#ae5e95e204107e4beb54afad3d5522818">kValueOffset</a>, value);</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
 </div>
@@ -235,7 +243,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment">// Returns the property details for the property at entry.</span></div>
 <div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OrderedNameDictionary.html#ab59203b8d894216d4558cc427768b27e">  116</a></span><span class="keyword">inline</span> <a class="code hl_class" href="classv8_1_1internal_1_1PropertyDetails.html">PropertyDetails</a> <a class="code hl_function" href="classv8_1_1internal_1_1OrderedNameDictionary.html#ab59203b8d894216d4558cc427768b27e">OrderedNameDictionary::DetailsAt</a>(<a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a> entry) {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#a8d405aded63c405c86fd03e1ff104408">as_int</a>(), this-&gt;UsedCapacity());</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#a8d405aded63c405c86fd03e1ff104408">as_int</a>(), this-&gt;UsedCapacity());</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="comment">// TODO(gsathya): Optimize the cast away.</span></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1PropertyDetails.html">PropertyDetails</a>(</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>      <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;Smi&gt;</a>(<a class="code hl_function" href="classv8_1_1internal_1_1TaggedArrayBase.html#aecb08dbef910032f48dcd03cf89b3319">get</a>(<a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#a923a9a57ffb8cccb805318364a29327d">EntryToIndex</a>(entry) + <a class="code hl_variable" href="classv8_1_1internal_1_1OrderedNameDictionary.html#ab48ec89cacde13e1d9dc599285654f49">kPropertyDetailsOffset</a>)));</div>
@@ -245,7 +253,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00123" data-start="{" data-end="}">
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OrderedNameDictionary.html#a72de7d41e2c336721e3ac31011c092c6">  123</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1OrderedNameDictionary.html#a72de7d41e2c336721e3ac31011c092c6">OrderedNameDictionary::DetailsAtPut</a>(<a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a> entry,</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                                                <a class="code hl_class" href="classv8_1_1internal_1_1PropertyDetails.html">PropertyDetails</a> value) {</div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#a8d405aded63c405c86fd03e1ff104408">as_int</a>(), this-&gt;UsedCapacity());</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#a8d405aded63c405c86fd03e1ff104408">as_int</a>(), this-&gt;UsedCapacity());</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="comment">// TODO(gsathya): Optimize the cast away.</span></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  this-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1TaggedArrayBase.html#a7e38236693f23879d5e5d5bfc91c95a7">set</a>(<a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTable.html#a923a9a57ffb8cccb805318364a29327d">EntryToIndex</a>(entry) + <a class="code hl_variable" href="classv8_1_1internal_1_1OrderedNameDictionary.html#ab48ec89cacde13e1d9dc599285654f49">kPropertyDetailsOffset</a>, value.AsSmi());</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
@@ -324,7 +332,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> Derived&gt;</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1SmallOrderedHashTable.html#a478c6bd3df74bf35458188eee330e80d">SmallOrderedHashTable&lt;Derived&gt;::SetDataEntry</a>(<span class="keywordtype">int</span> entry, <span class="keywordtype">int</span> relative_index,</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                                                  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> value) {</div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a14f4234ae23bee0bff6176a93c6e83cba72e85fa1bf19c36a86a609a52c13f1bc">kNotFound</a>, entry);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a14f4234ae23bee0bff6176a93c6e83cba72e85fa1bf19c36a86a609a52c13f1bc">kNotFound</a>, entry);</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="keywordtype">int</span> entry_offset = GetDataEntryOffset(entry, relative_index);</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>  <a class="code hl_define" href="object-macros_8h.html#aca23a28131b06c94b679cf874382b316">RELAXED_WRITE_FIELD</a>(*<span class="keyword">this</span>, entry_offset, value);</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  <a class="code hl_define" href="object-macros_8h.html#aa1fe24515f8f31a1b26277cafa747eca">WRITE_BARRIER</a>(*<span class="keyword">this</span>, entry_offset, value);</div>
@@ -335,17 +343,17 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OrderedHashTableIterator.html#a0da9c1b897719e6d22335bc12cdea222">  189</a></span><a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1OrderedHashTableIterator.html#a0da9c1b897719e6d22335bc12cdea222">OrderedHashTableIterator&lt;Derived, TableType&gt;::CurrentKey</a>() {</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;TableType&gt;</a> table = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;TableType&gt;</a>(this-&gt;table());</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a2e32de9e93a2cdfae189371f22782dad">Smi::ToInt</a>(this-&gt;<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>());</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(0, index);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(0, index);</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a> entry(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>);</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a> = table-&gt;KeyAt(entry);</div>
-<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!IsHashTableHole(<a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>));</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!IsHashTableHole(<a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>));</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>;</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>}</div>
 </div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
 <div class="foldopen" id="foldopen00199" data-start="{" data-end="}">
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SmallOrderedNameDictionary.html#a67b3012aef4b125251e37b50f4c847a3">  199</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1SmallOrderedNameDictionary.html#a67b3012aef4b125251e37b50f4c847a3">SmallOrderedNameDictionary::SetHash</a>(<span class="keywordtype">int</span> hash) {</div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a634dcf9bf5eb402dea1ec28d543bc55c">PropertyArray::HashField::is_valid</a>(hash));</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a634dcf9bf5eb402dea1ec28d543bc55c">PropertyArray::HashField::is_valid</a>(hash));</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>  <a class="code hl_function" href="classv8_1_1internal_1_1HeapObject.html#af03c1bedf6b6a77ceb3fefeb0957dbd7">WriteField&lt;int&gt;</a>(<a class="code hl_function" href="classv8_1_1internal_1_1SmallOrderedHashTable.html#a2e74c647de7745b93c92464898961251">PrefixOffset</a>(), hash);</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>}</div>
 </div>
@@ -353,14 +361,14 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00204" data-start="{" data-end="}">
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SmallOrderedNameDictionary.html#a8082811a4273b5259dca0b6b9ae9652a">  204</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1SmallOrderedNameDictionary.html#a8082811a4273b5259dca0b6b9ae9652a">SmallOrderedNameDictionary::Hash</a>() {</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <span class="keywordtype">int</span> hash = <a class="code hl_function" href="classv8_1_1internal_1_1HeapObject.html#a9c437b0e65275ce4ef93b51062e66cff">ReadField&lt;int&gt;</a>(<a class="code hl_function" href="classv8_1_1internal_1_1SmallOrderedHashTable.html#a2e74c647de7745b93c92464898961251">PrefixOffset</a>());</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a634dcf9bf5eb402dea1ec28d543bc55c">PropertyArray::HashField::is_valid</a>(hash));</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a634dcf9bf5eb402dea1ec28d543bc55c">PropertyArray::HashField::is_valid</a>(hash));</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  <span class="keywordflow">return</span> hash;</div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>}</div>
 </div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
 <div class="foldopen" id="foldopen00210" data-start="{" data-end="}">
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OrderedNameDictionary.html#ab3c05fc6691c282575da2584d269e994">  210</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1OrderedNameDictionary.html#ab3c05fc6691c282575da2584d269e994">OrderedNameDictionary::SetHash</a>(<span class="keywordtype">int</span> hash) {</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a634dcf9bf5eb402dea1ec28d543bc55c">PropertyArray::HashField::is_valid</a>(hash));</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a634dcf9bf5eb402dea1ec28d543bc55c">PropertyArray::HashField::is_valid</a>(hash));</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  this-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1TaggedArrayBase.html#a7e38236693f23879d5e5d5bfc91c95a7">set</a>(<a class="code hl_function" href="classv8_1_1internal_1_1OrderedNameDictionary.html#ae9c33195828c62cf6dc3291293220dd0">HashIndex</a>(), <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a755464f4d2c3a71ffd82cd474bbc50f3">Smi::FromInt</a>(hash));</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>}</div>
 </div>
@@ -369,7 +377,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OrderedNameDictionary.html#aed97a4700adc46be591c160b1558cb02">  215</a></span><span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1OrderedNameDictionary.html#aed97a4700adc46be591c160b1558cb02">OrderedNameDictionary::Hash</a>() {</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> hash_obj = this-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1TaggedArrayBase.html#aecb08dbef910032f48dcd03cf89b3319">get</a>(<a class="code hl_function" href="classv8_1_1internal_1_1OrderedNameDictionary.html#ae9c33195828c62cf6dc3291293220dd0">HashIndex</a>());</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <span class="keywordtype">int</span> hash = <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a2e32de9e93a2cdfae189371f22782dad">Smi::ToInt</a>(hash_obj);</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a634dcf9bf5eb402dea1ec28d543bc55c">PropertyArray::HashField::is_valid</a>(hash));</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a634dcf9bf5eb402dea1ec28d543bc55c">PropertyArray::HashField::is_valid</a>(hash));</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <span class="keywordflow">return</span> hash;</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>}</div>
 </div>
@@ -449,19 +457,14 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1Tagged_html"><div class="ttname"><a href="classv8_1_1internal_1_1Tagged.html">v8::internal::Tagged</a></div><div class="ttdef"><b>Definition</b> <a href="waiter-queue-node_8h_source.html#l00022">waiter-queue-node.h:22</a></div></div>
 <div class="ttc" id="acompressed-slots_8h_html"><div class="ttname"><a href="compressed-slots_8h.html">compressed-slots.h</a></div></div>
 <div class="ttc" id="afixed-array-inl_8h_html"><div class="ttname"><a href="fixed-array-inl_8h.html">fixed-array-inl.h</a></div></div>
-<div class="ttc" id="aheap_8h_html"><div class="ttname"><a href="heap_8h.html">heap.h</a></div></div>
 <div class="ttc" id="ajs-collection-iterator_8h_html"><div class="ttname"><a href="js-collection-iterator_8h.html">js-collection-iterator.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00486">logging.h:486</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a0cfab207d565dcf62ebf50f3987e05de"><div class="ttname"><a href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">v8::internal::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> <a href="heap-snapshot-generator_8cc_source.html#l01584">heap-snapshot-generator.cc:1584</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a14f4234ae23bee0bff6176a93c6e83cba72e85fa1bf19c36a86a609a52c13f1bc"><div class="ttname"><a href="namespacev8_1_1internal.html#a14f4234ae23bee0bff6176a93c6e83cba72e85fa1bf19c36a86a609a52c13f1bc">v8::internal::kNotFound</a></div><div class="ttdeci">@ kNotFound</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01699">globals.h:1699</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a3d8bef490db0b5b71efc19be04821f36"><div class="ttname"><a href="namespacev8_1_1internal.html#a3d8bef490db0b5b71efc19be04821f36">v8::internal::Offset</a></div><div class="ttdeci">constexpr AddrMode Offset</div><div class="ttdef"><b>Definition</b> <a href="constants-arm_8h_source.html#l00277">constants-arm.h:277</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5297fd2c72981b2220e6b9a831570fb3"><div class="ttname"><a href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">v8::internal::Tagged&lt; Object &gt;</a></div><div class="ttdeci">Tagged&lt; Object &gt;</div><div class="ttdef"><b>Definition</b> <a href="allocation-site-inl_8h_source.html#l00029">allocation-site-inl.h:30</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a67a51b6314a9bc8a8c44c5fe14149e6c"><div class="ttname"><a href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">v8::internal::key</a></div><div class="ttdeci">int32_t key</div><div class="ttdef"><b>Definition</b> <a href="external-reference_8cc_source.html#l01345">external-reference.cc:1345</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="aobject-macros-undef_8h_html"><div class="ttname"><a href="object-macros-undef_8h.html">object-macros-undef.h</a></div></div>
@@ -472,11 +475,19 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aobjects-inl_8h_html"><div class="ttname"><a href="objects-inl_8h.html">objects-inl.h</a></div></div>
 <div class="ttc" id="aordered-hash-table_8h_html"><div class="ttname"><a href="ordered-hash-table_8h.html">ordered-hash-table.h</a></div></div>
 <div class="ttc" id="aslots_8h_html"><div class="ttname"><a href="slots_8h.html">slots.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00486">logging.h:486</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2heap_2heap_8h_html"><div class="ttname"><a href="src_2heap_2heap_8h.html">heap.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:42 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li><li class="navelem"><a class="el" href="ordered-hash-table-inl_8h.html">ordered-hash-table-inl.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:55:55 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

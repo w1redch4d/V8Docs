@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/base/sanitizer/lsan-page-allocator.cc File Reference</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/base/sanitizer/lsan-page-allocator.cc File Reference</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('lsan-page-allocator_8cc.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="dir_d514eddf97e7596d46121f96c7173d15.html">sanitizer</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#namespaces">Namespaces</a>  </div>
@@ -97,71 +105,89 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="lsan-page-allocator_8h_source.html">src/base/sanitizer/lsan-page-allocator.h</a>&quot;</code><br />
-<code>#include &quot;include/v8-platform.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="logging_8h_source.html">src/base/logging.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="v8-platform_8h_source.html">include/v8-platform.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2base_2logging_8h_source.html">src/base/logging.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for lsan-page-allocator.cc:</div>
 <div class="dyncontent">
-<div class="center"><img src="lsan-page-allocator_8cc__incl.png" border="0" usemap="#a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2base_2sanitizer_2lsan-page-allocator_8cc" alt=""/></div>
-<map name="a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2base_2sanitizer_2lsan-page-allocator_8cc" id="a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2base_2sanitizer_2lsan-page-allocator_8cc">
-<area shape="rect" title=" " alt="" coords="126,5,338,92"/>
-<area shape="rect" href="lsan-page-allocator_8h.html" title=" " alt="" coords="157,140,308,189"/>
-<area shape="poly" title=" " alt="" coords="235,92,235,124,230,124,230,92"/>
-<area shape="rect" title=" " alt="" coords="5,246,161,276"/>
-<area shape="poly" title=" " alt="" coords="188,94,146,142,118,189,97,233,92,231,113,186,142,138,184,91"/>
-<area shape="rect" href="logging_8h.html" title=" " alt="" coords="977,150,1112,179"/>
-<area shape="poly" title=" " alt="" coords="339,62,961,149,961,154,339,67"/>
-<area shape="rect" title=" " alt="" coords="184,246,224,276"/>
-<area shape="poly" title=" " alt="" coords="228,190,215,232,210,231,223,188"/>
-<area shape="poly" title=" " alt="" coords="196,191,120,240,117,235,194,187"/>
-<area shape="rect" href="base-export_8h.html" title=" " alt="" coords="291,333,454,363"/>
-<area shape="poly" title=" " alt="" coords="243,188,264,234,296,284,316,304,339,322,335,326,313,308,292,287,259,237,238,190"/>
-<area shape="rect" href="compiler-specific_8h.html" title=" " alt="" coords="536,246,728,276"/>
-<area shape="poly" title=" " alt="" coords="309,181,558,239,557,245,308,186"/>
-<area shape="rect" title=" " alt="" coords="629,411,764,441"/>
-<area shape="poly" title=" " alt="" coords="434,361,621,404,620,410,433,366"/>
-<area shape="poly" title=" " alt="" coords="638,276,649,315,665,362,683,396,678,399,661,364,644,317,633,277"/>
-<area shape="poly" title=" " alt="" coords="977,170,812,176,610,189,514,198,432,209,371,223,351,231,340,238,331,257,333,278,341,299,354,319,349,322,337,302,328,279,326,256,336,235,349,226,370,218,431,204,514,193,609,184,811,171,976,165"/>
-<area shape="poly" title=" " alt="" coords="983,182,709,245,708,240,982,177"/>
-<area shape="rect" title=" " alt="" coords="970,246,1033,276"/>
-<area shape="poly" title=" " alt="" coords="1040,181,1017,233,1012,231,1036,178"/>
-<area shape="rect" title=" " alt="" coords="1057,246,1120,276"/>
-<area shape="poly" title=" " alt="" coords="1053,178,1078,231,1073,233,1048,181"/>
-<area shape="rect" title=" " alt="" coords="1144,246,1212,276"/>
-<area shape="poly" title=" " alt="" coords="1066,177,1147,235,1144,239,1062,182"/>
-<area shape="rect" title=" " alt="" coords="1236,246,1306,276"/>
-<area shape="poly" title=" " alt="" coords="1084,177,1225,234,1231,237,1229,242,1223,239,1082,182"/>
-<area shape="rect" title=" " alt="" coords="1330,246,1388,276"/>
-<area shape="poly" title=" " alt="" coords="1113,176,1211,199,1319,234,1324,236,1322,241,1317,239,1210,204,1112,181"/>
-<area shape="rect" title=" " alt="" coords="1301,333,1356,363"/>
-<area shape="poly" title=" " alt="" coords="1113,167,1192,174,1279,187,1354,206,1383,219,1402,235,1410,248,1412,260,1403,287,1388,309,1368,326,1365,322,1384,305,1398,284,1406,260,1405,249,1398,238,1380,224,1353,211,1277,192,1192,179,1112,172"/>
-<area shape="rect" title=" " alt="" coords="1660,246,1722,276"/>
-<area shape="poly" title=" " alt="" coords="1113,163,1218,166,1353,177,1502,198,1577,214,1649,234,1656,237,1654,242,1648,239,1576,219,1501,203,1353,182,1218,171,1113,168"/>
-<area shape="rect" href="abort-mode_8h.html" title=" " alt="" coords="349,246,513,276"/>
-<area shape="poly" title=" " alt="" coords="977,175,774,200,525,239,499,245,498,240,524,234,773,195,976,170"/>
-<area shape="rect" href="build__config_8h.html" title=" " alt="" coords="675,333,838,363"/>
-<area shape="poly" title=" " alt="" coords="977,170,931,176,882,189,834,209,793,239,779,256,770,277,761,318,755,317,765,275,775,253,789,235,832,204,880,183,930,171,976,165"/>
-<area shape="rect" href="immediate-crash_8h.html" title=" " alt="" coords="803,237,947,285"/>
-<area shape="poly" title=" " alt="" coords="1020,182,932,231,929,227,1018,177"/>
-<area shape="rect" href="template-utils_8h.html" title=" " alt="" coords="1462,246,1637,276"/>
-<area shape="poly" title=" " alt="" coords="1113,174,1445,234,1472,240,1471,245,1444,239,1112,180"/>
-<area shape="poly" title=" " alt="" coords="424,278,393,322,388,319,419,275"/>
-<area shape="poly" title=" " alt="" coords="747,365,719,400,715,397,743,362"/>
-<area shape="poly" title=" " alt="" coords="878,286,871,325,864,346,852,365,818,392,780,410,778,405,816,387,848,361,859,344,866,324,872,285"/>
-<area shape="poly" title=" " alt="" coords="843,288,790,326,787,322,840,284"/>
-<area shape="poly" title=" " alt="" coords="1514,279,1371,333,1370,328,1512,274"/>
-<area shape="rect" title=" " alt="" coords="1380,333,1452,363"/>
-<area shape="poly" title=" " alt="" coords="1529,279,1453,327,1450,322,1526,274"/>
-<area shape="rect" title=" " alt="" coords="1476,333,1530,363"/>
-<area shape="poly" title=" " alt="" coords="1544,278,1520,321,1516,319,1540,275"/>
-<area shape="rect" title=" " alt="" coords="1554,333,1636,363"/>
-<area shape="poly" title=" " alt="" coords="1560,275,1583,319,1578,321,1555,278"/>
-<area shape="rect" title=" " alt="" coords="1660,333,1722,363"/>
-<area shape="poly" title=" " alt="" coords="1574,274,1656,323,1653,327,1572,279"/>
-<area shape="rect" title=" " alt="" coords="1746,333,1799,363"/>
-<area shape="poly" title=" " alt="" coords="1588,274,1732,329,1730,334,1586,279"/>
-<area shape="rect" title=" " alt="" coords="1822,333,1909,363"/>
-<area shape="poly" title=" " alt="" coords="1603,274,1808,329,1807,334,1602,279"/>
+<div class="center"><img src="lsan-page-allocator_8cc__incl.png" border="0" usemap="#asrc_2base_2sanitizer_2lsan-page-allocator_8cc" alt=""/></div>
+<map name="asrc_2base_2sanitizer_2lsan-page-allocator_8cc" id="asrc_2base_2sanitizer_2lsan-page-allocator_8cc">
+<area shape="rect" title=" " alt="" coords="430,5,585,54"/>
+<area shape="rect" href="lsan-page-allocator_8h.html" title=" " alt="" coords="432,102,583,151"/>
+<area shape="poly" title=" " alt="" coords="510,54,510,86,505,86,505,54"/>
+<area shape="rect" href="v8-platform_8h.html" title=" " alt="" coords="239,208,394,238"/>
+<area shape="poly" title=" " alt="" coords="477,57,421,104,376,153,339,198,334,194,372,149,417,100,473,53"/>
+<area shape="rect" href="src_2base_2logging_8h.html" title=" " alt="" coords="1041,112,1176,141"/>
+<area shape="poly" title=" " alt="" coords="586,41,1026,109,1025,115,585,46"/>
+<area shape="rect" title=" " alt="" coords="418,208,458,238"/>
+<area shape="poly" title=" " alt="" coords="492,152,459,197,455,194,488,149"/>
+<area shape="poly" title=" " alt="" coords="461,154,360,203,358,198,459,149"/>
+<area shape="rect" href="base-export_8h.html" title=" " alt="" coords="799,295,962,325"/>
+<area shape="poly" title=" " alt="" coords="574,149,687,196,774,242,847,285,844,289,772,247,685,201,572,154"/>
+<area shape="rect" href="src_2base_2compiler-specific_8h.html" title=" " alt="" coords="482,208,674,238"/>
+<area shape="poly" title=" " alt="" coords="527,149,560,194,556,197,523,153"/>
+<area shape="rect" title=" " alt="" coords="5,295,71,325"/>
+<area shape="poly" title=" " alt="" coords="271,241,86,297,85,292,269,236"/>
+<area shape="rect" title=" " alt="" coords="652,295,725,325"/>
+<area shape="poly" title=" " alt="" coords="371,236,407,245,638,296,636,301,405,250,369,241"/>
+<area shape="rect" title=" " alt="" coords="368,295,436,325"/>
+<area shape="poly" title=" " alt="" coords="333,236,379,283,376,286,329,240"/>
+<area shape="rect" title=" " alt="" coords="461,295,527,325"/>
+<area shape="poly" title=" " alt="" coords="347,236,452,286,450,291,345,241"/>
+<area shape="rect" title=" " alt="" coords="325,451,399,480"/>
+<area shape="poly" title=" " alt="" coords="239,237,210,245,182,258,157,275,136,297,133,309,137,324,149,367,159,384,176,401,207,422,242,437,310,455,309,461,240,442,204,426,172,405,154,387,144,370,131,326,127,309,132,294,153,271,180,253,209,240,238,231"/>
+<area shape="rect" title=" " alt="" coords="301,373,359,403"/>
+<area shape="poly" title=" " alt="" coords="320,238,330,357,325,358,315,238"/>
+<area shape="rect" href="v8-source-location_8h.html" title=" " alt="" coords="147,295,292,325"/>
+<area shape="poly" title=" " alt="" coords="302,240,248,287,245,283,299,236"/>
+<area shape="rect" href="v8config_8h.html" title=" " alt="" coords="572,373,658,403"/>
+<area shape="poly" title=" " alt="" coords="374,236,468,263,511,278,541,293,575,324,601,358,597,361,572,328,538,298,509,283,466,268,372,241"/>
+<area shape="poly" title=" " alt="" coords="242,323,298,362,295,366,239,328"/>
+<area shape="rect" title=" " alt="" coords="186,373,253,403"/>
+<area shape="poly" title=" " alt="" coords="222,326,222,357,217,357,217,326"/>
+<area shape="poly" title=" " alt="" coords="293,323,557,373,556,378,292,328"/>
+<area shape="poly" title=" " alt="" coords="573,405,415,451,413,446,571,400"/>
+<area shape="poly" title=" " alt="" coords="831,328,674,373,673,368,830,323"/>
+<area shape="poly" title=" " alt="" coords="584,238,611,357,606,359,579,239"/>
+<area shape="poly" title=" " alt="" coords="1041,134,991,141,935,153,878,173,826,201,809,216,798,231,784,264,769,297,757,313,738,327,709,341,668,352,568,369,461,381,374,387,374,382,461,375,567,364,667,347,707,336,735,323,753,309,765,294,779,262,793,228,805,212,823,196,876,168,933,148,990,136,1040,129"/>
+<area shape="poly" title=" " alt="" coords="1041,139,983,148,923,162,871,179,852,189,840,200,833,220,836,241,846,262,860,282,855,285,841,265,831,242,827,219,836,197,849,185,869,174,921,157,982,143,1041,133"/>
+<area shape="poly" title=" " alt="" coords="1041,142,673,208,672,202,1040,137"/>
+<area shape="rect" title=" " alt="" coords="1863,208,1925,238"/>
+<area shape="poly" title=" " alt="" coords="1177,128,1331,137,1527,151,1716,170,1793,183,1852,196,1860,199,1858,204,1851,201,1792,188,1715,176,1526,156,1331,142,1176,133"/>
+<area shape="rect" title=" " alt="" coords="850,208,914,238"/>
+<area shape="poly" title=" " alt="" coords="1069,144,1001,169,926,201,921,203,919,198,924,196,999,164,1067,139"/>
+<area shape="rect" title=" " alt="" coords="937,208,1006,238"/>
+<area shape="poly" title=" " alt="" coords="1090,144,1006,201,1003,197,1087,139"/>
+<area shape="rect" title=" " alt="" coords="1030,208,1100,238"/>
+<area shape="poly" title=" " alt="" coords="1105,143,1080,195,1075,193,1100,140"/>
+<area shape="rect" title=" " alt="" coords="1560,295,1615,325"/>
+<area shape="poly" title=" " alt="" coords="1177,125,1283,129,1404,139,1462,148,1514,161,1555,177,1584,197,1595,216,1600,238,1598,280,1592,280,1595,238,1590,218,1580,200,1553,181,1512,166,1461,154,1403,145,1282,134,1177,130"/>
+<area shape="rect" title=" " alt="" coords="1123,208,1185,238"/>
+<area shape="poly" title=" " alt="" coords="1118,140,1143,193,1138,195,1113,143"/>
+<area shape="rect" href="abort-mode_8h.html" title=" " alt="" coords="1208,208,1372,238"/>
+<area shape="poly" title=" " alt="" coords="1137,139,1251,198,1249,203,1135,144"/>
+<area shape="rect" href="build__config_8h.html" title=" " alt="" coords="1639,295,1802,325"/>
+<area shape="poly" title=" " alt="" coords="1177,129,1284,138,1410,152,1527,171,1574,183,1610,196,1639,214,1665,236,1704,281,1700,284,1661,240,1635,218,1607,201,1573,188,1526,177,1409,157,1284,144,1177,135"/>
+<area shape="rect" href="immediate-crash_8h.html" title=" " alt="" coords="1696,199,1839,247"/>
+<area shape="poly" title=" " alt="" coords="1177,131,1400,154,1539,173,1677,196,1681,197,1680,202,1676,201,1538,178,1399,160,1177,136"/>
+<area shape="rect" href="template-utils_8h.html" title=" " alt="" coords="1396,208,1570,238"/>
+<area shape="poly" title=" " alt="" coords="1165,139,1413,201,1412,207,1164,144"/>
+<area shape="poly" title=" " alt="" coords="1235,241,1197,250,974,295,973,289,1196,245,1234,236"/>
+<area shape="poly" title=" " alt="" coords="1639,326,1628,328,1348,352,1074,369,674,387,674,382,1073,364,1348,347,1627,322,1638,321"/>
+<area shape="poly" title=" " alt="" coords="1794,246,1809,264,1821,285,1825,307,1816,327,1798,335,1764,342,1652,354,1318,372,946,383,674,388,674,383,946,378,1317,367,1652,349,1763,337,1796,330,1812,323,1820,306,1816,287,1805,267,1790,249"/>
+<area shape="poly" title=" " alt="" coords="1757,249,1738,283,1733,280,1752,247"/>
+<area shape="poly" title=" " alt="" coords="1429,241,1384,250,1217,271,1086,278,955,284,788,298,741,304,740,299,787,293,955,279,1086,273,1216,265,1383,245,1428,236"/>
+<area shape="poly" title=" " alt="" coords="1502,236,1560,284,1557,288,1499,240"/>
+<area shape="rect" title=" " alt="" coords="1290,295,1343,325"/>
+<area shape="poly" title=" " alt="" coords="1457,241,1358,291,1356,286,1454,236"/>
+<area shape="rect" title=" " alt="" coords="1368,295,1450,325"/>
+<area shape="poly" title=" " alt="" coords="1473,240,1433,285,1429,282,1469,237"/>
+<area shape="rect" title=" " alt="" coords="1474,295,1535,325"/>
+<area shape="poly" title=" " alt="" coords="1489,238,1500,280,1495,281,1484,239"/>
+<area shape="rect" title=" " alt="" coords="1103,295,1157,325"/>
+<area shape="poly" title=" " alt="" coords="1423,241,1384,250,1279,272,1172,297,1171,292,1278,266,1383,245,1422,236"/>
+<area shape="rect" title=" " alt="" coords="1180,295,1266,325"/>
+<area shape="poly" title=" " alt="" coords="1441,241,1282,293,1280,288,1439,236"/>
 </map>
 </div>
 </div>
@@ -175,10 +201,13 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:11 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="dir_d514eddf97e7596d46121f96c7173d15.html">sanitizer</a></li><li class="navelem"><a class="el" href="lsan-page-allocator_8cc.html">lsan-page-allocator.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:26 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

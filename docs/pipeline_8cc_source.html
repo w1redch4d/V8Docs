@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/compiler/pipeline.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/compiler/pipeline.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('pipeline_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">pipeline.cc</div></div>
 </div><!--header-->
@@ -373,7 +381,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>  NodeOriginTable* <span class="keyword">const</span> <a class="code hl_variable" href="pipeline_8cc.html#a1cf7b21ed85cb3d716fa4007ab54cc7c">table_</a>;</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>};</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="keyword">class </span>V8_NODISCARD PipelineRunScope {</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="keyword">class </span><a class="code hl_define" href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a> PipelineRunScope {</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">#ifdef V8_RUNTIME_CALL_STATS</span></div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  PipelineRunScope(</div>
@@ -385,14 +393,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <a class="code hl_variable" href="pipeline_8cc.html#afa36354e3f4278acadb4f2076ae3e246">origin_scope_</a>(data-&gt;node_origins(), phase_name),</div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        runtime_call_timer_scope(data-&gt;runtime_call_stats(),</div>
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                                 runtime_call_counter_id, counter_mode) {</div>
-<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(phase_name);</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(phase_name);</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  }</div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="preprocessor">#else   </span><span class="comment">// V8_RUNTIME_CALL_STATS</span></div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  PipelineRunScope(TFPipelineData* data, <span class="keyword">const</span> <span class="keywordtype">char</span>* phase_name)</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>      : <a class="code hl_variable" href="pipeline_8cc.html#af4599114b076349a807a00f80161ed13">phase_scope_</a>(data-&gt;pipeline_statistics(), phase_name),</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>        <a class="code hl_variable" href="pipeline_8cc.html#af112cc082e35d508fbc496d98304f935">zone_scope_</a>(data-&gt;zone_stats(), phase_name),</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        <a class="code hl_variable" href="pipeline_8cc.html#afa36354e3f4278acadb4f2076ae3e246">origin_scope_</a>(data-&gt;node_origins(), phase_name) {</div>
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(phase_name);</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(phase_name);</div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  }</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span><span class="preprocessor">#endif  </span><span class="comment">// V8_RUNTIME_CALL_STATS</span></div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
@@ -409,7 +417,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="comment">// LocalIsolateScope encapsulates the phase where persistent handles are</span></div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span><span class="comment">// attached to the LocalHeap inside {local_isolate}.</span></div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="keyword">class </span>V8_NODISCARD LocalIsolateScope {</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span><span class="keyword">class </span><a class="code hl_define" href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a> LocalIsolateScope {</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>  <span class="keyword">explicit</span> LocalIsolateScope(JSHeapBroker* <a class="code hl_variable" href="graph-builder_8cc.html#af88aca2403db6e64cd8bca9eda102a86">broker</a>,</div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                             OptimizedCompilationInfo* info,</div>
@@ -611,7 +619,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    turboshaft::Pipeline&amp; turboshaft_pipeline,</div>
 <div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>    PipelineImpl* turbofan_pipeline = <span class="keyword">nullptr</span>,</div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>    std::shared_ptr&lt;OsrHelper&gt; osr_helper = {}) {</div>
-<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(!use_turboshaft_instruction_selection, turbofan_pipeline);</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(!use_turboshaft_instruction_selection, turbofan_pipeline);</div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span> </div>
 <div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>  <span class="keywordflow">if</span> (use_turboshaft_instruction_selection) {</div>
 <div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>    turboshaft::PipelineData* turboshaft_data = turboshaft_pipeline.data();</div>
@@ -800,7 +808,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal_1_1compiler.html#a3b0b17a896dc48a4d8b81e853a198cae">  692</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#a3b0b17a896dc48a4d8b81e853a198cae">CheckNoDeprecatedMaps</a>(<a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Code&gt;</a> code, <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
 <div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>  <span class="keywordtype">int</span> mode_mask = <a class="code hl_function" href="classv8_1_1internal_1_1RelocInfo.html#af9e13797ecf59af38fcdb4da20c10ba1">RelocInfo::EmbeddedObjectModeMask</a>();</div>
 <div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>  <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1RelocIterator.html">RelocIterator</a> it(*code, mode_mask); !it.<a class="code hl_function" href="classv8_1_1internal_1_1RelocIteratorBase.html#a4e36ec3860d142b680388b2280014ea0">done</a>(); it.next()) {</div>
-<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1RelocInfo.html#a9de6eaa529e2d449eb3c4c78fc321d2e">RelocInfo::IsEmbeddedObjectMode</a>(it.rinfo()-&gt;rmode()));</div>
+<div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1RelocInfo.html#a9de6eaa529e2d449eb3c4c78fc321d2e">RelocInfo::IsEmbeddedObjectMode</a>(it.rinfo()-&gt;rmode()));</div>
 <div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> obj = it.rinfo()-&gt;target_object(isolate);</div>
 <div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>    <span class="keywordflow">if</span> (IsMap(obj) &amp;&amp; <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;Map&gt;</a>(obj)-&gt;<a class="code hl_variable" href="namespacev8_1_1internal.html#a87626c88fc718198c8a2bcf85411dd76">is_deprecated</a>()) {</div>
 <div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -815,7 +823,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00706" name="l00706"></a><span class="lineno">  706</span><span class="comment">// duration of the job phase and unset immediately afterwards. Each job</span></div>
 <div class="line"><a id="l00707" name="l00707"></a><span class="lineno">  707</span><span class="comment">// needs to set the correct RuntimeCallStats table depending on whether it</span></div>
 <div class="line"><a id="l00708" name="l00708"></a><span class="lineno">  708</span><span class="comment">// is running on a background or foreground thread.</span></div>
-<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span><span class="keyword">class </span>V8_NODISCARD PipelineJobScope {</div>
+<div class="line"><a id="l00709" name="l00709"></a><span class="lineno">  709</span><span class="keyword">class </span><a class="code hl_define" href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a> PipelineJobScope {</div>
 <div class="line"><a id="l00710" name="l00710"></a><span class="lineno">  710</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00711" name="l00711"></a><span class="lineno">  711</span>  PipelineJobScope(TFPipelineData* data, <a class="code hl_class" href="classv8_1_1internal_1_1RuntimeCallStats.html">RuntimeCallStats</a>* stats)</div>
 <div class="line"><a id="l00712" name="l00712"></a><span class="lineno">  712</span>      : <a class="code hl_variable" href="api_8cc.html#a87cb119678e603084928af555fe13e36">data_</a>(data), <a class="code hl_variable" href="pipeline_8cc.html#a89edd0c72e54caed2851cbdb1ba00cf9">current_broker_</a>(<a class="code hl_variable" href="api_8cc.html#a87cb119678e603084928af555fe13e36">data_</a>-&gt;<a class="code hl_variable" href="graph-builder_8cc.html#af88aca2403db6e64cd8bca9eda102a86">broker</a>()) {</div>
@@ -923,7 +931,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00809" name="l00809"></a><span class="lineno">  809</span>                                                   <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1PipelineCompilationJob.html#ac1a1be0c5bc8d7843dbda95ab9f8f1a4">data_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html#ad9afcd9aee3efaba9efac0259152415e">dependencies</a>());</div>
 <div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html">turboshaft::Pipeline</a> turboshaft_pipeline(&amp;<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1PipelineCompilationJob.html#a10659e5ac4d67178b0c5bebf14cbee2a">turboshaft_data_</a>);</div>
 <div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span> </div>
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_from_maglev)) {</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_from_maglev)) {</div>
 <div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>    <span class="keywordflow">if</span> (!turboshaft_pipeline.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#a9f2e26e7aaaebded2c9b632d016ae150">CreateGraphWithMaglev</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1PipelineCompilationJob.html#a855ae8194360d7da38a5cd3639cf05ae">linkage_</a>)) {</div>
 <div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1TurbofanCompilationJob.html#a921e7e119ea3ce3c157610d0f649a7cb">AbortOptimization</a>(BailoutReason::kGraphBuildingFailed);</div>
 <div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span>    }</div>
@@ -1132,7 +1140,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>    <span class="keywordflow">if</span> (call_reducer.has_js_wasm_calls()) {</div>
 <div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>      <span class="keyword">const</span> <a class="code hl_struct" href="structv8_1_1internal_1_1wasm_1_1WasmModule.html">wasm::WasmModule</a>* wasm_module =</div>
 <div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>          call_reducer.wasm_module_for_inlining();</div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>      <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(wasm_module);</div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(wasm_module);</div>
 <div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span>      data-&gt;set_wasm_module_for_inlining(wasm_module);</div>
 <div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>      <span class="comment">// Enable source positions if not enabled yet. While JS only uses the</span></div>
 <div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>      <span class="comment">// source position table for tracing, profiling, ..., wasm needs it at</span></div>
@@ -1155,8 +1163,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01028" name="l01028"></a><span class="lineno"> 1028</span><span class="keyword">struct </span>JSWasmInliningPhase {</div>
 <div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span>  <a class="code hl_define" href="phase_8h.html#a6e4da49a63145214281c51fdffc120f9">DECL_PIPELINE_PHASE_CONSTANTS</a>(JSWasmInlining)</div>
 <div class="line"><a id="l01030" name="l01030"></a><span class="lineno"> 1030</span>  <span class="keywordtype">void</span> Run(TFPipelineData* data, <a class="code hl_class" href="classv8_1_1internal_1_1Zone.html">Zone</a>* temp_zone) {</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(data-&gt;has_js_wasm_calls());</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>    <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(data-&gt;wasm_module_for_inlining());</div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(data-&gt;has_js_wasm_calls());</div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(data-&gt;wasm_module_for_inlining());</div>
 <div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span> </div>
 <div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span>    <a class="code hl_class" href="classv8_1_1internal_1_1OptimizedCompilationInfo.html">OptimizedCompilationInfo</a>* info = data-&gt;info();</div>
 <div class="line"><a id="l01035" name="l01035"></a><span class="lineno"> 1035</span>    GraphReducer graph_reducer(temp_zone, data-&gt;graph(), &amp;info-&gt;tick_counter(),</div>
@@ -1188,8 +1196,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01061" name="l01061"></a><span class="lineno"> 1061</span><span class="keyword">struct </span>JSWasmLoweringPhase {</div>
 <div class="line"><a id="l01062" name="l01062"></a><span class="lineno"> 1062</span>  <a class="code hl_define" href="phase_8h.html#a6e4da49a63145214281c51fdffc120f9">DECL_PIPELINE_PHASE_CONSTANTS</a>(JSWasmLowering)</div>
 <div class="line"><a id="l01063" name="l01063"></a><span class="lineno"> 1063</span>  <span class="keywordtype">void</span> Run(TFPipelineData* data, <a class="code hl_variable" href="asm-types_8cc.html#a3ec7489f692d014c845cc17e64456793">Zone</a>* temp_zone) {</div>
-<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(data-&gt;has_js_wasm_calls());</div>
-<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>    <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(data-&gt;wasm_module_for_inlining());</div>
+<div class="line"><a id="l01064" name="l01064"></a><span class="lineno"> 1064</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(data-&gt;has_js_wasm_calls());</div>
+<div class="line"><a id="l01065" name="l01065"></a><span class="lineno"> 1065</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(data-&gt;wasm_module_for_inlining());</div>
 <div class="line"><a id="l01066" name="l01066"></a><span class="lineno"> 1066</span> </div>
 <div class="line"><a id="l01067" name="l01067"></a><span class="lineno"> 1067</span>    OptimizedCompilationInfo* info = data-&gt;info();</div>
 <div class="line"><a id="l01068" name="l01068"></a><span class="lineno"> 1068</span>    GraphReducer graph_reducer(temp_zone, data-&gt;graph(), &amp;info-&gt;tick_counter(),</div>
@@ -2438,10 +2446,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02139" name="l02139"></a><span class="lineno"> 2139</span>      <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l02140" name="l02140"></a><span class="lineno"> 2140</span> </div>
 <div class="line"><a id="l02141" name="l02141"></a><span class="lineno"> 2141</span> <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l02142" name="l02142"></a><span class="lineno"> 2142</span>  Status PrepareJobImpl(Isolate* isolate) <span class="keyword">final</span>;</div>
+<div class="line"><a id="l02142" name="l02142"></a><span class="lineno"> 2142</span>  Status PrepareJobImpl(<a class="code hl_class" href="classv8_1_1Isolate.html">Isolate</a>* isolate) <span class="keyword">final</span>;</div>
 <div class="line"><a id="l02143" name="l02143"></a><span class="lineno"> 2143</span>  Status ExecuteJobImpl(RuntimeCallStats* stats,</div>
 <div class="line"><a id="l02144" name="l02144"></a><span class="lineno"> 2144</span>                        LocalIsolate* local_isolate) <span class="keyword">final</span>;</div>
-<div class="line"><a id="l02145" name="l02145"></a><span class="lineno"> 2145</span>  Status FinalizeJobImpl(Isolate* isolate) <span class="keyword">final</span>;</div>
+<div class="line"><a id="l02145" name="l02145"></a><span class="lineno"> 2145</span>  Status FinalizeJobImpl(<a class="code hl_class" href="classv8_1_1Isolate.html">Isolate</a>* isolate) <span class="keyword">final</span>;</div>
 <div class="line"><a id="l02146" name="l02146"></a><span class="lineno"> 2146</span> </div>
 <div class="line"><a id="l02147" name="l02147"></a><span class="lineno"> 2147</span> <span class="keyword">private</span>:</div>
 <div class="line"><a id="l02148" name="l02148"></a><span class="lineno"> 2148</span>  <span class="keyword">const</span> std::unique_ptr&lt;char[]&gt; debug_name_;</div>
@@ -2506,10 +2514,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02207" name="l02207"></a><span class="lineno"> 2207</span>    <span class="keywordflow">if</span> (code_kind == CodeKind::WASM_TO_JS_FUNCTION) {</div>
 <div class="line"><a id="l02208" name="l02208"></a><span class="lineno"> 2208</span>      CallDescriptor* <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a> = compiler::GetWasmCallDescriptor(</div>
 <div class="line"><a id="l02209" name="l02209"></a><span class="lineno"> 2209</span>          zone, sig, WasmCallKind::kWasmImportWrapper);</div>
-<div class="line"><a id="l02210" name="l02210"></a><span class="lineno"> 2210</span>      <span class="keywordflow">return</span> Is64() ? <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a></div>
+<div class="line"><a id="l02210" name="l02210"></a><span class="lineno"> 2210</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ac7063de1812b016c514e476bb2344dc4">Is64</a>() ? <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a></div>
 <div class="line"><a id="l02211" name="l02211"></a><span class="lineno"> 2211</span>                    : GetI32WasmCallDescriptor(zone, <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>);</div>
 <div class="line"><a id="l02212" name="l02212"></a><span class="lineno"> 2212</span>    }</div>
-<div class="line"><a id="l02213" name="l02213"></a><span class="lineno"> 2213</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(code_kind, CodeKind::JS_TO_WASM_FUNCTION);</div>
+<div class="line"><a id="l02213" name="l02213"></a><span class="lineno"> 2213</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(code_kind, CodeKind::JS_TO_WASM_FUNCTION);</div>
 <div class="line"><a id="l02214" name="l02214"></a><span class="lineno"> 2214</span>    <span class="keywordflow">return</span> Linkage::GetJSCallDescriptor(</div>
 <div class="line"><a id="l02215" name="l02215"></a><span class="lineno"> 2215</span>        zone, <span class="keyword">false</span>, <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a6135f0ef57de8d381e3225f6659c617a">sig</a>-&gt;parameter_count()) + 1,</div>
 <div class="line"><a id="l02216" name="l02216"></a><span class="lineno"> 2216</span>        CallDescriptor::kNoFlags);</div>
@@ -2596,11 +2604,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02297" name="l02297"></a><span class="lineno"> 2297</span>    PipelineImpl* pipeline, OptimizedCompilationInfo* info,</div>
 <div class="line"><a id="l02298" name="l02298"></a><span class="lineno"> 2298</span>    CallDescriptor* <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>, Isolate* isolate,</div>
 <div class="line"><a id="l02299" name="l02299"></a><span class="lineno"> 2299</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* method_name) {</div>
-<div class="line"><a id="l02300" name="l02300"></a><span class="lineno"> 2300</span>  Handle&lt;Code&gt; <a class="code hl_variable" href="namespacev8_1_1internal.html#a85b33c0aa285b5a6b0c9963edf565da7">code</a>;</div>
+<div class="line"><a id="l02300" name="l02300"></a><span class="lineno"> 2300</span>  <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Code&gt;</a> <a class="code hl_variable" href="namespacev8_1_1internal.html#a85b33c0aa285b5a6b0c9963edf565da7">code</a>;</div>
 <div class="line"><a id="l02301" name="l02301"></a><span class="lineno"> 2301</span>  <span class="keywordflow">if</span> (!pipeline-&gt;FinalizeCode(<a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>).ToHandle(&amp;code)) {</div>
 <div class="line"><a id="l02302" name="l02302"></a><span class="lineno"> 2302</span>    <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a977b087d4ee58955efe72b33136a4e94">V8::FatalProcessOutOfMemory</a>(isolate, method_name);</div>
 <div class="line"><a id="l02303" name="l02303"></a><span class="lineno"> 2303</span>  }</div>
-<div class="line"><a id="l02304" name="l02304"></a><span class="lineno"> 2304</span>  <a class="code hl_define" href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(pipeline-&gt;data()-&gt;dependencies());</div>
+<div class="line"><a id="l02304" name="l02304"></a><span class="lineno"> 2304</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(pipeline-&gt;data()-&gt;dependencies());</div>
 <div class="line"><a id="l02305" name="l02305"></a><span class="lineno"> 2305</span>  info-&gt;SetCode(code);</div>
 <div class="line"><a id="l02306" name="l02306"></a><span class="lineno"> 2306</span><span class="preprocessor">#ifdef ENABLE_DISASSEMBLER</span></div>
 <div class="line"><a id="l02307" name="l02307"></a><span class="lineno"> 2307</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.print_wasm_code) {</div>
@@ -2630,12 +2638,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02331" name="l02331"></a><span class="lineno"> 2331</span>    turboshaft::PipelineData* turboshaft_data, OptimizedCompilationInfo* info,</div>
 <div class="line"><a id="l02332" name="l02332"></a><span class="lineno"> 2332</span>    CallDescriptor* <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>, Isolate* isolate,</div>
 <div class="line"><a id="l02333" name="l02333"></a><span class="lineno"> 2333</span>    <span class="keyword">const</span> <span class="keywordtype">char</span>* method_name) {</div>
-<div class="line"><a id="l02334" name="l02334"></a><span class="lineno"> 2334</span>  Handle&lt;Code&gt; <a class="code hl_variable" href="namespacev8_1_1internal.html#a85b33c0aa285b5a6b0c9963edf565da7">code</a>;</div>
+<div class="line"><a id="l02334" name="l02334"></a><span class="lineno"> 2334</span>  <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;Code&gt;</a> <a class="code hl_variable" href="namespacev8_1_1internal.html#a85b33c0aa285b5a6b0c9963edf565da7">code</a>;</div>
 <div class="line"><a id="l02335" name="l02335"></a><span class="lineno"> 2335</span>  turboshaft::Pipeline pipeline(turboshaft_data);</div>
 <div class="line"><a id="l02336" name="l02336"></a><span class="lineno"> 2336</span>  <span class="keywordflow">if</span> (!pipeline.FinalizeCode(<a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>).ToHandle(&amp;code)) {</div>
 <div class="line"><a id="l02337" name="l02337"></a><span class="lineno"> 2337</span>    <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a977b087d4ee58955efe72b33136a4e94">V8::FatalProcessOutOfMemory</a>(isolate, method_name);</div>
 <div class="line"><a id="l02338" name="l02338"></a><span class="lineno"> 2338</span>  }</div>
-<div class="line"><a id="l02339" name="l02339"></a><span class="lineno"> 2339</span>  <a class="code hl_define" href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(turboshaft_data-&gt;depedencies());</div>
+<div class="line"><a id="l02339" name="l02339"></a><span class="lineno"> 2339</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(turboshaft_data-&gt;depedencies());</div>
 <div class="line"><a id="l02340" name="l02340"></a><span class="lineno"> 2340</span>  info-&gt;SetCode(code);</div>
 <div class="line"><a id="l02341" name="l02341"></a><span class="lineno"> 2341</span><span class="preprocessor">#ifdef ENABLE_DISASSEMBLER</span></div>
 <div class="line"><a id="l02342" name="l02342"></a><span class="lineno"> 2342</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.print_wasm_code) {</div>
@@ -2694,7 +2702,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02395" name="l02395"></a><span class="lineno"> 2395</span><a class="code hl_enumeration" href="classv8_1_1internal_1_1CompilationJob.html#a5139448eb71cada82780ab292fe35e9e">CompilationJob::Status</a> WasmTurboshaftWrapperCompilationJob::ExecuteJobImpl(</div>
 <div class="line"><a id="l02396" name="l02396"></a><span class="lineno"> 2396</span>    RuntimeCallStats* stats, LocalIsolate* local_isolate) {</div>
 <div class="line"><a id="l02397" name="l02397"></a><span class="lineno"> 2397</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_stats || <a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_stats_nvp) {</div>
-<div class="line"><a id="l02398" name="l02398"></a><span class="lineno"> 2398</span>    <a class="code hl_define" href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(pipeline_statistics_);</div>
+<div class="line"><a id="l02398" name="l02398"></a><span class="lineno"> 2398</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(pipeline_statistics_);</div>
 <div class="line"><a id="l02399" name="l02399"></a><span class="lineno"> 2399</span>    pipeline_statistics_ = std::make_unique&lt;TurbofanPipelineStatistics&gt;(</div>
 <div class="line"><a id="l02400" name="l02400"></a><span class="lineno"> 2400</span>        &amp;<a class="code hl_variable" href="pipeline_8cc.html#af557ebb703ebd3c9e815d70b9504ba36">info_</a>, <a class="code hl_function" href="namespacev8_1_1internal_1_1wasm.html#abc12fc3b25ebfb54c20b8479642acb94">wasm::GetWasmEngine</a>()-&gt;GetOrCreateTurboStatistics(),</div>
 <div class="line"><a id="l02401" name="l02401"></a><span class="lineno"> 2401</span>        &amp;zone_stats_);</div>
@@ -2729,7 +2737,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02430" name="l02430"></a><span class="lineno"> 2430</span>    turboshaft_pipeline.Run&lt;turboshaft::WasmOptimizePhase&gt;();</div>
 <div class="line"><a id="l02431" name="l02431"></a><span class="lineno"> 2431</span>  }</div>
 <div class="line"><a id="l02432" name="l02432"></a><span class="lineno"> 2432</span> </div>
-<div class="line"><a id="l02433" name="l02433"></a><span class="lineno"> 2433</span>  <span class="keywordflow">if</span> (!Is64()) {</div>
+<div class="line"><a id="l02433" name="l02433"></a><span class="lineno"> 2433</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespacev8_1_1internal.html#ac7063de1812b016c514e476bb2344dc4">Is64</a>()) {</div>
 <div class="line"><a id="l02434" name="l02434"></a><span class="lineno"> 2434</span>    turboshaft_pipeline.Run&lt;turboshaft::Int64LoweringPhase&gt;();</div>
 <div class="line"><a id="l02435" name="l02435"></a><span class="lineno"> 2435</span>  }</div>
 <div class="line"><a id="l02436" name="l02436"></a><span class="lineno"> 2436</span> </div>
@@ -2737,7 +2745,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02438" name="l02438"></a><span class="lineno"> 2438</span>  <span class="comment">// work around a bug in RecreateSchedulePhase.</span></div>
 <div class="line"><a id="l02439" name="l02439"></a><span class="lineno"> 2439</span>  turboshaft_pipeline.Run&lt;turboshaft::WasmDeadCodeEliminationPhase&gt;();</div>
 <div class="line"><a id="l02440" name="l02440"></a><span class="lineno"> 2440</span> </div>
-<div class="line"><a id="l02441" name="l02441"></a><span class="lineno"> 2441</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_enable_debug_features)) {</div>
+<div class="line"><a id="l02441" name="l02441"></a><span class="lineno"> 2441</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_enable_debug_features)) {</div>
 <div class="line"><a id="l02442" name="l02442"></a><span class="lineno"> 2442</span>    <span class="comment">// This phase has to run very late to allow all previous phases to use</span></div>
 <div class="line"><a id="l02443" name="l02443"></a><span class="lineno"> 2443</span>    <span class="comment">// debug features.</span></div>
 <div class="line"><a id="l02444" name="l02444"></a><span class="lineno"> 2444</span>    turboshaft_pipeline.Run&lt;turboshaft::DebugFeatureLoweringPhase&gt;();</div>
@@ -2813,7 +2821,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02510" name="l02510"></a><span class="lineno"> 2510</span> </div>
 <div class="foldopen" id="foldopen02511" data-start="{" data-end="}">
 <div class="line"><a id="l02511" name="l02511"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a6d8f4222688f509f5e25df7d6a967d64"> 2511</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a6d8f4222688f509f5e25df7d6a967d64">PipelineImpl::CreateGraph</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Linkage.html">Linkage</a>* <a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>) {</div>
-<div class="line"><a id="l02512" name="l02512"></a><span class="lineno"> 2512</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_from_maglev);</div>
+<div class="line"><a id="l02512" name="l02512"></a><span class="lineno"> 2512</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_from_maglev);</div>
 <div class="line"><a id="l02513" name="l02513"></a><span class="lineno"> 2513</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html">TFPipelineData</a>* data = this-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a3972067f2bfdb85017db0c359cdba886">data_</a>;</div>
 <div class="line"><a id="l02514" name="l02514"></a><span class="lineno"> 2514</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1UnparkedScopeIfNeeded.html">UnparkedScopeIfNeeded</a> unparked_scope(data-&gt;broker());</div>
 <div class="line"><a id="l02515" name="l02515"></a><span class="lineno"> 2515</span> </div>
@@ -2849,7 +2857,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02544" name="l02544"></a><span class="lineno"> 2544</span> </div>
 <div class="foldopen" id="foldopen02545" data-start="{" data-end="}">
 <div class="line"><a id="l02545" name="l02545"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a529ff670a8c7aef1e6d93f5a5ab6a84b"> 2545</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a529ff670a8c7aef1e6d93f5a5ab6a84b">PipelineImpl::OptimizeTurbofanGraph</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Linkage.html">Linkage</a>* <a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>) {</div>
-<div class="line"><a id="l02546" name="l02546"></a><span class="lineno"> 2546</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_from_maglev);</div>
+<div class="line"><a id="l02546" name="l02546"></a><span class="lineno"> 2546</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_from_maglev);</div>
 <div class="line"><a id="l02547" name="l02547"></a><span class="lineno"> 2547</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html">TFPipelineData</a>* data = this-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a3972067f2bfdb85017db0c359cdba886">data_</a>;</div>
 <div class="line"><a id="l02548" name="l02548"></a><span class="lineno"> 2548</span> </div>
 <div class="line"><a id="l02549" name="l02549"></a><span class="lineno"> 2549</span>  data-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html#ac0711a3823018a5800abcb22f7fc5700">BeginPhaseKind</a>(<span class="stringliteral">&quot;V8.TFLowering&quot;</span>);</div>
@@ -2898,7 +2906,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02592" name="l02592"></a><span class="lineno"> 2592</span> </div>
 <div class="line"><a id="l02593" name="l02593"></a><span class="lineno"> 2593</span><span class="preprocessor">#if V8_ENABLE_WEBASSEMBLY</span></div>
 <div class="line"><a id="l02594" name="l02594"></a><span class="lineno"> 2594</span>  <span class="keywordflow">if</span> (data-&gt;has_js_wasm_calls()) {</div>
-<div class="line"><a id="l02595" name="l02595"></a><span class="lineno"> 2595</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(data-&gt;info()-&gt;inline_js_wasm_calls());</div>
+<div class="line"><a id="l02595" name="l02595"></a><span class="lineno"> 2595</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(data-&gt;info()-&gt;inline_js_wasm_calls());</div>
 <div class="line"><a id="l02596" name="l02596"></a><span class="lineno"> 2596</span>    <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#af171ed682e348a0c3f597e174cccf4d0">Run&lt;JSWasmInliningPhase&gt;</a>();</div>
 <div class="line"><a id="l02597" name="l02597"></a><span class="lineno"> 2597</span>    <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a5902a52f83068f881b63cd17a20bea5d">RunPrintAndVerify</a>(JSWasmInliningPhase::phase_name(), <span class="keyword">true</span>);</div>
 <div class="line"><a id="l02598" name="l02598"></a><span class="lineno"> 2598</span>    <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#af171ed682e348a0c3f597e174cccf4d0">Run&lt;WasmTypingPhase&gt;</a>(-1);</div>
@@ -2976,7 +2984,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02669" name="l02669"></a><span class="lineno"> 2669</span>      }</div>
 <div class="line"><a id="l02670" name="l02670"></a><span class="lineno"> 2670</span>    });</div>
 <div class="line"><a id="l02671" name="l02671"></a><span class="lineno"> 2671</span>  }</div>
-<div class="line"><a id="l02672" name="l02672"></a><span class="lineno"> 2672</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#ae5e657aba90e2d28950f7c96453e9736">Tagged&lt;Smi&gt;</a>(IntToSmi(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(hash))).value();</div>
+<div class="line"><a id="l02672" name="l02672"></a><span class="lineno"> 2672</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#ae5e657aba90e2d28950f7c96453e9736">Tagged&lt;Smi&gt;</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#ae38b99de62124c22ce9a8cc9458de24c">IntToSmi</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(hash))).value();</div>
 <div class="line"><a id="l02673" name="l02673"></a><span class="lineno"> 2673</span>}</div>
 <div class="line"><a id="l02674" name="l02674"></a><span class="lineno"> 2674</span> </div>
 <div class="line"><a id="l02675" name="l02675"></a><span class="lineno"> 2675</span><span class="comment">// Compute a hash of the given graph, in a way that should provide the same</span></div>
@@ -3035,12 +3043,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02728" name="l02728"></a><span class="lineno"> 2728</span>      hash = <a class="code hl_function" href="namespacev8_1_1base.html#a06ab0f1db45a0e0b1baf8dbdcd3230a7">base::hash_combine</a>(hash, traversal_numbers[n-&gt;id()], n-&gt;opcode(),</div>
 <div class="line"><a id="l02729" name="l02729"></a><span class="lineno"> 2729</span>                                n-&gt;InputCount());</div>
 <div class="line"><a id="l02730" name="l02730"></a><span class="lineno"> 2730</span>      <span class="keywordflow">for</span> (Node* <span class="keyword">const</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> : n-&gt;inputs()) {</div>
-<div class="line"><a id="l02731" name="l02731"></a><span class="lineno"> 2731</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(traversal_numbers[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>-&gt;<a class="code hl_class" href="classid.html">id</a>()] != kUnassigned);</div>
+<div class="line"><a id="l02731" name="l02731"></a><span class="lineno"> 2731</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(traversal_numbers[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>-&gt;<a class="code hl_class" href="classid.html">id</a>()] != kUnassigned);</div>
 <div class="line"><a id="l02732" name="l02732"></a><span class="lineno"> 2732</span>        hash = <a class="code hl_function" href="namespacev8_1_1base.html#a06ab0f1db45a0e0b1baf8dbdcd3230a7">base::hash_combine</a>(hash, traversal_numbers[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>-&gt;<a class="code hl_class" href="classid.html">id</a>()]);</div>
 <div class="line"><a id="l02733" name="l02733"></a><span class="lineno"> 2733</span>      }</div>
 <div class="line"><a id="l02734" name="l02734"></a><span class="lineno"> 2734</span>    }</div>
 <div class="line"><a id="l02735" name="l02735"></a><span class="lineno"> 2735</span>  }</div>
-<div class="line"><a id="l02736" name="l02736"></a><span class="lineno"> 2736</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#ae5e657aba90e2d28950f7c96453e9736">Tagged&lt;Smi&gt;</a>(IntToSmi(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(hash))).value();</div>
+<div class="line"><a id="l02736" name="l02736"></a><span class="lineno"> 2736</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#ae5e657aba90e2d28950f7c96453e9736">Tagged&lt;Smi&gt;</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#ae38b99de62124c22ce9a8cc9458de24c">IntToSmi</a>(<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(hash))).value();</div>
 <div class="line"><a id="l02737" name="l02737"></a><span class="lineno"> 2737</span>}</div>
 <div class="line"><a id="l02738" name="l02738"></a><span class="lineno"> 2738</span> </div>
 <div class="line"><a id="l02739" name="l02739"></a><span class="lineno"> 2739</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> Graph&gt;</div>
@@ -3086,7 +3094,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02779" name="l02779"></a><span class="lineno"> 2779</span>        <span class="comment">// setting gn argument v8_builtins_profiling_log_file=&quot;&quot;.</span></div>
 <div class="line"><a id="l02780" name="l02780"></a><span class="lineno"> 2780</span>        <span class="comment">// One might also need to update the tools/builtins-pgo/generate.py if</span></div>
 <div class="line"><a id="l02781" name="l02781"></a><span class="lineno"> 2781</span>        <span class="comment">// the set of default release arguments has changed.</span></div>
-<div class="line"><a id="l02782" name="l02782"></a><span class="lineno"> 2782</span>        <a class="code hl_define" href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg.begin());</div>
+<div class="line"><a id="l02782" name="l02782"></a><span class="lineno"> 2782</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;%s&quot;</span>, msg.begin());</div>
 <div class="line"><a id="l02783" name="l02783"></a><span class="lineno"> 2783</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l02784" name="l02784"></a><span class="lineno"> 2784</span>        <a class="code hl_function" href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">PrintF</a>(<span class="stringliteral">&quot;%s\n&quot;</span>, msg.begin());</div>
 <div class="line"><a id="l02785" name="l02785"></a><span class="lineno"> 2785</span>      }</div>
@@ -3144,7 +3152,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02832" name="l02832"></a><span class="lineno"> 2832</span>      jump_opt_(ShouldOptimizeJumps(isolate) ? new <a class="code hl_struct" href="structv8_1_1internal_1_1JumpOptimizationInfo.html">JumpOptimizationInfo</a>()</div>
 <div class="line"><a id="l02833" name="l02833"></a><span class="lineno"> 2833</span>                                             : nullptr),</div>
 <div class="line"><a id="l02834" name="l02834"></a><span class="lineno"> 2834</span>      finalize_order_(finalize_order) {</div>
-<div class="line"><a id="l02835" name="l02835"></a><span class="lineno"> 2835</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(code_kind == CodeKind::BUILTIN ||</div>
+<div class="line"><a id="l02835" name="l02835"></a><span class="lineno"> 2835</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(code_kind == CodeKind::BUILTIN ||</div>
 <div class="line"><a id="l02836" name="l02836"></a><span class="lineno"> 2836</span>         code_kind == CodeKind::BYTECODE_HANDLER ||</div>
 <div class="line"><a id="l02837" name="l02837"></a><span class="lineno"> 2837</span>         code_kind == CodeKind::FOR_TESTING);</div>
 <div class="line"><a id="l02838" name="l02838"></a><span class="lineno"> 2838</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerCompilationJob.html#aa642b7994530dbdde60a8ca4038d77bf">compilation_info_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1OptimizedCompilationInfo.html#a8938bca0f95d292250d046cbaad298a6">set_builtin</a>(builtin);</div>
@@ -3309,7 +3317,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02984" name="l02984"></a><span class="lineno"> 2984</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurbofanCompilationJob.html#ab9c60d45cc8818b09ea62282ec268d07">pipeline_</a>-&gt;pipeline.<a class="code hl_function" href="structv8_1_1internal_1_1compiler_1_1BranchConditionDuplicationPhase.html#a35552b1e0fca4ef81b906af522504cd7">Run</a>&lt;<a class="code hl_struct" href="structv8_1_1internal_1_1compiler_1_1VerifyGraphPhase.html">VerifyGraphPhase</a>&gt;(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l02985" name="l02985"></a><span class="lineno"> 2985</span> </div>
 <div class="line"><a id="l02986" name="l02986"></a><span class="lineno"> 2986</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurbofanCompilationJob.html#ab9c60d45cc8818b09ea62282ec268d07">pipeline_</a>-&gt;pipeline.ComputeScheduledGraph();</div>
-<div class="line"><a id="l02987" name="l02987"></a><span class="lineno"> 2987</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurbofanCompilationJob.html#ab9c60d45cc8818b09ea62282ec268d07">pipeline_</a>-&gt;data.schedule());</div>
+<div class="line"><a id="l02987" name="l02987"></a><span class="lineno"> 2987</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurbofanCompilationJob.html#ab9c60d45cc8818b09ea62282ec268d07">pipeline_</a>-&gt;data.schedule());</div>
 <div class="line"><a id="l02988" name="l02988"></a><span class="lineno"> 2988</span> </div>
 <div class="line"><a id="l02989" name="l02989"></a><span class="lineno"> 2989</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurbofanCompilationJob.html#ae354c1990efe092e53438e9ee6e4e9b9">second_pipeline_</a>-&gt;data.set_profile_data(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerCompilationJob.html#a8fd62d09ebc55c9f2957e254cf8c7434">profile_data_</a>);</div>
 <div class="line"><a id="l02990" name="l02990"></a><span class="lineno"> 2990</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurbofanCompilationJob.html#ae354c1990efe092e53438e9ee6e4e9b9">second_pipeline_</a>-&gt;data.set_schedule(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurbofanCompilationJob.html#ab9c60d45cc8818b09ea62282ec268d07">pipeline_</a>-&gt;data.schedule());</div>
@@ -3317,7 +3325,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02992" name="l02992"></a><span class="lineno"> 2992</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1CallDescriptor.html">CallDescriptor</a>* <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a> = <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerCompilationJob.html#a21644a7d4c81086916b240e733a1cc14">raw_assembler</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1RawMachineAssembler.html#a6c036e57ce26e82b15c39eb63316750c">call_descriptor</a>();</div>
 <div class="line"><a id="l02993" name="l02993"></a><span class="lineno"> 2993</span>  PipelineJobScope second_scope(&amp;<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurbofanCompilationJob.html#ae354c1990efe092e53438e9ee6e4e9b9">second_pipeline_</a>-&gt;data, stats);</div>
 <div class="line"><a id="l02994" name="l02994"></a><span class="lineno"> 2994</span> </div>
-<div class="line"><a id="l02995" name="l02995"></a><span class="lineno"> 2995</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurbofanCompilationJob.html#ae354c1990efe092e53438e9ee6e4e9b9">second_pipeline_</a>-&gt;pipeline.SelectInstructionsAndAssemble(</div>
+<div class="line"><a id="l02995" name="l02995"></a><span class="lineno"> 2995</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurbofanCompilationJob.html#ae354c1990efe092e53438e9ee6e4e9b9">second_pipeline_</a>-&gt;pipeline.SelectInstructionsAndAssemble(</div>
 <div class="line"><a id="l02996" name="l02996"></a><span class="lineno"> 2996</span>      <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>));</div>
 <div class="line"><a id="l02997" name="l02997"></a><span class="lineno"> 2997</span> </div>
 <div class="line"><a id="l02998" name="l02998"></a><span class="lineno"> 2998</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_profiling) {</div>
@@ -3326,7 +3334,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03001" name="l03001"></a><span class="lineno"> 3001</span> </div>
 <div class="line"><a id="l03002" name="l03002"></a><span class="lineno"> 3002</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerCompilationJob.html#a03b2e3c59c0bdf2e2b4cafcb20cc5919">jump_opt_</a> &amp;&amp; <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerCompilationJob.html#a03b2e3c59c0bdf2e2b4cafcb20cc5919">jump_opt_</a>-&gt;is_optimizable()) {</div>
 <div class="line"><a id="l03003" name="l03003"></a><span class="lineno"> 3003</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerCompilationJob.html#a03b2e3c59c0bdf2e2b4cafcb20cc5919">jump_opt_</a>-&gt;set_optimizing();</div>
-<div class="line"><a id="l03004" name="l03004"></a><span class="lineno"> 3004</span>    <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurbofanCompilationJob.html#ab9c60d45cc8818b09ea62282ec268d07">pipeline_</a>-&gt;pipeline.SelectInstructionsAndAssemble(<a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>));</div>
+<div class="line"><a id="l03004" name="l03004"></a><span class="lineno"> 3004</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurbofanCompilationJob.html#ab9c60d45cc8818b09ea62282ec268d07">pipeline_</a>-&gt;pipeline.SelectInstructionsAndAssemble(<a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>));</div>
 <div class="line"><a id="l03005" name="l03005"></a><span class="lineno"> 3005</span>  }</div>
 <div class="line"><a id="l03006" name="l03006"></a><span class="lineno"> 3006</span> </div>
 <div class="line"><a id="l03007" name="l03007"></a><span class="lineno"> 3007</span>  <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="classv8_1_1internal_1_1CompilationJob.html#a5139448eb71cada82780ab292fe35e9ea77e01e83c7c3ed97092d7dc1dab5832d">SUCCEEDED</a>;</div>
@@ -3393,20 +3401,20 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03060" name="l03060"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1CodeAssemblerTurboshaftCompilationJob.html#aee2cf68bd5a0616b0f6b2deab714709e"> 3060</a></span>CodeAssemblerTurboshaftCompilationJob::ExecuteJobImpl(</div>
 <div class="line"><a id="l03061" name="l03061"></a><span class="lineno"> 3061</span>    <a class="code hl_class" href="classv8_1_1internal_1_1RuntimeCallStats.html">RuntimeCallStats</a>* stats, <a class="code hl_class" href="classv8_1_1internal_1_1LocalIsolate.html">LocalIsolate</a>* local_isolate) {</div>
 <div class="line"><a id="l03062" name="l03062"></a><span class="lineno"> 3062</span>  pipeline_-&gt;pipeline.ComputeScheduledGraph();</div>
-<div class="line"><a id="l03063" name="l03063"></a><span class="lineno"> 3063</span>  <a class="code hl_define" href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(pipeline_-&gt;data.frame());</div>
-<div class="line"><a id="l03064" name="l03064"></a><span class="lineno"> 3064</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(pipeline_-&gt;data.schedule());</div>
+<div class="line"><a id="l03063" name="l03063"></a><span class="lineno"> 3063</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(pipeline_-&gt;data.frame());</div>
+<div class="line"><a id="l03064" name="l03064"></a><span class="lineno"> 3064</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(pipeline_-&gt;data.schedule());</div>
 <div class="line"><a id="l03065" name="l03065"></a><span class="lineno"> 3065</span> </div>
 <div class="line"><a id="l03066" name="l03066"></a><span class="lineno"> 3066</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinPipeline.html">turboshaft::BuiltinPipeline</a> turboshaft_pipeline(&amp;<a class="code hl_variable" href="pipeline_8cc.html#ab837822e85ed55b8e616bf8a67b5e0de">turboshaft_data_</a>.value());</div>
 <div class="line"><a id="l03067" name="l03067"></a><span class="lineno"> 3067</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1CallDescriptor.html">CallDescriptor</a>* <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a> = raw_assembler()-&gt;call_descriptor();</div>
 <div class="line"><a id="l03068" name="l03068"></a><span class="lineno"> 3068</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Linkage.html">Linkage</a> <a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>(<a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>);</div>
 <div class="line"><a id="l03069" name="l03069"></a><span class="lineno"> 3069</span> </div>
-<div class="line"><a id="l03070" name="l03070"></a><span class="lineno"> 3070</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(</div>
+<div class="line"><a id="l03070" name="l03070"></a><span class="lineno"> 3070</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(</div>
 <div class="line"><a id="l03071" name="l03071"></a><span class="lineno"> 3071</span>      turboshaft_pipeline.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#a23bb6ebf2fb2d52c1aaf021efb8f91de">CreateGraphFromTurbofan</a>(&amp;pipeline_-&gt;data, &amp;<a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>));</div>
 <div class="line"><a id="l03072" name="l03072"></a><span class="lineno"> 3072</span> </div>
 <div class="line"><a id="l03073" name="l03073"></a><span class="lineno"> 3073</span>  turboshaft_pipeline.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinPipeline.html#ab24e1eff3c56a5752f842b63c2bfe094">OptimizeBuiltin</a>();</div>
 <div class="line"><a id="l03074" name="l03074"></a><span class="lineno"> 3074</span> </div>
-<div class="line"><a id="l03075" name="l03075"></a><span class="lineno"> 3075</span>  <a class="code hl_define" href="logging_8h.html#a7bf1ad59490562f507223cd6ca2cc6fa">CHECK_NULL</a>(pipeline_-&gt;data.osr_helper_ptr());</div>
-<div class="line"><a id="l03076" name="l03076"></a><span class="lineno"> 3076</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(turboshaft_pipeline.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#a86287ce29df0961d7caf2ff8aa543bde">GenerateCode</a>(</div>
+<div class="line"><a id="l03075" name="l03075"></a><span class="lineno"> 3075</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7bf1ad59490562f507223cd6ca2cc6fa">CHECK_NULL</a>(pipeline_-&gt;data.osr_helper_ptr());</div>
+<div class="line"><a id="l03076" name="l03076"></a><span class="lineno"> 3076</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(turboshaft_pipeline.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#a86287ce29df0961d7caf2ff8aa543bde">GenerateCode</a>(</div>
 <div class="line"><a id="l03077" name="l03077"></a><span class="lineno"> 3077</span>      &amp;<a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>, pipeline_-&gt;data.osr_helper_ptr(), jump_opt_.get(),</div>
 <div class="line"><a id="l03078" name="l03078"></a><span class="lineno"> 3078</span>      profile_data_, initial_graph_hash_));</div>
 <div class="line"><a id="l03079" name="l03079"></a><span class="lineno"> 3079</span> </div>
@@ -3437,7 +3445,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03100" name="l03100"></a><span class="lineno"> 3100</span>      [interface_descriptor](<a class="code hl_class" href="classv8_1_1internal_1_1Zone.html">Zone</a>* zone) {</div>
 <div class="line"><a id="l03101" name="l03101"></a><span class="lineno"> 3101</span>        <a class="code hl_class" href="classv8_1_1internal_1_1CallInterfaceDescriptor.html">CallInterfaceDescriptor</a> descriptor(interface_descriptor);</div>
 <div class="line"><a id="l03102" name="l03102"></a><span class="lineno"> 3102</span>        <span class="comment">// Ensure descriptor is already initialized.</span></div>
-<div class="line"><a id="l03103" name="l03103"></a><span class="lineno"> 3103</span>        <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(0, descriptor.<a class="code hl_function" href="classv8_1_1internal_1_1CallInterfaceDescriptor.html#a94ccca5725dab6ab4a9a088b89ce5fff">GetRegisterParameterCount</a>());</div>
+<div class="line"><a id="l03103" name="l03103"></a><span class="lineno"> 3103</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(0, descriptor.<a class="code hl_function" href="classv8_1_1internal_1_1CallInterfaceDescriptor.html#a94ccca5725dab6ab4a9a088b89ce5fff">GetRegisterParameterCount</a>());</div>
 <div class="line"><a id="l03104" name="l03104"></a><span class="lineno"> 3104</span>        <span class="keywordflow">return</span> Linkage::GetStubCallDescriptor(</div>
 <div class="line"><a id="l03105" name="l03105"></a><span class="lineno"> 3105</span>            zone, descriptor, descriptor.<a class="code hl_function" href="classv8_1_1internal_1_1CallInterfaceDescriptor.html#a07702c905dc8596acb19c70e7f53cc1a">GetStackParameterCount</a>(),</div>
 <div class="line"><a id="l03106" name="l03106"></a><span class="lineno"> 3106</span>            CallDescriptor::kNoFlags, Operator::kNoProperties);</div>
@@ -3537,7 +3545,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03192" name="l03192"></a><span class="lineno"> 3192</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html">turboshaft::PipelineData</a>* turboshaft_data, <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1CallDescriptor.html">CallDescriptor</a>* <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>,</div>
 <div class="line"><a id="l03193" name="l03193"></a><span class="lineno"> 3193</span>    <a class="code hl_enumeration" href="namespacev8_1_1internal.html#acc2e164143496f18b5ec68f8ab70af52">Builtin</a> builtin, <span class="keyword">const</span> <span class="keywordtype">char</span>* debug_name,</div>
 <div class="line"><a id="l03194" name="l03194"></a><span class="lineno"> 3194</span>    <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1ProfileDataFromFile.html">ProfileDataFromFile</a>* profile_data) {</div>
-<div class="line"><a id="l03195" name="l03195"></a><span class="lineno"> 3195</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(builtin, turboshaft_data-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#abc57d7bc8a06ab18819c75f474a93a13">info</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1OptimizedCompilationInfo.html#ae3ac1d45d03d3bb32a8628f97ff287f8">builtin</a>());</div>
+<div class="line"><a id="l03195" name="l03195"></a><span class="lineno"> 3195</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(builtin, turboshaft_data-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#abc57d7bc8a06ab18819c75f474a93a13">info</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1OptimizedCompilationInfo.html#ae3ac1d45d03d3bb32a8628f97ff287f8">builtin</a>());</div>
 <div class="line"><a id="l03196" name="l03196"></a><span class="lineno"> 3196</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate = turboshaft_data-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#ae9f73bd7d3232cf42ae42a46a13f76c9">isolate</a>();</div>
 <div class="line"><a id="l03197" name="l03197"></a><span class="lineno"> 3197</span> </div>
 <div class="line"><a id="l03198" name="l03198"></a><span class="lineno"> 3198</span><span class="preprocessor">#if V8_ENABLE_EXPERIMENTAL_TSA_BUILTINS</span></div>
@@ -3584,7 +3592,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03239" name="l03239"></a><span class="lineno"> 3239</span> </div>
 <div class="line"><a id="l03240" name="l03240"></a><span class="lineno"> 3240</span>  turboshaft_pipeline.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1BuiltinPipeline.html#ab24e1eff3c56a5752f842b63c2bfe094">OptimizeBuiltin</a>();</div>
 <div class="line"><a id="l03241" name="l03241"></a><span class="lineno"> 3241</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Linkage.html">Linkage</a> <a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>(<a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>);</div>
-<div class="line"><a id="l03242" name="l03242"></a><span class="lineno"> 3242</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(turboshaft_pipeline.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#a86287ce29df0961d7caf2ff8aa543bde">GenerateCode</a>(&amp;<a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>, {}, jump_optimization_info,</div>
+<div class="line"><a id="l03242" name="l03242"></a><span class="lineno"> 3242</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(turboshaft_pipeline.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#a86287ce29df0961d7caf2ff8aa543bde">GenerateCode</a>(&amp;<a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>, {}, jump_optimization_info,</div>
 <div class="line"><a id="l03243" name="l03243"></a><span class="lineno"> 3243</span>                                         profile_data, initial_graph_hash));</div>
 <div class="line"><a id="l03244" name="l03244"></a><span class="lineno"> 3244</span>  <span class="keywordflow">return</span> turboshaft_pipeline.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#a869eb2393ab4377642e77c6f85854a46">FinalizeCode</a>();</div>
 <div class="line"><a id="l03245" name="l03245"></a><span class="lineno"> 3245</span>}</div>
@@ -3679,12 +3687,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03333" name="l03333"></a><span class="lineno"> 3333</span>  pipeline.ComputeScheduledGraph();</div>
 <div class="line"><a id="l03334" name="l03334"></a><span class="lineno"> 3334</span> </div>
 <div class="line"><a id="l03335" name="l03335"></a><span class="lineno"> 3335</span>  Linkage <a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>(<a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>);</div>
-<div class="line"><a id="l03336" name="l03336"></a><span class="lineno"> 3336</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(pipeline.SelectInstructions(&amp;<a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>));</div>
+<div class="line"><a id="l03336" name="l03336"></a><span class="lineno"> 3336</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(pipeline.SelectInstructions(&amp;<a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>));</div>
 <div class="line"><a id="l03337" name="l03337"></a><span class="lineno"> 3337</span>  pipeline.AssembleCode(&amp;<a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>);</div>
 <div class="line"><a id="l03338" name="l03338"></a><span class="lineno"> 3338</span> </div>
 <div class="line"><a id="l03339" name="l03339"></a><span class="lineno"> 3339</span>  <span class="keyword">auto</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = WrapperCompilationResult(pipeline.code_generator(),</div>
 <div class="line"><a id="l03340" name="l03340"></a><span class="lineno"> 3340</span>                                         <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>, kind);</div>
-<div class="line"><a id="l03341" name="l03341"></a><span class="lineno"> 3341</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.succeeded());</div>
+<div class="line"><a id="l03341" name="l03341"></a><span class="lineno"> 3341</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.succeeded());</div>
 <div class="line"><a id="l03342" name="l03342"></a><span class="lineno"> 3342</span>  CodeTracer* code_tracer = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l03343" name="l03343"></a><span class="lineno"> 3343</span>  <span class="keywordflow">if</span> (info.trace_turbo_json() || info.trace_turbo_graph()) {</div>
 <div class="line"><a id="l03344" name="l03344"></a><span class="lineno"> 3344</span>    code_tracer = data.GetCodeTracer();</div>
@@ -3708,7 +3716,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03362" name="l03362"></a><span class="lineno"> 3362</span>          : WasmCallKind::kWasmCapiFunction;</div>
 <div class="line"><a id="l03363" name="l03363"></a><span class="lineno"> 3363</span>  CallDescriptor* <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a> =</div>
 <div class="line"><a id="l03364" name="l03364"></a><span class="lineno"> 3364</span>      <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#aade5489fce896bab05ac2370b204e0d2">GetWasmCallDescriptor</a>(&amp;zone, sig, call_kind);</div>
-<div class="line"><a id="l03365" name="l03365"></a><span class="lineno"> 3365</span>  <span class="keywordflow">if</span> (!Is64()) {</div>
+<div class="line"><a id="l03365" name="l03365"></a><span class="lineno"> 3365</span>  <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespacev8_1_1internal.html#ac7063de1812b016c514e476bb2344dc4">Is64</a>()) {</div>
 <div class="line"><a id="l03366" name="l03366"></a><span class="lineno"> 3366</span>    <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a> = GetI32WasmCallDescriptor(&amp;zone, <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>);</div>
 <div class="line"><a id="l03367" name="l03367"></a><span class="lineno"> 3367</span>  }</div>
 <div class="line"><a id="l03368" name="l03368"></a><span class="lineno"> 3368</span>  Linkage <a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>(<a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>);</div>
@@ -3756,7 +3764,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03410" name="l03410"></a><span class="lineno"> 3410</span>      turboshaft_pipeline.Run&lt;turboshaft::WasmOptimizePhase&gt;();</div>
 <div class="line"><a id="l03411" name="l03411"></a><span class="lineno"> 3411</span>    }</div>
 <div class="line"><a id="l03412" name="l03412"></a><span class="lineno"> 3412</span> </div>
-<div class="line"><a id="l03413" name="l03413"></a><span class="lineno"> 3413</span>    <span class="keywordflow">if</span> (!Is64()) {</div>
+<div class="line"><a id="l03413" name="l03413"></a><span class="lineno"> 3413</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespacev8_1_1internal.html#ac7063de1812b016c514e476bb2344dc4">Is64</a>()) {</div>
 <div class="line"><a id="l03414" name="l03414"></a><span class="lineno"> 3414</span>      turboshaft_pipeline.Run&lt;turboshaft::Int64LoweringPhase&gt;();</div>
 <div class="line"><a id="l03415" name="l03415"></a><span class="lineno"> 3415</span>    }</div>
 <div class="line"><a id="l03416" name="l03416"></a><span class="lineno"> 3416</span> </div>
@@ -3764,7 +3772,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03418" name="l03418"></a><span class="lineno"> 3418</span>    <span class="comment">// work around a bug in RecreateSchedulePhase.</span></div>
 <div class="line"><a id="l03419" name="l03419"></a><span class="lineno"> 3419</span>    turboshaft_pipeline.Run&lt;turboshaft::WasmDeadCodeEliminationPhase&gt;();</div>
 <div class="line"><a id="l03420" name="l03420"></a><span class="lineno"> 3420</span> </div>
-<div class="line"><a id="l03421" name="l03421"></a><span class="lineno"> 3421</span>    <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_enable_debug_features)) {</div>
+<div class="line"><a id="l03421" name="l03421"></a><span class="lineno"> 3421</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_enable_debug_features)) {</div>
 <div class="line"><a id="l03422" name="l03422"></a><span class="lineno"> 3422</span>      <span class="comment">// This phase has to run very late to allow all previous phases to use</span></div>
 <div class="line"><a id="l03423" name="l03423"></a><span class="lineno"> 3423</span>      <span class="comment">// debug features.</span></div>
 <div class="line"><a id="l03424" name="l03424"></a><span class="lineno"> 3424</span>      turboshaft_pipeline.Run&lt;turboshaft::DebugFeatureLoweringPhase&gt;();</div>
@@ -3775,13 +3783,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03429" name="l03429"></a><span class="lineno"> 3429</span>    <span class="keyword">const</span> <span class="keywordtype">bool</span> success = GenerateCodeFromTurboshaftGraph(</div>
 <div class="line"><a id="l03430" name="l03430"></a><span class="lineno"> 3430</span>        <a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_wasm_instruction_selection_staged, &amp;<a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>,</div>
 <div class="line"><a id="l03431" name="l03431"></a><span class="lineno"> 3431</span>        turboshaft_pipeline, &amp;pipeline, data.osr_helper_ptr());</div>
-<div class="line"><a id="l03432" name="l03432"></a><span class="lineno"> 3432</span>    <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(success);</div>
+<div class="line"><a id="l03432" name="l03432"></a><span class="lineno"> 3432</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(success);</div>
 <div class="line"><a id="l03433" name="l03433"></a><span class="lineno"> 3433</span> </div>
 <div class="line"><a id="l03434" name="l03434"></a><span class="lineno"> 3434</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_wasm_instruction_selection_staged) {</div>
 <div class="line"><a id="l03435" name="l03435"></a><span class="lineno"> 3435</span>      <span class="keyword">auto</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> =</div>
 <div class="line"><a id="l03436" name="l03436"></a><span class="lineno"> 3436</span>          WrapperCompilationResult(turboshaft_data.code_generator(),</div>
 <div class="line"><a id="l03437" name="l03437"></a><span class="lineno"> 3437</span>                                   <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>, wrapper_info.code_kind);</div>
-<div class="line"><a id="l03438" name="l03438"></a><span class="lineno"> 3438</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.succeeded());</div>
+<div class="line"><a id="l03438" name="l03438"></a><span class="lineno"> 3438</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.succeeded());</div>
 <div class="line"><a id="l03439" name="l03439"></a><span class="lineno"> 3439</span> </div>
 <div class="line"><a id="l03440" name="l03440"></a><span class="lineno"> 3440</span>      TraceFinishWrapperCompilation(info, code_tracer, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>,</div>
 <div class="line"><a id="l03441" name="l03441"></a><span class="lineno"> 3441</span>                                    turboshaft_data.code_generator());</div>
@@ -3789,7 +3797,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03443" name="l03443"></a><span class="lineno"> 3443</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l03444" name="l03444"></a><span class="lineno"> 3444</span>      <span class="keyword">auto</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = WrapperCompilationResult(</div>
 <div class="line"><a id="l03445" name="l03445"></a><span class="lineno"> 3445</span>          pipeline.code_generator(), <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>, wrapper_info.code_kind);</div>
-<div class="line"><a id="l03446" name="l03446"></a><span class="lineno"> 3446</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.succeeded());</div>
+<div class="line"><a id="l03446" name="l03446"></a><span class="lineno"> 3446</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.succeeded());</div>
 <div class="line"><a id="l03447" name="l03447"></a><span class="lineno"> 3447</span> </div>
 <div class="line"><a id="l03448" name="l03448"></a><span class="lineno"> 3448</span>      TraceFinishWrapperCompilation(info, code_tracer, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>,</div>
 <div class="line"><a id="l03449" name="l03449"></a><span class="lineno"> 3449</span>                                    pipeline.code_generator());</div>
@@ -3818,7 +3826,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03472" name="l03472"></a><span class="lineno"> 3472</span>    std::memcpy(iter, &amp;caller_pos, pos_size);</div>
 <div class="line"><a id="l03473" name="l03473"></a><span class="lineno"> 3473</span>    iter += pos_size;</div>
 <div class="line"><a id="l03474" name="l03474"></a><span class="lineno"> 3474</span>  }</div>
-<div class="line"><a id="l03475" name="l03475"></a><span class="lineno"> 3475</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(iter, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.end());</div>
+<div class="line"><a id="l03475" name="l03475"></a><span class="lineno"> 3475</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(iter, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.end());</div>
 <div class="line"><a id="l03476" name="l03476"></a><span class="lineno"> 3476</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>;</div>
 <div class="line"><a id="l03477" name="l03477"></a><span class="lineno"> 3477</span>}</div>
 <div class="line"><a id="l03478" name="l03478"></a><span class="lineno"> 3478</span> </div>
@@ -3832,7 +3840,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03486" name="l03486"></a><span class="lineno"> 3486</span>  <span class="keyword">auto</span>* wasm_engine = wasm::GetWasmEngine();</div>
 <div class="line"><a id="l03487" name="l03487"></a><span class="lineno"> 3487</span>  <span class="keyword">const</span> wasm::WasmModule* module = env-&gt;module;</div>
 <div class="line"><a id="l03488" name="l03488"></a><span class="lineno"> 3488</span>  base::TimeTicks start_time;</div>
-<div class="line"><a id="l03489" name="l03489"></a><span class="lineno"> 3489</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.trace_wasm_compilation_times)) {</div>
+<div class="line"><a id="l03489" name="l03489"></a><span class="lineno"> 3489</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.trace_wasm_compilation_times)) {</div>
 <div class="line"><a id="l03490" name="l03490"></a><span class="lineno"> 3490</span>    start_time = base::TimeTicks::Now();</div>
 <div class="line"><a id="l03491" name="l03491"></a><span class="lineno"> 3491</span>  }</div>
 <div class="line"><a id="l03492" name="l03492"></a><span class="lineno"> 3492</span>  ZoneStats zone_stats(wasm_engine-&gt;allocator());</div>
@@ -3870,7 +3878,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03524" name="l03524"></a><span class="lineno"> 3524</span>  <span class="keyword">const</span> wasm::FunctionSig* <a class="code hl_variable" href="namespacev8_1_1internal.html#a6135f0ef57de8d381e3225f6659c617a">sig</a> = compilation_data.func_body.sig;</div>
 <div class="line"><a id="l03525" name="l03525"></a><span class="lineno"> 3525</span>  turboshaft_data.SetIsWasmFunction(env-&gt;module, sig,</div>
 <div class="line"><a id="l03526" name="l03526"></a><span class="lineno"> 3526</span>                                    compilation_data.func_body.is_shared);</div>
-<div class="line"><a id="l03527" name="l03527"></a><span class="lineno"> 3527</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(turboshaft_data.wasm_module());</div>
+<div class="line"><a id="l03527" name="l03527"></a><span class="lineno"> 3527</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(turboshaft_data.wasm_module());</div>
 <div class="line"><a id="l03528" name="l03528"></a><span class="lineno"> 3528</span> </div>
 <div class="line"><a id="l03529" name="l03529"></a><span class="lineno"> 3529</span>  <span class="comment">// TODO(nicohartmann): This only works here because source positions are not</span></div>
 <div class="line"><a id="l03530" name="l03530"></a><span class="lineno"> 3530</span>  <span class="comment">// actually allocated inside the graph zone of TFPipelineData. We should</span></div>
@@ -3961,7 +3969,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03615" name="l03615"></a><span class="lineno"> 3615</span>  <span class="comment">// work around a bug in RecreateSchedulePhase.</span></div>
 <div class="line"><a id="l03616" name="l03616"></a><span class="lineno"> 3616</span>  turboshaft_pipeline.Run&lt;turboshaft::WasmDeadCodeEliminationPhase&gt;();</div>
 <div class="line"><a id="l03617" name="l03617"></a><span class="lineno"> 3617</span> </div>
-<div class="line"><a id="l03618" name="l03618"></a><span class="lineno"> 3618</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_enable_debug_features)) {</div>
+<div class="line"><a id="l03618" name="l03618"></a><span class="lineno"> 3618</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_enable_debug_features)) {</div>
 <div class="line"><a id="l03619" name="l03619"></a><span class="lineno"> 3619</span>    <span class="comment">// This phase has to run very late to allow all previous phases to use</span></div>
 <div class="line"><a id="l03620" name="l03620"></a><span class="lineno"> 3620</span>    <span class="comment">// debug features.</span></div>
 <div class="line"><a id="l03621" name="l03621"></a><span class="lineno"> 3621</span>    turboshaft_pipeline.Run&lt;turboshaft::DebugFeatureLoweringPhase&gt;();</div>
@@ -4027,7 +4035,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03681" name="l03681"></a><span class="lineno"> 3681</span>        &lt;&lt; <span class="stringliteral">&quot; using Turboshaft&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l03682" name="l03682"></a><span class="lineno"> 3682</span>  }</div>
 <div class="line"><a id="l03683" name="l03683"></a><span class="lineno"> 3683</span> </div>
-<div class="line"><a id="l03684" name="l03684"></a><span class="lineno"> 3684</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.trace_wasm_compilation_times)) {</div>
+<div class="line"><a id="l03684" name="l03684"></a><span class="lineno"> 3684</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.trace_wasm_compilation_times)) {</div>
 <div class="line"><a id="l03685" name="l03685"></a><span class="lineno"> 3685</span>    base::TimeDelta time = base::TimeTicks::Now() - start_time;</div>
 <div class="line"><a id="l03686" name="l03686"></a><span class="lineno"> 3686</span>    <span class="keywordtype">int</span> codesize = <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>-&gt;code_desc.body_size();</div>
 <div class="line"><a id="l03687" name="l03687"></a><span class="lineno"> 3687</span>    StdoutStream{} &lt;&lt; <span class="stringliteral">&quot;Compiled function &quot;</span></div>
@@ -4042,7 +4050,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03696" name="l03696"></a><span class="lineno"> 3696</span>                   &lt;&lt; std::endl;</div>
 <div class="line"><a id="l03697" name="l03697"></a><span class="lineno"> 3697</span>  }</div>
 <div class="line"><a id="l03698" name="l03698"></a><span class="lineno"> 3698</span> </div>
-<div class="line"><a id="l03699" name="l03699"></a><span class="lineno"> 3699</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>-&gt;succeeded());</div>
+<div class="line"><a id="l03699" name="l03699"></a><span class="lineno"> 3699</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>-&gt;succeeded());</div>
 <div class="line"><a id="l03700" name="l03700"></a><span class="lineno"> 3700</span>  info-&gt;SetWasmCompilationResult(std::move(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>));</div>
 <div class="line"><a id="l03701" name="l03701"></a><span class="lineno"> 3701</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l03702" name="l03702"></a><span class="lineno"> 3702</span>}</div>
@@ -4080,7 +4088,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03733" name="l03733"></a><span class="lineno"> 3733</span>    turboshaft_data.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1PipelineData.html#a4cb2c0ea4842aab5fd1aedd8ff132032">InitializeBrokerAndDependencies</a>(data.broker_ptr(),</div>
 <div class="line"><a id="l03734" name="l03734"></a><span class="lineno"> 3734</span>                                                    data.dependencies());</div>
 <div class="line"><a id="l03735" name="l03735"></a><span class="lineno"> 3735</span> </div>
-<div class="line"><a id="l03736" name="l03736"></a><span class="lineno"> 3736</span>    <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_from_maglev)) {</div>
+<div class="line"><a id="l03736" name="l03736"></a><span class="lineno"> 3736</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turboshaft_from_maglev)) {</div>
 <div class="line"><a id="l03737" name="l03737"></a><span class="lineno"> 3737</span>      <span class="keywordflow">if</span> (!turboshaft_pipeline.<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1turboshaft_1_1Pipeline.html#a9f2e26e7aaaebded2c9b632d016ae150">CreateGraphWithMaglev</a>(&amp;<a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>)) <span class="keywordflow">return</span> {};</div>
 <div class="line"><a id="l03738" name="l03738"></a><span class="lineno"> 3738</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l03739" name="l03739"></a><span class="lineno"> 3739</span>      <span class="keywordflow">if</span> (!pipeline.CreateGraph(&amp;<a class="code hl_variable" href="graph-builder_8cc.html#af97d4be930be06ad1e71c0c6a130dcff">linkage</a>)) <span class="keywordflow">return</span> {};</div>
@@ -4250,7 +4258,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03893" name="l03893"></a><span class="lineno"> 3893</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html">TFPipelineData</a>* data = this-&gt;<a class="code hl_variable" href="api_8cc.html#a87cb119678e603084928af555fe13e36">data_</a>;</div>
 <div class="line"><a id="l03894" name="l03894"></a><span class="lineno"> 3894</span> </div>
 <div class="line"><a id="l03895" name="l03895"></a><span class="lineno"> 3895</span>  <span class="comment">// We should only schedule the graph if it is not scheduled yet.</span></div>
-<div class="line"><a id="l03896" name="l03896"></a><span class="lineno"> 3896</span>  <a class="code hl_define" href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(data-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html#a09c702ad48cc52608f3fa1c9eb403c23">schedule</a>());</div>
+<div class="line"><a id="l03896" name="l03896"></a><span class="lineno"> 3896</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(data-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html#a09c702ad48cc52608f3fa1c9eb403c23">schedule</a>());</div>
 <div class="line"><a id="l03897" name="l03897"></a><span class="lineno"> 3897</span> </div>
 <div class="line"><a id="l03898" name="l03898"></a><span class="lineno"> 3898</span>  Run&lt;ComputeSchedulePhase&gt;();</div>
 <div class="line"><a id="l03899" name="l03899"></a><span class="lineno"> 3899</span>  TraceScheduleAndVerify(data-&gt;info(), data, data-&gt;schedule(), <span class="stringliteral">&quot;schedule&quot;</span>);</div>
@@ -4267,8 +4275,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03908" name="l03908"></a><span class="lineno"> 3908</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html">TFPipelineData</a>* data = this-&gt;<a class="code hl_variable" href="api_8cc.html#a87cb119678e603084928af555fe13e36">data_</a>;</div>
 <div class="line"><a id="l03909" name="l03909"></a><span class="lineno"> 3909</span> </div>
 <div class="line"><a id="l03910" name="l03910"></a><span class="lineno"> 3910</span>  <span class="comment">// We should have a scheduled graph.</span></div>
-<div class="line"><a id="l03911" name="l03911"></a><span class="lineno"> 3911</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(data-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html#a6504dfa4c8349b4b79d62cc0a503d042">graph</a>());</div>
-<div class="line"><a id="l03912" name="l03912"></a><span class="lineno"> 3912</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(data-&gt;schedule());</div>
+<div class="line"><a id="l03911" name="l03911"></a><span class="lineno"> 3911</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(data-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html#a6504dfa4c8349b4b79d62cc0a503d042">graph</a>());</div>
+<div class="line"><a id="l03912" name="l03912"></a><span class="lineno"> 3912</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(data-&gt;schedule());</div>
 <div class="line"><a id="l03913" name="l03913"></a><span class="lineno"> 3913</span> </div>
 <div class="line"><a id="l03914" name="l03914"></a><span class="lineno"> 3914</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.reorder_builtins &amp;&amp; Builtins::IsBuiltinId(info()-&gt;<a class="code hl_variable" href="liftoff-compiler_8cc.html#a01d5e89f3b7e433e5b30ecde7b63c6b2">builtin</a>())) {</div>
 <div class="line"><a id="l03915" name="l03915"></a><span class="lineno"> 3915</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1UnparkedScopeIfNeeded.html">UnparkedScopeIfNeeded</a> unparked_scope(data-&gt;broker());</div>
@@ -4368,7 +4376,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l04007" name="l04007"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1PipelineImpl.html#a849ec2b77272e2354b372958fc330782"> 4007</a></span><span class="keywordtype">bool</span> PipelineImpl::AllocateRegisters(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1CallDescriptor.html">CallDescriptor</a>* <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>,</div>
 <div class="line"><a id="l04008" name="l04008"></a><span class="lineno"> 4008</span>                                     <span class="keywordtype">bool</span> has_dummy_end_block) {</div>
 <div class="line"><a id="l04009" name="l04009"></a><span class="lineno"> 4009</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html">TFPipelineData</a>* data = this-&gt;<a class="code hl_variable" href="api_8cc.html#a87cb119678e603084928af555fe13e36">data_</a>;</div>
-<div class="line"><a id="l04010" name="l04010"></a><span class="lineno"> 4010</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(data-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html#ad74ec2797946fde85986cfd0cf99b210">sequence</a>());</div>
+<div class="line"><a id="l04010" name="l04010"></a><span class="lineno"> 4010</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(data-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1TFPipelineData.html#ad74ec2797946fde85986cfd0cf99b210">sequence</a>());</div>
 <div class="line"><a id="l04011" name="l04011"></a><span class="lineno"> 4011</span> </div>
 <div class="line"><a id="l04012" name="l04012"></a><span class="lineno"> 4012</span>  data-&gt;BeginPhaseKind(<span class="stringliteral">&quot;V8.TFRegisterAllocation&quot;</span>);</div>
 <div class="line"><a id="l04013" name="l04013"></a><span class="lineno"> 4013</span> </div>
@@ -4380,7 +4388,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l04019" name="l04019"></a><span class="lineno"> 4019</span>  std::unique_ptr&lt;const RegisterConfiguration&gt; restricted_config;</div>
 <div class="line"><a id="l04020" name="l04020"></a><span class="lineno"> 4020</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>-&gt;HasRestrictedAllocatableRegisters()) {</div>
 <div class="line"><a id="l04021" name="l04021"></a><span class="lineno"> 4021</span>    <a class="code hl_class" href="classv8_1_1internal_1_1RegListBase.html">RegList</a> <a class="code hl_variable" href="maglev-code-generator_8cc.html#ab6c2dc98768603fa8f30bd361f2c53d3">registers</a> = <a class="code hl_variable" href="recreate-schedule_8cc.html#a6e2504a557d0c1a3192ea70d577b8b58">call_descriptor</a>-&gt;AllocatableRegisters();</div>
-<div class="line"><a id="l04022" name="l04022"></a><span class="lineno"> 4022</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, <a class="code hl_variable" href="maglev-code-generator_8cc.html#ab6c2dc98768603fa8f30bd361f2c53d3">registers</a>.Count());</div>
+<div class="line"><a id="l04022" name="l04022"></a><span class="lineno"> 4022</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, <a class="code hl_variable" href="maglev-code-generator_8cc.html#ab6c2dc98768603fa8f30bd361f2c53d3">registers</a>.Count());</div>
 <div class="line"><a id="l04023" name="l04023"></a><span class="lineno"> 4023</span>    restricted_config.reset(</div>
 <div class="line"><a id="l04024" name="l04024"></a><span class="lineno"> 4024</span>        RegisterConfiguration::RestrictGeneralRegisters(<a class="code hl_variable" href="maglev-code-generator_8cc.html#ab6c2dc98768603fa8f30bd361f2c53d3">registers</a>));</div>
 <div class="line"><a id="l04025" name="l04025"></a><span class="lineno"> 4025</span>    config = restricted_config.get();</div>
@@ -4426,7 +4434,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l04063" name="l04063"></a><span class="lineno"> 4063</span>  <span class="keywordflow">if</span> (jump_opt-&gt;<a class="code hl_function" href="structv8_1_1internal_1_1JumpOptimizationInfo.html#ae0820dee6fb60dc2a432f3d5b47c6b3e">is_collecting</a>()) {</div>
 <div class="line"><a id="l04064" name="l04064"></a><span class="lineno"> 4064</span>    jump_opt-&gt;<a class="code hl_variable" href="structv8_1_1internal_1_1JumpOptimizationInfo.html#adb0e604bef6a9baedec6586a379443ad">hash_code</a> = hash_code;</div>
 <div class="line"><a id="l04065" name="l04065"></a><span class="lineno"> 4065</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l04066" name="l04066"></a><span class="lineno"> 4066</span>    <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(hash_code, jump_opt-&gt;<a class="code hl_variable" href="structv8_1_1internal_1_1JumpOptimizationInfo.html#adb0e604bef6a9baedec6586a379443ad">hash_code</a>);</div>
+<div class="line"><a id="l04066" name="l04066"></a><span class="lineno"> 4066</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(hash_code, jump_opt-&gt;<a class="code hl_variable" href="structv8_1_1internal_1_1JumpOptimizationInfo.html#adb0e604bef6a9baedec6586a379443ad">hash_code</a>);</div>
 <div class="line"><a id="l04067" name="l04067"></a><span class="lineno"> 4067</span>  }</div>
 <div class="line"><a id="l04068" name="l04068"></a><span class="lineno"> 4068</span>}</div>
 </div>
@@ -4609,8 +4617,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l04234" name="l04234"></a><span class="lineno"> 4234</span> </div>
 <div class="line"><a id="l04235" name="l04235"></a><span class="lineno"> 4235</span>  TraceSequence(<a class="code hl_variable" href="debug-coverage_8cc.html#aa28b37bd003d1724a468ca0cfa8478d2">info</a>(), data, <span class="stringliteral">&quot;before register allocation&quot;</span>);</div>
 <div class="line"><a id="l04236" name="l04236"></a><span class="lineno"> 4236</span>  <span class="keywordflow">if</span> (verifier != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l04237" name="l04237"></a><span class="lineno"> 4237</span>    <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!data-&gt;register_allocation_data()-&gt;ExistsUseWithoutDefinition());</div>
-<div class="line"><a id="l04238" name="l04238"></a><span class="lineno"> 4238</span>    <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(data-&gt;register_allocation_data()</div>
+<div class="line"><a id="l04237" name="l04237"></a><span class="lineno"> 4237</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!data-&gt;register_allocation_data()-&gt;ExistsUseWithoutDefinition());</div>
+<div class="line"><a id="l04238" name="l04238"></a><span class="lineno"> 4238</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(data-&gt;register_allocation_data()</div>
 <div class="line"><a id="l04239" name="l04239"></a><span class="lineno"> 4239</span>              -&gt;RangesDefinedInDeferredStayInDeferred());</div>
 <div class="line"><a id="l04240" name="l04240"></a><span class="lineno"> 4240</span>  }</div>
 <div class="line"><a id="l04241" name="l04241"></a><span class="lineno"> 4241</span> </div>
@@ -4738,6 +4746,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclass-debug-reader-generator_8cc_html_aede818ff693a0360e722300214ad6a52"><div class="ttname"><a href="class-debug-reader-generator_8cc.html#aede818ff693a0360e722300214ad6a52">pos</a></div><div class="ttdeci">SourcePosition pos</div><div class="ttdef"><b>Definition</b> <a href="class-debug-reader-generator_8cc_source.html#l00034">class-debug-reader-generator.cc:34</a></div></div>
 <div class="ttc" id="aclassid_html"><div class="ttname"><a href="classid.html">id</a></div></div>
 <div class="ttc" id="aclasssize_html"><div class="ttname"><a href="classsize.html">size</a></div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1Isolate.html">v8::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="v8-isolate_8h_source.html#l00261">v8-isolate.h:261</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1ContextualVariable_1_1Scope_html"><div class="ttname"><a href="classv8_1_1base_1_1ContextualVariable_1_1Scope.html">v8::base::ContextualVariable::Scope</a></div><div class="ttdef"><b>Definition</b> <a href="contextual_8h_source.html#l00036">contextual.h:36</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1Flags_html"><div class="ttname"><a href="classv8_1_1base_1_1Flags.html">v8::base::Flags</a></div><div class="ttdef"><b>Definition</b> <a href="base_2flags_8h_source.html#l00025">flags.h:25</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1AssemblerBase_html_a827990065c323903569414e6566a1fda"><div class="ttname"><a href="classv8_1_1internal_1_1AssemblerBase.html#a827990065c323903569414e6566a1fda">v8::internal::AssemblerBase::ReleaseBuffer</a></div><div class="ttdeci">std::unique_ptr&lt; AssemblerBuffer &gt; ReleaseBuffer()</div><div class="ttdef"><b>Definition</b> <a href="codegen_2assembler_8h_source.html#l00399">assembler.h:399</a></div></div>
@@ -5135,17 +5144,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aliveedit_8cc_html_a401e942526aac47cef94f478182486e7"><div class="ttname"><a href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a></div><div class="ttdeci">int position</div><div class="ttdef"><b>Definition</b> <a href="liveedit_8cc_source.html#l00290">liveedit.cc:290</a></div></div>
 <div class="ttc" id="aload-elimination_8h_html"><div class="ttname"><a href="load-elimination_8h.html">load-elimination.h</a></div></div>
 <div class="ttc" id="alocal-heap_8h_html"><div class="ttname"><a href="local-heap_8h.html">local-heap.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00047">logging.h:47</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_a2209830df6b59d1ec1fdf66b9352924f"><div class="ttname"><a href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a></div><div class="ttdeci">#define DCHECK_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00491">logging.h:491</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7bf1ad59490562f507223cd6ca2cc6fa"><div class="ttname"><a href="logging_8h.html#a7bf1ad59490562f507223cd6ca2cc6fa">CHECK_NULL</a></div><div class="ttdeci">#define CHECK_NULL(val)</div></div>
-<div class="ttc" id="alogging_8h_html_a96a75539aa82216cdde2250a11126ea0"><div class="ttname"><a href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a></div><div class="ttdeci">#define DCHECK_IMPLIES(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00493">logging.h:493</a></div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="aloop-analysis_8h_html"><div class="ttname"><a href="loop-analysis_8h.html">loop-analysis.h</a></div></div>
 <div class="ttc" id="aloop-peeling-phase_8h_html"><div class="ttname"><a href="loop-peeling-phase_8h.html">loop-peeling-phase.h</a></div></div>
 <div class="ttc" id="aloop-peeling_8h_html"><div class="ttname"><a href="loop-peeling_8h.html">loop-peeling.h</a></div></div>
@@ -5216,14 +5214,17 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_a87626c88fc718198c8a2bcf85411dd76"><div class="ttname"><a href="namespacev8_1_1internal.html#a87626c88fc718198c8a2bcf85411dd76">v8::internal::is_deprecated</a></div><div class="ttdeci">Map::Bits1::HasPrototypeSlotBit Map::Bits1::HasNamedInterceptorBit Map::Bits1::IsUndetectableBit Map::Bits1::IsConstructorBit Map::Bits2::IsImmutablePrototypeBit is_deprecated</div><div class="ttdef"><b>Definition</b> <a href="map-inl_8h_source.html#l00122">map-inl.h:122</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a9f3877ef6710a52328e07f2f6347b577"><div class="ttname"><a href="namespacev8_1_1internal.html#a9f3877ef6710a52328e07f2f6347b577">v8::internal::CodeKind</a></div><div class="ttdeci">CodeKind</div><div class="ttdef"><b>Definition</b> <a href="code-kind_8h_source.html#l00033">code-kind.h:33</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9db791c05a0359859a321dcfec42e37"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8::internal::v8_flags</a></div><div class="ttdeci">V8_EXPORT_PRIVATE FlagValues v8_flags</div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_ac7063de1812b016c514e476bb2344dc4"><div class="ttname"><a href="namespacev8_1_1internal.html#ac7063de1812b016c514e476bb2344dc4">v8::internal::Is64</a></div><div class="ttdeci">constexpr bool Is64()</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00210">v8-internal.h:210</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_acc2e164143496f18b5ec68f8ab70af52"><div class="ttname"><a href="namespacev8_1_1internal.html#acc2e164143496f18b5ec68f8ab70af52">v8::internal::Builtin</a></div><div class="ttdeci">Builtin</div><div class="ttdef"><b>Definition</b> <a href="builtins_8h_source.html#l00048">builtins.h:48</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_acdec713c25068019f935e35976f5b666"><div class="ttname"><a href="namespacev8_1_1internal.html#acdec713c25068019f935e35976f5b666">v8::internal::UNREACHABLE</a></div><div class="ttdeci">UNREACHABLE()</div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_ae38b99de62124c22ce9a8cc9458de24c"><div class="ttname"><a href="namespacev8_1_1internal.html#ae38b99de62124c22ce9a8cc9458de24c">v8::internal::IntToSmi</a></div><div class="ttdeci">static V8_INLINE constexpr Address IntToSmi(int value)</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00212">v8-internal.h:212</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ae5e657aba90e2d28950f7c96453e9736"><div class="ttname"><a href="namespacev8_1_1internal.html#ae5e657aba90e2d28950f7c96453e9736">v8::internal::Tagged&lt; Smi &gt;</a></div><div class="ttdeci">Tagged&lt; Smi &gt;</div><div class="ttdef"><b>Definition</b> <a href="property-cell-inl_8h_source.html#l00026">property-cell-inl.h:26</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_afa9ea55d792121fba92b4cfc8ef8c9d7"><div class="ttname"><a href="namespacev8_1_1internal.html#afa9ea55d792121fba92b4cfc8ef8c9d7">v8::internal::length</a></div><div class="ttdeci">size_t length</div><div class="ttdef"><b>Definition</b> <a href="external-reference_8cc_source.html#l01421">external-reference.cc:1421</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_afb7e5cd394b9632dddc2e7807b11b2ab"><div class="ttname"><a href="namespacev8_1_1internal.html#afb7e5cd394b9632dddc2e7807b11b2ab">v8::internal::script</a></div><div class="ttdeci">kInterpreterTrampolineOffset script</div><div class="ttdef"><b>Definition</b> <a href="shared-function-info-inl_8h_source.html#l00116">shared-function-info-inl.h:116</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_afe601ad9b4b4c61d8a6a700e7db12c2a"><div class="ttname"><a href="namespacev8_1_1internal.html#afe601ad9b4b4c61d8a6a700e7db12c2a">v8::internal::native_context</a></div><div class="ttdeci">!IsContextMap !IsContextMap native_context</div><div class="ttdef"><b>Definition</b> <a href="map-inl_8h_source.html#l00854">map-inl.h:854</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="anamespacev8_html_a25d2bd830a15c10ed892862df4c7f2eb"><div class="ttname"><a href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">v8::Handle</a></div><div class="ttdeci">Local&lt; T &gt; Handle</div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00618">v8-local-handle.h:618</a></div></div>
 <div class="ttc" id="anamespacewasm_html"><div class="ttname"><a href="namespacewasm.html">wasm</a></div><div class="ttdef"><b>Definition</b> <a href="c-api_8cc_source.html#l00090">c-api.cc:90</a></div></div>
 <div class="ttc" id="anode-observer_8h_html"><div class="ttname"><a href="node-observer_8h.html">node-observer.h</a></div></div>
 <div class="ttc" id="anode-origin-table_8h_html"><div class="ttname"><a href="node-origin-table_8h.html">node-origin-table.h</a></div></div>
@@ -5271,6 +5272,17 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="asimplified-operator-reducer_8h_html"><div class="ttname"><a href="simplified-operator-reducer_8h.html">simplified-operator-reducer.h</a></div></div>
 <div class="ttc" id="asimplified-operator_8h_html"><div class="ttname"><a href="simplified-operator_8h.html">simplified-operator.h</a></div></div>
 <div class="ttc" id="asimplify-tf-loops_8h_html"><div class="ttname"><a href="simplify-tf-loops_8h.html">simplify-tf-loops.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00047">logging.h:47</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a2209830df6b59d1ec1fdf66b9352924f"><div class="ttname"><a href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a></div><div class="ttdeci">#define DCHECK_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00491">logging.h:491</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7bf1ad59490562f507223cd6ca2cc6fa"><div class="ttname"><a href="src_2base_2logging_8h.html#a7bf1ad59490562f507223cd6ca2cc6fa">CHECK_NULL</a></div><div class="ttdeci">#define CHECK_NULL(val)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a96a75539aa82216cdde2250a11126ea0"><div class="ttname"><a href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a></div><div class="ttdeci">#define DCHECK_IMPLIES(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00493">logging.h:493</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="astore-store-elimination-phase_8h_html"><div class="ttname"><a href="store-store-elimination-phase_8h.html">store-store-elimination-phase.h</a></div></div>
 <div class="ttc" id="astring-inl_8h_html"><div class="ttname"><a href="string-inl_8h.html">string-inl.h</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1AsEscapedUC16ForJSON_html"><div class="ttname"><a href="structv8_1_1internal_1_1AsEscapedUC16ForJSON.html">v8::internal::AsEscapedUC16ForJSON</a></div><div class="ttdef"><b>Definition</b> <a href="ostreams_8h_source.html#l00127">ostreams.h:127</a></div></div>
@@ -5365,6 +5377,8 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="atyped-optimization_8h_html"><div class="ttname"><a href="typed-optimization_8h.html">typed-optimization.h</a></div></div>
 <div class="ttc" id="atyped-optimizations-phase_8h_html"><div class="ttname"><a href="typed-optimizations-phase_8h.html">typed-optimizations-phase.h</a></div></div>
 <div class="ttc" id="autils_2utils_8h_html"><div class="ttname"><a href="utils_2utils_8h.html">utils.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a67bd29db07c711b0fb11ff1c324ebb60"><div class="ttname"><a href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a></div><div class="ttdeci">#define V8_UNLIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00649">v8config.h:649</a></div></div>
+<div class="ttc" id="av8config_8h_html_ae5350bf5d731891583a34f9c8c52b532"><div class="ttname"><a href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a></div><div class="ttdeci">#define V8_NODISCARD</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00682">v8config.h:682</a></div></div>
 <div class="ttc" id="avalue-numbering-reducer_8h_html"><div class="ttname"><a href="value-numbering-reducer_8h.html">value-numbering-reducer.h</a></div></div>
 <div class="ttc" id="averifier_8h_html"><div class="ttname"><a href="verifier_8h.html">verifier.h</a></div></div>
 <div class="ttc" id="awasm-builtin-list_8h_html"><div class="ttname"><a href="wasm-builtin-list_8h.html">wasm-builtin-list.h</a></div></div>
@@ -5389,10 +5403,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="azone-stats_8h_html"><div class="ttname"><a href="zone-stats_8h.html">zone-stats.h</a></div></div>
 <div class="ttc" id="azone_8h_html_a6b1fd0a126df3f1b788cee19d9cce66e"><div class="ttname"><a href="zone_8h.html#a6b1fd0a126df3f1b788cee19d9cce66e">ZONE_NAME</a></div><div class="ttdeci">#define ZONE_NAME</div><div class="ttdef"><b>Definition</b> <a href="zone_8h_source.html#l00022">zone.h:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:17:17 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="pipeline_8cc.html">pipeline.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:53:22 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

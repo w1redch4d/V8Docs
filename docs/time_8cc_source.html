@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/base/platform/time.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/base/platform/time.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('time_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="dir_c00de8f55a27e6d67f70bde7b77593d5.html">platform</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">time.cc</div></div>
 </div><!--header-->
@@ -136,8 +144,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#include &quot;<a class="code" href="lazy-instance_8h.html">src/base/lazy-instance.h</a>&quot;</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#include &quot;<a class="code" href="cpu_8h.html">src/base/cpu.h</a>&quot;</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &quot;<a class="code" href="base_2platform_2platform_8h.html">src/base/platform/platform.h</a>&quot;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2platform_2platform_8h.html">src/base/platform/platform.h</a>&quot;</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#if V8_OS_STARBOARD</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#include &quot;starboard/common/time.h&quot;</span></div>
@@ -154,10 +162,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      THREAD_BASIC_INFO,</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      <span class="keyword">reinterpret_cast&lt;</span>thread_info_t<span class="keyword">&gt;</span>(&amp;thread_info_data),</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>      &amp;thread_info_count);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(kr, KERN_SUCCESS);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(kr, KERN_SUCCESS);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="comment">// We can add the seconds into a {int64_t} without overflow.</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <a class="code hl_define" href="logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a>(thread_info_data.user_time.seconds,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a>(thread_info_data.user_time.seconds,</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>           std::numeric_limits&lt;int64_t&gt;::max() -</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>               thread_info_data.system_time.seconds);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  int64_t seconds =</div>
@@ -168,19 +176,19 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>      (std::numeric_limits&lt;int64_t&gt;::max() /</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>       <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#acab094d0228291f6ddfb5cb137c8f79f">v8::base::Time::kMicrosecondsPerSecond</a>) -</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      2;</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_define" href="logging_8h.html#a43d2df1fb528ff7bee1e873e377e0323">CHECK_GT</a>(kSecondsLimit, seconds);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a43d2df1fb528ff7bee1e873e377e0323">CHECK_GT</a>(kSecondsLimit, seconds);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  int64_t micros = seconds * <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#acab094d0228291f6ddfb5cb137c8f79f">v8::base::Time::kMicrosecondsPerSecond</a>;</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  micros += (thread_info_data.user_time.microseconds +</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>             thread_info_data.system_time.microseconds);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordflow">return</span> micros;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="preprocessor">#elif V8_OS_FUCHSIA</span></div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>V8_INLINE int64_t GetFuchsiaThreadTicks() {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> int64_t GetFuchsiaThreadTicks() {</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  zx_info_thread_stats_t <a class="code hl_variable" href="debug-coverage_8cc.html#aa28b37bd003d1724a468ca0cfa8478d2">info</a>;</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  zx_status_t status = zx_object_get_info(thrd_get_zx_handle(thrd_current()),</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>                                          ZX_INFO_THREAD_STATS, &amp;info,</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                                          <span class="keyword">sizeof</span>(info), <span class="keyword">nullptr</span>, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(status, ZX_OK);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(status, ZX_OK);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordflow">return</span> info.total_runtime / <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#a7b7def4d913fbbad5793662bbc929fd7">v8::base::Time::kNanosecondsPerMicrosecond</a>;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">#elif V8_OS_POSIX</span></div>
@@ -188,7 +196,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">// microsecond timebase. Minimum requirement is MONOTONIC_CLOCK to be supported</span></div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">// on the system. FreeBSD 6 has CLOCK_MONOTONIC but defines</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">// _POSIX_MONOTONIC_CLOCK to -1.</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>V8_INLINE int64_t ClockNow(clockid_t clk_id) {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> int64_t ClockNow(clockid_t clk_id) {</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">#if (defined(_POSIX_MONOTONIC_CLOCK) &amp;&amp; _POSIX_MONOTONIC_CLOCK &gt;= 0) || \</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">    defined(V8_OS_BSD) || defined(V8_OS_ANDROID) || defined(V8_OS_ZOS)</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#if defined(V8_OS_AIX)</span></div>
@@ -200,7 +208,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    thread_cputime_t tc;</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">if</span> (thread_cputime(-1, &amp;tc) != 0) {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="keywordflow">return</span> (tc.stime / <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#a7b7def4d913fbbad5793662bbc929fd7">v8::base::Time::kNanosecondsPerMicrosecond</a>)</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>           + (tc.utime / <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#a7b7def4d913fbbad5793662bbc929fd7">v8::base::Time::kNanosecondsPerMicrosecond</a>);</div>
@@ -209,7 +217,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#endif  </span><span class="comment">// defined(V8_OS_AIX)</span></div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keyword">struct </span>timespec ts;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keywordflow">if</span> (clock_gettime(clk_id, &amp;ts) != 0) {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  }</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="comment">// Multiplying the seconds by {kMicrosecondsPerSecond}, and adding something</span></div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="comment">// in [0, kMicrosecondsPerSecond) must result in a valid {int64_t}.</span></div>
@@ -217,7 +225,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      (std::numeric_limits&lt;int64_t&gt;::max() /</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>       <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#acab094d0228291f6ddfb5cb137c8f79f">v8::base::Time::kMicrosecondsPerSecond</a>) -</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      1;</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <a class="code hl_define" href="logging_8h.html#a43d2df1fb528ff7bee1e873e377e0323">CHECK_GT</a>(kSecondsLimit, ts.tv_sec);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a43d2df1fb528ff7bee1e873e377e0323">CHECK_GT</a>(kSecondsLimit, ts.tv_sec);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  int64_t <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = int64_t{ts.tv_sec} * <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#acab094d0228291f6ddfb5cb137c8f79f">v8::base::Time::kMicrosecondsPerSecond</a>;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> += (ts.tv_nsec / <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#a7b7def4d913fbbad5793662bbc929fd7">v8::base::Time::kNanosecondsPerMicrosecond</a>);</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>;</div>
@@ -226,7 +234,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>}</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>V8_INLINE int64_t NanosecondsNow() {</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> int64_t NanosecondsNow() {</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="keyword">struct </span>timespec ts;</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  clock_gettime(CLOCK_MONOTONIC, &amp;ts);</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="keywordflow">return</span> int64_t{ts.tv_sec} * <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#a69135d50993fe40feea17e45158377fa">v8::base::Time::kNanosecondsPerSecond</a> +</div>
@@ -237,7 +245,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  <span class="comment">// Currently this is only needed for CLOCK_MONOTONIC. If other clocks need</span></div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <span class="comment">// to be checked, care must be taken to support all platforms correctly;</span></div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>  <span class="comment">// see ClockNow() above for precedent.</span></div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(clk_id, CLOCK_MONOTONIC);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(clk_id, CLOCK_MONOTONIC);</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  int64_t <a class="code hl_variable" href="earley-parser_8cc.html#a8a2b2ef92f1e05c391a8584a56d0672f">previous</a> = NanosecondsNow();</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <span class="comment">// There should be enough attempts to make the loop run for more than one</span></div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>  <span class="comment">// microsecond if the early return is not taken -- the elapsed time can&#39;t</span></div>
@@ -261,14 +269,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span> </div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="preprocessor">#elif V8_OS_WIN</span></div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">// Returns the current value of the performance counter.</span></div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>V8_INLINE uint64_t QPCNowRaw() {</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> uint64_t QPCNowRaw() {</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  LARGE_INTEGER perf_counter_now = {};</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="comment">// According to the MSDN documentation for QueryPerformanceCounter(), this</span></div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="comment">// will never fail on systems that run XP or later.</span></div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <span class="comment">// https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx</span></div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <a class="code hl_typedef" href="win32-headers_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = ::QueryPerformanceCounter(&amp;perf_counter_now);</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="keywordflow">return</span> perf_counter_now.QuadPart;</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>}</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">#endif  </span><span class="comment">// V8_OS_DARWIN</span></div>
@@ -382,8 +390,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="preprocessor">#if V8_OS_DARWIN</span></div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><a class="code hl_class" href="classv8_1_1base_1_1TimeDelta.html">TimeDelta</a> <a class="code hl_function" href="classv8_1_1base_1_1TimeDelta.html#acc527f0f013cfbb9c3e385ca412f70b6">TimeDelta::FromMachTimespec</a>(<span class="keyword">struct</span> mach_timespec ts) {</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(ts.tv_nsec, 0);</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(ts.tv_nsec,</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(ts.tv_nsec, 0);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(ts.tv_nsec,</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#a69135d50993fe40feea17e45158377fa">Time::kNanosecondsPerSecond</a>));  <span class="comment">// NOLINT</span></div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1base_1_1TimeDelta.html#a1602c64315c17e8725617c4a4a801fb0">TimeDelta</a>(ts.tv_sec * <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#acab094d0228291f6ddfb5cb137c8f79f">Time::kMicrosecondsPerSecond</a> +</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>                   ts.tv_nsec / <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#a7b7def4d913fbbad5793662bbc929fd7">Time::kNanosecondsPerMicrosecond</a>);</div>
@@ -392,7 +400,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="keyword">struct </span>mach_timespec TimeDelta::ToMachTimespec() const {</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <span class="keyword">struct </span>mach_timespec ts;</div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(delta_, 0);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(delta_, 0);</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  ts.tv_sec = <span class="keyword">static_cast&lt;</span><span class="keywordtype">unsigned</span><span class="keyword">&gt;</span>(delta_ / Time::kMicrosecondsPerSecond);</div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>  ts.tv_nsec = (delta_ % Time::kMicrosecondsPerSecond) *</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      Time::kNanosecondsPerMicrosecond;</div>
@@ -404,8 +412,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span><span class="preprocessor">#if V8_OS_POSIX</span></div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span> </div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>TimeDelta <a class="code hl_function" href="classv8_1_1base_1_1TimeDelta.html#a8713573eefc14f286991f5ed33654571">TimeDelta::FromTimespec</a>(<span class="keyword">struct</span> timespec ts) {</div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(ts.tv_nsec, 0);</div>
-<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(ts.tv_nsec,</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(ts.tv_nsec, 0);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(ts.tv_nsec,</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            <span class="keyword">static_cast&lt;</span><span class="keywordtype">long</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#a69135d50993fe40feea17e45158377fa">Time::kNanosecondsPerSecond</a>));  <span class="comment">// NOLINT</span></div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1base_1_1TimeDelta.html#a1602c64315c17e8725617c4a4a801fb0">TimeDelta</a>(ts.tv_sec * <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#acab094d0228291f6ddfb5cb137c8f79f">Time::kMicrosecondsPerSecond</a> +</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                   ts.tv_nsec / <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#a7b7def4d913fbbad5793662bbc929fd7">Time::kNanosecondsPerMicrosecond</a>);</div>
@@ -503,7 +511,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span> </div>
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>FILETIME <a class="code hl_function" href="classv8_1_1base_1_1Time.html#a8d6cd2d97ba2ad812891b20014e8a9d1">Time::ToFiletime</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(<a class="code hl_variable" href="classv8_1_1base_1_1time__internal_1_1TimeBase.html#a72adcd44d000d2fb8d09c263f7c6529b">us_</a>, 0);</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(<a class="code hl_variable" href="classv8_1_1base_1_1time__internal_1_1TimeBase.html#a72adcd44d000d2fb8d09c263f7c6529b">us_</a>, 0);</div>
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>  FILETIME ft;</div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="classv8_1_1base_1_1time__internal_1_1TimeBase.html#acf50e8599f7e76ab3cc07a32f8df30a9">IsNull</a>()) {</div>
 <div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    ft.dwLowDateTime = 0;</div>
@@ -526,8 +534,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>Time <a class="code hl_function" href="classv8_1_1base_1_1Time.html#a485c6079d0a94b6e93cc931b2857382d">Time::Now</a>() {</div>
 <div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>  <span class="keyword">struct </span>timeval tv;</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = gettimeofday(&amp;tv, <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
-<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1base_1_1Time.html#af4de5e39ec25ca6ba75561e9792be776">FromTimeval</a>(tv);</div>
 <div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>}</div>
 <div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span> </div>
@@ -538,8 +546,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span> </div>
 <div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span> </div>
 <div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>Time <a class="code hl_function" href="classv8_1_1base_1_1Time.html#a1f4311b50b1e6d80974dc3c1d485c6e7">Time::FromTimespec</a>(<span class="keyword">struct</span> timespec ts) {</div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(ts.tv_nsec, 0);</div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(ts.tv_nsec, <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#a69135d50993fe40feea17e45158377fa">kNanosecondsPerSecond</a>);</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(ts.tv_nsec, 0);</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(ts.tv_nsec, <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#a69135d50993fe40feea17e45158377fa">kNanosecondsPerSecond</a>);</div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>  <span class="keywordflow">if</span> (ts.tv_nsec == 0 &amp;&amp; ts.tv_sec == 0) {</div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1base_1_1Time.html#a1ed39da3e61f009bd2c1c83697347188">Time</a>();</div>
 <div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>  }</div>
@@ -571,8 +579,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span> </div>
 <div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span> </div>
 <div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>Time <a class="code hl_function" href="classv8_1_1base_1_1Time.html#af4de5e39ec25ca6ba75561e9792be776">Time::FromTimeval</a>(<span class="keyword">struct</span> timeval tv) {</div>
-<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(tv.tv_usec, 0);</div>
-<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(tv.tv_usec &lt; <span class="keyword">static_cast&lt;</span>suseconds_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#acab094d0228291f6ddfb5cb137c8f79f">kMicrosecondsPerSecond</a>));</div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(tv.tv_usec, 0);</div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(tv.tv_usec &lt; <span class="keyword">static_cast&lt;</span>suseconds_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#acab094d0228291f6ddfb5cb137c8f79f">kMicrosecondsPerSecond</a>));</div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>  <span class="keywordflow">if</span> (tv.tv_usec == 0 &amp;&amp; tv.tv_sec == 0) {</div>
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1base_1_1Time.html#a1ed39da3e61f009bd2c1c83697347188">Time</a>();</div>
 <div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>  }</div>
@@ -762,7 +770,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span>  <span class="comment">// InitializeNowFunctionPointer(), has happened by this point.</span></div>
 <div class="line"><a id="l00641" name="l00641"></a><span class="lineno">  641</span>  std::atomic_thread_fence(std::memory_order_acquire);</div>
 <div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span> </div>
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>  <a class="code hl_define" href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(g_qpc_ticks_per_second, 0);</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(g_qpc_ticks_per_second, 0);</div>
 <div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span> </div>
 <div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>  <span class="comment">// If the QPC Value is below the overflow threshold, we proceed with</span></div>
 <div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>  <span class="comment">// simple multiply and divide.</span></div>
@@ -841,7 +849,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span>TimeTicks <a class="code hl_function" href="classv8_1_1base_1_1TimeTicks.html#ab0886bf0e84f1e1fcdc101021c2c0775">TimeTicks::Now</a>() {</div>
 <div class="line"><a id="l00720" name="l00720"></a><span class="lineno">  720</span>  <span class="comment">// Make sure we never return 0 here.</span></div>
 <div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>  <a class="code hl_function" href="classv8_1_1base_1_1TimeTicks.html#a038b2c628a27c5d8a30993e0181a3398">TimeTicks</a> ticks(g_time_ticks_now_function());</div>
-<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!ticks.IsNull());</div>
+<div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!ticks.IsNull());</div>
 <div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span>  <span class="keywordflow">return</span> ticks;</div>
 <div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>}</div>
 <div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span> </div>
@@ -861,8 +869,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>  <span class="keyword">static</span> <span class="keyword">struct </span>mach_timebase_info info;</div>
 <div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>  <span class="keywordflow">if</span> (info.denom == 0) {</div>
 <div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span>    kern_return_t <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = mach_timebase_info(&amp;info);</div>
-<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(KERN_SUCCESS, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
-<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>    <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00741" name="l00741"></a><span class="lineno">  741</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(KERN_SUCCESS, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00742" name="l00742"></a><span class="lineno">  742</span>    <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l00743" name="l00743"></a><span class="lineno">  743</span>  }</div>
 <div class="line"><a id="l00744" name="l00744"></a><span class="lineno">  744</span>  ticks = (mach_absolute_time() / <a class="code hl_variable" href="classv8_1_1base_1_1TimeConstants.html#a7b7def4d913fbbad5793662bbc929fd7">Time::kNanosecondsPerMicrosecond</a> *</div>
 <div class="line"><a id="l00745" name="l00745"></a><span class="lineno">  745</span>           info.numer / info.denom);</div>
@@ -927,7 +935,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>  <span class="keyword">const</span> int64_t now = starboard::CurrentMonotonicThreadTime();</div>
 <div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>  <span class="keywordflow">if</span> (now != 0)</div>
 <div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1base_1_1ThreadTicks.html#aff7918e53e0c0856c4b0b23f28cc2837">ThreadTicks</a>(now);</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>  <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span><span class="preprocessor">#elif V8_OS_DARWIN</span></div>
 <div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1base_1_1ThreadTicks.html#aff7918e53e0c0856c4b0b23f28cc2837">ThreadTicks</a>(ComputeThreadTicks());</div>
 <div class="line"><a id="l00804" name="l00804"></a><span class="lineno">  804</span><span class="preprocessor">#elif V8_OS_FUCHSIA</span></div>
@@ -940,7 +948,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span><span class="preprocessor">#elif V8_OS_WIN</span></div>
 <div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>  <span class="keywordflow">return</span> ThreadTicks::GetForThread(::GetCurrentThread());</div>
 <div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>  <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00816" name="l00816"></a><span class="lineno">  816</span>}</div>
 </div>
@@ -948,7 +956,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span> </div>
 <div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span><span class="preprocessor">#if V8_OS_WIN</span></div>
 <div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span><a class="code hl_class" href="classv8_1_1base_1_1ThreadTicks.html">ThreadTicks</a> ThreadTicks::GetForThread(<span class="keyword">const</span> <a class="code hl_typedef" href="win32-headers_8h.html#aa8c0374618b33785ccb02f74bcfebc46">HANDLE</a>&amp; thread_handle) {</div>
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1ThreadTicks.html#a89eb96630497d044123bde1c3f8762c8">IsSupported</a>());</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1ThreadTicks.html#a89eb96630497d044123bde1c3f8762c8">IsSupported</a>());</div>
 <div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span> </div>
 <div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span><span class="preprocessor">#if V8_HOST_ARCH_ARM64</span></div>
 <div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>  <span class="comment">// QueryThreadCycleTime versus TSCTicksPerSecond doesn&#39;t have much relation to</span></div>
@@ -995,7 +1003,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00865" name="l00865"></a><span class="lineno">  865</span> </div>
 <div class="line"><a id="l00866" name="l00866"></a><span class="lineno">  866</span><span class="preprocessor">#ifndef V8_HOST_ARCH_ARM64</span></div>
 <div class="line"><a id="l00867" name="l00867"></a><span class="lineno">  867</span><span class="keywordtype">double</span> ThreadTicks::TSCTicksPerSecond() {</div>
-<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1ThreadTicks.html#a89eb96630497d044123bde1c3f8762c8">IsSupported</a>());</div>
+<div class="line"><a id="l00868" name="l00868"></a><span class="lineno">  868</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1base_1_1ThreadTicks.html#a89eb96630497d044123bde1c3f8762c8">IsSupported</a>());</div>
 <div class="line"><a id="l00869" name="l00869"></a><span class="lineno">  869</span> </div>
 <div class="line"><a id="l00870" name="l00870"></a><span class="lineno">  870</span>  <span class="comment">// The value returned by QueryPerformanceFrequency() cannot be used as the TSC</span></div>
 <div class="line"><a id="l00871" name="l00871"></a><span class="lineno">  871</span>  <span class="comment">// frequency, because there is no guarantee that the TSC frequency is equal to</span></div>
@@ -1036,7 +1044,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00906" name="l00906"></a><span class="lineno">  906</span>  <span class="comment">//   https://msdn.microsoft.com/library/windows/desktop/ms644905.aspx</span></div>
 <div class="line"><a id="l00907" name="l00907"></a><span class="lineno">  907</span>  LARGE_INTEGER perf_counter_frequency = {};</div>
 <div class="line"><a id="l00908" name="l00908"></a><span class="lineno">  908</span>  ::QueryPerformanceFrequency(&amp;perf_counter_frequency);</div>
-<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(perf_counter_now, perf_counter_initial);</div>
+<div class="line"><a id="l00909" name="l00909"></a><span class="lineno">  909</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(perf_counter_now, perf_counter_initial);</div>
 <div class="line"><a id="l00910" name="l00910"></a><span class="lineno">  910</span>  uint64_t perf_counter_ticks = perf_counter_now - perf_counter_initial;</div>
 <div class="line"><a id="l00911" name="l00911"></a><span class="lineno">  911</span>  <span class="keywordtype">double</span> elapsed_time_seconds =</div>
 <div class="line"><a id="l00912" name="l00912"></a><span class="lineno">  912</span>      perf_counter_ticks / <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(perf_counter_frequency.QuadPart);</div>
@@ -1046,7 +1054,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00916" name="l00916"></a><span class="lineno">  916</span>    <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00917" name="l00917"></a><span class="lineno">  917</span> </div>
 <div class="line"><a id="l00918" name="l00918"></a><span class="lineno">  918</span>  <span class="comment">// Compute the frequency of the TSC.</span></div>
-<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(tsc_now, tsc_initial);</div>
+<div class="line"><a id="l00919" name="l00919"></a><span class="lineno">  919</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(tsc_now, tsc_initial);</div>
 <div class="line"><a id="l00920" name="l00920"></a><span class="lineno">  920</span>  uint64_t tsc_ticks = tsc_now - tsc_initial;</div>
 <div class="line"><a id="l00921" name="l00921"></a><span class="lineno">  921</span>  tsc_ticks_per_second = tsc_ticks / elapsed_time_seconds;</div>
 <div class="line"><a id="l00922" name="l00922"></a><span class="lineno">  922</span> </div>
@@ -1057,7 +1065,6 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00927" name="l00927"></a><span class="lineno">  927</span> </div>
 <div class="line"><a id="l00928" name="l00928"></a><span class="lineno">  928</span>}  <span class="comment">// namespace base</span></div>
 <div class="line"><a id="l00929" name="l00929"></a><span class="lineno">  929</span>}  <span class="comment">// namespace v8</span></div>
-<div class="ttc" id="abase_2platform_2platform_8h_html"><div class="ttname"><a href="base_2platform_2platform_8h.html">platform.h</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1CPU_html"><div class="ttname"><a href="classv8_1_1base_1_1CPU.html">v8::base::CPU</a></div><div class="ttdef"><b>Definition</b> <a href="cpu_8h_source.html#l00032">cpu.h:32</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1CPU_html_a87c117682b0760245e15e88266b98097"><div class="ttname"><a href="classv8_1_1base_1_1CPU.html#a87c117682b0760245e15e88266b98097">v8::base::CPU::has_non_stop_time_stamp_counter</a></div><div class="ttdeci">bool has_non_stop_time_stamp_counter() const</div><div class="ttdef"><b>Definition</b> <a href="cpu_8h_source.html#l00099">cpu.h:99</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1ThreadTicks_html"><div class="ttname"><a href="classv8_1_1base_1_1ThreadTicks.html">v8::base::ThreadTicks</a></div><div class="ttdef"><b>Definition</b> <a href="time_8h_source.html#l00461">time.h:462</a></div></div>
@@ -1115,32 +1122,37 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="alazy-instance_8h_html"><div class="ttname"><a href="lazy-instance_8h.html">lazy-instance.h</a></div></div>
 <div class="ttc" id="alazy-instance_8h_html_a219abfaf8244b8fa42f0c18aca72c58f"><div class="ttname"><a href="lazy-instance_8h.html#a219abfaf8244b8fa42f0c18aca72c58f">DEFINE_LAZY_LEAKY_OBJECT_GETTER</a></div><div class="ttdeci">#define DEFINE_LAZY_LEAKY_OBJECT_GETTER(T, FunctionName,...)</div><div class="ttdef"><b>Definition</b> <a href="lazy-instance_8h_source.html#l00249">lazy-instance.h:249</a></div></div>
 <div class="ttc" id="aliftoff-compiler_8cc_html_ab600894d6947e13cf9b2a5a775e70324"><div class="ttname"><a href="liftoff-compiler_8cc.html#ab600894d6947e13cf9b2a5a775e70324">state</a></div><div class="ttdeci">LiftoffAssembler::CacheState state</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l00453">liftoff-compiler.cc:453</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00067">logging.h:67</a></div></div>
-<div class="ttc" id="alogging_8h_html_a43d2df1fb528ff7bee1e873e377e0323"><div class="ttname"><a href="logging_8h.html#a43d2df1fb528ff7bee1e873e377e0323">CHECK_GT</a></div><div class="ttdeci">#define CHECK_GT(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_a56e883b55c80205b4d1727679c68b2bd"><div class="ttname"><a href="logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a></div><div class="ttdeci">#define CHECK_LE(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="alogging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00487">logging.h:487</a></div></div>
-<div class="ttc" id="amacros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="anamespaceunibrow_html_a67de744730c9fed24aa185ab5747772c"><div class="ttname"><a href="namespaceunibrow.html#a67de744730c9fed24aa185ab5747772c">unibrow::int32_t</a></div><div class="ttdeci">int int32_t</div><div class="ttdef"><b>Definition</b> <a href="unicode_8cc_source.html#l00040">unicode.cc:40</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_ad14ce8f109f26adb0616a8b4d7d7968f"><div class="ttname"><a href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">v8::base::MutexGuard</a></div><div class="ttdeci">LockGuard&lt; Mutex &gt; MutexGuard</div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00561">mutex.h:561</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_af6642e0a4575f458aeafc14b48f77b43"><div class="ttname"><a href="namespacev8_1_1base.html#af6642e0a4575f458aeafc14b48f77b43">v8::base::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, AddressRegion region)</div><div class="ttdef"><b>Definition</b> <a href="address-region_8h_source.html#l00092">address-region.h:92</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aea9d736830d86242c4e1cb59a371d3a6"><div class="ttname"><a href="namespacev8_1_1internal.html#aea9d736830d86242c4e1cb59a371d3a6">v8::internal::IsNull</a></div><div class="ttdeci">kInstanceDescriptorsOffset kTransitionsOrPrototypeInfoOffset IsNull(value)||IsJSProxy(value)||IsWasmObject(value)||(IsJSObject(value) &amp;&amp;(HeapLayout</div><div class="ttdef"><b>Definition</b> <a href="map-inl_8h_source.html#l00063">map-inl.h:63</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00067">logging.h:67</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a43d2df1fb528ff7bee1e873e377e0323"><div class="ttname"><a href="src_2base_2logging_8h.html#a43d2df1fb528ff7bee1e873e377e0323">CHECK_GT</a></div><div class="ttdeci">#define CHECK_GT(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a56e883b55c80205b4d1727679c68b2bd"><div class="ttname"><a href="src_2base_2logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a></div><div class="ttdeci">#define CHECK_LE(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00487">logging.h:487</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00281">macros.h:281</a></div></div>
+<div class="ttc" id="asrc_2base_2platform_2platform_8h_html"><div class="ttname"><a href="src_2base_2platform_2platform_8h.html">platform.h</a></div></div>
 <div class="ttc" id="atime_8h_html"><div class="ttname"><a href="time_8h.html">time.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
 <div class="ttc" id="awin32-headers_8h_html_a050c65e107f0c828f856a231f4b4e788"><div class="ttname"><a href="win32-headers_8h.html#a050c65e107f0c828f856a231f4b4e788">BOOL</a></div><div class="ttdeci">int BOOL</div><div class="ttdef"><b>Definition</b> <a href="win32-headers_8h_source.html#l00051">win32-headers.h:51</a></div></div>
 <div class="ttc" id="awin32-headers_8h_html_aa8c0374618b33785ccb02f74bcfebc46"><div class="ttname"><a href="win32-headers_8h.html#aa8c0374618b33785ccb02f74bcfebc46">HANDLE</a></div><div class="ttdeci">void * HANDLE</div><div class="ttdef"><b>Definition</b> <a href="win32-headers_8h_source.html#l00056">win32-headers.h:56</a></div></div>
 <div class="ttc" id="awin32-headers_8h_html_ad342ac907eb044443153a22f964bf0af"><div class="ttname"><a href="win32-headers_8h.html#ad342ac907eb044443153a22f964bf0af">DWORD</a></div><div class="ttdeci">unsigned long DWORD</div><div class="ttdef"><b>Definition</b> <a href="win32-headers_8h_source.html#l00052">win32-headers.h:52</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:16:43 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="dir_c00de8f55a27e6d67f70bde7b77593d5.html">platform</a></li><li class="navelem"><a class="el" href="time_8cc.html">time.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:52:45 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

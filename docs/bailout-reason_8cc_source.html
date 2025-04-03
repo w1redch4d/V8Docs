@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/codegen/bailout-reason.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/codegen/bailout-reason.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('bailout-reason_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7cf1b5e32c0ccac638cac1ebc38d93b6.html">codegen</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">bailout-reason.cc</div></div>
 </div><!--header-->
@@ -100,7 +108,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="bailout-reason_8h.html">src/codegen/bailout-reason.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="check_8h.html">src/sandbox/check.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8.html">v8</a> {</div>
@@ -115,7 +123,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="comment">// needs to be validated here.</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keyword">static_assert</span>(std::is_unsigned_v&lt;std::underlying_type_t&lt;BailoutReason&gt;&gt;);</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_define" href="check_8h.html#a27bd9aa8e613a2123a446cd6bc973fdf">SBXCHECK_LT</a>(reason, BailoutReason::kLastErrorMessage);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(reason, BailoutReason::kNoReason);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(reason, BailoutReason::kNoReason);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* error_messages_[] = {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>      <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a170d48425b861bac584bb286a25d977fa1674caa3e479e8b5786f29b1a5a5f86c">BAILOUT_MESSAGES_LIST</a>(<a class="code hl_define" href="bailout-reason_8cc.html#a3bf8cc04a4f45be0051aa3bae6af36f2">ERROR_MESSAGES_TEXTS</a>)};</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordflow">return</span> error_messages_[<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(reason)];</div>
@@ -124,8 +132,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a7b6a6561b3f3e0bc20b6961b94e5137f">   27</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_function" href="namespacev8_1_1internal.html#a7b6a6561b3f3e0bc20b6961b94e5137f">GetAbortReason</a>(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#a6be0ebaac1c71949d56857fd00173292">AbortReason</a> reason) {</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(reason, AbortReason::kLastErrorMessage);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(reason, AbortReason::kNoReason);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(reason, AbortReason::kLastErrorMessage);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(reason, AbortReason::kNoReason);</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* error_messages_[] = {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a6be0ebaac1c71949d56857fd00173292adbc359c9e049284be7aa5c36a0934690">ABORT_MESSAGES_LIST</a>(<a class="code hl_define" href="bailout-reason_8cc.html#a3bf8cc04a4f45be0051aa3bae6af36f2">ERROR_MESSAGES_TEXTS</a>)};</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordflow">return</span> error_messages_[<span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(reason)];</div>
@@ -146,9 +154,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="abailout-reason_8h_html"><div class="ttname"><a href="bailout-reason_8h.html">bailout-reason.h</a></div></div>
 <div class="ttc" id="acheck_8h_html"><div class="ttname"><a href="check_8h.html">check.h</a></div></div>
 <div class="ttc" id="acheck_8h_html_a27bd9aa8e613a2123a446cd6bc973fdf"><div class="ttname"><a href="check_8h.html#a27bd9aa8e613a2123a446cd6bc973fdf">SBXCHECK_LT</a></div><div class="ttdeci">#define SBXCHECK_LT(lhs, rhs)</div><div class="ttdef"><b>Definition</b> <a href="check_8h_source.html#l00065">check.h:65</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a170d48425b861bac584bb286a25d977f"><div class="ttname"><a href="namespacev8_1_1internal.html#a170d48425b861bac584bb286a25d977f">v8::internal::BailoutReason</a></div><div class="ttdeci">BailoutReason</div><div class="ttdef"><b>Definition</b> <a href="bailout-reason_8h_source.html#l00137">bailout-reason.h:137</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a170d48425b861bac584bb286a25d977fa1674caa3e479e8b5786f29b1a5a5f86c"><div class="ttname"><a href="namespacev8_1_1internal.html#a170d48425b861bac584bb286a25d977fa1674caa3e479e8b5786f29b1a5a5f86c">v8::internal::BailoutReason::BAILOUT_MESSAGES_LIST</a></div><div class="ttdeci">@ BAILOUT_MESSAGES_LIST</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
@@ -158,11 +163,17 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_a897c6cf5ec7b89bc77a687fce0e31d12"><div class="ttname"><a href="namespacev8_1_1internal.html#a897c6cf5ec7b89bc77a687fce0e31d12">v8::internal::GetBailoutReason</a></div><div class="ttdeci">const char * GetBailoutReason(BailoutReason reason)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">bailout-reason.cc:15</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a90efa3a32736f4f1e9891e6664294166"><div class="ttname"><a href="namespacev8_1_1internal.html#a90efa3a32736f4f1e9891e6664294166">v8::internal::IsValidAbortReason</a></div><div class="ttdeci">bool IsValidAbortReason(int reason_id)</div><div class="ttdef"><b>Definition</b> <a href="#l00035">bailout-reason.cc:35</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:17:02 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7cf1b5e32c0ccac638cac1ebc38d93b6.html">codegen</a></li><li class="navelem"><a class="el" href="bailout-reason_8cc.html">bailout-reason.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:53:06 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

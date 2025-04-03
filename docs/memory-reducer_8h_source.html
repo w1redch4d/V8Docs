@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/memory-reducer.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/memory-reducer.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('memory-reducer_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">memory-reducer.h</div></div>
 </div><!--header-->
@@ -101,8 +109,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef V8_HEAP_MEMORY_REDUCER_H_</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define V8_HEAP_MEMORY_REDUCER_H_</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;include/v8-platform.h&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="v8-platform_8h.html">include/v8-platform.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="common_2globals_8h.html">src/common/globals.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="cancelable-task_8h.html">src/tasks/cancelable-task.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
@@ -181,7 +189,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">// t&#39; is t if the current event is not a GC event and is now_ms otherwise,</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">// long_delay_ms, short_delay_ms, and watchdog_delay_ms are constants.</span></div>
 <div class="foldopen" id="foldopen00087" data-start="{" data-end="};">
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MemoryReducer.html">   87</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1MemoryReducer.html">MemoryReducer</a> {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MemoryReducer.html">   87</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1MemoryReducer.html">MemoryReducer</a> {</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MemoryReducer.html#abd2f0611452dd9344369bb6f29682024">   89</a></span>  <span class="keyword">enum</span> <a class="code hl_enumeration" href="classv8_1_1internal_1_1MemoryReducer.html#abd2f0611452dd9344369bb6f29682024">Id</a> { kUninit, kDone, kWait, kRun };</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
@@ -213,28 +221,28 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="foldopen" id="foldopen00110" data-start="{" data-end="}">
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MemoryReducer_1_1State.html#a48dac00268212aab6deb173307732a51">  110</a></span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1MemoryReducer_1_1State.html#a48dac00268212aab6deb173307732a51">started_gcs</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<span class="keywordtype">id</span>() == kWait || <span class="keywordtype">id</span>() == kRun);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<span class="keywordtype">id</span>() == kWait || <span class="keywordtype">id</span>() == kRun);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>      <span class="keywordflow">return</span> started_gcs_;</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    }</div>
 </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="foldopen" id="foldopen00115" data-start="{" data-end="}">
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MemoryReducer_1_1State.html#a169340477cc64eeb1755e1d9f6b128db">  115</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classv8_1_1internal_1_1MemoryReducer_1_1State.html#a169340477cc64eeb1755e1d9f6b128db">next_gc_start_ms</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<span class="keywordtype">id</span>(), kWait);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<span class="keywordtype">id</span>(), kWait);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>      <span class="keywordflow">return</span> next_gc_start_ms_;</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    }</div>
 </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
 <div class="foldopen" id="foldopen00120" data-start="{" data-end="}">
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MemoryReducer_1_1State.html#acb6927f569eda3b2675d466ca6714360">  120</a></span>    <span class="keywordtype">double</span> <a class="code hl_function" href="classv8_1_1internal_1_1MemoryReducer_1_1State.html#acb6927f569eda3b2675d466ca6714360">last_gc_time_ms</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<span class="keywordtype">id</span>() == kWait || <span class="keywordtype">id</span>() == kDone || <span class="keywordtype">id</span>() == kUninit);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<span class="keywordtype">id</span>() == kWait || <span class="keywordtype">id</span>() == kDone || <span class="keywordtype">id</span>() == kUninit);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>      <span class="keywordflow">return</span> last_gc_time_ms_;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    }</div>
 </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MemoryReducer_1_1State.html#aec5759e818447c8c95ed914301cb44f8">  125</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_function" href="classv8_1_1internal_1_1MemoryReducer_1_1State.html#aec5759e818447c8c95ed914301cb44f8">committed_memory_at_last_run</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<span class="keywordtype">id</span>() == kUninit || <span class="keywordtype">id</span>() == kDone);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<span class="keywordtype">id</span>() == kUninit || <span class="keywordtype">id</span>() == kDone);</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>      <span class="keywordflow">return</span> committed_memory_at_last_run_;</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    }</div>
 </div>
@@ -336,7 +344,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="preprocessor">#endif  </span><span class="comment">// V8_HEAP_MEMORY_REDUCER_H_</span></div>
 <div class="ttc" id="acancelable-task_8h_html"><div class="ttname"><a href="cancelable-task_8h.html">cancelable-task.h</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1CancelableTask_html"><div class="ttname"><a href="classv8_1_1internal_1_1CancelableTask.html">v8::internal::CancelableTask</a></div><div class="ttdef"><b>Definition</b> <a href="cancelable-task_8h_source.html#l00144">cancelable-task.h:145</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00192">heap.h:192</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00192">heap.h:192</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryReducer_1_1State_html"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryReducer_1_1State.html">v8::internal::MemoryReducer::State</a></div><div class="ttdef"><b>Definition</b> <a href="#l00091">memory-reducer.h:91</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryReducer_1_1State_html_a03d22e06c4dcea25ba073608840e3f4f"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryReducer_1_1State.html#a03d22e06c4dcea25ba073608840e3f4f">v8::internal::MemoryReducer::State::started_gcs_</a></div><div class="ttdeci">int started_gcs_</div><div class="ttdef"><b>Definition</b> <a href="#l00140">memory-reducer.h:140</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryReducer_1_1State_html_a169340477cc64eeb1755e1d9f6b128db"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryReducer_1_1State.html#a169340477cc64eeb1755e1d9f6b128db">v8::internal::MemoryReducer::State::next_gc_start_ms</a></div><div class="ttdeci">double next_gc_start_ms() const</div><div class="ttdef"><b>Definition</b> <a href="#l00115">memory-reducer.h:115</a></div></div>
@@ -377,13 +385,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="acommon_2globals_8h_html"><div class="ttname"><a href="common_2globals_8h.html">globals.h</a></div></div>
 <div class="ttc" id="acpp-heap_8cc_html_abf26aeebfa3b211a147d054e3acfa1aa"><div class="ttname"><a href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a></div><div class="ttdeci">CppHeap * heap_</div><div class="ttdef"><b>Definition</b> <a href="cpp-heap_8cc_source.html#l00559">cpp-heap.cc:559</a></div></div>
 <div class="ttc" id="adeoptimizer_8cc_html_a74a38defd07f033742bdf0c540f3c848"><div class="ttname"><a href="deoptimizer_8cc.html#a74a38defd07f033742bdf0c540f3c848">state_</a></div><div class="ttdeci">enum v8::internal::@1162::DeoptimizableCodeIterator::@61 state_</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
-<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
+<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1MemoryReducer_1_1Event_html"><div class="ttname"><a href="structv8_1_1internal_1_1MemoryReducer_1_1Event.html">v8::internal::MemoryReducer::Event</a></div><div class="ttdef"><b>Definition</b> <a href="#l00148">memory-reducer.h:148</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1MemoryReducer_1_1Event_html_a10deb19d76cb4bcb0ecadaf05e9cb878"><div class="ttname"><a href="structv8_1_1internal_1_1MemoryReducer_1_1Event.html#a10deb19d76cb4bcb0ecadaf05e9cb878">v8::internal::MemoryReducer::Event::type</a></div><div class="ttdeci">EventType type</div><div class="ttdef"><b>Definition</b> <a href="#l00149">memory-reducer.h:149</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1MemoryReducer_1_1Event_html_a1ebcab4dfaf90280650991f682f117f0"><div class="ttname"><a href="structv8_1_1internal_1_1MemoryReducer_1_1Event.html#a1ebcab4dfaf90280650991f682f117f0">v8::internal::MemoryReducer::Event::committed_memory</a></div><div class="ttdeci">size_t committed_memory</div><div class="ttdef"><b>Definition</b> <a href="#l00151">memory-reducer.h:151</a></div></div>
@@ -391,11 +399,15 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="astructv8_1_1internal_1_1MemoryReducer_1_1Event_html_a56faabbcce0dd300632aced5b63eed43"><div class="ttname"><a href="structv8_1_1internal_1_1MemoryReducer_1_1Event.html#a56faabbcce0dd300632aced5b63eed43">v8::internal::MemoryReducer::Event::next_gc_likely_to_collect_more</a></div><div class="ttdeci">bool next_gc_likely_to_collect_more</div><div class="ttdef"><b>Definition</b> <a href="#l00152">memory-reducer.h:152</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1MemoryReducer_1_1Event_html_a8bbd85b79f523bc8e8a79edfe2bdd74e"><div class="ttname"><a href="structv8_1_1internal_1_1MemoryReducer_1_1Event.html#a8bbd85b79f523bc8e8a79edfe2bdd74e">v8::internal::MemoryReducer::Event::time_ms</a></div><div class="ttdeci">double time_ms</div><div class="ttdef"><b>Definition</b> <a href="#l00150">memory-reducer.h:150</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1MemoryReducer_1_1Event_html_ae5968ba719482ceea0211f4df94157af"><div class="ttname"><a href="structv8_1_1internal_1_1MemoryReducer_1_1Event.html#ae5968ba719482ceea0211f4df94157af">v8::internal::MemoryReducer::Event::can_start_incremental_gc</a></div><div class="ttdeci">bool can_start_incremental_gc</div><div class="ttdef"><b>Definition</b> <a href="#l00154">memory-reducer.h:154</a></div></div>
+<div class="ttc" id="av8-platform_8h_html"><div class="ttname"><a href="v8-platform_8h.html">v8-platform.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:34 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="memory-reducer_8h.html">memory-reducer.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:42 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

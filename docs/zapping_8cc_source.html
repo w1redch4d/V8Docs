@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/zapping.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/zapping.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('zapping_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">zapping.cc</div></div>
 </div><!--header-->
@@ -101,19 +109,19 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="zapping_8h.html">src/heap/zapping.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="base_2memory_8h.html">src/base/memory.h</a>&quot;</span></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="heap_8h.html">src/heap/heap.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="src_2heap_2heap_8h.html">src/heap/heap.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="memory-chunk-metadata-inl_8h.html">src/heap/memory-chunk-metadata-inl.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="slots-inl_8h.html">src/objects/slots-inl.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8_1_1internal_1_1heap.html">v8::internal::heap</a> {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal_1_1heap.html#a6f6dfa288283f8584872bb93d494e385">   14</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal_1_1heap.html#a6f6dfa288283f8584872bb93d494e385">ZapCodeBlock</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, <span class="keywordtype">int</span> size_in_bytes) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal_1_1heap.html#a6f6dfa288283f8584872bb93d494e385">   14</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal_1_1heap.html#a6f6dfa288283f8584872bb93d494e385">ZapCodeBlock</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, <span class="keywordtype">int</span> size_in_bytes) {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal_1_1heap.html#abbe47cc01f1d548508ed123a8be3f4ca">ShouldZapGarbage</a>());</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal_1_1heap.html#abbe47cc01f1d548508ed123a8be3f4ca">ShouldZapGarbage</a>());</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <a class="code hl_class" href="classv8_1_1internal_1_1CodePageMemoryModificationScopeForDebugging.html">CodePageMemoryModificationScopeForDebugging</a> code_modification_scope(</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      <a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunkMetadata.html#a93f0ee88ee72fd6e1231443f73b6f9d3">MemoryChunkMetadata::FromAddress</a>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>));</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a0d861fe0fc98861bc356ec102d698706">kIntSize</a>));</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a0d861fe0fc98861bc356ec102d698706">kIntSize</a>));</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; size_in_bytes / <a class="code hl_variable" href="namespacev8_1_1internal.html#a0d861fe0fc98861bc356ec102d698706">kIntSize</a>; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>++) {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_function" href="namespacev8_1_1base.html#a91efdd756745da29055880710d0da80a">base::Memory&lt;int&gt;</a>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a> + <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> * <a class="code hl_variable" href="namespacev8_1_1internal.html#a0d861fe0fc98861bc356ec102d698706">kIntSize</a>) = <a class="code hl_variable" href="namespacev8_1_1internal.html#aa868e8358ecda669c65e3844fcbd229c">kCodeZapValue</a>;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  }</div>
@@ -122,25 +130,22 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
 <div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal_1_1heap.html#a39b178054d75d3f6dcd24cd38a01aaee">   26</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal_1_1heap.html#a39b178054d75d3f6dcd24cd38a01aaee">ZapBlock</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, <span class="keywordtype">size_t</span> size, uintptr_t zap_value) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal_1_1heap.html#abbe47cc01f1d548508ed123a8be3f4ca">ShouldZapGarbage</a>());</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a12d50d7bb2c9d8a916ff0785e6eff241">kTaggedSize</a>));</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(size, <a class="code hl_variable" href="namespacev8_1_1internal.html#a12d50d7bb2c9d8a916ff0785e6eff241">kTaggedSize</a>));</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal_1_1heap.html#a39b178054d75d3f6dcd24cd38a01aaee">   26</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal_1_1heap.html#a39b178054d75d3f6dcd24cd38a01aaee">ZapBlock</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, <span class="keywordtype">size_t</span> size, uintptr_t zap_value) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal_1_1heap.html#abbe47cc01f1d548508ed123a8be3f4ca">ShouldZapGarbage</a>());</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a12d50d7bb2c9d8a916ff0785e6eff241">kTaggedSize</a>));</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(size, <a class="code hl_variable" href="namespacev8_1_1internal.html#a12d50d7bb2c9d8a916ff0785e6eff241">kTaggedSize</a>));</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#a5b59223136254772ef018d90e009318d">MemsetTagged</a>(<a class="code hl_typedef" href="namespacev8_1_1internal.html#a2b7e4fb72ad9eb1ccadac01ef972ea05">ObjectSlot</a>(<a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a>),</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>               <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a>(<span class="keyword">static_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(zap_value)),</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>               <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a>(<span class="keyword">static_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(zap_value)),</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>               size &gt;&gt; <a class="code hl_variable" href="namespacev8_1_1internal.html#a7b94dc2dd5250e9341c12941db8e9595">kTaggedSizeLog2</a>);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
 </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}  <span class="comment">// namespace v8::internal::heap</span></div>
 <div class="ttc" id="abase_2memory_8h_html"><div class="ttname"><a href="base_2memory_8h.html">memory.h</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1CodePageMemoryModificationScopeForDebugging_html"><div class="ttname"><a href="classv8_1_1internal_1_1CodePageMemoryModificationScopeForDebugging.html">v8::internal::CodePageMemoryModificationScopeForDebugging</a></div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l02541">heap.h:2541</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1CodePageMemoryModificationScopeForDebugging_html"><div class="ttname"><a href="classv8_1_1internal_1_1CodePageMemoryModificationScopeForDebugging.html">v8::internal::CodePageMemoryModificationScopeForDebugging</a></div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l02541">heap.h:2541</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryChunkMetadata_html_a93f0ee88ee72fd6e1231443f73b6f9d3"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryChunkMetadata.html#a93f0ee88ee72fd6e1231443f73b6f9d3">v8::internal::MemoryChunkMetadata::FromAddress</a></div><div class="ttdeci">static V8_INLINE MemoryChunkMetadata * FromAddress(Address a)</div><div class="ttdef"><b>Definition</b> <a href="memory-chunk-metadata-inl_8h_source.html#l00015">memory-chunk-metadata-inl.h:15</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Tagged_html"><div class="ttname"><a href="classv8_1_1internal_1_1Tagged.html">v8::internal::Tagged</a></div><div class="ttdef"><b>Definition</b> <a href="waiter-queue-node_8h_source.html#l00022">waiter-queue-node.h:22</a></div></div>
 <div class="ttc" id="adebug-coverage_8cc_html_a37722a150250e2a5a98e5e0d11e53449"><div class="ttname"><a href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a></div><div class="ttdeci">int start</div><div class="ttdef"><b>Definition</b> <a href="debug-coverage_8cc_source.html#l00595">debug-coverage.cc:595</a></div></div>
-<div class="ttc" id="aheap_8h_html"><div class="ttname"><a href="heap_8h.html">heap.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab7a19c1f785f31f2b190afc19875368a"><div class="ttname"><a href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a></div><div class="ttdeci">constexpr bool IsAligned(T value, U alignment)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00391">macros.h:391</a></div></div>
 <div class="ttc" id="amemory-chunk-metadata-inl_8h_html"><div class="ttname"><a href="memory-chunk-metadata-inl_8h.html">memory-chunk-metadata-inl.h</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a91efdd756745da29055880710d0da80a"><div class="ttname"><a href="namespacev8_1_1base.html#a91efdd756745da29055880710d0da80a">v8::base::Memory</a></div><div class="ttdeci">T &amp; Memory(Address addr)</div><div class="ttdef"><b>Definition</b> <a href="base_2memory_8h_source.html#l00018">memory.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1heap_html"><div class="ttname"><a href="namespacev8_1_1internal_1_1heap.html">v8::internal::heap</a></div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l00105">isolate.h:105</a></div></div>
@@ -152,16 +157,22 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_a12d50d7bb2c9d8a916ff0785e6eff241"><div class="ttname"><a href="namespacev8_1_1internal.html#a12d50d7bb2c9d8a916ff0785e6eff241">v8::internal::kTaggedSize</a></div><div class="ttdeci">constexpr int kTaggedSize</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00534">globals.h:534</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a2b7e4fb72ad9eb1ccadac01ef972ea05"><div class="ttname"><a href="namespacev8_1_1internal.html#a2b7e4fb72ad9eb1ccadac01ef972ea05">v8::internal::ObjectSlot</a></div><div class="ttdeci">SlotTraits::TObjectSlot ObjectSlot</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01232">globals.h:1232</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5b59223136254772ef018d90e009318d"><div class="ttname"><a href="namespacev8_1_1internal.html#a5b59223136254772ef018d90e009318d">v8::internal::MemsetTagged</a></div><div class="ttdeci">void MemsetTagged(Tagged_t *start, Tagged&lt; MaybeObject &gt; value, size_t counter)</div><div class="ttdef"><b>Definition</b> <a href="slots-inl_8h_source.html#l00466">slots-inl.h:466</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a7b94dc2dd5250e9341c12941db8e9595"><div class="ttname"><a href="namespacev8_1_1internal.html#a7b94dc2dd5250e9341c12941db8e9595">v8::internal::kTaggedSizeLog2</a></div><div class="ttdeci">constexpr int kTaggedSizeLog2</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00535">globals.h:535</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa868e8358ecda669c65e3844fcbd229c"><div class="ttname"><a href="namespacev8_1_1internal.html#aa868e8358ecda669c65e3844fcbd229c">v8::internal::kCodeZapValue</a></div><div class="ttdeci">constexpr int kCodeZapValue</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01010">globals.h:1010</a></div></div>
 <div class="ttc" id="aslots-inl_8h_html"><div class="ttname"><a href="slots-inl_8h.html">slots-inl.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab7a19c1f785f31f2b190afc19875368a"><div class="ttname"><a href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a></div><div class="ttdeci">constexpr bool IsAligned(T value, U alignment)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00391">macros.h:391</a></div></div>
+<div class="ttc" id="asrc_2heap_2heap_8h_html"><div class="ttname"><a href="src_2heap_2heap_8h.html">heap.h</a></div></div>
 <div class="ttc" id="azapping_8h_html"><div class="ttname"><a href="zapping_8h.html">zapping.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:37 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="zapping_8cc.html">zapping.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:46 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

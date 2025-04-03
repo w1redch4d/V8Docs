@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/base/utils/random-number-generator.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/base/utils/random-number-generator.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('random-number-generator_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="dir_50d32333f5bdddff7d31991c0551e21c.html">utils</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">random-number-generator.cc</div></div>
 </div><!--header-->
@@ -110,7 +118,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;new&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="bits_8h.html">src/base/bits.h</a>&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="mutex_8h.html">src/base/platform/mutex.h</a>&quot;</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="time_8h.html">src/base/platform/time.h</a>&quot;</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="wrappers_8h.html">src/base/platform/wrappers.h</a>&quot;</span></div>
@@ -150,10 +158,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="comment">// https://code.google.com/p/v8/issues/detail?id=2905</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordtype">unsigned</span> first_half, second_half;</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  errno_t <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = rand_s(&amp;first_half);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = rand_s(&amp;second_half);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <a class="code hl_function" href="classv8_1_1base_1_1RandomNumberGenerator.html#a09f96e1c329a56aa6c62b21c2d97d188">SetSeed</a>((<span class="keyword">static_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(first_half) &lt;&lt; 32) + second_half);</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#elif V8_OS_DARWIN || V8_OS_FREEBSD || V8_OS_OPENBSD</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">// Despite its prefix suggests it is not RC4 algorithm anymore.</span></div>
@@ -195,7 +203,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classv8_1_1base_1_1RandomNumberGenerator.html#a32102edf0e72631705af5a3316fd4068">   96</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1base_1_1RandomNumberGenerator.html#aef22ff5ed9ab075348bb7988874ad6f8">RandomNumberGenerator::NextInt</a>(<span class="keywordtype">int</span> max) {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, max);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, max);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="comment">// Fast path if max is a power of 2.</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacev8_1_1base_1_1bits.html#a4d06086712ebcd60838caae1a21fcfa3">bits::IsPowerOfTwo</a>(max)) {</div>
@@ -254,7 +262,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00144" data-start="{" data-end="}">
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="classv8_1_1base_1_1RandomNumberGenerator.html#a4090ec844e0f1cc4150db68cf69c6c7d">  144</a></span>std::vector&lt;uint64_t&gt; <a class="code hl_function" href="classv8_1_1base_1_1RandomNumberGenerator.html#a4090ec844e0f1cc4150db68cf69c6c7d">RandomNumberGenerator::NextSample</a>(uint64_t max,</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                                                        <span class="keywordtype">size_t</span> n) {</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <a class="code hl_define" href="logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a>(n, max);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a>(n, max);</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  <span class="keywordflow">if</span> (n == 0) {</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keywordflow">return</span> std::vector&lt;uint64_t&gt;();</div>
@@ -268,7 +276,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <span class="keywordtype">size_t</span> counter = 0;</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keywordflow">while</span> (selected.size() != smaller_part &amp;&amp; counter / 3 &lt; smaller_part) {</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    uint64_t <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a> = <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(<a class="code hl_function" href="classv8_1_1base_1_1RandomNumberGenerator.html#a3cb661fd70f4322d36792f98acd6ca7e">NextDouble</a>() * <a class="code hl_function" href="classv8_1_1base_1_1RandomNumberGenerator.html#a64914e03f573be801ef1cfdc7170db65">max</a>);</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_define" href="logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a>(<a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, max);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a>(<a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, max);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    selected.insert(<a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>);</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    counter++;</div>
@@ -289,7 +297,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00177" data-start="{" data-end="}">
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="classv8_1_1base_1_1RandomNumberGenerator.html#a8da70065401acffe63d0be29e5a20596">  177</a></span>std::vector&lt;uint64_t&gt; <a class="code hl_function" href="classv8_1_1base_1_1RandomNumberGenerator.html#a8da70065401acffe63d0be29e5a20596">RandomNumberGenerator::NextSampleSlow</a>(</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    uint64_t max, <span class="keywordtype">size_t</span> n, <span class="keyword">const</span> std::unordered_set&lt;uint64_t&gt;&amp; excluded) {</div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <a class="code hl_define" href="logging_8h.html#a1c7c9b7f14b9a33ea69cbe4578016a19">CHECK_GE</a>(max - excluded.size(), n);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a1c7c9b7f14b9a33ea69cbe4578016a19">CHECK_GE</a>(max - excluded.size(), n);</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  std::vector&lt;uint64_t&gt; <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>;</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.reserve(max - excluded.size());</div>
@@ -309,7 +317,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  <span class="comment">// larget_part.</span></div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <span class="keywordflow">while</span> (<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.size() != larger_part &amp;&amp; <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.size() &gt; n) {</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">size_t</span><span class="keyword">&gt;</span>(<a class="code hl_function" href="classv8_1_1base_1_1RandomNumberGenerator.html#a3cb661fd70f4322d36792f98acd6ca7e">NextDouble</a>() * <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.size());</div>
-<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <a class="code hl_define" href="logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a>(<a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.size());</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a>(<a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>, <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.size());</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    std::swap(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>[<a class="code hl_variable" href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a>], <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.back());</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.pop_back();</div>
@@ -325,8 +333,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
 <div class="foldopen" id="foldopen00212" data-start="{" data-end="}">
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="classv8_1_1base_1_1RandomNumberGenerator.html#ab45f16fc178d407ab832831eabb812ad">  212</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1base_1_1RandomNumberGenerator.html#ab45f16fc178d407ab832831eabb812ad">RandomNumberGenerator::Next</a>(<span class="keywordtype">int</span> bits) {</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, bits);</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(32, bits);</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, bits);</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(32, bits);</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>  <a class="code hl_function" href="classv8_1_1base_1_1RandomNumberGenerator.html#aed81ac9a466d6f8c981f13909574b1cf">XorShift128</a>(&amp;<a class="code hl_variable" href="classv8_1_1base_1_1RandomNumberGenerator.html#af67af3ca8628f5f93ae7873900a4c1b3">state0_</a>, &amp;<a class="code hl_variable" href="classv8_1_1base_1_1RandomNumberGenerator.html#ae78e49a0715becf7a38c157ea07e2486">state1_</a>);</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>((<a class="code hl_variable" href="classv8_1_1base_1_1RandomNumberGenerator.html#af67af3ca8628f5f93ae7873900a4c1b3">state0_</a> + <a class="code hl_variable" href="classv8_1_1base_1_1RandomNumberGenerator.html#ae78e49a0715becf7a38c157ea07e2486">state1_</a>) &gt;&gt; (64 - bits));</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>}</div>
@@ -338,7 +346,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  <a class="code hl_variable" href="classv8_1_1base_1_1RandomNumberGenerator.html#a7e31ab8773dc8d0c526d7615ab558f0e">initial_seed_</a> = seed;</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <a class="code hl_variable" href="classv8_1_1base_1_1RandomNumberGenerator.html#af67af3ca8628f5f93ae7873900a4c1b3">state0_</a> = <a class="code hl_function" href="classv8_1_1base_1_1RandomNumberGenerator.html#ac780ac819aabd925ed250e66dc00a6b8">MurmurHash3</a>(<a class="code hl_function" href="namespacev8_1_1base.html#a6c410bc41f21b97060b8520c074eb957">base::bit_cast&lt;uint64_t&gt;</a>(seed));</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>  <a class="code hl_variable" href="classv8_1_1base_1_1RandomNumberGenerator.html#ae78e49a0715becf7a38c157ea07e2486">state1_</a> = <a class="code hl_function" href="classv8_1_1base_1_1RandomNumberGenerator.html#ac780ac819aabd925ed250e66dc00a6b8">MurmurHash3</a>(~<a class="code hl_variable" href="classv8_1_1base_1_1RandomNumberGenerator.html#af67af3ca8628f5f93ae7873900a4c1b3">state0_</a>);</div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1base_1_1RandomNumberGenerator.html#af67af3ca8628f5f93ae7873900a4c1b3">state0_</a> != 0 || <a class="code hl_variable" href="classv8_1_1base_1_1RandomNumberGenerator.html#ae78e49a0715becf7a38c157ea07e2486">state1_</a> != 0);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1base_1_1RandomNumberGenerator.html#af67af3ca8628f5f93ae7873900a4c1b3">state0_</a> != 0 || <a class="code hl_variable" href="classv8_1_1base_1_1RandomNumberGenerator.html#ae78e49a0715becf7a38c157ea07e2486">state1_</a> != 0);</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>}</div>
 </div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
@@ -382,15 +390,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a115c48491bb37004f5ac67eb46ac2c23"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a></div><div class="ttdeci">turboshaft::OpIndex base</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00070">instruction-selector-ia32.cc:70</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_a41f8c58d2c01bf65b8ee199c3f87fc80"><div class="ttname"><a href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a></div><div class="ttdeci">ZoneVector&lt; RpoNumber &gt; &amp; result</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00021">jump-threading.cc:21</a></div></div>
 <div class="ttc" id="aliveedit-diff_8cc_html_a6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition</b> <a href="liveedit-diff_8cc_source.html#l00060">liveedit-diff.cc:60</a></div></div>
-<div class="ttc" id="alogging_8h_html_a1c7c9b7f14b9a33ea69cbe4578016a19"><div class="ttname"><a href="logging_8h.html#a1c7c9b7f14b9a33ea69cbe4578016a19">CHECK_GE</a></div><div class="ttdeci">#define CHECK_GE(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_a45a0717f39b7011dc823c1fe7b83e6fc"><div class="ttname"><a href="logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a></div><div class="ttdeci">#define CHECK_LT(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_a56e883b55c80205b4d1727679c68b2bd"><div class="ttname"><a href="logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a></div><div class="ttdeci">#define CHECK_LE(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="amove-optimizer_8cc_html_a93b84296d9854b2ab5bd18f69c3f8768"><div class="ttname"><a href="move-optimizer_8cc.html#a93b84296d9854b2ab5bd18f69c3f8768">source</a></div><div class="ttdeci">InstructionOperand source</div><div class="ttdef"><b>Definition</b> <a href="move-optimizer_8cc_source.html#l00016">move-optimizer.cc:16</a></div></div>
 <div class="ttc" id="amul-fft_8cc_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="mul-fft_8cc.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition</b> <a href="mul-fft_8cc_source.html#l00296">mul-fft.cc:296</a></div></div>
 <div class="ttc" id="amutex_8h_html"><div class="ttname"><a href="mutex_8h.html">mutex.h</a></div></div>
@@ -399,21 +398,33 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1base_html_a0067b2b005a620eb13a776e1fc6e1bf5"><div class="ttname"><a href="namespacev8_1_1base.html#a0067b2b005a620eb13a776e1fc6e1bf5">v8::base::entropy_mutex</a></div><div class="ttdeci">static LazyMutex entropy_mutex</div><div class="ttdef"><b>Definition</b> <a href="#l00025">random-number-generator.cc:25</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a33667af832c2971d6e824793e7f4301b"><div class="ttname"><a href="namespacev8_1_1base.html#a33667af832c2971d6e824793e7f4301b">v8::base::entropy_source</a></div><div class="ttdeci">static RandomNumberGenerator::EntropySource entropy_source</div><div class="ttdef"><b>Definition</b> <a href="#l00026">random-number-generator.cc:26</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a5c78a9800cbcf09478d155ac69cdbd0f"><div class="ttname"><a href="namespacev8_1_1base.html#a5c78a9800cbcf09478d155ac69cdbd0f">v8::base::Fclose</a></div><div class="ttdeci">int Fclose(FILE *stream)</div><div class="ttdef"><b>Definition</b> <a href="wrappers_8h_source.html#l00022">wrappers.h:22</a></div></div>
-<div class="ttc" id="anamespacev8_1_1base_html_a6c410bc41f21b97060b8520c074eb957"><div class="ttname"><a href="namespacev8_1_1base.html#a6c410bc41f21b97060b8520c074eb957">v8::base::bit_cast</a></div><div class="ttdeci">V8_INLINE Dest bit_cast(Source const &amp;source)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00095">macros.h:95</a></div></div>
+<div class="ttc" id="anamespacev8_1_1base_html_a6c410bc41f21b97060b8520c074eb957"><div class="ttname"><a href="namespacev8_1_1base.html#a6c410bc41f21b97060b8520c074eb957">v8::base::bit_cast</a></div><div class="ttdeci">V8_INLINE Dest bit_cast(Source const &amp;source)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00095">macros.h:95</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a8f6bab3a2c24be0997fc262a419cee82"><div class="ttname"><a href="namespacev8_1_1base.html#a8f6bab3a2c24be0997fc262a419cee82">v8::base::ComplementSample</a></div><div class="ttdeci">static std::vector&lt; uint64_t &gt; ComplementSample(const std::unordered_set&lt; uint64_t &gt; &amp;set, uint64_t max)</div><div class="ttdef"><b>Definition</b> <a href="#l00132">random-number-generator.cc:132</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_aed0bbfb9170fdaec74a0acab96f634e5"><div class="ttname"><a href="namespacev8_1_1base.html#aed0bbfb9170fdaec74a0acab96f634e5">v8::base::Fopen</a></div><div class="ttdeci">FILE * Fopen(const char *filename, const char *mode)</div><div class="ttdef"><b>Definition</b> <a href="wrappers_8h_source.html#l00014">wrappers.h:14</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="arandom-number-generator_8h_html"><div class="ttname"><a href="random-number-generator_8h.html">random-number-generator.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a1c7c9b7f14b9a33ea69cbe4578016a19"><div class="ttname"><a href="src_2base_2logging_8h.html#a1c7c9b7f14b9a33ea69cbe4578016a19">CHECK_GE</a></div><div class="ttdeci">#define CHECK_GE(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a45a0717f39b7011dc823c1fe7b83e6fc"><div class="ttname"><a href="src_2base_2logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a></div><div class="ttdeci">#define CHECK_LT(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a56e883b55c80205b4d1727679c68b2bd"><div class="ttname"><a href="src_2base_2logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a></div><div class="ttdeci">#define CHECK_LE(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="astructv8_1_1base_1_1LazyInstanceImpl_html"><div class="ttname"><a href="structv8_1_1base_1_1LazyInstanceImpl.html">v8::base::LazyInstanceImpl</a></div><div class="ttdef"><b>Definition</b> <a href="lazy-instance_8h_source.html#l00164">lazy-instance.h:164</a></div></div>
 <div class="ttc" id="astructv8_1_1base_1_1LazyInstanceImpl_html_a66006c64ca089a7f7b66b71f0bf0f264"><div class="ttname"><a href="structv8_1_1base_1_1LazyInstanceImpl.html#a66006c64ca089a7f7b66b71f0bf0f264">v8::base::LazyInstanceImpl::Pointer</a></div><div class="ttdeci">T * Pointer()</div><div class="ttdef"><b>Definition</b> <a href="lazy-instance_8h_source.html#l00179">lazy-instance.h:179</a></div></div>
 <div class="ttc" id="atime_8h_html"><div class="ttname"><a href="time_8h.html">time.h</a></div></div>
 <div class="ttc" id="awrappers_8h_html"><div class="ttname"><a href="wrappers_8h.html">wrappers.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:16:44 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="dir_50d32333f5bdddff7d31991c0551e21c.html">utils</a></li><li class="navelem"><a class="el" href="random-number-generator_8cc.html">random-number-generator.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:52:46 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

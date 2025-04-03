@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/spaces.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/spaces.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('spaces_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">spaces.h</div></div>
 </div><!--header-->
@@ -105,7 +113,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="iterator_8h.html">src/base/iterator.h</a>&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="common_2globals_8h.html">src/common/globals.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="allocation-observer_8h.html">src/heap/allocation-observer.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="base-space_8h.html">src/heap/base-space.h</a>&quot;</span></div>
@@ -120,7 +128,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;<a class="code" href="page-metadata_8h.html">src/heap/page-metadata.h</a>&quot;</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;<a class="code" href="slot-set_8h.html">src/heap/slot-set.h</a>&quot;</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &quot;<a class="code" href="objects_8h.html">src/objects/objects.h</a>&quot;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="allocation_8h.html">src/utils/allocation.h</a>&quot;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &quot;<a class="code" href="src_2utils_2allocation_8h.html">src/utils/allocation.h</a>&quot;</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &quot;<a class="code" href="utils_2utils_8h.html">src/utils/utils.h</a>&quot;</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &quot;testing/gtest/include/gtest/gtest_prod.h&quot;</span>  <span class="comment">// nogncheck</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
@@ -167,7 +175,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// Space is the abstract superclass for all allocation spaces that are not</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">// sealed after startup (i.e. not ReadOnlySpace).</span></div>
 <div class="foldopen" id="foldopen00067" data-start="{" data-end="};">
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1Space.html">   67</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1Space.html">Space</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1BaseSpace.html">BaseSpace</a> {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1Space.html">   67</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1Space.html">Space</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1BaseSpace.html">BaseSpace</a> {</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> MoveExternalBackingStoreBytes(</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#aab78aa090756e11a406701fe7a53bd53">ExternalBackingStoreType</a> type, <a class="code hl_class" href="classv8_1_1internal_1_1Space.html">Space</a>* from, <a class="code hl_class" href="classv8_1_1internal_1_1Space.html">Space</a>* to, <span class="keywordtype">size_t</span> amount);</div>
@@ -230,7 +238,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
 <div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1Space.html#a64d68ca125e2763f139ba9dffa3430c4">  116</a></span>  <span class="keyword">virtual</span> <a class="code hl_class" href="classv8_1_1internal_1_1PageMetadata.html">PageMetadata</a>* <a class="code hl_function" href="classv8_1_1internal_1_1Space.html#a64d68ca125e2763f139ba9dffa3430c4">InitializePage</a>(<a class="code hl_class" href="classv8_1_1internal_1_1MutablePageMetadata.html">MutablePageMetadata</a>* chunk) {</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  }</div>
 </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
@@ -241,7 +249,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="foldopen" id="foldopen00125" data-start="{" data-end="}">
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1Space.html#a19d31d1452b61b10125138f54624e522">  125</a></span>  Address <a class="code hl_function" href="classv8_1_1internal_1_1Space.html#a19d31d1452b61b10125138f54624e522">FirstPageAddress</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(first_page());</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(first_page());</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">return</span> first_page()-&gt;ChunkAddress();</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  }</div>
 </div>
@@ -269,7 +277,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">// object iterators.</span></div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
 <div class="foldopen" id="foldopen00149" data-start="{" data-end="};">
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ObjectIterator.html">  149</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1ObjectIterator.html">ObjectIterator</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1Malloced.html">Malloced</a> {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ObjectIterator.html">  149</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1ObjectIterator.html">ObjectIterator</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1Malloced.html">Malloced</a> {</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="comment">// Note: The destructor can not be marked as `= default` as this causes</span></div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <span class="comment">// the compiler on C++20 to define it as `constexpr` resulting in the</span></div>
@@ -286,8 +294,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    : <span class="keyword">public</span> <a class="code hl_struct" href="structv8_1_1base_1_1iterator.html">base::iterator</a>&lt;std::forward_iterator_tag, PageType&gt; {</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1PageIteratorImpl.html#a0596c11afa9cd6d167e158a7a52fe05a">  163</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1PageIteratorImpl.html#a0596c11afa9cd6d167e158a7a52fe05a">PageIteratorImpl</a>(PageType* p) : <a class="code hl_variable" href="classv8_1_1internal_1_1PageIteratorImpl.html#aa88fa53b40de6bf79c25eb445365dd6d">p_</a>(p) {}</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1PageIteratorImpl.html#a09c31df386bc564de3a46950f65d6501">  164</a></span>  <a class="code hl_function" href="classv8_1_1internal_1_1PageIteratorImpl.html#a09c31df386bc564de3a46950f65d6501">PageIteratorImpl</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1PageIteratorImpl.html">PageIteratorImpl</a>&amp;) <a class="code hl_define" href="compiler-specific_8h.html#a415acbb16ae1bfc9e3e053f8477852f5">V8_NOEXCEPT</a> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1PageIteratorImpl.html#ae17796c3289f47512f960e3cf3c6217f">  165</a></span>  <a class="code hl_class" href="classv8_1_1internal_1_1PageIteratorImpl.html">PageIteratorImpl</a>&amp; <a class="code hl_function" href="classv8_1_1internal_1_1PageIteratorImpl.html#ae17796c3289f47512f960e3cf3c6217f">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1PageIteratorImpl.html">PageIteratorImpl</a>&amp;) <a class="code hl_define" href="compiler-specific_8h.html#a415acbb16ae1bfc9e3e053f8477852f5">V8_NOEXCEPT</a> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1PageIteratorImpl.html#a09c31df386bc564de3a46950f65d6501">  164</a></span>  <a class="code hl_function" href="classv8_1_1internal_1_1PageIteratorImpl.html#a09c31df386bc564de3a46950f65d6501">PageIteratorImpl</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1PageIteratorImpl.html">PageIteratorImpl</a>&amp;) <a class="code hl_define" href="src_2base_2compiler-specific_8h.html#a415acbb16ae1bfc9e3e053f8477852f5">V8_NOEXCEPT</a> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1PageIteratorImpl.html#ae17796c3289f47512f960e3cf3c6217f">  165</a></span>  <a class="code hl_class" href="classv8_1_1internal_1_1PageIteratorImpl.html">PageIteratorImpl</a>&amp; <a class="code hl_function" href="classv8_1_1internal_1_1PageIteratorImpl.html#ae17796c3289f47512f960e3cf3c6217f">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1PageIteratorImpl.html">PageIteratorImpl</a>&amp;) <a class="code hl_define" href="src_2base_2compiler-specific_8h.html#a415acbb16ae1bfc9e3e053f8477852f5">V8_NOEXCEPT</a> = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1PageIteratorImpl.html#a06eaf4572b23115090305f42c48decb7">  167</a></span>  PageType* <a class="code hl_function" href="classv8_1_1internal_1_1PageIteratorImpl.html#a06eaf4572b23115090305f42c48decb7">operator*</a>() { <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1PageIteratorImpl.html#aa88fa53b40de6bf79c25eb445365dd6d">p_</a>; }</div>
 <div class="foldopen" id="foldopen00168" data-start="{" data-end="}">
@@ -352,7 +360,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
 <div class="foldopen" id="foldopen00216" data-start="{" data-end="};">
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SpaceWithLinearArea.html">  216</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1SpaceWithLinearArea.html">SpaceWithLinearArea</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1Space.html">Space</a> {</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SpaceWithLinearArea.html">  216</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1SpaceWithLinearArea.html">SpaceWithLinearArea</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1Space.html">Space</a> {</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>  <span class="comment">// Creates this space and uses the existing `allocator`. It doesn&#39;t create a</span></div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <span class="comment">// new MainAllocator instance.</span></div>
@@ -366,7 +374,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
 <div class="foldopen" id="foldopen00228" data-start="{" data-end="};">
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SpaceIterator.html">  228</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1SpaceIterator.html">SpaceIterator</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1Malloced.html">Malloced</a> {</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SpaceIterator.html">  228</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1SpaceIterator.html">SpaceIterator</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1Malloced.html">Malloced</a> {</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="keyword">explicit</span> <a class="code hl_class" href="classv8_1_1internal_1_1SpaceIterator.html">SpaceIterator</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Heap.html">Heap</a>* <a class="code hl_namespace" href="namespaceheap.html">heap</a>);</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SpaceIterator.html#a28112781b029ee1e80ffbea5c4b5e6fb">  231</a></span>  <span class="keyword">virtual</span> <a class="code hl_function" href="classv8_1_1internal_1_1SpaceIterator.html#a28112781b029ee1e80ffbea5c4b5e6fb">~SpaceIterator</a>();</div>
@@ -386,8 +394,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MemoryChunkIterator.html#ac6b95898e9267dd6f744dd1933a8db44">  244</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunkIterator.html#ac6b95898e9267dd6f744dd1933a8db44">MemoryChunkIterator</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Heap.html">Heap</a>* <a class="code hl_namespace" href="namespaceheap.html">heap</a>) : <a class="code hl_variable" href="classv8_1_1internal_1_1MemoryChunkIterator.html#a0af11c1627ab4eea5d16952c16214825">space_iterator_</a>(<a class="code hl_namespace" href="namespaceheap.html">heap</a>) {}</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span> </div>
-<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  V8_INLINE <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunkIterator.html#a76edecc87124dd19fbf9ede99ed61dad">HasNext</a>();</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  V8_INLINE <a class="code hl_class" href="classv8_1_1internal_1_1MutablePageMetadata.html">MutablePageMetadata</a>* <a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunkIterator.html#ad291416d159c306704f0bfea711f1106">Next</a>();</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunkIterator.html#a76edecc87124dd19fbf9ede99ed61dad">HasNext</a>();</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <a class="code hl_class" href="classv8_1_1internal_1_1MutablePageMetadata.html">MutablePageMetadata</a>* <a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunkIterator.html#ad291416d159c306704f0bfea711f1106">Next</a>();</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MemoryChunkIterator.html#a0af11c1627ab4eea5d16952c16214825">  250</a></span>  <a class="code hl_class" href="classv8_1_1internal_1_1SpaceIterator.html">SpaceIterator</a> <a class="code hl_variable" href="classv8_1_1internal_1_1MemoryChunkIterator.html#a0af11c1627ab4eea5d16952c16214825">space_iterator_</a>;</div>
@@ -401,7 +409,6 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="preprocessor">#endif  </span><span class="comment">// V8_HEAP_SPACES_H_</span></div>
 <div class="ttc" id="aactive-system-pages_8h_html"><div class="ttname"><a href="active-system-pages_8h.html">active-system-pages.h</a></div></div>
 <div class="ttc" id="aallocation-observer_8h_html"><div class="ttname"><a href="allocation-observer_8h.html">allocation-observer.h</a></div></div>
-<div class="ttc" id="aallocation_8h_html"><div class="ttname"><a href="allocation_8h.html">allocation.h</a></div></div>
 <div class="ttc" id="abase-space_8h_html"><div class="ttname"><a href="base-space_8h.html">base-space.h</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1AllocatorPolicy_html"><div class="ttname"><a href="classv8_1_1internal_1_1AllocatorPolicy.html">v8::internal::AllocatorPolicy</a></div><div class="ttdef"><b>Definition</b> <a href="main-allocator_8h_source.html#l00028">main-allocator.h:28</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1BaseSpace_html"><div class="ttname"><a href="classv8_1_1internal_1_1BaseSpace.html">v8::internal::BaseSpace</a></div><div class="ttdef"><b>Definition</b> <a href="base-space_8h_source.html#l00022">base-space.h:22</a></div></div>
@@ -413,9 +420,9 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1ConstPageRange_html_ad5d4d190a607338b57eae30779cb5f11"><div class="ttname"><a href="classv8_1_1internal_1_1ConstPageRange.html#ad5d4d190a607338b57eae30779cb5f11">v8::internal::ConstPageRange::ConstPageRange</a></div><div class="ttdeci">ConstPageRange(const PageMetadata *begin, const PageMetadata *end)</div><div class="ttdef"><b>Definition</b> <a href="#l00204">spaces.h:204</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1ConstPageRange_html_aefcf3e613a75fcb20ea6d094869dcae2"><div class="ttname"><a href="classv8_1_1internal_1_1ConstPageRange.html#aefcf3e613a75fcb20ea6d094869dcae2">v8::internal::ConstPageRange::iterator</a></div><div class="ttdeci">ConstPageIterator iterator</div><div class="ttdef"><b>Definition</b> <a href="#l00203">spaces.h:203</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1FreeList_html"><div class="ttname"><a href="classv8_1_1internal_1_1FreeList.html">v8::internal::FreeList</a></div><div class="ttdef"><b>Definition</b> <a href="free-list_8h_source.html#l00135">free-list.h:135</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00192">heap.h:192</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00192">heap.h:192</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MainAllocator_html"><div class="ttname"><a href="classv8_1_1internal_1_1MainAllocator.html">v8::internal::MainAllocator</a></div><div class="ttdef"><b>Definition</b> <a href="main-allocator_8h_source.html#l00148">main-allocator.h:148</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Malloced_html"><div class="ttname"><a href="classv8_1_1internal_1_1Malloced.html">v8::internal::Malloced</a></div><div class="ttdef"><b>Definition</b> <a href="allocation_8h_source.html#l00032">allocation.h:32</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Malloced_html"><div class="ttname"><a href="classv8_1_1internal_1_1Malloced.html">v8::internal::Malloced</a></div><div class="ttdef"><b>Definition</b> <a href="src_2utils_2allocation_8h_source.html#l00032">allocation.h:32</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryChunkIterator_html"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryChunkIterator.html">v8::internal::MemoryChunkIterator</a></div><div class="ttdef"><b>Definition</b> <a href="#l00242">spaces.h:242</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryChunkIterator_html_a0169ebf8e1138ac7a20eb9c02be6c8a4"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryChunkIterator.html#a0169ebf8e1138ac7a20eb9c02be6c8a4">v8::internal::MemoryChunkIterator::current_chunk_</a></div><div class="ttdeci">MutablePageMetadata * current_chunk_</div><div class="ttdef"><b>Definition</b> <a href="#l00251">spaces.h:251</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryChunkIterator_html_a0af11c1627ab4eea5d16952c16214825"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryChunkIterator.html#a0af11c1627ab4eea5d16952c16214825">v8::internal::MemoryChunkIterator::space_iterator_</a></div><div class="ttdeci">SpaceIterator space_iterator_</div><div class="ttdef"><b>Definition</b> <a href="#l00250">spaces.h:250</a></div></div>
@@ -473,7 +480,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1Tagged_html"><div class="ttname"><a href="classv8_1_1internal_1_1Tagged.html">v8::internal::Tagged</a></div><div class="ttdef"><b>Definition</b> <a href="waiter-queue-node_8h_source.html#l00022">waiter-queue-node.h:22</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1heap_1_1List_html"><div class="ttname"><a href="classv8_1_1internal_1_1heap_1_1List.html">v8::internal::heap::List</a></div><div class="ttdef"><b>Definition</b> <a href="heap_2list_8h_source.html#l00017">list.h:17</a></div></div>
 <div class="ttc" id="acommon_2globals_8h_html"><div class="ttname"><a href="common_2globals_8h.html">globals.h</a></div></div>
-<div class="ttc" id="acompiler-specific_8h_html_a415acbb16ae1bfc9e3e053f8477852f5"><div class="ttname"><a href="compiler-specific_8h.html#a415acbb16ae1bfc9e3e053f8477852f5">V8_NOEXCEPT</a></div><div class="ttdeci">#define V8_NOEXCEPT</div><div class="ttdef"><b>Definition</b> <a href="compiler-specific_8h_source.html#l00105">compiler-specific.h:105</a></div></div>
 <div class="ttc" id="acppgc_2sweeper_8cc_html_a2d71363713c5941c7926810adee1407f"><div class="ttname"><a href="cppgc_2sweeper_8cc.html#a2d71363713c5941c7926810adee1407f">free_list_</a></div><div class="ttdeci">FreeList &amp; free_list_</div><div class="ttdef"><b>Definition</b> <a href="cppgc_2sweeper_8cc_source.html#l00156">sweeper.cc:156</a></div></div>
 <div class="ttc" id="acppgc_2sweeper_8cc_html_a876e0ae5632dcb3138e6e718ac01ae8a"><div class="ttname"><a href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a></div><div class="ttdeci">BasePage * page</div><div class="ttdef"><b>Definition</b> <a href="cppgc_2sweeper_8cc_source.html#l00218">sweeper.cc:218</a></div></div>
 <div class="ttc" id="afree-list_8h_html"><div class="ttname"><a href="free-list_8h.html">free-list.h</a></div></div>
@@ -481,15 +487,11 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aiterator_8h_html"><div class="ttname"><a href="iterator_8h.html">iterator.h</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_ad83e8682ed733ee0cf359fa4f48441b0"><div class="ttname"><a href="js-call-reducer_8cc.html#ad83e8682ed733ee0cf359fa4f48441b0">callback</a></div><div class="ttdeci">TNode&lt; Object &gt; callback</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01500">js-call-reducer.cc:1500</a></div></div>
 <div class="ttc" id="alinear-allocation-area_8h_html"><div class="ttname"><a href="linear-allocation-area_8h.html">linear-allocation-area.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00067">logging.h:67</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="amain-allocator_8h_html"><div class="ttname"><a href="main-allocator_8h.html">main-allocator.h</a></div></div>
 <div class="ttc" id="amemory-chunk-layout_8h_html"><div class="ttname"><a href="memory-chunk-layout_8h.html">memory-chunk-layout.h</a></div></div>
 <div class="ttc" id="amemory-chunk-metadata_8h_html"><div class="ttname"><a href="memory-chunk-metadata_8h.html">memory-chunk-metadata.h</a></div></div>
 <div class="ttc" id="amutable-page-metadata_8h_html"><div class="ttname"><a href="mutable-page-metadata_8h.html">mutable-page-metadata.h</a></div></div>
-<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
+<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div><div class="ttdef"><b>Definition</b> <a href="hashing_8h_source.html#l00364">hashing.h:364</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
@@ -503,14 +505,24 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aobjects_8h_html"><div class="ttname"><a href="objects_8h.html">objects.h</a></div></div>
 <div class="ttc" id="apage-metadata_8h_html"><div class="ttname"><a href="page-metadata_8h.html">page-metadata.h</a></div></div>
 <div class="ttc" id="aslot-set_8h_html"><div class="ttname"><a href="slot-set_8h.html">slot-set.h</a></div></div>
+<div class="ttc" id="asrc_2base_2compiler-specific_8h_html_a415acbb16ae1bfc9e3e053f8477852f5"><div class="ttname"><a href="src_2base_2compiler-specific_8h.html#a415acbb16ae1bfc9e3e053f8477852f5">V8_NOEXCEPT</a></div><div class="ttdeci">#define V8_NOEXCEPT</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2compiler-specific_8h_source.html#l00105">compiler-specific.h:105</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00067">logging.h:67</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
+<div class="ttc" id="asrc_2utils_2allocation_8h_html"><div class="ttname"><a href="src_2utils_2allocation_8h.html">allocation.h</a></div></div>
 <div class="ttc" id="astructv8_1_1base_1_1iterator_html"><div class="ttname"><a href="structv8_1_1base_1_1iterator.html">v8::base::iterator</a></div><div class="ttdef"><b>Definition</b> <a href="iterator_8h_source.html#l00019">iterator.h:19</a></div></div>
 <div class="ttc" id="autils_2utils_8h_html"><div class="ttname"><a href="utils_2utils_8h.html">utils.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
 <div class="ttc" id="awasm-inlining-into-js_8cc_html_a66874a4e937e4192b2b42e57f55251e8"><div class="ttname"><a href="wasm-inlining-into-js_8cc.html#a66874a4e937e4192b2b42e57f55251e8">type</a></div><div class="ttdeci">wasm::ValueType type</div><div class="ttdef"><b>Definition</b> <a href="wasm-inlining-into-js_8cc_source.html#l00028">wasm-inlining-into-js.cc:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:36 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="spaces_8h.html">spaces.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:44 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

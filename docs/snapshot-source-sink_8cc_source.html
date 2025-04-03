@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/snapshot/snapshot-source-sink.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/snapshot/snapshot-source-sink.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('snapshot-source-sink_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0d52d89f10096f53df22fcdccd9461ad.html">snapshot</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">snapshot-source-sink.cc</div></div>
 </div><!--header-->
@@ -102,7 +110,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="handles-inl_8h.html">src/handles/handles-inl.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="objects-inl_8h.html">src/objects/objects-inl.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
@@ -118,7 +126,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="foldopen" id="foldopen00021" data-start="{" data-end="}">
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SnapshotByteSink.html#aabc2272982a939be24759c15eabaa615">   21</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1SnapshotByteSink.html#aabc2272982a939be24759c15eabaa615">SnapshotByteSink::PutUint30</a>(uint32_t integer, <span class="keyword">const</span> <span class="keywordtype">char</span>* description) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <a class="code hl_define" href="logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a>(integer, 1UL &lt;&lt; 30);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a>(integer, 1UL &lt;&lt; 30);</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  integer &lt;&lt;= 2;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keywordtype">int</span> bytes = 1;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keywordflow">if</span> (integer &gt; 0xFF) bytes = 2;</div>
@@ -151,7 +159,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SnapshotByteSource.html#a787f2f86a6bafa485d535bd025fb701a">   47</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1SnapshotByteSource.html#a787f2f86a6bafa485d535bd025fb701a">SnapshotByteSource::GetBlob</a>(<span class="keyword">const</span> uint8_t** data) {</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordtype">int</span> size = <a class="code hl_function" href="classv8_1_1internal_1_1SnapshotByteSource.html#ab5cbeb5c8cbd24ba02e72e62b8c8820f">GetUint30</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_define" href="logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1SnapshotByteSource.html#ae1f782248415ee4baf56cfe152deda64">position_</a> + size, <a class="code hl_variable" href="classv8_1_1internal_1_1SnapshotByteSource.html#ac281b199b9c74eab38f68b053907a902">length_</a>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1SnapshotByteSource.html#ae1f782248415ee4baf56cfe152deda64">position_</a> + size, <a class="code hl_variable" href="classv8_1_1internal_1_1SnapshotByteSource.html#ac281b199b9c74eab38f68b053907a902">length_</a>);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  *data = &amp;<a class="code hl_variable" href="classv8_1_1internal_1_1SnapshotByteSource.html#abed3fb31d8ee10f492e2c82cb34886c8">data_</a>[<a class="code hl_variable" href="classv8_1_1internal_1_1SnapshotByteSource.html#ae1f782248415ee4baf56cfe152deda64">position_</a>];</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <a class="code hl_function" href="classv8_1_1internal_1_1SnapshotByteSource.html#a0a711417dc223373cb5b3b6468ceb51a">Advance</a>(size);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>;</div>
@@ -173,19 +181,22 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1SnapshotByteSource_html_ac281b199b9c74eab38f68b053907a902"><div class="ttname"><a href="classv8_1_1internal_1_1SnapshotByteSource.html#ac281b199b9c74eab38f68b053907a902">v8::internal::SnapshotByteSource::length_</a></div><div class="ttdeci">int length_</div><div class="ttdef"><b>Definition</b> <a href="snapshot-source-sink_8h_source.html#l00119">snapshot-source-sink.h:119</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1SnapshotByteSource_html_ae1f782248415ee4baf56cfe152deda64"><div class="ttname"><a href="classv8_1_1internal_1_1SnapshotByteSource.html#ae1f782248415ee4baf56cfe152deda64">v8::internal::SnapshotByteSource::position_</a></div><div class="ttdeci">int position_</div><div class="ttdef"><b>Definition</b> <a href="snapshot-source-sink_8h_source.html#l00120">snapshot-source-sink.h:120</a></div></div>
 <div class="ttc" id="ahandles-inl_8h_html"><div class="ttname"><a href="handles-inl_8h.html">handles-inl.h</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a45a0717f39b7011dc823c1fe7b83e6fc"><div class="ttname"><a href="logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a></div><div class="ttdeci">#define CHECK_LT(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_a56e883b55c80205b4d1727679c68b2bd"><div class="ttname"><a href="logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a></div><div class="ttdeci">#define CHECK_LE(lhs, rhs)</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="aobjects-inl_8h_html"><div class="ttname"><a href="objects-inl_8h.html">objects-inl.h</a></div></div>
 <div class="ttc" id="asetup-heap-internal_8cc_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> <a href="setup-heap-internal_8cc_source.html#l00126">setup-heap-internal.cc:126</a></div></div>
 <div class="ttc" id="asnapshot-source-sink_8h_html"><div class="ttname"><a href="snapshot-source-sink_8h.html">snapshot-source-sink.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a45a0717f39b7011dc823c1fe7b83e6fc"><div class="ttname"><a href="src_2base_2logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a></div><div class="ttdeci">#define CHECK_LT(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a56e883b55c80205b4d1727679c68b2bd"><div class="ttname"><a href="src_2base_2logging_8h.html#a56e883b55c80205b4d1727679c68b2bd">CHECK_LE</a></div><div class="ttdeci">#define CHECK_LE(lhs, rhs)</div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:00 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0d52d89f10096f53df22fcdccd9461ad.html">snapshot</a></li><li class="navelem"><a class="el" href="snapshot-source-sink_8cc.html">snapshot-source-sink.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:13 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

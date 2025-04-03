@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/objects/js-atomics-synchronization.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/objects/js-atomics-synchronization.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('js-atomics-synchronization_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">js-atomics-synchronization.h</div></div>
 </div><!--header-->
@@ -208,7 +216,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="comment">// When pointer compression is enabled, the pointer to the waiter queue head</span></div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="comment">// is stored in the external pointer table and the object itself only contains</span></div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="comment">// a 32-bit external pointer handles.</span></div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keyword">inline</span> ExternalPointerHandle* waiter_queue_head_handle_location() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keyword">inline</span> <a class="code hl_typedef" href="namespacev8_1_1internal.html#ab9463710d94cd592e2742301e5f6c87a">ExternalPointerHandle</a>* waiter_queue_head_handle_location() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <span class="keyword">inline</span> <a class="code hl_class" href="classv8_1_1internal_1_1detail_1_1WaiterQueueNode.html">WaiterQueueNode</a>** <a class="code hl_function" href="classv8_1_1internal_1_1JSSynchronizationPrimitive.html#ac8d0fee3039e443cad11b286eb8b084b">waiter_queue_head_location</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="preprocessor">#endif</span></div>
@@ -277,7 +285,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="comment">// A non-copyable wrapper class that provides an RAII-style mechanism for</span></div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <span class="comment">// owning the `JSAtomicsMutex`.</span></div>
 <div class="foldopen" id="foldopen00180" data-start="{" data-end="};">
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">  180</a></span>  <span class="keyword">class </span>V8_NODISCARD <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">LockGuardBase</a> {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">  180</a></span>  <span class="keyword">class </span><a class="code hl_define" href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a> <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">LockGuardBase</a> {</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>   <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#a698a663b949a8c1b6ea44ba90d1021ac">  182</a></span>    <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#a698a663b949a8c1b6ea44ba90d1021ac">LockGuardBase</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">LockGuardBase</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#a8926713657be51ad5358d3d33de70ce6">  183</a></span>    <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">LockGuardBase</a>&amp; <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#a8926713657be51ad5358d3d33de70ce6">operator=</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">LockGuardBase</a>&amp;) = <span class="keyword">delete</span>;</div>
@@ -300,7 +308,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="comment">// If the mutex was acquired, then it is released when the `LockGuard` object</span></div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>  <span class="comment">// is destructed.</span></div>
 <div class="foldopen" id="foldopen00201" data-start="{" data-end="};">
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuard.html">  201</a></span>  <span class="keyword">class </span>V8_NODISCARD <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuard.html">LockGuard</a> final : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">LockGuardBase</a> {</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuard.html">  201</a></span>  <span class="keyword">class </span><a class="code hl_define" href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a> <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuard.html">LockGuard</a> final : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">LockGuardBase</a> {</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>   <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keyword">inline</span> <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuard.html">LockGuard</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsMutex&gt;</a> <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>,</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                     std::optional&lt;base::TimeDelta&gt; timeout = std::nullopt);</div>
@@ -311,7 +319,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <span class="comment">// object is created. If the mutex was acquired, then it is released when the</span></div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <span class="comment">// `TryLockGuard` object is destructed.</span></div>
 <div class="foldopen" id="foldopen00210" data-start="{" data-end="};">
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1TryLockGuard.html">  210</a></span>  <span class="keyword">class </span>V8_NODISCARD <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1TryLockGuard.html">TryLockGuard</a> final : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">LockGuardBase</a> {</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1TryLockGuard.html">  210</a></span>  <span class="keyword">class </span><a class="code hl_define" href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a> <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1TryLockGuard.html">TryLockGuard</a> final : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">LockGuardBase</a> {</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>   <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keyword">inline</span> <a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1TryLockGuard.html">TryLockGuard</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsMutex&gt;</a> <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>);</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  };</div>
@@ -330,7 +338,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsMutex&gt;</a> <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>,</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>      std::optional&lt;base::TimeDelta&gt; timeout = std::nullopt);</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  V8_WARN_UNUSED_RESULT <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#aaf1f431fef6b2704f0c784653b8b6ce0">TryLock</a>();</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#aaf1f431fef6b2704f0c784653b8b6ce0">TryLock</a>();</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <span class="comment">// Try to lock the mutex, if it&#39;s currently owned by another thread, creates</span></div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  <span class="comment">// a LockAsyncWaiterQueueNode and enqueue it in the mutex&#39;s waiter queue.</span></div>
@@ -413,7 +421,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  <span class="keyword">inline</span> std::atomic&lt;int32_t&gt;* <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#ab2f7375f951c118766461226411be1ab">AtomicOwnerThreadIdPtr</a>();</div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span> </div>
-<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#ac8bf7d94723c5c295222dd8d4a166b31">LockSlowPath</a>(</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#ac8bf7d94723c5c295222dd8d4a166b31">LockSlowPath</a>(</div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsMutex&gt;</a> <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>,</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>      std::atomic&lt;StateT&gt;* state, std::optional&lt;base::TimeDelta&gt; timeout);</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#ab7e2476ac1ba817339cc2ce7211cb401">LockAsyncSlowPath</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate,</div>
@@ -424,7 +432,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>                                <a class="code hl_class" href="classv8_1_1internal_1_1detail_1_1AsyncWaiterQueueNode.html">AsyncWaiterNodeType</a>** waiter_node,</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>                                std::optional&lt;base::TimeDelta&gt; timeout);</div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span> </div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a68bd13c3c741e314efa4d6aa52242674">UnlockSlowPath</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester,</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a68bd13c3c741e314efa4d6aa52242674">UnlockSlowPath</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester,</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>                                        std::atomic&lt;StateT&gt;* state);</div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span> </div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  <span class="comment">// Returns true if the JS mutex was taken and false otherwise.</span></div>
@@ -437,10 +445,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>  <span class="comment">// with a `WaiterQueueLockGuard` object.</span></div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>  <span class="keyword">static</span> std::optional&lt;WaiterQueueLockGuard&gt; <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a9366032c352dd4ea1aacba86b387ff3c">LockWaiterQueueOrJSMutex</a>(</div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>      std::atomic&lt;StateT&gt;* state, StateT&amp; current_state);</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a77ed4b19a76afe92edb99301cf9940d6">  335</a></span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a77ed4b19a76afe92edb99301cf9940d6">SpinningMutexTryLock</a>(</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a77ed4b19a76afe92edb99301cf9940d6">  335</a></span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a77ed4b19a76afe92edb99301cf9940d6">SpinningMutexTryLock</a>(</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsMutex&gt;</a> <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>,</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>      std::atomic&lt;StateT&gt;* state);</div>
-<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>  V8_INLINE <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#afb36fc0276082e7d8e41e3910e44afcd">BackoffTryLock</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester,</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>  <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#afb36fc0276082e7d8e41e3910e44afcd">BackoffTryLock</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester,</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                                       <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsMutex&gt;</a> <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>,</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                                       std::atomic&lt;StateT&gt;* state);</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#ab4c5854aa0c92c8e1e140b44fddcca01">DequeueTimedOutAsyncWaiter</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester,</div>
@@ -448,7 +456,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                                         std::atomic&lt;StateT&gt;* state,</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                                         <a class="code hl_class" href="classv8_1_1internal_1_1detail_1_1WaiterQueueNode.html">WaiterQueueNode</a>* timed_out_waiter);</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a4616a757face97266410b7318b372f19">MaybeEnqueueNode</a>(</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a4616a757face97266410b7318b372f19">MaybeEnqueueNode</a>(</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsMutex&gt;</a> <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>,</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      std::atomic&lt;StateT&gt;* state, <a class="code hl_class" href="classv8_1_1internal_1_1detail_1_1WaiterQueueNode.html">WaiterQueueNode</a>* this_waiter);</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span> </div>
@@ -512,12 +520,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>  <a class="code hl_define" href="object-macros_8h.html#aa7a425a01fc14fb48417913423c17a85">DECL_PRINTER</a>(<a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsCondition.html">JSAtomicsCondition</a>)</div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>  <a class="code hl_define" href="object-macros_8h.html#ae113cce74c2365f96127fa87fa512f9c">EXPORT_DECL_VERIFIER</a>(<a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsCondition.html">JSAtomicsCondition</a>)</div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span> </div>
-<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsCondition.html#af9e08e07218a45361ad3e9e3a27cf15a">WaitFor</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester,</div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsCondition.html#af9e08e07218a45361ad3e9e3a27cf15a">WaitFor</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester,</div>
 <div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>                                        <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsCondition&gt;</a> cv,</div>
 <div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>                                        <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsMutex&gt;</a> <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>,</div>
 <div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>                                        std::optional&lt;base::TimeDelta&gt; timeout);</div>
 <div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span> </div>
-<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1MaybeHandle.html">MaybeHandle&lt;JSReceiver&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsCondition.html#aedaa808e29bf8904c09024116f7b3a13">WaitAsync</a>(</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1MaybeHandle.html">MaybeHandle&lt;JSReceiver&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsCondition.html#aedaa808e29bf8904c09024116f7b3a13">WaitAsync</a>(</div>
 <div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsCondition&gt;</a> cv,</div>
 <div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>      <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsMutex&gt;</a> <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>,</div>
 <div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>      std::optional&lt;base::TimeDelta&gt; timeout);</div>
@@ -528,9 +536,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00421" name="l00421"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsCondition.html#aae1f923bd44e58174430c354950d5b32">  421</a></span>  <span class="keyword">static</span> <span class="keyword">constexpr</span> uint32_t <a class="code hl_variable" href="classv8_1_1internal_1_1JSAtomicsCondition.html#aae1f923bd44e58174430c354950d5b32">kAllWaiters</a> = UINT32_MAX;</div>
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span> </div>
 <div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>  <span class="comment">// Notify {count} waiters. Returns the number of waiters woken up.</span></div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>  <span class="keyword">static</span> <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> uint32_t <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsCondition.html#ae6324d997082736b35e9aef9a3243dcd">Notify</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester,</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>  <span class="keyword">static</span> <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> uint32_t <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsCondition.html#ae6324d997082736b35e9aef9a3243dcd">Notify</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester,</div>
 <div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>                                           <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsCondition&gt;</a> cv,</div>
-<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>                                           uint32_t count);</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>                                           uint32_t <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>);</div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span> </div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsCondition.html#ab4f19096b07f910048e717ad625b233a">CleanupMatchingAsyncWaiters</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate,</div>
 <div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>                                          <a class="code hl_class" href="classv8_1_1internal_1_1detail_1_1WaiterQueueNode.html">WaiterQueueNode</a>* node,</div>
@@ -659,26 +667,34 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ajs-objects_8h_html"><div class="ttname"><a href="js-objects_8h.html">js-objects.h</a></div></div>
 <div class="ttc" id="ajs-struct_8h_html"><div class="ttname"><a href="js-struct_8h.html">js-struct.h</a></div></div>
 <div class="ttc" id="aliftoff-compiler_8cc_html_ab600894d6947e13cf9b2a5a775e70324"><div class="ttname"><a href="liftoff-compiler_8cc.html#ab600894d6947e13cf9b2a5a775e70324">state</a></div><div class="ttdeci">LiftoffAssembler::CacheState state</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l00453">liftoff-compiler.cc:453</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="amodule-compiler_8cc_html_af6befd6f98ada7aaa0bb9f802cf519a9"><div class="ttname"><a href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a></div><div class="ttdeci">base::SpinningMutex mutex</div><div class="ttdef"><b>Definition</b> <a href="module-compiler_8cc_source.html#l00310">module-compiler.cc:310</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a473f51a89d5d106c89a5f4e539268e8b"><div class="ttname"><a href="namespacev8_1_1internal.html#a473f51a89d5d106c89a5f4e539268e8b">v8::internal::LockAsyncWaiterQueueNode</a></div><div class="ttdeci">detail::AsyncWaiterQueueNode&lt; JSAtomicsMutex &gt; LockAsyncWaiterQueueNode</div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8cc_source.html#l00412">js-atomics-synchronization.cc:412</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a4e2118a7c0d730210e0cb87b511cba70"><div class="ttname"><a href="namespacev8_1_1internal.html#a4e2118a7c0d730210e0cb87b511cba70">v8::internal::bool</a></div><div class="ttdeci">bool</div><div class="ttdef"><b>Definition</b> <a href="js-function-inl_8h_source.html#l00452">js-function-inl.h:452</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a50aa0d069c89f3ff4c466600f0afd5b1"><div class="ttname"><a href="namespacev8_1_1internal.html#a50aa0d069c89f3ff4c466600f0afd5b1">v8::internal::WaitAsyncWaiterQueueNode</a></div><div class="ttdeci">detail::AsyncWaiterQueueNode&lt; JSAtomicsCondition &gt; WaitAsyncWaiterQueueNode</div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8cc_source.html#l00413">js-atomics-synchronization.cc:413</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_ab9463710d94cd592e2742301e5f6c87a"><div class="ttname"><a href="namespacev8_1_1internal.html#ab9463710d94cd592e2742301e5f6c87a">v8::internal::ExternalPointerHandle</a></div><div class="ttdeci">uint32_t ExternalPointerHandle</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00357">v8-internal.h:357</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="aobject-macros-undef_8h_html"><div class="ttname"><a href="object-macros-undef_8h.html">object-macros-undef.h</a></div></div>
 <div class="ttc" id="aobject-macros_8h_html"><div class="ttname"><a href="object-macros_8h.html">object-macros.h</a></div></div>
 <div class="ttc" id="aobject-macros_8h_html_aa7a425a01fc14fb48417913423c17a85"><div class="ttname"><a href="object-macros_8h.html#aa7a425a01fc14fb48417913423c17a85">DECL_PRINTER</a></div><div class="ttdeci">#define DECL_PRINTER(Name)</div><div class="ttdef"><b>Definition</b> <a href="object-macros_8h_source.html#l00888">object-macros.h:888</a></div></div>
 <div class="ttc" id="aobject-macros_8h_html_abc19c7a657becf2f04feabf136bc011a"><div class="ttname"><a href="object-macros_8h.html#abc19c7a657becf2f04feabf136bc011a">TQ_OBJECT_CONSTRUCTORS</a></div><div class="ttdeci">#define TQ_OBJECT_CONSTRUCTORS(Type)</div><div class="ttdef"><b>Definition</b> <a href="object-macros_8h_source.html#l00923">object-macros.h:923</a></div></div>
 <div class="ttc" id="aobject-macros_8h_html_ae113cce74c2365f96127fa87fa512f9c"><div class="ttname"><a href="object-macros_8h.html#ae113cce74c2365f96127fa87fa512f9c">EXPORT_DECL_VERIFIER</a></div><div class="ttdeci">#define EXPORT_DECL_VERIFIER(Name)</div><div class="ttdef"><b>Definition</b> <a href="object-macros_8h_source.html#l00902">object-macros.h:902</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="astruct_8h_html"><div class="ttname"><a href="struct_8h.html">struct.h</a></div></div>
+<div class="ttc" id="astructv8_1_1internal_1_1count_html"><div class="ttname"><a href="structv8_1_1internal_1_1count.html">v8::internal::count</a></div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00567">v8-fast-api-calls.h:567</a></div></div>
 <div class="ttc" id="athread-id_8h_html"><div class="ttname"><a href="thread-id_8h.html">thread-id.h</a></div></div>
 <div class="ttc" id="atime_8h_html"><div class="ttname"><a href="time_8h.html">time.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
+<div class="ttc" id="av8config_8h_html_a63258e4bf5dc9fb8c78f881c8405d83b"><div class="ttname"><a href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a></div><div class="ttdeci">#define V8_WARN_UNUSED_RESULT</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00660">v8config.h:660</a></div></div>
+<div class="ttc" id="av8config_8h_html_ae5350bf5d731891583a34f9c8c52b532"><div class="ttname"><a href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a></div><div class="ttdeci">#define V8_NODISCARD</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00682">v8config.h:682</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:35 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li><li class="navelem"><a class="el" href="js-atomics-synchronization_8h.html">js-atomics-synchronization.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:55:47 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

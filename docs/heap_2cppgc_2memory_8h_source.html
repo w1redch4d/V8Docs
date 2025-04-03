@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/cppgc/memory.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/cppgc/memory.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('heap_2cppgc_2memory_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">memory.h</div></div>
 </div><!--header-->
@@ -105,7 +113,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;cstring&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="asan_8h.html">src/base/sanitizer/asan.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="msan_8h.html">src/base/sanitizer/msan.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="heap_2cppgc_2globals_8h.html">src/heap/cppgc/globals.h</a>&quot;</span></div>
@@ -113,13 +121,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecppgc.html">cppgc</a> {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">namespace </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">internal</a> {</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>V8_NOINLINE <a class="code hl_define" href="asan_8h.html#aa50cd3d3fb9ae19a5973bdb4e6a6ce38">DISABLE_ASAN</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a34ece969fe6544c2bc0cc30c1ca04f8e">NoSanitizeMemset</a>(<span class="keywordtype">void</span>* address, <span class="keywordtype">char</span> c,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><a class="code hl_define" href="v8config_8h.html#aae8e4cfdd8ebf80e774cb42d8b4980e6">V8_NOINLINE</a> <a class="code hl_define" href="asan_8h.html#aa50cd3d3fb9ae19a5973bdb4e6a6ce38">DISABLE_ASAN</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a34ece969fe6544c2bc0cc30c1ca04f8e">NoSanitizeMemset</a>(<span class="keywordtype">void</span>* address, <span class="keywordtype">char</span> c,</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                                               <span class="keywordtype">size_t</span> bytes);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a1e9d71b2e3f0e3e847f4148302e3a0cf">   23</a></span><span class="keyword">static</span> <span class="keyword">constexpr</span> uint8_t <a class="code hl_variable" href="namespacecppgc_1_1internal.html#a1e9d71b2e3f0e3e847f4148302e3a0cf">kZappedValue</a> = 0xdc;</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a653452023f08ff54eddb171d03675757">   25</a></span>V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a653452023f08ff54eddb171d03675757">ZapMemory</a>(<span class="keywordtype">void</span>* address, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a653452023f08ff54eddb171d03675757">   25</a></span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a653452023f08ff54eddb171d03675757">ZapMemory</a>(<span class="keywordtype">void</span>* address, <span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="comment">// The lowest bit of the zapped value should be 0 so that zapped object are</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="comment">// never viewed as fully constructed objects.</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  memset(address, <a class="code hl_variable" href="namespacecppgc_1_1internal.html#a1e9d71b2e3f0e3e847f4148302e3a0cf">kZappedValue</a>, size);</div>
@@ -127,17 +135,17 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a44017820d1471b0ece99268500a6db3a">   31</a></span>V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a44017820d1471b0ece99268500a6db3a">CheckMemoryIsZapped</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* address, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a44017820d1471b0ece99268500a6db3a">   31</a></span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a44017820d1471b0ece99268500a6db3a">CheckMemoryIsZapped</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* address, <span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; <a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>++) {</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(<a class="code hl_variable" href="namespacecppgc_1_1internal.html#a1e9d71b2e3f0e3e847f4148302e3a0cf">kZappedValue</a>, <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a9aee2e1ba3ad41b6fef630ce7821ee00">ConstAddress</a><span class="keyword">&gt;</span>(address)[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(<a class="code hl_variable" href="namespacecppgc_1_1internal.html#a1e9d71b2e3f0e3e847f4148302e3a0cf">kZappedValue</a>, <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a9aee2e1ba3ad41b6fef630ce7821ee00">ConstAddress</a><span class="keyword">&gt;</span>(address)[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a195c74fbc1f7010482ad0af1ccb7cc2b">   37</a></span>V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a195c74fbc1f7010482ad0af1ccb7cc2b">CheckMemoryIsZero</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* address, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a195c74fbc1f7010482ad0af1ccb7cc2b">   37</a></span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a195c74fbc1f7010482ad0af1ccb7cc2b">CheckMemoryIsZero</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* address, <span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; <a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>++) {</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(0, <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a9aee2e1ba3ad41b6fef630ce7821ee00">ConstAddress</a><span class="keyword">&gt;</span>(address)[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(0, <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacecppgc_1_1internal.html#a9aee2e1ba3ad41b6fef630ce7821ee00">ConstAddress</a><span class="keyword">&gt;</span>(address)[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  }</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>}</div>
 </div>
@@ -171,12 +179,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">// Nothing to be done for release builds.</span></div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a713063893bc5c3eb40cebc5dade998da">   72</a></span>V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a713063893bc5c3eb40cebc5dade998da">SetMemoryAccessible</a>(<span class="keywordtype">void</span>* address, <span class="keywordtype">size_t</span> size) {}</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a43158d150d290415eb9f1fc966a27e85">   73</a></span>V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a43158d150d290415eb9f1fc966a27e85">CheckMemoryIsInaccessible</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* address, <span class="keywordtype">size_t</span> size) {}</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a713063893bc5c3eb40cebc5dade998da">   72</a></span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a713063893bc5c3eb40cebc5dade998da">SetMemoryAccessible</a>(<span class="keywordtype">void</span>* address, <span class="keywordtype">size_t</span> size) {}</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a43158d150d290415eb9f1fc966a27e85">   73</a></span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a43158d150d290415eb9f1fc966a27e85">CheckMemoryIsInaccessible</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* address, <span class="keywordtype">size_t</span> size) {}</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a841370d4add05228e4f2dc70369e0368">   74</a></span><span class="keyword">constexpr</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a841370d4add05228e4f2dc70369e0368">CheckMemoryIsInaccessibleIsNoop</a>() { <span class="keywordflow">return</span> <span class="keyword">true</span>; }</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a6195d95eb470576ce85a9aef57387da2">   76</a></span>V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a6195d95eb470576ce85a9aef57387da2">SetMemoryInaccessible</a>(<span class="keywordtype">void</span>* address, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="namespacecppgc_1_1internal.html#a6195d95eb470576ce85a9aef57387da2">   76</a></span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacecppgc_1_1internal.html#a6195d95eb470576ce85a9aef57387da2">SetMemoryInaccessible</a>(<span class="keywordtype">void</span>* address, <span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  memset(address, 0, size);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
 </div>
@@ -190,8 +198,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aasan_8h_html"><div class="ttname"><a href="asan_8h.html">asan.h</a></div></div>
 <div class="ttc" id="aasan_8h_html_aa50cd3d3fb9ae19a5973bdb4e6a6ce38"><div class="ttname"><a href="asan_8h.html#aa50cd3d3fb9ae19a5973bdb4e6a6ce38">DISABLE_ASAN</a></div><div class="ttdeci">#define DISABLE_ASAN</div><div class="ttdef"><b>Definition</b> <a href="asan_8h_source.html#l00062">asan.h:62</a></div></div>
 <div class="ttc" id="aheap_2cppgc_2globals_8h_html"><div class="ttname"><a href="heap_2cppgc_2globals_8h.html">globals.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
 <div class="ttc" id="amsan_8h_html"><div class="ttname"><a href="msan_8h.html">msan.h</a></div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_a195c74fbc1f7010482ad0af1ccb7cc2b"><div class="ttname"><a href="namespacecppgc_1_1internal.html#a195c74fbc1f7010482ad0af1ccb7cc2b">cppgc::internal::CheckMemoryIsZero</a></div><div class="ttdeci">V8_INLINE void CheckMemoryIsZero(const void *address, size_t size)</div><div class="ttdef"><b>Definition</b> <a href="#l00037">memory.h:37</a></div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_a1e9d71b2e3f0e3e847f4148302e3a0cf"><div class="ttname"><a href="namespacecppgc_1_1internal.html#a1e9d71b2e3f0e3e847f4148302e3a0cf">cppgc::internal::kZappedValue</a></div><div class="ttdeci">static constexpr uint8_t kZappedValue</div><div class="ttdef"><b>Definition</b> <a href="#l00023">memory.h:23</a></div></div>
@@ -207,11 +213,18 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="asetup-heap-internal_8cc_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> <a href="setup-heap-internal_8cc_source.html#l00126">setup-heap-internal.cc:126</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
+<div class="ttc" id="av8config_8h_html_aae8e4cfdd8ebf80e774cb42d8b4980e6"><div class="ttname"><a href="v8config_8h.html#aae8e4cfdd8ebf80e774cb42d8b4980e6">V8_NOINLINE</a></div><div class="ttdeci">#define V8_NOINLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00575">v8config.h:575</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:16:43 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li><li class="navelem"><a class="el" href="heap_2cppgc_2memory_8h.html">memory.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:52:45 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/compiler-dispatcher/optimizing-compile-dispatcher.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/compiler-dispatcher/optimizing-compile-dispatcher.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('optimizing-compile-dispatcher_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1a7178c34c90a36607844bbab755febe.html">compiler-dispatcher</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">optimizing-compile-dispatcher.cc</div></div>
 </div><!--header-->
@@ -107,7 +115,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="local-isolate-inl_8h.html">src/execution/local-isolate-inl.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="handles-inl_8h.html">src/handles/handles-inl.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="local-heap-inl_8h.html">src/heap/local-heap-inl.h</a>&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="v8_8h.html">src/init/v8.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="src_2init_2v8_8h.html">src/init/v8.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="counters_8h.html">src/logging/counters.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="log_8h.html">src/logging/log.h</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="runtime-call-stats-scope_8h.html">src/logging/runtime-call-stats-scope.h</a>&quot;</span></div>
@@ -119,7 +127,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">namespace </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">internal</a> {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
 <div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html">OptimizingCompileDispatcher::CompileTask</a> : <span class="keyword">public</span> v8::JobTask {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html">OptimizingCompileDispatcher::CompileTask</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1JobTask.html">v8::JobTask</a> {</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> <span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html#a98739c2882604956178fa2abe60d99ac">   27</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html#a98739c2882604956178fa2abe60d99ac">CompileTask</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate,</div>
@@ -131,16 +139,16 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html#a9aacb55935b430a48d6bd310a1aafcad">   34</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html#a9aacb55935b430a48d6bd310a1aafcad">Run</a>(JobDelegate* delegate)<span class="keyword"> override </span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html#a9aacb55935b430a48d6bd310a1aafcad">   34</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html#a9aacb55935b430a48d6bd310a1aafcad">Run</a>(<a class="code hl_class" href="classv8_1_1JobDelegate.html">JobDelegate</a>* delegate)<span class="keyword"> override </span>{</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_class" href="classv8_1_1internal_1_1LocalIsolate.html">LocalIsolate</a> local_isolate(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html#a259f45fb0692cf3ef808e7a126aea6c5">isolate_</a>, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a34c412e70714b6b814e60c4b6883e0eea7c58afb43537a264dcd68e698a7b8e3b">ThreadKind::kBackground</a>);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(local_isolate.<a class="code hl_function" href="classv8_1_1internal_1_1LocalIsolate.html#a6c12bc9810a9e5f546c2545aaa303367">heap</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1LocalHeap.html#afdff19c624bcc46bba5d207cb853848e">IsParked</a>());</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(local_isolate.<a class="code hl_function" href="classv8_1_1internal_1_1LocalIsolate.html#a6c12bc9810a9e5f546c2545aaa303367">heap</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1LocalHeap.html#afdff19c624bcc46bba5d207cb853848e">IsParked</a>());</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    {</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <a class="code hl_define" href="runtime-call-stats-scope_8h.html#ae2e0b4aff109545657aba76d78cbf764">RCS_SCOPE</a>(&amp;local_isolate,</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                RuntimeCallCounterId::kOptimizeBackgroundDispatcherJob);</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      <a class="code hl_class" href="classv8_1_1internal_1_1TimerEventScope.html">TimerEventScope&lt;TimerEventRecompileConcurrent&gt;</a> timer(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html#a259f45fb0692cf3ef808e7a126aea6c5">isolate_</a>);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keywordflow">while</span> (!delegate-&gt;ShouldYield()) {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      <span class="keywordflow">while</span> (!delegate-&gt;<a class="code hl_function" href="classv8_1_1JobDelegate.html#a7180a73d20fc8a240c742163001d8b3a">ShouldYield</a>()) {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        <a class="code hl_class" href="classv8_1_1internal_1_1TurbofanCompilationJob.html">TurbofanCompilationJob</a>* job = <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher_1_1CompileTask.html#a72b15548abaab81242b9335a93b99238">dispatcher_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ac68d41703274dcc9d8021b3df60ae764">NextInput</a>(&amp;local_isolate);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (!job) <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_define" href="trace-event-no-perfetto_8h.html#a9acc0ee6e45fa2eba06b20a78d4510ca">TRACE_EVENT_WITH_FLOW0</a>(</div>
@@ -179,7 +187,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
 <div class="foldopen" id="foldopen00076" data-start="{" data-end="}">
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ab71247caa09e63efbf21bfc83a5b6c37">   76</a></span><a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ab71247caa09e63efbf21bfc83a5b6c37">OptimizingCompileDispatcher::~OptimizingCompileDispatcher</a>() {</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae383c19a579fb14b883c27d4c6c0290c">input_queue_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a071d987229349d6215ddc585cf1c9625">Length</a>());</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae383c19a579fb14b883c27d4c6c0290c">input_queue_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a071d987229349d6215ddc585cf1c9625">Length</a>());</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae1cecdc7968b5f67189415c0a6bbaba8">job_handle_</a> &amp;&amp; <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae1cecdc7968b5f67189415c0a6bbaba8">job_handle_</a>-&gt;IsValid()) {</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// Wait for the job handle to complete, so that we know the queue</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="comment">// pointers are safe.</span></div>
@@ -203,7 +211,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="comment">// The function may have already been optimized by OSR.  Simply continue.</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <a class="code hl_enumeration" href="classv8_1_1internal_1_1CompilationJob.html#a5139448eb71cada82780ab292fe35e9e">CompilationJob::Status</a> status =</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      job-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1OptimizedCompilationJob.html#ad6a0b95414cf2e2c86d4cee341c800ba">ExecuteJob</a>(local_isolate-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1LocalIsolate.html#a6e6d8675f0f8d3d8eaa7a4f4c7498c3e">runtime_call_stats</a>(), local_isolate);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(status);  <span class="comment">// Prevent an unused-variable error.</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(status);  <span class="comment">// Prevent an unused-variable error.</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  {</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// The function may have already been optimized by OSR.  Simply continue.</span></div>
@@ -238,7 +246,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::SpinningMutexGuard</a> access(&amp;<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a37f8f00bfaf9936ef6912e5bbcf69f91">mutex_</a>);</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="keywordflow">while</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a557b1c0db0a706d78d0a8b6ef3181201">length_</a> &gt; 0) {</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    std::unique_ptr&lt;TurbofanCompilationJob&gt; job(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a04a1789bc9ae76e0c2c1bfe3e130de11">queue_</a>[<a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a0eeccf9d76daf0921489afc5af0e9e82">QueueIndex</a>(0)]);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(job);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(job);</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#acb7b13a5b59294a341aaee3539ff5ab5">shift_</a> = <a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a0eeccf9d76daf0921489afc5af0e9e82">QueueIndex</a>(1);</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a557b1c0db0a706d78d0a8b6ef3181201">length_</a>--;</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <a class="code hl_function" href="classv8_1_1internal_1_1Compiler.html#a97dbc84d46fe97537b9f1f87c77c1fc1">Compiler::DisposeTurbofanCompilationJob</a>(isolate, job.get());</div>
@@ -260,11 +268,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        [<span class="keyword">this</span>]() { <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae1cecdc7968b5f67189415c0a6bbaba8">job_handle_</a>-&gt;Join(); });</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>  }</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  <span class="comment">// Join kills the job handle, so drop it and post a new one.</span></div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae1cecdc7968b5f67189415c0a6bbaba8">job_handle_</a> = <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a5eb1d47c492fa1e85e7d7c31dd5cf2bb">V8::GetCurrentPlatform</a>()-&gt;PostJob(</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae1cecdc7968b5f67189415c0a6bbaba8">job_handle_</a> = <a class="code hl_function" href="classv8_1_1internal_1_1V8.html#a5eb1d47c492fa1e85e7d7c31dd5cf2bb">V8::GetCurrentPlatform</a>()-&gt;<a class="code hl_function" href="classv8_1_1Platform.html#a45fbfd99c4f7d887c583adc770aa9b97">PostJob</a>(</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>      <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a5f55aaa00a805aad3deef732254fa8fe">kTaskPriority</a>, std::make_unique&lt;CompileTask&gt;(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a4f878d577357a51ad07c7636b660e0f7">isolate_</a>, <span class="keyword">this</span>));</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae383c19a579fb14b883c27d4c6c0290c">input_queue_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a071d987229349d6215ddc585cf1c9625">Length</a>(), 0);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae383c19a579fb14b883c27d4c6c0290c">input_queue_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a071d987229349d6215ddc585cf1c9625">Length</a>(), 0);</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="preprocessor">#endif  </span><span class="comment">// DEBUG</span></div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>}</div>
 </div>
@@ -296,7 +304,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a45c1f475951c95dbfaa5190af5fc098d">FlushQueues</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a76fa79703c1959ac0597972623c7915aaaf937713a39275d7c02a4a08b982d81a">BlockingBehavior::kBlock</a>);</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <span class="comment">// At this point the optimizing compiler thread&#39;s event loop has stopped.</span></div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <span class="comment">// There is no need for a mutex when reading input_queue_length_.</span></div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae383c19a579fb14b883c27d4c6c0290c">input_queue_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a071d987229349d6215ddc585cf1c9625">Length</a>(), 0);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae383c19a579fb14b883c27d4c6c0290c">input_queue_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a071d987229349d6215ddc585cf1c9625">Length</a>(), 0);</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>}</div>
 </div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
@@ -346,7 +354,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <span class="comment">// compilation, only finalize contiguous builtins in ascending order of their</span></div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  <span class="comment">// finalization order, which is set at job creation time.</span></div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a4f878d577357a51ad07c7636b660e0f7">isolate_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#aedaf87f2e27a1df86eaf664a83539c4b">IsGeneratingEmbeddedBuiltins</a>());</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a4f878d577357a51ad07c7636b660e0f7">isolate_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#aedaf87f2e27a1df86eaf664a83539c4b">IsGeneratingEmbeddedBuiltins</a>());</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::SpinningMutexGuard</a> access_output_queue_(&amp;<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a9dbe86ca42f82c4a7c90d3387e3a69b9">output_queue_mutex_</a>);</div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
@@ -358,10 +366,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  <span class="keywordflow">while</span> (!<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a9be8e3a0bd8b3502e19d0d1c662dc1ec">output_queue_</a>.empty()) {</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <span class="keywordtype">int</span> current = <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a9be8e3a0bd8b3502e19d0d1c662dc1ec">output_queue_</a>.front()-&gt;FinalizeOrder();</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(installed_count, current);</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(installed_count, current);</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    std::unique_ptr&lt;TurbofanCompilationJob&gt; job(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a9be8e3a0bd8b3502e19d0d1c662dc1ec">output_queue_</a>.front());</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a9be8e3a0bd8b3502e19d0d1c662dc1ec">output_queue_</a>.pop_front();</div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(<a class="code hl_enumvalue" href="classv8_1_1internal_1_1CompilationJob.html#a5139448eb71cada82780ab292fe35e9ea77e01e83c7c3ed97092d7dc1dab5832d">CompilationJob::SUCCEEDED</a>, job-&gt;FinalizeJob(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a4f878d577357a51ad07c7636b660e0f7">isolate_</a>));</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(<a class="code hl_enumvalue" href="classv8_1_1internal_1_1CompilationJob.html#a5139448eb71cada82780ab292fe35e9ea77e01e83c7c3ed97092d7dc1dab5832d">CompilationJob::SUCCEEDED</a>, job-&gt;FinalizeJob(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a4f878d577357a51ad07c7636b660e0f7">isolate_</a>));</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>    installed_count = current + 1;</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  }</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <span class="keywordflow">return</span> installed_count;</div>
@@ -370,7 +378,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
 <div class="foldopen" id="foldopen00243" data-start="{" data-end="}">
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a4e600bb05ff4b8aad0323dad2b18c612">  243</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a4e600bb05ff4b8aad0323dad2b18c612">OptimizingCompileDispatcher::HasJobs</a>() {</div>
-<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_function" href="classv8_1_1internal_1_1ThreadId.html#a81c60d3524b03db2f154b7f682e7796f">ThreadId::Current</a>(), <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a4f878d577357a51ad07c7636b660e0f7">isolate_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#a863567eca5cd2e437780d09553235557">thread_id</a>());</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_function" href="classv8_1_1internal_1_1ThreadId.html#a81c60d3524b03db2f154b7f682e7796f">ThreadId::Current</a>(), <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a4f878d577357a51ad07c7636b660e0f7">isolate_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#a863567eca5cd2e437780d09553235557">thread_id</a>());</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae1cecdc7968b5f67189415c0a6bbaba8">job_handle_</a>-&gt;IsActive() || !<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a9be8e3a0bd8b3502e19d0d1c662dc1ec">output_queue_</a>.empty();</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>}</div>
 </div>
@@ -378,7 +386,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00248" data-start="{" data-end="}">
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ad4c9e18bce0d13b7a98b1babd0ea249f">  248</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ad4c9e18bce0d13b7a98b1babd0ea249f">OptimizingCompileDispatcher::QueueForOptimization</a>(</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <a class="code hl_class" href="classv8_1_1internal_1_1TurbofanCompilationJob.html">TurbofanCompilationJob</a>* job) {</div>
-<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae383c19a579fb14b883c27d4c6c0290c">input_queue_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#ad6e12d993eacd469d18b6302e1cb07e4">IsAvailable</a>());</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae383c19a579fb14b883c27d4c6c0290c">input_queue_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#ad6e12d993eacd469d18b6302e1cb07e4">IsAvailable</a>());</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae383c19a579fb14b883c27d4c6c0290c">input_queue_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1OptimizingCompileDispatcherQueue.html#a0033a343198f6ec0f5a06de422459653">Enqueue</a>(job);</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae1cecdc7968b5f67189415c0a6bbaba8">job_handle_</a>-&gt;UpdatePriorityEnabled()) {</div>
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#ae1cecdc7968b5f67189415c0a6bbaba8">job_handle_</a>-&gt;UpdatePriority(<a class="code hl_variable" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html#a4f878d577357a51ad07c7636b660e0f7">isolate_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#a6aaaceedeed1b4d8390ec23038ca1d87">EfficiencyModeEnabledForTiering</a>()</div>
@@ -431,6 +439,10 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aapi-natives_8cc_html_a68072bca3fef7bd8b0d3cbac971cbf4b"><div class="ttname"><a href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a></div><div class="ttdeci">Isolate * isolate_</div><div class="ttdef"><b>Definition</b> <a href="api-natives_8cc_source.html#l00037">api-natives.cc:37</a></div></div>
 <div class="ttc" id="aatomicops_8h_html"><div class="ttname"><a href="atomicops_8h.html">atomicops.h</a></div></div>
 <div class="ttc" id="acancelable-task_8h_html"><div class="ttname"><a href="cancelable-task_8h.html">cancelable-task.h</a></div></div>
+<div class="ttc" id="aclassv8_1_1JobDelegate_html"><div class="ttname"><a href="classv8_1_1JobDelegate.html">v8::JobDelegate</a></div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l00206">v8-platform.h:206</a></div></div>
+<div class="ttc" id="aclassv8_1_1JobDelegate_html_a7180a73d20fc8a240c742163001d8b3a"><div class="ttname"><a href="classv8_1_1JobDelegate.html#a7180a73d20fc8a240c742163001d8b3a">v8::JobDelegate::ShouldYield</a></div><div class="ttdeci">virtual bool ShouldYield()=0</div></div>
+<div class="ttc" id="aclassv8_1_1JobTask_html"><div class="ttname"><a href="classv8_1_1JobTask.html">v8::JobTask</a></div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l00300">v8-platform.h:300</a></div></div>
+<div class="ttc" id="aclassv8_1_1Platform_html_a45fbfd99c4f7d887c583adc770aa9b97"><div class="ttname"><a href="classv8_1_1Platform.html#a45fbfd99c4f7d887c583adc770aa9b97">v8::Platform::PostJob</a></div><div class="ttdeci">std::unique_ptr&lt; JobHandle &gt; PostJob(TaskPriority priority, std::unique_ptr&lt; JobTask &gt; job_task, const SourceLocation &amp;location=SourceLocation::Current())</div><div class="ttdef"><b>Definition</b> <a href="v8-platform_8h_source.html#l01248">v8-platform.h:1248</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1LockGuard_html"><div class="ttname"><a href="classv8_1_1base_1_1LockGuard.html">v8::base::LockGuard</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00534">mutex.h:534</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1OS_html_a04656670e0be067dfe2a93bd2c809b7c"><div class="ttname"><a href="classv8_1_1base_1_1OS.html#a04656670e0be067dfe2a93bd2c809b7c">v8::base::OS::Sleep</a></div><div class="ttdeci">static void Sleep(TimeDelta interval)</div><div class="ttdef"><b>Definition</b> <a href="platform-posix_8cc_source.html#l00718">platform-posix.cc:718</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1TimeDelta_html_aedb23f3b7d15531e09b71883aaa96b6d"><div class="ttname"><a href="classv8_1_1base_1_1TimeDelta.html#aedb23f3b7d15531e09b71883aaa96b6d">v8::base::TimeDelta::FromMilliseconds</a></div><div class="ttdeci">static constexpr TimeDelta FromMilliseconds(int64_t milliseconds)</div><div class="ttdef"><b>Definition</b> <a href="time_8h_source.html#l00084">time.h:84</a></div></div>
@@ -512,12 +524,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="alocal-heap-inl_8h_html"><div class="ttname"><a href="local-heap-inl_8h.html">local-heap-inl.h</a></div></div>
 <div class="ttc" id="alocal-isolate-inl_8h_html"><div class="ttname"><a href="local-isolate-inl_8h.html">local-isolate-inl.h</a></div></div>
 <div class="ttc" id="alog_8h_html"><div class="ttname"><a href="log_8h.html">log.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="amacros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00281">macros.h:281</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a3430752cde9f29d73e97ceed1bce0856"><div class="ttname"><a href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">v8::internal::PrintF</a></div><div class="ttdeci">void PrintF(const char *format,...)</div><div class="ttdef"><b>Definition</b> <a href="utils_2utils_8cc_source.html#l00039">utils.cc:39</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a34c412e70714b6b814e60c4b6883e0eea7c58afb43537a264dcd68e698a7b8e3b"><div class="ttname"><a href="namespacev8_1_1internal.html#a34c412e70714b6b814e60c4b6883e0eea7c58afb43537a264dcd68e698a7b8e3b">v8::internal::ThreadKind::kBackground</a></div><div class="ttdeci">@ kBackground</div></div>
@@ -531,17 +537,26 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aoptimizing-compile-dispatcher_8h_html"><div class="ttname"><a href="optimizing-compile-dispatcher_8h.html">optimizing-compile-dispatcher.h</a></div></div>
 <div class="ttc" id="aruntime-call-stats-scope_8h_html"><div class="ttname"><a href="runtime-call-stats-scope_8h.html">runtime-call-stats-scope.h</a></div></div>
 <div class="ttc" id="aruntime-call-stats-scope_8h_html_ae2e0b4aff109545657aba76d78cbf764"><div class="ttname"><a href="runtime-call-stats-scope_8h.html#ae2e0b4aff109545657aba76d78cbf764">RCS_SCOPE</a></div><div class="ttdeci">#define RCS_SCOPE(...)</div><div class="ttdef"><b>Definition</b> <a href="runtime-call-stats-scope_8h_source.html#l00049">runtime-call-stats-scope.h:49</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00281">macros.h:281</a></div></div>
+<div class="ttc" id="asrc_2init_2v8_8h_html"><div class="ttname"><a href="src_2init_2v8_8h.html">v8.h</a></div></div>
 <div class="ttc" id="atrace-event-no-perfetto_8h_html_a97689377430b094caec680dd7dd230fe"><div class="ttname"><a href="trace-event-no-perfetto_8h.html#a97689377430b094caec680dd7dd230fe">TRACE_DISABLED_BY_DEFAULT</a></div><div class="ttdeci">#define TRACE_DISABLED_BY_DEFAULT(name)</div><div class="ttdef"><b>Definition</b> <a href="trace-event-no-perfetto_8h_source.html#l00025">trace-event-no-perfetto.h:25</a></div></div>
 <div class="ttc" id="atrace-event-no-perfetto_8h_html_a9acc0ee6e45fa2eba06b20a78d4510ca"><div class="ttname"><a href="trace-event-no-perfetto_8h.html#a9acc0ee6e45fa2eba06b20a78d4510ca">TRACE_EVENT_WITH_FLOW0</a></div><div class="ttdeci">#define TRACE_EVENT_WITH_FLOW0(category_group, name, bind_id, flow_flags)</div><div class="ttdef"><b>Definition</b> <a href="trace-event-no-perfetto_8h_source.html#l00034">trace-event-no-perfetto.h:34</a></div></div>
 <div class="ttc" id="atrace-event-no-perfetto_8h_html_af086bb0f8b985835cc9f35cfe856155f"><div class="ttname"><a href="trace-event-no-perfetto_8h.html#af086bb0f8b985835cc9f35cfe856155f">TRACE_EVENT_FLAG_FLOW_OUT</a></div><div class="ttdeci">#define TRACE_EVENT_FLAG_FLOW_OUT</div><div class="ttdef"><b>Definition</b> <a href="trace-event-no-perfetto_8h_source.html#l00837">trace-event-no-perfetto.h:837</a></div></div>
 <div class="ttc" id="atrace-event-no-perfetto_8h_html_afd116bac8e67a7eafb2b21a62f0a383f"><div class="ttname"><a href="trace-event-no-perfetto_8h.html#afd116bac8e67a7eafb2b21a62f0a383f">TRACE_EVENT_FLAG_FLOW_IN</a></div><div class="ttdeci">#define TRACE_EVENT_FLAG_FLOW_IN</div><div class="ttdef"><b>Definition</b> <a href="trace-event-no-perfetto_8h_source.html#l00836">trace-event-no-perfetto.h:836</a></div></div>
 <div class="ttc" id="atracing_2trace-event_8h_html"><div class="ttname"><a href="tracing_2trace-event_8h.html">trace-event.h</a></div></div>
-<div class="ttc" id="av8_8h_html"><div class="ttname"><a href="v8_8h.html">v8.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:17:06 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1a7178c34c90a36607844bbab755febe.html">compiler-dispatcher</a></li><li class="navelem"><a class="el" href="optimizing-compile-dispatcher_8cc.html">optimizing-compile-dispatcher.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:53:10 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

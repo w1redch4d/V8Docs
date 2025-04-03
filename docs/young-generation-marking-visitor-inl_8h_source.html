@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/young-generation-marking-visitor-inl.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/young-generation-marking-visitor-inl.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('young-generation-marking-visitor-inl_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">young-generation-marking-visitor-inl.h</div></div>
 </div><!--header-->
@@ -126,7 +134,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>          <a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;minor_mark_sweep_collector()-&gt;marking_worklists(),</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>          <a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;cpp_heap()</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>              ? <a class="code hl_class" href="classv8_1_1internal_1_1CppHeap.html">CppHeap</a>::From(<a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;cpp_heap())-&gt;CreateCppMarkingState()</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>              : <a class="code hl_class" href="classv8_1_1internal_1_1MarkingWorklists.html">MarkingWorklists</a>::Local::kNoCppMarkingState),</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>              : <a class="code hl_class" href="classv8_1_1internal_1_1MarkingWorklists.html">MarkingWorklists</a>::<a class="code hl_class" href="classv8_1_1Local.html">Local</a>::kNoCppMarkingState),</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      ephemeron_table_list_local_(</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>          *<a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;minor_mark_sweep_collector()-&gt;ephemeron_table_list()),</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      pretenuring_handler_(<a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;pretenuring_handler()),</div>
@@ -160,7 +168,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="comment">// The table is not reclaimed in the young generation, so we only need to mark</span></div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="comment">// through to the C++ pointer.</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordflow">if</span> (<span class="keyword">auto</span> cpp_heap_pointer = slot.<a class="code hl_function" href="classv8_1_1internal_1_1CppHeapPointerSlot.html#a07e0b5516265212b8e19bb2f0e0e930d">try_load</a>(<a class="code hl_variable" href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a>, kAnyCppHeapPointer)) {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordflow">if</span> (<span class="keyword">auto</span> cpp_heap_pointer = slot.<a class="code hl_function" href="classv8_1_1internal_1_1CppHeapPointerSlot.html#a07e0b5516265212b8e19bb2f0e0e930d">try_load</a>(<a class="code hl_variable" href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a>, <a class="code hl_function" href="namespacev8.html#aae49a9f3d8db66575ac58455ef63fe6f">kAnyCppHeapPointer</a>)) {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    marking_worklists_local_.cpp_marking_state()-&gt;MarkAndPush(</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(cpp_heap_pointer));</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  }</div>
@@ -213,17 +221,17 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1ObjectVisitor.html#a5f60b14a8e3408a5dc8fdb0412f2e556">YoungGenerationMarkingVisitor&lt;marking_mode&gt;::VisitExternalPointer</a>(</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> host, <a class="code hl_class" href="classv8_1_1internal_1_1ExternalPointerSlot.html">ExternalPointerSlot</a> slot) {</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="comment">// With sticky mark-bits the host object was already marked (old).</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.sticky_mark_bits,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.sticky_mark_bits,</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                 <a class="code hl_function" href="classv8_1_1internal_1_1HeapLayout.html#a597d0e70459c694743e92d98a9292f92">HeapLayout::InYoungGeneration</a>(host));</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!slot.<a class="code hl_function" href="classv8_1_1internal_1_1ExternalPointerSlot.html#a87aaabdbcc018bc1d244d7ca15f203c7">tag_range</a>().IsEmpty());</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!IsSharedExternalPointerType(slot.<a class="code hl_function" href="classv8_1_1internal_1_1ExternalPointerSlot.html#a87aaabdbcc018bc1d244d7ca15f203c7">tag_range</a>()));</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!slot.<a class="code hl_function" href="classv8_1_1internal_1_1ExternalPointerSlot.html#a87aaabdbcc018bc1d244d7ca15f203c7">tag_range</a>().<a class="code hl_function" href="structv8_1_1internal_1_1TagRange.html#a56ed482a36e57df1cbf181cea4631df6">IsEmpty</a>());</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="namespacev8_1_1internal.html#a3634e4ee77895f47d337f51db1d5e00f">IsSharedExternalPointerType</a>(slot.<a class="code hl_function" href="classv8_1_1internal_1_1ExternalPointerSlot.html#a87aaabdbcc018bc1d244d7ca15f203c7">tag_range</a>()));</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="comment">// TODO(chromium:337580006): Remove when pointer compression always uses</span></div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="comment">// EPT.</span></div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="keywordflow">if</span> (!slot.HasExternalPointerHandle()) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  ExternalPointerHandle <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a> = slot.Relaxed_LoadHandle();</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a> != kNullExternalPointerHandle) {</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <a class="code hl_typedef" href="namespacev8_1_1internal.html#ab9463710d94cd592e2742301e5f6c87a">ExternalPointerHandle</a> <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a> = slot.Relaxed_LoadHandle();</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a> != <a class="code hl_variable" href="namespacev8_1_1internal.html#a7d9d03c72a6418e2aba25f8a52114027">kNullExternalPointerHandle</a>) {</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    ExternalPointerTable&amp; table = <a class="code hl_variable" href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a>-&gt;external_pointer_table();</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keyword">auto</span>* space = <a class="code hl_variable" href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#a8f158e28d6a29d8bf8459c45ba5e40c2">heap</a>()-&gt;young_external_pointer_space();</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    table.Mark(space, <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>, slot.<a class="code hl_function" href="classv8_1_1internal_1_1SlotBase.html#a761a11659b4338ee734b79e7c6886911">address</a>());</div>
@@ -259,7 +267,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keyword">template</span> &lt;YoungGenerationMarkingVisitationMode marking_mode&gt;</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> TSlot&gt;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>V8_INLINE <span class="keywordtype">bool</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">bool</span></div>
 <div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1YoungGenerationMarkingVisitor.html#ae00458029ff83ce9e204fe2aa610b7dc">  153</a></span><a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationMarkingVisitor.html#ae00458029ff83ce9e204fe2aa610b7dc">YoungGenerationMarkingVisitor&lt;marking_mode&gt;::VisitObjectViaSlotInRememberedSet</a>(</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    TSlot slot) {</div>
@@ -281,7 +289,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>              marking_mode&gt;::SlotTreatmentMode slot_treatment_mode,</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>          <span class="keyword">typename</span> TSlot&gt;</div>
 <div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1YoungGenerationMarkingVisitor.html#a3a63a66c53a370e709df9790c2864055">  171</a></span>V8_INLINE <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationMarkingVisitor.html#a3a63a66c53a370e709df9790c2864055">YoungGenerationMarkingVisitor&lt;marking_mode&gt;::VisitObjectViaSlot</a>(</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1YoungGenerationMarkingVisitor.html#a3a63a66c53a370e709df9790c2864055">  171</a></span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationMarkingVisitor.html#a3a63a66c53a370e709df9790c2864055">YoungGenerationMarkingVisitor&lt;marking_mode&gt;::VisitObjectViaSlot</a>(</div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    TSlot slot) {</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <span class="keyword">const</span> std::optional&lt;Tagged&lt;Object&gt;&gt; optional_object =</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      this-&gt;GetObjectFilterReadOnlyAndSmiFast(slot);</div>
@@ -337,24 +345,24 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="preprocessor">#ifdef V8_MINORMS_STRING_SHORTCUTTING</span></div>
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keyword">template</span> &lt;YoungGenerationMarkingVisitationMode marking_mode&gt;</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>V8_INLINE <span class="keywordtype">bool</span> <a class="code hl_class" href="classv8_1_1internal_1_1YoungGenerationMarkingVisitor.html">YoungGenerationMarkingVisitor&lt;marking_mode&gt;::ShortCutStrings</a>(</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">bool</span> <a class="code hl_class" href="classv8_1_1internal_1_1YoungGenerationMarkingVisitor.html">YoungGenerationMarkingVisitor&lt;marking_mode&gt;::ShortCutStrings</a>(</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <a class="code hl_class" href="classv8_1_1internal_1_1FullHeapObjectSlot.html">HeapObjectSlot</a> slot, <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a>* heap_object) {</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a3a92b5a19abd073d4bc764cc428c843da6fb3551e3657204372d76d2d9b83a3b9">YoungGenerationMarkingVisitationMode::kParallel</a>, marking_mode);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a3a92b5a19abd073d4bc764cc428c843da6fb3551e3657204372d76d2d9b83a3b9">YoungGenerationMarkingVisitationMode::kParallel</a>, marking_mode);</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <span class="keywordflow">if</span> (shortcut_strings_) {</div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(V8_STATIC_ROOTS_BOOL);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_define" href="v8config_8h.html#a00d0eb346ff317ba25fd28d7ff4d4a98">V8_STATIC_ROOTS_BOOL</a>);</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="preprocessor">#if V8_STATIC_ROOTS_BOOL</span></div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <a class="code hl_class" href="classv8_1_1internal_1_1FullObjectSlot.html">ObjectSlot</a> map_slot = (*heap_object)-&gt;map_slot();</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> map_address = map_slot.<a class="code hl_function" href="classv8_1_1internal_1_1FullObjectSlot.html#a809fa0255a2590bd274b7d831275b56a">load_map</a>().ptr();</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> map_address = map_slot.<a class="code hl_function" href="classv8_1_1internal_1_1FullObjectSlot.html#a809fa0255a2590bd274b7d831275b56a">load_map</a>().ptr();</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>    <span class="keywordflow">if</span> (map_address == StaticReadOnlyRoot::kThinOneByteStringMap ||</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        map_address == StaticReadOnlyRoot::kThinTwoByteStringMap) {</div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>((*heap_object)</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>((*heap_object)</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>                    -&gt;<a class="code hl_variable" href="js-date-time-format_8cc.html#a22ede25ca923109929a8dca3c225b2ad">map</a>(<a class="code hl_function" href="classv8_1_1internal_1_1ObjectVisitorWithCageBases.html#a79ee9c5d1dd4d742f9fa3b1c9186b9a7">ObjectVisitorWithCageBases::cage_base</a>())</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                    -&gt;visitor_id(),</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                VisitorId::kVisitThinString);</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>      *heap_object = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;ThinString&gt;</a>(*heap_object)-&gt;actual();</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>      <span class="comment">// ThinStrings always refer to internalized strings, which are always</span></div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      <span class="comment">// in old space.</span></div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!Heap::InYoungGeneration(*heap_object));</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!Heap::InYoungGeneration(*heap_object));</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      slot.<a class="code hl_function" href="classv8_1_1internal_1_1FullHeapObjectSlot.html#a9aa1570ec013e11f4707b5aa7e1ae036">StoreHeapObject</a>(*heap_object);</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (map_address == StaticReadOnlyRoot::kConsOneByteStringMap ||</div>
@@ -383,12 +391,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="preprocessor">#endif  </span><span class="comment">// V8_MINORMS_STRING_SHORTCUTTING</span></div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="keyword">template</span> &lt;YoungGenerationMarkingVisitationMode marking_mode&gt;</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>V8_INLINE <span class="keywordtype">void</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span></div>
 <div class="foldopen" id="foldopen00273" data-start="{" data-end="}">
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1YoungGenerationMarkingVisitor.html#aef0536768c1f63a65659654282b608ae">  273</a></span><a class="code hl_function" href="classv8_1_1internal_1_1YoungGenerationMarkingVisitor.html#aef0536768c1f63a65659654282b608ae">YoungGenerationMarkingVisitor&lt;marking_mode&gt;::IncrementLiveBytesCached</a>(</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <a class="code hl_class" href="classv8_1_1internal_1_1MutablePageMetadata.html">MutablePageMetadata</a>* chunk, intptr_t by) {</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(<a class="code hl_define" href="common_2globals_8h.html#a69541a836e89979350b2e7634e2d5a0a">V8_COMPRESS_POINTERS_8GB_BOOL</a>,</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                 <a class="code hl_function" href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(by, <a class="code hl_variable" href="namespacev8_1_1internal.html#a7415a3fa85fa43250a858be607863a54">kObjectAlignment8GbHeap</a>));</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(<a class="code hl_define" href="common_2globals_8h.html#a69541a836e89979350b2e7634e2d5a0a">V8_COMPRESS_POINTERS_8GB_BOOL</a>,</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                 <a class="code hl_function" href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(by, <a class="code hl_variable" href="namespacev8_1_1internal.html#a7415a3fa85fa43250a858be607863a54">kObjectAlignment8GbHeap</a>));</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> hash = <a class="code hl_struct" href="structv8_1_1base_1_1hash.html">base::hash&lt;MutablePageMetadata*&gt;</a>()(chunk) &amp; kEntriesMask;</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  <span class="keyword">auto</span>&amp; entry = live_bytes_data_[hash];</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  <span class="keywordflow">if</span> (entry.first &amp;&amp; entry.first != chunk) {</div>
@@ -407,6 +415,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span> </div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span><span class="preprocessor">#endif  </span><span class="comment">// V8_HEAP_YOUNG_GENERATION_MARKING_VISITOR_INL_H_</span></div>
 <div class="ttc" id="aapi-natives_8cc_html_a68072bca3fef7bd8b0d3cbac971cbf4b"><div class="ttname"><a href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a></div><div class="ttdeci">Isolate * isolate_</div><div class="ttdef"><b>Definition</b> <a href="api-natives_8cc_source.html#l00037">api-natives.cc:37</a></div></div>
+<div class="ttc" id="aclassv8_1_1Local_html"><div class="ttname"><a href="classv8_1_1Local.html">v8::Local</a></div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00260">v8-local-handle.h:266</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1CppHeapPointerSlot_html"><div class="ttname"><a href="classv8_1_1internal_1_1CppHeapPointerSlot.html">v8::internal::CppHeapPointerSlot</a></div><div class="ttdef"><b>Definition</b> <a href="slots_8h_source.html#l00440">slots.h:442</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1CppHeapPointerSlot_html_a07e0b5516265212b8e19bb2f0e0e930d"><div class="ttname"><a href="classv8_1_1internal_1_1CppHeapPointerSlot.html#a07e0b5516265212b8e19bb2f0e0e930d">v8::internal::CppHeapPointerSlot::try_load</a></div><div class="ttdeci">Address try_load(IsolateForPointerCompression isolate, CppHeapPointerTagRange tag_range) const</div><div class="ttdef"><b>Definition</b> <a href="slots-inl_8h_source.html#l00310">slots-inl.h:310</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1CppHeap_html"><div class="ttname"><a href="classv8_1_1internal_1_1CppHeap.html">v8::internal::CppHeap</a></div><div class="ttdef"><b>Definition</b> <a href="cpp-heap_8h_source.html#l00039">cpp-heap.h:43</a></div></div>
@@ -418,7 +427,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1FullObjectSlot_html"><div class="ttname"><a href="classv8_1_1internal_1_1FullObjectSlot.html">v8::internal::FullObjectSlot</a></div><div class="ttdef"><b>Definition</b> <a href="slots_8h_source.html#l00099">slots.h:99</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1FullObjectSlot_html_a809fa0255a2590bd274b7d831275b56a"><div class="ttname"><a href="classv8_1_1internal_1_1FullObjectSlot.html#a809fa0255a2590bd274b7d831275b56a">v8::internal::FullObjectSlot::load_map</a></div><div class="ttdeci">Tagged&lt; Map &gt; load_map() const</div><div class="ttdef"><b>Definition</b> <a href="slots-inl_8h_source.html#l00065">slots-inl.h:65</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1HeapLayout_html_a597d0e70459c694743e92d98a9292f92"><div class="ttname"><a href="classv8_1_1internal_1_1HeapLayout.html#a597d0e70459c694743e92d98a9292f92">v8::internal::HeapLayout::InYoungGeneration</a></div><div class="ttdeci">static V8_INLINE bool InYoungGeneration(Tagged&lt; Object &gt; object)</div><div class="ttdef"><b>Definition</b> <a href="heap-layout-inl_8h_source.html#l00041">heap-layout-inl.h:41</a></div></div>
-<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00192">heap.h:192</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2heap_2heap_8h_source.html#l00192">heap.h:192</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1InternalIndex_html"><div class="ttname"><a href="classv8_1_1internal_1_1InternalIndex.html">v8::internal::InternalIndex</a></div><div class="ttdef"><b>Definition</b> <a href="internal-index_8h_source.html#l00020">internal-index.h:20</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html_a8f158e28d6a29d8bf8459c45ba5e40c2"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html#a8f158e28d6a29d8bf8459c45ba5e40c2">v8::internal::Isolate::heap</a></div><div class="ttdeci">Heap * heap()</div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l01188">isolate.h:1188</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingWorklists_html"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingWorklists.html">v8::internal::MarkingWorklists</a></div><div class="ttdef"><b>Definition</b> <a href="marking-worklist_8h_source.html#l00068">marking-worklist.h:68</a></div></div>
@@ -455,24 +464,23 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aheap-visitor-inl_8h_html"><div class="ttname"><a href="heap-visitor-inl_8h.html">heap-visitor-inl.h</a></div></div>
 <div class="ttc" id="aheap-visitor_8h_html"><div class="ttname"><a href="heap-visitor_8h.html">heap-visitor.h</a></div></div>
 <div class="ttc" id="ajs-date-time-format_8cc_html_a22ede25ca923109929a8dca3c225b2ad"><div class="ttname"><a href="js-date-time-format_8cc.html#a22ede25ca923109929a8dca3c225b2ad">map</a></div><div class="ttdeci">std::map&lt; const std::string, const std::string &gt; map</div><div class="ttdef"><b>Definition</b> <a href="js-date-time-format_8cc_source.html#l00268">js-date-time-format.cc:268</a></div></div>
-<div class="ttc" id="alogging_8h_html_a96a75539aa82216cdde2250a11126ea0"><div class="ttname"><a href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a></div><div class="ttdeci">#define DCHECK_IMPLIES(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00493">logging.h:493</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab7a19c1f785f31f2b190afc19875368a"><div class="ttname"><a href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a></div><div class="ttdeci">constexpr bool IsAligned(T value, U alignment)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00391">macros.h:391</a></div></div>
 <div class="ttc" id="amarking-worklist-inl_8h_html"><div class="ttname"><a href="marking-worklist-inl_8h.html">marking-worklist-inl.h</a></div></div>
 <div class="ttc" id="aminor-mark-sweep_8h_html"><div class="ttname"><a href="minor-mark-sweep_8h.html">minor-mark-sweep.h</a></div></div>
 <div class="ttc" id="amutable-page-metadata_8h_html"><div class="ttname"><a href="mutable-page-metadata_8h.html">mutable-page-metadata.h</a></div></div>
-<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
+<div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="src_2base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a175c065c1245d42fdbd4a853993be670"><div class="ttname"><a href="namespacev8_1_1internal.html#a175c065c1245d42fdbd4a853993be670">v8::internal::kTaggedNullAddress</a></div><div class="ttdeci">constexpr Address kTaggedNullAddress</div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00052">handles.h:52</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a3634e4ee77895f47d337f51db1d5e00f"><div class="ttname"><a href="namespacev8_1_1internal.html#a3634e4ee77895f47d337f51db1d5e00f">v8::internal::IsSharedExternalPointerType</a></div><div class="ttdeci">static V8_INLINE constexpr bool IsSharedExternalPointerType(ExternalPointerTagRange tag_range)</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00663">v8-internal.h:663</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a3a92b5a19abd073d4bc764cc428c843da16cba595e96a3a0c9abe5bd79d19e6dd"><div class="ttname"><a href="namespacev8_1_1internal.html#a3a92b5a19abd073d4bc764cc428c843da16cba595e96a3a0c9abe5bd79d19e6dd">v8::internal::YoungGenerationMarkingVisitationMode::kConcurrent</a></div><div class="ttdeci">@ kConcurrent</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a3a92b5a19abd073d4bc764cc428c843da6fb3551e3657204372d76d2d9b83a3b9"><div class="ttname"><a href="namespacev8_1_1internal.html#a3a92b5a19abd073d4bc764cc428c843da6fb3551e3657204372d76d2d9b83a3b9">v8::internal::YoungGenerationMarkingVisitationMode::kParallel</a></div><div class="ttdeci">@ kParallel</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a4382c244e839ce16a4beafabd1c6bd1d"><div class="ttname"><a href="namespacev8_1_1internal.html#a4382c244e839ce16a4beafabd1c6bd1d">v8::internal::Tagged</a></div><div class="ttdeci">Tagged(T object) -&gt; Tagged&lt; T &gt;</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5c4dae8d9552de9997c7b6d25b6d59c8"><div class="ttname"><a href="namespacev8_1_1internal.html#a5c4dae8d9552de9997c7b6d25b6d59c8">v8::internal::Tagged_t</a></div><div class="ttdeci">Address Tagged_t</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00539">globals.h:539</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a7415a3fa85fa43250a858be607863a54"><div class="ttname"><a href="namespacev8_1_1internal.html#a7415a3fa85fa43250a858be607863a54">v8::internal::kObjectAlignment8GbHeap</a></div><div class="ttdeci">constexpr intptr_t kObjectAlignment8GbHeap</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00925">globals.h:925</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a7d9d03c72a6418e2aba25f8a52114027"><div class="ttname"><a href="namespacev8_1_1internal.html#a7d9d03c72a6418e2aba25f8a52114027">v8::internal::kNullExternalPointerHandle</a></div><div class="ttdeci">constexpr ExternalPointerHandle kNullExternalPointerHandle</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00369">v8-internal.h:369</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9db791c05a0359859a321dcfec42e37"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8::internal::v8_flags</a></div><div class="ttdeci">V8_EXPORT_PRIVATE FlagValues v8_flags</div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_ab9463710d94cd592e2742301e5f6c87a"><div class="ttname"><a href="namespacev8_1_1internal.html#ab9463710d94cd592e2742301e5f6c87a">v8::internal::ExternalPointerHandle</a></div><div class="ttdeci">uint32_t ExternalPointerHandle</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00357">v8-internal.h:357</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ab9df0bf289155b5ae1d6da682adf1d6f"><div class="ttname"><a href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">v8::internal::handle</a></div><div class="ttdeci">V8_INLINE Handle&lt; T &gt; handle(Tagged&lt; T &gt; object, Isolate *isolate)</div><div class="ttdef"><b>Definition</b> <a href="handles-inl_8h_source.html#l00070">handles-inl.h:70</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ad504e70236bfcc0478d67053d1ed9ac0"><div class="ttname"><a href="namespacev8_1_1internal.html#ad504e70236bfcc0478d67053d1ed9ac0">v8::internal::GarbageCollector</a></div><div class="ttdeci">GarbageCollector</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01554">globals.h:1554</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ad504e70236bfcc0478d67053d1ed9ac0a650d85b59c887eb439352fdd1dae9345"><div class="ttname"><a href="namespacev8_1_1internal.html#ad504e70236bfcc0478d67053d1ed9ac0a650d85b59c887eb439352fdd1dae9345">v8::internal::GarbageCollector::MINOR_MARK_SWEEPER</a></div><div class="ttdeci">@ MINOR_MARK_SWEEPER</div></div>
@@ -480,15 +488,26 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_aec2f264d0aec66757464be8da088cf83"><div class="ttname"><a href="namespacev8_1_1internal.html#aec2f264d0aec66757464be8da088cf83">v8::internal::VisitorId</a></div><div class="ttdeci">VisitorId</div><div class="ttdef"><b>Definition</b> <a href="map_8h_source.html#l00127">map.h:127</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="anamespacev8_html_aae49a9f3d8db66575ac58455ef63fe6f"><div class="ttname"><a href="namespacev8.html#aae49a9f3d8db66575ac58455ef63fe6f">v8::kAnyCppHeapPointer</a></div><div class="ttdeci">constexpr CppHeapPointerTagRange kAnyCppHeapPointer(CppHeapPointerTag::kFirstTag, CppHeapPointerTag::kLastTag)</div></div>
 <div class="ttc" id="apretenuring-handler-inl_8h_html"><div class="ttname"><a href="pretenuring-handler-inl_8h.html">pretenuring-handler-inl.h</a></div></div>
 <div class="ttc" id="aremembered-set-inl_8h_html"><div class="ttname"><a href="remembered-set-inl_8h.html">remembered-set-inl.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a96a75539aa82216cdde2250a11126ea0"><div class="ttname"><a href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a></div><div class="ttdeci">#define DCHECK_IMPLIES(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00493">logging.h:493</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab7a19c1f785f31f2b190afc19875368a"><div class="ttname"><a href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a></div><div class="ttdeci">constexpr bool IsAligned(T value, U alignment)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00391">macros.h:391</a></div></div>
 <div class="ttc" id="astructv8_1_1base_1_1hash_html"><div class="ttname"><a href="structv8_1_1base_1_1hash.html">v8::base::hash</a></div><div class="ttdef"><b>Definition</b> <a href="hashing_8h_source.html#l00074">hashing.h:74</a></div></div>
+<div class="ttc" id="astructv8_1_1internal_1_1TagRange_html_a56ed482a36e57df1cbf181cea4631df6"><div class="ttname"><a href="structv8_1_1internal_1_1TagRange.html#a56ed482a36e57df1cbf181cea4631df6">v8::internal::TagRange::IsEmpty</a></div><div class="ttdeci">constexpr bool IsEmpty() const</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00466">v8-internal.h:466</a></div></div>
+<div class="ttc" id="av8config_8h_html_a00d0eb346ff317ba25fd28d7ff4d4a98"><div class="ttname"><a href="v8config_8h.html#a00d0eb346ff317ba25fd28d7ff4d4a98">V8_STATIC_ROOTS_BOOL</a></div><div class="ttdeci">#define V8_STATIC_ROOTS_BOOL</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00994">v8config.h:994</a></div></div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
 <div class="ttc" id="ayoung-generation-marking-visitor_8h_html"><div class="ttname"><a href="young-generation-marking-visitor_8h.html">young-generation-marking-visitor.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:37 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="young-generation-marking-visitor-inl_8h.html">young-generation-marking-visitor-inl.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:46 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

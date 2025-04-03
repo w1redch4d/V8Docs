@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/cppgc/trace-trait.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/cppgc/trace-trait.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('trace-trait_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">trace-trait.cc</div></div>
 </div><!--header-->
@@ -98,7 +106,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Use of this source code is governed by a BSD-style license that can be</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// found in the LICENSE file.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;include/cppgc/trace-trait.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="trace-trait_8h.html">include/cppgc/trace-trait.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="gc-info-table_8h.html">src/heap/cppgc/gc-info-table.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="heap-page_8h.html">src/heap/cppgc/heap-page.h</a>&quot;</span></div>
@@ -106,38 +114,48 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecppgc.html">cppgc</a> {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">internal</a> {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>TraceDescriptor TraceTraitFromInnerAddressImpl::GetTraceDescriptor(</div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structcppgc_1_1internal_1_1TraceTraitFromInnerAddressImpl.html#a4cf1491d34143a690583dceab0ae73d7">   13</a></span><a class="code hl_struct" href="structcppgc_1_1TraceDescriptor.html">TraceDescriptor</a> <a class="code hl_function" href="structcppgc_1_1internal_1_1TraceTraitFromInnerAddressImpl.html#a4cf1491d34143a690583dceab0ae73d7">TraceTraitFromInnerAddressImpl::GetTraceDescriptor</a>(</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">const</span> <span class="keywordtype">void</span>* address) {</div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="comment">// address is guaranteed to be on a normal page because this is used only for</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="comment">// mixins.</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keyword">const</span> BasePage* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> = <a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#aad13cafeed6c2ea494b7423b9c527b7a">BasePage::FromPayload</a>(address);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;<a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#ab9bebea6af5128927c2ae53ed869de3b">SynchronizedLoad</a>();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keyword">const</span> HeapObjectHeader&amp; header =</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;<a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#a3e4e942b9d1f96f27df335a9daaacf09">ObjectHeaderFromInnerAddress</a>&lt;<a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71">AccessMode::kAtomic</a>&gt;(address);</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keywordflow">return</span> {header.ObjectStart(),</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keyword">const</span> <a class="code hl_class" href="classcppgc_1_1internal_1_1BasePage.html">BasePage</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> = <a class="code hl_function" href="classcppgc_1_1internal_1_1BasePage.html#aad13cafeed6c2ea494b7423b9c527b7a">BasePage::FromPayload</a>(address);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;SynchronizedLoad();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keyword">const</span> <a class="code hl_class" href="classcppgc_1_1internal_1_1HeapObjectHeader.html">HeapObjectHeader</a>&amp; header =</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>-&gt;ObjectHeaderFromInnerAddress&lt;<a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71">AccessMode::kAtomic</a>&gt;(address);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keywordflow">return</span> {header.<a class="code hl_function" href="classcppgc_1_1internal_1_1HeapObjectHeader.html#a2f5a585893bb8836a77a5fdbf344a24a">ObjectStart</a>(),</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>          <a class="code hl_function" href="classcppgc_1_1internal_1_1GlobalGCInfoTable.html#a4b8c1b342810ea68458b9a25731c9670">GlobalGCInfoTable::GCInfoFromIndex</a>(</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>              header.GetGCInfoIndex&lt;<a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71">AccessMode::kAtomic</a>&gt;())</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>              header.<a class="code hl_function" href="classcppgc_1_1internal_1_1HeapObjectHeader.html#a7390352abcea20d83a29d566d3968a9c">GetGCInfoIndex</a>&lt;<a class="code hl_enumvalue" href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71">AccessMode::kAtomic</a>&gt;())</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>              .<a class="code hl_variable" href="structcppgc_1_1internal_1_1GCInfo.html#a38d648a24eb18de96f6f9b9b9bda4f09">trace</a>};</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>}</div>
+</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>}  <span class="comment">// namespace cppgc</span></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1BasePage_html_a3e4e942b9d1f96f27df335a9daaacf09"><div class="ttname"><a href="classcppgc_1_1internal_1_1BasePage.html#a3e4e942b9d1f96f27df335a9daaacf09">cppgc::internal::BasePage::ObjectHeaderFromInnerAddress</a></div><div class="ttdeci">HeapObjectHeader &amp; ObjectHeaderFromInnerAddress(void *address) const</div><div class="ttdef"><b>Definition</b> <a href="heap-page_8h_source.html#l00339">heap-page.h:339</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1BasePage_html"><div class="ttname"><a href="classcppgc_1_1internal_1_1BasePage.html">cppgc::internal::BasePage</a></div><div class="ttdef"><b>Definition</b> <a href="heap-page_8h_source.html#l00030">heap-page.h:30</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1BasePage_html_aad13cafeed6c2ea494b7423b9c527b7a"><div class="ttname"><a href="classcppgc_1_1internal_1_1BasePage.html#aad13cafeed6c2ea494b7423b9c527b7a">cppgc::internal::BasePage::FromPayload</a></div><div class="ttdeci">static BasePage * FromPayload(void *)</div><div class="ttdef"><b>Definition</b> <a href="heap-page_8h_source.html#l00314">heap-page.h:314</a></div></div>
-<div class="ttc" id="aclasscppgc_1_1internal_1_1BasePage_html_ab9bebea6af5128927c2ae53ed869de3b"><div class="ttname"><a href="classcppgc_1_1internal_1_1BasePage.html#ab9bebea6af5128927c2ae53ed869de3b">cppgc::internal::BasePage::SynchronizedLoad</a></div><div class="ttdeci">void SynchronizedLoad() const</div><div class="ttdef"><b>Definition</b> <a href="heap-page_8h_source.html#l00080">heap-page.h:80</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1GlobalGCInfoTable_html_a4b8c1b342810ea68458b9a25731c9670"><div class="ttname"><a href="classcppgc_1_1internal_1_1GlobalGCInfoTable.html#a4b8c1b342810ea68458b9a25731c9670">cppgc::internal::GlobalGCInfoTable::GCInfoFromIndex</a></div><div class="ttdeci">static const GCInfo &amp; GCInfoFromIndex(GCInfoIndex index)</div><div class="ttdef"><b>Definition</b> <a href="gc-info-table_8h_source.html#l00115">gc-info-table.h:115</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1HeapObjectHeader_html"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapObjectHeader.html">cppgc::internal::HeapObjectHeader</a></div><div class="ttdef"><b>Definition</b> <a href="heap-object-header_8h_source.html#l00059">heap-object-header.h:59</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1HeapObjectHeader_html_a2f5a585893bb8836a77a5fdbf344a24a"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapObjectHeader.html#a2f5a585893bb8836a77a5fdbf344a24a">cppgc::internal::HeapObjectHeader::ObjectStart</a></div><div class="ttdeci">Address ObjectStart() const</div><div class="ttdef"><b>Definition</b> <a href="heap-object-header_8h_source.html#l00209">heap-object-header.h:209</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1HeapObjectHeader_html_a7390352abcea20d83a29d566d3968a9c"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapObjectHeader.html#a7390352abcea20d83a29d566d3968a9c">cppgc::internal::HeapObjectHeader::GetGCInfoIndex</a></div><div class="ttdeci">GCInfoIndex GetGCInfoIndex() const</div><div class="ttdef"><b>Definition</b> <a href="heap-object-header_8h_source.html#l00222">heap-object-header.h:222</a></div></div>
 <div class="ttc" id="acppgc_2sweeper_8cc_html_a876e0ae5632dcb3138e6e718ac01ae8a"><div class="ttname"><a href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a></div><div class="ttdeci">BasePage * page</div><div class="ttdef"><b>Definition</b> <a href="cppgc_2sweeper_8cc_source.html#l00218">sweeper.cc:218</a></div></div>
 <div class="ttc" id="agc-info-table_8h_html"><div class="ttname"><a href="gc-info-table_8h.html">gc-info-table.h</a></div></div>
 <div class="ttc" id="aheap-page_8h_html"><div class="ttname"><a href="heap-page_8h.html">heap-page.h</a></div></div>
 <div class="ttc" id="anamespacecppgc_1_1internal_html_ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71"><div class="ttname"><a href="namespacecppgc_1_1internal.html#ac0b40b7e4ac65024fbfcf57d01fa808ea726d9cf5163c50b3cf8e05800e3cef71">cppgc::internal::AccessMode::kAtomic</a></div><div class="ttdeci">@ kAtomic</div></div>
 <div class="ttc" id="anamespacecppgc_html"><div class="ttname"><a href="namespacecppgc.html">cppgc</a></div><div class="ttdef"><b>Definition</b> <a href="cross-heap-remembered-set_8h_source.html#l00014">cross-heap-remembered-set.h:14</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
+<div class="ttc" id="astructcppgc_1_1TraceDescriptor_html"><div class="ttname"><a href="structcppgc_1_1TraceDescriptor.html">cppgc::TraceDescriptor</a></div><div class="ttdef"><b>Definition</b> <a href="trace-trait_8h_source.html#l00044">trace-trait.h:44</a></div></div>
 <div class="ttc" id="astructcppgc_1_1internal_1_1GCInfo_html_a38d648a24eb18de96f6f9b9b9bda4f09"><div class="ttname"><a href="structcppgc_1_1internal_1_1GCInfo.html#a38d648a24eb18de96f6f9b9b9bda4f09">cppgc::internal::GCInfo::trace</a></div><div class="ttdeci">TraceCallback trace</div><div class="ttdef"><b>Definition</b> <a href="gc-info-table_8h_source.html#l00030">gc-info-table.h:30</a></div></div>
+<div class="ttc" id="astructcppgc_1_1internal_1_1TraceTraitFromInnerAddressImpl_html_a4cf1491d34143a690583dceab0ae73d7"><div class="ttname"><a href="structcppgc_1_1internal_1_1TraceTraitFromInnerAddressImpl.html#a4cf1491d34143a690583dceab0ae73d7">cppgc::internal::TraceTraitFromInnerAddressImpl::GetTraceDescriptor</a></div><div class="ttdeci">static TraceDescriptor GetTraceDescriptor(const void *address)</div><div class="ttdef"><b>Definition</b> <a href="#l00013">trace-trait.cc:13</a></div></div>
+<div class="ttc" id="atrace-trait_8h_html"><div class="ttname"><a href="trace-trait_8h.html">trace-trait.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:31 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li><li class="navelem"><a class="el" href="trace-trait_8cc.html">trace-trait.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:39 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

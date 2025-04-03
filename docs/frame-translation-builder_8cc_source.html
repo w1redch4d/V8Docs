@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/deoptimizer/frame-translation-builder.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/deoptimizer/frame-translation-builder.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('frame-translation-builder_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3ab3da63c8f7e21a052b2d96a9431252.html">deoptimizer</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">frame-translation-builder.cc</div></div>
 </div><!--header-->
@@ -127,7 +135,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keyword">class </span>SmallUnsignedOperand : <span class="keyword">public</span> OperandBase {</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keyword">explicit</span> SmallUnsignedOperand(uint32_t value) : OperandBase(value) {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(value, <a class="code hl_variable" href="namespacev8_1_1base.html#a5daacb5b84e100188656c25ed34bfc92">base::kDataMask</a>);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(value, <a class="code hl_variable" href="namespacev8_1_1base.html#a5daacb5b84e100188656c25ed34bfc92">base::kDataMask</a>);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  }</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keywordtype">void</span> WriteVLQ(ZoneVector&lt;uint8_t&gt;* buffer) { buffer-&gt;push_back(<a class="code hl_variable" href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">value</a>()); }</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordtype">bool</span> IsSigned()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
@@ -137,7 +145,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keyword">explicit</span> UnsignedOperand(int32_t value)</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      : UnsignedOperand(static_cast&lt;uint32_t&gt;(value)) {</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(value, 0);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(value, 0);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keyword">explicit</span> UnsignedOperand(uint32_t value) : OperandBase(value) {}</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordtype">void</span> WriteVLQ(ZoneVector&lt;uint8_t&gt;* buffer) {</div>
@@ -174,8 +182,8 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#af887328d584883204b9ab5542b33cd49">   78</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#af887328d584883204b9ab5542b33cd49">FrameTranslationBuilder::AddRawToContents</a>(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> opcode,</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                                               T... operands) {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<span class="keyword">sizeof</span>...(T), <a class="code hl_function" href="namespacev8_1_1internal.html#a4d1013079e1cf0e846db134873b7ce66">TranslationOpcodeOperandCount</a>(opcode));</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<span class="keyword">sizeof</span>...(T), <a class="code hl_function" href="namespacev8_1_1internal.html#a4d1013079e1cf0e846db134873b7ce66">TranslationOpcodeOperandCount</a>(opcode));</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a4af771e93644aaf7f95306b1d91add2c">contents_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1ZoneVector.html#af4d3701d605c7c9ed301a2ef3880784f">push_back</a>(<span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(opcode));</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  (..., operands.WriteVLQ(&amp;<a class="code hl_variable" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a4af771e93644aaf7f95306b1d91add2c">contents_</a>));</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
@@ -185,8 +193,8 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00087" data-start="{" data-end="}">
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a310d0fbfeb0c0f96f76a2d56e6b75412">   87</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a310d0fbfeb0c0f96f76a2d56e6b75412">FrameTranslationBuilder::AddRawToContentsForCompression</a>(</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> opcode, T... operands) {</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<span class="keyword">sizeof</span>...(T), <a class="code hl_function" href="namespacev8_1_1internal.html#a4d1013079e1cf0e846db134873b7ce66">TranslationOpcodeOperandCount</a>(opcode));</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<span class="keyword">sizeof</span>...(T), <a class="code hl_function" href="namespacev8_1_1internal.html#a4d1013079e1cf0e846db134873b7ce66">TranslationOpcodeOperandCount</a>(opcode));</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#ae482a4a6421fde613cfc13179734200e">contents_for_compression_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1ZoneVector.html#af4d3701d605c7c9ed301a2ef3880784f">push_back</a>(<span class="keyword">static_cast&lt;</span>uint8_t<span class="keyword">&gt;</span>(opcode));</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  (..., <a class="code hl_variable" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#ae482a4a6421fde613cfc13179734200e">contents_for_compression_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1ZoneVector.html#af4d3701d605c7c9ed301a2ef3880784f">push_back</a>(operands.value()));</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>}</div>
@@ -197,7 +205,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#ae937f16f768a79744bf21255a5a6f277">   96</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#ae937f16f768a79744bf21255a5a6f277">FrameTranslationBuilder::AddRawBegin</a>(<span class="keywordtype">bool</span> update_feedback, T... operands) {</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keyword">auto</span> opcode = update_feedback ? TranslationOpcode::BEGIN_WITH_FEEDBACK</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                                : TranslationOpcode::BEGIN_WITHOUT_FEEDBACK;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a310d0fbfeb0c0f96f76a2d56e6b75412">AddRawToContentsForCompression</a>(opcode, operands...);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#af887328d584883204b9ab5542b33cd49">AddRawToContents</a>(opcode, operands...);</div>
@@ -280,8 +288,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span>... T&gt;</div>
 <div class="foldopen" id="foldopen00175" data-start="{" data-end="}">
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#aee35e4b8f30fc8783587c9fbd15ef1e0">  175</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#aee35e4b8f30fc8783587c9fbd15ef1e0">FrameTranslationBuilder::Add</a>(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08e">TranslationOpcode</a> opcode, T... operands) {</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<span class="keyword">sizeof</span>...(T), <a class="code hl_function" href="namespacev8_1_1internal.html#a4d1013079e1cf0e846db134873b7ce66">TranslationOpcodeOperandCount</a>(opcode));</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<span class="keyword">sizeof</span>...(T), <a class="code hl_function" href="namespacev8_1_1internal.html#a4d1013079e1cf0e846db134873b7ce66">TranslationOpcodeOperandCount</a>(opcode));</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a310d0fbfeb0c0f96f76a2d56e6b75412">AddRawToContentsForCompression</a>(opcode, operands...);</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>  }</div>
@@ -304,7 +312,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a1a060c93bd5bcd2d7277ec2aa77fa070">match_previous_allowed_</a>) {</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>      <span class="comment">// Include this instruction in basis_instructions_ so that future</span></div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>      <span class="comment">// translations can check whether they match with it.</span></div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a16552d39e52630e94afe086e7fbfee39">basis_instructions_</a>.size(),</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a16552d39e52630e94afe086e7fbfee39">basis_instructions_</a>.size(),</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>                <a class="code hl_variable" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#aaa73195bcc9554f9dda4d4f99469ce27">instruction_index_within_translation_</a>);</div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>      <a class="code hl_variable" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a16552d39e52630e94afe086e7fbfee39">basis_instructions_</a>.emplace_back(opcode, operands...);</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    }</div>
@@ -317,13 +325,13 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00209" data-start="{" data-end="}">
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#ab00f8a6628b1c061947a6fc463bdb26d">  209</a></span><a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#ab00f8a6628b1c061947a6fc463bdb26d">FrameTranslationBuilder::ToFrameTranslation</a>(<a class="code hl_class" href="classv8_1_1internal_1_1LocalFactory.html">LocalFactory</a>* factory) {</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">#ifdef V8_USE_ZLIB</span></div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations)) {</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> input_size = <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a31bb95fa40c3ef4ea040953fc724ecb6">SizeInBytes</a>();</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    uLongf compressed_data_size = compressBound(input_size);</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <a class="code hl_class" href="classv8_1_1internal_1_1ZoneVector.html">ZoneVector&lt;uint8_t&gt;</a> compressed_data(compressed_data_size, <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a738ba348e31d12906476362969e678bc">zone</a>());</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        zlib_internal::CompressHelper(</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>            zlib_internal::ZRAW, compressed_data.<a class="code hl_function" href="classv8_1_1internal_1_1ZoneVector.html#a1bd89ac61b8f1cf97f127d76ef98bff7">data</a>(), &amp;compressed_data_size,</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>Bytef*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#ae482a4a6421fde613cfc13179734200e">contents_for_compression_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1ZoneVector.html#a1bd89ac61b8f1cf97f127d76ef98bff7">data</a>()),</div>
@@ -345,7 +353,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>;</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  }</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations);</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a8226f47538775581142a91222f97c018">FinishPendingInstructionIfNeeded</a>();</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;DeoptimizationFrameTranslation&gt;</a> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> =</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>      factory-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1FactoryBase.html#a250ba16e00e1a0ddf21fef497dd889ff">NewDeoptimizationFrameTranslation</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a31bb95fa40c3ef4ea040953fc724ecb6">SizeInBytes</a>());</div>
@@ -361,7 +369,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
 <div class="foldopen" id="foldopen00252" data-start="{" data-end="}">
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a321e4aa85a1061eda497ed4a9cd21c91">  252</a></span><a class="code hl_class" href="classv8_1_1base_1_1Vector.html">base::Vector&lt;const uint8_t&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a321e4aa85a1061eda497ed4a9cd21c91">FrameTranslationBuilder::ToFrameTranslationWasm</a>() {</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.turbo_compress_frame_translations);</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a8226f47538775581142a91222f97c018">FinishPendingInstructionIfNeeded</a>();</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  <a class="code hl_class" href="classv8_1_1base_1_1Vector.html">base::Vector&lt;const uint8_t&gt;</a> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = <a class="code hl_function" href="namespacev8_1_1base.html#ab277246c6caecad159bbc8755cf6bb54">base::VectorOf</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#a4af771e93644aaf7f95306b1d91add2c">contents_</a>);</div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">#ifdef ENABLE_SLOW_DCHECKS</span></div>
@@ -379,15 +387,15 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.enable_slow_asserts) {</div>
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="comment">// Check that we can read back all of the same content we intended to write.</span></div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; all_instructions_.<a class="code hl_class" href="classsize.html">size</a>(); ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(iter.<a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a574a92070bb8edbc607d2532d04ec5d1">HasNextOpcode</a>());</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(iter.<a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a574a92070bb8edbc607d2532d04ec5d1">HasNextOpcode</a>());</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      <span class="keyword">const</span> <a class="code hl_struct" href="structv8_1_1internal_1_1FrameTranslationBuilder_1_1Instruction.html">Instruction</a>&amp; instruction = all_instructions_[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>];</div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>      <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(instruction.opcode, iter.<a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a8b98657c4b31fbde341075323e47d020">NextOpcode</a>());</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(instruction.opcode, iter.<a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a8b98657c4b31fbde341075323e47d020">NextOpcode</a>());</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code hl_function" href="namespacev8_1_1internal.html#a4d1013079e1cf0e846db134873b7ce66">TranslationOpcodeOperandCount</a>(instruction.opcode);</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>           ++j) {</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        uint32_t operand = instruction.is_operand_signed[j]</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                               ? iter.<a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a28c618cae6ac5ce2c36df0774cea6c16">NextOperand</a>()</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                               : iter.<a class="code hl_function" href="classv8_1_1internal_1_1DeoptTranslationIterator.html#a5121398bf1290509b9d14f72288c1f9d">NextOperandUnsigned</a>();</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(instruction.operands[j], operand);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(instruction.operands[j], operand);</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>      }</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    }</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  }</div>
@@ -704,7 +712,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00518" data-start="{" data-end="}">
 <div class="line"><a id="l00518" name="l00518"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#aa02058e436f7afae9f4be4527ea659ce">  518</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#aa02058e436f7afae9f4be4527ea659ce">FrameTranslationBuilder::StoreLiteral</a>(<span class="keywordtype">int</span> literal_id) {</div>
 <div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>  <span class="keyword">auto</span> opcode = TranslationOpcode::LITERAL;</div>
-<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>  <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(literal_id, 0);</div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(literal_id, 0);</div>
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>  <a class="code hl_function" href="classv8_1_1internal_1_1FrameTranslationBuilder.html#aee35e4b8f30fc8783587c9fbd15ef1e0">Add</a>(opcode, SignedOperand(literal_id));</div>
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>}</div>
 </div>
@@ -822,12 +830,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aframe-translation-builder_8h_html"><div class="ttname"><a href="frame-translation-builder_8h.html">frame-translation-builder.h</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_a41f8c58d2c01bf65b8ee199c3f87fc80"><div class="ttname"><a href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a></div><div class="ttdeci">ZoneVector&lt; RpoNumber &gt; &amp; result</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00021">jump-threading.cc:21</a></div></div>
 <div class="ttc" id="aliftoff-compiler_8cc_html_a0b22b2be5dbaab38c23b09bdd78d7c43"><div class="ttname"><a href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a></div><div class="ttdeci">LiftoffRegister reg</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l00512">liftoff-compiler.cc:512</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a2546ba248284603588e13f738f1f40db"><div class="ttname"><a href="namespacev8_1_1base.html#a2546ba248284603588e13f738f1f40db">v8::base::VLQEncode</a></div><div class="ttdeci">void VLQEncode(Function &amp;&amp;process_byte, int32_t value)</div><div class="ttdef"><b>Definition</b> <a href="vlq_8h_source.html#l00060">vlq.h:60</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a5daacb5b84e100188656c25ed34bfc92"><div class="ttname"><a href="namespacev8_1_1base.html#a5daacb5b84e100188656c25ed34bfc92">v8::base::kDataMask</a></div><div class="ttdeci">static constexpr uint32_t kDataMask</div><div class="ttdef"><b>Definition</b> <a href="vlq_8h_source.html#l00018">vlq.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_ab277246c6caecad159bbc8755cf6bb54"><div class="ttname"><a href="namespacev8_1_1base.html#ab277246c6caecad159bbc8755cf6bb54">v8::base::VectorOf</a></div><div class="ttdeci">constexpr Vector&lt; T &gt; VectorOf(T *start, size_t size)</div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00360">vector.h:360</a></div></div>
@@ -844,14 +846,24 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9db791c05a0359859a321dcfec42e37"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8::internal::v8_flags</a></div><div class="ttdeci">V8_EXPORT_PRIVATE FlagValues v8_flags</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ac1a33b5fd9af1653d346746cdb5c1ac0"><div class="ttname"><a href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">v8::internal::value</a></div><div class="ttdeci">return value</div><div class="ttdef"><b>Definition</b> <a href="map-inl_8h_source.html#l00870">map-inl.h:870</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1FrameTranslationBuilder_1_1Instruction_html"><div class="ttname"><a href="structv8_1_1internal_1_1FrameTranslationBuilder_1_1Instruction.html">v8::internal::FrameTranslationBuilder::Instruction</a></div><div class="ttdef"><b>Definition</b> <a href="frame-translation-builder_8h_source.html#l00096">frame-translation-builder.h:96</a></div></div>
 <div class="ttc" id="atranslated-state_8h_html"><div class="ttname"><a href="translated-state_8h.html">translated-state.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a67bd29db07c711b0fb11ff1c324ebb60"><div class="ttname"><a href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a></div><div class="ttdeci">#define V8_UNLIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00649">v8config.h:649</a></div></div>
 <div class="ttc" id="avlq_8h_html"><div class="ttname"><a href="vlq_8h.html">vlq.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:26 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3ab3da63c8f7e21a052b2d96a9431252.html">deoptimizer</a></li><li class="navelem"><a class="el" href="frame-translation-builder_8cc.html">frame-translation-builder.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:34 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

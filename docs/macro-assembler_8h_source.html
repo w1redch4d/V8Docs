@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/codegen/macro-assembler.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/codegen/macro-assembler.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('macro-assembler_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7cf1b5e32c0ccac638cac1ebc38d93b6.html">codegen</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">macro-assembler.h</div></div>
 </div><!--header-->
@@ -103,7 +111,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="macro-assembler-base_8h.html">src/codegen/macro-assembler-base.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="frames_8h.html">src/execution/frames.h</a>&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="heap_8h.html">src/heap/heap.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="src_2heap_2heap_8h.html">src/heap/heap.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// Helper types to make boolean flag easier to read at call-site.</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="macro-assembler_8h.html#a4364155222207deea4c9f82c2369b49b">   13</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="macro-assembler_8h.html#a4364155222207deea4c9f82c2369b49b">InvokeType</a> { <a class="code hl_enumvalue" href="macro-assembler_8h.html#a4364155222207deea4c9f82c2369b49ba4ff0cb81f1d2d093837e39bbf48501c8">kCall</a>, <a class="code hl_enumvalue" href="macro-assembler_8h.html#a4364155222207deea4c9f82c2369b49bacd00bfbff81479d2c7c349bbb769fcd4">kJump</a> };</div>
@@ -202,11 +210,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="foldopen" id="foldopen00100" data-start="{" data-end="};">
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameScope.html">  100</a></span><span class="keyword">class </span>V8_NODISCARD <a class="code hl_class" href="classv8_1_1internal_1_1FrameScope.html">FrameScope</a> {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameScope.html">  100</a></span><span class="keyword">class </span><a class="code hl_define" href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a> <a class="code hl_class" href="classv8_1_1internal_1_1FrameScope.html">FrameScope</a> {</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> <span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameScope.html#aff3d88385241f67a94180e313a085901">  102</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1FrameScope.html#aff3d88385241f67a94180e313a085901">FrameScope</a>(<a class="code hl_class" href="classv8_1_1internal_1_1MacroAssembler.html">MacroAssembler</a>* masm, <a class="code hl_enumeration" href="classv8_1_1internal_1_1StackFrame.html#a539db1a450ec470771bfb8f4995cee9b">StackFrame::Type</a> type,</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                      <span class="keyword">const</span> SourceLocation&amp; loc = SourceLocation())</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                      <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1SourceLocation.html">SourceLocation</a>&amp; loc = <a class="code hl_class" href="classv8_1_1SourceLocation.html">SourceLocation</a>())</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      :</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>#ifdef V8_CODE_COMMENTS</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        comment_(masm, frame_name(type), loc),</div>
@@ -259,7 +267,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
 <div class="foldopen" id="foldopen00151" data-start="{" data-end="};">
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameAndConstantPoolScope.html">  151</a></span><span class="keyword">class </span>V8_NODISCARD <a class="code hl_class" href="classv8_1_1internal_1_1FrameAndConstantPoolScope.html">FrameAndConstantPoolScope</a> {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameAndConstantPoolScope.html">  151</a></span><span class="keyword">class </span><a class="code hl_define" href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a> <a class="code hl_class" href="classv8_1_1internal_1_1FrameAndConstantPoolScope.html">FrameAndConstantPoolScope</a> {</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> <span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00153" data-start="{" data-end="}">
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FrameAndConstantPoolScope.html#afef3825495745c8b98c5b3381ce99060">  153</a></span>  <a class="code hl_function" href="classv8_1_1internal_1_1FrameAndConstantPoolScope.html#afef3825495745c8b98c5b3381ce99060">FrameAndConstantPoolScope</a>(<a class="code hl_class" href="classv8_1_1internal_1_1MacroAssembler.html">MacroAssembler</a>* masm, <a class="code hl_enumeration" href="classv8_1_1internal_1_1StackFrame.html#a539db1a450ec470771bfb8f4995cee9b">StackFrame::Type</a> type)</div>
@@ -300,7 +308,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">// Class for scoping the the unavailability of constant pool access.</span></div>
 <div class="foldopen" id="foldopen00186" data-start="{" data-end="};">
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ConstantPoolUnavailableScope.html">  186</a></span><span class="keyword">class </span>V8_NODISCARD <a class="code hl_class" href="classv8_1_1internal_1_1ConstantPoolUnavailableScope.html">ConstantPoolUnavailableScope</a> {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ConstantPoolUnavailableScope.html">  186</a></span><span class="keyword">class </span><a class="code hl_define" href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a> <a class="code hl_class" href="classv8_1_1internal_1_1ConstantPoolUnavailableScope.html">ConstantPoolUnavailableScope</a> {</div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> <span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1ConstantPoolUnavailableScope.html#aefe98b03d8a3084f81ba719cf56d4d19">  188</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1ConstantPoolUnavailableScope.html#aefe98b03d8a3084f81ba719cf56d4d19">ConstantPoolUnavailableScope</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Assembler.html">Assembler</a>* assembler)</div>
@@ -329,7 +337,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
 <div class="foldopen" id="foldopen00209" data-start="{" data-end="};">
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AllowExternalCallThatCantCauseGC.html">  209</a></span><span class="keyword">class </span>V8_NODISCARD <a class="code hl_class" href="classv8_1_1internal_1_1AllowExternalCallThatCantCauseGC.html">AllowExternalCallThatCantCauseGC</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1FrameScope.html">FrameScope</a> {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AllowExternalCallThatCantCauseGC.html">  209</a></span><span class="keyword">class </span><a class="code hl_define" href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a> <a class="code hl_class" href="classv8_1_1internal_1_1AllowExternalCallThatCantCauseGC.html">AllowExternalCallThatCantCauseGC</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1FrameScope.html">FrameScope</a> {</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> <span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00211" data-start="{" data-end="}">
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1AllowExternalCallThatCantCauseGC.html#ae136159f715f0afd4a7f76629f7bca48">  211</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1AllowExternalCallThatCantCauseGC.html#ae136159f715f0afd4a7f76629f7bca48">AllowExternalCallThatCantCauseGC</a>(<a class="code hl_class" href="classv8_1_1internal_1_1MacroAssembler.html">MacroAssembler</a>* masm)</div>
@@ -341,7 +349,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="comment">// Prevent the use of the RootArray during the lifetime of this</span></div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment">// scope object.</span></div>
 <div class="foldopen" id="foldopen00217" data-start="{" data-end="};">
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1NoRootArrayScope.html">  217</a></span><span class="keyword">class </span>V8_NODISCARD <a class="code hl_class" href="classv8_1_1internal_1_1NoRootArrayScope.html">NoRootArrayScope</a> {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1NoRootArrayScope.html">  217</a></span><span class="keyword">class </span><a class="code hl_define" href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a> <a class="code hl_class" href="classv8_1_1internal_1_1NoRootArrayScope.html">NoRootArrayScope</a> {</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> <span class="keyword">public</span>:</div>
 <div class="foldopen" id="foldopen00219" data-start="{" data-end="}">
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1NoRootArrayScope.html#a38a0557626edab1f7544dc49147c9631">  219</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="classv8_1_1internal_1_1NoRootArrayScope.html#a38a0557626edab1f7544dc49147c9631">NoRootArrayScope</a>(<a class="code hl_class" href="classv8_1_1internal_1_1MacroAssembler.html">MacroAssembler</a>* masm)</div>
@@ -362,6 +370,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>}  <span class="comment">// namespace v8</span></div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="preprocessor">#endif  </span><span class="comment">// V8_CODEGEN_MACRO_ASSEMBLER_H_</span></div>
+<div class="ttc" id="aclassv8_1_1SourceLocation_html"><div class="ttname"><a href="classv8_1_1SourceLocation.html">v8::SourceLocation</a></div><div class="ttdef"><b>Definition</b> <a href="v8-source-location_8h_source.html#l00031">v8-source-location.h:31</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1AllowExternalCallThatCantCauseGC_html"><div class="ttname"><a href="classv8_1_1internal_1_1AllowExternalCallThatCantCauseGC.html">v8::internal::AllowExternalCallThatCantCauseGC</a></div><div class="ttdef"><b>Definition</b> <a href="#l00209">macro-assembler.h:209</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1AllowExternalCallThatCantCauseGC_html_ae136159f715f0afd4a7f76629f7bca48"><div class="ttname"><a href="classv8_1_1internal_1_1AllowExternalCallThatCantCauseGC.html#ae136159f715f0afd4a7f76629f7bca48">v8::internal::AllowExternalCallThatCantCauseGC::AllowExternalCallThatCantCauseGC</a></div><div class="ttdeci">AllowExternalCallThatCantCauseGC(MacroAssembler *masm)</div><div class="ttdef"><b>Definition</b> <a href="#l00211">macro-assembler.h:211</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1AssemblerBase_html_af45536e3cf5df4078e5b8e2b5bb54dba"><div class="ttname"><a href="classv8_1_1internal_1_1AssemblerBase.html#af45536e3cf5df4078e5b8e2b5bb54dba">v8::internal::AssemblerBase::set_constant_pool_available</a></div><div class="ttdeci">void set_constant_pool_available(bool available)</div><div class="ttdef"><b>Definition</b> <a href="codegen_2assembler_8h_source.html#l00512">assembler.h:512</a></div></div>
@@ -410,7 +419,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aframes_8cc_html_a1e5878f74c33452112d3c74960645be7"><div class="ttname"><a href="frames_8cc.html#a1e5878f74c33452112d3c74960645be7">FRAME_TYPE_CASE</a></div><div class="ttdeci">#define FRAME_TYPE_CASE(type, class)</div></div>
 <div class="ttc" id="aframes_8h_html"><div class="ttname"><a href="frames_8h.html">frames.h</a></div></div>
 <div class="ttc" id="aframes_8h_html_aed580249e80fb51118f64dba4394a9b7"><div class="ttname"><a href="frames_8h.html#aed580249e80fb51118f64dba4394a9b7">STACK_FRAME_TYPE_LIST</a></div><div class="ttdeci">#define STACK_FRAME_TYPE_LIST(V)</div><div class="ttdef"><b>Definition</b> <a href="frames_8h_source.html#l00115">frames.h:115</a></div></div>
-<div class="ttc" id="aheap_8h_html"><div class="ttname"><a href="heap_8h.html">heap.h</a></div></div>
 <div class="ttc" id="amacro-assembler-arm64_8h_html"><div class="ttname"><a href="macro-assembler-arm64_8h.html">macro-assembler-arm64.h</a></div></div>
 <div class="ttc" id="amacro-assembler-arm_8h_html"><div class="ttname"><a href="macro-assembler-arm_8h.html">macro-assembler-arm.h</a></div></div>
 <div class="ttc" id="amacro-assembler-base_8h_html"><div class="ttname"><a href="macro-assembler-base_8h.html">macro-assembler-base.h</a></div></div>
@@ -448,11 +456,16 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="amaglev-code-generator_8cc_html_adade6e3b43bc4bfc70490c9536cc70ba"><div class="ttname"><a href="maglev-code-generator_8cc.html#adade6e3b43bc4bfc70490c9536cc70ba">masm_</a></div><div class="ttdeci">MaglevAssembler *const masm_</div><div class="ttdef"><b>Definition</b> <a href="maglev-code-generator_8cc_source.html#l00492">maglev-code-generator.cc:492</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a7dbb75f29f0db9e81bd5cbe7316b1604"><div class="ttname"><a href="namespacev8_1_1internal.html#a7dbb75f29f0db9e81bd5cbe7316b1604">v8::internal::kMaxCParameters</a></div><div class="ttdeci">static constexpr int kMaxCParameters</div><div class="ttdef"><b>Definition</b> <a href="#l00097">macro-assembler.h:97</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2heap_2heap_8h_html"><div class="ttname"><a href="src_2heap_2heap_8h.html">heap.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_ae5350bf5d731891583a34f9c8c52b532"><div class="ttname"><a href="v8config_8h.html#ae5350bf5d731891583a34f9c8c52b532">V8_NODISCARD</a></div><div class="ttdeci">#define V8_NODISCARD</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00682">v8config.h:682</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:17:04 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7cf1b5e32c0ccac638cac1ebc38d93b6.html">codegen</a></li><li class="navelem"><a class="el" href="macro-assembler_8h.html">macro-assembler.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:53:07 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

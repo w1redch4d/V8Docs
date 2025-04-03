@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/builtins/builtins-object.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/builtins/builtins-object.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('builtins-object_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1909b13b6d0cbcc1d36d622424b54e1c.html">builtins</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">builtins-object.cc</div></div>
 </div><!--header-->
@@ -124,11 +132,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      isolate, name, <a class="code hl_function" href="classv8_1_1internal_1_1Object.html#acb95f42f17423c9ea74b8e9e84337adb">Object::ToName</a>(isolate, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.atOrUndefined(isolate, 1)));</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <a class="code hl_define" href="execution_2isolate_8h.html#a2ff064a43911dd1ec71bcb23989bd9d8">ASSIGN_RETURN_FAILURE_ON_EXCEPTION</a>(</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      isolate, <span class="keywordtype">object</span>, <a class="code hl_function" href="classv8_1_1internal_1_1Object.html#a67829f0b3b20513ae40538f3449a0765">Object::ToObject</a>(isolate, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.receiver()));</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  Maybe&lt;PropertyAttributes&gt; maybe =</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_class" href="classv8_1_1Maybe.html">Maybe&lt;PropertyAttributes&gt;</a> maybe =</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#a3e2e3840f6982eab5647fdbc0755aacc">JSReceiver::GetOwnPropertyAttributes</a>(isolate, <span class="keywordtype">object</span>, name);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordflow">if</span> (maybe.IsNothing()) <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).exception();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordflow">if</span> (maybe.FromJust() == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a352f65439007f2f1b85c997c1ba11436a43a690b3bd1e2d70d77d667eebc88424">ABSENT</a>) <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).false_value();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordflow">return</span> isolate-&gt;heap()-&gt;ToBoolean((maybe.FromJust() &amp; <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a352f65439007f2f1b85c997c1ba11436a7a681885f7c5656b01ef8ba9f9bde868">DONT_ENUM</a>) == 0);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordflow">if</span> (maybe.<a class="code hl_function" href="classv8_1_1Maybe.html#ae78f3cea1ba1913f81ca4f4751eb4f32">IsNothing</a>()) <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).exception();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordflow">if</span> (maybe.<a class="code hl_function" href="classv8_1_1Maybe.html#ab4550eea27732f24603ac46c53599676">FromJust</a>() == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a352f65439007f2f1b85c997c1ba11436a43a690b3bd1e2d70d77d667eebc88424">ABSENT</a>) <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).false_value();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordflow">return</span> isolate-&gt;heap()-&gt;ToBoolean((maybe.<a class="code hl_function" href="classv8_1_1Maybe.html#ab4550eea27732f24603ac46c53599676">FromJust</a>() &amp; <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a352f65439007f2f1b85c997c1ba11436a7a681885f7c5656b01ef8ba9f9bde868">DONT_ENUM</a>) == 0);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
@@ -136,7 +144,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a98dbd872cd92b330e0f6d922620e556a">   38</a></span><a class="code hl_define" href="builtins-utils_8h.html#a8ddc47515f89d0e3691438a6244e6642">BUILTIN</a>(ObjectDefineProperties) {</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <a class="code hl_class" href="classv8_1_1internal_1_1HandleScope.html">HandleScope</a> scope(isolate);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(3, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(3, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Object&gt;</a> target = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at(1);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> properties = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at(2);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
@@ -149,7 +157,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#ab9260858622c6486e77eca0d23c59a4d">   49</a></span><a class="code hl_define" href="builtins-utils_8h.html#a8ddc47515f89d0e3691438a6244e6642">BUILTIN</a>(ObjectDefineProperty) {</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <a class="code hl_class" href="classv8_1_1internal_1_1HandleScope.html">HandleScope</a> scope(isolate);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(4, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(4, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> target = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at(1);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a> = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at(2);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Object&gt;</a> attributes = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at(3);</div>
@@ -161,7 +169,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">template</span> &lt;AccessorComponent which_accessor&gt;</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> ObjectDefineAccessor(Isolate* isolate,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> ObjectDefineAccessor(<a class="code hl_class" href="classv8_1_1Isolate.html">Isolate</a>* isolate,</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                    DirectHandle&lt;JSAny&gt; <span class="keywordtype">object</span>,</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                                    DirectHandle&lt;Object&gt; name,</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                                    DirectHandle&lt;Object&gt; accessor) {</div>
@@ -183,7 +191,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordflow">if</span> (which_accessor == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adc34d4f8e7520b193a7d7143cb734744a8fcc62a5b4d1ed80f829479712c29965">ACCESSOR_GETTER</a>) {</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    desc.set_get(<a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSAny&gt;</a>(accessor));</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(which_accessor == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adc34d4f8e7520b193a7d7143cb734744abd25995ca9ed13eebbe179f59eebc970">ACCESSOR_SETTER</a>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(which_accessor == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adc34d4f8e7520b193a7d7143cb734744abd25995ca9ed13eebbe179f59eebc970">ACCESSOR_SETTER</a>);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    desc.set_set(<a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSAny&gt;</a>(accessor));</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  desc.set_enumerable(<span class="keyword">true</span>);</div>
@@ -195,10 +203,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="comment">// To preserve legacy behavior, we ignore errors silently rather than</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="comment">// throwing an exception.</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  Maybe&lt;bool&gt; success = <a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ac5e7161278e080e578f54aab03924947">JSReceiver::DefineOwnProperty</a>(</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      isolate, <a class="code hl_variable" href="js-call-reducer_8cc.html#a8aab47cc18f1dda0f6b8034f5c64d43d">receiver</a>, name, &amp;desc, Just(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760ac8c06c0e5cdd46711981e472881756de">kThrowOnError</a>));</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>      isolate, <a class="code hl_variable" href="js-call-reducer_8cc.html#a8aab47cc18f1dda0f6b8034f5c64d43d">receiver</a>, name, &amp;desc, <a class="code hl_function" href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">Just</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760ac8c06c0e5cdd46711981e472881756de">kThrowOnError</a>));</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <a class="code hl_define" href="execution_2isolate_8h.html#ab9c5f988388c2c537b8b161438e4ed31">MAYBE_RETURN</a>(success, ReadOnlyRoots(isolate).<a class="code hl_variable" href="graph-builder-interface_8cc.html#a79d661617f46aabd0c6a79666870cbf5">exception</a>());</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keywordflow">if</span> (!success.FromJust()) {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    isolate-&gt;CountUsage(v8::Isolate::kDefineGetterOrSetterWouldThrow);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    isolate-&gt;CountUsage(<a class="code hl_enumvalue" href="classv8_1_1Isolate.html#aed6909379c3f2820cb3084710b73385da923e64930e5f62eb53332fc445354251">v8::Isolate::kDefineGetterOrSetterWouldThrow</a>);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  }</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>  <span class="comment">// 6. Return undefined.</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keywordflow">return</span> ReadOnlyRoots(isolate).undefined_value();</div>
@@ -388,9 +396,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> GetOwnPropertyKeys(Isolate* isolate, BuiltinArguments <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>,</div>
-<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                                  <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a8b74cbdcf84843aeaeb20961f4e24eaf">PropertyFilter</a> filter) {</div>
-<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  HandleScope scope(isolate);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> GetOwnPropertyKeys(<a class="code hl_class" href="classv8_1_1Isolate.html">Isolate</a>* isolate, BuiltinArguments <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>,</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                                  <a class="code hl_enumeration" href="namespacev8.html#afbf02b6b1152a3e25d7bde90798209ac">PropertyFilter</a> filter) {</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>  <a class="code hl_class" href="classv8_1_1HandleScope.html">HandleScope</a> scope(isolate);</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>  DirectHandle&lt;Object&gt; <span class="keywordtype">object</span> = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.atOrUndefined(isolate, 1);</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>  DirectHandle&lt;JSReceiver&gt; <a class="code hl_variable" href="js-call-reducer_8cc.html#a8aab47cc18f1dda0f6b8034f5c64d43d">receiver</a>;</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>  <a class="code hl_define" href="execution_2isolate_8h.html#a2ff064a43911dd1ec71bcb23989bd9d8">ASSIGN_RETURN_FAILURE_ON_EXCEPTION</a>(isolate, <a class="code hl_variable" href="js-call-reducer_8cc.html#a8aab47cc18f1dda0f6b8034f5c64d43d">receiver</a>,</div>
@@ -417,10 +425,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#aef85f18136d6a497621116b4cd5dc93b">  298</a></span><a class="code hl_define" href="builtins-utils_8h.html#a8ddc47515f89d0e3691438a6244e6642">BUILTIN</a>(ObjectIsFrozen) {</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <a class="code hl_class" href="classv8_1_1internal_1_1HandleScope.html">HandleScope</a> scope(isolate);</div>
 <div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> <span class="keywordtype">object</span> = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.atOrUndefined(isolate, 1);</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>  Maybe&lt;bool&gt; <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = IsJSReceiver(*<span class="keywordtype">object</span>)</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>  <a class="code hl_class" href="classv8_1_1Maybe.html">Maybe&lt;bool&gt;</a> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = IsJSReceiver(*<span class="keywordtype">object</span>)</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>                           ? <a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#a4ad3a57084445f982265dfec0f38841e">JSReceiver::TestIntegrityLevel</a>(</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                                 isolate, <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSReceiver&gt;</a>(<span class="keywordtype">object</span>), <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a352f65439007f2f1b85c997c1ba11436ac96c4a6f8b2f89bb1dbaebb75becb0c2">FROZEN</a>)</div>
-<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                           : Just(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>                           : <a class="code hl_function" href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">Just</a>(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  <a class="code hl_define" href="execution_2isolate_8h.html#ab9c5f988388c2c537b8b161438e4ed31">MAYBE_RETURN</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).<a class="code hl_variable" href="graph-builder-interface_8cc.html#a79d661617f46aabd0c6a79666870cbf5">exception</a>());</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  <span class="keywordflow">return</span> isolate-&gt;heap()-&gt;ToBoolean(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.FromJust());</div>
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>}</div>
@@ -431,10 +439,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a2fbc292e50b6c521ba4a76ba634eb0df">  310</a></span><a class="code hl_define" href="builtins-utils_8h.html#a8ddc47515f89d0e3691438a6244e6642">BUILTIN</a>(ObjectIsSealed) {</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  <a class="code hl_class" href="classv8_1_1internal_1_1HandleScope.html">HandleScope</a> scope(isolate);</div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> <span class="keywordtype">object</span> = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.atOrUndefined(isolate, 1);</div>
-<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  Maybe&lt;bool&gt; <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = IsJSReceiver(*<span class="keywordtype">object</span>)</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  <a class="code hl_class" href="classv8_1_1Maybe.html">Maybe&lt;bool&gt;</a> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = IsJSReceiver(*<span class="keywordtype">object</span>)</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                           ? <a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#a4ad3a57084445f982265dfec0f38841e">JSReceiver::TestIntegrityLevel</a>(</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                                 isolate, <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSReceiver&gt;</a>(<span class="keywordtype">object</span>), <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a352f65439007f2f1b85c997c1ba11436ae1b3d8db108d2f4b5319b8d1ac5ebaef">SEALED</a>)</div>
-<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                           : Just(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                           : <a class="code hl_function" href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">Just</a>(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>  <a class="code hl_define" href="execution_2isolate_8h.html#ab9c5f988388c2c537b8b161438e4ed31">MAYBE_RETURN</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).<a class="code hl_variable" href="graph-builder-interface_8cc.html#a79d661617f46aabd0c6a79666870cbf5">exception</a>());</div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>  <span class="keywordflow">return</span> isolate-&gt;heap()-&gt;ToBoolean(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.FromJust());</div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>}</div>
@@ -462,16 +470,16 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; keys-&gt;<a class="code hl_class" href="classlength.html">length</a>(); ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Name&gt;</a> <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;Name&gt;</a>(keys-&gt;get(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>)), isolate);</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>    <a class="code hl_class" href="classv8_1_1internal_1_1PropertyDescriptor.html">PropertyDescriptor</a> descriptor;</div>
-<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    Maybe&lt;bool&gt; did_get_descriptor = <a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#a06aa297ae69afff3f5a84ea032840099">JSReceiver::GetOwnPropertyDescriptor</a>(</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>    <a class="code hl_class" href="classv8_1_1Maybe.html">Maybe&lt;bool&gt;</a> did_get_descriptor = <a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#a06aa297ae69afff3f5a84ea032840099">JSReceiver::GetOwnPropertyDescriptor</a>(</div>
 <div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>        isolate, <a class="code hl_variable" href="js-call-reducer_8cc.html#a8aab47cc18f1dda0f6b8034f5c64d43d">receiver</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>, &amp;descriptor);</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>    <a class="code hl_define" href="execution_2isolate_8h.html#ab9c5f988388c2c537b8b161438e4ed31">MAYBE_RETURN</a>(did_get_descriptor, <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).<a class="code hl_variable" href="graph-builder-interface_8cc.html#a79d661617f46aabd0c6a79666870cbf5">exception</a>());</div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span> </div>
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keywordflow">if</span> (!did_get_descriptor.FromJust()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    <span class="keywordflow">if</span> (!did_get_descriptor.<a class="code hl_function" href="classv8_1_1Maybe.html#ab4550eea27732f24603ac46c53599676">FromJust</a>()) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> from_descriptor = descriptor.<a class="code hl_function" href="classv8_1_1internal_1_1PropertyDescriptor.html#aed33d99874e9f08a5c0afa6710295ff3">ToObject</a>(isolate);</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span> </div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    Maybe&lt;bool&gt; success = <a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        isolate, descriptors, <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>, from_descriptor, Just(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>));</div>
-<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(success.FromJust());</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <a class="code hl_class" href="classv8_1_1Maybe.html">Maybe&lt;bool&gt;</a> success = <a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#ab0d496ab5c687ec63fed2abbc354df25">JSReceiver::CreateDataProperty</a>(</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>        isolate, descriptors, <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>, from_descriptor, <a class="code hl_function" href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">Just</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760a4b0c7b00af69f6f81914acaa3a9849ee">kDontThrow</a>));</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(success.<a class="code hl_function" href="classv8_1_1Maybe.html#ab4550eea27732f24603ac46c53599676">FromJust</a>());</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>  }</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span> </div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  <span class="keywordflow">return</span> *descriptors;</div>
@@ -499,6 +507,12 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="abuiltins_8h_html"><div class="ttname"><a href="builtins_8h.html">builtins.h</a></div></div>
 <div class="ttc" id="abytecode-generator_8cc_html_ac44f078841b0e4ca9889f5da5ec95590"><div class="ttname"><a href="bytecode-generator_8cc.html#ac44f078841b0e4ca9889f5da5ec95590">getter</a></div><div class="ttdeci">PropertyT * getter</div><div class="ttdef"><b>Definition</b> <a href="bytecode-generator_8cc_source.html#l01337">bytecode-generator.cc:1337</a></div></div>
 <div class="ttc" id="aclasslength_html"><div class="ttname"><a href="classlength.html">length</a></div></div>
+<div class="ttc" id="aclassv8_1_1HandleScope_html"><div class="ttname"><a href="classv8_1_1HandleScope.html">v8::HandleScope</a></div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00097">v8-local-handle.h:97</a></div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1Isolate.html">v8::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="v8-isolate_8h_source.html#l00261">v8-isolate.h:261</a></div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html_aed6909379c3f2820cb3084710b73385da923e64930e5f62eb53332fc445354251"><div class="ttname"><a href="classv8_1_1Isolate.html#aed6909379c3f2820cb3084710b73385da923e64930e5f62eb53332fc445354251">v8::Isolate::kDefineGetterOrSetterWouldThrow</a></div><div class="ttdeci">@ kDefineGetterOrSetterWouldThrow</div><div class="ttdef"><b>Definition</b> <a href="v8-isolate_8h_source.html#l00490">v8-isolate.h:490</a></div></div>
+<div class="ttc" id="aclassv8_1_1Maybe_html"><div class="ttname"><a href="classv8_1_1Maybe.html">v8::Maybe</a></div><div class="ttdef"><b>Definition</b> <a href="v8-maybe_8h_source.html#l00032">v8-maybe.h:32</a></div></div>
+<div class="ttc" id="aclassv8_1_1Maybe_html_ab4550eea27732f24603ac46c53599676"><div class="ttname"><a href="classv8_1_1Maybe.html#ab4550eea27732f24603ac46c53599676">v8::Maybe::FromJust</a></div><div class="ttdeci">V8_INLINE T FromJust() const &amp;</div><div class="ttdef"><b>Definition</b> <a href="v8-maybe_8h_source.html#l00063">v8-maybe.h:63</a></div></div>
+<div class="ttc" id="aclassv8_1_1Maybe_html_ae78f3cea1ba1913f81ca4f4751eb4f32"><div class="ttname"><a href="classv8_1_1Maybe.html#ae78f3cea1ba1913f81ca4f4751eb4f32">v8::Maybe::IsNothing</a></div><div class="ttdeci">V8_INLINE bool IsNothing() const</div><div class="ttdef"><b>Definition</b> <a href="v8-maybe_8h_source.html#l00034">v8-maybe.h:34</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1AccessorPair_html_a34c7ae0cae3af1b29355c19d8ee64b7d"><div class="ttname"><a href="classv8_1_1internal_1_1AccessorPair.html#a34c7ae0cae3af1b29355c19d8ee64b7d">v8::internal::AccessorPair::GetComponent</a></div><div class="ttdeci">static Handle&lt; JSAny &gt; GetComponent(Isolate *isolate, DirectHandle&lt; NativeContext &gt; native_context, DirectHandle&lt; AccessorPair &gt; accessor_pair, AccessorComponent component)</div><div class="ttdef"><b>Definition</b> <a href="objects_8cc_source.html#l04011">objects.cc:4011</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1DirectHandle_html"><div class="ttname"><a href="classv8_1_1internal_1_1DirectHandle.html">v8::internal::DirectHandle</a></div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00643">handles.h:652</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1HandleScope_html"><div class="ttname"><a href="classv8_1_1internal_1_1HandleScope.html">v8::internal::HandleScope</a></div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00258">handles.h:258</a></div></div>
@@ -545,9 +559,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ajs-call-reducer_8cc_html_a8aab47cc18f1dda0f6b8034f5c64d43d"><div class="ttname"><a href="js-call-reducer_8cc.html#a8aab47cc18f1dda0f6b8034f5c64d43d">receiver</a></div><div class="ttdeci">TNode&lt; Object &gt; receiver</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l01499">js-call-reducer.cc:1499</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_a41f8c58d2c01bf65b8ee199c3f87fc80"><div class="ttname"><a href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a></div><div class="ttdeci">ZoneVector&lt; RpoNumber &gt; &amp; result</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00021">jump-threading.cc:21</a></div></div>
 <div class="ttc" id="akeys_8h_html"><div class="ttname"><a href="keys_8h.html">keys.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="alookup_8h_html"><div class="ttname"><a href="lookup_8h.html">lookup.h</a></div></div>
 <div class="ttc" id="amessage-template_8h_html"><div class="ttname"><a href="message-template_8h.html">message-template.h</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
@@ -564,7 +575,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_a611f0528d5415d4591ad6e8fe9513ac4"><div class="ttname"><a href="namespacev8_1_1internal.html#a611f0528d5415d4591ad6e8fe9513ac4">v8::internal::name</a></div><div class="ttdeci">too high values may cause the compiler to set high thresholds for inlining to as much as possible avoid inlined allocation of objects that cannot escape trace load stores from virtual maglev objects use TurboFan fast string builder analyze liveness of environment slots and zap dead values trace TurboFan load elimination emit data about basic block usage in builtins to this enable builtin reordering when run mksnapshot flag for emit warnings when applying builtin profile data verify register allocation in TurboFan randomly schedule instructions to stress dependency tracking enable store store elimination in TurboFan rewrite far to near simulate GC compiler thread race related to allow float parameters to be passed in simulator mode JS Wasm Run additional turbo_optimize_inlined_js_wasm_wrappers enable experimental feedback collection in generic lowering enable Turboshaft s WasmLoadElimination run instruction selection on Turboshaft IR directly enable Turboshaft s loop unrolling enable an additional Turboshaft phase that performs optimizations based on type information build the Turboshaft graph from Maglev trace emitted Turboshaft instructions profile guided optimization for empty feedback vector invocation count for maglev for functions which according to profile_guided_optimization are likely to deoptimize before reaching this invocation count Immediately re optimize code after some lazy deopts Enables the lazy new space shrinking strategy max size of a semi the new space consists of two semi spaces young and full garbage collection phases are not overlapping Collect garbage after keeps maps alive for&lt; n &gt; old space garbage collections print one detailed trace line in name</div><div class="ttdef"><b>Definition</b> <a href="flags_8cc_source.html#l01983">flags.cc:1983</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a67a51b6314a9bc8a8c44c5fe14149e6c"><div class="ttname"><a href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">v8::internal::key</a></div><div class="ttdeci">int32_t key</div><div class="ttdef"><b>Definition</b> <a href="external-reference_8cc_source.html#l01345">external-reference.cc:1345</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a6db5c47c190e9de94a96948682b877c8"><div class="ttname"><a href="namespacev8_1_1internal.html#a6db5c47c190e9de94a96948682b877c8">v8::internal::IsNullOrUndefined</a></div><div class="ttdeci">bool IsNullOrUndefined(Tagged&lt; Object &gt; obj, Isolate *isolate)</div><div class="ttdef"><b>Definition</b> <a href="objects-inl_8h_source.html#l00175">objects-inl.h:175</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a8b74cbdcf84843aeaeb20961f4e24eaf"><div class="ttname"><a href="namespacev8_1_1internal.html#a8b74cbdcf84843aeaeb20961f4e24eaf">v8::internal::PropertyFilter</a></div><div class="ttdeci">PropertyFilter</div><div class="ttdef"><b>Definition</b> <a href="property-details_8h_source.html#l00046">property-details.h:46</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a8b74cbdcf84843aeaeb20961f4e24eafa55278054fa5d731bc32dd424e982fa15"><div class="ttname"><a href="namespacev8_1_1internal.html#a8b74cbdcf84843aeaeb20961f4e24eafa55278054fa5d731bc32dd424e982fa15">v8::internal::SKIP_STRINGS</a></div><div class="ttdeci">@ SKIP_STRINGS</div><div class="ttdef"><b>Definition</b> <a href="property-details_8h_source.html#l00051">property-details.h:51</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a8b74cbdcf84843aeaeb20961f4e24eafa809075e7f24b8b30f3adf43685a77af7"><div class="ttname"><a href="namespacev8_1_1internal.html#a8b74cbdcf84843aeaeb20961f4e24eafa809075e7f24b8b30f3adf43685a77af7">v8::internal::ALL_PROPERTIES</a></div><div class="ttdeci">@ ALL_PROPERTIES</div><div class="ttdef"><b>Definition</b> <a href="property-details_8h_source.html#l00047">property-details.h:47</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_acdec713c25068019f935e35976f5b666"><div class="ttname"><a href="namespacev8_1_1internal.html#acdec713c25068019f935e35976f5b666">v8::internal::UNREACHABLE</a></div><div class="ttdeci">UNREACHABLE()</div></div>
@@ -577,13 +587,21 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_af2d9fec01057be7bdab90bb4682717b0"><div class="ttname"><a href="namespacev8_1_1internal.html#af2d9fec01057be7bdab90bb4682717b0">v8::internal::prototype</a></div><div class="ttdeci">kInstanceDescriptorsOffset kTransitionsOrPrototypeInfoOffset prototype</div><div class="ttdef"><b>Definition</b> <a href="map-inl_8h_source.html#l00062">map-inl.h:62</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="anamespacev8_html_aef5115fb284980e6c3772b55f8e8ca72"><div class="ttname"><a href="namespacev8.html#aef5115fb284980e6c3772b55f8e8ca72">v8::Just</a></div><div class="ttdeci">Maybe&lt; T &gt; Just(const T &amp;t)</div><div class="ttdef"><b>Definition</b> <a href="v8-maybe_8h_source.html#l00116">v8-maybe.h:116</a></div></div>
+<div class="ttc" id="anamespacev8_html_afbf02b6b1152a3e25d7bde90798209ac"><div class="ttname"><a href="namespacev8.html#afbf02b6b1152a3e25d7bde90798209ac">v8::PropertyFilter</a></div><div class="ttdeci">PropertyFilter</div><div class="ttdef"><b>Definition</b> <a href="v8-object_8h_source.html#l00179">v8-object.h:179</a></div></div>
 <div class="ttc" id="aobjects-inl_8h_html"><div class="ttname"><a href="objects-inl_8h.html">objects-inl.h</a></div></div>
 <div class="ttc" id="aproperty-descriptor_8h_html"><div class="ttname"><a href="property-descriptor_8h.html">property-descriptor.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:16:46 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1909b13b6d0cbcc1d36d622424b54e1c.html">builtins</a></li><li class="navelem"><a class="el" href="builtins-object_8cc.html">builtins-object.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:52:48 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

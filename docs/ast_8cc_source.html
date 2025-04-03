@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/ast/ast.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/ast/ast.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('ast_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_203e5988f1ed315d29383d699972de6f.html">ast</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">ast.cc</div></div>
 </div><!--header-->
@@ -106,7 +114,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="prettyprinter_8h.html">src/ast/prettyprinter.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="scopes_8h.html">src/ast/scopes.h</a>&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="hashmap_8h.html">src/base/hashmap.h</a>&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="double_8h.html">src/base/numbers/double.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="builtins-constructor_8h.html">src/builtins/builtins-constructor.h</a>&quot;</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="builtins_8h.html">src/builtins/builtins.h</a>&quot;</span></div>
@@ -294,7 +302,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    : <a class="code hl_class" href="classv8_1_1internal_1_1Expression.html">Expression</a>(start_position, kVariableProxy),</div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>      raw_name_(var-&gt;raw_name()),</div>
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>      next_unresolved_(nullptr) {</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#a833028634710d9960d8432d49d72fef7">var</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Variable.html#a3ea5d38859115335c180ece6d25b6af8">is_this</a>());</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#a833028634710d9960d8432d49d72fef7">var</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Variable.html#a3ea5d38859115335c180ece6d25b6af8">is_this</a>());</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1AstNode.html#a45226472a08d30f2ed552fe22b0790f2">bit_field_</a> |= <a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a70718344d8a4df6c20b3cf9c9b14d0d4">IsAssignedField::encode</a>(<span class="keyword">false</span>) |</div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                <a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a70718344d8a4df6c20b3cf9c9b14d0d4">IsResolvedField::encode</a>(<span class="keyword">false</span>) |</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                <a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a70718344d8a4df6c20b3cf9c9b14d0d4">HoleCheckModeField::encode</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a8f461427d879c386ed7961f9c7d13d0aae3b7cbd3cac72a2e074e65361038842d">HoleCheckMode::kElided</a>);</div>
@@ -307,14 +315,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    : <a class="code hl_class" href="classv8_1_1internal_1_1Expression.html">Expression</a>(copy_from-&gt;<a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a>(), kVariableProxy),</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      next_unresolved_(nullptr) {</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1AstNode.html#a45226472a08d30f2ed552fe22b0790f2">bit_field_</a> = copy_from-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1AstNode.html#a45226472a08d30f2ed552fe22b0790f2">bit_field_</a>;</div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!copy_from-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#ae914e0a2f4143256edcdd1eb534d2523">is_resolved</a>());</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!copy_from-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#ae914e0a2f4143256edcdd1eb534d2523">is_resolved</a>());</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1VariableProxy.html#af9603eecf02bfa83ebbb700d4251a62e">raw_name_</a> = copy_from-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1VariableProxy.html#af9603eecf02bfa83ebbb700d4251a62e">raw_name_</a>;</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>}</div>
 </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
 <div class="foldopen" id="foldopen00173" data-start="{" data-end="}">
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1VariableProxy.html#a59cea07955f145b7fe4d6c1ebf369452">  173</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#a59cea07955f145b7fe4d6c1ebf369452">VariableProxy::BindTo</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Variable.html">Variable</a>* var) {</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#a8a64ce9fda464989fc9853eaae0bd10f">raw_name</a>(), <a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#a833028634710d9960d8432d49d72fef7">var</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Variable.html#adfaede1714f486d8c0b15a6b51816365">raw_name</a>());</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#a8a64ce9fda464989fc9853eaae0bd10f">raw_name</a>(), <a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#a833028634710d9960d8432d49d72fef7">var</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Variable.html#adfaede1714f486d8c0b15a6b51816365">raw_name</a>());</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#ac8cb651fb9705a200f0d453d1c557ff7">set_var</a>(<a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#a833028634710d9960d8432d49d72fef7">var</a>);</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#ac03971ba1afc8a76243c678870cf092c">set_is_resolved</a>();</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <a class="code hl_function" href="classv8_1_1internal_1_1VariableProxy.html#a833028634710d9960d8432d49d72fef7">var</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Variable.html#a3eb74f3734ff7ee42a7512aff5e34e66">set_is_used</a>();</div>
@@ -332,8 +340,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
 <div class="foldopen" id="foldopen00187" data-start="{" data-end="}">
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FunctionLiteral.html#a3350c76d8d211df77eca68446f1f0db9">  187</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FunctionLiteral.html#a3350c76d8d211df77eca68446f1f0db9">FunctionLiteral::set_raw_inferred_name</a>(<a class="code hl_class" href="classv8_1_1internal_1_1AstConsString.html">AstConsString</a>* raw_inferred_name) {</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FunctionLiteral.html#a669bdc639fccfd49e7e45a6d30a5a783">raw_inferred_name</a>);</div>
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a9af7b8e6c40dc8580d1c400ce48d7cda">shared_function_info_</a>.is_null());</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FunctionLiteral.html#a669bdc639fccfd49e7e45a6d30a5a783">raw_inferred_name</a>);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a9af7b8e6c40dc8580d1c400ce48d7cda">shared_function_info_</a>.is_null());</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a8b4fbdbd61ec89ff73d2643c222fd98d">raw_inferred_name_</a> = <a class="code hl_function" href="classv8_1_1internal_1_1FunctionLiteral.html#a669bdc639fccfd49e7e45a6d30a5a783">raw_inferred_name</a>;</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <a class="code hl_function" href="classv8_1_1internal_1_1FunctionLiteral.html#ae0129b7e1925cb7079b81a81c05737b5">scope</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1DeclarationScope.html#a79c21bcf9fdc2e24dd41c5f64c7c4274">set_has_inferred_function_name</a>(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>}</div>
@@ -344,7 +352,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a8b4fbdbd61ec89ff73d2643c222fd98d">raw_inferred_name_</a> != <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a8b4fbdbd61ec89ff73d2643c222fd98d">raw_inferred_name_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1AstConsString.html#ab3e91767506ccb6f02b946b92b31410e">GetString</a>(isolate);</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  }</div>
-<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a9af7b8e6c40dc8580d1c400ce48d7cda">shared_function_info_</a>.is_null());</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a9af7b8e6c40dc8580d1c400ce48d7cda">shared_function_info_</a>.is_null());</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a9af7b8e6c40dc8580d1c400ce48d7cda">shared_function_info_</a>-&gt;inferred_name(), isolate);</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>}</div>
 </div>
@@ -352,8 +360,8 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00202" data-start="{" data-end="}">
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1FunctionLiteral.html#afbf0ec0bcf57859701b5ee10fd1cca9b">  202</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1FunctionLiteral.html#afbf0ec0bcf57859701b5ee10fd1cca9b">FunctionLiteral::set_shared_function_info</a>(</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;SharedFunctionInfo&gt;</a> shared_function_info) {</div>
-<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a9af7b8e6c40dc8580d1c400ce48d7cda">shared_function_info_</a>.is_null());</div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FunctionLiteral.html#a380d2672c74b328348ac2b87c4970647">shared_function_info</a>-&gt;function_literal_id(), <a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a121d219c973bc7b4a7855182b8673bf8">function_literal_id_</a>);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a9af7b8e6c40dc8580d1c400ce48d7cda">shared_function_info_</a>.is_null());</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(<a class="code hl_function" href="classv8_1_1internal_1_1FunctionLiteral.html#a380d2672c74b328348ac2b87c4970647">shared_function_info</a>-&gt;function_literal_id(), <a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a121d219c973bc7b4a7855182b8673bf8">function_literal_id_</a>);</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1FunctionLiteral.html#a9af7b8e6c40dc8580d1c400ce48d7cda">shared_function_info_</a> = <a class="code hl_function" href="classv8_1_1internal_1_1FunctionLiteral.html#a380d2672c74b328348ac2b87c4970647">shared_function_info</a>;</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>}</div>
 </div>
@@ -500,7 +508,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>      is_static_(is_static),</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>      is_private_(is_private),</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>      auto_accessor_info_(info) {</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(info);</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(info);</div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>}</div>
 </div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span> </div>
@@ -532,7 +540,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>    <span class="keywordflow">if</span> (property-&gt;is_computed_name()) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <span class="keywordflow">if</span> (property-&gt;IsPrototype()) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Literal.html">Literal</a>* <a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a> = <span class="keyword">property</span>-&gt;key()-&gt;AsLiteral();</div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a>-&gt;IsNullLiteral());</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a>-&gt;IsNullLiteral());</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>    uint32_t hash = <a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a>-&gt;Hash();</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <a class="code hl_struct" href="structv8_1_1base_1_1TemplateHashMapEntry.html">ZoneHashMap::Entry</a>* entry = table.LookupOrInsert(<a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a>, hash);</div>
@@ -619,17 +627,17 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>        <a class="code hl_function" href="classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#ae5846246331dc81191db3374187bad10">set_has_null_protoype</a>(<span class="keyword">true</span>);</div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>        <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>      }</div>
-<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#ab9d81d788424599ec3839be589f99328">has_null_prototype</a>());</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#ab9d81d788424599ec3839be589f99328">has_null_prototype</a>());</div>
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>      <a class="code hl_function" href="classv8_1_1internal_1_1LiteralBoilerplateBuilder.html#a854831b82c4561c58106e859653f51ad">is_simple</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>      <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    }</div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>    <span class="keywordflow">if</span> (nof_properties == <a class="code hl_variable" href="classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#ab48aa1f4c3c2f47faa702b0addd40c7b">boilerplate_properties_</a>) {</div>
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(property-&gt;is_computed_name());</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(property-&gt;is_computed_name());</div>
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>      <a class="code hl_function" href="classv8_1_1internal_1_1LiteralBoilerplateBuilder.html#a854831b82c4561c58106e859653f51ad">is_simple</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>      <span class="keywordflow">if</span> (!has_seen_prototype) <a class="code hl_function" href="classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#abad9349187a39619b55d10a5ae815f2d">InitFlagsForPendingNullPrototype</a>(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>);</div>
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>    }</div>
-<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!property-&gt;is_computed_name());</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!property-&gt;is_computed_name());</div>
 <div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span> </div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>    <a class="code hl_class" href="classv8_1_1internal_1_1MaterializedLiteral.html">MaterializedLiteral</a>* <a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a> = <span class="keyword">property</span>-&gt;value()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1AstNode.html#a81215882e963669f78e868d42d131946">AsMaterializedLiteral</a>();</div>
 <div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a> != <span class="keyword">nullptr</span>) {</div>
@@ -653,7 +661,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>      max_element_index = std::max(element_index, max_element_index);</div>
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>      elements++;</div>
 <div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>-&gt;IsPropertyName());</div>
+<div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>-&gt;IsPropertyName());</div>
 <div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>    }</div>
 <div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span> </div>
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>    nof_properties++;</div>
@@ -699,10 +707,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>    <span class="keywordflow">if</span> (property-&gt;IsPrototype()) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span> </div>
 <div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>    <span class="keywordflow">if</span> (<span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a>) == <a class="code hl_variable" href="classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#ab48aa1f4c3c2f47faa702b0addd40c7b">boilerplate_properties_</a>) {</div>
-<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(property-&gt;is_computed_name());</div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(property-&gt;is_computed_name());</div>
 <div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>      <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>    }</div>
-<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!property-&gt;is_computed_name());</div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!property-&gt;is_computed_name());</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span> </div>
 <div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>    <a class="code hl_class" href="classv8_1_1internal_1_1MaterializedLiteral.html">MaterializedLiteral</a>* m_literal = <span class="keyword">property</span>-&gt;value()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1AstNode.html#a81215882e963669f78e868d42d131946">AsMaterializedLiteral</a>();</div>
 <div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>    <span class="keywordflow">if</span> (m_literal != <span class="keyword">nullptr</span>) {</div>
@@ -757,22 +765,22 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>  <span class="keywordflow">if</span> (expression-&gt;IsCompileTimeValue()) {</div>
 <div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>    <span class="keywordflow">if</span> (expression-&gt;IsObjectLiteral()) {</div>
 <div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>      <a class="code hl_class" href="classv8_1_1internal_1_1ObjectLiteral.html">ObjectLiteral</a>* object_literal = expression-&gt;AsObjectLiteral();</div>
-<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(object_literal-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ObjectLiteral.html#a4d96d89c5874f23b2bb26645c0fa4ba7">builder</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1LiteralBoilerplateBuilder.html#a854831b82c4561c58106e859653f51ad">is_simple</a>());</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(object_literal-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ObjectLiteral.html#a4d96d89c5874f23b2bb26645c0fa4ba7">builder</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1LiteralBoilerplateBuilder.html#a854831b82c4561c58106e859653f51ad">is_simple</a>());</div>
 <div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>      <span class="keywordflow">return</span> object_literal-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ObjectLiteral.html#a4d96d89c5874f23b2bb26645c0fa4ba7">builder</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ObjectLiteralBoilerplateBuilder.html#a27698bd5444c568710b23fe22aac343c">boilerplate_description</a>();</div>
 <div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(expression-&gt;IsArrayLiteral());</div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(expression-&gt;IsArrayLiteral());</div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>      <a class="code hl_class" href="classv8_1_1internal_1_1ArrayLiteral.html">ArrayLiteral</a>* array_literal = expression-&gt;AsArrayLiteral();</div>
-<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(array_literal-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ArrayLiteral.html#a0bcbc80362087726c3a1fd5019ae3e75">builder</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1LiteralBoilerplateBuilder.html#a854831b82c4561c58106e859653f51ad">is_simple</a>());</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(array_literal-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ArrayLiteral.html#a0bcbc80362087726c3a1fd5019ae3e75">builder</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1LiteralBoilerplateBuilder.html#a854831b82c4561c58106e859653f51ad">is_simple</a>());</div>
 <div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>      <span class="keywordflow">return</span> array_literal-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ArrayLiteral.html#a0bcbc80362087726c3a1fd5019ae3e75">builder</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1ArrayLiteralBoilerplateBuilder.html#aebaf131593c07dbca577a9f0d63dae54">boilerplate_description</a>();</div>
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>    }</div>
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>  }</div>
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>  <span class="keywordflow">return</span> isolate-&gt;factory()-&gt;uninitialized_value();</div>
 <div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>}</div>
 </div>
-<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>)</div>
+<div class="line"><a id="l00574" name="l00574"></a><span class="lineno">  574</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>)</div>
 <div class="line"><a id="l00575" name="l00575"></a><span class="lineno">  575</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Object&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1LiteralBoilerplateBuilder.html#ac3cfd4a289382ea04e57c33115a9c51f">LiteralBoilerplateBuilder::GetBoilerplateValue</a>(</div>
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span>        <a class="code hl_class" href="classv8_1_1internal_1_1Expression.html">Expression</a>* expression, <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate);</div>
-<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>)</div>
+<div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>)</div>
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Object&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1LiteralBoilerplateBuilder.html#ac3cfd4a289382ea04e57c33115a9c51f">LiteralBoilerplateBuilder::GetBoilerplateValue</a>(</div>
 <div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>        <a class="code hl_class" href="classv8_1_1internal_1_1Expression.html">Expression</a>* expression, <a class="code hl_class" href="classv8_1_1internal_1_1LocalIsolate.html">LocalIsolate</a>* isolate);</div>
 <div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span> </div>
@@ -812,7 +820,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>      <span class="keywordflow">if</span> (!<a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a>) {</div>
 <div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>        <span class="comment">// Only arrays and objects are compile-time values but not (primitive)</span></div>
 <div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>        <span class="comment">// literals.</span></div>
-<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(element-&gt;IsObjectLiteral() || element-&gt;IsArrayLiteral());</div>
+<div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(element-&gt;IsObjectLiteral() || element-&gt;IsArrayLiteral());</div>
 <div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>        kind = <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a5feb64a99571462d3380d03aa42c149cae3a0d04130356ec4a12d457b33f9d837">PACKED_ELEMENTS</a>;</div>
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>        <span class="keywordflow">switch</span> (<a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a>-&gt;type()) {</div>
@@ -823,11 +831,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classv8_1_1internal_1_1Literal.html#aebdc45fab4b314d13410bd3285391f1cac0345c7dcaf9fb0bd0f4ef5f85a77d54">Literal::kHeapNumber</a>:</div>
 <div class="line"><a id="l00627" name="l00627"></a><span class="lineno">  627</span>            <span class="keywordflow">if</span> (kind == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a5feb64a99571462d3380d03aa42c149caacd80dc26319a94f43f077341db0d93b">PACKED_SMI_ELEMENTS</a>) kind = <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a5feb64a99571462d3380d03aa42c149cac25b0d7150281d63b6463770582c7715">PACKED_DOUBLE_ELEMENTS</a>;</div>
-<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>            <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(kind,</div>
+<div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>            <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(kind,</div>
 <div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>                      <a class="code hl_function" href="namespacev8_1_1internal.html#adc40831a63e0cc6d3d2cfb448dfd9f98">GetMoreGeneralElementsKind</a>(kind, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a5feb64a99571462d3380d03aa42c149cac25b0d7150281d63b6463770582c7715">PACKED_DOUBLE_ELEMENTS</a>));</div>
 <div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classv8_1_1internal_1_1Literal.html#aebdc45fab4b314d13410bd3285391f1ca284e18cfb56a3b651157aeaaceb2809c">Literal::kSmi</a>:</div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>            <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(kind,</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>            <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(kind,</div>
 <div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>                      <a class="code hl_function" href="namespacev8_1_1internal.html#adc40831a63e0cc6d3d2cfb448dfd9f98">GetMoreGeneralElementsKind</a>(kind, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a5feb64a99571462d3380d03aa42c149caacd80dc26319a94f43f077341db0d93b">PACKED_SMI_ELEMENTS</a>));</div>
 <div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>            <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>          <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classv8_1_1internal_1_1Literal.html#aebdc45fab4b314d13410bd3285391f1caaff40ae106cf61818121300647843ce2">Literal::kBigInt</a>:</div>
@@ -880,20 +888,20 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>  <span class="keywordtype">int</span> array_index = 0;</div>
 <div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>  <span class="keywordflow">for</span> (; array_index &lt; constants_length; array_index++) {</div>
 <div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Expression.html">Expression</a>* element = <a class="code hl_variable" href="classv8_1_1internal_1_1ArrayLiteralBoilerplateBuilder.html#ac5ec21698fe04a78fb002be36f0fc6e3">values_</a>-&gt;at(array_index);</div>
-<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!element-&gt;IsSpread());</div>
+<div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!element-&gt;IsSpread());</div>
 <div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>    <span class="keywordflow">if</span> (use_doubles) {</div>
 <div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Literal.html">Literal</a>* <a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a> = element-&gt;AsLiteral();</div>
 <div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span> </div>
 <div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a> &amp;&amp; <a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a>-&gt;type() == <a class="code hl_enumvalue" href="classv8_1_1internal_1_1Literal.html#aebdc45fab4b314d13410bd3285391f1ca0498a2ab22bb973b422949af330659e7">Literal::kTheHole</a>) {</div>
-<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a2450d9b76a72bae457082c0b405c2c78">IsHoleyElementsKind</a>(kind));</div>
-<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsTheHole(*<a class="code hl_function" href="classv8_1_1internal_1_1LiteralBoilerplateBuilder.html#ac3cfd4a289382ea04e57c33115a9c51f">GetBoilerplateValue</a>(element, isolate), isolate));</div>
+<div class="line"><a id="l00689" name="l00689"></a><span class="lineno">  689</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a2450d9b76a72bae457082c0b405c2c78">IsHoleyElementsKind</a>(kind));</div>
+<div class="line"><a id="l00690" name="l00690"></a><span class="lineno">  690</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsTheHole(*<a class="code hl_function" href="classv8_1_1internal_1_1LiteralBoilerplateBuilder.html#ac3cfd4a289382ea04e57c33115a9c51f">GetBoilerplateValue</a>(element, isolate), isolate));</div>
 <div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>        <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;FixedDoubleArray&gt;</a>(*elements)-&gt;set_the_hole(array_index);</div>
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>        <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a> &amp;&amp; <a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a>-&gt;IsNumber()) {</div>
 <div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>        <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;FixedDoubleArray&gt;</a>(*elements)-&gt;set(array_index,</div>
 <div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>                                               <a class="code hl_variable" href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a>-&gt;AsNumber());</div>
 <div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>      } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(</div>
+<div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(</div>
 <div class="line"><a id="l00698" name="l00698"></a><span class="lineno">  698</span>            IsUninitialized(*<a class="code hl_function" href="classv8_1_1internal_1_1LiteralBoilerplateBuilder.html#ac3cfd4a289382ea04e57c33115a9c51f">GetBoilerplateValue</a>(element, isolate), isolate));</div>
 <div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>        <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;FixedDoubleArray&gt;</a>(*elements)-&gt;set(array_index, 0);</div>
 <div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>      }</div>
@@ -912,7 +920,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00713" name="l00713"></a><span class="lineno">  713</span>      <a class="code hl_class" href="classv8_1_1internal_1_1PerThreadAssertScopeEmpty.html">DisallowGarbageCollection</a> no_gc;</div>
 <div class="line"><a id="l00714" name="l00714"></a><span class="lineno">  714</span> </div>
 <div class="line"><a id="l00715" name="l00715"></a><span class="lineno">  715</span>      <span class="keywordflow">if</span> (IsTheHole(boilerplate_value, isolate)) {</div>
-<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a2450d9b76a72bae457082c0b405c2c78">IsHoleyElementsKind</a>(kind));</div>
+<div class="line"><a id="l00716" name="l00716"></a><span class="lineno">  716</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a2450d9b76a72bae457082c0b405c2c78">IsHoleyElementsKind</a>(kind));</div>
 <div class="line"><a id="l00717" name="l00717"></a><span class="lineno">  717</span>        <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00718" name="l00718"></a><span class="lineno">  718</span>      }</div>
 <div class="line"><a id="l00719" name="l00719"></a><span class="lineno">  719</span> </div>
@@ -920,7 +928,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00721" name="l00721"></a><span class="lineno">  721</span>        boilerplate_value = <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#ae2be3083c9562dbe7c4bc39337bbe831">Smi::zero</a>();</div>
 <div class="line"><a id="l00722" name="l00722"></a><span class="lineno">  722</span>      }</div>
 <div class="line"><a id="l00723" name="l00723"></a><span class="lineno">  723</span> </div>
-<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(kind, <a class="code hl_function" href="namespacev8_1_1internal.html#adc40831a63e0cc6d3d2cfb448dfd9f98">GetMoreGeneralElementsKind</a>(</div>
+<div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(kind, <a class="code hl_function" href="namespacev8_1_1internal.html#adc40831a63e0cc6d3d2cfb448dfd9f98">GetMoreGeneralElementsKind</a>(</div>
 <div class="line"><a id="l00725" name="l00725"></a><span class="lineno">  725</span>                          kind, <a class="code hl_function" href="classv8_1_1internal_1_1Object.html#a5db2dda9eb96d97830cfda5ffc322116">Object::OptimalElementsKind</a>(</div>
 <div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>                                    boilerplate_value,</div>
 <div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span>                                    <a class="code hl_function" href="namespacev8_1_1internal.html#a790db6f6c9a7f30756c04bf5d350a256">GetPtrComprCageBase</a>(*elements))));</div>
@@ -960,7 +968,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00759" name="l00759"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MaterializedLiteral.html#aa63ccdb0c1ce7bb9f0ac5a42dc914ad6">  759</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedLiteral.html#aa63ccdb0c1ce7bb9f0ac5a42dc914ad6">MaterializedLiteral::IsSimple</a>()<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00760" name="l00760"></a><span class="lineno">  760</span>  <span class="keywordflow">if</span> (IsArrayLiteral()) <span class="keywordflow">return</span> AsArrayLiteral()-&gt;builder()-&gt;is_simple();</div>
 <div class="line"><a id="l00761" name="l00761"></a><span class="lineno">  761</span>  <span class="keywordflow">if</span> (IsObjectLiteral()) <span class="keywordflow">return</span> AsObjectLiteral()-&gt;builder()-&gt;is_simple();</div>
-<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsRegExpLiteral());</div>
+<div class="line"><a id="l00762" name="l00762"></a><span class="lineno">  762</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsRegExpLiteral());</div>
 <div class="line"><a id="l00763" name="l00763"></a><span class="lineno">  763</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00764" name="l00764"></a><span class="lineno">  764</span>}</div>
 </div>
@@ -974,7 +982,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>  <span class="keywordflow">if</span> (expr-&gt;IsObjectLiteral()) {</div>
 <div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>    <span class="keywordflow">return</span> expr-&gt;AsObjectLiteral()-&gt;builder()-&gt;InitDepthAndFlags();</div>
 <div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>  }</div>
-<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(expr-&gt;IsRegExpLiteral());</div>
+<div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(expr-&gt;IsRegExpLiteral());</div>
 <div class="line"><a id="l00775" name="l00775"></a><span class="lineno">  775</span>}</div>
 </div>
 <div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span> </div>
@@ -988,7 +996,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>  <span class="keywordflow">if</span> (IsObjectLiteral()) {</div>
 <div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>    <span class="keywordflow">return</span> AsObjectLiteral()-&gt;builder()-&gt;needs_initial_allocation_site();</div>
 <div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>  }</div>
-<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsRegExpLiteral());</div>
+<div class="line"><a id="l00786" name="l00786"></a><span class="lineno">  786</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsRegExpLiteral());</div>
 <div class="line"><a id="l00787" name="l00787"></a><span class="lineno">  787</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00788" name="l00788"></a><span class="lineno">  788</span>}</div>
 </div>
@@ -1005,7 +1013,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    expr-&gt;AsObjectLiteral()-&gt;builder()-&gt;BuildBoilerplateDescription(isolate);</div>
 <div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>  }</div>
-<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(expr-&gt;IsRegExpLiteral());</div>
+<div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(expr-&gt;IsRegExpLiteral());</div>
 <div class="line"><a id="l00802" name="l00802"></a><span class="lineno">  802</span>}</div>
 </div>
 <div class="line"><a id="l00803" name="l00803"></a><span class="lineno">  803</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="base-export_8h.html#aa4fedc3c9e2b5fc6f324138ab21c6e64">V8_BASE_EXPORT</a>) <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1LiteralBoilerplateBuilder.html#aee01c205142523d56caf6178a290b524">LiteralBoilerplateBuilder::</a></div>
@@ -1028,7 +1036,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span>        <span class="comment">// If the AstRawStrings don&#39;t match, then neither should the allocated</span></div>
 <div class="line"><a id="l00821" name="l00821"></a><span class="lineno">  821</span>        <span class="comment">// Strings, since the AstValueFactory should have deduplicated them</span></div>
 <div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>        <span class="comment">// already.</span></div>
-<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>        <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(this-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1GetTemplateObject.html#a93f531f1105979c702ac587f380db98f">cooked_strings</a>()-&gt;at(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) != <span class="keyword">nullptr</span>,</div>
+<div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(this-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1GetTemplateObject.html#a93f531f1105979c702ac587f380db98f">cooked_strings</a>()-&gt;at(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) != <span class="keyword">nullptr</span>,</div>
 <div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span>                       *this-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1GetTemplateObject.html#a93f531f1105979c702ac587f380db98f">cooked_strings</a>()-&gt;at(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>)-&gt;<span class="keywordtype">string</span>() !=</div>
 <div class="line"><a id="l00825" name="l00825"></a><span class="lineno">  825</span>                           *this-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1GetTemplateObject.html#a7782f0169c5eff90a8049b2c99812dd7">raw_strings</a>()-&gt;at(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>)-&gt;<span class="keywordtype">string</span>());</div>
 <div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span> </div>
@@ -1037,7 +1045,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span>      <a class="code hl_function" href="classv8_1_1internal_1_1GetTemplateObject.html#a7782f0169c5eff90a8049b2c99812dd7">raw_strings</a>-&gt;set(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>, *this-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1GetTemplateObject.html#a7782f0169c5eff90a8049b2c99812dd7">raw_strings</a>()-&gt;at(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>)-&gt;<span class="keywordtype">string</span>());</div>
 <div class="line"><a id="l00830" name="l00830"></a><span class="lineno">  830</span>    }</div>
 <div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>  }</div>
-<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>  Handle&lt;FixedArray&gt; cooked_strings_handle = raw_strings_handle;</div>
+<div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>  <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;FixedArray&gt;</a> cooked_strings_handle = raw_strings_handle;</div>
 <div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>  <span class="keywordflow">if</span> (!raw_and_cooked_match) {</div>
 <div class="line"><a id="l00834" name="l00834"></a><span class="lineno">  834</span>    cooked_strings_handle = isolate-&gt;factory()-&gt;NewFixedArray(</div>
 <div class="line"><a id="l00835" name="l00835"></a><span class="lineno">  835</span>        this-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1GetTemplateObject.html#a93f531f1105979c702ac587f380db98f">cooked_strings</a>()-&gt;<a class="code hl_variable" href="namespacev8_1_1internal.html#afa9ea55d792121fba92b4cfc8ef8c9d7">length</a>(), <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a604d5beeb6fc8639670f737ed201e20aa0aa38c28f349d65a6819e03844b73dff">AllocationType::kOld</a>);</div>
@@ -1056,10 +1064,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00848" name="l00848"></a><span class="lineno">  848</span>      raw_strings_handle, cooked_strings_handle);</div>
 <div class="line"><a id="l00849" name="l00849"></a><span class="lineno">  849</span>}</div>
 <div class="line"><a id="l00850" name="l00850"></a><span class="lineno">  850</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="base-export_8h.html#aa4fedc3c9e2b5fc6f324138ab21c6e64">V8_BASE_EXPORT</a>)</div>
-<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    Handle&lt;TemplateObjectDescription&gt; <a class="code hl_function" href="classv8_1_1internal_1_1GetTemplateObject.html#a872f9d7737c50b465ee17d2fa28bf4df">GetTemplateObject::GetOrBuildDescription</a>(</div>
+<div class="line"><a id="l00851" name="l00851"></a><span class="lineno">  851</span>    <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;TemplateObjectDescription&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1GetTemplateObject.html#a872f9d7737c50b465ee17d2fa28bf4df">GetTemplateObject::GetOrBuildDescription</a>(</div>
 <div class="line"><a id="l00852" name="l00852"></a><span class="lineno">  852</span>        Isolate* isolate);</div>
 <div class="line"><a id="l00853" name="l00853"></a><span class="lineno">  853</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="base-export_8h.html#aa4fedc3c9e2b5fc6f324138ab21c6e64">V8_BASE_EXPORT</a>)</div>
-<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>    Handle&lt;TemplateObjectDescription&gt; <a class="code hl_function" href="classv8_1_1internal_1_1GetTemplateObject.html#a872f9d7737c50b465ee17d2fa28bf4df">GetTemplateObject::GetOrBuildDescription</a>(</div>
+<div class="line"><a id="l00854" name="l00854"></a><span class="lineno">  854</span>    <a class="code hl_typedef" href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">Handle&lt;TemplateObjectDescription&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1GetTemplateObject.html#a872f9d7737c50b465ee17d2fa28bf4df">GetTemplateObject::GetOrBuildDescription</a>(</div>
 <div class="line"><a id="l00855" name="l00855"></a><span class="lineno">  855</span>        LocalIsolate* isolate);</div>
 <div class="line"><a id="l00856" name="l00856"></a><span class="lineno">  856</span> </div>
 <div class="foldopen" id="foldopen00857" data-start="{" data-end="}">
@@ -1200,7 +1208,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>  <span class="keywordflow">if</span> (first_spread_index == arguments_length - 1) {</div>
 <div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>    <a class="code hl_function" href="classv8_1_1internal_1_1AstNode.html#a9fcfa53b12eb954e0f72f17465ade813">position</a> = <a class="code hl_enumvalue" href="classv8_1_1internal_1_1CallBase.html#a7554c2cccc6c3e9784a9182ce2d4a31eac893ced4fe12e66227263cc8ab808fb2">kHasFinalSpread</a>;</div>
 <div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(first_spread_index, arguments_length - 1);</div>
+<div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(first_spread_index, arguments_length - 1);</div>
 <div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>    <a class="code hl_function" href="classv8_1_1internal_1_1AstNode.html#a9fcfa53b12eb954e0f72f17465ade813">position</a> = <a class="code hl_enumvalue" href="classv8_1_1internal_1_1CallBase.html#a7554c2cccc6c3e9784a9182ce2d4a31ea2251bb47b1c0e147888b901b251b4f32">kHasNonFinalSpread</a>;</div>
 <div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>  }</div>
 <div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1AstNode.html#a45226472a08d30f2ed552fe22b0790f2">bit_field_</a> |= <a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a70718344d8a4df6c20b3cf9c9b14d0d4">SpreadPositionField::encode</a>(<a class="code hl_function" href="classv8_1_1internal_1_1AstNode.html#a9fcfa53b12eb954e0f72f17465ade813">position</a>);</div>
@@ -1225,7 +1233,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00990" name="l00990"></a><span class="lineno">  990</span> </div>
 <div class="line"><a id="l00991" name="l00991"></a><span class="lineno">  991</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Property.html">Property</a>* property = <a class="code hl_function" href="classv8_1_1internal_1_1CallBase.html#ae7a62d062f318c47396e9d0f8be6ffaa">expression</a>()-&gt;AsProperty();</div>
 <div class="line"><a id="l00992" name="l00992"></a><span class="lineno">  992</span>  <span class="keywordtype">bool</span> is_optional_chain = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>  <span class="keywordflow">if</span> (V8_UNLIKELY(property == <span class="keyword">nullptr</span> &amp;&amp; <a class="code hl_function" href="classv8_1_1internal_1_1CallBase.html#ae7a62d062f318c47396e9d0f8be6ffaa">expression</a>()-&gt;IsOptionalChain())) {</div>
+<div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span>  <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(property == <span class="keyword">nullptr</span> &amp;&amp; <a class="code hl_function" href="classv8_1_1internal_1_1CallBase.html#ae7a62d062f318c47396e9d0f8be6ffaa">expression</a>()-&gt;IsOptionalChain())) {</div>
 <div class="line"><a id="l00994" name="l00994"></a><span class="lineno">  994</span>    is_optional_chain = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>    property = <a class="code hl_function" href="classv8_1_1internal_1_1CallBase.html#ae7a62d062f318c47396e9d0f8be6ffaa">expression</a>()-&gt;AsOptionalChain()-&gt;expression()-&gt;AsProperty();</div>
 <div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>  }</div>
@@ -1237,7 +1245,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>    <span class="keywordtype">bool</span> is_super = property-&gt;IsSuperAccess();</div>
 <div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>    <span class="comment">// `super?.` is not syntactically valid, so a property load cannot be both</span></div>
 <div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>    <span class="comment">// super and an optional chain.</span></div>
-<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!is_super || !is_optional_chain);</div>
+<div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!is_super || !is_optional_chain);</div>
 <div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>    <span class="keywordflow">if</span> (property-&gt;key()-&gt;IsPropertyName()) {</div>
 <div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>      <span class="keywordflow">if</span> (is_super) <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="classv8_1_1internal_1_1Call.html#ac6d809a066023f5d0fae3545e3df4fcead68ecf76d28f7faad57b97ae2ca46ba6">NAMED_SUPER_PROPERTY_CALL</a>;</div>
 <div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>      <span class="keywordflow">if</span> (is_optional_chain) <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="classv8_1_1internal_1_1Call.html#ac6d809a066023f5d0fae3545e3df4fceae815fe9eaac7b3a00851ddc5a410dc78">NAMED_OPTIONAL_CHAIN_PROPERTY_CALL</a>;</div>
@@ -1319,9 +1327,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01074" name="l01074"></a><span class="lineno"> 1074</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#acdec713c25068019f935e35976f5b666">UNREACHABLE</a>();</div>
 <div class="line"><a id="l01075" name="l01075"></a><span class="lineno"> 1075</span>}</div>
 </div>
-<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>)</div>
+<div class="line"><a id="l01076" name="l01076"></a><span class="lineno"> 1076</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>)</div>
 <div class="line"><a id="l01077" name="l01077"></a><span class="lineno"> 1077</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Object&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1Literal.html#aca2cef699dabb539a1693a0dbcaaca93">Literal::BuildValue</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>)</div>
+<div class="line"><a id="l01078" name="l01078"></a><span class="lineno"> 1078</span><span class="keyword">template</span> <a class="code hl_define" href="export-template_8h.html#a8687a18b601021d53d8f4417c60584c5">EXPORT_TEMPLATE_DEFINE</a>(<a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a>)</div>
 <div class="line"><a id="l01079" name="l01079"></a><span class="lineno"> 1079</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Object&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1Literal.html#aca2cef699dabb539a1693a0dbcaaca93">Literal::BuildValue</a>(<a class="code hl_class" href="classv8_1_1internal_1_1LocalIsolate.html">LocalIsolate</a>* isolate) <span class="keyword">const</span>;</div>
 <div class="line"><a id="l01080" name="l01080"></a><span class="lineno"> 1080</span> </div>
 <div class="line"><a id="l01081" name="l01081"></a><span class="lineno"> 1081</span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1Literal.html#ad8547123e5c1db727e06aea1ed49cae7">Literal::ToBooleanIsTrue</a>()<span class="keyword"> const </span>{</div>
@@ -1342,7 +1350,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="classv8_1_1internal_1_1Literal.html#aebdc45fab4b314d13410bd3285391f1caaff40ae106cf61818121300647843ce2">kBigInt</a>: {</div>
 <div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>      <span class="keyword">const</span> <span class="keywordtype">char</span>* bigint_str = <a class="code hl_variable" href="classv8_1_1internal_1_1Literal.html#aaf51d52ad5b199ad9842c802e96a57ad">bigint_</a>.<a class="code hl_function" href="classv8_1_1internal_1_1AstBigInt.html#a64b16460a1974e4bd4fdaf9c339da88b">c_str</a>();</div>
 <div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>      <span class="keywordtype">size_t</span> length = strlen(bigint_str);</div>
-<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>      <a class="code hl_define" href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(length, 0);</div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(length, 0);</div>
 <div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>      <span class="keywordflow">if</span> (length == 1 &amp;&amp; bigint_str[0] == <span class="charliteral">&#39;0&#39;</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>      <span class="comment">// Skip over any radix prefix; BigInts with length &gt; 1 only</span></div>
 <div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>      <span class="comment">// begin with zero if they include a radix.</span></div>
@@ -1359,7 +1367,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01113" name="l01113"></a><span class="lineno"> 1113</span> </div>
 <div class="foldopen" id="foldopen01114" data-start="{" data-end="}">
 <div class="line"><a id="l01114" name="l01114"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1Literal.html#a3d473e923ccc91b435159fde350974a8"> 1114</a></span>uint32_t <a class="code hl_function" href="classv8_1_1internal_1_1Literal.html#a3d473e923ccc91b435159fde350974a8">Literal::Hash</a>() {</div>
-<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1Literal.html#ab3953c986546cab77aae0b51ee7579b9">IsRawString</a>() || <a class="code hl_function" href="classv8_1_1internal_1_1Literal.html#abb4c94e71c472cbfb953c5abe42244b9">IsNumber</a>());</div>
+<div class="line"><a id="l01115" name="l01115"></a><span class="lineno"> 1115</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1Literal.html#ab3953c986546cab77aae0b51ee7579b9">IsRawString</a>() || <a class="code hl_function" href="classv8_1_1internal_1_1Literal.html#abb4c94e71c472cbfb953c5abe42244b9">IsNumber</a>());</div>
 <div class="line"><a id="l01116" name="l01116"></a><span class="lineno"> 1116</span>  uint32_t <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>;</div>
 <div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="classv8_1_1internal_1_1Literal.html#a0794e1a8d9d6ba7433c5a78d8c57ac69">AsArrayIndex</a>(&amp;<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>)) {</div>
 <div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>    <span class="comment">// Treat array indices as numbers, so that array indices are de-duped</span></div>
@@ -1688,15 +1696,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aliveedit_8cc_html_a1f97b45a31f6a35546d48f4f1ad531ac"><div class="ttname"><a href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a></div><div class="ttdeci">FunctionLiteral * literal</div><div class="ttdef"><b>Definition</b> <a href="liveedit_8cc_source.html#l00294">liveedit.cc:294</a></div></div>
 <div class="ttc" id="aliveedit_8cc_html_a401e942526aac47cef94f478182486e7"><div class="ttname"><a href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a></div><div class="ttdeci">int position</div><div class="ttdef"><b>Definition</b> <a href="liveedit_8cc_source.html#l00290">liveedit.cc:290</a></div></div>
 <div class="ttc" id="alocal-factory-inl_8h_html"><div class="ttname"><a href="local-factory-inl_8h.html">local-factory-inl.h</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_a96a75539aa82216cdde2250a11126ea0"><div class="ttname"><a href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a></div><div class="ttdeci">#define DCHECK_IMPLIES(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00493">logging.h:493</a></div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="alogging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00487">logging.h:487</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="amap_8h_html"><div class="ttname"><a href="map_8h.html">map.h</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a99d87bd5ff7cd32c84499432e640ff8d"><div class="ttname"><a href="namespacev8_1_1base.html#a99d87bd5ff7cd32c84499432e640ff8d">v8::base::double_to_uint64</a></div><div class="ttdeci">uint64_t double_to_uint64(double d)</div><div class="ttdef"><b>Definition</b> <a href="double_8h_source.html#l00015">double.h:15</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
@@ -1745,22 +1744,36 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="anamespacev8_html_a13596ed4ca024abd4790ec46b62c2097"><div class="ttname"><a href="namespacev8.html#a13596ed4ca024abd4790ec46b62c2097">v8::kReleaseStore</a></div><div class="ttdeci">static constexpr ReleaseStoreTag kReleaseStore</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l02835">globals.h:2835</a></div></div>
+<div class="ttc" id="anamespacev8_html_a25d2bd830a15c10ed892862df4c7f2eb"><div class="ttname"><a href="namespacev8.html#a25d2bd830a15c10ed892862df4c7f2eb">v8::Handle</a></div><div class="ttdeci">Local&lt; T &gt; Handle</div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00618">v8-local-handle.h:618</a></div></div>
 <div class="ttc" id="aobjects-inl_8h_html"><div class="ttname"><a href="objects-inl_8h.html">objects-inl.h</a></div></div>
 <div class="ttc" id="aprettyprinter_8h_html"><div class="ttname"><a href="prettyprinter_8h.html">prettyprinter.h</a></div></div>
 <div class="ttc" id="aproperty-details_8h_html"><div class="ttname"><a href="property-details_8h.html">property-details.h</a></div></div>
 <div class="ttc" id="aproperty_8h_html"><div class="ttname"><a href="property_8h.html">property.h</a></div></div>
 <div class="ttc" id="ascopes_8h_html"><div class="ttname"><a href="scopes_8h.html">scopes.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a96a75539aa82216cdde2250a11126ea0"><div class="ttname"><a href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a></div><div class="ttdeci">#define DCHECK_IMPLIES(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00493">logging.h:493</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00487">logging.h:487</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="astring-stream_8h_html"><div class="ttname"><a href="string-stream_8h.html">string-stream.h</a></div></div>
 <div class="ttc" id="astructv8_1_1base_1_1TemplateHashMapEntry_html"><div class="ttname"><a href="structv8_1_1base_1_1TemplateHashMapEntry.html">v8::base::TemplateHashMapEntry</a></div><div class="ttdef"><b>Definition</b> <a href="hashmap-entry_8h_source.html#l00025">hashmap-entry.h:25</a></div></div>
 <div class="ttc" id="astructv8_1_1base_1_1TemplateHashMapEntry_html_a1a0fd5679125cfb0715e9aaba5c49f77"><div class="ttname"><a href="structv8_1_1base_1_1TemplateHashMapEntry.html#a1a0fd5679125cfb0715e9aaba5c49f77">v8::base::TemplateHashMapEntry::value</a></div><div class="ttdeci">Value value</div><div class="ttdef"><b>Definition</b> <a href="hashmap-entry_8h_source.html#l00029">hashmap-entry.h:29</a></div></div>
+<div class="ttc" id="av8config_8h_html_a67bd29db07c711b0fb11ff1c324ebb60"><div class="ttname"><a href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a></div><div class="ttdeci">#define V8_UNLIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00649">v8config.h:649</a></div></div>
 <div class="ttc" id="awasm-disassembler-impl_8h_html_a9081b029a736f872120e966775e32950"><div class="ttname"><a href="wasm-disassembler-impl_8h.html#a9081b029a736f872120e966775e32950">GETTER</a></div><div class="ttdeci">#define GETTER(name)</div><div class="ttdef"><b>Definition</b> <a href="wasm-disassembler-impl_8h_source.html#l00180">wasm-disassembler-impl.h:180</a></div></div>
 <div class="ttc" id="awasm-inlining-into-js_8cc_html_a66874a4e937e4192b2b42e57f55251e8"><div class="ttname"><a href="wasm-inlining-into-js_8cc.html#a66874a4e937e4192b2b42e57f55251e8">type</a></div><div class="ttdeci">wasm::ValueType type</div><div class="ttdef"><b>Definition</b> <a href="wasm-inlining-into-js_8cc_source.html#l00028">wasm-inlining-into-js.cc:28</a></div></div>
 <div class="ttc" id="azone-list-inl_8h_html"><div class="ttname"><a href="zone-list-inl_8h.html">zone-list-inl.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:16:42 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_203e5988f1ed315d29383d699972de6f.html">ast</a></li><li class="navelem"><a class="el" href="ast_8cc.html">ast.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:52:44 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

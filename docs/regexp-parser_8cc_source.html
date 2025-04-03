@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/regexp/regexp-parser.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/regexp/regexp-parser.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('regexp-parser_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1729a598fafe31601528e57784d200c0.html">regexp</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">regexp-parser.cc</div></div>
 </div><!--header-->
@@ -184,18 +192,18 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keywordtype">void</span> RegExpTextBuilder::AddLeadSurrogate(<a class="code hl_typedef" href="namespacev8_1_1base.html#a9b30a9dce9a646c03dd1fd6a409d9d7f">base::uc16</a> lead_surrogate) {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classunibrow_1_1Utf16.html#ada29066756f075feb4786ec1b6d50f71">unibrow::Utf16::IsLeadSurrogate</a>(lead_surrogate));</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classunibrow_1_1Utf16.html#ada29066756f075feb4786ec1b6d50f71">unibrow::Utf16::IsLeadSurrogate</a>(lead_surrogate));</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  FlushPendingSurrogate();</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="comment">// Hold onto the lead surrogate, waiting for a trail surrogate to follow.</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <a class="code hl_variable" href="regexp-parser_8cc.html#a760a0526b5435bc88d74aac26f214cf0">pending_surrogate_</a> = lead_surrogate;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>}</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="keywordtype">void</span> RegExpTextBuilder::AddTrailSurrogate(<a class="code hl_typedef" href="namespacev8_1_1base.html#a9b30a9dce9a646c03dd1fd6a409d9d7f">base::uc16</a> trail_surrogate) {</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classunibrow_1_1Utf16.html#abb3a01f7302f952deaad31b667fd83a8">unibrow::Utf16::IsTrailSurrogate</a>(trail_surrogate));</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classunibrow_1_1Utf16.html#abb3a01f7302f952deaad31b667fd83a8">unibrow::Utf16::IsTrailSurrogate</a>(trail_surrogate));</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="regexp-parser_8cc.html#a760a0526b5435bc88d74aac26f214cf0">pending_surrogate_</a> != <a class="code hl_variable" href="regexp-parser_8cc.html#a5c830ee43374af876958bce0ad1a9c18">kNoPendingSurrogate</a>) {</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    base::uc16 lead_surrogate = <a class="code hl_variable" href="regexp-parser_8cc.html#a760a0526b5435bc88d74aac26f214cf0">pending_surrogate_</a>;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_variable" href="regexp-parser_8cc.html#a760a0526b5435bc88d74aac26f214cf0">pending_surrogate_</a> = <a class="code hl_variable" href="regexp-parser_8cc.html#a5c830ee43374af876958bce0ad1a9c18">kNoPendingSurrogate</a>;</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classunibrow_1_1Utf16.html#ada29066756f075feb4786ec1b6d50f71">unibrow::Utf16::IsLeadSurrogate</a>(lead_surrogate));</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classunibrow_1_1Utf16.html#ada29066756f075feb4786ec1b6d50f71">unibrow::Utf16::IsLeadSurrogate</a>(lead_surrogate));</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    base::uc32 combined =</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <a class="code hl_function" href="classunibrow_1_1Utf16.html#aac66a94947867b52f783c206f7f798ac">unibrow::Utf16::CombineSurrogatePair</a>(lead_surrogate, trail_surrogate);</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordflow">if</span> (NeedsDesugaringForIgnoreCase(combined)) {</div>
@@ -216,7 +224,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="keywordtype">void</span> RegExpTextBuilder::FlushPendingSurrogate() {</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="regexp-parser_8cc.html#a760a0526b5435bc88d74aac26f214cf0">pending_surrogate_</a> != <a class="code hl_variable" href="regexp-parser_8cc.html#a5c830ee43374af876958bce0ad1a9c18">kNoPendingSurrogate</a>) {</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsUnicodeMode());</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsUnicodeMode());</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    base::uc32 c = <a class="code hl_variable" href="regexp-parser_8cc.html#a760a0526b5435bc88d74aac26f214cf0">pending_surrogate_</a>;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <a class="code hl_variable" href="regexp-parser_8cc.html#a760a0526b5435bc88d74aac26f214cf0">pending_surrogate_</a> = <a class="code hl_variable" href="regexp-parser_8cc.html#a5c830ee43374af876958bce0ad1a9c18">kNoPendingSurrogate</a>;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    AddClassRangesForDesugaring(c);</div>
@@ -259,7 +267,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="keywordtype">void</span> RegExpTextBuilder::AddUnicodeCharacter(<a class="code hl_typedef" href="namespacev8_1_1base.html#a57f73be761c205242d27bc2062756c33">base::uc32</a> c) {</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keywordflow">if</span> (c &gt; <span class="keyword">static_cast&lt;</span>base::uc32<span class="keyword">&gt;</span>(<a class="code hl_variable" href="classunibrow_1_1Utf16.html#a621e7db0a6d40f06c69c7041f48a5591">unibrow::Utf16::kMaxNonSurrogateCharCode</a>)) {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsUnicodeMode());</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsUnicodeMode());</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    AddLeadSurrogate(<a class="code hl_function" href="classunibrow_1_1Utf16.html#a01bbf2bab943780510481b14565039b5">unibrow::Utf16::LeadSurrogate</a>(c));</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    AddTrailSurrogate(<a class="code hl_function" href="classunibrow_1_1Utf16.html#a867f66dde6dfd10126ed5dc997caee32">unibrow::Utf16::TrailSurrogate</a>(c));</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (IsUnicodeMode() &amp;&amp; <a class="code hl_function" href="classunibrow_1_1Utf16.html#ada29066756f075feb4786ec1b6d50f71">unibrow::Utf16::IsLeadSurrogate</a>(c)) {</div>
@@ -295,13 +303,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>}</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="keywordtype">void</span> RegExpTextBuilder::AddAtom(RegExpTree* atom) {</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(atom-&gt;IsTextElement());</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(atom-&gt;IsTextElement());</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>  FlushCharacters();</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <a class="code hl_variable" href="regexp-parser_8cc.html#a84eab20b9dac5982bf60f204741594f9">text_</a>.emplace_back(atom);</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>}</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="keywordtype">void</span> RegExpTextBuilder::AddTerm(RegExpTree* term) {</div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(term-&gt;IsTextElement());</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(term-&gt;IsTextElement());</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  FlushText();</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <a class="code hl_variable" href="regexp-compiler-tonode_8cc.html#aa997a9ef809a069ef2e158e868aa9166">terms_</a>-&gt;emplace_back(term);</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>}</div>
@@ -497,7 +505,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span> </div>
 <div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>  <span class="comment">// Check whether the parser is inside a capture group with the given name.</span></div>
 <div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>  <span class="keywordtype">bool</span> IsInsideCaptureGroup(<span class="keyword">const</span> ZoneVector&lt;base::uc16&gt;* name)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(name);</div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(name);</div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> RegExpParserState* s = <span class="keyword">this</span>; s != <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>         s = s-&gt;previous_state()) {</div>
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>      <span class="keywordflow">if</span> (s-&gt;capture_name() == <span class="keyword">nullptr</span>) <span class="keywordflow">continue</span>;</div>
@@ -693,7 +701,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00597" name="l00597"></a><span class="lineno">  597</span>  <span class="keyword">template</span> &lt;<span class="keywordtype">bool</span> update_position&gt;</div>
 <div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span>  base::uc32 ReadNext();</div>
 <div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span>  CharT InputAt(<span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(0 &lt;= <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> &amp;&amp; <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> &lt; input_length());</div>
+<div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(0 &lt;= <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> &amp;&amp; <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> &lt; input_length());</div>
 <div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="code-generator-ia32_8cc.html#a8136e0c518eae601ca3c84adba6a2e0b">input_</a>[<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>];</div>
 <div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>  }</div>
 <div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>  <span class="keywordtype">int</span> input_length()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code hl_variable" href="regexp-parser_8cc.html#a3b9fb6d2a014b92b7a2d2e823bc2c441">input_length_</a>; }</div>
@@ -701,8 +709,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span> </div>
 <div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span>  <span class="keyword">struct </span>RegExpCaptureNameLess {</div>
 <div class="line"><a id="l00607" name="l00607"></a><span class="lineno">  607</span>    <span class="keywordtype">bool</span> operator()(<span class="keyword">const</span> RegExpCapture* lhs, <span class="keyword">const</span> RegExpCapture* rhs)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>      <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(lhs);</div>
-<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>      <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(rhs);</div>
+<div class="line"><a id="l00608" name="l00608"></a><span class="lineno">  608</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(lhs);</div>
+<div class="line"><a id="l00609" name="l00609"></a><span class="lineno">  609</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(rhs);</div>
 <div class="line"><a id="l00610" name="l00610"></a><span class="lineno">  610</span>      <span class="keywordflow">return</span> *lhs-&gt;name() &lt; *rhs-&gt;name();</div>
 <div class="line"><a id="l00611" name="l00611"></a><span class="lineno">  611</span>    }</div>
 <div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>  };</div>
@@ -711,11 +719,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>   <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>    <span class="keyword">explicit</span> ForceUnicodeScope(RegExpParserImpl&lt;CharT&gt;* parser)</div>
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>        : <a class="code hl_variable" href="regexp-parser_8cc.html#a81c1199fd898b73a7dbf2fd5de2e1b5e">parser_</a>(parser) {</div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="regexp-parser_8cc.html#a81c1199fd898b73a7dbf2fd5de2e1b5e">parser_</a>-&gt;force_unicode_);</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="regexp-parser_8cc.html#a81c1199fd898b73a7dbf2fd5de2e1b5e">parser_</a>-&gt;force_unicode_);</div>
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>      <a class="code hl_variable" href="regexp-parser_8cc.html#a81c1199fd898b73a7dbf2fd5de2e1b5e">parser_</a>-&gt;force_unicode_ = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>    }</div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>    ~ForceUnicodeScope() {</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="regexp-parser_8cc.html#a81c1199fd898b73a7dbf2fd5de2e1b5e">parser_</a>-&gt;force_unicode_);</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="regexp-parser_8cc.html#a81c1199fd898b73a7dbf2fd5de2e1b5e">parser_</a>-&gt;force_unicode_);</div>
 <div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>      <a class="code hl_variable" href="regexp-parser_8cc.html#a81c1199fd898b73a7dbf2fd5de2e1b5e">parser_</a>-&gt;force_unicode_ = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>    }</div>
 <div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span> </div>
@@ -787,7 +795,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00691" name="l00691"></a><span class="lineno">  691</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a> = <a class="code hl_variable" href="regexp-parser_8cc.html#ae787f8255d3fa83b73460af9953c4488">next_pos_</a>;</div>
 <div class="line"><a id="l00692" name="l00692"></a><span class="lineno">  692</span>  <a class="code hl_typedef" href="namespacev8_1_1base.html#a9b30a9dce9a646c03dd1fd6a409d9d7f">base::uc16</a> c0 = InputAt(<a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a>);</div>
 <div class="line"><a id="l00693" name="l00693"></a><span class="lineno">  693</span>  <a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a>++;</div>
-<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classunibrow_1_1Utf16.html#ada29066756f075feb4786ec1b6d50f71">unibrow::Utf16::IsLeadSurrogate</a>(c0));</div>
+<div class="line"><a id="l00694" name="l00694"></a><span class="lineno">  694</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_function" href="classunibrow_1_1Utf16.html#ada29066756f075feb4786ec1b6d50f71">unibrow::Utf16::IsLeadSurrogate</a>(c0));</div>
 <div class="line"><a id="l00695" name="l00695"></a><span class="lineno">  695</span>  <span class="keywordflow">if</span> (update_position) <a class="code hl_variable" href="regexp-parser_8cc.html#ae787f8255d3fa83b73460af9953c4488">next_pos_</a> = <a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a>;</div>
 <div class="line"><a id="l00696" name="l00696"></a><span class="lineno">  696</span>  <span class="keywordflow">return</span> c0;</div>
 <div class="line"><a id="l00697" name="l00697"></a><span class="lineno">  697</span>}</div>
@@ -826,7 +834,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00730" name="l00730"></a><span class="lineno">  730</span>  <span class="keywordflow">if</span> (has_next()) {</div>
 <div class="line"><a id="l00731" name="l00731"></a><span class="lineno">  731</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacev8_1_1internal.html#a8002b4a0fe4f465e8a6261cff4e9b66d">GetCurrentStackPosition</a>() &lt; <a class="code hl_variable" href="regexp-parser_8cc.html#ae3f02fa951c4dcb5ca0c973870bfd79d">stack_limit_</a>) {</div>
 <div class="line"><a id="l00732" name="l00732"></a><span class="lineno">  732</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.correctness_fuzzer_suppressions) {</div>
-<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>        <a class="code hl_define" href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;Aborting on stack overflow&quot;</span>);</div>
+<div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;Aborting on stack overflow&quot;</span>);</div>
 <div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>      }</div>
 <div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>      <a class="code hl_function" href="namespacev8_1_1internal_1_1torque.html#a32f384957418edc0b1e63188bbb2e85e">ReportError</a>(RegExpError::kStackOverflow);</div>
 <div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    } <span class="keywordflow">else</span> {</div>
@@ -996,7 +1004,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00898" name="l00898"></a><span class="lineno">  898</span>RegExpTree* RegExpParserImpl&lt;CharT&gt;::ParsePattern() {</div>
 <div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>  RegExpTree* <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = ParseDisjunction(<a class="code hl_define" href="regexp-parser_8cc.html#ad902ea0a444fd6dfb515d8f103c185cc">CHECK_FAILED</a>);</div>
 <div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>  PatchNamedBackReferences(<a class="code hl_define" href="regexp-parser_8cc.html#ad902ea0a444fd6dfb515d8f103c185cc">CHECK_FAILED</a>);</div>
-<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!has_more());</div>
+<div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!has_more());</div>
 <div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>  <span class="comment">// If the result of parsing is a literal string atom, and it has the</span></div>
 <div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>  <span class="comment">// same length as the input, then the atom is identical to the input.</span></div>
 <div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>-&gt;IsAtom() &amp;&amp; <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>-&gt;AsAtom()-&gt;length() == input_length()) {</div>
@@ -1031,14 +1039,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span>          <span class="comment">// Inside a parenthesized group when hitting end of input.</span></div>
 <div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>          <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal_1_1torque.html#a32f384957418edc0b1e63188bbb2e85e">ReportError</a>(RegExpError::kUnterminatedGroup);</div>
 <div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>        }</div>
-<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>        <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(INITIAL, state-&gt;group_type());</div>
+<div class="line"><a id="l00936" name="l00936"></a><span class="lineno">  936</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(INITIAL, state-&gt;group_type());</div>
 <div class="line"><a id="l00937" name="l00937"></a><span class="lineno">  937</span>        <span class="comment">// Parsing completed successfully.</span></div>
 <div class="line"><a id="l00938" name="l00938"></a><span class="lineno">  938</span>        <span class="keywordflow">return</span> builder-&gt;ToRegExp();</div>
 <div class="line"><a id="l00939" name="l00939"></a><span class="lineno">  939</span>      <span class="keywordflow">case</span> <span class="charliteral">&#39;)&#39;</span>: {</div>
 <div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>        <span class="keywordflow">if</span> (!state-&gt;IsSubexpression()) {</div>
 <div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span>          <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal_1_1torque.html#a32f384957418edc0b1e63188bbb2e85e">ReportError</a>(RegExpError::kUnmatchedParen);</div>
 <div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span>        }</div>
-<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>        <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(INITIAL, state-&gt;group_type());</div>
+<div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(INITIAL, state-&gt;group_type());</div>
 <div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span> </div>
 <div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span>        Advance();</div>
 <div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span>        <span class="comment">// End disjunction parsing and convert builder content to new single</span></div>
@@ -1061,7 +1069,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (group_type == GROUPING) {</div>
 <div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>          body = zone()-&gt;template New&lt;RegExpGroup&gt;(body, builder-&gt;flags());</div>
 <div class="line"><a id="l00965" name="l00965"></a><span class="lineno">  965</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>          <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(group_type == POSITIVE_LOOKAROUND ||</div>
+<div class="line"><a id="l00966" name="l00966"></a><span class="lineno">  966</span>          <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(group_type == POSITIVE_LOOKAROUND ||</div>
 <div class="line"><a id="l00967" name="l00967"></a><span class="lineno">  967</span>                 group_type == NEGATIVE_LOOKAROUND);</div>
 <div class="line"><a id="l00968" name="l00968"></a><span class="lineno">  968</span>          <span class="keywordtype">bool</span> is_positive = (group_type == POSITIVE_LOOKAROUND);</div>
 <div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>          body = zone()-&gt;template New&lt;RegExpLookaround&gt;(</div>
@@ -1137,7 +1145,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>        <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a5f686fa958f21956d0c68aabd13dc9df">cc</a>-&gt;IsClassRanges()) {</div>
 <div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>          builder-&gt;AddClassRanges(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a5f686fa958f21956d0c68aabd13dc9df">cc</a>-&gt;AsClassRanges());</div>
 <div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>          <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a5f686fa958f21956d0c68aabd13dc9df">cc</a>-&gt;IsClassSetExpression());</div>
+<div class="line"><a id="l01042" name="l01042"></a><span class="lineno"> 1042</span>          <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a5f686fa958f21956d0c68aabd13dc9df">cc</a>-&gt;IsClassSetExpression());</div>
 <div class="line"><a id="l01043" name="l01043"></a><span class="lineno"> 1043</span>          builder-&gt;AddTerm(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a5f686fa958f21956d0c68aabd13dc9df">cc</a>);</div>
 <div class="line"><a id="l01044" name="l01044"></a><span class="lineno"> 1044</span>        }</div>
 <div class="line"><a id="l01045" name="l01045"></a><span class="lineno"> 1045</span>        <span class="keywordflow">break</span>;</div>
@@ -1244,7 +1252,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01146" name="l01146"></a><span class="lineno"> 1146</span>                  zone()-&gt;template New&lt;RegExpClassRanges&gt;(zone(), ranges);</div>
 <div class="line"><a id="l01147" name="l01147"></a><span class="lineno"> 1147</span>              builder-&gt;AddClassRanges(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a5f686fa958f21956d0c68aabd13dc9df">cc</a>);</div>
 <div class="line"><a id="l01148" name="l01148"></a><span class="lineno"> 1148</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>              <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!IsUnicodeMode());</div>
+<div class="line"><a id="l01149" name="l01149"></a><span class="lineno"> 1149</span>              <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!IsUnicodeMode());</div>
 <div class="line"><a id="l01150" name="l01150"></a><span class="lineno"> 1150</span>              Advance(2);</div>
 <div class="line"><a id="l01151" name="l01151"></a><span class="lineno"> 1151</span>              builder-&gt;AddCharacter(next);  <span class="comment">// IdentityEscape.</span></div>
 <div class="line"><a id="l01152" name="l01152"></a><span class="lineno"> 1152</span>            }</div>
@@ -1276,7 +1284,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01178" name="l01178"></a><span class="lineno"> 1178</span>                builder-&gt;AddClassRanges(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a5f686fa958f21956d0c68aabd13dc9df">cc</a>);</div>
 <div class="line"><a id="l01179" name="l01179"></a><span class="lineno"> 1179</span>              }</div>
 <div class="line"><a id="l01180" name="l01180"></a><span class="lineno"> 1180</span>            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>              <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!IsUnicodeMode());</div>
+<div class="line"><a id="l01181" name="l01181"></a><span class="lineno"> 1181</span>              <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!IsUnicodeMode());</div>
 <div class="line"><a id="l01182" name="l01182"></a><span class="lineno"> 1182</span>              Advance(2);</div>
 <div class="line"><a id="l01183" name="l01183"></a><span class="lineno"> 1183</span>              builder-&gt;AddCharacter(next);  <span class="comment">// IdentityEscape.</span></div>
 <div class="line"><a id="l01184" name="l01184"></a><span class="lineno"> 1184</span>            }</div>
@@ -1442,7 +1450,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01344" name="l01344"></a><span class="lineno"> 1344</span>        <span class="keywordflow">case</span> <span class="charliteral">&#39;=&#39;</span>:</div>
 <div class="line"><a id="l01345" name="l01345"></a><span class="lineno"> 1345</span>          Advance(2);</div>
 <div class="line"><a id="l01346" name="l01346"></a><span class="lineno"> 1346</span>          <span class="keywordflow">if</span> (parsing_modifiers) {</div>
-<div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span>            <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.js_regexp_modifiers);</div>
+<div class="line"><a id="l01347" name="l01347"></a><span class="lineno"> 1347</span>            <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.js_regexp_modifiers);</div>
 <div class="line"><a id="l01348" name="l01348"></a><span class="lineno"> 1348</span>            <a class="code hl_function" href="namespacev8_1_1internal_1_1torque.html#a32f384957418edc0b1e63188bbb2e85e">ReportError</a>(RegExpError::kInvalidGroup);</div>
 <div class="line"><a id="l01349" name="l01349"></a><span class="lineno"> 1349</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l01350" name="l01350"></a><span class="lineno"> 1350</span>          }</div>
@@ -1452,7 +1460,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01354" name="l01354"></a><span class="lineno"> 1354</span>        <span class="keywordflow">case</span> <span class="charliteral">&#39;!&#39;</span>:</div>
 <div class="line"><a id="l01355" name="l01355"></a><span class="lineno"> 1355</span>          Advance(2);</div>
 <div class="line"><a id="l01356" name="l01356"></a><span class="lineno"> 1356</span>          <span class="keywordflow">if</span> (parsing_modifiers) {</div>
-<div class="line"><a id="l01357" name="l01357"></a><span class="lineno"> 1357</span>            <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.js_regexp_modifiers);</div>
+<div class="line"><a id="l01357" name="l01357"></a><span class="lineno"> 1357</span>            <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.js_regexp_modifiers);</div>
 <div class="line"><a id="l01358" name="l01358"></a><span class="lineno"> 1358</span>            <a class="code hl_function" href="namespacev8_1_1internal_1_1torque.html#a32f384957418edc0b1e63188bbb2e85e">ReportError</a>(RegExpError::kInvalidGroup);</div>
 <div class="line"><a id="l01359" name="l01359"></a><span class="lineno"> 1359</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l01360" name="l01360"></a><span class="lineno"> 1360</span>          }</div>
@@ -1462,7 +1470,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01364" name="l01364"></a><span class="lineno"> 1364</span>        <span class="keywordflow">case</span> <span class="charliteral">&#39;&lt;&#39;</span>:</div>
 <div class="line"><a id="l01365" name="l01365"></a><span class="lineno"> 1365</span>          Advance();</div>
 <div class="line"><a id="l01366" name="l01366"></a><span class="lineno"> 1366</span>          <span class="keywordflow">if</span> (parsing_modifiers) {</div>
-<div class="line"><a id="l01367" name="l01367"></a><span class="lineno"> 1367</span>            <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.js_regexp_modifiers);</div>
+<div class="line"><a id="l01367" name="l01367"></a><span class="lineno"> 1367</span>            <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.js_regexp_modifiers);</div>
 <div class="line"><a id="l01368" name="l01368"></a><span class="lineno"> 1368</span>            <a class="code hl_function" href="namespacev8_1_1internal_1_1torque.html#a32f384957418edc0b1e63188bbb2e85e">ReportError</a>(RegExpError::kInvalidGroup);</div>
 <div class="line"><a id="l01369" name="l01369"></a><span class="lineno"> 1369</span>            <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l01370" name="l01370"></a><span class="lineno"> 1370</span>          }</div>
@@ -1524,7 +1532,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01426" name="l01426"></a><span class="lineno"> 1426</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> CharT&gt;</div>
 <div class="line"><a id="l01427" name="l01427"></a><span class="lineno"> 1427</span><span class="keywordtype">void</span> RegExpParserImpl&lt;CharT&gt;::ScanForCaptures(</div>
 <div class="line"><a id="l01428" name="l01428"></a><span class="lineno"> 1428</span>    InClassEscapeState in_class_escape_state) {</div>
-<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="regexp-parser_8cc.html#aef55e55a498c805d92144cd43e38633d">is_scanned_for_captures_</a>);</div>
+<div class="line"><a id="l01429" name="l01429"></a><span class="lineno"> 1429</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="regexp-parser_8cc.html#aef55e55a498c805d92144cd43e38633d">is_scanned_for_captures_</a>);</div>
 <div class="line"><a id="l01430" name="l01430"></a><span class="lineno"> 1430</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> saved_position = <a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a>();</div>
 <div class="line"><a id="l01431" name="l01431"></a><span class="lineno"> 1431</span>  <span class="comment">// Start with captures started previous to current position</span></div>
 <div class="line"><a id="l01432" name="l01432"></a><span class="lineno"> 1432</span>  <span class="keywordtype">int</span> capture_count = captures_started();</div>
@@ -1532,7 +1540,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01434" name="l01434"></a><span class="lineno"> 1434</span>  <span class="keywordflow">if</span> (in_class_escape_state == InClassEscapeState::kInClass) {</div>
 <div class="line"><a id="l01435" name="l01435"></a><span class="lineno"> 1435</span>    <span class="comment">// \k is always invalid within a class in unicode mode, thus we should never</span></div>
 <div class="line"><a id="l01436" name="l01436"></a><span class="lineno"> 1436</span>    <span class="comment">// call ScanForCaptures within a class.</span></div>
-<div class="line"><a id="l01437" name="l01437"></a><span class="lineno"> 1437</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!IsUnicodeMode());</div>
+<div class="line"><a id="l01437" name="l01437"></a><span class="lineno"> 1437</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!IsUnicodeMode());</div>
 <div class="line"><a id="l01438" name="l01438"></a><span class="lineno"> 1438</span>    <span class="keywordtype">int</span> c;</div>
 <div class="line"><a id="l01439" name="l01439"></a><span class="lineno"> 1439</span>    <span class="keywordflow">while</span> ((c = <a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>()) != <a class="code hl_variable" href="regexp-parser_8cc.html#af5b1808ad8015db10444c01a053d6c8d">kEndMarker</a>) {</div>
 <div class="line"><a id="l01440" name="l01440"></a><span class="lineno"> 1440</span>      Advance();</div>
@@ -1600,8 +1608,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01502" name="l01502"></a><span class="lineno"> 1502</span> </div>
 <div class="line"><a id="l01503" name="l01503"></a><span class="lineno"> 1503</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> CharT&gt;</div>
 <div class="line"><a id="l01504" name="l01504"></a><span class="lineno"> 1504</span><span class="keywordtype">bool</span> RegExpParserImpl&lt;CharT&gt;::ParseBackReferenceIndex(<span class="keywordtype">int</span>* index_out) {</div>
-<div class="line"><a id="l01505" name="l01505"></a><span class="lineno"> 1505</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<span class="charliteral">&#39;\\&#39;</span>, <a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>());</div>
-<div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<span class="charliteral">&#39;1&#39;</span> &lt;= Next() &amp;&amp; Next() &lt;= <span class="charliteral">&#39;9&#39;</span>);</div>
+<div class="line"><a id="l01505" name="l01505"></a><span class="lineno"> 1505</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<span class="charliteral">&#39;\\&#39;</span>, <a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>());</div>
+<div class="line"><a id="l01506" name="l01506"></a><span class="lineno"> 1506</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<span class="charliteral">&#39;1&#39;</span> &lt;= Next() &amp;&amp; Next() &lt;= <span class="charliteral">&#39;9&#39;</span>);</div>
 <div class="line"><a id="l01507" name="l01507"></a><span class="lineno"> 1507</span>  <span class="comment">// Try to parse a decimal literal that is no greater than the total number</span></div>
 <div class="line"><a id="l01508" name="l01508"></a><span class="lineno"> 1508</span>  <span class="comment">// of left capturing parentheses in the input.</span></div>
 <div class="line"><a id="l01509" name="l01509"></a><span class="lineno"> 1509</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a> = <a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a>();</div>
@@ -1724,11 +1732,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01626" name="l01626"></a><span class="lineno"> 1626</span>  <span class="keyword">const</span> ZoneVector&lt;base::uc16&gt;* name = state-&gt;capture_name();</div>
 <div class="line"><a id="l01627" name="l01627"></a><span class="lineno"> 1627</span>  <span class="keyword">const</span> std::pair&lt;int, int&gt; non_participating_capture_group_interval =</div>
 <div class="line"><a id="l01628" name="l01628"></a><span class="lineno"> 1628</span>      state-&gt;non_participating_capture_group_interval();</div>
-<div class="line"><a id="l01629" name="l01629"></a><span class="lineno"> 1629</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(0 &lt; <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> &amp;&amp; <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> &lt;= <a class="code hl_variable" href="regexp-parser_8cc.html#aeaaa942ff06e9bb78185d909bdff0cc4">captures_started_</a>);</div>
-<div class="line"><a id="l01630" name="l01630"></a><span class="lineno"> 1630</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(name);</div>
+<div class="line"><a id="l01629" name="l01629"></a><span class="lineno"> 1629</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(0 &lt; <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> &amp;&amp; <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> &lt;= <a class="code hl_variable" href="regexp-parser_8cc.html#aeaaa942ff06e9bb78185d909bdff0cc4">captures_started_</a>);</div>
+<div class="line"><a id="l01630" name="l01630"></a><span class="lineno"> 1630</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(name);</div>
 <div class="line"><a id="l01631" name="l01631"></a><span class="lineno"> 1631</span> </div>
 <div class="line"><a id="l01632" name="l01632"></a><span class="lineno"> 1632</span>  RegExpCapture* capture = GetCapture(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>);</div>
-<div class="line"><a id="l01633" name="l01633"></a><span class="lineno"> 1633</span>  <a class="code hl_define" href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(capture-&gt;name());</div>
+<div class="line"><a id="l01633" name="l01633"></a><span class="lineno"> 1633</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(capture-&gt;name());</div>
 <div class="line"><a id="l01634" name="l01634"></a><span class="lineno"> 1634</span> </div>
 <div class="line"><a id="l01635" name="l01635"></a><span class="lineno"> 1635</span>  capture-&gt;set_name(name);</div>
 <div class="line"><a id="l01636" name="l01636"></a><span class="lineno"> 1636</span> </div>
@@ -1741,8 +1749,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01643" name="l01643"></a><span class="lineno"> 1643</span>    <span class="keywordflow">if</span> (named_capture_it != <a class="code hl_variable" href="regexp-parser_8cc.html#a4952a3b02fa4cef43748785d4c1f981d">named_captures_</a>-&gt;end()) {</div>
 <div class="line"><a id="l01644" name="l01644"></a><span class="lineno"> 1644</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.js_regexp_duplicate_named_groups) {</div>
 <div class="line"><a id="l01645" name="l01645"></a><span class="lineno"> 1645</span>        ZoneList&lt;int&gt;* named_capture_indices = named_capture_it-&gt;second;</div>
-<div class="line"><a id="l01646" name="l01646"></a><span class="lineno"> 1646</span>        <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(named_capture_indices);</div>
-<div class="line"><a id="l01647" name="l01647"></a><span class="lineno"> 1647</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!named_capture_indices-&gt;is_empty());</div>
+<div class="line"><a id="l01646" name="l01646"></a><span class="lineno"> 1646</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(named_capture_indices);</div>
+<div class="line"><a id="l01647" name="l01647"></a><span class="lineno"> 1647</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!named_capture_indices-&gt;is_empty());</div>
 <div class="line"><a id="l01648" name="l01648"></a><span class="lineno"> 1648</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> named_index : *named_capture_indices) {</div>
 <div class="line"><a id="l01649" name="l01649"></a><span class="lineno"> 1649</span>          <span class="keywordflow">if</span> (named_index &lt; non_participating_capture_group_interval.first ||</div>
 <div class="line"><a id="l01650" name="l01650"></a><span class="lineno"> 1650</span>              named_index &gt; non_participating_capture_group_interval.second) {</div>
@@ -1816,7 +1824,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01718" name="l01718"></a><span class="lineno"> 1718</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal_1_1trap__handler.html#a3a4e1080db1d2e35955b53106d9b1f62">kInvalidIndex</a> = 0;</div>
 <div class="line"><a id="l01719" name="l01719"></a><span class="lineno"> 1719</span>    RegExpCapture* search_capture =</div>
 <div class="line"><a id="l01720" name="l01720"></a><span class="lineno"> 1720</span>        zone()-&gt;template New&lt;RegExpCapture&gt;(kInvalidIndex);</div>
-<div class="line"><a id="l01721" name="l01721"></a><span class="lineno"> 1721</span>    <a class="code hl_define" href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(search_capture-&gt;name());</div>
+<div class="line"><a id="l01721" name="l01721"></a><span class="lineno"> 1721</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(search_capture-&gt;name());</div>
 <div class="line"><a id="l01722" name="l01722"></a><span class="lineno"> 1722</span>    search_capture-&gt;set_name(ref-&gt;name());</div>
 <div class="line"><a id="l01723" name="l01723"></a><span class="lineno"> 1723</span> </div>
 <div class="line"><a id="l01724" name="l01724"></a><span class="lineno"> 1724</span>    <span class="keyword">const</span> <span class="keyword">auto</span>&amp; capture_it = <a class="code hl_variable" href="regexp-parser_8cc.html#a4952a3b02fa4cef43748785d4c1f981d">named_captures_</a>-&gt;find(search_capture);</div>
@@ -1825,7 +1833,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01727" name="l01727"></a><span class="lineno"> 1727</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l01728" name="l01728"></a><span class="lineno"> 1728</span>    }</div>
 <div class="line"><a id="l01729" name="l01729"></a><span class="lineno"> 1729</span> </div>
-<div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span>    <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.js_regexp_duplicate_named_groups,</div>
+<div class="line"><a id="l01730" name="l01730"></a><span class="lineno"> 1730</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.js_regexp_duplicate_named_groups,</div>
 <div class="line"><a id="l01731" name="l01731"></a><span class="lineno"> 1731</span>                   capture_it-&gt;second-&gt;length() == 1);</div>
 <div class="line"><a id="l01732" name="l01732"></a><span class="lineno"> 1732</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> : *capture_it-&gt;second) {</div>
 <div class="line"><a id="l01733" name="l01733"></a><span class="lineno"> 1733</span>      ref-&gt;add_capture(GetCapture(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>), zone());</div>
@@ -1839,7 +1847,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01741" name="l01741"></a><span class="lineno"> 1741</span>  <span class="comment">// zero-based.</span></div>
 <div class="line"><a id="l01742" name="l01742"></a><span class="lineno"> 1742</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> known_captures =</div>
 <div class="line"><a id="l01743" name="l01743"></a><span class="lineno"> 1743</span>      <a class="code hl_variable" href="regexp-parser_8cc.html#aef55e55a498c805d92144cd43e38633d">is_scanned_for_captures_</a> ? <a class="code hl_variable" href="regexp-parser_8cc.html#a2ed924bc3eb76f22a1b5b85104abfd96">capture_count_</a> : <a class="code hl_variable" href="regexp-parser_8cc.html#aeaaa942ff06e9bb78185d909bdff0cc4">captures_started_</a>;</div>
-<div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> &lt;= known_captures);</div>
+<div class="line"><a id="l01744" name="l01744"></a><span class="lineno"> 1744</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> &lt;= known_captures);</div>
 <div class="line"><a id="l01745" name="l01745"></a><span class="lineno"> 1745</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="regexp-parser_8cc.html#a8918b67c15b6a00e49b2659444edfa97">captures_</a> == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l01746" name="l01746"></a><span class="lineno"> 1746</span>    <a class="code hl_variable" href="regexp-parser_8cc.html#a8918b67c15b6a00e49b2659444edfa97">captures_</a> =</div>
 <div class="line"><a id="l01747" name="l01747"></a><span class="lineno"> 1747</span>        zone()-&gt;template New&lt;ZoneList&lt;RegExpCapture*&gt;&gt;(known_captures, zone());</div>
@@ -1856,12 +1864,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01758" name="l01758"></a><span class="lineno"> 1758</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="regexp-parser_8cc.html#a4952a3b02fa4cef43748785d4c1f981d">named_captures_</a> == <span class="keyword">nullptr</span>) {</div>
 <div class="line"><a id="l01759" name="l01759"></a><span class="lineno"> 1759</span>    <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l01760" name="l01760"></a><span class="lineno"> 1760</span>  }</div>
-<div class="line"><a id="l01761" name="l01761"></a><span class="lineno"> 1761</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="regexp-parser_8cc.html#a4952a3b02fa4cef43748785d4c1f981d">named_captures_</a>-&gt;empty());</div>
+<div class="line"><a id="l01761" name="l01761"></a><span class="lineno"> 1761</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="regexp-parser_8cc.html#a4952a3b02fa4cef43748785d4c1f981d">named_captures_</a>-&gt;empty());</div>
 <div class="line"><a id="l01762" name="l01762"></a><span class="lineno"> 1762</span> </div>
 <div class="line"><a id="l01763" name="l01763"></a><span class="lineno"> 1763</span>  ZoneVector&lt;RegExpCapture*&gt;* flattened_named_captures =</div>
 <div class="line"><a id="l01764" name="l01764"></a><span class="lineno"> 1764</span>      zone()-&gt;template New&lt;ZoneVector&lt;RegExpCapture*&gt;&gt;(zone());</div>
 <div class="line"><a id="l01765" name="l01765"></a><span class="lineno"> 1765</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> capture : *<a class="code hl_variable" href="regexp-parser_8cc.html#a4952a3b02fa4cef43748785d4c1f981d">named_captures_</a>) {</div>
-<div class="line"><a id="l01766" name="l01766"></a><span class="lineno"> 1766</span>    <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.js_regexp_duplicate_named_groups,</div>
+<div class="line"><a id="l01766" name="l01766"></a><span class="lineno"> 1766</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.js_regexp_duplicate_named_groups,</div>
 <div class="line"><a id="l01767" name="l01767"></a><span class="lineno"> 1767</span>                   capture.second-&gt;length() == 1);</div>
 <div class="line"><a id="l01768" name="l01768"></a><span class="lineno"> 1768</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> : *capture.second) {</div>
 <div class="line"><a id="l01769" name="l01769"></a><span class="lineno"> 1769</span>      flattened_named_captures-&gt;push_back(GetCapture(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>));</div>
@@ -1878,7 +1886,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01780" name="l01780"></a><span class="lineno"> 1780</span>  }</div>
 <div class="line"><a id="l01781" name="l01781"></a><span class="lineno"> 1781</span> </div>
 <div class="line"><a id="l01782" name="l01782"></a><span class="lineno"> 1782</span>  ScanForCaptures(in_class_escape_state);</div>
-<div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="regexp-parser_8cc.html#aef55e55a498c805d92144cd43e38633d">is_scanned_for_captures_</a>);</div>
+<div class="line"><a id="l01783" name="l01783"></a><span class="lineno"> 1783</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="regexp-parser_8cc.html#aef55e55a498c805d92144cd43e38633d">is_scanned_for_captures_</a>);</div>
 <div class="line"><a id="l01784" name="l01784"></a><span class="lineno"> 1784</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="regexp-parser_8cc.html#a49e0b742bd7d0564ed575385162a822a">has_named_captures_</a>;</div>
 <div class="line"><a id="l01785" name="l01785"></a><span class="lineno"> 1785</span>}</div>
 <div class="line"><a id="l01786" name="l01786"></a><span class="lineno"> 1786</span> </div>
@@ -1892,7 +1900,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01794" name="l01794"></a><span class="lineno"> 1794</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> CharT&gt;</div>
 <div class="line"><a id="l01795" name="l01795"></a><span class="lineno"> 1795</span><span class="keywordtype">bool</span> RegExpParserImpl&lt;CharT&gt;::ParseIntervalQuantifier(<span class="keywordtype">int</span>* min_out,</div>
 <div class="line"><a id="l01796" name="l01796"></a><span class="lineno"> 1796</span>                                                      <span class="keywordtype">int</span>* max_out) {</div>
-<div class="line"><a id="l01797" name="l01797"></a><span class="lineno"> 1797</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;{&#39;</span>);</div>
+<div class="line"><a id="l01797" name="l01797"></a><span class="lineno"> 1797</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;{&#39;</span>);</div>
 <div class="line"><a id="l01798" name="l01798"></a><span class="lineno"> 1798</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a> = <a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a>();</div>
 <div class="line"><a id="l01799" name="l01799"></a><span class="lineno"> 1799</span>  Advance();</div>
 <div class="line"><a id="l01800" name="l01800"></a><span class="lineno"> 1800</span>  <span class="keywordtype">int</span> min = 0;</div>
@@ -1952,7 +1960,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01854" name="l01854"></a><span class="lineno"> 1854</span> </div>
 <div class="line"><a id="l01855" name="l01855"></a><span class="lineno"> 1855</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> CharT&gt;</div>
 <div class="line"><a id="l01856" name="l01856"></a><span class="lineno"> 1856</span>base::uc32 RegExpParserImpl&lt;CharT&gt;::ParseOctalLiteral() {</div>
-<div class="line"><a id="l01857" name="l01857"></a><span class="lineno"> 1857</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>((<span class="charliteral">&#39;0&#39;</span> &lt;= <a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>() &amp;&amp; <a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>() &lt;= <span class="charliteral">&#39;7&#39;</span>) || !has_more());</div>
+<div class="line"><a id="l01857" name="l01857"></a><span class="lineno"> 1857</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>((<span class="charliteral">&#39;0&#39;</span> &lt;= <a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>() &amp;&amp; <a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>() &lt;= <span class="charliteral">&#39;7&#39;</span>) || !has_more());</div>
 <div class="line"><a id="l01858" name="l01858"></a><span class="lineno"> 1858</span>  <span class="comment">// For compatibility with some other browsers (not all), we parse</span></div>
 <div class="line"><a id="l01859" name="l01859"></a><span class="lineno"> 1859</span>  <span class="comment">// up to three octal digits with a value below 256.</span></div>
 <div class="line"><a id="l01860" name="l01860"></a><span class="lineno"> 1860</span>  <span class="comment">// ES#prod-annexB-LegacyOctalEscapeSequence</span></div>
@@ -2063,9 +2071,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01965" name="l01965"></a><span class="lineno"> 1965</span><span class="keywordtype">void</span> ExtractStringsFromUnicodeSet(<span class="keyword">const</span> icu::UnicodeSet&amp; set,</div>
 <div class="line"><a id="l01966" name="l01966"></a><span class="lineno"> 1966</span>                                  CharacterClassStrings* strings,</div>
 <div class="line"><a id="l01967" name="l01967"></a><span class="lineno"> 1967</span>                                  RegExpFlags <a class="code hl_function" href="flag-definitions_8h.html#af0832cf93cb1767d6e6e287bb7dcdf72">flags</a>, <a class="code hl_variable" href="asm-types_8cc.html#a3ec7489f692d014c845cc17e64456793">Zone</a>* zone) {</div>
-<div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(set.hasStrings());</div>
-<div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsUnicodeSets(<a class="code hl_function" href="flag-definitions_8h.html#af0832cf93cb1767d6e6e287bb7dcdf72">flags</a>));</div>
-<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(strings);</div>
+<div class="line"><a id="l01968" name="l01968"></a><span class="lineno"> 1968</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(set.hasStrings());</div>
+<div class="line"><a id="l01969" name="l01969"></a><span class="lineno"> 1969</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsUnicodeSets(<a class="code hl_function" href="flag-definitions_8h.html#af0832cf93cb1767d6e6e287bb7dcdf72">flags</a>));</div>
+<div class="line"><a id="l01970" name="l01970"></a><span class="lineno"> 1970</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(strings);</div>
 <div class="line"><a id="l01971" name="l01971"></a><span class="lineno"> 1971</span> </div>
 <div class="line"><a id="l01972" name="l01972"></a><span class="lineno"> 1972</span>  RegExpTextBuilder::SmallRegExpTreeVector string_storage(zone);</div>
 <div class="line"><a id="l01973" name="l01973"></a><span class="lineno"> 1973</span>  RegExpTextBuilder string_builder(zone, &amp;string_storage, <a class="code hl_function" href="flag-definitions_8h.html#af0832cf93cb1767d6e6e287bb7dcdf72">flags</a>);</div>
@@ -2271,8 +2279,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02173" name="l02173"></a><span class="lineno"> 2173</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> CharT&gt;</div>
 <div class="line"><a id="l02174" name="l02174"></a><span class="lineno"> 2174</span><span class="keywordtype">bool</span> RegExpParserImpl&lt;CharT&gt;::ParsePropertyClassName(ZoneVector&lt;char&gt;* name_1,</div>
 <div class="line"><a id="l02175" name="l02175"></a><span class="lineno"> 2175</span>                                                     ZoneVector&lt;char&gt;* name_2) {</div>
-<div class="line"><a id="l02176" name="l02176"></a><span class="lineno"> 2176</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(name_1-&gt;empty());</div>
-<div class="line"><a id="l02177" name="l02177"></a><span class="lineno"> 2177</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(name_2-&gt;empty());</div>
+<div class="line"><a id="l02176" name="l02176"></a><span class="lineno"> 2176</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(name_1-&gt;empty());</div>
+<div class="line"><a id="l02177" name="l02177"></a><span class="lineno"> 2177</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(name_2-&gt;empty());</div>
 <div class="line"><a id="l02178" name="l02178"></a><span class="lineno"> 2178</span>  <span class="comment">// Parse the property class as follows:</span></div>
 <div class="line"><a id="l02179" name="l02179"></a><span class="lineno"> 2179</span>  <span class="comment">// - In \p{name}, &#39;name&#39; is interpreted</span></div>
 <div class="line"><a id="l02180" name="l02180"></a><span class="lineno"> 2180</span>  <span class="comment">//   - either as a general category property value name.</span></div>
@@ -2302,8 +2310,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02204" name="l02204"></a><span class="lineno"> 2204</span>  Advance();</div>
 <div class="line"><a id="l02205" name="l02205"></a><span class="lineno"> 2205</span>  name_1-&gt;push_back(0);  <span class="comment">// null-terminate string.</span></div>
 <div class="line"><a id="l02206" name="l02206"></a><span class="lineno"> 2206</span> </div>
-<div class="line"><a id="l02207" name="l02207"></a><span class="lineno"> 2207</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(name_1-&gt;size() - 1 == std::strlen(name_1-&gt;data()));</div>
-<div class="line"><a id="l02208" name="l02208"></a><span class="lineno"> 2208</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(name_2-&gt;empty() || name_2-&gt;size() - 1 == std::strlen(name_2-&gt;data()));</div>
+<div class="line"><a id="l02207" name="l02207"></a><span class="lineno"> 2207</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(name_1-&gt;size() - 1 == std::strlen(name_1-&gt;data()));</div>
+<div class="line"><a id="l02208" name="l02208"></a><span class="lineno"> 2208</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(name_2-&gt;empty() || name_2-&gt;size() - 1 == std::strlen(name_2-&gt;data()));</div>
 <div class="line"><a id="l02209" name="l02209"></a><span class="lineno"> 2209</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l02210" name="l02210"></a><span class="lineno"> 2210</span>}</div>
 <div class="line"><a id="l02211" name="l02211"></a><span class="lineno"> 2211</span> </div>
@@ -2408,8 +2416,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02310" name="l02310"></a><span class="lineno"> 2310</span>base::uc32 RegExpParserImpl&lt;CharT&gt;::ParseCharacterEscape(</div>
 <div class="line"><a id="l02311" name="l02311"></a><span class="lineno"> 2311</span>    InClassEscapeState in_class_escape_state,</div>
 <div class="line"><a id="l02312" name="l02312"></a><span class="lineno"> 2312</span>    <span class="keywordtype">bool</span>* is_escaped_unicode_character) {</div>
-<div class="line"><a id="l02313" name="l02313"></a><span class="lineno"> 2313</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<span class="charliteral">&#39;\\&#39;</span>, <a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>());</div>
-<div class="line"><a id="l02314" name="l02314"></a><span class="lineno"> 2314</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(has_next());</div>
+<div class="line"><a id="l02313" name="l02313"></a><span class="lineno"> 2313</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<span class="charliteral">&#39;\\&#39;</span>, <a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>());</div>
+<div class="line"><a id="l02314" name="l02314"></a><span class="lineno"> 2314</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(has_next());</div>
 <div class="line"><a id="l02315" name="l02315"></a><span class="lineno"> 2315</span> </div>
 <div class="line"><a id="l02316" name="l02316"></a><span class="lineno"> 2316</span>  Advance();</div>
 <div class="line"><a id="l02317" name="l02317"></a><span class="lineno"> 2317</span> </div>
@@ -2553,7 +2561,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02455" name="l02455"></a><span class="lineno"> 2455</span>    Advance();</div>
 <div class="line"><a id="l02456" name="l02456"></a><span class="lineno"> 2456</span>    <span class="keywordflow">return</span> c;</div>
 <div class="line"><a id="l02457" name="l02457"></a><span class="lineno"> 2457</span>  }</div>
-<div class="line"><a id="l02458" name="l02458"></a><span class="lineno"> 2458</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!IsUnicodeMode());</div>
+<div class="line"><a id="l02458" name="l02458"></a><span class="lineno"> 2458</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!IsUnicodeMode());</div>
 <div class="line"><a id="l02459" name="l02459"></a><span class="lineno"> 2459</span>  <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;c&#39;</span>) {</div>
 <div class="line"><a id="l02460" name="l02460"></a><span class="lineno"> 2460</span>    <a class="code hl_function" href="namespacev8_1_1internal_1_1torque.html#a32f384957418edc0b1e63188bbb2e85e">ReportError</a>(RegExpError::kInvalidEscape);</div>
 <div class="line"><a id="l02461" name="l02461"></a><span class="lineno"> 2461</span>    <span class="keywordflow">return</span> 0;</div>
@@ -2666,8 +2674,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02568" name="l02568"></a><span class="lineno"> 2568</span>    base::uc32 next, InClassEscapeState in_class_escape_state,</div>
 <div class="line"><a id="l02569" name="l02569"></a><span class="lineno"> 2569</span>    ZoneList&lt;CharacterRange&gt;* ranges, CharacterClassStrings* strings,</div>
 <div class="line"><a id="l02570" name="l02570"></a><span class="lineno"> 2570</span>    <a class="code hl_variable" href="asm-types_8cc.html#a3ec7489f692d014c845cc17e64456793">Zone</a>* zone, <span class="keywordtype">bool</span> add_unicode_case_equivalents) {</div>
-<div class="line"><a id="l02571" name="l02571"></a><span class="lineno"> 2571</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;\\&#39;</span>);</div>
-<div class="line"><a id="l02572" name="l02572"></a><span class="lineno"> 2572</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(Next(), next);</div>
+<div class="line"><a id="l02571" name="l02571"></a><span class="lineno"> 2571</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;\\&#39;</span>);</div>
+<div class="line"><a id="l02572" name="l02572"></a><span class="lineno"> 2572</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(Next(), next);</div>
 <div class="line"><a id="l02573" name="l02573"></a><span class="lineno"> 2573</span> </div>
 <div class="line"><a id="l02574" name="l02574"></a><span class="lineno"> 2574</span>  <span class="keywordflow">switch</span> (next) {</div>
 <div class="line"><a id="l02575" name="l02575"></a><span class="lineno"> 2575</span>    <span class="keywordflow">case</span> <span class="charliteral">&#39;d&#39;</span>:</div>
@@ -2721,9 +2729,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02623" name="l02623"></a><span class="lineno"> 2623</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> CharT&gt;</div>
 <div class="line"><a id="l02624" name="l02624"></a><span class="lineno"> 2624</span>RegExpTree* RegExpParserImpl&lt;CharT&gt;::ParseClassStringDisjunction(</div>
 <div class="line"><a id="l02625" name="l02625"></a><span class="lineno"> 2625</span>    ZoneList&lt;CharacterRange&gt;* ranges, CharacterClassStrings* strings) {</div>
-<div class="line"><a id="l02626" name="l02626"></a><span class="lineno"> 2626</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
-<div class="line"><a id="l02627" name="l02627"></a><span class="lineno"> 2627</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;\\&#39;</span>);</div>
-<div class="line"><a id="l02628" name="l02628"></a><span class="lineno"> 2628</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(Next(), <span class="charliteral">&#39;q&#39;</span>);</div>
+<div class="line"><a id="l02626" name="l02626"></a><span class="lineno"> 2626</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
+<div class="line"><a id="l02627" name="l02627"></a><span class="lineno"> 2627</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;\\&#39;</span>);</div>
+<div class="line"><a id="l02628" name="l02628"></a><span class="lineno"> 2628</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(Next(), <span class="charliteral">&#39;q&#39;</span>);</div>
 <div class="line"><a id="l02629" name="l02629"></a><span class="lineno"> 2629</span>  Advance(2);</div>
 <div class="line"><a id="l02630" name="l02630"></a><span class="lineno"> 2630</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>() != <span class="charliteral">&#39;{&#39;</span>) {</div>
 <div class="line"><a id="l02631" name="l02631"></a><span class="lineno"> 2631</span>    <span class="comment">// Identity escape of &#39;q&#39; is not allowed in unicode mode.</span></div>
@@ -2781,20 +2789,20 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02683" name="l02683"></a><span class="lineno"> 2683</span>  base::uc32 <a class="code hl_variable" href="namespacev8_1_1internal.html#a588304928fa11501c65a287c6d404b0c">character</a>;</div>
 <div class="line"><a id="l02684" name="l02684"></a><span class="lineno"> 2684</span>  RegExpTree* tree = ParseClassSetOperand(builder, type_out, ranges, strings,</div>
 <div class="line"><a id="l02685" name="l02685"></a><span class="lineno"> 2685</span>                                          &amp;character <a class="code hl_define" href="regexp-parser_8cc.html#ad902ea0a444fd6dfb515d8f103c185cc">CHECK_FAILED</a>);</div>
-<div class="line"><a id="l02686" name="l02686"></a><span class="lineno"> 2686</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(*type_out != ClassSetOperandType::kNestedClass,</div>
+<div class="line"><a id="l02686" name="l02686"></a><span class="lineno"> 2686</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(*type_out != ClassSetOperandType::kNestedClass,</div>
 <div class="line"><a id="l02687" name="l02687"></a><span class="lineno"> 2687</span>                 tree == <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l02688" name="l02688"></a><span class="lineno"> 2688</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(*type_out == ClassSetOperandType::kClassSetCharacter,</div>
+<div class="line"><a id="l02688" name="l02688"></a><span class="lineno"> 2688</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(*type_out == ClassSetOperandType::kClassSetCharacter,</div>
 <div class="line"><a id="l02689" name="l02689"></a><span class="lineno"> 2689</span>                 ranges-&gt;is_empty());</div>
-<div class="line"><a id="l02690" name="l02690"></a><span class="lineno"> 2690</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(*type_out == ClassSetOperandType::kClassSetCharacter,</div>
+<div class="line"><a id="l02690" name="l02690"></a><span class="lineno"> 2690</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(*type_out == ClassSetOperandType::kClassSetCharacter,</div>
 <div class="line"><a id="l02691" name="l02691"></a><span class="lineno"> 2691</span>                 strings-&gt;empty());</div>
-<div class="line"><a id="l02692" name="l02692"></a><span class="lineno"> 2692</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(*type_out == ClassSetOperandType::kNestedClass,</div>
+<div class="line"><a id="l02692" name="l02692"></a><span class="lineno"> 2692</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(*type_out == ClassSetOperandType::kNestedClass,</div>
 <div class="line"><a id="l02693" name="l02693"></a><span class="lineno"> 2693</span>                 ranges-&gt;is_empty());</div>
-<div class="line"><a id="l02694" name="l02694"></a><span class="lineno"> 2694</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(*type_out == ClassSetOperandType::kNestedClass,</div>
+<div class="line"><a id="l02694" name="l02694"></a><span class="lineno"> 2694</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(*type_out == ClassSetOperandType::kNestedClass,</div>
 <div class="line"><a id="l02695" name="l02695"></a><span class="lineno"> 2695</span>                 strings-&gt;empty());</div>
-<div class="line"><a id="l02696" name="l02696"></a><span class="lineno"> 2696</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(*type_out == ClassSetOperandType::kNestedClass,</div>
+<div class="line"><a id="l02696" name="l02696"></a><span class="lineno"> 2696</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(*type_out == ClassSetOperandType::kNestedClass,</div>
 <div class="line"><a id="l02697" name="l02697"></a><span class="lineno"> 2697</span>                 tree-&gt;IsClassSetExpression());</div>
 <div class="line"><a id="l02698" name="l02698"></a><span class="lineno"> 2698</span>  <span class="comment">// ClassSetRange is only used within ClassSetUnion().</span></div>
-<div class="line"><a id="l02699" name="l02699"></a><span class="lineno"> 2699</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(*type_out, ClassSetOperandType::kClassSetRange);</div>
+<div class="line"><a id="l02699" name="l02699"></a><span class="lineno"> 2699</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(*type_out, ClassSetOperandType::kClassSetRange);</div>
 <div class="line"><a id="l02700" name="l02700"></a><span class="lineno"> 2700</span>  <span class="comment">// There are no restrictions for kCharacterClassEscape.</span></div>
 <div class="line"><a id="l02701" name="l02701"></a><span class="lineno"> 2701</span>  <span class="comment">// CharacterClassEscape includes \p{}, which can contain ranges, strings or</span></div>
 <div class="line"><a id="l02702" name="l02702"></a><span class="lineno"> 2702</span>  <span class="comment">// both and \P{}, which could contain nothing (i.e. \P{Any}).</span></div>
@@ -2820,7 +2828,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02722" name="l02722"></a><span class="lineno"> 2722</span>    <span class="keyword">const</span> RegExpBuilder* builder, ClassSetOperandType* type_out,</div>
 <div class="line"><a id="l02723" name="l02723"></a><span class="lineno"> 2723</span>    ZoneList&lt;CharacterRange&gt;* ranges, CharacterClassStrings* strings,</div>
 <div class="line"><a id="l02724" name="l02724"></a><span class="lineno"> 2724</span>    base::uc32* character) {</div>
-<div class="line"><a id="l02725" name="l02725"></a><span class="lineno"> 2725</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
+<div class="line"><a id="l02725" name="l02725"></a><span class="lineno"> 2725</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
 <div class="line"><a id="l02726" name="l02726"></a><span class="lineno"> 2726</span>  base::uc32 c = <a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>();</div>
 <div class="line"><a id="l02727" name="l02727"></a><span class="lineno"> 2727</span>  <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;\\&#39;</span>) {</div>
 <div class="line"><a id="l02728" name="l02728"></a><span class="lineno"> 2728</span>    <span class="keyword">const</span> base::uc32 next = Next();</div>
@@ -2852,7 +2860,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02754" name="l02754"></a><span class="lineno"> 2754</span> </div>
 <div class="line"><a id="l02755" name="l02755"></a><span class="lineno"> 2755</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> CharT&gt;</div>
 <div class="line"><a id="l02756" name="l02756"></a><span class="lineno"> 2756</span>base::uc32 RegExpParserImpl&lt;CharT&gt;::ParseClassSetCharacter() {</div>
-<div class="line"><a id="l02757" name="l02757"></a><span class="lineno"> 2757</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
+<div class="line"><a id="l02757" name="l02757"></a><span class="lineno"> 2757</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
 <div class="line"><a id="l02758" name="l02758"></a><span class="lineno"> 2758</span>  <span class="keyword">const</span> base::uc32 c = <a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>();</div>
 <div class="line"><a id="l02759" name="l02759"></a><span class="lineno"> 2759</span>  <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;\\&#39;</span>) {</div>
 <div class="line"><a id="l02760" name="l02760"></a><span class="lineno"> 2760</span>    <span class="keyword">const</span> base::uc32 next = Next();</div>
@@ -2903,7 +2911,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02805" name="l02805"></a><span class="lineno"> 2805</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> CharT&gt;</div>
 <div class="line"><a id="l02806" name="l02806"></a><span class="lineno"> 2806</span><span class="keywordtype">void</span> RegExpParserImpl&lt;CharT&gt;::AddMaybeSimpleCaseFoldedRange(</div>
 <div class="line"><a id="l02807" name="l02807"></a><span class="lineno"> 2807</span>    ZoneList&lt;CharacterRange&gt;* ranges, CharacterRange new_range) {</div>
-<div class="line"><a id="l02808" name="l02808"></a><span class="lineno"> 2808</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
+<div class="line"><a id="l02808" name="l02808"></a><span class="lineno"> 2808</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
 <div class="line"><a id="l02809" name="l02809"></a><span class="lineno"> 2809</span>  <span class="keywordflow">if</span> (ignore_case()) {</div>
 <div class="line"><a id="l02810" name="l02810"></a><span class="lineno"> 2810</span>    ZoneList&lt;CharacterRange&gt;* new_ranges =</div>
 <div class="line"><a id="l02811" name="l02811"></a><span class="lineno"> 2811</span>        zone()-&gt;template New&lt;ZoneList&lt;CharacterRange&gt;&gt;(2, zone());</div>
@@ -2922,7 +2930,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02824" name="l02824"></a><span class="lineno"> 2824</span>    <span class="keyword">const</span> RegExpBuilder* builder, <span class="keywordtype">bool</span> is_negated, RegExpTree* first_operand,</div>
 <div class="line"><a id="l02825" name="l02825"></a><span class="lineno"> 2825</span>    ClassSetOperandType first_operand_type, ZoneList&lt;CharacterRange&gt;* ranges,</div>
 <div class="line"><a id="l02826" name="l02826"></a><span class="lineno"> 2826</span>    CharacterClassStrings* strings, base::uc32 character) {</div>
-<div class="line"><a id="l02827" name="l02827"></a><span class="lineno"> 2827</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
+<div class="line"><a id="l02827" name="l02827"></a><span class="lineno"> 2827</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
 <div class="line"><a id="l02828" name="l02828"></a><span class="lineno"> 2828</span>  ZoneList&lt;RegExpTree*&gt;* operands =</div>
 <div class="line"><a id="l02829" name="l02829"></a><span class="lineno"> 2829</span>      zone()-&gt;template New&lt;ZoneList&lt;RegExpTree*&gt;&gt;(2, zone());</div>
 <div class="line"><a id="l02830" name="l02830"></a><span class="lineno"> 2830</span>  <span class="keywordtype">bool</span> may_contain_strings = <span class="keyword">false</span>;</div>
@@ -2969,7 +2977,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02871" name="l02871"></a><span class="lineno"> 2871</span>                                    CharacterRange::Range(from, character));</div>
 <div class="line"><a id="l02872" name="l02872"></a><span class="lineno"> 2872</span>      last_type = ClassSetOperandType::kClassSetRange;</div>
 <div class="line"><a id="l02873" name="l02873"></a><span class="lineno"> 2873</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l02874" name="l02874"></a><span class="lineno"> 2874</span>      <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><a id="l02874" name="l02874"></a><span class="lineno"> 2874</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;-&#39;</span>);</div>
 <div class="line"><a id="l02875" name="l02875"></a><span class="lineno"> 2875</span>      <span class="keywordflow">if</span> (last_type == ClassSetOperandType::kClassSetCharacter) {</div>
 <div class="line"><a id="l02876" name="l02876"></a><span class="lineno"> 2876</span>        AddMaybeSimpleCaseFoldedRange(ranges,</div>
 <div class="line"><a id="l02877" name="l02877"></a><span class="lineno"> 2877</span>                                      CharacterRange::Singleton(character));</div>
@@ -3008,7 +3016,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02910" name="l02910"></a><span class="lineno"> 2910</span>                  zone());</div>
 <div class="line"><a id="l02911" name="l02911"></a><span class="lineno"> 2911</span>  }</div>
 <div class="line"><a id="l02912" name="l02912"></a><span class="lineno"> 2912</span> </div>
-<div class="line"><a id="l02913" name="l02913"></a><span class="lineno"> 2913</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;]&#39;</span>);</div>
+<div class="line"><a id="l02913" name="l02913"></a><span class="lineno"> 2913</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;]&#39;</span>);</div>
 <div class="line"><a id="l02914" name="l02914"></a><span class="lineno"> 2914</span>  Advance();</div>
 <div class="line"><a id="l02915" name="l02915"></a><span class="lineno"> 2915</span> </div>
 <div class="line"><a id="l02916" name="l02916"></a><span class="lineno"> 2916</span>  <span class="keywordflow">if</span> (is_negated &amp;&amp; may_contain_strings) {</div>
@@ -3018,8 +3026,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02920" name="l02920"></a><span class="lineno"> 2920</span>  <span class="keywordflow">if</span> (operands-&gt;is_empty()) {</div>
 <div class="line"><a id="l02921" name="l02921"></a><span class="lineno"> 2921</span>    <span class="comment">// Return empty expression if no operands were added (e.g. [\P{Any}]</span></div>
 <div class="line"><a id="l02922" name="l02922"></a><span class="lineno"> 2922</span>    <span class="comment">// produces an empty range).</span></div>
-<div class="line"><a id="l02923" name="l02923"></a><span class="lineno"> 2923</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(ranges-&gt;is_empty());</div>
-<div class="line"><a id="l02924" name="l02924"></a><span class="lineno"> 2924</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(strings-&gt;empty());</div>
+<div class="line"><a id="l02923" name="l02923"></a><span class="lineno"> 2923</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(ranges-&gt;is_empty());</div>
+<div class="line"><a id="l02924" name="l02924"></a><span class="lineno"> 2924</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(strings-&gt;empty());</div>
 <div class="line"><a id="l02925" name="l02925"></a><span class="lineno"> 2925</span>    <span class="keywordflow">return</span> RegExpClassSetExpression::Empty(zone(), is_negated);</div>
 <div class="line"><a id="l02926" name="l02926"></a><span class="lineno"> 2926</span>  }</div>
 <div class="line"><a id="l02927" name="l02927"></a><span class="lineno"> 2927</span> </div>
@@ -3033,8 +3041,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02935" name="l02935"></a><span class="lineno"> 2935</span>RegExpTree* RegExpParserImpl&lt;CharT&gt;::ParseClassIntersection(</div>
 <div class="line"><a id="l02936" name="l02936"></a><span class="lineno"> 2936</span>    <span class="keyword">const</span> RegExpBuilder* builder, <span class="keywordtype">bool</span> is_negated, RegExpTree* first_operand,</div>
 <div class="line"><a id="l02937" name="l02937"></a><span class="lineno"> 2937</span>    ClassSetOperandType first_operand_type) {</div>
-<div class="line"><a id="l02938" name="l02938"></a><span class="lineno"> 2938</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
-<div class="line"><a id="l02939" name="l02939"></a><span class="lineno"> 2939</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>() == <span class="charliteral">&#39;&amp;&#39;</span> &amp;&amp; Next() == <span class="charliteral">&#39;&amp;&#39;</span>);</div>
+<div class="line"><a id="l02938" name="l02938"></a><span class="lineno"> 2938</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
+<div class="line"><a id="l02939" name="l02939"></a><span class="lineno"> 2939</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>() == <span class="charliteral">&#39;&amp;&#39;</span> &amp;&amp; Next() == <span class="charliteral">&#39;&amp;&#39;</span>);</div>
 <div class="line"><a id="l02940" name="l02940"></a><span class="lineno"> 2940</span>  <span class="keywordtype">bool</span> may_contain_strings =</div>
 <div class="line"><a id="l02941" name="l02941"></a><span class="lineno"> 2941</span>      MayContainStrings(first_operand_type, first_operand);</div>
 <div class="line"><a id="l02942" name="l02942"></a><span class="lineno"> 2942</span>  ZoneList&lt;RegExpTree*&gt;* operands =</div>
@@ -3062,7 +3070,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02964" name="l02964"></a><span class="lineno"> 2964</span>  <span class="keywordflow">if</span> (is_negated &amp;&amp; may_contain_strings) {</div>
 <div class="line"><a id="l02965" name="l02965"></a><span class="lineno"> 2965</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal_1_1torque.html#a32f384957418edc0b1e63188bbb2e85e">ReportError</a>(RegExpError::kNegatedCharacterClassWithStrings);</div>
 <div class="line"><a id="l02966" name="l02966"></a><span class="lineno"> 2966</span>  }</div>
-<div class="line"><a id="l02967" name="l02967"></a><span class="lineno"> 2967</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;]&#39;</span>);</div>
+<div class="line"><a id="l02967" name="l02967"></a><span class="lineno"> 2967</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;]&#39;</span>);</div>
 <div class="line"><a id="l02968" name="l02968"></a><span class="lineno"> 2968</span>  Advance();</div>
 <div class="line"><a id="l02969" name="l02969"></a><span class="lineno"> 2969</span>  <span class="keywordflow">return</span> zone()-&gt;template New&lt;RegExpClassSetExpression&gt;(</div>
 <div class="line"><a id="l02970" name="l02970"></a><span class="lineno"> 2970</span>      RegExpClassSetExpression::OperationType::kIntersection, is_negated,</div>
@@ -3074,8 +3082,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02976" name="l02976"></a><span class="lineno"> 2976</span>RegExpTree* RegExpParserImpl&lt;CharT&gt;::ParseClassSubtraction(</div>
 <div class="line"><a id="l02977" name="l02977"></a><span class="lineno"> 2977</span>    <span class="keyword">const</span> RegExpBuilder* builder, <span class="keywordtype">bool</span> is_negated, RegExpTree* first_operand,</div>
 <div class="line"><a id="l02978" name="l02978"></a><span class="lineno"> 2978</span>    ClassSetOperandType first_operand_type) {</div>
-<div class="line"><a id="l02979" name="l02979"></a><span class="lineno"> 2979</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
-<div class="line"><a id="l02980" name="l02980"></a><span class="lineno"> 2980</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>() == <span class="charliteral">&#39;-&#39;</span> &amp;&amp; Next() == <span class="charliteral">&#39;-&#39;</span>);</div>
+<div class="line"><a id="l02979" name="l02979"></a><span class="lineno"> 2979</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(unicode_sets());</div>
+<div class="line"><a id="l02980" name="l02980"></a><span class="lineno"> 2980</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>() == <span class="charliteral">&#39;-&#39;</span> &amp;&amp; Next() == <span class="charliteral">&#39;-&#39;</span>);</div>
 <div class="line"><a id="l02981" name="l02981"></a><span class="lineno"> 2981</span>  <span class="keyword">const</span> <span class="keywordtype">bool</span> may_contain_strings =</div>
 <div class="line"><a id="l02982" name="l02982"></a><span class="lineno"> 2982</span>      MayContainStrings(first_operand_type, first_operand);</div>
 <div class="line"><a id="l02983" name="l02983"></a><span class="lineno"> 2983</span>  <span class="keywordflow">if</span> (is_negated &amp;&amp; may_contain_strings) {</div>
@@ -3096,7 +3104,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l02998" name="l02998"></a><span class="lineno"> 2998</span>  <span class="keywordflow">if</span> (!has_more()) {</div>
 <div class="line"><a id="l02999" name="l02999"></a><span class="lineno"> 2999</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal_1_1torque.html#a32f384957418edc0b1e63188bbb2e85e">ReportError</a>(RegExpError::kUnterminatedCharacterClass);</div>
 <div class="line"><a id="l03000" name="l03000"></a><span class="lineno"> 3000</span>  }</div>
-<div class="line"><a id="l03001" name="l03001"></a><span class="lineno"> 3001</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;]&#39;</span>);</div>
+<div class="line"><a id="l03001" name="l03001"></a><span class="lineno"> 3001</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;]&#39;</span>);</div>
 <div class="line"><a id="l03002" name="l03002"></a><span class="lineno"> 3002</span>  Advance();</div>
 <div class="line"><a id="l03003" name="l03003"></a><span class="lineno"> 3003</span>  <span class="keywordflow">return</span> zone()-&gt;template New&lt;RegExpClassSetExpression&gt;(</div>
 <div class="line"><a id="l03004" name="l03004"></a><span class="lineno"> 3004</span>      RegExpClassSetExpression::OperationType::kSubtraction, is_negated,</div>
@@ -3107,7 +3115,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03009" name="l03009"></a><span class="lineno"> 3009</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> CharT&gt;</div>
 <div class="line"><a id="l03010" name="l03010"></a><span class="lineno"> 3010</span>RegExpTree* RegExpParserImpl&lt;CharT&gt;::ParseCharacterClass(</div>
 <div class="line"><a id="l03011" name="l03011"></a><span class="lineno"> 3011</span>    <span class="keyword">const</span> RegExpBuilder* builder) {</div>
-<div class="line"><a id="l03012" name="l03012"></a><span class="lineno"> 3012</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;[&#39;</span>);</div>
+<div class="line"><a id="l03012" name="l03012"></a><span class="lineno"> 3012</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;[&#39;</span>);</div>
 <div class="line"><a id="l03013" name="l03013"></a><span class="lineno"> 3013</span>  Advance();</div>
 <div class="line"><a id="l03014" name="l03014"></a><span class="lineno"> 3014</span>  <span class="keywordtype">bool</span> is_negated = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l03015" name="l03015"></a><span class="lineno"> 3015</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>() == <span class="charliteral">&#39;^&#39;</span>) {</div>
@@ -3134,7 +3142,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03036" name="l03036"></a><span class="lineno"> 3036</span>    <span class="keywordflow">if</span> (!has_more()) {</div>
 <div class="line"><a id="l03037" name="l03037"></a><span class="lineno"> 3037</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal_1_1torque.html#a32f384957418edc0b1e63188bbb2e85e">ReportError</a>(RegExpError::kUnterminatedCharacterClass);</div>
 <div class="line"><a id="l03038" name="l03038"></a><span class="lineno"> 3038</span>    }</div>
-<div class="line"><a id="l03039" name="l03039"></a><span class="lineno"> 3039</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;]&#39;</span>);</div>
+<div class="line"><a id="l03039" name="l03039"></a><span class="lineno"> 3039</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="earley-parser_8cc.html#a69620d3d0bf3441e9802e4853271cad4">current</a>(), <span class="charliteral">&#39;]&#39;</span>);</div>
 <div class="line"><a id="l03040" name="l03040"></a><span class="lineno"> 3040</span>    Advance();</div>
 <div class="line"><a id="l03041" name="l03041"></a><span class="lineno"> 3041</span>    RegExpClassRanges::ClassRangesFlags character_class_flags;</div>
 <div class="line"><a id="l03042" name="l03042"></a><span class="lineno"> 3042</span>    <span class="keywordflow">if</span> (is_negated) character_class_flags = RegExpClassRanges::NEGATED;</div>
@@ -3186,19 +3194,19 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03088" name="l03088"></a><span class="lineno"> 3088</span> </div>
 <div class="line"><a id="l03089" name="l03089"></a><span class="lineno"> 3089</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> CharT&gt;</div>
 <div class="line"><a id="l03090" name="l03090"></a><span class="lineno"> 3090</span><span class="keywordtype">bool</span> RegExpParserImpl&lt;CharT&gt;::Parse(RegExpCompileData* <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>) {</div>
-<div class="line"><a id="l03091" name="l03091"></a><span class="lineno"> 3091</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
+<div class="line"><a id="l03091" name="l03091"></a><span class="lineno"> 3091</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>);</div>
 <div class="line"><a id="l03092" name="l03092"></a><span class="lineno"> 3092</span>  RegExpTree* tree = ParsePattern();</div>
 <div class="line"><a id="l03093" name="l03093"></a><span class="lineno"> 3093</span> </div>
 <div class="line"><a id="l03094" name="l03094"></a><span class="lineno"> 3094</span>  <span class="keywordflow">if</span> (failed()) {</div>
-<div class="line"><a id="l03095" name="l03095"></a><span class="lineno"> 3095</span>    <a class="code hl_define" href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(tree);</div>
-<div class="line"><a id="l03096" name="l03096"></a><span class="lineno"> 3096</span>    <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_variable" href="regexp-parser_8cc.html#a2e88b5c2a2e98a96967b79adaa6991a0">error_</a>, RegExpError::kNone);</div>
+<div class="line"><a id="l03095" name="l03095"></a><span class="lineno"> 3095</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(tree);</div>
+<div class="line"><a id="l03096" name="l03096"></a><span class="lineno"> 3096</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_variable" href="regexp-parser_8cc.html#a2e88b5c2a2e98a96967b79adaa6991a0">error_</a>, RegExpError::kNone);</div>
 <div class="line"><a id="l03097" name="l03097"></a><span class="lineno"> 3097</span>    <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>-&gt;error = <a class="code hl_variable" href="regexp-parser_8cc.html#a2e88b5c2a2e98a96967b79adaa6991a0">error_</a>;</div>
 <div class="line"><a id="l03098" name="l03098"></a><span class="lineno"> 3098</span>    <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>-&gt;error_pos = <a class="code hl_variable" href="regexp-parser_8cc.html#a15b406aba19b296a3de584c990b53d2f">error_pos_</a>;</div>
 <div class="line"><a id="l03099" name="l03099"></a><span class="lineno"> 3099</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l03100" name="l03100"></a><span class="lineno"> 3100</span>  }</div>
 <div class="line"><a id="l03101" name="l03101"></a><span class="lineno"> 3101</span> </div>
-<div class="line"><a id="l03102" name="l03102"></a><span class="lineno"> 3102</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(tree);</div>
-<div class="line"><a id="l03103" name="l03103"></a><span class="lineno"> 3103</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="regexp-parser_8cc.html#a2e88b5c2a2e98a96967b79adaa6991a0">error_</a>, RegExpError::kNone);</div>
+<div class="line"><a id="l03102" name="l03102"></a><span class="lineno"> 3102</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(tree);</div>
+<div class="line"><a id="l03103" name="l03103"></a><span class="lineno"> 3103</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="regexp-parser_8cc.html#a2e88b5c2a2e98a96967b79adaa6991a0">error_</a>, RegExpError::kNone);</div>
 <div class="line"><a id="l03104" name="l03104"></a><span class="lineno"> 3104</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.trace_regexp_parser) {</div>
 <div class="line"><a id="l03105" name="l03105"></a><span class="lineno"> 3105</span>    StdoutStream os;</div>
 <div class="line"><a id="l03106" name="l03106"></a><span class="lineno"> 3106</span>    tree-&gt;Print(os, zone());</div>
@@ -3256,7 +3264,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03158" name="l03158"></a><span class="lineno"> 3158</span>}</div>
 <div class="line"><a id="l03159" name="l03159"></a><span class="lineno"> 3159</span> </div>
 <div class="line"><a id="l03160" name="l03160"></a><span class="lineno"> 3160</span><span class="keywordtype">void</span> RegExpBuilder::AddTerm(RegExpTree* term) {</div>
-<div class="line"><a id="l03161" name="l03161"></a><span class="lineno"> 3161</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!term-&gt;IsEmpty());</div>
+<div class="line"><a id="l03161" name="l03161"></a><span class="lineno"> 3161</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!term-&gt;IsEmpty());</div>
 <div class="line"><a id="l03162" name="l03162"></a><span class="lineno"> 3162</span>  <a class="code hl_variable" href="regexp-parser_8cc.html#a91200d83cf370c1b00058a58333c5b03">pending_empty_</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l03163" name="l03163"></a><span class="lineno"> 3163</span>  <span class="keywordflow">if</span> (term-&gt;IsTextElement()) {</div>
 <div class="line"><a id="l03164" name="l03164"></a><span class="lineno"> 3164</span>    text_builder().AddTerm(term);</div>
@@ -3331,7 +3339,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l03233" name="l03233"></a><span class="lineno"> 3233</span>    }</div>
 <div class="line"><a id="l03234" name="l03234"></a><span class="lineno"> 3234</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l03235" name="l03235"></a><span class="lineno"> 3235</span>    <span class="comment">// Only call immediately after adding an atom or character!</span></div>
-<div class="line"><a id="l03236" name="l03236"></a><span class="lineno"> 3236</span>    <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l03236" name="l03236"></a><span class="lineno"> 3236</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l03237" name="l03237"></a><span class="lineno"> 3237</span>  }</div>
 <div class="line"><a id="l03238" name="l03238"></a><span class="lineno"> 3238</span>  <a class="code hl_variable" href="regexp-parser_8cc.html#aca355bef0e88f5f73fa42e2975a6017f">terms_</a>.emplace_back(</div>
 <div class="line"><a id="l03239" name="l03239"></a><span class="lineno"> 3239</span>      zone()-&gt;New&lt;RegExpQuantifier&gt;(min, max, quantifier_type, <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>, atom));</div>
@@ -3448,15 +3456,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aliveedit-diff_8cc_html_a6150e0515f7202e2fb518f7206ed97dc"><div class="ttname"><a href="liveedit-diff_8cc.html#a6150e0515f7202e2fb518f7206ed97dc">x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition</b> <a href="liveedit-diff_8cc_source.html#l00060">liveedit-diff.cc:60</a></div></div>
 <div class="ttc" id="aliveedit_8cc_html_a1f97b45a31f6a35546d48f4f1ad531ac"><div class="ttname"><a href="liveedit_8cc.html#a1f97b45a31f6a35546d48f4f1ad531ac">literal</a></div><div class="ttdeci">FunctionLiteral * literal</div><div class="ttdef"><b>Definition</b> <a href="liveedit_8cc_source.html#l00294">liveedit.cc:294</a></div></div>
 <div class="ttc" id="aliveedit_8cc_html_a401e942526aac47cef94f478182486e7"><div class="ttname"><a href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a></div><div class="ttdeci">int position</div><div class="ttdef"><b>Definition</b> <a href="liveedit_8cc_source.html#l00290">liveedit.cc:290</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00067">logging.h:67</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00047">logging.h:47</a></div></div>
-<div class="ttc" id="alogging_8h_html_a2209830df6b59d1ec1fdf66b9352924f"><div class="ttname"><a href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a></div><div class="ttdeci">#define DCHECK_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00491">logging.h:491</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
-<div class="ttc" id="alogging_8h_html_a96a75539aa82216cdde2250a11126ea0"><div class="ttname"><a href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a></div><div class="ttdeci">#define DCHECK_IMPLIES(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00493">logging.h:493</a></div></div>
-<div class="ttc" id="alogging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00486">logging.h:486</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="amul-fft_8cc_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="mul-fft_8cc.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition</b> <a href="mul-fft_8cc_source.html#l00296">mul-fft.cc:296</a></div></div>
 <div class="ttc" id="anamespaceunibrow_html_a67de744730c9fed24aa185ab5747772c"><div class="ttname"><a href="namespaceunibrow.html#a67de744730c9fed24aa185ab5747772c">unibrow::int32_t</a></div><div class="ttdeci">int int32_t</div><div class="ttdef"><b>Definition</b> <a href="unicode_8cc_source.html#l00040">unicode.cc:40</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a57f73be761c205242d27bc2062756c33"><div class="ttname"><a href="namespacev8_1_1base.html#a57f73be761c205242d27bc2062756c33">v8::base::uc32</a></div><div class="ttdeci">uint32_t uc32</div><div class="ttdef"><b>Definition</b> <a href="strings_8h_source.html#l00019">strings.h:19</a></div></div>
@@ -3534,6 +3533,15 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aregexp-parser_8cc_html_af5da64e3b5ecaae98db05646bac6bc73"><div class="ttname"><a href="regexp-parser_8cc.html#af5da64e3b5ecaae98db05646bac6bc73">lookaround_count_</a></div><div class="ttdeci">int lookaround_count_</div><div class="ttdef"><b>Definition</b> <a href="#l00649">regexp-parser.cc:649</a></div></div>
 <div class="ttc" id="aregexp-parser_8h_html"><div class="ttname"><a href="regexp-parser_8h.html">regexp-parser.h</a></div></div>
 <div class="ttc" id="aregexp_8h_html"><div class="ttname"><a href="regexp_8h.html">regexp.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00067">logging.h:67</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00047">logging.h:47</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a2209830df6b59d1ec1fdf66b9352924f"><div class="ttname"><a href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a></div><div class="ttdeci">#define DCHECK_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00491">logging.h:491</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00492">logging.h:492</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a96a75539aa82216cdde2250a11126ea0"><div class="ttname"><a href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a></div><div class="ttdeci">#define DCHECK_IMPLIES(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00493">logging.h:493</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00486">logging.h:486</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="astring-inl_8h_html"><div class="ttname"><a href="string-inl_8h.html">string-inl.h</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1RegExpCompileData_html"><div class="ttname"><a href="structv8_1_1internal_1_1RegExpCompileData.html">v8::internal::RegExpCompileData</a></div><div class="ttdef"><b>Definition</b> <a href="regexp_8h_source.html#l00031">regexp.h:31</a></div></div>
 <div class="ttc" id="autils_2utils_8h_html"><div class="ttname"><a href="utils_2utils_8h.html">utils.h</a></div></div>
@@ -3541,10 +3549,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="azone-allocator_8h_html"><div class="ttname"><a href="zone-allocator_8h.html">zone-allocator.h</a></div></div>
 <div class="ttc" id="azone-list-inl_8h_html"><div class="ttname"><a href="zone-list-inl_8h.html">zone-list-inl.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:52 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1729a598fafe31601528e57784d200c0.html">regexp</a></li><li class="navelem"><a class="el" href="regexp-parser_8cc.html">regexp-parser.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:05 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

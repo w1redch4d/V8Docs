@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/objects/dictionary.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/objects/dictionary.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('dictionary_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">dictionary.h</div></div>
 </div><!--header-->
@@ -165,12 +173,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <span class="comment">// Delete a property from the dictionary.</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">typename</span> HandleType&gt;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">requires</span>(std::is_convertible_v&lt;HandleType&lt;Derived&gt;, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Derived&gt;</a>&gt;)</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  V8_WARN_UNUSED_RESULT <span class="keyword">static</span> HandleType&lt;Derived&gt; DeleteEntry(</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">static</span> HandleType&lt;Derived&gt; DeleteEntry(</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, HandleType&lt;Derived&gt; dictionary, <a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a> entry);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <span class="comment">// Attempt to shrink the dictionary after deletion of key.</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  <span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">typename</span> HandleType&gt;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  V8_WARN_UNUSED_RESULT <span class="keyword">static</span> <span class="keyword">inline</span> HandleType&lt;Derived&gt; Shrink(</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">static</span> <span class="keyword">inline</span> HandleType&lt;Derived&gt; Shrink(</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, HandleType&lt;Derived&gt; dictionary)</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">requires</span>(std::is_convertible_v&lt;HandleType&lt;Derived&gt;, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Derived&gt;</a>&gt;)</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  {</div>
@@ -196,7 +204,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>                std::is_same&lt;IsolateT, Isolate&gt;::value ? AllocationType::kYoung</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>                                                       : AllocationType::kOld&gt;</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keyword">requires</span>(std::is_convertible_v&lt;HandleType&lt;Derived&gt;, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Derived&gt;</a>&gt;)</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  V8_WARN_UNUSED_RESULT <span class="keyword">static</span> HandleType&lt;Derived&gt; Add(</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">static</span> HandleType&lt;Derived&gt; Add(</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>      IsolateT* isolate, HandleType&lt;Derived&gt; dictionary, Key <a class="code hl_variable" href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a>,</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>      <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> value, <a class="code hl_class" href="classv8_1_1internal_1_1PropertyDetails.html">PropertyDetails</a> details,</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>      <a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a>* entry_out = <span class="keyword">nullptr</span>);</div>
@@ -222,7 +230,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="comment">// Generic at put operation.</span></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">typename</span> HandleType&gt;</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">requires</span>(std::is_convertible_v&lt;HandleType&lt;Derived&gt;, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Derived&gt;</a>&gt;)</div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  V8_WARN_UNUSED_RESULT <span class="keyword">static</span> HandleType&lt;Derived&gt; AtPut(</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">static</span> HandleType&lt;Derived&gt; AtPut(</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, HandleType&lt;Derived&gt; dictionary, Key <a class="code hl_variable" href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a>,</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> value, <a class="code hl_class" href="classv8_1_1internal_1_1PropertyDetails.html">PropertyDetails</a> details);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="keyword">static</span> <span class="keywordtype">void</span> UncheckedAtPut(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Derived&gt;</a> dictionary,</div>
@@ -294,7 +302,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span> </div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="comment">// Creates a new dictionary.</span></div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> IsolateT&gt;</div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  V8_WARN_UNUSED_RESULT <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Derived&gt;</a> New(</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Derived&gt;</a> New(</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>      IsolateT* isolate, <span class="keywordtype">int</span> at_least_space_for,</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a604d5beeb6fc8639670f737ed201e20a">AllocationType</a> allocation = AllocationType::kYoung,</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a4137891b4443fec6079352b879f44ae0">MinimumCapacity</a> capacity_option = <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a4137891b4443fec6079352b879f44ae0a3a006cacfce379b1cabe7cd9dec5f608">USE_DEFAULT_MINIMUM_CAPACITY</a>);</div>
@@ -313,7 +321,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span> </div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> IsolateT, <span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">typename</span> HandleType&gt;</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="keyword">requires</span>(std::is_convertible_v&lt;HandleType&lt;Derived&gt;, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Derived&gt;</a>&gt;)</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  V8_WARN_UNUSED_RESULT <span class="keyword">static</span> HandleType&lt;Derived&gt;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">static</span> HandleType&lt;Derived&gt;</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  AddNoUpdateNextEnumerationIndex(IsolateT* isolate,</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                                  HandleType&lt;Derived&gt; dictionary, Key <a class="code hl_variable" href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a>,</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>                                  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> value,</div>
@@ -322,7 +330,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  <span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">typename</span> HandleType&gt;</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>    <span class="keyword">requires</span>(std::is_convertible_v&lt;HandleType&lt;Derived&gt;, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Derived&gt;</a>&gt;)</div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  V8_WARN_UNUSED_RESULT <span class="keyword">static</span> HandleType&lt;Derived&gt; Add(</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">static</span> HandleType&lt;Derived&gt; Add(</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, HandleType&lt;Derived&gt; dictionary, Key <a class="code hl_variable" href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a>,</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>      <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> value, <a class="code hl_class" href="classv8_1_1internal_1_1PropertyDetails.html">PropertyDetails</a> details,</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>      <a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a>* entry_out = <span class="keyword">nullptr</span>);</div>
@@ -342,7 +350,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><a class="code hl_define" href="dictionary_8h.html#a9b690b7db5323ad039df9261daee1a6b">EXTERN_DECLARE_BASE_NAME_DICTIONARY</a>(NameDictionary, NameDictionaryShape)</div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span> </div>
 <div class="foldopen" id="foldopen00238" data-start="{" data-end="};">
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1NameDictionary.html">  238</a></span>class <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1NameDictionary.html">NameDictionary</a></div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1NameDictionary.html">  238</a></span>class <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1NameDictionary.html">NameDictionary</a></div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>    : public BaseNameDictionary&lt;<a class="code hl_class" href="classv8_1_1internal_1_1NameDictionary.html">NameDictionary</a>, <a class="code hl_class" href="classv8_1_1internal_1_1NameDictionaryShape.html">NameDictionaryShape</a>&gt; {</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Map&gt;</a> GetMap(<a class="code hl_class" href="classv8_1_1internal_1_1RootsTable.html">RootsTable</a>&amp; roots);</div>
@@ -371,7 +379,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span> </div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>  <span class="comment">// Creates a new NameDictionary.</span></div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>  template &lt;typename IsolateT&gt;</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1NameDictionary.html#a9f28c2fc8f1176ff32dfd2a247de2cb6">  267</a></span>  V8_WARN_UNUSED_RESULT static <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle</a>&lt;<a class="code hl_class" href="classv8_1_1internal_1_1NameDictionary.html">NameDictionary</a>&gt; New(</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1NameDictionary.html#a9f28c2fc8f1176ff32dfd2a247de2cb6">  267</a></span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> static <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle</a>&lt;<a class="code hl_class" href="classv8_1_1internal_1_1NameDictionary.html">NameDictionary</a>&gt; New(</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>      IsolateT* isolate, <span class="keywordtype">int</span> at_least_space_for,</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a604d5beeb6fc8639670f737ed201e20a">AllocationType</a> allocation = <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a604d5beeb6fc8639670f737ed201e20a">AllocationType</a>::kYoung,</div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a4137891b4443fec6079352b879f44ae0">MinimumCapacity</a> capacity_option = USE_DEFAULT_MINIMUM_CAPACITY);</div>
@@ -379,7 +387,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
 <div class="foldopen" id="foldopen00273" data-start="{" data-end="};">
-<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1GlobalDictionaryShape.html">  273</a></span>class <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1GlobalDictionaryShape.html">GlobalDictionaryShape</a> : public <a class="code hl_class" href="classv8_1_1internal_1_1BaseNameDictionaryShape.html">BaseNameDictionaryShape</a> {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1GlobalDictionaryShape.html">  273</a></span>class <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1GlobalDictionaryShape.html">GlobalDictionaryShape</a> : public <a class="code hl_class" href="classv8_1_1internal_1_1BaseNameDictionaryShape.html">BaseNameDictionaryShape</a> {</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> IsMatch(<a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Name&gt;</a> <a class="code hl_variable" href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a>, <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> other);</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>  <span class="keyword">static</span> <span class="keyword">inline</span> uint32_t HashForObject(<a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a> roots,</div>
@@ -404,7 +412,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><a class="code hl_define" href="dictionary_8h.html#a9b690b7db5323ad039df9261daee1a6b">EXTERN_DECLARE_BASE_NAME_DICTIONARY</a>(<a class="code hl_class" href="classv8_1_1internal_1_1GlobalDictionary.html">GlobalDictionary</a>, <a class="code hl_class" href="classv8_1_1internal_1_1GlobalDictionaryShape.html">GlobalDictionaryShape</a>)</div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span> </div>
 <div class="foldopen" id="foldopen00296" data-start="{" data-end="};">
-<div class="line"><a id="l00296" name="l00296"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1GlobalDictionary.html">  296</a></span>class <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1GlobalDictionary.html">GlobalDictionary</a></div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1GlobalDictionary.html">  296</a></span>class <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1GlobalDictionary.html">GlobalDictionary</a></div>
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>    : public BaseNameDictionary&lt;<a class="code hl_class" href="classv8_1_1internal_1_1GlobalDictionary.html">GlobalDictionary</a>, <a class="code hl_class" href="classv8_1_1internal_1_1GlobalDictionaryShape.html">GlobalDictionaryShape</a>&gt; {</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Map&gt;</a> GetMap(<a class="code hl_class" href="classv8_1_1internal_1_1RootsTable.html">RootsTable</a>&amp; roots);</div>
@@ -468,7 +476,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00351" data-start="{" data-end="}">
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SimpleNumberDictionaryShape.html#a2bb962a73f857a0920872dd2ba12c9b5">  351</a></span>  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="classv8_1_1internal_1_1PropertyDetails.html">PropertyDetails</a> <a class="code hl_function" href="classv8_1_1internal_1_1SimpleNumberDictionaryShape.html#a2bb962a73f857a0920872dd2ba12c9b5">DetailsAt</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Dictionary&gt;</a> dict,</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                                          <a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a> entry) {</div>
-<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  }</div>
 </div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
@@ -476,7 +484,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00357" data-start="{" data-end="}">
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SimpleNumberDictionaryShape.html#aebe78bc0ae51bba7fdea2bb7cf2cb884">  357</a></span>  <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1SimpleNumberDictionaryShape.html#aebe78bc0ae51bba7fdea2bb7cf2cb884">DetailsAtPut</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Dictionary&gt;</a> dict, <a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a> entry,</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>                                  <a class="code hl_class" href="classv8_1_1internal_1_1PropertyDetails.html">PropertyDetails</a> value) {</div>
-<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>  }</div>
 </div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>};</div>
@@ -492,8 +500,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>  <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Map&gt;</a> GetMap(<a class="code hl_class" href="classv8_1_1internal_1_1RootsTable.html">RootsTable</a>&amp; roots);</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>  <span class="comment">// Type specific at put (default NONE attributes is used when adding).</span></div>
-<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>  <a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> V8_WARN_UNUSED_RESULT <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;SimpleNumberDictionary&gt;</a></div>
-<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>  Set(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;SimpleNumberDictionary&gt;</a> dictionary, uint32_t <a class="code hl_variable" href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a>,</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;SimpleNumberDictionary&gt;</a></div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>  <a class="code hl_class" href="classv8_1_1Set.html">Set</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;SimpleNumberDictionary&gt;</a> dictionary, uint32_t <a class="code hl_variable" href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a>,</div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>      <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> value);</div>
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span> </div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1SimpleNumberDictionary.html#a75b47da151b15ceb8d74d872782b2aad">  376</a></span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> kEntryValueIndex = 1;</div>
@@ -516,7 +524,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>  <span class="keyword">template</span> &lt;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>&gt; <span class="keyword">typename</span> HandleType&gt;</div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>    <span class="keyword">requires</span>(std::is_convertible_v&lt;HandleType&lt;NumberDictionary&gt;,</div>
 <div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                                   <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;NumberDictionary&gt;</a>&gt;)</div>
-<div class="line"><a id="l00394" name="l00394"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1NumberDictionary.html#a59e5a56e83dea1027355375898f56d28">  394</a></span>  V8_WARN_UNUSED_RESULT <span class="keyword">static</span> HandleType&lt;NumberDictionary&gt; <a class="code hl_function" href="classv8_1_1internal_1_1NumberDictionary.html#a59e5a56e83dea1027355375898f56d28">Set</a>(</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1NumberDictionary.html#a59e5a56e83dea1027355375898f56d28">  394</a></span>  <a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <span class="keyword">static</span> HandleType&lt;NumberDictionary&gt; <a class="code hl_function" href="classv8_1_1internal_1_1NumberDictionary.html#a59e5a56e83dea1027355375898f56d28">Set</a>(</div>
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, HandleType&lt;NumberDictionary&gt; dictionary, uint32_t <a class="code hl_variable" href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a>,</div>
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>      <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> value,</div>
 <div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>      <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSObject&gt;</a> dictionary_holder = <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSObject&gt;::null</a>(),</div>
@@ -589,6 +597,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span><span class="preprocessor">#include &quot;<a class="code" href="object-macros-undef_8h.html">src/objects/object-macros-undef.h</a>&quot;</span></div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span> </div>
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span><span class="preprocessor">#endif  </span><span class="comment">// V8_OBJECTS_DICTIONARY_H_</span></div>
+<div class="ttc" id="aclassv8_1_1Set_html"><div class="ttname"><a href="classv8_1_1Set.html">v8::Set</a></div><div class="ttdef"><b>Definition</b> <a href="v8-container_8h_source.html#l00148">v8-container.h:148</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1BitField_html"><div class="ttname"><a href="classv8_1_1base_1_1BitField.html">v8::base::BitField</a></div><div class="ttdef"><b>Definition</b> <a href="bit-field_8h_source.html#l00025">bit-field.h:25</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1BaseDictionaryShape_html"><div class="ttname"><a href="classv8_1_1internal_1_1BaseDictionaryShape.html">v8::internal::BaseDictionaryShape</a></div><div class="ttdef"><b>Definition</b> <a href="#l00143">dictionary.h:143</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1BaseNameDictionaryShape_html"><div class="ttname"><a href="classv8_1_1internal_1_1BaseNameDictionaryShape.html">v8::internal::BaseNameDictionaryShape</a></div><div class="ttdef"><b>Definition</b> <a href="#l00155">dictionary.h:155</a></div></div>
@@ -626,8 +635,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ahash-table_8h_html"><div class="ttname"><a href="hash-table_8h.html">hash-table.h</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a115c48491bb37004f5ac67eb46ac2c23"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a></div><div class="ttdeci">turboshaft::OpIndex base</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00070">instruction-selector-ia32.cc:70</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_ae55190dbead0a94298bdfa37911694e3"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a></div><div class="ttdeci">turboshaft::OptionalOpIndex index</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00071">instruction-selector-ia32.cc:71</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00067">logging.h:67</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a4137891b4443fec6079352b879f44ae0"><div class="ttname"><a href="namespacev8_1_1internal.html#a4137891b4443fec6079352b879f44ae0">v8::internal::MinimumCapacity</a></div><div class="ttdeci">MinimumCapacity</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01549">globals.h:1549</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a4137891b4443fec6079352b879f44ae0a3a006cacfce379b1cabe7cd9dec5f608"><div class="ttname"><a href="namespacev8_1_1internal.html#a4137891b4443fec6079352b879f44ae0a3a006cacfce379b1cabe7cd9dec5f608">v8::internal::USE_DEFAULT_MINIMUM_CAPACITY</a></div><div class="ttdeci">@ USE_DEFAULT_MINIMUM_CAPACITY</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01550">globals.h:1550</a></div></div>
@@ -643,19 +650,25 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aproperty-array_8h_html"><div class="ttname"><a href="property-array_8h.html">property-array.h</a></div></div>
 <div class="ttc" id="aroots_8h_html"><div class="ttname"><a href="roots_8h.html">roots.h</a></div></div>
 <div class="ttc" id="asmi_8h_html"><div class="ttname"><a href="smi_8h.html">smi.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00067">logging.h:67</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="astructv8_1_1RelaxedLoadTag_html"><div class="ttname"><a href="structv8_1_1RelaxedLoadTag.html">v8::RelaxedLoadTag</a></div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l02829">globals.h:2829</a></div></div>
 <div class="ttc" id="astructv8_1_1SeqCstAccessTag_html"><div class="ttname"><a href="structv8_1_1SeqCstAccessTag.html">v8::SeqCstAccessTag</a></div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l02832">globals.h:2832</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1EnumIndexComparator_html"><div class="ttname"><a href="structv8_1_1internal_1_1EnumIndexComparator.html">v8::internal::EnumIndexComparator</a></div><div class="ttdef"><b>Definition</b> <a href="#l00445">dictionary.h:445</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1EnumIndexComparator_html_aaeba9984fa9b6baae87b7f45036e2367"><div class="ttname"><a href="structv8_1_1internal_1_1EnumIndexComparator.html#aaeba9984fa9b6baae87b7f45036e2367">v8::internal::EnumIndexComparator::operator()</a></div><div class="ttdeci">bool operator()(Tagged_t a, Tagged_t b)</div><div class="ttdef"><b>Definition</b> <a href="#l00447">dictionary.h:447</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1EnumIndexComparator_html_acec41fdf8c150c6ba83759f2dbd7dda8"><div class="ttname"><a href="structv8_1_1internal_1_1EnumIndexComparator.html#acec41fdf8c150c6ba83759f2dbd7dda8">v8::internal::EnumIndexComparator::EnumIndexComparator</a></div><div class="ttdeci">EnumIndexComparator(Tagged&lt; Dictionary &gt; dict)</div><div class="ttdef"><b>Definition</b> <a href="#l00446">dictionary.h:446</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1EnumIndexComparator_html_ad57a4e801bb7cd50b70e2a0f3e075aa1"><div class="ttname"><a href="structv8_1_1internal_1_1EnumIndexComparator.html#ad57a4e801bb7cd50b70e2a0f3e075aa1">v8::internal::EnumIndexComparator::dict</a></div><div class="ttdeci">Tagged&lt; Dictionary &gt; dict</div><div class="ttdef"><b>Definition</b> <a href="#l00454">dictionary.h:454</a></div></div>
+<div class="ttc" id="av8config_8h_html_a63258e4bf5dc9fb8c78f881c8405d83b"><div class="ttname"><a href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a></div><div class="ttdeci">#define V8_WARN_UNUSED_RESULT</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00660">v8config.h:660</a></div></div>
 <div class="ttc" id="avalue-mirror_8cc_html_a1ca88ee8dc0e8e51d60cf01ab8e8702a"><div class="ttname"><a href="value-mirror_8cc.html#a1ca88ee8dc0e8e51d60cf01ab8e8702a">value</a></div><div class="ttdeci">std::unique_ptr&lt; ValueMirror &gt; value</div><div class="ttdef"><b>Definition</b> <a href="value-mirror_8cc_source.html#l00950">value-mirror.cc:950</a></div></div>
 <div class="ttc" id="avalue-mirror_8cc_html_af6b78a5a5b7a4e51ea415c001e9eb58b"><div class="ttname"><a href="value-mirror_8cc.html#af6b78a5a5b7a4e51ea415c001e9eb58b">key</a></div><div class="ttdeci">std::unique_ptr&lt; ValueMirror &gt; key</div><div class="ttdef"><b>Definition</b> <a href="value-mirror_8cc_source.html#l00949">value-mirror.cc:949</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:23 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li><li class="navelem"><a class="el" href="dictionary_8h.html">dictionary.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:55:32 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

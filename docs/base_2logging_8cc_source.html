@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/base/logging.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/base/logging.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('base_2logging_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">logging.cc</div></div>
 </div><!--header-->
@@ -98,7 +106,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">// Use of this source code is governed by a BSD-style license that can be</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// found in the LICENSE file.</span></div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cctype&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstdarg&gt;</span></div>
@@ -106,7 +114,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="stack__trace_8h.html">src/base/debug/stack_trace.h</a>&quot;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="base_2platform_2platform_8h.html">src/base/platform/platform.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2platform_2platform_8h.html">src/base/platform/platform.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8.html">v8</a> {</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a> {</div>
@@ -256,8 +264,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="keyword">class </span>FailureMessage {</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>  <span class="keyword">explicit</span> FailureMessage(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="namespacev8_1_1base.html#a1164c4a4843f31b51527e1661ff36565">format</a>, va_list arguments) {</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    memset(&amp;message_, 0, <a class="code hl_define" href="macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a>(message_));</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    v8::base::OS::VSNPrintF(&amp;message_[0], <a class="code hl_define" href="macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a>(message_), <a class="code hl_variable" href="namespacev8_1_1base.html#a1164c4a4843f31b51527e1661ff36565">format</a>,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    memset(&amp;message_, 0, <a class="code hl_define" href="src_2base_2macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a>(message_));</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    v8::base::OS::VSNPrintF(&amp;message_[0], <a class="code hl_define" href="src_2base_2macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a>(message_), <a class="code hl_variable" href="namespacev8_1_1base.html#a1164c4a4843f31b51527e1661ff36565">format</a>,</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                            arguments);</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  }</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
@@ -343,14 +351,11 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="abase_2logging_8cc_html_ac6b8420d6dcbd1ce934c21fd7b7a6e7e"><div class="ttname"><a href="base_2logging_8cc.html#ac6b8420d6dcbd1ce934c21fd7b7a6e7e">V8_Dcheck</a></div><div class="ttdeci">void V8_Dcheck(const char *file, int line, const char *message)</div><div class="ttdef"><b>Definition</b> <a href="#l00218">logging.cc:218</a></div></div>
 <div class="ttc" id="abase_2logging_8cc_html_adf1cd69ef96fe9dbae0960238c7dce39"><div class="ttname"><a href="base_2logging_8cc.html#adf1cd69ef96fe9dbae0960238c7dce39">DEFINE_PRINT_CHECK_OPERAND_CHAR</a></div><div class="ttdeci">#define DEFINE_PRINT_CHECK_OPERAND_CHAR(type)</div><div class="ttdef"><b>Definition</b> <a href="#l00106">logging.cc:106</a></div></div>
 <div class="ttc" id="abase_2logging_8cc_html_af41fc76372d61c8fdef26c1914237238"><div class="ttname"><a href="base_2logging_8cc.html#af41fc76372d61c8fdef26c1914237238">DEFINE_MAKE_CHECK_OP_STRING</a></div><div class="ttdeci">#define DEFINE_MAKE_CHECK_OP_STRING(type)</div><div class="ttdef"><b>Definition</b> <a href="#l00126">logging.cc:126</a></div></div>
-<div class="ttc" id="abase_2platform_2platform_8h_html"><div class="ttname"><a href="base_2platform_2platform_8h.html">platform.h</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1OS_html_a3abddefa2e7ad8ab0628e6b44fad5a6b"><div class="ttname"><a href="classv8_1_1base_1_1OS.html#a3abddefa2e7ad8ab0628e6b44fad5a6b">v8::base::OS::Abort</a></div><div class="ttdeci">static void Abort()</div><div class="ttdef"><b>Definition</b> <a href="platform-posix_8cc_source.html#l00723">platform-posix.cc:723</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a115c48491bb37004f5ac67eb46ac2c23"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a></div><div class="ttdeci">turboshaft::OpIndex base</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00070">instruction-selector-ia32.cc:70</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_ac55fdd6aa61539c49b1b1f5d38a0ed73"><div class="ttname"><a href="macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a></div><div class="ttdeci">#define arraysize(array)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00067">macros.h:67</a></div></div>
 <div class="ttc" id="amul-fft_8cc_html_acab531abaa74a7e664e3986f2522b33a"><div class="ttname"><a href="mul-fft_8cc.html#acab531abaa74a7e664e3986f2522b33a">r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition</b> <a href="mul-fft_8cc_source.html#l00298">mul-fft.cc:298</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a1164c4a4843f31b51527e1661ff36565"><div class="ttname"><a href="namespacev8_1_1base.html#a1164c4a4843f31b51527e1661ff36565">v8::base::format</a></div><div class="ttdeci">V8_BASE_EXPORT int const char * format</div><div class="ttdef"><b>Definition</b> <a href="strings_8h_source.html#l00023">strings.h:23</a></div></div>
-<div class="ttc" id="anamespacev8_1_1base_html_a3e1ce8fd5531efe75da18a2110ee8076"><div class="ttname"><a href="namespacev8_1_1base.html#a3e1ce8fd5531efe75da18a2110ee8076">v8::base::OOMType</a></div><div class="ttdeci">OOMType</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00092">logging.h:92</a></div></div>
+<div class="ttc" id="anamespacev8_1_1base_html_a3e1ce8fd5531efe75da18a2110ee8076"><div class="ttname"><a href="namespacev8_1_1base.html#a3e1ce8fd5531efe75da18a2110ee8076">v8::base::OOMType</a></div><div class="ttdeci">OOMType</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00092">logging.h:92</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a3e1ce8fd5531efe75da18a2110ee8076a3fc05876acd3bdfabc21ceefddf8846c"><div class="ttname"><a href="namespacev8_1_1base.html#a3e1ce8fd5531efe75da18a2110ee8076a3fc05876acd3bdfabc21ceefddf8846c">v8::base::OOMType::kProcess</a></div><div class="ttdeci">@ kProcess</div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a54ee556bc0dcd71e6592cc6ad0f6aaad"><div class="ttname"><a href="namespacev8_1_1base.html#a54ee556bc0dcd71e6592cc6ad0f6aaad">v8::base::SetPrintStackTrace</a></div><div class="ttdeci">void SetPrintStackTrace(void(*print_stack_trace)())</div><div class="ttdef"><b>Definition</b> <a href="#l00068">logging.cc:68</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_html_a7ba4ff8b9c3d957f9b7a77cf1eef7e73"><div class="ttname"><a href="namespacev8_1_1base.html#a7ba4ff8b9c3d957f9b7a77cf1eef7e73">v8::base::FatalOOM</a></div><div class="ttdeci">void FatalOOM(OOMType type, const char *msg)</div><div class="ttdef"><b>Definition</b> <a href="#l00080">logging.cc:80</a></div></div>
@@ -360,12 +365,18 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1base_html_af7a8ddb4d6816c05a1036b606ba8e42b"><div class="ttname"><a href="namespacev8_1_1base.html#af7a8ddb4d6816c05a1036b606ba8e42b">v8::base::SetFatalFunction</a></div><div class="ttdeci">void SetFatalFunction(void(*fatal_function)(const char *, int, const char *))</div><div class="ttdef"><b>Definition</b> <a href="#l00076">logging.cc:76</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1wasm_html_ac81d27d6edb00aeed62a3e4745b8cba0"><div class="ttname"><a href="namespacev8_1_1internal_1_1wasm.html#ac81d27d6edb00aeed62a3e4745b8cba0">v8::internal::wasm::void</a></div><div class="ttdeci">typedef void(VECTORCALL PWasmOp)(const uint8_t *code</div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ac55fdd6aa61539c49b1b1f5d38a0ed73"><div class="ttname"><a href="src_2base_2macros_8h.html#ac55fdd6aa61539c49b1b1f5d38a0ed73">arraysize</a></div><div class="ttdeci">#define arraysize(array)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00067">macros.h:67</a></div></div>
+<div class="ttc" id="asrc_2base_2platform_2platform_8h_html"><div class="ttname"><a href="src_2base_2platform_2platform_8h.html">platform.h</a></div></div>
 <div class="ttc" id="astack__trace_8h_html"><div class="ttname"><a href="stack__trace_8h.html">stack_trace.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:16:43 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="base_2logging_8cc.html">logging.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:52:45 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

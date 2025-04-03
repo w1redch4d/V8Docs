@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/compiler/wasm-typer.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/compiler/wasm-typer.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('wasm-typer_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">wasm-typer.cc</div></div>
 </div><!--header-->
@@ -100,7 +108,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="wasm-typer_8h.html">src/compiler/wasm-typer.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="common-operator_8h.html">src/compiler/common-operator.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="node-matchers_8h.html">src/compiler/node-matchers.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="node-properties_8h.html">src/compiler/node-properties.h</a>&quot;</span></div>
@@ -248,7 +256,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>      }</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>      <a class="code hl_struct" href="structv8_1_1internal_1_1wasm_1_1ModuleTypeIndex.html">wasm::ModuleTypeIndex</a> ref_index = object_type.type.ref_index();</div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(object_type.module-&gt;has_array(ref_index));</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(object_type.module-&gt;has_array(ref_index));</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>      <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1ArrayType.html">wasm::ArrayType</a>* type_from_object =</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>          object_type.module-&gt;type(ref_index).array_type;</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>      computed_type = {type_from_object-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1ArrayType.html#a33942a61683c7b83fe86986a26333b1a">element_type</a>().<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1ValueType.html#aad49cd56c8c59e31b315e65d18c1d772">Unpacked</a>(),</div>
@@ -270,7 +278,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      <a class="code hl_struct" href="structv8_1_1internal_1_1wasm_1_1ModuleTypeIndex.html">wasm::ModuleTypeIndex</a> ref_index = object_type.type.ref_index();</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(object_type.module-&gt;has_struct(ref_index));</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(object_type.module-&gt;has_struct(ref_index));</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>      <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1StructType.html">wasm::StructType</a>* struct_type_from_object =</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>          object_type.module-&gt;type(ref_index).struct_type;</div>
@@ -300,7 +308,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>          (current_type.type.heap_representation() == <a class="code hl_enumvalue" href="classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a463a41f5a96db5c80819e14e5461d787a01edec79a04fce2edabc7f5f9b6f2305">wasm::HeapType::kExtern</a> &amp;&amp;</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>           computed_type.type.heap_representation() ==</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>               <a class="code hl_enumvalue" href="classv8_1_1internal_1_1wasm_1_1HeapTypeBase.html#a463a41f5a96db5c80819e14e5461d787add407adfe4e7d07e6e00416e104e930f">wasm::HeapType::kString</a>))) {</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>      <a class="code hl_define" href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>          <span class="stringliteral">&quot;Error - Incompatible types. function: %d, node: %d:%s, input0:%d, &quot;</span></div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>          <span class="stringliteral">&quot;current %s, computed %s\n&quot;</span>,</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>          <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1WasmTyper.html#ad341deffc7274c5266bff3568fbd5371">function_index_</a>, node-&gt;id(), node-&gt;op()-&gt;mnemonic(),</div>
@@ -360,9 +368,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1wasm_1_1ValueType_html_aad49cd56c8c59e31b315e65d18c1d772"><div class="ttname"><a href="classv8_1_1internal_1_1wasm_1_1ValueType.html#aad49cd56c8c59e31b315e65d18c1d772">v8::internal::wasm::ValueType::Unpacked</a></div><div class="ttdeci">constexpr ValueType Unpacked() const</div><div class="ttdef"><b>Definition</b> <a href="value-type_8h_source.html#l00987">value-type.h:987</a></div></div>
 <div class="ttc" id="acommon-operator_8h_html"><div class="ttname"><a href="common-operator_8h.html">common-operator.h</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_a5f6aa8edcd99914757600b5d3b259bb7"><div class="ttname"><a href="jump-threading_8cc.html#a5f6aa8edcd99914757600b5d3b259bb7">TRACE</a></div><div class="ttdeci">#define TRACE(...)</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00012">jump-threading.cc:12</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00047">logging.h:47</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_html_a9a69d0536048a5288b5d7c8767cc23b7"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler.html#a9a69d0536048a5288b5d7c8767cc23b7">v8::internal::compiler::TypeGuardTypeOf</a></div><div class="ttdeci">Type TypeGuardTypeOf(Operator const *op)</div><div class="ttdef"><b>Definition</b> <a href="common-operator_8cc_source.html#l00398">common-operator.cc:398</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_html_aabadb96fe807431e0e6d48c3f0984015"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler.html#aabadb96fe807431e0e6d48c3f0984015">v8::internal::compiler::OpParameter</a></div><div class="ttdeci">T const &amp; OpParameter(const Operator *op)</div><div class="ttdef"><b>Definition</b> <a href="operator_8h_source.html#l00214">operator.h:214</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1wasm_html_a0cadd459f634903125d7572357b610e8"><div class="ttname"><a href="namespacev8_1_1internal_1_1wasm.html#a0cadd459f634903125d7572357b610e8">v8::internal::wasm::ToNullSentinel</a></div><div class="ttdeci">ValueType ToNullSentinel(TypeInModule type)</div><div class="ttdef"><b>Definition</b> <a href="wasm-subtyping_8cc_source.html#l00846">wasm-subtyping.cc:846</a></div></div>
@@ -380,6 +385,9 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aobject-access_8h_html"><div class="ttname"><a href="object-access_8h.html">object-access.h</a></div></div>
 <div class="ttc" id="aopcodes_8h_html"><div class="ttname"><a href="opcodes_8h.html">opcodes.h</a></div></div>
 <div class="ttc" id="asimplified-operator_8h_html"><div class="ttname"><a href="simplified-operator_8h.html">simplified-operator.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00047">logging.h:47</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1wasm_1_1ModuleTypeIndex_html"><div class="ttname"><a href="structv8_1_1internal_1_1wasm_1_1ModuleTypeIndex.html">v8::internal::wasm::ModuleTypeIndex</a></div><div class="ttdef"><b>Definition</b> <a href="value-type_8h_source.html#l00063">value-type.h:63</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1wasm_1_1TypeInModule_html"><div class="ttname"><a href="structv8_1_1internal_1_1wasm_1_1TypeInModule.html">v8::internal::wasm::TypeInModule</a></div><div class="ttdef"><b>Definition</b> <a href="wasm-subtyping_8h_source.html#l00129">wasm-subtyping.h:129</a></div></div>
 <div class="ttc" id="autils_2utils_8h_html"><div class="ttname"><a href="utils_2utils_8h.html">utils.h</a></div></div>
@@ -388,10 +396,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="awasm-subtyping_8h_html"><div class="ttname"><a href="wasm-subtyping_8h.html">wasm-subtyping.h</a></div></div>
 <div class="ttc" id="awasm-typer_8h_html"><div class="ttname"><a href="wasm-typer_8h.html">wasm-typer.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:24 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="wasm-typer_8cc.html">wasm-typer.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:32 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

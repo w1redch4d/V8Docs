@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/objects/backing-store.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/objects/backing-store.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('backing-store_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">backing-store.h</div></div>
 </div><!--header-->
@@ -104,8 +112,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;include/v8-array-buffer.h&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;include/v8-internal.h&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="v8-array-buffer_8h.html">include/v8-array-buffer.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="v8-internal_8h.html">include/v8-internal.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="handles_8h.html">src/handles/handles.h</a>&quot;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="sandbox_8h.html">src/sandbox/sandbox.h</a>&quot;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
@@ -138,7 +146,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// when they are created through one of the {Allocate()} methods below,</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">// and the destructor frees the memory (and page allocation if necessary).</span></div>
 <div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BackingStore.html">   44</a></span><span class="keyword">class </span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1BackingStore.html">BackingStore</a> : <span class="keyword">public</span> BackingStoreBase {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BackingStore.html">   44</a></span><span class="keyword">class </span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_class" href="classv8_1_1internal_1_1BackingStore.html">BackingStore</a> : <span class="keyword">public</span> <a class="code hl_class" href="classv8_1_1internal_1_1BackingStoreBase.html">BackingStoreBase</a> {</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <a class="code hl_class" href="classv8_1_1internal_1_1BackingStore.html">~BackingStore</a>();</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
@@ -169,7 +177,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="comment">// Create a backing store that wraps existing allocated memory.</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keyword">static</span> std::unique_ptr&lt;BackingStore&gt; WrapAllocation(</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      <span class="keywordtype">void</span>* allocation_base, <span class="keywordtype">size_t</span> allocation_length,</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      v8::BackingStore::DeleterCallback deleter, <span class="keywordtype">void</span>* deleter_data,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <a class="code hl_typedef" href="classv8_1_1BackingStore.html#a3e91bbf335d64c4cd15279bc3b4fe5fb">v8::BackingStore::DeleterCallback</a> deleter, <span class="keywordtype">void</span>* deleter_data,</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a680ace1d3e86dae2df93867132a3c160">SharedFlag</a> shared);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="comment">// Create an empty backing store.</span></div>
@@ -200,7 +208,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="foldopen" id="foldopen00100" data-start="{" data-end="}">
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BackingStore.html#a71e8062413fb16de06849f48b315426f">  100</a></span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1BackingStore.html#a71e8062413fb16de06849f48b315426f">IsEmpty</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(byte_capacity_, byte_length_);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(byte_capacity_, byte_length_);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <span class="keywordflow">return</span> byte_capacity_ == 0;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  }</div>
 </div>
@@ -286,7 +294,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>  <span class="keywordtype">void</span> SetAllocatorFromIsolate(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate);</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>  <span class="comment">// Accessors for type-specific data.</span></div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  v8::ArrayBuffer::Allocator* get_v8_api_array_buffer_allocator();</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>  <a class="code hl_class" href="classv8_1_1ArrayBuffer_1_1Allocator.html">v8::ArrayBuffer::Allocator</a>* get_v8_api_array_buffer_allocator();</div>
 <div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <a class="code hl_struct" href="structv8_1_1internal_1_1SharedWasmMemoryData.html">SharedWasmMemoryData</a>* get_shared_wasm_memory_data() <span class="keyword">const</span>;</div>
 <div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1BackingStore.html#a78a522363c3d04a38e1420392ff73151">  185</a></span>  <span class="keywordtype">void</span>* buffer_start_ = <span class="keyword">nullptr</span>;</div>
@@ -308,7 +316,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="comment">// If this backing store was allocated through the ArrayBufferAllocator API,</span></div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="comment">// this is a direct pointer to the API object for freeing the backing</span></div>
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="comment">// store.</span></div>
-<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="unionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData.html#adc88bc06374b235a42ac1f1bbcb81622">  203</a></span>    v8::ArrayBuffer::Allocator* <a class="code hl_variable" href="unionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData.html#adc88bc06374b235a42ac1f1bbcb81622">v8_api_array_buffer_allocator</a>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="unionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData.html#adc88bc06374b235a42ac1f1bbcb81622">  203</a></span>    <a class="code hl_class" href="classv8_1_1ArrayBuffer_1_1Allocator.html">v8::ArrayBuffer::Allocator</a>* <a class="code hl_variable" href="unionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData.html#adc88bc06374b235a42ac1f1bbcb81622">v8_api_array_buffer_allocator</a>;</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="comment">// Holds a shared_ptr to the ArrayBuffer::Allocator instance, if requested</span></div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>    <span class="comment">// so by the embedder through setting</span></div>
@@ -324,7 +332,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="comment">// allocated with a custom allocator.</span></div>
 <div class="foldopen" id="foldopen00217" data-start="{" data-end="};">
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo.html">  217</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo.html">DeleterInfo</a> {</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo.html#a6853a256bd2344dff0976a8c60c8ea28">  218</a></span>      v8::BackingStore::DeleterCallback <a class="code hl_variable" href="structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo.html#a6853a256bd2344dff0976a8c60c8ea28">callback</a>;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo.html#a6853a256bd2344dff0976a8c60c8ea28">  218</a></span>      <a class="code hl_typedef" href="classv8_1_1BackingStore.html#a3e91bbf335d64c4cd15279bc3b4fe5fb">v8::BackingStore::DeleterCallback</a> <a class="code hl_variable" href="structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo.html#a6853a256bd2344dff0976a8c60c8ea28">callback</a>;</div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo.html#a2c9bfc1cb445a3fa8f272675154ea341">  219</a></span>      <span class="keywordtype">void</span>* <a class="code hl_variable" href="structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo.html#a2c9bfc1cb445a3fa8f272675154ea341">data</a>;</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="unionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData.html#a35e64d445c5f7885b2e36234dc3d6b8c">  220</a></span>    } deleter;</div>
 </div>
@@ -381,6 +389,9 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>}  <span class="comment">// namespace v8::internal</span></div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="preprocessor">#endif  </span><span class="comment">// V8_OBJECTS_BACKING_STORE_H_</span></div>
+<div class="ttc" id="aclassv8_1_1ArrayBuffer_1_1Allocator_html"><div class="ttname"><a href="classv8_1_1ArrayBuffer_1_1Allocator.html">v8::ArrayBuffer::Allocator</a></div><div class="ttdef"><b>Definition</b> <a href="v8-array-buffer_8h_source.html#l00153">v8-array-buffer.h:153</a></div></div>
+<div class="ttc" id="aclassv8_1_1BackingStore_html_a3e91bbf335d64c4cd15279bc3b4fe5fb"><div class="ttname"><a href="classv8_1_1BackingStore.html#a3e91bbf335d64c4cd15279bc3b4fe5fb">v8::BackingStore::DeleterCallback</a></div><div class="ttdeci">void(*)(void *data, size_t length, void *deleter_data) DeleterCallback</div><div class="ttdef"><b>Definition</b> <a href="v8-array-buffer_8h_source.html#l00104">v8-array-buffer.h:104</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1BackingStoreBase_html"><div class="ttname"><a href="classv8_1_1internal_1_1BackingStoreBase.html">v8::internal::BackingStoreBase</a></div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l01340">v8-internal.h:1340</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1BackingStore_html"><div class="ttname"><a href="classv8_1_1internal_1_1BackingStore.html">v8::internal::BackingStore</a></div><div class="ttdef"><b>Definition</b> <a href="#l00044">backing-store.h:44</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1BackingStore_html_a01034df6de5b1cd00a95fd7eccc09a87"><div class="ttname"><a href="classv8_1_1internal_1_1BackingStore.html#a01034df6de5b1cd00a95fd7eccc09a87">v8::internal::BackingStore::buffer_start</a></div><div class="ttdeci">void * buffer_start() const</div><div class="ttdef"><b>Definition</b> <a href="#l00086">backing-store.h:86</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1BackingStore_html_a0282cadcc561732ab479c8ec67cf89f1"><div class="ttname"><a href="classv8_1_1internal_1_1BackingStore.html#a0282cadcc561732ab479c8ec67cf89f1">v8::internal::BackingStore::BackingStore</a></div><div class="ttdeci">BackingStore(const BackingStore &amp;)=delete</div></div>
@@ -421,8 +432,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aclassv8_1_1internal_1_1GlobalBackingStoreRegistry_html_af68be2d45b01f8cf2848c5ff3e1e7a0f"><div class="ttname"><a href="classv8_1_1internal_1_1GlobalBackingStoreRegistry.html#af68be2d45b01f8cf2848c5ff3e1e7a0f">v8::internal::GlobalBackingStoreRegistry::UpdateSharedWasmMemoryObjects</a></div><div class="ttdeci">static void UpdateSharedWasmMemoryObjects(Isolate *isolate)</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html">v8::internal::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l00575">isolate.h:575</a></div></div>
 <div class="ttc" id="ahandles_8h_html"><div class="ttname"><a href="handles_8h.html">handles.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5ccd81f4720c063fbbb03699603034c6"><div class="ttname"><a href="namespacev8_1_1internal.html#a5ccd81f4720c063fbbb03699603034c6">v8::internal::WasmMemoryFlag</a></div><div class="ttdeci">WasmMemoryFlag</div><div class="ttdef"><b>Definition</b> <a href="#l00022">backing-store.h:22</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5ccd81f4720c063fbbb03699603034c6a047ebee131a760d19529704fdfc1d412"><div class="ttname"><a href="namespacev8_1_1internal.html#a5ccd81f4720c063fbbb03699603034c6a047ebee131a760d19529704fdfc1d412">v8::internal::WasmMemoryFlag::kWasmMemory32</a></div><div class="ttdeci">@ kWasmMemory32</div></div>
@@ -439,6 +448,8 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_ab10416aabce855093f2c91151df24348a791e8c43bffb7c8241a98ff4a7f315f0"><div class="ttname"><a href="namespacev8_1_1internal.html#ab10416aabce855093f2c91151df24348a791e8c43bffb7c8241a98ff4a7f315f0">v8::internal::ResizableFlag::kResizable</a></div><div class="ttdeci">@ kResizable</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ab10416aabce855093f2c91151df24348af444d0c6959a4f4e0553ccd4f9f35908"><div class="ttname"><a href="namespacev8_1_1internal.html#ab10416aabce855093f2c91151df24348af444d0c6959a4f4e0553ccd4f9f35908">v8::internal::ResizableFlag::kNotResizable</a></div><div class="ttdeci">@ kNotResizable</div></div>
 <div class="ttc" id="asandbox_8h_html"><div class="ttname"><a href="sandbox_8h.html">sandbox.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo_html"><div class="ttname"><a href="structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo.html">v8::internal::BackingStore::TypeSpecificData::DeleterInfo</a></div><div class="ttdef"><b>Definition</b> <a href="#l00217">backing-store.h:217</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo_html_a2c9bfc1cb445a3fa8f272675154ea341"><div class="ttname"><a href="structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo.html#a2c9bfc1cb445a3fa8f272675154ea341">v8::internal::BackingStore::TypeSpecificData::DeleterInfo::data</a></div><div class="ttdeci">void * data</div><div class="ttdef"><b>Definition</b> <a href="#l00219">backing-store.h:219</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo_html_a6853a256bd2344dff0976a8c60c8ea28"><div class="ttname"><a href="structv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_1_1DeleterInfo.html#a6853a256bd2344dff0976a8c60c8ea28">v8::internal::BackingStore::TypeSpecificData::DeleterInfo::callback</a></div><div class="ttdeci">v8::BackingStore::DeleterCallback callback</div><div class="ttdef"><b>Definition</b> <a href="#l00218">backing-store.h:218</a></div></div>
@@ -449,11 +460,16 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aunionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_html_ac117defca71a4ab8eefd23077bc900ee"><div class="ttname"><a href="unionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData.html#ac117defca71a4ab8eefd23077bc900ee">v8::internal::BackingStore::TypeSpecificData::TypeSpecificData</a></div><div class="ttdeci">TypeSpecificData()</div><div class="ttdef"><b>Definition</b> <a href="#l00197">backing-store.h:197</a></div></div>
 <div class="ttc" id="aunionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_html_ac24f8e676b135f4d2ade39723eb07a4e"><div class="ttname"><a href="unionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData.html#ac24f8e676b135f4d2ade39723eb07a4e">v8::internal::BackingStore::TypeSpecificData::shared_wasm_memory_data</a></div><div class="ttdeci">SharedWasmMemoryData * shared_wasm_memory_data</div><div class="ttdef"><b>Definition</b> <a href="#l00213">backing-store.h:213</a></div></div>
 <div class="ttc" id="aunionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData_html_adc88bc06374b235a42ac1f1bbcb81622"><div class="ttname"><a href="unionv8_1_1internal_1_1BackingStore_1_1TypeSpecificData.html#adc88bc06374b235a42ac1f1bbcb81622">v8::internal::BackingStore::TypeSpecificData::v8_api_array_buffer_allocator</a></div><div class="ttdeci">v8::ArrayBuffer::Allocator * v8_api_array_buffer_allocator</div><div class="ttdef"><b>Definition</b> <a href="#l00203">backing-store.h:203</a></div></div>
+<div class="ttc" id="av8-array-buffer_8h_html"><div class="ttname"><a href="v8-array-buffer_8h.html">v8-array-buffer.h</a></div></div>
+<div class="ttc" id="av8-internal_8h_html"><div class="ttname"><a href="v8-internal_8h.html">v8-internal.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:22 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li><li class="navelem"><a class="el" href="backing-store_8h.html">backing-store.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:55:31 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/utils/memcopy.h Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/utils/memcopy.h Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('memcopy_8h_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">memcopy.h</div></div>
 </div><!--header-->
@@ -108,14 +116,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;<a class="code" href="bits_8h.html">src/base/bits.h</a>&quot;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="macros_8h.html">src/base/macros.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2macros_8h.html">src/base/macros.h</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="utils_2utils_8h.html">src/utils/utils.h</a>&quot;</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8.html">v8</a> {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">namespace </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">internal</a> {</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">using </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> = uintptr_t;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">using </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> = uintptr_t;</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">// ----------------------------------------------------------------------------</span></div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">// Generated memcpy/memmove for ia32 and arm.</span></div>
@@ -128,29 +136,29 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#ae9c3e01ed0907ba11f87871dbb21b357">kMinComplexMemCopy</a> = 64;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">// Copy memory area. No restrictions.</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a7d9a6377d2996578ec1e725079f12ee0">MemMove</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> size);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a7d9a6377d2996578ec1e725079f12ee0">MemMove</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> size);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keyword">using </span>MemMoveFunction = <a class="code hl_function" href="namespacev8_1_1internal_1_1wasm.html#ac81d27d6edb00aeed62a3e4745b8cba0">void</a> (*)(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> <a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">// Keep the distinction of &quot;move&quot; vs. &quot;copy&quot; for the benefit of other</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">// architectures.</span></div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ae0ee98c9174e5955450c56da22cb8f6a">MemCopy</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ae0ee98c9174e5955450c56da22cb8f6a">MemCopy</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#a7d9a6377d2996578ec1e725079f12ee0">MemMove</a>(dest, src, size);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#elif defined(V8_HOST_ARCH_ARM)</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">using </span>MemCopyUint8Function = <a class="code hl_function" href="namespacev8_1_1internal_1_1wasm.html#ac81d27d6edb00aeed62a3e4745b8cba0">void</a> (*)(uint8_t* dest, <span class="keyword">const</span> uint8_t* src,</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                                      <span class="keywordtype">size_t</span> <a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">extern</span> MemCopyUint8Function memcopy_uint8_function;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>V8_INLINE <span class="keywordtype">void</span> MemCopyUint8Wrapper(uint8_t* dest, <span class="keyword">const</span> uint8_t* src,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">extern</span> MemCopyUint8Function memcopy_uint8_function;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> MemCopyUint8Wrapper(uint8_t* dest, <span class="keyword">const</span> uint8_t* src,</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                                   <span class="keywordtype">size_t</span> chars) {</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  memcpy(dest, src, chars);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>}</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">// For values &lt; 16, the assembler function is slower than the inlined C code.</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#ae9c3e01ed0907ba11f87871dbb21b357">kMinComplexMemCopy</a> = 16;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ae0ee98c9174e5955450c56da22cb8f6a">MemCopy</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> size) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ae0ee98c9174e5955450c56da22cb8f6a">MemCopy</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  (*memcopy_uint8_function)(<span class="keyword">reinterpret_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(dest),</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                            <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>uint8_t*<span class="keyword">&gt;</span>(src), <a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> V8_INLINE <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a7d9a6377d2996578ec1e725079f12ee0">MemMove</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a7d9a6377d2996578ec1e725079f12ee0">MemMove</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src,</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                                         <span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  memmove(dest, src, size);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>}</div>
@@ -164,7 +172,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">// Overlapping writes help to save instructions, e.g. doing 2 two-byte writes</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">// instead 3 one-byte write for count == 3.</span></div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> IntType&gt;</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>V8_INLINE V8_CLANG_NO_SANITIZE(<span class="stringliteral">&quot;alignment&quot;</span>) void OverlappingWrites(</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><a class="code hl_define" href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a> <a class="code hl_define" href="v8config_8h.html#a4a4f805933601fb08938a5ddfad7afa8">V8_CLANG_NO_SANITIZE</a>(<span class="stringliteral">&quot;alignment&quot;</span>) void OverlappingWrites(</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span>* dst, const <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> count) {</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  *<span class="keyword">reinterpret_cast&lt;</span>IntType*<span class="keyword">&gt;</span>(dst) = *<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>IntType*<span class="keyword">&gt;</span>(src);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  *<span class="keyword">reinterpret_cast&lt;</span>IntType*<span class="keyword">&gt;</span>(<span class="keyword">static_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(dst) + count -</div>
@@ -173,7 +181,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>                                        count - <span class="keyword">sizeof</span>(IntType));</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>V8_CLANG_NO_SANITIZE(<span class="stringliteral">&quot;alignment&quot;</span>)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><a class="code hl_define" href="v8config_8h.html#a4a4f805933601fb08938a5ddfad7afa8">V8_CLANG_NO_SANITIZE</a>(<span class="stringliteral">&quot;alignment&quot;</span>)</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>inline <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ae0ee98c9174e5955450c56da22cb8f6a">MemCopy</a>(<span class="keywordtype">void</span>* dst, const <span class="keywordtype">void</span>* src, <span class="keywordtype">size_t</span> count) {</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keyword">auto</span>* dst_u = <span class="keyword">static_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(dst);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keyword">const</span> <span class="keyword">auto</span>* src_u = <span class="keyword">static_cast&lt;</span><span class="keyword">const </span>uint8_t*<span class="keyword">&gt;</span>(src);</div>
@@ -285,7 +293,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>}</div>
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">#endif</span></div>
 <div class="foldopen" id="foldopen00189" data-start="{" data-end="}">
-<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a7d9a6377d2996578ec1e725079f12ee0">  189</a></span><a class="code hl_define" href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a7d9a6377d2996578ec1e725079f12ee0">MemMove</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src,</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a7d9a6377d2996578ec1e725079f12ee0">  189</a></span><a class="code hl_define" href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a> <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a7d9a6377d2996578ec1e725079f12ee0">MemMove</a>(<span class="keywordtype">void</span>* dest, <span class="keyword">const</span> <span class="keywordtype">void</span>* src,</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>                                      <span class="keywordtype">size_t</span> size) {</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="comment">// Fast path for small sizes. The compiler will expand the {memmove} for small</span></div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>  <span class="comment">// fixed sizes to a sequence of move instructions. This avoids the overhead of</span></div>
@@ -325,27 +333,27 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment">// |src| and |dst| must be TWord-size aligned.</span></div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="keyword">template</span> &lt;<span class="keywordtype">size_t</span> kBlockCopyLimit, <span class="keyword">typename</span> T&gt;</div>
 <div class="foldopen" id="foldopen00227" data-start="{" data-end="}">
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a59fcc0965ca472966865337e44c00269">  227</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a59fcc0965ca472966865337e44c00269">CopyImpl</a>(T* dst_ptr, <span class="keyword">const</span> T* src_ptr, <span class="keywordtype">size_t</span> count) {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a59fcc0965ca472966865337e44c00269">  227</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a59fcc0965ca472966865337e44c00269">CopyImpl</a>(T* dst_ptr, <span class="keyword">const</span> T* src_ptr, <span class="keywordtype">size_t</span> <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>) {</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <span class="keyword">constexpr</span> <span class="keywordtype">int</span> kTWordSize = <span class="keyword">sizeof</span>(<a class="code hl_define" href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a>);</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> dst = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(dst_ptr);</div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> src = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(src_ptr);</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(dst, kTWordSize));</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(src, kTWordSize));</div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(((src &lt;= dst) &amp;&amp; ((src + count * kTWordSize) &lt;= dst)) ||</div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>         ((dst &lt;= src) &amp;&amp; ((dst + count * kTWordSize) &lt;= src)));</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> dst = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(dst_ptr);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> src = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(src_ptr);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(dst, kTWordSize));</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a>(src, kTWordSize));</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(((src &lt;= dst) &amp;&amp; ((src + <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> * kTWordSize) &lt;= dst)) ||</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>         ((dst &lt;= src) &amp;&amp; ((dst + <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> * kTWordSize) &lt;= src)));</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <span class="keywordflow">if</span> (count == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <span class="keywordflow">if</span> (<a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> == 0) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  <span class="comment">// Use block copying MemCopy if the segment we&#39;re copying is</span></div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <span class="comment">// enough to justify the extra call/setup overhead.</span></div>
-<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <span class="keywordflow">if</span> (count &lt; kBlockCopyLimit) {</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>  <span class="keywordflow">if</span> (<a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> &lt; kBlockCopyLimit) {</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keywordflow">do</span> {</div>
-<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      count--;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>      <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>--;</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      *dst_ptr++ = *src_ptr++;</div>
-<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    } <span class="keywordflow">while</span> (count &gt; 0);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    } <span class="keywordflow">while</span> (<a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> &gt; 0);</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#ae0ee98c9174e5955450c56da22cb8f6a">MemCopy</a>(dst_ptr, src_ptr, count * kTWordSize);</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#ae0ee98c9174e5955450c56da22cb8f6a">MemCopy</a>(dst_ptr, src_ptr, <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> * kTWordSize);</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>  }</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>}</div>
 </div>
@@ -353,10 +361,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="comment">// Copies kSystemPointerSize-sized words from |src| to |dst|. The data spans</span></div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="comment">// must not overlap. |src| and |dst| must be kSystemPointerSize-aligned.</span></div>
 <div class="foldopen" id="foldopen00253" data-start="{" data-end="}">
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a93d841f23de8e9b9325a0ab6fd171e8a">  253</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a93d841f23de8e9b9325a0ab6fd171e8a">CopyWords</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> dst, <span class="keyword">const</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> src, <span class="keywordtype">size_t</span> num_words) {</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a93d841f23de8e9b9325a0ab6fd171e8a">  253</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a93d841f23de8e9b9325a0ab6fd171e8a">CopyWords</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> dst, <span class="keyword">const</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> src, <span class="keywordtype">size_t</span> num_words) {</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> kBlockCopyLimit = 16;</div>
-<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#a59fcc0965ca472966865337e44c00269">CopyImpl&lt;kBlockCopyLimit&gt;</a>(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a>*<span class="keyword">&gt;</span>(dst),</div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                            <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a>*<span class="keyword">&gt;</span>(src), num_words);</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#a59fcc0965ca472966865337e44c00269">CopyImpl&lt;kBlockCopyLimit&gt;</a>(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a>*<span class="keyword">&gt;</span>(dst),</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>                            <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a>*<span class="keyword">&gt;</span>(src), num_words);</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>}</div>
 </div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span> </div>
@@ -399,7 +407,7 @@ $(function(){ initResizable(false); });
 </div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
 <div class="foldopen" id="foldopen00293" data-start="{" data-end="}">
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a0e211cc6badff5ae72d89e7835124862">  293</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ade4e5e39ec28c957990aa1eb406ae857">MemsetPointer</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a>* dest, <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> value, <span class="keywordtype">size_t</span> counter) {</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a0e211cc6badff5ae72d89e7835124862">  293</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ade4e5e39ec28c957990aa1eb406ae857">MemsetPointer</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a>* dest, <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> value, <span class="keywordtype">size_t</span> counter) {</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span><span class="preprocessor">#if V8_HOST_ARCH_IA32</span></div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="preprocessor">#define STOS &quot;stosl&quot;</span></div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span><span class="preprocessor">#elif V8_HOST_ARCH_X64</span></div>
@@ -435,17 +443,17 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  T* a = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a713282f0d86c48b3ac210e8f7380d0ea">U</a>* b = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>  a = b;  <span class="comment">// Fake assignment to check assignability.</span></div>
-<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(a);</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>  <a class="code hl_define" href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(a);</div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="preprocessor">#endif  </span><span class="comment">// DEBUG</span></div>
-<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#ade4e5e39ec28c957990aa1eb406ae857">MemsetPointer</a>(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a>*<span class="keyword">&gt;</span>(dest),</div>
-<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(value), counter);</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#ade4e5e39ec28c957990aa1eb406ae857">MemsetPointer</a>(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a>*<span class="keyword">&gt;</span>(dest),</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(value), counter);</div>
 <div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>}</div>
 </div>
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
 <div class="foldopen" id="foldopen00334" data-start="{" data-end="}">
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#af76ce7ac895cdc281d8d930a0bc81105">  334</a></span><span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#ade4e5e39ec28c957990aa1eb406ae857">MemsetPointer</a>(T** dest, std::nullptr_t, <span class="keywordtype">size_t</span> counter) {</div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#ade4e5e39ec28c957990aa1eb406ae857">MemsetPointer</a>(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a>*<span class="keyword">&gt;</span>(dest), <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a>{0}, counter);</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#ade4e5e39ec28c957990aa1eb406ae857">MemsetPointer</a>(<span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a>*<span class="keyword">&gt;</span>(dest), <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a>{0}, counter);</div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>}</div>
 </div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
@@ -454,11 +462,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="comment">// The separate declaration is needed for the V8_NONNULL, which is not allowed</span></div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span><span class="comment">// on a definition.</span></div>
 <div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SrcType, <span class="keyword">typename</span> DstType&gt;</div>
-<div class="line"><a id="l00343" name="l00343"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a97a2bf2e1b8fac6ada79dd7ec47ffcfe">  343</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a97a2bf2e1b8fac6ada79dd7ec47ffcfe">CopyChars</a>(DstType* dst, <span class="keyword">const</span> SrcType* src, <span class="keywordtype">size_t</span> count) V8_NONNULL(1, 2);</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a97a2bf2e1b8fac6ada79dd7ec47ffcfe">  343</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a97a2bf2e1b8fac6ada79dd7ec47ffcfe">CopyChars</a>(DstType* dst, <span class="keyword">const</span> SrcType* src, <span class="keywordtype">size_t</span> <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>) <a class="code hl_define" href="v8config_8h.html#ab44f5ad517e54a11b0662cbdb503317f">V8_NONNULL</a>(1, 2);</div>
 <div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span> </div>
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> SrcType, <span class="keyword">typename</span> DstType&gt;</div>
 <div class="foldopen" id="foldopen00346" data-start="{" data-end="}">
-<div class="line"><a id="l00346" name="l00346"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a2540290d1874f4643986fb9db313ca40">  346</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a97a2bf2e1b8fac6ada79dd7ec47ffcfe">CopyChars</a>(DstType* dst, <span class="keyword">const</span> SrcType* src, <span class="keywordtype">size_t</span> count) {</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a2540290d1874f4643986fb9db313ca40">  346</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a97a2bf2e1b8fac6ada79dd7ec47ffcfe">CopyChars</a>(DstType* dst, <span class="keyword">const</span> SrcType* src, <span class="keywordtype">size_t</span> <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>) {</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>  <span class="keyword">static_assert</span>(std::is_integral&lt;SrcType&gt;::value);</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>  <span class="keyword">static_assert</span>(std::is_integral&lt;DstType&gt;::value);</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>  <span class="keyword">using </span>SrcTypeUnsigned = <span class="keyword">typename</span> std::make_unsigned&lt;SrcType&gt;::type;</div>
@@ -466,11 +474,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span><span class="preprocessor">#ifdef DEBUG</span></div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>  <span class="comment">// Check for no overlap, otherwise {std::copy_n} cannot be used.</span></div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> src_start = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(src);</div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> src_end = src_start + count * <span class="keyword">sizeof</span>(SrcType);</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> dst_start = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(dst);</div>
-<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> dst_end = dst_start + count * <span class="keyword">sizeof</span>(DstType);</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(src_end &lt;= dst_start || dst_end &lt;= src_start);</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> src_start = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(src);</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> src_end = src_start + <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> * <span class="keyword">sizeof</span>(SrcType);</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> dst_start = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(dst);</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> dst_end = dst_start + <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> * <span class="keyword">sizeof</span>(DstType);</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(src_end &lt;= dst_start || dst_end &lt;= src_start);</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span> </div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>  <span class="keyword">auto</span>* dst_u = <span class="keyword">reinterpret_cast&lt;</span>DstTypeUnsigned*<span class="keyword">&gt;</span>(dst);</div>
@@ -479,7 +487,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span><span class="preprocessor">#if defined(V8_OPTIMIZE_WITH_NEON)</span></div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (<span class="keyword">sizeof</span>(DstType) == 1 &amp;&amp; <span class="keyword">sizeof</span>(SrcType) == 1) {</div>
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    <span class="comment">// Use simd optimized memcpy.</span></div>
-<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#ae0ee98c9174e5955450c56da22cb8f6a">MemCopy</a>(dst, src, count);</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#ae0ee98c9174e5955450c56da22cb8f6a">MemCopy</a>(dst, src, <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>);</div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>  }</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span><span class="preprocessor">#endif  </span><span class="comment">// defined(V8_OPTIMIZE_WITH_NEON)</span></div>
@@ -487,7 +495,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>  <span class="comment">// Especially Atom CPUs profit from this explicit instantiation for small</span></div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>  <span class="comment">// counts. This gives up to 20 percent improvement for microbenchmarks such as</span></div>
 <div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>  <span class="comment">// joining an array of small integers (2019-10-16).</span></div>
-<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>  <span class="keywordflow">switch</span> (count) {</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>  <span class="keywordflow">switch</span> (<a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>) {</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span><span class="preprocessor">#define CASE(N)                   \</span></div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span><span class="preprocessor">  case N:                         \</span></div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span><span class="preprocessor">    std::copy_n(src_u, N, dst_u); \</span></div>
@@ -510,7 +518,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08eaaac39f4a9457da6fbab6f63ef8320ca4">CASE</a>(16)</div>
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span><span class="preprocessor">#undef CASE</span></div>
 <div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>    <span class="keywordflow">default</span>:</div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>      std::copy_n(src_u, count, dst_u);</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>      std::copy_n(src_u, <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>, dst_u);</div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>      <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>  }</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>}</div>
@@ -523,12 +531,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="abase_2ieee754_8cc_html_a0acb682b8260ab1c60b918599864e2e5"><div class="ttname"><a href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a></div><div class="ttdeci">#define T</div></div>
 <div class="ttc" id="abits_8h_html"><div class="ttname"><a href="bits_8h.html">bits.h</a></div></div>
 <div class="ttc" id="adebug-coverage_8cc_html_a86988a65e0d3ece7990c032c159786d6"><div class="ttname"><a href="debug-coverage_8cc.html#a86988a65e0d3ece7990c032c159786d6">count</a></div><div class="ttdeci">uint32_t count</div><div class="ttdef"><b>Definition</b> <a href="debug-coverage_8cc_source.html#l00594">debug-coverage.cc:594</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="amacros_8h_html"><div class="ttname"><a href="macros_8h.html">macros.h</a></div></div>
-<div class="ttc" id="amacros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00281">macros.h:281</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00452">macros.h:452</a></div></div>
-<div class="ttc" id="amacros_8h_html_ab7a19c1f785f31f2b190afc19875368a"><div class="ttname"><a href="macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a></div><div class="ttdeci">constexpr bool IsAligned(T value, U alignment)</div><div class="ttdef"><b>Definition</b> <a href="macros_8h_source.html#l00391">macros.h:391</a></div></div>
 <div class="ttc" id="anamespaceunibrow_html_abcc5d3424c551c568df4199a48bea1c2"><div class="ttname"><a href="namespaceunibrow.html#abcc5d3424c551c568df4199a48bea1c2">unibrow::uint16_t</a></div><div class="ttdeci">unsigned short uint16_t</div><div class="ttdef"><b>Definition</b> <a href="unicode_8cc_source.html#l00039">unicode.cc:39</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_1_1bits_html_a05e2bc2d432bf561a7cf3ced275a87be"><div class="ttname"><a href="namespacev8_1_1base_1_1bits.html#a05e2bc2d432bf561a7cf3ced275a87be">v8::base::bits::CountLeadingZeros</a></div><div class="ttdeci">constexpr unsigned CountLeadingZeros(T value)</div><div class="ttdef"><b>Definition</b> <a href="bits_8h_source.html#l00100">bits.h:100</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1wasm_html_ac81d27d6edb00aeed62a3e4745b8cba0"><div class="ttname"><a href="namespacev8_1_1internal_1_1wasm.html#ac81d27d6edb00aeed62a3e4745b8cba0">v8::internal::wasm::void</a></div><div class="ttdeci">typedef void(VECTORCALL PWasmOp)(const uint8_t *code</div></div>
@@ -540,8 +542,8 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a59fcc0965ca472966865337e44c00269"><div class="ttname"><a href="namespacev8_1_1internal.html#a59fcc0965ca472966865337e44c00269">v8::internal::CopyImpl</a></div><div class="ttdeci">void CopyImpl(T *dst_ptr, const T *src_ptr, size_t count)</div><div class="ttdef"><b>Definition</b> <a href="#l00227">memcopy.h:227</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a713282f0d86c48b3ac210e8f7380d0ea"><div class="ttname"><a href="namespacev8_1_1internal.html#a713282f0d86c48b3ac210e8f7380d0ea">v8::internal::U</a></div><div class="ttdeci">constexpr int U</div><div class="ttdef"><b>Definition</b> <a href="constants-arm_8h_source.html#l00180">constants-arm.h:180</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a7d9a6377d2996578ec1e725079f12ee0"><div class="ttname"><a href="namespacev8_1_1internal.html#a7d9a6377d2996578ec1e725079f12ee0">v8::internal::MemMove</a></div><div class="ttdeci">V8_EXPORT_PRIVATE void MemMove(void *dest, const void *src, size_t size)</div><div class="ttdef"><b>Definition</b> <a href="#l00189">memcopy.h:189</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a93d841f23de8e9b9325a0ab6fd171e8a"><div class="ttname"><a href="namespacev8_1_1internal.html#a93d841f23de8e9b9325a0ab6fd171e8a">v8::internal::CopyWords</a></div><div class="ttdeci">void CopyWords(Address dst, const Address src, size_t num_words)</div><div class="ttdef"><b>Definition</b> <a href="#l00253">memcopy.h:253</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a97a2bf2e1b8fac6ada79dd7ec47ffcfe"><div class="ttname"><a href="namespacev8_1_1internal.html#a97a2bf2e1b8fac6ada79dd7ec47ffcfe">v8::internal::CopyChars</a></div><div class="ttdeci">void CopyChars(DstType *dst, const SrcType *src, size_t count) V8_NONNULL(1</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ac1a33b5fd9af1653d346746cdb5c1ac0"><div class="ttname"><a href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">v8::internal::value</a></div><div class="ttdeci">return value</div><div class="ttdef"><b>Definition</b> <a href="map-inl_8h_source.html#l00870">map-inl.h:870</a></div></div>
@@ -554,13 +556,26 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_afc346a825a4faca215c836ee5203269c"><div class="ttname"><a href="namespacev8_1_1internal.html#afc346a825a4faca215c836ee5203269c">v8::internal::MemsetUint32</a></div><div class="ttdeci">void MemsetUint32(uint32_t *dest, uint32_t value, size_t counter)</div><div class="ttdef"><b>Definition</b> <a href="#l00267">memcopy.h:267</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="asetup-heap-internal_8cc_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> <a href="setup-heap-internal_8cc_source.html#l00126">setup-heap-internal.cc:126</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html"><div class="ttname"><a href="src_2base_2macros_8h.html">macros.h</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_a280b0798f270f4b3f361c9ab64832956"><div class="ttname"><a href="src_2base_2macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a></div><div class="ttdeci">#define USE(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00281">macros.h:281</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab08e353943a53678ac6baafc678f2d81"><div class="ttname"><a href="src_2base_2macros_8h.html#ab08e353943a53678ac6baafc678f2d81">V8_EXPORT_PRIVATE</a></div><div class="ttdeci">#define V8_EXPORT_PRIVATE</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00452">macros.h:452</a></div></div>
+<div class="ttc" id="asrc_2base_2macros_8h_html_ab7a19c1f785f31f2b190afc19875368a"><div class="ttname"><a href="src_2base_2macros_8h.html#ab7a19c1f785f31f2b190afc19875368a">IsAligned</a></div><div class="ttdeci">constexpr bool IsAligned(T value, U alignment)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2macros_8h_source.html#l00391">macros.h:391</a></div></div>
 <div class="ttc" id="astring_8h_html"><div class="ttname"><a href="string_8h.html">string.h</a></div></div>
+<div class="ttc" id="astructv8_1_1internal_1_1count_html"><div class="ttname"><a href="structv8_1_1internal_1_1count.html">v8::internal::count</a></div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00567">v8-fast-api-calls.h:567</a></div></div>
 <div class="ttc" id="autils_2utils_8h_html"><div class="ttname"><a href="utils_2utils_8h.html">utils.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a24a5c8b6c341efc8dc6de3e6d0d73a50"><div class="ttname"><a href="v8config_8h.html#a24a5c8b6c341efc8dc6de3e6d0d73a50">V8_INLINE</a></div><div class="ttdeci">#define V8_INLINE</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00499">v8config.h:499</a></div></div>
+<div class="ttc" id="av8config_8h_html_a4a4f805933601fb08938a5ddfad7afa8"><div class="ttname"><a href="v8config_8h.html#a4a4f805933601fb08938a5ddfad7afa8">V8_CLANG_NO_SANITIZE</a></div><div class="ttdeci">#define V8_CLANG_NO_SANITIZE(what)</div><div class="ttdoc">defined(V8_TRIVIAL_ABI)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00754">v8config.h:754</a></div></div>
+<div class="ttc" id="av8config_8h_html_ab44f5ad517e54a11b0662cbdb503317f"><div class="ttname"><a href="v8config_8h.html#ab44f5ad517e54a11b0662cbdb503317f">V8_NONNULL</a></div><div class="ttdeci">#define V8_NONNULL(...)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00563">v8config.h:563</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:01 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_313caf1132e152dd9b58bea13a4052ca.html">utils</a></li><li class="navelem"><a class="el" href="memcopy_8h.html">memcopy.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:15 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

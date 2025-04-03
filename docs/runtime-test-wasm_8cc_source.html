@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/runtime/runtime-test-wasm.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/runtime/runtime-test-wasm.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('runtime-test-wasm_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bf9f26469d00835ba20ff8d80ee5a804.html">runtime</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">runtime-test-wasm.cc</div></div>
 </div><!--header-->
@@ -101,7 +109,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cinttypes&gt;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;type_traits&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;include/v8-wasm.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="v8-wasm_8h.html">include/v8-wasm.h</a>&quot;</span></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="base_2memory_8h.html">src/base/memory.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="mutex_8h.html">src/base/platform/mutex.h</a>&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="builtins-inl_8h.html">src/builtins/builtins-inl.h</a>&quot;</span></div>
@@ -126,8 +134,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8_1_1internal.html">v8::internal</a> {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span>{</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>V8_WARN_UNUSED_RESULT <a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> CrashUnlessFuzzing(Isolate* isolate) {</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.fuzzing);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a> <a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> CrashUnlessFuzzing(Isolate* isolate) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.fuzzing);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordflow">return</span> ReadOnlyRoots(isolate).undefined_value();</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
@@ -144,58 +152,58 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>                                GetPerIsolateWasmControls)</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><a class="code hl_typedef" href="namespacev8_1_1base.html#aff4f0bde11bb5029febbd61c8217f63e">base::LazyMutex</a> g_PerIsolateWasmControlsMutex = <a class="code hl_define" href="mutex_8h.html#ab9eda31a32ad469c6c00d977fe45b37f">LAZY_MUTEX_INITIALIZER</a>;</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">bool</span> IsWasmCompileAllowed(v8::Isolate* isolate, v8::Local&lt;v8::Value&gt; value,</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">bool</span> IsWasmCompileAllowed(<a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a> value,</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                          <span class="keywordtype">bool</span> is_async) {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> guard(g_PerIsolateWasmControlsMutex.Pointer());</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <a class="code hl_define" href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(GetPerIsolateWasmControls()-&gt;<a class="code hl_variable" href="debug-coverage_8cc.html#a86988a65e0d3ece7990c032c159786d6">count</a>(isolate), 0);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(GetPerIsolateWasmControls()-&gt;<a class="code hl_variable" href="debug-coverage_8cc.html#a86988a65e0d3ece7990c032c159786d6">count</a>(isolate), 0);</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keyword">const</span> WasmCompileControls&amp; ctrls = GetPerIsolateWasmControls()-&gt;at(isolate);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordflow">return</span> (is_async &amp;&amp; ctrls.AllowAnySizeForAsync) ||</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>         (value-&gt;IsArrayBuffer() &amp;&amp; value.As&lt;v8::ArrayBuffer&gt;()-&gt;ByteLength() &lt;=</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>         (value-&gt;IsArrayBuffer() &amp;&amp; value.As&lt;<a class="code hl_class" href="classv8_1_1ArrayBuffer.html">v8::ArrayBuffer</a>&gt;()-&gt;<a class="code hl_function" href="classv8_1_1ArrayBuffer.html#af4c4ad8075f74892ed3fa217219a2626">ByteLength</a>() &lt;=</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                                        ctrls.MaxWasmBufferSize) ||</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>         (value-&gt;IsArrayBufferView() &amp;&amp;</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>          value.As&lt;v8::ArrayBufferView&gt;()-&gt;ByteLength() &lt;=</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>          value.As&lt;<a class="code hl_class" href="classv8_1_1ArrayBufferView.html">v8::ArrayBufferView</a>&gt;()-&gt;<a class="code hl_function" href="classv8_1_1ArrayBufferView.html#a9fc7563c97e0b639a6c0a3274995bb3c">ByteLength</a>() &lt;=</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>              ctrls.MaxWasmBufferSize);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// Use the compile controls for instantiation, too</span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">bool</span> IsWasmInstantiateAllowed(v8::Isolate* isolate,</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                              v8::Local&lt;v8::Value&gt; module_or_bytes,</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="keywordtype">bool</span> IsWasmInstantiateAllowed(<a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* isolate,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>                              <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a> module_or_bytes,</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>                              <span class="keywordtype">bool</span> is_async) {</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> guard(g_PerIsolateWasmControlsMutex.Pointer());</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <a class="code hl_define" href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(GetPerIsolateWasmControls()-&gt;<a class="code hl_variable" href="debug-coverage_8cc.html#a86988a65e0d3ece7990c032c159786d6">count</a>(isolate), 0);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(GetPerIsolateWasmControls()-&gt;<a class="code hl_variable" href="debug-coverage_8cc.html#a86988a65e0d3ece7990c032c159786d6">count</a>(isolate), 0);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keyword">const</span> WasmCompileControls&amp; ctrls = GetPerIsolateWasmControls()-&gt;at(isolate);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordflow">if</span> (is_async &amp;&amp; ctrls.AllowAnySizeForAsync) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordflow">if</span> (!module_or_bytes-&gt;IsWasmModuleObject()) {</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keywordflow">return</span> IsWasmCompileAllowed(isolate, module_or_bytes, is_async);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>  }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  v8::Local&lt;v8::WasmModuleObject&gt; module =</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      v8::Local&lt;v8::WasmModuleObject&gt;::Cast(module_or_bytes);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::WasmModuleObject&gt;</a> module =</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <a class="code hl_function" href="classv8_1_1Local.html#a45e2cd2a1e652a5fa6a0c4d178e9fb1a">v8::Local&lt;v8::WasmModuleObject&gt;::Cast</a>(module_or_bytes);</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>             <span class="keyword">module</span>-&gt;GetCompiledModule().GetWireBytesRef().size()) &lt;=</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>         ctrls.MaxWasmBufferSize;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>}</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>v8::Local&lt;v8::Value&gt; NewRangeException(v8::Isolate* isolate,</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Value&gt;</a> NewRangeException(<a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* isolate,</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                                       <span class="keyword">const</span> <span class="keywordtype">char</span>* message) {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">return</span> v8::Exception::RangeError(</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      v8::String::NewFromOneByte(isolate,</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1Exception.html#a56a41912c5cf60675a6a0f589e914cfa">v8::Exception::RangeError</a>(</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <a class="code hl_function" href="classv8_1_1String.html#ae79a33fdd62ca7cf6464fbf9a205ee26">v8::String::NewFromOneByte</a>(isolate,</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>                                 <span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span>uint8_t*<span class="keyword">&gt;</span>(message))</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>          .ToLocalChecked());</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>}</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keywordtype">void</span> ThrowRangeException(v8::Isolate* isolate, <span class="keyword">const</span> <span class="keywordtype">char</span>* message) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keywordtype">void</span> ThrowRangeException(<a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* isolate, <span class="keyword">const</span> <span class="keywordtype">char</span>* message) {</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  isolate-&gt;ThrowException(NewRangeException(isolate, message));</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keywordtype">bool</span> WasmModuleOverride(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1FunctionCallbackInfo.html">v8::FunctionCallbackInfo&lt;v8::Value&gt;</a>&amp; info) {</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a84fbbdbd472303acde12e2cc65e316f3">ValidateCallbackInfo</a>(info));</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a84fbbdbd472303acde12e2cc65e316f3">ValidateCallbackInfo</a>(info));</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <span class="keywordflow">if</span> (IsWasmCompileAllowed(info.GetIsolate(), info[0], <span class="keyword">false</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  ThrowRangeException(info.GetIsolate(), <span class="stringliteral">&quot;Sync compile not allowed&quot;</span>);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>}</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="keywordtype">bool</span> WasmInstanceOverride(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1FunctionCallbackInfo.html">v8::FunctionCallbackInfo&lt;v8::Value&gt;</a>&amp; info) {</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a84fbbdbd472303acde12e2cc65e316f3">ValidateCallbackInfo</a>(info));</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#a84fbbdbd472303acde12e2cc65e316f3">ValidateCallbackInfo</a>(info));</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keywordflow">if</span> (IsWasmInstantiateAllowed(info.GetIsolate(), info[0], <span class="keyword">false</span>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  ThrowRangeException(info.GetIsolate(), <span class="stringliteral">&quot;Sync instantiate not allowed&quot;</span>);</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -211,14 +219,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length() != 2 || !<a class="code hl_function" href="namespacev8_1_1internal.html#a511c3dd03bb4fc2b91ed9ef5535e202e">IsSmi</a>(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[0]) || !IsBoolean(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[1])) {</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">return</span> CrashUnlessFuzzing(isolate);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  }</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  v8::Isolate* v8_isolate = <span class="keyword">reinterpret_cast&lt;</span>v8::Isolate*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* v8_isolate = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordtype">int</span> block_size = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.smi_value_at(0);</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="keywordtype">bool</span> allow_async = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;Boolean&gt;</a>(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[1])-&gt;ToBool(isolate);</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::MutexGuard</a> guard(g_PerIsolateWasmControlsMutex.Pointer());</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  WasmCompileControls&amp; ctrl = (*GetPerIsolateWasmControls())[v8_isolate];</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  ctrl.AllowAnySizeForAsync = allow_async;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  ctrl.MaxWasmBufferSize = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(block_size);</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  v8_isolate-&gt;SetWasmModuleCallback(WasmModuleOverride);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  v8_isolate-&gt;<a class="code hl_function" href="classv8_1_1Isolate.html#ad3dd2d7c8d03b3243f513c5f4d34723f">SetWasmModuleCallback</a>(WasmModuleOverride);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).undefined_value();</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>}</div>
 </div>
@@ -226,8 +234,8 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00128" data-start="{" data-end="}">
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a18699cef52db62956258460f09c4d535">  128</a></span><a class="code hl_define" href="execution_2arguments_8h.html#a6ecc8298355f5ad7b603cd7638f35882">RUNTIME_FUNCTION</a>(Runtime_SetWasmInstantiateControls) {</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <a class="code hl_class" href="classv8_1_1internal_1_1HandleScope.html">HandleScope</a> scope(isolate);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  v8::Isolate* v8_isolate = <span class="keyword">reinterpret_cast&lt;</span>v8::Isolate*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  v8_isolate-&gt;SetWasmInstanceCallback(WasmInstanceOverride);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>  <a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* v8_isolate = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>  v8_isolate-&gt;<a class="code hl_function" href="classv8_1_1Isolate.html#a7ad2d4c60517c11bf275bf640a45db79">SetWasmInstanceCallback</a>(WasmInstanceOverride);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).undefined_value();</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
 </div>
@@ -265,7 +273,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>      <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;WasmInstanceObject&gt;</a>(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[0]);</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;WasmTrustedInstanceData&gt;</a> trusted_data =</div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#adfd398598d5cab5022712cef2cb18ea7">instance_object</a>-&gt;trusted_data(isolate);</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> wrapper_entry =</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> wrapper_entry =</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>      <a class="code hl_function" href="classv8_1_1internal_1_1Builtins.html#acebcaee6cb63c76d9b36678a3a375187">Builtins::EntryOf</a>(Builtin::kWasmToJsWrapperAsm, isolate);</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = 0;</div>
@@ -308,7 +316,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;WasmFunctionData&gt;</a> func_data = sfi-&gt;wasm_function_data();</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <a class="code hl_class" href="classv8_1_1internal_1_1WasmCodePointer.html">WasmCodePointer</a> call_target = func_data-&gt;internal()-&gt;call_target();</div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
-<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> wrapper_entry =</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> wrapper_entry =</div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>      <a class="code hl_function" href="classv8_1_1internal_1_1Builtins.html#acebcaee6cb63c76d9b36678a3a375187">Builtins::EntryOf</a>(Builtin::kWasmToJsWrapperAsm, isolate);</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <span class="keywordflow">return</span> isolate-&gt;heap()-&gt;ToBoolean(</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>      <a class="code hl_function" href="namespacev8_1_1internal_1_1wasm.html#a0a36931b3d2bbcdfcbb253b229838952">wasm::GetProcessWideWasmCodePointerTable</a>()-&gt;EntrypointEqualTo(</div>
@@ -341,7 +349,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>  <span class="comment">// TODO(saelo): we have to use full pointer comparison here until all Code</span></div>
 <div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>  <span class="comment">// objects are located in trusted space. Currently, builtin Code objects are</span></div>
 <div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  <span class="comment">// still inside the main pointer compression cage.</span></div>
-<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  <span class="keyword">static_assert</span>(!kAllCodeObjectsLiveInTrustedSpace);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>  <span class="keyword">static_assert</span>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#ac8661ea9688019bb467bec1d28cc977a">kAllCodeObjectsLiveInTrustedSpace</a>);</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>  <span class="keywordflow">if</span> (!wrapper.<a class="code hl_function" href="classv8_1_1internal_1_1TaggedImpl.html#a2f2dd9d2a3a33b75e7510a58b0bde9a5">SafeEquals</a>(*external_function_code)) {</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="keywordflow">return</span> isolate-&gt;heap()-&gt;ToBoolean(<span class="keyword">false</span>);</div>
 <div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>  }</div>
@@ -357,16 +365,16 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a892e5b9a9e63a9807fb57ac7f18e6e3d">  250</a></span><a class="code hl_define" href="execution_2arguments_8h.html#a6ecc8298355f5ad7b603cd7638f35882">RUNTIME_FUNCTION</a>(Runtime_WasmTraceEnter) {</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>  <a class="code hl_class" href="classv8_1_1internal_1_1HandleScope.html">HandleScope</a> shs(isolate);</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>  <span class="comment">// This isn&#39;t exposed to fuzzers so doesn&#39;t need to handle invalid arguments.</span></div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>  PrintIndentation(WasmStackSize(isolate));</div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>  <span class="comment">// Find the caller wasm frame.</span></div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>  <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmCodeRefScope.html">wasm::WasmCodeRefScope</a> wasm_code_ref_scope;</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DebuggableStackFrameIterator.html">DebuggableStackFrameIterator</a> it(isolate);</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!it.done());</div>
-<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(it.is_wasm());</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!it.done());</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(it.is_wasm());</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><span class="preprocessor">#if V8_ENABLE_DRUMBRAKE</span></div>
-<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!it.is_wasm_interpreter_entry());</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!it.is_wasm_interpreter_entry());</div>
 <div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="preprocessor">#endif  </span><span class="comment">// V8_ENABLE_DRUMBRAKE</span></div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>  WasmFrame* frame = WasmFrame::cast(it.frame());</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span> </div>
@@ -397,7 +405,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00288" name="l00288"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a22a6defe7780384887ac2f7afd46956e">  288</a></span><a class="code hl_define" href="execution_2arguments_8h.html#a6ecc8298355f5ad7b603cd7638f35882">RUNTIME_FUNCTION</a>(Runtime_WasmTraceExit) {</div>
 <div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>  <a class="code hl_class" href="classv8_1_1internal_1_1HandleScope.html">HandleScope</a> shs(isolate);</div>
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>  <span class="comment">// This isn&#39;t exposed to fuzzers so doesn&#39;t need to handle invalid arguments.</span></div>
-<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(1, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(1, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Smi&gt;</a> return_addr_smi = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;Smi&gt;</a>(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[0]);</div>
 <div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>  PrintIndentation(WasmStackSize(isolate));</div>
@@ -406,10 +414,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>  <span class="comment">// Find the caller wasm frame.</span></div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>  <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmCodeRefScope.html">wasm::WasmCodeRefScope</a> wasm_code_ref_scope;</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DebuggableStackFrameIterator.html">DebuggableStackFrameIterator</a> it(isolate);</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!it.done());</div>
-<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(it.is_wasm());</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!it.done());</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(it.is_wasm());</div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span><span class="preprocessor">#if V8_ENABLE_DRUMBRAKE</span></div>
-<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!it.is_wasm_interpreter_entry());</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!it.is_wasm_interpreter_entry());</div>
 <div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span><span class="preprocessor">#endif  </span><span class="comment">// V8_ENABLE_DRUMBRAKE</span></div>
 <div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>  WasmFrame* frame = WasmFrame::cast(it.frame());</div>
 <div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>  <span class="keywordtype">int</span> func_index = frame-&gt;function_index();</div>
@@ -418,7 +426,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
 <div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <span class="keywordtype">size_t</span> num_returns = <a class="code hl_variable" href="namespacev8_1_1internal.html#a6135f0ef57de8d381e3225f6659c617a">sig</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Signature.html#a1280bc48b23c97cbf6d4498145693440">return_count</a>();</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>  <span class="comment">// If we have no returns, we should have passed {Smi::zero()}.</span></div>
-<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(num_returns == 0, <a class="code hl_function" href="namespacev8_1_1internal.html#afe9ba8a86bf1be5a82d2fcf9770e364d">IsZero</a>(return_addr_smi));</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(num_returns == 0, <a class="code hl_function" href="namespacev8_1_1internal.html#afe9ba8a86bf1be5a82d2fcf9770e364d">IsZero</a>(return_addr_smi));</div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  <span class="keywordflow">if</span> (num_returns == 1) {</div>
 <div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>    <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1ValueType.html">wasm::ValueType</a> return_type = <a class="code hl_variable" href="namespacev8_1_1internal.html#a6135f0ef57de8d381e3225f6659c617a">sig</a>-&gt;GetReturn(0);</div>
 <div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="keywordflow">switch</span> (return_type.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1ValueTypeBase.html#a777139722a5dbb1f696aa90375aab584">kind</a>()) {</div>
@@ -478,8 +486,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span> </div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span> </div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="keywordtype">bool</span> DisallowWasmCodegenFromStringsCallback(v8::Local&lt;v8::Context&gt; <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>,</div>
-<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                                            v8::Local&lt;v8::String&gt; source) {</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span><span class="keywordtype">bool</span> DisallowWasmCodegenFromStringsCallback(<a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Context&gt;</a> <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>,</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                                            <a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::String&gt;</a> source) {</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>}</div>
 <div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
@@ -492,8 +500,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    <span class="keywordflow">return</span> CrashUnlessFuzzing(isolate);</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>  }</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>  <span class="keywordtype">bool</span> flag = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;Boolean&gt;</a>(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[0])-&gt;ToBool(isolate);</div>
-<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>  v8::Isolate* v8_isolate = <span class="keyword">reinterpret_cast&lt;</span>v8::Isolate*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
-<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>  v8_isolate-&gt;SetAllowWasmCodeGenerationCallback(</div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>  <a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* v8_isolate = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>  v8_isolate-&gt;<a class="code hl_function" href="classv8_1_1Isolate.html#a0cac332e61544be1271ceb784078b2fe">SetAllowWasmCodeGenerationCallback</a>(</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>      flag ? DisallowWasmCodegenFromStringsCallback : <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).undefined_value();</div>
 <div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>}</div>
@@ -568,7 +576,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#adfd398598d5cab5022712cef2cb18ea7">instance_object</a>-&gt;trusted_data(isolate), isolate);</div>
 <div class="line"><a id="l00444" name="l00444"></a><span class="lineno">  444</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> tag =</div>
 <div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>      <a class="code hl_function" href="classv8_1_1internal_1_1WasmExceptionPackage.html#a833f9e80776b90dc91b14074accc7588">WasmExceptionPackage::GetExceptionTag</a>(isolate, exception);</div>
-<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(IsWasmExceptionTag(*tag));</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(IsWasmExceptionTag(*tag));</div>
 <div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;FixedArray&gt;</a> tags_table(trusted_data-&gt;tags_table(), isolate);</div>
 <div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = 0; <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> &lt; tags_table-&gt;length(); ++<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>) {</div>
 <div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>    <span class="keywordflow">if</span> (tags_table-&gt;get(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>) == *tag) <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a755464f4d2c3a71ffd82cd474bbc50f3">Smi::FromInt</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>);</div>
@@ -616,7 +624,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;WasmModuleObject&gt;</a> module_obj = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at&lt;<a class="code hl_class" href="classv8_1_1internal_1_1WasmModuleObject.html">WasmModuleObject</a>&gt;(0);</div>
 <div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span> </div>
 <div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span>  <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1NativeModule.html">wasm::NativeModule</a>* native_module = module_obj-&gt;native_module();</div>
-<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!native_module-&gt;compilation_state()-&gt;failed());</div>
+<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!native_module-&gt;compilation_state()-&gt;failed());</div>
 <div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span> </div>
 <div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>  <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmSerializer.html">wasm::WasmSerializer</a> wasm_serializer(native_module);</div>
 <div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>  <span class="keywordtype">size_t</span> byte_length = wasm_serializer.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmSerializer.html#ad5372741d4ea6dbc5fa3c0f61079ea4a">GetSerializedNativeModuleSize</a>();</div>
@@ -629,7 +637,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span> </div>
 <div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>  <span class="keywordtype">bool</span> serialized_successfully = wasm_serializer.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmSerializer.html#afb6ac6111b3c42c9fb5914a18c2b0771">SerializeNativeModule</a>(</div>
 <div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>      {<span class="keyword">static_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(array_buffer-&gt;backing_store()), byte_length});</div>
-<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(serialized_successfully || <a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.fuzzing);</div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(serialized_successfully || <a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.fuzzing);</div>
 <div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>  <span class="keywordflow">return</span> *array_buffer;</div>
 <div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>}</div>
 </div>
@@ -640,14 +648,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00509" name="l00509"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a9d6c2a1d3adc7f01b6aa06fe0286d649">  509</a></span><a class="code hl_define" href="execution_2arguments_8h.html#a6ecc8298355f5ad7b603cd7638f35882">RUNTIME_FUNCTION</a>(Runtime_DeserializeWasmModule) {</div>
 <div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>  <a class="code hl_class" href="classv8_1_1internal_1_1HandleScope.html">HandleScope</a> scope(isolate);</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>  <span class="comment">// This isn&#39;t exposed to fuzzers so doesn&#39;t need to handle invalid arguments.</span></div>
-<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>  <a class="code hl_define" href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(2, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
-<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(IsJSArrayBuffer(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[0]));</div>
-<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(IsJSTypedArray(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[1]));</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a>(2, <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length());</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(IsJSArrayBuffer(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[0]));</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(IsJSTypedArray(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[1]));</div>
 <div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span> </div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSArrayBuffer&gt;</a> buffer = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at&lt;<a class="code hl_class" href="classv8_1_1internal_1_1JSArrayBuffer.html">JSArrayBuffer</a>&gt;(0);</div>
 <div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSTypedArray&gt;</a> wire_bytes = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at&lt;<a class="code hl_class" href="classv8_1_1internal_1_1JSTypedArray.html">JSTypedArray</a>&gt;(1);</div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!buffer-&gt;was_detached());</div>
-<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!wire_bytes-&gt;WasDetached());</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!buffer-&gt;was_detached());</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!wire_bytes-&gt;WasDetached());</div>
 <div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span> </div>
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSArrayBuffer&gt;</a> wire_bytes_buffer = wire_bytes-&gt;GetBuffer();</div>
 <div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>  <a class="code hl_class" href="classv8_1_1base_1_1Vector.html">base::Vector&lt;const uint8_t&gt;</a> wire_bytes_vec{</div>
@@ -714,7 +722,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span> </div>
 <div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T1, <span class="keyword">typename</span> T2 = T1&gt;</div>
-<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span><span class="keywordtype">void</span> PrintRep(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> address, <span class="keyword">const</span> <span class="keywordtype">char</span>* str) {</div>
+<div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span><span class="keywordtype">void</span> PrintRep(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> address, <span class="keyword">const</span> <span class="keywordtype">char</span>* str) {</div>
 <div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">PrintF</a>(<span class="stringliteral">&quot;%4s:&quot;</span>, str);</div>
 <div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>  <span class="keyword">const</span> <span class="keyword">auto</span> t1 = <a class="code hl_function" href="namespacev8_1_1base.html#ab45c101e7276178d8f0ee9ec3de002c4">base::ReadLittleEndianValue&lt;T1&gt;</a>(address);</div>
 <div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (std::is_floating_point_v&lt;T1&gt;) {</div>
@@ -749,10 +757,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00612" name="l00612"></a><span class="lineno">  612</span>  <span class="comment">// Find the caller wasm frame.</span></div>
 <div class="line"><a id="l00613" name="l00613"></a><span class="lineno">  613</span>  <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmCodeRefScope.html">wasm::WasmCodeRefScope</a> wasm_code_ref_scope;</div>
 <div class="line"><a id="l00614" name="l00614"></a><span class="lineno">  614</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DebuggableStackFrameIterator.html">DebuggableStackFrameIterator</a> it(isolate, <a class="code hl_struct" href="structv8_1_1internal_1_1StackFrameIterator_1_1NoHandles.html">StackFrameIterator::NoHandles</a>{});</div>
-<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!it.done());</div>
-<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(it.is_wasm());</div>
+<div class="line"><a id="l00615" name="l00615"></a><span class="lineno">  615</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!it.done());</div>
+<div class="line"><a id="l00616" name="l00616"></a><span class="lineno">  616</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(it.is_wasm());</div>
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span><span class="preprocessor">#if V8_ENABLE_DRUMBRAKE</span></div>
-<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!it.is_wasm_interpreter_entry());</div>
+<div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!it.is_wasm_interpreter_entry());</div>
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span><span class="preprocessor">#endif  </span><span class="comment">// V8_ENABLE_DRUMBRAKE</span></div>
 <div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>  WasmFrame* frame = WasmFrame::cast(it.frame());</div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span> </div>
@@ -765,8 +773,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00628" name="l00628"></a><span class="lineno">  628</span>         <span class="comment">// &quot;load from&quot;.</span></div>
 <div class="line"><a id="l00629" name="l00629"></a><span class="lineno">  629</span>         info-&gt;is_store ? <span class="stringliteral">&quot; store to&quot;</span> : <span class="stringliteral">&quot;load from&quot;</span>, info-&gt;offset);</div>
 <div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>  <span class="comment">// TODO(14259): Fix for multi-memory.</span></div>
-<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>  <span class="keyword">const</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> address =</div>
-<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>      <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a><span class="keyword">&gt;</span>(frame-&gt;trusted_instance_data()</div>
+<div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>  <span class="keyword">const</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> address =</div>
+<div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>      <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a><span class="keyword">&gt;</span>(frame-&gt;trusted_instance_data()</div>
 <div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>                                    -&gt;memory_object(0)</div>
 <div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>                                    -&gt;array_buffer()</div>
 <div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>                                    -&gt;backing_store()) +</div>
@@ -811,13 +819,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span><span class="keyword">namespace </span>{</div>
 <div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span><span class="comment">// Validate a function now if not already validated. Returns false on validation</span></div>
 <div class="line"><a id="l00675" name="l00675"></a><span class="lineno">  675</span><span class="comment">// failure, true otherwise.</span></div>
-<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span>V8_WARN_UNUSED_RESULT</div>
-<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span><span class="keywordtype">bool</span> ValidateFunctionNowIfNeeded(Isolate* isolate,</div>
+<div class="line"><a id="l00676" name="l00676"></a><span class="lineno">  676</span><a class="code hl_define" href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a></div>
+<div class="line"><a id="l00677" name="l00677"></a><span class="lineno">  677</span><span class="keywordtype">bool</span> ValidateFunctionNowIfNeeded(<a class="code hl_class" href="classv8_1_1Isolate.html">Isolate</a>* isolate,</div>
 <div class="line"><a id="l00678" name="l00678"></a><span class="lineno">  678</span>                                 wasm::NativeModule* native_module,</div>
 <div class="line"><a id="l00679" name="l00679"></a><span class="lineno">  679</span>                                 <span class="keywordtype">int</span> func_index) {</div>
 <div class="line"><a id="l00680" name="l00680"></a><span class="lineno">  680</span>  <span class="keyword">const</span> wasm::WasmModule* module = native_module-&gt;module();</div>
 <div class="line"><a id="l00681" name="l00681"></a><span class="lineno">  681</span>  <span class="keywordflow">if</span> (module-&gt;function_was_validated(func_index)) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.wasm_lazy_validation);</div>
+<div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.wasm_lazy_validation);</div>
 <div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>  <a class="code hl_variable" href="asm-types_8cc.html#a3ec7489f692d014c845cc17e64456793">Zone</a> validation_zone(isolate-&gt;allocator(), <a class="code hl_define" href="zone_8h.html#a6b1fd0a126df3f1b788cee19d9cce66e">ZONE_NAME</a>);</div>
 <div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>  wasm::WasmDetectedFeatures unused_detected_features;</div>
 <div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>  <span class="keyword">const</span> wasm::WasmFunction* func = &amp;<span class="keyword">module</span>-&gt;functions[func_index];</div>
@@ -838,7 +846,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span> </div>
 <div class="foldopen" id="foldopen00701" data-start="{" data-end="}">
 <div class="line"><a id="l00701" name="l00701"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a42c82ebf6a42abfce53e41ef5a2e76fd">  701</a></span><a class="code hl_define" href="execution_2arguments_8h.html#a6ecc8298355f5ad7b603cd7638f35882">RUNTIME_FUNCTION</a>(Runtime_WasmTierUpFunction) {</div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.wasm_jitless);</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.wasm_jitless);</div>
 <div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span> </div>
 <div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>  <a class="code hl_class" href="classv8_1_1internal_1_1HandleScope.html">HandleScope</a> scope(isolate);</div>
 <div class="line"><a id="l00705" name="l00705"></a><span class="lineno">  705</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length() != 1 ||</div>
@@ -864,7 +872,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00724" name="l00724"></a><span class="lineno">  724</span> </div>
 <div class="foldopen" id="foldopen00725" data-start="{" data-end="}">
 <div class="line"><a id="l00725" name="l00725"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#af3d0d58a1820ecaa77f6c89613974246">  725</a></span><a class="code hl_define" href="execution_2arguments_8h.html#a6ecc8298355f5ad7b603cd7638f35882">RUNTIME_FUNCTION</a>(Runtime_WasmTriggerTierUpForTesting) {</div>
-<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.wasm_jitless);</div>
+<div class="line"><a id="l00726" name="l00726"></a><span class="lineno">  726</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.wasm_jitless);</div>
 <div class="line"><a id="l00727" name="l00727"></a><span class="lineno">  727</span> </div>
 <div class="line"><a id="l00728" name="l00728"></a><span class="lineno">  728</span>  <a class="code hl_class" href="classv8_1_1internal_1_1HandleScope.html">HandleScope</a> scope(isolate);</div>
 <div class="line"><a id="l00729" name="l00729"></a><span class="lineno">  729</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length() != 1 ||</div>
@@ -910,10 +918,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00765" name="l00765"></a><span class="lineno">  765</span>  <a class="code hl_class" href="classv8_1_1internal_1_1MaybeHandle.html">MaybeHandle&lt;WasmModuleObject&gt;</a> maybe_module_object = engine-&gt;SyncCompile(</div>
 <div class="line"><a id="l00766" name="l00766"></a><span class="lineno">  766</span>      isolate, <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmEnabledFeatures.html">wasm::WasmEnabledFeatures</a>(), <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1CompileTimeImports.html">wasm::CompileTimeImports</a>(),</div>
 <div class="line"><a id="l00767" name="l00767"></a><span class="lineno">  767</span>      &amp;thrower, std::move(bytes));</div>
-<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!thrower.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1ErrorThrower.html#a603a53d1ac3dddd81154744ff36db838">error</a>());</div>
+<div class="line"><a id="l00768" name="l00768"></a><span class="lineno">  768</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!thrower.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1ErrorThrower.html#a603a53d1ac3dddd81154744ff36db838">error</a>());</div>
 <div class="line"><a id="l00769" name="l00769"></a><span class="lineno">  769</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;WasmModuleObject&gt;</a> module_object;</div>
 <div class="line"><a id="l00770" name="l00770"></a><span class="lineno">  770</span>  <span class="keywordflow">if</span> (!maybe_module_object.<a class="code hl_function" href="classv8_1_1internal_1_1MaybeHandle.html#a98ea84525b814e50e12ccf8299f62cdd">ToHandle</a>(&amp;module_object)) {</div>
-<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(isolate-&gt;has_exception());</div>
+<div class="line"><a id="l00771" name="l00771"></a><span class="lineno">  771</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(isolate-&gt;has_exception());</div>
 <div class="line"><a id="l00772" name="l00772"></a><span class="lineno">  772</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).exception();</div>
 <div class="line"><a id="l00773" name="l00773"></a><span class="lineno">  773</span>  }</div>
 <div class="line"><a id="l00774" name="l00774"></a><span class="lineno">  774</span>  <span class="comment">// Instantiate the module.</span></div>
@@ -921,10 +929,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00776" name="l00776"></a><span class="lineno">  776</span>      engine-&gt;SyncInstantiate(isolate, &amp;thrower, module_object,</div>
 <div class="line"><a id="l00777" name="l00777"></a><span class="lineno">  777</span>                              <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;JSReceiver&gt;::null</a>(),</div>
 <div class="line"><a id="l00778" name="l00778"></a><span class="lineno">  778</span>                              <a class="code hl_class" href="classv8_1_1internal_1_1MaybeHandle.html">MaybeHandle&lt;JSArrayBuffer&gt;</a>());</div>
-<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!thrower.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1ErrorThrower.html#a603a53d1ac3dddd81154744ff36db838">error</a>());</div>
+<div class="line"><a id="l00779" name="l00779"></a><span class="lineno">  779</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!thrower.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1ErrorThrower.html#a603a53d1ac3dddd81154744ff36db838">error</a>());</div>
 <div class="line"><a id="l00780" name="l00780"></a><span class="lineno">  780</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;WasmInstanceObject&gt;</a> instance;</div>
 <div class="line"><a id="l00781" name="l00781"></a><span class="lineno">  781</span>  <span class="keywordflow">if</span> (!maybe_instance.<a class="code hl_function" href="classv8_1_1internal_1_1MaybeDirectHandle.html#a76857e813e1bdb19bbb3cbbfad729f1c">ToHandle</a>(&amp;instance)) {</div>
-<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(isolate-&gt;has_exception());</div>
+<div class="line"><a id="l00782" name="l00782"></a><span class="lineno">  782</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(isolate-&gt;has_exception());</div>
 <div class="line"><a id="l00783" name="l00783"></a><span class="lineno">  783</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).exception();</div>
 <div class="line"><a id="l00784" name="l00784"></a><span class="lineno">  784</span>  }</div>
 <div class="line"><a id="l00785" name="l00785"></a><span class="lineno">  785</span>  <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmValue.html">wasm::WasmValue</a> <a class="code hl_variable" href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">value</a>(int64_t{0x7AADF00DBAADF00D});</div>
@@ -935,12 +943,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00790" name="l00790"></a><span class="lineno">  790</span>  <span class="keywordflow">if</span> (is_struct) {</div>
 <div class="line"><a id="l00791" name="l00791"></a><span class="lineno">  791</span>    <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1StructType.html">wasm::StructType</a>* struct_type =</div>
 <div class="line"><a id="l00792" name="l00792"></a><span class="lineno">  792</span>        instance-&gt;module()-&gt;struct_type(type_index);</div>
-<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(struct_type-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1StructTypeBase.html#ac0b87d48dd4e3ca9e711b70d77309035">field_count</a>(), 1);</div>
-<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(struct_type-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1StructType.html#a0befc03840ccdf98e89b868ecaf154c7">field</a>(0), <a class="code hl_variable" href="namespacev8_1_1internal_1_1wasm.html#ac0993b253da7c6a4f84e778a5a7b99a3">wasm::kWasmI64</a>);</div>
+<div class="line"><a id="l00793" name="l00793"></a><span class="lineno">  793</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(struct_type-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1StructTypeBase.html#ac0b87d48dd4e3ca9e711b70d77309035">field_count</a>(), 1);</div>
+<div class="line"><a id="l00794" name="l00794"></a><span class="lineno">  794</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(struct_type-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1StructType.html#a0befc03840ccdf98e89b868ecaf154c7">field</a>(0), <a class="code hl_variable" href="namespacev8_1_1internal_1_1wasm.html#ac0993b253da7c6a4f84e778a5a7b99a3">wasm::kWasmI64</a>);</div>
 <div class="line"><a id="l00795" name="l00795"></a><span class="lineno">  795</span>    <span class="keywordflow">return</span> *isolate-&gt;factory()-&gt;NewWasmStruct(struct_type, &amp;value,</div>
 <div class="line"><a id="l00796" name="l00796"></a><span class="lineno">  796</span>                                              <a class="code hl_function" href="namespacev8_1_1internal.html#a60f13a8c00d0433f9336368824ac21a1">direct_handle</a>(map, isolate));</div>
 <div class="line"><a id="l00797" name="l00797"></a><span class="lineno">  797</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(instance-&gt;module()-&gt;array_type(type_index)-&gt;element_type(),</div>
+<div class="line"><a id="l00798" name="l00798"></a><span class="lineno">  798</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(instance-&gt;module()-&gt;array_type(type_index)-&gt;element_type(),</div>
 <div class="line"><a id="l00799" name="l00799"></a><span class="lineno">  799</span>              <a class="code hl_variable" href="namespacev8_1_1internal_1_1wasm.html#ac0993b253da7c6a4f84e778a5a7b99a3">wasm::kWasmI64</a>);</div>
 <div class="line"><a id="l00800" name="l00800"></a><span class="lineno">  800</span>    <span class="keywordflow">return</span> *isolate-&gt;factory()-&gt;NewWasmArray(<a class="code hl_variable" href="namespacev8_1_1internal_1_1wasm.html#ac0993b253da7c6a4f84e778a5a7b99a3">wasm::kWasmI64</a>, 1, value,</div>
 <div class="line"><a id="l00801" name="l00801"></a><span class="lineno">  801</span>                                             <a class="code hl_function" href="namespacev8_1_1internal.html#a60f13a8c00d0433f9336368824ac21a1">direct_handle</a>(map, isolate));</div>
@@ -955,7 +963,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00809" data-start="{" data-end="}">
 <div class="line"><a id="l00809" name="l00809"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a9a531612e07e7d95b4b3d9f1b4d51e58">  809</a></span><span class="keyword">static</span> <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> <a class="code hl_function" href="namespacev8_1_1internal.html#a9a531612e07e7d95b4b3d9f1b4d51e58">CreateDummyWasmLookAlikeForFuzzing</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
 <div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSObject&gt;</a> obj = isolate-&gt;factory()-&gt;NewJSObjectWithNullProto();</div>
-<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(IsJSReceiver(*obj));</div>
+<div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(IsJSReceiver(*obj));</div>
 <div class="line"><a id="l00812" name="l00812"></a><span class="lineno">  812</span>  <a class="code hl_define" href="execution_2isolate_8h.html#ab9c5f988388c2c537b8b161438e4ed31">MAYBE_RETURN</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSReceiver.html#a4add3013a632121dadc47c3321d85dc6">JSReceiver::SetIntegrityLevel</a>(isolate, <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSReceiver&gt;</a>(obj),</div>
 <div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>                                             <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a352f65439007f2f1b85c997c1ba11436ac96c4a6f8b2f89bb1dbaebb75becb0c2">FROZEN</a>, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760ac8c06c0e5cdd46711981e472881756de">kThrowOnError</a>),</div>
 <div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>               <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).<a class="code hl_variable" href="graph-builder-interface_8cc.html#a79d661617f46aabd0c6a79666870cbf5">exception</a>());</div>
@@ -1117,8 +1125,8 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00953" data-start="{" data-end="}">
 <div class="line"><a id="l00953" name="l00953"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#ac75bdb194bde35de892bc5b79a71101c">  953</a></span><a class="code hl_define" href="execution_2arguments_8h.html#a6ecc8298355f5ad7b603cd7638f35882">RUNTIME_FUNCTION</a>(Runtime_FreezeWasmLazyCompilation) {</div>
 <div class="line"><a id="l00954" name="l00954"></a><span class="lineno">  954</span>  <span class="comment">// This isn&#39;t exposed to fuzzers so doesn&#39;t need to handle invalid arguments.</span></div>
-<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length(), 1);</div>
-<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsWasmInstanceObject(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[0]));</div>
+<div class="line"><a id="l00955" name="l00955"></a><span class="lineno">  955</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.length(), 1);</div>
+<div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(IsWasmInstanceObject(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[0]));</div>
 <div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>  <a class="code hl_class" href="classv8_1_1internal_1_1PerThreadAssertScopeEmpty.html">DisallowGarbageCollection</a> no_gc;</div>
 <div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>  <span class="keyword">auto</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#adfd398598d5cab5022712cef2cb18ea7">instance_object</a> = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;WasmInstanceObject&gt;</a>(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>[0]);</div>
 <div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span> </div>
@@ -1136,14 +1144,14 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00969" name="l00969"></a><span class="lineno">  969</span>    <span class="keywordflow">return</span> CrashUnlessFuzzing(isolate);</div>
 <div class="line"><a id="l00970" name="l00970"></a><span class="lineno">  970</span>  }</div>
 <div class="line"><a id="l00971" name="l00971"></a><span class="lineno">  971</span>  <span class="keywordtype">bool</span> enable = <a class="code hl_function" href="classv8_1_1internal_1_1Object.html#a5cac49538cd5c519bab4d32d0d3c5ed9">Object::BooleanValue</a>(*<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at(0), isolate);</div>
-<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>  v8::Isolate* v8_isolate = <span class="keyword">reinterpret_cast&lt;</span>v8::Isolate*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
-<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>  <a class="code hl_variable" href="namespacev8.html#a01d5832a1667ac5e69ecb0b0cea36132">WasmImportedStringsEnabledCallback</a> enabled = [](v8::Local&lt;v8::Context&gt;) {</div>
+<div class="line"><a id="l00972" name="l00972"></a><span class="lineno">  972</span>  <a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>* v8_isolate = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classv8_1_1Isolate.html">v8::Isolate</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>);</div>
+<div class="line"><a id="l00973" name="l00973"></a><span class="lineno">  973</span>  <a class="code hl_typedef" href="namespacev8.html#aae4113b2f959523da4d5a900ae36620a">WasmImportedStringsEnabledCallback</a> enabled = [](<a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Context&gt;</a>) {</div>
 <div class="line"><a id="l00974" name="l00974"></a><span class="lineno">  974</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00975" name="l00975"></a><span class="lineno">  975</span>  };</div>
-<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>  <a class="code hl_variable" href="namespacev8.html#a01d5832a1667ac5e69ecb0b0cea36132">WasmImportedStringsEnabledCallback</a> disabled = [](v8::Local&lt;v8::Context&gt;) {</div>
+<div class="line"><a id="l00976" name="l00976"></a><span class="lineno">  976</span>  <a class="code hl_typedef" href="namespacev8.html#aae4113b2f959523da4d5a900ae36620a">WasmImportedStringsEnabledCallback</a> disabled = [](<a class="code hl_class" href="classv8_1_1Local.html">v8::Local&lt;v8::Context&gt;</a>) {</div>
 <div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>  };</div>
-<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>  v8_isolate-&gt;SetWasmImportedStringsEnabledCallback(enable ? enabled</div>
+<div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span>  v8_isolate-&gt;<a class="code hl_function" href="classv8_1_1Isolate.html#af2f6a6c6855a5d5a2a98184dc8a74e51">SetWasmImportedStringsEnabledCallback</a>(enable ? enabled</div>
 <div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>                                                           : disabled);</div>
 <div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).undefined_value();</div>
 <div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span>}</div>
@@ -1165,18 +1173,18 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00993" name="l00993"></a><span class="lineno">  993</span> </div>
 <div class="foldopen" id="foldopen00994" data-start="{" data-end="}">
 <div class="line"><a id="l00994" name="l00994"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a6f1d1d0142ea1e379d054c1578de30dd">  994</a></span><a class="code hl_define" href="execution_2arguments_8h.html#a6ecc8298355f5ad7b603cd7638f35882">RUNTIME_FUNCTION</a>(Runtime_WasmCompiledExportWrappersCount) {</div>
-<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>  <span class="keywordtype">int</span> count = isolate-&gt;counters()</div>
+<div class="line"><a id="l00995" name="l00995"></a><span class="lineno">  995</span>  <span class="keywordtype">int</span> <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> = isolate-&gt;counters()</div>
 <div class="line"><a id="l00996" name="l00996"></a><span class="lineno">  996</span>                  -&gt;wasm_compiled_export_wrapper()</div>
 <div class="line"><a id="l00997" name="l00997"></a><span class="lineno">  997</span>                  -&gt;GetInternalPointer()</div>
 <div class="line"><a id="l00998" name="l00998"></a><span class="lineno">  998</span>                  -&gt;load();</div>
-<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a755464f4d2c3a71ffd82cd474bbc50f3">Smi::FromInt</a>(count);</div>
+<div class="line"><a id="l00999" name="l00999"></a><span class="lineno">  999</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a755464f4d2c3a71ffd82cd474bbc50f3">Smi::FromInt</a>(<a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>);</div>
 <div class="line"><a id="l01000" name="l01000"></a><span class="lineno"> 1000</span>}</div>
 </div>
 <div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span> </div>
 <div class="foldopen" id="foldopen01002" data-start="{" data-end="}">
 <div class="line"><a id="l01002" name="l01002"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a56681e439667e4db816bfd812520ccc8"> 1002</a></span><a class="code hl_define" href="execution_2arguments_8h.html#a6ecc8298355f5ad7b603cd7638f35882">RUNTIME_FUNCTION</a>(Runtime_WasmDeoptsExecutedCount) {</div>
-<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>  <span class="keywordtype">int</span> count = <a class="code hl_function" href="namespacev8_1_1internal_1_1wasm.html#abc12fc3b25ebfb54c20b8479642acb94">wasm::GetWasmEngine</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmEngine.html#a5147b0f617e7f09fa772e669a5f84c58">GetDeoptsExecutedCount</a>();</div>
-<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a755464f4d2c3a71ffd82cd474bbc50f3">Smi::FromInt</a>(count);</div>
+<div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span>  <span class="keywordtype">int</span> <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> = <a class="code hl_function" href="namespacev8_1_1internal_1_1wasm.html#abc12fc3b25ebfb54c20b8479642acb94">wasm::GetWasmEngine</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmEngine.html#a5147b0f617e7f09fa772e669a5f84c58">GetDeoptsExecutedCount</a>();</div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a755464f4d2c3a71ffd82cd474bbc50f3">Smi::FromInt</a>(<a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>);</div>
 <div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>}</div>
 </div>
 <div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span> </div>
@@ -1207,8 +1215,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01029" name="l01029"></a><span class="lineno"> 1029</span> </div>
 <div class="foldopen" id="foldopen01030" data-start="{" data-end="}">
 <div class="line"><a id="l01030" name="l01030"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a7c34d11c23249795270eb796b6ccbc6e"> 1030</a></span><a class="code hl_define" href="execution_2arguments_8h.html#a6ecc8298355f5ad7b603cd7638f35882">RUNTIME_FUNCTION</a>(Runtime_WasmSwitchToTheCentralStackCount) {</div>
-<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>  <span class="keywordtype">int</span> count = isolate-&gt;wasm_switch_to_the_central_stack_counter();</div>
-<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a755464f4d2c3a71ffd82cd474bbc50f3">Smi::FromInt</a>(count);</div>
+<div class="line"><a id="l01031" name="l01031"></a><span class="lineno"> 1031</span>  <span class="keywordtype">int</span> <a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a> = isolate-&gt;wasm_switch_to_the_central_stack_counter();</div>
+<div class="line"><a id="l01032" name="l01032"></a><span class="lineno"> 1032</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1Smi.html#a755464f4d2c3a71ffd82cd474bbc50f3">Smi::FromInt</a>(<a class="code hl_struct" href="structv8_1_1internal_1_1count.html">count</a>);</div>
 <div class="line"><a id="l01033" name="l01033"></a><span class="lineno"> 1033</span>}</div>
 </div>
 <div class="line"><a id="l01034" name="l01034"></a><span class="lineno"> 1034</span> </div>
@@ -1217,7 +1225,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01036" name="l01036"></a><span class="lineno"> 1036</span>  <span class="comment">// This function verifies that itself, and therefore the JS function that</span></div>
 <div class="line"><a id="l01037" name="l01037"></a><span class="lineno"> 1037</span>  <span class="comment">// called it, is running on the central stack. This is used to check that wasm</span></div>
 <div class="line"><a id="l01038" name="l01038"></a><span class="lineno"> 1038</span>  <span class="comment">// switches to the central stack to run JS imports.</span></div>
-<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(isolate-&gt;IsOnCentralStack());</div>
+<div class="line"><a id="l01039" name="l01039"></a><span class="lineno"> 1039</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(isolate-&gt;IsOnCentralStack());</div>
 <div class="line"><a id="l01040" name="l01040"></a><span class="lineno"> 1040</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate).undefined_value();</div>
 <div class="line"><a id="l01041" name="l01041"></a><span class="lineno"> 1041</span>}</div>
 </div>
@@ -1299,7 +1307,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01117" name="l01117"></a><span class="lineno"> 1117</span>                                         wasm::CompileTimeImports{}, &amp;thrower,</div>
 <div class="line"><a id="l01118" name="l01118"></a><span class="lineno"> 1118</span>                                         <a class="code hl_function" href="namespacev8_1_1base.html#abc1a5cbcd5118aa93d683e4875fa029c">base::OwnedCopyOf</a>(module_bytes));</div>
 <div class="line"><a id="l01119" name="l01119"></a><span class="lineno"> 1119</span>  <span class="keywordflow">if</span> (thrower.error()) {</div>
-<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>    <a class="code hl_define" href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(</div>
+<div class="line"><a id="l01120" name="l01120"></a><span class="lineno"> 1120</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(</div>
 <div class="line"><a id="l01121" name="l01121"></a><span class="lineno"> 1121</span>        <span class="stringliteral">&quot;wasm::GenerateRandomWasmModule produced a module which did not &quot;</span></div>
 <div class="line"><a id="l01122" name="l01122"></a><span class="lineno"> 1122</span>        <span class="stringliteral">&quot;compile: %s&quot;</span>,</div>
 <div class="line"><a id="l01123" name="l01123"></a><span class="lineno"> 1123</span>        thrower.error_msg());</div>
@@ -1313,7 +1321,20 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="abase_2memory_8h_html"><div class="ttname"><a href="base_2memory_8h.html">memory.h</a></div></div>
 <div class="ttc" id="abuiltins-inl_8h_html"><div class="ttname"><a href="builtins-inl_8h.html">builtins-inl.h</a></div></div>
 <div class="ttc" id="aclasslength_html"><div class="ttname"><a href="classlength.html">length</a></div></div>
-<div class="ttc" id="aclassv8_1_1FunctionCallbackInfo_html"><div class="ttname"><a href="classv8_1_1FunctionCallbackInfo.html">v8::FunctionCallbackInfo</a></div><div class="ttdef"><b>Definition</b> <a href="wasm-js_8h_source.html#l00019">wasm-js.h:19</a></div></div>
+<div class="ttc" id="aclassv8_1_1ArrayBufferView_html"><div class="ttname"><a href="classv8_1_1ArrayBufferView.html">v8::ArrayBufferView</a></div><div class="ttdef"><b>Definition</b> <a href="v8-array-buffer_8h_source.html#l00384">v8-array-buffer.h:384</a></div></div>
+<div class="ttc" id="aclassv8_1_1ArrayBufferView_html_a9fc7563c97e0b639a6c0a3274995bb3c"><div class="ttname"><a href="classv8_1_1ArrayBufferView.html#a9fc7563c97e0b639a6c0a3274995bb3c">v8::ArrayBufferView::ByteLength</a></div><div class="ttdeci">size_t ByteLength()</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l09399">api.cc:9399</a></div></div>
+<div class="ttc" id="aclassv8_1_1ArrayBuffer_html"><div class="ttname"><a href="classv8_1_1ArrayBuffer.html">v8::ArrayBuffer</a></div><div class="ttdef"><b>Definition</b> <a href="v8-array-buffer_8h_source.html#l00136">v8-array-buffer.h:136</a></div></div>
+<div class="ttc" id="aclassv8_1_1ArrayBuffer_html_af4c4ad8075f74892ed3fa217219a2626"><div class="ttname"><a href="classv8_1_1ArrayBuffer.html#af4c4ad8075f74892ed3fa217219a2626">v8::ArrayBuffer::ByteLength</a></div><div class="ttdeci">size_t ByteLength() const</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l09165">api.cc:9165</a></div></div>
+<div class="ttc" id="aclassv8_1_1Exception_html_a56a41912c5cf60675a6a0f589e914cfa"><div class="ttname"><a href="classv8_1_1Exception.html#a56a41912c5cf60675a6a0f589e914cfa">v8::Exception::RangeError</a></div><div class="ttdeci">static Local&lt; Value &gt; RangeError(Local&lt; String &gt; message, Local&lt; Value &gt; options={})</div></div>
+<div class="ttc" id="aclassv8_1_1FunctionCallbackInfo_html"><div class="ttname"><a href="classv8_1_1FunctionCallbackInfo.html">v8::FunctionCallbackInfo</a></div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00049">v8-local-handle.h:49</a></div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1Isolate.html">v8::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="v8-isolate_8h_source.html#l00261">v8-isolate.h:261</a></div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html_a0cac332e61544be1271ceb784078b2fe"><div class="ttname"><a href="classv8_1_1Isolate.html#a0cac332e61544be1271ceb784078b2fe">v8::Isolate::SetAllowWasmCodeGenerationCallback</a></div><div class="ttdeci">void SetAllowWasmCodeGenerationCallback(AllowWasmCodeGenerationCallback callback)</div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html_a7ad2d4c60517c11bf275bf640a45db79"><div class="ttname"><a href="classv8_1_1Isolate.html#a7ad2d4c60517c11bf275bf640a45db79">v8::Isolate::SetWasmInstanceCallback</a></div><div class="ttdeci">void SetWasmInstanceCallback(ExtensionCallback callback)</div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html_ad3dd2d7c8d03b3243f513c5f4d34723f"><div class="ttname"><a href="classv8_1_1Isolate.html#ad3dd2d7c8d03b3243f513c5f4d34723f">v8::Isolate::SetWasmModuleCallback</a></div><div class="ttdeci">void SetWasmModuleCallback(ExtensionCallback callback)</div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html_af2f6a6c6855a5d5a2a98184dc8a74e51"><div class="ttname"><a href="classv8_1_1Isolate.html#af2f6a6c6855a5d5a2a98184dc8a74e51">v8::Isolate::SetWasmImportedStringsEnabledCallback</a></div><div class="ttdeci">void SetWasmImportedStringsEnabledCallback(WasmImportedStringsEnabledCallback callback)</div></div>
+<div class="ttc" id="aclassv8_1_1Local_html"><div class="ttname"><a href="classv8_1_1Local.html">v8::Local</a></div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00260">v8-local-handle.h:266</a></div></div>
+<div class="ttc" id="aclassv8_1_1Local_html_a45e2cd2a1e652a5fa6a0c4d178e9fb1a"><div class="ttname"><a href="classv8_1_1Local.html#a45e2cd2a1e652a5fa6a0c4d178e9fb1a">v8::Local::Cast</a></div><div class="ttdeci">static V8_INLINE Local&lt; T &gt; Cast(Local&lt; S &gt; that)</div><div class="ttdef"><b>Definition</b> <a href="v8-local-handle_8h_source.html#l00321">v8-local-handle.h:321</a></div></div>
+<div class="ttc" id="aclassv8_1_1String_html_ae79a33fdd62ca7cf6464fbf9a205ee26"><div class="ttname"><a href="classv8_1_1String.html#ae79a33fdd62ca7cf6464fbf9a205ee26">v8::String::NewFromOneByte</a></div><div class="ttdeci">static V8_WARN_UNUSED_RESULT MaybeLocal&lt; String &gt; NewFromOneByte(Isolate *isolate, const uint8_t *data, NewStringType type=NewStringType::kNormal, int length=-1)</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l07773">api.cc:7773</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1LockGuard_html"><div class="ttname"><a href="classv8_1_1base_1_1LockGuard.html">v8::base::LockGuard</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00534">mutex.h:534</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1OwnedVector_html"><div class="ttname"><a href="classv8_1_1base_1_1OwnedVector.html">v8::base::OwnedVector</a></div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00209">vector.h:209</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1SharedMutexGuard_html"><div class="ttname"><a href="classv8_1_1base_1_1SharedMutexGuard.html">v8::base::SharedMutexGuard</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00568">mutex.h:568</a></div></div>
@@ -1404,13 +1425,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="ajs-temporal-objects_8cc_html_a5d1eaa4d00d65b745d493b4b8ae43b00"><div class="ttname"><a href="js-temporal-objects_8cc.html#a5d1eaa4d00d65b745d493b4b8ae43b00">options</a></div><div class="ttdeci">DirectHandle&lt; JSReceiver &gt; options</div><div class="ttdef"><b>Definition</b> <a href="js-temporal-objects_8cc_source.html#l00207">js-temporal-objects.cc:207</a></div></div>
 <div class="ttc" id="ajump-threading_8cc_html_a41f8c58d2c01bf65b8ee199c3f87fc80"><div class="ttname"><a href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a></div><div class="ttdeci">ZoneVector&lt; RpoNumber &gt; &amp; result</div><div class="ttdef"><b>Definition</b> <a href="jump-threading_8cc_source.html#l00021">jump-threading.cc:21</a></div></div>
 <div class="ttc" id="alazy-instance_8h_html_a219abfaf8244b8fa42f0c18aca72c58f"><div class="ttname"><a href="lazy-instance_8h.html#a219abfaf8244b8fa42f0c18aca72c58f">DEFINE_LAZY_LEAKY_OBJECT_GETTER</a></div><div class="ttdeci">#define DEFINE_LAZY_LEAKY_OBJECT_GETTER(T, FunctionName,...)</div><div class="ttdef"><b>Definition</b> <a href="lazy-instance_8h_source.html#l00249">lazy-instance.h:249</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00047">logging.h:47</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
-<div class="ttc" id="alogging_8h_html_a96a75539aa82216cdde2250a11126ea0"><div class="ttname"><a href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a></div><div class="ttdeci">#define DCHECK_IMPLIES(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00493">logging.h:493</a></div></div>
-<div class="ttc" id="alogging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
-<div class="ttc" id="alogging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00487">logging.h:487</a></div></div>
 <div class="ttc" id="amemory-tracing_8h_html"><div class="ttname"><a href="memory-tracing_8h.html">memory-tracing.h</a></div></div>
 <div class="ttc" id="amodule-compiler_8h_html"><div class="ttname"><a href="module-compiler_8h.html">module-compiler.h</a></div></div>
 <div class="ttc" id="amul-fft_8cc_html_a76f11d9a0a47b94f72c2d0e77fb32240"><div class="ttname"><a href="mul-fft_8cc.html#a76f11d9a0a47b94f72c2d0e77fb32240">n</a></div><div class="ttdeci">int n</div><div class="ttdef"><b>Definition</b> <a href="mul-fft_8cc_source.html#l00296">mul-fft.cc:296</a></div></div>
@@ -1451,8 +1465,8 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_a60f13a8c00d0433f9336368824ac21a1"><div class="ttname"><a href="namespacev8_1_1internal.html#a60f13a8c00d0433f9336368824ac21a1">v8::internal::direct_handle</a></div><div class="ttdeci">V8_INLINE DirectHandle&lt; T &gt; direct_handle(Tagged&lt; T &gt; object, Isolate *isolate)</div><div class="ttdef"><b>Definition</b> <a href="handles-inl_8h_source.html#l00141">handles-inl.h:141</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a6135f0ef57de8d381e3225f6659c617a"><div class="ttname"><a href="namespacev8_1_1internal.html#a6135f0ef57de8d381e3225f6659c617a">v8::internal::sig</a></div><div class="ttdeci">kWasmInternalFunctionIndirectPointerTag kProtectedInstanceDataOffset sig</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00475">wasm-objects-inl.h:475</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a6d3f691695696e478ebb4a18ab857bfaa518b13885544b3431069d8b44387de9c"><div class="ttname"><a href="namespacev8_1_1internal.html#a6d3f691695696e478ebb4a18ab857bfaa518b13885544b3431069d8b44387de9c">v8::internal::InitializedFlag::kUninitialized</a></div><div class="ttdeci">@ kUninitialized</div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a84fbbdbd472303acde12e2cc65e316f3"><div class="ttname"><a href="namespacev8_1_1internal.html#a84fbbdbd472303acde12e2cc65e316f3">v8::internal::ValidateCallbackInfo</a></div><div class="ttdeci">bool V8_EXPORT ValidateCallbackInfo(const FunctionCallbackInfo&lt; void &gt; &amp;info)</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l12405">api.cc:12405</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a9a531612e07e7d95b4b3d9f1b4d51e58"><div class="ttname"><a href="namespacev8_1_1internal.html#a9a531612e07e7d95b4b3d9f1b4d51e58">v8::internal::CreateDummyWasmLookAlikeForFuzzing</a></div><div class="ttdeci">static Tagged&lt; Object &gt; CreateDummyWasmLookAlikeForFuzzing(Isolate *isolate)</div><div class="ttdef"><b>Definition</b> <a href="#l00809">runtime-test-wasm.cc:809</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9db791c05a0359859a321dcfec42e37"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8::internal::v8_flags</a></div><div class="ttdeci">V8_EXPORT_PRIVATE FlagValues v8_flags</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_abe5419355372f787c28119c509343410"><div class="ttname"><a href="namespacev8_1_1internal.html#abe5419355372f787c28119c509343410">v8::internal::MachineRepresentation</a></div><div class="ttdeci">MachineRepresentation</div><div class="ttdef"><b>Definition</b> <a href="machine-type_8h_source.html#l00019">machine-type.h:19</a></div></div>
@@ -1464,6 +1478,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_abe5419355372f787c28119c509343410aa5a13c410a14e644fd71a1a193fb882f"><div class="ttname"><a href="namespacev8_1_1internal.html#abe5419355372f787c28119c509343410aa5a13c410a14e644fd71a1a193fb882f">v8::internal::MachineRepresentation::kSimd128</a></div><div class="ttdeci">@ kSimd128</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_abe5419355372f787c28119c509343410af30575882aa69e9db7afa3e0a5873fc7"><div class="ttname"><a href="namespacev8_1_1internal.html#abe5419355372f787c28119c509343410af30575882aa69e9db7afa3e0a5873fc7">v8::internal::MachineRepresentation::kWord32</a></div><div class="ttdeci">@ kWord32</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ac1a33b5fd9af1653d346746cdb5c1ac0"><div class="ttname"><a href="namespacev8_1_1internal.html#ac1a33b5fd9af1653d346746cdb5c1ac0">v8::internal::value</a></div><div class="ttdeci">return value</div><div class="ttdef"><b>Definition</b> <a href="map-inl_8h_source.html#l00870">map-inl.h:870</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_ac8661ea9688019bb467bec1d28cc977a"><div class="ttname"><a href="namespacev8_1_1internal.html#ac8661ea9688019bb467bec1d28cc977a">v8::internal::kAllCodeObjectsLiveInTrustedSpace</a></div><div class="ttdeci">constexpr bool kAllCodeObjectsLiveInTrustedSpace</div><div class="ttdef"><b>Definition</b> <a href="v8-internal_8h_source.html#l00813">v8-internal.h:813</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ada67458c5a8e8c0ade0017e5d3c56fd3"><div class="ttname"><a href="namespacev8_1_1internal.html#ada67458c5a8e8c0ade0017e5d3c56fd3">v8::internal::kDoubleSize</a></div><div class="ttdeci">constexpr int kDoubleSize</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00399">globals.h:399</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_adbf2c933630f2f4bb419ce1ba04ce760ac8c06c0e5cdd46711981e472881756de"><div class="ttname"><a href="namespacev8_1_1internal.html#adbf2c933630f2f4bb419ce1ba04ce760ac8c06c0e5cdd46711981e472881756de">v8::internal::kThrowOnError</a></div><div class="ttdeci">@ kThrowOnError</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01703">globals.h:1703</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_adee95482032a93e07f59341fed5c909f"><div class="ttname"><a href="namespacev8_1_1internal.html#adee95482032a93e07f59341fed5c909f">v8::internal::is_shared</a></div><div class="ttdeci">JSArrayBuffer::IsDetachableBit is_shared</div><div class="ttdef"><b>Definition</b> <a href="js-array-buffer-inl_8h_source.html#l00180">js-array-buffer-inl.h:180</a></div></div>
@@ -1471,13 +1486,21 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_ae2a85b60dd6245096476dd62e5f1ba55"><div class="ttname"><a href="namespacev8_1_1internal.html#ae2a85b60dd6245096476dd62e5f1ba55">v8::internal::CreateWasmObject</a></div><div class="ttdeci">static Tagged&lt; Object &gt; CreateWasmObject(Isolate *isolate, base::Vector&lt; const uint8_t &gt; module_bytes, bool is_struct)</div><div class="ttdef"><b>Definition</b> <a href="#l00755">runtime-test-wasm.cc:755</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_afe9ba8a86bf1be5a82d2fcf9770e364d"><div class="ttname"><a href="namespacev8_1_1internal.html#afe9ba8a86bf1be5a82d2fcf9770e364d">v8::internal::IsZero</a></div><div class="ttdeci">static bool IsZero(const Operand &amp;rt)</div><div class="ttdef"><b>Definition</b> <a href="macro-assembler-riscv_8cc_source.html#l00039">macro-assembler-riscv.cc:39</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
-<div class="ttc" id="anamespacev8_html_a01d5832a1667ac5e69ecb0b0cea36132"><div class="ttname"><a href="namespacev8.html#a01d5832a1667ac5e69ecb0b0cea36132">v8::WasmImportedStringsEnabledCallback</a></div><div class="ttdeci">allow_wasm_code_gen_callback wasm_async_resolve_promise_callback WasmImportedStringsEnabledCallback</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l10882">api.cc:10882</a></div></div>
+<div class="ttc" id="anamespacev8_html_aae4113b2f959523da4d5a900ae36620a"><div class="ttname"><a href="namespacev8.html#aae4113b2f959523da4d5a900ae36620a">v8::WasmImportedStringsEnabledCallback</a></div><div class="ttdeci">bool(*)(Local&lt; Context &gt; context) WasmImportedStringsEnabledCallback</div><div class="ttdef"><b>Definition</b> <a href="v8-callbacks_8h_source.html#l00320">v8-callbacks.h:320</a></div></div>
 <div class="ttc" id="aproperty-descriptor_8h_html"><div class="ttname"><a href="property-descriptor_8h.html">property-descriptor.h</a></div></div>
 <div class="ttc" id="arandom-module-generation_8h_html"><div class="ttname"><a href="random-module-generation_8h.html">random-module-generation.h</a></div></div>
 <div class="ttc" id="aruntime-test-wasm_8cc_html_ab6082fff38c5901a8bed6aa58241a205"><div class="ttname"><a href="runtime-test-wasm_8cc.html#ab6082fff38c5901a8bed6aa58241a205">AllowAnySizeForAsync</a></div><div class="ttdeci">bool AllowAnySizeForAsync</div><div class="ttdef"><b>Definition</b> <a href="#l00040">runtime-test-wasm.cc:40</a></div></div>
 <div class="ttc" id="aruntime-test-wasm_8cc_html_ac81449c72ab9a7fa5f9d3435c09abdc2"><div class="ttname"><a href="runtime-test-wasm_8cc.html#ac81449c72ab9a7fa5f9d3435c09abdc2">MaxWasmBufferSize</a></div><div class="ttdeci">uint32_t MaxWasmBufferSize</div><div class="ttdef"><b>Definition</b> <a href="#l00039">runtime-test-wasm.cc:39</a></div></div>
 <div class="ttc" id="asmi_8h_html"><div class="ttname"><a href="smi_8h.html">smi.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00047">logging.h:47</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a96a75539aa82216cdde2250a11126ea0"><div class="ttname"><a href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a></div><div class="ttdeci">#define DCHECK_IMPLIES(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00493">logging.h:493</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aca32614b4d2aea7dd9abdeb222bf02f3"><div class="ttname"><a href="src_2base_2logging_8h.html#aca32614b4d2aea7dd9abdeb222bf02f3">CHECK_EQ</a></div><div class="ttdeci">#define CHECK_EQ(lhs, rhs)</div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="src_2base_2logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00487">logging.h:487</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1StackFrameIterator_1_1NoHandles_html"><div class="ttname"><a href="structv8_1_1internal_1_1StackFrameIterator_1_1NoHandles.html">v8::internal::StackFrameIterator::NoHandles</a></div><div class="ttdef"><b>Definition</b> <a href="frames_8h_source.html#l01717">frames.h:1717</a></div></div>
+<div class="ttc" id="astructv8_1_1internal_1_1count_html"><div class="ttname"><a href="structv8_1_1internal_1_1count.html">v8::internal::count</a></div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00567">v8-fast-api-calls.h:567</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1wasm_1_1MemoryTracingInfo_html"><div class="ttname"><a href="structv8_1_1internal_1_1wasm_1_1MemoryTracingInfo.html">v8::internal::wasm::MemoryTracingInfo</a></div><div class="ttdef"><b>Definition</b> <a href="memory-tracing_8h_source.html#l00020">memory-tracing.h:20</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1wasm_1_1ModuleTypeIndex_html"><div class="ttname"><a href="structv8_1_1internal_1_1wasm_1_1ModuleTypeIndex.html">v8::internal::wasm::ModuleTypeIndex</a></div><div class="ttdef"><b>Definition</b> <a href="value-type_8h_source.html#l00063">value-type.h:63</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1wasm_1_1ModuleWireBytes_html"><div class="ttname"><a href="structv8_1_1internal_1_1wasm_1_1ModuleWireBytes.html">v8::internal::wasm::ModuleWireBytes</a></div><div class="ttdef"><b>Definition</b> <a href="wasm-module_8h_source.html#l00986">wasm-module.h:986</a></div></div>
@@ -1488,6 +1511,8 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="atoken_8cc_html_a11e128205e425378254b6a9cf928ac6a"><div class="ttname"><a href="token_8cc.html#a11e128205e425378254b6a9cf928ac6a">T1</a></div><div class="ttdeci">#define T1(name, string, precedence)</div><div class="ttdef"><b>Definition</b> <a href="token_8cc_source.html#l00028">token.cc:28</a></div></div>
 <div class="ttc" id="atoken_8cc_html_af160c8734afb064af618897deb6ddb0e"><div class="ttname"><a href="token_8cc.html#af160c8734afb064af618897deb6ddb0e">T2</a></div><div class="ttdeci">#define T2(name, string, precedence)</div><div class="ttdef"><b>Definition</b> <a href="token_8cc_source.html#l00030">token.cc:30</a></div></div>
 <div class="ttc" id="atrap-handler_8h_html"><div class="ttname"><a href="trap-handler_8h.html">trap-handler.h</a></div></div>
+<div class="ttc" id="av8-wasm_8h_html"><div class="ttname"><a href="v8-wasm_8h.html">v8-wasm.h</a></div></div>
+<div class="ttc" id="av8config_8h_html_a63258e4bf5dc9fb8c78f881c8405d83b"><div class="ttname"><a href="v8config_8h.html#a63258e4bf5dc9fb8c78f881c8405d83b">V8_WARN_UNUSED_RESULT</a></div><div class="ttdeci">#define V8_WARN_UNUSED_RESULT</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00660">v8config.h:660</a></div></div>
 <div class="ttc" id="awasm-code-manager_8h_html"><div class="ttname"><a href="wasm-code-manager_8h.html">wasm-code-manager.h</a></div></div>
 <div class="ttc" id="awasm-code-pointer-table-inl_8h_html"><div class="ttname"><a href="wasm-code-pointer-table-inl_8h.html">wasm-code-pointer-table-inl.h</a></div></div>
 <div class="ttc" id="awasm-engine_8h_html"><div class="ttname"><a href="wasm-engine_8h.html">wasm-engine.h</a></div></div>
@@ -1497,10 +1522,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="awasm-serialization_8h_html"><div class="ttname"><a href="wasm-serialization_8h.html">wasm-serialization.h</a></div></div>
 <div class="ttc" id="azone_8h_html_a6b1fd0a126df3f1b788cee19d9cce66e"><div class="ttname"><a href="zone_8h.html#a6b1fd0a126df3f1b788cee19d9cce66e">ZONE_NAME</a></div><div class="ttdeci">#define ZONE_NAME</div><div class="ttdef"><b>Definition</b> <a href="zone_8h_source.html#l00022">zone.h:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:19:53 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bf9f26469d00835ba20ff8d80ee5a804.html">runtime</a></li><li class="navelem"><a class="el" href="runtime-test-wasm_8cc.html">runtime-test-wasm.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:06 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

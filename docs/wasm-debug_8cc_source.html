@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/wasm/wasm-debug.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/wasm/wasm-debug.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('wasm-debug_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2b581e8501b9ee14adb2dc81ebf46f49.html">wasm</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">wasm-debug.cc</div></div>
 </div><!--header-->
@@ -136,11 +144,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">enum</span> ReturnLocation { kAfterBreakpoint, kAfterWasmCall };</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> FindNewPC(WasmFrame* frame, WasmCode* wasm_code, <span class="keywordtype">int</span> byte_offset,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> FindNewPC(WasmFrame* frame, WasmCode* wasm_code, <span class="keywordtype">int</span> byte_offset,</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                  ReturnLocation return_location) {</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  base::Vector&lt;const uint8_t&gt; new_pos_table = wasm_code-&gt;source_positions();</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(0, byte_offset);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(0, byte_offset);</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <span class="comment">// Find the size of the call instruction by computing the distance from the</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="comment">// source position entry to the return address.</span></div>
@@ -153,7 +161,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    call_offset = old_it.code_offset();</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    old_it.Advance();</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  }</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(0, call_offset);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(0, call_offset);</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <span class="keywordtype">int</span> call_instruction_size = <a class="code hl_variable" href="liftoff-compiler_8cc.html#ac8403346601a16f8902bbe271ff3c261">pc_offset</a> - call_offset;</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <span class="comment">// If {return_location == kAfterBreakpoint} we search for the first code</span></div>
@@ -166,12 +174,12 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordflow">if</span> (return_location == kAfterBreakpoint) {</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">while</span> (!it.is_statement()) it.Advance();</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(byte_offset, it.source_position().ScriptOffset());</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(byte_offset, it.source_position().ScriptOffset());</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="keywordflow">return</span> wasm_code-&gt;instruction_start() + it.code_offset() +</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>           call_instruction_size;</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  }</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(kAfterWasmCall, return_location);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(kAfterWasmCall, return_location);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordtype">int</span> code_offset;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <span class="keywordflow">do</span> {</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    code_offset = it.code_offset();</div>
@@ -367,7 +375,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="comment">// Debug side tables for stepping are generated lazily.</span></div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>    <span class="keywordtype">bool</span> generate_debug_sidetable = for_debugging == <a class="code hl_enumvalue" href="namespacev8_1_1internal_1_1wasm.html#a11df36d2f23b22c6772f3a5f08731b5bafb5f23c032f3e99631bbc881807faac5">kWithBreakpoints</a>;</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="comment">// If lazy validation is on, we might need to lazily validate here.</span></div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keywordflow">if</span> (V8_UNLIKELY(!env.<a class="code hl_variable" href="structv8_1_1internal_1_1wasm_1_1CompilationEnv.html#aaa94c1bc8d30640716c3e0b5f32097cd">module</a>-&gt;<a class="code hl_function" href="structv8_1_1internal_1_1wasm_1_1WasmModule.html#ad1d21f975964f38d4f11b3db56a094bf">function_was_validated</a>(func_index))) {</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keywordflow">if</span> (<a class="code hl_define" href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a>(!env.<a class="code hl_variable" href="structv8_1_1internal_1_1wasm_1_1CompilationEnv.html#aaa94c1bc8d30640716c3e0b5f32097cd">module</a>-&gt;<a class="code hl_function" href="structv8_1_1internal_1_1wasm_1_1WasmModule.html#ad1d21f975964f38d4f11b3db56a094bf">function_was_validated</a>(func_index))) {</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>      <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmDetectedFeatures.html">WasmDetectedFeatures</a> unused_detected_features;</div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>      <a class="code hl_class" href="classv8_1_1internal_1_1Zone.html">Zone</a> validation_zone(wasm::GetWasmEngine()-&gt;allocator(), <a class="code hl_define" href="zone_8h.html#a6b1fd0a126df3f1b788cee19d9cce66e">ZONE_NAME</a>);</div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>      <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1Result.html">DecodeResult</a> validation_result =</div>
@@ -375,7 +383,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>                               env.<a class="code hl_variable" href="structv8_1_1internal_1_1wasm_1_1CompilationEnv.html#aaa94c1bc8d30640716c3e0b5f32097cd">module</a>, &amp;unused_detected_features, body);</div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>      <span class="comment">// Handling illegal modules here is tricky. As lazy validation is off by</span></div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>      <span class="comment">// default anyway and this is for debugging only, we just crash for now.</span></div>
-<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      <a class="code hl_define" href="logging_8h.html#a7b0fb5d6be902959a80a9a33cc4e73fe">CHECK_WITH_MSG</a>(validation_result.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1Result.html#a084b2eb633d37457622cd4dc1cd2e506">ok</a>(),</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a7b0fb5d6be902959a80a9a33cc4e73fe">CHECK_WITH_MSG</a>(validation_result.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1Result.html#a084b2eb633d37457622cd4dc1cd2e506">ok</a>(),</div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>                     validation_result.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1Result.html#a11e980b41b98a6afe45b9fdd1fd9066e">error</a>().<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmError.html#a7d583c40faf6dae5c064a75e61724fce">message</a>().c_str());</div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>      env.<a class="code hl_variable" href="structv8_1_1internal_1_1wasm_1_1CompilationEnv.html#aaa94c1bc8d30640716c3e0b5f32097cd">module</a>-&gt;<a class="code hl_function" href="structv8_1_1internal_1_1wasm_1_1WasmModule.html#a1ba1c8f2a48659fe0cdf2aee38ce0a43">set_function_validated</a>(func_index);</div>
 <div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    }</div>
@@ -390,17 +398,17 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>                                                          : <span class="keyword">nullptr</span>));</div>
 <div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    <span class="comment">// Liftoff compilation failure is a FATAL error. We rely on complete Liftoff</span></div>
 <div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    <span class="comment">// support for debugging.</span></div>
-<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.succeeded()) <a class="code hl_define" href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;Liftoff compilation failed&quot;</span>);</div>
-<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(generate_debug_sidetable, debug_sidetable != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.succeeded()) <a class="code hl_define" href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;Liftoff compilation failed&quot;</span>);</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(generate_debug_sidetable, debug_sidetable != <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <a class="code hl_define" href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.assumptions);</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>.assumptions);</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html">WasmCode</a>* new_code =</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>        <a class="code hl_variable" href="module-compiler_8cc.html#a0b64f93045c33bf33392097c6a3aef2e">native_module_</a>-&gt;PublishCode(<a class="code hl_variable" href="module-compiler_8cc.html#a0b64f93045c33bf33392097c6a3aef2e">native_module_</a>-&gt;AddCompiledCode(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>));</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
-<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(new_code-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html#a7838dc8e200c4afc343c57c4b839a9b3">is_inspectable</a>());</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(new_code-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html#a7838dc8e200c4afc343c57c4b839a9b3">is_inspectable</a>());</div>
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keywordflow">if</span> (generate_debug_sidetable) {</div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>      <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::SpinningMutexGuard</a> lock(&amp;debug_side_tables_mutex_);</div>
-<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, debug_side_tables_.count(new_code));</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, debug_side_tables_.count(new_code));</div>
 <div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>      debug_side_tables_.emplace(new_code, std::move(debug_sidetable));</div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    }</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
@@ -419,7 +427,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>      cached_debugging_code_.back().code-&gt;DecRefOnLiveCode();</div>
 <div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>      cached_debugging_code_.pop_back();</div>
 <div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    }</div>
-<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(kMaxCachedDebuggingCode, cached_debugging_code_.size());</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(kMaxCachedDebuggingCode, cached_debugging_code_.size());</div>
 <div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span> </div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keywordflow">return</span> new_code;</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>  }</div>
@@ -440,7 +448,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::SpinningMutexGuard</a> guard(&amp;<a class="code hl_variable" href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a>);</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <span class="comment">// offset == 0 indicates flooding and should not happen here.</span></div>
-<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(0, <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(0, <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>);</div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="comment">// Get the set of previously set breakpoints, to check later whether a new</span></div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>    <span class="comment">// breakpoint was actually added.</span></div>
@@ -457,7 +465,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    }</div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    breakpoints.insert(insertion_point, <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>);</div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
-<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(std::is_sorted(all_breakpoints.begin(), all_breakpoints.end()));</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(std::is_sorted(all_breakpoints.begin(), all_breakpoints.end()));</div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="comment">// Find the insertion position within {all_breakpoints}.</span></div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    insertion_point = std::lower_bound(all_breakpoints.begin(),</div>
 <div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                                       all_breakpoints.end(), <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>);</div>
@@ -508,7 +516,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a246196d91f0949ef76618b2b2a01fbcc">  378</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a246196d91f0949ef76618b2b2a01fbcc">FloodWithBreakpoints</a>(WasmFrame* frame, ReturnLocation return_location) {</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>    <span class="comment">// 0 is an invalid offset used to indicate flooding.</span></div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>    <span class="keyword">constexpr</span> <span class="keywordtype">int</span> kFloodingBreakpoints[] = {0};</div>
-<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(frame-&gt;wasm_code()-&gt;is_liftoff());</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(frame-&gt;wasm_code()-&gt;is_liftoff());</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>    <span class="comment">// Generate an additional source position for the current byte offset.</span></div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::SpinningMutexGuard</a> guard(&amp;<a class="code hl_variable" href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a>);</div>
 <div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html">WasmCode</a>* new_code = RecompileLiftoffWithBreakpoints(</div>
@@ -602,7 +610,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>    <span class="keyword">auto</span>&amp; isolate_data = per_isolate_data_[<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>];</div>
 <div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>    std::vector&lt;int&gt;&amp; breakpoints =</div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>        isolate_data.breakpoints_per_function[func_index];</div>
-<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>);</div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>);</div>
 <div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>    <span class="keyword">auto</span> insertion_point =</div>
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>        std::lower_bound(breakpoints.begin(), breakpoints.end(), <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>);</div>
 <div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>    <span class="keywordflow">if</span> (insertion_point == breakpoints.end()) <span class="keywordflow">return</span>;</div>
@@ -611,7 +619,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span> </div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>    std::vector&lt;int&gt; remaining = FindAllBreakpoints(func_index);</div>
 <div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>    <span class="comment">// If the breakpoint is still set in another isolate, don&#39;t remove it.</span></div>
-<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(std::is_sorted(remaining.begin(), remaining.end()));</div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(std::is_sorted(remaining.begin(), remaining.end()));</div>
 <div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>    <span class="keywordflow">if</span> (std::binary_search(remaining.begin(), remaining.end(), <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span>    <span class="keywordtype">int</span> dead_breakpoint =</div>
 <div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>        DeadBreakpoint(func_index, base::VectorOf(remaining), isolate);</div>
@@ -640,7 +648,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00491" data-start="{" data-end="}">
 <div class="line"><a id="l00491" name="l00491"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a80b0dcb1270a13471501b30016dd8424">  491</a></span>  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a80b0dcb1270a13471501b30016dd8424">HasRemovedBreakpoints</a>(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; removed,</div>
 <div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>                                    <span class="keyword">const</span> std::vector&lt;int&gt;&amp; remaining) {</div>
-<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(std::is_sorted(remaining.begin(), remaining.end()));</div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(std::is_sorted(remaining.begin(), remaining.end()));</div>
 <div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a> : removed) {</div>
 <div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>      <span class="comment">// Return true if we removed a breakpoint which is not part of remaining.</span></div>
 <div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>      <span class="keywordflow">if</span> (!std::binary_search(remaining.begin(), remaining.end(), <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>)) {</div>
@@ -724,7 +732,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>          debug_side_table_entry(debug_side_table</div>
 <div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span>                                     ? debug_side_table-&gt;GetEntry(<a class="code hl_variable" href="liftoff-compiler_8cc.html#ac8403346601a16f8902bbe271ff3c261">pc_offset</a>)</div>
 <div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>                                     : nullptr) {</div>
-<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>      <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(code-&gt;is_inspectable(), debug_side_table_entry != <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(code-&gt;is_inspectable(), debug_side_table_entry != <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>    }</div>
 </div>
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span> </div>
@@ -740,7 +748,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span> </div>
 <div class="foldopen" id="foldopen00582" data-start="{" data-end="}">
 <div class="line"><a id="l00582" name="l00582"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a5e1cac71b004ec7608477c42c53e073a">  582</a></span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1DebugSideTable.html">DebugSideTable</a>* <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a5e1cac71b004ec7608477c42c53e073a">GetDebugSideTable</a>(<a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html">WasmCode</a>* code) {</div>
-<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(code-&gt;is_inspectable());</div>
+<div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(code-&gt;is_inspectable());</div>
 <div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span>    {</div>
 <div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span>      <span class="comment">// Only hold the mutex temporarily. We can&#39;t hold it while generating the</span></div>
 <div class="line"><a id="l00586" name="l00586"></a><span class="lineno">  586</span>      <span class="comment">// debug side table, because compilation takes the {NativeModule} lock.</span></div>
@@ -779,7 +787,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>    <span class="keyword">const</span> <a class="code hl_struct" href="structv8_1_1internal_1_1wasm_1_1DebugSideTable_1_1Entry_1_1Value.html">DebugSideTable::Entry::Value</a>* value =</div>
 <div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>        debug_side_table-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugSideTable.html#a72da10f2d440a9c7cdc0162fc9e0c681">FindValue</a>(debug_side_table_entry, <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>);</div>
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>    <span class="keywordflow">if</span> (value-&gt;is_constant()) {</div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(value-&gt;type == <a class="code hl_variable" href="namespacev8_1_1internal_1_1wasm.html#abe108c96012d3726499466455f359115">kWasmI32</a> || value-&gt;type == <a class="code hl_variable" href="namespacev8_1_1internal_1_1wasm.html#ac0993b253da7c6a4f84e778a5a7b99a3">kWasmI64</a>);</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(value-&gt;type == <a class="code hl_variable" href="namespacev8_1_1internal_1_1wasm.html#abe108c96012d3726499466455f359115">kWasmI32</a> || value-&gt;type == <a class="code hl_variable" href="namespacev8_1_1internal_1_1wasm.html#ac0993b253da7c6a4f84e778a5a7b99a3">kWasmI64</a>);</div>
 <div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>      <span class="keywordflow">return</span> value-&gt;type == <a class="code hl_variable" href="namespacev8_1_1internal_1_1wasm.html#abe108c96012d3726499466455f359115">kWasmI32</a> ? <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmValue.html">WasmValue</a>(value-&gt;i32_const)</div>
 <div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>                                     : <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmValue.html">WasmValue</a>(int64_t{value-&gt;i32_const});</div>
 <div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>    }</div>
@@ -792,7 +800,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00630" name="l00630"></a><span class="lineno">  630</span>                   <a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>.code());</div>
 <div class="line"><a id="l00631" name="l00631"></a><span class="lineno">  631</span>      };</div>
 <div class="line"><a id="l00632" name="l00632"></a><span class="lineno">  632</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>.is_gp_pair()) {</div>
-<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>        <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="namespacev8_1_1internal_1_1wasm.html#ac0993b253da7c6a4f84e778a5a7b99a3">kWasmI64</a>, value-&gt;type);</div>
+<div class="line"><a id="l00633" name="l00633"></a><span class="lineno">  633</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="namespacev8_1_1internal_1_1wasm.html#ac0993b253da7c6a4f84e778a5a7b99a3">kWasmI64</a>, value-&gt;type);</div>
 <div class="line"><a id="l00634" name="l00634"></a><span class="lineno">  634</span>        uint32_t low_word = ReadUnalignedValue&lt;uint32_t&gt;(gp_addr(<a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>.low_gp()));</div>
 <div class="line"><a id="l00635" name="l00635"></a><span class="lineno">  635</span>        uint32_t high_word =</div>
 <div class="line"><a id="l00636" name="l00636"></a><span class="lineno">  636</span>            ReadUnalignedValue&lt;uint32_t&gt;(gp_addr(<a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>.high_gp()));</div>
@@ -809,10 +817,10 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span>              isolate);</div>
 <div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>          <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmValue.html">WasmValue</a>(obj, value-&gt;type, value-&gt;module);</div>
 <div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>          <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>          <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>        }</div>
 <div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>      }</div>
-<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>.is_fp() || <a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>.is_fp_pair());</div>
+<div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>.is_fp() || <a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>.is_fp_pair());</div>
 <div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span>      <span class="comment">// ifdef here to workaround unreachable code for is_fp_pair.</span></div>
 <div class="line"><a id="l00655" name="l00655"></a><span class="lineno">  655</span><span class="preprocessor">#ifdef V8_TARGET_ARCH_ARM</span></div>
 <div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>      <span class="keywordtype">int</span> code = <a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>.is_fp_pair() ? <a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>.low_fp().code() : <a class="code hl_variable" href="liftoff-compiler_8cc.html#a0b22b2be5dbaab38c23b09bdd78d7c43">reg</a>.fp().code();</div>
@@ -830,7 +838,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00668" name="l00668"></a><span class="lineno">  668</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmValue.html">WasmValue</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Simd128.html">Simd128</a>(ReadUnalignedValue&lt;int8x16&gt;(spilled_addr)));</div>
 <div class="line"><a id="l00669" name="l00669"></a><span class="lineno">  669</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00670" name="l00670"></a><span class="lineno">  670</span>        <span class="comment">// All other cases should have been handled above.</span></div>
-<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>        <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00671" name="l00671"></a><span class="lineno">  671</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00672" name="l00672"></a><span class="lineno">  672</span>      }</div>
 <div class="line"><a id="l00673" name="l00673"></a><span class="lineno">  673</span>    }</div>
 <div class="line"><a id="l00674" name="l00674"></a><span class="lineno">  674</span> </div>
@@ -861,7 +869,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00699" name="l00699"></a><span class="lineno">  699</span>      <span class="keywordflow">case</span> kVoid:</div>
 <div class="line"><a id="l00700" name="l00700"></a><span class="lineno">  700</span>      <span class="keywordflow">case</span> kTop:</div>
 <div class="line"><a id="l00701" name="l00701"></a><span class="lineno">  701</span>      <span class="keywordflow">case</span> kBottom:</div>
-<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>        <a class="code hl_define" href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
+<div class="line"><a id="l00702" name="l00702"></a><span class="lineno">  702</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a>();</div>
 <div class="line"><a id="l00703" name="l00703"></a><span class="lineno">  703</span>    }</div>
 <div class="line"><a id="l00704" name="l00704"></a><span class="lineno">  704</span>  }</div>
 </div>
@@ -897,10 +905,10 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00732" data-start="{" data-end="}">
 <div class="line"><a id="l00732" name="l00732"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a96f357164b0f9a59d00bb0f2a7e285ab">  732</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfoImpl.html#a96f357164b0f9a59d00bb0f2a7e285ab">UpdateReturnAddress</a>(WasmFrame* frame, <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html">WasmCode</a>* new_code,</div>
 <div class="line"><a id="l00733" name="l00733"></a><span class="lineno">  733</span>                           ReturnLocation return_location) {</div>
-<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(new_code-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html#a8bd3de600f8533f15759f5770993cb34">is_liftoff</a>());</div>
-<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(frame-&gt;function_index(), new_code-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html#a41fcec1a1b74c208fe92d705c51f2a81">index</a>());</div>
-<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(frame-&gt;native_module(), new_code-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html#a7505326ebe9aab3ab86719afe8a9a612">native_module</a>());</div>
-<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(frame-&gt;wasm_code()-&gt;is_liftoff());</div>
+<div class="line"><a id="l00734" name="l00734"></a><span class="lineno">  734</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(new_code-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html#a8bd3de600f8533f15759f5770993cb34">is_liftoff</a>());</div>
+<div class="line"><a id="l00735" name="l00735"></a><span class="lineno">  735</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(frame-&gt;function_index(), new_code-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html#a41fcec1a1b74c208fe92d705c51f2a81">index</a>());</div>
+<div class="line"><a id="l00736" name="l00736"></a><span class="lineno">  736</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(frame-&gt;native_module(), new_code-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WasmCode.html#a7505326ebe9aab3ab86719afe8a9a612">native_module</a>());</div>
+<div class="line"><a id="l00737" name="l00737"></a><span class="lineno">  737</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(frame-&gt;wasm_code()-&gt;is_liftoff());</div>
 <div class="line"><a id="l00738" name="l00738"></a><span class="lineno">  738</span>    Address new_pc = FindNewPC(frame, new_code, frame-&gt;generated_code_offset(),</div>
 <div class="line"><a id="l00739" name="l00739"></a><span class="lineno">  739</span>                               return_location);</div>
 <div class="line"><a id="l00740" name="l00740"></a><span class="lineno">  740</span><span class="preprocessor">#ifdef DEBUG</span></div>
@@ -915,7 +923,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00749" name="l00749"></a><span class="lineno">  749</span>                                     <a class="code hl_variable" href="namespacev8_1_1internal.html#a72cbfdfeabb9a401f279f7b80bcff67a">kSystemPointerSize</a>);</div>
 <div class="line"><a id="l00750" name="l00750"></a><span class="lineno">  750</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00751" name="l00751"></a><span class="lineno">  751</span>    <span class="comment">// The frame position should still be the same after OSR.</span></div>
-<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(old_position, frame-&gt;position());</div>
+<div class="line"><a id="l00752" name="l00752"></a><span class="lineno">  752</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(old_position, frame-&gt;position());</div>
 <div class="line"><a id="l00753" name="l00753"></a><span class="lineno">  753</span>  }</div>
 </div>
 <div class="line"><a id="l00754" name="l00754"></a><span class="lineno">  754</span> </div>
@@ -986,33 +994,33 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00810" name="l00810"></a><span class="lineno">  810</span><a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a845c3eb621466b0fdace2a2190a77717">DebugInfo::~DebugInfo</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a id="l00811" name="l00811"></a><span class="lineno">  811</span> </div>
 <div class="foldopen" id="foldopen00812" data-start="{" data-end="}">
-<div class="line"><a id="l00812" name="l00812"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#abd1c27a06e2443ab75ac315f2d5f9ede">  812</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#abd1c27a06e2443ab75ac315f2d5f9ede">DebugInfo::GetNumLocals</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
+<div class="line"><a id="l00812" name="l00812"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#abd1c27a06e2443ab75ac315f2d5f9ede">  812</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#abd1c27a06e2443ab75ac315f2d5f9ede">DebugInfo::GetNumLocals</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
 <div class="line"><a id="l00813" name="l00813"></a><span class="lineno">  813</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9a2d8147b1f57b4e671ddb6bca45da32">impl_</a>-&gt;GetNumLocals(<a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, isolate);</div>
 <div class="line"><a id="l00814" name="l00814"></a><span class="lineno">  814</span>}</div>
 </div>
 <div class="line"><a id="l00815" name="l00815"></a><span class="lineno">  815</span> </div>
 <div class="foldopen" id="foldopen00816" data-start="{" data-end="}">
-<div class="line"><a id="l00816" name="l00816"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a17de21fa800df49620633c5e2d15de38">  816</a></span><a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmValue.html">WasmValue</a> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a17de21fa800df49620633c5e2d15de38">DebugInfo::GetLocalValue</a>(<span class="keywordtype">int</span> local, <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> fp,</div>
-<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>                                   <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> debug_break_fp, <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
+<div class="line"><a id="l00816" name="l00816"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a17de21fa800df49620633c5e2d15de38">  816</a></span><a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmValue.html">WasmValue</a> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a17de21fa800df49620633c5e2d15de38">DebugInfo::GetLocalValue</a>(<span class="keywordtype">int</span> local, <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> fp,</div>
+<div class="line"><a id="l00817" name="l00817"></a><span class="lineno">  817</span>                                   <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> debug_break_fp, <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
 <div class="line"><a id="l00818" name="l00818"></a><span class="lineno">  818</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9a2d8147b1f57b4e671ddb6bca45da32">impl_</a>-&gt;GetLocalValue(local, <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, fp, debug_break_fp, isolate);</div>
 <div class="line"><a id="l00819" name="l00819"></a><span class="lineno">  819</span>}</div>
 </div>
 <div class="line"><a id="l00820" name="l00820"></a><span class="lineno">  820</span> </div>
 <div class="foldopen" id="foldopen00821" data-start="{" data-end="}">
-<div class="line"><a id="l00821" name="l00821"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9ed59239d0304f3d33bb5015c9d0d071">  821</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9ed59239d0304f3d33bb5015c9d0d071">DebugInfo::GetStackDepth</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
+<div class="line"><a id="l00821" name="l00821"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9ed59239d0304f3d33bb5015c9d0d071">  821</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9ed59239d0304f3d33bb5015c9d0d071">DebugInfo::GetStackDepth</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
 <div class="line"><a id="l00822" name="l00822"></a><span class="lineno">  822</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9a2d8147b1f57b4e671ddb6bca45da32">impl_</a>-&gt;GetStackDepth(<a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, isolate);</div>
 <div class="line"><a id="l00823" name="l00823"></a><span class="lineno">  823</span>}</div>
 </div>
 <div class="line"><a id="l00824" name="l00824"></a><span class="lineno">  824</span> </div>
 <div class="foldopen" id="foldopen00825" data-start="{" data-end="}">
-<div class="line"><a id="l00825" name="l00825"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9b10d8af8ab5a7dd5bcb5ea9530023b0">  825</a></span><a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmValue.html">WasmValue</a> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9b10d8af8ab5a7dd5bcb5ea9530023b0">DebugInfo::GetStackValue</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> fp,</div>
-<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>                                   <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> debug_break_fp, <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
+<div class="line"><a id="l00825" name="l00825"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9b10d8af8ab5a7dd5bcb5ea9530023b0">  825</a></span><a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1WasmValue.html">WasmValue</a> <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9b10d8af8ab5a7dd5bcb5ea9530023b0">DebugInfo::GetStackValue</a>(<span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> fp,</div>
+<div class="line"><a id="l00826" name="l00826"></a><span class="lineno">  826</span>                                   <a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> debug_break_fp, <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
 <div class="line"><a id="l00827" name="l00827"></a><span class="lineno">  827</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9a2d8147b1f57b4e671ddb6bca45da32">impl_</a>-&gt;GetStackValue(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, fp, debug_break_fp, isolate);</div>
 <div class="line"><a id="l00828" name="l00828"></a><span class="lineno">  828</span>}</div>
 </div>
 <div class="line"><a id="l00829" name="l00829"></a><span class="lineno">  829</span> </div>
 <div class="foldopen" id="foldopen00830" data-start="{" data-end="}">
-<div class="line"><a id="l00830" name="l00830"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a8f912de5dded2b05e5a158f320246a27">  830</a></span><span class="keyword">const</span> <a class="code hl_struct" href="structv8_1_1internal_1_1wasm_1_1WasmFunction.html">wasm::WasmFunction</a>&amp; <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a8f912de5dded2b05e5a158f320246a27">DebugInfo::GetFunctionAtAddress</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>,</div>
+<div class="line"><a id="l00830" name="l00830"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a8f912de5dded2b05e5a158f320246a27">  830</a></span><span class="keyword">const</span> <a class="code hl_struct" href="structv8_1_1internal_1_1wasm_1_1WasmFunction.html">wasm::WasmFunction</a>&amp; <a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a8f912de5dded2b05e5a158f320246a27">DebugInfo::GetFunctionAtAddress</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>,</div>
 <div class="line"><a id="l00831" name="l00831"></a><span class="lineno">  831</span>                                                          <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate) {</div>
 <div class="line"><a id="l00832" name="l00832"></a><span class="lineno">  832</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1wasm_1_1DebugInfo.html#a9a2d8147b1f57b4e671ddb6bca45da32">impl_</a>-&gt;GetFunctionAtAddress(<a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a>, isolate);</div>
 <div class="line"><a id="l00833" name="l00833"></a><span class="lineno">  833</span>}</div>
@@ -1107,7 +1115,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00899" name="l00899"></a><span class="lineno">  899</span>  wasm::BytecodeIterator iterator(module_start + func.code.offset(),</div>
 <div class="line"><a id="l00900" name="l00900"></a><span class="lineno">  900</span>                                  module_start + func.code.end_offset(),</div>
 <div class="line"><a id="l00901" name="l00901"></a><span class="lineno">  901</span>                                  &amp;<a class="code hl_variable" href="graph-builder-interface_8cc.html#ad79e01639ad6e8048e3e4cafdb150514">locals</a>, &amp;zone);</div>
-<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, <a class="code hl_variable" href="graph-builder-interface_8cc.html#ad79e01639ad6e8048e3e4cafdb150514">locals</a>.encoded_size);</div>
+<div class="line"><a id="l00902" name="l00902"></a><span class="lineno">  902</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, <a class="code hl_variable" href="graph-builder-interface_8cc.html#ad79e01639ad6e8048e3e4cafdb150514">locals</a>.encoded_size);</div>
 <div class="line"><a id="l00903" name="l00903"></a><span class="lineno">  903</span>  <span class="keywordflow">if</span> (offset_in_func &lt; 0) <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a id="l00904" name="l00904"></a><span class="lineno">  904</span>  <span class="keywordflow">for</span> (; iterator.has_next(); iterator.next()) {</div>
 <div class="line"><a id="l00905" name="l00905"></a><span class="lineno">  905</span>    <span class="keywordflow">if</span> (iterator.pc_offset() &lt; <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(offset_in_func)) <span class="keywordflow">continue</span>;</div>
@@ -1138,7 +1146,7 @@ $(function(){ initResizable(false); });
 <div class="foldopen" id="foldopen00930" data-start="{" data-end="}">
 <div class="line"><a id="l00930" name="l00930"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1WasmScript.html#ae1e1a96e03197d0abc1be8866329cde1">  930</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1WasmScript.html#ae1e1a96e03197d0abc1be8866329cde1">WasmScript::SetBreakPoint</a>(<a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Script&gt;</a> script, <span class="keywordtype">int</span>* <a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a>,</div>
 <div class="line"><a id="l00931" name="l00931"></a><span class="lineno">  931</span>                               <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;BreakPoint&gt;</a> break_point) {</div>
-<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1WasmScript.html#ae2c706b2efb06b19a3fc316ecb677dfe">kOnEntryBreakpointPosition</a>, *<a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a>);</div>
+<div class="line"><a id="l00932" name="l00932"></a><span class="lineno">  932</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1WasmScript.html#ae2c706b2efb06b19a3fc316ecb677dfe">kOnEntryBreakpointPosition</a>, *<a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a>);</div>
 <div class="line"><a id="l00933" name="l00933"></a><span class="lineno">  933</span> </div>
 <div class="line"><a id="l00934" name="l00934"></a><span class="lineno">  934</span>  <span class="comment">// Find the function for this breakpoint.</span></div>
 <div class="line"><a id="l00935" name="l00935"></a><span class="lineno">  935</span>  <span class="keyword">const</span> <a class="code hl_struct" href="structv8_1_1internal_1_1wasm_1_1WasmModule.html">wasm::WasmModule</a>* module = script-&gt;wasm_native_module()-&gt;module();</div>
@@ -1192,8 +1200,8 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00977" name="l00977"></a><span class="lineno">  977</span>    <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;BreakPoint&gt;</a> break_point) {</div>
 <div class="line"><a id="l00978" name="l00978"></a><span class="lineno">  978</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate = script-&gt;GetIsolate();</div>
 <div class="line"><a id="l00979" name="l00979"></a><span class="lineno">  979</span> </div>
-<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>  <a class="code hl_define" href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(0, func_index);</div>
-<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(0, <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>);</div>
+<div class="line"><a id="l00980" name="l00980"></a><span class="lineno">  980</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a>(0, func_index);</div>
+<div class="line"><a id="l00981" name="l00981"></a><span class="lineno">  981</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(0, <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>);</div>
 <div class="line"><a id="l00982" name="l00982"></a><span class="lineno">  982</span> </div>
 <div class="line"><a id="l00983" name="l00983"></a><span class="lineno">  983</span>  <span class="comment">// Find the function for this breakpoint.</span></div>
 <div class="line"><a id="l00984" name="l00984"></a><span class="lineno">  984</span>  <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1NativeModule.html">wasm::NativeModule</a>* native_module = script-&gt;wasm_native_module();</div>
@@ -1217,13 +1225,13 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01001" name="l01001"></a><span class="lineno"> 1001</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;BreakPointInfo&gt;</a>(break_point_info_or_undef)-&gt;source_position();</div>
 <div class="line"><a id="l01002" name="l01002"></a><span class="lineno"> 1002</span>}</div>
 <div class="line"><a id="l01003" name="l01003"></a><span class="lineno"> 1003</span> </div>
-<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span><span class="keywordtype">int</span> FindBreakpointInfoInsertPos(Isolate* isolate,</div>
+<div class="line"><a id="l01004" name="l01004"></a><span class="lineno"> 1004</span><span class="keywordtype">int</span> FindBreakpointInfoInsertPos(<a class="code hl_class" href="classv8_1_1Isolate.html">Isolate</a>* isolate,</div>
 <div class="line"><a id="l01005" name="l01005"></a><span class="lineno"> 1005</span>                                DirectHandle&lt;FixedArray&gt; breakpoint_infos,</div>
 <div class="line"><a id="l01006" name="l01006"></a><span class="lineno"> 1006</span>                                <span class="keywordtype">int</span> <a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a>) {</div>
 <div class="line"><a id="l01007" name="l01007"></a><span class="lineno"> 1007</span>  <span class="comment">// Find insert location via binary search, taking care of undefined values on</span></div>
 <div class="line"><a id="l01008" name="l01008"></a><span class="lineno"> 1008</span>  <span class="comment">// the right. {position} is either {kOnEntryBreakpointPosition} (which is -1),</span></div>
 <div class="line"><a id="l01009" name="l01009"></a><span class="lineno"> 1009</span>  <span class="comment">// or positive.</span></div>
-<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a> == <a class="code hl_variable" href="classv8_1_1internal_1_1WasmScript.html#ae2c706b2efb06b19a3fc316ecb677dfe">WasmScript::kOnEntryBreakpointPosition</a> || <a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a> &gt; 0);</div>
+<div class="line"><a id="l01010" name="l01010"></a><span class="lineno"> 1010</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a> == <a class="code hl_variable" href="classv8_1_1internal_1_1WasmScript.html#ae2c706b2efb06b19a3fc316ecb677dfe">WasmScript::kOnEntryBreakpointPosition</a> || <a class="code hl_variable" href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a> &gt; 0);</div>
 <div class="line"><a id="l01011" name="l01011"></a><span class="lineno"> 1011</span> </div>
 <div class="line"><a id="l01012" name="l01012"></a><span class="lineno"> 1012</span>  <span class="keywordtype">int</span> left = 0;                            <span class="comment">// inclusive</span></div>
 <div class="line"><a id="l01013" name="l01013"></a><span class="lineno"> 1013</span>  <span class="keywordtype">int</span> right = breakpoint_infos-&gt;length();  <span class="comment">// exclusive</span></div>
@@ -1303,7 +1311,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01084" name="l01084"></a><span class="lineno"> 1084</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;FixedArray&gt;</a> breakpoint_infos(script-&gt;wasm_breakpoint_infos(),</div>
 <div class="line"><a id="l01085" name="l01085"></a><span class="lineno"> 1085</span>                                            isolate);</div>
 <div class="line"><a id="l01086" name="l01086"></a><span class="lineno"> 1086</span>  <span class="comment">// If the array exists, it should not be empty.</span></div>
-<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>  <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, breakpoint_infos-&gt;length());</div>
+<div class="line"><a id="l01087" name="l01087"></a><span class="lineno"> 1087</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0, breakpoint_infos-&gt;length());</div>
 <div class="line"><a id="l01088" name="l01088"></a><span class="lineno"> 1088</span> </div>
 <div class="line"><a id="l01089" name="l01089"></a><span class="lineno"> 1089</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0, e = breakpoint_infos-&gt;length(); <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; e; ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
 <div class="line"><a id="l01090" name="l01090"></a><span class="lineno"> 1090</span>    <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> obj(breakpoint_infos-&gt;get(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>), isolate);</div>
@@ -1315,7 +1323,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01096" name="l01096"></a><span class="lineno"> 1096</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classv8_1_1internal_1_1BreakPointInfo.html#a6395d12ce6821320145a3ad1c28c9091">BreakPointInfo::GetBreakPointById</a>(isolate, breakpoint_info,</div>
 <div class="line"><a id="l01097" name="l01097"></a><span class="lineno"> 1097</span>                                          breakpoint_id)</div>
 <div class="line"><a id="l01098" name="l01098"></a><span class="lineno"> 1098</span>            .ToHandle(&amp;breakpoint)) {</div>
-<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(breakpoint-&gt;id() == breakpoint_id);</div>
+<div class="line"><a id="l01099" name="l01099"></a><span class="lineno"> 1099</span>      <a class="code hl_define" href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(breakpoint-&gt;id() == breakpoint_id);</div>
 <div class="line"><a id="l01100" name="l01100"></a><span class="lineno"> 1100</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1WasmScript.html#acf3295abda6ad6bd436ecca2cd68cb04">WasmScript::ClearBreakPoint</a>(</div>
 <div class="line"><a id="l01101" name="l01101"></a><span class="lineno"> 1101</span>          script, breakpoint_info-&gt;source_position(), breakpoint);</div>
 <div class="line"><a id="l01102" name="l01102"></a><span class="lineno"> 1102</span>    }</div>
@@ -1427,7 +1435,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01202" name="l01202"></a><span class="lineno"> 1202</span>    <span class="comment">// If end is specified: Use it and check for valid input.</span></div>
 <div class="line"><a id="l01203" name="l01203"></a><span class="lineno"> 1203</span>    end_offset = <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>.GetColumnNumber();</div>
 <div class="line"><a id="l01204" name="l01204"></a><span class="lineno"> 1204</span>    end_func_index = GetNearestWasmFunction(module, end_offset);</div>
-<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>    <a class="code hl_define" href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(end_func_index, start_func_index);</div>
+<div class="line"><a id="l01205" name="l01205"></a><span class="lineno"> 1205</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a>(end_func_index, start_func_index);</div>
 <div class="line"><a id="l01206" name="l01206"></a><span class="lineno"> 1206</span>  }</div>
 <div class="line"><a id="l01207" name="l01207"></a><span class="lineno"> 1207</span> </div>
 <div class="line"><a id="l01208" name="l01208"></a><span class="lineno"> 1208</span>  <span class="keywordflow">if</span> (start_func_index == end_func_index &amp;&amp;</div>
@@ -1445,11 +1453,11 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l01220" name="l01220"></a><span class="lineno"> 1220</span>    <a class="code hl_class" href="classv8_1_1internal_1_1wasm_1_1BytecodeIterator.html">wasm::BytecodeIterator</a> iterator(module_start + func.<a class="code hl_variable" href="structv8_1_1internal_1_1wasm_1_1WasmFunction.html#aec97739a140bf8da830c55636434adcf">code</a>.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WireBytesRef.html#a4f2dffb7efc3721571b5f1604d5d448a">offset</a>(),</div>
 <div class="line"><a id="l01221" name="l01221"></a><span class="lineno"> 1221</span>                                    module_start + func.<a class="code hl_variable" href="structv8_1_1internal_1_1wasm_1_1WasmFunction.html#aec97739a140bf8da830c55636434adcf">code</a>.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WireBytesRef.html#a1853a6fc4a88a37d2bb8a91b58781daf">end_offset</a>(),</div>
 <div class="line"><a id="l01222" name="l01222"></a><span class="lineno"> 1222</span>                                    &amp;<a class="code hl_variable" href="graph-builder-interface_8cc.html#ad79e01639ad6e8048e3e4cafdb150514">locals</a>, &amp;zone);</div>
-<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>    <a class="code hl_define" href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0u, <a class="code hl_variable" href="graph-builder-interface_8cc.html#ad79e01639ad6e8048e3e4cafdb150514">locals</a>.encoded_size);</div>
+<div class="line"><a id="l01223" name="l01223"></a><span class="lineno"> 1223</span>    <a class="code hl_define" href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a>(0u, <a class="code hl_variable" href="graph-builder-interface_8cc.html#ad79e01639ad6e8048e3e4cafdb150514">locals</a>.encoded_size);</div>
 <div class="line"><a id="l01224" name="l01224"></a><span class="lineno"> 1224</span>    <span class="keywordflow">for</span> (; iterator.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1BytecodeIterator.html#ad19a4513ac37443f77abef9fda487343">has_next</a>(); iterator.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1BytecodeIterator.html#aeffa27162f4dce4f196670293525d1cb">next</a>()) {</div>
 <div class="line"><a id="l01225" name="l01225"></a><span class="lineno"> 1225</span>      uint32_t total_offset = func.<a class="code hl_variable" href="structv8_1_1internal_1_1wasm_1_1WasmFunction.html#aec97739a140bf8da830c55636434adcf">code</a>.<a class="code hl_function" href="classv8_1_1internal_1_1wasm_1_1WireBytesRef.html#a4f2dffb7efc3721571b5f1604d5d448a">offset</a>() + iterator.pc_offset();</div>
 <div class="line"><a id="l01226" name="l01226"></a><span class="lineno"> 1226</span>      <span class="keywordflow">if</span> (total_offset &gt;= end_offset) {</div>
-<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>        <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(end_func_index, func_idx);</div>
+<div class="line"><a id="l01227" name="l01227"></a><span class="lineno"> 1227</span>        <a class="code hl_define" href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(end_func_index, func_idx);</div>
 <div class="line"><a id="l01228" name="l01228"></a><span class="lineno"> 1228</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l01229" name="l01229"></a><span class="lineno"> 1229</span>      }</div>
 <div class="line"><a id="l01230" name="l01230"></a><span class="lineno"> 1230</span>      <span class="keywordflow">if</span> (total_offset &lt; start_offset) <span class="keywordflow">continue</span>;</div>
@@ -1541,6 +1549,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aassert-scope_8h_html"><div class="ttname"><a href="assert-scope_8h.html">assert-scope.h</a></div></div>
 <div class="ttc" id="aclass-debug-reader-generator_8cc_html_aede818ff693a0360e722300214ad6a52"><div class="ttname"><a href="class-debug-reader-generator_8cc.html#aede818ff693a0360e722300214ad6a52">pos</a></div><div class="ttdeci">SourcePosition pos</div><div class="ttdef"><b>Definition</b> <a href="class-debug-reader-generator_8cc_source.html#l00034">class-debug-reader-generator.cc:34</a></div></div>
 <div class="ttc" id="aclasslength_html"><div class="ttname"><a href="classlength.html">length</a></div></div>
+<div class="ttc" id="aclassv8_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1Isolate.html">v8::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="v8-isolate_8h_source.html#l00261">v8-isolate.h:261</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1LockGuard_html"><div class="ttname"><a href="classv8_1_1base_1_1LockGuard.html">v8::base::LockGuard</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00534">mutex.h:534</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1OwnedVector_html"><div class="ttname"><a href="classv8_1_1base_1_1OwnedVector.html">v8::base::OwnedVector</a></div><div class="ttdef"><b>Definition</b> <a href="vector_8h_source.html#l00209">vector.h:209</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1SpinningMutex_html"><div class="ttname"><a href="classv8_1_1base_1_1SpinningMutex.html">v8::base::SpinningMutex</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00201">mutex.h:201</a></div></div>
@@ -1709,17 +1718,6 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="aliftoff-compiler_8h_html"><div class="ttname"><a href="liftoff-compiler_8h.html">liftoff-compiler.h</a></div></div>
 <div class="ttc" id="aliftoff-register_8h_html"><div class="ttname"><a href="liftoff-register_8h.html">liftoff-register.h</a></div></div>
 <div class="ttc" id="aliveedit_8cc_html_a401e942526aac47cef94f478182486e7"><div class="ttname"><a href="liveedit_8cc.html#a401e942526aac47cef94f478182486e7">position</a></div><div class="ttdeci">int position</div><div class="ttdef"><b>Definition</b> <a href="liveedit_8cc_source.html#l00290">liveedit.cc:290</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00067">logging.h:67</a></div></div>
-<div class="ttc" id="alogging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00047">logging.h:47</a></div></div>
-<div class="ttc" id="alogging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00490">logging.h:490</a></div></div>
-<div class="ttc" id="alogging_8h_html_a2209830df6b59d1ec1fdf66b9352924f"><div class="ttname"><a href="logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a></div><div class="ttdeci">#define DCHECK_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00491">logging.h:491</a></div></div>
-<div class="ttc" id="alogging_8h_html_a7b0fb5d6be902959a80a9a33cc4e73fe"><div class="ttname"><a href="logging_8h.html#a7b0fb5d6be902959a80a9a33cc4e73fe">CHECK_WITH_MSG</a></div><div class="ttdeci">#define CHECK_WITH_MSG(condition, message)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00118">logging.h:118</a></div></div>
-<div class="ttc" id="alogging_8h_html_a96a75539aa82216cdde2250a11126ea0"><div class="ttname"><a href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a></div><div class="ttdeci">#define DCHECK_IMPLIES(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00493">logging.h:493</a></div></div>
-<div class="ttc" id="alogging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00486">logging.h:486</a></div></div>
-<div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
-<div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
-<div class="ttc" id="alogging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00489">logging.h:489</a></div></div>
-<div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="amachine-operator-reducer_8cc_html_a0e07aad9de22abf9b9b1b4b437beef30"><div class="ttname"><a href="machine-operator-reducer_8cc.html#a0e07aad9de22abf9b9b1b4b437beef30">condition</a></div><div class="ttdeci">Node * condition</div><div class="ttdef"><b>Definition</b> <a href="machine-operator-reducer_8cc_source.html#l02792">machine-operator-reducer.cc:2792</a></div></div>
 <div class="ttc" id="amodule-compiler_8cc_html_a0b64f93045c33bf33392097c6a3aef2e"><div class="ttname"><a href="module-compiler_8cc.html#a0b64f93045c33bf33392097c6a3aef2e">native_module_</a></div><div class="ttdeci">std::shared_ptr&lt; NativeModule &gt; native_module_</div><div class="ttdef"><b>Definition</b> <a href="module-compiler_8cc_source.html#l00099">module-compiler.cc:99</a></div></div>
 <div class="ttc" id="amodule-decoder_8h_html"><div class="ttname"><a href="module-decoder_8h.html">module-decoder.h</a></div></div>
@@ -1751,7 +1749,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_1_1internal_html_a604d5beeb6fc8639670f737ed201e20aa0aa38c28f349d65a6819e03844b73dff"><div class="ttname"><a href="namespacev8_1_1internal.html#a604d5beeb6fc8639670f737ed201e20aa0aa38c28f349d65a6819e03844b73dff">v8::internal::AllocationType::kOld</a></div><div class="ttdeci">@ kOld</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a60f13a8c00d0433f9336368824ac21a1"><div class="ttname"><a href="namespacev8_1_1internal.html#a60f13a8c00d0433f9336368824ac21a1">v8::internal::direct_handle</a></div><div class="ttdeci">V8_INLINE DirectHandle&lt; T &gt; direct_handle(Tagged&lt; T &gt; object, Isolate *isolate)</div><div class="ttdef"><b>Definition</b> <a href="handles-inl_8h_source.html#l00141">handles-inl.h:141</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a72cbfdfeabb9a401f279f7b80bcff67a"><div class="ttname"><a href="namespacev8_1_1internal.html#a72cbfdfeabb9a401f279f7b80bcff67a">v8::internal::kSystemPointerSize</a></div><div class="ttdeci">constexpr int kSystemPointerSize</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00402">globals.h:402</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a92ab64d42404e439be3d6a7556e32380"><div class="ttname"><a href="namespacev8_1_1internal.html#a92ab64d42404e439be3d6a7556e32380">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aa9db791c05a0359859a321dcfec42e37"><div class="ttname"><a href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8::internal::v8_flags</a></div><div class="ttdeci">V8_EXPORT_PRIVATE FlagValues v8_flags</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_abb767b639fb9b3ebabe15c8e91e99210a0a0ecdb4eded286c722877578774a293"><div class="ttname"><a href="namespacev8_1_1internal.html#abb767b639fb9b3ebabe15c8e91e99210a0a0ecdb4eded286c722877578774a293">v8::internal::WasmValueType::kI32</a></div><div class="ttdeci">@ kI32</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_abb767b639fb9b3ebabe15c8e91e99210a1201e21104cbb7ea3a7c362efcb325a3"><div class="ttname"><a href="namespacev8_1_1internal.html#abb767b639fb9b3ebabe15c8e91e99210a1201e21104cbb7ea3a7c362efcb325a3">v8::internal::WasmValueType::kI16</a></div><div class="ttdeci">@ kI16</div></div>
@@ -1769,6 +1767,17 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="anamespacewasm_html"><div class="ttname"><a href="namespacewasm.html">wasm</a></div><div class="ttdef"><b>Definition</b> <a href="c-api_8cc_source.html#l00090">c-api.cc:90</a></div></div>
 <div class="ttc" id="asimd128_8h_html"><div class="ttname"><a href="simd128_8h.html">simd128.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0bc63b24b654ca433be7b97a3edde132"><div class="ttname"><a href="src_2base_2logging_8h.html#a0bc63b24b654ca433be7b97a3edde132">UNREACHABLE</a></div><div class="ttdeci">#define UNREACHABLE()</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00067">logging.h:67</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a0d093cb749cfc7ab5993726392df681f"><div class="ttname"><a href="src_2base_2logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a></div><div class="ttdeci">#define FATAL(...)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00047">logging.h:47</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a16b382527f19b805fc8f856668f2270b"><div class="ttname"><a href="src_2base_2logging_8h.html#a16b382527f19b805fc8f856668f2270b">DCHECK_LE</a></div><div class="ttdeci">#define DCHECK_LE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00490">logging.h:490</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a2209830df6b59d1ec1fdf66b9352924f"><div class="ttname"><a href="src_2base_2logging_8h.html#a2209830df6b59d1ec1fdf66b9352924f">DCHECK_NULL</a></div><div class="ttdeci">#define DCHECK_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00491">logging.h:491</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a7b0fb5d6be902959a80a9a33cc4e73fe"><div class="ttname"><a href="src_2base_2logging_8h.html#a7b0fb5d6be902959a80a9a33cc4e73fe">CHECK_WITH_MSG</a></div><div class="ttdeci">#define CHECK_WITH_MSG(condition, message)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00118">logging.h:118</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a96a75539aa82216cdde2250a11126ea0"><div class="ttname"><a href="src_2base_2logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a></div><div class="ttdeci">#define DCHECK_IMPLIES(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00493">logging.h:493</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="src_2base_2logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00486">logging.h:486</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="src_2base_2logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00488">logging.h:488</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="src_2base_2logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00482">logging.h:482</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af1a711c8d5520dff78858ddefd2ad668"><div class="ttname"><a href="src_2base_2logging_8h.html#af1a711c8d5520dff78858ddefd2ad668">DCHECK_LT</a></div><div class="ttdeci">#define DCHECK_LT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00489">logging.h:489</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="src_2base_2logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="astd-object-sizes_8h_html"><div class="ttname"><a href="std-object-sizes_8h.html">std-object-sizes.h</a></div></div>
 <div class="ttc" id="astd-object-sizes_8h_html_a56caa02a4280c4f0c82adab429400770"><div class="ttname"><a href="std-object-sizes_8h.html#a56caa02a4280c4f0c82adab429400770">UPDATE_WHEN_CLASS_CHANGES</a></div><div class="ttdeci">#define UPDATE_WHEN_CLASS_CHANGES(classname, size)</div><div class="ttdef"><b>Definition</b> <a href="std-object-sizes_8h_source.html#l00073">std-object-sizes.h:73</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1wasm_1_1BodyLocalDecls_html"><div class="ttname"><a href="structv8_1_1internal_1_1wasm_1_1BodyLocalDecls.html">v8::internal::wasm::BodyLocalDecls</a></div><div class="ttdef"><b>Definition</b> <a href="function-body-decoder_8h_source.html#l00054">function-body-decoder.h:54</a></div></div>
@@ -1802,6 +1811,7 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="astructv8_1_1internal_1_1wasm_1_1WasmModule_html_a79b743888793de4a17ae53dd93988de6"><div class="ttname"><a href="structv8_1_1internal_1_1wasm_1_1WasmModule.html#a79b743888793de4a17ae53dd93988de6">v8::internal::wasm::WasmModule::functions</a></div><div class="ttdeci">std::vector&lt; WasmFunction &gt; functions</div><div class="ttdef"><b>Definition</b> <a href="wasm-module_8h_source.html#l00730">wasm-module.h:730</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1wasm_1_1WasmModule_html_a7fdb9a714e26bc49e382791ae5a01ede"><div class="ttname"><a href="structv8_1_1internal_1_1wasm_1_1WasmModule.html#a7fdb9a714e26bc49e382791ae5a01ede">v8::internal::wasm::WasmModule::type</a></div><div class="ttdeci">TypeDefinition type(ModuleTypeIndex index) const</div><div class="ttdef"><b>Definition</b> <a href="wasm-module_8h_source.html#l00811">wasm-module.h:811</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1wasm_1_1WasmModule_html_ad1d21f975964f38d4f11b3db56a094bf"><div class="ttname"><a href="structv8_1_1internal_1_1wasm_1_1WasmModule.html#ad1d21f975964f38d4f11b3db56a094bf">v8::internal::wasm::WasmModule::function_was_validated</a></div><div class="ttdeci">bool function_was_validated(int func_index) const</div><div class="ttdef"><b>Definition</b> <a href="wasm-module_8h_source.html#l00898">wasm-module.h:898</a></div></div>
+<div class="ttc" id="av8config_8h_html_a67bd29db07c711b0fb11ff1c324ebb60"><div class="ttname"><a href="v8config_8h.html#a67bd29db07c711b0fb11ff1c324ebb60">V8_UNLIKELY</a></div><div class="ttdeci">#define V8_UNLIKELY(condition)</div><div class="ttdef"><b>Definition</b> <a href="v8config_8h_source.html#l00649">v8config.h:649</a></div></div>
 <div class="ttc" id="avalue-type_8h_html"><div class="ttname"><a href="value-type_8h.html">value-type.h</a></div></div>
 <div class="ttc" id="awasm-code-manager_8h_html"><div class="ttname"><a href="wasm-code-manager_8h.html">wasm-code-manager.h</a></div></div>
 <div class="ttc" id="awasm-compiler_8h_html"><div class="ttname"><a href="wasm-compiler_8h.html">wasm-compiler.h</a></div></div>
@@ -1815,10 +1825,13 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="awasm-value_8h_html"><div class="ttname"><a href="wasm-value_8h.html">wasm-value.h</a></div></div>
 <div class="ttc" id="azone_8h_html_a6b1fd0a126df3f1b788cee19d9cce66e"><div class="ttname"><a href="zone_8h.html#a6b1fd0a126df3f1b788cee19d9cce66e">ZONE_NAME</a></div><div class="ttdeci">#define ZONE_NAME</div><div class="ttdef"><b>Definition</b> <a href="zone_8h_source.html#l00022">zone.h:22</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:08 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_2b581e8501b9ee14adb2dc81ebf46f49.html">wasm</a></li><li class="navelem"><a class="el" href="wasm-debug_8cc.html">wasm-debug.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:21 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

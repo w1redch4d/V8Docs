@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/cppgc/gc-info-table.h File Reference</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/heap/cppgc/gc-info-table.h File Reference</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('gc-info-table_8h.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
@@ -98,320 +106,372 @@ $(function(){ initResizable(false); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &quot;include/cppgc/internal/gc-info.h&quot;</code><br />
-<code>#include &quot;include/cppgc/platform.h&quot;</code><br />
-<code>#include &quot;include/v8config.h&quot;</code><br />
-<code>#include &quot;<a class="el" href="logging_8h_source.html">src/base/logging.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="macros_8h_source.html">src/base/macros.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="gc-info_8h_source.html">include/cppgc/internal/gc-info.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="include_2cppgc_2platform_8h_source.html">include/cppgc/platform.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="v8config_8h_source.html">include/v8config.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2base_2logging_8h_source.html">src/base/logging.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2base_2macros_8h_source.html">src/base/macros.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="mutex_8h_source.html">src/base/platform/mutex.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="base_2platform_2platform_8h_source.html">src/base/platform/platform.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="heap_2cppgc_2platform_8h_source.html">src/heap/cppgc/platform.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2base_2platform_2platform_8h_source.html">src/base/platform/platform.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="src_2heap_2cppgc_2platform_8h_source.html">src/heap/cppgc/platform.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for gc-info-table.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="gc-info-table_8h__incl.png" border="0" usemap="#a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2heap_2cppgc_2gc-info-table_8h" alt=""/></div>
-<map name="a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2heap_2cppgc_2gc-info-table_8h" id="a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2heap_2cppgc_2gc-info-table_8h">
-<area shape="rect" title=" " alt="" coords="660,5,873,92"/>
-<area shape="rect" title=" " alt="" coords="1198,576,1266,606"/>
-<area shape="poly" title=" " alt="" coords="725,94,692,135,664,184,655,209,651,235,654,260,664,284,698,322,752,363,821,404,898,445,1058,517,1185,569,1183,573,1056,522,896,450,818,409,749,367,694,326,659,287,649,261,646,235,650,208,659,182,688,132,721,91"/>
-<area shape="rect" title=" " alt="" coords="128,140,288,189"/>
-<area shape="poly" title=" " alt="" coords="661,72,307,143,303,143,302,138,306,137,659,67"/>
-<area shape="rect" title=" " alt="" coords="2027,246,2205,276"/>
-<area shape="poly" title=" " alt="" coords="873,51,1155,61,1509,79,1828,104,1942,120,1982,128,2009,138,2039,157,2065,181,2103,231,2098,234,2061,185,2036,161,2007,142,1981,134,1941,125,1828,110,1508,84,1155,66,873,56"/>
-<area shape="rect" title=" " alt="" coords="276,741,412,770"/>
-<area shape="poly" title=" " alt="" coords="660,59,521,69,363,87,218,111,160,126,117,142,73,165,38,187,26,200,16,216,10,236,8,260,8,592,15,630,33,661,61,687,97,707,137,723,179,734,261,747,260,752,178,739,135,728,94,712,58,691,29,665,10,632,3,592,3,260,5,235,11,214,21,197,35,183,70,160,115,138,159,120,217,105,362,81,520,64,660,53"/>
-<area shape="rect" href="logging_8h.html" title=" " alt="" coords="683,489,818,518"/>
-<area shape="poly" title=" " alt="" coords="666,95,640,116,620,141,609,164,603,186,601,234,611,282,629,329,654,374,680,414,729,476,725,479,676,417,649,377,625,331,606,284,596,234,598,186,604,162,615,139,636,112,662,90"/>
-<area shape="rect" href="macros_8h.html" title=" " alt="" coords="1921,411,2055,441"/>
-<area shape="poly" title=" " alt="" coords="873,54,1115,75,1416,111,1566,135,1704,164,1819,197,1865,215,1903,234,1930,255,1947,276,1973,332,1983,364,1988,395,1983,396,1978,365,1968,334,1943,279,1926,259,1900,239,1863,220,1817,202,1703,169,1566,140,1416,116,1114,81,873,60"/>
-<area shape="rect" href="mutex_8h.html" title=" " alt="" coords="673,246,860,276"/>
-<area shape="poly" title=" " alt="" coords="769,92,769,231,764,231,764,92"/>
-<area shape="rect" href="base_2platform_2platform_8h.html" title=" " alt="" coords="999,150,1201,179"/>
-<area shape="poly" title=" " alt="" coords="874,84,1045,142,1043,147,872,89"/>
-<area shape="rect" href="heap_2cppgc_2platform_8h.html" title=" " alt="" coords="2150,150,2336,179"/>
-<area shape="poly" title=" " alt="" coords="873,51,1399,79,1745,104,2095,137,2145,144,2144,149,2094,143,1744,109,1399,84,873,57"/>
-<area shape="rect" title=" " alt="" coords="976,576,1038,606"/>
-<area shape="poly" title=" " alt="" coords="812,516,885,537,964,564,970,566,968,571,962,569,884,542,810,522"/>
-<area shape="rect" title=" " alt="" coords="363,576,426,606"/>
-<area shape="poly" title=" " alt="" coords="683,515,567,534,502,549,438,569,432,571,430,566,436,564,500,544,566,529,682,510"/>
-<area shape="rect" title=" " alt="" coords="450,576,518,606"/>
-<area shape="poly" title=" " alt="" coords="695,522,620,542,538,569,530,572,528,567,536,564,618,537,694,516"/>
-<area shape="rect" title=" " alt="" coords="593,576,663,606"/>
-<area shape="poly" title=" " alt="" coords="732,521,662,569,659,565,729,517"/>
-<area shape="rect" title=" " alt="" coords="1829,576,1886,606"/>
-<area shape="poly" title=" " alt="" coords="819,506,1180,527,1664,564,1814,581,1813,586,1664,569,1180,532,819,511"/>
-<area shape="rect" title=" " alt="" coords="1128,663,1184,693"/>
-<area shape="poly" title=" " alt="" coords="752,519,755,566,763,591,778,613,795,621,826,630,919,646,1113,670,1112,675,918,651,825,635,793,626,774,617,758,594,749,567,747,519"/>
-<area shape="rect" title=" " alt="" coords="1061,576,1123,606"/>
-<area shape="poly" title=" " alt="" coords="819,510,929,530,990,545,1050,564,1056,566,1054,571,1048,569,989,550,928,535,818,516"/>
-<area shape="rect" href="abort-mode_8h.html" title=" " alt="" coords="788,576,951,606"/>
-<area shape="poly" title=" " alt="" coords="772,517,839,564,836,569,769,521"/>
-<area shape="rect" href="base-export_8h.html" title=" " alt="" coords="788,663,951,693"/>
-<area shape="poly" title=" " alt="" coords="745,520,736,540,728,565,726,590,734,614,757,638,787,655,785,659,754,642,730,616,721,591,723,564,731,538,740,518"/>
-<area shape="rect" href="build__config_8h.html" title=" " alt="" coords="144,663,307,693"/>
-<area shape="poly" title=" " alt="" coords="695,521,639,541,583,569,568,581,559,593,548,606,532,617,481,640,426,656,323,674,322,668,425,650,479,635,529,613,545,602,554,590,564,577,580,564,637,536,693,516"/>
-<area shape="rect" href="compiler-specific_8h.html" title=" " alt="" coords="1968,576,2160,606"/>
-<area shape="poly" title=" " alt="" coords="819,504,1272,521,1583,538,1899,564,1958,571,1957,576,1898,569,1582,544,1272,526,819,509"/>
-<area shape="rect" href="immediate-crash_8h.html" title=" " alt="" coords="144,566,288,615"/>
-<area shape="poly" title=" " alt="" coords="683,518,351,569,304,577,303,572,350,564,682,512"/>
-<area shape="rect" href="template-utils_8h.html" title=" " alt="" coords="1392,576,1566,606"/>
-<area shape="poly" title=" " alt="" coords="819,510,1376,575,1376,580,818,515"/>
-<area shape="poly" title=" " alt="" coords="872,606,872,648,867,648,867,606"/>
-<area shape="poly" title=" " alt="" coords="788,694,427,745,426,740,787,688"/>
-<area shape="poly" title=" " alt="" coords="249,691,310,730,307,734,246,696"/>
-<area shape="poly" title=" " alt="" coords="2046,608,1973,654,1925,677,1874,695,1784,709,1631,720,1210,738,759,750,427,756,427,750,759,744,1210,733,1630,715,1783,703,1873,690,1923,672,1971,649,2043,604"/>
-<area shape="poly" title=" " alt="" coords="266,613,295,634,321,661,336,693,344,725,339,726,331,695,316,665,292,638,263,618"/>
-<area shape="poly" title=" " alt="" coords="221,615,225,647,219,648,216,616"/>
-<area shape="poly" title=" " alt="" coords="1425,609,1200,668,1198,663,1424,604"/>
-<area shape="rect" title=" " alt="" coords="1573,663,1646,693"/>
-<area shape="poly" title=" " alt="" coords="1502,604,1577,652,1574,657,1499,608"/>
-<area shape="rect" title=" " alt="" coords="1411,663,1464,693"/>
-<area shape="poly" title=" " alt="" coords="1474,607,1453,650,1448,648,1469,605"/>
-<area shape="rect" title=" " alt="" coords="1670,663,1752,693"/>
-<area shape="poly" title=" " alt="" coords="1518,604,1659,655,1657,660,1517,609"/>
-<area shape="rect" title=" " alt="" coords="1488,663,1549,693"/>
-<area shape="poly" title=" " alt="" coords="1488,605,1508,648,1503,650,1483,607"/>
-<area shape="rect" title=" " alt="" coords="1333,663,1387,693"/>
-<area shape="poly" title=" " alt="" coords="1461,608,1394,656,1390,652,1458,604"/>
-<area shape="rect" title=" " alt="" coords="1776,663,1862,693"/>
-<area shape="poly" title=" " alt="" coords="1536,604,1761,659,1760,665,1535,609"/>
-<area shape="poly" title=" " alt="" coords="2023,439,2082,468,2143,510,2167,534,2183,561,2186,588,2174,616,2149,646,2123,665,2096,677,2067,684,2004,688,1928,695,1791,713,1610,726,1174,745,740,754,427,757,427,751,740,748,1174,739,1610,721,1791,707,1928,690,2004,683,2066,678,2094,672,2120,661,2145,642,2170,614,2181,588,2178,562,2163,538,2140,514,2079,473,2021,444"/>
-<area shape="poly" title=" " alt="" coords="1921,434,834,500,834,494,1921,429"/>
-<area shape="poly" title=" " alt="" coords="2000,439,2029,487,2058,560,2053,562,2024,490,1995,442"/>
-<area shape="poly" title=" " alt="" coords="1981,442,1952,490,1937,525,1930,555,1921,584,1901,617,1880,638,1858,656,1854,652,1877,634,1897,613,1916,581,1925,553,1932,524,1947,487,1976,440"/>
-<area shape="rect" title=" " alt="" coords="1961,489,2015,518"/>
-<area shape="poly" title=" " alt="" coords="1991,441,1991,473,1985,473,1985,441"/>
-<area shape="poly" title=" " alt="" coords="673,269,507,281,414,293,322,308,238,329,171,355,145,370,126,387,113,405,109,425,109,592,110,647,117,668,134,691,161,713,193,729,227,740,261,747,260,752,226,745,191,734,159,717,130,695,112,671,105,648,104,592,104,424,109,403,121,383,142,366,168,350,237,324,321,303,413,287,507,276,672,263"/>
-<area shape="poly" title=" " alt="" coords="768,276,755,473,750,473,763,276"/>
-<area shape="poly" title=" " alt="" coords="724,279,592,329,514,366,439,408,377,455,353,480,336,506,327,532,326,559,334,586,352,613,372,624,409,633,519,649,650,661,772,669,772,674,650,667,518,655,408,638,370,628,349,617,329,588,320,559,322,531,332,504,349,477,373,452,436,404,511,361,590,324,722,274"/>
-<area shape="rect" title=" " alt="" coords="839,333,910,363"/>
-<area shape="poly" title=" " alt="" coords="786,274,847,321,843,326,783,278"/>
-<area shape="rect" href="lazy-instance_8h.html" title=" " alt="" coords="1607,333,1774,363"/>
-<area shape="poly" title=" " alt="" coords="861,268,1592,335,1592,340,861,274"/>
-<area shape="poly" title=" " alt="" coords="1699,363,1810,647,1805,649,1694,365"/>
-<area shape="poly" title=" " alt="" coords="1747,361,1918,404,1917,409,1746,366"/>
-<area shape="rect" href="once_8h.html" title=" " alt="" coords="1562,489,1681,518"/>
-<area shape="poly" title=" " alt="" coords="1687,365,1636,475,1632,473,1682,362"/>
-<area shape="poly" title=" " alt="" coords="1562,520,1337,569,1282,581,1281,576,1335,564,1561,515"/>
-<area shape="poly" title=" " alt="" coords="1562,515,1474,534,1426,549,1381,569,1365,580,1354,593,1342,606,1324,617,1258,637,1165,652,967,672,966,667,1164,647,1256,631,1322,613,1339,602,1350,590,1361,577,1379,564,1425,544,1473,529,1561,510"/>
-<area shape="poly" title=" " alt="" coords="1599,521,1517,570,1514,565,1596,516"/>
-<area shape="poly" title=" " alt="" coords="1637,517,1653,539,1667,565,1672,591,1666,616,1655,637,1640,654,1636,651,1651,634,1662,614,1667,591,1661,567,1649,541,1633,520"/>
-<area shape="poly" title=" " alt="" coords="1643,517,1666,538,1688,565,1704,607,1711,647,1706,648,1699,608,1683,568,1663,541,1639,521"/>
-<area shape="rect" title=" " alt="" coords="1590,576,1652,606"/>
-<area shape="poly" title=" " alt="" coords="1624,519,1624,561,1619,561,1619,519"/>
-<area shape="poly" title=" " alt="" coords="1087,181,1062,210,1034,249,1011,296,1004,321,1001,347,1001,427,1007,560,1002,560,996,427,996,347,999,320,1006,294,1029,246,1058,206,1083,178"/>
-<area shape="poly" title=" " alt="" coords="1202,166,1370,174,1561,187,1725,207,1782,220,1814,235,1843,271,1862,313,1874,359,1879,406,1877,494,1867,561,1861,560,1872,493,1874,406,1869,360,1857,315,1838,274,1810,239,1780,225,1724,212,1560,192,1370,179,1202,172"/>
-<area shape="poly" title=" " alt="" coords="1096,180,1069,251,1057,298,1052,347,1052,427,1055,464,1062,500,1082,560,1077,562,1057,501,1050,464,1047,427,1047,347,1052,297,1064,249,1091,178"/>
-<area shape="poly" title=" " alt="" coords="1077,182,1042,206,1010,238,983,279,958,324,920,415,893,498,878,561,873,560,888,497,915,413,954,321,978,277,1006,235,1039,202,1074,177"/>
-<area shape="poly" title=" " alt="" coords="1105,179,1136,411,1146,542,1144,590,1137,617,1110,635,1068,650,967,669,966,664,1067,645,1108,631,1132,613,1139,589,1140,542,1130,411,1100,180"/>
-<area shape="poly" title=" " alt="" coords="999,172,741,190,585,207,429,232,286,265,223,285,168,307,122,333,88,360,66,391,59,425,59,505,62,530,71,553,84,575,101,595,142,628,182,653,179,658,139,633,98,599,80,578,66,556,57,531,53,505,53,424,61,389,84,357,119,328,165,303,221,280,284,260,428,226,585,202,740,185,998,167"/>
-<area shape="poly" title=" " alt="" coords="1202,163,1373,167,1576,177,1676,186,1768,199,1845,214,1902,234,1964,267,2007,302,2040,347,2069,410,2079,450,2082,491,2074,561,2068,560,2076,491,2074,451,2064,412,2035,350,2003,306,1961,272,1900,239,1844,219,1767,204,1676,192,1576,183,1373,172,1201,168"/>
-<area shape="poly" title=" " alt="" coords="1202,162,1365,165,1556,175,1649,184,1734,196,1805,213,1857,234,1880,250,1901,269,1936,313,1962,358,1980,396,1975,398,1957,360,1932,316,1897,273,1877,254,1855,239,1803,218,1733,202,1648,189,1555,180,1365,170,1202,168"/>
-<area shape="poly" title=" " alt="" coords="1051,182,832,244,830,239,1049,177"/>
-<area shape="poly" title=" " alt="" coords="1039,182,983,204,956,220,931,239,915,257,902,278,885,319,880,317,898,275,911,254,927,235,953,215,981,199,1037,177"/>
-<area shape="rect" title=" " alt="" coords="1138,246,1204,276"/>
-<area shape="poly" title=" " alt="" coords="1113,178,1153,232,1149,235,1108,181"/>
-<area shape="rect" title=" " alt="" coords="1228,246,1383,276"/>
-<area shape="poly" title=" " alt="" coords="1132,177,1262,237,1260,242,1130,182"/>
-<area shape="rect" href="semaphore_8h.html" title=" " alt="" coords="1582,246,1800,276"/>
-<area shape="poly" title=" " alt="" coords="1201,177,1570,234,1604,240,1603,245,1569,239,1200,182"/>
-<area shape="rect" title=" " alt="" coords="1408,237,1558,285"/>
-<area shape="poly" title=" " alt="" coords="1161,177,1393,233,1391,239,1159,182"/>
-<area shape="poly" title=" " alt="" coords="1622,279,1526,303,1422,337,1376,357,1340,378,1315,401,1309,413,1307,425,1307,505,1308,566,1301,592,1280,617,1258,631,1227,643,1147,661,1055,671,967,677,967,672,1054,666,1146,656,1226,638,1256,627,1277,613,1296,589,1303,566,1301,505,1301,424,1304,411,1311,398,1336,374,1374,352,1420,332,1524,298,1621,274"/>
-<area shape="poly" title=" " alt="" coords="1693,276,1693,318,1688,318,1688,276"/>
-<area shape="poly" title=" " alt="" coords="2226,182,2148,239,2145,235,2222,177"/>
-<area shape="poly" title=" " alt="" coords="2249,179,2256,227,2255,257,2248,286,2228,331,2208,367,2186,397,2162,423,2104,468,2028,521,1963,556,1901,579,1900,574,1961,551,2025,516,2101,464,2158,419,2182,394,2203,365,2223,329,2243,284,2250,257,2251,228,2244,180"/>
-<area shape="poly" title=" " alt="" coords="2246,180,2242,230,2234,259,2220,287,2182,328,2137,362,2090,388,2046,407,2044,403,2087,383,2134,357,2178,324,2215,284,2229,257,2236,229,2240,179"/>
-<area shape="rect" title=" " alt="" coords="2330,237,2483,285"/>
-<area shape="poly" title=" " alt="" coords="2269,177,2354,226,2351,231,2266,182"/>
+<div class="center"><img src="gc-info-table_8h__incl.png" border="0" usemap="#asrc_2heap_2cppgc_2gc-info-table_8h" alt=""/></div>
+<map name="asrc_2heap_2cppgc_2gc-info-table_8h" id="asrc_2heap_2cppgc_2gc-info-table_8h">
+<area shape="rect" title=" " alt="" coords="1944,5,2106,54"/>
+<area shape="rect" title=" " alt="" coords="3155,644,3224,674"/>
+<area shape="poly" title=" " alt="" coords="2107,31,2415,44,2613,56,2816,73,3006,95,3164,123,3226,140,3273,158,3303,179,3312,190,3315,202,3315,380,3312,418,3303,455,3276,527,3242,588,3212,633,3207,630,3238,585,3271,524,3298,454,3306,417,3309,380,3309,203,3307,193,3300,183,3271,163,3224,145,3163,129,3005,100,2815,78,2612,61,2414,49,2107,36"/>
+<area shape="rect" href="gc-info_8h.html" title=" " alt="" coords="599,354,758,403"/>
+<area shape="poly" title=" " alt="" coords="1944,33,1683,35,1515,42,1338,53,1164,72,1005,98,935,115,874,135,823,157,783,182,749,217,723,259,704,302,691,340,686,338,699,300,718,257,745,214,780,178,820,152,872,130,934,110,1004,93,1163,66,1337,48,1515,36,1683,30,1944,27"/>
+<area shape="rect" href="v8config_8h.html" title=" " alt="" coords="1118,722,1204,751"/>
+<area shape="poly" title=" " alt="" coords="1944,36,1481,54,833,88,519,112,255,139,152,154,74,170,24,187,12,195,8,203,8,573,14,610,30,635,56,649,89,657,172,661,217,664,263,671,338,684,438,695,678,712,1103,731,1102,736,678,718,437,700,337,689,262,676,217,669,172,667,89,662,54,654,27,639,9,612,3,573,3,202,8,192,22,182,72,165,151,149,255,134,519,106,833,83,1481,49,1944,31"/>
+<area shape="rect" href="include_2cppgc_2platform_8h.html" title=" " alt="" coords="2887,460,3065,490"/>
+<area shape="poly" title=" " alt="" coords="2107,33,2360,52,2676,86,2824,109,2947,136,2995,150,3032,166,3055,183,3064,202,3064,293,3057,338,3041,381,3020,419,2999,449,2995,446,3016,416,3036,379,3052,337,3059,292,3059,203,3051,187,3029,171,2993,155,2946,141,2823,114,2676,92,2359,58,2107,39"/>
+<area shape="rect" href="src_2base_2logging_8h.html" title=" " alt="" coords="1463,460,1598,490"/>
+<area shape="poly" title=" " alt="" coords="1944,40,1718,62,1439,98,1310,121,1203,146,1162,160,1131,174,1112,189,1105,203,1105,292,1108,318,1115,342,1126,362,1141,381,1180,412,1229,435,1284,451,1341,462,1448,471,1447,477,1341,467,1283,456,1227,440,1177,416,1137,385,1122,365,1110,344,1103,319,1100,293,1100,202,1108,185,1128,170,1160,155,1202,141,1309,115,1438,93,1717,57,1944,35"/>
+<area shape="rect" href="src_2base_2macros_8h.html" title=" " alt="" coords="2533,364,2667,393"/>
+<area shape="poly" title=" " alt="" coords="2107,38,2233,58,2376,87,2445,106,2506,127,2554,151,2587,178,2600,198,2609,220,2617,266,2616,311,2610,349,2605,348,2610,311,2612,266,2604,221,2596,200,2583,181,2552,156,2504,132,2443,111,2375,93,2232,63,2106,44"/>
+<area shape="rect" href="mutex_8h.html" title=" " alt="" coords="1576,189,1763,219"/>
+<area shape="poly" title=" " alt="" coords="1978,57,1713,185,1711,180,1975,52"/>
+<area shape="rect" href="src_2base_2platform_2platform_8h.html" title=" " alt="" coords="1924,102,2126,132"/>
+<area shape="poly" title=" " alt="" coords="2028,55,2028,86,2023,86,2023,55"/>
+<area shape="rect" href="src_2heap_2cppgc_2platform_8h.html" title=" " alt="" coords="2787,276,2973,306"/>
+<area shape="poly" title=" " alt="" coords="2107,33,2236,41,2387,55,2529,74,2587,86,2630,100,2701,135,2765,180,2819,226,2858,263,2855,267,2815,230,2761,184,2698,140,2628,104,2585,91,2528,80,2386,61,2235,47,2107,38"/>
+<area shape="rect" title=" " alt="" coords="1917,557,1979,586"/>
+<area shape="poly" title=" " alt="" coords="759,377,917,379,1129,389,1370,411,1492,427,1611,448,1696,467,1761,487,1905,545,1910,547,1908,552,1903,550,1760,492,1695,472,1610,453,1491,432,1369,416,1129,395,917,385,759,382"/>
+<area shape="rect" title=" " alt="" coords="712,557,774,586"/>
+<area shape="poly" title=" " alt="" coords="689,402,736,541,731,543,684,404"/>
+<area shape="rect" title=" " alt="" coords="274,644,360,674"/>
+<area shape="poly" title=" " alt="" coords="599,387,469,396,323,411,198,430,156,441,134,453,127,468,126,487,138,532,157,573,171,594,191,611,213,624,260,642,258,647,211,629,188,615,167,598,153,575,133,534,120,487,122,466,130,449,154,436,197,424,322,405,469,391,598,382"/>
+<area shape="rect" href="finalizer-trait_8h.html" title=" " alt="" coords="144,451,309,499"/>
+<area shape="poly" title=" " alt="" coords="599,397,324,453,323,448,598,392"/>
+<area shape="rect" href="include_2cppgc_2internal_2logging_8h.html" title=" " alt="" coords="943,460,1116,490"/>
+<area shape="poly" title=" " alt="" coords="759,399,963,453,962,458,758,404"/>
+<area shape="poly" title=" " alt="" coords="677,403,673,443,673,493,681,546,690,571,702,594,771,634,844,671,912,692,982,708,1103,727,1102,732,981,713,910,697,842,676,769,639,698,598,685,573,676,547,667,493,667,443,672,403"/>
+<area shape="rect" href="name-trait_8h.html" title=" " alt="" coords="492,451,642,499"/>
+<area shape="poly" title=" " alt="" coords="653,405,608,443,605,438,649,401"/>
+<area shape="rect" href="trace-trait_8h.html" title=" " alt="" coords="333,460,467,490"/>
+<area shape="poly" title=" " alt="" coords="610,406,457,457,455,452,608,401"/>
+<area shape="poly" title=" " alt="" coords="208,501,194,522,182,547,178,571,185,595,200,612,218,626,261,644,259,649,216,630,196,616,180,597,173,572,177,545,189,520,204,498"/>
+<area shape="rect" href="type-traits_8h.html" title=" " alt="" coords="195,557,333,586"/>
+<area shape="poly" title=" " alt="" coords="238,499,255,541,250,543,233,501"/>
+<area shape="poly" title=" " alt="" coords="275,586,303,630,298,632,271,588"/>
+<area shape="rect" title=" " alt="" coords="438,722,506,751"/>
+<area shape="poly" title=" " alt="" coords="262,587,254,629,256,652,265,672,289,689,330,704,424,725,423,730,328,709,287,694,261,675,251,653,249,629,256,586"/>
+<area shape="rect" title=" " alt="" coords="1478,644,1533,674"/>
+<area shape="poly" title=" " alt="" coords="333,575,1314,641,1463,652,1462,657,1313,647,333,580"/>
+<area shape="rect" href="source-location_8h.html" title=" " alt="" coords="2771,557,2938,586"/>
+<area shape="poly" title=" " alt="" coords="1117,479,1451,497,1805,507,2080,510,2355,518,2517,528,2708,545,2761,551,2760,557,2708,550,2517,533,2355,523,2080,515,1804,513,1451,502,1116,484"/>
+<area shape="poly" title=" " alt="" coords="1004,492,972,516,957,531,946,548,939,572,946,595,978,636,1018,669,1062,695,1105,714,1102,719,1060,700,1015,674,974,640,942,597,934,572,942,546,953,528,968,512,1001,488"/>
+<area shape="rect" href="v8-source-location_8h.html" title=" " alt="" coords="2602,644,2747,674"/>
+<area shape="poly" title=" " alt="" coords="2826,590,2719,640,2717,635,2823,585"/>
+<area shape="poly" title=" " alt="" coords="2602,667,2437,676,1847,699,1277,717,521,737,521,731,1276,712,1847,694,2437,671,2601,662"/>
+<area shape="rect" title=" " alt="" coords="3022,722,3079,751"/>
+<area shape="poly" title=" " alt="" coords="2746,672,3007,724,3006,729,2745,677"/>
+<area shape="poly" title=" " alt="" coords="2602,674,2583,676,2381,693,2175,707,1776,725,1441,734,1220,737,1220,732,1441,729,1776,720,2174,701,2380,688,2582,671,2601,669"/>
+<area shape="rect" title=" " alt="" coords="3080,799,3154,829"/>
+<area shape="poly" title=" " alt="" coords="1205,737,3065,808,3064,813,1205,742"/>
+<area shape="poly" title=" " alt="" coords="612,497,704,547,702,551,609,502"/>
+<area shape="poly" title=" " alt="" coords="528,502,455,549,346,636,343,632,452,545,525,498"/>
+<area shape="poly" title=" " alt="" coords="561,501,485,708,480,706,556,499"/>
+<area shape="poly" title=" " alt="" coords="582,498,614,545,658,594,724,635,793,671,875,695,960,712,1103,729,1103,734,959,717,874,700,791,676,721,639,654,598,610,549,578,501"/>
+<area shape="rect" href="name-provider_8h.html" title=" " alt="" coords="560,644,723,674"/>
+<area shape="poly" title=" " alt="" coords="575,499,589,544,608,595,627,630,622,632,603,597,584,546,570,501"/>
+<area shape="poly" title=" " alt="" coords="724,669,1103,724,1103,729,723,675"/>
+<area shape="poly" title=" " alt="" coords="396,491,332,631,328,629,391,489"/>
+<area shape="poly" title=" " alt="" coords="381,492,298,550,295,546,378,488"/>
+<area shape="poly" title=" " alt="" coords="408,489,426,528,456,578,497,630,522,653,549,671,594,689,656,703,730,714,810,721,972,730,1103,733,1103,738,972,735,810,727,729,719,655,708,592,694,547,676,519,657,493,634,452,581,421,530,403,492"/>
+<area shape="poly" title=" " alt="" coords="2960,492,2886,549,2883,545,2956,488"/>
+<area shape="poly" title=" " alt="" coords="2980,491,2977,542,2969,571,2953,598,2935,614,2918,623,2884,630,2847,634,2827,638,2805,646,2784,662,2775,670,2761,676,2722,685,2663,693,2495,706,2036,724,1554,734,1220,737,1220,732,1554,729,2036,719,2495,701,2662,687,2721,680,2759,671,2772,665,2781,658,2803,642,2825,633,2846,628,2883,625,2916,618,2932,609,2949,594,2964,569,2972,541,2975,490"/>
+<area shape="poly" title=" " alt="" coords="3045,488,3109,510,3141,526,3171,545,3197,567,3215,587,3227,611,3239,643,3242,666,3239,688,3231,710,3218,730,3187,765,3153,792,3150,788,3183,761,3214,727,3226,707,3234,687,3237,666,3233,645,3222,613,3210,590,3193,571,3168,549,3139,530,3107,515,3043,493"/>
+<area shape="rect" href="v8-platform_8h.html" title=" " alt="" coords="3014,557,3120,586"/>
+<area shape="poly" title=" " alt="" coords="2991,488,3045,544,3041,548,2987,492"/>
+<area shape="poly" title=" " alt="" coords="3088,585,3158,633,3155,637,3085,589"/>
+<area shape="poly" title=" " alt="" coords="3014,587,2756,643,2754,638,3012,582"/>
+<area shape="poly" title=" " alt="" coords="3068,587,3056,706,3051,706,3063,587"/>
+<area shape="poly" title=" " alt="" coords="3025,590,2864,646,2835,663,2805,676,2703,690,2530,702,2057,720,1562,732,1220,737,1220,732,1562,726,2057,715,2529,697,2702,685,2803,671,2833,658,2862,642,3023,585"/>
+<area shape="poly" title=" " alt="" coords="3072,586,3114,784,3109,785,3067,587"/>
+<area shape="rect" title=" " alt="" coords="2874,644,2939,674"/>
+<area shape="poly" title=" " alt="" coords="3041,590,2948,639,2945,634,3039,585"/>
+<area shape="rect" title=" " alt="" coords="2353,644,2426,674"/>
+<area shape="poly" title=" " alt="" coords="3014,587,2951,599,2663,635,2441,656,2440,651,2662,630,2950,593,3013,582"/>
+<area shape="rect" title=" " alt="" coords="2963,644,3029,674"/>
+<area shape="poly" title=" " alt="" coords="3057,589,3019,634,3015,631,3053,585"/>
+<area shape="poly" title=" " alt="" coords="1463,487,790,567,789,562,1462,482"/>
+<area shape="poly" title=" " alt="" coords="1531,490,1512,629,1507,628,1526,490"/>
+<area shape="poly" title=" " alt="" coords="1599,476,1767,484,1981,498,2190,518,2276,531,2341,545,2381,559,2414,574,2467,607,2519,641,2552,657,2591,671,2707,699,2823,717,2927,727,3006,731,3006,737,2927,732,2822,723,2706,705,2590,676,2550,662,2517,646,2464,612,2412,579,2379,564,2339,550,2275,536,2189,524,1981,504,1766,490,1599,482"/>
+<area shape="rect" title=" " alt="" coords="1000,557,1064,586"/>
+<area shape="poly" title=" " alt="" coords="1463,483,1383,490,1285,502,1180,522,1077,550,1070,552,1068,547,1075,545,1179,517,1285,497,1382,484,1462,477"/>
+<area shape="rect" title=" " alt="" coords="1255,557,1324,586"/>
+<area shape="poly" title=" " alt="" coords="1489,493,1337,550,1332,552,1330,547,1335,545,1487,488"/>
+<area shape="rect" title=" " alt="" coords="1348,557,1418,586"/>
+<area shape="poly" title=" " alt="" coords="1510,492,1419,550,1416,546,1507,488"/>
+<area shape="rect" title=" " alt="" coords="1593,557,1655,586"/>
+<area shape="poly" title=" " alt="" coords="1546,488,1601,544,1598,548,1543,492"/>
+<area shape="rect" href="abort-mode_8h.html" title=" " alt="" coords="1729,557,1892,586"/>
+<area shape="poly" title=" " alt="" coords="1573,488,1755,549,1754,554,1572,493"/>
+<area shape="rect" href="base-export_8h.html" title=" " alt="" coords="1729,644,1892,674"/>
+<area shape="poly" title=" " alt="" coords="1535,490,1549,541,1563,570,1583,594,1612,615,1645,630,1714,648,1713,653,1644,635,1610,619,1580,598,1558,573,1544,543,1530,491"/>
+<area shape="rect" href="build__config_8h.html" title=" " alt="" coords="1138,644,1302,674"/>
+<area shape="poly" title=" " alt="" coords="1525,492,1489,544,1462,573,1431,598,1375,626,1318,644,1316,639,1373,621,1428,594,1458,569,1484,540,1520,489"/>
+<area shape="rect" href="src_2base_2compiler-specific_8h.html" title=" " alt="" coords="2504,557,2696,586"/>
+<area shape="poly" title=" " alt="" coords="1599,478,1957,502,2194,521,2435,545,2491,552,2491,557,2434,550,2194,527,1956,507,1599,483"/>
+<area shape="rect" href="immediate-crash_8h.html" title=" " alt="" coords="1088,547,1232,596"/>
+<area shape="poly" title=" " alt="" coords="1472,493,1247,549,1246,544,1471,488"/>
+<area shape="rect" href="template-utils_8h.html" title=" " alt="" coords="2154,557,2328,586"/>
+<area shape="poly" title=" " alt="" coords="1599,483,2139,554,2138,559,1598,488"/>
+<area shape="poly" title=" " alt="" coords="1813,587,1813,629,1808,629,1808,587"/>
+<area shape="poly" title=" " alt="" coords="1729,672,1220,731,1220,726,1728,667"/>
+<area shape="poly" title=" " alt="" coords="1211,676,1184,711,1179,708,1207,673"/>
+<area shape="poly" title=" " alt="" coords="2585,589,2524,634,2483,658,2438,676,2361,689,2231,700,1873,718,1493,730,1220,737,1220,731,1493,725,1873,713,2231,695,2361,684,2437,671,2480,653,2521,630,2582,585"/>
+<area shape="poly" title=" " alt="" coords="1147,597,1131,633,1127,653,1129,673,1145,708,1140,710,1124,674,1122,653,1126,632,1142,595"/>
+<area shape="poly" title=" " alt="" coords="1179,595,1203,629,1199,633,1175,598"/>
+<area shape="poly" title=" " alt="" coords="2154,585,1991,599,1585,619,1270,627,954,632,548,647,376,656,376,651,548,641,954,627,1269,621,1585,614,1990,593,2154,580"/>
+<area shape="poly" title=" " alt="" coords="2154,586,1549,655,1549,650,2153,580"/>
+<area shape="poly" title=" " alt="" coords="2267,585,2353,634,2350,638,2265,589"/>
+<area shape="rect" title=" " alt="" coords="2007,644,2060,674"/>
+<area shape="poly" title=" " alt="" coords="2208,590,2075,643,2073,638,2206,585"/>
+<area shape="rect" title=" " alt="" coords="2247,644,2329,674"/>
+<area shape="poly" title=" " alt="" coords="2251,586,2275,629,2271,632,2247,588"/>
+<area shape="rect" title=" " alt="" coords="2084,644,2145,674"/>
+<area shape="poly" title=" " alt="" coords="2222,589,2150,637,2147,633,2219,585"/>
+<area shape="rect" title=" " alt="" coords="2169,644,2223,674"/>
+<area shape="poly" title=" " alt="" coords="2236,588,2213,632,2208,629,2231,586"/>
+<area shape="poly" title=" " alt="" coords="2533,382,2180,384,1677,394,1426,402,1203,415,1030,432,970,442,932,453,905,468,886,485,860,523,833,563,813,582,787,598,753,611,707,622,596,639,477,650,377,657,376,652,476,645,595,633,706,616,751,606,784,594,810,578,829,560,855,520,882,481,902,464,930,448,969,437,1030,426,1202,409,1425,397,1677,388,2180,379,2533,377"/>
+<area shape="poly" title=" " alt="" coords="2619,392,2658,429,2699,480,2715,510,2723,539,2723,569,2710,598,2673,615,2600,640,2487,676,2371,693,2216,706,1844,724,1477,734,1220,737,1220,732,1477,728,1844,719,2215,701,2370,687,2486,671,2598,635,2671,610,2706,594,2717,568,2718,540,2710,512,2695,483,2654,432,2615,396"/>
+<area shape="poly" title=" " alt="" coords="2533,388,1614,469,1613,464,2532,383"/>
+<area shape="poly" title=" " alt="" coords="2603,393,2603,541,2597,541,2597,393"/>
+<area shape="rect" title=" " alt="" coords="2759,460,2812,490"/>
+<area shape="poly" title=" " alt="" coords="2629,391,2746,451,2744,455,2627,396"/>
+<area shape="poly" title=" " alt="" coords="1592,222,1427,257,1227,309,1130,340,1044,375,976,413,951,432,933,452,915,482,905,512,902,541,905,569,915,596,931,622,953,647,980,672,1009,690,1041,705,1104,724,1102,729,1039,710,1007,695,977,676,949,651,927,625,911,598,900,570,896,541,899,511,910,480,929,449,947,428,973,408,1042,370,1128,335,1225,304,1426,251,1591,217"/>
+<area shape="poly" title=" " alt="" coords="1664,221,1547,448,1542,445,1660,218"/>
+<area shape="poly" title=" " alt="" coords="1675,219,1687,287,1695,377,1695,476,1696,539,1703,565,1719,594,1740,617,1765,634,1762,639,1737,621,1715,598,1698,567,1691,540,1689,476,1689,377,1682,287,1670,220"/>
+<area shape="rect" title=" " alt="" coords="1738,276,1809,306"/>
+<area shape="poly" title=" " alt="" coords="1688,217,1746,265,1743,269,1685,221"/>
+<area shape="rect" href="lazy-instance_8h.html" title=" " alt="" coords="1990,276,2157,306"/>
+<area shape="poly" title=" " alt="" coords="1737,217,1991,270,1990,275,1736,222"/>
+<area shape="poly" title=" " alt="" coords="1989,300,1821,309,1492,314,1230,319,943,329,659,345,408,370,303,386,218,405,155,427,134,439,119,452,114,465,112,482,116,527,127,569,138,594,164,617,195,633,228,644,259,650,258,655,226,649,193,638,161,621,134,598,121,571,111,527,107,482,109,463,115,449,131,435,153,422,216,400,302,381,407,365,659,340,943,324,1230,314,1492,309,1821,303,1989,295"/>
+<area shape="poly" title=" " alt="" coords="2158,303,2519,361,2518,367,2157,309"/>
+<area shape="rect" href="once_8h.html" title=" " alt="" coords="2104,460,2224,490"/>
+<area shape="poly" title=" " alt="" coords="2083,305,2153,445,2148,448,2078,307"/>
+<area shape="poly" title=" " alt="" coords="2224,476,2741,505,3003,525,3091,535,3133,545,3153,562,3167,584,3185,628,3180,630,3163,586,3149,566,3131,550,3090,540,3003,530,2741,510,2224,482"/>
+<area shape="poly" title=" " alt="" coords="2133,493,1994,553,1992,548,2131,488"/>
+<area shape="poly" title=" " alt="" coords="2212,488,2304,518,2343,534,2364,545,2377,565,2386,586,2392,628,2387,629,2381,588,2373,567,2361,549,2341,538,2303,523,2210,493"/>
+<area shape="poly" title=" " alt="" coords="2161,492,2135,544,2114,573,2087,598,2045,622,1999,638,1952,650,1908,656,1907,651,1951,644,1997,633,2042,617,2084,594,2110,570,2131,541,2157,489"/>
+<area shape="poly" title=" " alt="" coords="2177,489,2222,543,2218,546,2173,492"/>
+<area shape="poly" title=" " alt="" coords="2207,488,2290,518,2324,534,2342,546,2349,559,2350,571,2342,597,2332,617,2318,635,2313,631,2327,614,2338,595,2345,571,2344,560,2338,549,2321,538,2288,523,2205,493"/>
+<area shape="poly" title=" " alt="" coords="1924,120,1770,122,1573,131,1354,150,1243,164,1135,182,1076,189,1018,190,910,190,866,197,848,203,832,213,820,226,811,242,805,264,803,290,803,380,798,426,787,471,759,544,754,542,782,469,793,425,797,380,797,290,799,263,806,240,816,222,829,209,845,198,865,191,909,185,1017,185,1076,184,1134,177,1242,159,1353,144,1572,125,1770,117,1924,115"/>
+<area shape="poly" title=" " alt="" coords="2127,119,2429,134,2616,147,2805,165,2981,187,3126,214,3183,230,3226,248,3254,267,3261,278,3264,290,3264,380,3267,425,3274,466,3292,536,3296,569,3294,603,3283,638,3259,675,3243,693,3224,707,3181,726,3136,735,3095,739,3094,733,3135,730,3179,720,3222,702,3240,689,3255,672,3278,635,3289,602,3291,569,3286,537,3269,467,3262,426,3259,380,3259,290,3256,280,3250,271,3223,253,3181,235,3125,220,2980,192,2805,170,2616,152,2429,139,2127,124"/>
+<area shape="poly" title=" " alt="" coords="2127,120,2335,135,2589,163,2714,183,2827,208,2920,238,2958,255,2987,274,3028,313,3052,351,3066,394,3080,450,3083,474,3083,499,3077,542,3072,542,3078,498,3078,475,3075,451,3061,396,3047,353,3024,316,2984,278,2955,260,2918,243,2825,213,2713,188,2588,168,2334,140,2127,125"/>
+<area shape="poly" title=" " alt="" coords="1981,135,1940,154,1903,182,1880,207,1864,230,1856,256,1853,290,1853,380,1848,414,1834,445,1813,472,1786,496,1727,533,1670,558,1668,553,1724,528,1783,491,1809,468,1829,442,1843,412,1848,379,1848,290,1851,255,1860,228,1875,204,1900,178,1938,149,1979,130"/>
+<area shape="poly" title=" " alt="" coords="1995,134,1963,154,1935,181,1918,208,1909,232,1905,257,1904,290,1904,380,1903,415,1897,443,1872,501,1856,525,1838,547,1834,544,1852,522,1867,498,1892,441,1897,414,1899,380,1899,290,1899,257,1903,230,1913,206,1931,178,1960,150,1992,130"/>
+<area shape="poly" title=" " alt="" coords="2012,134,1994,155,1980,181,1971,212,1968,242,1972,297,1986,348,2004,396,2020,444,2028,492,2027,517,2021,543,2010,570,1993,598,1976,616,1955,631,1908,649,1906,645,1952,626,1972,612,1989,594,2005,567,2016,541,2022,516,2023,492,2015,445,1999,398,1981,349,1967,298,1962,242,1966,211,1975,179,1990,152,2008,130"/>
+<area shape="poly" title=" " alt="" coords="1924,120,1706,125,1579,133,1453,148,1337,170,1286,183,1242,200,1206,218,1179,240,1162,263,1156,290,1156,380,1157,445,1150,472,1130,501,1112,516,1094,523,1056,524,1021,527,1005,534,990,549,983,561,981,572,983,583,990,594,1010,609,1042,622,1123,641,1122,646,1040,627,1007,614,986,598,978,585,976,572,978,559,986,546,1002,530,1019,522,1056,519,1093,517,1110,511,1126,498,1145,470,1152,444,1151,380,1151,290,1157,261,1175,236,1203,214,1240,195,1285,178,1336,164,1452,143,1579,128,1706,120,1924,114"/>
+<area shape="poly" title=" " alt="" coords="2102,130,2162,148,2222,177,2246,200,2266,227,2443,410,2577,544,2573,547,2439,413,2262,230,2242,204,2218,182,2160,153,2100,135"/>
+<area shape="poly" title=" " alt="" coords="2120,130,2193,148,2265,177,2283,189,2295,201,2323,226,2384,265,2447,300,2556,354,2554,359,2445,305,2381,269,2320,230,2292,205,2280,193,2263,182,2191,153,2119,135"/>
+<area shape="poly" title=" " alt="" coords="1966,135,1744,188,1743,182,1965,130"/>
+<area shape="poly" title=" " alt="" coords="1934,135,1881,153,1856,166,1834,182,1817,200,1803,220,1784,262,1779,260,1798,218,1813,196,1830,178,1854,161,1879,148,1932,130"/>
+<area shape="rect" title=" " alt="" coords="2334,189,2400,219"/>
+<area shape="poly" title=" " alt="" coords="2116,130,2213,149,2315,177,2325,180,2323,185,2314,182,2211,155,2115,135"/>
+<area shape="rect" href="semaphore_8h.html" title=" " alt="" coords="1990,189,2208,219"/>
+<area shape="poly" title=" " alt="" coords="2039,130,2079,176,2075,179,2035,134"/>
+<area shape="rect" title=" " alt="" coords="2424,180,2574,228"/>
+<area shape="poly" title=" " alt="" coords="2127,129,2258,149,2409,176,2408,182,2257,154,2126,134"/>
+<area shape="poly" title=" " alt="" coords="2122,217,2149,242,2172,275,2175,291,2172,307,2156,350,2138,381,2117,412,2094,452,2081,494,2074,530,2064,564,2053,581,2036,598,2008,619,1975,634,1909,653,1907,648,1974,629,2005,614,2033,594,2049,577,2059,561,2069,529,2075,493,2090,450,2112,409,2133,379,2152,348,2167,305,2170,291,2167,277,2145,245,2118,221"/>
+<area shape="poly" title=" " alt="" coords="2097,220,2084,262,2079,261,2092,219"/>
+<area shape="poly" title=" " alt="" coords="2881,307,2860,541,2855,541,2876,306"/>
+<area shape="poly" title=" " alt="" coords="2908,304,2983,350,3030,383,3080,423,3129,470,3174,522,3212,580,3239,643,3243,660,3238,675,3208,704,3171,722,3132,732,3095,737,3095,732,3130,727,3169,717,3205,699,3234,672,3238,660,3233,645,3207,583,3170,526,3126,474,3077,427,3027,387,2980,354,2905,309"/>
+<area shape="poly" title=" " alt="" coords="2890,305,2964,445,2959,448,2885,307"/>
+<area shape="poly" title=" " alt="" coords="2834,309,2662,361,2660,356,2832,304"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="gc-info-table_8h__dep__incl.png" border="0" usemap="#a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2heap_2cppgc_2gc-info-table_8hdep" alt=""/></div>
-<map name="a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2heap_2cppgc_2gc-info-table_8hdep" id="a_2home_2w1redch4d_2Documents_2browser-exploitation_2v8_2v8_2src_2heap_2cppgc_2gc-info-table_8hdep">
-<area shape="rect" title=" " alt="" coords="2856,5,3068,92"/>
-<area shape="rect" href="cpp-heap_8cc.html" title=" " alt="" coords="1475,929,1687,1016"/>
-<area shape="poly" title=" " alt="" coords="2841,54,2424,62,1854,78,1560,90,1286,105,1049,122,870,143,814,149,757,151,644,148,535,140,435,136,390,138,349,144,313,155,282,172,258,195,239,226,228,266,223,317,223,570,230,635,247,688,274,731,311,766,357,795,409,823,532,879,611,904,716,925,841,940,978,952,1252,965,1474,968,1474,974,1252,970,978,957,841,946,715,930,609,910,531,883,407,827,354,800,308,770,270,734,242,690,224,636,218,570,218,317,222,265,234,224,253,192,279,167,311,150,348,139,389,133,435,131,535,135,644,142,757,146,814,144,870,137,1049,117,1285,99,1560,85,1854,73,2424,57,2841,49"/>
-<area shape="rect" href="gc-info-table_8cc.html" title=" " alt="" coords="4477,140,4690,227"/>
-<area shape="poly" title=" " alt="" coords="3084,51,3392,61,3789,78,4176,104,4337,119,4459,137,4478,142,4476,147,4458,143,4336,125,4176,109,3788,83,3392,66,3084,56"/>
-<area shape="rect" href="gc-info_8cc.html" title=" " alt="" coords="4713,150,4926,217"/>
-<area shape="poly" title=" " alt="" coords="3084,49,3437,56,3905,72,4144,84,4367,98,4558,116,4703,137,4737,146,4736,151,4702,143,4557,121,4366,103,4144,89,3905,77,3437,62,3084,54"/>
-<area shape="rect" href="heap-object-header_8cc.html" title=" " alt="" coords="842,794,1061,881"/>
-<area shape="poly" title=" " alt="" coords="2840,56,2351,74,2030,91,1695,113,1373,143,1094,179,979,201,886,224,817,249,793,263,776,277,750,305,730,329,718,356,718,392,730,443,759,515,806,614,874,745,890,770,908,792,904,795,885,773,869,748,801,616,754,517,725,445,712,393,713,355,725,327,746,301,772,273,790,258,814,244,884,219,978,195,1093,174,1373,137,1694,108,2030,86,2351,69,2840,51"/>
-<area shape="rect" href="heap-object-header_8h.html" title=" " alt="" coords="2780,140,2998,227"/>
-<area shape="poly" title=" " alt="" coords="2934,107,2915,141,2910,138,2929,104"/>
-<area shape="rect" href="visitor_8cc.html" title=" " alt="" coords="605,804,818,872"/>
-<area shape="poly" title=" " alt="" coords="2841,53,2382,59,1767,73,1464,84,1197,99,991,119,918,130,871,143,815,166,773,190,741,224,711,276,686,347,671,422,665,499,667,574,674,644,684,708,705,803,699,804,678,709,668,645,662,574,660,499,666,422,680,346,706,274,736,221,770,186,813,161,869,137,917,125,990,113,1196,94,1464,79,1767,67,2382,53,2841,48"/>
-<area shape="rect" href="trace-trait_8cc.html" title=" " alt="" coords="5172,525,5384,612"/>
-<area shape="poly" title=" " alt="" coords="3084,65,3677,142,4068,187,4465,224,5014,233,5370,247,5493,258,5531,264,5550,273,5571,298,5585,322,5593,348,5595,373,5591,399,5582,425,5551,479,5517,513,5476,537,5431,553,5385,563,5384,558,5429,548,5474,532,5514,508,5547,475,5577,423,5586,397,5589,373,5587,349,5580,324,5567,301,5547,277,5530,270,5492,263,5370,252,5014,239,4465,229,4067,192,3677,147,3083,70"/>
-<area shape="rect" href="heap_2cppgc_2platform_8cc.html" title=" " alt="" coords="4949,150,5164,217"/>
-<area shape="poly" title=" " alt="" coords="3084,48,3481,54,4017,68,4293,79,4550,94,4771,114,4939,137,4973,146,4972,151,4938,143,4771,119,4550,100,4292,85,4017,73,3481,59,3084,54"/>
-<area shape="poly" title=" " alt="" coords="2765,188,2419,193,1982,207,1772,219,1588,234,1448,253,1400,264,1369,277,1322,309,1291,344,1281,364,1274,386,1269,442,1269,570,1272,662,1265,702,1243,748,1226,765,1208,772,1191,780,1176,796,1166,819,1161,839,1164,859,1176,879,1195,895,1223,909,1298,932,1388,949,1475,960,1474,965,1387,954,1297,937,1221,914,1192,899,1172,883,1159,860,1156,839,1161,817,1172,793,1187,775,1206,767,1223,760,1239,745,1260,700,1266,662,1264,570,1264,442,1269,385,1276,362,1287,341,1319,305,1366,272,1398,259,1447,248,1587,228,1771,213,1982,202,2419,188,2765,183"/>
-<area shape="poly" title=" " alt="" coords="2764,190,2370,200,1859,218,1609,230,1389,244,1220,259,1160,268,1120,277,1026,302,982,313,944,326,912,342,887,366,872,398,866,442,866,570,873,632,889,693,910,748,931,793,926,795,905,750,884,694,867,633,861,570,861,442,867,397,883,363,909,338,942,321,981,308,1024,297,1119,272,1159,263,1219,254,1389,238,1608,224,1858,212,2370,195,2764,185"/>
-<area shape="rect" href="cpp-snapshot_8cc.html" title=" " alt="" coords="251,929,463,1016"/>
-<area shape="poly" title=" " alt="" coords="2764,189,2228,197,1503,213,1152,225,850,239,631,257,562,267,527,277,489,306,456,339,427,377,404,419,385,463,370,509,350,606,342,702,342,792,346,869,353,928,348,929,341,870,336,792,337,702,345,605,365,508,380,461,399,416,423,374,452,336,485,301,525,272,561,261,630,251,849,234,1151,219,1503,208,2228,191,2764,183"/>
-<area shape="rect" href="concurrent-marker_8cc.html" title=" " alt="" coords="1474,794,1688,881"/>
-<area shape="poly" title=" " alt="" coords="2765,187,2586,192,2359,206,2108,233,1982,252,1859,277,1781,289,1703,294,1629,296,1562,300,1504,312,1480,322,1460,336,1443,354,1431,377,1423,406,1421,442,1421,570,1424,603,1432,635,1461,696,1498,749,1537,792,1533,796,1494,753,1456,699,1427,637,1419,604,1416,570,1416,442,1418,406,1426,376,1439,351,1456,332,1478,317,1503,307,1561,295,1629,290,1703,288,1780,284,1858,272,1981,247,2107,227,2358,200,2585,187,2764,182"/>
-<area shape="rect" href="explicit-management_8cc.html" title=" " alt="" coords="1187,794,1399,881"/>
-<area shape="poly" title=" " alt="" coords="2764,188,2431,191,2015,204,1814,215,1640,231,1509,251,1464,263,1436,277,1399,311,1379,347,1371,389,1370,442,1370,570,1365,632,1351,694,1333,749,1315,795,1310,793,1328,748,1346,692,1359,631,1365,570,1365,442,1366,388,1374,345,1394,308,1433,272,1462,258,1508,246,1640,226,1814,210,2014,199,2431,186,2764,182"/>
-<area shape="rect" href="cppgc_2free-list_8cc.html" title=" " alt="" coords="5324,409,5536,477"/>
-<area shape="poly" title=" " alt="" coords="3014,185,4296,223,4951,249,5164,261,5227,267,5255,272,5278,292,5288,313,5297,336,5313,360,5342,385,5373,407,5370,411,5339,389,5310,363,5292,338,5283,315,5273,295,5253,277,5226,272,5163,266,4951,254,4296,228,3013,191"/>
-<area shape="rect" href="cppgc_2free-list_8h.html" title=" " alt="" coords="5324,284,5536,352"/>
-<area shape="poly" title=" " alt="" coords="3014,186,4296,226,4966,252,5194,263,5305,272,5342,281,5341,286,5304,277,5193,268,4966,257,4296,232,3014,191"/>
-<area shape="rect" href="heap-page_8cc.html" title=" " alt="" coords="4970,938,5197,1006"/>
-<area shape="poly" title=" " alt="" coords="3014,185,4487,227,5255,252,5506,263,5615,272,5713,296,5758,306,5799,319,5833,336,5860,361,5877,395,5883,442,5883,704,5881,761,5871,807,5848,846,5806,883,5767,902,5715,915,5653,922,5587,925,5455,927,5354,932,5198,955,5197,949,5354,926,5455,922,5586,920,5653,916,5714,909,5765,897,5803,879,5844,842,5866,805,5876,761,5878,704,5878,442,5872,397,5856,364,5830,340,5797,324,5757,311,5712,301,5614,277,5506,269,5255,258,4487,232,3013,191"/>
-<area shape="rect" href="object-allocator_8cc.html" title=" " alt="" coords="5367,929,5579,1016"/>
-<area shape="poly" title=" " alt="" coords="3014,185,4577,229,5390,255,5650,265,5755,272,5825,301,5882,331,5904,350,5920,375,5931,405,5934,442,5934,704,5932,761,5921,805,5898,844,5859,883,5838,896,5811,908,5740,929,5659,946,5580,960,5579,954,5658,941,5739,924,5809,903,5836,891,5855,879,5894,841,5916,803,5926,760,5929,704,5929,442,5925,406,5915,377,5900,354,5879,335,5823,305,5754,277,5650,270,5389,260,4577,235,3014,191"/>
-<area shape="rect" href="object-allocator_8h.html" title=" " alt="" coords="4172,525,4384,612"/>
-<area shape="poly" title=" " alt="" coords="3014,193,3209,216,3460,257,3596,285,3735,319,3873,360,4006,407,4064,433,4121,463,4218,522,4215,527,4118,467,4062,437,4004,412,3871,365,3734,324,3595,290,3459,262,3208,221,3013,198"/>
-<area shape="rect" href="heap-base_8h.html" title=" " alt="" coords="2901,669,3122,737"/>
-<area shape="poly" title=" " alt="" coords="2905,241,3006,668,3001,670,2900,242"/>
-<area shape="rect" href="heap-base_8cc.html" title=" " alt="" coords="759,1073,984,1141"/>
-<area shape="poly" title=" " alt="" coords="2764,188,2208,195,1452,209,1085,221,770,236,541,255,470,265,434,277,408,299,381,331,326,414,276,519,233,634,203,750,193,806,188,859,188,907,193,950,204,986,221,1014,246,1028,294,1041,436,1064,604,1083,759,1095,758,1101,604,1088,435,1070,293,1046,244,1033,218,1018,199,988,188,951,183,908,183,859,188,806,198,749,228,632,271,516,322,412,376,327,404,296,432,272,469,260,541,249,769,231,1085,216,1452,204,2208,189,2764,183"/>
-<area shape="rect" href="heap-statistics-collector_8cc.html" title=" " alt="" coords="5561,794,5793,881"/>
-<area shape="poly" title=" " alt="" coords="3014,185,4467,228,5215,253,5454,264,5550,272,5601,310,5637,349,5661,391,5676,435,5685,483,5690,536,5697,660,5699,703,5697,747,5689,794,5684,794,5692,746,5694,703,5692,660,5684,537,5680,484,5671,436,5656,393,5632,352,5597,314,5548,277,5453,269,5215,259,4467,233,3013,191"/>
-<area shape="rect" href="cppgc_2heap_8cc.html" title=" " alt="" coords="3852,1073,4064,1141"/>
-<area shape="poly" title=" " alt="" coords="3014,185,4636,232,5478,257,5850,272,5907,303,5949,337,5965,357,5976,381,5983,409,5985,442,5985,839,5991,874,5986,891,5967,908,5925,928,5854,951,5592,1018,5455,1041,5274,1060,5063,1075,4837,1087,4395,1101,4065,1107,4065,1102,4395,1096,4837,1082,5063,1070,5274,1055,5455,1036,5591,1013,5853,946,5923,923,5964,904,5982,888,5985,874,5980,839,5980,442,5977,410,5971,382,5960,360,5945,340,5904,308,5848,277,5478,263,4635,237,3014,191"/>
-<area shape="rect" href="marker_8cc.html" title=" " alt="" coords="4003,938,4215,1006"/>
-<area shape="poly" title=" " alt="" coords="3014,189,3162,201,3348,219,3556,244,3771,278,3978,322,4073,348,4161,377,4240,409,4307,444,4361,482,4399,523,4410,546,4412,567,4399,613,4363,669,4290,760,4140,940,4135,936,4286,757,4358,666,4394,611,4407,566,4405,548,4395,527,4357,486,4304,448,4238,414,4160,382,4072,353,3976,328,3770,284,3555,250,3347,224,3161,206,3013,195"/>
-<area shape="rect" href="marking-verifier_8h.html" title=" " alt="" coords="487,929,699,1016"/>
-<area shape="poly" title=" " alt="" coords="2764,189,2253,199,1569,216,1238,228,954,242,748,259,683,268,650,277,591,314,545,352,509,391,481,433,459,479,439,532,401,660,393,695,392,726,396,753,405,777,438,826,484,879,535,927,532,931,480,883,433,829,400,780,391,754,386,726,388,695,396,659,434,530,454,477,476,430,505,388,541,348,588,310,648,272,682,262,747,253,954,237,1238,223,1569,211,2253,193,2764,184"/>
-<area shape="rect" href="marking-verifier_8cc.html" title=" " alt="" coords="5,1064,218,1150"/>
-<area shape="poly" title=" " alt="" coords="2764,188,2192,194,1410,209,1029,221,702,236,464,254,390,265,353,277,306,313,265,355,230,403,200,454,175,508,155,565,126,682,111,798,105,905,106,995,110,1063,105,1063,101,996,100,904,106,797,121,681,150,564,170,506,195,451,225,400,261,352,302,309,350,272,389,260,464,249,701,230,1029,215,1410,204,2192,189,2764,183"/>
-<area shape="rect" href="pointer-policies_8cc.html" title=" " alt="" coords="4527,929,4739,1016"/>
-<area shape="poly" title=" " alt="" coords="3014,189,3641,224,4097,230,4245,235,4379,243,4482,255,4519,263,4542,272,4587,308,4617,345,4636,385,4649,426,4673,514,4692,561,4723,610,4749,640,4774,662,4824,696,4848,712,4870,732,4890,758,4909,793,4918,818,4923,839,4920,860,4908,883,4874,917,4832,942,4786,958,4740,968,4739,963,4785,953,4830,937,4871,913,4904,879,4915,858,4918,839,4913,819,4904,795,4886,761,4866,736,4844,716,4821,700,4771,666,4745,644,4719,613,4687,563,4667,515,4644,427,4631,386,4613,348,4584,312,4539,277,4517,268,4482,260,4378,248,4245,240,4097,235,3641,229,3013,194"/>
-<area shape="rect" href="write-barrier_8cc.html" title=" " alt="" coords="4239,929,4451,1016"/>
-<area shape="poly" title=" " alt="" coords="3014,188,3503,221,3759,245,3864,258,3944,272,4053,296,4137,318,4218,351,4313,407,4352,432,4381,455,4404,483,4425,524,4437,564,4439,598,4435,629,4425,658,4398,719,4384,754,4373,795,4352,929,4347,928,4368,794,4379,752,4393,717,4420,656,4430,628,4434,598,4431,565,4420,526,4400,486,4377,459,4349,437,4310,412,4215,356,4136,323,4052,301,3943,277,3863,263,3758,250,3503,226,3013,194"/>
-<area shape="rect" href="cppgc_2sweeper_8cc.html" title=" " alt="" coords="5223,804,5435,872"/>
-<area shape="poly" title=" " alt="" coords="3014,190,3641,224,3926,227,4293,226,4481,229,4658,236,4814,250,4881,260,4939,272,5020,298,5079,327,5209,407,5261,441,5313,475,5345,486,5373,491,5399,500,5412,509,5423,524,5430,545,5430,576,5421,650,5399,747,5382,778,5362,805,5358,802,5378,775,5394,745,5416,649,5425,575,5424,546,5418,526,5408,513,5397,505,5372,496,5344,491,5310,479,5258,446,5206,412,5077,332,5018,303,4937,277,4880,265,4814,255,4658,242,4481,234,4293,232,3926,232,3641,229,3013,195"/>
-<area shape="poly" title=" " alt="" coords="2764,187,2320,188,1732,198,1444,210,1190,226,997,248,929,262,886,277,833,308,795,342,782,361,772,384,767,410,765,442,765,570,761,636,750,700,724,804,719,803,745,699,755,635,760,570,760,442,761,410,767,382,777,359,791,338,830,304,884,272,928,257,996,243,1190,220,1443,204,1732,193,2320,183,2764,181"/>
-<area shape="rect" href="heap-page_8h.html" title=" " alt="" coords="3769,409,3992,477"/>
-<area shape="poly" title=" " alt="" coords="3014,214,3769,410,3768,415,3012,219"/>
-<area shape="rect" href="cppgc_2marking-state_8h.html" title=" " alt="" coords="2260,660,2472,746"/>
-<area shape="poly" title=" " alt="" coords="2827,239,2785,277,2675,383,2569,490,2407,661,2403,657,2565,486,2672,379,2782,273,2824,235"/>
-<area shape="rect" href="object-poisoner_8h.html" title=" " alt="" coords="4479,660,4691,746"/>
-<area shape="poly" title=" " alt="" coords="3013,185,3391,196,3869,214,4096,226,4289,240,4427,255,4470,263,4493,272,4531,314,4559,362,4578,415,4590,470,4596,524,4597,576,4593,659,4588,659,4592,576,4590,525,4584,471,4572,417,4554,364,4527,317,4490,277,4469,268,4427,260,4288,245,4096,231,3869,219,3391,201,3013,190"/>
-<area shape="rect" href="object-size-trait_8cc.html" title=" " alt="" coords="1016,660,1228,746"/>
-<area shape="poly" title=" " alt="" coords="2764,190,2378,200,1887,218,1654,230,1456,244,1314,259,1270,268,1249,277,1217,314,1202,351,1198,389,1202,428,1208,470,1211,514,1208,562,1193,613,1163,660,1159,658,1188,611,1203,561,1206,514,1202,471,1196,429,1193,389,1197,350,1213,311,1246,273,1269,263,1313,254,1455,238,1653,224,1887,213,2377,195,2764,185"/>
-<area shape="rect" href="object-view_8h.html" title=" " alt="" coords="952,534,1178,602"/>
-<area shape="poly" title=" " alt="" coords="2765,187,2382,188,1891,199,1652,210,1444,226,1286,248,1232,262,1198,277,1168,303,1143,334,1122,368,1105,405,1083,476,1071,535,1066,534,1078,475,1100,403,1117,366,1138,331,1164,299,1195,272,1231,257,1285,243,1444,221,1652,204,1890,193,2382,183,2765,181"/>
-<area shape="rect" href="liveness-broker_8cc.html" title=" " alt="" coords="1871,275,2083,361"/>
-<area shape="poly" title=" " alt="" coords="2764,194,2628,203,2461,220,2281,244,2103,277,2084,282,2083,277,2102,272,2280,239,2461,215,2627,198,2764,188"/>
-<area shape="rect" href="marking-worklists_8h.html" title=" " alt="" coords="2563,525,2775,612"/>
-<area shape="poly" title=" " alt="" coords="2859,242,2696,526,2691,523,2855,239"/>
-<area shape="rect" href="object-start-bitmap_8h.html" title=" " alt="" coords="4713,275,4926,361"/>
-<area shape="poly" title=" " alt="" coords="3014,184,3380,191,3866,207,4114,219,4345,233,4544,251,4695,272,4713,276,4712,281,4694,277,4543,256,4345,239,4114,224,3865,213,3380,197,3014,189"/>
-<area shape="rect" href="unmarker_8h.html" title=" " alt="" coords="2013,804,2229,872"/>
-<area shape="poly" title=" " alt="" coords="2765,203,2573,235,2466,257,2362,285,2268,317,2192,354,2163,374,2142,396,2128,418,2123,442,2124,570,2124,803,2118,803,2118,570,2118,442,2123,416,2137,393,2160,370,2189,349,2266,312,2360,280,2465,252,2572,229,2764,198"/>
-<area shape="rect" href="visitor_8h.html" title=" " alt="" coords="411,669,623,737"/>
-<area shape="poly" title=" " alt="" coords="2765,189,2273,198,1620,216,1304,227,1033,242,837,258,776,267,745,277,695,316,652,365,617,419,588,476,564,532,547,585,525,669,520,668,542,584,559,530,583,474,612,416,648,362,691,313,742,272,775,262,836,253,1033,236,1303,222,1619,210,2273,193,2765,184"/>
-<area shape="poly" title=" " alt="" coords="5433,367,5433,409,5428,409,5428,367"/>
-<area shape="rect" href="heap-space_8h.html" title=" " alt="" coords="4920,409,5148,477"/>
-<area shape="poly" title=" " alt="" coords="5310,359,5142,411,5141,406,5308,354"/>
-<area shape="poly" title=" " alt="" coords="5552,339,5646,368,5693,388,5737,413,5775,443,5805,478,5826,520,5833,567,5833,704,5836,757,5840,800,5839,820,5833,840,5823,861,5807,883,5792,895,5770,907,5714,928,5647,944,5580,958,5579,952,5646,939,5712,923,5768,902,5789,891,5803,879,5819,858,5828,839,5833,819,5835,800,5831,757,5828,704,5828,567,5820,521,5801,481,5771,447,5734,418,5690,393,5644,373,5551,344"/>
-<area shape="poly" title=" " alt="" coords="5509,358,5543,381,5573,407,5600,436,5618,460,5632,488,5646,524,5665,597,5676,671,5680,739,5681,794,5676,794,5675,739,5670,671,5660,598,5641,526,5627,490,5614,463,5596,439,5570,411,5539,385,5506,362"/>
-<area shape="poly" title=" " alt="" coords="5509,359,5533,381,5551,408,5558,446,5558,505,5554,567,5545,612,5531,644,5513,673,5471,726,5424,771,5380,805,5377,801,5421,767,5467,723,5509,670,5526,641,5540,611,5548,566,5553,505,5552,446,5546,410,5529,385,5505,363"/>
-<area shape="rect" href="compactor_8cc.html" title=" " alt="" coords="4670,804,4894,872"/>
-<area shape="poly" title=" " alt="" coords="5037,492,5030,552,5022,583,5010,613,4972,672,4925,725,4876,770,4832,805,4829,801,4873,766,4921,722,4967,669,5005,610,5017,581,5025,551,5032,492"/>
-<area shape="poly" title=" " alt="" coords="5052,491,5073,565,5093,662,5106,771,5108,827,5105,881,5095,938,5089,937,5100,881,5102,827,5101,771,5088,663,5067,567,5047,492"/>
-<area shape="rect" href="heap-space_8cc.html" title=" " alt="" coords="4764,534,4995,602"/>
-<area shape="poly" title=" " alt="" coords="4982,489,4923,536,4919,532,4979,485"/>
-<area shape="poly" title=" " alt="" coords="5164,463,5311,493,5368,508,5399,523,5434,569,5459,622,5476,678,5486,735,5490,791,5490,844,5482,929,5477,928,5484,844,5484,792,5480,736,5471,679,5454,624,5430,572,5395,527,5366,513,5310,498,5163,469"/>
-<area shape="poly" title=" " alt="" coords="4906,468,4385,552,4384,547,4905,463"/>
-<area shape="poly" title=" " alt="" coords="5075,487,5104,523,5133,567,5162,610,5305,802,5301,805,5157,613,5129,570,5100,527,5071,491"/>
-<area shape="poly" title=" " alt="" coords="4157,586,3856,614,3708,623,3584,627,3371,629,3160,636,3035,646,2889,662,2775,682,2687,705,2600,728,2485,749,2346,755,2113,761,1883,773,1799,783,1770,789,1752,797,1733,815,1724,835,1717,858,1702,883,1676,908,1648,931,1645,926,1672,904,1697,879,1712,856,1719,833,1728,812,1749,792,1768,784,1798,778,1883,768,2113,756,2346,750,2485,744,2599,723,2686,700,2774,677,2888,657,3035,640,3159,630,3371,624,3583,622,3708,618,3855,609,4156,581"/>
-<area shape="poly" title=" " alt="" coords="4400,586,4612,622,4700,641,4749,657,4771,678,4783,701,4793,723,4813,744,4848,764,4879,773,4911,779,4951,792,4999,815,5034,837,5069,857,5116,879,5245,919,5367,948,5365,954,5244,925,5115,883,5066,862,5031,841,4996,820,4949,797,4910,784,4877,778,4846,769,4810,748,4789,726,4778,703,4767,682,4746,662,4698,646,4611,627,4399,591"/>
-<area shape="poly" title=" " alt="" coords="4157,585,3123,693,3122,687,4157,580"/>
-<area shape="poly" title=" " alt="" coords="2904,746,2862,769,2824,796,2806,819,2798,841,2788,863,2766,883,2741,893,2704,902,2597,919,2456,933,2294,945,1958,962,1687,971,1687,966,1958,956,2294,939,2455,928,2596,914,2703,897,2740,888,2763,879,2784,860,2793,839,2802,816,2820,792,2859,764,2901,741"/>
-<area shape="poly" title=" " alt="" coords="2886,719,2485,749,2285,758,2116,762,1829,761,1690,762,1542,767,1373,778,1175,797,1061,815,1060,810,1174,792,1373,772,1541,762,1690,757,1829,756,2116,756,2285,753,2485,744,2886,713"/>
-<area shape="poly" title=" " alt="" coords="2886,718,2485,749,2278,759,2116,763,1956,772,1751,797,1688,809,1687,804,1750,792,1955,766,2116,758,2278,754,2485,744,2886,712"/>
-<area shape="poly" title=" " alt="" coords="2886,718,2485,749,2329,757,2197,759,1972,759,1864,760,1748,766,1617,777,1463,797,1400,809,1399,804,1462,792,1616,772,1748,760,1864,755,1972,754,2197,754,2329,751,2485,744,2886,713"/>
-<area shape="poly" title=" " alt="" coords="3138,701,3405,704,3771,717,3976,728,4187,744,4400,765,4608,792,4670,803,4669,809,4607,797,4399,770,4187,749,3975,733,3771,722,3405,710,3138,706"/>
-<area shape="rect" href="cpp-heap_8h.html" title=" " alt="" coords="1762,804,1989,872"/>
-<area shape="poly" title=" " alt="" coords="2885,718,2001,797,1967,806,1966,801,2000,792,2885,713"/>
-<area shape="rect" href="caged-heap_8cc.html" title=" " alt="" coords="2540,794,2752,881"/>
-<area shape="poly" title=" " alt="" coords="2907,745,2754,800,2752,795,2905,740"/>
-<area shape="poly" title=" " alt="" coords="2932,747,2899,770,2868,796,2852,819,2844,841,2835,863,2814,883,2747,919,2663,950,2563,978,2451,1002,2328,1023,2198,1041,1923,1070,1645,1088,1383,1100,985,1108,985,1103,1383,1095,1644,1083,1922,1064,2197,1036,2328,1018,2450,997,2562,973,2661,945,2745,914,2811,879,2830,860,2839,839,2847,817,2864,793,2895,766,2929,743"/>
-<area shape="rect" href="heap-consistency_8cc.html" title=" " alt="" coords="2878,804,3145,872"/>
-<area shape="poly" title=" " alt="" coords="3014,752,3014,803,3009,803,3009,752"/>
-<area shape="rect" href="heap-state_8cc.html" title=" " alt="" coords="3168,804,3396,872"/>
-<area shape="poly" title=" " alt="" coords="3094,742,3215,801,3213,806,3092,746"/>
-<area shape="poly" title=" " alt="" coords="3138,705,4382,744,5055,769,5302,781,5448,792,5560,809,5560,814,5447,797,5301,787,5055,775,4381,749,3138,711"/>
-<area shape="rect" href="cppgc_2heap_8h.html" title=" " alt="" coords="4383,804,4595,872"/>
-<area shape="poly" title=" " alt="" coords="3138,711,3572,744,4117,792,4383,821,4382,826,4117,797,3571,749,3137,716"/>
-<area shape="rect" href="marking-state_8cc.html" title=" " alt="" coords="2304,794,2516,881"/>
-<area shape="poly" title=" " alt="" coords="2886,725,2715,754,2528,797,2517,800,2516,795,2527,792,2714,749,2885,719"/>
-<area shape="rect" href="persistent-node_8cc.html" title=" " alt="" coords="3420,794,3632,881"/>
-<area shape="poly" title=" " alt="" coords="3138,726,3269,755,3408,792,3420,795,3419,801,3407,797,3268,761,3137,732"/>
-<area shape="rect" href="process-heap_8cc.html" title=" " alt="" coords="3656,794,3868,881"/>
-<area shape="poly" title=" " alt="" coords="3138,712,3375,740,3511,763,3645,792,3656,795,3655,800,3644,797,3510,768,3374,746,3137,717"/>
-<area shape="poly" title=" " alt="" coords="3138,705,3887,734,4392,759,4906,792,5222,822,5222,827,4906,797,4392,764,3886,739,3138,711"/>
-<area shape="rect" href="heap_2cppgc_2testing_8cc.html" title=" " alt="" coords="3892,804,4104,872"/>
-<area shape="poly" title=" " alt="" coords="3138,705,3289,713,3476,729,3679,754,3881,792,3914,801,3912,806,3880,797,3679,760,3475,734,3289,719,3138,711"/>
-<area shape="poly" title=" " alt="" coords="2886,719,2697,735,2485,749,2323,754,2122,755,1655,755,1416,757,1190,764,990,776,831,797,796,806,794,801,830,792,990,771,1189,758,1416,752,1655,750,2122,750,2323,749,2485,744,2697,729,2886,713"/>
-<area shape="poly" title=" " alt="" coords="1789,881,1677,931,1675,926,1787,876"/>
-<area shape="poly" title=" " alt="" coords="1747,875,1700,884,1514,903,1356,908,1215,904,1085,897,955,890,816,891,659,903,475,932,464,934,463,929,474,926,658,898,815,886,955,885,1085,891,1216,899,1355,903,1514,897,1699,878,1747,870"/>
-<area shape="poly" title=" " alt="" coords="4611,867,4659,878,4970,945,4969,951,4658,884,4609,872"/>
-<area shape="poly" title=" " alt="" coords="4611,869,4659,878,4812,899,4933,906,5054,912,5209,926,5367,950,5366,955,5209,932,5054,917,4933,912,4812,904,4658,884,4610,874"/>
-<area shape="poly" title=" " alt="" coords="4499,887,4499,919,4496,954,4485,988,4465,1018,4438,1037,4398,1054,4349,1068,4294,1079,4175,1095,4065,1104,4064,1098,4175,1089,4293,1074,4348,1062,4396,1049,4435,1033,4462,1014,4480,986,4490,953,4494,919,4493,887"/>
-<area shape="poly" title=" " alt="" coords="4378,879,4227,932,4202,940,4200,935,4225,926,4376,874"/>
-<area shape="poly" title=" " alt="" coords="4367,858,4246,872,4117,884,3713,906,3371,918,3070,922,2790,922,2209,918,1867,922,1462,932,1039,950,700,967,699,962,1039,944,1462,926,1867,916,2209,913,2790,917,3070,917,3371,913,3713,901,4117,878,4246,867,4367,853"/>
-<area shape="poly" title=" " alt="" coords="4538,880,4588,927,4585,930,4534,884"/>
-<area shape="poly" title=" " alt="" coords="4444,884,4393,930,4389,927,4440,880"/>
-<area shape="poly" title=" " alt="" coords="697,1020,803,1070,801,1075,695,1025"/>
-<area shape="poly" title=" " alt="" coords="715,977,1462,1013,2875,1067,3852,1100,3852,1105,2874,1072,1462,1018,715,983"/>
-<area shape="poly" title=" " alt="" coords="472,1019,337,1056,219,1085,218,1080,336,1051,471,1014"/>
-<area shape="poly" title=" " alt="" coords="3753,446,3489,448,3130,459,2929,469,2721,484,2512,503,2308,528,1778,646,1062,813,1060,808,1777,641,2307,522,2511,497,2720,478,2928,464,3130,454,3489,443,3753,441"/>
-<area shape="poly" title=" " alt="" coords="3754,449,3477,456,3129,470,2793,493,2655,509,2551,528,2459,550,2388,572,2324,606,2249,662,2232,684,2223,707,2213,729,2192,749,2161,763,2124,774,2036,788,1933,793,1823,794,1607,789,1514,790,1441,797,1400,806,1399,801,1440,792,1514,785,1607,784,1823,788,1933,788,2035,782,2123,769,2159,758,2189,744,2209,726,2218,704,2227,681,2246,658,2321,601,2386,567,2458,545,2550,522,2655,503,2793,488,3129,464,3476,450,3754,444"/>
-<area shape="poly" title=" " alt="" coords="3955,484,4003,523,4019,548,4026,570,4035,591,4053,610,4093,631,4130,641,4165,644,4200,641,4273,637,4314,642,4359,657,4393,678,4415,700,4436,723,4467,744,4517,764,4557,773,4599,780,4652,792,4682,801,4680,806,4651,797,4598,785,4556,778,4515,769,4465,749,4432,727,4411,704,4389,682,4357,662,4313,647,4273,642,4200,647,4165,649,4129,647,4091,636,4050,614,4030,594,4021,572,4014,550,3999,527,3952,488"/>
-<area shape="poly" title=" " alt="" coords="4007,480,4064,502,4104,523,4123,546,4132,569,4141,591,4161,609,4199,629,4235,641,4270,648,4304,650,4370,643,4434,629,4498,615,4563,610,4597,613,4632,621,4668,636,4705,658,4716,667,4723,678,4729,701,4734,723,4749,744,4769,758,4789,765,4827,768,4866,771,4887,778,4908,792,4925,814,4932,835,4938,857,4952,879,4986,910,5023,936,5019,940,4982,914,4948,883,4933,859,4927,837,4921,816,4904,796,4884,783,4865,776,4827,773,4788,770,4767,762,4746,748,4729,726,4724,702,4718,681,4712,671,4702,662,4665,640,4630,626,4596,618,4563,615,4498,620,4435,634,4371,648,4304,655,4270,653,4234,646,4197,634,4158,614,4137,594,4127,571,4119,549,4100,527,4062,507,4005,485"/>
-<area shape="poly" title=" " alt="" coords="4008,453,4299,481,4644,522,4764,542,4763,547,4643,528,4299,486,4008,458"/>
-<area shape="poly" title=" " alt="" coords="4009,456,4193,482,4296,500,4397,522,4513,552,4602,579,4689,611,4799,657,4873,691,4928,721,5053,792,5131,837,5211,879,5290,910,5367,937,5366,942,5288,915,5209,883,5129,842,5050,797,4925,726,4870,696,4797,662,4687,616,4600,584,4512,557,4396,528,4295,506,4193,487,4008,461"/>
-<area shape="poly" title=" " alt="" coords="4008,478,4154,522,4172,528,4171,534,4152,528,4007,484"/>
-<area shape="poly" title=" " alt="" coords="3754,458,3578,480,3359,518,3241,545,3121,578,3003,617,2890,662,2834,691,2781,726,2694,796,2690,792,2778,722,2831,687,2888,657,3001,611,3120,573,3239,540,3358,513,3578,474,3754,452"/>
-<area shape="poly" title=" " alt="" coords="3754,451,3014,478,2606,500,2437,513,2308,528,2112,569,1739,654,1367,743,1237,777,1175,797,1148,816,1114,845,1037,922,901,1075,897,1071,1033,919,1110,841,1144,812,1173,792,1236,771,1365,737,1737,649,2111,564,2307,522,2436,508,2605,495,3014,472,3754,445"/>
-<area shape="poly" title=" " alt="" coords="3884,492,3892,551,3901,582,3915,610,3956,646,4032,700,4108,755,4135,777,4149,793,4158,831,4155,871,4144,908,4130,939,4125,937,4139,906,4150,870,4153,832,4144,796,4131,781,4104,759,4029,705,3953,650,3911,613,3896,584,3887,552,3879,493"/>
-<area shape="poly" title=" " alt="" coords="3754,448,3102,456,2192,472,1745,483,1359,496,1077,511,988,519,940,527,870,570,759,652,651,738,614,773,595,796,584,828,580,863,585,928,580,929,575,863,579,827,590,793,610,769,648,734,755,647,867,566,939,523,987,514,1076,505,1359,491,1745,478,2192,467,3102,451,3754,443"/>
-<area shape="poly" title=" " alt="" coords="3930,487,3960,524,3973,548,3979,570,3987,590,4002,610,4061,635,4179,680,4359,744,4397,751,4432,753,4494,749,4523,749,4552,754,4580,768,4610,793,4630,823,4640,859,4643,895,4642,928,4637,928,4638,896,4635,860,4625,826,4605,796,4577,772,4550,759,4523,754,4494,754,4432,758,4397,757,4357,749,4177,685,4059,640,3999,614,3982,592,3974,572,3968,550,3956,526,3925,490"/>
-<area shape="poly" title=" " alt="" coords="3903,490,3935,559,3966,610,3986,626,4006,635,4026,643,4050,658,4129,726,4203,799,4313,927,4309,930,4199,803,4126,730,4047,662,4024,648,4004,640,3983,631,3961,613,3930,562,3898,492"/>
-<area shape="poly" title=" " alt="" coords="4009,456,4193,482,4296,500,4397,522,4642,590,4881,667,5091,742,5246,801,5244,806,5089,747,4880,672,4641,595,4396,528,4295,506,4193,487,4008,461"/>
-<area shape="poly" title=" " alt="" coords="3754,447,3247,450,2560,461,2220,471,1920,485,1688,504,1606,515,1552,528,1500,550,1459,576,1426,605,1397,635,1368,666,1335,696,1294,724,1242,749,1182,768,1130,778,1083,782,1038,782,946,781,893,786,831,797,798,806,797,801,830,792,892,780,946,776,1038,777,1083,777,1129,773,1181,763,1240,744,1292,719,1332,692,1364,662,1393,631,1423,601,1456,572,1497,545,1551,522,1605,510,1687,499,1919,480,2220,466,2560,456,3247,445,3754,442"/>
-<area shape="rect" href="cross-heap-remembered-set_8cc.html" title=" " alt="" coords="3631,525,3843,612"/>
-<area shape="poly" title=" " alt="" coords="3832,490,3788,527,3785,523,3829,485"/>
-<area shape="poly" title=" " alt="" coords="3754,451,3513,460,3231,475,2983,498,2896,512,2846,527,2834,536,2827,546,2818,569,2810,592,2801,604,2789,614,2749,636,2713,648,2679,653,2646,653,2577,652,2537,654,2492,662,2474,667,2472,662,2491,657,2536,649,2577,646,2646,648,2679,648,2712,643,2747,631,2786,609,2798,600,2805,590,2813,567,2822,544,2831,533,2844,523,2895,507,2982,493,3230,470,3513,455,3754,446"/>
-<area shape="poly" title=" " alt="" coords="3987,482,4021,500,4053,523,4074,546,4084,569,4095,590,4117,609,4163,632,4205,645,4243,650,4281,649,4361,646,4407,648,4460,657,4479,662,4478,667,4459,662,4407,653,4361,651,4281,655,4243,655,4204,650,4161,637,4114,614,4091,594,4080,572,4069,549,4050,527,4018,505,3984,486"/>
-<area shape="poly" title=" " alt="" coords="3753,448,3237,456,2536,470,2188,481,1880,494,1642,509,1558,518,1501,528,1415,554,1332,589,1256,626,1192,662,1190,657,1253,622,1329,584,1413,549,1500,522,1557,513,1641,504,1880,489,2188,476,2536,465,3237,450,3753,443"/>
-<area shape="poly" title=" " alt="" coords="3754,448,3365,453,2796,466,2130,489,1787,506,1450,528,1309,540,1179,555,1178,550,1308,535,1450,522,1787,501,2130,484,2796,460,3365,448,3753,443"/>
-<area shape="poly" title=" " alt="" coords="4008,448,4451,473,4729,495,5008,522,5172,546,5171,551,5007,528,4728,500,4451,479,4008,453"/>
-<area shape="poly" title=" " alt="" coords="2245,748,2241,749,2186,753,2092,755,1842,756,1712,758,1597,765,1510,777,1481,786,1464,796,1451,816,1449,835,1454,856,1464,880,1482,905,1505,927,1502,931,1478,909,1460,882,1449,858,1443,835,1446,814,1460,792,1479,781,1509,772,1597,760,1712,753,1842,750,2092,749,2185,748,2240,744,2244,743"/>
-<area shape="poly" title=" " alt="" coords="2245,748,2241,749,2161,763,2092,770,1974,773,1856,776,1787,783,1707,797,1689,801,1687,796,1706,792,1786,778,1855,770,1973,768,2091,765,2160,758,2240,744,2244,743"/>
-<area shape="poly" title=" " alt="" coords="2317,760,2296,790,2282,822,2280,853,2284,866,2293,879,2312,887,2352,894,2482,905,2862,918,3446,926,4002,961,4002,966,3446,932,2861,924,2481,910,2351,899,2310,892,2290,883,2280,869,2275,853,2277,821,2292,788,2313,757"/>
-<area shape="poly" title=" " alt="" coords="2388,760,2399,793,2393,795,2383,762"/>
-<area shape="poly" title=" " alt="" coords="4662,753,4735,801,4732,806,4659,757"/>
-<area shape="poly" title=" " alt="" coords="4707,724,4812,744,5223,816,5222,821,4811,749,4706,730"/>
-<area shape="poly" title=" " alt="" coords="1030,616,1011,647,997,681,994,714,998,730,1006,745,1033,766,1077,784,1187,814,1185,819,1075,790,1030,770,1001,748,993,732,989,715,992,679,1006,645,1025,614"/>
-<area shape="poly" title=" " alt="" coords="936,577,793,585,637,601,562,612,495,626,440,642,400,662,361,690,331,717,308,745,291,774,265,842,241,930,228,976,229,994,240,1014,255,1027,274,1039,325,1059,389,1075,462,1086,617,1100,758,1104,758,1109,617,1105,461,1092,388,1080,323,1064,272,1044,251,1031,236,1017,224,996,222,975,236,928,260,840,286,772,304,742,327,713,358,686,397,657,438,638,494,621,561,607,636,596,793,580,936,571"/>
-<area shape="poly" title=" " alt="" coords="936,572,770,577,584,591,495,602,415,618,349,637,302,662,257,704,219,754,189,808,165,866,147,923,133,976,118,1064,113,1063,128,975,142,921,160,864,184,806,215,751,253,700,299,657,347,632,414,613,494,597,583,585,770,572,936,567"/>
-<area shape="poly" title=" " alt="" coords="1011,614,757,806,753,801,1007,610"/>
-<area shape="poly" title=" " alt="" coords="1194,572,4478,695,4478,700,1194,577"/>
-<area shape="poly" title=" " alt="" coords="1088,615,1106,658,1101,660,1083,618"/>
-<area shape="poly" title=" " alt="" coords="2791,567,3108,574,3305,586,3509,605,3706,633,3798,651,3883,673,3959,697,4025,725,4079,757,4119,793,4130,809,4137,827,4140,866,4135,905,4125,939,4120,937,4130,904,4135,866,4131,829,4125,811,4115,796,4076,761,4023,730,3957,702,3881,678,3797,657,3705,638,3508,610,3304,591,3107,580,2791,572"/>
-<area shape="poly" title=" " alt="" coords="2559,621,2465,661,2463,657,2556,616"/>
-<area shape="poly" title=" " alt="" coords="4784,376,4755,430,4734,492,4729,524,4730,555,4738,584,4754,610,4781,633,4810,642,4840,642,4872,637,4904,631,4937,629,4970,637,5003,658,5029,689,5050,724,5065,763,5076,802,5087,878,5088,938,5083,938,5081,878,5071,803,5060,764,5045,727,5025,692,4999,662,4968,642,4937,635,4905,636,4873,642,4840,647,4809,648,4778,638,4749,613,4733,586,4725,555,4724,524,4728,491,4750,428,4779,373"/>
-<area shape="poly" title=" " alt="" coords="4836,376,4874,533,4869,535,4831,377"/>
-<area shape="poly" title=" " alt="" coords="4941,334,5072,362,5142,382,5209,407,5240,423,5262,439,5283,456,5313,475,5344,488,5370,495,5395,504,5423,523,5462,563,5491,603,5510,643,5521,684,5525,727,5523,773,5507,882,5494,930,5489,928,5502,880,5518,773,5519,727,5516,684,5505,644,5486,606,5458,567,5419,527,5393,508,5368,500,5342,493,5310,479,5280,461,5259,444,5237,428,5206,412,5140,387,5071,367,4940,339"/>
-<area shape="poly" title=" " alt="" coords="4714,371,4372,527,4370,522,4712,366"/>
-<area shape="poly" title=" " alt="" coords="4941,331,4995,342,5052,358,5108,379,5161,407,5180,424,5190,442,5201,459,5218,475,5243,487,5268,491,5314,490,5336,490,5358,493,5379,504,5399,524,5408,546,5409,577,5395,655,5370,737,5345,804,5340,802,5365,735,5390,653,5404,577,5403,547,5395,526,5376,508,5356,499,5336,495,5314,496,5267,497,5242,492,5215,479,5196,462,5186,445,5176,428,5158,412,5106,384,5050,363,4994,347,4940,336"/>
-<area shape="poly" title=" " alt="" coords="4698,338,3993,430,3993,425,4697,333"/>
-<area shape="poly" title=" " alt="" coords="2017,879,2002,884,1837,924,1688,955,1687,949,1836,919,2000,878,2015,874"/>
-<area shape="poly" title=" " alt="" coords="2046,881,1889,953,1796,989,1700,1018,1604,1040,1505,1059,1309,1085,1129,1099,985,1106,984,1101,1129,1094,1308,1079,1505,1053,1603,1035,1699,1013,1794,984,1887,948,2044,876"/>
-<area shape="poly" title=" " alt="" coords="2245,872,2272,878,2499,921,2731,960,3183,1023,3575,1067,3852,1094,3851,1099,3575,1073,3183,1028,2730,965,2498,927,2271,884,2243,877"/>
-<area shape="poly" title=" " alt="" coords="526,752,535,785,548,820,568,852,594,879,613,888,642,896,727,912,839,926,970,937,1245,955,1474,965,1474,970,1245,960,969,943,839,931,726,917,640,902,611,893,591,883,564,856,544,822,530,786,521,753"/>
-<area shape="poly" title=" " alt="" coords="492,751,385,930,380,927,487,748"/>
-<area shape="poly" title=" " alt="" coords="502,752,495,782,491,815,492,848,501,880,515,905,535,927,531,930,511,908,496,882,487,849,486,814,490,781,497,751"/>
-<area shape="poly" title=" " alt="" coords="580,744,664,801,661,806,577,748"/>
+<div class="center"><img src="gc-info-table_8h__dep__incl.png" border="0" usemap="#asrc_2heap_2cppgc_2gc-info-table_8hdep" alt=""/></div>
+<map name="asrc_2heap_2cppgc_2gc-info-table_8hdep" id="asrc_2heap_2cppgc_2gc-info-table_8hdep">
+<area shape="rect" title=" " alt="" coords="2436,5,2599,54"/>
+<area shape="rect" href="cpp-heap_8cc.html" title=" " alt="" coords="1311,682,1466,731"/>
+<area shape="poly" title=" " alt="" coords="2421,33,2150,34,1761,42,1309,64,1076,82,849,105,795,108,741,108,632,97,527,82,430,71,387,69,347,71,312,78,283,90,259,110,241,138,230,175,226,222,226,418,232,471,250,511,279,541,316,564,361,581,412,597,524,631,591,649,681,664,901,685,1130,696,1310,701,1310,707,1129,702,901,690,680,669,590,655,522,637,410,602,359,586,314,569,276,545,246,514,227,473,220,418,220,222,224,174,236,135,255,107,280,86,311,73,346,65,387,63,430,65,527,77,632,92,741,102,795,103,848,99,1076,76,1309,59,1761,37,2150,29,2421,28"/>
+<area shape="rect" href="gc-info-table_8cc.html" title=" " alt="" coords="3816,102,3979,151"/>
+<area shape="poly" title=" " alt="" coords="2614,28,2828,31,3122,41,3458,62,3630,78,3798,99,3816,102,3816,108,3797,105,3629,84,3458,67,3122,46,2828,36,2614,33"/>
+<area shape="rect" href="gc-info_8cc.html" title=" " alt="" coords="4003,112,4182,141"/>
+<area shape="poly" title=" " alt="" coords="2615,31,3309,54,3703,74,3867,86,3991,99,4039,108,4038,114,3991,105,3866,92,3703,80,3309,60,2614,36"/>
+<area shape="rect" href="heap-object-header_8cc.html" title=" " alt="" coords="779,585,931,634"/>
+<area shape="poly" title=" " alt="" coords="2421,35,2025,47,1764,58,1491,74,1230,96,1003,124,909,140,833,159,777,179,744,201,727,223,716,246,709,272,707,298,714,353,731,408,757,462,785,510,838,583,833,587,781,513,752,464,727,410,708,354,702,298,704,271,711,245,723,220,740,197,774,174,831,153,908,135,1002,118,1229,90,1491,69,1763,53,2025,41,2421,30"/>
+<area shape="rect" href="heap-object-header_8h.html" title=" " alt="" coords="2386,102,2537,151"/>
+<area shape="poly" title=" " alt="" coords="2498,68,2478,103,2473,100,2494,66"/>
+<area shape="rect" href="visitor_8cc.html" title=" " alt="" coords="584,595,755,624"/>
+<area shape="poly" title=" " alt="" coords="2421,35,2056,40,1566,52,1324,62,1110,73,945,87,887,96,849,105,803,121,767,137,738,161,711,200,686,253,670,310,660,369,657,427,661,528,670,594,664,595,656,529,652,427,655,369,664,309,681,251,706,197,734,158,764,133,801,116,848,99,886,90,945,82,1110,68,1323,56,1565,47,2056,35,2421,29"/>
+<area shape="rect" href="trace-trait_8cc.html" title=" " alt="" coords="4399,392,4551,441"/>
+<area shape="poly" title=" " alt="" coords="2614,39,3123,90,3461,120,3804,148,4266,160,4565,174,4668,184,4700,190,4717,197,4742,233,4747,251,4749,270,4740,307,4717,346,4691,365,4650,381,4552,405,4551,400,4648,376,4689,360,4713,342,4735,305,4744,269,4742,252,4737,235,4713,201,4699,195,4668,189,4565,179,4265,165,3804,153,3460,126,3122,95,2614,44"/>
+<area shape="rect" href="heap_2cppgc_2platform_8cc.html" title=" " alt="" coords="4205,112,4396,141"/>
+<area shape="poly" title=" " alt="" coords="2614,30,3404,52,3860,73,4050,85,4194,99,4244,108,4243,114,4193,105,4050,91,3860,78,3404,58,2614,36"/>
+<area shape="poly" title=" " alt="" coords="2371,132,2102,138,1758,151,1445,172,1333,185,1268,201,1223,222,1187,245,1174,258,1164,274,1158,294,1156,318,1156,418,1156,482,1148,509,1130,539,1120,550,1109,557,1086,563,1064,569,1055,576,1047,587,1038,611,1040,621,1046,632,1063,646,1088,658,1156,677,1235,690,1311,697,1310,703,1235,695,1155,682,1086,663,1060,650,1042,636,1035,623,1032,610,1042,584,1051,572,1062,565,1084,558,1107,552,1117,546,1126,536,1143,507,1150,481,1151,418,1151,318,1153,293,1160,272,1170,255,1184,241,1220,218,1266,196,1332,180,1444,166,1758,146,2101,133,2370,127"/>
+<area shape="poly" title=" " alt="" coords="2370,129,2082,130,1695,138,1496,146,1312,159,1154,177,1036,201,958,217,889,231,862,243,841,259,828,284,823,319,823,418,826,464,833,510,851,584,845,586,828,511,821,465,818,418,818,318,823,282,837,256,859,238,888,226,957,212,1034,196,1153,172,1311,154,1496,141,1694,132,2082,124,2370,124"/>
+<area shape="rect" href="cpp-snapshot_8cc.html" title=" " alt="" coords="229,682,385,731"/>
+<area shape="poly" title=" " alt="" coords="2370,130,1958,129,1388,137,1104,145,853,158,660,177,593,188,549,201,515,220,484,243,457,270,432,300,391,368,361,441,339,514,324,582,311,682,306,681,319,581,334,513,356,439,386,366,428,297,453,267,481,239,512,215,547,196,592,183,660,171,853,153,1104,140,1388,131,1958,124,2370,124"/>
+<area shape="rect" href="concurrent-marker_8cc.html" title=" " alt="" coords="1294,585,1482,634"/>
+<area shape="poly" title=" " alt="" coords="2371,129,2224,132,2034,142,1823,164,1717,180,1613,201,1559,210,1504,213,1406,219,1366,227,1335,245,1324,257,1315,274,1310,294,1308,318,1308,417,1315,466,1332,512,1353,552,1373,584,1369,587,1348,555,1327,514,1310,467,1303,418,1303,318,1305,293,1311,272,1320,254,1332,240,1364,222,1405,213,1504,208,1558,205,1612,196,1716,175,1823,158,2034,137,2224,127,2370,124"/>
+<area shape="rect" href="explicit-management_8cc.html" title=" " alt="" coords="1056,585,1219,634"/>
+<area shape="poly" title=" " alt="" coords="2371,131,2113,136,1786,147,1628,156,1491,168,1386,183,1350,192,1327,201,1294,224,1273,249,1261,279,1258,318,1258,418,1255,444,1248,469,1225,516,1195,556,1166,587,1162,583,1191,552,1220,513,1243,467,1250,443,1252,418,1252,318,1256,278,1268,246,1291,220,1324,196,1348,186,1385,178,1490,163,1628,151,1786,142,2113,130,2371,126"/>
+<area shape="rect" href="cppgc_2free-list_8cc.html" title=" " alt="" coords="4556,295,4703,344"/>
+<area shape="poly" title=" " alt="" coords="2553,127,3004,135,3629,151,4200,171,4394,183,4455,190,4488,196,4507,206,4520,218,4546,245,4603,293,4599,297,4543,249,4516,221,4504,211,4486,201,4454,195,4393,188,4200,177,3629,156,3004,141,2553,132"/>
+<area shape="rect" href="cppgc_2free-list_8h.html" title=" " alt="" coords="4556,199,4703,247"/>
+<area shape="poly" title=" " alt="" coords="2553,127,3612,154,4197,175,4411,185,4538,196,4557,199,4556,204,4537,201,4411,191,4197,180,3612,160,2553,132"/>
+<area shape="rect" href="heap-page_8cc.html" title=" " alt="" coords="4239,682,4391,731"/>
+<area shape="poly" title=" " alt="" coords="2552,127,3774,154,4433,175,4658,185,4767,196,4853,210,4930,222,4962,234,4987,252,5003,279,5008,318,5008,514,5004,556,4990,587,4966,612,4931,636,4859,650,4712,668,4392,701,4391,695,4712,663,4858,645,4929,632,4962,608,4985,584,4999,554,5003,514,5003,319,4998,281,4983,255,4959,238,4929,227,4852,216,4767,201,4657,191,4433,180,3774,159,2552,132"/>
+<area shape="rect" href="object-allocator_8cc.html" title=" " alt="" coords="4598,682,4757,731"/>
+<area shape="poly" title=" " alt="" coords="2553,126,3083,134,3840,149,4537,170,4775,182,4850,189,4890,196,4953,214,5007,233,5028,246,5045,264,5055,287,5059,318,5059,514,5057,539,5050,561,5027,599,4992,630,4949,655,4901,673,4851,687,4757,702,4757,697,4850,682,4900,668,4947,650,4989,626,5023,596,5046,559,5052,538,5054,514,5054,318,5050,289,5040,267,5025,250,5004,238,4951,219,4889,201,4849,194,4774,188,4537,175,3840,154,3083,139,2553,132"/>
+<area shape="rect" href="object-allocator_8h.html" title=" " alt="" coords="3534,392,3693,441"/>
+<area shape="poly" title=" " alt="" coords="2553,136,2703,156,2899,189,3117,234,3226,262,3333,293,3462,341,3568,389,3565,394,3460,346,3331,298,3225,267,3115,239,2898,194,2703,162,2552,141"/>
+<area shape="rect" href="heap-base_8h.html" title=" " alt="" coords="2481,489,2632,537"/>
+<area shape="poly" title=" " alt="" coords="2474,165,2553,487,2548,489,2469,167"/>
+<area shape="rect" href="heap-base_8cc.html" title=" " alt="" coords="707,779,859,827"/>
+<area shape="poly" title=" " alt="" coords="2371,131,1926,138,1311,152,752,173,563,186,504,193,473,201,387,250,308,307,239,369,211,402,186,437,167,472,152,508,144,544,142,581,146,618,158,655,178,692,206,729,230,741,276,753,412,772,570,786,707,795,707,801,570,792,411,778,275,758,228,746,203,733,174,695,153,657,141,619,136,581,139,543,147,506,162,470,182,434,207,399,236,366,305,302,384,246,471,196,503,188,563,181,752,167,1311,147,1926,133,2370,126"/>
+<area shape="rect" href="heap-statistics-collector_8cc.html" title=" " alt="" coords="4766,585,4917,634"/>
+<area shape="poly" title=" " alt="" coords="2552,127,3771,154,4415,175,4626,186,4716,196,4758,223,4790,252,4813,282,4830,315,4841,352,4848,393,4859,489,4859,538,4850,585,4845,584,4854,537,4854,489,4843,393,4836,353,4825,317,4809,285,4786,255,4755,227,4714,201,4625,191,4415,180,3771,160,2552,132"/>
+<area shape="rect" href="cppgc_2heap_8cc.html" title=" " alt="" coords="3257,788,3424,818"/>
+<area shape="poly" title=" " alt="" coords="2553,127,3909,156,4635,177,4873,187,4976,196,5028,216,5070,238,5087,252,5099,269,5107,291,5110,318,5110,611,5106,628,5094,643,5075,658,5050,671,4983,695,4894,715,4788,733,4667,749,4398,773,4111,788,3835,798,3424,804,3424,799,3835,793,4111,783,4397,767,4667,744,4787,728,4893,710,4981,690,5048,666,5072,653,5090,639,5101,625,5104,611,5104,318,5102,292,5094,272,5083,255,5067,242,5026,221,4974,201,4873,192,4635,182,3909,161,2553,132"/>
+<area shape="rect" href="marker_8cc.html" title=" " alt="" coords="3373,692,3553,721"/>
+<area shape="poly" title=" " alt="" coords="2553,129,2825,150,2998,168,3177,194,3350,228,3431,249,3505,271,3571,297,3628,325,3674,356,3706,390,3713,403,3715,416,3707,442,3698,458,3687,469,3661,491,3477,693,3473,689,3657,487,3683,465,3693,455,3702,440,3709,415,3708,405,3702,394,3670,360,3625,330,3569,302,3503,276,3430,254,3349,233,3176,199,2997,174,2825,155,2553,135"/>
+<area shape="rect" href="marking-verifier_8h.html" title=" " alt="" coords="461,682,633,731"/>
+<area shape="poly" title=" " alt="" coords="2371,132,1959,140,1397,154,888,175,716,187,663,194,635,201,585,228,544,256,511,284,484,315,462,349,442,389,403,489,398,518,401,546,412,573,428,599,470,645,513,679,510,683,466,648,424,602,407,575,396,547,392,518,398,488,437,387,457,347,480,311,508,280,541,251,582,224,633,196,662,189,716,182,888,169,1397,149,1959,134,2371,126"/>
+<area shape="rect" href="marking-verifier_8cc.html" title=" " alt="" coords="5,779,177,827"/>
+<area shape="poly" title=" " alt="" coords="2370,130,1928,132,1307,140,996,149,721,162,509,179,434,189,385,201,331,223,286,247,250,274,220,305,195,341,175,383,140,489,122,572,109,654,95,778,90,778,103,653,117,571,135,488,170,381,191,339,216,302,246,270,283,243,329,218,384,196,433,184,508,174,721,156,996,144,1307,135,1928,126,2370,125"/>
+<area shape="rect" href="pointer-policies_8cc.html" title=" " alt="" coords="3805,682,3972,731"/>
+<area shape="poly" title=" " alt="" coords="2553,128,3284,154,3653,174,3776,185,3836,196,3893,259,3994,385,4092,514,4140,584,4148,611,4147,623,4140,636,4114,655,4072,671,3973,695,3971,690,4071,666,4111,650,4136,632,4142,621,4143,611,4135,586,4088,517,3990,389,3889,262,3834,201,3775,190,3652,179,3284,159,2553,133"/>
+<area shape="rect" href="write-barrier_8cc.html" title=" " alt="" coords="3576,682,3728,731"/>
+<area shape="poly" title=" " alt="" coords="2553,126,2701,130,2893,141,3108,162,3216,177,3322,196,3411,213,3480,228,3546,251,3626,293,3661,314,3688,332,3710,356,3729,391,3735,416,3733,445,3716,504,3679,586,3659,682,3653,681,3674,585,3711,502,3728,444,3730,417,3725,393,3706,359,3685,336,3658,318,3623,298,3544,256,3479,233,3410,218,3321,201,3215,183,3107,168,2893,147,2701,136,2553,131"/>
+<area shape="rect" href="cppgc_2sweeper_8cc.html" title=" " alt="" coords="4453,595,4641,624"/>
+<area shape="poly" title=" " alt="" coords="2553,128,3471,160,3949,180,4111,189,4190,196,4287,223,4409,268,4469,296,4522,326,4565,358,4593,391,4611,429,4616,462,4611,497,4599,538,4583,571,4563,596,4558,593,4578,568,4594,536,4606,496,4610,462,4606,430,4589,393,4562,362,4519,331,4466,301,4407,273,4285,228,4189,201,4110,194,3948,185,3471,165,2553,133"/>
+<area shape="poly" title=" " alt="" coords="2371,131,2017,134,1540,144,1304,153,1097,165,937,181,882,191,845,201,796,222,757,243,742,256,731,273,724,293,722,318,722,418,717,470,705,521,678,595,673,593,700,519,712,469,716,418,716,318,719,292,726,270,738,253,754,239,794,217,843,196,880,185,937,176,1097,160,1304,148,1540,139,2016,129,2371,125"/>
+<area shape="rect" href="heap-page_8h.html" title=" " alt="" coords="3169,295,3320,344"/>
+<area shape="poly" title=" " alt="" coords="2553,147,3169,297,3167,302,2552,152"/>
+<area shape="rect" href="cppgc_2marking-state_8h.html" title=" " alt="" coords="1971,489,2142,537"/>
+<area shape="poly" title=" " alt="" coords="2423,163,2378,201,2274,295,2174,394,2080,490,2076,487,2170,390,2271,292,2375,197,2419,159"/>
+<area shape="rect" href="object-poisoner_8h.html" title=" " alt="" coords="3765,489,3924,537"/>
+<area shape="poly" title=" " alt="" coords="2553,127,2865,134,3269,148,3626,168,3745,181,3781,188,3801,197,3828,229,3846,267,3857,308,3862,350,3861,429,3852,489,3847,488,3856,429,3857,350,3852,309,3841,269,3823,232,3797,201,3780,194,3744,187,3626,174,3269,153,2865,139,2553,132"/>
+<area shape="rect" href="object-size-trait_8cc.html" title=" " alt="" coords="958,489,1117,537"/>
+<area shape="poly" title=" " alt="" coords="2370,132,2061,140,1661,154,1307,175,1190,187,1154,194,1136,201,1112,227,1098,253,1093,280,1092,308,1094,369,1091,404,1080,442,1055,489,1051,487,1075,440,1086,403,1089,369,1087,308,1088,279,1093,251,1108,224,1134,196,1153,189,1189,182,1307,169,1661,149,2061,135,2370,127"/>
+<area shape="rect" href="object-view_8h.html" title=" " alt="" coords="908,392,1066,441"/>
+<area shape="poly" title=" " alt="" coords="2370,130,2062,130,1658,138,1461,146,1289,159,1159,177,1114,188,1086,201,1063,220,1045,243,1017,296,1001,349,992,392,987,391,995,348,1012,294,1040,240,1060,216,1083,196,1112,183,1158,172,1289,154,1461,141,1658,132,2062,125,2370,124"/>
+<area shape="rect" href="liveness-broker_8cc.html" title=" " alt="" coords="1625,199,1794,247"/>
+<area shape="poly" title=" " alt="" coords="2371,137,2119,161,1967,179,1814,201,1795,205,1794,199,1813,196,1966,174,2118,156,2370,132"/>
+<area shape="rect" href="marking-worklists_8h.html" title=" " alt="" coords="2184,392,2355,441"/>
+<area shape="poly" title=" " alt="" coords="2440,165,2288,393,2283,390,2435,162"/>
+<area shape="rect" href="object-start-bitmap_8h.html" title=" " alt="" coords="4020,199,4178,247"/>
+<area shape="poly" title=" " alt="" coords="2553,127,3279,149,3697,169,3870,182,4002,196,4020,199,4019,204,4001,201,3870,187,3696,175,3279,154,2553,132"/>
+<area shape="rect" href="unmarker_8h.html" title=" " alt="" coords="1737,595,1928,624"/>
+<area shape="poly" title=" " alt="" coords="2371,139,2213,160,2124,175,2037,195,1958,219,1893,248,1869,264,1850,281,1839,299,1835,319,1835,418,1835,594,1830,594,1830,418,1830,318,1834,297,1846,278,1865,260,1891,243,1956,214,2035,190,2123,170,2212,154,2370,133"/>
+<area shape="rect" href="src_2heap_2cppgc_2visitor_8h.html" title=" " alt="" coords="413,498,580,528"/>
+<area shape="poly" title=" " alt="" coords="2371,132,1972,139,1432,153,943,174,779,187,728,194,701,201,659,231,621,269,589,312,562,356,523,440,503,499,498,497,518,438,558,354,585,309,617,266,655,227,699,196,727,188,778,181,943,168,1431,148,1972,134,2371,126"/>
+<area shape="poly" title=" " alt="" coords="4632,263,4632,295,4627,295,4627,263"/>
+<area shape="rect" href="heap-space_8h.html" title=" " alt="" coords="4229,295,4380,344"/>
+<area shape="poly" title=" " alt="" coords="4542,252,4381,299,4379,294,4541,247"/>
+<area shape="poly" title=" " alt="" coords="4719,235,4797,256,4837,271,4874,290,4907,314,4934,342,4951,376,4958,415,4958,514,4959,580,4952,607,4932,636,4893,666,4849,687,4802,699,4758,706,4757,701,4801,694,4847,682,4891,662,4928,632,4947,605,4954,579,4952,514,4952,415,4946,377,4929,345,4904,318,4872,295,4835,276,4795,261,4718,240"/>
+<area shape="poly" title=" " alt="" coords="4687,254,4738,293,4782,337,4797,360,4812,391,4829,444,4839,498,4845,585,4839,585,4833,498,4824,445,4807,393,4793,362,4778,341,4735,297,4683,258"/>
+<area shape="poly" title=" " alt="" coords="4686,255,4704,273,4717,294,4722,323,4721,366,4711,441,4699,472,4686,495,4648,539,4610,572,4573,596,4570,592,4607,567,4644,535,4682,492,4694,470,4706,440,4716,366,4716,323,4713,296,4699,276,4682,259"/>
+<area shape="rect" href="compactor_8cc.html" title=" " alt="" coords="3926,595,4125,624"/>
+<area shape="poly" title=" " alt="" coords="4290,359,4267,401,4237,442,4189,491,4137,535,4050,597,4047,592,4134,531,4185,487,4233,439,4262,398,4285,357"/>
+<area shape="poly" title=" " alt="" coords="4316,359,4326,413,4336,482,4340,558,4336,634,4325,682,4320,681,4331,634,4335,558,4330,482,4321,414,4311,360"/>
+<area shape="rect" href="heap-space_8cc.html" title=" " alt="" coords="4071,392,4223,441"/>
+<area shape="poly" title=" " alt="" coords="4253,354,4188,394,4185,389,4251,350"/>
+<area shape="poly" title=" " alt="" coords="4396,324,4438,332,4483,345,4526,364,4565,390,4596,422,4621,460,4640,501,4655,543,4672,622,4679,681,4674,682,4667,623,4650,544,4635,503,4616,463,4592,426,4561,394,4523,369,4481,350,4437,337,4395,330"/>
+<area shape="poly" title=" " alt="" coords="4214,336,3694,407,3693,402,4213,331"/>
+<area shape="poly" title=" " alt="" coords="4329,355,4389,439,4469,528,4534,592,4530,596,4465,532,4385,442,4325,358"/>
+<area shape="poly" title=" " alt="" coords="3519,426,2469,491,2380,503,2311,515,2243,528,2154,540,2019,546,1846,549,1757,553,1674,559,1602,571,1547,588,1531,598,1521,609,1497,636,1429,684,1425,679,1493,632,1517,605,1527,594,1545,583,1601,565,1674,554,1757,547,1845,544,2019,541,2153,535,2242,522,2310,510,2379,498,2468,486,3519,421"/>
+<area shape="poly" title=" " alt="" coords="3709,422,3771,430,3840,442,3912,461,3980,486,4000,498,4013,510,4026,523,4044,535,4100,556,4195,586,4348,631,4480,663,4599,688,4597,693,4479,668,4346,637,4193,591,4098,561,4042,540,4023,527,4009,514,3997,502,3978,491,3910,466,3839,447,3770,435,3708,427"/>
+<area shape="poly" title=" " alt="" coords="3519,429,2633,508,2632,502,3519,423"/>
+<area shape="poly" title=" " alt="" coords="2494,547,2426,588,2410,601,2399,614,2387,626,2368,636,2290,659,2186,676,2064,689,1932,698,1670,707,1466,708,1466,703,1669,701,1931,692,2064,683,2186,671,2289,654,2366,632,2384,622,2395,610,2406,597,2423,583,2492,543"/>
+<area shape="poly" title=" " alt="" coords="2465,523,2154,540,1842,552,1599,558,1356,567,1045,588,932,600,931,595,1044,583,1356,562,1599,553,1841,547,2154,535,2465,517"/>
+<area shape="poly" title=" " alt="" coords="2465,523,1992,553,1546,588,1483,596,1483,591,1545,583,1991,548,2465,517"/>
+<area shape="poly" title=" " alt="" coords="2465,522,2154,540,1908,551,1717,557,1526,566,1282,588,1220,596,1219,591,1281,583,1526,561,1717,551,1908,546,2154,535,2465,517"/>
+<area shape="poly" title=" " alt="" coords="2647,514,3164,534,3511,554,3863,583,3936,592,3935,597,3863,588,3511,559,3164,539,2647,519"/>
+<area shape="rect" href="cpp-heap_8h.html" title=" " alt="" coords="1557,585,1713,634"/>
+<area shape="poly" title=" " alt="" coords="2465,523,2078,551,1874,569,1725,588,1714,590,1713,585,1724,583,1873,564,2078,546,2465,518"/>
+<area shape="rect" href="caged-heap_8cc.html" title=" " alt="" coords="2198,585,2355,634"/>
+<area shape="poly" title=" " alt="" coords="2473,545,2348,587,2346,582,2471,540"/>
+<area shape="poly" title=" " alt="" coords="2516,549,2470,587,2445,614,2434,626,2416,636,2355,660,2279,681,2191,699,2093,716,1873,744,1637,766,1401,782,1182,792,859,803,859,798,1182,787,1401,776,1637,761,1872,739,2092,711,2190,694,2278,675,2353,655,2414,632,2431,622,2442,611,2466,583,2513,545"/>
+<area shape="rect" href="heap-consistency_8cc.html" title=" " alt="" coords="2481,585,2632,634"/>
+<area shape="poly" title=" " alt="" coords="2559,553,2559,585,2554,585,2554,553"/>
+<area shape="rect" href="heap-state_8cc.html" title=" " alt="" coords="2657,585,2808,634"/>
+<area shape="poly" title=" " alt="" coords="2615,543,2690,582,2687,587,2612,547"/>
+<area shape="poly" title=" " alt="" coords="2647,514,3631,540,4220,560,4653,583,4766,595,4765,600,4652,588,4220,565,3631,545,2647,519"/>
+<area shape="rect" href="src_2heap_2cppgc_2heap_8h.html" title=" " alt="" coords="3688,595,3851,624"/>
+<area shape="poly" title=" " alt="" coords="2648,519,3688,599,3687,605,2647,524"/>
+<area shape="rect" href="marking-state_8cc.html" title=" " alt="" coords="2003,585,2174,634"/>
+<area shape="poly" title=" " alt="" coords="2466,533,2186,588,2175,590,2174,585,2185,583,2465,528"/>
+<area shape="rect" href="persistent-node_8cc.html" title=" " alt="" coords="2833,585,3016,634"/>
+<area shape="poly" title=" " alt="" coords="2648,535,2833,582,2832,587,2647,540"/>
+<area shape="rect" href="process-heap_8cc.html" title=" " alt="" coords="3041,585,3208,634"/>
+<area shape="poly" title=" " alt="" coords="2647,523,2824,548,3029,583,3041,585,3040,590,3028,588,2824,553,2647,528"/>
+<area shape="poly" title=" " alt="" coords="2648,515,3271,542,4138,583,4453,600,4453,605,4138,588,3271,547,2647,521"/>
+<area shape="rect" href="heap_2cppgc_2testing_8cc.html" title=" " alt="" coords="3232,595,3411,624"/>
+<area shape="poly" title=" " alt="" coords="2648,518,2906,541,3063,560,3221,583,3266,592,3265,597,3220,588,3063,565,2906,547,2647,523"/>
+<area shape="poly" title=" " alt="" coords="2465,523,2154,540,1942,547,1763,548,1459,544,1312,544,1155,550,977,564,767,588,721,597,720,592,767,583,977,558,1155,545,1312,539,1459,539,1763,543,1942,541,2154,535,2465,517"/>
+<area shape="poly" title=" " alt="" coords="1560,642,1451,684,1449,679,1558,637"/>
+<area shape="poly" title=" " alt="" coords="1542,630,1495,637,1336,651,1202,658,972,661,743,664,609,671,450,685,386,693,385,688,449,679,608,666,743,659,972,656,1201,653,1336,645,1495,631,1542,625"/>
+<area shape="poly" title=" " alt="" coords="3866,625,4239,689,4239,695,3865,630"/>
+<area shape="poly" title=" " alt="" coords="3867,625,3914,631,4242,664,4598,696,4598,701,4242,670,3913,637,3866,630"/>
+<area shape="poly" title=" " alt="" coords="3774,640,3767,688,3758,712,3742,733,3719,748,3687,760,3605,780,3511,792,3425,800,3424,795,3511,787,3604,774,3686,755,3717,743,3739,729,3753,709,3762,686,3768,640"/>
+<area shape="poly" title=" " alt="" coords="3710,632,3510,694,3508,688,3709,627"/>
+<area shape="poly" title=" " alt="" coords="3672,621,3423,637,2826,658,2361,667,1896,672,1299,685,633,705,633,699,1299,679,1896,667,2361,662,2826,653,3423,631,3672,616"/>
+<area shape="poly" title=" " alt="" coords="3801,632,3860,680,3857,684,3797,636"/>
+<area shape="poly" title=" " alt="" coords="3742,636,3683,684,3680,680,3739,632"/>
+<area shape="poly" title=" " alt="" coords="621,734,725,776,723,781,619,739"/>
+<area shape="poly" title=" " alt="" coords="649,708,3256,796,3256,801,648,714"/>
+<area shape="poly" title=" " alt="" coords="447,731,177,787,176,781,445,726"/>
+<area shape="poly" title=" " alt="" coords="3153,325,2951,331,2673,343,2355,363,2033,395,1848,425,1532,483,932,596,931,591,1531,478,1847,420,2032,389,2354,358,2673,337,2951,325,3153,320"/>
+<area shape="poly" title=" " alt="" coords="3153,326,2931,332,2648,345,2372,365,2259,379,2173,395,2110,412,2062,431,2017,456,1961,491,1944,504,1933,517,1921,529,1903,540,1843,557,1767,568,1588,577,1407,581,1267,588,1220,595,1219,590,1267,583,1407,575,1588,572,1767,562,1842,551,1901,535,1918,525,1929,513,1941,500,1957,486,2014,451,2060,427,2108,407,2172,389,2258,373,2372,360,2648,339,2931,327,3153,320"/>
+<area shape="poly" title=" " alt="" coords="3304,350,3366,390,3391,416,3401,428,3416,438,3448,453,3477,462,3528,468,3581,472,3646,486,3701,510,3755,535,3862,568,3959,592,3958,597,3860,573,3753,540,3699,515,3645,491,3580,477,3527,473,3476,467,3446,458,3414,443,3397,432,3387,420,3363,394,3301,354"/>
+<area shape="poly" title=" " alt="" coords="3336,346,3467,390,3484,403,3496,416,3507,428,3524,438,3583,458,3636,465,3684,463,3731,458,3777,453,3826,453,3878,463,3936,486,3951,498,3960,511,3967,523,3981,535,4002,547,4022,553,4059,559,4096,564,4116,571,4139,583,4154,595,4163,607,4172,619,4185,632,4223,658,4263,679,4261,684,4221,662,4181,636,4168,623,4159,610,4150,599,4136,588,4114,576,4095,570,4058,564,4021,559,4000,552,3977,540,3963,527,3955,514,3947,502,3934,491,3876,468,3825,459,3777,458,3731,463,3685,469,3636,470,3582,463,3522,443,3504,432,3492,419,3481,407,3464,394,3334,351"/>
+<area shape="poly" title=" " alt="" coords="3335,327,3951,389,4071,403,4070,408,3951,395,3335,332"/>
+<area shape="poly" title=" " alt="" coords="3336,329,3508,353,3705,389,3820,417,3916,444,4077,499,4236,559,4442,631,4599,680,4597,685,4441,637,4235,564,4075,504,3915,449,3819,422,3704,395,3507,358,3335,334"/>
+<area shape="poly" title=" " alt="" coords="3336,342,3535,392,3533,397,3334,347"/>
+<area shape="poly" title=" " alt="" coords="3154,333,3018,352,2845,383,2655,429,2560,458,2469,491,2423,513,2379,538,2308,587,2305,583,2377,534,2421,508,2467,486,2559,453,2654,423,2843,378,3017,346,3153,328"/>
+<area shape="poly" title=" " alt="" coords="3153,325,2951,330,2673,341,2355,362,2033,395,1846,424,1535,479,1226,540,1112,566,1045,588,971,632,903,685,846,738,806,780,802,776,842,734,899,681,968,627,1043,583,1111,561,1225,534,1534,473,1845,419,2032,389,2354,357,2673,336,2951,324,3153,319"/>
+<area shape="poly" title=" " alt="" coords="3251,359,3260,399,3279,439,3300,466,3323,484,3371,509,3395,520,3418,534,3439,555,3459,584,3468,613,3472,642,3468,691,3463,691,3466,643,3463,614,3454,587,3435,558,3415,538,3392,524,3369,513,3320,489,3296,470,3274,442,3255,401,3246,360"/>
+<area shape="poly" title=" " alt="" coords="3153,324,2660,326,1955,335,1600,344,1284,357,1040,373,954,383,897,395,792,425,750,440,712,457,677,479,643,506,610,542,575,587,562,610,555,635,549,682,544,681,549,634,557,608,570,584,606,538,640,502,674,474,709,453,748,435,791,420,896,389,953,378,1039,368,1284,351,1599,339,1955,330,2660,321,3153,318"/>
+<area shape="poly" title=" " alt="" coords="3287,352,3328,390,3346,416,3353,427,3366,439,3404,463,3437,480,3498,502,3564,515,3646,535,3680,542,3710,544,3764,542,3789,544,3814,549,3839,562,3865,584,3880,606,3889,632,3893,682,3888,682,3884,634,3876,609,3861,587,3836,566,3812,554,3788,549,3764,548,3710,549,3679,547,3645,540,3563,520,3497,507,3435,485,3401,468,3363,443,3349,431,3342,419,3324,394,3283,356"/>
+<area shape="poly" title=" " alt="" coords="3268,356,3295,397,3329,439,3359,464,3391,487,3626,680,3623,684,3388,491,3355,468,3325,443,3291,401,3263,359"/>
+<area shape="poly" title=" " alt="" coords="3336,330,3508,354,3705,389,3940,442,4169,500,4500,592,4498,597,4167,505,3939,447,3704,395,3507,360,3335,335"/>
+<area shape="poly" title=" " alt="" coords="3153,325,2764,333,2230,347,1729,367,1547,380,1440,395,1371,422,1285,466,1198,511,1129,540,1029,563,949,570,869,575,767,588,726,597,725,592,767,583,869,569,949,565,1028,557,1128,535,1196,506,1282,461,1368,417,1438,389,1546,375,1729,362,2230,342,2764,327,3153,320"/>
+<area shape="rect" href="cross-heap-remembered-set_8cc.html" title=" " alt="" coords="3026,392,3207,441"/>
+<area shape="poly" title=" " alt="" coords="3202,355,3150,394,3147,389,3199,351"/>
+<area shape="poly" title=" " alt="" coords="3153,325,2979,329,2768,341,2567,361,2486,376,2425,394,2408,405,2397,417,2386,431,2368,443,2143,495,2142,490,2366,438,2382,427,2393,414,2405,401,2423,390,2485,371,2566,356,2768,335,2979,324,3153,319"/>
+<area shape="poly" title=" " alt="" coords="3328,348,3416,390,3435,403,3448,416,3461,427,3480,438,3552,463,3610,471,3671,475,3747,486,3765,490,3764,495,3747,491,3670,480,3610,476,3550,468,3478,443,3458,432,3445,420,3432,407,3414,394,3325,353"/>
+<area shape="poly" title=" " alt="" coords="3153,324,2789,326,2278,335,2013,344,1764,357,1550,373,1389,395,1306,414,1225,439,1091,491,1089,486,1223,434,1305,409,1388,389,1549,368,1764,351,2012,339,2278,330,2789,321,3153,318"/>
+<area shape="poly" title=" " alt="" coords="3153,326,2404,350,1877,370,1338,395,1067,412,1067,406,1338,389,1877,365,2404,344,3153,321"/>
+<area shape="poly" title=" " alt="" coords="3336,324,3727,351,4235,389,4399,405,4399,410,4235,395,3726,356,3335,329"/>
+<area shape="poly" title=" " alt="" coords="1956,539,1953,540,1824,544,1608,548,1497,552,1398,559,1323,571,1298,578,1284,587,1277,598,1275,608,1284,633,1306,659,1334,679,1331,684,1302,663,1279,635,1270,609,1272,596,1280,583,1296,573,1321,565,1397,554,1497,546,1608,542,1823,539,1952,535,1955,534"/>
+<area shape="poly" title=" " alt="" coords="1956,539,1953,540,1826,557,1727,565,1628,572,1502,588,1483,591,1482,586,1501,583,1628,567,1727,559,1826,552,1952,535,1955,534"/>
+<area shape="poly" title=" " alt="" coords="2019,550,2001,571,1988,592,1984,614,1987,623,1992,632,2165,643,2565,662,3373,698,3373,704,2565,667,2164,648,1990,636,1982,625,1979,614,1983,590,1997,567,2015,546"/>
+<area shape="poly" title=" " alt="" coords="2072,551,2083,584,2078,586,2067,553"/>
+<area shape="poly" title=" " alt="" coords="3904,542,4000,592,3997,597,3902,547"/>
+<area shape="poly" title=" " alt="" coords="3939,524,4453,593,4453,598,3939,530"/>
+<area shape="poly" title=" " alt="" coords="961,455,950,475,943,496,942,517,949,536,970,559,997,576,1026,588,1057,597,1055,602,1025,593,994,581,967,563,945,539,937,518,938,495,946,473,957,452"/>
+<area shape="poly" title=" " alt="" coords="892,424,767,431,624,444,493,464,440,476,401,491,335,528,288,566,252,614,220,683,212,708,213,718,219,729,243,741,287,753,419,772,573,786,707,795,707,800,573,791,419,777,286,758,241,746,216,733,208,720,207,708,215,681,248,612,284,562,332,524,399,486,439,471,492,459,624,439,767,426,892,419"/>
+<area shape="poly" title=" " alt="" coords="893,421,748,426,579,438,422,459,360,473,314,491,271,520,233,555,200,595,171,637,127,718,102,779,97,777,122,716,167,634,196,591,229,551,268,515,311,486,358,468,421,453,578,433,747,421,892,416"/>
+<area shape="poly" title=" " alt="" coords="937,451,694,597,692,592,934,446"/>
+<area shape="poly" title=" " alt="" coords="1082,418,3765,506,3765,512,1082,423"/>
+<area shape="poly" title=" " alt="" coords="1009,453,1027,487,1023,489,1004,455"/>
+<area shape="poly" title=" " alt="" coords="2371,417,2619,426,2772,437,2932,452,3087,473,3227,502,3289,519,3343,538,3389,559,3425,583,3445,608,3457,638,3465,691,3460,691,3452,639,3440,611,3421,587,3386,564,3341,543,3288,524,3226,507,3086,479,2931,457,2772,442,2619,432,2371,422"/>
+<area shape="poly" title=" " alt="" coords="2204,450,2111,491,2109,486,2201,445"/>
+<area shape="poly" title=" " alt="" coords="4079,262,4060,302,4046,349,4043,373,4044,397,4050,419,4061,439,4079,457,4099,465,4120,467,4142,466,4187,465,4211,471,4234,487,4254,508,4271,533,4295,587,4309,640,4316,681,4310,682,4304,641,4290,589,4266,536,4250,512,4231,491,4209,476,4187,470,4142,471,4119,472,4098,470,4076,461,4057,442,4045,421,4039,397,4038,373,4041,348,4055,300,4074,260"/>
+<area shape="poly" title=" " alt="" coords="4111,262,4144,391,4138,392,4106,263"/>
+<area shape="poly" title=" " alt="" coords="4194,232,4314,254,4379,271,4441,293,4488,313,4523,332,4555,356,4593,390,4635,435,4662,477,4678,524,4688,585,4689,637,4685,682,4679,681,4684,637,4683,586,4673,525,4657,479,4631,438,4589,394,4552,360,4520,337,4486,318,4439,298,4377,276,4313,259,4193,237"/>
+<area shape="poly" title=" " alt="" coords="4026,256,3675,394,3673,389,4024,251"/>
+<area shape="poly" title=" " alt="" coords="4194,233,4293,255,4344,272,4394,293,4412,305,4423,317,4435,329,4451,342,4483,355,4513,359,4540,367,4553,376,4565,391,4578,417,4584,445,4586,475,4583,504,4570,557,4556,595,4551,593,4565,555,4578,503,4580,475,4579,446,4573,419,4561,393,4550,380,4538,372,4512,364,4482,360,4448,346,4431,333,4420,321,4408,309,4391,298,4342,277,4291,260,4193,238"/>
+<area shape="poly" title=" " alt="" coords="4005,237,3321,313,3320,307,4004,232"/>
+<area shape="poly" title=" " alt="" coords="1752,631,1725,637,1467,691,1466,686,1724,631,1751,626"/>
+<area shape="poly" title=" " alt="" coords="1786,633,1649,684,1564,711,1478,733,1306,764,1134,784,979,796,859,802,859,797,979,791,1133,779,1305,758,1477,728,1563,706,1647,679,1784,628"/>
+<area shape="poly" title=" " alt="" coords="1933,625,1977,631,2351,682,2718,727,3257,790,3256,795,2717,733,2350,687,1976,637,1932,630"/>
+<area shape="poly" title=" " alt="" coords="508,541,533,590,551,613,574,632,615,645,687,657,893,677,1123,691,1310,699,1310,705,1122,696,892,682,686,662,613,650,571,636,547,617,528,593,503,544"/>
+<area shape="poly" title=" " alt="" coords="474,541,332,683,328,680,470,537"/>
+<area shape="poly" title=" " alt="" coords="486,543,475,587,475,610,480,633,496,658,517,680,513,683,492,662,475,635,470,611,470,586,481,542"/>
+<area shape="poly" title=" " alt="" coords="537,533,645,592,643,597,534,538"/>
 </map>
 </div>
 </div>
@@ -434,10 +494,13 @@ Namespaces</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:20:18 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li><li class="navelem"><a class="el" href="gc-info-table_8h.html">gc-info-table.h</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:56:34 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>

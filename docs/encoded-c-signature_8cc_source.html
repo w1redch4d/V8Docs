@@ -5,13 +5,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/execution/encoded-c-signature.cc Source File</title>
-<link rel="icon" href="v8.svg" type="image/x-icon" />
+<title>v8: src/execution/encoded-c-signature.cc Source File</title>
+<link rel="icon" href="v8.png" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -25,7 +27,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr id="projectrow">
-  <td id="projectlogo"><img alt="Logo" src="v8.svg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="v8.png"/></td>
   <td id="projectalign">
    <div id="projectname">v8
    </div>
@@ -52,17 +54,29 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',false);
+  initMenu('',true,false,'search.php','Search',true);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){ initResizable(false); });
+$(function(){initNavTree('encoded-c-signature_8cc_source.html',''); initResizable(true); });
 /* @license-end */
 </script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -84,12 +98,6 @@ $(function(){ initResizable(false); });
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bd0755c95a42e835fb06f38bbeb1d6ed.html">execution</a></li>  </ul>
-</div>
-</div><!-- top -->
-<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">encoded-c-signature.cc</div></div>
 </div><!--header-->
@@ -100,39 +108,39 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="encoded-c-signature_8h.html">src/execution/encoded-c-signature.h</a>&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;include/v8-fast-api-calls.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="v8-fast-api-calls_8h.html">include/v8-fast-api-calls.h</a>&quot;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="bits_8h.html">src/base/bits.h</a>&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="logging_8h.html">src/base/logging.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="src_2base_2logging_8h.html">src/base/logging.h</a>&quot;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacev8.html">v8</a> {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">internal</a> {</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="foldopen" id="foldopen00014" data-start="{" data-end="}">
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1EncodedCSignature.html#a6b29a3e13018073c820b3da9d8ec5908">   14</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="structv8_1_1internal_1_1EncodedCSignature.html#a6b29a3e13018073c820b3da9d8ec5908">EncodedCSignature::FPParameterCount</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="structv8_1_1internal_1_1EncodedCSignature.html#a479c7622ea55df20ac8dbfa1824088f0">IsValid</a>());</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <a class="code hl_define" href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="structv8_1_1internal_1_1EncodedCSignature.html#a479c7622ea55df20ac8dbfa1824088f0">IsValid</a>());</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1base_1_1bits.html#a3e15b77414d0cf8a8d231ee130df2204">base::bits::CountPopulation</a>(<a class="code hl_variable" href="structv8_1_1internal_1_1EncodedCSignature.html#a2b73cc9aeb1fb3930e261c80a659d8db">bitfield_</a> &amp; ~(1 &lt;&lt; <a class="code hl_variable" href="structv8_1_1internal_1_1EncodedCSignature.html#a58412ce7d263e39973f6e523be569e18">kReturnIndex</a>));</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>}</div>
 </div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1EncodedCSignature.html#a924a7a1ff231640f69536cad33111ca8">   19</a></span><a class="code hl_function" href="structv8_1_1internal_1_1EncodedCSignature.html#ad2dc003d64d9e5fb84b18f7e7cdd2970">EncodedCSignature::EncodedCSignature</a>(<span class="keyword">const</span> CFunctionInfo* signature) {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_variable" href="structv8_1_1internal_1_1EncodedCSignature.html#aa05fc14f15d6f0c35225361ff6fd3046">parameter_count_</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(signature-&gt;ArgumentCount());</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1EncodedCSignature.html#a924a7a1ff231640f69536cad33111ca8">   19</a></span><a class="code hl_function" href="structv8_1_1internal_1_1EncodedCSignature.html#ad2dc003d64d9e5fb84b18f7e7cdd2970">EncodedCSignature::EncodedCSignature</a>(<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1CFunctionInfo.html">CFunctionInfo</a>* signature) {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_variable" href="structv8_1_1internal_1_1EncodedCSignature.html#aa05fc14f15d6f0c35225361ff6fd3046">parameter_count_</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(signature-&gt;<a class="code hl_function" href="classv8_1_1CFunctionInfo.html#af455f6d614066181d1aa6eb7832b3fee">ArgumentCount</a>());</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; <a class="code hl_variable" href="structv8_1_1internal_1_1EncodedCSignature.html#aa05fc14f15d6f0c35225361ff6fd3046">parameter_count_</a>; ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">if</span> (signature-&gt;ArgumentInfo(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>).GetSequenceType() ==</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            CTypeInfo::SequenceType::kScalar &amp;&amp;</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        CTypeInfo::IsFloatingPointType(signature-&gt;ArgumentInfo(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>).GetType())) {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordflow">if</span> (signature-&gt;<a class="code hl_function" href="classv8_1_1CFunctionInfo.html#a74624c1e0dc051230611d42071c033a0">ArgumentInfo</a>(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>).<a class="code hl_function" href="classv8_1_1CTypeInfo.html#afcc395e9cdf8040041dbbeb72054d338">GetSequenceType</a>() ==</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <a class="code hl_enumvalue" href="classv8_1_1CTypeInfo.html#a941534556bd714f53c7499f2111fa893ad84b20d8e2277928cd3c2efeef3a302b">CTypeInfo::SequenceType::kScalar</a> &amp;&amp;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_function" href="classv8_1_1CTypeInfo.html#a4380813beff0adcfc05eff128b7efc2b">CTypeInfo::IsFloatingPointType</a>(signature-&gt;<a class="code hl_function" href="classv8_1_1CFunctionInfo.html#a74624c1e0dc051230611d42071c033a0">ArgumentInfo</a>(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>).<a class="code hl_function" href="classv8_1_1CTypeInfo.html#abf7f57d074b5a146cfb3b05543381ad1">GetType</a>())) {</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      <a class="code hl_function" href="structv8_1_1internal_1_1EncodedCSignature.html#a0f28a6b29d9ca383ea926ca5065fdcb3">SetFloat</a>(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    }</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  }</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="comment">// The struct holding the options of the CFunction (e.g. callback) is not</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="comment">// included in the number of regular parameters, so we add it manually here.</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordflow">if</span> (signature-&gt;HasOptions()) {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordflow">if</span> (signature-&gt;<a class="code hl_function" href="classv8_1_1CFunctionInfo.html#a857c37bd652ce8ebc3effb6545ff7fd7">HasOptions</a>()) {</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_variable" href="structv8_1_1internal_1_1EncodedCSignature.html#aa05fc14f15d6f0c35225361ff6fd3046">parameter_count_</a>++;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  }</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordflow">if</span> (signature-&gt;ReturnInfo().GetSequenceType() ==</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>          CTypeInfo::SequenceType::kScalar &amp;&amp;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      CTypeInfo::IsFloatingPointType(signature-&gt;ReturnInfo().GetType())) {</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">if</span> (signature-&gt;ReturnInfo().GetType() == CTypeInfo::Type::kFloat64) {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordflow">if</span> (signature-&gt;<a class="code hl_function" href="classv8_1_1CFunctionInfo.html#a71745b39b997c16fd67d7788e6052628">ReturnInfo</a>().<a class="code hl_function" href="classv8_1_1CTypeInfo.html#afcc395e9cdf8040041dbbeb72054d338">GetSequenceType</a>() ==</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>          <a class="code hl_enumvalue" href="classv8_1_1CTypeInfo.html#a941534556bd714f53c7499f2111fa893ad84b20d8e2277928cd3c2efeef3a302b">CTypeInfo::SequenceType::kScalar</a> &amp;&amp;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <a class="code hl_function" href="classv8_1_1CTypeInfo.html#a4380813beff0adcfc05eff128b7efc2b">CTypeInfo::IsFloatingPointType</a>(signature-&gt;<a class="code hl_function" href="classv8_1_1CFunctionInfo.html#a71745b39b997c16fd67d7788e6052628">ReturnInfo</a>().<a class="code hl_function" href="classv8_1_1CTypeInfo.html#abf7f57d074b5a146cfb3b05543381ad1">GetType</a>())) {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="keywordflow">if</span> (signature-&gt;<a class="code hl_function" href="classv8_1_1CFunctionInfo.html#a71745b39b997c16fd67d7788e6052628">ReturnInfo</a>().<a class="code hl_function" href="classv8_1_1CTypeInfo.html#abf7f57d074b5a146cfb3b05543381ad1">GetType</a>() == <a class="code hl_enumvalue" href="classv8_1_1CTypeInfo.html#aecb61a42625eacedeae9f88c01298b0ba78f9bf284cc7269efe0093b7c505feaa">CTypeInfo::Type::kFloat64</a>) {</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <a class="code hl_function" href="structv8_1_1internal_1_1EncodedCSignature.html#add9f687a85ab2494651b64405ac5ace6">SetReturnFloat64</a>();</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <a class="code hl_function" href="structv8_1_1internal_1_1EncodedCSignature.html#a3cfdf562fb1135f82aed4b9686957f8e">SetReturnFloat32</a>();</div>
@@ -144,13 +152,23 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}  <span class="comment">// namespace v8</span></div>
 <div class="ttc" id="abits_8h_html"><div class="ttname"><a href="bits_8h.html">bits.h</a></div></div>
+<div class="ttc" id="aclassv8_1_1CFunctionInfo_html"><div class="ttname"><a href="classv8_1_1CFunctionInfo.html">v8::CFunctionInfo</a></div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00357">v8-fast-api-calls.h:357</a></div></div>
+<div class="ttc" id="aclassv8_1_1CFunctionInfo_html_a71745b39b997c16fd67d7788e6052628"><div class="ttname"><a href="classv8_1_1CFunctionInfo.html#a71745b39b997c16fd67d7788e6052628">v8::CFunctionInfo::ReturnInfo</a></div><div class="ttdeci">const CTypeInfo &amp; ReturnInfo() const</div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00373">v8-fast-api-calls.h:373</a></div></div>
+<div class="ttc" id="aclassv8_1_1CFunctionInfo_html_a74624c1e0dc051230611d42071c033a0"><div class="ttname"><a href="classv8_1_1CFunctionInfo.html#a74624c1e0dc051230611d42071c033a0">v8::CFunctionInfo::ArgumentInfo</a></div><div class="ttdeci">const CTypeInfo &amp; ArgumentInfo(unsigned int index) const</div><div class="ttdef"><b>Definition</b> <a href="api_8cc_source.html#l11973">api.cc:11973</a></div></div>
+<div class="ttc" id="aclassv8_1_1CFunctionInfo_html_a857c37bd652ce8ebc3effb6545ff7fd7"><div class="ttname"><a href="classv8_1_1CFunctionInfo.html#a857c37bd652ce8ebc3effb6545ff7fd7">v8::CFunctionInfo::HasOptions</a></div><div class="ttdeci">bool HasOptions() const</div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00389">v8-fast-api-calls.h:389</a></div></div>
+<div class="ttc" id="aclassv8_1_1CFunctionInfo_html_af455f6d614066181d1aa6eb7832b3fee"><div class="ttname"><a href="classv8_1_1CFunctionInfo.html#af455f6d614066181d1aa6eb7832b3fee">v8::CFunctionInfo::ArgumentCount</a></div><div class="ttdeci">unsigned int ArgumentCount() const</div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00377">v8-fast-api-calls.h:377</a></div></div>
+<div class="ttc" id="aclassv8_1_1CTypeInfo_html_a4380813beff0adcfc05eff128b7efc2b"><div class="ttname"><a href="classv8_1_1CTypeInfo.html#a4380813beff0adcfc05eff128b7efc2b">v8::CTypeInfo::IsFloatingPointType</a></div><div class="ttdeci">static constexpr bool IsFloatingPointType(Type type)</div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00314">v8-fast-api-calls.h:314</a></div></div>
+<div class="ttc" id="aclassv8_1_1CTypeInfo_html_a941534556bd714f53c7499f2111fa893ad84b20d8e2277928cd3c2efeef3a302b"><div class="ttname"><a href="classv8_1_1CTypeInfo.html#a941534556bd714f53c7499f2111fa893ad84b20d8e2277928cd3c2efeef3a302b">v8::CTypeInfo::SequenceType::kScalar</a></div><div class="ttdeci">@ kScalar</div></div>
+<div class="ttc" id="aclassv8_1_1CTypeInfo_html_abf7f57d074b5a146cfb3b05543381ad1"><div class="ttname"><a href="classv8_1_1CTypeInfo.html#abf7f57d074b5a146cfb3b05543381ad1">v8::CTypeInfo::GetType</a></div><div class="ttdeci">constexpr Type GetType() const</div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00304">v8-fast-api-calls.h:304</a></div></div>
+<div class="ttc" id="aclassv8_1_1CTypeInfo_html_aecb61a42625eacedeae9f88c01298b0ba78f9bf284cc7269efe0093b7c505feaa"><div class="ttname"><a href="classv8_1_1CTypeInfo.html#aecb61a42625eacedeae9f88c01298b0ba78f9bf284cc7269efe0093b7c505feaa">v8::CTypeInfo::Type::kFloat64</a></div><div class="ttdeci">@ kFloat64</div></div>
+<div class="ttc" id="aclassv8_1_1CTypeInfo_html_afcc395e9cdf8040041dbbeb72054d338"><div class="ttname"><a href="classv8_1_1CTypeInfo.html#afcc395e9cdf8040041dbbeb72054d338">v8::CTypeInfo::GetSequenceType</a></div><div class="ttdeci">constexpr SequenceType GetSequenceType() const</div><div class="ttdef"><b>Definition</b> <a href="v8-fast-api-calls_8h_source.html#l00305">v8-fast-api-calls.h:305</a></div></div>
 <div class="ttc" id="aencoded-c-signature_8h_html"><div class="ttname"><a href="encoded-c-signature_8h.html">encoded-c-signature.h</a></div></div>
-<div class="ttc" id="alogging_8h_html"><div class="ttname"><a href="logging_8h.html">logging.h</a></div></div>
-<div class="ttc" id="alogging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00124">logging.h:124</a></div></div>
 <div class="ttc" id="anamespacev8_1_1base_1_1bits_html_a3e15b77414d0cf8a8d231ee130df2204"><div class="ttname"><a href="namespacev8_1_1base_1_1bits.html#a3e15b77414d0cf8a8d231ee130df2204">v8::base::bits::CountPopulation</a></div><div class="ttdeci">constexpr unsigned CountPopulation(T value)</div><div class="ttdef"><b>Definition</b> <a href="bits_8h_source.html#l00026">bits.h:26</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html"><div class="ttname"><a href="src_2base_2logging_8h.html">logging.h</a></div></div>
+<div class="ttc" id="asrc_2base_2logging_8h_html_a3e1cfef60e774a81f30eaddf26a3a274"><div class="ttname"><a href="src_2base_2logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a></div><div class="ttdeci">#define CHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="src_2base_2logging_8h_source.html#l00124">logging.h:124</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1EncodedCSignature_html_a0f28a6b29d9ca383ea926ca5065fdcb3"><div class="ttname"><a href="structv8_1_1internal_1_1EncodedCSignature.html#a0f28a6b29d9ca383ea926ca5065fdcb3">v8::internal::EncodedCSignature::SetFloat</a></div><div class="ttdeci">void SetFloat(int index)</div><div class="ttdef"><b>Definition</b> <a href="encoded-c-signature_8h_source.html#l00041">encoded-c-signature.h:41</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1EncodedCSignature_html_a2b73cc9aeb1fb3930e261c80a659d8db"><div class="ttname"><a href="structv8_1_1internal_1_1EncodedCSignature.html#a2b73cc9aeb1fb3930e261c80a659d8db">v8::internal::EncodedCSignature::bitfield_</a></div><div class="ttdeci">uint32_t bitfield_</div><div class="ttdef"><b>Definition</b> <a href="encoded-c-signature_8h_source.html#l00071">encoded-c-signature.h:71</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1EncodedCSignature_html_a3cfdf562fb1135f82aed4b9686957f8e"><div class="ttname"><a href="structv8_1_1internal_1_1EncodedCSignature.html#a3cfdf562fb1135f82aed4b9686957f8e">v8::internal::EncodedCSignature::SetReturnFloat32</a></div><div class="ttdeci">void SetReturnFloat32()</div><div class="ttdef"><b>Definition</b> <a href="encoded-c-signature_8h_source.html#l00049">encoded-c-signature.h:49</a></div></div>
@@ -160,11 +178,15 @@ $(function(){ initResizable(false); });
 <div class="ttc" id="astructv8_1_1internal_1_1EncodedCSignature_html_aa05fc14f15d6f0c35225361ff6fd3046"><div class="ttname"><a href="structv8_1_1internal_1_1EncodedCSignature.html#aa05fc14f15d6f0c35225361ff6fd3046">v8::internal::EncodedCSignature::parameter_count_</a></div><div class="ttdeci">int parameter_count_</div><div class="ttdef"><b>Definition</b> <a href="encoded-c-signature_8h_source.html#l00077">encoded-c-signature.h:77</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1EncodedCSignature_html_ad2dc003d64d9e5fb84b18f7e7cdd2970"><div class="ttname"><a href="structv8_1_1internal_1_1EncodedCSignature.html#ad2dc003d64d9e5fb84b18f7e7cdd2970">v8::internal::EncodedCSignature::EncodedCSignature</a></div><div class="ttdeci">EncodedCSignature()=default</div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1EncodedCSignature_html_add9f687a85ab2494651b64405ac5ace6"><div class="ttname"><a href="structv8_1_1internal_1_1EncodedCSignature.html#add9f687a85ab2494651b64405ac5ace6">v8::internal::EncodedCSignature::SetReturnFloat64</a></div><div class="ttdeci">void SetReturnFloat64()</div><div class="ttdef"><b>Definition</b> <a href="encoded-c-signature_8h_source.html#l00043">encoded-c-signature.h:43</a></div></div>
+<div class="ttc" id="av8-fast-api-calls_8h_html"><div class="ttname"><a href="v8-fast-api-calls_8h.html">v8-fast-api-calls.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-<!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 3 2025 08:18:28 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
-</small></address>
 </div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bd0755c95a42e835fb06f38bbeb1d6ed.html">execution</a></li><li class="navelem"><a class="el" href="encoded-c-signature_8cc.html">encoded-c-signature.cc</a></li>
+    <li class="footer">Generated on Thu Apr 3 2025 09:54:36 for v8 by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
+  </ul>
+</div>
 </body>
 </html>
