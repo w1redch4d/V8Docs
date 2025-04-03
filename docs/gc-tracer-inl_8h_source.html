@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/heap/gc-tracer-inl.h Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/gc-tracer-inl.h Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('gc-tracer-inl_8h_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('gc-tracer-inl_8h_source.html',''); initResizable(true)
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">gc-tracer-inl.h</div></div>
 </div><!--header-->
@@ -132,22 +125,22 @@ $(function(){initNavTree('gc-tracer-inl_8h_source.html',''); initResizable(true)
 <div class="foldopen" id="foldopen00027" data-start="{" data-end="}">
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a1feed3c9549c656d1a6c3e604371aa27">   27</a></span><a class="code hl_function" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a1feed3c9549c656d1a6c3e604371aa27">GCTracer::Scope::Scope</a>(<a class="code hl_class" href="classv8_1_1internal_1_1GCTracer.html">GCTracer</a>* tracer, <a class="code hl_enumeration" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6702624408f5af3d30559d5d02371891">ScopeId</a> scope, <a class="code hl_enumeration" href="namespacev8_1_1internal.html#a34c412e70714b6b814e60c4b6883e0ee">ThreadKind</a> thread_kind)</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    : tracer_(tracer),</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      scope_(scope),</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>      <a class="code hl_variable" href="debug-scopes_8cc.html#a532d503e9e6c20acff8920a6b0a0fd2e">scope_</a>(scope),</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      thread_kind_(thread_kind),</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      start_time_(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a>::TimeTicks::Now()) {</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(thread_kind_ == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a34c412e70714b6b814e60c4b6883e0eea04ed0d17680a76a1a906aed4ff47cd07">ThreadKind::kMain</a>,</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                 tracer_-&gt;heap_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Heap.html#a146bc22614c875c46edc5d5cf521d6d6">IsMainThread</a>());</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <a class="code hl_variable" href="module-compiler_8cc.html#a73e8444199dcb8227139e8dbaae11b8a">start_time_</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a>::TimeTicks::Now()) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a7d7c323869e318a666c9386d79ec80d9">thread_kind_</a> == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a34c412e70714b6b814e60c4b6883e0eea04ed0d17680a76a1a906aed4ff47cd07">ThreadKind::kMain</a>,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>                 <a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#ab00c9fd56378a0931ad1b99e7b640987">tracer_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer.html#ae674c990a8e82b6b0102910b814db34d">heap_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Heap.html#a146bc22614c875c46edc5d5cf521d6d6">IsMainThread</a>());</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#ifdef V8_RUNTIME_CALL_STATS</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keywordflow">if</span> (V8_LIKELY(!TracingFlags::is_runtime_stats_enabled())) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordflow">if</span> (thread_kind_ == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a34c412e70714b6b814e60c4b6883e0eea04ed0d17680a76a1a906aed4ff47cd07">ThreadKind::kMain</a>) {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    runtime_stats_ = tracer_-&gt;heap_-&gt;isolate_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#a267e21e771e72483e74bf9c13c9cd267">counters</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Counters.html#aab677cd86a32e68cb0d1bb4b5bf97520">runtime_call_stats</a>();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    runtime_stats_-&gt;Enter(&amp;timer_, GCTracer::RCSCounterFromScope(scope));</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a7d7c323869e318a666c9386d79ec80d9">thread_kind_</a> == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a34c412e70714b6b814e60c4b6883e0eea04ed0d17680a76a1a906aed4ff47cd07">ThreadKind::kMain</a>) {</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    runtime_stats_ = <a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#ab00c9fd56378a0931ad1b99e7b640987">tracer_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer.html#ae674c990a8e82b6b0102910b814db34d">heap_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1Heap.html#a2cd0c6366709d65b493eb14c1ea5e52a">isolate_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#a267e21e771e72483e74bf9c13c9cd267">counters</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Counters.html#aab677cd86a32e68cb0d1bb4b5bf97520">runtime_call_stats</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    runtime_stats_-&gt;Enter(&amp;<a class="code hl_variable" href="module-compiler_8cc.html#a1117b728b07a51697a39f72749a6d74b">timer_</a>, GCTracer::RCSCounterFromScope(scope));</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    runtime_call_stats_scope_.emplace(</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        tracer-&gt;worker_thread_runtime_call_stats());</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    runtime_stats_ = runtime_call_stats_scope_-&gt;Get();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    runtime_stats_-&gt;Enter(&amp;timer_, GCTracer::RCSCounterFromScope(scope));</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    runtime_stats_-&gt;Enter(&amp;<a class="code hl_variable" href="module-compiler_8cc.html#a1117b728b07a51697a39f72749a6d74b">timer_</a>, GCTracer::RCSCounterFromScope(scope));</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  }</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#endif  </span><span class="comment">// defined(V8_RUNTIME_CALL_STATS)</span></div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
@@ -155,13 +148,13 @@ $(function(){initNavTree('gc-tracer-inl_8h_source.html',''); initResizable(true)
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6ba49dbbdd654d00f0f7f2322d1e877a">   49</a></span><a class="code hl_function" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6ba49dbbdd654d00f0f7f2322d1e877a">GCTracer::Scope::~Scope</a>() {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1base_1_1TimeDelta.html">base::TimeDelta</a> duration = <a class="code hl_function" href="classv8_1_1base_1_1TimeTicks.html#ab0886bf0e84f1e1fcdc101021c2c0775">base::TimeTicks::Now</a>() - start_time_;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  tracer_-&gt;AddScopeSample(scope_, duration);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1base_1_1TimeDelta.html">base::TimeDelta</a> duration = <a class="code hl_function" href="classv8_1_1base_1_1TimeTicks.html#ab0886bf0e84f1e1fcdc101021c2c0775">base::TimeTicks::Now</a>() - <a class="code hl_variable" href="module-compiler_8cc.html#a73e8444199dcb8227139e8dbaae11b8a">start_time_</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  tracer_-&gt;AddScopeSample(<a class="code hl_variable" href="debug-scopes_8cc.html#a532d503e9e6c20acff8920a6b0a0fd2e">scope_</a>, duration);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <span class="keywordflow">if</span> (thread_kind_ == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a34c412e70714b6b814e60c4b6883e0eea04ed0d17680a76a1a906aed4ff47cd07">ThreadKind::kMain</a>) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">if</span> (scope_ == ScopeId::MC_INCREMENTAL ||</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        scope_ == ScopeId::MC_INCREMENTAL_START ||</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        scope_ == ScopeId::MC_INCREMENTAL_FINALIZE) {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="debug-scopes_8cc.html#a532d503e9e6c20acff8920a6b0a0fd2e">scope_</a> == ScopeId::MC_INCREMENTAL ||</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <a class="code hl_variable" href="debug-scopes_8cc.html#a532d503e9e6c20acff8920a6b0a0fd2e">scope_</a> == ScopeId::MC_INCREMENTAL_START ||</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_variable" href="debug-scopes_8cc.html#a532d503e9e6c20acff8920a6b0a0fd2e">scope_</a> == ScopeId::MC_INCREMENTAL_FINALIZE) {</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="keyword">auto</span>* long_task_stats =</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>          tracer_-&gt;heap_-&gt;isolate_-&gt;GetCurrentLongTaskStats();</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      long_task_stats-&gt;gc_full_incremental_wall_clock_duration_us +=</div>
@@ -171,7 +164,7 @@ $(function(){initNavTree('gc-tracer-inl_8h_source.html',''); initResizable(true)
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#ifdef V8_RUNTIME_CALL_STATS</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordflow">if</span> (V8_LIKELY(runtime_stats_ == <span class="keyword">nullptr</span>)) <span class="keywordflow">return</span>;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  runtime_stats_-&gt;Leave(&amp;timer_);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  runtime_stats_-&gt;Leave(&amp;<a class="code hl_variable" href="module-compiler_8cc.html#a1117b728b07a51697a39f72749a6d74b">timer_</a>);</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif  </span><span class="comment">// defined(V8_RUNTIME_CALL_STATS)</span></div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>}</div>
 </div>
@@ -223,39 +216,43 @@ $(function(){initNavTree('gc-tracer-inl_8h_source.html',''); initResizable(true)
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
 <div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1GCTracer.html#a92a304cc0ff8ef761bdbd6220c64dec0">  107</a></span><a class="code hl_typedef" href="namespacev8_1_1internal.html#a62a63b4034a372315aa7f0c8fa0aae7f">CollectionEpoch</a> <a class="code hl_function" href="classv8_1_1internal_1_1GCTracer.html#a92a304cc0ff8ef761bdbd6220c64dec0">GCTracer::CurrentEpoch</a>(<a class="code hl_enumeration" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6702624408f5af3d30559d5d02371891">Scope::ScopeId</a> <span class="keywordtype">id</span>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a777fda7c455a0df8b0df3c4a00fe6130">Scope::NeedsYoungEpoch</a>(<span class="keywordtype">id</span>) ? epoch_young_ : epoch_full_;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a777fda7c455a0df8b0df3c4a00fe6130">Scope::NeedsYoungEpoch</a>(<span class="keywordtype">id</span>) ? <a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer.html#ae3b408c7da141418334e7fe317b66849">epoch_young_</a> : <a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer.html#aa28de988fd5f917cdb871ad106470c58">epoch_full_</a>;</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>}</div>
 </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span> </div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="keywordtype">double</span> GCTracer::current_scope(<a class="code hl_enumeration" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6702624408f5af3d30559d5d02371891">Scope::ScopeId</a> <span class="keywordtype">id</span>)<span class="keyword"> const </span>{</div>
+<div class="foldopen" id="foldopen00111" data-start="{" data-end="}">
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1GCTracer.html#a867d4de69cbf3355137749d54256f339">  111</a></span><span class="keywordtype">double</span> <a class="code hl_function" href="classv8_1_1internal_1_1GCTracer.html#a867d4de69cbf3355137749d54256f339">GCTracer::current_scope</a>(<a class="code hl_enumeration" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6702624408f5af3d30559d5d02371891">Scope::ScopeId</a> <span class="keywordtype">id</span>)<span class="keyword"> const </span>{</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <a class="code hl_define" href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(Scope::NUMBER_OF_SCOPES, <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="keywordflow">return</span> current_.<a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer_1_1Event.html#aab1d055006b73cd3ffb19c6352cf56da">scopes</a>[id].<a class="code hl_function" href="classv8_1_1base_1_1TimeDelta.html#a494cc64764a7ba009367e2e8b64496de">InMillisecondsF</a>();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer.html#a0a3e90d2f50583fe894fb909beea6c1d">current_</a>.<a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer_1_1Event.html#aab1d055006b73cd3ffb19c6352cf56da">scopes</a>[id].<a class="code hl_function" href="classv8_1_1base_1_1TimeDelta.html#a494cc64764a7ba009367e2e8b64496de">InMillisecondsF</a>();</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>}</div>
+</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="keyword">constexpr</span> <span class="keyword">const</span> GCTracer::IncrementalInfos&amp; GCTracer::incremental_scope(</div>
+<div class="foldopen" id="foldopen00116" data-start="{" data-end="}">
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1GCTracer.html#ac8caed72e03a891ae6fd638be2d2e4bb">  116</a></span><span class="keyword">constexpr</span> <span class="keyword">const</span> <a class="code hl_struct" href="structv8_1_1internal_1_1GCTracer_1_1IncrementalInfos.html">GCTracer::IncrementalInfos</a>&amp; <a class="code hl_function" href="classv8_1_1internal_1_1GCTracer.html#ac8caed72e03a891ae6fd638be2d2e4bb">GCTracer::incremental_scope</a>(</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <a class="code hl_enumeration" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6702624408f5af3d30559d5d02371891">Scope::ScopeId</a> <span class="keywordtype">id</span>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">return</span> incremental_scopes_[<a class="code hl_function" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#ae4abffc0ac3d7764d71e579329f2e580">Scope::IncrementalOffset</a>(<span class="keywordtype">id</span>)];</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer.html#aeae64f66b9a92487991f68e9719366a1">incremental_scopes_</a>[<a class="code hl_function" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#ae4abffc0ac3d7764d71e579329f2e580">Scope::IncrementalOffset</a>(<span class="keywordtype">id</span>)];</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>}</div>
+</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="foldopen" id="foldopen00121" data-start="{" data-end="}">
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1GCTracer.html#a773a363ce74351c08ffba9eea46709b7">  121</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1GCTracer.html#a773a363ce74351c08ffba9eea46709b7">GCTracer::AddScopeSample</a>(<a class="code hl_enumeration" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6702624408f5af3d30559d5d02371891">Scope::ScopeId</a> <span class="keywordtype">id</span>, <a class="code hl_class" href="classv8_1_1base_1_1TimeDelta.html">base::TimeDelta</a> duration) {</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6702624408f5af3d30559d5d02371891a3ff9a89727c99c3021865c925b2317ae">Scope::FIRST_INCREMENTAL_SCOPE</a> &lt;= <span class="keywordtype">id</span> &amp;&amp;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>      <span class="keywordtype">id</span> &lt;= <a class="code hl_enumvalue" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6702624408f5af3d30559d5d02371891ae337ee1bb353e337181e631f28953391">Scope::LAST_INCREMENTAL_SCOPE</a>) {</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    incremental_scopes_[<a class="code hl_function" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#ae4abffc0ac3d7764d71e579329f2e580">Scope::IncrementalOffset</a>(<span class="keywordtype">id</span>)] += duration;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer.html#aeae64f66b9a92487991f68e9719366a1">incremental_scopes_</a>[<a class="code hl_function" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#ae4abffc0ac3d7764d71e579329f2e580">Scope::IncrementalOffset</a>(<span class="keywordtype">id</span>)] += duration;</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_enumvalue" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6702624408f5af3d30559d5d02371891a9e1c6152f6ae86d0b78c0aa95f342620">Scope::FIRST_BACKGROUND_SCOPE</a> &lt;= <span class="keywordtype">id</span> &amp;&amp;</div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>             <span class="keywordtype">id</span> &lt;= <a class="code hl_enumvalue" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6702624408f5af3d30559d5d02371891af58395b7187e37e13a8f11abbc6d1067">Scope::LAST_BACKGROUND_SCOPE</a>) {</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::SpinningMutexGuard</a> guard(&amp;background_scopes_mutex_);</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    background_scopes_[id] += duration;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::SpinningMutexGuard</a> guard(&amp;<a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer.html#a36f5c1768f425ffbde287b36bce4751b">background_scopes_mutex_</a>);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer.html#a4df0f149a6f8db418968180c2ade6c44">background_scopes_</a>[id] += duration;</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <a class="code hl_define" href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a>(Scope::NUMBER_OF_SCOPES, <span class="keywordtype">id</span>);</div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    current_.<a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer_1_1Event.html#aab1d055006b73cd3ffb19c6352cf56da">scopes</a>[id] += duration;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer.html#a0a3e90d2f50583fe894fb909beea6c1d">current_</a>.<a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer_1_1Event.html#aab1d055006b73cd3ffb19c6352cf56da">scopes</a>[id] += duration;</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  }</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
 </div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="preprocessor">#ifdef V8_RUNTIME_CALL_STATS</span></div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><a class="code hl_class" href="classv8_1_1internal_1_1WorkerThreadRuntimeCallStats.html">WorkerThreadRuntimeCallStats</a>* GCTracer::worker_thread_runtime_call_stats() {</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keywordflow">return</span> heap_-&gt;isolate_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#a267e21e771e72483e74bf9c13c9cd267">counters</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Counters.html#a9228f1087a48040d3cf0ee476d1919f3">worker_thread_runtime_call_stats</a>();</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="classv8_1_1internal_1_1GCTracer.html#ae674c990a8e82b6b0102910b814db34d">heap_</a>-&gt;<a class="code hl_variable" href="classv8_1_1internal_1_1Heap.html#a2cd0c6366709d65b493eb14c1ea5e52a">isolate_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#a267e21e771e72483e74bf9c13c9cd267">counters</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Counters.html#a9228f1087a48040d3cf0ee476d1919f3">worker_thread_runtime_call_stats</a>();</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>RuntimeCallCounterId GCTracer::RCSCounterFromScope(<a class="code hl_enumeration" href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6702624408f5af3d30559d5d02371891">Scope::ScopeId</a> <span class="keywordtype">id</span>) {</div>
@@ -290,14 +287,27 @@ $(function(){initNavTree('gc-tracer-inl_8h_source.html',''); initResizable(true)
 <div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_1_1Scope_html_a6702624408f5af3d30559d5d02371891af58395b7187e37e13a8f11abbc6d1067"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6702624408f5af3d30559d5d02371891af58395b7187e37e13a8f11abbc6d1067">v8::internal::GCTracer::Scope::LAST_BACKGROUND_SCOPE</a></div><div class="ttdeci">@ LAST_BACKGROUND_SCOPE</div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00136">gc-tracer.h:135</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_1_1Scope_html_a6ba49dbbdd654d00f0f7f2322d1e877a"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a6ba49dbbdd654d00f0f7f2322d1e877a">v8::internal::GCTracer::Scope::~Scope</a></div><div class="ttdeci">V8_INLINE ~Scope()</div><div class="ttdef"><b>Definition</b> <a href="#l00049">gc-tracer-inl.h:49</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_1_1Scope_html_a777fda7c455a0df8b0df3c4a00fe6130"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a777fda7c455a0df8b0df3c4a00fe6130">v8::internal::GCTracer::Scope::NeedsYoungEpoch</a></div><div class="ttdeci">static constexpr bool NeedsYoungEpoch(ScopeId id)</div><div class="ttdef"><b>Definition</b> <a href="#l00083">gc-tracer-inl.h:83</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_1_1Scope_html_a7d7c323869e318a666c9386d79ec80d9"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#a7d7c323869e318a666c9386d79ec80d9">v8::internal::GCTracer::Scope::thread_kind_</a></div><div class="ttdeci">const ThreadKind thread_kind_</div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00149">gc-tracer.h:149</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_1_1Scope_html_ab00c9fd56378a0931ad1b99e7b640987"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#ab00c9fd56378a0931ad1b99e7b640987">v8::internal::GCTracer::Scope::tracer_</a></div><div class="ttdeci">GCTracer *const tracer_</div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00147">gc-tracer.h:147</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_1_1Scope_html_ae4abffc0ac3d7764d71e579329f2e580"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#ae4abffc0ac3d7764d71e579329f2e580">v8::internal::GCTracer::Scope::IncrementalOffset</a></div><div class="ttdeci">static constexpr int IncrementalOffset(ScopeId id)</div><div class="ttdef"><b>Definition</b> <a href="#l00095">gc-tracer-inl.h:95</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_1_1Scope_html_aebc492832e6cb5dd3413b00a07e1b45c"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer_1_1Scope.html#aebc492832e6cb5dd3413b00a07e1b45c">v8::internal::GCTracer::Scope::Name</a></div><div class="ttdeci">static constexpr const char * Name(ScopeId id)</div><div class="ttdef"><b>Definition</b> <a href="#l00070">gc-tracer-inl.h:70</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_html"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer.html">v8::internal::GCTracer</a></div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00107">gc-tracer.h:107</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_html_a0a3e90d2f50583fe894fb909beea6c1d"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer.html#a0a3e90d2f50583fe894fb909beea6c1d">v8::internal::GCTracer::current_</a></div><div class="ttdeci">Event current_</div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00506">gc-tracer.h:506</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_html_a36f5c1768f425ffbde287b36bce4751b"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer.html#a36f5c1768f425ffbde287b36bce4751b">v8::internal::GCTracer::background_scopes_mutex_</a></div><div class="ttdeci">base::SpinningMutex background_scopes_mutex_</div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00597">gc-tracer.h:597</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_html_a4df0f149a6f8db418968180c2ade6c44"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer.html#a4df0f149a6f8db418968180c2ade6c44">v8::internal::GCTracer::background_scopes_</a></div><div class="ttdeci">base::TimeDelta background_scopes_[Scope::NUMBER_OF_SCOPES]</div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00598">gc-tracer.h:598</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_html_a773a363ce74351c08ffba9eea46709b7"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer.html#a773a363ce74351c08ffba9eea46709b7">v8::internal::GCTracer::AddScopeSample</a></div><div class="ttdeci">V8_INLINE void AddScopeSample(Scope::ScopeId id, base::TimeDelta duration)</div><div class="ttdef"><b>Definition</b> <a href="#l00121">gc-tracer-inl.h:121</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_html_a867d4de69cbf3355137749d54256f339"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer.html#a867d4de69cbf3355137749d54256f339">v8::internal::GCTracer::current_scope</a></div><div class="ttdeci">V8_INLINE double current_scope(Scope::ScopeId id) const</div><div class="ttdef"><b>Definition</b> <a href="#l00111">gc-tracer-inl.h:111</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_html_a92a304cc0ff8ef761bdbd6220c64dec0"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer.html#a92a304cc0ff8ef761bdbd6220c64dec0">v8::internal::GCTracer::CurrentEpoch</a></div><div class="ttdeci">V8_INLINE CollectionEpoch CurrentEpoch(Scope::ScopeId id) const</div><div class="ttdef"><b>Definition</b> <a href="#l00107">gc-tracer-inl.h:107</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_html_aa28de988fd5f917cdb871ad106470c58"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer.html#aa28de988fd5f917cdb871ad106470c58">v8::internal::GCTracer::epoch_full_</a></div><div class="ttdeci">CollectionEpoch epoch_full_</div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00517">gc-tracer.h:517</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_html_ac8caed72e03a891ae6fd638be2d2e4bb"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer.html#ac8caed72e03a891ae6fd638be2d2e4bb">v8::internal::GCTracer::incremental_scope</a></div><div class="ttdeci">V8_INLINE constexpr const IncrementalInfos &amp; incremental_scope(Scope::ScopeId id) const</div><div class="ttdef"><b>Definition</b> <a href="#l00116">gc-tracer-inl.h:116</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_html_ae3b408c7da141418334e7fe317b66849"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer.html#ae3b408c7da141418334e7fe317b66849">v8::internal::GCTracer::epoch_young_</a></div><div class="ttdeci">CollectionEpoch epoch_young_</div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00516">gc-tracer.h:516</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_html_ae674c990a8e82b6b0102910b814db34d"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer.html#ae674c990a8e82b6b0102910b814db34d">v8::internal::GCTracer::heap_</a></div><div class="ttdeci">Heap * heap_</div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00502">gc-tracer.h:502</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1GCTracer_html_aeae64f66b9a92487991f68e9719366a1"><div class="ttname"><a href="classv8_1_1internal_1_1GCTracer.html#aeae64f66b9a92487991f68e9719366a1">v8::internal::GCTracer::incremental_scopes_</a></div><div class="ttdeci">IncrementalInfos incremental_scopes_[Scope::NUMBER_OF_INCREMENTAL_SCOPES]</div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00531">gc-tracer.h:531</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a146bc22614c875c46edc5d5cf521d6d6"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a146bc22614c875c46edc5d5cf521d6d6">v8::internal::Heap::IsMainThread</a></div><div class="ttdeci">bool IsMainThread() const</div><div class="ttdef"><b>Definition</b> <a href="heap-inl_8h_source.html#l00061">heap-inl.h:61</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a2cd0c6366709d65b493eb14c1ea5e52a"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a2cd0c6366709d65b493eb14c1ea5e52a">v8::internal::Heap::isolate_</a></div><div class="ttdeci">Isolate * isolate_</div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l02055">heap.h:2055</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html_a267e21e771e72483e74bf9c13c9cd267"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html#a267e21e771e72483e74bf9c13c9cd267">v8::internal::Isolate::counters</a></div><div class="ttdeci">Counters * counters()</div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l01169">isolate.h:1169</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1WorkerThreadRuntimeCallStats_html"><div class="ttname"><a href="classv8_1_1internal_1_1WorkerThreadRuntimeCallStats.html">v8::internal::WorkerThreadRuntimeCallStats</a></div><div class="ttdef"><b>Definition</b> <a href="runtime-call-stats_8h_source.html#l00815">runtime-call-stats.h:815</a></div></div>
+<div class="ttc" id="adebug-scopes_8cc_html_a532d503e9e6c20acff8920a6b0a0fd2e"><div class="ttname"><a href="debug-scopes_8cc.html#a532d503e9e6c20acff8920a6b0a0fd2e">scope_</a></div><div class="ttdeci">DeclarationScope * scope_</div><div class="ttdef"><b>Definition</b> <a href="debug-scopes_8cc_source.html#l00121">debug-scopes.cc:121</a></div></div>
 <div class="ttc" id="aexecution_2isolate_8h_html"><div class="ttname"><a href="execution_2isolate_8h.html">isolate.h</a></div></div>
 <div class="ttc" id="agc-tracer_8h_html"><div class="ttname"><a href="gc-tracer_8h.html">gc-tracer.h</a></div></div>
 <div class="ttc" id="aheap-inl_8h_html"><div class="ttname"><a href="heap-inl_8h.html">heap-inl.h</a></div></div>
@@ -311,6 +321,8 @@ $(function(){initNavTree('gc-tracer-inl_8h_source.html',''); initResizable(true)
 <div class="ttc" id="alogging_8h_html_a986dc8f4ec6dcd0644efe205c13f8eb7"><div class="ttname"><a href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a></div><div class="ttdeci">#define DCHECK_NE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00486">logging.h:486</a></div></div>
 <div class="ttc" id="alogging_8h_html_aabec5c3b7a8628298a25f044dcf89c25"><div class="ttname"><a href="logging_8h.html#aabec5c3b7a8628298a25f044dcf89c25">DCHECK_GE</a></div><div class="ttdeci">#define DCHECK_GE(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00488">logging.h:488</a></div></div>
 <div class="ttc" id="alogging_8h_html_afd957f297df7e9ee36c46185e961485f"><div class="ttname"><a href="logging_8h.html#afd957f297df7e9ee36c46185e961485f">DCHECK_GT</a></div><div class="ttdeci">#define DCHECK_GT(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00487">logging.h:487</a></div></div>
+<div class="ttc" id="amodule-compiler_8cc_html_a1117b728b07a51697a39f72749a6d74b"><div class="ttname"><a href="module-compiler_8cc.html#a1117b728b07a51697a39f72749a6d74b">timer_</a></div><div class="ttdeci">base::ElapsedTimer timer_</div><div class="ttdef"><b>Definition</b> <a href="module-compiler_8cc_source.html#l01176">module-compiler.cc:1176</a></div></div>
+<div class="ttc" id="amodule-compiler_8cc_html_a73e8444199dcb8227139e8dbaae11b8a"><div class="ttname"><a href="module-compiler_8cc.html#a73e8444199dcb8227139e8dbaae11b8a">start_time_</a></div><div class="ttdeci">base::TimeTicks start_time_</div><div class="ttdef"><b>Definition</b> <a href="module-compiler_8cc_source.html#l02225">module-compiler.cc:2225</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a230181043ad093a4a820286d0ba5f08eaaac39f4a9457da6fbab6f63ef8320ca4"><div class="ttname"><a href="namespacev8_1_1internal.html#a230181043ad093a4a820286d0ba5f08eaaac39f4a9457da6fbab6f63ef8320ca4">v8::internal::TranslationOpcode::CASE</a></div><div class="ttdeci">CASE(name,...)</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a34c412e70714b6b814e60c4b6883e0ee"><div class="ttname"><a href="namespacev8_1_1internal.html#a34c412e70714b6b814e60c4b6883e0ee">v8::internal::ThreadKind</a></div><div class="ttdeci">ThreadKind</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01714">globals.h:1714</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a34c412e70714b6b814e60c4b6883e0eea04ed0d17680a76a1a906aed4ff47cd07"><div class="ttname"><a href="namespacev8_1_1internal.html#a34c412e70714b6b814e60c4b6883e0eea04ed0d17680a76a1a906aed4ff47cd07">v8::internal::ThreadKind::kMain</a></div><div class="ttdeci">@ kMain</div></div>
@@ -323,13 +335,10 @@ $(function(){initNavTree('gc-tracer-inl_8h_source.html',''); initResizable(true)
 <div class="ttc" id="astructv8_1_1internal_1_1GCTracer_1_1IncrementalInfos_html_a9ce8ed135af1df28054f2dbda27b8f0b"><div class="ttname"><a href="structv8_1_1internal_1_1GCTracer_1_1IncrementalInfos.html#a9ce8ed135af1df28054f2dbda27b8f0b">v8::internal::GCTracer::IncrementalInfos::steps</a></div><div class="ttdeci">int steps</div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00116">gc-tracer.h:116</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1GCTracer_1_1IncrementalInfos_html_ace6c12f6f1a94e5f4d425dcec02d700a"><div class="ttname"><a href="structv8_1_1internal_1_1GCTracer_1_1IncrementalInfos.html#ace6c12f6f1a94e5f4d425dcec02d700a">v8::internal::GCTracer::IncrementalInfos::longest_step</a></div><div class="ttdeci">base::TimeDelta longest_step</div><div class="ttdef"><b>Definition</b> <a href="gc-tracer_8h_source.html#l00115">gc-tracer.h:115</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="gc-tracer-inl_8h.html">gc-tracer-inl.h</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:31 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

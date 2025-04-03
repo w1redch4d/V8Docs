@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/heap/marking-inl.h Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/marking-inl.h Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('marking-inl_8h_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('marking-inl_8h_source.html',''); initResizable(true); 
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">marking-inl.h</div></div>
 </div><!--header-->
@@ -197,7 +190,7 @@ $(function(){initNavTree('marking-inl_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="keyword">template</span> &lt;AccessMode mode&gt;</div>
 <div class="foldopen" id="foldopen00079" data-start="{" data-end="}">
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MarkingBitmap.html#a96867193db25f5c08dc357cf42a80bdd">   79</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a96867193db25f5c08dc357cf42a80bdd">MarkingBitmap::Clear</a>() {</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  ClearCellRangeRelaxed&lt;mode&gt;(0, <a class="code hl_variable" href="classv8_1_1internal_1_1MarkingBitmap.html#a0187cb9cb48cd8b09946b76ddeb1c5dc">kCellsCount</a>);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a9a5063c149743480282401e829ba90ae">ClearCellRangeRelaxed&lt;mode&gt;</a>(0, <a class="code hl_variable" href="classv8_1_1internal_1_1MarkingBitmap.html#a0187cb9cb48cd8b09946b76ddeb1c5dc">kCellsCount</a>);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordflow">if</span> <span class="keyword">constexpr</span> (mode == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#ade1fa6c3f4fadb82080eb655686b6ebcaef668eed93582ab6729f8a7e679d4f4a">AccessMode::ATOMIC</a>) {</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// This fence prevents re-ordering of publishing stores with the mark-bit</span></div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="comment">// setting stores.</span></div>
@@ -221,13 +214,13 @@ $(function(){initNavTree('marking-inl_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  <span class="keywordflow">if</span> (start_cell_index != end_cell_index) {</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="comment">// Firstly, fill all bits from the start address to the end of the first</span></div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="comment">// cell with 1s.</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    SetBitsInCell&lt;mode&gt;(start_cell_index, ~(start_index_mask - 1));</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a9179096d02c9c51cd6aa980212a31c54">SetBitsInCell&lt;mode&gt;</a>(start_cell_index, ~(start_index_mask - 1));</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="comment">// Then fill all in between cells with 1s.</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    SetCellRangeRelaxed&lt;mode&gt;(start_cell_index + 1, end_cell_index);</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a8ab5738c732c1701b7b3c1880462a204">SetCellRangeRelaxed&lt;mode&gt;</a>(start_cell_index + 1, end_cell_index);</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">// Finally, fill all bits until the end address in the last cell with 1s.</span></div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    SetBitsInCell&lt;mode&gt;(end_cell_index, end_index_mask | (end_index_mask - 1));</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a9179096d02c9c51cd6aa980212a31c54">SetBitsInCell&lt;mode&gt;</a>(end_cell_index, end_index_mask | (end_index_mask - 1));</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    SetBitsInCell&lt;mode&gt;(start_cell_index,</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a9179096d02c9c51cd6aa980212a31c54">SetBitsInCell&lt;mode&gt;</a>(start_cell_index,</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>                        end_index_mask | (end_index_mask - start_index_mask));</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  }</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="keywordflow">if</span> (mode == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#ade1fa6c3f4fadb82080eb655686b6ebcaef668eed93582ab6729f8a7e679d4f4a">AccessMode::ATOMIC</a>) {</div>
@@ -253,14 +246,14 @@ $(function(){initNavTree('marking-inl_8h_source.html',''); initResizable(true); 
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keywordflow">if</span> (start_cell_index != end_cell_index) {</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="comment">// Firstly, fill all bits from the start address to the end of the first</span></div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">// cell with 0s.</span></div>
-<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    ClearBitsInCell&lt;mode&gt;(start_cell_index, ~(start_index_mask - 1));</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a4ad9131b22c30d70a4d6063d63dcd22b">ClearBitsInCell&lt;mode&gt;</a>(start_cell_index, ~(start_index_mask - 1));</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="comment">// Then fill all in between cells with 0s.</span></div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    ClearCellRangeRelaxed&lt;mode&gt;(start_cell_index + 1, end_cell_index);</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a9a5063c149743480282401e829ba90ae">ClearCellRangeRelaxed&lt;mode&gt;</a>(start_cell_index + 1, end_cell_index);</div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>    <span class="comment">// Finally, set all bits until the end address in the last cell with 0s.</span></div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    ClearBitsInCell&lt;mode&gt;(end_cell_index,</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a4ad9131b22c30d70a4d6063d63dcd22b">ClearBitsInCell&lt;mode&gt;</a>(end_cell_index,</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                          end_index_mask | (end_index_mask - 1));</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    ClearBitsInCell&lt;mode&gt;(start_cell_index,</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a4ad9131b22c30d70a4d6063d63dcd22b">ClearBitsInCell&lt;mode&gt;</a>(start_cell_index,</div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>                          end_index_mask | (end_index_mask - start_index_mask));</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>  }</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>  <span class="keywordflow">if</span> (mode == <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#ade1fa6c3f4fadb82080eb655686b6ebcaef668eed93582ab6729f8a7e679d4f4a">AccessMode::ATOMIC</a>) {</div>
@@ -272,18 +265,20 @@ $(function(){initNavTree('marking-inl_8h_source.html',''); initResizable(true); 
 </div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><a class="code hl_class" href="classv8_1_1internal_1_1MarkingBitmap.html">MarkingBitmap</a>* MarkingBitmap::FromAddress(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> address) {</div>
+<div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MarkingBitmap.html#a7c08445fbf45968439c78d17a9c898ca">  150</a></span><a class="code hl_class" href="classv8_1_1internal_1_1MarkingBitmap.html">MarkingBitmap</a>* <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a7c08445fbf45968439c78d17a9c898ca">MarkingBitmap::FromAddress</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> address) {</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> metadata_address =</div>
 <div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>      <a class="code hl_function" href="classv8_1_1internal_1_1MutablePageMetadata.html#a27e674b7d22c1799418a7fe14898e338">MutablePageMetadata::FromAddress</a>(address)-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunkMetadata.html#aaed37938f5c17d3b7b9f1974f180d809">MetadataAddress</a>();</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#ad8aa324505f60d8664ac8482593a9e70">Cast</a>(metadata_address + MutablePageMetadata::MarkingBitmapOffset());</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#ad8aa324505f60d8664ac8482593a9e70">Cast</a>(metadata_address + <a class="code hl_function" href="classv8_1_1internal_1_1MutablePageMetadata.html#a6a65402619071495a5f03a8b81644a83">MutablePageMetadata::MarkingBitmapOffset</a>());</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>}</div>
+</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span> </div>
 <div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment">// static</span></div>
 <div class="foldopen" id="foldopen00157" data-start="{" data-end="}">
 <div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MarkingBitmap.html#a60a4f28fab0331de5fb65cabcec247cc">  157</a></span><a class="code hl_class" href="classv8_1_1internal_1_1MarkBit.html">MarkBit</a> <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a60a4f28fab0331de5fb65cabcec247cc">MarkingBitmap::MarkBitFromAddress</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> address) {</div>
 <div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#ac7f71568eee595a022aec72fe5135a71">AddressToIndex</a>(address);</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>  <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a> = <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#adb034d89afd2d562f1cb5349dac7ce8e">IndexInCellMask</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>);</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <a class="code hl_typedef" href="classv8_1_1internal_1_1MarkBit.html#a7c3d863e3a593e5ea2b90a567b8f8b5d">MarkBit::CellType</a>* cell = FromAddress(address)-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#aad873ea8d8f477de21a3f1164e5105b4">cells</a>() + <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#ab1dff99b8cec375d571908838e0c0cf1">IndexToCell</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <a class="code hl_typedef" href="classv8_1_1internal_1_1MarkBit.html#a7c3d863e3a593e5ea2b90a567b8f8b5d">MarkBit::CellType</a>* cell = <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#a7c08445fbf45968439c78d17a9c898ca">FromAddress</a>(address)-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#aad873ea8d8f477de21a3f1164e5105b4">cells</a>() + <a class="code hl_function" href="classv8_1_1internal_1_1MarkingBitmap.html#ab1dff99b8cec375d571908838e0c0cf1">IndexToCell</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1MarkBit.html">MarkBit</a>(cell, <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>);</div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>}</div>
 </div>
@@ -513,12 +508,17 @@ $(function(){initNavTree('marking-inl_8h_source.html',''); initResizable(true); 
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a0187cb9cb48cd8b09946b76ddeb1c5dc"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a0187cb9cb48cd8b09946b76ddeb1c5dc">v8::internal::MarkingBitmap::kCellsCount</a></div><div class="ttdeci">static constexpr size_t kCellsCount</div><div class="ttdef"><b>Definition</b> <a href="marking_8h_source.html#l00109">marking.h:109</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a041663a6087cdd4b979b42dea3fe4230"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a041663a6087cdd4b979b42dea3fe4230">v8::internal::MarkingBitmap::MarkBitIndex</a></div><div class="ttdeci">uint32_t MarkBitIndex</div><div class="ttdef"><b>Definition</b> <a href="marking_8h_source.html#l00096">marking.h:96</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a09786a005d931a7dfa680af352e7fe54"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a09786a005d931a7dfa680af352e7fe54">v8::internal::MarkingBitmap::IndexToAddressOffset</a></div><div class="ttdeci">static V8_INLINE constexpr Address IndexToAddressOffset(MarkBitIndex index)</div><div class="ttdef"><b>Definition</b> <a href="marking_8h_source.html#l00123">marking.h:123</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a4ad9131b22c30d70a4d6063d63dcd22b"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a4ad9131b22c30d70a4d6063d63dcd22b">v8::internal::MarkingBitmap::ClearBitsInCell</a></div><div class="ttdeci">void ClearBitsInCell(uint32_t cell_index, MarkBit::CellType mask)</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a4c5e332a1057c85ef89c792e312cd711"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a4c5e332a1057c85ef89c792e312cd711">v8::internal::MarkingBitmap::FindPreviousValidObject</a></div><div class="ttdeci">static Address FindPreviousValidObject(const PageMetadata *page, Address maybe_inner_ptr)</div><div class="ttdef"><b>Definition</b> <a href="#l00178">marking-inl.h:178</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a5a3db383669ce4b6f2a28b618ab2e26f"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a5a3db383669ce4b6f2a28b618ab2e26f">v8::internal::MarkingBitmap::CellIndex</a></div><div class="ttdeci">uint32_t CellIndex</div><div class="ttdef"><b>Definition</b> <a href="marking_8h_source.html#l00095">marking.h:95</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a60a4f28fab0331de5fb65cabcec247cc"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a60a4f28fab0331de5fb65cabcec247cc">v8::internal::MarkingBitmap::MarkBitFromAddress</a></div><div class="ttdeci">static V8_INLINE MarkBit MarkBitFromAddress(Address address)</div><div class="ttdef"><b>Definition</b> <a href="#l00157">marking-inl.h:157</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a7c08445fbf45968439c78d17a9c898ca"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a7c08445fbf45968439c78d17a9c898ca">v8::internal::MarkingBitmap::FromAddress</a></div><div class="ttdeci">static V8_INLINE MarkingBitmap * FromAddress(Address address)</div><div class="ttdef"><b>Definition</b> <a href="#l00150">marking-inl.h:150</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a7f7f810c837f1cf007d31f3aef27091f"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a7f7f810c837f1cf007d31f3aef27091f">v8::internal::MarkingBitmap::kLength</a></div><div class="ttdeci">static constexpr size_t kLength</div><div class="ttdef"><b>Definition</b> <a href="marking_8h_source.html#l00107">marking.h:107</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a8ab5738c732c1701b7b3c1880462a204"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a8ab5738c732c1701b7b3c1880462a204">v8::internal::MarkingBitmap::SetCellRangeRelaxed</a></div><div class="ttdeci">void SetCellRangeRelaxed(uint32_t start_cell_index, uint32_t end_cell_index)</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a8bb5bf0ce90ffc4569e0bbd164dc1401"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a8bb5bf0ce90ffc4569e0bbd164dc1401">v8::internal::MarkingBitmap::IndexInCell</a></div><div class="ttdeci">static V8_INLINE constexpr uint32_t IndexInCell(MarkBitIndex index)</div><div class="ttdef"><b>Definition</b> <a href="marking_8h_source.html#l00131">marking.h:131</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a9179096d02c9c51cd6aa980212a31c54"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a9179096d02c9c51cd6aa980212a31c54">v8::internal::MarkingBitmap::SetBitsInCell</a></div><div class="ttdeci">void SetBitsInCell(uint32_t cell_index, MarkBit::CellType mask)</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a96867193db25f5c08dc357cf42a80bdd"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a96867193db25f5c08dc357cf42a80bdd">v8::internal::MarkingBitmap::Clear</a></div><div class="ttdeci">void Clear()</div><div class="ttdef"><b>Definition</b> <a href="#l00079">marking-inl.h:79</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_a9a5063c149743480282401e829ba90ae"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#a9a5063c149743480282401e829ba90ae">v8::internal::MarkingBitmap::ClearCellRangeRelaxed</a></div><div class="ttdeci">void ClearCellRangeRelaxed(uint32_t start_cell_index, uint32_t end_cell_index)</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_aa8ab665be2b5f50fb416292074401ac9"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#aa8ab665be2b5f50fb416292074401ac9">v8::internal::MarkingBitmap::LimitAddressToIndex</a></div><div class="ttdeci">static V8_INLINE constexpr MarkBitIndex LimitAddressToIndex(Address address)</div><div class="ttdef"><b>Definition</b> <a href="#l00171">marking-inl.h:171</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_aad873ea8d8f477de21a3f1164e5105b4"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#aad873ea8d8f477de21a3f1164e5105b4">v8::internal::MarkingBitmap::cells</a></div><div class="ttdeci">V8_INLINE CellType * cells()</div><div class="ttdef"><b>Definition</b> <a href="marking_8h_source.html#l00156">marking.h:156</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MarkingBitmap_html_ab035b813ebd4cc3c95d4d1c2f6fd00bf"><div class="ttname"><a href="classv8_1_1internal_1_1MarkingBitmap.html#ab035b813ebd4cc3c95d4d1c2f6fd00bf">v8::internal::MarkingBitmap::ClearRange</a></div><div class="ttdeci">void ClearRange(MarkBitIndex start_index, MarkBitIndex end_index)</div><div class="ttdef"><b>Definition</b> <a href="#l00119">marking-inl.h:119</a></div></div>
@@ -543,6 +543,7 @@ $(function(){initNavTree('marking-inl_8h_source.html',''); initResizable(true); 
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryChunk_html_abb4f5b4779cc364180c3d30f7af06ae5"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryChunk.html#abb4f5b4779cc364180c3d30f7af06ae5">v8::internal::MemoryChunk::FromHeapObject</a></div><div class="ttdeci">static V8_INLINE MemoryChunk * FromHeapObject(Tagged&lt; HeapObject &gt; object)</div><div class="ttdef"><b>Definition</b> <a href="memory-chunk_8h_source.html#l00176">memory-chunk.h:176</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryChunk_html_adebd5072ca38ed1f507e8a6bf683fddf"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryChunk.html#adebd5072ca38ed1f507e8a6bf683fddf">v8::internal::MemoryChunk::IsAligned</a></div><div class="ttdeci">static V8_INLINE constexpr bool IsAligned(Address address)</div><div class="ttdef"><b>Definition</b> <a href="memory-chunk_8h_source.html#l00312">memory-chunk.h:312</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MutablePageMetadata_html_a27e674b7d22c1799418a7fe14898e338"><div class="ttname"><a href="classv8_1_1internal_1_1MutablePageMetadata.html#a27e674b7d22c1799418a7fe14898e338">v8::internal::MutablePageMetadata::FromAddress</a></div><div class="ttdeci">static V8_INLINE MutablePageMetadata * FromAddress(Address a)</div><div class="ttdef"><b>Definition</b> <a href="mutable-page-metadata-inl_8h_source.html#l00016">mutable-page-metadata-inl.h:16</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MutablePageMetadata_html_a6a65402619071495a5f03a8b81644a83"><div class="ttname"><a href="classv8_1_1internal_1_1MutablePageMetadata.html#a6a65402619071495a5f03a8b81644a83">v8::internal::MutablePageMetadata::MarkingBitmapOffset</a></div><div class="ttdeci">static constexpr intptr_t MarkingBitmapOffset()</div><div class="ttdef"><b>Definition</b> <a href="mutable-page-metadata_8h_source.html#l00364">mutable-page-metadata.h:364</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1PageMetadata_html"><div class="ttname"><a href="classv8_1_1internal_1_1PageMetadata.html">v8::internal::PageMetadata</a></div><div class="ttdef"><b>Definition</b> <a href="page-metadata_8h_source.html#l00024">page-metadata.h:24</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1TaggedImpl_html_a04c1b715ba67f397a5a6607d054d9c4c"><div class="ttname"><a href="classv8_1_1internal_1_1TaggedImpl.html#a04c1b715ba67f397a5a6607d054d9c4c">v8::internal::TaggedImpl::ptr</a></div><div class="ttdeci">V8_INLINE constexpr StorageType ptr() const</div><div class="ttdef"><b>Definition</b> <a href="tagged-impl_8h_source.html#l00114">tagged-impl.h:114</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Tagged_html"><div class="ttname"><a href="classv8_1_1internal_1_1Tagged.html">v8::internal::Tagged</a></div><div class="ttdef"><b>Definition</b> <a href="waiter-queue-node_8h_source.html#l00022">waiter-queue-node.h:22</a></div></div>
@@ -581,13 +582,10 @@ $(function(){initNavTree('marking-inl_8h_source.html',''); initResizable(true); 
 <div class="ttc" id="astructv8_1_1internal_1_1MarkingHelper_html_ac5e90f6e0c7ddb83975856969a4ad03f"><div class="ttname"><a href="structv8_1_1internal_1_1MarkingHelper.html#ac5e90f6e0c7ddb83975856969a4ad03f">v8::internal::MarkingHelper::ShouldMarkObject</a></div><div class="ttdeci">static V8_INLINE std::optional&lt; WorklistTarget &gt; ShouldMarkObject(Heap *heap, Tagged&lt; HeapObject &gt; object)</div><div class="ttdef"><b>Definition</b> <a href="#l00269">marking-inl.h:269</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1MarkingHelper_html_ada9b37f4e5abfa1ad3569dcfabea4ff1"><div class="ttname"><a href="structv8_1_1internal_1_1MarkingHelper.html#ada9b37f4e5abfa1ad3569dcfabea4ff1">v8::internal::MarkingHelper::GetLivenessMode</a></div><div class="ttdeci">static V8_INLINE LivenessMode GetLivenessMode(Heap *heap, Tagged&lt; HeapObject &gt; object)</div><div class="ttdef"><b>Definition</b> <a href="#l00295">marking-inl.h:295</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="marking-inl_8h.html">marking-inl.h</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:33 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

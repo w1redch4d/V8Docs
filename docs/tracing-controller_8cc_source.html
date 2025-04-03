@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/libplatform/tracing/tracing-controller.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/libplatform/tracing/tracing-controller.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4ee34a990ac0cd4ceb75130c67cb9983.html">libplatform</a></li><li class="navelem"><a class="el" href="dir_18014baa66575281a5f6d486621c2057.html">tracing</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">tracing-controller.cc</div></div>
 </div><!--header-->
@@ -147,7 +140,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keyword">namespace </span>tracing {</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#if !defined(V8_USE_PERFETTO)</span></div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> kMaxCategoryGroups = 200;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="namespacev8_1_1platform_1_1tracing.html#a970b60b739f01e6c5331fe9760cf59f7">   47</a></span><span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a970b60b739f01e6c5331fe9760cf59f7">kMaxCategoryGroups</a> = 200;</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// Parallel arrays g_category_groups and g_category_group_enabled are separate</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">// so that a pointer to a member of g_category_group_enabled can be easily</span></div>
@@ -156,14 +149,14 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">// convert internally to determine the category name from the char enabled</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">// pointer.</span></div>
 <div class="foldopen" id="foldopen00055" data-start="{" data-end="};">
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="namespacev8_1_1platform_1_1tracing.html#ae233fb291b5b2b1f491edf33a56d3df9">   55</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#ae233fb291b5b2b1f491edf33a56d3df9">g_category_groups</a>[kMaxCategoryGroups] = {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="namespacev8_1_1platform_1_1tracing.html#ae233fb291b5b2b1f491edf33a56d3df9">   55</a></span><span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#ae233fb291b5b2b1f491edf33a56d3df9">g_category_groups</a>[<a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a970b60b739f01e6c5331fe9760cf59f7">kMaxCategoryGroups</a>] = {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="stringliteral">&quot;toplevel&quot;</span>,</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="stringliteral">&quot;tracing categories exhausted; must increase kMaxCategoryGroups&quot;</span>,</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="stringliteral">&quot;__metadata&quot;</span>};</div>
 </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">// The enabled flag is char instead of bool so that the API can be used from C.</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="namespacev8_1_1platform_1_1tracing.html#a0dd7ae611bce6273291fe4aed72ade32">   61</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a0dd7ae611bce6273291fe4aed72ade32">g_category_group_enabled</a>[kMaxCategoryGroups] = {0};</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="namespacev8_1_1platform_1_1tracing.html#a0dd7ae611bce6273291fe4aed72ade32">   61</a></span><span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a0dd7ae611bce6273291fe4aed72ade32">g_category_group_enabled</a>[<a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a970b60b739f01e6c5331fe9760cf59f7">kMaxCategoryGroups</a>] = {0};</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">// Indexes here have to match the g_category_groups array indexes above.</span></div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="namespacev8_1_1platform_1_1tracing.html#a4598331a3fd7530c6a4dfdf18eb14bee">   63</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a4598331a3fd7530c6a4dfdf18eb14bee">g_category_categories_exhausted</a> = 1;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">// Metadata category not used in V8.</span></div>
@@ -174,7 +167,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="namespacev8_1_1platform_1_1tracing.html#ae3b3ef6819d708dd7b3623dfe2c7f52c">   69</a></span><a class="code hl_typedef" href="namespacev8_1_1base.html#a01be57ce2e59dc0d5816703b58ce1e95">v8::base::AtomicWord</a> <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#ae3b3ef6819d708dd7b3623dfe2c7f52c">g_category_index</a> = <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a26d1fc5cb7668c12014bc9cb17622cab">g_num_builtin_categories</a>;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif  </span><span class="comment">// !defined(V8_USE_PERFETTO)</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>TracingController::TracingController() { mutex_.reset(<span class="keyword">new</span> <a class="code hl_class" href="classv8_1_1base_1_1Mutex.html">base::Mutex</a>()); }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>TracingController::TracingController() { <a class="code hl_variable" href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a>.reset(<span class="keyword">new</span> <a class="code hl_class" href="classv8_1_1base_1_1Mutex.html">base::Mutex</a>()); }</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>TracingController::~TracingController() {</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  StopTracing();</div>
@@ -182,7 +175,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#if !defined(V8_USE_PERFETTO)</span></div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  {</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// Free memory for category group names allocated via strdup.</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::MutexGuard</a> lock(mutex_.get());</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::MutexGuard</a> lock(<a class="code hl_variable" href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a>.get());</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#ae3b3ef6819d708dd7b3623dfe2c7f52c">g_category_index</a> - 1; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &gt;= <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a26d1fc5cb7668c12014bc9cb17622cab">g_num_builtin_categories</a>; --<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <span class="keyword">const</span> <span class="keywordtype">char</span>* group = <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#ae233fb291b5b2b1f491edf33a56d3df9">g_category_groups</a>[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>];</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#ae233fb291b5b2b1f491edf33a56d3df9">g_category_groups</a>[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>] = <span class="keyword">nullptr</span>;</div>
@@ -245,7 +238,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    TraceObject* trace_object = trace_buffer_-&gt;AddTraceEvent(&amp;handle);</div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordflow">if</span> (trace_object) {</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>      {</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(mutex_.get());</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(<a class="code hl_variable" href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a>.get());</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        trace_object-&gt;Initialize(phase, category_enabled_flag, name, scope, <span class="keywordtype">id</span>,</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                                 bind_id, num_args, arg_names, arg_types,</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>                                 arg_values, arg_convertables, <a class="code hl_function" href="flag-definitions_8h.html#af0832cf93cb1767d6e6e287bb7dcdf72">flags</a>, timestamp,</div>
@@ -276,7 +269,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="comment">// Check for out of bounds category pointers.</span></div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(category_ptr &gt;= category_begin &amp;&amp;</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>         category_ptr &lt; <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a0dd7ae611bce6273291fe4aed72ade32">g_category_group_enabled</a> +</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                                                    kMaxCategoryGroups));</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                                                    <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a970b60b739f01e6c5331fe9760cf59f7">kMaxCategoryGroups</a>));</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  uintptr_t category_index =</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>      (category_ptr - category_begin) / <span class="keyword">sizeof</span>(<a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a0dd7ae611bce6273291fe4aed72ade32">g_category_group_enabled</a>[0]);</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#ae233fb291b5b2b1f491edf33a56d3df9">g_category_groups</a>[category_index];</div>
@@ -315,7 +308,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="preprocessor">#ifndef V8_USE_PERFETTO</span></div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  std::unordered_set&lt;v8::TracingController::TraceStateObserver*&gt; observers_copy;</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  {</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(mutex_.get());</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(<a class="code hl_variable" href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a>.get());</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    UpdateCategoryGroupEnabledFlags();</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    observers_copy = observers_;</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  }</div>
@@ -334,7 +327,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  UpdateCategoryGroupEnabledFlags();</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>  std::unordered_set&lt;v8::TracingController::TraceStateObserver*&gt; observers_copy;</div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>  {</div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(mutex_.get());</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(<a class="code hl_variable" href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a>.get());</div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>    observers_copy = observers_;</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>  }</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>  <span class="keywordflow">for</span> (<span class="keyword">auto</span> o : observers_copy) {</div>
@@ -361,7 +354,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
 <div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>  {</div>
-<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(mutex_.get());</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(<a class="code hl_variable" href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a>.get());</div>
 <div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(trace_buffer_);</div>
 <div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    trace_buffer_-&gt;Flush();</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>  }</div>
@@ -412,7 +405,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>  }</div>
 <div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span> </div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>  <span class="comment">// Slow path. Grab the lock.</span></div>
-<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(mutex_.get());</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>  <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(<a class="code hl_variable" href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a>.get());</div>
 <div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span> </div>
 <div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>  <span class="comment">// Check the list again with lock in hand.</span></div>
 <div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>* category_group_enabled = <span class="keyword">nullptr</span>;</div>
@@ -425,8 +418,8 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
 <div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  <span class="comment">// Create a new category group.</span></div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>  <span class="comment">// Check that there is a slot for the new category_group.</span></div>
-<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(category_index &lt; kMaxCategoryGroups);</div>
-<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  <span class="keywordflow">if</span> (category_index &lt; kMaxCategoryGroups) {</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(category_index &lt; <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a970b60b739f01e6c5331fe9760cf59f7">kMaxCategoryGroups</a>);</div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>  <span class="keywordflow">if</span> (category_index &lt; <a class="code hl_variable" href="namespacev8_1_1platform_1_1tracing.html#a970b60b739f01e6c5331fe9760cf59f7">kMaxCategoryGroups</a>) {</div>
 <div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>    <span class="comment">// Don&#39;t hold on to the category_group pointer, so that we can create</span></div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="comment">// category groups with strings not known at compile time (this is</span></div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>    <span class="comment">// required by SetWatchEvent).</span></div>
@@ -450,7 +443,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span><span class="keywordtype">void</span> TracingController::AddTraceStateObserver(</div>
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>    v8::TracingController::TraceStateObserver* observer) {</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>  {</div>
-<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(mutex_.get());</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(<a class="code hl_variable" href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a>.get());</div>
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    observers_.insert(observer);</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>    <span class="keywordflow">if</span> (!recording_.load(std::memory_order_acquire)) <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>  }</div>
@@ -460,7 +453,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span> </div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span><span class="keywordtype">void</span> TracingController::RemoveTraceStateObserver(</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    v8::TracingController::TraceStateObserver* observer) {</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(mutex_.get());</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>  <a class="code hl_typedef" href="namespacev8_1_1base.html#ad14ce8f109f26adb0616a8b4d7d7968f">base::MutexGuard</a> lock(<a class="code hl_variable" href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a>.get());</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(observers_.find(observer) != observers_.end());</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>  observers_.erase(observer);</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>}</div>
@@ -476,6 +469,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="ttc" id="aclassv8_1_1base_1_1ThreadTicks_html_a8df52c0f32cab7a0984a3623ab769b40"><div class="ttname"><a href="classv8_1_1base_1_1ThreadTicks.html#a8df52c0f32cab7a0984a3623ab769b40">v8::base::ThreadTicks::Now</a></div><div class="ttdeci">static ThreadTicks Now()</div><div class="ttdef"><b>Definition</b> <a href="time_8cc_source.html#l00796">time.cc:796</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1TimeTicks_html_ab0886bf0e84f1e1fcdc101021c2c0775"><div class="ttname"><a href="classv8_1_1base_1_1TimeTicks.html#ab0886bf0e84f1e1fcdc101021c2c0775">v8::base::TimeTicks::Now</a></div><div class="ttdeci">static TimeTicks Now()</div><div class="ttdef"><b>Definition</b> <a href="time_8cc_source.html#l00735">time.cc:735</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1time__internal_1_1TimeBase_html_a427d0ae30364890f60329a209eb11a22"><div class="ttname"><a href="classv8_1_1base_1_1time__internal_1_1TimeBase.html#a427d0ae30364890f60329a209eb11a22">v8::base::time_internal::TimeBase::ToInternalValue</a></div><div class="ttdeci">int64_t ToInternalValue() const</div><div class="ttdef"><b>Definition</b> <a href="time_8h_source.html#l00287">time.h:287</a></div></div>
+<div class="ttc" id="acode-memory-access_8cc_html_a4cce83e2a3313f207c5d77da0b1e0198"><div class="ttname"><a href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a></div><div class="ttdeci">base::SpinningMutex &amp; mutex_</div><div class="ttdef"><b>Definition</b> <a href="code-memory-access_8cc_source.html#l00623">code-memory-access.cc:623</a></div></div>
 <div class="ttc" id="aflag-definitions_8h_html_af0832cf93cb1767d6e6e287bb7dcdf72"><div class="ttname"><a href="flag-definitions_8h.html#af0832cf93cb1767d6e6e287bb7dcdf72">flags</a></div><div class="ttdeci">other heap size flags(e.g. initial_heap_size) take precedence&quot;) DEFINE_SIZE_T( max_shared_heap_size</div></div>
 <div class="ttc" id="alogging_8h_html_a7b9f9517fedacc2a1a56c2bbb9d03688"><div class="ttname"><a href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a></div><div class="ttdeci">#define DCHECK_NOT_NULL(val)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00492">logging.h:492</a></div></div>
 <div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
@@ -491,6 +485,7 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="ttc" id="anamespacev8_1_1platform_1_1tracing_html_a0dd7ae611bce6273291fe4aed72ade32"><div class="ttname"><a href="namespacev8_1_1platform_1_1tracing.html#a0dd7ae611bce6273291fe4aed72ade32">v8::platform::tracing::g_category_group_enabled</a></div><div class="ttdeci">unsigned char g_category_group_enabled[kMaxCategoryGroups]</div><div class="ttdef"><b>Definition</b> <a href="#l00061">tracing-controller.cc:61</a></div></div>
 <div class="ttc" id="anamespacev8_1_1platform_1_1tracing_html_a26d1fc5cb7668c12014bc9cb17622cab"><div class="ttname"><a href="namespacev8_1_1platform_1_1tracing.html#a26d1fc5cb7668c12014bc9cb17622cab">v8::platform::tracing::g_num_builtin_categories</a></div><div class="ttdeci">const int g_num_builtin_categories</div><div class="ttdef"><b>Definition</b> <a href="#l00066">tracing-controller.cc:66</a></div></div>
 <div class="ttc" id="anamespacev8_1_1platform_1_1tracing_html_a4598331a3fd7530c6a4dfdf18eb14bee"><div class="ttname"><a href="namespacev8_1_1platform_1_1tracing.html#a4598331a3fd7530c6a4dfdf18eb14bee">v8::platform::tracing::g_category_categories_exhausted</a></div><div class="ttdeci">const int g_category_categories_exhausted</div><div class="ttdef"><b>Definition</b> <a href="#l00063">tracing-controller.cc:63</a></div></div>
+<div class="ttc" id="anamespacev8_1_1platform_1_1tracing_html_a970b60b739f01e6c5331fe9760cf59f7"><div class="ttname"><a href="namespacev8_1_1platform_1_1tracing.html#a970b60b739f01e6c5331fe9760cf59f7">v8::platform::tracing::kMaxCategoryGroups</a></div><div class="ttdeci">static const size_t kMaxCategoryGroups</div><div class="ttdef"><b>Definition</b> <a href="#l00047">tracing-controller.cc:47</a></div></div>
 <div class="ttc" id="anamespacev8_1_1platform_1_1tracing_html_ae233fb291b5b2b1f491edf33a56d3df9"><div class="ttname"><a href="namespacev8_1_1platform_1_1tracing.html#ae233fb291b5b2b1f491edf33a56d3df9">v8::platform::tracing::g_category_groups</a></div><div class="ttdeci">const char * g_category_groups[kMaxCategoryGroups]</div><div class="ttdef"><b>Definition</b> <a href="#l00055">tracing-controller.cc:55</a></div></div>
 <div class="ttc" id="anamespacev8_1_1platform_1_1tracing_html_ae3b3ef6819d708dd7b3623dfe2c7f52c"><div class="ttname"><a href="namespacev8_1_1platform_1_1tracing.html#ae3b3ef6819d708dd7b3623dfe2c7f52c">v8::platform::tracing::g_category_index</a></div><div class="ttdeci">v8::base::AtomicWord g_category_index</div><div class="ttdef"><b>Definition</b> <a href="#l00069">tracing-controller.cc:69</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
@@ -499,13 +494,10 @@ $(function(){initNavTree('tracing-controller_8cc_source.html',''); initResizable
 <div class="ttc" id="atime_8h_html"><div class="ttname"><a href="time_8h.html">time.h</a></div></div>
 <div class="ttc" id="atrace-event-listener_8h_html"><div class="ttname"><a href="trace-event-listener_8h.html">trace-event-listener.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4ee34a990ac0cd4ceb75130c67cb9983.html">libplatform</a></li><li class="navelem"><a class="el" href="dir_18014baa66575281a5f6d486621c2057.html">tracing</a></li><li class="navelem"><a class="el" href="tracing-controller_8cc.html">tracing-controller.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:40 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

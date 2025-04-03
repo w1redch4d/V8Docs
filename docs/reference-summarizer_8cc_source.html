@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/heap/reference-summarizer.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/reference-summarizer.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('reference-summarizer_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('reference-summarizer_8cc_source.html',''); initResizab
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">reference-summarizer.cc</div></div>
 </div><!--header-->
@@ -124,16 +117,16 @@ $(function(){initNavTree('reference-summarizer_8cc_source.html',''); initResizab
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">class </span>ReferenceSummarizerMarkingState final {</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> <span class="keyword">public</span>:</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keyword">explicit</span> ReferenceSummarizerMarkingState(<a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> <span class="keywordtype">object</span>)</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      : primary_object_(object),</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        local_marking_worklists_(&amp;marking_worklists_),</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        local_weak_objects_(&amp;weak_objects_) {}</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>      : <a class="code hl_variable" href="reference-summarizer_8cc.html#a8b301755269f221648bd6d6363c5d9cf">primary_object_</a>(object),</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        <a class="code hl_variable" href="reference-summarizer_8cc.html#a550f8ddc96494943005f4cd94ad09e01">local_marking_worklists_</a>(&amp;<a class="code hl_variable" href="reference-summarizer_8cc.html#a6b59d061d97640791278582e60080519">marking_worklists_</a>),</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <a class="code hl_variable" href="reference-summarizer_8cc.html#ac43ee55b6bbcdb47c11bbc7cb34fed02">local_weak_objects_</a>(&amp;<a class="code hl_variable" href="reference-summarizer_8cc.html#aba80221ce38fb63cd5bb867f9446f7a3">weak_objects_</a>) {}</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  ~ReferenceSummarizerMarkingState() {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment">// Clean up temporary state.</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    local_weak_objects_.Publish();</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    weak_objects_.Clear();</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    local_marking_worklists_.Publish();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    marking_worklists_.Clear();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_variable" href="reference-summarizer_8cc.html#ac43ee55b6bbcdb47c11bbc7cb34fed02">local_weak_objects_</a>.Publish();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_variable" href="reference-summarizer_8cc.html#aba80221ce38fb63cd5bb867f9446f7a3">weak_objects_</a>.Clear();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_variable" href="reference-summarizer_8cc.html#a550f8ddc96494943005f4cd94ad09e01">local_marking_worklists_</a>.Publish();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_variable" href="reference-summarizer_8cc.html#a6b59d061d97640791278582e60080519">marking_worklists_</a>.Clear();</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  }</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="comment">// Retrieves the references that were collected by this marker. This operation</span></div>
@@ -141,7 +134,7 @@ $(function(){initNavTree('reference-summarizer_8cc_source.html',''); initResizab
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="comment">// result.</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  ReferenceSummary DestructivelyRetrieveReferences() {</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    ReferenceSummary tmp = std::move(references_);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    references_.Clear();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_variable" href="reference-summarizer_8cc.html#a7b6429558408e103b8b7a00b56c30d58">references_</a>.Clear();</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="liftoff-compiler_8cc.html#a50f5e33a2768a7272ffd11d31200fdfe">tmp</a>;</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  }</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
@@ -153,7 +146,7 @@ $(function(){initNavTree('reference-summarizer_8cc_source.html',''); initResizab
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="comment">// Adds a retaining relationship found by the marking visitor.</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">void</span> AddStrongReferenceForReferenceSummarizer(<a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> host,</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                                                <a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> obj) {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    AddReference(host, obj, references_.strong_references());</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    AddReference(host, obj, <a class="code hl_variable" href="reference-summarizer_8cc.html#a7b6429558408e103b8b7a00b56c30d58">references_</a>.strong_references());</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  }</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="comment">// Adds a non-retaining weak reference found by the marking visitor. The value</span></div>
@@ -161,15 +154,15 @@ $(function(){initNavTree('reference-summarizer_8cc_source.html',''); initResizab
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="comment">// known to be strong without further information about the key.</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keywordtype">void</span> AddWeakReferenceForReferenceSummarizer(<a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> host,</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                                              <a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> obj) {</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    AddReference(host, obj, references_.weak_references());</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    AddReference(host, obj, <a class="code hl_variable" href="reference-summarizer_8cc.html#a7b6429558408e103b8b7a00b56c30d58">references_</a>.weak_references());</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="comment">// Other member functions, not part of the marking visitor contract:</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  MarkingWorklists::Local* local_marking_worklists() {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> &amp;local_marking_worklists_;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="reference-summarizer_8cc.html#a550f8ddc96494943005f4cd94ad09e01">local_marking_worklists_</a>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  }</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  WeakObjects::Local* local_weak_objects() { <span class="keywordflow">return</span> &amp;local_weak_objects_; }</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  WeakObjects::Local* local_weak_objects() { <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="reference-summarizer_8cc.html#ac43ee55b6bbcdb47c11bbc7cb34fed02">local_weak_objects_</a>; }</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="keywordtype">void</span> AddReference(<a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> host, <a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> obj,</div>
@@ -182,12 +175,12 @@ $(function(){initNavTree('reference-summarizer_8cc_source.html',''); initResizab
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  }</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  ReferenceSummary references_;</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> primary_object_;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  MarkingWorklists marking_worklists_;</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  MarkingWorklists::Local local_marking_worklists_;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  WeakObjects weak_objects_;</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  WeakObjects::Local local_weak_objects_;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="reference-summarizer_8cc.html#a7b6429558408e103b8b7a00b56c30d58">   82</a></span>  ReferenceSummary <a class="code hl_variable" href="reference-summarizer_8cc.html#a7b6429558408e103b8b7a00b56c30d58">references_</a>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="reference-summarizer_8cc.html#a8b301755269f221648bd6d6363c5d9cf">   83</a></span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> <a class="code hl_variable" href="reference-summarizer_8cc.html#a8b301755269f221648bd6d6363c5d9cf">primary_object_</a>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="reference-summarizer_8cc.html#a6b59d061d97640791278582e60080519">   84</a></span>  MarkingWorklists <a class="code hl_variable" href="reference-summarizer_8cc.html#a6b59d061d97640791278582e60080519">marking_worklists_</a>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="reference-summarizer_8cc.html#a550f8ddc96494943005f4cd94ad09e01">   85</a></span>  MarkingWorklists::Local <a class="code hl_variable" href="reference-summarizer_8cc.html#a550f8ddc96494943005f4cd94ad09e01">local_marking_worklists_</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="reference-summarizer_8cc.html#aba80221ce38fb63cd5bb867f9446f7a3">   86</a></span>  WeakObjects <a class="code hl_variable" href="reference-summarizer_8cc.html#aba80221ce38fb63cd5bb867f9446f7a3">weak_objects_</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="reference-summarizer_8cc.html#ac43ee55b6bbcdb47c11bbc7cb34fed02">   87</a></span>  WeakObjects::Local <a class="code hl_variable" href="reference-summarizer_8cc.html#ac43ee55b6bbcdb47c11bbc7cb34fed02">local_weak_objects_</a>;</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="keyword">class </span>ReferenceSummarizerMarkingVisitor</div>
@@ -200,7 +193,7 @@ $(function(){initNavTree('reference-summarizer_8cc_source.html',''); initResizab
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                           0 <span class="comment">/*mark_compact_epoch*/</span>, {} <span class="comment">/*code_flush_mode*/</span>,</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>                           <span class="keyword">true</span> <span class="comment">/*should_keep_ages_unchanged*/</span>,</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                           0 <span class="comment">/*code_flushing_increase*/</span>),</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        marking_state_(marking_state) {}</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <a class="code hl_variable" href="mark-compact_8cc.html#abd487a5a0c55e6011fa27068c35dfe31">marking_state_</a>(marking_state) {}</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TSlot&gt;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>  <span class="keywordtype">void</span> RecordSlot(<a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> <span class="keywordtype">object</span>, TSlot slot,</div>
@@ -211,18 +204,18 @@ $(function(){initNavTree('reference-summarizer_8cc_source.html',''); initResizab
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  V8_INLINE <span class="keywordtype">void</span> AddStrongReferenceForReferenceSummarizer(</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> host, <a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> obj) {</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    marking_state_-&gt;AddStrongReferenceForReferenceSummarizer(host, obj);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_variable" href="mark-compact_8cc.html#abd487a5a0c55e6011fa27068c35dfe31">marking_state_</a>-&gt;AddStrongReferenceForReferenceSummarizer(host, obj);</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  }</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  V8_INLINE <span class="keywordtype">void</span> AddWeakReferenceForReferenceSummarizer(</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>      <a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> host, <a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> obj) {</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    marking_state_-&gt;AddWeakReferenceForReferenceSummarizer(host, obj);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <a class="code hl_variable" href="mark-compact_8cc.html#abd487a5a0c55e6011fa27068c35dfe31">marking_state_</a>-&gt;AddWeakReferenceForReferenceSummarizer(host, obj);</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  }</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  <span class="keyword">constexpr</span> <span class="keywordtype">bool</span> CanUpdateValuesInHeap() { <span class="keywordflow">return</span> <span class="keyword">false</span>; }</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>  ReferenceSummarizerMarkingState* marking_state()<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">return</span> marking_state_;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="mark-compact_8cc.html#abd487a5a0c55e6011fa27068c35dfe31">marking_state_</a>;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  }</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="keywordtype">void</span> MarkPointerTableEntry(<a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> host,</div>
@@ -236,7 +229,7 @@ $(function(){initNavTree('reference-summarizer_8cc_source.html',''); initResizab
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                                 <a class="code hl_typedef" href="namespacev8_1_1internal.html#a5dcd96b54aa3ba80c6f5ca6ef51bf4d0">JSDispatchHandle</a> <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>)<span class="keyword"> override </span>{}</div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  ReferenceSummarizerMarkingState* marking_state_;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="reference-summarizer_8cc.html#ace10e813911be84421a544e931a6da6b">  136</a></span>  ReferenceSummarizerMarkingState* <a class="code hl_variable" href="mark-compact_8cc.html#abd487a5a0c55e6011fa27068c35dfe31">marking_state_</a>;</div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>};</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span> </div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>}  <span class="comment">// namespace</span></div>
@@ -264,6 +257,7 @@ $(function(){initNavTree('reference-summarizer_8cc_source.html',''); initResizab
 <div class="ttc" id="ajs-array-buffer-inl_8h_html"><div class="ttname"><a href="js-array-buffer-inl_8h.html">js-array-buffer-inl.h</a></div></div>
 <div class="ttc" id="aliftoff-compiler_8cc_html_a50f5e33a2768a7272ffd11d31200fdfe"><div class="ttname"><a href="liftoff-compiler_8cc.html#a50f5e33a2768a7272ffd11d31200fdfe">tmp</a></div><div class="ttdeci">Register tmp</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l07416">liftoff-compiler.cc:7416</a></div></div>
 <div class="ttc" id="amark-compact-inl_8h_html"><div class="ttname"><a href="mark-compact-inl_8h.html">mark-compact-inl.h</a></div></div>
+<div class="ttc" id="amark-compact_8cc_html_abd487a5a0c55e6011fa27068c35dfe31"><div class="ttname"><a href="mark-compact_8cc.html#abd487a5a0c55e6011fa27068c35dfe31">marking_state_</a></div><div class="ttdeci">NonAtomicMarkingState * marking_state_</div><div class="ttdef"><b>Definition</b> <a href="mark-compact_8cc_source.html#l05488">mark-compact.cc:5488</a></div></div>
 <div class="ttc" id="amarking-visitor-inl_8h_html"><div class="ttname"><a href="marking-visitor-inl_8h.html">marking-visitor-inl.h</a></div></div>
 <div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a4382c244e839ce16a4beafabd1c6bd1d"><div class="ttname"><a href="namespacev8_1_1internal.html#a4382c244e839ce16a4beafabd1c6bd1d">v8::internal::Tagged</a></div><div class="ttdeci">Tagged(T object) -&gt; Tagged&lt; T &gt;</div></div>
@@ -272,15 +266,18 @@ $(function(){initNavTree('reference-summarizer_8cc_source.html',''); initResizab
 <div class="ttc" id="anamespacev8_1_1internal_html_a5dcd96b54aa3ba80c6f5ca6ef51bf4d0"><div class="ttname"><a href="namespacev8_1_1internal.html#a5dcd96b54aa3ba80c6f5ca6ef51bf4d0">v8::internal::JSDispatchHandle</a></div><div class="ttdeci">base::StrongAlias&lt; JSDispatchHandleAliasTag, uint32_t &gt; JSDispatchHandle</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00549">globals.h:549</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ab9df0bf289155b5ae1d6da682adf1d6f"><div class="ttname"><a href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">v8::internal::handle</a></div><div class="ttdeci">V8_INLINE Handle&lt; T &gt; handle(Tagged&lt; T &gt; object, Isolate *isolate)</div><div class="ttdef"><b>Definition</b> <a href="handles-inl_8h_source.html#l00070">handles-inl.h:70</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="areference-summarizer_8cc_html_a550f8ddc96494943005f4cd94ad09e01"><div class="ttname"><a href="reference-summarizer_8cc.html#a550f8ddc96494943005f4cd94ad09e01">local_marking_worklists_</a></div><div class="ttdeci">MarkingWorklists::Local local_marking_worklists_</div><div class="ttdef"><b>Definition</b> <a href="#l00085">reference-summarizer.cc:85</a></div></div>
+<div class="ttc" id="areference-summarizer_8cc_html_a6b59d061d97640791278582e60080519"><div class="ttname"><a href="reference-summarizer_8cc.html#a6b59d061d97640791278582e60080519">marking_worklists_</a></div><div class="ttdeci">MarkingWorklists marking_worklists_</div><div class="ttdef"><b>Definition</b> <a href="#l00084">reference-summarizer.cc:84</a></div></div>
+<div class="ttc" id="areference-summarizer_8cc_html_a7b6429558408e103b8b7a00b56c30d58"><div class="ttname"><a href="reference-summarizer_8cc.html#a7b6429558408e103b8b7a00b56c30d58">references_</a></div><div class="ttdeci">ReferenceSummary references_</div><div class="ttdef"><b>Definition</b> <a href="#l00082">reference-summarizer.cc:82</a></div></div>
+<div class="ttc" id="areference-summarizer_8cc_html_a8b301755269f221648bd6d6363c5d9cf"><div class="ttname"><a href="reference-summarizer_8cc.html#a8b301755269f221648bd6d6363c5d9cf">primary_object_</a></div><div class="ttdeci">Tagged&lt; HeapObject &gt; primary_object_</div><div class="ttdef"><b>Definition</b> <a href="#l00083">reference-summarizer.cc:83</a></div></div>
+<div class="ttc" id="areference-summarizer_8cc_html_aba80221ce38fb63cd5bb867f9446f7a3"><div class="ttname"><a href="reference-summarizer_8cc.html#aba80221ce38fb63cd5bb867f9446f7a3">weak_objects_</a></div><div class="ttdeci">WeakObjects weak_objects_</div><div class="ttdef"><b>Definition</b> <a href="#l00086">reference-summarizer.cc:86</a></div></div>
+<div class="ttc" id="areference-summarizer_8cc_html_ac43ee55b6bbcdb47c11bbc7cb34fed02"><div class="ttname"><a href="reference-summarizer_8cc.html#ac43ee55b6bbcdb47c11bbc7cb34fed02">local_weak_objects_</a></div><div class="ttdeci">WeakObjects::Local local_weak_objects_</div><div class="ttdef"><b>Definition</b> <a href="#l00087">reference-summarizer.cc:87</a></div></div>
 <div class="ttc" id="areference-summarizer_8h_html"><div class="ttname"><a href="reference-summarizer_8h.html">reference-summarizer.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="reference-summarizer_8cc.html">reference-summarizer.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:35 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

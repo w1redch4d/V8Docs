@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/objects/js-atomics-synchronization-inl.h Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/objects/js-atomics-synchronization-inl.h Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">js-atomics-synchronization-inl.h</div></div>
 </div><!--header-->
@@ -140,7 +133,7 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <a class="code hl_function" href="classv8_1_1base_1_1AsAtomicImpl.html#a7d4a9ea0c0d495ee50668782992c067f">base::AsAtomic32::Relaxed_Store</a>(waiter_queue_head_handle_location(),</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                                  kNullExternalPointerHandle);</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <a class="code hl_function" href="classv8_1_1base_1_1AsAtomicImpl.html#a7d4a9ea0c0d495ee50668782992c067f">base::AsAtomicPointer::Relaxed_Store</a>(waiter_queue_head_location(), <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <a class="code hl_function" href="classv8_1_1base_1_1AsAtomicImpl.html#a7d4a9ea0c0d495ee50668782992c067f">base::AsAtomicPointer::Relaxed_Store</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSSynchronizationPrimitive.html#ac8d0fee3039e443cad11b286eb8b084b">waiter_queue_head_location</a>(), <span class="keyword">nullptr</span>);</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif  </span><span class="comment">// V8_COMPRESS_POINTERS</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>}</div>
 </div>
@@ -152,11 +145,13 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>ExternalPointerHandle*<span class="keyword">&gt;</span>(location);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>WaiterQueueNode** JSSynchronizationPrimitive::waiter_queue_head_location()<span class="keyword"></span></div>
+<div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSSynchronizationPrimitive.html#ac8d0fee3039e443cad11b286eb8b084b">   48</a></span><a class="code hl_class" href="classv8_1_1internal_1_1detail_1_1WaiterQueueNode.html">WaiterQueueNode</a>** <a class="code hl_function" href="classv8_1_1internal_1_1JSSynchronizationPrimitive.html#ac8d0fee3039e443cad11b286eb8b084b">JSSynchronizationPrimitive::waiter_queue_head_location</a>()<span class="keyword"></span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keyword">    const </span>{</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> location = field_address(kWaiterQueueHeadOffset);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span>WaiterQueueNode**<span class="keyword">&gt;</span>(location);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">return</span> <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classv8_1_1internal_1_1detail_1_1WaiterQueueNode.html">WaiterQueueNode</a>**<span class="keyword">&gt;</span>(location);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#endif  </span><span class="comment">// V8_COMPRESS_POINTERS</span></div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
@@ -178,7 +173,7 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                                                          kWaiterQueueNodeTag));</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordflow">return</span> waiter_head;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1base_1_1AsAtomicImpl.html#ae17a848e6e9140dda698d2f1395d6cff">base::AsAtomicPointer::Relaxed_Load</a>(waiter_queue_head_location());</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1base_1_1AsAtomicImpl.html#ae17a848e6e9140dda698d2f1395d6cff">base::AsAtomicPointer::Relaxed_Load</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSSynchronizationPrimitive.html#ac8d0fee3039e443cad11b286eb8b084b">waiter_queue_head_location</a>());</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif  </span><span class="comment">// V8_COMPRESS_POINTERS</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
 </div>
@@ -230,7 +225,7 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  }</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>  new_state = <a class="code hl_function" href="classv8_1_1base_1_1BitField.html#a836440ec0d749002215c3fb0dff554ef">HasWaitersField::update</a>(new_state, waiter_head);</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <a class="code hl_function" href="classv8_1_1base_1_1AsAtomicImpl.html#a7d4a9ea0c0d495ee50668782992c067f">base::AsAtomicPointer::Relaxed_Store</a>(waiter_queue_head_location(),</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  <a class="code hl_function" href="classv8_1_1base_1_1AsAtomicImpl.html#a7d4a9ea0c0d495ee50668782992c067f">base::AsAtomicPointer::Relaxed_Store</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSSynchronizationPrimitive.html#ac8d0fee3039e443cad11b286eb8b084b">waiter_queue_head_location</a>(),</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                                       waiter_head);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="preprocessor">#endif  </span><span class="comment">// V8_COMPRESS_POINTERS</span></div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="keywordflow">return</span> new_state;</div>
@@ -243,12 +238,12 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#a0aa0e7dd2ad04fa36445389d83be7880">  131</a></span><a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex.html">JSAtomicsMutex</a>::<a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">LockGuardBase</a>::<a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">LockGuardBase</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate,</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>                                             <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle</a>&lt;<a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsMutex.html">JSAtomicsMutex</a>&gt; <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>,</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                                             <span class="keywordtype">bool</span> locked)</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    : isolate_(isolate), mutex_(<a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>), locked_(locked) {}</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    : <a class="code hl_variable" href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a>(isolate), <a class="code hl_variable" href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a>(<a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>), locked_(locked) {}</div>
 </div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
 <div class="foldopen" id="foldopen00136" data-start="{" data-end="}">
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#ab89baa91804b7d151d3c3aebfc30eb70">  136</a></span><a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#ab89baa91804b7d151d3c3aebfc30eb70">JSAtomicsMutex::LockGuardBase::~LockGuardBase</a>() {</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keywordflow">if</span> (locked_) mutex_-&gt;Unlock(isolate_);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#a97c175c854a39cb9d1dbf3cb8e7b7cee">locked_</a>) <a class="code hl_variable" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#a27e7071b5a8bce93ff28951e1ca78948">mutex_</a>-&gt;Unlock(<a class="code hl_variable" href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#a7698bb968268860b7d334ef27dcc94e6">isolate_</a>);</div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}</div>
 </div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
@@ -268,7 +263,8 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">// static</span></div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="keyword">template</span> &lt;<span class="keyword">typename</span> LockSlowPathWrapper, <span class="keyword">typename</span>&gt;</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="keywordtype">bool</span> JSAtomicsMutex::LockImpl(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester,</div>
+<div class="foldopen" id="foldopen00152" data-start="{" data-end="}">
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a7c30bc0f07f0f6b70f597c469839d2c8">  152</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a7c30bc0f07f0f6b70f597c469839d2c8">JSAtomicsMutex::LockImpl</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester,</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>                              <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsMutex&gt;</a> <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>,</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>                              std::optional&lt;base::TimeDelta&gt; timeout,</div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>                              LockSlowPathWrapper slow_path_wrapper) {</div>
@@ -280,9 +276,9 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="comment">// The fast path is done using a weak CAS which may fail spuriously on</span></div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>  <span class="comment">// architectures with load-link/store-conditional instructions.</span></div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>  std::atomic&lt;StateT&gt;* state = <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>-&gt;AtomicStatePtr();</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  StateT expected = kUnlockedUncontended;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>  StateT expected = <a class="code hl_variable" href="classv8_1_1internal_1_1JSAtomicsMutex.html#adad82103a513c6ae370d4410446ac458">kUnlockedUncontended</a>;</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>  <span class="keywordtype">bool</span> locked;</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keywordflow">if</span> (V8_LIKELY(state-&gt;compare_exchange_weak(expected, kLockedUncontended,</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>  <span class="keywordflow">if</span> (V8_LIKELY(state-&gt;compare_exchange_weak(expected, <a class="code hl_variable" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a62731633096ae9f362bf7a31c1e31917">kLockedUncontended</a>,</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                                             std::memory_order_acquire,</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                                             std::memory_order_relaxed))) {</div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>    locked = <span class="keyword">true</span>;</div>
@@ -294,14 +290,15 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  }</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <span class="keywordflow">return</span> locked;</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>}</div>
+</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="comment">// static</span></div>
 <div class="foldopen" id="foldopen00180" data-start="{" data-end="}">
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a4ebd969fa7c9e3b1087beb252d802a15">  180</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a4ebd969fa7c9e3b1087beb252d802a15">JSAtomicsMutex::Lock</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* requester,</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>                          <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;JSAtomicsMutex&gt;</a> <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>,</div>
 <div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>                          std::optional&lt;base::TimeDelta&gt; timeout) {</div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="keywordflow">return</span> LockImpl(requester, <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>, timeout, [=](std::atomic&lt;StateT&gt;* state) {</div>
-<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">return</span> LockSlowPath(requester, <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>, state, timeout);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a7c30bc0f07f0f6b70f597c469839d2c8">LockImpl</a>(requester, <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>, timeout, [=](std::atomic&lt;StateT&gt;* state) {</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#ac8bf7d94723c5c295222dd8d4a166b31">LockSlowPath</a>(requester, <a class="code hl_variable" href="module-compiler_8cc.html#af6befd6f98ada7aaa0bb9f802cf519a9">mutex</a>, state, timeout);</div>
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>  });</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>}</div>
 </div>
@@ -309,11 +306,11 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
 <div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex.html#aaf1f431fef6b2704f0c784653b8b6ce0">  188</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#aaf1f431fef6b2704f0c784653b8b6ce0">JSAtomicsMutex::TryLock</a>() {</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>  <a class="code hl_class" href="classv8_1_1internal_1_1PerThreadAssertScopeEmpty.html">DisallowGarbageCollection</a> no_gc;</div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  StateT expected = kUnlockedUncontended;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>  StateT expected = <a class="code hl_variable" href="classv8_1_1internal_1_1JSAtomicsMutex.html#adad82103a513c6ae370d4410446ac458">kUnlockedUncontended</a>;</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>  <span class="keywordflow">if</span> (V8_LIKELY(AtomicStatePtr()-&gt;compare_exchange_strong(</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>          expected, kLockedUncontended, std::memory_order_acquire,</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>          expected, <a class="code hl_variable" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a62731633096ae9f362bf7a31c1e31917">kLockedUncontended</a>, std::memory_order_acquire,</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>          std::memory_order_relaxed))) {</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    SetCurrentThreadAsOwner();</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a0e568254dbb2720ce375e668f60d8bbf">SetCurrentThreadAsOwner</a>();</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>  }</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
@@ -330,15 +327,15 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>  <span class="comment">// not fail spuriously. This simplifies the slow path by guaranteeing that</span></div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>  <span class="comment">// there is at least one waiter to be notified.</span></div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#addaae4dc87fff8c1b4877fd9a888956e">IsCurrentThreadOwner</a>());</div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  ClearOwnerThread();</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a5eef16f892811b86a20bcbf5d2a9d40d">ClearOwnerThread</a>();</div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  std::atomic&lt;StateT&gt;* state = AtomicStatePtr();</div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  StateT expected = kLockedUncontended;</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <span class="keywordflow">if</span> (V8_LIKELY(state-&gt;compare_exchange_strong(expected, kUnlockedUncontended,</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  StateT expected = <a class="code hl_variable" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a62731633096ae9f362bf7a31c1e31917">kLockedUncontended</a>;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>  <span class="keywordflow">if</span> (V8_LIKELY(state-&gt;compare_exchange_strong(expected, <a class="code hl_variable" href="classv8_1_1internal_1_1JSAtomicsMutex.html#adad82103a513c6ae370d4410446ac458">kUnlockedUncontended</a>,</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>                                               std::memory_order_release,</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>                                               std::memory_order_relaxed))) {</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>  }</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  UnlockSlowPath(requester, state);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a68bd13c3c741e314efa4d6aa52242674">UnlockSlowPath</a>(requester, state);</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>}</div>
 </div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
@@ -351,30 +348,36 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
 <div class="foldopen" id="foldopen00225" data-start="{" data-end="}">
 <div class="line"><a id="l00225" name="l00225"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex.html#addaae4dc87fff8c1b4877fd9a888956e">  225</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#addaae4dc87fff8c1b4877fd9a888956e">JSAtomicsMutex::IsCurrentThreadOwner</a>() {</div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = AtomicOwnerThreadIdPtr()-&gt;load(std::memory_order_relaxed) ==</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>  <span class="keywordtype">bool</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a> = <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#ab2f7375f951c118766461226411be1ab">AtomicOwnerThreadIdPtr</a>()-&gt;load(std::memory_order_relaxed) ==</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>                <a class="code hl_function" href="classv8_1_1internal_1_1ThreadId.html#a81c60d3524b03db2f154b7f682e7796f">ThreadId::Current</a>().<a class="code hl_function" href="classv8_1_1internal_1_1ThreadId.html#a17819bcea6f016c8bb0615d52c8a52aa">ToInteger</a>();</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(<a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>, <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a8c80b0d6206c38b9f19ab2f0624c5def">IsHeld</a>());</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="jump-threading_8cc.html#a41f8c58d2c01bf65b8ee199c3f87fc80">result</a>;</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>}</div>
 </div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="keywordtype">void</span> JSAtomicsMutex::SetCurrentThreadAsOwner() {</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  AtomicOwnerThreadIdPtr()-&gt;store(<a class="code hl_function" href="classv8_1_1internal_1_1ThreadId.html#a81c60d3524b03db2f154b7f682e7796f">ThreadId::Current</a>().ToInteger(),</div>
+<div class="foldopen" id="foldopen00232" data-start="{" data-end="}">
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a0e568254dbb2720ce375e668f60d8bbf">  232</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a0e568254dbb2720ce375e668f60d8bbf">JSAtomicsMutex::SetCurrentThreadAsOwner</a>() {</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>  <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#ab2f7375f951c118766461226411be1ab">AtomicOwnerThreadIdPtr</a>()-&gt;store(<a class="code hl_function" href="classv8_1_1internal_1_1ThreadId.html#a81c60d3524b03db2f154b7f682e7796f">ThreadId::Current</a>().ToInteger(),</div>
 <div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>                                  std::memory_order_relaxed);</div>
 <div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>}</div>
+</div>
 <div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
-<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="keywordtype">void</span> JSAtomicsMutex::ClearOwnerThread() {</div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  AtomicOwnerThreadIdPtr()-&gt;store(<a class="code hl_function" href="classv8_1_1internal_1_1ThreadId.html#ade3e1a41d03f0f9f593c7d35c4cafa6c">ThreadId::Invalid</a>().ToInteger(),</div>
+<div class="foldopen" id="foldopen00237" data-start="{" data-end="}">
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a5eef16f892811b86a20bcbf5d2a9d40d">  237</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#a5eef16f892811b86a20bcbf5d2a9d40d">JSAtomicsMutex::ClearOwnerThread</a>() {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>  <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#ab2f7375f951c118766461226411be1ab">AtomicOwnerThreadIdPtr</a>()-&gt;store(<a class="code hl_function" href="classv8_1_1internal_1_1ThreadId.html#ade3e1a41d03f0f9f593c7d35c4cafa6c">ThreadId::Invalid</a>().ToInteger(),</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                                  std::memory_order_relaxed);</div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>}</div>
+</div>
 <div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span> </div>
-<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>std::atomic&lt;int32_t&gt;* JSAtomicsMutex::AtomicOwnerThreadIdPtr() {</div>
+<div class="foldopen" id="foldopen00242" data-start="{" data-end="}">
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1JSAtomicsMutex.html#ab2f7375f951c118766461226411be1ab">  242</a></span>std::atomic&lt;int32_t&gt;* <a class="code hl_function" href="classv8_1_1internal_1_1JSAtomicsMutex.html#ab2f7375f951c118766461226411be1ab">JSAtomicsMutex::AtomicOwnerThreadIdPtr</a>() {</div>
 <div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>  int32_t* owner_thread_id_ptr =</div>
 <div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>      <span class="keyword">reinterpret_cast&lt;</span>int32_t*<span class="keyword">&gt;</span>(field_address(kOwnerThreadIdOffset));</div>
 <div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1base.html#ad3d393880cec093684e12accb94dcd74">base::AsAtomicPtr</a>(owner_thread_id_ptr);</div>
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>}</div>
+</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
-<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><a class="code hl_define" href="object-macros_8h.html#a7ff94823eae742a8df4df792f0781cb7">TQ_OBJECT_CONSTRUCTORS_IMPL</a>(JSAtomicsCondition)</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><a class="code hl_define" href="object-macros_8h.html#a7ff94823eae742a8df4df792f0781cb7">TQ_OBJECT_CONSTRUCTORS_IMPL</a>(<a class="code hl_class" href="classv8_1_1internal_1_1JSAtomicsCondition.html">JSAtomicsCondition</a>)</div>
 <div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>}  <span class="comment">// namespace v8</span></div>
@@ -382,6 +385,7 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="preprocessor">#include &quot;<a class="code" href="object-macros-undef_8h.html">src/objects/object-macros-undef.h</a>&quot;</span></div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span> </div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="preprocessor">#endif  </span><span class="comment">// V8_OBJECTS_JS_ATOMICS_SYNCHRONIZATION_INL_H_</span></div>
+<div class="ttc" id="aapi-natives_8cc_html_a68072bca3fef7bd8b0d3cbac971cbf4b"><div class="ttname"><a href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a></div><div class="ttdeci">Isolate * isolate_</div><div class="ttdef"><b>Definition</b> <a href="api-natives_8cc_source.html#l00037">api-natives.cc:37</a></div></div>
 <div class="ttc" id="aassert-scope_8h_html"><div class="ttname"><a href="assert-scope_8h.html">assert-scope.h</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1AsAtomicImpl_html_a34e2a63266f7f9ad03907c218e97eb47"><div class="ttname"><a href="classv8_1_1base_1_1AsAtomicImpl.html#a34e2a63266f7f9ad03907c218e97eb47">v8::base::AsAtomicImpl::Release_Store</a></div><div class="ttdeci">static void Release_Store(T *addr, typename std::remove_reference&lt; T &gt;::type new_value)</div><div class="ttdef"><b>Definition</b> <a href="atomic-utils_8h_source.html#l00100">atomic-utils.h:100</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1AsAtomicImpl_html_a7d4a9ea0c0d495ee50668782992c067f"><div class="ttname"><a href="classv8_1_1base_1_1AsAtomicImpl.html#a7d4a9ea0c0d495ee50668782992c067f">v8::base::AsAtomicImpl::Relaxed_Store</a></div><div class="ttdeci">static void Relaxed_Store(T *addr, typename std::remove_reference&lt; T &gt;::type new_value)</div><div class="ttdef"><b>Definition</b> <a href="atomic-utils_8h_source.html#l00108">atomic-utils.h:108</a></div></div>
@@ -390,19 +394,32 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="ttc" id="aclassv8_1_1base_1_1BitField_html_a836440ec0d749002215c3fb0dff554ef"><div class="ttname"><a href="classv8_1_1base_1_1BitField.html#a836440ec0d749002215c3fb0dff554ef">v8::base::BitField::update</a></div><div class="ttdeci">static V8_NODISCARD constexpr U update(U previous, T value)</div><div class="ttdef"><b>Definition</b> <a href="bit-field_8h_source.html#l00061">bit-field.h:61</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1DirectHandle_html"><div class="ttname"><a href="classv8_1_1internal_1_1DirectHandle.html">v8::internal::DirectHandle</a></div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00643">handles.h:652</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html">v8::internal::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l00575">isolate.h:575</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsCondition_html"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsCondition.html">v8::internal::JSAtomicsCondition</a></div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8h_source.html#l00400">js-atomics-synchronization.h:402</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase_html"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html">v8::internal::JSAtomicsMutex::LockGuardBase</a></div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8h_source.html#l00180">js-atomics-synchronization.h:180</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase_html_a27e7071b5a8bce93ff28951e1ca78948"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#a27e7071b5a8bce93ff28951e1ca78948">v8::internal::JSAtomicsMutex::LockGuardBase::mutex_</a></div><div class="ttdeci">DirectHandle&lt; JSAtomicsMutex &gt; mutex_</div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8h_source.html#l00193">js-atomics-synchronization.h:193</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase_html_a7698bb968268860b7d334ef27dcc94e6"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#a7698bb968268860b7d334ef27dcc94e6">v8::internal::JSAtomicsMutex::LockGuardBase::isolate_</a></div><div class="ttdeci">Isolate * isolate_</div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8h_source.html#l00192">js-atomics-synchronization.h:192</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase_html_a97c175c854a39cb9d1dbf3cb8e7b7cee"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#a97c175c854a39cb9d1dbf3cb8e7b7cee">v8::internal::JSAtomicsMutex::LockGuardBase::locked_</a></div><div class="ttdeci">bool locked_</div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8h_source.html#l00194">js-atomics-synchronization.h:194</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase_html_ab89baa91804b7d151d3c3aebfc30eb70"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuardBase.html#ab89baa91804b7d151d3c3aebfc30eb70">v8::internal::JSAtomicsMutex::LockGuardBase::~LockGuardBase</a></div><div class="ttdeci">~LockGuardBase()</div><div class="ttdef"><b>Definition</b> <a href="#l00136">js-atomics-synchronization-inl.h:136</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuard_html_af27333502ad202797bb6da213aaffd94"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex_1_1LockGuard.html#af27333502ad202797bb6da213aaffd94">v8::internal::JSAtomicsMutex::LockGuard::LockGuard</a></div><div class="ttdeci">LockGuard(Isolate *isolate, DirectHandle&lt; JSAtomicsMutex &gt; mutex, std::optional&lt; base::TimeDelta &gt; timeout=std::nullopt)</div><div class="ttdef"><b>Definition</b> <a href="#l00140">js-atomics-synchronization-inl.h:140</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_1_1TryLockGuard_html_a84546e9572c4da0ce75265d0e4310ab4"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex_1_1TryLockGuard.html#a84546e9572c4da0ce75265d0e4310ab4">v8::internal::JSAtomicsMutex::TryLockGuard::TryLockGuard</a></div><div class="ttdeci">TryLockGuard(Isolate *isolate, DirectHandle&lt; JSAtomicsMutex &gt; mutex)</div><div class="ttdef"><b>Definition</b> <a href="#l00146">js-atomics-synchronization-inl.h:146</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html">v8::internal::JSAtomicsMutex</a></div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8h_source.html#l00173">js-atomics-synchronization.h:175</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_a0e568254dbb2720ce375e668f60d8bbf"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#a0e568254dbb2720ce375e668f60d8bbf">v8::internal::JSAtomicsMutex::SetCurrentThreadAsOwner</a></div><div class="ttdeci">void SetCurrentThreadAsOwner()</div><div class="ttdef"><b>Definition</b> <a href="#l00232">js-atomics-synchronization-inl.h:232</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_a4ebd969fa7c9e3b1087beb252d802a15"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#a4ebd969fa7c9e3b1087beb252d802a15">v8::internal::JSAtomicsMutex::Lock</a></div><div class="ttdeci">static bool Lock(Isolate *requester, DirectHandle&lt; JSAtomicsMutex &gt; mutex, std::optional&lt; base::TimeDelta &gt; timeout=std::nullopt)</div><div class="ttdef"><b>Definition</b> <a href="#l00180">js-atomics-synchronization-inl.h:180</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_a5eef16f892811b86a20bcbf5d2a9d40d"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#a5eef16f892811b86a20bcbf5d2a9d40d">v8::internal::JSAtomicsMutex::ClearOwnerThread</a></div><div class="ttdeci">void ClearOwnerThread()</div><div class="ttdef"><b>Definition</b> <a href="#l00237">js-atomics-synchronization-inl.h:237</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_a62731633096ae9f362bf7a31c1e31917"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#a62731633096ae9f362bf7a31c1e31917">v8::internal::JSAtomicsMutex::kLockedUncontended</a></div><div class="ttdeci">static constexpr StateT kLockedUncontended</div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8h_source.html#l00304">js-atomics-synchronization.h:304</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_a68bd13c3c741e314efa4d6aa52242674"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#a68bd13c3c741e314efa4d6aa52242674">v8::internal::JSAtomicsMutex::UnlockSlowPath</a></div><div class="ttdeci">V8_EXPORT_PRIVATE void UnlockSlowPath(Isolate *requester, std::atomic&lt; StateT &gt; *state)</div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8cc_source.html#l00780">js-atomics-synchronization.cc:780</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_a7c30bc0f07f0f6b70f597c469839d2c8"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#a7c30bc0f07f0f6b70f597c469839d2c8">v8::internal::JSAtomicsMutex::LockImpl</a></div><div class="ttdeci">static bool LockImpl(Isolate *requester, DirectHandle&lt; JSAtomicsMutex &gt; mutex, std::optional&lt; base::TimeDelta &gt; timeout, LockSlowPathWrapper slow_path_wrapper)</div><div class="ttdef"><b>Definition</b> <a href="#l00152">js-atomics-synchronization-inl.h:152</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_a8c80b0d6206c38b9f19ab2f0624c5def"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#a8c80b0d6206c38b9f19ab2f0624c5def">v8::internal::JSAtomicsMutex::IsHeld</a></div><div class="ttdeci">bool IsHeld()</div><div class="ttdef"><b>Definition</b> <a href="#l00220">js-atomics-synchronization-inl.h:220</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_aaa58ad7796019bb3edcfa72926a01673"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#aaa58ad7796019bb3edcfa72926a01673">v8::internal::JSAtomicsMutex::Unlock</a></div><div class="ttdeci">void Unlock(Isolate *requester)</div><div class="ttdef"><b>Definition</b> <a href="#l00200">js-atomics-synchronization-inl.h:200</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_aaf1f431fef6b2704f0c784653b8b6ce0"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#aaf1f431fef6b2704f0c784653b8b6ce0">v8::internal::JSAtomicsMutex::TryLock</a></div><div class="ttdeci">V8_WARN_UNUSED_RESULT bool TryLock()</div><div class="ttdef"><b>Definition</b> <a href="#l00188">js-atomics-synchronization-inl.h:188</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_ab2f7375f951c118766461226411be1ab"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#ab2f7375f951c118766461226411be1ab">v8::internal::JSAtomicsMutex::AtomicOwnerThreadIdPtr</a></div><div class="ttdeci">std::atomic&lt; int32_t &gt; * AtomicOwnerThreadIdPtr()</div><div class="ttdef"><b>Definition</b> <a href="#l00242">js-atomics-synchronization-inl.h:242</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_ac8bf7d94723c5c295222dd8d4a166b31"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#ac8bf7d94723c5c295222dd8d4a166b31">v8::internal::JSAtomicsMutex::LockSlowPath</a></div><div class="ttdeci">static V8_EXPORT_PRIVATE bool LockSlowPath(Isolate *requester, DirectHandle&lt; JSAtomicsMutex &gt; mutex, std::atomic&lt; StateT &gt; *state, std::optional&lt; base::TimeDelta &gt; timeout)</div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8cc_source.html#l00736">js-atomics-synchronization.cc:736</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_adad82103a513c6ae370d4410446ac458"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#adad82103a513c6ae370d4410446ac458">v8::internal::JSAtomicsMutex::kUnlockedUncontended</a></div><div class="ttdeci">static constexpr StateT kUnlockedUncontended</div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8h_source.html#l00303">js-atomics-synchronization.h:303</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSAtomicsMutex_html_addaae4dc87fff8c1b4877fd9a888956e"><div class="ttname"><a href="classv8_1_1internal_1_1JSAtomicsMutex.html#addaae4dc87fff8c1b4877fd9a888956e">v8::internal::JSAtomicsMutex::IsCurrentThreadOwner</a></div><div class="ttdeci">bool IsCurrentThreadOwner()</div><div class="ttdef"><b>Definition</b> <a href="#l00225">js-atomics-synchronization-inl.h:225</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSSynchronizationPrimitive_html_a1e0bfb34688a5c1c54829b9e026cec48"><div class="ttname"><a href="classv8_1_1internal_1_1JSSynchronizationPrimitive.html#a1e0bfb34688a5c1c54829b9e026cec48">v8::internal::JSSynchronizationPrimitive::DestructivelyGetWaiterQueueHead</a></div><div class="ttdeci">WaiterQueueNode * DestructivelyGetWaiterQueueHead(Isolate *requester)</div><div class="ttdef"><b>Definition</b> <a href="#l00055">js-atomics-synchronization-inl.h:55</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSSynchronizationPrimitive_html_a392a807d75814493c8814ad080a44e48"><div class="ttname"><a href="classv8_1_1internal_1_1JSSynchronizationPrimitive.html#a392a807d75814493c8814ad080a44e48">v8::internal::JSSynchronizationPrimitive::SetNullWaiterQueueHead</a></div><div class="ttdeci">void SetNullWaiterQueueHead()</div><div class="ttdef"><b>Definition</b> <a href="#l00032">js-atomics-synchronization-inl.h:32</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSSynchronizationPrimitive_html_abfd689cf34aba0faf209af049f587453"><div class="ttname"><a href="classv8_1_1internal_1_1JSSynchronizationPrimitive.html#abfd689cf34aba0faf209af049f587453">v8::internal::JSSynchronizationPrimitive::StateT</a></div><div class="ttdeci">uint32_t StateT</div><div class="ttdef"><b>Definition</b> <a href="js-atomics-synchronization_8h_source.html#l00058">js-atomics-synchronization.h:58</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1JSSynchronizationPrimitive_html_ac8d0fee3039e443cad11b286eb8b084b"><div class="ttname"><a href="classv8_1_1internal_1_1JSSynchronizationPrimitive.html#ac8d0fee3039e443cad11b286eb8b084b">v8::internal::JSSynchronizationPrimitive::waiter_queue_head_location</a></div><div class="ttdeci">WaiterQueueNode ** waiter_queue_head_location() const</div><div class="ttdef"><b>Definition</b> <a href="#l00048">js-atomics-synchronization-inl.h:48</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSSynchronizationPrimitive_html_add100aa9ee43dcbf5e3c7f06bc526144"><div class="ttname"><a href="classv8_1_1internal_1_1JSSynchronizationPrimitive.html#add100aa9ee43dcbf5e3c7f06bc526144">v8::internal::JSSynchronizationPrimitive::SetWaiterQueueHead</a></div><div class="ttdeci">StateT SetWaiterQueueHead(Isolate *requester, WaiterQueueNode *waiter_head, StateT new_state)</div><div class="ttdef"><b>Definition</b> <a href="#l00078">js-atomics-synchronization-inl.h:78</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1JSSynchronizationPrimitive_html_ae398ad3d744727552b1d59f725cf9bbe"><div class="ttname"><a href="classv8_1_1internal_1_1JSSynchronizationPrimitive.html#ae398ad3d744727552b1d59f725cf9bbe">v8::internal::JSSynchronizationPrimitive::AtomicStatePtr</a></div><div class="ttdeci">std::atomic&lt; StateT &gt; * AtomicStatePtr()</div><div class="ttdef"><b>Definition</b> <a href="#l00026">js-atomics-synchronization-inl.h:26</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1PerThreadAssertScopeEmpty_html"><div class="ttname"><a href="classv8_1_1internal_1_1PerThreadAssertScopeEmpty.html">v8::internal::PerThreadAssertScopeEmpty&lt; kAllow, kTypes... &gt;</a></div></div>
@@ -410,6 +427,7 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="ttc" id="aclassv8_1_1internal_1_1ThreadId_html_a81c60d3524b03db2f154b7f682e7796f"><div class="ttname"><a href="classv8_1_1internal_1_1ThreadId.html#a81c60d3524b03db2f154b7f682e7796f">v8::internal::ThreadId::Current</a></div><div class="ttdeci">static ThreadId Current()</div><div class="ttdef"><b>Definition</b> <a href="thread-id_8h_source.html#l00032">thread-id.h:32</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1ThreadId_html_ade3e1a41d03f0f9f593c7d35c4cafa6c"><div class="ttname"><a href="classv8_1_1internal_1_1ThreadId.html#ade3e1a41d03f0f9f593c7d35c4cafa6c">v8::internal::ThreadId::Invalid</a></div><div class="ttdeci">static constexpr ThreadId Invalid()</div><div class="ttdef"><b>Definition</b> <a href="thread-id_8h_source.html#l00035">thread-id.h:35</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1detail_1_1WaiterQueueNode_html"><div class="ttname"><a href="classv8_1_1internal_1_1detail_1_1WaiterQueueNode.html">v8::internal::detail::WaiterQueueNode</a></div><div class="ttdef"><b>Definition</b> <a href="waiter-queue-node_8h_source.html#l00039">waiter-queue-node.h:39</a></div></div>
+<div class="ttc" id="acode-memory-access_8cc_html_a4cce83e2a3313f207c5d77da0b1e0198"><div class="ttname"><a href="code-memory-access_8cc.html#a4cce83e2a3313f207c5d77da0b1e0198">mutex_</a></div><div class="ttdeci">base::SpinningMutex &amp; mutex_</div><div class="ttdef"><b>Definition</b> <a href="code-memory-access_8cc_source.html#l00623">code-memory-access.cc:623</a></div></div>
 <div class="ttc" id="acommon_2globals_8h_html"><div class="ttname"><a href="common_2globals_8h.html">globals.h</a></div></div>
 <div class="ttc" id="acommon_2globals_8h_html_a186f91782e6bd63105cf92242b870b34"><div class="ttname"><a href="common_2globals_8h.html#a186f91782e6bd63105cf92242b870b34">DEBUG_BOOL</a></div><div class="ttdeci">#define DEBUG_BOOL</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00087">globals.h:87</a></div></div>
 <div class="ttc" id="aheap-write-barrier-inl_8h_html"><div class="ttname"><a href="heap-write-barrier-inl_8h.html">heap-write-barrier-inl.h</a></div></div>
@@ -433,13 +451,10 @@ $(function(){initNavTree('js-atomics-synchronization-inl_8h_source.html',''); in
 <div class="ttc" id="aobject-macros_8h_html_a7ff94823eae742a8df4df792f0781cb7"><div class="ttname"><a href="object-macros_8h.html#a7ff94823eae742a8df4df792f0781cb7">TQ_OBJECT_CONSTRUCTORS_IMPL</a></div><div class="ttdeci">#define TQ_OBJECT_CONSTRUCTORS_IMPL(Type)</div><div class="ttdef"><b>Definition</b> <a href="object-macros_8h_source.html#l00927">object-macros.h:927</a></div></div>
 <div class="ttc" id="aobjects-inl_8h_html"><div class="ttname"><a href="objects-inl_8h.html">objects-inl.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_a7fa5847c07dc92c5227f8a150238560.html">objects</a></li><li class="navelem"><a class="el" href="js-atomics-synchronization-inl_8h.html">js-atomics-synchronization-inl.h</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:19:35 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

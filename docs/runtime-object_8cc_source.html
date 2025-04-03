@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/runtime/runtime-object.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/runtime/runtime-object.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('runtime-object_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('runtime-object_8cc_source.html',''); initResizable(tru
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bf9f26469d00835ba20ff8d80ee5a804.html">runtime</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">runtime-object.cc</div></div>
 </div><!--header-->
@@ -815,7 +808,7 @@ $(function(){initNavTree('runtime-object_8cc_source.html',''); initResizable(tru
 <div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>        <span class="comment">// Attempt dictionary lookup.</span></div>
 <div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>        <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;GlobalDictionary&gt;</a> dictionary =</div>
 <div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>            <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;JSGlobalObject&gt;</a>(*lookup_start_object)</div>
-<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>                -&gt;global_dictionary(kAcquireLoad);</div>
+<div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>                -&gt;global_dictionary(<a class="code hl_variable" href="namespacev8.html#aee4e677b8d8a86416617b3330778b98a">kAcquireLoad</a>);</div>
 <div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span>        <a class="code hl_class" href="classv8_1_1internal_1_1InternalIndex.html">InternalIndex</a> entry = dictionary-&gt;FindEntry(isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a67a51b6314a9bc8a8c44c5fe14149e6c">key</a>);</div>
 <div class="line"><a id="l00662" name="l00662"></a><span class="lineno">  662</span>        <span class="keywordflow">if</span> (entry.<a class="code hl_function" href="classv8_1_1internal_1_1InternalIndex.html#ad381db083f3f9b72f16908eac7027823">is_found</a>()) {</div>
 <div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>          <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;PropertyCell&gt;</a> cell = dictionary-&gt;CellAt(entry);</div>
@@ -1128,9 +1121,11 @@ $(function(){initNavTree('runtime-object_8cc_source.html',''); initResizable(tru
 <div class="line"><a id="l00940" name="l00940"></a><span class="lineno">  940</span>}</div>
 </div>
 <div class="line"><a id="l00941" name="l00941"></a><span class="lineno">  941</span> </div>
-<div class="line"><a id="l00942" name="l00942"></a><span class="lineno">  942</span><span class="keyword">static</span> <span class="keywordtype">bool</span> IsValidAccessor(Isolate* isolate, DirectHandle&lt;Object&gt; obj) {</div>
+<div class="foldopen" id="foldopen00942" data-start="{" data-end="}">
+<div class="line"><a id="l00942" name="l00942"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#aa6bad8704cddac10f4c783858182b195">  942</a></span><span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacev8_1_1internal.html#aa6bad8704cddac10f4c783858182b195">IsValidAccessor</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">Isolate</a>* isolate, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> obj) {</div>
 <div class="line"><a id="l00943" name="l00943"></a><span class="lineno">  943</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a6db5c47c190e9de94a96948682b877c8">IsNullOrUndefined</a>(*obj, isolate) || IsCallable(*obj);</div>
 <div class="line"><a id="l00944" name="l00944"></a><span class="lineno">  944</span>}</div>
+</div>
 <div class="line"><a id="l00945" name="l00945"></a><span class="lineno">  945</span> </div>
 <div class="line"><a id="l00946" name="l00946"></a><span class="lineno">  946</span><span class="comment">// Implements part of 8.12.9 DefineOwnProperty.</span></div>
 <div class="line"><a id="l00947" name="l00947"></a><span class="lineno">  947</span><span class="comment">// There are 3 cases that lead here:</span></div>
@@ -1146,9 +1141,9 @@ $(function(){initNavTree('runtime-object_8cc_source.html',''); initResizable(tru
 <div class="line"><a id="l00956" name="l00956"></a><span class="lineno">  956</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!<a class="code hl_function" href="namespacev8_1_1internal.html#aea9d736830d86242c4e1cb59a371d3a6">IsNull</a>(*obj, isolate));</div>
 <div class="line"><a id="l00957" name="l00957"></a><span class="lineno">  957</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Name&gt;</a> name = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at&lt;<a class="code hl_class" href="classv8_1_1internal_1_1Name.html">Name</a>&gt;(1);</div>
 <div class="line"><a id="l00958" name="l00958"></a><span class="lineno">  958</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> <a class="code hl_variable" href="bytecode-generator_8cc.html#ac44f078841b0e4ca9889f5da5ec95590">getter</a> = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at(2);</div>
-<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(IsValidAccessor(isolate, <a class="code hl_variable" href="bytecode-generator_8cc.html#ac44f078841b0e4ca9889f5da5ec95590">getter</a>));</div>
+<div class="line"><a id="l00959" name="l00959"></a><span class="lineno">  959</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#aa6bad8704cddac10f4c783858182b195">IsValidAccessor</a>(isolate, <a class="code hl_variable" href="bytecode-generator_8cc.html#ac44f078841b0e4ca9889f5da5ec95590">getter</a>));</div>
 <div class="line"><a id="l00960" name="l00960"></a><span class="lineno">  960</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;Object&gt;</a> <a class="code hl_variable" href="namespacev8_1_1internal.html#a55eed44eaa9dbd54a74a0390def124b6">setter</a> = <a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.at(3);</div>
-<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(IsValidAccessor(isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a55eed44eaa9dbd54a74a0390def124b6">setter</a>));</div>
+<div class="line"><a id="l00961" name="l00961"></a><span class="lineno">  961</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(<a class="code hl_function" href="namespacev8_1_1internal.html#aa6bad8704cddac10f4c783858182b195">IsValidAccessor</a>(isolate, <a class="code hl_variable" href="namespacev8_1_1internal.html#a55eed44eaa9dbd54a74a0390def124b6">setter</a>));</div>
 <div class="line"><a id="l00962" name="l00962"></a><span class="lineno">  962</span>  <span class="keyword">auto</span> attrs = <a class="code hl_function" href="namespacev8_1_1internal.html#ab0a2095fbc8a73360b0fde42f64fc423">PropertyAttributesFromInt</a>(<a class="code hl_variable" href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a>.smi_value_at(4));</div>
 <div class="line"><a id="l00963" name="l00963"></a><span class="lineno">  963</span> </div>
 <div class="line"><a id="l00964" name="l00964"></a><span class="lineno">  964</span>  <a class="code hl_define" href="execution_2isolate_8h.html#a8a33bdf97332fd4505388185d6ed10c9">RETURN_FAILURE_ON_EXCEPTION</a>(</div>
@@ -2198,6 +2193,7 @@ $(function(){initNavTree('runtime-object_8cc_source.html',''); initResizable(tru
 <div class="ttc" id="anamespacev8_1_1internal_html_a8b74cbdcf84843aeaeb20961f4e24eafae820c9dcb4948be5475e09a7537876e2"><div class="ttname"><a href="namespacev8_1_1internal.html#a8b74cbdcf84843aeaeb20961f4e24eafae820c9dcb4948be5475e09a7537876e2">v8::internal::PRIVATE_NAMES_ONLY</a></div><div class="ttdeci">@ PRIVATE_NAMES_ONLY</div><div class="ttdef"><b>Definition</b> <a href="property-details_8h_source.html#l00053">property-details.h:53</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a8b74cbdcf84843aeaeb20961f4e24eafaf9d562d258c3e8ab35cb8cd9e09078da"><div class="ttname"><a href="namespacev8_1_1internal.html#a8b74cbdcf84843aeaeb20961f4e24eafaf9d562d258c3e8ab35cb8cd9e09078da">v8::internal::SKIP_SYMBOLS</a></div><div class="ttdeci">@ SKIP_SYMBOLS</div><div class="ttdef"><b>Definition</b> <a href="property-details_8h_source.html#l00052">property-details.h:52</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a915c289a31a33b4c18de441e4a1e5aab"><div class="ttname"><a href="namespacev8_1_1internal.html#a915c289a31a33b4c18de441e4a1e5aab">v8::internal::IsFastElementsKind</a></div><div class="ttdeci">bool IsFastElementsKind(ElementsKind kind)</div><div class="ttdef"><b>Definition</b> <a href="elements-kind_8h_source.html#l00352">elements-kind.h:352</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_aa6bad8704cddac10f4c783858182b195"><div class="ttname"><a href="namespacev8_1_1internal.html#aa6bad8704cddac10f4c783858182b195">v8::internal::IsValidAccessor</a></div><div class="ttdeci">static bool IsValidAccessor(Isolate *isolate, DirectHandle&lt; Object &gt; obj)</div><div class="ttdef"><b>Definition</b> <a href="#l00942">runtime-object.cc:942</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aadfafc505df78c7e9c96f8ce883f0982"><div class="ttname"><a href="namespacev8_1_1internal.html#aadfafc505df78c7e9c96f8ce883f0982">v8::internal::IsUniqueName</a></div><div class="ttdeci">bool IsUniqueName(Tagged&lt; Name &gt; obj)</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ab0a2095fbc8a73360b0fde42f64fc423"><div class="ttname"><a href="namespacev8_1_1internal.html#ab0a2095fbc8a73360b0fde42f64fc423">v8::internal::PropertyAttributesFromInt</a></div><div class="ttdeci">V8_INLINE PropertyAttributes PropertyAttributesFromInt(int value)</div><div class="ttdef"><b>Definition</b> <a href="property-details_8h_source.html#l00035">property-details.h:35</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ab4a3774525773cb4b7f80dfe83ec0537"><div class="ttname"><a href="namespacev8_1_1internal.html#ab4a3774525773cb4b7f80dfe83ec0537">v8::internal::IsPrivateMethodOrAccessorVariableMode</a></div><div class="ttdeci">bool IsPrivateMethodOrAccessorVariableMode(VariableMode mode)</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l02062">globals.h:2062</a></div></div>
@@ -2223,6 +2219,7 @@ $(function(){initNavTree('runtime-object_8cc_source.html',''); initResizable(tru
 <div class="ttc" id="anamespacev8_1_1internal_html_aff269dc9be2370cdca244d8f1f97237aa2218bc18b86468072fce6605e688330f"><div class="ttname"><a href="namespacev8_1_1internal.html#aff269dc9be2370cdca244d8f1f97237aa2218bc18b86468072fce6605e688330f">v8::internal::KEEP_INOBJECT_PROPERTIES</a></div><div class="ttdeci">@ KEEP_INOBJECT_PROPERTIES</div><div class="ttdef"><b>Definition</b> <a href="objects_8h_source.html#l00063">objects.h:62</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_aff82af2c2f7b200915e30bcfedca6f85"><div class="ttname"><a href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">v8::internal::Cast</a></div><div class="ttdeci">Tagged&lt; To &gt; Cast(Tagged&lt; From &gt; value, const v8::SourceLocation &amp;loc=INIT_SOURCE_LOCATION_IN_DEBUG)</div><div class="ttdef"><b>Definition</b> <a href="casting_8h_source.html#l00148">casting.h:148</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="anamespacev8_html_aee4e677b8d8a86416617b3330778b98a"><div class="ttname"><a href="namespacev8.html#aee4e677b8d8a86416617b3330778b98a">v8::kAcquireLoad</a></div><div class="ttdeci">static constexpr AcquireLoadTag kAcquireLoad</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l02833">globals.h:2833</a></div></div>
 <div class="ttc" id="aproperty-descriptor-object_8h_html"><div class="ttname"><a href="property-descriptor-object_8h.html">property-descriptor-object.h</a></div></div>
 <div class="ttc" id="aproperty-descriptor_8h_html"><div class="ttname"><a href="property-descriptor_8h.html">property-descriptor.h</a></div></div>
 <div class="ttc" id="aproperty-details_8h_html"><div class="ttname"><a href="property-details_8h.html">property-details.h</a></div></div>
@@ -2236,13 +2233,10 @@ $(function(){initNavTree('runtime-object_8cc_source.html',''); initResizable(tru
 <div class="ttc" id="astructv8_1_1internal_1_1VariableLookupResult_html_ac48d93b97b2a45fee0a73b8b2684c817"><div class="ttname"><a href="structv8_1_1internal_1_1VariableLookupResult.html#ac48d93b97b2a45fee0a73b8b2684c817">v8::internal::VariableLookupResult::is_static_flag</a></div><div class="ttdeci">IsStaticFlag is_static_flag</div><div class="ttdef"><b>Definition</b> <a href="scope-info_8h_source.html#l00037">scope-info.h:37</a></div></div>
 <div class="ttc" id="aswiss-name-dictionary-inl_8h_html"><div class="ttname"><a href="swiss-name-dictionary-inl_8h.html">swiss-name-dictionary-inl.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bf9f26469d00835ba20ff8d80ee5a804.html">runtime</a></li><li class="navelem"><a class="el" href="runtime-object_8cc.html">runtime-object.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:19:52 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

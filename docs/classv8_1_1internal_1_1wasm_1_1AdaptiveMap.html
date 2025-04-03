@@ -6,13 +6,12 @@
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>v8: v8::internal::wasm::AdaptiveMap&lt; Value &gt; Class Template Reference</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classv8_1_1internal_1_1wasm_1_1AdaptiveMap.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,10 +84,19 @@ $(function(){initNavTree('classv8_1_1internal_1_1wasm_1_1AdaptiveMap.html',''); 
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacev8.html">v8</a></li><li class="navelem"><a class="el" href="namespacev8_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="namespacev8_1_1internal_1_1wasm.html">wasm</a></li><li class="navelem"><a class="el" href="classv8_1_1internal_1_1wasm_1_1AdaptiveMap.html">AdaptiveMap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classv8_1_1internal_1_1wasm_1_1AdaptiveMap-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">v8::internal::wasm::AdaptiveMap&lt; Value &gt; Class Template Reference</div></div>
 </div><!--header-->
@@ -139,12 +135,95 @@ Public Member Functions</h2></td></tr>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a926b7d63d6b88e73810623b76ca3da99" id="r_a926b7d63d6b88e73810623b76ca3da99"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a926b7d63d6b88e73810623b76ca3da99">kMaxKey</a> = 10'000'000</td></tr>
 <tr class="separator:a926b7d63d6b88e73810623b76ca3da99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-types" name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a31e6eb17a3948ee5639385bb1335f7a7" id="r_a31e6eb17a3948ee5639385bb1335f7a7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31e6eb17a3948ee5639385bb1335f7a7">Mode</a> { <a class="el" href="#a31e6eb17a3948ee5639385bb1335f7a7adaf0bf194f4d22f97e611980d5833c40">kDense</a>
+, <a class="el" href="#a31e6eb17a3948ee5639385bb1335f7a7a608147e7ed41219fa4732e884e01931c">kSparse</a>
+, <a class="el" href="#a31e6eb17a3948ee5639385bb1335f7a7aa70a20469d98835a84f509b8ef038dbe">kInitializing</a>
+ }</td></tr>
+<tr class="separator:a31e6eb17a3948ee5639385bb1335f7a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229b2b36394c04822b6c7c6bdf671a23" id="r_a229b2b36394c04822b6c7c6bdf671a23"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a229b2b36394c04822b6c7c6bdf671a23">MapType</a> = std::map&lt;uint32_t, Value&gt;</td></tr>
+<tr class="separator:a229b2b36394c04822b6c7c6bdf671a23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a82351ddfcfb817f847cd2de2fe27d826" id="r_a82351ddfcfb817f847cd2de2fe27d826"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a31e6eb17a3948ee5639385bb1335f7a7">Mode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a82351ddfcfb817f847cd2de2fe27d826">mode_</a> {<a class="el" href="#a31e6eb17a3948ee5639385bb1335f7a7aa70a20469d98835a84f509b8ef038dbe">kInitializing</a>}</td></tr>
+<tr class="separator:a82351ddfcfb817f847cd2de2fe27d826"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab84f4de27f34726cb85f83cbf06458e8" id="r_ab84f4de27f34726cb85f83cbf06458e8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; Value &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab84f4de27f34726cb85f83cbf06458e8">vector_</a></td></tr>
+<tr class="separator:ab84f4de27f34726cb85f83cbf06458e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c9a93ce34984c59b73f579ef606602" id="r_a53c9a93ce34984c59b73f579ef606602"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="#a229b2b36394c04822b6c7c6bdf671a23">MapType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a53c9a93ce34984c59b73f579ef606602">map_</a></td></tr>
+<tr class="separator:a53c9a93ce34984c59b73f579ef606602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a732bb54beea29e9441ca68f6a6ec9217" id="r_a732bb54beea29e9441ca68f6a6ec9217"><td class="memItemLeft" align="right" valign="top">static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a732bb54beea29e9441ca68f6a6ec9217">kLoadFactor</a> = 4</td></tr>
+<tr class="separator:a732bb54beea29e9441ca68f6a6ec9217"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class Value&gt;<br />
 class v8::internal::wasm::AdaptiveMap&lt; Value &gt;</div>
 <p class="definition">Definition at line <a class="el" href="wasm-module_8h_source.html#l00325">325</a> of file <a class="el" href="wasm-module_8h_source.html">wasm-module.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a229b2b36394c04822b6c7c6bdf671a23" name="a229b2b36394c04822b6c7c6bdf671a23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229b2b36394c04822b6c7c6bdf671a23">&#9670;&#160;</a></span>MapType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classv8_1_1internal_1_1wasm_1_1AdaptiveMap.html">v8::internal::wasm::AdaptiveMap</a>&lt; Value &gt;::MapType = std::map&lt;uint32_t, Value&gt;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="wasm-module_8h_source.html#l00389">389</a> of file <a class="el" href="wasm-module_8h_source.html">wasm-module.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a id="a31e6eb17a3948ee5639385bb1335f7a7" name="a31e6eb17a3948ee5639385bb1335f7a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31e6eb17a3948ee5639385bb1335f7a7">&#9670;&#160;</a></span>Mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a31e6eb17a3948ee5639385bb1335f7a7">v8::internal::wasm::AdaptiveMap::Mode</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a31e6eb17a3948ee5639385bb1335f7a7adaf0bf194f4d22f97e611980d5833c40" name="a31e6eb17a3948ee5639385bb1335f7a7adaf0bf194f4d22f97e611980d5833c40"></a>kDense&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a31e6eb17a3948ee5639385bb1335f7a7a608147e7ed41219fa4732e884e01931c" name="a31e6eb17a3948ee5639385bb1335f7a7a608147e7ed41219fa4732e884e01931c"></a>kSparse&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a31e6eb17a3948ee5639385bb1335f7a7aa70a20469d98835a84f509b8ef038dbe" name="a31e6eb17a3948ee5639385bb1335f7a7aa70a20469d98835a84f509b8ef038dbe"></a>kInitializing&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="wasm-module_8h_source.html#l00390">390</a> of file <a class="el" href="wasm-module_8h_source.html">wasm-module.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa260c11b9147be1bc4395ad6679e91d1" name="aa260c11b9147be1bc4395ad6679e91d1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa260c11b9147be1bc4395ad6679e91d1">&#9670;&#160;</a></span>AdaptiveMap() <span class="overload">[1/3]</span></h2>
 
@@ -264,9 +343,11 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classv8_1_1internal_1_1wasm_1_1AdaptiveMap_a2e1d925b03baab6d561e55c98d410bd4_icgraph.png" border="0" usemap="#aclassv8_1_1internal_1_1wasm_1_1AdaptiveMap_a2e1d925b03baab6d561e55c98d410bd4_icgraph" alt=""/></div>
 <map name="aclassv8_1_1internal_1_1wasm_1_1AdaptiveMap_a2e1d925b03baab6d561e55c98d410bd4_icgraph" id="aclassv8_1_1internal_1_1wasm_1_1AdaptiveMap_a2e1d925b03baab6d561e55c98d410bd4_icgraph">
-<area shape="rect" title=" " alt="" coords="589,5,809,73"/>
+<area shape="rect" title=" " alt="" coords="589,52,809,120"/>
 <area shape="rect" href="classv8_1_1internal_1_1wasm_1_1LazilyGeneratedNames.html#a3bd38dcae4721af54077da2481f78b04" title=" " alt="" coords="276,5,541,73"/>
-<area shape="poly" title=" " alt="" coords="573,42,541,42,541,36,573,36"/>
+<area shape="poly" title=" " alt="" coords="573,68,541,63,542,58,574,63"/>
+<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1NamesProvider.html#aee01d36597e2f90023531b14c46e9792" title=" " alt="" coords="291,97,526,165"/>
+<area shape="poly" title=" " alt="" coords="574,108,527,115,526,110,573,103"/>
 <area shape="rect" href="structv8_1_1internal_1_1wasm_1_1WasmModule.html#a9265ab7d030075b15a1ce9f3c0d02bd6" title=" " alt="" coords="5,5,228,73"/>
 <area shape="poly" title=" " alt="" coords="260,42,228,42,228,36,260,36"/>
 </map>
@@ -326,27 +407,35 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classv8_1_1internal_1_1wasm_1_1AdaptiveMap_a4f1aee15176802853541af9930994efb_icgraph.png" border="0" usemap="#aclassv8_1_1internal_1_1wasm_1_1AdaptiveMap_a4f1aee15176802853541af9930994efb_icgraph" alt=""/></div>
 <map name="aclassv8_1_1internal_1_1wasm_1_1AdaptiveMap_a4f1aee15176802853541af9930994efb_icgraph" id="aclassv8_1_1internal_1_1wasm_1_1AdaptiveMap_a4f1aee15176802853541af9930994efb_icgraph">
-<area shape="rect" title=" " alt="" coords="987,58,1129,107"/>
-<area shape="rect" href="namespacev8_1_1internal_1_1wasm.html#a4aeea93c0956075e97575dd3a9561236" title=" " alt="" coords="754,5,920,35"/>
-<area shape="poly" title=" " alt="" coords="971,59,938,49,897,38,899,33,939,44,972,54"/>
-<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1LazilyGeneratedNames.html#aa7787c474684e4b774a4f5d5cd426dfe" title=" " alt="" coords="735,58,939,107"/>
-<area shape="poly" title=" " alt="" coords="971,86,939,86,939,80,971,80"/>
-<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1LazilyGeneratedNames.html#a18b1d6d0ec7a67bbb0ecac1da13d75db" title=" " alt="" coords="751,132,923,199"/>
-<area shape="poly" title=" " alt="" coords="978,116,924,136,923,131,976,111"/>
-<area shape="rect" href="structv8_1_1internal_1_1wasm_1_1ModuleWireBytes.html#af57b61abae17c946be6007caebe73620" title=" " alt="" coords="457,49,664,117"/>
-<area shape="poly" title=" " alt="" coords="735,138,664,116,665,111,737,133"/>
-<area shape="rect" href="classv8_1_1internal_1_1WasmModuleObject.html#a9c404ba0124692e0b3b5b7c58c582ac2" title=" " alt="" coords="457,141,664,190"/>
-<area shape="poly" title=" " alt="" coords="735,168,665,168,665,163,735,163"/>
-<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1NamesProvider.html#a790ab0904e385ffba48506ca479e884d" title=" " alt="" coords="434,214,687,263"/>
-<area shape="poly" title=" " alt="" coords="736,195,656,217,654,211,735,190"/>
-<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1FunctionBodyDisassembler.html#a9dd49b2d85631aab0ce39f3ff496f18b" title=" " alt="" coords="189,158,386,226"/>
-<area shape="poly" title=" " alt="" coords="418,217,386,212,387,206,419,212"/>
-<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a9ba4dbf090c02043a40dc1e746ae2f05" title=" " alt="" coords="208,250,367,318"/>
-<area shape="poly" title=" " alt="" coords="419,265,368,274,367,268,418,260"/>
-<area shape="rect" href="namespacev8_1_1internal_1_1wasm.html#a4d66830baa9fb9c957c844394b4c352c" title=" " alt="" coords="5,222,141,271"/>
-<area shape="poly" title=" " alt="" coords="192,270,141,261,142,256,193,265"/>
-<area shape="rect" href="namespacev8_1_1internal_1_1wasm.html#a705cc48582d146ceda18f8e7c337c4c2" title=" " alt="" coords="5,296,141,344"/>
-<area shape="poly" title=" " alt="" coords="193,303,142,311,141,306,192,297"/>
+<area shape="rect" title=" " alt="" coords="1485,132,1628,181"/>
+<area shape="rect" href="namespacev8_1_1internal_1_1wasm.html#a4aeea93c0956075e97575dd3a9561236" title=" " alt="" coords="1252,79,1419,109"/>
+<area shape="poly" title=" " alt="" coords="1470,133,1437,123,1396,112,1397,107,1438,118,1471,128"/>
+<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1LazilyGeneratedNames.html#aa7787c474684e4b774a4f5d5cd426dfe" title=" " alt="" coords="1234,132,1437,181"/>
+<area shape="poly" title=" " alt="" coords="1470,159,1438,159,1438,154,1470,154"/>
+<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1LazilyGeneratedNames.html#a18b1d6d0ec7a67bbb0ecac1da13d75db" title=" " alt="" coords="1250,220,1422,288"/>
+<area shape="poly" title=" " alt="" coords="1487,190,1415,222,1413,217,1485,185"/>
+<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1NamesProvider.html#a21c2af0e0a9eebc1386592876d35fd97" title=" " alt="" coords="943,108,1186,176"/>
+<area shape="poly" title=" " alt="" coords="1218,153,1186,151,1187,146,1218,148"/>
+<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1NamesProvider.html#a790ab0904e385ffba48506ca479e884d" title=" " alt="" coords="641,154,895,202"/>
+<area shape="poly" title=" " alt="" coords="928,161,896,165,895,160,927,156"/>
+<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1FunctionBodyDisassembler.html#a9dd49b2d85631aab0ce39f3ff496f18b" title=" " alt="" coords="396,5,593,73"/>
+<area shape="poly" title=" " alt="" coords="706,148,592,88,567,76,570,71,595,83,709,143"/>
+<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1ImmediatesPrinter.html#ac75324a7ebf480e6948ce841c5ba865c" title=" " alt="" coords="421,97,568,165"/>
+<area shape="poly" title=" " alt="" coords="625,156,568,146,569,141,626,151"/>
+<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a962cbb5a04fc5af04a4e3b2cc7c4706e" title=" " alt="" coords="415,189,574,257"/>
+<area shape="poly" title=" " alt="" coords="626,204,575,213,574,207,626,199"/>
+<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1ModuleDisassembler.html#a9ba4dbf090c02043a40dc1e746ae2f05" title=" " alt="" coords="189,225,348,293"/>
+<area shape="poly" title=" " alt="" coords="720,213,662,246,628,260,594,271,530,282,465,284,403,282,348,276,348,270,403,276,465,279,530,276,593,266,626,255,659,241,718,209"/>
+<area shape="poly" title=" " alt="" coords="400,241,349,249,348,244,399,236"/>
+<area shape="rect" href="namespacev8_1_1internal_1_1wasm.html#a4d66830baa9fb9c957c844394b4c352c" title=" " alt="" coords="5,198,141,246"/>
+<area shape="poly" title=" " alt="" coords="173,244,141,237,142,232,174,238"/>
+<area shape="rect" href="namespacev8_1_1internal_1_1wasm.html#a705cc48582d146ceda18f8e7c337c4c2" title=" " alt="" coords="5,271,141,320"/>
+<area shape="poly" title=" " alt="" coords="174,279,142,285,141,280,173,274"/>
+<area shape="poly" title=" " alt="" coords="1234,243,895,197,895,192,1235,238"/>
+<area shape="rect" href="structv8_1_1internal_1_1wasm_1_1ModuleWireBytes.html#af57b61abae17c946be6007caebe73620" title=" " alt="" coords="961,249,1168,317"/>
+<area shape="poly" title=" " alt="" coords="1235,267,1169,275,1168,269,1234,262"/>
+<area shape="rect" href="classv8_1_1internal_1_1WasmModuleObject.html#a9c404ba0124692e0b3b5b7c58c582ac2" title=" " alt="" coords="961,342,1168,390"/>
+<area shape="poly" title=" " alt="" coords="1260,297,1187,331,1153,344,1151,339,1185,326,1258,293"/>
 </map>
 </div>
 
@@ -543,6 +632,32 @@ template&lt;class Value &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a732bb54beea29e9441ca68f6a6ec9217" name="a732bb54beea29e9441ca68f6a6ec9217"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a732bb54beea29e9441ca68f6a6ec9217">&#9670;&#160;</a></span>kLoadFactor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t <a class="el" href="classv8_1_1internal_1_1wasm_1_1AdaptiveMap.html">v8::internal::wasm::AdaptiveMap</a>&lt; Value &gt;::kLoadFactor = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="wasm-module_8h_source.html#l00388">388</a> of file <a class="el" href="wasm-module_8h_source.html">wasm-module.h</a>.</p>
+
+</div>
+</div>
 <a id="a926b7d63d6b88e73810623b76ca3da99" name="a926b7d63d6b88e73810623b76ca3da99"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a926b7d63d6b88e73810623b76ca3da99">&#9670;&#160;</a></span>kMaxKey</h2>
 
@@ -569,18 +684,93 @@ template&lt;class Value &gt; </div>
 
 </div>
 </div>
+<a id="a53c9a93ce34984c59b73f579ef606602" name="a53c9a93ce34984c59b73f579ef606602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53c9a93ce34984c59b73f579ef606602">&#9670;&#160;</a></span>map_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="#a229b2b36394c04822b6c7c6bdf671a23">MapType</a>&gt; <a class="el" href="classv8_1_1internal_1_1wasm_1_1AdaptiveMap.html">v8::internal::wasm::AdaptiveMap</a>&lt; Value &gt;::map_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="wasm-module_8h_source.html#l00394">394</a> of file <a class="el" href="wasm-module_8h_source.html">wasm-module.h</a>.</p>
+
+</div>
+</div>
+<a id="a82351ddfcfb817f847cd2de2fe27d826" name="a82351ddfcfb817f847cd2de2fe27d826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82351ddfcfb817f847cd2de2fe27d826">&#9670;&#160;</a></span>mode_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a31e6eb17a3948ee5639385bb1335f7a7">Mode</a> <a class="el" href="classv8_1_1internal_1_1wasm_1_1AdaptiveMap.html">v8::internal::wasm::AdaptiveMap</a>&lt; Value &gt;::mode_ {<a class="el" href="#a31e6eb17a3948ee5639385bb1335f7a7aa70a20469d98835a84f509b8ef038dbe">kInitializing</a>}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="wasm-module_8h_source.html#l00392">392</a> of file <a class="el" href="wasm-module_8h_source.html">wasm-module.h</a>.</p>
+
+</div>
+</div>
+<a id="ab84f4de27f34726cb85f83cbf06458e8" name="ab84f4de27f34726cb85f83cbf06458e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab84f4de27f34726cb85f83cbf06458e8">&#9670;&#160;</a></span>vector_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class Value &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;Value&gt; <a class="el" href="classv8_1_1internal_1_1wasm_1_1AdaptiveMap.html">v8::internal::wasm::AdaptiveMap</a>&lt; Value &gt;::vector_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="wasm-module_8h_source.html#l00393">393</a> of file <a class="el" href="wasm-module_8h_source.html">wasm-module.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/wasm/<a class="el" href="wasm-module_8h_source.html">wasm-module.h</a></li>
-<li>src/wasm/<a class="el" href="wasm-module_8cc_source.html">wasm-module.cc</a></li>
+<li>/home/w1redch4d/Documents/browser-exploitation/v8/v8/src/wasm/<a class="el" href="wasm-module_8h_source.html">wasm-module.h</a></li>
+<li>/home/w1redch4d/Documents/browser-exploitation/v8/v8/src/wasm/<a class="el" href="wasm-module_8cc_source.html">wasm-module.cc</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="namespacev8.html">v8</a></li><li class="navelem"><a class="el" href="namespacev8_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="namespacev8_1_1internal_1_1wasm.html">wasm</a></li><li class="navelem"><a class="el" href="classv8_1_1internal_1_1wasm_1_1AdaptiveMap.html">AdaptiveMap</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:22:23 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

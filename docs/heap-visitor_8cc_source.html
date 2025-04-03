@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/heap/heap-visitor.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/heap-visitor.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('heap-visitor_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('heap-visitor_8cc_source.html',''); initResizable(true)
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">heap-visitor.cc</div></div>
 </div><!--header-->
@@ -119,10 +112,12 @@ $(function(){initNavTree('heap-visitor_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">// once when we complete mark-compact cycle.  Note that write barrier has no</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// effect if we are already in the middle of compacting mark-sweep cycle and we</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// have to record slots manually.</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">static</span> <span class="keywordtype">bool</span> MustRecordSlots(Heap* <a class="code hl_namespace" href="namespaceheap.html">heap</a>) {</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="}">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a20fd7a34b332cb6e9ea1ac4fb31902c2">   19</a></span><span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a20fd7a34b332cb6e9ea1ac4fb31902c2">MustRecordSlots</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Heap.html">Heap</a>* <a class="code hl_namespace" href="namespaceheap.html">heap</a>) {</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordflow">return</span> <a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;gc_state() == <a class="code hl_enumvalue" href="classv8_1_1internal_1_1Heap.html#aee3f8b2c700602c6e8546212a2ac0f65a5ec79940bd3c314a7e20c8c9fcf69b61">Heap::MARK_COMPACT</a> &amp;&amp;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>         <a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;mark_compact_collector()-&gt;is_compacting();</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>}</div>
+</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structv8_1_1internal_1_1WeakListVisitor.html">   25</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structv8_1_1internal_1_1WeakListVisitor.html">WeakListVisitor</a>;</div>
@@ -134,7 +129,7 @@ $(function(){initNavTree('heap-visitor_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> undefined = <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(<a class="code hl_namespace" href="namespaceheap.html">heap</a>).undefined_value();</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> head = <a class="code hl_variable" href="namespacev8_1_1internal.html#ab165da27eb70b7cac315ad3c2c991c06">undefined</a>;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;T&gt;</a> tail;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordtype">bool</span> record_slots = MustRecordSlots(<a class="code hl_namespace" href="namespaceheap.html">heap</a>);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <span class="keywordtype">bool</span> record_slots = <a class="code hl_function" href="namespacev8_1_1internal.html#a20fd7a34b332cb6e9ea1ac4fb31902c2">MustRecordSlots</a>(<a class="code hl_namespace" href="namespaceheap.html">heap</a>);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordflow">while</span> (list != undefined) {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    <span class="comment">// Check whether to keep the candidate in the list.</span></div>
@@ -182,14 +177,16 @@ $(function(){initNavTree('heap-visitor_8cc_source.html',''); initResizable(true)
 </div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">static</span> <span class="keywordtype">void</span> ClearWeakList(Heap* <a class="code hl_namespace" href="namespaceheap.html">heap</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> list) {</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">Tagged&lt;Object&gt;</a> undefined = ReadOnlyRoots(<a class="code hl_namespace" href="namespaceheap.html">heap</a>).undefined_value();</div>
+<div class="foldopen" id="foldopen00080" data-start="{" data-end="}">
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a9c2e52c5ddf596f4d4b45f5fafc227ce">   80</a></span><span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacev8_1_1internal.html#a9c2e52c5ddf596f4d4b45f5fafc227ce">ClearWeakList</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Heap.html">Heap</a>* <a class="code hl_namespace" href="namespaceheap.html">heap</a>, <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> list) {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;Object&gt;</a> undefined = <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(<a class="code hl_namespace" href="namespaceheap.html">heap</a>).undefined_value();</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <span class="keywordflow">while</span> (list != undefined) {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    Tagged&lt;T&gt; candidate = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;T&gt;</a>(list);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    list = WeakListVisitor&lt;T&gt;::WeakNext(candidate);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    WeakListVisitor&lt;T&gt;::SetWeakNext(candidate, undefined);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;T&gt;</a> candidate = <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;T&gt;</a>(list);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    list = <a class="code hl_struct" href="structv8_1_1internal_1_1WeakListVisitor.html">WeakListVisitor&lt;T&gt;::WeakNext</a>(candidate);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <a class="code hl_struct" href="structv8_1_1internal_1_1WeakListVisitor.html">WeakListVisitor&lt;T&gt;::SetWeakNext</a>(candidate, undefined);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="keyword">template</span> &lt;&gt;</div>
 <div class="foldopen" id="foldopen00090" data-start="{" data-end="};">
@@ -244,7 +241,7 @@ $(function(){initNavTree('heap-visitor_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="comment">// Update the list head.</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>-&gt;set(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, list_head, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a20c66a96ddfae551866ceae989a8ba13a936c581afe29bbe04ab84d8ae4c6267d">UPDATE_WRITE_BARRIER</a>);</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">if</span> (MustRecordSlots(<a class="code hl_namespace" href="namespaceheap.html">heap</a>)) {</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacev8_1_1internal.html#a20fd7a34b332cb6e9ea1ac4fb31902c2">MustRecordSlots</a>(<a class="code hl_namespace" href="namespaceheap.html">heap</a>)) {</div>
 <div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>      <span class="comment">// Record the updated slot if necessary.</span></div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>      <a class="code hl_class" href="classv8_1_1internal_1_1FullObjectSlot.html">ObjectSlot</a> head_slot = <a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>-&gt;RawField(<a class="code hl_function" href="classv8_1_1internal_1_1TaggedArrayBase.html#afe7f2d7adb5ae1d1c0d27a2dcba39575">FixedArray::SizeFor</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>));</div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>      <a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;mark_compact_collector()-&gt;RecordSlot(<a class="code hl_variable" href="js-call-reducer_8cc.html#a0835767fe473cead88c1afdf3175bce8">context</a>, head_slot,</div>
@@ -366,11 +363,12 @@ $(function(){initNavTree('heap-visitor_8cc_source.html',''); initResizable(true)
 <div class="ttc" id="anamespaceheap_html"><div class="ttname"><a href="namespaceheap.html">heap</a></div><div class="ttdef"><b>Definition</b> <a href="base_2platform_2platform_8h_source.html#l00073">platform.h:73</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a0cfab207d565dcf62ebf50f3987e05de"><div class="ttname"><a href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">v8::internal::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> <a href="heap-snapshot-generator_8cc_source.html#l01584">heap-snapshot-generator.cc:1584</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a20c66a96ddfae551866ceae989a8ba13a936c581afe29bbe04ab84d8ae4c6267d"><div class="ttname"><a href="namespacev8_1_1internal.html#a20c66a96ddfae551866ceae989a8ba13a936c581afe29bbe04ab84d8ae4c6267d">v8::internal::UPDATE_WRITE_BARRIER</a></div><div class="ttdeci">@ UPDATE_WRITE_BARRIER</div><div class="ttdef"><b>Definition</b> <a href="objects_8h_source.html#l00056">objects.h:55</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a20fd7a34b332cb6e9ea1ac4fb31902c2"><div class="ttname"><a href="namespacev8_1_1internal.html#a20fd7a34b332cb6e9ea1ac4fb31902c2">v8::internal::MustRecordSlots</a></div><div class="ttdeci">static bool MustRecordSlots(Heap *heap)</div><div class="ttdef"><b>Definition</b> <a href="#l00019">heap-visitor.cc:19</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a2c7ddd5f170347c3ef1ca0b0a5241902"><div class="ttname"><a href="namespacev8_1_1internal.html#a2c7ddd5f170347c3ef1ca0b0a5241902">v8::internal::VisitWeakList</a></div><div class="ttdeci">Tagged&lt; Object &gt; VisitWeakList(Heap *heap, Tagged&lt; Object &gt; list, WeakObjectRetainer *retainer)</div><div class="ttdef"><b>Definition</b> <a href="#l00028">heap-visitor.cc:28</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a5297fd2c72981b2220e6b9a831570fb3"><div class="ttname"><a href="namespacev8_1_1internal.html#a5297fd2c72981b2220e6b9a831570fb3">v8::internal::Tagged&lt; Object &gt;</a></div><div class="ttdeci">Tagged&lt; Object &gt;</div><div class="ttdef"><b>Definition</b> <a href="allocation-site-inl_8h_source.html#l00029">allocation-site-inl.h:30</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a8af1a4c63f8814c5fa8bce25cb6ad902"><div class="ttname"><a href="namespacev8_1_1internal.html#a8af1a4c63f8814c5fa8bce25cb6ad902">v8::internal::VisitWeakList&lt; JSFinalizationRegistry &gt;</a></div><div class="ttdeci">template Tagged&lt; Object &gt; VisitWeakList&lt; JSFinalizationRegistry &gt;(Heap *heap, Tagged&lt; Object &gt; list, WeakObjectRetainer *retainer)</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a8e22aa9e1d4ba77711488163b273be47"><div class="ttname"><a href="namespacev8_1_1internal.html#a8e22aa9e1d4ba77711488163b273be47">v8::internal::UnionOf</a></div><div class="ttdeci">typename detail::FlattenUnionHelper&lt; Union&lt;&gt;, Ts... &gt;::type UnionOf</div><div class="ttdef"><b>Definition</b> <a href="union_8h_source.html#l00090">union.h:90</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a9c2e52c5ddf596f4d4b45f5fafc227ce"><div class="ttname"><a href="namespacev8_1_1internal.html#a9c2e52c5ddf596f4d4b45f5fafc227ce">v8::internal::ClearWeakList</a></div><div class="ttdeci">static void ClearWeakList(Heap *heap, Tagged&lt; Object &gt; list)</div><div class="ttdef"><b>Definition</b> <a href="#l00080">heap-visitor.cc:80</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ab165da27eb70b7cac315ad3c2c991c06"><div class="ttname"><a href="namespacev8_1_1internal.html#ab165da27eb70b7cac315ad3c2c991c06">v8::internal::undefined</a></div><div class="ttdeci">undefined</div><div class="ttdef"><b>Definition</b> <a href="templates-inl_8h_source.html#l00150">templates-inl.h:150</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ac0ce68cf608edba76fa4988976eac12c"><div class="ttname"><a href="namespacev8_1_1internal.html#ac0ce68cf608edba76fa4988976eac12c">v8::internal::VisitWeakList&lt; AllocationSite &gt;</a></div><div class="ttdeci">template Tagged&lt; Object &gt; VisitWeakList&lt; AllocationSite &gt;(Heap *heap, Tagged&lt; Object &gt; list, WeakObjectRetainer *retainer)</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ae7091d35373cf738561d0edf1498266d"><div class="ttname"><a href="namespacev8_1_1internal.html#ae7091d35373cf738561d0edf1498266d">v8::internal::VisitWeakList&lt; Context &gt;</a></div><div class="ttdeci">template Tagged&lt; Object &gt; VisitWeakList&lt; Context &gt;(Heap *heap, Tagged&lt; Object &gt; list, WeakObjectRetainer *retainer)</div></div>
@@ -397,13 +395,10 @@ $(function(){initNavTree('heap-visitor_8cc_source.html',''); initResizable(true)
 <div class="ttc" id="astructv8_1_1internal_1_1WeakListVisitor_3_01JSFinalizationRegistry_01_4_html_ae3677b92ab27e6141ed4d68d41e15522"><div class="ttname"><a href="structv8_1_1internal_1_1WeakListVisitor_3_01JSFinalizationRegistry_01_4.html#ae3677b92ab27e6141ed4d68d41e15522">v8::internal::WeakListVisitor&lt; JSFinalizationRegistry &gt;::SetWeakNext</a></div><div class="ttdeci">static void SetWeakNext(Tagged&lt; JSFinalizationRegistry &gt; obj, Tagged&lt; HeapObject &gt; next)</div><div class="ttdef"><b>Definition</b> <a href="#l00165">heap-visitor.cc:165</a></div></div>
 <div class="ttc" id="astructv8_1_1internal_1_1WeakListVisitor_html"><div class="ttname"><a href="structv8_1_1internal_1_1WeakListVisitor.html">v8::internal::WeakListVisitor</a></div><div class="ttdef"><b>Definition</b> <a href="#l00025">heap-visitor.cc:25</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="heap-visitor_8cc.html">heap-visitor.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:32 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

@@ -6,13 +6,12 @@
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>v8: v8::internal::ThreadState Class Reference</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('classv8_1_1internal_1_1ThreadState.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,10 +84,18 @@ $(function(){initNavTree('classv8_1_1internal_1_1ThreadState.html',''); initResi
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="namespacev8.html">v8</a></li><li class="navelem"><a class="el" href="namespacev8_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="classv8_1_1internal_1_1ThreadState.html">ThreadState</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classv8_1_1internal_1_1ThreadState-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">v8::internal::ThreadState Class Reference</div></div>
@@ -108,6 +103,146 @@ $(function(){initNavTree('classv8_1_1internal_1_1ThreadState.html',''); initResi
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="v8threads_8h_source.html">v8threads.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for v8::internal::ThreadState:</div>
+<div class="dyncontent">
+<div class="center"><img src="classv8_1_1internal_1_1ThreadState__coll__graph.png" border="0" usemap="#av8_1_1internal_1_1ThreadState_coll__map" alt="Collaboration graph"/></div>
+<map name="av8_1_1internal_1_1ThreadState_coll__map" id="av8_1_1internal_1_1ThreadState_coll__map">
+<area shape="rect" title=" " alt="" coords="287,788,462,818"/>
+<area shape="poly" title=" " alt="" coords="348,770,357,764,375,761,391,763,401,770,405,779,401,789,396,787,399,779,397,773,389,769,375,767,359,769,351,775"/>
+<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html" title=" " alt="" coords="672,759,871,788"/>
+<area shape="poly" title=" " alt="" coords="478,793,671,778,672,783,479,798"/>
+<area shape="rect" href="classv8_1_1internal_1_1ThreadId.html" title=" " alt="" coords="12,704,168,734"/>
+<area shape="poly" title=" " alt="" coords="158,736,322,785,321,790,157,741"/>
+<area shape="poly" title=" " alt="" coords="183,702,298,688,426,678,487,677,543,680,590,687,624,701,635,711,638,723,641,735,649,745,673,758,671,763,645,749,636,737,633,725,630,714,622,705,588,692,542,685,487,682,426,683,298,693,184,707"/>
+<area shape="poly" title=" " alt="" coords="709,796,648,816,624,824,556,830,489,824,458,821,458,816,489,819,556,825,622,819,646,811,707,791"/>
+<area shape="rect" href="classv8_1_1internal_1_1Isolate.html" title=" " alt="" coords="1129,1265,1272,1295"/>
+<area shape="poly" title=" " alt="" coords="887,755,950,750,1012,749,1065,754,1085,760,1101,769,1116,785,1129,806,1150,864,1167,935,1180,1013,1196,1164,1201,1265,1196,1265,1190,1164,1175,1014,1162,936,1145,865,1124,809,1111,788,1098,773,1083,765,1064,759,1011,754,950,755,887,760"/>
+<area shape="rect" href="classv8_1_1base_1_1SpinningMutex.html" title=" " alt="" coords="288,291,462,320"/>
+<area shape="poly" title=" " alt="" coords="389,334,428,426,457,481,491,533,526,570,560,593,593,617,609,635,625,658,634,683,635,705,636,725,649,745,673,761,670,765,645,749,631,727,629,705,629,684,621,660,605,638,589,621,557,597,523,574,487,537,453,484,423,429,384,336"/>
+<area shape="poly" title=" " alt="" coords="405,329,448,365,507,409,575,450,648,483,691,491,748,492,881,484,949,482,1011,484,1063,494,1084,502,1101,514,1112,531,1122,559,1141,641,1157,749,1171,871,1191,1111,1201,1264,1195,1265,1186,1112,1165,872,1151,749,1135,642,1117,560,1107,533,1097,518,1082,507,1062,499,1011,489,949,487,882,490,748,497,691,496,646,488,572,455,504,413,445,369,402,333"/>
+<area shape="rect" href="classv8_1_1internal_1_1IsolateGroup.html" title=" " alt="" coords="1518,203,1699,232"/>
+<area shape="poly" title=" " alt="" coords="406,279,444,251,488,224,603,161,696,116,792,81,920,51,969,44,1019,41,1119,46,1218,63,1313,88,1399,118,1474,148,1580,200,1578,204,1472,153,1397,123,1311,93,1217,68,1119,51,1019,46,970,49,921,56,794,86,698,120,606,166,490,229,447,256,409,283"/>
+<area shape="rect" href="classv8_1_1internal_1_1Heap.html" title=" " alt="" coords="1542,353,1675,383"/>
+<area shape="poly" title=" " alt="" coords="422,282,488,259,706,207,795,189,879,178,963,171,1054,170,1277,180,1337,181,1384,180,1430,186,1483,210,1497,225,1508,243,1596,351,1592,354,1503,246,1493,228,1480,214,1428,191,1384,185,1337,186,1277,185,1054,175,964,177,880,183,796,195,707,212,490,264,424,287"/>
+<area shape="rect" href="classv8_1_1internal_1_1OptimizingCompileDispatcher.html" title=" " alt="" coords="1525,574,1692,623"/>
+<area shape="poly" title=" " alt="" coords="477,303,741,306,1065,312,1346,325,1439,334,1468,340,1483,346,1499,366,1506,387,1506,407,1503,428,1496,470,1498,493,1508,516,1533,547,1564,572,1561,576,1529,551,1503,519,1493,494,1491,470,1498,427,1501,407,1501,387,1495,369,1480,350,1466,345,1438,339,1346,330,1065,318,741,311,477,308"/>
+<area shape="rect" href="classv8_1_1internal_1_1BuiltinsConstantsTableBuilder.html" title=" " alt="" coords="1505,713,1712,762"/>
+<area shape="poly" title=" " alt="" coords="477,310,672,327,897,353,1001,365,1046,374,1100,394,1134,411,1161,429,1202,467,1243,504,1269,522,1302,539,1329,548,1352,551,1396,550,1438,553,1460,561,1483,577,1494,590,1498,604,1501,618,1508,633,1542,676,1579,711,1575,714,1538,679,1503,636,1496,620,1493,605,1489,593,1480,581,1457,566,1436,558,1396,556,1352,557,1327,553,1300,544,1266,527,1240,508,1199,471,1158,433,1132,415,1098,399,1044,379,1000,370,896,359,671,332,477,315"/>
+<area shape="poly" title=" " alt="" coords="1194,1250,1185,1153,1166,1024,1153,960,1138,902,1119,856,1098,825,1073,818,1017,808,871,788,872,783,1018,803,1074,813,1101,821,1124,853,1143,901,1158,959,1171,1023,1190,1152,1199,1250"/>
+<area shape="poly" title=" " alt="" coords="1166,1248,1178,1241,1200,1239,1221,1241,1234,1247,1239,1256,1234,1266,1229,1264,1233,1256,1231,1251,1220,1246,1200,1244,1180,1246,1168,1252"/>
+<area shape="poly" title=" " alt="" coords="1200,1249,1207,1038,1225,724,1238,566,1255,427,1275,321,1286,286,1300,263,1377,248,1517,228,1518,233,1378,254,1303,268,1291,288,1280,323,1260,428,1243,567,1230,724,1213,1038,1205,1249"/>
+<area shape="poly" title=" " alt="" coords="1201,1250,1211,1073,1231,819,1245,692,1261,580,1279,495,1289,467,1299,449,1321,431,1341,422,1362,419,1383,420,1428,425,1453,424,1481,419,1531,401,1576,381,1578,386,1533,406,1482,424,1454,430,1428,430,1383,425,1363,425,1343,427,1323,436,1303,453,1293,469,1284,497,1266,581,1250,692,1236,819,1216,1073,1206,1250"/>
+<area shape="rect" href="classv8_1_1internal_1_1Bootstrapper.html" title=" " alt="" coords="1517,935,1700,964"/>
+<area shape="poly" title=" " alt="" coords="1201,1249,1209,1199,1225,1136,1238,1103,1255,1072,1275,1043,1300,1018,1323,1002,1344,993,1385,989,1429,992,1481,986,1561,962,1563,967,1482,991,1429,997,1385,995,1345,999,1325,1007,1303,1022,1279,1046,1259,1074,1243,1105,1231,1137,1214,1200,1207,1250"/>
+<area shape="rect" href="classv8_1_1internal_1_1TieringManager.html" title=" " alt="" coords="1509,1043,1708,1072"/>
+<area shape="poly" title=" " alt="" coords="1208,1249,1221,1216,1240,1178,1266,1141,1300,1111,1324,1098,1346,1090,1387,1086,1429,1089,1481,1084,1546,1070,1547,1075,1482,1090,1429,1094,1387,1092,1347,1095,1326,1102,1303,1116,1270,1145,1245,1181,1226,1219,1213,1251"/>
+<area shape="rect" href="classv8_1_1internal_1_1CompilationCache.html" title=" " alt="" coords="1522,1222,1695,1271"/>
+<area shape="poly" title=" " alt="" coords="1287,1286,1381,1289,1481,1282,1536,1269,1537,1274,1482,1287,1381,1294,1287,1291"/>
+<area shape="rect" href="classv8_1_1internal_1_1V8FileLogger.html" title=" " alt="" coords="1517,1340,1700,1370"/>
+<area shape="poly" title=" " alt="" coords="1224,1305,1258,1339,1279,1354,1302,1366,1334,1375,1367,1381,1433,1384,1497,1378,1550,1368,1551,1373,1497,1383,1434,1389,1366,1387,1333,1381,1300,1371,1276,1359,1255,1343,1220,1309"/>
+<area shape="rect" href="classv8_1_1internal_1_1StubCache.html" title=" " alt="" coords="1526,1512,1691,1542"/>
+<area shape="poly" title=" " alt="" coords="1205,1310,1211,1363,1226,1428,1239,1461,1256,1493,1277,1521,1303,1544,1335,1560,1370,1570,1407,1573,1444,1572,1514,1558,1570,1540,1572,1545,1515,1563,1444,1577,1407,1579,1369,1575,1333,1565,1300,1548,1273,1524,1251,1496,1234,1464,1221,1430,1206,1364,1200,1311"/>
+<area shape="rect" href="classv8_1_1internal_1_1Deoptimizer.html" title=" " alt="" coords="1520,1612,1697,1642"/>
+<area shape="poly" title=" " alt="" coords="1208,1310,1219,1392,1239,1496,1267,1593,1284,1629,1303,1652,1320,1660,1344,1664,1407,1662,1477,1653,1543,1640,1544,1645,1478,1658,1407,1668,1343,1669,1318,1665,1300,1656,1279,1632,1262,1595,1234,1497,1214,1393,1202,1311"/>
+<area shape="rect" href="classv8_1_1internal_1_1MaterializedObjectStore.html" title=" " alt="" coords="1520,1729,1697,1778"/>
+<area shape="poly" title=" " alt="" coords="1206,1310,1213,1415,1229,1556,1242,1626,1259,1689,1279,1740,1290,1758,1303,1772,1318,1779,1338,1784,1393,1786,1457,1780,1519,1769,1520,1775,1457,1785,1393,1791,1338,1789,1316,1784,1300,1776,1286,1761,1274,1742,1253,1691,1237,1627,1224,1557,1208,1416,1200,1310"/>
+<area shape="rect" href="classv8_1_1internal_1_1HandleScopeImplementer.html" title=" " alt="" coords="1518,1813,1699,1862"/>
+<area shape="poly" title=" " alt="" coords="1205,1310,1209,1433,1223,1602,1235,1688,1252,1764,1275,1826,1288,1849,1303,1865,1317,1873,1338,1877,1392,1877,1455,1869,1517,1857,1518,1863,1455,1875,1392,1883,1337,1882,1316,1878,1300,1869,1284,1852,1270,1828,1247,1766,1230,1689,1217,1603,1203,1434,1199,1311"/>
+<area shape="rect" href="classv8_1_1internal_1_1InnerPointerToCodeCache.html" title=" " alt="" coords="1518,1932,1699,1980"/>
+<area shape="poly" title=" " alt="" coords="1204,1310,1204,1455,1214,1659,1226,1763,1244,1857,1270,1932,1285,1961,1303,1981,1331,1999,1362,2010,1395,2014,1430,2013,1497,1999,1555,1978,1557,1983,1498,2004,1430,2018,1395,2019,1361,2015,1329,2004,1300,1985,1281,1964,1265,1935,1239,1858,1221,1764,1209,1660,1199,1455,1198,1310"/>
+<area shape="rect" href="classv8_1_1internal_1_1GlobalHandles.html" title=" " alt="" coords="1514,2047,1703,2076"/>
+<area shape="poly" title=" " alt="" coords="1206,1310,1216,1483,1235,1730,1249,1853,1265,1961,1283,2041,1293,2067,1303,2083,1334,2102,1369,2113,1406,2117,1444,2114,1517,2097,1575,2074,1577,2079,1519,2102,1445,2119,1406,2122,1368,2119,1332,2107,1299,2086,1288,2070,1278,2043,1259,1962,1243,1854,1230,1731,1210,1484,1200,1311"/>
+<area shape="rect" href="classv8_1_1internal_1_1TracedHandles.html" title=" " alt="" coords="1513,1152,1704,1182"/>
+<area shape="poly" title=" " alt="" coords="1214,1250,1248,1201,1272,1177,1300,1159,1331,1147,1364,1140,1431,1135,1495,1139,1550,1149,1549,1154,1495,1144,1431,1140,1365,1145,1333,1152,1303,1164,1275,1181,1252,1204,1218,1253"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html" title=" " alt="" coords="1537,476,1680,506"/>
+<area shape="poly" title=" " alt="" coords="1199,1250,1200,1103,1212,893,1224,785,1242,687,1267,607,1282,575,1299,552,1320,534,1341,523,1362,519,1383,518,1428,522,1453,522,1481,518,1544,504,1545,509,1482,523,1453,527,1427,527,1382,524,1362,524,1343,528,1323,538,1303,555,1286,578,1271,609,1247,688,1229,786,1217,893,1206,1103,1204,1250"/>
+<area shape="rect" href="classv8_1_1internal_1_1interpreter_1_1Interpreter.html" title=" " alt="" coords="1523,846,1694,895"/>
+<area shape="poly" title=" " alt="" coords="1203,1249,1216,1170,1236,1070,1264,975,1281,939,1300,914,1315,905,1336,899,1387,892,1481,887,1523,881,1523,886,1482,892,1388,898,1337,904,1317,910,1303,918,1285,941,1269,977,1241,1071,1221,1171,1208,1250"/>
+<area shape="poly" title=" " alt="" coords="1199,1249,1202,1115,1215,927,1227,831,1245,744,1268,674,1283,647,1299,626,1324,608,1350,594,1379,584,1409,578,1469,575,1525,579,1525,584,1469,580,1410,583,1380,589,1352,599,1326,612,1303,630,1287,649,1273,676,1250,746,1232,832,1220,927,1207,1115,1204,1249"/>
+<area shape="poly" title=" " alt="" coords="1201,1250,1211,1153,1230,1025,1243,960,1259,902,1277,855,1299,822,1321,805,1342,796,1363,792,1384,793,1429,796,1453,794,1481,789,1555,760,1557,765,1482,794,1454,800,1429,801,1384,798,1364,798,1344,801,1324,810,1303,826,1282,857,1264,904,1248,962,1235,1025,1216,1153,1207,1250"/>
+<area shape="rect" href="classv8_1_1internal_1_1HiddenFactory.html" title=" " alt="" coords="676,652,867,682"/>
+<area shape="poly" title=" " alt="" coords="883,654,947,652,1010,654,1064,662,1086,669,1101,678,1118,697,1132,724,1156,793,1173,877,1186,970,1199,1148,1202,1265,1196,1265,1193,1149,1180,971,1168,878,1151,794,1127,726,1113,700,1098,682,1083,673,1063,667,1010,659,947,657,883,660"/>
+<area shape="rect" href="classv8_1_1internal_1_1IsolateData.html" title=" " alt="" coords="686,705,857,735"/>
+<area shape="poly" title=" " alt="" coords="873,706,939,702,1005,702,1062,708,1085,715,1101,725,1117,742,1130,766,1153,829,1170,907,1183,992,1197,1156,1201,1265,1196,1265,1192,1157,1178,993,1165,908,1148,831,1125,768,1112,745,1098,729,1082,720,1061,714,1005,707,939,707,873,711"/>
+<area shape="poly" title=" " alt="" coords="1572,243,1530,266,1482,287,1454,294,1429,296,1383,293,1362,293,1343,297,1323,306,1303,323,1292,344,1281,379,1261,484,1245,621,1231,777,1213,1078,1205,1265,1200,1265,1207,1078,1226,776,1239,621,1256,483,1276,378,1287,342,1299,320,1320,301,1341,291,1362,288,1383,288,1428,291,1453,289,1480,282,1527,261,1569,238"/>
+<area shape="poly" title=" " alt="" coords="1569,185,1583,178,1608,176,1632,178,1647,184,1652,194,1646,204,1642,201,1647,194,1643,188,1631,183,1609,181,1585,184,1572,190"/>
+<area shape="rect" href="classv8_1_1internal_1_1ReadOnlyHeap.html" title=" " alt="" coords="676,368,868,398"/>
+<area shape="poly" title=" " alt="" coords="855,399,1006,439,1068,459,1101,477,1120,506,1136,544,1162,640,1180,756,1192,881,1202,1117,1202,1265,1197,1265,1196,1118,1187,882,1175,757,1157,641,1131,545,1115,508,1098,481,1066,464,1004,444,854,404"/>
+<area shape="poly" title=" " alt="" coords="793,354,846,301,881,275,919,254,997,226,1078,207,1161,195,1243,189,1322,187,1395,190,1518,201,1517,206,1395,195,1322,193,1243,194,1161,200,1079,212,998,231,921,259,884,279,850,305,797,358"/>
+<area shape="poly" title=" " alt="" coords="1526,353,1470,348,1410,352,1381,358,1352,367,1326,381,1303,399,1292,418,1281,449,1262,545,1245,671,1232,813,1213,1091,1205,1265,1200,1265,1208,1091,1227,813,1240,670,1257,544,1276,448,1287,415,1299,396,1323,376,1350,362,1379,352,1409,346,1470,343,1527,348"/>
+<area shape="rect" href="classv8_1_1internal_1_1StringStream.html" title=" " alt="" coords="681,825,862,855"/>
+<area shape="poly" title=" " alt="" coords="878,841,1016,851,1071,858,1101,869,1123,899,1142,945,1159,1001,1172,1062,1191,1182,1200,1265,1195,1265,1186,1183,1167,1063,1153,1002,1137,946,1119,902,1098,873,1070,864,1015,856,878,847"/>
+<area shape="poly" title=" " alt="" coords="1502,945,1385,946,1336,953,1303,966,1271,998,1246,1037,1228,1080,1216,1124,1205,1207,1204,1265,1198,1265,1200,1206,1211,1123,1223,1078,1242,1035,1267,995,1300,962,1334,948,1384,940,1501,939"/>
+<area shape="poly" title=" " alt="" coords="1493,1050,1382,1048,1335,1054,1303,1065,1278,1085,1258,1110,1242,1138,1230,1167,1213,1223,1206,1265,1201,1265,1208,1222,1225,1165,1238,1135,1254,1107,1275,1081,1300,1060,1333,1049,1381,1043,1494,1044"/>
+<area shape="poly" title=" " alt="" coords="1506,1250,1407,1254,1302,1263,1272,1267,1271,1262,1301,1257,1407,1248,1506,1245"/>
+<area shape="rect" href="classv8_1_1base_1_1RecursiveMutex.html" title=" " alt="" coords="285,2100,465,2130"/>
+<area shape="poly" title=" " alt="" coords="467,2094,489,2091,606,2083,801,2073,992,2055,1061,2043,1084,2035,1097,2028,1107,2012,1117,1986,1134,1906,1150,1800,1164,1680,1185,1445,1195,1295,1201,1295,1190,1445,1170,1681,1156,1801,1140,1907,1122,1987,1112,2015,1101,2031,1086,2040,1063,2048,993,2061,801,2078,606,2089,489,2096,468,2099"/>
+<area shape="rect" href="classv8_1_1internal_1_1Logger.html" title=" " alt="" coords="699,2112,844,2142"/>
+<area shape="poly" title=" " alt="" coords="481,2115,698,2122,698,2127,481,2121"/>
+<area shape="rect" href="classv8_1_1base_1_1SharedMutex.html" title=" " alt="" coords="690,1060,853,1090"/>
+<area shape="poly" title=" " alt="" coords="869,1084,898,1099,908,1111,911,1124,914,1135,922,1145,945,1158,966,1164,1007,1163,1051,1161,1075,1165,1101,1175,1130,1195,1155,1218,1191,1263,1187,1266,1151,1222,1126,1199,1098,1180,1073,1170,1050,1166,1008,1168,965,1169,943,1163,919,1149,909,1137,906,1125,903,1114,895,1103,867,1089"/>
+<area shape="poly" title=" " alt="" coords="1501,1350,1403,1338,1301,1319,1237,1298,1239,1293,1302,1314,1404,1333,1502,1345"/>
+<area shape="poly" title=" " alt="" coords="1510,1527,1389,1516,1336,1505,1300,1489,1276,1468,1257,1444,1228,1389,1210,1336,1201,1296,1207,1295,1215,1334,1233,1387,1261,1441,1280,1465,1303,1485,1338,1500,1390,1510,1511,1521"/>
+<area shape="poly" title=" " alt="" coords="1504,1633,1385,1627,1334,1618,1300,1603,1267,1568,1242,1528,1224,1484,1211,1438,1200,1354,1198,1295,1204,1295,1205,1354,1217,1437,1229,1482,1247,1526,1271,1565,1303,1598,1336,1613,1386,1622,1504,1627"/>
+<area shape="poly" title=" " alt="" coords="1505,1754,1385,1742,1334,1730,1300,1712,1277,1680,1258,1631,1241,1572,1228,1508,1209,1382,1200,1296,1206,1295,1215,1381,1233,1507,1247,1571,1263,1630,1281,1677,1303,1708,1336,1725,1386,1737,1505,1748"/>
+<area shape="rect" href="classv8_1_1internal_1_1DescriptorLookupCache.html" title=" " alt="" coords="688,1113,855,1162"/>
+<area shape="poly" title=" " alt="" coords="866,1165,898,1179,921,1194,970,1207,1010,1210,1050,1212,1100,1224,1142,1242,1177,1262,1174,1267,1139,1247,1098,1229,1049,1218,1009,1215,969,1212,919,1199,895,1184,864,1170"/>
+<area shape="poly" title=" " alt="" coords="1502,1845,1443,1845,1384,1841,1333,1832,1314,1825,1300,1816,1285,1799,1272,1775,1250,1714,1233,1640,1220,1558,1205,1400,1199,1295,1205,1295,1210,1400,1225,1557,1238,1639,1255,1713,1277,1773,1289,1795,1303,1812,1316,1820,1335,1827,1384,1836,1443,1840,1502,1840"/>
+<area shape="rect" href="classv8_1_1internal_1_1AccountingAllocator.html" title=" " alt="" coords="5,1516,175,1564"/>
+<area shape="poly" title=" " alt="" coords="101,1579,126,1709,167,1880,193,1964,222,2040,253,2101,269,2123,286,2139,306,2149,338,2158,433,2173,557,2184,694,2190,831,2191,953,2187,1047,2175,1079,2167,1098,2157,1109,2139,1120,2108,1140,2014,1157,1888,1170,1746,1188,1469,1196,1295,1201,1295,1193,1469,1175,1747,1162,1889,1145,2015,1125,2110,1114,2142,1101,2161,1081,2172,1048,2180,954,2192,831,2197,694,2196,556,2189,433,2178,337,2163,304,2154,283,2144,265,2127,249,2104,217,2042,188,1966,162,1881,121,1710,95,1580"/>
+<area shape="rect" href="classv8_1_1internal_1_1Zone.html" title=" " alt="" coords="309,1389,441,1419"/>
+<area shape="poly" title=" " alt="" coords="156,1506,340,1417,343,1422,158,1511"/>
+<area shape="poly" title=" " alt="" coords="1502,1961,1442,1960,1383,1954,1333,1944,1314,1936,1300,1927,1282,1905,1267,1877,1243,1802,1226,1710,1213,1610,1201,1419,1199,1295,1204,1295,1207,1418,1219,1609,1231,1709,1248,1800,1272,1875,1287,1902,1303,1923,1316,1932,1335,1939,1384,1949,1443,1954,1502,1956"/>
+<area shape="poly" title=" " alt="" coords="1498,2064,1374,2059,1326,2053,1300,2044,1289,2027,1278,1999,1260,1918,1244,1810,1230,1688,1210,1448,1200,1296,1205,1295,1215,1448,1235,1687,1249,1809,1265,1917,1284,1998,1293,2025,1303,2040,1327,2048,1375,2053,1498,2058"/>
+<area shape="poly" title=" " alt="" coords="1498,1181,1401,1199,1302,1227,1261,1246,1225,1267,1223,1262,1258,1241,1300,1222,1400,1193,1497,1176"/>
+<area shape="rect" href="classv8_1_1internal_1_1EternalHandles.html" title=" " alt="" coords="674,1253,869,1283"/>
+<area shape="poly" title=" " alt="" coords="885,1275,920,1276,1129,1279,1129,1284,920,1282,884,1280"/>
+<area shape="rect" href="classv8_1_1bigint_1_1Processor.html" title=" " alt="" coords="698,1307,846,1336"/>
+<area shape="poly" title=" " alt="" coords="861,1319,975,1316,1099,1303,1147,1293,1148,1298,1100,1308,975,1321,861,1325"/>
+<area shape="rect" href="classv8_1_1internal_1_1RuntimeState.html" title=" " alt="" coords="680,1360,864,1390"/>
+<area shape="poly" title=" " alt="" coords="880,1375,987,1367,1044,1357,1098,1342,1144,1319,1180,1293,1183,1297,1146,1324,1100,1347,1045,1362,988,1372,880,1380"/>
+<area shape="rect" href="classv8_1_1internal_1_1Builtins.html" title=" " alt="" coords="699,1413,844,1443"/>
+<area shape="poly" title=" " alt="" coords="860,1436,916,1437,977,1433,1040,1421,1098,1398,1129,1376,1155,1347,1189,1294,1194,1297,1160,1350,1133,1380,1101,1403,1041,1426,978,1438,916,1442,860,1441"/>
+<area shape="rect" href="classv8_1_1internal_1_1SetupIsolateDelegate.html" title=" " alt="" coords="682,1466,861,1515"/>
+<area shape="poly" title=" " alt="" coords="877,1503,931,1505,989,1500,1046,1486,1098,1461,1119,1444,1137,1423,1165,1376,1183,1330,1193,1295,1198,1296,1188,1332,1170,1379,1141,1427,1123,1448,1101,1465,1048,1491,990,1505,931,1510,876,1509"/>
+<area shape="rect" href="classunibrow_1_1Mapping.html" title=" " alt="" coords="674,1540,869,1588"/>
+<area shape="poly" title=" " alt="" coords="884,1577,938,1578,994,1572,1049,1556,1098,1529,1124,1504,1145,1474,1162,1441,1175,1407,1190,1342,1196,1295,1201,1295,1195,1343,1180,1408,1167,1443,1150,1477,1128,1507,1101,1533,1051,1561,995,1577,939,1583,884,1583"/>
+<area shape="rect" href="classunibrow_1_1Mapping.html" title=" " alt="" coords="674,1613,869,1662"/>
+<area shape="poly" title=" " alt="" coords="884,1653,939,1654,995,1648,1050,1632,1075,1620,1098,1604,1130,1570,1155,1529,1172,1485,1185,1440,1196,1355,1197,1295,1202,1296,1201,1355,1190,1441,1177,1487,1159,1532,1134,1573,1101,1608,1077,1624,1051,1637,996,1653,939,1659,884,1658"/>
+<area shape="rect" href="classunibrow_1_1Mapping.html" title=" " alt="" coords="674,1686,869,1735"/>
+<area shape="poly" title=" " alt="" coords="884,1719,948,1721,1010,1720,1063,1713,1083,1707,1098,1699,1120,1670,1139,1624,1155,1567,1168,1503,1187,1380,1195,1295,1200,1295,1192,1381,1174,1504,1160,1568,1144,1625,1124,1672,1101,1703,1085,1712,1064,1718,1011,1725,948,1727,884,1724"/>
+<area shape="rect" href="classv8_1_1internal_1_1RegExpStack.html" title=" " alt="" coords="682,1759,861,1788"/>
+<area shape="poly" title=" " alt="" coords="877,1776,942,1776,1007,1772,1062,1763,1083,1755,1098,1746,1110,1732,1121,1713,1141,1661,1158,1597,1171,1526,1188,1388,1195,1295,1201,1296,1193,1389,1176,1527,1163,1598,1146,1663,1126,1715,1114,1736,1101,1750,1085,1760,1063,1768,1007,1777,942,1781,877,1781"/>
+<area shape="rect" href="classv8_1_1internal_1_1DateCache.html" title=" " alt="" coords="688,1812,855,1842"/>
+<area shape="poly" title=" " alt="" coords="871,1830,937,1830,1004,1827,1061,1818,1082,1810,1098,1801,1111,1785,1124,1763,1145,1705,1162,1632,1175,1552,1190,1398,1196,1295,1201,1296,1195,1399,1180,1553,1167,1633,1150,1706,1128,1766,1116,1788,1101,1805,1085,1815,1062,1823,1005,1832,937,1836,871,1835"/>
+<area shape="rect" href="classv8_1_1base_1_1RandomNumberGenerator.html" title=" " alt="" coords="647,1865,896,1895"/>
+<area shape="poly" title=" " alt="" coords="912,1893,969,1896,1023,1895,1068,1888,1098,1875,1113,1857,1127,1832,1151,1764,1168,1681,1181,1589,1193,1411,1196,1295,1202,1296,1199,1411,1186,1589,1174,1681,1156,1766,1132,1834,1118,1860,1101,1879,1070,1893,1024,1900,969,1901,912,1899"/>
+<area shape="poly" title=" " alt="" coords="1522,483,1458,478,1394,477,1338,483,1318,489,1303,498,1293,514,1283,541,1264,625,1248,736,1234,862,1214,1108,1205,1265,1200,1265,1209,1108,1229,861,1243,735,1259,624,1278,539,1288,511,1299,494,1316,485,1337,478,1394,472,1459,473,1522,478"/>
+<area shape="rect" href="classv8_1_1internal_1_1HeapProfiler.html" title=" " alt="" coords="682,1919,861,1948"/>
+<area shape="poly" title=" " alt="" coords="877,1941,942,1945,1007,1944,1062,1937,1083,1930,1098,1921,1114,1901,1129,1874,1154,1800,1171,1710,1183,1610,1195,1419,1196,1295,1202,1295,1200,1419,1189,1611,1177,1711,1159,1802,1134,1876,1119,1904,1101,1925,1085,1935,1063,1942,1008,1949,942,1950,877,1947"/>
+<area shape="poly" title=" " alt="" coords="847,2142,908,2150,976,2150,1009,2144,1041,2135,1071,2120,1097,2100,1108,2083,1118,2054,1137,1966,1153,1849,1167,1717,1187,1458,1196,1295,1201,1295,1192,1459,1172,1717,1159,1850,1142,1967,1123,2056,1113,2085,1101,2104,1074,2125,1043,2140,1010,2149,976,2155,908,2156,846,2148"/>
+<area shape="rect" href="classv8_1_1internal_1_1AstStringConstants.html" title=" " alt="" coords="662,943,881,972"/>
+<area shape="poly" title=" " alt="" coords="833,935,920,916,972,905,1015,894,1036,892,1056,894,1078,902,1101,917,1122,942,1140,982,1156,1030,1170,1084,1189,1190,1200,1265,1195,1265,1184,1191,1164,1085,1151,1032,1135,983,1117,945,1098,921,1076,907,1055,900,1036,898,1016,899,973,910,921,921,835,940"/>
+<area shape="poly" title=" " alt="" coords="403,1377,447,1343,506,1304,574,1267,646,1239,715,1225,785,1218,856,1218,925,1222,1051,1240,1146,1262,1145,1267,1050,1246,925,1227,856,1223,786,1223,716,1230,648,1244,576,1271,508,1308,450,1348,407,1382"/>
+<area shape="poly" title=" " alt="" coords="385,1373,425,1286,453,1234,487,1185,552,1115,624,1053,691,1004,743,971,746,975,694,1009,627,1058,556,1119,491,1188,458,1237,429,1288,390,1376"/>
+<area shape="rect" href="classv8_1_1internal_1_1compiler_1_1PerIsolateCompilerCache.html" title=" " alt="" coords="678,1972,865,2020"/>
+<area shape="poly" title=" " alt="" coords="384,1433,409,1534,431,1601,459,1675,494,1752,537,1827,588,1897,649,1958,680,1976,677,1981,645,1962,584,1901,532,1830,489,1754,454,1677,426,1603,404,1535,379,1434"/>
+<area shape="poly" title=" " alt="" coords="1508,859,1447,853,1388,851,1336,855,1317,860,1303,867,1281,896,1262,941,1246,997,1233,1059,1214,1181,1206,1265,1200,1264,1209,1180,1227,1058,1241,995,1257,939,1276,893,1300,863,1315,855,1335,850,1387,845,1448,847,1508,853"/>
+<area shape="poly" title=" " alt="" coords="880,2017,936,2021,994,2017,1050,2001,1075,1988,1097,1971,1115,1949,1131,1919,1156,1839,1174,1740,1186,1632,1196,1427,1197,1295,1202,1295,1201,1427,1191,1633,1179,1741,1161,1840,1136,1921,1120,1952,1101,1974,1078,1992,1052,2006,995,2022,936,2026,880,2022"/>
+<area shape="poly" title=" " alt="" coords="1556,634,1521,652,1482,669,1454,675,1429,677,1384,673,1363,673,1344,676,1324,684,1303,701,1289,719,1276,745,1254,811,1237,893,1224,982,1210,1153,1205,1265,1199,1265,1204,1153,1219,981,1232,892,1249,810,1271,743,1284,717,1299,697,1321,680,1342,670,1363,667,1384,668,1429,672,1454,670,1480,664,1518,648,1554,629"/>
+<area shape="poly" title=" " alt="" coords="1490,745,1371,754,1326,761,1303,769,1290,784,1278,806,1257,864,1240,935,1227,1013,1211,1164,1205,1265,1200,1265,1206,1164,1222,1013,1235,934,1252,862,1273,804,1285,781,1300,765,1325,755,1370,749,1490,739"/>
+<area shape="rect" href="classv8_1_1internal_1_1FutexWaitListNode.html" title=" " alt="" coords="664,2279,880,2308"/>
+<area shape="poly" title=" " alt="" coords="895,2294,949,2288,1004,2274,1055,2250,1077,2234,1097,2215,1108,2194,1119,2160,1138,2058,1155,1923,1168,1772,1187,1478,1196,1295,1201,1296,1193,1478,1174,1772,1160,1924,1144,2059,1124,2161,1113,2196,1101,2218,1081,2238,1058,2255,1006,2279,950,2293,896,2300"/>
+<area shape="poly" title=" " alt="" coords="733,2261,746,2254,772,2252,795,2254,810,2260,815,2270,809,2280,805,2277,809,2270,806,2264,794,2259,772,2257,748,2260,735,2266"/>
+<area shape="rect" href="classv8_1_1internal_1_1CancelableTaskManager.html" title=" " alt="" coords="688,2332,855,2380"/>
+<area shape="poly" title=" " alt="" coords="870,2372,929,2375,990,2369,1020,2362,1048,2351,1074,2337,1097,2317,1110,2295,1122,2258,1144,2144,1160,1994,1173,1825,1190,1497,1196,1295,1201,1296,1195,1497,1179,1825,1166,1994,1149,2145,1128,2259,1115,2297,1101,2321,1077,2341,1050,2356,1021,2367,991,2375,929,2380,870,2377"/>
+<area shape="rect" href="classv8_1_1debug_1_1ConsoleDelegate.html" title=" " alt="" coords="672,545,871,575"/>
+<area shape="poly" title=" " alt="" coords="853,540,913,534,980,536,1013,542,1045,552,1075,567,1101,588,1119,610,1135,641,1161,722,1179,821,1191,929,1201,1134,1202,1265,1197,1265,1196,1134,1185,929,1173,822,1155,723,1130,643,1115,613,1097,591,1072,572,1043,557,1012,547,979,541,914,539,853,545"/>
+<area shape="rect" href="classv8_1_1debug_1_1AsyncEventDelegate.html" title=" " alt="" coords="662,599,882,628"/>
+<area shape="poly" title=" " alt="" coords="898,609,959,611,1018,617,1068,629,1087,636,1101,646,1118,667,1133,695,1157,769,1174,859,1186,957,1199,1144,1202,1265,1196,1265,1194,1145,1181,957,1169,860,1151,770,1128,697,1114,670,1098,650,1084,641,1066,634,1017,623,958,617,897,614"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -130,6 +265,28 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4ea95e4c29e70027b8f5840cc99c38f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a721df0b8493ec8b3a2d52506991e6d7a" id="r_a721df0b8493ec8b3a2d52506991e6d7a"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a721df0b8493ec8b3a2d52506991e6d7a">data</a> ()</td></tr>
 <tr class="separator:a721df0b8493ec8b3a2d52506991e6d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ac4ab63f9eacfc3d337c6e4db599dd39f" id="r_ac4ab63f9eacfc3d337c6e4db599dd39f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac4ab63f9eacfc3d337c6e4db599dd39f">ThreadState</a> (<a class="el" href="classv8_1_1internal_1_1ThreadManager.html">ThreadManager</a> *thread_manager)</td></tr>
+<tr class="separator:ac4ab63f9eacfc3d337c6e4db599dd39f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e2f0787dd4fe46bd9292a73ee5c05e" id="r_a23e2f0787dd4fe46bd9292a73ee5c05e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23e2f0787dd4fe46bd9292a73ee5c05e">~ThreadState</a> ()</td></tr>
+<tr class="separator:a23e2f0787dd4fe46bd9292a73ee5c05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56568601d3edc011a56cc9fd59df70ae" id="r_a56568601d3edc011a56cc9fd59df70ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56568601d3edc011a56cc9fd59df70ae">AllocateSpace</a> ()</td></tr>
+<tr class="separator:a56568601d3edc011a56cc9fd59df70ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:af0d7ec1e5588fa5eec4ebd1ab71e98b8" id="r_af0d7ec1e5588fa5eec4ebd1ab71e98b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classv8_1_1internal_1_1ThreadId.html">ThreadId</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0d7ec1e5588fa5eec4ebd1ab71e98b8">id_</a></td></tr>
+<tr class="separator:af0d7ec1e5588fa5eec4ebd1ab71e98b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada5e4dd6f2c80e4e4aef5ccbbd7a999f" id="r_ada5e4dd6f2c80e4e4aef5ccbbd7a999f"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada5e4dd6f2c80e4e4aef5ccbbd7a999f">data_</a></td></tr>
+<tr class="separator:ada5e4dd6f2c80e4e4aef5ccbbd7a999f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3a17b374e832a7634cd892cd4e9ce0" id="r_a6e3a17b374e832a7634cd892cd4e9ce0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classv8_1_1internal_1_1ThreadState.html">ThreadState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e3a17b374e832a7634cd892cd4e9ce0">next_</a></td></tr>
+<tr class="separator:a6e3a17b374e832a7634cd892cd4e9ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35506e67f5503f2c2934361ed8bcd4d2" id="r_a35506e67f5503f2c2934361ed8bcd4d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classv8_1_1internal_1_1ThreadState.html">ThreadState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35506e67f5503f2c2934361ed8bcd4d2">previous_</a></td></tr>
+<tr class="separator:a35506e67f5503f2c2934361ed8bcd4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5b113e820a374a4db02de0e6ae8af2e" id="r_ab5b113e820a374a4db02de0e6ae8af2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classv8_1_1internal_1_1ThreadManager.html">ThreadManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5b113e820a374a4db02de0e6ae8af2e">thread_manager_</a></td></tr>
+<tr class="separator:ab5b113e820a374a4db02de0e6ae8af2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -160,7 +317,149 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac4ab63f9eacfc3d337c6e4db599dd39f" name="ac4ab63f9eacfc3d337c6e4db599dd39f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4ab63f9eacfc3d337c6e4db599dd39f">&#9670;&#160;</a></span>ThreadState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">v8::internal::ThreadState::ThreadState </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classv8_1_1internal_1_1ThreadManager.html">ThreadManager</a> *</td>          <td class="paramname"><span class="paramname"><em>thread_manager</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="v8threads_8cc_source.html#l00169">169</a> of file <a class="el" href="v8threads_8cc_source.html">v8threads.cc</a>.</p>
+
+</div>
+</div>
+<a id="a23e2f0787dd4fe46bd9292a73ee5c05e" name="a23e2f0787dd4fe46bd9292a73ee5c05e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e2f0787dd4fe46bd9292a73ee5c05e">&#9670;&#160;</a></span>~ThreadState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">v8::internal::ThreadState::~ThreadState </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="v8threads_8cc_source.html#l00176">176</a> of file <a class="el" href="v8threads_8cc_source.html">v8threads.cc</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classv8_1_1internal_1_1ThreadState_a23e2f0787dd4fe46bd9292a73ee5c05e_cgraph.png" border="0" usemap="#aclassv8_1_1internal_1_1ThreadState_a23e2f0787dd4fe46bd9292a73ee5c05e_cgraph" alt=""/></div>
+<map name="aclassv8_1_1internal_1_1ThreadState_a23e2f0787dd4fe46bd9292a73ee5c05e_cgraph" id="aclassv8_1_1internal_1_1ThreadState_a23e2f0787dd4fe46bd9292a73ee5c05e_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,181,54"/>
+<area shape="rect" href="namespacev8_1_1internal.html#a0166c55019a8ae518b6bb1ac17ad4706" title=" " alt="" coords="229,15,405,44"/>
+<area shape="poly" title=" " alt="" coords="181,27,213,27,213,32,181,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a56568601d3edc011a56cc9fd59df70ae" name="a56568601d3edc011a56cc9fd59df70ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56568601d3edc011a56cc9fd59df70ae">&#9670;&#160;</a></span>AllocateSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void v8::internal::ThreadState::AllocateSpace </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="v8threads_8cc_source.html#l00178">178</a> of file <a class="el" href="v8threads_8cc_source.html">v8threads.cc</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classv8_1_1internal_1_1ThreadState_a56568601d3edc011a56cc9fd59df70ae_cgraph.png" border="0" usemap="#aclassv8_1_1internal_1_1ThreadState_a56568601d3edc011a56cc9fd59df70ae_cgraph" alt=""/></div>
+<map name="aclassv8_1_1internal_1_1ThreadState_a56568601d3edc011a56cc9fd59df70ae_cgraph" id="aclassv8_1_1internal_1_1ThreadState_a56568601d3edc011a56cc9fd59df70ae_cgraph">
+<area shape="rect" title=" " alt="" coords="5,409,181,458"/>
+<area shape="rect" href="namespacev8_1_1internal.html#aac827a4f92767fe08bc70dc15e1f0da7" title=" " alt="" coords="229,263,411,311"/>
+<area shape="poly" title=" " alt="" coords="131,407,266,318,269,322,134,411"/>
+<area shape="rect" href="namespacev8_1_1internal.html#aed43b98c5ffa7f17cee0d8ed23ffd385" title=" " alt="" coords="239,528,400,558"/>
+<area shape="poly" title=" " alt="" coords="146,456,275,519,273,524,144,461"/>
+<area shape="rect" href="classv8_1_1internal_1_1Bootstrapper.html#af55e132f4a17a18aceb087688aea0291" title=" " alt="" coords="497,5,680,54"/>
+<area shape="poly" title=" " alt="" coords="327,261,345,218,373,166,410,111,433,87,457,65,481,50,484,55,461,69,436,90,414,115,377,168,350,221,332,263"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#adb09bdbce4e9edfc915eef0b59574825" title=" " alt="" coords="500,79,677,127"/>
+<area shape="poly" title=" " alt="" coords="336,261,385,199,419,166,458,138,485,124,487,129,460,143,423,170,389,203,340,264"/>
+<area shape="rect" href="classv8_1_1internal_1_1HandleScopeImplementer.html#ae1a88c356c5413fc94977f71ef5915e7" title=" " alt="" coords="459,152,718,201"/>
+<area shape="poly" title=" " alt="" coords="361,260,407,235,458,211,478,204,480,209,460,216,409,240,364,265"/>
+<area shape="rect" href="classv8_1_1internal_1_1Isolate.html#a7a165e2049a92057523bacbcaaadbeb4" title=" " alt="" coords="500,225,677,274"/>
+<area shape="poly" title=" " alt="" coords="411,272,485,261,486,267,412,277"/>
+<area shape="rect" href="classv8_1_1internal_1_1RegExpStack.html#a8f8a69e3a5103224ceebb1b139d9da42" title=" " alt="" coords="500,299,678,347"/>
+<area shape="poly" title=" " alt="" coords="412,297,484,306,484,312,411,302"/>
+<area shape="rect" href="classv8_1_1internal_1_1Relocatable.html#a95095caf2356678d1258fe8a8b27b44e" title=" " alt="" coords="500,372,677,421"/>
+<area shape="poly" title=" " alt="" coords="365,310,410,334,460,357,487,366,485,371,458,361,408,339,362,314"/>
+<area shape="rect" href="classv8_1_1internal_1_1StackGuard.html#aca52d15703dd748210cc05932ad6ab8f" title=" " alt="" coords="500,445,677,494"/>
+<area shape="poly" title=" " alt="" coords="340,310,390,371,423,403,460,430,487,443,485,448,458,435,420,407,386,374,336,314"/>
+<area shape="rect" href="classv8_1_1internal_1_1HandleScopeImplementer.html#a8a8b3601372eacaddfe9eae275e7bdc5" title=" " alt="" coords="766,152,1043,201"/>
+<area shape="poly" title=" " alt="" coords="719,174,751,174,751,179,719,179"/>
+<area shape="rect" href="classv8_1_1internal_1_1V8.html#a977b087d4ee58955efe72b33136a4e94" title=" " alt="" coords="488,519,689,567"/>
+<area shape="poly" title=" " alt="" coords="401,540,473,540,473,546,401,546"/>
+<area shape="rect" href="namespacev8_1_1internal.html#a4dbd9d093eaf158525194749da22eeb4" title=" " alt="" coords="509,592,668,641"/>
+<area shape="poly" title=" " alt="" coords="378,556,494,588,493,593,376,561"/>
+<area shape="rect" href="classv8_1_1internal_1_1V8.html#a5eb1d47c492fa1e85e7d7c31dd5cf2bb" title=" " alt="" coords="807,592,1002,641"/>
+<area shape="poly" title=" " alt="" coords="669,614,791,614,791,619,669,619"/>
+<area shape="rect" href="namespacev8_1_1base.html#a2e581b5cd5e9342670c135a3b365160c" title=" " alt="" coords="1091,602,1257,631"/>
+<area shape="poly" title=" " alt="" coords="1002,614,1075,614,1075,619,1002,619"/>
+<area shape="rect" href="namespacev8_1_1base_1_1helper.html#a4409b4489ee737fd59055eaaa6f83280" title=" " alt="" coords="1305,592,1448,641"/>
+<area shape="poly" title=" " alt="" coords="1257,614,1290,614,1290,619,1257,619"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classv8_1_1internal_1_1ThreadState_a56568601d3edc011a56cc9fd59df70ae_icgraph.png" border="0" usemap="#aclassv8_1_1internal_1_1ThreadState_a56568601d3edc011a56cc9fd59df70ae_icgraph" alt=""/></div>
+<map name="aclassv8_1_1internal_1_1ThreadState_a56568601d3edc011a56cc9fd59df70ae_icgraph" id="aclassv8_1_1internal_1_1ThreadState_a56568601d3edc011a56cc9fd59df70ae_icgraph">
+<area shape="rect" title=" " alt="" coords="500,5,675,54"/>
+<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html#ae7610d3c55e69ceffd65c6b734813f0b" title=" " alt="" coords="253,5,452,54"/>
+<area shape="poly" title=" " alt="" coords="484,32,453,32,453,27,484,27"/>
+<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html#a36506aaa6d781c749efe48996b48e2a0" title=" " alt="" coords="5,5,205,54"/>
+<area shape="poly" title=" " alt="" coords="237,32,205,32,205,27,237,27"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a721df0b8493ec8b3a2d52506991e6d7a" name="a721df0b8493ec8b3a2d52506991e6d7a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a721df0b8493ec8b3a2d52506991e6d7a">&#9670;&#160;</a></span>data()</h2>
 
@@ -248,9 +547,12 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classv8_1_1internal_1_1ThreadState_a4defafb5b3668efb14f85d77374bbe3b_icgraph.png" border="0" usemap="#aclassv8_1_1internal_1_1ThreadState_a4defafb5b3668efb14f85d77374bbe3b_icgraph" alt=""/></div>
 <map name="aclassv8_1_1internal_1_1ThreadState_a4defafb5b3668efb14f85d77374bbe3b_icgraph" id="aclassv8_1_1internal_1_1ThreadState_a4defafb5b3668efb14f85d77374bbe3b_icgraph">
-<area shape="rect" title=" " alt="" coords="253,5,428,54"/>
-<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html#ac7d4ad5d9a21d88fc2d50f5d91a62442" title=" " alt="" coords="5,5,205,54"/>
-<area shape="poly" title=" " alt="" coords="237,32,205,32,205,27,237,27"/>
+<area shape="rect" title=" " alt="" coords="500,36,675,85"/>
+<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html#ac86e451a498ebd5d66704a4278ef383d" title=" " alt="" coords="253,5,452,54"/>
+<area shape="poly" title=" " alt="" coords="484,50,452,45,453,40,485,44"/>
+<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html#ac7d4ad5d9a21d88fc2d50f5d91a62442" title=" " alt="" coords="5,36,205,85"/>
+<area shape="poly" title=" " alt="" coords="484,67,452,68,253,68,205,67,205,62,253,63,452,63,484,62"/>
+<area shape="poly" title=" " alt="" coords="237,47,205,51,205,45,237,41"/>
 </map>
 </div>
 
@@ -277,94 +579,115 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classv8_1_1internal_1_1ThreadState_a72a0930797cee81d1c9554b85d823a85_icgraph.png" border="0" usemap="#aclassv8_1_1internal_1_1ThreadState_a72a0930797cee81d1c9554b85d823a85_icgraph" alt=""/></div>
 <map name="aclassv8_1_1internal_1_1ThreadState_a72a0930797cee81d1c9554b85d823a85_icgraph" id="aclassv8_1_1internal_1_1ThreadState_a72a0930797cee81d1c9554b85d823a85_icgraph">
-<area shape="rect" title=" " alt="" coords="2607,449,2782,498"/>
-<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html#a31381c48c7f8608f4a2ab582a2c4c729" title=" " alt="" coords="2359,449,2559,498"/>
-<area shape="poly" title=" " alt="" coords="2591,476,2559,476,2559,471,2591,471"/>
-<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html#a041c4cd7b983c468cc33e2c8e687f60e" title=" " alt="" coords="2110,376,2309,425"/>
-<area shape="poly" title=" " alt="" coords="2593,448,2558,440,2429,421,2309,409,2310,404,2430,416,2559,435,2594,442"/>
-<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html#a2fec67e06e5fc2f061ac8f87bb2bb080" title=" " alt="" coords="2110,523,2309,571"/>
-<area shape="poly" title=" " alt="" coords="2594,505,2559,512,2430,531,2310,543,2309,538,2429,526,2558,507,2593,500"/>
-<area shape="poly" title=" " alt="" coords="2359,447,2294,428,2296,423,2360,442"/>
-<area shape="poly" title=" " alt="" coords="2360,505,2296,525,2294,519,2359,500"/>
-<area shape="rect" href="classv8_1_1internal_1_1StartupSerializer.html#ae0615940a7e5436447ba8f226de888bd" title=" " alt="" coords="2108,449,2311,498"/>
-<area shape="poly" title=" " alt="" coords="2343,476,2312,476,2312,471,2343,471"/>
-<area shape="rect" href="classv8_1_1internal_1_1Heap.html#a888246e231dc6514e84cbad718195f2e" title=" " alt="" coords="1907,189,2040,238"/>
-<area shape="poly" title=" " alt="" coords="2164,368,2004,241,2007,236,2167,364"/>
-<area shape="rect" href="classv8_1_1internal_1_1ScavengerCollector.html#a9f8043360f0e70afd346c2ad23a0b5ab" title=" " alt="" coords="1618,5,1839,54"/>
-<area shape="poly" title=" " alt="" coords="1945,178,1898,122,1869,94,1837,69,1815,57,1817,52,1840,65,1873,90,1902,119,1949,175"/>
-<area shape="rect" href="classv8_1_1internal_1_1StartupDeserializer.html#a00b930ec1d2789493f357f5d79d57cf0" title=" " alt="" coords="1618,79,1839,127"/>
-<area shape="poly" title=" " alt="" coords="1917,184,1838,143,1807,130,1809,125,1840,138,1920,179"/>
-<area shape="rect" href="classv8_1_1internal_1_1V8HeapExplorer.html#aff3a17723e9ea1c85248d70a57b357d7" title=" " alt="" coords="1624,152,1833,201"/>
-<area shape="poly" title=" " alt="" coords="1891,204,1833,195,1834,190,1892,199"/>
-<area shape="rect" href="classv8_1_1internal_1_1Heap.html#a065f31941b8c3f83d4cb37864fe9bd9b" title=" " alt="" coords="1626,225,1831,274"/>
-<area shape="poly" title=" " alt="" coords="1892,228,1832,237,1831,232,1891,223"/>
-<area shape="rect" href="classv8_1_1internal_1_1Heap.html#af440bd7cf82c3a3a76978f5fc6578aef" title=" " alt="" coords="1654,299,1803,347"/>
-<area shape="poly" title=" " alt="" coords="1918,248,1840,288,1805,302,1803,297,1838,283,1916,244"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#ae7fed350d8a45f5a5c847c6b5e509c18" title=" " alt="" coords="1887,523,2060,571"/>
-<area shape="poly" title=" " alt="" coords="2095,550,2060,550,2060,544,2095,544"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#ab91a707cbc3e33197041d577d9a4a03d" title=" " alt="" coords="1316,620,1570,669"/>
-<area shape="poly" title=" " alt="" coords="2176,584,2125,626,2094,645,2061,659,1997,676,1930,687,1863,693,1796,694,1670,687,1562,672,1563,667,1670,681,1796,689,1863,687,1930,682,1996,671,2059,654,2091,640,2122,621,2173,580"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#ac2825d56d3b2ad9d736b9ecd2c7b8010" title=" " alt="" coords="1894,596,2052,645"/>
-<area shape="poly" title=" " alt="" coords="2116,579,2054,598,2052,593,2114,574"/>
-<area shape="poly" title=" " alt="" coords="1871,554,1750,565,1619,587,1561,603,1506,622,1505,617,1559,598,1618,582,1749,560,1871,549"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a03ae7b6b1046a4f8ccb4e3816e002940" title=" " alt="" coords="544,480,686,529"/>
-<area shape="poly" title=" " alt="" coords="1381,615,1327,591,1267,571,1188,553,1107,538,945,519,799,510,686,507,686,501,799,504,945,514,1107,533,1189,548,1269,566,1329,586,1383,610"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#aa95c64adcbebdd0a749ff4c8779546e1" title=" " alt="" coords="1009,702,1268,770"/>
-<area shape="poly" title=" " alt="" coords="1346,676,1253,704,1252,699,1345,671"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#aa85301619ff630af215f4fc53041b815" title=" " alt="" coords="528,783,701,831"/>
-<area shape="poly" title=" " alt="" coords="1411,682,1350,738,1311,764,1269,784,1221,796,1158,805,1004,814,840,816,702,813,702,808,840,810,1004,809,1158,800,1220,791,1267,779,1308,759,1346,734,1408,678"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a74b0df5dab4c42b5aca8daacf23a00d3" title=" " alt="" coords="775,629,951,678"/>
-<area shape="poly" title=" " alt="" coords="1300,649,952,655,951,650,1300,644"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#aeff02047bc9a9cfd8772db19b5027723" title=" " alt="" coords="1048,580,1228,629"/>
-<area shape="poly" title=" " alt="" coords="1300,628,1228,619,1229,613,1301,623"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a1872132362358cdade44b99095d8f97f" title=" " alt="" coords="1067,437,1210,486"/>
-<area shape="poly" title=" " alt="" coords="1395,613,1335,570,1267,527,1194,489,1196,484,1269,522,1338,566,1398,608"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a4db52a214dff937d74c599818eda2ece" title=" " alt="" coords="1067,844,1210,893"/>
-<area shape="poly" title=" " alt="" coords="1418,683,1355,756,1314,794,1269,828,1241,843,1211,854,1209,849,1239,838,1267,823,1311,790,1351,752,1414,679"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a37c6669bd6f73aded4de6e21334b8efb" title=" " alt="" coords="765,702,961,770"/>
-<area shape="poly" title=" " alt="" coords="993,739,961,739,961,734,993,734"/>
-<area shape="poly" title=" " alt="" coords="1008,700,946,681,947,676,1010,695"/>
-<area shape="poly" title=" " alt="" coords="751,771,703,785,701,780,750,766"/>
-<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1gdb__server_1_1WasmModuleDebug.html#afc6d23eb17da83c6bcf5ecbcfac2607a" title=" " alt="" coords="230,773,464,841"/>
-<area shape="poly" title=" " alt="" coords="513,810,464,810,464,804,513,804"/>
-<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1gdb__server_1_1GdbServer.html#a168d97440f3a10c328264f4b299e6f9e" title=" " alt="" coords="5,773,182,841"/>
-<area shape="poly" title=" " alt="" coords="214,810,182,810,182,804,214,804"/>
-<area shape="poly" title=" " alt="" coords="1052,471,687,501,686,496,1051,466"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a7b3dc3d19f2788ba4752a781ea1b58eb" title=" " alt="" coords="792,407,934,455"/>
-<area shape="poly" title=" " alt="" coords="1051,455,934,442,935,436,1052,449"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#ae861376668c9dff179eba5d8b43bffb5" title=" " alt="" coords="782,260,944,309"/>
-<area shape="poly" title=" " alt="" coords="1051,451,1028,441,1007,426,995,413,988,400,982,374,976,349,970,336,959,324,943,311,946,307,962,320,974,333,981,347,987,373,993,398,999,410,1010,422,1031,436,1054,446"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#adecb3c22088fc338ea44d910ae2158aa" title=" " alt="" coords="792,333,934,382"/>
-<area shape="poly" title=" " alt="" coords="1051,443,1008,427,983,412,959,397,932,385,934,380,962,393,986,408,1010,422,1053,438"/>
-<area shape="poly" title=" " alt="" coords="777,459,687,486,686,481,776,454"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a581d5c1f6bf12b7da5300f01d1a042d5" title=" " alt="" coords="539,407,690,455"/>
-<area shape="poly" title=" " alt="" coords="776,434,691,434,691,428,776,428"/>
-<area shape="rect" href="classv8_1_1internal_1_1DebugStackTraceIterator.html#a165622582ac0dcdc2046a9fa3b2d147e" title=" " alt="" coords="512,260,717,309"/>
-<area shape="poly" title=" " alt="" coords="766,287,718,287,718,282,766,282"/>
-<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html#ac7d4ad5d9a21d88fc2d50f5d91a62442" title=" " alt="" coords="515,333,714,382"/>
-<area shape="poly" title=" " alt="" coords="776,360,715,360,715,355,776,355"/>
-<area shape="poly" title=" " alt="" coords="1051,861,765,828,701,821,702,815,766,823,1052,856"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a1441d93a1f3a36283a49150f2a85b731" title=" " alt="" coords="767,895,959,943"/>
-<area shape="poly" title=" " alt="" coords="1052,887,959,904,958,899,1051,882"/>
-<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a1247ff32050488611b41927cb4190033" title=" " alt="" coords="1652,596,1805,645"/>
-<area shape="poly" title=" " alt="" coords="1879,623,1806,623,1806,618,1879,618"/>
-<area shape="poly" title=" " alt="" coords="1637,631,1571,636,1570,631,1636,625"/>
-<area shape="rect" href="classv8_1_1internal_1_1Snapshot.html#a2a8b9398e37cf2a5588fc73175fef44a" title=" " alt="" coords="1895,449,2052,498"/>
-<area shape="poly" title=" " alt="" coords="2092,476,2053,476,2053,471,2092,471"/>
-<area shape="rect" href="classv8_1_1internal_1_1SnapshotCreatorImpl.html#ab7f9d4c9aa101d7b600a9016de8ccda3" title=" " alt="" coords="1626,372,1831,421"/>
-<area shape="poly" title=" " alt="" coords="1879,447,1807,424,1809,419,1880,442"/>
-<area shape="rect" href="classv8_1_1internal_1_1Snapshot.html#a28b4f9df415675bda833d449e659206b" title=" " alt="" coords="1623,445,1834,513"/>
-<area shape="poly" title=" " alt="" coords="1879,478,1834,479,1834,474,1879,473"/>
-<area shape="rect" href="namespacev8_1_1internal.html#a14f16a08710724c5a5c0923d62b0fbec" title=" " alt="" coords="1344,349,1542,398"/>
-<area shape="poly" title=" " alt="" coords="1611,390,1542,384,1543,379,1611,384"/>
-<area shape="rect" href="namespacev8_1_1internal.html#aee546234c14821d1335d5999bc4ea95b" title=" " alt="" coords="1039,364,1238,413"/>
-<area shape="poly" title=" " alt="" coords="1329,382,1238,386,1238,381,1329,376"/>
-<area shape="rect" href="namespacev8_1_1internal.html#a1f3705b7c0b4bc22145b22662b25cd69" title=" " alt="" coords="1021,217,1256,266"/>
-<area shape="poly" title=" " alt="" coords="1388,343,1331,311,1267,281,1233,269,1235,264,1269,277,1333,307,1390,339"/>
-<area shape="rect" href="namespacev8_1_1internal.html#ab180993742a3168569e2e6f4c6e41228" title=" " alt="" coords="1059,291,1218,339"/>
-<area shape="poly" title=" " alt="" coords="1328,354,1218,333,1219,328,1329,349"/>
-<area shape="rect" href="namespacev8_1_1internal.html#a0bf464558f6983e61206cdce20712404" title=" " alt="" coords="1364,455,1523,503"/>
-<area shape="poly" title=" " alt="" coords="1608,482,1523,482,1523,476,1608,476"/>
+<area shape="rect" title=" " alt="" coords="2408,679,2584,727"/>
+<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html#a31381c48c7f8608f4a2ab582a2c4c729" title=" " alt="" coords="2161,679,2360,727"/>
+<area shape="poly" title=" " alt="" coords="2393,706,2361,706,2361,700,2393,700"/>
+<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html#a041c4cd7b983c468cc33e2c8e687f60e" title=" " alt="" coords="1912,605,2111,654"/>
+<area shape="poly" title=" " alt="" coords="2394,677,2360,670,2231,651,2111,639,2112,634,2231,645,2361,664,2395,672"/>
+<area shape="rect" href="classv8_1_1internal_1_1ThreadManager.html#a2fec67e06e5fc2f061ac8f87bb2bb080" title=" " alt="" coords="1912,752,2111,801"/>
+<area shape="poly" title=" " alt="" coords="2395,734,2361,742,2231,761,2112,772,2111,767,2231,755,2360,736,2394,729"/>
+<area shape="poly" title=" " alt="" coords="2160,676,2096,657,2097,652,2162,671"/>
+<area shape="poly" title=" " alt="" coords="2162,735,2097,754,2096,749,2160,730"/>
+<area shape="rect" href="classv8_1_1internal_1_1StartupSerializer.html#ae0615940a7e5436447ba8f226de888bd" title=" " alt="" coords="1910,679,2113,727"/>
+<area shape="poly" title=" " alt="" coords="2145,706,2114,706,2114,700,2145,700"/>
+<area shape="rect" href="classv8_1_1internal_1_1Heap.html#a888246e231dc6514e84cbad718195f2e" title=" " alt="" coords="1708,299,1842,347"/>
+<area shape="poly" title=" " alt="" coords="1980,595,1793,349,1797,346,1984,591"/>
+<area shape="rect" href="classv8_1_1internal_1_1ScavengerCollector.html#a9f8043360f0e70afd346c2ad23a0b5ab" title=" " alt="" coords="1420,372,1640,421"/>
+<area shape="poly" title=" " alt="" coords="1694,350,1615,374,1613,369,1693,345"/>
+<area shape="rect" href="classv8_1_1internal_1_1StartupDeserializer.html#a00b930ec1d2789493f357f5d79d57cf0" title=" " alt="" coords="1420,445,1640,494"/>
+<area shape="poly" title=" " alt="" coords="1740,360,1695,399,1642,435,1615,447,1613,442,1639,430,1692,394,1736,356"/>
+<area shape="rect" href="classv8_1_1internal_1_1V8HeapExplorer.html#aff3a17723e9ea1c85248d70a57b357d7" title=" " alt="" coords="1426,519,1635,567"/>
+<area shape="poly" title=" " alt="" coords="1757,362,1711,436,1679,474,1642,508,1621,521,1618,516,1639,504,1675,471,1707,433,1753,359"/>
+<area shape="rect" href="classv8_1_1internal_1_1Heap.html#a065f31941b8c3f83d4cb37864fe9bd9b" title=" " alt="" coords="1428,5,1633,54"/>
+<area shape="poly" title=" " alt="" coords="1761,285,1744,236,1719,178,1684,119,1663,93,1639,69,1621,57,1624,52,1642,65,1667,89,1688,116,1724,175,1749,234,1766,283"/>
+<area shape="rect" href="classv8_1_1internal_1_1Heap.html#af440bd7cf82c3a3a76978f5fc6578aef" title=" " alt="" coords="1456,79,1605,127"/>
+<area shape="poly" title=" " alt="" coords="1753,287,1707,213,1675,175,1639,143,1604,124,1607,119,1642,138,1679,172,1711,210,1757,284"/>
+<area shape="rect" href="classv8_1_1internal_1_1IncrementalMarking.html#a616234f6bea7e067a3ab1d96daa38a02" title=" " alt="" coords="1442,152,1618,201"/>
+<area shape="poly" title=" " alt="" coords="1736,290,1692,252,1639,216,1613,204,1615,199,1642,211,1695,247,1740,286"/>
+<area shape="rect" href="classv8_1_1internal_1_1MarkCompactCollector.html#a158db1a522505fb3dd824882108797bb" title=" " alt="" coords="1437,225,1623,274"/>
+<area shape="poly" title=" " alt="" coords="1693,301,1613,277,1615,272,1694,296"/>
+<area shape="rect" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#a886294a73bdb95cb1e8ff06c61b0f8df" title=" " alt="" coords="1425,299,1635,347"/>
+<area shape="poly" title=" " alt="" coords="1693,326,1636,326,1636,320,1693,320"/>
+<area shape="rect" href="classv8_1_1internal_1_1Isolate.html#a4535e49a2b3c7ef7aab11feb1809e768" title=" " alt="" coords="1174,445,1316,494"/>
+<area shape="poly" title=" " alt="" coords="1404,472,1316,472,1316,467,1404,467"/>
+<area shape="rect" href="classv8_1_1internal_1_1Isolate.html#a0c09c781d1ac4e9875dbdea784ea1be7" title=" " alt="" coords="862,445,1018,494"/>
+<area shape="poly" title=" " alt="" coords="1158,472,1019,472,1019,467,1158,467"/>
+<area shape="rect" href="classv8_1_1internal_1_1Isolate.html#a5ce29507c1c6b3834fa592c921613c24" title=" " alt="" coords="869,372,1011,421"/>
+<area shape="poly" title=" " alt="" coords="1158,452,1011,416,1012,411,1159,446"/>
+<area shape="rect" href="classv8_1_1internal_1_1HeapSnapshotGenerator.html#a66198a94726fa80496fad091fcd368ac" title=" " alt="" coords="1150,519,1340,567"/>
+<area shape="poly" title=" " alt="" coords="1410,546,1340,546,1340,540,1410,540"/>
+<area shape="rect" href="classv8_1_1internal_1_1HeapSnapshotGenerator.html#a5119a215e57adbedee69fde36570a0dc" title=" " alt="" coords="835,519,1045,567"/>
+<area shape="poly" title=" " alt="" coords="1134,546,1045,546,1045,540,1134,540"/>
+<area shape="rect" href="classv8_1_1internal_1_1IncrementalMarking.html#a2a44332dc0e65c3315f10c78f986f32f" title=" " alt="" coords="1139,79,1351,127"/>
+<area shape="poly" title=" " alt="" coords="1427,153,1341,130,1343,125,1428,147"/>
+<area shape="rect" href="classv8_1_1internal_1_1IncrementalMarking.html#aa2596c8242c2e40791afd0812877275a" title=" " alt="" coords="1146,152,1344,201"/>
+<area shape="poly" title=" " alt="" coords="1427,179,1344,179,1344,174,1427,174"/>
+<area shape="rect" href="classv8_1_1internal_1_1IncrementalMarking.html#a3069e76a432ef28d2e37f2f08746c33d" title=" " alt="" coords="1146,5,1344,54"/>
+<area shape="poly" title=" " alt="" coords="1427,147,1418,141,1402,122,1394,104,1386,86,1370,69,1343,54,1346,49,1374,65,1391,83,1399,102,1406,120,1422,137,1431,143"/>
+<area shape="rect" href="classv8_1_1internal_1_1MarkCompactCollector.html#a16935f51d75fd467f80fae7c7d960e5e" title=" " alt="" coords="1151,225,1338,274"/>
+<area shape="poly" title=" " alt="" coords="1421,252,1339,252,1339,247,1421,247"/>
+<area shape="rect" href="classv8_1_1internal_1_1MinorMarkSweepCollector.html#ac933b5beb57063616485eccbaeeddc74" title=" " alt="" coords="1140,299,1350,347"/>
+<area shape="poly" title=" " alt="" coords="1410,326,1351,326,1351,320,1410,320"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#ae7fed350d8a45f5a5c847c6b5e509c18" title=" " alt="" coords="1688,880,1862,929"/>
+<area shape="poly" title=" " alt="" coords="1961,812,1863,869,1837,882,1835,877,1860,865,1958,807"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#ab91a707cbc3e33197041d577d9a4a03d" title=" " alt="" coords="1118,807,1372,855"/>
+<area shape="poly" title=" " alt="" coords="1896,777,1675,780,1547,786,1420,798,1352,809,1351,803,1420,792,1547,781,1675,774,1896,771"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#ac2825d56d3b2ad9d736b9ecd2c7b8010" title=" " alt="" coords="1696,807,1854,855"/>
+<area shape="poly" title=" " alt="" coords="1897,805,1855,815,1854,810,1896,800"/>
+<area shape="poly" title=" " alt="" coords="1673,899,1551,887,1420,870,1358,859,1359,853,1420,864,1552,882,1673,894"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a03ae7b6b1046a4f8ccb4e3816e002940" title=" " alt="" coords="51,731,194,779"/>
+<area shape="poly" title=" " alt="" coords="1102,835,937,834,733,829,510,816,287,794,194,776,195,771,288,788,510,811,733,823,937,829,1102,830"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#aa95c64adcbebdd0a749ff4c8779546e1" title=" " alt="" coords="810,1026,1070,1094"/>
+<area shape="poly" title=" " alt="" coords="1217,870,1154,940,1114,977,1071,1011,1040,1028,1038,1024,1068,1006,1111,973,1151,936,1213,866"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#aa85301619ff630af215f4fc53041b815" title=" " alt="" coords="288,965,461,1014"/>
+<area shape="poly" title=" " alt="" coords="1188,865,1132,892,1071,916,989,939,905,957,737,980,583,991,461,994,461,988,583,986,736,975,904,952,988,934,1069,911,1130,887,1186,860"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a74b0df5dab4c42b5aca8daacf23a00d3" title=" " alt="" coords="548,1119,724,1167"/>
+<area shape="poly" title=" " alt="" coords="1234,871,1212,927,1178,992,1156,1025,1131,1057,1103,1085,1071,1108,1029,1129,985,1145,939,1155,893,1162,803,1165,724,1160,725,1154,803,1160,892,1157,938,1150,984,1140,1027,1124,1068,1103,1100,1081,1128,1053,1152,1022,1174,990,1207,925,1229,869"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a26fa2b540320df6313a700e930354198" title=" " alt="" coords="867,601,1013,650"/>
+<area shape="poly" title=" " alt="" coords="1184,800,1149,775,1116,746,1101,725,1093,706,1084,688,1068,670,1041,654,1012,642,1014,638,1044,649,1071,666,1089,685,1098,704,1105,722,1120,743,1152,771,1187,796"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a1872132362358cdade44b99095d8f97f" title=" " alt="" coords="564,675,707,723"/>
+<area shape="poly" title=" " alt="" coords="1104,806,810,743,707,719,708,714,811,738,1105,800"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#aeff02047bc9a9cfd8772db19b5027723" title=" " alt="" coords="850,680,1030,729"/>
+<area shape="poly" title=" " alt="" coords="1182,802,1069,749,1021,732,1023,727,1071,745,1184,797"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a4db52a214dff937d74c599818eda2ece" title=" " alt="" coords="869,853,1011,902"/>
+<area shape="poly" title=" " alt="" coords="1103,855,1012,869,1011,864,1102,850"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a37c6669bd6f73aded4de6e21334b8efb" title=" " alt="" coords="538,1026,733,1094"/>
+<area shape="poly" title=" " alt="" coords="795,1063,734,1063,734,1058,795,1058"/>
+<area shape="poly" title=" " alt="" coords="799,1101,725,1122,724,1116,797,1096"/>
+<area shape="poly" title=" " alt="" coords="522,1032,461,1016,462,1011,524,1027"/>
+<area shape="rect" href="classv8_1_1internal_1_1wasm_1_1gdb__server_1_1WasmModuleDebug.html#afc6d23eb17da83c6bcf5ecbcfac2607a" title=" " alt="" coords="5,956,240,1024"/>
+<area shape="poly" title=" " alt="" coords="272,992,240,992,240,987,272,987"/>
+<area shape="poly" title=" " alt="" coords="853,649,708,685,707,679,852,644"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a3c2a27911997bda5387b8a2ef2308aa3" title=" " alt="" coords="564,528,707,577"/>
+<area shape="poly" title=" " alt="" coords="852,607,707,572,708,567,853,602"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a3d8af8aa938b899207eb095fa69c4b64" title=" " alt="" coords="509,601,762,650"/>
+<area shape="poly" title=" " alt="" coords="852,628,763,628,763,623,852,623"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#aca9a11794cd471939698acde5a1ab7d4" title=" " alt="" coords="554,455,717,503"/>
+<area shape="poly" title=" " alt="" coords="851,604,809,581,793,565,784,549,776,533,761,519,716,497,718,492,764,514,780,530,789,546,797,562,812,577,854,600"/>
+<area shape="poly" title=" " alt="" coords="549,703,426,708,288,722,194,740,193,734,287,716,425,703,549,697"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a7b3dc3d19f2788ba4752a781ea1b58eb" title=" " alt="" coords="303,731,446,779"/>
+<area shape="poly" title=" " alt="" coords="550,720,447,742,445,737,548,715"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#ae861376668c9dff179eba5d8b43bffb5" title=" " alt="" coords="293,535,456,583"/>
+<area shape="poly" title=" " alt="" coords="549,684,507,664,491,647,482,631,474,615,459,598,441,586,443,582,463,594,478,612,487,628,495,644,511,659,551,680"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#adecb3c22088fc338ea44d910ae2158aa" title=" " alt="" coords="303,608,446,657"/>
+<area shape="poly" title=" " alt="" coords="549,680,445,653,447,648,550,675"/>
+<area shape="poly" title=" " alt="" coords="288,758,194,758,194,752,288,752"/>
+<area shape="poly" title=" " alt="" coords="854,898,763,916,462,976,461,970,762,911,853,893"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a1441d93a1f3a36283a49150f2a85b731" title=" " alt="" coords="540,853,731,902"/>
+<area shape="poly" title=" " alt="" coords="853,880,732,880,732,875,853,875"/>
+<area shape="rect" href="classv8_1_1internal_1_1Debug.html#a1247ff32050488611b41927cb4190033" title=" " alt="" coords="1454,807,1607,855"/>
+<area shape="poly" title=" " alt="" coords="1680,834,1607,834,1607,828,1680,828"/>
+<area shape="poly" title=" " alt="" coords="1438,834,1372,834,1372,828,1438,828"/>
+<area shape="rect" href="classv8_1_1internal_1_1Snapshot.html#a2a8b9398e37cf2a5588fc73175fef44a" title=" " alt="" coords="1696,679,1854,727"/>
+<area shape="poly" title=" " alt="" coords="1894,706,1854,706,1854,700,1894,700"/>
+<area shape="rect" href="classv8_1_1internal_1_1SnapshotCreatorImpl.html#ab7f9d4c9aa101d7b600a9016de8ccda3" title=" " alt="" coords="1428,684,1632,733"/>
+<area shape="poly" title=" " alt="" coords="1680,708,1633,709,1633,703,1680,702"/>
+<area shape="rect" href="classv8_1_1internal_1_1Snapshot.html#a28b4f9df415675bda833d449e659206b" title=" " alt="" coords="1425,592,1635,660"/>
+<area shape="poly" title=" " alt="" coords="1680,676,1635,662,1637,656,1682,671"/>
+<area shape="rect" href="namespacev8_1_1internal.html#a14f16a08710724c5a5c0923d62b0fbec" title=" " alt="" coords="1146,684,1344,733"/>
+<area shape="poly" title=" " alt="" coords="1413,711,1344,711,1344,706,1413,706"/>
+<area shape="rect" href="namespacev8_1_1internal.html#a0bf464558f6983e61206cdce20712404" title=" " alt="" coords="1165,601,1324,650"/>
+<area shape="poly" title=" " alt="" coords="1409,628,1325,628,1325,623,1409,623"/>
 </map>
 </div>
 
@@ -461,18 +784,136 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ada5e4dd6f2c80e4e4aef5ccbbd7a999f" name="ada5e4dd6f2c80e4e4aef5ccbbd7a999f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada5e4dd6f2c80e4e4aef5ccbbd7a999f">&#9670;&#160;</a></span>data_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* v8::internal::ThreadState::data_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="v8threads_8h_source.html#l00042">42</a> of file <a class="el" href="v8threads_8h_source.html">v8threads.h</a>.</p>
+
+</div>
+</div>
+<a id="af0d7ec1e5588fa5eec4ebd1ab71e98b8" name="af0d7ec1e5588fa5eec4ebd1ab71e98b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0d7ec1e5588fa5eec4ebd1ab71e98b8">&#9670;&#160;</a></span>id_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classv8_1_1internal_1_1ThreadId.html">ThreadId</a> v8::internal::ThreadState::id_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="v8threads_8h_source.html#l00041">41</a> of file <a class="el" href="v8threads_8h_source.html">v8threads.h</a>.</p>
+
+</div>
+</div>
+<a id="a6e3a17b374e832a7634cd892cd4e9ce0" name="a6e3a17b374e832a7634cd892cd4e9ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3a17b374e832a7634cd892cd4e9ce0">&#9670;&#160;</a></span>next_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classv8_1_1internal_1_1ThreadState.html">ThreadState</a>* v8::internal::ThreadState::next_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="v8threads_8h_source.html#l00043">43</a> of file <a class="el" href="v8threads_8h_source.html">v8threads.h</a>.</p>
+
+</div>
+</div>
+<a id="a35506e67f5503f2c2934361ed8bcd4d2" name="a35506e67f5503f2c2934361ed8bcd4d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35506e67f5503f2c2934361ed8bcd4d2">&#9670;&#160;</a></span>previous_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classv8_1_1internal_1_1ThreadState.html">ThreadState</a>* v8::internal::ThreadState::previous_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="v8threads_8h_source.html#l00044">44</a> of file <a class="el" href="v8threads_8h_source.html">v8threads.h</a>.</p>
+
+</div>
+</div>
+<a id="ab5b113e820a374a4db02de0e6ae8af2e" name="ab5b113e820a374a4db02de0e6ae8af2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5b113e820a374a4db02de0e6ae8af2e">&#9670;&#160;</a></span>thread_manager_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classv8_1_1internal_1_1ThreadManager.html">ThreadManager</a>* v8::internal::ThreadState::thread_manager_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="v8threads_8h_source.html#l00046">46</a> of file <a class="el" href="v8threads_8h_source.html">v8threads.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/execution/<a class="el" href="v8threads_8h_source.html">v8threads.h</a></li>
-<li>src/execution/<a class="el" href="v8threads_8cc_source.html">v8threads.cc</a></li>
+<li>/home/w1redch4d/Documents/browser-exploitation/v8/v8/src/execution/<a class="el" href="v8threads_8h_source.html">v8threads.h</a></li>
+<li>/home/w1redch4d/Documents/browser-exploitation/v8/v8/src/execution/<a class="el" href="v8threads_8cc_source.html">v8threads.cc</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="namespacev8.html">v8</a></li><li class="navelem"><a class="el" href="namespacev8_1_1internal.html">internal</a></li><li class="navelem"><a class="el" href="classv8_1_1internal_1_1ThreadState.html">ThreadState</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:21:17 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

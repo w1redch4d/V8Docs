@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/libplatform/tracing/trace-buffer.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/libplatform/tracing/trace-buffer.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('trace-buffer_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('trace-buffer_8cc_source.html',''); initResizable(true)
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4ee34a990ac0cd4ceb75130c67cb9983.html">libplatform</a></li><li class="navelem"><a class="el" href="dir_18014baa66575281a5f6d486621c2057.html">tracing</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">trace-buffer.cc</div></div>
 </div><!--header-->
@@ -115,40 +108,40 @@ $(function(){initNavTree('trace-buffer_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a1e5c4dbe0670124e68dd8625a6e823d2">   11</a></span><a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a1e5c4dbe0670124e68dd8625a6e823d2">TraceBufferRingBuffer::TraceBufferRingBuffer</a>(<span class="keywordtype">size_t</span> max_chunks,</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>                                             TraceWriter* trace_writer)</div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    : max_chunks_(max_chunks) {</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  trace_writer_.reset(trace_writer);</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  chunks_.resize(max_chunks);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ac34ca75fed70e4e9d2e70871d9ccc047">trace_writer_</a>.reset(trace_writer);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ac6e93510139ac026c58db067d4a373db">chunks_</a>.resize(max_chunks);</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>}</div>
 </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
 <div class="foldopen" id="foldopen00018" data-start="{" data-end="}">
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#abf965dcde2df5e3c0159f411ced0a03d">   18</a></span>TraceObject* <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#abf965dcde2df5e3c0159f411ced0a03d">TraceBufferRingBuffer::AddTraceEvent</a>(uint64_t* handle) {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::MutexGuard</a> guard(&amp;mutex_);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordflow">if</span> (is_empty_ || chunks_[chunk_index_]-&gt;IsFull()) {</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    chunk_index_ = is_empty_ ? 0 : NextChunkIndex(chunk_index_);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    is_empty_ = <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">auto</span>&amp; chunk = chunks_[chunk_index_];</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::MutexGuard</a> guard(&amp;<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a0b8aab808aab2ffca8a27343111bf441">mutex_</a>);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a8f41c0122183d1e3d17575947b9ac94b">is_empty_</a> || <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ac6e93510139ac026c58db067d4a373db">chunks_</a>[<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a633c623da9488c0ee327b216a8c8c2e2">chunk_index_</a>]-&gt;IsFull()) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a633c623da9488c0ee327b216a8c8c2e2">chunk_index_</a> = <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a8f41c0122183d1e3d17575947b9ac94b">is_empty_</a> ? 0 : <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ad61dc0100da1a13b5089300634e8f4aa">NextChunkIndex</a>(<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a633c623da9488c0ee327b216a8c8c2e2">chunk_index_</a>);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a8f41c0122183d1e3d17575947b9ac94b">is_empty_</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">auto</span>&amp; chunk = <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ac6e93510139ac026c58db067d4a373db">chunks_</a>[<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a633c623da9488c0ee327b216a8c8c2e2">chunk_index_</a>];</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordflow">if</span> (chunk) {</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      chunk-&gt;Reset(current_chunk_seq_++);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>      chunk-&gt;Reset(<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ab082abdcd4111e78517a5bdf05abcf29">current_chunk_seq_</a>++);</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      chunk.reset(<span class="keyword">new</span> TraceBufferChunk(current_chunk_seq_++));</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      chunk.reset(<span class="keyword">new</span> TraceBufferChunk(<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ab082abdcd4111e78517a5bdf05abcf29">current_chunk_seq_</a>++));</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  }</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keyword">auto</span>&amp; chunk = chunks_[chunk_index_];</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keyword">auto</span>&amp; chunk = <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ac6e93510139ac026c58db067d4a373db">chunks_</a>[<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a633c623da9488c0ee327b216a8c8c2e2">chunk_index_</a>];</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keywordtype">size_t</span> event_index;</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  TraceObject* trace_object = chunk-&gt;AddTraceEvent(&amp;event_index);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  *handle = MakeHandle(chunk_index_, chunk-&gt;seq(), event_index);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  *handle = <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#acd3d0253c11e6419d8a218df5598b6eb">MakeHandle</a>(<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a633c623da9488c0ee327b216a8c8c2e2">chunk_index_</a>, chunk-&gt;seq(), event_index);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  <span class="keywordflow">return</span> trace_object;</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a4c87a36fa8366eaeacaaf73eaf691d9b">   37</a></span>TraceObject* <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a4c87a36fa8366eaeacaaf73eaf691d9b">TraceBufferRingBuffer::GetEventByHandle</a>(uint64_t handle) {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::MutexGuard</a> guard(&amp;mutex_);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::MutexGuard</a> guard(&amp;<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a0b8aab808aab2ffca8a27343111bf441">mutex_</a>);</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordtype">size_t</span> chunk_index, event_index;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  uint32_t chunk_seq;</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  ExtractHandle(handle, &amp;chunk_index, &amp;chunk_seq, &amp;event_index);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordflow">if</span> (chunk_index &gt;= chunks_.size()) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">auto</span>&amp; chunk = chunks_[chunk_index];</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ae11e06c2303c16d7b0b0e9f433564153">ExtractHandle</a>(handle, &amp;chunk_index, &amp;chunk_seq, &amp;event_index);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keywordflow">if</span> (chunk_index &gt;= <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ac6e93510139ac026c58db067d4a373db">chunks_</a>.size()) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">auto</span>&amp; chunk = <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ac6e93510139ac026c58db067d4a373db">chunks_</a>[chunk_index];</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordflow">if</span> (!chunk || chunk-&gt;seq() != chunk_seq) <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keywordflow">return</span> chunk-&gt;GetEventAt(event_index);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>}</div>
@@ -156,45 +149,51 @@ $(function(){initNavTree('trace-buffer_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="foldopen" id="foldopen00048" data-start="{" data-end="}">
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a21202d84d990c72b3e4ad212b88ce08c">   48</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a21202d84d990c72b3e4ad212b88ce08c">TraceBufferRingBuffer::Flush</a>() {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::MutexGuard</a> guard(&amp;mutex_);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">base::MutexGuard</a> guard(&amp;<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a0b8aab808aab2ffca8a27343111bf441">mutex_</a>);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="comment">// This flushes all the traces stored in the buffer.</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">if</span> (!is_empty_) {</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = NextChunkIndex(chunk_index_);; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = NextChunkIndex(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>)) {</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keywordflow">if</span> (<span class="keyword">auto</span>&amp; chunk = chunks_[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a8f41c0122183d1e3d17575947b9ac94b">is_empty_</a>) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ad61dc0100da1a13b5089300634e8f4aa">NextChunkIndex</a>(<a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a633c623da9488c0ee327b216a8c8c2e2">chunk_index_</a>);; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ad61dc0100da1a13b5089300634e8f4aa">NextChunkIndex</a>(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>)) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keywordflow">if</span> (<span class="keyword">auto</span>&amp; chunk = <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ac6e93510139ac026c58db067d4a373db">chunks_</a>[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]) {</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = 0; j &lt; chunk-&gt;size(); ++j) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>          trace_writer_-&gt;AppendTraceEvent(chunk-&gt;GetEventAt(j));</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>          <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ac34ca75fed70e4e9d2e70871d9ccc047">trace_writer_</a>-&gt;AppendTraceEvent(chunk-&gt;GetEventAt(j));</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        }</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="keywordflow">if</span> (<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> == chunk_index_) <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <span class="keywordflow">if</span> (<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> == <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a633c623da9488c0ee327b216a8c8c2e2">chunk_index_</a>) <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  trace_writer_-&gt;Flush();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ac34ca75fed70e4e9d2e70871d9ccc047">trace_writer_</a>-&gt;Flush();</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="comment">// This resets the trace buffer.</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  is_empty_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a8f41c0122183d1e3d17575947b9ac94b">is_empty_</a> = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
 </div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>uint64_t TraceBufferRingBuffer::MakeHandle(<span class="keywordtype">size_t</span> chunk_index,</div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#acd3d0253c11e6419d8a218df5598b6eb">   67</a></span>uint64_t <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#acd3d0253c11e6419d8a218df5598b6eb">TraceBufferRingBuffer::MakeHandle</a>(<span class="keywordtype">size_t</span> chunk_index,</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>                                           uint32_t chunk_seq,</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>                                           <span class="keywordtype">size_t</span> event_index)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(chunk_seq) * Capacity() +</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(chunk_seq) * <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a1ddc109340a11f15c92705d9af38a5fb">Capacity</a>() +</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>         chunk_index * TraceBufferChunk::kChunkSize + event_index;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
+</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">void</span> TraceBufferRingBuffer::ExtractHandle(uint64_t handle, <span class="keywordtype">size_t</span>* chunk_index,</div>
+<div class="foldopen" id="foldopen00074" data-start="{" data-end="}">
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ae11e06c2303c16d7b0b0e9f433564153">   74</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ae11e06c2303c16d7b0b0e9f433564153">TraceBufferRingBuffer::ExtractHandle</a>(uint64_t handle, <span class="keywordtype">size_t</span>* chunk_index,</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>                                          uint32_t* chunk_seq,</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>                                          <span class="keywordtype">size_t</span>* event_index)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  *chunk_seq = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(handle / Capacity());</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordtype">size_t</span> indices = handle % Capacity();</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  *chunk_seq = <span class="keyword">static_cast&lt;</span>uint32_t<span class="keyword">&gt;</span>(handle / <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a1ddc109340a11f15c92705d9af38a5fb">Capacity</a>());</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <span class="keywordtype">size_t</span> indices = handle % <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a1ddc109340a11f15c92705d9af38a5fb">Capacity</a>();</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  *chunk_index = indices / TraceBufferChunk::kChunkSize;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  *event_index = indices % TraceBufferChunk::kChunkSize;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}</div>
+</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="keywordtype">size_t</span> TraceBufferRingBuffer::NextChunkIndex(<span class="keywordtype">size_t</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>)<span class="keyword"> const </span>{</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">if</span> (++<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> &gt;= max_chunks_) <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> = 0;</div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ad61dc0100da1a13b5089300634e8f4aa">   83</a></span><span class="keywordtype">size_t</span> <a class="code hl_function" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ad61dc0100da1a13b5089300634e8f4aa">TraceBufferRingBuffer::NextChunkIndex</a>(<span class="keywordtype">size_t</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>)<span class="keyword"> const </span>{</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">if</span> (++<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> &gt;= <a class="code hl_variable" href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a8c20474b5bab33cbb9d24ae50940dcaa">max_chunks_</a>) <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a> = 0;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a>;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
+</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>TraceBufferChunk::TraceBufferChunk(uint32_t seq) : seq_(seq) {}</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
@@ -205,7 +204,7 @@ $(function(){initNavTree('trace-buffer_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>TraceObject* TraceBufferChunk::AddTraceEvent(<span class="keywordtype">size_t</span>* event_index) {</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  *event_index = next_free_++;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordflow">return</span> &amp;chunk_[*event_index];</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>  <span class="keywordflow">return</span> &amp;<a class="code hl_variable" href="mark-compact_8cc.html#ac2ffe6503c948be4a72419e157747832">chunk_</a>[*event_index];</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>TraceBuffer* TraceBuffer::CreateTraceBufferRingBuffer(</div>
@@ -217,22 +216,31 @@ $(function(){initNavTree('trace-buffer_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>}  <span class="comment">// namespace platform</span></div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}  <span class="comment">// namespace v8</span></div>
 <div class="ttc" id="aclassv8_1_1base_1_1LockGuard_html"><div class="ttname"><a href="classv8_1_1base_1_1LockGuard.html">v8::base::LockGuard</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00534">mutex.h:534</a></div></div>
+<div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_a0b8aab808aab2ffca8a27343111bf441"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a0b8aab808aab2ffca8a27343111bf441">v8::platform::tracing::TraceBufferRingBuffer::mutex_</a></div><div class="ttdeci">base::Mutex mutex_</div><div class="ttdef"><b>Definition</b> <a href="trace-buffer_8h_source.html#l00036">trace-buffer.h:36</a></div></div>
+<div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_a1ddc109340a11f15c92705d9af38a5fb"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a1ddc109340a11f15c92705d9af38a5fb">v8::platform::tracing::TraceBufferRingBuffer::Capacity</a></div><div class="ttdeci">size_t Capacity() const</div><div class="ttdef"><b>Definition</b> <a href="trace-buffer_8h_source.html#l00033">trace-buffer.h:33</a></div></div>
 <div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_a1e5c4dbe0670124e68dd8625a6e823d2"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a1e5c4dbe0670124e68dd8625a6e823d2">v8::platform::tracing::TraceBufferRingBuffer::TraceBufferRingBuffer</a></div><div class="ttdeci">TraceBufferRingBuffer(size_t max_chunks, TraceWriter *trace_writer)</div><div class="ttdef"><b>Definition</b> <a href="#l00011">trace-buffer.cc:11</a></div></div>
 <div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_a21202d84d990c72b3e4ad212b88ce08c"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a21202d84d990c72b3e4ad212b88ce08c">v8::platform::tracing::TraceBufferRingBuffer::Flush</a></div><div class="ttdeci">bool Flush() override</div><div class="ttdef"><b>Definition</b> <a href="#l00048">trace-buffer.cc:48</a></div></div>
 <div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_a4c87a36fa8366eaeacaaf73eaf691d9b"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a4c87a36fa8366eaeacaaf73eaf691d9b">v8::platform::tracing::TraceBufferRingBuffer::GetEventByHandle</a></div><div class="ttdeci">TraceObject * GetEventByHandle(uint64_t handle) override</div><div class="ttdef"><b>Definition</b> <a href="#l00037">trace-buffer.cc:37</a></div></div>
+<div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_a633c623da9488c0ee327b216a8c8c2e2"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a633c623da9488c0ee327b216a8c8c2e2">v8::platform::tracing::TraceBufferRingBuffer::chunk_index_</a></div><div class="ttdeci">size_t chunk_index_</div><div class="ttdef"><b>Definition</b> <a href="trace-buffer_8h_source.html#l00040">trace-buffer.h:40</a></div></div>
+<div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_a8c20474b5bab33cbb9d24ae50940dcaa"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a8c20474b5bab33cbb9d24ae50940dcaa">v8::platform::tracing::TraceBufferRingBuffer::max_chunks_</a></div><div class="ttdeci">size_t max_chunks_</div><div class="ttdef"><b>Definition</b> <a href="trace-buffer_8h_source.html#l00037">trace-buffer.h:37</a></div></div>
+<div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_a8f41c0122183d1e3d17575947b9ac94b"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#a8f41c0122183d1e3d17575947b9ac94b">v8::platform::tracing::TraceBufferRingBuffer::is_empty_</a></div><div class="ttdeci">bool is_empty_</div><div class="ttdef"><b>Definition</b> <a href="trace-buffer_8h_source.html#l00041">trace-buffer.h:41</a></div></div>
+<div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_ab082abdcd4111e78517a5bdf05abcf29"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ab082abdcd4111e78517a5bdf05abcf29">v8::platform::tracing::TraceBufferRingBuffer::current_chunk_seq_</a></div><div class="ttdeci">uint32_t current_chunk_seq_</div><div class="ttdef"><b>Definition</b> <a href="trace-buffer_8h_source.html#l00042">trace-buffer.h:42</a></div></div>
 <div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_abf965dcde2df5e3c0159f411ced0a03d"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#abf965dcde2df5e3c0159f411ced0a03d">v8::platform::tracing::TraceBufferRingBuffer::AddTraceEvent</a></div><div class="ttdeci">TraceObject * AddTraceEvent(uint64_t *handle) override</div><div class="ttdef"><b>Definition</b> <a href="#l00018">trace-buffer.cc:18</a></div></div>
+<div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_ac34ca75fed70e4e9d2e70871d9ccc047"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ac34ca75fed70e4e9d2e70871d9ccc047">v8::platform::tracing::TraceBufferRingBuffer::trace_writer_</a></div><div class="ttdeci">std::unique_ptr&lt; TraceWriter &gt; trace_writer_</div><div class="ttdef"><b>Definition</b> <a href="trace-buffer_8h_source.html#l00038">trace-buffer.h:38</a></div></div>
+<div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_ac6e93510139ac026c58db067d4a373db"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ac6e93510139ac026c58db067d4a373db">v8::platform::tracing::TraceBufferRingBuffer::chunks_</a></div><div class="ttdeci">std::vector&lt; std::unique_ptr&lt; TraceBufferChunk &gt; &gt; chunks_</div><div class="ttdef"><b>Definition</b> <a href="trace-buffer_8h_source.html#l00039">trace-buffer.h:39</a></div></div>
+<div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_acd3d0253c11e6419d8a218df5598b6eb"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#acd3d0253c11e6419d8a218df5598b6eb">v8::platform::tracing::TraceBufferRingBuffer::MakeHandle</a></div><div class="ttdeci">uint64_t MakeHandle(size_t chunk_index, uint32_t chunk_seq, size_t event_index) const</div><div class="ttdef"><b>Definition</b> <a href="#l00067">trace-buffer.cc:67</a></div></div>
+<div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_ad61dc0100da1a13b5089300634e8f4aa"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ad61dc0100da1a13b5089300634e8f4aa">v8::platform::tracing::TraceBufferRingBuffer::NextChunkIndex</a></div><div class="ttdeci">size_t NextChunkIndex(size_t index) const</div><div class="ttdef"><b>Definition</b> <a href="#l00083">trace-buffer.cc:83</a></div></div>
+<div class="ttc" id="aclassv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer_html_ae11e06c2303c16d7b0b0e9f433564153"><div class="ttname"><a href="classv8_1_1platform_1_1tracing_1_1TraceBufferRingBuffer.html#ae11e06c2303c16d7b0b0e9f433564153">v8::platform::tracing::TraceBufferRingBuffer::ExtractHandle</a></div><div class="ttdeci">void ExtractHandle(uint64_t handle, size_t *chunk_index, uint32_t *chunk_seq, size_t *event_index) const</div><div class="ttdef"><b>Definition</b> <a href="#l00074">trace-buffer.cc:74</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_ae55190dbead0a94298bdfa37911694e3"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#ae55190dbead0a94298bdfa37911694e3">index</a></div><div class="ttdeci">turboshaft::OptionalOpIndex index</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00071">instruction-selector-ia32.cc:71</a></div></div>
+<div class="ttc" id="amark-compact_8cc_html_ac2ffe6503c948be4a72419e157747832"><div class="ttname"><a href="mark-compact_8cc.html#ac2ffe6503c948be4a72419e157747832">chunk_</a></div><div class="ttdeci">MutablePageMetadata * chunk_</div><div class="ttdef"><b>Definition</b> <a href="mark-compact_8cc_source.html#l05489">mark-compact.cc:5489</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="atrace-buffer_8h_html"><div class="ttname"><a href="trace-buffer_8h.html">trace-buffer.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4ee34a990ac0cd4ceb75130c67cb9983.html">libplatform</a></li><li class="navelem"><a class="el" href="dir_18014baa66575281a5f6d486621c2057.html">tracing</a></li><li class="navelem"><a class="el" href="trace-buffer_8cc.html">trace-buffer.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:40 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

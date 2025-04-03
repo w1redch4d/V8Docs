@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/compiler/value-numbering-reducer.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/compiler/value-numbering-reducer.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('value-numbering-reducer_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('value-numbering-reducer_8cc_source.html',''); initResi
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">value-numbering-reducer.cc</div></div>
 </div><!--header-->
@@ -118,9 +111,9 @@ $(function(){initNavTree('value-numbering-reducer_8cc_source.html',''); initResi
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#aca924daf4a7bb79ed96ed7412656aee5">   16</a></span><a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#aca924daf4a7bb79ed96ed7412656aee5">ValueNumberingReducer::ValueNumberingReducer</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Zone.html">Zone</a>* temp_zone, <a class="code hl_class" href="classv8_1_1internal_1_1Zone.html">Zone</a>* <a class="code hl_variable" href="graph-builder_8cc.html#ab554ff773f02a3fc0720fca9775dce78">graph_zone</a>)</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    : entries_(nullptr),</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    : <a class="code hl_variable" href="liftoff-compiler_8cc.html#a2e9df2951c16c037d2625a34871464cd">entries_</a>(nullptr),</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>      capacity_(0),</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      size_(0),</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>      <a class="code hl_variable" href="codegen_2assembler_8cc.html#a50218915641ec8f39877c2565e95a604">size_</a>(0),</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>      temp_zone_(temp_zone),</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>      graph_zone_(<a class="code hl_variable" href="graph-builder_8cc.html#ab554ff773f02a3fc0720fca9775dce78">graph_zone</a>) {}</div>
 </div>
@@ -133,39 +126,39 @@ $(function(){initNavTree('value-numbering-reducer_8cc_source.html',''); initResi
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordflow">if</span> (!node-&gt;op()-&gt;HasProperty(<a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1Operator.html#a46a45dbac84017b87c0432803df4c3efa4e4f727b2acc0bd446e06d5ebea379c7">Operator::kIdempotent</a>)) <span class="keywordflow">return</span> NoChange();</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> hash = <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#a9f1a07006950d28bf7f54cafa260680a">NodeProperties::HashCode</a>(node);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordflow">if</span> (!entries_) {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, size_);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, capacity_);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>) {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a>);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(0, <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a>);</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// Allocate the initial entries and insert the first entry.</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    capacity_ = kInitialCapacity;</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    entries_ = temp_zone()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Zone.html#a94a480bf811555f252fa10e82214684b">AllocateArray</a>&lt;<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>*&gt;(kInitialCapacity);</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    memset(entries_, 0, <span class="keyword">sizeof</span>(*entries_) * kInitialCapacity);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    entries_[hash &amp; (kInitialCapacity - 1)] = node;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    size_ = 1;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a> = <a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#adfe81d480a2471fdf3eb53708770e2a1a545b2e5d75d488d38c403cb05018803f">kInitialCapacity</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a> = <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#aa5d05d10f94fa30ddc0bb7ea53ca660c">temp_zone</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Zone.html#a94a480bf811555f252fa10e82214684b">AllocateArray</a>&lt;<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>*&gt;(<a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#adfe81d480a2471fdf3eb53708770e2a1a545b2e5d75d488d38c403cb05018803f">kInitialCapacity</a>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    memset(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>, 0, <span class="keyword">sizeof</span>(*<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>) * <a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#adfe81d480a2471fdf3eb53708770e2a1a545b2e5d75d488d38c403cb05018803f">kInitialCapacity</a>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>[hash &amp; (<a class="code hl_enumvalue" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#adfe81d480a2471fdf3eb53708770e2a1a545b2e5d75d488d38c403cb05018803f">kInitialCapacity</a> - 1)] = node;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a> = 1;</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">return</span> NoChange();</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  }</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(size_ &lt; capacity_);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(size_ + size_ / 4 &lt; capacity_);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a> &lt; <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a> + <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a> / 4 &lt; <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a>);</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a> = capacity_ - 1;</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">size_t</span> dead = capacity_;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <span class="keyword">const</span> <span class="keywordtype">size_t</span> <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a> - 1;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">size_t</span> dead = <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a>;</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = hash &amp; <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>;; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = (<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> + 1) &amp; <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>) {</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* entry = entries_[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>];</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* entry = <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>];</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keywordflow">if</span> (!entry) {</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keywordflow">if</span> (dead != capacity_) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="keywordflow">if</span> (dead != <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a>) {</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="comment">// Reuse dead entry that we discovered on the way.</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        entries_[dead] = <a class="code hl_variable" href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>[dead] = <a class="code hl_variable" href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a>;</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="comment">// Have to insert a new entry.</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        entries_[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>] = <a class="code hl_variable" href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a>;</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        size_++;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>] = <a class="code hl_variable" href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a>++;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="comment">// Resize to keep load factor below 80%</span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">if</span> (size_ + size_ / 4 &gt;= capacity_) Grow();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a> + <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a> / 4 &gt;= <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a>) <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a326c22e597d0f404b75f0ebd41d7b2f0">Grow</a>();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>      }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(size_ + size_ / 4 &lt; capacity_);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>      <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a> + <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a> / 4 &lt; <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a>);</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>      <span class="keywordflow">return</span> NoChange();</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    }</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
@@ -181,7 +174,7 @@ $(function(){initNavTree('value-numbering-reducer_8cc_source.html',''); initResi
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>      <span class="comment">// in this case because we find node1 first, but what we should actually</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>      <span class="comment">// do is return Replace(node2) instead.</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>      <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = (<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> + 1) &amp; <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>;; j = (j + 1) &amp; <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>) {</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* other_entry = entries_[j];</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* other_entry = <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>[j];</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">if</span> (!other_entry) {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>          <span class="comment">// No collision, {node} is fine.</span></div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>          <span class="keywordflow">return</span> NoChange();</div>
@@ -193,24 +186,24 @@ $(function(){initNavTree('value-numbering-reducer_8cc_source.html',''); initResi
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>          <span class="comment">// Collision with ourselves, doesn&#39;t count as a real collision.</span></div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>          <span class="comment">// Opportunistically clean-up the duplicate entry if we&#39;re at the end</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>          <span class="comment">// of a bucket.</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>          <span class="keywordflow">if</span> (!entries_[(j + 1) &amp; <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>]) {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            entries_[j] = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            size_--;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>          <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>[(j + 1) &amp; <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>]) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>[j] = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a>--;</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>            <span class="keywordflow">return</span> NoChange();</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>          }</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>          <span class="comment">// Otherwise, keep searching for another collision.</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>          <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        }</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#ab63411808cb470780267f23077305763">NodeProperties::Equals</a>(other_entry, node)) {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>          <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> reduction = ReplaceIfTypesMatch(node, other_entry);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>          <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> reduction = <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a6e7111cc2c93593d87bb2f9aa7bc0462">ReplaceIfTypesMatch</a>(node, other_entry);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>          <span class="keywordflow">if</span> (reduction.Changed()) {</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            <span class="comment">// Overwrite the colliding entry with the actual entry.</span></div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            entries_[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>] = other_entry;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>            <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>] = other_entry;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <span class="comment">// Opportunistically clean-up the duplicate entry if we&#39;re at the</span></div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <span class="comment">// end of a bucket.</span></div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">if</span> (!entries_[(j + 1) &amp; <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>]) {</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>              entries_[j] = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>              size_--;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">if</span> (!<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>[(j + 1) &amp; <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>]) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>              <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>[j] = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>              <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a>--;</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            }</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>          }</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>          <span class="keywordflow">return</span> reduction;</div>
@@ -224,13 +217,14 @@ $(function(){initNavTree('value-numbering-reducer_8cc_source.html',''); initResi
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>      <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    }</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#ab63411808cb470780267f23077305763">NodeProperties::Equals</a>(entry, node)) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <span class="keywordflow">return</span> ReplaceIfTypesMatch(node, entry);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>      <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a6e7111cc2c93593d87bb2f9aa7bc0462">ReplaceIfTypesMatch</a>(node, entry);</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    }</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  }</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>}</div>
 </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> ValueNumberingReducer::ReplaceIfTypesMatch(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node,</div>
+<div class="foldopen" id="foldopen00126" data-start="{" data-end="}">
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a6e7111cc2c93593d87bb2f9aa7bc0462">  126</a></span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Reduction.html">Reduction</a> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a6e7111cc2c93593d87bb2f9aa7bc0462">ValueNumberingReducer::ReplaceIfTypesMatch</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* node,</div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>                                                     <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* replacement) {</div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="comment">// Make sure the replacement has at least as good type as the original node.</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>  <span class="keywordflow">if</span> (<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#a360819de483fa505a4a01aae2b390308">NodeProperties::IsTyped</a>(replacement) &amp;&amp; <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#a360819de483fa505a4a01aae2b390308">NodeProperties::IsTyped</a>(node)) {</div>
@@ -252,37 +246,40 @@ $(function(){initNavTree('value-numbering-reducer_8cc_source.html',''); initResi
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>  }</div>
 <div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>  <span class="keywordflow">return</span> Replace(replacement);</div>
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>}</div>
+</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="keywordtype">void</span> ValueNumberingReducer::Grow() {</div>
+<div class="foldopen" id="foldopen00150" data-start="{" data-end="}">
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a326c22e597d0f404b75f0ebd41d7b2f0">  150</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a326c22e597d0f404b75f0ebd41d7b2f0">ValueNumberingReducer::Grow</a>() {</div>
 <div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>  <span class="comment">// Allocate a new block of entries double the previous capacity.</span></div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  Node** <span class="keyword">const</span> old_entries = entries_;</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keywordtype">size_t</span> <span class="keyword">const</span> old_capacity = capacity_;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  capacity_ *= 2;</div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  entries_ = temp_zone()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Zone.html#a94a480bf811555f252fa10e82214684b">AllocateArray</a>&lt;Node*&gt;(capacity_);</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  memset(entries_, 0, <span class="keyword">sizeof</span>(*entries_) * capacity_);</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  size_ = 0;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keywordtype">size_t</span> <span class="keyword">const</span> <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a> = capacity_ - 1;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>** <span class="keyword">const</span> old_entries = <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>;</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>  <span class="keywordtype">size_t</span> <span class="keyword">const</span> old_capacity = <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a> *= 2;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a> = <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#aa5d05d10f94fa30ddc0bb7ea53ca660c">temp_zone</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Zone.html#a94a480bf811555f252fa10e82214684b">AllocateArray</a>&lt;<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>*&gt;(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>  memset(<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>, 0, <span class="keyword">sizeof</span>(*<a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>) * <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a>);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a> = 0;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>  <span class="keywordtype">size_t</span> <span class="keyword">const</span> <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a> = <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">capacity_</a> - 1;</div>
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>  <span class="comment">// Insert the old entries into the new block (skipping dead nodes).</span></div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; old_capacity; ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    Node* <span class="keyword">const</span> old_entry = old_entries[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>];</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">if</span> (!old_entry || old_entry-&gt;IsDead()) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* <span class="keyword">const</span> old_entry = old_entries[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>];</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="keywordflow">if</span> (!old_entry || old_entry-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1Node.html#ac6d3da5063476a6f25d701f7fa44542d">IsDead</a>()) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> j = <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1NodeProperties.html#a9f1a07006950d28bf7f54cafa260680a">NodeProperties::HashCode</a>(old_entry) &amp; <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>;;</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>         j = (j + 1) &amp; <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>) {</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      Node* <span class="keyword">const</span> entry = entries_[j];</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>      <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1Node.html">Node</a>* <span class="keyword">const</span> entry = <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>[j];</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>      <span class="keywordflow">if</span> (entry == old_entry) {</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>        <span class="comment">// Skip duplicate of the old entry.</span></div>
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>      }</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>      <span class="keywordflow">if</span> (!entry) {</div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        entries_[j] = old_entry;</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        size_++;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>        <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">entries_</a>[j] = old_entry;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">size_</a>++;</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>      }</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    }</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>  }</div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>}</div>
+</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>}  <span class="comment">// namespace compiler</span></div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>}  <span class="comment">// namespace internal</span></div>
@@ -300,11 +297,20 @@ $(function(){initNavTree('value-numbering-reducer_8cc_source.html',''); initResi
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Reduction_html"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Reduction.html">v8::internal::compiler::Reduction</a></div><div class="ttdef"><b>Definition</b> <a href="graph-reducer_8h_source.html#l00034">graph-reducer.h:34</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Type_html"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Type.html">v8::internal::compiler::Type</a></div><div class="ttdef"><b>Definition</b> <a href="compiler_2turbofan-types_8h_source.html#l00421">turbofan-types.h:421</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1Type_html_abbe439a56b70129372c2ecb49e906bd1"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1Type.html#abbe439a56b70129372c2ecb49e906bd1">v8::internal::compiler::Type::Is</a></div><div class="ttdeci">bool Is(Type that) const</div><div class="ttdef"><b>Definition</b> <a href="compiler_2turbofan-types_8h_source.html#l00461">turbofan-types.h:461</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1ValueNumberingReducer_html_a1dec4b3615b9e6f74b77f42d08cafcbd"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a1dec4b3615b9e6f74b77f42d08cafcbd">v8::internal::compiler::ValueNumberingReducer::capacity_</a></div><div class="ttdeci">size_t capacity_</div><div class="ttdef"><b>Definition</b> <a href="value-numbering-reducer_8h_source.html#l00035">value-numbering-reducer.h:35</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1ValueNumberingReducer_html_a326c22e597d0f404b75f0ebd41d7b2f0"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a326c22e597d0f404b75f0ebd41d7b2f0">v8::internal::compiler::ValueNumberingReducer::Grow</a></div><div class="ttdeci">void Grow()</div><div class="ttdef"><b>Definition</b> <a href="#l00150">value-numbering-reducer.cc:150</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1ValueNumberingReducer_html_a3f49dd1deee724ec21fce3cd9c38b38a"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a3f49dd1deee724ec21fce3cd9c38b38a">v8::internal::compiler::ValueNumberingReducer::Reduce</a></div><div class="ttdeci">Reduction Reduce(Node *node) override</div><div class="ttdef"><b>Definition</b> <a href="#l00026">value-numbering-reducer.cc:26</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1ValueNumberingReducer_html_a4eb98539c46cf5204231f5fea85bcd9c"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a4eb98539c46cf5204231f5fea85bcd9c">v8::internal::compiler::ValueNumberingReducer::entries_</a></div><div class="ttdeci">Node ** entries_</div><div class="ttdef"><b>Definition</b> <a href="value-numbering-reducer_8h_source.html#l00034">value-numbering-reducer.h:34</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1ValueNumberingReducer_html_a6e7111cc2c93593d87bb2f9aa7bc0462"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#a6e7111cc2c93593d87bb2f9aa7bc0462">v8::internal::compiler::ValueNumberingReducer::ReplaceIfTypesMatch</a></div><div class="ttdeci">Reduction ReplaceIfTypesMatch(Node *node, Node *replacement)</div><div class="ttdef"><b>Definition</b> <a href="#l00126">value-numbering-reducer.cc:126</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1ValueNumberingReducer_html_aa5d05d10f94fa30ddc0bb7ea53ca660c"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#aa5d05d10f94fa30ddc0bb7ea53ca660c">v8::internal::compiler::ValueNumberingReducer::temp_zone</a></div><div class="ttdeci">Zone * temp_zone() const</div><div class="ttdef"><b>Definition</b> <a href="value-numbering-reducer_8h_source.html#l00031">value-numbering-reducer.h:31</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1ValueNumberingReducer_html_ac9fef91cbcb6b730fe254d2de7e0cb81"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#ac9fef91cbcb6b730fe254d2de7e0cb81">v8::internal::compiler::ValueNumberingReducer::~ValueNumberingReducer</a></div><div class="ttdeci">~ValueNumberingReducer() override</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1ValueNumberingReducer_html_aca924daf4a7bb79ed96ed7412656aee5"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#aca924daf4a7bb79ed96ed7412656aee5">v8::internal::compiler::ValueNumberingReducer::ValueNumberingReducer</a></div><div class="ttdeci">ValueNumberingReducer(Zone *temp_zone, Zone *graph_zone)</div><div class="ttdef"><b>Definition</b> <a href="#l00016">value-numbering-reducer.cc:16</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1ValueNumberingReducer_html_acf2e54ca0f3e1e33f6e4077705625cfd"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#acf2e54ca0f3e1e33f6e4077705625cfd">v8::internal::compiler::ValueNumberingReducer::size_</a></div><div class="ttdeci">size_t size_</div><div class="ttdef"><b>Definition</b> <a href="value-numbering-reducer_8h_source.html#l00036">value-numbering-reducer.h:36</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1ValueNumberingReducer_html_adfe81d480a2471fdf3eb53708770e2a1a545b2e5d75d488d38c403cb05018803f"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1ValueNumberingReducer.html#adfe81d480a2471fdf3eb53708770e2a1a545b2e5d75d488d38c403cb05018803f">v8::internal::compiler::ValueNumberingReducer::kInitialCapacity</a></div><div class="ttdeci">@ kInitialCapacity</div><div class="ttdef"><b>Definition</b> <a href="value-numbering-reducer_8h_source.html#l00027">value-numbering-reducer.h:27</a></div></div>
+<div class="ttc" id="acodegen_2assembler_8cc_html_a50218915641ec8f39877c2565e95a604"><div class="ttname"><a href="codegen_2assembler_8cc.html#a50218915641ec8f39877c2565e95a604">size_</a></div><div class="ttdeci">const int size_</div><div class="ttdef"><b>Definition</b> <a href="codegen_2assembler_8cc_source.html#l00132">assembler.cc:132</a></div></div>
 <div class="ttc" id="agraph-builder_8cc_html_ab554ff773f02a3fc0720fca9775dce78"><div class="ttname"><a href="graph-builder_8cc.html#ab554ff773f02a3fc0720fca9775dce78">graph_zone</a></div><div class="ttdeci">Zone * graph_zone</div><div class="ttdef"><b>Definition</b> <a href="graph-builder_8cc_source.html#l00060">graph-builder.cc:60</a></div></div>
 <div class="ttc" id="ajs-inlining-heuristic_8cc_html_ab88cd70dad2e152cea983610f2a16e68"><div class="ttname"><a href="js-inlining-heuristic_8cc.html#ab88cd70dad2e152cea983610f2a16e68">node</a></div><div class="ttdeci">Node * node</div><div class="ttdef"><b>Definition</b> <a href="js-inlining-heuristic_8cc_source.html#l00316">js-inlining-heuristic.cc:316</a></div></div>
+<div class="ttc" id="aliftoff-compiler_8cc_html_a2e9df2951c16c037d2625a34871464cd"><div class="ttname"><a href="liftoff-compiler_8cc.html#a2e9df2951c16c037d2625a34871464cd">entries_</a></div><div class="ttdeci">std::vector&lt; EntryBuilder &gt; entries_</div><div class="ttdef"><b>Definition</b> <a href="liftoff-compiler_8cc_source.html#l00304">liftoff-compiler.cc:304</a></div></div>
 <div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="alogging_8h_html_af9c313d74155f7f201955a939e24c71f"><div class="ttname"><a href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a></div><div class="ttdeci">#define DCHECK_EQ(v1, v2)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00485">logging.h:485</a></div></div>
 <div class="ttc" id="amachine-operator-reducer_8cc_html_a406af858c5259e17f9ddc64513999dac"><div class="ttname"><a href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a></div><div class="ttdeci">uint32_t const mask</div><div class="ttdef"><b>Definition</b> <a href="machine-operator-reducer_8cc_source.html#l02278">machine-operator-reducer.cc:2278</a></div></div>
@@ -315,13 +321,10 @@ $(function(){initNavTree('value-numbering-reducer_8cc_source.html',''); initResi
 <div class="ttc" id="anode_8h_html"><div class="ttname"><a href="node_8h.html">node.h</a></div></div>
 <div class="ttc" id="avalue-numbering-reducer_8h_html"><div class="ttname"><a href="value-numbering-reducer_8h.html">value-numbering-reducer.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="value-numbering-reducer_8cc.html">value-numbering-reducer.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:24 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

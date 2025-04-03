@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/heap/evacuation-verifier.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/evacuation-verifier.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('evacuation-verifier_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('evacuation-verifier_8cc_source.html',''); initResizabl
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">evacuation-verifier.cc</div></div>
 </div><!--header-->
@@ -117,15 +110,15 @@ $(function(){initNavTree('evacuation-verifier_8cc_source.html',''); initResizabl
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifdef VERIFY_HEAP</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>EvacuationVerifier::EvacuationVerifier(Heap* <a class="code hl_namespace" href="namespaceheap.html">heap</a>)</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    : ObjectVisitorWithCageBases(<a class="code hl_namespace" href="namespaceheap.html">heap</a>), heap_(<a class="code hl_namespace" href="namespaceheap.html">heap</a>) {}</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    : ObjectVisitorWithCageBases(<a class="code hl_namespace" href="namespaceheap.html">heap</a>), <a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>(<a class="code hl_namespace" href="namespaceheap.html">heap</a>) {}</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">void</span> EvacuationVerifier::Run() {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!heap_-&gt;sweeping_in_progress());</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>-&gt;sweeping_in_progress());</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  VerifyRoots();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  VerifyEvacuation(heap_-&gt;new_space());</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  VerifyEvacuation(heap_-&gt;old_space());</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  VerifyEvacuation(heap_-&gt;code_space());</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keywordflow">if</span> (heap_-&gt;shared_space()) VerifyEvacuation(heap_-&gt;shared_space());</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  VerifyEvacuation(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>-&gt;new_space());</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  VerifyEvacuation(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>-&gt;old_space());</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  VerifyEvacuation(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>-&gt;code_space());</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>-&gt;shared_space()) VerifyEvacuation(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>-&gt;shared_space());</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>}</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> EvacuationVerifier::VisitPointers(Tagged&lt;HeapObject&gt; host,</div>
@@ -172,7 +165,7 @@ $(function(){initNavTree('evacuation-verifier_8cc_source.html',''); initResizabl
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">void</span> EvacuationVerifier::VerifyRoots() {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  heap_-&gt;IterateRootsIncludingClients(</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>-&gt;IterateRootsIncludingClients(</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <span class="keyword">this</span>,</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>      base::EnumSet&lt;SkipRoot&gt;{SkipRoot::kWeak, SkipRoot::kConservativeStack});</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
@@ -182,7 +175,7 @@ $(function(){initNavTree('evacuation-verifier_8cc_source.html',''); initResizabl
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordflow">while</span> (current &lt; <a class="code hl_variable" href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a>) {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    Tagged&lt;HeapObject&gt; <span class="keywordtype">object</span> = HeapObject::FromAddress(current);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">if</span> (!<a class="code hl_function" href="namespacev8_1_1internal_1_1InstanceTypeChecker.html#acb4931443a48b939fda13731d0f7943c">IsFreeSpaceOrFiller</a>(<span class="keywordtype">object</span>, cage_base())) {</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <a class="code hl_function" href="namespacev8_1_1internal.html#a5f672157ae21ec21c6452b35f5eb884c">VisitObject</a>(heap_-&gt;isolate(), <span class="keywordtype">object</span>, <span class="keyword">this</span>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      <a class="code hl_function" href="namespacev8_1_1internal.html#a5f672157ae21ec21c6452b35f5eb884c">VisitObject</a>(<a class="code hl_variable" href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a>-&gt;isolate(), <span class="keywordtype">object</span>, <span class="keyword">this</span>);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    current += <a class="code hl_define" href="common_2globals_8h.html#a76f936b13cc7401de647c23963eda5c1">ALIGN_TO_ALLOCATION_ALIGNMENT</a>(object-&gt;Size(cage_base()));</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  }</div>
@@ -215,6 +208,7 @@ $(function(){initNavTree('evacuation-verifier_8cc_source.html',''); initResizabl
 <div class="ttc" id="aassembler-inl_8h_html"><div class="ttname"><a href="assembler-inl_8h.html">assembler-inl.h</a></div></div>
 <div class="ttc" id="acode-reference_8cc_html_aeaf31c189d3b2a89ff45fedfceb87d9d"><div class="ttname"><a href="code-reference_8cc.html#aeaf31c189d3b2a89ff45fedfceb87d9d">code</a></div><div class="ttdeci">Handle&lt; Code &gt; code</div><div class="ttdef"><b>Definition</b> <a href="code-reference_8cc_source.html#l00022">code-reference.cc:22</a></div></div>
 <div class="ttc" id="acommon_2globals_8h_html_a76f936b13cc7401de647c23963eda5c1"><div class="ttname"><a href="common_2globals_8h.html#a76f936b13cc7401de647c23963eda5c1">ALIGN_TO_ALLOCATION_ALIGNMENT</a></div><div class="ttdeci">#define ALIGN_TO_ALLOCATION_ALIGNMENT(value)</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l01779">globals.h:1779</a></div></div>
+<div class="ttc" id="acpp-heap_8cc_html_abf26aeebfa3b211a147d054e3acfa1aa"><div class="ttname"><a href="cpp-heap_8cc.html#abf26aeebfa3b211a147d054e3acfa1aa">heap_</a></div><div class="ttdeci">CppHeap * heap_</div><div class="ttdef"><b>Definition</b> <a href="cpp-heap_8cc_source.html#l00559">cpp-heap.cc:559</a></div></div>
 <div class="ttc" id="adebug-coverage_8cc_html_a37722a150250e2a5a98e5e0d11e53449"><div class="ttname"><a href="debug-coverage_8cc.html#a37722a150250e2a5a98e5e0d11e53449">start</a></div><div class="ttdeci">int start</div><div class="ttdef"><b>Definition</b> <a href="debug-coverage_8cc_source.html#l00595">debug-coverage.cc:595</a></div></div>
 <div class="ttc" id="adebug-coverage_8cc_html_abce9f5dc9c83f2639b72024fdee5d388"><div class="ttname"><a href="debug-coverage_8cc.html#abce9f5dc9c83f2639b72024fdee5d388">end</a></div><div class="ttdeci">int end</div><div class="ttdef"><b>Definition</b> <a href="debug-coverage_8cc_source.html#l00596">debug-coverage.cc:596</a></div></div>
 <div class="ttc" id="aevacuation-verifier-inl_8h_html"><div class="ttname"><a href="evacuation-verifier-inl_8h.html">evacuation-verifier-inl.h</a></div></div>
@@ -230,13 +224,10 @@ $(function(){initNavTree('evacuation-verifier_8cc_source.html',''); initResizabl
 <div class="ttc" id="areloc-info_8h_html"><div class="ttname"><a href="reloc-info_8h.html">reloc-info.h</a></div></div>
 <div class="ttc" id="avisit-object_8h_html"><div class="ttname"><a href="visit-object_8h.html">visit-object.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="evacuation-verifier_8cc.html">evacuation-verifier.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:31 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

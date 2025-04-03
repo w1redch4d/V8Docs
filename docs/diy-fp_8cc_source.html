@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/base/numbers/diy-fp.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/base/numbers/diy-fp.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('diy-fp_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('diy-fp_8cc_source.html',''); initResizable(true); });
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="dir_86a9bf0bbd475bf97d705f243e9d1407.html">numbers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">diy-fp.cc</div></div>
 </div><!--header-->
@@ -119,8 +112,8 @@ $(function(){initNavTree('diy-fp_8cc_source.html',''); initResizable(true); });
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="comment">// significant 64 bits are only used for rounding the most significant 64</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="comment">// bits.</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keyword">const</span> uint64_t kM32 = 0xFFFFFFFFu;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  uint64_t a = f_ &gt;&gt; 32;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  uint64_t b = f_ &amp; kM32;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  uint64_t a = <a class="code hl_variable" href="classv8_1_1base_1_1DiyFp.html#a83d095207fed8b77a1511b5a5485dfe3">f_</a> &gt;&gt; 32;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  uint64_t b = <a class="code hl_variable" href="classv8_1_1base_1_1DiyFp.html#a83d095207fed8b77a1511b5a5485dfe3">f_</a> &amp; kM32;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  uint64_t c = other.f_ &gt;&gt; 32;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  uint64_t d = other.f_ &amp; kM32;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  uint64_t ac = a * c;</div>
@@ -132,26 +125,25 @@ $(function(){initNavTree('diy-fp_8cc_source.html',''); initResizable(true); });
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="comment">// Halfway cases will be round up.</span></div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  tmp += 1U &lt;&lt; 31;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  uint64_t result_f = ac + (ad &gt;&gt; 32) + (bc &gt;&gt; 32) + (tmp &gt;&gt; 32);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  e_ += other.e_ + 64;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  f_ = result_f;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_variable" href="classv8_1_1base_1_1DiyFp.html#af2a260ec33ab833ddc6570f42d69212f">e_</a> += other.e_ + 64;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_variable" href="classv8_1_1base_1_1DiyFp.html#a83d095207fed8b77a1511b5a5485dfe3">f_</a> = result_f;</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
 </div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}  <span class="comment">// namespace base</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}  <span class="comment">// namespace v8</span></div>
 <div class="ttc" id="aclassv8_1_1base_1_1DiyFp_html"><div class="ttname"><a href="classv8_1_1base_1_1DiyFp.html">v8::base::DiyFp</a></div><div class="ttdef"><b>Definition</b> <a href="diy-fp_8h_source.html#l00020">diy-fp.h:20</a></div></div>
+<div class="ttc" id="aclassv8_1_1base_1_1DiyFp_html_a83d095207fed8b77a1511b5a5485dfe3"><div class="ttname"><a href="classv8_1_1base_1_1DiyFp.html#a83d095207fed8b77a1511b5a5485dfe3">v8::base::DiyFp::f_</a></div><div class="ttdeci">uint64_t f_</div><div class="ttdef"><b>Definition</b> <a href="diy-fp_8h_source.html#l00100">diy-fp.h:100</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1DiyFp_html_aa961ca101a71f437927a463bde62790d"><div class="ttname"><a href="classv8_1_1base_1_1DiyFp.html#aa961ca101a71f437927a463bde62790d">v8::base::DiyFp::Multiply</a></div><div class="ttdeci">V8_BASE_EXPORT void Multiply(const DiyFp &amp;other)</div><div class="ttdef"><b>Definition</b> <a href="#l00012">diy-fp.cc:12</a></div></div>
+<div class="ttc" id="aclassv8_1_1base_1_1DiyFp_html_af2a260ec33ab833ddc6570f42d69212f"><div class="ttname"><a href="classv8_1_1base_1_1DiyFp.html#af2a260ec33ab833ddc6570f42d69212f">v8::base::DiyFp::e_</a></div><div class="ttdeci">int e_</div><div class="ttdef"><b>Definition</b> <a href="diy-fp_8h_source.html#l00101">diy-fp.h:101</a></div></div>
 <div class="ttc" id="adiy-fp_8h_html"><div class="ttname"><a href="diy-fp_8h.html">diy-fp.h</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a115c48491bb37004f5ac67eb46ac2c23"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a></div><div class="ttdeci">turboshaft::OpIndex base</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00070">instruction-selector-ia32.cc:70</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_0af1587c8378955de40f48b4bd1869f0.html">base</a></li><li class="navelem"><a class="el" href="dir_86a9bf0bbd475bf97d705f243e9d1407.html">numbers</a></li><li class="navelem"><a class="el" href="diy-fp_8cc.html">diy-fp.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:16:43 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

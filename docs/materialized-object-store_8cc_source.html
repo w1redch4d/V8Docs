@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/deoptimizer/materialized-object-store.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/deoptimizer/materialized-object-store.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('materialized-object-store_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('materialized-object-store_8cc_source.html',''); initRe
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3ab3da63c8f7e21a052b2d96a9431252.html">deoptimizer</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">materialized-object-store.cc</div></div>
 </div><!--header-->
@@ -117,11 +110,11 @@ $(function(){initNavTree('materialized-object-store_8cc_source.html',''); initRe
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="foldopen" id="foldopen00015" data-start="{" data-end="}">
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aa0d2defd96ec00cdcfc6c17c7b7d3227">   15</a></span><a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;FixedArray&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aa0d2defd96ec00cdcfc6c17c7b7d3227">MaterializedObjectStore::Get</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> fp) {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = StackIdToIndex(fp);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#af34184266190710fae87c6290ddeb054">StackIdToIndex</a>(fp);</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> == -1) {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">return</span> <a class="code hl_function" href="classv8_1_1internal_1_1Handle.html#a7fde29e675604ed824bd306445f2c6de">Handle&lt;FixedArray&gt;::null</a>();</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  }</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;FixedArray&gt;</a> array = GetStackEntries();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;FixedArray&gt;</a> array = <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ab0e78cd2b624f4eaf06aeaec0f6bed5c">GetStackEntries</a>();</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <a class="code hl_define" href="logging_8h.html#a43d2df1fb528ff7bee1e873e377e0323">CHECK_GT</a>(array-&gt;length(), <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keywordflow">return</span> <a class="code hl_function" href="namespacev8_1_1internal.html#aff82af2c2f7b200915e30bcfedca6f85">Cast&lt;FixedArray&gt;</a>(<a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;Object&gt;</a>(array-&gt;get(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>), isolate()));</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>}</div>
@@ -130,50 +123,55 @@ $(function(){initNavTree('materialized-object-store_8cc_source.html',''); initRe
 <div class="foldopen" id="foldopen00025" data-start="{" data-end="}">
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ad1019d856d16a3f5a980ad8166c9aa0d">   25</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ad1019d856d16a3f5a980ad8166c9aa0d">MaterializedObjectStore::Set</a>(</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> fp, <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;FixedArray&gt;</a> materialized_objects) {</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = StackIdToIndex(fp);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#af34184266190710fae87c6290ddeb054">StackIdToIndex</a>(fp);</div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> == -1) {</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(frame_fps_.size());</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    frame_fps_.push_back(fp);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">frame_fps_</a>.size());</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">frame_fps_</a>.push_back(fp);</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  }</div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;FixedArray&gt;</a> array = EnsureStackEntries(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> + 1);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_class" href="classv8_1_1internal_1_1DirectHandle.html">DirectHandle&lt;FixedArray&gt;</a> array = <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#a929d3b0b9c06bd4c2a5a72d271dc2fd2">EnsureStackEntries</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> + 1);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  array-&gt;set(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, *materialized_objects);</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
 </div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="foldopen" id="foldopen00037" data-start="{" data-end="}">
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MaterializedObjectStore.html#afb9c11abbbd9d73a34036157a048c324">   37</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#afb9c11abbbd9d73a34036157a048c324">MaterializedObjectStore::Remove</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> fp) {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">auto</span> it = std::find(frame_fps_.begin(), frame_fps_.end(), fp);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordflow">if</span> (it == frame_fps_.end()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::distance(frame_fps_.begin(), it));</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keyword">auto</span> it = std::find(<a class="code hl_variable" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">frame_fps_</a>.begin(), <a class="code hl_variable" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">frame_fps_</a>.end(), fp);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  <span class="keywordflow">if</span> (it == <a class="code hl_variable" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">frame_fps_</a>.end()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keywordtype">int</span> <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a> = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::distance(<a class="code hl_variable" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">frame_fps_</a>.begin(), it));</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  frame_fps_.erase(it);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FixedArray&gt;</a> array = isolate()-&gt;heap()-&gt;materialized_objects();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">frame_fps_</a>.erase(it);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;FixedArray&gt;</a> array = <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ad30c85e01b3476e6868b54c30a3a9f98">isolate</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#a8f158e28d6a29d8bf8459c45ba5e40c2">heap</a>()-&gt;materialized_objects();</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  <a class="code hl_define" href="logging_8h.html#a45a0717f39b7011dc823c1fe7b83e6fc">CHECK_LT</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>, array-&gt;length());</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">int</span> fps_size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(frame_fps_.size());</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="keywordtype">int</span> fps_size = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(<a class="code hl_variable" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">frame_fps_</a>.size());</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = <a class="code hl_variable" href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">index</a>; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; fps_size; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>++) {</div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    array-&gt;set(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>, array-&gt;<a class="code hl_class" href="classget.html">get</a>(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> + 1));</div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  }</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  array-&gt;set(fps_size, <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(isolate()).undefined_value());</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  array-&gt;set(fps_size, <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(<a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ad30c85e01b3476e6868b54c30a3a9f98">isolate</a>()).undefined_value());</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">int</span> MaterializedObjectStore::StackIdToIndex(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> fp) {</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keyword">auto</span> it = std::find(frame_fps_.begin(), frame_fps_.end(), fp);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordflow">return</span> it == frame_fps_.end()</div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MaterializedObjectStore.html#af34184266190710fae87c6290ddeb054">   54</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#af34184266190710fae87c6290ddeb054">MaterializedObjectStore::StackIdToIndex</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">Address</a> fp) {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <span class="keyword">auto</span> it = std::find(<a class="code hl_variable" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">frame_fps_</a>.begin(), <a class="code hl_variable" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">frame_fps_</a>.end(), fp);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordflow">return</span> it == <a class="code hl_variable" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">frame_fps_</a>.end()</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>             ? -1</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>             : <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::distance(frame_fps_.begin(), it));</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>             : <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::distance(<a class="code hl_variable" href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">frame_fps_</a>.begin(), it));</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>Handle&lt;FixedArray&gt; MaterializedObjectStore::GetStackEntries() {</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordflow">return</span> Handle&lt;FixedArray&gt;(isolate()-&gt;<a class="code hl_namespace" href="namespaceheap.html">heap</a>()-&gt;materialized_objects(),</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                            isolate());</div>
+<div class="foldopen" id="foldopen00061" data-start="{" data-end="}">
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ab0e78cd2b624f4eaf06aeaec0f6bed5c">   61</a></span><a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;FixedArray&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ab0e78cd2b624f4eaf06aeaec0f6bed5c">MaterializedObjectStore::GetStackEntries</a>() {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  <span class="keywordflow">return</span> <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;FixedArray&gt;</a>(<a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ad30c85e01b3476e6868b54c30a3a9f98">isolate</a>()-&gt;<a class="code hl_namespace" href="namespaceheap.html">heap</a>()-&gt;materialized_objects(),</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                            <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ad30c85e01b3476e6868b54c30a3a9f98">isolate</a>());</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>Handle&lt;FixedArray&gt; MaterializedObjectStore::EnsureStackEntries(<span class="keywordtype">int</span> length) {</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  Handle&lt;FixedArray&gt; array = GetStackEntries();</div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1MaterializedObjectStore.html#a929d3b0b9c06bd4c2a5a72d271dc2fd2">   66</a></span><a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;FixedArray&gt;</a> <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#a929d3b0b9c06bd4c2a5a72d271dc2fd2">MaterializedObjectStore::EnsureStackEntries</a>(<span class="keywordtype">int</span> length) {</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;FixedArray&gt;</a> array = <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ab0e78cd2b624f4eaf06aeaec0f6bed5c">GetStackEntries</a>();</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  <span class="keywordflow">if</span> (array-&gt;length() &gt;= length) {</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> array;</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  }</div>
@@ -183,29 +181,39 @@ $(function(){initNavTree('materialized-object-store_8cc_source.html',''); initRe
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_variable" href="regexp-bytecode-peephole_8cc.html#ae6409a32d85daa404e52072329e0a5ad">new_length</a> = 2 * array-&gt;length();</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  }</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  Handle&lt;FixedArray&gt; new_array =</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      isolate()-&gt;factory()-&gt;NewFixedArray(<a class="code hl_variable" href="regexp-bytecode-peephole_8cc.html#ae6409a32d85daa404e52072329e0a5ad">new_length</a>, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a604d5beeb6fc8639670f737ed201e20aa0aa38c28f349d65a6819e03844b73dff">AllocationType::kOld</a>);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Handle.html">Handle&lt;FixedArray&gt;</a> new_array =</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>      <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ad30c85e01b3476e6868b54c30a3a9f98">isolate</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#ab7dd326c7e0e0d5d2cba90947b2ef48b">factory</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1FactoryBase.html#add1def193680fa7edc2ead51ef49f8c3">NewFixedArray</a>(<a class="code hl_variable" href="regexp-bytecode-peephole_8cc.html#ae6409a32d85daa404e52072329e0a5ad">new_length</a>, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a604d5beeb6fc8639670f737ed201e20aa0aa38c28f349d65a6819e03844b73dff">AllocationType::kOld</a>);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; array-&gt;<a class="code hl_class" href="classlength.html">length</a>(); <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>++) {</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    new_array-&gt;set(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>, array-&gt;<a class="code hl_class" href="classget.html">get</a>(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>));</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  }</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <a class="code hl_variable" href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">Tagged&lt;HeapObject&gt;</a> undefined_value =</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      ReadOnlyRoots(isolate()).undefined_value();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Tagged.html">Tagged&lt;HeapObject&gt;</a> undefined_value =</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyRoots.html">ReadOnlyRoots</a>(<a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ad30c85e01b3476e6868b54c30a3a9f98">isolate</a>()).undefined_value();</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = array-&gt;<a class="code hl_class" href="classlength.html">length</a>(); <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; length; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>++) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    new_array-&gt;set(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>, undefined_value);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  }</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  isolate()-&gt;heap()-&gt;SetRootMaterializedObjects(*new_array);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_function" href="classv8_1_1internal_1_1MaterializedObjectStore.html#ad30c85e01b3476e6868b54c30a3a9f98">isolate</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#a8f158e28d6a29d8bf8459c45ba5e40c2">heap</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Heap.html#a51958d3b3b2fe08c8471f80941731f27">SetRootMaterializedObjects</a>(*new_array);</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <span class="keywordflow">return</span> new_array;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>}</div>
+</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}  <span class="comment">// namespace v8</span></div>
 <div class="ttc" id="aclassget_html"><div class="ttname"><a href="classget.html">get</a></div></div>
 <div class="ttc" id="aclasslength_html"><div class="ttname"><a href="classlength.html">length</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1DirectHandle_html"><div class="ttname"><a href="classv8_1_1internal_1_1DirectHandle.html">v8::internal::DirectHandle</a></div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00643">handles.h:652</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1FactoryBase_html_add1def193680fa7edc2ead51ef49f8c3"><div class="ttname"><a href="classv8_1_1internal_1_1FactoryBase.html#add1def193680fa7edc2ead51ef49f8c3">v8::internal::FactoryBase::NewFixedArray</a></div><div class="ttdeci">Handle&lt; FixedArray &gt; NewFixedArray(int length, AllocationType allocation=AllocationType::kYoung)</div><div class="ttdef"><b>Definition</b> <a href="factory-base_8cc_source.html#l00176">factory-base.cc:176</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Handle_html"><div class="ttname"><a href="classv8_1_1internal_1_1Handle.html">v8::internal::Handle</a></div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00145">handles.h:145</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Handle_html_a7fde29e675604ed824bd306445f2c6de"><div class="ttname"><a href="classv8_1_1internal_1_1Handle.html#a7fde29e675604ed824bd306445f2c6de">v8::internal::Handle::null</a></div><div class="ttdeci">static const Handle&lt; T &gt; null()</div><div class="ttdef"><b>Definition</b> <a href="handles_8h_source.html#l00202">handles.h:202</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Heap_html_a51958d3b3b2fe08c8471f80941731f27"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html#a51958d3b3b2fe08c8471f80941731f27">v8::internal::Heap::SetRootMaterializedObjects</a></div><div class="ttdeci">V8_INLINE void SetRootMaterializedObjects(Tagged&lt; FixedArray &gt; objects)</div><div class="ttdef"><b>Definition</b> <a href="heap-inl_8h_source.html#l00120">heap-inl.h:120</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html_a8f158e28d6a29d8bf8459c45ba5e40c2"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html#a8f158e28d6a29d8bf8459c45ba5e40c2">v8::internal::Isolate::heap</a></div><div class="ttdeci">Heap * heap()</div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l01188">isolate.h:1188</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html_ab7dd326c7e0e0d5d2cba90947b2ef48b"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html#ab7dd326c7e0e0d5d2cba90947b2ef48b">v8::internal::Isolate::factory</a></div><div class="ttdeci">v8::internal::Factory * factory()</div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l01517">isolate.h:1517</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MaterializedObjectStore_html_a929d3b0b9c06bd4c2a5a72d271dc2fd2"><div class="ttname"><a href="classv8_1_1internal_1_1MaterializedObjectStore.html#a929d3b0b9c06bd4c2a5a72d271dc2fd2">v8::internal::MaterializedObjectStore::EnsureStackEntries</a></div><div class="ttdeci">Handle&lt; FixedArray &gt; EnsureStackEntries(int size)</div><div class="ttdef"><b>Definition</b> <a href="#l00066">materialized-object-store.cc:66</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MaterializedObjectStore_html_aa0d2defd96ec00cdcfc6c17c7b7d3227"><div class="ttname"><a href="classv8_1_1internal_1_1MaterializedObjectStore.html#aa0d2defd96ec00cdcfc6c17c7b7d3227">v8::internal::MaterializedObjectStore::Get</a></div><div class="ttdeci">Handle&lt; FixedArray &gt; Get(Address fp)</div><div class="ttdef"><b>Definition</b> <a href="#l00015">materialized-object-store.cc:15</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MaterializedObjectStore_html_ab0e78cd2b624f4eaf06aeaec0f6bed5c"><div class="ttname"><a href="classv8_1_1internal_1_1MaterializedObjectStore.html#ab0e78cd2b624f4eaf06aeaec0f6bed5c">v8::internal::MaterializedObjectStore::GetStackEntries</a></div><div class="ttdeci">Handle&lt; FixedArray &gt; GetStackEntries()</div><div class="ttdef"><b>Definition</b> <a href="#l00061">materialized-object-store.cc:61</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MaterializedObjectStore_html_ad1019d856d16a3f5a980ad8166c9aa0d"><div class="ttname"><a href="classv8_1_1internal_1_1MaterializedObjectStore.html#ad1019d856d16a3f5a980ad8166c9aa0d">v8::internal::MaterializedObjectStore::Set</a></div><div class="ttdeci">void Set(Address fp, DirectHandle&lt; FixedArray &gt; materialized_objects)</div><div class="ttdef"><b>Definition</b> <a href="#l00025">materialized-object-store.cc:25</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MaterializedObjectStore_html_ad30c85e01b3476e6868b54c30a3a9f98"><div class="ttname"><a href="classv8_1_1internal_1_1MaterializedObjectStore.html#ad30c85e01b3476e6868b54c30a3a9f98">v8::internal::MaterializedObjectStore::isolate</a></div><div class="ttdeci">Isolate * isolate() const</div><div class="ttdef"><b>Definition</b> <a href="materialized-object-store_8h_source.html#l00027">materialized-object-store.h:27</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MaterializedObjectStore_html_aee2d6917b6ba9e3a4dfffabc95ddc47c"><div class="ttname"><a href="classv8_1_1internal_1_1MaterializedObjectStore.html#aee2d6917b6ba9e3a4dfffabc95ddc47c">v8::internal::MaterializedObjectStore::frame_fps_</a></div><div class="ttdeci">std::vector&lt; Address &gt; frame_fps_</div><div class="ttdef"><b>Definition</b> <a href="materialized-object-store_8h_source.html#l00034">materialized-object-store.h:34</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MaterializedObjectStore_html_af34184266190710fae87c6290ddeb054"><div class="ttname"><a href="classv8_1_1internal_1_1MaterializedObjectStore.html#af34184266190710fae87c6290ddeb054">v8::internal::MaterializedObjectStore::StackIdToIndex</a></div><div class="ttdeci">int StackIdToIndex(Address fp)</div><div class="ttdef"><b>Definition</b> <a href="#l00054">materialized-object-store.cc:54</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MaterializedObjectStore_html_afb9c11abbbd9d73a34036157a048c324"><div class="ttname"><a href="classv8_1_1internal_1_1MaterializedObjectStore.html#afb9c11abbbd9d73a34036157a048c324">v8::internal::MaterializedObjectStore::Remove</a></div><div class="ttdeci">bool Remove(Address fp)</div><div class="ttdef"><b>Definition</b> <a href="#l00037">materialized-object-store.cc:37</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1ReadOnlyRoots_html"><div class="ttname"><a href="classv8_1_1internal_1_1ReadOnlyRoots.html">v8::internal::ReadOnlyRoots</a></div><div class="ttdef"><b>Definition</b> <a href="roots_8h_source.html#l00699">roots.h:699</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Tagged_html"><div class="ttname"><a href="classv8_1_1internal_1_1Tagged.html">v8::internal::Tagged</a></div><div class="ttdef"><b>Definition</b> <a href="waiter-queue-node_8h_source.html#l00022">waiter-queue-node.h:22</a></div></div>
@@ -219,7 +227,6 @@ $(function(){initNavTree('materialized-object-store_8cc_source.html',''); initRe
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a0cfab207d565dcf62ebf50f3987e05de"><div class="ttname"><a href="namespacev8_1_1internal.html#a0cfab207d565dcf62ebf50f3987e05de">v8::internal::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> <a href="heap-snapshot-generator_8cc_source.html#l01584">heap-snapshot-generator.cc:1584</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
-<div class="ttc" id="anamespacev8_1_1internal_html_a57f5ecf71b9a2757b0555b2be4c640b8"><div class="ttname"><a href="namespacev8_1_1internal.html#a57f5ecf71b9a2757b0555b2be4c640b8">v8::internal::Tagged&lt; HeapObject &gt;</a></div><div class="ttdeci">kInterpreterTrampolineOffset Tagged&lt; HeapObject &gt;</div><div class="ttdef"><b>Definition</b> <a href="shared-function-info-inl_8h_source.html#l00116">shared-function-info-inl.h:116</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a604d5beeb6fc8639670f737ed201e20aa0aa38c28f349d65a6819e03844b73dff"><div class="ttname"><a href="namespacev8_1_1internal.html#a604d5beeb6fc8639670f737ed201e20aa0aa38c28f349d65a6819e03844b73dff">v8::internal::AllocationType::kOld</a></div><div class="ttdeci">@ kOld</div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_afa9ea55d792121fba92b4cfc8ef8c9d7"><div class="ttname"><a href="namespacev8_1_1internal.html#afa9ea55d792121fba92b4cfc8ef8c9d7">v8::internal::length</a></div><div class="ttdeci">size_t length</div><div class="ttdef"><b>Definition</b> <a href="external-reference_8cc_source.html#l01421">external-reference.cc:1421</a></div></div>
@@ -228,13 +235,10 @@ $(function(){initNavTree('materialized-object-store_8cc_source.html',''); initRe
 <div class="ttc" id="aoddball_8h_html"><div class="ttname"><a href="oddball_8h.html">oddball.h</a></div></div>
 <div class="ttc" id="aregexp-bytecode-peephole_8cc_html_ae6409a32d85daa404e52072329e0a5ad"><div class="ttname"><a href="regexp-bytecode-peephole_8cc.html#ae6409a32d85daa404e52072329e0a5ad">new_length</a></div><div class="ttdeci">int new_length</div><div class="ttdef"><b>Definition</b> <a href="regexp-bytecode-peephole_8cc_source.html#l00028">regexp-bytecode-peephole.cc:28</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_3ab3da63c8f7e21a052b2d96a9431252.html">deoptimizer</a></li><li class="navelem"><a class="el" href="materialized-object-store_8cc.html">materialized-object-store.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:26 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

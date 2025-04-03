@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/strings/string-case.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/strings/string-case.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('string-case_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('string-case_8cc_source.html',''); initResizable(true);
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ae51fee59f4ef3f44a2ed76f397a2645.html">strings</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">string-case.cc</div></div>
 </div><!--header-->
@@ -150,7 +143,8 @@ $(function(){initNavTree('string-case_8cc_source.html',''); initResizable(true);
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">// boundaries are statically known.</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">// Requires: all bytes in the input word and the boundaries must be</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">// ASCII (less than 0x7F).</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a> AsciiRangeMask(<a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a> w, <span class="keywordtype">char</span> <a class="code hl_variable" href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a>, <span class="keywordtype">char</span> n) {</div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="namespacev8_1_1internal.html#a4177ac9392fc2739c6c01c692fa854e4">   50</a></span><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a> <a class="code hl_function" href="namespacev8_1_1internal.html#a4177ac9392fc2739c6c01c692fa854e4">AsciiRangeMask</a>(<a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a> w, <span class="keywordtype">char</span> <a class="code hl_variable" href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a>, <span class="keywordtype">char</span> n) {</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="comment">// Use strict inequalities since in edge cases the function could be</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="comment">// further simplified.</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(0 &lt; <a class="code hl_variable" href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a> &amp;&amp; <a class="code hl_variable" href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a> &lt; n);</div>
@@ -160,6 +154,7 @@ $(function(){initNavTree('string-case_8cc_source.html',''); initResizable(true);
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a> tmp2 = w + <a class="code hl_variable" href="namespacev8_1_1internal.html#a64db7e172ebd2ada9b6ade99eb967cf8">kOneInEveryByte</a> * (0x7F - <a class="code hl_variable" href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a>);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <span class="keywordflow">return</span> (tmp1 &amp; tmp2 &amp; (<a class="code hl_variable" href="namespacev8_1_1internal.html#a64db7e172ebd2ada9b6ade99eb967cf8">kOneInEveryByte</a> * 0x80));</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>}</div>
+</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keyword">template</span> &lt;<span class="keywordtype">bool</span> is_lower&gt;</div>
 <div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
@@ -188,7 +183,7 @@ $(function(){initNavTree('string-case_8cc_source.html',''); initResizable(true);
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordflow">while</span> (src &lt;= limit - <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a>)) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>      <span class="keyword">const</span> <a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a> w = *<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a>*<span class="keyword">&gt;</span>(src);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>      <span class="keywordflow">if</span> ((w &amp; <a class="code hl_variable" href="namespacev8_1_1internal.html#a8d95e9286473c70c091d2faf47194289">kAsciiMask</a>) != 0) <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(src - saved_src);</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <span class="keywordflow">if</span> (AsciiRangeMask(w, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21ad42723cb5a5f89e4d53f95e585e11ad7">lo</a>, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a26bb1f65f8c22d598ef4f4d65aeac9f6">hi</a>) != 0) {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>      <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacev8_1_1internal.html#a4177ac9392fc2739c6c01c692fa854e4">AsciiRangeMask</a>(w, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21ad42723cb5a5f89e4d53f95e585e11ad7">lo</a>, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a26bb1f65f8c22d598ef4f4d65aeac9f6">hi</a>) != 0) {</div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        changed = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>      }</div>
@@ -201,7 +196,7 @@ $(function(){initNavTree('string-case_8cc_source.html',''); initResizable(true);
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">while</span> (src &lt;= limit - <span class="keyword">sizeof</span>(<a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a>)) {</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>      <span class="keyword">const</span> <a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a> w = *<span class="keyword">reinterpret_cast&lt;</span><span class="keyword">const </span><a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a>*<span class="keyword">&gt;</span>(src);</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>      <span class="keywordflow">if</span> ((w &amp; <a class="code hl_variable" href="namespacev8_1_1internal.html#a8d95e9286473c70c091d2faf47194289">kAsciiMask</a>) != 0) <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(src - saved_src);</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a> <a class="code hl_variable" href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a> = AsciiRangeMask(w, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21ad42723cb5a5f89e4d53f95e585e11ad7">lo</a>, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a26bb1f65f8c22d598ef4f4d65aeac9f6">hi</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>      <a class="code hl_typedef" href="namespacev8_1_1internal.html#a96f629c868307c6801befaf3d80d1dfe">word_t</a> <a class="code hl_variable" href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a> = <a class="code hl_function" href="namespacev8_1_1internal.html#a4177ac9392fc2739c6c01c692fa854e4">AsciiRangeMask</a>(w, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21ad42723cb5a5f89e4d53f95e585e11ad7">lo</a>, <a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a26bb1f65f8c22d598ef4f4d65aeac9f6">hi</a>);</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>      <span class="comment">// The mask has high (7th) bit set in every byte that needs</span></div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>      <span class="comment">// conversion and we know that the distance between cases is</span></div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>      <span class="comment">// 1 &lt;&lt; 5.</span></div>
@@ -251,6 +246,7 @@ $(function(){initNavTree('string-case_8cc_source.html',''); initResizable(true);
 <div class="ttc" id="anamespacev8_1_1internal_html"><div class="ttname"><a href="namespacev8_1_1internal.html">v8::internal</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00018">api-arguments-inl.h:18</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a271f8ea99b7c0bbd771df015d4e4cf21a26bb1f65f8c22d598ef4f4d65aeac9f6"><div class="ttname"><a href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21a26bb1f65f8c22d598ef4f4d65aeac9f6">v8::internal::hi</a></div><div class="ttdeci">@ hi</div><div class="ttdef"><b>Definition</b> <a href="constants-arm_8h_source.html#l00093">constants-arm.h:93</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a271f8ea99b7c0bbd771df015d4e4cf21ad42723cb5a5f89e4d53f95e585e11ad7"><div class="ttname"><a href="namespacev8_1_1internal.html#a271f8ea99b7c0bbd771df015d4e4cf21ad42723cb5a5f89e4d53f95e585e11ad7">v8::internal::lo</a></div><div class="ttdeci">@ lo</div><div class="ttdef"><b>Definition</b> <a href="constants-arm_8h_source.html#l00107">constants-arm.h:107</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_a4177ac9392fc2739c6c01c692fa854e4"><div class="ttname"><a href="namespacev8_1_1internal.html#a4177ac9392fc2739c6c01c692fa854e4">v8::internal::AsciiRangeMask</a></div><div class="ttdeci">static word_t AsciiRangeMask(word_t w, char m, char n)</div><div class="ttdef"><b>Definition</b> <a href="#l00050">string-case.cc:50</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a5031451934208565c827c86d9eb86c5a"><div class="ttname"><a href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">v8::internal::internal</a></div><div class="ttdeci">internal</div><div class="ttdef"><b>Definition</b> <a href="wasm-objects-inl_8h_source.html#l00457">wasm-objects-inl.h:457</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a64db7e172ebd2ada9b6ade99eb967cf8"><div class="ttname"><a href="namespacev8_1_1internal.html#a64db7e172ebd2ada9b6ade99eb967cf8">v8::internal::kOneInEveryByte</a></div><div class="ttdeci">const word_t kOneInEveryByte</div><div class="ttdef"><b>Definition</b> <a href="#l00021">string-case.cc:21</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_a782acb70e9eabcd3faaccfb6a3bde48e"><div class="ttname"><a href="namespacev8_1_1internal.html#a782acb70e9eabcd3faaccfb6a3bde48e">v8::internal::Address</a></div><div class="ttdeci">Address</div><div class="ttdef"><b>Definition</b> <a href="api-callbacks-inl_8h_source.html#l00034">api-callbacks-inl.h:34</a></div></div>
@@ -265,13 +261,10 @@ $(function(){initNavTree('string-case_8cc_source.html',''); initResizable(true);
 <div class="ttc" id="astring-case_8h_html"><div class="ttname"><a href="string-case_8h.html">string-case.h</a></div></div>
 <div class="ttc" id="autils_2utils_8h_html"><div class="ttname"><a href="utils_2utils_8h.html">utils.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_ae51fee59f4ef3f44a2ed76f397a2645.html">strings</a></li><li class="navelem"><a class="el" href="string-case_8cc.html">string-case.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:20:00 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

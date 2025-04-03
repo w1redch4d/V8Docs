@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/interpreter/bytecodes.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/interpreter/bytecodes.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('bytecodes_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('bytecodes_8cc_source.html',''); initResizable(true); }
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4904b5727094acb85f1fb3ce4b540d24.html">interpreter</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">bytecodes.cc</div></div>
 </div><!--header-->
@@ -116,31 +109,31 @@ $(function(){initNavTree('bytecodes_8cc_source.html',''); initResizable(true); }
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span>interpreter {</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// clang-format off</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">const</span> <a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#a39fea0bd5e7271ce703cd41313e7eefc">OperandType</a>* <span class="keyword">const</span> Bytecodes::kOperandTypes[] = {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">const</span> <a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#a39fea0bd5e7271ce703cd41313e7eefc">OperandType</a>* <span class="keyword">const</span> <a class="code hl_variable" href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#afb911f021958c332fd065844a1724540">Bytecodes::kOperandTypes</a>[] = {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#define ENTRY(Name, ...) BytecodeTraits&lt;__VA_ARGS__&gt;::kOperandTypes,</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <a class="code hl_define" href="bytecodes_8h.html#ab60ff831bd383cdf3ff083bc1d5c9c4b">BYTECODE_LIST</a>(<a class="code hl_define" href="bytecodes_8cc.html#afc1159f6d8e206a7f051934d7fd23be5">ENTRY</a>, <a class="code hl_define" href="bytecodes_8cc.html#afc1159f6d8e206a7f051934d7fd23be5">ENTRY</a>)</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#undef ENTRY</span></div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">const</span> <a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#a10982cdf304c413ad720399d3d2673b8">OperandTypeInfo</a>* <span class="keyword">const</span> Bytecodes::kOperandTypeInfos[] = {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">const</span> <a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#a10982cdf304c413ad720399d3d2673b8">OperandTypeInfo</a>* <span class="keyword">const</span> <a class="code hl_variable" href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a76564e499701a5d5c763de248759b42b">Bytecodes::kOperandTypeInfos</a>[] = {</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define ENTRY(Name, ...) BytecodeTraits&lt;__VA_ARGS__&gt;::kOperandTypeInfos,</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <a class="code hl_define" href="bytecodes_8h.html#ab60ff831bd383cdf3ff083bc1d5c9c4b">BYTECODE_LIST</a>(<a class="code hl_define" href="bytecodes_8cc.html#afc1159f6d8e206a7f051934d7fd23be5">ENTRY</a>, <a class="code hl_define" href="bytecodes_8cc.html#afc1159f6d8e206a7f051934d7fd23be5">ENTRY</a>)</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#undef ENTRY</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">const</span> <span class="keywordtype">int</span> Bytecodes::kOperandCount[] = {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a13df3dee805a32f6f49bea8ab8df19b5">Bytecodes::kOperandCount</a>[] = {</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define ENTRY(Name, ...) BytecodeTraits&lt;__VA_ARGS__&gt;::kOperandCount,</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_define" href="bytecodes_8h.html#ab60ff831bd383cdf3ff083bc1d5c9c4b">BYTECODE_LIST</a>(<a class="code hl_define" href="bytecodes_8cc.html#afc1159f6d8e206a7f051934d7fd23be5">ENTRY</a>, <a class="code hl_define" href="bytecodes_8cc.html#afc1159f6d8e206a7f051934d7fd23be5">ENTRY</a>)</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#undef ENTRY</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>};</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">const</span> <a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#aa4f89a1d7779b75d4a7afcca72afc2b4">ImplicitRegisterUse</a> Bytecodes::kImplicitRegisterUse[] = {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">const</span> <a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#aa4f89a1d7779b75d4a7afcca72afc2b4">ImplicitRegisterUse</a> <a class="code hl_variable" href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#aa386dbe554bdfd2fe38c4e8e5aabcbf7">Bytecodes::kImplicitRegisterUse</a>[] = {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define ENTRY(Name, ...) BytecodeTraits&lt;__VA_ARGS__&gt;::kImplicitRegisterUse,</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <a class="code hl_define" href="bytecodes_8h.html#ab60ff831bd383cdf3ff083bc1d5c9c4b">BYTECODE_LIST</a>(<a class="code hl_define" href="bytecodes_8cc.html#afc1159f6d8e206a7f051934d7fd23be5">ENTRY</a>, <a class="code hl_define" href="bytecodes_8cc.html#afc1159f6d8e206a7f051934d7fd23be5">ENTRY</a>)</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#undef ENTRY</span></div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">const</span> uint8_t Bytecodes::kBytecodeSizes[3][kBytecodeCount] = {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keyword">const</span> uint8_t <a class="code hl_variable" href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a895866ed3d2908f871aef5a41d7c7463">Bytecodes::kBytecodeSizes</a>[3][kBytecodeCount] = {</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  {</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#define ENTRY(Name, ...) BytecodeTraits&lt;__VA_ARGS__&gt;::kSingleScaleSize,</span></div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_define" href="bytecodes_8h.html#ab60ff831bd383cdf3ff083bc1d5c9c4b">BYTECODE_LIST</a>(<a class="code hl_define" href="bytecodes_8cc.html#afc1159f6d8e206a7f051934d7fd23be5">ENTRY</a>, <a class="code hl_define" href="bytecodes_8cc.html#afc1159f6d8e206a7f051934d7fd23be5">ENTRY</a>)</div>
@@ -156,7 +149,7 @@ $(function(){initNavTree('bytecodes_8cc_source.html',''); initResizable(true); }
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  }</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>};</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">const</span> <a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#a7ab109862bb5d9ab534b3e7a63d856fc">OperandSize</a>* <span class="keyword">const</span> Bytecodes::kOperandSizes[3][kBytecodeCount] = {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keyword">const</span> <a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#a7ab109862bb5d9ab534b3e7a63d856fc">OperandSize</a>* <span class="keyword">const</span> <a class="code hl_variable" href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#ad9d644173e4a11bb49980f2dc50fe0c1">Bytecodes::kOperandSizes</a>[3][kBytecodeCount] = {</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="preprocessor">#define ENTRY(Name, ...)  \</span></div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">    BytecodeTraits&lt;__VA_ARGS__&gt;::kSingleScaleOperandSizes,</span></div>
@@ -175,7 +168,7 @@ $(function(){initNavTree('bytecodes_8cc_source.html',''); initResizable(true); }
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  }</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>};</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">const</span> <span class="keywordtype">int</span>* <span class="keyword">const</span> Bytecodes::kOperandOffsets[3][kBytecodeCount] = {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="keyword">const</span> <span class="keywordtype">int</span>* <span class="keyword">const</span> <a class="code hl_variable" href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a6f0ad9b507165efc7ff116f0093d8f76">Bytecodes::kOperandOffsets</a>[3][kBytecodeCount] = {</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>  {</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#define ENTRY(Name, ...)  \</span></div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">    BytecodeTraits&lt;__VA_ARGS__&gt;::kSingleScaleOperandOffsets.data(),</span></div>
@@ -195,7 +188,7 @@ $(function(){initNavTree('bytecodes_8cc_source.html',''); initResizable(true); }
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>};</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="keyword">const</span> <a class="code hl_enumeration" href="namespacev8_1_1internal_1_1interpreter.html#a7ab109862bb5d9ab534b3e7a63d856fc">OperandSize</a></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>Bytecodes::kOperandKindSizes[3][<a class="code hl_variable" href="classv8_1_1internal_1_1interpreter_1_1BytecodeOperands.html#ac940ae2f66cada5fb19f8195b8905189">BytecodeOperands::kOperandTypeCount</a>] = {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><a class="code hl_variable" href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a2b623f65d259a17fb1e8da6dc8fdb78a">Bytecodes::kOperandKindSizes</a>[3][<a class="code hl_variable" href="classv8_1_1internal_1_1interpreter_1_1BytecodeOperands.html#ac940ae2f66cada5fb19f8195b8905189">BytecodeOperands::kOperandTypeCount</a>] = {</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  {</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#define ENTRY(Name, ...)  \</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">    OperandScaler&lt;OperandType::k##Name, OperandScale::kSingle&gt;::kOperandSize,</span></div>
@@ -492,25 +485,33 @@ $(function(){initNavTree('bytecodes_8cc_source.html',''); initResizable(true); }
 <div class="ttc" id="abytecodes_8h_html_a894521cb84d3174c18a0e6d416671378"><div class="ttname"><a href="bytecodes_8h.html#a894521cb84d3174c18a0e6d416671378">DEBUG_BREAK_BYTECODE_LIST</a></div><div class="ttdeci">#define DEBUG_BREAK_BYTECODE_LIST(V)</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l00502">bytecodes.h:502</a></div></div>
 <div class="ttc" id="abytecodes_8h_html_ab60ff831bd383cdf3ff083bc1d5c9c4b"><div class="ttname"><a href="bytecodes_8h.html#ab60ff831bd383cdf3ff083bc1d5c9c4b">BYTECODE_LIST</a></div><div class="ttdeci">#define BYTECODE_LIST(V, V_TSA)</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l00479">bytecodes.h:479</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1BytecodeOperands_html_ac940ae2f66cada5fb19f8195b8905189"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1BytecodeOperands.html#ac940ae2f66cada5fb19f8195b8905189">v8::internal::interpreter::BytecodeOperands::kOperandTypeCount</a></div><div class="ttdeci">static const int kOperandTypeCount</div><div class="ttdef"><b>Definition</b> <a href="bytecode-operands_8h_source.html#l00149">bytecode-operands.h:149</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a13df3dee805a32f6f49bea8ab8df19b5"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a13df3dee805a32f6f49bea8ab8df19b5">v8::internal::interpreter::Bytecodes::kOperandCount</a></div><div class="ttdeci">static const int kOperandCount[]</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l01114">bytecodes.h:1114</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a2b623f65d259a17fb1e8da6dc8fdb78a"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a2b623f65d259a17fb1e8da6dc8fdb78a">v8::internal::interpreter::Bytecodes::kOperandKindSizes</a></div><div class="ttdeci">static OperandSize const kOperandKindSizes[3][BytecodeOperands::kOperandTypeCount]</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l01122">bytecodes.h:1122</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a3adceda5bd96e2e34b5a3b1f63d2aa2a"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a3adceda5bd96e2e34b5a3b1f63d2aa2a">v8::internal::interpreter::Bytecodes::MakesCallAlongCriticalPath</a></div><div class="ttdeci">static bool MakesCallAlongCriticalPath(Bytecode bytecode)</div><div class="ttdef"><b>Definition</b> <a href="#l00207">bytecodes.cc:207</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a4c33673d5481f183117c0967a5a8f6f1"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a4c33673d5481f183117c0967a5a8f6f1">v8::internal::interpreter::Bytecodes::IsCallRuntime</a></div><div class="ttdeci">static constexpr bool IsCallRuntime(Bytecode bytecode)</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l00858">bytecodes.h:858</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a6150d0c67dad07020c2a5f44f5a80adb"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a6150d0c67dad07020c2a5f44f5a80adb">v8::internal::interpreter::Bytecodes::OperandScaleToPrefixBytecode</a></div><div class="ttdeci">static Bytecode OperandScaleToPrefixBytecode(OperandScale operand_scale)</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l00632">bytecodes.h:632</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a626ffd237701bcfeea88cbe36c9e2e3b"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a626ffd237701bcfeea88cbe36c9e2e3b">v8::internal::interpreter::Bytecodes::IsRegisterOutputOperandType</a></div><div class="ttdeci">static bool IsRegisterOutputOperandType(OperandType operand_type)</div><div class="ttdef"><b>Definition</b> <a href="#l00241">bytecodes.cc:241</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a6f0ad9b507165efc7ff116f0093d8f76"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a6f0ad9b507165efc7ff116f0093d8f76">v8::internal::interpreter::Bytecodes::kOperandOffsets</a></div><div class="ttdeci">static const int *const kOperandOffsets[3][kBytecodeCount]</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l01120">bytecodes.h:1120</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a7274e07fabb5e66eb74806687c52cc94"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a7274e07fabb5e66eb74806687c52cc94">v8::internal::interpreter::Bytecodes::OperandIsScalable</a></div><div class="ttdeci">static bool OperandIsScalable(Bytecode bytecode, int operand_index)</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l00922">bytecodes.h:922</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a73c15d2ef6e681eb36695d40f787f521"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a73c15d2ef6e681eb36695d40f787f521">v8::internal::interpreter::Bytecodes::GetDebugBreak</a></div><div class="ttdeci">static Bytecode GetDebugBreak(Bytecode bytecode)</div><div class="ttdef"><b>Definition</b> <a href="#l00148">bytecodes.cc:148</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a76564e499701a5d5c763de248759b42b"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a76564e499701a5d5c763de248759b42b">v8::internal::interpreter::Bytecodes::kOperandTypeInfos</a></div><div class="ttdeci">static const OperandTypeInfo *const kOperandTypeInfos[]</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l01113">bytecodes.h:1113</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a7c63b8f1b462a5bf34d4a542403d78c8"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a7c63b8f1b462a5bf34d4a542403d78c8">v8::internal::interpreter::Bytecodes::IsDebugBreak</a></div><div class="ttdeci">static bool IsDebugBreak(Bytecode bytecode)</div><div class="ttdef"><b>Definition</b> <a href="#l00167">bytecodes.cc:167</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a7d3c91ed23038a19976d8af9da043f51"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a7d3c91ed23038a19976d8af9da043f51">v8::internal::interpreter::Bytecodes::IsRegisterOperandType</a></div><div class="ttdeci">static bool IsRegisterOperandType(OperandType operand_type)</div><div class="ttdef"><b>Definition</b> <a href="#l00180">bytecodes.cc:180</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a85747c14f501885a7197088c3d47b5b3"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a85747c14f501885a7197088c3d47b5b3">v8::internal::interpreter::Bytecodes::IsCallOrConstruct</a></div><div class="ttdeci">static constexpr bool IsCallOrConstruct(Bytecode bytecode)</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l00840">bytecodes.h:840</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_a895866ed3d2908f871aef5a41d7c7463"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#a895866ed3d2908f871aef5a41d7c7463">v8::internal::interpreter::Bytecodes::kBytecodeSizes</a></div><div class="ttdeci">static const uint8_t kBytecodeSizes[3][kBytecodeCount]</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l01118">bytecodes.h:1118</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_aa36d92e9553de50e7137dcea9afaa212"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#aa36d92e9553de50e7137dcea9afaa212">v8::internal::interpreter::Bytecodes::Size</a></div><div class="ttdeci">static int Size(Bytecode bytecode, OperandScale operand_scale)</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l00964">bytecodes.h:964</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_aa386dbe554bdfd2fe38c4e8e5aabcbf7"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#aa386dbe554bdfd2fe38c4e8e5aabcbf7">v8::internal::interpreter::Bytecodes::kImplicitRegisterUse</a></div><div class="ttdeci">static const ImplicitRegisterUse kImplicitRegisterUse[]</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l01116">bytecodes.h:1116</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_abb0613f9f91ebca474ab9aa88eb72d73"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#abb0613f9f91ebca474ab9aa88eb72d73">v8::internal::interpreter::Bytecodes::IsRegisterListOperandType</a></div><div class="ttdeci">static bool IsRegisterListOperandType(OperandType operand_type)</div><div class="ttdef"><b>Definition</b> <a href="#l00197">bytecodes.cc:197</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_abc577a8cd4f913460335fc176437ad5e"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#abc577a8cd4f913460335fc176437ad5e">v8::internal::interpreter::Bytecodes::IsRegisterInputOperandType</a></div><div class="ttdeci">static bool IsRegisterInputOperandType(OperandType operand_type)</div><div class="ttdef"><b>Definition</b> <a href="#l00222">bytecodes.cc:222</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_ac87569cd15f31410ddc6ab15978910f3"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#ac87569cd15f31410ddc6ab15978910f3">v8::internal::interpreter::Bytecodes::NumberOfOperands</a></div><div class="ttdeci">static int NumberOfOperands(Bytecode bytecode)</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l00886">bytecodes.h:886</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_ad2a4f8ecd3f16eec011b54b97551c801"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#ad2a4f8ecd3f16eec011b54b97551c801">v8::internal::interpreter::Bytecodes::IsUnsignedOperandType</a></div><div class="ttdeci">static bool IsUnsignedOperandType(OperandType operand_type)</div><div class="ttdef"><b>Definition</b> <a href="#l00321">bytecodes.cc:321</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_ad697eb59a688fe84de52de079331de19"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#ad697eb59a688fe84de52de079331de19">v8::internal::interpreter::Bytecodes::IsShortStar</a></div><div class="ttdeci">static constexpr bool IsShortStar(Bytecode bytecode)</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l00732">bytecodes.h:732</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_ad9d644173e4a11bb49980f2dc50fe0c1"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#ad9d644173e4a11bb49980f2dc50fe0c1">v8::internal::interpreter::Bytecodes::kOperandSizes</a></div><div class="ttdeci">static const OperandSize *const kOperandSizes[3][kBytecodeCount]</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l01119">bytecodes.h:1119</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_ae3e76b6c1aba4e2cfafd4c53594607ba"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#ae3e76b6c1aba4e2cfafd4c53594607ba">v8::internal::interpreter::Bytecodes::ToString</a></div><div class="ttdeci">static const char * ToString(Bytecode bytecode)</div><div class="ttdef"><b>Definition</b> <a href="#l00123">bytecodes.cc:123</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_ae93f888d61e3d512171c79f34438a681"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#ae93f888d61e3d512171c79f34438a681">v8::internal::interpreter::Bytecodes::IsStarLookahead</a></div><div class="ttdeci">static bool IsStarLookahead(Bytecode bytecode, OperandScale operand_scale)</div><div class="ttdef"><b>Definition</b> <a href="#l00260">bytecodes.cc:260</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_aec091240b4ac4697d9086609eaeb6b1c"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#aec091240b4ac4697d9086609eaeb6b1c">v8::internal::interpreter::Bytecodes::BytecodeHasHandler</a></div><div class="ttdeci">static bool BytecodeHasHandler(Bytecode bytecode, OperandScale operand_scale)</div><div class="ttdef"><b>Definition</b> <a href="#l00333">bytecodes.cc:333</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_af0cf9ed0b1fa6d5cd1f258194cfaadc4"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#af0cf9ed0b1fa6d5cd1f258194cfaadc4">v8::internal::interpreter::Bytecodes::IsBytecodeWithScalableOperands</a></div><div class="ttdeci">static bool IsBytecodeWithScalableOperands(Bytecode bytecode)</div><div class="ttdef"><b>Definition</b> <a href="#l00313">bytecodes.cc:313</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1interpreter_1_1Bytecodes_html_afb911f021958c332fd065844a1724540"><div class="ttname"><a href="classv8_1_1internal_1_1interpreter_1_1Bytecodes.html#afb911f021958c332fd065844a1724540">v8::internal::interpreter::Bytecodes::kOperandTypes</a></div><div class="ttdeci">static const OperandType *const kOperandTypes[]</div><div class="ttdef"><b>Definition</b> <a href="bytecodes_8h_source.html#l01112">bytecodes.h:1112</a></div></div>
 <div class="ttc" id="ajs-call-reducer_8cc_html_ae4dfd7b0d66121016d6466d2ff10e8ba"><div class="ttname"><a href="js-call-reducer_8cc.html#ae4dfd7b0d66121016d6466d2ff10e8ba">_</a></div><div class="ttdeci">#define _</div><div class="ttdef"><b>Definition</b> <a href="js-call-reducer_8cc_source.html#l00054">js-call-reducer.cc:54</a></div></div>
 <div class="ttc" id="alogging_8h_html_ae17f8119c108cf3070bad3449c7e0006"><div class="ttname"><a href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a></div><div class="ttdeci">#define DCHECK(condition)</div><div class="ttdef"><b>Definition</b> <a href="logging_8h_source.html#l00482">logging.h:482</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_1_1compiler_1_1turboshaft_html_a0d0f5f60e0c98fe5585c09f1afbdafb4"><div class="ttname"><a href="namespacev8_1_1internal_1_1compiler_1_1turboshaft.html#a0d0f5f60e0c98fe5585c09f1afbdafb4">v8::internal::compiler::turboshaft::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, PaddingSpace padding)</div><div class="ttdef"><b>Definition</b> <a href="copying-phase_8cc_source.html#l00018">copying-phase.cc:18</a></div></div>
@@ -528,13 +529,10 @@ $(function(){initNavTree('bytecodes_8cc_source.html',''); initResizable(true); }
 <div class="ttc" id="anamespacev8_1_1internal_html_acdec713c25068019f935e35976f5b666"><div class="ttname"><a href="namespacev8_1_1internal.html#acdec713c25068019f935e35976f5b666">v8::internal::UNREACHABLE</a></div><div class="ttdeci">UNREACHABLE()</div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_4904b5727094acb85f1fb3ce4b540d24.html">interpreter</a></li><li class="navelem"><a class="el" href="bytecodes_8cc.html">bytecodes.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:40 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

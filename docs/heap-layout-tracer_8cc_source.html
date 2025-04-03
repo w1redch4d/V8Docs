@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/heap/heap-layout-tracer.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/heap-layout-tracer.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('heap-layout-tracer_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('heap-layout-tracer_8cc_source.html',''); initResizable
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">heap-layout-tracer.cc</div></div>
 </div><!--header-->
@@ -145,7 +138,7 @@ $(function(){initNavTree('heap-layout-tracer_8cc_source.html',''); initResizable
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>  <span class="comment">// gc_count_ will increase after this callback, manually add 1.</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">PrintF</a>(<span class="stringliteral">&quot;Before GC:%d,&quot;</span>, <a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;gc_count() + 1);</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">PrintF</a>(<span class="stringliteral">&quot;collector_name:%s\n&quot;</span>, TypeToCollectorName(gc_type));</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  PrintHeapLayout(std::cout, <a class="code hl_namespace" href="namespaceheap.html">heap</a>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_function" href="classv8_1_1internal_1_1HeapLayoutTracer.html#af94744274848d28a4aa06b79530913a1">PrintHeapLayout</a>(std::cout, <a class="code hl_namespace" href="namespaceheap.html">heap</a>);</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
 </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
@@ -158,12 +151,13 @@ $(function(){initNavTree('heap-layout-tracer_8cc_source.html',''); initResizable
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <a class="code hl_class" href="classv8_1_1internal_1_1Heap.html">Heap</a>* <a class="code hl_namespace" href="namespaceheap.html">heap</a> = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_class" href="classv8_1_1internal_1_1Isolate.html">i::Isolate</a>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a>)-&gt;<a class="code hl_namespace" href="namespaceheap.html">heap</a>();</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">PrintF</a>(<span class="stringliteral">&quot;After GC:%d,&quot;</span>, <a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;gc_count());</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  <a class="code hl_function" href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">PrintF</a>(<span class="stringliteral">&quot;collector_name:%s\n&quot;</span>, TypeToCollectorName(gc_type));</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  PrintHeapLayout(std::cout, <a class="code hl_namespace" href="namespaceheap.html">heap</a>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>  <a class="code hl_function" href="classv8_1_1internal_1_1HeapLayoutTracer.html#af94744274848d28a4aa06b79530913a1">PrintHeapLayout</a>(std::cout, <a class="code hl_namespace" href="namespaceheap.html">heap</a>);</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
 </div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keywordtype">void</span> HeapLayoutTracer::PrintMemoryChunk(std::ostream&amp; os,</div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1HeapLayoutTracer.html#ae0857ed53aabe89fcb86f8f6476ce30c">   59</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1HeapLayoutTracer.html#ae0857ed53aabe89fcb86f8f6476ce30c">HeapLayoutTracer::PrintMemoryChunk</a>(std::ostream&amp; os,</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                                        <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1MemoryChunkMetadata.html">MemoryChunkMetadata</a>&amp; chunk,</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                                        <span class="keyword">const</span> <span class="keywordtype">char</span>* owner_name) {</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  os &lt;&lt; <span class="stringliteral">&quot;{owner:&quot;</span> &lt;&lt; owner_name &lt;&lt; <span class="stringliteral">&quot;,&quot;</span></div>
@@ -172,46 +166,60 @@ $(function(){initNavTree('heap-layout-tracer_8cc_source.html',''); initResizable
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>     &lt;&lt; <span class="stringliteral">&quot;allocated_bytes:&quot;</span> &lt;&lt; chunk.<a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunkMetadata.html#a9fc112c5748d8edf2b68bd19ab082519">allocated_bytes</a>() &lt;&lt; <span class="stringliteral">&quot;,&quot;</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>     &lt;&lt; <span class="stringliteral">&quot;wasted_memory:&quot;</span> &lt;&lt; chunk.<a class="code hl_function" href="classv8_1_1internal_1_1MemoryChunkMetadata.html#a43dd748e526d3967927794bfd0a42e5b">wasted_memory</a>() &lt;&lt; <span class="stringliteral">&quot;}&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>}</div>
+</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">void</span> HeapLayoutTracer::PrintHeapLayout(std::ostream&amp; os, Heap* <a class="code hl_namespace" href="namespaceheap.html">heap</a>) {</div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1HeapLayoutTracer.html#af94744274848d28a4aa06b79530913a1">   70</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1HeapLayoutTracer.html#af94744274848d28a4aa06b79530913a1">HeapLayoutTracer::PrintHeapLayout</a>(std::ostream&amp; os, <a class="code hl_class" href="classv8_1_1internal_1_1Heap.html">Heap</a>* <a class="code hl_namespace" href="namespaceheap.html">heap</a>) {</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.minor_ms) {</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> PageMetadata* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> : *<a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;paged_new_space()) {</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      PrintMemoryChunk(os, *<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <span class="stringliteral">&quot;new_space&quot;</span>);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1PageMetadata.html">PageMetadata</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> : *<a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;paged_new_space()) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>      <a class="code hl_function" href="classv8_1_1internal_1_1HeapLayoutTracer.html#ae0857ed53aabe89fcb86f8f6476ce30c">PrintMemoryChunk</a>(os, *<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <span class="stringliteral">&quot;new_space&quot;</span>);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">const</span> SemiSpaceNewSpace* semi_space_new_space =</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1SemiSpaceNewSpace.html">SemiSpaceNewSpace</a>* semi_space_new_space =</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <a class="code hl_function" href="classv8_1_1internal_1_1SemiSpaceNewSpace.html#a3141235cf9b034f7b218b59e7e527bf9">SemiSpaceNewSpace::From</a>(<a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;new_space());</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> PageMetadata* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> : semi_space_new_space-&gt;to_space()) {</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      PrintMemoryChunk(os, *<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <span class="stringliteral">&quot;to_space&quot;</span>);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1PageMetadata.html">PageMetadata</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> : semi_space_new_space-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1SemiSpaceNewSpace.html#aef3492511051a0c274acd607da353553">to_space</a>()) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>      <a class="code hl_function" href="classv8_1_1internal_1_1HeapLayoutTracer.html#ae0857ed53aabe89fcb86f8f6476ce30c">PrintMemoryChunk</a>(os, *<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <span class="stringliteral">&quot;to_space&quot;</span>);</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> PageMetadata* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> : semi_space_new_space-&gt;from_space()) {</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      PrintMemoryChunk(os, *<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <span class="stringliteral">&quot;from_space&quot;</span>);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code hl_class" href="classv8_1_1internal_1_1PageMetadata.html">PageMetadata</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> : semi_space_new_space-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1SemiSpaceNewSpace.html#a15fcd6e7e833d792156f6d8d67a570ad">from_space</a>()) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>      <a class="code hl_function" href="classv8_1_1internal_1_1HeapLayoutTracer.html#ae0857ed53aabe89fcb86f8f6476ce30c">PrintMemoryChunk</a>(os, *<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <span class="stringliteral">&quot;from_space&quot;</span>);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    }</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>  }</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  OldGenerationMemoryChunkIterator it(<a class="code hl_namespace" href="namespaceheap.html">heap</a>);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  MutablePageMetadata* chunk;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  <a class="code hl_class" href="classv8_1_1internal_1_1OldGenerationMemoryChunkIterator.html">OldGenerationMemoryChunkIterator</a> it(<a class="code hl_namespace" href="namespaceheap.html">heap</a>);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  <a class="code hl_class" href="classv8_1_1internal_1_1MutablePageMetadata.html">MutablePageMetadata</a>* chunk;</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>  <span class="keywordflow">while</span> ((chunk = it.next()) != <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    PrintMemoryChunk(os, *chunk, <a class="code hl_function" href="namespacev8_1_1internal.html#a10b1a1807774d2d287797132732f0d9a">ToString</a>(chunk-&gt;owner()-&gt;identity()));</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <a class="code hl_function" href="classv8_1_1internal_1_1HeapLayoutTracer.html#ae0857ed53aabe89fcb86f8f6476ce30c">PrintMemoryChunk</a>(os, *chunk, <a class="code hl_function" href="namespacev8_1_1internal.html#a10b1a1807774d2d287797132732f0d9a">ToString</a>(chunk-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1MutablePageMetadata.html#a7a6457ae64013350c1d3d7003fe8c8de">owner</a>()-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1BaseSpace.html#a97c01ba3966b5b6d9e5a1f9b7bc34953">identity</a>()));</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  }</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordflow">for</span> (ReadOnlyPageMetadata* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> : <a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;read_only_space()-&gt;pages()) {</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    PrintMemoryChunk(os, *<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <span class="stringliteral">&quot;ro_space&quot;</span>);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1ReadOnlyPageMetadata.html">ReadOnlyPageMetadata</a>* <a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a> : <a class="code hl_namespace" href="namespaceheap.html">heap</a>-&gt;read_only_space()-&gt;pages()) {</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <a class="code hl_function" href="classv8_1_1internal_1_1HeapLayoutTracer.html#ae0857ed53aabe89fcb86f8f6476ce30c">PrintMemoryChunk</a>(os, *<a class="code hl_variable" href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a>, <span class="stringliteral">&quot;ro_space&quot;</span>);</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>  }</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}  <span class="comment">// namespace v8</span></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1BaseSpace_html_a97c01ba3966b5b6d9e5a1f9b7bc34953"><div class="ttname"><a href="classv8_1_1internal_1_1BaseSpace.html#a97c01ba3966b5b6d9e5a1f9b7bc34953">v8::internal::BaseSpace::identity</a></div><div class="ttdeci">AllocationSpace identity() const</div><div class="ttdef"><b>Definition</b> <a href="base-space_8h_source.html#l00032">base-space.h:32</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1HeapLayoutTracer_html_a00aee862d7ec2eee2510a8b033ed45b1"><div class="ttname"><a href="classv8_1_1internal_1_1HeapLayoutTracer.html#a00aee862d7ec2eee2510a8b033ed45b1">v8::internal::HeapLayoutTracer::GCEpiloguePrintHeapLayout</a></div><div class="ttdeci">static void GCEpiloguePrintHeapLayout(v8::Isolate *isolate, v8::GCType gc_type, v8::GCCallbackFlags flags, void *data)</div><div class="ttdef"><b>Definition</b> <a href="#l00048">heap-layout-tracer.cc:48</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1HeapLayoutTracer_html_ac3e9e581681cd83b75d7f0659e99b498"><div class="ttname"><a href="classv8_1_1internal_1_1HeapLayoutTracer.html#ac3e9e581681cd83b75d7f0659e99b498">v8::internal::HeapLayoutTracer::GCProloguePrintHeapLayout</a></div><div class="ttdeci">static void GCProloguePrintHeapLayout(v8::Isolate *isolate, v8::GCType gc_type, v8::GCCallbackFlags flags, void *data)</div><div class="ttdef"><b>Definition</b> <a href="#l00036">heap-layout-tracer.cc:36</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1HeapLayoutTracer_html_ae0857ed53aabe89fcb86f8f6476ce30c"><div class="ttname"><a href="classv8_1_1internal_1_1HeapLayoutTracer.html#ae0857ed53aabe89fcb86f8f6476ce30c">v8::internal::HeapLayoutTracer::PrintMemoryChunk</a></div><div class="ttdeci">static void PrintMemoryChunk(std::ostream &amp;os, const MemoryChunkMetadata &amp;chunk, const char *owner_name)</div><div class="ttdef"><b>Definition</b> <a href="#l00059">heap-layout-tracer.cc:59</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1HeapLayoutTracer_html_af94744274848d28a4aa06b79530913a1"><div class="ttname"><a href="classv8_1_1internal_1_1HeapLayoutTracer.html#af94744274848d28a4aa06b79530913a1">v8::internal::HeapLayoutTracer::PrintHeapLayout</a></div><div class="ttdeci">static void PrintHeapLayout(std::ostream &amp;os, Heap *heap)</div><div class="ttdef"><b>Definition</b> <a href="#l00070">heap-layout-tracer.cc:70</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Heap_html"><div class="ttname"><a href="classv8_1_1internal_1_1Heap.html">v8::internal::Heap</a></div><div class="ttdef"><b>Definition</b> <a href="heap_8h_source.html#l00192">heap.h:192</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html">v8::internal::Isolate</a></div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l00575">isolate.h:575</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryChunkMetadata_html"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryChunkMetadata.html">v8::internal::MemoryChunkMetadata</a></div><div class="ttdef"><b>Definition</b> <a href="memory-chunk-metadata_8h_source.html#l00032">memory-chunk-metadata.h:32</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryChunkMetadata_html_a0808ead096d44274bcfee4d717c325b5"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryChunkMetadata.html#a0808ead096d44274bcfee4d717c325b5">v8::internal::MemoryChunkMetadata::size</a></div><div class="ttdeci">size_t size() const</div><div class="ttdef"><b>Definition</b> <a href="memory-chunk-metadata_8h_source.html#l00057">memory-chunk-metadata.h:57</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryChunkMetadata_html_a43dd748e526d3967927794bfd0a42e5b"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryChunkMetadata.html#a43dd748e526d3967927794bfd0a42e5b">v8::internal::MemoryChunkMetadata::wasted_memory</a></div><div class="ttdeci">size_t wasted_memory() const</div><div class="ttdef"><b>Definition</b> <a href="memory-chunk-metadata_8h_source.html#l00099">memory-chunk-metadata.h:99</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1MemoryChunkMetadata_html_a9fc112c5748d8edf2b68bd19ab082519"><div class="ttname"><a href="classv8_1_1internal_1_1MemoryChunkMetadata.html#a9fc112c5748d8edf2b68bd19ab082519">v8::internal::MemoryChunkMetadata::allocated_bytes</a></div><div class="ttdeci">size_t allocated_bytes() const</div><div class="ttdef"><b>Definition</b> <a href="memory-chunk-metadata_8h_source.html#l00101">memory-chunk-metadata.h:101</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MutablePageMetadata_html"><div class="ttname"><a href="classv8_1_1internal_1_1MutablePageMetadata.html">v8::internal::MutablePageMetadata</a></div><div class="ttdef"><b>Definition</b> <a href="mutable-page-metadata_8h_source.html#l00046">mutable-page-metadata.h:46</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1MutablePageMetadata_html_a7a6457ae64013350c1d3d7003fe8c8de"><div class="ttname"><a href="classv8_1_1internal_1_1MutablePageMetadata.html#a7a6457ae64013350c1d3d7003fe8c8de">v8::internal::MutablePageMetadata::owner</a></div><div class="ttdeci">Space * owner() const</div><div class="ttdef"><b>Definition</b> <a href="mutable-page-metadata_8h_source.html#l00202">mutable-page-metadata.h:202</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1OldGenerationMemoryChunkIterator_html"><div class="ttname"><a href="classv8_1_1internal_1_1OldGenerationMemoryChunkIterator.html">v8::internal::OldGenerationMemoryChunkIterator</a></div><div class="ttdef"><b>Definition</b> <a href="paged-spaces_8h_source.html#l00583">paged-spaces.h:583</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1PageMetadata_html"><div class="ttname"><a href="classv8_1_1internal_1_1PageMetadata.html">v8::internal::PageMetadata</a></div><div class="ttdef"><b>Definition</b> <a href="page-metadata_8h_source.html#l00024">page-metadata.h:24</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1ReadOnlyPageMetadata_html"><div class="ttname"><a href="classv8_1_1internal_1_1ReadOnlyPageMetadata.html">v8::internal::ReadOnlyPageMetadata</a></div><div class="ttdef"><b>Definition</b> <a href="read-only-spaces_8h_source.html#l00028">read-only-spaces.h:28</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1SemiSpaceNewSpace_html"><div class="ttname"><a href="classv8_1_1internal_1_1SemiSpaceNewSpace.html">v8::internal::SemiSpaceNewSpace</a></div><div class="ttdef"><b>Definition</b> <a href="new-spaces_8h_source.html#l00308">new-spaces.h:308</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1SemiSpaceNewSpace_html_a15fcd6e7e833d792156f6d8d67a570ad"><div class="ttname"><a href="classv8_1_1internal_1_1SemiSpaceNewSpace.html#a15fcd6e7e833d792156f6d8d67a570ad">v8::internal::SemiSpaceNewSpace::from_space</a></div><div class="ttdeci">SemiSpace &amp; from_space()</div><div class="ttdef"><b>Definition</b> <a href="new-spaces_8h_source.html#l00460">new-spaces.h:460</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1SemiSpaceNewSpace_html_a3141235cf9b034f7b218b59e7e527bf9"><div class="ttname"><a href="classv8_1_1internal_1_1SemiSpaceNewSpace.html#a3141235cf9b034f7b218b59e7e527bf9">v8::internal::SemiSpaceNewSpace::From</a></div><div class="ttdeci">static SemiSpaceNewSpace * From(NewSpace *space)</div><div class="ttdef"><b>Definition</b> <a href="new-spaces_8h_source.html#l00313">new-spaces.h:313</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1SemiSpaceNewSpace_html_aef3492511051a0c274acd607da353553"><div class="ttname"><a href="classv8_1_1internal_1_1SemiSpaceNewSpace.html#aef3492511051a0c274acd607da353553">v8::internal::SemiSpaceNewSpace::to_space</a></div><div class="ttdeci">SemiSpace &amp; to_space()</div><div class="ttdef"><b>Definition</b> <a href="new-spaces_8h_source.html#l00462">new-spaces.h:462</a></div></div>
 <div class="ttc" id="acppgc_2sweeper_8cc_html_a876e0ae5632dcb3138e6e718ac01ae8a"><div class="ttname"><a href="cppgc_2sweeper_8cc.html#a876e0ae5632dcb3138e6e718ac01ae8a">page</a></div><div class="ttdeci">BasePage * page</div><div class="ttdef"><b>Definition</b> <a href="cppgc_2sweeper_8cc_source.html#l00218">sweeper.cc:218</a></div></div>
 <div class="ttc" id="agraph-builder_8cc_html_a9990dda08de44f6aee0aaf44c50da7d9"><div class="ttname"><a href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a></div><div class="ttdeci">Isolate * isolate</div><div class="ttdef"><b>Definition</b> <a href="graph-builder_8cc_source.html#l00058">graph-builder.cc:58</a></div></div>
 <div class="ttc" id="aheap-layout-tracer_8h_html"><div class="ttname"><a href="heap-layout-tracer_8h.html">heap-layout-tracer.h</a></div></div>
@@ -227,13 +235,10 @@ $(function(){initNavTree('heap-layout-tracer_8cc_source.html',''); initResizable
 <div class="ttc" id="aread-only-spaces_8h_html"><div class="ttname"><a href="read-only-spaces_8h.html">read-only-spaces.h</a></div></div>
 <div class="ttc" id="aspaces-inl_8h_html"><div class="ttname"><a href="spaces-inl_8h.html">spaces-inl.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="heap-layout-tracer_8cc.html">heap-layout-tracer.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:32 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

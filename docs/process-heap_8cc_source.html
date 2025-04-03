@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/heap/cppgc/process-heap.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/heap/cppgc/process-heap.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('process-heap_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('process-heap_8cc_source.html',''); initResizable(true)
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">process-heap.cc</div></div>
 </div><!--header-->
@@ -134,16 +127,19 @@ $(function(){initNavTree('process-heap_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>}  <span class="comment">// namespace</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> HeapRegistry::RegisterHeap(HeapBase&amp; <a class="code hl_namespace" href="namespaceheap.html">heap</a>) {</div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1HeapRegistry.html#aa5dc705f930a30773376f4f092e99869">   34</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1HeapRegistry.html#aa5dc705f930a30773376f4f092e99869">HeapRegistry::RegisterHeap</a>(<a class="code hl_class" href="classcppgc_1_1internal_1_1HeapBase.html">HeapBase</a>&amp; <a class="code hl_namespace" href="namespaceheap.html">heap</a>) {</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">v8::base::MutexGuard</a> guard(g_heap_registry_mutex.Pointer());</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>  <span class="keyword">auto</span>&amp; storage = GetHeapRegistryStorage();</div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(storage.end(), std::find(storage.begin(), storage.end(), &amp;<a class="code hl_namespace" href="namespaceheap.html">heap</a>));</div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>  storage.push_back(&amp;<a class="code hl_namespace" href="namespaceheap.html">heap</a>);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+</div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">// static</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> HeapRegistry::UnregisterHeap(HeapBase&amp; <a class="code hl_namespace" href="namespaceheap.html">heap</a>) {</div>
+<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="classcppgc_1_1internal_1_1HeapRegistry.html#a885305fbea8ec10cf050120d2ca17269">   43</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classcppgc_1_1internal_1_1HeapRegistry.html#a885305fbea8ec10cf050120d2ca17269">HeapRegistry::UnregisterHeap</a>(<a class="code hl_class" href="classcppgc_1_1internal_1_1HeapBase.html">HeapBase</a>&amp; <a class="code hl_namespace" href="namespaceheap.html">heap</a>) {</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <a class="code hl_class" href="classv8_1_1base_1_1LockGuard.html">v8::base::MutexGuard</a> guard(g_heap_registry_mutex.Pointer());</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>  <span class="comment">// HeapRegistry requires access to PageBackend which means it must still</span></div>
@@ -155,6 +151,7 @@ $(function(){initNavTree('process-heap_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <a class="code hl_define" href="logging_8h.html#a986dc8f4ec6dcd0644efe205c13f8eb7">DCHECK_NE</a>(storage.end(), <a class="code hl_variable" href="class-debug-reader-generator_8cc.html#aede818ff693a0360e722300214ad6a52">pos</a>);</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>  storage.erase(<a class="code hl_variable" href="class-debug-reader-generator_8cc.html#aede818ff693a0360e722300214ad6a52">pos</a>);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
+</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">// static</span></div>
 <div class="foldopen" id="foldopen00057" data-start="{" data-end="}">
@@ -184,6 +181,8 @@ $(function(){initNavTree('process-heap_8cc_source.html',''); initResizable(true)
 <div class="ttc" id="aclasscppgc_1_1internal_1_1HeapRegistry_html_a064d6fa2a2f6e88cf466d4e9cdebfafc"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapRegistry.html#a064d6fa2a2f6e88cf466d4e9cdebfafc">cppgc::internal::HeapRegistry::TryFromManagedPointer</a></div><div class="ttdeci">static HeapBase * TryFromManagedPointer(const void *needle)</div><div class="ttdef"><b>Definition</b> <a href="#l00057">process-heap.cc:57</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1HeapRegistry_html_a62038aaa1d28f55c3bb2281aa7e9073c"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapRegistry.html#a62038aaa1d28f55c3bb2281aa7e9073c">cppgc::internal::HeapRegistry::GetRegisteredHeapsForTesting</a></div><div class="ttdeci">static const Storage &amp; GetRegisteredHeapsForTesting()</div><div class="ttdef"><b>Definition</b> <a href="#l00069">process-heap.cc:69</a></div></div>
 <div class="ttc" id="aclasscppgc_1_1internal_1_1HeapRegistry_html_a7ee03e8b1b18e0a18468278000d635ae"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapRegistry.html#a7ee03e8b1b18e0a18468278000d635ae">cppgc::internal::HeapRegistry::Storage</a></div><div class="ttdeci">std::vector&lt; HeapBase * &gt; Storage</div><div class="ttdef"><b>Definition</b> <a href="process-heap_8h_source.html#l00022">process-heap.h:22</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1HeapRegistry_html_a885305fbea8ec10cf050120d2ca17269"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapRegistry.html#a885305fbea8ec10cf050120d2ca17269">cppgc::internal::HeapRegistry::UnregisterHeap</a></div><div class="ttdeci">static void UnregisterHeap(HeapBase &amp;)</div><div class="ttdef"><b>Definition</b> <a href="#l00043">process-heap.cc:43</a></div></div>
+<div class="ttc" id="aclasscppgc_1_1internal_1_1HeapRegistry_html_aa5dc705f930a30773376f4f092e99869"><div class="ttname"><a href="classcppgc_1_1internal_1_1HeapRegistry.html#aa5dc705f930a30773376f4f092e99869">cppgc::internal::HeapRegistry::RegisterHeap</a></div><div class="ttdeci">static void RegisterHeap(HeapBase &amp;)</div><div class="ttdef"><b>Definition</b> <a href="#l00034">process-heap.cc:34</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1LockGuard_html"><div class="ttname"><a href="classv8_1_1base_1_1LockGuard.html">v8::base::LockGuard</a></div><div class="ttdef"><b>Definition</b> <a href="mutex_8h_source.html#l00534">mutex.h:534</a></div></div>
 <div class="ttc" id="aheap-base_8h_html"><div class="ttname"><a href="heap-base_8h.html">heap-base.h</a></div></div>
 <div class="ttc" id="alazy-instance_8h_html"><div class="ttname"><a href="lazy-instance_8h.html">lazy-instance.h</a></div></div>
@@ -204,13 +203,10 @@ $(function(){initNavTree('process-heap_8cc_source.html',''); initResizable(true)
 <div class="ttc" id="astructv8_1_1base_1_1LazyInstanceImpl_html"><div class="ttname"><a href="structv8_1_1base_1_1LazyInstanceImpl.html">v8::base::LazyInstanceImpl</a></div><div class="ttdef"><b>Definition</b> <a href="lazy-instance_8h_source.html#l00164">lazy-instance.h:164</a></div></div>
 <div class="ttc" id="astructv8_1_1base_1_1LazyInstance_html_a646dc09a6f18981f98a113cfbbefb8c8"><div class="ttname"><a href="structv8_1_1base_1_1LazyInstance.html#a646dc09a6f18981f98a113cfbbefb8c8">v8::base::LazyInstance::type</a></div><div class="ttdeci">typename LazyStaticInstance&lt; T, CreateTrait, InitOnceTrait, DestroyTrait &gt;::type type</div><div class="ttdef"><b>Definition</b> <a href="lazy-instance_8h_source.html#l00213">lazy-instance.h:213</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_c4d22fc0e4736089ffe45cb281f7e16f.html">heap</a></li><li class="navelem"><a class="el" href="dir_9a0a46428d24e8d2abf1fe6afe8a84d7.html">cppgc</a></li><li class="navelem"><a class="el" href="process-heap_8cc.html">process-heap.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:31 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

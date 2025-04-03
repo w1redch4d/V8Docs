@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/codegen/ppc/assembler-ppc.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/codegen/ppc/assembler-ppc.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7cf1b5e32c0ccac638cac1ebc38d93b6.html">codegen</a></li><li class="navelem"><a class="el" href="dir_873f9159e24213d9ee5f851faf124bf8.html">ppc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">assembler-ppc.cc</div></div>
 </div><!--header-->
@@ -155,7 +148,7 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="keyword">namespace </span><a class="code hl_variable" href="namespacev8_1_1internal.html#a5031451934208565c827c86d9eb86c5a">internal</a> {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">// Get the CPU features enabled by the build.</span></div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">static</span> <span class="keywordtype">unsigned</span> CpuFeaturesImpliedByCompiler() {</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">static</span> <span class="keywordtype">unsigned</span> <a class="code hl_function" href="namespacev8_1_1internal.html#abd06571dd8f8f47f40ec4901b53271ac">CpuFeaturesImpliedByCompiler</a>() {</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  <span class="keywordtype">unsigned</span> answer = 0;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  <span class="keywordflow">return</span> answer;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
@@ -168,9 +161,9 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif  </span><span class="comment">// V8_ENABLE_WEBASSEMBLY</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> CpuFeatures::ProbeImpl(<span class="keywordtype">bool</span> cross_compile) {</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  supported_ |= CpuFeaturesImpliedByCompiler();</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  icache_line_size_ = 128;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1CpuFeatures.html#af6cc8344bc8cd1157441e24af6aa030e">CpuFeatures::ProbeImpl</a>(<span class="keywordtype">bool</span> cross_compile) {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597">supported_</a> |= <a class="code hl_function" href="namespacev8_1_1internal.html#abd06571dd8f8f47f40ec4901b53271ac">CpuFeaturesImpliedByCompiler</a>();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a969bfb7b14676f419578f948e850355d">icache_line_size_</a> = 128;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <span class="comment">// Only use statically determined features for cross compile (snapshot).</span></div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <span class="keywordflow">if</span> (cross_compile) <span class="keywordflow">return</span>;</div>
@@ -178,7 +171,7 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment">// Probe for additional features at runtime.</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#ifdef USE_SIMULATOR</span></div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>  <span class="comment">// Simulator</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  supported_ |= (1u &lt;&lt; PPC_10_PLUS);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597">supported_</a> |= (1u &lt;&lt; PPC_10_PLUS);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#else</span></div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  base::CPU cpu;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  <span class="keywordflow">if</span> (cpu.part() == <a class="code hl_enumvalue" href="classv8_1_1base_1_1CPU.html#ac09c8c9017a0a38f43e6a4ce93c3d760a1b19f5149db4e2604da64e6be7698349">base::CPU::kPPCPower10</a>) {</div>
@@ -191,32 +184,32 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_define" href="logging_8h.html#a1c7c9b7f14b9a33ea69cbe4578016a19">CHECK_GE</a>(<a class="code hl_variable" href="mul-fft_8cc.html#acab531abaa74a7e664e3986f2522b33a">r</a>, 0);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">int</span> rel = atoi(uts.release);</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> (rel &gt; 4) {</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      supported_ |= (1u &lt;&lt; PPC_10_PLUS);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>      <a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597">supported_</a> |= (1u &lt;&lt; PPC_10_PLUS);</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      supported_ |= (1u &lt;&lt; PPC_9_PLUS);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      <a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597">supported_</a> |= (1u &lt;&lt; PPC_9_PLUS);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">#else</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    supported_ |= (1u &lt;&lt; PPC_10_PLUS);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597">supported_</a> |= (1u &lt;&lt; PPC_10_PLUS);</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cpu.part() == <a class="code hl_enumvalue" href="classv8_1_1base_1_1CPU.html#ac09c8c9017a0a38f43e6a4ce93c3d760a104345071cc525981e294bec4b2672ff">base::CPU::kPPCPower9</a>) {</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    supported_ |= (1u &lt;&lt; PPC_9_PLUS);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597">supported_</a> |= (1u &lt;&lt; PPC_9_PLUS);</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cpu.part() == <a class="code hl_enumvalue" href="classv8_1_1base_1_1CPU.html#ac09c8c9017a0a38f43e6a4ce93c3d760aa53e5e20438ac17d380852b9a31bec2c">base::CPU::kPPCPower8</a>) {</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    supported_ |= (1u &lt;&lt; PPC_8_PLUS);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597">supported_</a> |= (1u &lt;&lt; PPC_8_PLUS);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>  }</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="preprocessor">#if V8_OS_LINUX</span></div>
 <div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>  <span class="keywordflow">if</span> (cpu.icache_line_size() != <a class="code hl_variable" href="classv8_1_1base_1_1CPU.html#ab7acefea4cb0440a863fcb63ec3c27b9">base::CPU::kUnknownCacheLineSize</a>) {</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    icache_line_size_ = cpu.icache_line_size();</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a969bfb7b14676f419578f948e850355d">icache_line_size_</a> = cpu.icache_line_size();</div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>  }</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordflow">if</span> (supported_ &amp; (1u &lt;&lt; PPC_10_PLUS)) supported_ |= (1u &lt;&lt; PPC_9_PLUS);</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="keywordflow">if</span> (supported_ &amp; (1u &lt;&lt; PPC_9_PLUS)) supported_ |= (1u &lt;&lt; PPC_8_PLUS);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597">supported_</a> &amp; (1u &lt;&lt; PPC_10_PLUS)) <a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597">supported_</a> |= (1u &lt;&lt; PPC_9_PLUS);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597">supported_</a> &amp; (1u &lt;&lt; PPC_9_PLUS)) <a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597">supported_</a> |= (1u &lt;&lt; PPC_8_PLUS);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <span class="comment">// Set a static value on whether Simd is supported.</span></div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>  <span class="comment">// This variable is only used for certain archs to query SupportWasmSimd128()</span></div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="comment">// at runtime in builtins using an extern ref. Other callers should use</span></div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>  <span class="comment">// CpuFeatures::SupportWasmSimd128().</span></div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  CpuFeatures::supports_wasm_simd_128_ = <a class="code hl_function" href="classv8_1_1internal_1_1CpuFeatures.html#a7b36448a7bd94e1f4a8288e0ed6313d5">CpuFeatures::SupportsWasmSimd128</a>();</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1CpuFeatures.html#a6120397cf8d6aeb2a07a11b37049d5cb">CpuFeatures::supports_wasm_simd_128_</a> = <a class="code hl_function" href="classv8_1_1internal_1_1CpuFeatures.html#a7b36448a7bd94e1f4a8288e0ed6313d5">CpuFeatures::SupportsWasmSimd128</a>();</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1CpuFeatures.html#ae0fe4123ba495285648ec2a6232bd85f">CpuFeatures::PrintTarget</a>() {</div>
@@ -273,9 +266,9 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">// See assembler-ppc-inl.h for inlined constructors</span></div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
 <div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><a class="code hl_function" href="classv8_1_1internal_1_1Operand.html#aea1469b0006c42edd55f2d6b567f716b">Operand::Operand</a>(Handle&lt;HeapObject&gt; <a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>) {</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  rm_ = <a class="code hl_variable" href="namespacev8_1_1internal.html#a00a63531b1853ad102a9dcd7636d385a">no_reg</a>;</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  value_.immediate = <span class="keyword">static_cast&lt;</span>intptr_t<span class="keyword">&gt;</span>(<a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>.address());</div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  rmode_ = <a class="code hl_enumvalue" href="classv8_1_1internal_1_1RelocInfo.html#ad2e613bbaf7c7a82f0db322c069cad8ea1907af900c06ae2aafda911802e13ee2">RelocInfo::FULL_EMBEDDED_OBJECT</a>;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Operand.html#a940b5d9706be60c97bf56711e02302b3">rm_</a> = <a class="code hl_variable" href="namespacev8_1_1internal.html#a00a63531b1853ad102a9dcd7636d385a">no_reg</a>;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Operand.html#a83ffb590d1583edeb0f009a1481a56ba">value_</a>.<a class="code hl_variable" href="unionv8_1_1internal_1_1Operand_1_1Value.html#a65692a6a851acec46b051c5509410185">immediate</a> = <span class="keyword">static_cast&lt;</span>intptr_t<span class="keyword">&gt;</span>(<a class="code hl_function" href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">handle</a>.address());</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1Operand.html#aa732500a309873bc3ac377f642042b15">rmode_</a> = <a class="code hl_enumvalue" href="classv8_1_1internal_1_1RelocInfo.html#ad2e613bbaf7c7a82f0db322c069cad8ea1907af900c06ae2aafda911802e13ee2">RelocInfo::FULL_EMBEDDED_OBJECT</a>;</div>
 <div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>}</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
 <div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>Operand <a class="code hl_function" href="classv8_1_1internal_1_1Operand.html#a4ab9922b5049f50d789c3b44184e5383">Operand::EmbeddedNumber</a>(<span class="keywordtype">double</span> value) {</div>
@@ -288,13 +281,13 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>}</div>
 <div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
 <div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>MemOperand::MemOperand(Register rn, int64_t <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>)</div>
-<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    : ra_(rn), offset_(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>), rb_(<a class="code hl_variable" href="namespacev8_1_1internal.html#a00a63531b1853ad102a9dcd7636d385a">no_reg</a>) {}</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    : ra_(rn), <a class="code hl_variable" href="code-generator-arm_8cc.html#ab11f8f1256e847420fa280346be66736">offset_</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>), rb_(<a class="code hl_variable" href="namespacev8_1_1internal.html#a00a63531b1853ad102a9dcd7636d385a">no_reg</a>) {}</div>
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>MemOperand::MemOperand(Register ra, Register rb)</div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    : ra_(ra), offset_(0), rb_(rb) {}</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    : ra_(ra), <a class="code hl_variable" href="code-generator-arm_8cc.html#ab11f8f1256e847420fa280346be66736">offset_</a>(0), rb_(rb) {}</div>
 <div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>MemOperand::MemOperand(Register ra, Register rb, int64_t <a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>)</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    : ra_(ra), offset_(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>), rb_(rb) {}</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    : ra_(ra), <a class="code hl_variable" href="code-generator-arm_8cc.html#ab11f8f1256e847420fa280346be66736">offset_</a>(<a class="code hl_variable" href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a>), rb_(rb) {}</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="keywordtype">void</span> Assembler::AllocateAndInstallRequestedHeapNumbers(LocalIsolate* isolate) {</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>  <a class="code hl_define" href="logging_8h.html#a96a75539aa82216cdde2250a11126ea0">DCHECK_IMPLIES</a>(isolate == <span class="keyword">nullptr</span>, heap_number_requests_.empty());</div>
@@ -317,7 +310,7 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    : AssemblerBase(<a class="code hl_variable" href="js-temporal-objects_8cc.html#a5d1eaa4d00d65b745d493b4b8ae43b00">options</a>, <a class="code hl_namespace" href="namespacestd.html">std</a>::move(buffer)),</div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>      scratch_register_list_({ip}),</div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>      constant_pool_builder_(kLoadPtrMaxReachBits, kLoadDoubleMaxReachBits) {</div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  reloc_info_writer.Reposition(buffer_start_ + buffer_-&gt;size(), pc_);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>  reloc_info_writer.Reposition(buffer_start_ + <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>-&gt;size(), <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>);</div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
 <div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>  no_trampoline_pool_before_ = 0;</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>  trampoline_pool_blocked_nesting_ = 0;</div>
@@ -374,7 +367,7 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>          ? handler_table_offset2</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>          : safepoint_table_builder-&gt;safepoint_table_offset();</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>  <span class="keyword">const</span> <span class="keywordtype">int</span> reloc_info_offset =</div>
-<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>      <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(reloc_info_writer.pos() - buffer_-&gt;start());</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>      <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(reloc_info_writer.pos() - <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>-&gt;start());</div>
 <div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>  CodeDesc::Initialize(desc, <span class="keyword">this</span>, safepoint_table_offset,</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                       handler_table_offset2, constant_pool_offset,</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>                       code_comments_offset, builtin_jump_table_info_offset,</div>
@@ -2161,10 +2154,10 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l02058" name="l02058"></a><span class="lineno"> 2058</span>}</div>
 <div class="line"><a id="l02059" name="l02059"></a><span class="lineno"> 2059</span> </div>
 <div class="line"><a id="l02060" name="l02060"></a><span class="lineno"> 2060</span><span class="keywordtype">void</span> Assembler::GrowBuffer(<span class="keywordtype">int</span> needed) {</div>
-<div class="line"><a id="l02061" name="l02061"></a><span class="lineno"> 2061</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(buffer_start_, buffer_-&gt;start());</div>
+<div class="line"><a id="l02061" name="l02061"></a><span class="lineno"> 2061</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(buffer_start_, <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>-&gt;start());</div>
 <div class="line"><a id="l02062" name="l02062"></a><span class="lineno"> 2062</span> </div>
 <div class="line"><a id="l02063" name="l02063"></a><span class="lineno"> 2063</span>  <span class="comment">// Compute new buffer size.</span></div>
-<div class="line"><a id="l02064" name="l02064"></a><span class="lineno"> 2064</span>  <span class="keywordtype">int</span> old_size = buffer_-&gt;size();</div>
+<div class="line"><a id="l02064" name="l02064"></a><span class="lineno"> 2064</span>  <span class="keywordtype">int</span> old_size = <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>-&gt;size();</div>
 <div class="line"><a id="l02065" name="l02065"></a><span class="lineno"> 2065</span>  <span class="keywordtype">int</span> new_size = std::min(2 * old_size, old_size + 1 * MB);</div>
 <div class="line"><a id="l02066" name="l02066"></a><span class="lineno"> 2066</span>  <span class="keywordtype">int</span> space = buffer_space() + (new_size - old_size);</div>
 <div class="line"><a id="l02067" name="l02067"></a><span class="lineno"> 2067</span>  new_size += (space &lt; needed) ? needed - space : 0;</div>
@@ -2176,7 +2169,7 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l02073" name="l02073"></a><span class="lineno"> 2073</span>  }</div>
 <div class="line"><a id="l02074" name="l02074"></a><span class="lineno"> 2074</span> </div>
 <div class="line"><a id="l02075" name="l02075"></a><span class="lineno"> 2075</span>  <span class="comment">// Set up new buffer.</span></div>
-<div class="line"><a id="l02076" name="l02076"></a><span class="lineno"> 2076</span>  std::unique_ptr&lt;AssemblerBuffer&gt; new_buffer = buffer_-&gt;Grow(new_size);</div>
+<div class="line"><a id="l02076" name="l02076"></a><span class="lineno"> 2076</span>  std::unique_ptr&lt;AssemblerBuffer&gt; new_buffer = <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>-&gt;Grow(new_size);</div>
 <div class="line"><a id="l02077" name="l02077"></a><span class="lineno"> 2077</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(new_size, new_buffer-&gt;size());</div>
 <div class="line"><a id="l02078" name="l02078"></a><span class="lineno"> 2078</span>  uint8_t* new_start = new_buffer-&gt;start();</div>
 <div class="line"><a id="l02079" name="l02079"></a><span class="lineno"> 2079</span> </div>
@@ -2189,9 +2182,9 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l02086" name="l02086"></a><span class="lineno"> 2086</span>          reloc_size);</div>
 <div class="line"><a id="l02087" name="l02087"></a><span class="lineno"> 2087</span> </div>
 <div class="line"><a id="l02088" name="l02088"></a><span class="lineno"> 2088</span>  <span class="comment">// Switch buffers.</span></div>
-<div class="line"><a id="l02089" name="l02089"></a><span class="lineno"> 2089</span>  buffer_ = std::move(new_buffer);</div>
+<div class="line"><a id="l02089" name="l02089"></a><span class="lineno"> 2089</span>  <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a> = std::move(new_buffer);</div>
 <div class="line"><a id="l02090" name="l02090"></a><span class="lineno"> 2090</span>  buffer_start_ = new_start;</div>
-<div class="line"><a id="l02091" name="l02091"></a><span class="lineno"> 2091</span>  pc_ += pc_delta;</div>
+<div class="line"><a id="l02091" name="l02091"></a><span class="lineno"> 2091</span>  <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a> += pc_delta;</div>
 <div class="line"><a id="l02092" name="l02092"></a><span class="lineno"> 2092</span>  reloc_info_writer.Reposition(reloc_info_writer.pos() + rc_delta,</div>
 <div class="line"><a id="l02093" name="l02093"></a><span class="lineno"> 2093</span>                               reloc_info_writer.last_pc() + pc_delta);</div>
 <div class="line"><a id="l02094" name="l02094"></a><span class="lineno"> 2094</span> </div>
@@ -2202,26 +2195,26 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l02099" name="l02099"></a><span class="lineno"> 2099</span> </div>
 <div class="line"><a id="l02100" name="l02100"></a><span class="lineno"> 2100</span><span class="keywordtype">void</span> Assembler::db(uint8_t data) {</div>
 <div class="line"><a id="l02101" name="l02101"></a><span class="lineno"> 2101</span>  CheckBuffer();</div>
-<div class="line"><a id="l02102" name="l02102"></a><span class="lineno"> 2102</span>  *<span class="keyword">reinterpret_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(pc_) = data;</div>
-<div class="line"><a id="l02103" name="l02103"></a><span class="lineno"> 2103</span>  pc_ += <span class="keyword">sizeof</span>(uint8_t);</div>
+<div class="line"><a id="l02102" name="l02102"></a><span class="lineno"> 2102</span>  *<span class="keyword">reinterpret_cast&lt;</span>uint8_t*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>) = data;</div>
+<div class="line"><a id="l02103" name="l02103"></a><span class="lineno"> 2103</span>  <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a> += <span class="keyword">sizeof</span>(uint8_t);</div>
 <div class="line"><a id="l02104" name="l02104"></a><span class="lineno"> 2104</span>}</div>
 <div class="line"><a id="l02105" name="l02105"></a><span class="lineno"> 2105</span> </div>
 <div class="line"><a id="l02106" name="l02106"></a><span class="lineno"> 2106</span><span class="keywordtype">void</span> Assembler::dd(uint32_t data) {</div>
 <div class="line"><a id="l02107" name="l02107"></a><span class="lineno"> 2107</span>  CheckBuffer();</div>
-<div class="line"><a id="l02108" name="l02108"></a><span class="lineno"> 2108</span>  *<span class="keyword">reinterpret_cast&lt;</span>uint32_t*<span class="keyword">&gt;</span>(pc_) = data;</div>
-<div class="line"><a id="l02109" name="l02109"></a><span class="lineno"> 2109</span>  pc_ += <span class="keyword">sizeof</span>(uint32_t);</div>
+<div class="line"><a id="l02108" name="l02108"></a><span class="lineno"> 2108</span>  *<span class="keyword">reinterpret_cast&lt;</span>uint32_t*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>) = data;</div>
+<div class="line"><a id="l02109" name="l02109"></a><span class="lineno"> 2109</span>  <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a> += <span class="keyword">sizeof</span>(uint32_t);</div>
 <div class="line"><a id="l02110" name="l02110"></a><span class="lineno"> 2110</span>}</div>
 <div class="line"><a id="l02111" name="l02111"></a><span class="lineno"> 2111</span> </div>
 <div class="line"><a id="l02112" name="l02112"></a><span class="lineno"> 2112</span><span class="keywordtype">void</span> Assembler::dq(uint64_t value) {</div>
 <div class="line"><a id="l02113" name="l02113"></a><span class="lineno"> 2113</span>  CheckBuffer();</div>
-<div class="line"><a id="l02114" name="l02114"></a><span class="lineno"> 2114</span>  *<span class="keyword">reinterpret_cast&lt;</span>uint64_t*<span class="keyword">&gt;</span>(pc_) = value;</div>
-<div class="line"><a id="l02115" name="l02115"></a><span class="lineno"> 2115</span>  pc_ += <span class="keyword">sizeof</span>(uint64_t);</div>
+<div class="line"><a id="l02114" name="l02114"></a><span class="lineno"> 2114</span>  *<span class="keyword">reinterpret_cast&lt;</span>uint64_t*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>) = value;</div>
+<div class="line"><a id="l02115" name="l02115"></a><span class="lineno"> 2115</span>  <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a> += <span class="keyword">sizeof</span>(uint64_t);</div>
 <div class="line"><a id="l02116" name="l02116"></a><span class="lineno"> 2116</span>}</div>
 <div class="line"><a id="l02117" name="l02117"></a><span class="lineno"> 2117</span> </div>
 <div class="line"><a id="l02118" name="l02118"></a><span class="lineno"> 2118</span><span class="keywordtype">void</span> Assembler::dp(uintptr_t data) {</div>
 <div class="line"><a id="l02119" name="l02119"></a><span class="lineno"> 2119</span>  CheckBuffer();</div>
-<div class="line"><a id="l02120" name="l02120"></a><span class="lineno"> 2120</span>  *<span class="keyword">reinterpret_cast&lt;</span>uintptr_t*<span class="keyword">&gt;</span>(pc_) = data;</div>
-<div class="line"><a id="l02121" name="l02121"></a><span class="lineno"> 2121</span>  pc_ += <span class="keyword">sizeof</span>(uintptr_t);</div>
+<div class="line"><a id="l02120" name="l02120"></a><span class="lineno"> 2120</span>  *<span class="keyword">reinterpret_cast&lt;</span>uintptr_t*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>) = data;</div>
+<div class="line"><a id="l02121" name="l02121"></a><span class="lineno"> 2121</span>  <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a> += <span class="keyword">sizeof</span>(uintptr_t);</div>
 <div class="line"><a id="l02122" name="l02122"></a><span class="lineno"> 2122</span>}</div>
 <div class="line"><a id="l02123" name="l02123"></a><span class="lineno"> 2123</span> </div>
 <div class="line"><a id="l02124" name="l02124"></a><span class="lineno"> 2124</span><span class="keywordtype">void</span> Assembler::RecordRelocInfo(RelocInfo::Mode rmode, intptr_t data) {</div>
@@ -2295,13 +2288,13 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="line"><a id="l02192" name="l02192"></a><span class="lineno"> 2192</span>                                     uint8_t* address, <span class="keywordtype">int</span> instructions)</div>
 <div class="line"><a id="l02193" name="l02193"></a><span class="lineno"> 2193</span>    : Assembler(<a class="code hl_variable" href="js-temporal-objects_8cc.html#a5d1eaa4d00d65b745d493b4b8ae43b00">options</a>, <a class="code hl_function" href="namespacev8_1_1internal.html#ad99b70feee5ffed73561f8f49559eb3d">ExternalAssemblerBuffer</a>(</div>
 <div class="line"><a id="l02194" name="l02194"></a><span class="lineno"> 2194</span>                             address, instructions * <a class="code hl_variable" href="namespacev8_1_1internal.html#ac915558733f2fceaec1860dd81c6df7f">kInstrSize</a> + kGap)) {</div>
-<div class="line"><a id="l02195" name="l02195"></a><span class="lineno"> 2195</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(reloc_info_writer.pos(), buffer_start_ + buffer_-&gt;size());</div>
+<div class="line"><a id="l02195" name="l02195"></a><span class="lineno"> 2195</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(reloc_info_writer.pos(), buffer_start_ + <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>-&gt;size());</div>
 <div class="line"><a id="l02196" name="l02196"></a><span class="lineno"> 2196</span>}</div>
 <div class="line"><a id="l02197" name="l02197"></a><span class="lineno"> 2197</span> </div>
 <div class="line"><a id="l02198" name="l02198"></a><span class="lineno"> 2198</span>PatchingAssembler::~PatchingAssembler() {</div>
 <div class="line"><a id="l02199" name="l02199"></a><span class="lineno"> 2199</span>  <span class="comment">// Check that the code was patched as expected.</span></div>
-<div class="line"><a id="l02200" name="l02200"></a><span class="lineno"> 2200</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(pc_, buffer_start_ + buffer_-&gt;size() - kGap);</div>
-<div class="line"><a id="l02201" name="l02201"></a><span class="lineno"> 2201</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(reloc_info_writer.pos(), buffer_start_ + buffer_-&gt;size());</div>
+<div class="line"><a id="l02200" name="l02200"></a><span class="lineno"> 2200</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>, buffer_start_ + <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>-&gt;size() - kGap);</div>
+<div class="line"><a id="l02201" name="l02201"></a><span class="lineno"> 2201</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(reloc_info_writer.pos(), buffer_start_ + <a class="code hl_variable" href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a>-&gt;size());</div>
 <div class="line"><a id="l02202" name="l02202"></a><span class="lineno"> 2202</span>}</div>
 <div class="line"><a id="l02203" name="l02203"></a><span class="lineno"> 2203</span> </div>
 <div class="line"><a id="l02204" name="l02204"></a><span class="lineno"> 2204</span>}  <span class="comment">// namespace internal</span></div>
@@ -2319,10 +2312,17 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="ttc" id="aclassv8_1_1internal_1_1Assembler_html_a6c66f08de533e0078481ac45d3cdd57a"><div class="ttname"><a href="classv8_1_1internal_1_1Assembler.html#a6c66f08de533e0078481ac45d3cdd57a">v8::internal::Assembler::IsConstantPoolLoadStart</a></div><div class="ttdeci">static V8_INLINE bool IsConstantPoolLoadStart(Address pc, ConstantPoolEntry::Access *access=nullptr)</div><div class="ttdef"><b>Definition</b> <a href="assembler-ppc-inl_8h_source.html#l00291">assembler-ppc-inl.h:291</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Assembler_html_aef6034ee39ac5c1316aacb592b00acd5"><div class="ttname"><a href="classv8_1_1internal_1_1Assembler.html#aef6034ee39ac5c1316aacb592b00acd5">v8::internal::Assembler::target_address_at</a></div><div class="ttdeci">static V8_INLINE Address target_address_at(Address pc, Address constant_pool)</div><div class="ttdef"><b>Definition</b> <a href="assembler-arm-inl_8h_source.html#l00216">assembler-arm-inl.h:216</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1CpuFeatures_html_a44305c4c7840c90b5cf4a0b6ebd791af"><div class="ttname"><a href="classv8_1_1internal_1_1CpuFeatures.html#a44305c4c7840c90b5cf4a0b6ebd791af">v8::internal::CpuFeatures::IsSupported</a></div><div class="ttdeci">static bool IsSupported(CpuFeature f)</div><div class="ttdef"><b>Definition</b> <a href="cpu-features_8h_source.html#l00124">cpu-features.h:124</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1CpuFeatures_html_a6120397cf8d6aeb2a07a11b37049d5cb"><div class="ttname"><a href="classv8_1_1internal_1_1CpuFeatures.html#a6120397cf8d6aeb2a07a11b37049d5cb">v8::internal::CpuFeatures::supports_wasm_simd_128_</a></div><div class="ttdeci">static bool supports_wasm_simd_128_</div><div class="ttdef"><b>Definition</b> <a href="cpu-features_8h_source.html#l00164">cpu-features.h:164</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1CpuFeatures_html_a7b36448a7bd94e1f4a8288e0ed6313d5"><div class="ttname"><a href="classv8_1_1internal_1_1CpuFeatures.html#a7b36448a7bd94e1f4a8288e0ed6313d5">v8::internal::CpuFeatures::SupportsWasmSimd128</a></div><div class="ttdeci">static bool SupportsWasmSimd128()</div><div class="ttdef"><b>Definition</b> <a href="assembler-riscv_8cc_source.html#l00094">assembler-riscv.cc:94</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1CpuFeatures_html_a9208502ba124784127b46ae75eb39597"><div class="ttname"><a href="classv8_1_1internal_1_1CpuFeatures.html#a9208502ba124784127b46ae75eb39597">v8::internal::CpuFeatures::supported_</a></div><div class="ttdeci">static unsigned supported_</div><div class="ttdef"><b>Definition</b> <a href="cpu-features_8h_source.html#l00157">cpu-features.h:157</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1CpuFeatures_html_a969bfb7b14676f419578f948e850355d"><div class="ttname"><a href="classv8_1_1internal_1_1CpuFeatures.html#a969bfb7b14676f419578f948e850355d">v8::internal::CpuFeatures::icache_line_size_</a></div><div class="ttdeci">static unsigned icache_line_size_</div><div class="ttdef"><b>Definition</b> <a href="cpu-features_8h_source.html#l00158">cpu-features.h:158</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1CpuFeatures_html_ab494f1c6e7fd14ba490530c2bd6a60bd"><div class="ttname"><a href="classv8_1_1internal_1_1CpuFeatures.html#ab494f1c6e7fd14ba490530c2bd6a60bd">v8::internal::CpuFeatures::PrintFeatures</a></div><div class="ttdeci">static void PrintFeatures()</div><div class="ttdef"><b>Definition</b> <a href="assembler-riscv_8cc_source.html#l00131">assembler-riscv.cc:131</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1CpuFeatures_html_ae0fe4123ba495285648ec2a6232bd85f"><div class="ttname"><a href="classv8_1_1internal_1_1CpuFeatures.html#ae0fe4123ba495285648ec2a6232bd85f">v8::internal::CpuFeatures::PrintTarget</a></div><div class="ttdeci">static void PrintTarget()</div><div class="ttdef"><b>Definition</b> <a href="assembler-riscv_8cc_source.html#l00130">assembler-riscv.cc:130</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1CpuFeatures_html_af6cc8344bc8cd1157441e24af6aa030e"><div class="ttname"><a href="classv8_1_1internal_1_1CpuFeatures.html#af6cc8344bc8cd1157441e24af6aa030e">v8::internal::CpuFeatures::ProbeImpl</a></div><div class="ttdeci">static void ProbeImpl(bool cross_compile)</div><div class="ttdef"><b>Definition</b> <a href="assembler-riscv_8cc_source.html#l00096">assembler-riscv.cc:96</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Operand_html_a4ab9922b5049f50d789c3b44184e5383"><div class="ttname"><a href="classv8_1_1internal_1_1Operand.html#a4ab9922b5049f50d789c3b44184e5383">v8::internal::Operand::EmbeddedNumber</a></div><div class="ttdeci">static Operand EmbeddedNumber(double number)</div><div class="ttdef"><b>Definition</b> <a href="assembler-riscv_8cc_source.html#l00226">assembler-riscv.cc:226</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Operand_html_a83ffb590d1583edeb0f009a1481a56ba"><div class="ttname"><a href="classv8_1_1internal_1_1Operand.html#a83ffb590d1583edeb0f009a1481a56ba">v8::internal::Operand::value_</a></div><div class="ttdeci">union v8::internal::Operand::Value value_</div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Operand_html_a940b5d9706be60c97bf56711e02302b3"><div class="ttname"><a href="classv8_1_1internal_1_1Operand.html#a940b5d9706be60c97bf56711e02302b3">v8::internal::Operand::rm_</a></div><div class="ttdeci">Register rm_</div><div class="ttdef"><b>Definition</b> <a href="assembler-arm_8h_source.html#l00171">assembler-arm.h:171</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1Operand_html_aa732500a309873bc3ac377f642042b15"><div class="ttname"><a href="classv8_1_1internal_1_1Operand.html#aa732500a309873bc3ac377f642042b15">v8::internal::Operand::rmode_</a></div><div class="ttdeci">RelocInfo::Mode rmode_</div><div class="ttdef"><b>Definition</b> <a href="assembler-arm_8h_source.html#l00181">assembler-arm.h:181</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Operand_html_aea1469b0006c42edd55f2d6b567f716b"><div class="ttname"><a href="classv8_1_1internal_1_1Operand.html#aea1469b0006c42edd55f2d6b567f716b">v8::internal::Operand::Operand</a></div><div class="ttdeci">V8_INLINE Operand(int32_t immediate, RelocInfo::Mode rmode=RelocInfo::NO_INFO)</div><div class="ttdef"><b>Definition</b> <a href="assembler-arm_8h_source.html#l00087">assembler-arm.h:87</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1RelocInfo_html_a3674f1738fbd7b36d670397d0fbd363e"><div class="ttname"><a href="classv8_1_1internal_1_1RelocInfo.html#a3674f1738fbd7b36d670397d0fbd363e">v8::internal::RelocInfo::kApplyMask</a></div><div class="ttdeci">static const int kApplyMask</div><div class="ttdef"><b>Definition</b> <a href="reloc-info_8h_source.html#l00369">reloc-info.h:369</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1RelocInfo_html_a4532875f67c1658431b317da15aaa1b9"><div class="ttname"><a href="classv8_1_1internal_1_1RelocInfo.html#a4532875f67c1658431b317da15aaa1b9">v8::internal::RelocInfo::wasm_call_tag</a></div><div class="ttdeci">uint32_t wasm_call_tag() const</div><div class="ttdef"><b>Definition</b> <a href="assembler-riscv_8cc_source.html#l00202">assembler-riscv.cc:202</a></div></div>
@@ -2338,6 +2338,8 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="ttc" id="aclassv8_1_1internal_1_1RelocInfo_html_ad2e613bbaf7c7a82f0db322c069cad8eaf44d1f5521a36a56293dd55fa8e269c6"><div class="ttname"><a href="classv8_1_1internal_1_1RelocInfo.html#ad2e613bbaf7c7a82f0db322c069cad8eaf44d1f5521a36a56293dd55fa8e269c6">v8::internal::RelocInfo::WASM_STUB_CALL</a></div><div class="ttdeci">@ WASM_STUB_CALL</div><div class="ttdef"><b>Definition</b> <a href="reloc-info_8h_source.html#l00119">reloc-info.h:119</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1RelocInfo_html_ae6944586e8f9650af37d1bb494cd4a39"><div class="ttname"><a href="classv8_1_1internal_1_1RelocInfo.html#ae6944586e8f9650af37d1bb494cd4a39">v8::internal::RelocInfo::rmode_</a></div><div class="ttdeci">Mode rmode_</div><div class="ttdef"><b>Definition</b> <a href="reloc-info_8h_source.html#l00399">reloc-info.h:399</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1Smi_html_a755464f4d2c3a71ffd82cd474bbc50f3"><div class="ttname"><a href="classv8_1_1internal_1_1Smi.html#a755464f4d2c3a71ffd82cd474bbc50f3">v8::internal::Smi::FromInt</a></div><div class="ttdeci">static constexpr Tagged&lt; Smi &gt; FromInt(int value)</div><div class="ttdef"><b>Definition</b> <a href="smi_8h_source.html#l00038">smi.h:38</a></div></div>
+<div class="ttc" id="acode-generator-arm_8cc_html_ab11f8f1256e847420fa280346be66736"><div class="ttname"><a href="code-generator-arm_8cc.html#ab11f8f1256e847420fa280346be66736">offset_</a></div><div class="ttdeci">Operand const offset_</div><div class="ttdef"><b>Definition</b> <a href="code-generator-arm_8cc_source.html#l00222">code-generator-arm.cc:222</a></div></div>
+<div class="ttc" id="acodegen_2assembler_8cc_html_a0f89cfebe2092f94fd9d33321262334b"><div class="ttname"><a href="codegen_2assembler_8cc.html#a0f89cfebe2092f94fd9d33321262334b">buffer_</a></div><div class="ttdeci">base::OwnedVector&lt; uint8_t &gt; buffer_</div><div class="ttdef"><b>Definition</b> <a href="codegen_2assembler_8cc_source.html#l00111">assembler.cc:111</a></div></div>
 <div class="ttc" id="acommon_2globals_8h_html_a66ec6fa51a5427d80ac1b27a3b4f38d2"><div class="ttname"><a href="common_2globals_8h.html#a66ec6fa51a5427d80ac1b27a3b4f38d2">V8_EMBEDDED_CONSTANT_POOL_BOOL</a></div><div class="ttdeci">#define V8_EMBEDDED_CONSTANT_POOL_BOOL</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00081">globals.h:81</a></div></div>
 <div class="ttc" id="aconstants-ppc_8h_html_a5c0108b4eba33eeaaf98534fbc16a81d"><div class="ttname"><a href="constants-ppc_8h.html#a5c0108b4eba33eeaaf98534fbc16a81d">CRWIDTH</a></div><div class="ttdeci">#define CRWIDTH</div><div class="ttdef"><b>Definition</b> <a href="constants-ppc_8h_source.html#l02907">constants-ppc.h:2907</a></div></div>
 <div class="ttc" id="aconstants-ppc_8h_html_a67a0a2fac057241db6c4d2bc3762fee4"><div class="ttname"><a href="constants-ppc_8h.html#a67a0a2fac057241db6c4d2bc3762fee4">SIGN_EXT_IMM16</a></div><div class="ttdeci">#define SIGN_EXT_IMM16(imm)</div><div class="ttdef"><b>Definition</b> <a href="constants-ppc_8h_source.html#l00091">constants-ppc.h:91</a></div></div>
@@ -2346,6 +2348,7 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="ttc" id="acpu_8h_html"><div class="ttname"><a href="cpu_8h.html">cpu.h</a></div></div>
 <div class="ttc" id="adeoptimizer_8h_html"><div class="ttname"><a href="deoptimizer_8h.html">deoptimizer.h</a></div></div>
 <div class="ttc" id="aexperimental-compiler_8cc_html_a092c9ed2d1a6372cb90bb48d778891c7"><div class="ttname"><a href="experimental-compiler_8cc.html#a092c9ed2d1a6372cb90bb48d778891c7">label</a></div><div class="ttdeci">Label label</div><div class="ttdef"><b>Definition</b> <a href="experimental-compiler_8cc_source.html#l00532">experimental-compiler.cc:532</a></div></div>
+<div class="ttc" id="aexperimental-interpreter_8cc_html_a83f199140d1eabf6bd461c821290b834"><div class="ttname"><a href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a></div><div class="ttdeci">int pc_</div><div class="ttdef"><b>Definition</b> <a href="experimental-interpreter_8cc_source.html#l00227">experimental-interpreter.cc:227</a></div></div>
 <div class="ttc" id="aexperimental-interpreter_8cc_html_ac8c81e61335635fa4709d82412b31f06"><div class="ttname"><a href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a></div><div class="ttdeci">int pc</div><div class="ttdef"><b>Definition</b> <a href="experimental-interpreter_8cc_source.html#l00554">experimental-interpreter.cc:554</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a115c48491bb37004f5ac67eb46ac2c23"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a115c48491bb37004f5ac67eb46ac2c23">base</a></div><div class="ttdeci">turboshaft::OpIndex base</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00070">instruction-selector-ia32.cc:70</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a97bd6c077f3c7769f575b82988b9b668"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a></div><div class="ttdeci">int32_t offset</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00072">instruction-selector-ia32.cc:72</a></div></div>
@@ -2407,6 +2410,7 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="ttc" id="anamespacev8_1_1internal_html_aad4614e9eaee9371d87d0f56ffb440e3"><div class="ttname"><a href="namespacev8_1_1internal.html#aad4614e9eaee9371d87d0f56ffb440e3">v8::internal::ToRegister</a></div><div class="ttdeci">Register ToRegister(int num)</div><div class="ttdef"><b>Definition</b> <a href="assembler-riscv_8cc_source.html#l00176">assembler-riscv.cc:176</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ab9a366b114762fc880a39cf87d6ad94b"><div class="ttname"><a href="namespacev8_1_1internal.html#ab9a366b114762fc880a39cf87d6ad94b">v8::internal::r11</a></div><div class="ttdeci">constexpr Register r11</div><div class="ttdef"><b>Definition</b> <a href="register-arm_8h_source.html#l00331">register-arm.h:331</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ab9df0bf289155b5ae1d6da682adf1d6f"><div class="ttname"><a href="namespacev8_1_1internal.html#ab9df0bf289155b5ae1d6da682adf1d6f">v8::internal::handle</a></div><div class="ttdeci">V8_INLINE Handle&lt; T &gt; handle(Tagged&lt; T &gt; object, Isolate *isolate)</div><div class="ttdef"><b>Definition</b> <a href="handles-inl_8h_source.html#l00070">handles-inl.h:70</a></div></div>
+<div class="ttc" id="anamespacev8_1_1internal_html_abd06571dd8f8f47f40ec4901b53271ac"><div class="ttname"><a href="namespacev8_1_1internal.html#abd06571dd8f8f47f40ec4901b53271ac">v8::internal::CpuFeaturesImpliedByCompiler</a></div><div class="ttdeci">static unsigned CpuFeaturesImpliedByCompiler()</div><div class="ttdef"><b>Definition</b> <a href="assembler-riscv_8cc_source.html#l00053">assembler-riscv.cc:53</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ac915558733f2fceaec1860dd81c6df7f"><div class="ttname"><a href="namespacev8_1_1internal.html#ac915558733f2fceaec1860dd81c6df7f">v8::internal::kInstrSize</a></div><div class="ttdeci">constexpr uint8_t kInstrSize</div><div class="ttdef"><b>Definition</b> <a href="constants-arm_8h_source.html#l00448">constants-arm.h:448</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_acd6714fd3b623a7dc366c38791a9f23e"><div class="ttname"><a href="namespacev8_1_1internal.html#acd6714fd3b623a7dc366c38791a9f23e">v8::internal::kOpcodeMask</a></div><div class="ttdeci">const int kOpcodeMask</div><div class="ttdef"><b>Definition</b> <a href="constants-mips64_8h_source.html#l00378">constants-mips64.h:378</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_ad03e50e4d15ee0da6a722254f350e7eb"><div class="ttname"><a href="namespacev8_1_1internal.html#ad03e50e4d15ee0da6a722254f350e7eb">v8::internal::kMaxInt</a></div><div class="ttdeci">constexpr int kMaxInt</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00366">globals.h:366</a></div></div>
@@ -2415,15 +2419,13 @@ $(function(){initNavTree('assembler-ppc_8cc_source.html',''); initResizable(true
 <div class="ttc" id="anamespacev8_1_1internal_html_ae76fc3ea414a02b238b9a7f3e269f49e"><div class="ttname"><a href="namespacev8_1_1internal.html#ae76fc3ea414a02b238b9a7f3e269f49e">v8::internal::kEndOfChain</a></div><div class="ttdeci">const int kEndOfChain</div><div class="ttdef"><b>Definition</b> <a href="assembler-riscv_8cc_source.html#l00368">assembler-riscv.cc:368</a></div></div>
 <div class="ttc" id="anamespacev8_1_1internal_html_afaac3cc4a40f6f5494b861f6313bf922"><div class="ttname"><a href="namespacev8_1_1internal.html#afaac3cc4a40f6f5494b861f6313bf922">v8::internal::kNumRegisters</a></div><div class="ttdeci">constexpr int kNumRegisters</div><div class="ttdef"><b>Definition</b> <a href="constants-arm_8h_source.html#l00040">constants-arm.h:40</a></div></div>
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
+<div class="ttc" id="aunionv8_1_1internal_1_1Operand_1_1Value_html_a65692a6a851acec46b051c5509410185"><div class="ttname"><a href="unionv8_1_1internal_1_1Operand_1_1Value.html#a65692a6a851acec46b051c5509410185">v8::internal::Operand::Value::immediate</a></div><div class="ttdeci">int32_t immediate</div><div class="ttdef"><b>Definition</b> <a href="assembler-arm_8h_source.html#l00178">assembler-arm.h:178</a></div></div>
 <div class="ttc" id="avalue-mirror_8cc_html_a1ca88ee8dc0e8e51d60cf01ab8e8702a"><div class="ttname"><a href="value-mirror_8cc.html#a1ca88ee8dc0e8e51d60cf01ab8e8702a">value</a></div><div class="ttdeci">std::unique_ptr&lt; ValueMirror &gt; value</div><div class="ttdef"><b>Definition</b> <a href="value-mirror_8cc_source.html#l00950">value-mirror.cc:950</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7cf1b5e32c0ccac638cac1ebc38d93b6.html">codegen</a></li><li class="navelem"><a class="el" href="dir_873f9159e24213d9ee5f851faf124bf8.html">ppc</a></li><li class="navelem"><a class="el" href="assembler-ppc_8cc.html">assembler-ppc.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:17:04 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/compiler/backend/gap-resolver.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/compiler/backend/gap-resolver.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('gap-resolver_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('gap-resolver_8cc_source.html',''); initResizable(true)
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="dir_ea3a8a4e4b987044b4a5aa16ea5873dc.html">backend</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">gap-resolver.cc</div></div>
 </div><!--header-->
@@ -155,16 +148,16 @@ $(function(){initNavTree('gap-resolver_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordflow">if</span> ((source_kinds &amp; destination_kinds).empty() || moves-&gt;size() &lt; 2) {</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">// Fast path for non-conflicting parallel moves.</span></div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">for</span> (<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html">MoveOperands</a>* move : *moves) {</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      assembler_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a6a0e6dc1f86df92f38d770fa454cce9a">AssembleMove</a>(&amp;move-&gt;source(), &amp;move-&gt;destination());</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>      <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ab92ef3f8c3dffa455e0267398566e5b1">assembler_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a6a0e6dc1f86df92f38d770fa454cce9a">AssembleMove</a>(&amp;move-&gt;source(), &amp;move-&gt;destination());</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  }</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; moves-&gt;size(); ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">auto</span> move = (*moves)[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>];</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">if</span> (!move-&gt;IsEliminated()) PerformMove(moves, move);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordflow">if</span> (!move-&gt;IsEliminated()) <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ad0223db0bb3d370388a927cd46bb0cbe">PerformMove</a>(moves, move);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  }</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  assembler_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#ab9e918f93b00369c3b93533d48cc033a">PopTempStackSlots</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ab92ef3f8c3dffa455e0267398566e5b1">assembler_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#ab9e918f93b00369c3b93533d48cc033a">PopTempStackSlots</a>();</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
 </div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
@@ -185,23 +178,24 @@ $(function(){initNavTree('gap-resolver_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
 </div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keywordtype">void</span> GapResolver::PerformCycle(<span class="keyword">const</span> std::vector&lt;MoveOperands*&gt;&amp; cycle) {</div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#a9bf1fdfc47fd6203542f17c079caeffd">   81</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#a9bf1fdfc47fd6203542f17c079caeffd">GapResolver::PerformCycle</a>(<span class="keyword">const</span> std::vector&lt;MoveOperands*&gt;&amp; cycle) {</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!cycle.empty());</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  MoveOperands* move1 = cycle.back();</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html">MoveOperands</a>* move1 = cycle.back();</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <span class="keywordflow">if</span> (cycle.size() == 2 &amp;&amp; <a class="code hl_function" href="namespacev8_1_1internal_1_1compiler.html#aa380f5b8635c36df42b04d6b4772a384">IsSwap</a>(cycle.front(), cycle.back())) {</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="comment">// Call {AssembleSwap} which can generate better code than the generic</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// algorithm below in some cases.</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    MoveOperands* move2 = cycle.front();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    InstructionOperand* source = &amp;move1-&gt;source();</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    InstructionOperand* <a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a> = &amp;move1-&gt;destination();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html">MoveOperands</a>* move2 = cycle.front();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1InstructionOperand.html">InstructionOperand</a>* source = &amp;move1-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a4aa05ae621c53fba614650d91a6db7dd">source</a>();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1InstructionOperand.html">InstructionOperand</a>* <a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a> = &amp;move1-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a4ae8fd7ac23be3f2e6271043a6d13c48">destination</a>();</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// Ensure source is a register or both are stack slots, to limit swap</span></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="comment">// cases.</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">if</span> (source-&gt;IsAnyStackSlot()) {</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>      std::swap(source, <a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a>);</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    assembler_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#aa4de0477b384c6559df4c875323ae3ee">AssembleSwap</a>(source, <a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a>);</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    move1-&gt;Eliminate();</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    move2-&gt;Eliminate();</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ab92ef3f8c3dffa455e0267398566e5b1">assembler_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#aa4de0477b384c6559df4c875323ae3ee">AssembleSwap</a>(source, <a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a>);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    move1-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#ab39953280d3cb4e1e68b76cbcf7665ab">Eliminate</a>();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    move2-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#ab39953280d3cb4e1e68b76cbcf7665ab">Eliminate</a>();</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>  }</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>  <span class="comment">// Generic move-cycle algorithm. The cycle of size n is ordered such that the</span></div>
@@ -217,35 +211,37 @@ $(function(){initNavTree('gap-resolver_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <span class="comment">// {SetPendingMove}, which marks the registers needed for the given moves.</span></div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>  <span class="comment">// {MoveToTempLocation} will then choose the location accordingly.</span></div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <a class="code hl_enumeration" href="namespacev8_1_1internal.html#abe5419355372f787c28119c509343410">MachineRepresentation</a> rep =</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1LocationOperand.html#a801512516bd6cdefad3ca6ddc15e179d">LocationOperand::cast</a>(move1-&gt;destination()).<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1LocationOperand.html#a598f20b98f0d7647b58bef3b57ec20a9">representation</a>();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>      <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1LocationOperand.html#a801512516bd6cdefad3ca6ddc15e179d">LocationOperand::cast</a>(move1-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a4ae8fd7ac23be3f2e6271043a6d13c48">destination</a>()).<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1LocationOperand.html#a598f20b98f0d7647b58bef3b57ec20a9">representation</a>();</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; cycle.size() - 1; ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
-<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    assembler_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a1e2feb2a48b639fc6769a6bc26b3fe1d">SetPendingMove</a>(cycle[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ab92ef3f8c3dffa455e0267398566e5b1">assembler_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a1e2feb2a48b639fc6769a6bc26b3fe1d">SetPendingMove</a>(cycle[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]);</div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>  }</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  assembler_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a28a361de6e0b26d6eb78073b1c6d148a">MoveToTempLocation</a>(&amp;move1-&gt;source(), rep);</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  InstructionOperand <a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a> = move1-&gt;destination();</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  move1-&gt;Eliminate();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ab92ef3f8c3dffa455e0267398566e5b1">assembler_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a28a361de6e0b26d6eb78073b1c6d148a">MoveToTempLocation</a>(&amp;move1-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a4aa05ae621c53fba614650d91a6db7dd">source</a>(), rep);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1InstructionOperand.html">InstructionOperand</a> <a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a> = move1-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a4ae8fd7ac23be3f2e6271043a6d13c48">destination</a>();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>  move1-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#ab39953280d3cb4e1e68b76cbcf7665ab">Eliminate</a>();</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; cycle.size() - 1; ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    assembler_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a6a0e6dc1f86df92f38d770fa454cce9a">AssembleMove</a>(&amp;cycle[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]-&gt;<a class="code hl_variable" href="move-optimizer_8cc.html#a93b84296d9854b2ab5bd18f69c3f8768">source</a>(), &amp;cycle[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]-&gt;<a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a>());</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ab92ef3f8c3dffa455e0267398566e5b1">assembler_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a6a0e6dc1f86df92f38d770fa454cce9a">AssembleMove</a>(&amp;cycle[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]-&gt;<a class="code hl_variable" href="move-optimizer_8cc.html#a93b84296d9854b2ab5bd18f69c3f8768">source</a>(), &amp;cycle[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]-&gt;<a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a>());</div>
 <div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    cycle[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>]-&gt;Eliminate();</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>  }</div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  assembler_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#ae0d941f8192f6ce27f13fecb5ec6be83">MoveTempLocationTo</a>(&amp;<a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a>, rep);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>  <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ab92ef3f8c3dffa455e0267398566e5b1">assembler_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#ae0d941f8192f6ce27f13fecb5ec6be83">MoveTempLocationTo</a>(&amp;<a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a>, rep);</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>  <span class="comment">// We do not need to update the sources of the remaining moves in the parallel</span></div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>  <span class="comment">// move. If any of the remaining moves had the same source as one of the moves</span></div>
 <div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>  <span class="comment">// in the cycle, it would block the cycle and would have already been</span></div>
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>  <span class="comment">// assembled by {PerformMoveHelper}.</span></div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>}</div>
+</div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="keywordtype">void</span> GapResolver::PerformMove(ParallelMove* moves, MoveOperands* move) {</div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="}">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ad0223db0bb3d370388a927cd46bb0cbe">  131</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ad0223db0bb3d370388a927cd46bb0cbe">GapResolver::PerformMove</a>(<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ParallelMove.html">ParallelMove</a>* moves, <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html">MoveOperands</a>* move) {</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>  <span class="comment">// Try to perform the move and its dependencies with {PerformMoveHelper}.</span></div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>  <span class="comment">// This helper function will be able to solve most cases, including cycles.</span></div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>  <span class="comment">// But for some rare cases, it will bail out and return one of the</span></div>
 <div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>  <span class="comment">// problematic moves. In this case, push the source to the stack to</span></div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>  <span class="comment">// break the cycles that it belongs to, and try again.</span></div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>  std::vector&lt;MoveOperands*&gt; cycle;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  <span class="keywordflow">while</span> (MoveOperands* blocking_move = PerformMoveHelper(moves, move, &amp;cycle)) {</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>  <span class="keywordflow">while</span> (<a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html">MoveOperands</a>* blocking_move = <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#a82d43538b2a67e77a0da6a57d412e376">PerformMoveHelper</a>(moves, move, &amp;cycle)) {</div>
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="comment">// Push an arbitrary operand of the cycle to break it.</span></div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    AllocatedOperand scratch = assembler_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#aaef55edc4cc222c5c97da17974897256">Push</a>(&amp;blocking_move-&gt;source());</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    InstructionOperand source = blocking_move-&gt;source();</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1AllocatedOperand.html">AllocatedOperand</a> scratch = <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ab92ef3f8c3dffa455e0267398566e5b1">assembler_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#aaef55edc4cc222c5c97da17974897256">Push</a>(&amp;blocking_move-&gt;source());</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1InstructionOperand.html">InstructionOperand</a> source = blocking_move-&gt;source();</div>
 <div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> <a class="code hl_variable" href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a> : *moves) {</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>      <span class="keywordflow">if</span> (<a class="code hl_variable" href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a>-&gt;source() == source) {</div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        <a class="code hl_variable" href="mul-fft_8cc.html#a742204794ea328ba293fe59cec79b990">m</a>-&gt;set_source(scratch);</div>
@@ -254,9 +250,11 @@ $(function(){initNavTree('gap-resolver_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    cycle.clear();</div>
 <div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>  }</div>
 <div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>}</div>
+</div>
 <div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>MoveOperands* GapResolver::PerformMoveHelper(</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    ParallelMove* moves, MoveOperands* move,</div>
+<div class="foldopen" id="foldopen00151" data-start="{" data-end="}">
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#a82d43538b2a67e77a0da6a57d412e376">  151</a></span><a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html">MoveOperands</a>* <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#a82d43538b2a67e77a0da6a57d412e376">GapResolver::PerformMoveHelper</a>(</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1ParallelMove.html">ParallelMove</a>* moves, <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html">MoveOperands</a>* move,</div>
 <div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    std::vector&lt;MoveOperands*&gt;* cycle) {</div>
 <div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>  <span class="comment">// We interpret moves as nodes in a graph. x is a successor of y (x blocks y)</span></div>
 <div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>  <span class="comment">// if x.source() conflicts with y.destination(). We recursively assemble the</span></div>
@@ -276,13 +274,13 @@ $(function(){initNavTree('gap-resolver_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>  <span class="comment">// Clear this move&#39;s destination to indicate a pending move.  The actual</span></div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>  <span class="comment">// destination is saved on the side.</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  InstructionOperand source = move-&gt;source();</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1InstructionOperand.html">InstructionOperand</a> source = move-&gt;source();</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>  <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(!source.IsInvalid());  <span class="comment">// Or else it will look eliminated.</span></div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  InstructionOperand <a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a> = move-&gt;destination();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1InstructionOperand.html">InstructionOperand</a> <a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a> = move-&gt;destination();</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>  move-&gt;SetPending();</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  MoveOperands* blocking_move = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>  <a class="code hl_class" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html">MoveOperands</a>* blocking_move = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; moves-&gt;<a class="code hl_class" href="classsize.html">size</a>(); ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>  <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; moves-&gt;size(); ++<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>) {</div>
 <div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keyword">auto</span> other = (*moves)[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>];</div>
 <div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordflow">if</span> (other-&gt;IsEliminated()) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordflow">if</span> (other == move) <span class="keywordflow">continue</span>;</div>
@@ -300,7 +298,7 @@ $(function(){initNavTree('gap-resolver_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        cycle-&gt;push_back(other);</div>
 <div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>      } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        std::vector&lt;MoveOperands*&gt; cycle_rec;</div>
-<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        blocking_move = PerformMoveHelper(moves, other, &amp;cycle_rec);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        blocking_move = <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#a82d43538b2a67e77a0da6a57d412e376">PerformMoveHelper</a>(moves, other, &amp;cycle_rec);</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        <span class="keywordflow">if</span> (blocking_move) <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        <span class="keywordflow">if</span> (!cycle-&gt;empty() &amp;&amp; !cycle_rec.empty()) {</div>
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>          blocking_move = cycle_rec.front();</div>
@@ -315,7 +313,7 @@ $(function(){initNavTree('gap-resolver_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
 <div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>  <span class="comment">// We finished processing all the blocking moves and don&#39;t need this one</span></div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>  <span class="comment">// marked as pending anymore, restore its destination.</span></div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  move-&gt;set_destination(<a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a>);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>  move-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#aae527d9ab8855c81ac7b3f0bfd6bb194">set_destination</a>(<a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a>);</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>  <span class="keywordflow">if</span> (blocking_move != <span class="keyword">nullptr</span>) <span class="keywordflow">return</span> blocking_move;</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span> </div>
@@ -323,24 +321,25 @@ $(function(){initNavTree('gap-resolver_8cc_source.html',''); initResizable(true)
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordflow">if</span> (cycle-&gt;front() == move) {</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>      <span class="comment">// We returned to the topmost move in the cycle and assembled all the</span></div>
 <div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>      <span class="comment">// other dependencies. Assemble the cycle.</span></div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      PerformCycle(*cycle);</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>      <a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#a9bf1fdfc47fd6203542f17c079caeffd">PerformCycle</a>(*cycle);</div>
 <div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>      cycle-&gt;clear();</div>
 <div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>      cycle-&gt;push_back(move);</div>
 <div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    }</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>  } <span class="keywordflow">else</span> {</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    assembler_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a6a0e6dc1f86df92f38d770fa454cce9a">AssembleMove</a>(&amp;source, &amp;<a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a>);</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <a class="code hl_variable" href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ab92ef3f8c3dffa455e0267398566e5b1">assembler_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a6a0e6dc1f86df92f38d770fa454cce9a">AssembleMove</a>(&amp;source, &amp;<a class="code hl_variable" href="move-optimizer_8cc.html#adb1a4461ad083604a932b7eeba4780de">destination</a>);</div>
 <div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    move-&gt;Eliminate();</div>
 <div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>  }</div>
 <div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>  <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>}</div>
+</div>
 <div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
 <div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>}  <span class="comment">// namespace compiler</span></div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>}  <span class="comment">// namespace internal</span></div>
 <div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>}  <span class="comment">// namespace v8</span></div>
-<div class="ttc" id="aclasssize_html"><div class="ttname"><a href="classsize.html">size</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1EnumSet_html"><div class="ttname"><a href="classv8_1_1base_1_1EnumSet.html">v8::base::EnumSet</a></div><div class="ttdef"><b>Definition</b> <a href="enum-set_8h_source.html#l00020">enum-set.h:20</a></div></div>
 <div class="ttc" id="aclassv8_1_1base_1_1EnumSet_html_a284a9564cbcce06b154271c335244102"><div class="ttname"><a href="classv8_1_1base_1_1EnumSet.html#a284a9564cbcce06b154271c335244102">v8::base::EnumSet::Add</a></div><div class="ttdeci">constexpr void Add(E element)</div><div class="ttdef"><b>Definition</b> <a href="enum-set_8h_source.html#l00050">enum-set.h:50</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1AllocatedOperand_html"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1AllocatedOperand.html">v8::internal::compiler::AllocatedOperand</a></div><div class="ttdef"><b>Definition</b> <a href="instruction_8h_source.html#l00619">instruction.h:619</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler_html_a1e2feb2a48b639fc6769a6bc26b3fe1d"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a1e2feb2a48b639fc6769a6bc26b3fe1d">v8::internal::compiler::GapResolver::Assembler::SetPendingMove</a></div><div class="ttdeci">virtual void SetPendingMove(MoveOperands *move)=0</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler_html_a28a361de6e0b26d6eb78073b1c6d148a"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a28a361de6e0b26d6eb78073b1c6d148a">v8::internal::compiler::GapResolver::Assembler::MoveToTempLocation</a></div><div class="ttdeci">virtual void MoveToTempLocation(InstructionOperand *src, MachineRepresentation rep)=0</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler_html_a6a0e6dc1f86df92f38d770fa454cce9a"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#a6a0e6dc1f86df92f38d770fa454cce9a">v8::internal::compiler::GapResolver::Assembler::AssembleMove</a></div><div class="ttdeci">virtual void AssembleMove(InstructionOperand *source, InstructionOperand *destination)=0</div></div>
@@ -348,13 +347,20 @@ $(function(){initNavTree('gap-resolver_8cc_source.html',''); initResizable(true)
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler_html_aaef55edc4cc222c5c97da17974897256"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#aaef55edc4cc222c5c97da17974897256">v8::internal::compiler::GapResolver::Assembler::Push</a></div><div class="ttdeci">virtual AllocatedOperand Push(InstructionOperand *src)=0</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler_html_ab9e918f93b00369c3b93533d48cc033a"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#ab9e918f93b00369c3b93533d48cc033a">v8::internal::compiler::GapResolver::Assembler::PopTempStackSlots</a></div><div class="ttdeci">virtual void PopTempStackSlots()=0</div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler_html_ae0d941f8192f6ce27f13fecb5ec6be83"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1GapResolver_1_1Assembler.html#ae0d941f8192f6ce27f13fecb5ec6be83">v8::internal::compiler::GapResolver::Assembler::MoveTempLocationTo</a></div><div class="ttdeci">virtual void MoveTempLocationTo(InstructionOperand *dst, MachineRepresentation rep)=0</div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1GapResolver_html_a82d43538b2a67e77a0da6a57d412e376"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#a82d43538b2a67e77a0da6a57d412e376">v8::internal::compiler::GapResolver::PerformMoveHelper</a></div><div class="ttdeci">MoveOperands * PerformMoveHelper(ParallelMove *moves, MoveOperands *move, std::vector&lt; MoveOperands * &gt; *cycle)</div><div class="ttdef"><b>Definition</b> <a href="#l00151">gap-resolver.cc:151</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1GapResolver_html_a9bf1fdfc47fd6203542f17c079caeffd"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#a9bf1fdfc47fd6203542f17c079caeffd">v8::internal::compiler::GapResolver::PerformCycle</a></div><div class="ttdeci">void PerformCycle(const std::vector&lt; MoveOperands * &gt; &amp;cycle)</div><div class="ttdef"><b>Definition</b> <a href="#l00081">gap-resolver.cc:81</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1GapResolver_html_ab92ef3f8c3dffa455e0267398566e5b1"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ab92ef3f8c3dffa455e0267398566e5b1">v8::internal::compiler::GapResolver::assembler_</a></div><div class="ttdeci">Assembler *const assembler_</div><div class="ttdef"><b>Definition</b> <a href="gap-resolver_8h_source.html#l00071">gap-resolver.h:71</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1GapResolver_html_ac1a0a4967cb5b68dd9baab80e5c40f5c"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ac1a0a4967cb5b68dd9baab80e5c40f5c">v8::internal::compiler::GapResolver::Resolve</a></div><div class="ttdeci">V8_EXPORT_PRIVATE void Resolve(ParallelMove *parallel_move)</div><div class="ttdef"><b>Definition</b> <a href="#l00030">gap-resolver.cc:30</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1GapResolver_html_ad0223db0bb3d370388a927cd46bb0cbe"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1GapResolver.html#ad0223db0bb3d370388a927cd46bb0cbe">v8::internal::compiler::GapResolver::PerformMove</a></div><div class="ttdeci">void PerformMove(ParallelMove *moves, MoveOperands *move)</div><div class="ttdef"><b>Definition</b> <a href="#l00131">gap-resolver.cc:131</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1InstructionOperand_html"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1InstructionOperand.html">v8::internal::compiler::InstructionOperand</a></div><div class="ttdef"><b>Definition</b> <a href="instruction_8h_source.html#l00048">instruction.h:48</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1LocationOperand_html_a598f20b98f0d7647b58bef3b57ec20a9"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1LocationOperand.html#a598f20b98f0d7647b58bef3b57ec20a9">v8::internal::compiler::LocationOperand::representation</a></div><div class="ttdeci">MachineRepresentation representation() const</div><div class="ttdef"><b>Definition</b> <a href="instruction_8h_source.html#l00563">instruction.h:563</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1LocationOperand_html_a801512516bd6cdefad3ca6ddc15e179d"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1LocationOperand.html#a801512516bd6cdefad3ca6ddc15e179d">v8::internal::compiler::LocationOperand::cast</a></div><div class="ttdeci">static LocationOperand * cast(InstructionOperand *op)</div><div class="ttdef"><b>Definition</b> <a href="instruction_8h_source.html#l00598">instruction.h:598</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1LocationOperand_html_af9e0a334eaf58a05f9ea5b7139221140aafe479edbb7a04d078220746abc95b19"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1LocationOperand.html#af9e0a334eaf58a05f9ea5b7139221140aafe479edbb7a04d078220746abc95b19">v8::internal::compiler::LocationOperand::REGISTER</a></div><div class="ttdeci">@ REGISTER</div><div class="ttdef"><b>Definition</b> <a href="instruction_8h_source.html#l00499">instruction.h:499</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1MoveOperands_html"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html">v8::internal::compiler::MoveOperands</a></div><div class="ttdef"><b>Definition</b> <a href="instruction_8h_source.html#l00767">instruction.h:768</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1MoveOperands_html_a4aa05ae621c53fba614650d91a6db7dd"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a4aa05ae621c53fba614650d91a6db7dd">v8::internal::compiler::MoveOperands::source</a></div><div class="ttdeci">const InstructionOperand &amp; source() const</div><div class="ttdef"><b>Definition</b> <a href="instruction_8h_source.html#l00795">instruction.h:795</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1MoveOperands_html_a4ae8fd7ac23be3f2e6271043a6d13c48"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#a4ae8fd7ac23be3f2e6271043a6d13c48">v8::internal::compiler::MoveOperands::destination</a></div><div class="ttdeci">const InstructionOperand &amp; destination() const</div><div class="ttdef"><b>Definition</b> <a href="instruction_8h_source.html#l00802">instruction.h:802</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1MoveOperands_html_aae527d9ab8855c81ac7b3f0bfd6bb194"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#aae527d9ab8855c81ac7b3f0bfd6bb194">v8::internal::compiler::MoveOperands::set_destination</a></div><div class="ttdeci">void set_destination(const InstructionOperand &amp;operand)</div><div class="ttdef"><b>Definition</b> <a href="instruction_8h_source.html#l00804">instruction.h:804</a></div></div>
+<div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1MoveOperands_html_ab39953280d3cb4e1e68b76cbcf7665ab"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1MoveOperands.html#ab39953280d3cb4e1e68b76cbcf7665ab">v8::internal::compiler::MoveOperands::Eliminate</a></div><div class="ttdeci">void Eliminate()</div><div class="ttdef"><b>Definition</b> <a href="instruction_8h_source.html#l00824">instruction.h:824</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1compiler_1_1ParallelMove_html"><div class="ttname"><a href="classv8_1_1internal_1_1compiler_1_1ParallelMove.html">v8::internal::compiler::ParallelMove</a></div><div class="ttdef"><b>Definition</b> <a href="instruction_8h_source.html#l00846">instruction.h:848</a></div></div>
 <div class="ttc" id="aenum-set_8h_html"><div class="ttname"><a href="enum-set_8h.html">enum-set.h</a></div></div>
 <div class="ttc" id="agap-resolver_8h_html"><div class="ttname"><a href="gap-resolver_8h.html">gap-resolver.h</a></div></div>
@@ -374,13 +380,10 @@ $(function(){initNavTree('gap-resolver_8cc_source.html',''); initResizable(true)
 <div class="ttc" id="anamespacev8_html"><div class="ttname"><a href="namespacev8.html">v8</a></div><div class="ttdef"><b>Definition</b> <a href="api-arguments-inl_8h_source.html#l00017">api-arguments-inl.h:17</a></div></div>
 <div class="ttc" id="aregister-configuration_8h_html"><div class="ttname"><a href="register-configuration_8h.html">register-configuration.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_f13bc85843fa14191e0ad4a3a157cf60.html">compiler</a></li><li class="navelem"><a class="el" href="dir_ea3a8a4e4b987044b4a5aa16ea5873dc.html">backend</a></li><li class="navelem"><a class="el" href="gap-resolver_8cc.html">gap-resolver.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:17:07 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

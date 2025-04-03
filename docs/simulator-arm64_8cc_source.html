@@ -5,14 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>v8: src/execution/arm64/simulator-arm64.cc Source File</title>
+<title>v8: /home/w1redch4d/Documents/browser-exploitation/v8/v8/src/execution/arm64/simulator-arm64.cc Source File</title>
+<link rel="icon" href="v8.svg" type="image/x-icon" />
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="cookie.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
@@ -53,29 +52,17 @@ $(function() { codefold.init(0); });
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
 $(function() {
-  initMenu('',true,false,'search.php','Search',true);
+  initMenu('',true,false,'search.php','Search',false);
   $(function() { init_search(); });
 });
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-      <div id="nav-sync" class="sync"></div>
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(true); });
+$(function(){ initResizable(false); });
 /* @license-end */
 </script>
-<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -97,6 +84,12 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bd0755c95a42e835fb06f38bbeb1d6ed.html">execution</a></li><li class="navelem"><a class="el" href="dir_308b7fb6abddc38655bf3cd39077ea7d.html">arm64</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
 <div class="header">
   <div class="headertitle"><div class="title">simulator-arm64.cc</div></div>
 </div><!--header-->
@@ -180,7 +173,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keywordtype">bool</span> Simulator::ProbeMemory(uintptr_t address, uintptr_t access_size) {</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#if V8_ENABLE_WEBASSEMBLY &amp;&amp; V8_TRAP_HANDLER_SUPPORTED</span></div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>  uintptr_t last_accessed_byte = address + access_size - 1;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  uintptr_t current_pc = <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(pc_);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>  uintptr_t current_pc = <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>);</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>  uintptr_t landing_pad =</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>      trap_handler::ProbeMemory(last_accessed_byte, current_pc);</div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>  <span class="keywordflow">if</span> (!landing_pad) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
@@ -212,7 +205,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>  uint32_t <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a> = ((1 &lt;&lt; width) - 1) &lt;&lt; lsb;</div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a> &amp; write_ignore_mask_, 0);</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  value_ = (value_ &amp; ~mask) | (bits &amp; <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>  <a class="code hl_variable" href="code-generator-arm_8cc.html#ac1b34591c0a6bb909fcc2d34d0b5aaff">value_</a> = (<a class="code hl_variable" href="code-generator-arm_8cc.html#ac1b34591c0a6bb909fcc2d34d0b5aaff">value_</a> &amp; ~mask) | (bits &amp; <a class="code hl_variable" href="machine-operator-reducer_8cc.html#a406af858c5259e17f9ddc64513999dac">mask</a>);</div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>}</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>SimSystemRegister SimSystemRegister::DefaultValueFor(<a class="code hl_enumeration" href="namespacev8_1_1internal.html#a888b25ee149fee988d165a43496de3ad">SystemRegister</a> <span class="keywordtype">id</span>) {</div>
@@ -305,7 +298,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="keywordtype">void</span> Simulator::CheckPCSComplianceAndRun() {</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>  <span class="comment">// Adjust JS-based stack limit to C-based stack limit.</span></div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  isolate_-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#aa1d56784c93784d8154d8bc2f5c62721">stack_guard</a>()-&gt;AdjustStackLimitForSimulator();</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>  <a class="code hl_variable" href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a>-&gt;<a class="code hl_function" href="classv8_1_1internal_1_1Isolate.html#aa1d56784c93784d8154d8bc2f5c62721">stack_guard</a>()-&gt;AdjustStackLimitForSimulator();</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
 <div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span><span class="preprocessor">#ifdef DEBUG</span></div>
 <div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>  <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="namespacev8_1_1internal.html#ae66547e717c634f03fd938317ab318ea">kNumberOfCalleeSavedRegisters</a>, <a class="code hl_variable" href="namespacev8_1_1internal.html#a3ad590c194f94aef8dc7168057dc0609">kCalleeSaved</a>.<a class="code hl_function" href="classv8_1_1internal_1_1RegListBase.html#a8a586367d3a47c009d14bd52a47cd45b">Count</a>());</div>
@@ -421,11 +414,11 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span> </div>
 <div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>  <span class="comment">// Otherwise the limit is the JS stack. Leave a safety margin to prevent</span></div>
 <div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>  <span class="comment">// overrunning the stack when pushing values.</span></div>
-<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  <span class="keywordflow">return</span> stack_limit_ + kAdditionalStackMargin;</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>  <span class="keywordflow">return</span> <a class="code hl_variable" href="regexp-parser_8cc.html#ae3f02fa951c4dcb5ca0c973870bfd79d">stack_limit_</a> + kAdditionalStackMargin;</div>
 <div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>}</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
 <div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span><span class="keywordtype">void</span> Simulator::SetStackLimit(uintptr_t limit) {</div>
-<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  stack_limit_ = <span class="keyword">static_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(limit - kAdditionalStackMargin);</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span>  <a class="code hl_variable" href="regexp-parser_8cc.html#ae3f02fa951c4dcb5ca0c973870bfd79d">stack_limit_</a> = <span class="keyword">static_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(limit - kAdditionalStackMargin);</div>
 <div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>}</div>
 <div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
 <div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>base::Vector&lt;uint8_t&gt; Simulator::GetCentralStackView()<span class="keyword"> const </span>{</div>
@@ -449,7 +442,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>      last_debugger_input_(nullptr),</div>
 <div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>      log_parameters_(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a74fb79617946b9646299bf4db3c9f601adbd18465ad9bb001dc3dc86bc01b58af">NO_PARAM</a>),</div>
 <div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>      icount_for_stop_sim_at_(0),</div>
-<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      isolate_(isolate) {</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>      <a class="code hl_variable" href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a>(isolate) {</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>  <span class="comment">// Setup the decoder.</span></div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>  decoder_-&gt;AppendVisitor(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
@@ -466,7 +459,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>      guard_pages_(<a class="code hl_define" href="common_2globals_8h.html#a014409a21c0c6f0899042f1d5afd19ac">ENABLE_CONTROL_FLOW_INTEGRITY_BOOL</a>),</div>
 <div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>      last_debugger_input_(nullptr),</div>
 <div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>      log_parameters_(<a class="code hl_enumvalue" href="namespacev8_1_1internal.html#a74fb79617946b9646299bf4db3c9f601adbd18465ad9bb001dc3dc86bc01b58af">NO_PARAM</a>),</div>
-<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>      isolate_(nullptr) {</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>      <a class="code hl_variable" href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a>(nullptr) {</div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>  Init(stdout);</div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>  <a class="code hl_define" href="logging_8h.html#a3e1cfef60e774a81f30eaddf26a3a274">CHECK</a>(!<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.trace_sim);</div>
 <div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>}</div>
@@ -478,7 +471,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span>  <span class="keywordtype">size_t</span> stack_size = AllocatedStackSize();</div>
 <div class="line"><a id="l00376" name="l00376"></a><span class="lineno">  376</span> </div>
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>  stack_ = <span class="keyword">reinterpret_cast&lt;</span>uintptr_t<span class="keyword">&gt;</span>(<span class="keyword">new</span> uint8_t[stack_size]());</div>
-<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>  stack_limit_ = stack_ + kStackProtectionSize;</div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>  <a class="code hl_variable" href="regexp-parser_8cc.html#ae3f02fa951c4dcb5ca0c973870bfd79d">stack_limit_</a> = stack_ + kStackProtectionSize;</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>  uintptr_t tos = stack_ + stack_size - kStackProtectionSize;</div>
 <div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>  <span class="comment">// The stack pointer must be 16-byte aligned.</span></div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>  set_sp(tos &amp; ~0xFULL);</div>
@@ -498,7 +491,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>  fpcr_ = SimSystemRegister::DefaultValueFor(FPCR);</div>
 <div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span> </div>
 <div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>  <span class="comment">// Reset registers to 0.</span></div>
-<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>  pc_ = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span>  <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a> = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; <a class="code hl_variable" href="namespacev8_1_1internal.html#a47b347cc324221a47339bedca96ce81d">kNumberOfRegisters</a>; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>++) {</div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>    set_xreg(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>, 0xBADBEEF);</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>  }</div>
@@ -534,13 +527,13 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>  <span class="keywordflow">if</span> (<a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.stop_sim_at == 0) {</div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>    <span class="comment">// Fast version of the dispatch loop without checking whether the simulator</span></div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>    <span class="comment">// should be stopping at a particular executed instruction.</span></div>
-<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>    <span class="keywordflow">while</span> (pc_ != kEndOfSimAddress) {</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>    <span class="keywordflow">while</span> (<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a> != kEndOfSimAddress) {</div>
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>      ExecuteInstruction();</div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>    }</div>
 <div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>  } <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>    <span class="comment">// v8_flags.stop_sim_at is at the non-default value. Stop in the debugger</span></div>
 <div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span>    <span class="comment">// when we reach the particular instruction count.</span></div>
-<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>    <span class="keywordflow">while</span> (pc_ != kEndOfSimAddress) {</div>
+<div class="line"><a id="l00440" name="l00440"></a><span class="lineno">  440</span>    <span class="keywordflow">while</span> (<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a> != kEndOfSimAddress) {</div>
 <div class="line"><a id="l00441" name="l00441"></a><span class="lineno">  441</span>      icount_for_stop_sim_at_ =</div>
 <div class="line"><a id="l00442" name="l00442"></a><span class="lineno">  442</span>          base::AddWithWraparound(icount_for_stop_sim_at_, 1);</div>
 <div class="line"><a id="l00443" name="l00443"></a><span class="lineno">  443</span>      <span class="keywordflow">if</span> (icount_for_stop_sim_at_ == <a class="code hl_variable" href="namespacev8_1_1internal.html#aa9db791c05a0359859a321dcfec42e37">v8_flags</a>.stop_sim_at) {</div>
@@ -750,7 +743,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span> </div>
 <div class="line"><a id="l00648" name="l00648"></a><span class="lineno">  648</span>  <a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a> func_addr =</div>
 <div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>      <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a><span class="keyword">&gt;</span>(redirection-&gt;external_function());</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>  SimulatorData* simulator_data = isolate_-&gt;simulator_data();</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>  SimulatorData* simulator_data = <a class="code hl_variable" href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a>-&gt;simulator_data();</div>
 <div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>  <a class="code hl_define" href="logging_8h.html#a7b9f9517fedacc2a1a56c2bbb9d03688">DCHECK_NOT_NULL</a>(simulator_data);</div>
 <div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>  <span class="keyword">const</span> EncodedCSignature&amp; signature =</div>
 <div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>      simulator_data-&gt;GetSignatureForTarget(func_addr);</div>
@@ -1506,7 +1499,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l01403" name="l01403"></a><span class="lineno"> 1403</span><span class="keywordtype">void</span> Simulator::CheckBreakpoints() {</div>
 <div class="line"><a id="l01404" name="l01404"></a><span class="lineno"> 1404</span>  <span class="keywordtype">bool</span> hit_a_breakpoint = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l01405" name="l01405"></a><span class="lineno"> 1405</span>  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; breakpoints_.<a class="code hl_class" href="classsize.html">size</a>(); <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>++) {</div>
-<div class="line"><a id="l01406" name="l01406"></a><span class="lineno"> 1406</span>    <span class="keywordflow">if</span> ((breakpoints_.at(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>).location == pc_) &amp;&amp; breakpoints_.at(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>).enabled) {</div>
+<div class="line"><a id="l01406" name="l01406"></a><span class="lineno"> 1406</span>    <span class="keywordflow">if</span> ((breakpoints_.at(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>).location == <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>) &amp;&amp; breakpoints_.at(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>).enabled) {</div>
 <div class="line"><a id="l01407" name="l01407"></a><span class="lineno"> 1407</span>      hit_a_breakpoint = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l01408" name="l01408"></a><span class="lineno"> 1408</span>      <span class="comment">// Disable this breakpoint.</span></div>
 <div class="line"><a id="l01409" name="l01409"></a><span class="lineno"> 1409</span>      breakpoints_.at(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>).enabled = <span class="keyword">false</span>;</div>
@@ -1514,15 +1507,15 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l01411" name="l01411"></a><span class="lineno"> 1411</span>  }</div>
 <div class="line"><a id="l01412" name="l01412"></a><span class="lineno"> 1412</span>  <span class="keywordflow">if</span> (hit_a_breakpoint) {</div>
 <div class="line"><a id="l01413" name="l01413"></a><span class="lineno"> 1413</span>    <a class="code hl_function" href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">PrintF</a>(stream_, <span class="stringliteral">&quot;Hit and disabled a breakpoint at %p.\n&quot;</span>,</div>
-<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>           <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(pc_));</div>
+<div class="line"><a id="l01414" name="l01414"></a><span class="lineno"> 1414</span>           <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>));</div>
 <div class="line"><a id="l01415" name="l01415"></a><span class="lineno"> 1415</span>    Debug();</div>
 <div class="line"><a id="l01416" name="l01416"></a><span class="lineno"> 1416</span>  }</div>
 <div class="line"><a id="l01417" name="l01417"></a><span class="lineno"> 1417</span>}</div>
 <div class="line"><a id="l01418" name="l01418"></a><span class="lineno"> 1418</span> </div>
 <div class="line"><a id="l01419" name="l01419"></a><span class="lineno"> 1419</span><span class="keywordtype">void</span> Simulator::CheckBreakNext() {</div>
 <div class="line"><a id="l01420" name="l01420"></a><span class="lineno"> 1420</span>  <span class="comment">// If the current instruction is a BL, insert a breakpoint just after it.</span></div>
-<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>  <span class="keywordflow">if</span> (break_on_next_ &amp;&amp; pc_-&gt;IsBranchAndLinkToRegister()) {</div>
-<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>    SetBreakpoint(pc_-&gt;following());</div>
+<div class="line"><a id="l01421" name="l01421"></a><span class="lineno"> 1421</span>  <span class="keywordflow">if</span> (break_on_next_ &amp;&amp; <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>-&gt;IsBranchAndLinkToRegister()) {</div>
+<div class="line"><a id="l01422" name="l01422"></a><span class="lineno"> 1422</span>    SetBreakpoint(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>-&gt;following());</div>
 <div class="line"><a id="l01423" name="l01423"></a><span class="lineno"> 1423</span>    break_on_next_ = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l01424" name="l01424"></a><span class="lineno"> 1424</span>  }</div>
 <div class="line"><a id="l01425" name="l01425"></a><span class="lineno"> 1425</span>}</div>
@@ -1536,7 +1529,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l01433" name="l01433"></a><span class="lineno"> 1433</span> </div>
 <div class="line"><a id="l01434" name="l01434"></a><span class="lineno"> 1434</span><span class="keywordtype">void</span> Simulator::PrintWrittenRegisters() {</div>
 <div class="line"><a id="l01435" name="l01435"></a><span class="lineno"> 1435</span>  <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> = 0; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a> &lt; <a class="code hl_variable" href="namespacev8_1_1internal.html#a47b347cc324221a47339bedca96ce81d">kNumberOfRegisters</a>; <a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>++) {</div>
-<div class="line"><a id="l01436" name="l01436"></a><span class="lineno"> 1436</span>    <span class="keywordflow">if</span> (registers_[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>].WrittenSinceLastLog()) PrintRegister(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>);</div>
+<div class="line"><a id="l01436" name="l01436"></a><span class="lineno"> 1436</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="regexp-interpreter_8cc.html#a147ef59429460248dd4522a17ab6602a">registers_</a>[<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>].WrittenSinceLastLog()) PrintRegister(<a class="code hl_namespace" href="namespacev8_1_1internal.html">i</a>);</div>
 <div class="line"><a id="l01437" name="l01437"></a><span class="lineno"> 1437</span>  }</div>
 <div class="line"><a id="l01438" name="l01438"></a><span class="lineno"> 1438</span>}</div>
 <div class="line"><a id="l01439" name="l01439"></a><span class="lineno"> 1439</span> </div>
@@ -1566,7 +1559,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l01463" name="l01463"></a><span class="lineno"> 1463</span>}</div>
 <div class="line"><a id="l01464" name="l01464"></a><span class="lineno"> 1464</span> </div>
 <div class="line"><a id="l01465" name="l01465"></a><span class="lineno"> 1465</span><span class="keywordtype">void</span> Simulator::PrintRegister(<span class="keywordtype">unsigned</span> code, Reg31Mode r31mode) {</div>
-<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>  registers_[<a class="code hl_variable" href="code-reference_8cc.html#aeaf31c189d3b2a89ff45fedfceb87d9d">code</a>].NotifyRegisterLogged();</div>
+<div class="line"><a id="l01466" name="l01466"></a><span class="lineno"> 1466</span>  <a class="code hl_variable" href="regexp-interpreter_8cc.html#a147ef59429460248dd4522a17ab6602a">registers_</a>[<a class="code hl_variable" href="code-reference_8cc.html#aeaf31c189d3b2a89ff45fedfceb87d9d">code</a>].NotifyRegisterLogged();</div>
 <div class="line"><a id="l01467" name="l01467"></a><span class="lineno"> 1467</span> </div>
 <div class="line"><a id="l01468" name="l01468"></a><span class="lineno"> 1468</span>  <span class="comment">// Don&#39;t print writes into xzr.</span></div>
 <div class="line"><a id="l01469" name="l01469"></a><span class="lineno"> 1469</span>  <span class="keywordflow">if</span> ((code == kZeroRegCode) &amp;&amp; (r31mode == Reg31IsZeroRegister)) {</div>
@@ -1794,7 +1787,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l01691" name="l01691"></a><span class="lineno"> 1691</span> </div>
 <div class="line"><a id="l01692" name="l01692"></a><span class="lineno"> 1692</span><span class="keywordtype">void</span> Simulator::PrintRead(uintptr_t address, <span class="keywordtype">unsigned</span> reg_code,</div>
 <div class="line"><a id="l01693" name="l01693"></a><span class="lineno"> 1693</span>                          PrintRegisterFormat format) {</div>
-<div class="line"><a id="l01694" name="l01694"></a><span class="lineno"> 1694</span>  registers_[reg_code].NotifyRegisterLogged();</div>
+<div class="line"><a id="l01694" name="l01694"></a><span class="lineno"> 1694</span>  <a class="code hl_variable" href="regexp-interpreter_8cc.html#a147ef59429460248dd4522a17ab6602a">registers_</a>[reg_code].NotifyRegisterLogged();</div>
 <div class="line"><a id="l01695" name="l01695"></a><span class="lineno"> 1695</span> </div>
 <div class="line"><a id="l01696" name="l01696"></a><span class="lineno"> 1696</span>  <a class="code hl_define" href="macros_8h.html#a280b0798f270f4b3f361c9ab64832956">USE</a>(format);</div>
 <div class="line"><a id="l01697" name="l01697"></a><span class="lineno"> 1697</span> </div>
@@ -3025,14 +3018,14 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l02922" name="l02922"></a><span class="lineno"> 2922</span>}</div>
 <div class="line"><a id="l02923" name="l02923"></a><span class="lineno"> 2923</span> </div>
 <div class="line"><a id="l02924" name="l02924"></a><span class="lineno"> 2924</span><span class="keywordtype">void</span> Simulator::CheckMemoryAccess(uintptr_t address, uintptr_t stack) {</div>
-<div class="line"><a id="l02925" name="l02925"></a><span class="lineno"> 2925</span>  <span class="keywordflow">if</span> ((address &gt;= stack_limit_) &amp;&amp; (address &lt; stack)) {</div>
+<div class="line"><a id="l02925" name="l02925"></a><span class="lineno"> 2925</span>  <span class="keywordflow">if</span> ((address &gt;= <a class="code hl_variable" href="regexp-parser_8cc.html#ae3f02fa951c4dcb5ca0c973870bfd79d">stack_limit_</a>) &amp;&amp; (address &lt; stack)) {</div>
 <div class="line"><a id="l02926" name="l02926"></a><span class="lineno"> 2926</span>    fprintf(stream_, <span class="stringliteral">&quot;ACCESS BELOW STACK POINTER:\n&quot;</span>);</div>
 <div class="line"><a id="l02927" name="l02927"></a><span class="lineno"> 2927</span>    fprintf(stream_, <span class="stringliteral">&quot;  sp is here:          0x%016&quot;</span> PRIx64 <span class="stringliteral">&quot;\n&quot;</span>,</div>
 <div class="line"><a id="l02928" name="l02928"></a><span class="lineno"> 2928</span>            <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(stack));</div>
 <div class="line"><a id="l02929" name="l02929"></a><span class="lineno"> 2929</span>    fprintf(stream_, <span class="stringliteral">&quot;  access was here:     0x%016&quot;</span> PRIx64 <span class="stringliteral">&quot;\n&quot;</span>,</div>
 <div class="line"><a id="l02930" name="l02930"></a><span class="lineno"> 2930</span>            <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(address));</div>
 <div class="line"><a id="l02931" name="l02931"></a><span class="lineno"> 2931</span>    fprintf(stream_, <span class="stringliteral">&quot;  stack limit is here: 0x%016&quot;</span> PRIx64 <span class="stringliteral">&quot;\n&quot;</span>,</div>
-<div class="line"><a id="l02932" name="l02932"></a><span class="lineno"> 2932</span>            <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(stack_limit_));</div>
+<div class="line"><a id="l02932" name="l02932"></a><span class="lineno"> 2932</span>            <span class="keyword">static_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="regexp-parser_8cc.html#ae3f02fa951c4dcb5ca0c973870bfd79d">stack_limit_</a>));</div>
 <div class="line"><a id="l02933" name="l02933"></a><span class="lineno"> 2933</span>    fprintf(stream_, <span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line"><a id="l02934" name="l02934"></a><span class="lineno"> 2934</span>    <a class="code hl_define" href="logging_8h.html#a0d093cb749cfc7ab5993726392df681f">FATAL</a>(<span class="stringliteral">&quot;ACCESS BELOW STACK POINTER&quot;</span>);</div>
 <div class="line"><a id="l02935" name="l02935"></a><span class="lineno"> 2935</span>  }</div>
@@ -4010,7 +4003,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l03907" name="l03907"></a><span class="lineno"> 3907</span>  <span class="keywordtype">bool</span> done = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l03908" name="l03908"></a><span class="lineno"> 3908</span>  <span class="keywordflow">while</span> (!done) {</div>
 <div class="line"><a id="l03909" name="l03909"></a><span class="lineno"> 3909</span>    <span class="comment">// Disassemble the next instruction to execute before doing anything else.</span></div>
-<div class="line"><a id="l03910" name="l03910"></a><span class="lineno"> 3910</span>    PrintInstructionsAt(pc_, 1);</div>
+<div class="line"><a id="l03910" name="l03910"></a><span class="lineno"> 3910</span>    PrintInstructionsAt(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>, 1);</div>
 <div class="line"><a id="l03911" name="l03911"></a><span class="lineno"> 3911</span>    <span class="comment">// Read the command line.</span></div>
 <div class="line"><a id="l03912" name="l03912"></a><span class="lineno"> 3912</span>    ArrayUniquePtr&lt;char&gt; line(<a class="code hl_function" href="namespacev8_1_1internal.html#a3483f39c23e0616216bebaf3f205b6ad">ReadLine</a>(<span class="stringliteral">&quot;sim&gt; &quot;</span>));</div>
 <div class="line"><a id="l03913" name="l03913"></a><span class="lineno"> 3913</span>    done = ExecDebugCommand(std::move(line));</div>
@@ -4104,7 +4097,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l04001" name="l04001"></a><span class="lineno"> 4001</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(cmd, <span class="stringliteral">&quot;disassemble&quot;</span>) == 0 || strcmp(cmd, <span class="stringliteral">&quot;disasm&quot;</span>) == 0 ||</div>
 <div class="line"><a id="l04002" name="l04002"></a><span class="lineno"> 4002</span>             strcmp(cmd, <span class="stringliteral">&quot;di&quot;</span>) == 0) {</div>
 <div class="line"><a id="l04003" name="l04003"></a><span class="lineno"> 4003</span>    int64_t n_of_instrs_to_disasm = 10;                <span class="comment">// default value.</span></div>
-<div class="line"><a id="l04004" name="l04004"></a><span class="lineno"> 4004</span>    int64_t address = <span class="keyword">reinterpret_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(pc_);  <span class="comment">// default value.</span></div>
+<div class="line"><a id="l04004" name="l04004"></a><span class="lineno"> 4004</span>    int64_t address = <span class="keyword">reinterpret_cast&lt;</span>int64_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>);  <span class="comment">// default value.</span></div>
 <div class="line"><a id="l04005" name="l04005"></a><span class="lineno"> 4005</span>    <span class="keywordflow">if</span> (argc &gt;= 2) {                                   <span class="comment">// disasm &lt;n of instrs&gt;</span></div>
 <div class="line"><a id="l04006" name="l04006"></a><span class="lineno"> 4006</span>      GetValue(arg1, &amp;n_of_instrs_to_disasm);</div>
 <div class="line"><a id="l04007" name="l04007"></a><span class="lineno"> 4007</span>    }</div>
@@ -4203,7 +4196,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l04100" name="l04100"></a><span class="lineno"> 4100</span>             <span class="keyword">reinterpret_cast&lt;</span>uint64_t<span class="keyword">&gt;</span>(cur), *cur, *cur);</div>
 <div class="line"><a id="l04101" name="l04101"></a><span class="lineno"> 4101</span>      <span class="keywordflow">if</span> (!skip_obj_print) {</div>
 <div class="line"><a id="l04102" name="l04102"></a><span class="lineno"> 4102</span>        Tagged&lt;Object&gt; obj(*cur);</div>
-<div class="line"><a id="l04103" name="l04103"></a><span class="lineno"> 4103</span>        Heap* current_heap = isolate_-&gt;heap();</div>
+<div class="line"><a id="l04103" name="l04103"></a><span class="lineno"> 4103</span>        Heap* current_heap = <a class="code hl_variable" href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a>-&gt;heap();</div>
 <div class="line"><a id="l04104" name="l04104"></a><span class="lineno"> 4104</span>        <span class="keywordflow">if</span> (<a class="code hl_function" href="namespacev8_1_1internal.html#a511c3dd03bb4fc2b91ed9ef5535e202e">IsSmi</a>(obj) ||</div>
 <div class="line"><a id="l04105" name="l04105"></a><span class="lineno"> 4105</span>            <a class="code hl_function" href="namespacev8_1_1internal.html#af4dac4fd89643ceaa9c7fe78bd0d0850">IsValidHeapObject</a>(current_heap, Cast&lt;HeapObject&gt;(obj))) {</div>
 <div class="line"><a id="l04106" name="l04106"></a><span class="lineno"> 4106</span>          <a class="code hl_function" href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">PrintF</a>(<span class="stringliteral">&quot; (&quot;</span>);</div>
@@ -4248,7 +4241,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l04145" name="l04145"></a><span class="lineno"> 4145</span>    <span class="comment">// backtrace / bt</span></div>
 <div class="line"><a id="l04146" name="l04146"></a><span class="lineno"> 4146</span>    <span class="comment">// ---------------------------------------------------------------</span></div>
 <div class="line"><a id="l04147" name="l04147"></a><span class="lineno"> 4147</span>  } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(cmd, <span class="stringliteral">&quot;backtrace&quot;</span>) == 0 || strcmp(cmd, <span class="stringliteral">&quot;bt&quot;</span>) == 0) {</div>
-<div class="line"><a id="l04148" name="l04148"></a><span class="lineno"> 4148</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a> = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a><span class="keyword">&gt;</span>(pc_);</div>
+<div class="line"><a id="l04148" name="l04148"></a><span class="lineno"> 4148</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a> <a class="code hl_variable" href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a> = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>);</div>
 <div class="line"><a id="l04149" name="l04149"></a><span class="lineno"> 4149</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a> lr = <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a><span class="keyword">&gt;</span>(this-&gt;lr());</div>
 <div class="line"><a id="l04150" name="l04150"></a><span class="lineno"> 4150</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a> <a class="code hl_typedef" href="namespacev8_1_1internal_1_1wasm.html#acb72381f9ca78a1b2f55c6946e319a0f">sp</a> = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a><span class="keyword">&gt;</span>(this-&gt;sp());</div>
 <div class="line"><a id="l04151" name="l04151"></a><span class="lineno"> 4151</span>    <a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a> fp = <span class="keyword">static_cast&lt;</span><a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a><span class="keyword">&gt;</span>(this-&gt;fp());</div>
@@ -4351,11 +4344,11 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l04248" name="l04248"></a><span class="lineno"> 4248</span>        uint32_t <a class="code hl_variable" href="code-reference_8cc.html#aeaf31c189d3b2a89ff45fedfceb87d9d">code</a>;</div>
 <div class="line"><a id="l04249" name="l04249"></a><span class="lineno"> 4249</span>        uint32_t <a class="code hl_variable" href="recreate-schedule_8cc.html#a8d8d60cc63a2c85bbdc84a0f9269717e">parameters</a>;</div>
 <div class="line"><a id="l04250" name="l04250"></a><span class="lineno"> 4250</span> </div>
-<div class="line"><a id="l04251" name="l04251"></a><span class="lineno"> 4251</span>        memcpy(&amp;code, pc_-&gt;InstructionAtOffset(kDebugCodeOffset), <span class="keyword">sizeof</span>(code));</div>
-<div class="line"><a id="l04252" name="l04252"></a><span class="lineno"> 4252</span>        memcpy(&amp;<a class="code hl_variable" href="recreate-schedule_8cc.html#a8d8d60cc63a2c85bbdc84a0f9269717e">parameters</a>, pc_-&gt;InstructionAtOffset(kDebugParamsOffset),</div>
+<div class="line"><a id="l04251" name="l04251"></a><span class="lineno"> 4251</span>        memcpy(&amp;code, <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>-&gt;InstructionAtOffset(kDebugCodeOffset), <span class="keyword">sizeof</span>(code));</div>
+<div class="line"><a id="l04252" name="l04252"></a><span class="lineno"> 4252</span>        memcpy(&amp;<a class="code hl_variable" href="recreate-schedule_8cc.html#a8d8d60cc63a2c85bbdc84a0f9269717e">parameters</a>, <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>-&gt;InstructionAtOffset(kDebugParamsOffset),</div>
 <div class="line"><a id="l04253" name="l04253"></a><span class="lineno"> 4253</span>               <span class="keyword">sizeof</span>(<a class="code hl_variable" href="recreate-schedule_8cc.html#a8d8d60cc63a2c85bbdc84a0f9269717e">parameters</a>));</div>
 <div class="line"><a id="l04254" name="l04254"></a><span class="lineno"> 4254</span>        <span class="keywordtype">char</span> <span class="keyword">const</span>* message = <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">char</span> const*<span class="keyword">&gt;</span>(</div>
-<div class="line"><a id="l04255" name="l04255"></a><span class="lineno"> 4255</span>            pc_-&gt;InstructionAtOffset(kDebugMessageOffset));</div>
+<div class="line"><a id="l04255" name="l04255"></a><span class="lineno"> 4255</span>            <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>-&gt;InstructionAtOffset(kDebugMessageOffset));</div>
 <div class="line"><a id="l04256" name="l04256"></a><span class="lineno"> 4256</span> </div>
 <div class="line"><a id="l04257" name="l04257"></a><span class="lineno"> 4257</span>        <span class="comment">// Always print something when we hit a debug point that breaks.</span></div>
 <div class="line"><a id="l04258" name="l04258"></a><span class="lineno"> 4258</span>        <span class="comment">// We are going to break, so printing something is not an issue in</span></div>
@@ -4370,7 +4363,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l04267" name="l04267"></a><span class="lineno"> 4267</span>                   clr_normal);</div>
 <div class="line"><a id="l04268" name="l04268"></a><span class="lineno"> 4268</span>          }</div>
 <div class="line"><a id="l04269" name="l04269"></a><span class="lineno"> 4269</span>          <a class="code hl_enumeration" href="namespacev8_1_1internal.html#acc2e164143496f18b5ec68f8ab70af52">Builtin</a> maybe_builtin = OffHeapInstructionStream::TryLookupCode(</div>
-<div class="line"><a id="l04270" name="l04270"></a><span class="lineno"> 4270</span>              Isolate::Current(), <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a><span class="keyword">&gt;</span>(pc_));</div>
+<div class="line"><a id="l04270" name="l04270"></a><span class="lineno"> 4270</span>              Isolate::Current(), <span class="keyword">reinterpret_cast&lt;</span><a class="code hl_typedef" href="namespacev8_1_1base.html#ab5fa5880b3e672f78b7e772eebdae914">Address</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>));</div>
 <div class="line"><a id="l04271" name="l04271"></a><span class="lineno"> 4271</span>          <span class="keywordflow">if</span> (Builtins::IsBuiltinId(maybe_builtin)) {</div>
 <div class="line"><a id="l04272" name="l04272"></a><span class="lineno"> 4272</span>            <span class="keywordtype">char</span> <span class="keyword">const</span>* name = Builtins::name(maybe_builtin);</div>
 <div class="line"><a id="l04273" name="l04273"></a><span class="lineno"> 4273</span>            <a class="code hl_function" href="namespacev8_1_1internal.html#a3430752cde9f29d73e97ceed1bce0856">PrintF</a>(stream_, <span class="stringliteral">&quot;# %s                %sLOCATION: %s%s\n&quot;</span>,</div>
@@ -4412,12 +4405,12 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l04309" name="l04309"></a><span class="lineno"> 4309</span>        <span class="comment">// The stop parameters are inlined in the code. Skip them:</span></div>
 <div class="line"><a id="l04310" name="l04310"></a><span class="lineno"> 4310</span>        <span class="comment">//  - Skip to the end of the message string.</span></div>
 <div class="line"><a id="l04311" name="l04311"></a><span class="lineno"> 4311</span>        <span class="keywordtype">size_t</span> size = <a class="code hl_variable" href="namespacev8_1_1internal.html#afc00de11b7ecff9410779f5ea740e2ed">kDebugMessageOffset</a> + strlen(message) + 1;</div>
-<div class="line"><a id="l04312" name="l04312"></a><span class="lineno"> 4312</span>        pc_ = pc_-&gt;InstructionAtOffset(<a class="code hl_function" href="macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(size, kInstrSize));</div>
+<div class="line"><a id="l04312" name="l04312"></a><span class="lineno"> 4312</span>        <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a> = <a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>-&gt;InstructionAtOffset(<a class="code hl_function" href="macros_8h.html#a5113f5db9eec9c30ecea57b8d4175f2d">RoundUp</a>(size, kInstrSize));</div>
 <div class="line"><a id="l04313" name="l04313"></a><span class="lineno"> 4313</span>        <span class="comment">//  - Verify that the unreachable marker is present.</span></div>
-<div class="line"><a id="l04314" name="l04314"></a><span class="lineno"> 4314</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(pc_-&gt;Mask(ExceptionMask) == HLT);</div>
-<div class="line"><a id="l04315" name="l04315"></a><span class="lineno"> 4315</span>        <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(pc_-&gt;ImmException(), kImmExceptionIsUnreachable);</div>
+<div class="line"><a id="l04314" name="l04314"></a><span class="lineno"> 4314</span>        <a class="code hl_define" href="logging_8h.html#ae17f8119c108cf3070bad3449c7e0006">DCHECK</a>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>-&gt;Mask(ExceptionMask) == HLT);</div>
+<div class="line"><a id="l04315" name="l04315"></a><span class="lineno"> 4315</span>        <a class="code hl_define" href="logging_8h.html#af9c313d74155f7f201955a939e24c71f">DCHECK_EQ</a>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>-&gt;ImmException(), kImmExceptionIsUnreachable);</div>
 <div class="line"><a id="l04316" name="l04316"></a><span class="lineno"> 4316</span>        <span class="comment">//  - Skip past the unreachable marker.</span></div>
-<div class="line"><a id="l04317" name="l04317"></a><span class="lineno"> 4317</span>        set_pc(pc_-&gt;following());</div>
+<div class="line"><a id="l04317" name="l04317"></a><span class="lineno"> 4317</span>        set_pc(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>-&gt;following());</div>
 <div class="line"><a id="l04318" name="l04318"></a><span class="lineno"> 4318</span> </div>
 <div class="line"><a id="l04319" name="l04319"></a><span class="lineno"> 4319</span>        <span class="comment">// Check if the debugger should break.</span></div>
 <div class="line"><a id="l04320" name="l04320"></a><span class="lineno"> 4320</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="recreate-schedule_8cc.html#a8d8d60cc63a2c85bbdc84a0f9269717e">parameters</a> &amp; <a class="code hl_define" href="builtins-number-tsa_8cc.html#abe022c8f09db1f0680a92293523f25dd">BREAK</a>) Debug();</div>
@@ -4430,7 +4423,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l04327" name="l04327"></a><span class="lineno"> 4327</span>        DoSwitchStackLimit(<a class="code hl_variable" href="jump-threading_8cc.html#a0a0af5b095a4cca0e42ca82256441999">instr</a>);</div>
 <div class="line"><a id="l04328" name="l04328"></a><span class="lineno"> 4328</span>      } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="jump-threading_8cc.html#a0a0af5b095a4cca0e42ca82256441999">instr</a>-&gt;ImmException() == kImmExceptionIsUnreachable) {</div>
 <div class="line"><a id="l04329" name="l04329"></a><span class="lineno"> 4329</span>        fprintf(stream_, <span class="stringliteral">&quot;Hit UNREACHABLE marker at PC=%p.\n&quot;</span>,</div>
-<div class="line"><a id="l04330" name="l04330"></a><span class="lineno"> 4330</span>                <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(pc_));</div>
+<div class="line"><a id="l04330" name="l04330"></a><span class="lineno"> 4330</span>                <span class="keyword">reinterpret_cast&lt;</span><span class="keywordtype">void</span>*<span class="keyword">&gt;</span>(<a class="code hl_variable" href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a>));</div>
 <div class="line"><a id="l04331" name="l04331"></a><span class="lineno"> 4331</span>        abort();</div>
 <div class="line"><a id="l04332" name="l04332"></a><span class="lineno"> 4332</span> </div>
 <div class="line"><a id="l04333" name="l04333"></a><span class="lineno"> 4333</span>      } <span class="keywordflow">else</span> {</div>
@@ -6768,12 +6761,12 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l06665" name="l06665"></a><span class="lineno"> 6665</span>Simulator::LocalMonitor::LocalMonitor()</div>
 <div class="line"><a id="l06666" name="l06666"></a><span class="lineno"> 6666</span>    : access_state_(MonitorAccess::Open),</div>
 <div class="line"><a id="l06667" name="l06667"></a><span class="lineno"> 6667</span>      tagged_addr_(0),</div>
-<div class="line"><a id="l06668" name="l06668"></a><span class="lineno"> 6668</span>      size_(TransactionSize::<a class="code hl_enumvalue" href="namespacev8_1_1debug.html#a65c2c2d25a61bb22d9b1d4dbc02ad590a6adf97f83acf6453d4a6a4b1070f3754">None</a>) {}</div>
+<div class="line"><a id="l06668" name="l06668"></a><span class="lineno"> 6668</span>      <a class="code hl_variable" href="codegen_2assembler_8cc.html#a50218915641ec8f39877c2565e95a604">size_</a>(TransactionSize::<a class="code hl_enumvalue" href="namespacev8_1_1debug.html#a65c2c2d25a61bb22d9b1d4dbc02ad590a6adf97f83acf6453d4a6a4b1070f3754">None</a>) {}</div>
 <div class="line"><a id="l06669" name="l06669"></a><span class="lineno"> 6669</span> </div>
 <div class="line"><a id="l06670" name="l06670"></a><span class="lineno"> 6670</span><span class="keywordtype">void</span> Simulator::LocalMonitor::Clear() {</div>
 <div class="line"><a id="l06671" name="l06671"></a><span class="lineno"> 6671</span>  access_state_ = MonitorAccess::Open;</div>
 <div class="line"><a id="l06672" name="l06672"></a><span class="lineno"> 6672</span>  tagged_addr_ = 0;</div>
-<div class="line"><a id="l06673" name="l06673"></a><span class="lineno"> 6673</span>  size_ = TransactionSize::None;</div>
+<div class="line"><a id="l06673" name="l06673"></a><span class="lineno"> 6673</span>  <a class="code hl_variable" href="codegen_2assembler_8cc.html#a50218915641ec8f39877c2565e95a604">size_</a> = TransactionSize::None;</div>
 <div class="line"><a id="l06674" name="l06674"></a><span class="lineno"> 6674</span>}</div>
 <div class="line"><a id="l06675" name="l06675"></a><span class="lineno"> 6675</span> </div>
 <div class="line"><a id="l06676" name="l06676"></a><span class="lineno"> 6676</span><span class="keywordtype">void</span> Simulator::LocalMonitor::NotifyLoad() {</div>
@@ -6788,7 +6781,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l06685" name="l06685"></a><span class="lineno"> 6685</span>                                             TransactionSize size) {</div>
 <div class="line"><a id="l06686" name="l06686"></a><span class="lineno"> 6686</span>  access_state_ = MonitorAccess::Exclusive;</div>
 <div class="line"><a id="l06687" name="l06687"></a><span class="lineno"> 6687</span>  tagged_addr_ = addr;</div>
-<div class="line"><a id="l06688" name="l06688"></a><span class="lineno"> 6688</span>  size_ = <a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>;</div>
+<div class="line"><a id="l06688" name="l06688"></a><span class="lineno"> 6688</span>  <a class="code hl_variable" href="codegen_2assembler_8cc.html#a50218915641ec8f39877c2565e95a604">size_</a> = <a class="code hl_variable" href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a>;</div>
 <div class="line"><a id="l06689" name="l06689"></a><span class="lineno"> 6689</span>}</div>
 <div class="line"><a id="l06690" name="l06690"></a><span class="lineno"> 6690</span> </div>
 <div class="line"><a id="l06691" name="l06691"></a><span class="lineno"> 6691</span><span class="keywordtype">void</span> Simulator::LocalMonitor::NotifyStore() {</div>
@@ -6804,7 +6797,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l06701" name="l06701"></a><span class="lineno"> 6701</span>  <span class="keywordflow">if</span> (access_state_ == MonitorAccess::Exclusive) {</div>
 <div class="line"><a id="l06702" name="l06702"></a><span class="lineno"> 6702</span>    <span class="comment">// It is allowed for a processor to require that the address matches</span></div>
 <div class="line"><a id="l06703" name="l06703"></a><span class="lineno"> 6703</span>    <span class="comment">// exactly (B2.10.1), so this comparison does not mask addr.</span></div>
-<div class="line"><a id="l06704" name="l06704"></a><span class="lineno"> 6704</span>    <span class="keywordflow">if</span> (addr == tagged_addr_ &amp;&amp; size_ == size) {</div>
+<div class="line"><a id="l06704" name="l06704"></a><span class="lineno"> 6704</span>    <span class="keywordflow">if</span> (addr == tagged_addr_ &amp;&amp; <a class="code hl_variable" href="codegen_2assembler_8cc.html#a50218915641ec8f39877c2565e95a604">size_</a> == size) {</div>
 <div class="line"><a id="l06705" name="l06705"></a><span class="lineno"> 6705</span>      Clear();</div>
 <div class="line"><a id="l06706" name="l06706"></a><span class="lineno"> 6706</span>      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a id="l06707" name="l06707"></a><span class="lineno"> 6707</span>    } <span class="keywordflow">else</span> {</div>
@@ -6824,7 +6817,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l06721" name="l06721"></a><span class="lineno"> 6721</span>    : access_state_(MonitorAccess::Open),</div>
 <div class="line"><a id="l06722" name="l06722"></a><span class="lineno"> 6722</span>      tagged_addr_(0),</div>
 <div class="line"><a id="l06723" name="l06723"></a><span class="lineno"> 6723</span>      next_(nullptr),</div>
-<div class="line"><a id="l06724" name="l06724"></a><span class="lineno"> 6724</span>      prev_(nullptr),</div>
+<div class="line"><a id="l06724" name="l06724"></a><span class="lineno"> 6724</span>      <a class="code hl_variable" href="revectorizer_8cc.html#a8995a507d8cc5dd2e7dadb9ca44f38ea">prev_</a>(nullptr),</div>
 <div class="line"><a id="l06725" name="l06725"></a><span class="lineno"> 6725</span>      failure_counter_(0) {}</div>
 <div class="line"><a id="l06726" name="l06726"></a><span class="lineno"> 6726</span> </div>
 <div class="line"><a id="l06727" name="l06727"></a><span class="lineno"> 6727</span><span class="keywordtype">void</span> Simulator::GlobalMonitor::Processor::Clear_Locked() {</div>
@@ -6989,6 +6982,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="line"><a id="l06886" name="l06886"></a><span class="lineno"> 6886</span><span class="preprocessor">#undef BRACKETS</span></div>
 <div class="line"><a id="l06887" name="l06887"></a><span class="lineno"> 6887</span> </div>
 <div class="line"><a id="l06888" name="l06888"></a><span class="lineno"> 6888</span><span class="preprocessor">#endif  </span><span class="comment">// USE_SIMULATOR</span></div>
+<div class="ttc" id="aapi-natives_8cc_html_a68072bca3fef7bd8b0d3cbac971cbf4b"><div class="ttname"><a href="api-natives_8cc.html#a68072bca3fef7bd8b0d3cbac971cbf4b">isolate_</a></div><div class="ttdeci">Isolate * isolate_</div><div class="ttdef"><b>Definition</b> <a href="api-natives_8cc_source.html#l00037">api-natives.cc:37</a></div></div>
 <div class="ttc" id="aapi_8cc_html_a681a57b69471dedb99b36abb7f2cb544"><div class="ttname"><a href="api_8cc.html#a681a57b69471dedb99b36abb7f2cb544">V</a></div><div class="ttdeci">#define V(Name)</div></div>
 <div class="ttc" id="aassembler-inl_8h_html"><div class="ttname"><a href="assembler-inl_8h.html">assembler-inl.h</a></div></div>
 <div class="ttc" id="abase_2ieee754_8cc_html_a0acb682b8260ab1c60b918599864e2e5"><div class="ttname"><a href="base_2ieee754_8cc.html#a0acb682b8260ab1c60b918599864e2e5">T</a></div><div class="ttdeci">#define T</div></div>
@@ -7005,7 +6999,9 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="ttc" id="aclassv8_1_1internal_1_1Isolate_html_aa1d56784c93784d8154d8bc2f5c62721"><div class="ttname"><a href="classv8_1_1internal_1_1Isolate.html#aa1d56784c93784d8154d8bc2f5c62721">v8::internal::Isolate::stack_guard</a></div><div class="ttdeci">StackGuard * stack_guard()</div><div class="ttdef"><b>Definition</b> <a href="execution_2isolate_8h_source.html#l01187">isolate.h:1187</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1RegListBase_html_a8a586367d3a47c009d14bd52a47cd45b"><div class="ttname"><a href="classv8_1_1internal_1_1RegListBase.html#a8a586367d3a47c009d14bd52a47cd45b">v8::internal::RegListBase::Count</a></div><div class="ttdeci">constexpr unsigned Count() const</div><div class="ttdef"><b>Definition</b> <a href="reglist-base_8h_source.html#l00067">reglist-base.h:67</a></div></div>
 <div class="ttc" id="aclassv8_1_1internal_1_1RegisterBase_html_ae4f77df87f77114f40f3e8968e1c4a12"><div class="ttname"><a href="classv8_1_1internal_1_1RegisterBase.html#ae4f77df87f77114f40f3e8968e1c4a12">v8::internal::RegisterBase::code</a></div><div class="ttdeci">constexpr int8_t code() const</div><div class="ttdef"><b>Definition</b> <a href="register-base_8h_source.html#l00043">register-base.h:43</a></div></div>
+<div class="ttc" id="acode-generator-arm_8cc_html_ac1b34591c0a6bb909fcc2d34d0b5aaff"><div class="ttname"><a href="code-generator-arm_8cc.html#ac1b34591c0a6bb909fcc2d34d0b5aaff">value_</a></div><div class="ttdeci">Register const value_</div><div class="ttdef"><b>Definition</b> <a href="code-generator-arm_8cc_source.html#l00223">code-generator-arm.cc:223</a></div></div>
 <div class="ttc" id="acode-reference_8cc_html_aeaf31c189d3b2a89ff45fedfceb87d9d"><div class="ttname"><a href="code-reference_8cc.html#aeaf31c189d3b2a89ff45fedfceb87d9d">code</a></div><div class="ttdeci">Handle&lt; Code &gt; code</div><div class="ttdef"><b>Definition</b> <a href="code-reference_8cc_source.html#l00022">code-reference.cc:22</a></div></div>
+<div class="ttc" id="acodegen_2assembler_8cc_html_a50218915641ec8f39877c2565e95a604"><div class="ttname"><a href="codegen_2assembler_8cc.html#a50218915641ec8f39877c2565e95a604">size_</a></div><div class="ttdeci">const int size_</div><div class="ttdef"><b>Definition</b> <a href="codegen_2assembler_8cc_source.html#l00132">assembler.cc:132</a></div></div>
 <div class="ttc" id="acombined-heap_8h_html"><div class="ttname"><a href="combined-heap_8h.html">combined-heap.h</a></div></div>
 <div class="ttc" id="acommon_2globals_8h_html_a014409a21c0c6f0899042f1d5afd19ac"><div class="ttname"><a href="common_2globals_8h.html#a014409a21c0c6f0899042f1d5afd19ac">ENABLE_CONTROL_FLOW_INTEGRITY_BOOL</a></div><div class="ttdeci">#define ENABLE_CONTROL_FLOW_INTEGRITY_BOOL</div><div class="ttdef"><b>Definition</b> <a href="common_2globals_8h_source.html#l00161">globals.h:161</a></div></div>
 <div class="ttc" id="acompiler-specific_8h_html_a2b4c8d55b8ed6204173226fb265706ae"><div class="ttname"><a href="compiler-specific_8h.html#a2b4c8d55b8ed6204173226fb265706ae">V8_DONT_STRIP_SYMBOL</a></div><div class="ttdeci">#define V8_DONT_STRIP_SYMBOL</div><div class="ttdef"><b>Definition</b> <a href="compiler-specific_8h_source.html#l00141">compiler-specific.h:141</a></div></div>
@@ -7017,6 +7013,7 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="ttc" id="aembedded-data_8h_html"><div class="ttname"><a href="embedded-data_8h.html">embedded-data.h</a></div></div>
 <div class="ttc" id="aexecution_2isolate_8h_html"><div class="ttname"><a href="execution_2isolate_8h.html">isolate.h</a></div></div>
 <div class="ttc" id="aexecution_8cc_html_a1d8217e3925e66477879e51a11ceb4b7"><div class="ttname"><a href="execution_8cc.html#a1d8217e3925e66477879e51a11ceb4b7">args</a></div><div class="ttdeci">base::Vector&lt; const DirectHandle&lt; Object &gt; &gt; args</div><div class="ttdef"><b>Definition</b> <a href="execution_8cc_source.html#l00074">execution.cc:74</a></div></div>
+<div class="ttc" id="aexperimental-interpreter_8cc_html_a83f199140d1eabf6bd461c821290b834"><div class="ttname"><a href="experimental-interpreter_8cc.html#a83f199140d1eabf6bd461c821290b834">pc_</a></div><div class="ttdeci">int pc_</div><div class="ttdef"><b>Definition</b> <a href="experimental-interpreter_8cc_source.html#l00227">experimental-interpreter.cc:227</a></div></div>
 <div class="ttc" id="aexperimental-interpreter_8cc_html_ac8c81e61335635fa4709d82412b31f06"><div class="ttname"><a href="experimental-interpreter_8cc.html#ac8c81e61335635fa4709d82412b31f06">pc</a></div><div class="ttdeci">int pc</div><div class="ttdef"><b>Definition</b> <a href="experimental-interpreter_8cc_source.html#l00554">experimental-interpreter.cc:554</a></div></div>
 <div class="ttc" id="agraph-builder_8cc_html_a9990dda08de44f6aee0aaf44c50da7d9"><div class="ttname"><a href="graph-builder_8cc.html#a9990dda08de44f6aee0aaf44c50da7d9">isolate</a></div><div class="ttdeci">Isolate * isolate</div><div class="ttdef"><b>Definition</b> <a href="graph-builder_8cc_source.html#l00058">graph-builder.cc:58</a></div></div>
 <div class="ttc" id="ainstruction-selector-ia32_8cc_html_a97bd6c077f3c7769f575b82988b9b668"><div class="ttname"><a href="instruction-selector-ia32_8cc.html#a97bd6c077f3c7769f575b82988b9b668">offset</a></div><div class="ttdeci">int32_t offset</div><div class="ttdef"><b>Definition</b> <a href="instruction-selector-ia32_8cc_source.html#l00072">instruction-selector-ia32.cc:72</a></div></div>
@@ -7929,8 +7926,11 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="ttc" id="aoverflowing-math_8h_html"><div class="ttname"><a href="overflowing-math_8h.html">overflowing-math.h</a></div></div>
 <div class="ttc" id="arecreate-schedule_8cc_html_a8d8d60cc63a2c85bbdc84a0f9269717e"><div class="ttname"><a href="recreate-schedule_8cc.html#a8d8d60cc63a2c85bbdc84a0f9269717e">parameters</a></div><div class="ttdeci">ZoneAbslFlatHashMap&lt; int, Node * &gt; parameters</div><div class="ttdef"><b>Definition</b> <a href="recreate-schedule_8cc_source.html#l00061">recreate-schedule.cc:61</a></div></div>
 <div class="ttc" id="aregexp-bytecode-peephole_8cc_html_a9f59b34b1f25fe00023291b678246bcc"><div class="ttname"><a href="regexp-bytecode-peephole_8cc.html#a9f59b34b1f25fe00023291b678246bcc">length</a></div><div class="ttdeci">int length</div><div class="ttdef"><b>Definition</b> <a href="regexp-bytecode-peephole_8cc_source.html#l00022">regexp-bytecode-peephole.cc:22</a></div></div>
+<div class="ttc" id="aregexp-interpreter_8cc_html_a147ef59429460248dd4522a17ab6602a"><div class="ttname"><a href="regexp-interpreter_8cc.html#a147ef59429460248dd4522a17ab6602a">registers_</a></div><div class="ttdeci">base::SmallVector&lt; RegisterT, kStaticCapacity &gt; registers_</div><div class="ttdef"><b>Definition</b> <a href="regexp-interpreter_8cc_source.html#l00212">regexp-interpreter.cc:212</a></div></div>
+<div class="ttc" id="aregexp-parser_8cc_html_ae3f02fa951c4dcb5ca0c973870bfd79d"><div class="ttname"><a href="regexp-parser_8cc.html#ae3f02fa951c4dcb5ca0c973870bfd79d">stack_limit_</a></div><div class="ttdeci">const uintptr_t stack_limit_</div><div class="ttdef"><b>Definition</b> <a href="regexp-parser_8cc_source.html#l00656">regexp-parser.cc:656</a></div></div>
 <div class="ttc" id="areglist-arm64_8h_html_a910e3961e4d59d61a44920112509ccd1"><div class="ttname"><a href="reglist-arm64_8h.html#a910e3961e4d59d61a44920112509ccd1">kCalleeSavedV</a></div><div class="ttdeci">#define kCalleeSavedV</div><div class="ttdef"><b>Definition</b> <a href="reglist-arm64_8h_source.html#l00163">reglist-arm64.h:163</a></div></div>
 <div class="ttc" id="areglist-arm64_8h_html_aaa07b255d92a96feff4b2e77b4d27bf5"><div class="ttname"><a href="reglist-arm64_8h.html#aaa07b255d92a96feff4b2e77b4d27bf5">kCallerSavedV</a></div><div class="ttdeci">#define kCallerSavedV</div><div class="ttdef"><b>Definition</b> <a href="reglist-arm64_8h_source.html#l00167">reglist-arm64.h:167</a></div></div>
+<div class="ttc" id="arevectorizer_8cc_html_a8995a507d8cc5dd2e7dadb9ca44f38ea"><div class="ttname"><a href="revectorizer_8cc.html#a8995a507d8cc5dd2e7dadb9ca44f38ea">prev_</a></div><div class="ttdeci">Node * prev_</div><div class="ttdef"><b>Definition</b> <a href="revectorizer_8cc_source.html#l00373">revectorizer.cc:373</a></div></div>
 <div class="ttc" id="aruntime-utils_8h_html"><div class="ttname"><a href="runtime-utils_8h.html">runtime-utils.h</a></div></div>
 <div class="ttc" id="asetup-builtins-internal_8cc_html_ac66f7950aef0d57c14d7acc298145bdd"><div class="ttname"><a href="setup-builtins-internal_8cc.html#ac66f7950aef0d57c14d7acc298145bdd">NOP</a></div><div class="ttdeci">#define NOP(...)</div></div>
 <div class="ttc" id="asetup-heap-internal_8cc_html_a439227feff9d7f55384e8780cfc2eb82"><div class="ttname"><a href="setup-heap-internal_8cc.html#a439227feff9d7f55384e8780cfc2eb82">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition</b> <a href="setup-heap-internal_8cc_source.html#l00126">setup-heap-internal.cc:126</a></div></div>
@@ -7939,13 +7939,10 @@ $(function(){initNavTree('simulator-arm64_8cc_source.html',''); initResizable(tr
 <div class="ttc" id="avalue-mirror_8cc_html_a1ca88ee8dc0e8e51d60cf01ab8e8702a"><div class="ttname"><a href="value-mirror_8cc.html#a1ca88ee8dc0e8e51d60cf01ab8e8702a">value</a></div><div class="ttdeci">std::unique_ptr&lt; ValueMirror &gt; value</div><div class="ttdef"><b>Definition</b> <a href="value-mirror_8cc_source.html#l00950">value-mirror.cc:950</a></div></div>
 <div class="ttc" id="awrappers_8h_html"><div class="ttname"><a href="wrappers_8h.html">wrappers.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_bd0755c95a42e835fb06f38bbeb1d6ed.html">execution</a></li><li class="navelem"><a class="el" href="dir_308b7fb6abddc38655bf3cd39077ea7d.html">arm64</a></li><li class="navelem"><a class="el" href="simulator-arm64_8cc.html">simulator-arm64.cc</a></li>
-    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Generated on Thu Apr 3 2025 08:18:28 for v8 by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>
